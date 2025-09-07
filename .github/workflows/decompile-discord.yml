@@ -31,6 +31,7 @@ jobs:
       - name: Decompile
         run: |
           git rm -qrf decompiled 2>/dev/null || true
+
           sh */bin/jadx \
             --output-dir decompiled \
             --export-gradle \
@@ -40,6 +41,16 @@ jobs:
             --no-inline-methods \
             --no-inline-anonymous \
             --no-inline-kotlin-lambda \
+            --use-source-name-as-class-name-alias if-better \
+            "$FILE" \
+            || true
+
+          sh */bin/jadx \
+            --output-dir no-inline \
+            --export-gradle \
+            --show-bad-code \
+            --fs-case-sensitive \
+            --respect-bytecode-access-modifiers \
             --use-source-name-as-class-name-alias if-better \
             "$FILE" \
             || true
@@ -55,3 +66,9 @@ jobs:
         with:
           name: decompiled
           path: decompiled
+
+      - name: Upload No Inline
+        uses: actions/upload-artifact@v4
+        with:
+          name: no-inline
+          path: no-inline
