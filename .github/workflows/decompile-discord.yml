@@ -27,7 +27,6 @@ jobs:
 
       - name: Decompile
         run: |
-          git rm -qrf decompiled 2>/dev/null || true
           sh */bin/jadx \
             --output-dir decompiled \
             --export-gradle \
@@ -41,6 +40,7 @@ jobs:
             "$FILE" \
             || true
 
+          git init -b main
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add decompiled
