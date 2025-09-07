@@ -15,7 +15,7 @@ public final class u8 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException, IOException {
+    public final void run() throws IOException {
         this.j.R();
         k9 k9Var = this.j;
         Runnable runnable = this.k;

@@ -1,6 +1,5 @@
 package com.discord.widgets.guildscheduledevent;
 
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
@@ -50,12 +49,12 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, GuildScheduledEventListItem guildScheduledEventListItem) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, GuildScheduledEventListItem guildScheduledEventListItem) {
             onConfigure2(i, guildScheduledEventListItem);
         }
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, GuildScheduledEventListItem data) throws Resources.NotFoundException {
+        public void onConfigure2(int position, GuildScheduledEventListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             GuildScheduledEventListItem.Event event = (GuildScheduledEventListItem.Event) data;

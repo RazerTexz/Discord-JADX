@@ -17,7 +17,7 @@ public final class m5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException, IOException {
+    public final void run() throws IOException {
         this.l.a.R();
         this.l.a.m(this.j, this.k);
     }

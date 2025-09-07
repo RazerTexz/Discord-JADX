@@ -741,19 +741,6 @@ public class AlertController {
         }
     }
 
-    /* JADX WARN: Failed to analyze thrown exceptions
-    java.util.ConcurrentModificationException
-    	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1095)
-    	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:1049)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.processInstructions(MethodThrowsVisitor.java:131)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.visit(MethodThrowsVisitor.java:69)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.checkInsn(MethodThrowsVisitor.java:179)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.processInstructions(MethodThrowsVisitor.java:132)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.visit(MethodThrowsVisitor.java:69)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.checkInsn(MethodThrowsVisitor.java:179)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.processInstructions(MethodThrowsVisitor.java:132)
-    	at jadx.core.dex.visitors.MethodThrowsVisitor.visit(MethodThrowsVisitor.java:69)
-     */
     /* JADX WARN: Multi-variable type inference failed */
     private void setupView() {
         View viewFindViewById;

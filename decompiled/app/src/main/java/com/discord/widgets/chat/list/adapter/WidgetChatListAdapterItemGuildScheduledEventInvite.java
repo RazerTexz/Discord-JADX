@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.list.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.View;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.ViewKt;
@@ -362,13 +361,13 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Model model) throws Resources.NotFoundException {
+        public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemGuildScheduledEventInvite.access$configureUI((WidgetChatListAdapterItemGuildScheduledEventInvite) this.receiver, model);
         }
@@ -399,7 +398,7 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         this(widgetChatListAdapter, (i & 2) != 0 ? StoreStream.INSTANCE.getGuildScheduledEvents() : storeGuildScheduledEvents);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetChatListAdapterItemGuildScheduledEventInvite widgetChatListAdapterItemGuildScheduledEventInvite, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetChatListAdapterItemGuildScheduledEventInvite widgetChatListAdapterItemGuildScheduledEventInvite, Model model) {
         widgetChatListAdapterItemGuildScheduledEventInvite.configureUI(model);
     }
 
@@ -427,7 +426,7 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         widgetChatListAdapterItemGuildScheduledEventInvite.subscription = subscription;
     }
 
-    private final void configureUI(Model model) throws Resources.NotFoundException {
+    private final void configureUI(Model model) {
         GuildScheduledEventItemView guildScheduledEventItemView = this.binding.f2322b;
         Intrinsics3.checkNotNullExpressionValue(guildScheduledEventItemView, "binding.guildScheduledEventInviteContainer");
         guildScheduledEventItemView.setBackground(null);

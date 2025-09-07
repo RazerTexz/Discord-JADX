@@ -17,7 +17,7 @@ public final class p9 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         t9 t9VarT = this.l.a.k.t();
         String str = this.j;
         Bundle bundle = this.k;

@@ -1,6 +1,5 @@
 package com.discord.widgets.hubs.events;
 
-import android.content.res.Resources;
 import android.view.View;
 import com.discord.databinding.WidgetHubEventBinding;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView;
@@ -90,7 +89,7 @@ public final class WidgetHubEventsPageViewHolder2 extends WidgetHubEventsPageVie
         this.listener = widgetHubEventsPage3;
     }
 
-    public final void bind(WidgetHubEventsViewModel2 eventData) throws Resources.NotFoundException {
+    public final void bind(WidgetHubEventsViewModel2 eventData) {
         Intrinsics3.checkNotNullParameter(eventData, "eventData");
         this.binding.f2474b.configureInDirectoryEventList(eventData, new AnonymousClass1(eventData), new AnonymousClass2(eventData), new AnonymousClass3(eventData), new AnonymousClass4(eventData));
     }

@@ -19,7 +19,7 @@ public abstract class ConfigurationKey<T> {
         this(keyName, description, false);
     }
 
-    public ConfigurationKey(String keyName, String description, boolean hidden) throws NoSuchMethodException, SecurityException {
+    public ConfigurationKey(String keyName, String description, boolean hidden) {
         this.keyName = checkName(keyName);
         ConfigurationDataType type = ConfigurationDataType.toDataType(getClass());
         this.type = type;

@@ -2,7 +2,6 @@ package com.discord.widgets.hubs.events;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +57,7 @@ public final class WidgetHubEventsPageAdapter extends RecyclerView.Adapter<Widge
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         onBindViewHolder((WidgetHubEventsPageViewHolder) viewHolder, i);
     }
 
@@ -74,7 +73,7 @@ public final class WidgetHubEventsPageAdapter extends RecyclerView.Adapter<Widge
         notifyDataSetChanged();
     }
 
-    public void onBindViewHolder(WidgetHubEventsPageViewHolder holder, int position) throws Resources.NotFoundException {
+    public void onBindViewHolder(WidgetHubEventsPageViewHolder holder, int position) {
         Intrinsics3.checkNotNullParameter(holder, "holder");
         if (holder instanceof WidgetHubEventsPageViewHolder5) {
             ((WidgetHubEventsPageViewHolder5) holder).bind();

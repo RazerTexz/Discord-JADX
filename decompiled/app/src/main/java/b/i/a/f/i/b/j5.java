@@ -20,7 +20,7 @@ public final class j5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException, IOException {
+    public final void run() throws IOException {
         zzap zzapVar;
         z4 z4Var = this.l;
         zzaq zzaqVar = this.j;

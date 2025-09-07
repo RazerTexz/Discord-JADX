@@ -182,7 +182,7 @@ public final class ConfigurationDataType {
         }
     }
 
-    private static ConfigurationValueParser valueTypeParser(Type argumentType) throws NoSuchMethodException, SecurityException {
+    private static ConfigurationValueParser valueTypeParser(Type argumentType) {
         Class<?> type = (Class) argumentType;
         Method valueOfMethod = getMethod(type, "valueOf", String.class);
         Method descriptionMethod = getMethod(type, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION, new Class[0]);
@@ -229,7 +229,7 @@ public final class ConfigurationDataType {
         }
     }
 
-    public static ConfigurationDataType toDataType(Class<? extends ConfigurationKey<?>> keyClass) throws NoSuchMethodException, SecurityException {
+    public static ConfigurationDataType toDataType(Class<? extends ConfigurationKey<?>> keyClass) {
         if (keyClass.getSuperclass() != ConfigurationKey.class) {
             throw new IllegalArgumentException("No direct subclass of ConfigurationKey: " + keyClass.getName());
         }
@@ -284,7 +284,7 @@ public final class ConfigurationDataType {
         return (argumentType instanceof Class) && ConfigurationValueType.class.isAssignableFrom((Class) argumentType);
     }
 
-    private static Method getMethod(Class<?> argumentType, String name, Class<?>... clsArr) throws NoSuchMethodException, SecurityException {
+    private static Method getMethod(Class<?> argumentType, String name, Class<?>... clsArr) {
         try {
             return argumentType.getMethod(name, clsArr);
         } catch (NoSuchMethodException e) {

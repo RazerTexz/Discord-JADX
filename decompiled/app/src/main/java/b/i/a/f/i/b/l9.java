@@ -13,7 +13,7 @@ public final class l9 implements z3 {
     }
 
     @Override // b.i.a.f.i.b.z3
-    public final void a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) throws IllegalStateException {
+    public final void a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) {
         this.a.r(str, i, th, bArr, map);
     }
 }
