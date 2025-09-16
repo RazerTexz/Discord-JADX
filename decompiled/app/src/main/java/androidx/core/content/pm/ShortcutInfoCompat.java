@@ -424,7 +424,7 @@ public class ShortcutInfoCompat {
         return personArr;
     }
 
-    public Intent addToIntent(Intent intent) throws PackageManager.NameNotFoundException {
+    public Intent addToIntent(Intent intent) {
         intent.putExtra("android.intent.extra.shortcut.INTENT", this.mIntents[r0.length - 1]).putExtra("android.intent.extra.shortcut.NAME", this.mLabel.toString());
         if (this.mIcon != null) {
             Drawable activityIcon = null;

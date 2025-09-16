@@ -172,7 +172,7 @@ public class ThreadUtils {
         throw runtimeException;
     }
 
-    public static boolean joinUninterruptibly(Thread thread, long j) throws InterruptedException {
+    public static boolean joinUninterruptibly(Thread thread, long j) {
         long jElapsedRealtime = SystemClock.elapsedRealtime();
         boolean z2 = false;
         long jElapsedRealtime2 = j;
@@ -191,7 +191,7 @@ public class ThreadUtils {
         return !thread.isAlive();
     }
 
-    public static boolean awaitUninterruptibly(CountDownLatch countDownLatch, long j) throws InterruptedException {
+    public static boolean awaitUninterruptibly(CountDownLatch countDownLatch, long j) {
         long jElapsedRealtime = SystemClock.elapsedRealtime();
         boolean zAwait = false;
         long jElapsedRealtime2 = j;

@@ -150,7 +150,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        public final void b(Closeable closeable) throws IOException {
+        public final void b(Closeable closeable) {
             if (closeable != null) {
                 try {
                     closeable.close();

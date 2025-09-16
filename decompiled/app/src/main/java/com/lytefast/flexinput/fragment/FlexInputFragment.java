@@ -2,7 +2,6 @@ package com.lytefast.flexinput.fragment;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.Editable;
@@ -279,7 +278,7 @@ public class FlexInputFragment extends Fragment implements FlexInputCoordinator<
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public Unit invoke(FlexInputState flexInputState) throws Resources.NotFoundException {
+        public Unit invoke(FlexInputState flexInputState) {
             FlexInputState flexInputState2 = flexInputState;
             Intrinsics3.checkNotNullParameter(flexInputState2, "p1");
             FlexInputFragment flexInputFragment = (FlexInputFragment) this.receiver;

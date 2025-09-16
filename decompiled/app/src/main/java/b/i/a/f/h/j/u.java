@@ -2,7 +2,6 @@ package b.i.a.f.h.j;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
@@ -14,7 +13,7 @@ public final class u implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws PackageManager.NameNotFoundException {
+    public final void run() {
         boolean zA;
         r rVar = this.j;
         rVar.N();

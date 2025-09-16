@@ -232,7 +232,7 @@ public final class MGImages {
         }
     }
 
-    public static final void requestImageCrop(Context context, MediaPicker.Provider provider, Uri inputUri, float aspectRatioX, float aspectRatioY, int maxOutputDimensionPx) throws IOException {
+    public static final void requestImageCrop(Context context, MediaPicker.Provider provider, Uri inputUri, float aspectRatioX, float aspectRatioY, int maxOutputDimensionPx) {
         Intrinsics3.checkNotNullParameter(provider, "provider");
         Intrinsics3.checkNotNullParameter(inputUri, "inputUri");
         AnonymousClass1 anonymousClass1 = new AnonymousClass1(context);
@@ -288,7 +288,7 @@ public final class MGImages {
         }
     }
 
-    public static /* synthetic */ void requestImageCrop$default(Context context, MediaPicker.Provider provider, Uri uri, float f, float f2, int i, int i2, Object obj) throws IOException {
+    public static /* synthetic */ void requestImageCrop$default(Context context, MediaPicker.Provider provider, Uri uri, float f, float f2, int i, int i2, Object obj) {
         requestImageCrop(context, provider, uri, (i2 & 8) != 0 ? 1.0f : f, (i2 & 16) != 0 ? 1.0f : f2, (i2 & 32) != 0 ? 1024 : i);
     }
 

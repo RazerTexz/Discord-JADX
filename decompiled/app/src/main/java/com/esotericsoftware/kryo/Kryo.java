@@ -28,7 +28,6 @@ import com.esotericsoftware.kryo.util.ObjectMap;
 import com.esotericsoftware.kryo.util.Util;
 import h0.b.a.ObjectInstantiator;
 import h0.b.b.InstantiatorStrategy;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Modifier;
@@ -140,7 +139,7 @@ public class Kryo {
         }
 
         @Override // h0.b.b.InstantiatorStrategy
-        public ObjectInstantiator newInstantiatorOf(Class cls) throws NoSuchMethodException, SecurityException {
+        public ObjectInstantiator newInstantiatorOf(Class cls) {
             Constructor declaredConstructor;
             if (!Util.IS_ANDROID) {
                 if (!((cls.getEnclosingClass() == null || !cls.isMemberClass() || Modifier.isStatic(cls.getModifiers())) ? false : true)) {
@@ -933,7 +932,7 @@ public class Kryo {
         }
     }
 
-    public boolean writeReferenceOrNull(Output output, Object obj, boolean z2) throws IOException, KryoException {
+    public boolean writeReferenceOrNull(Output output, Object obj, boolean z2) throws KryoException {
         if (obj == null) {
             Log.a aVar = Log.a;
             output.writeVarInt(0, true);

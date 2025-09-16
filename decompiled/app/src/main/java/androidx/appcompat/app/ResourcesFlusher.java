@@ -24,7 +24,7 @@ public class ResourcesFlusher {
     private ResourcesFlusher() {
     }
 
-    public static void flush(@NonNull Resources resources) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public static void flush(@NonNull Resources resources) throws IllegalArgumentException {
         int i = Build.VERSION.SDK_INT;
         if (i >= 28) {
             return;
@@ -39,7 +39,7 @@ public class ResourcesFlusher {
     }
 
     @RequiresApi(21)
-    private static void flushLollipops(@NonNull Resources resources) throws NoSuchFieldException {
+    private static void flushLollipops(@NonNull Resources resources) {
         if (!sDrawableCacheFieldFetched) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
@@ -65,7 +65,7 @@ public class ResourcesFlusher {
     }
 
     @RequiresApi(23)
-    private static void flushMarshmallows(@NonNull Resources resources) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    private static void flushMarshmallows(@NonNull Resources resources) throws IllegalArgumentException {
         if (!sDrawableCacheFieldFetched) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
@@ -92,7 +92,7 @@ public class ResourcesFlusher {
     }
 
     @RequiresApi(24)
-    private static void flushNougats(@NonNull Resources resources) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    private static void flushNougats(@NonNull Resources resources) throws IllegalArgumentException {
         Object obj;
         if (!sResourcesImplFieldFetched) {
             try {
@@ -142,7 +142,7 @@ public class ResourcesFlusher {
     }
 
     @RequiresApi(16)
-    private static void flushThemedResourcesCache(@NonNull Object obj) throws NoSuchFieldException {
+    private static void flushThemedResourcesCache(@NonNull Object obj) {
         if (!sThemedResourceCacheClazzFetched) {
             try {
                 sThemedResourceCacheClazz = Class.forName("android.content.res.ThemedResourceCache");

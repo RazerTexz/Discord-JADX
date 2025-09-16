@@ -125,7 +125,7 @@ public class TypefaceCompatUtil {
 
     @Nullable
     @RequiresApi(19)
-    private static ByteBuffer mmap(File file) throws IOException {
+    private static ByteBuffer mmap(File file) {
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             try {
@@ -158,7 +158,7 @@ public class TypefaceCompatUtil {
 
     @Nullable
     @RequiresApi(19)
-    public static ByteBuffer mmap(Context context, CancellationSignal cancellationSignal, Uri uri) throws IOException {
+    public static ByteBuffer mmap(Context context, CancellationSignal cancellationSignal, Uri uri) {
         try {
             ParcelFileDescriptor parcelFileDescriptorOpenFileDescriptor = context.getContentResolver().openFileDescriptor(uri, "r", cancellationSignal);
             if (parcelFileDescriptorOpenFileDescriptor == null) {

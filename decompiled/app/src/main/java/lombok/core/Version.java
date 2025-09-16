@@ -1,7 +1,6 @@
 package lombok.core;
 
 import com.adjust.sdk.Constants;
-import java.io.IOException;
 import java.io.InputStream;
 
 /* loaded from: discord:lombok/core/Version.SCL.lombok */
@@ -28,7 +27,7 @@ public class Version {
         return RELEASE_NAME;
     }
 
-    public static String getFullVersion() throws IOException {
+    public static String getFullVersion() {
         InputStream in;
         int r;
         String version = String.format("v%s \"%s\"", VERSION, RELEASE_NAME);

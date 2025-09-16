@@ -282,7 +282,7 @@ public class AnimatedStateListDrawableCompat extends StateListDrawable implement
     }
 
     @Nullable
-    public static AnimatedStateListDrawableCompat create(@NonNull Context context, @DrawableRes int i, @Nullable Resources.Theme theme) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    public static AnimatedStateListDrawableCompat create(@NonNull Context context, @DrawableRes int i, @Nullable Resources.Theme theme) throws Resources.NotFoundException {
         int next;
         try {
             Resources resources = context.getResources();

@@ -1,6 +1,5 @@
 package b.o.a.n.p;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -50,7 +49,7 @@ public class WhiteBalanceLock extends BaseLock {
     }
 
     @Override // b.o.a.n.p.BaseLock
-    public void o(@NonNull ActionHolder actionHolder) throws CameraAccessException {
+    public void o(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AWB_LOCK, Boolean.TRUE);
         ((Camera2Engine) actionHolder).k1();
     }

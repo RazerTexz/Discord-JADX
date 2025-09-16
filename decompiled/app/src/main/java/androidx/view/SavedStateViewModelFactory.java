@@ -8,7 +8,6 @@ import androidx.annotation.Nullable;
 import androidx.view.SavedStateRegistry;
 import androidx.view.SavedStateRegistryOwner;
 import androidx.view.ViewModelProvider;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -43,7 +42,7 @@ public final class SavedStateViewModelFactory extends ViewModelProvider.KeyedFac
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls) throws NoSuchMethodException, SecurityException, IOException {
+    public <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls) throws SecurityException {
         T t;
         boolean zIsAssignableFrom = AndroidViewModel.class.isAssignableFrom(cls);
         Constructor constructorFindMatchingConstructor = (!zIsAssignableFrom || this.mApplication == null) ? findMatchingConstructor(cls, VIEWMODEL_SIGNATURE) : findMatchingConstructor(cls, ANDROID_VIEWMODEL_SIGNATURE);
@@ -68,7 +67,7 @@ public final class SavedStateViewModelFactory extends ViewModelProvider.KeyedFac
     }
 
     @Override // androidx.lifecycle.ViewModelProvider.OnRequeryFactory
-    public void onRequery(@NonNull ViewModel viewModel) throws NoSuchMethodException, SecurityException {
+    public void onRequery(@NonNull ViewModel viewModel) throws SecurityException {
         SavedStateHandleController.attachHandleIfNeeded(viewModel, this.mSavedStateRegistry, this.mLifecycle);
     }
 

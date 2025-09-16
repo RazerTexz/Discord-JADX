@@ -42,7 +42,7 @@ public final class j extends r5 {
         return false;
     }
 
-    public final boolean s(Context context) throws PackageManager.NameNotFoundException {
+    public final boolean s(Context context) {
         if (this.e == null) {
             this.e = Boolean.FALSE;
             try {
@@ -74,7 +74,7 @@ public final class j extends r5 {
     }
 
     @WorkerThread
-    public final boolean w() throws OperationCanceledException, IOException, AuthenticatorException {
+    public final boolean w() {
         Account[] result;
         b();
         Objects.requireNonNull((b.i.a.f.e.o.c) this.a.o);

@@ -42,7 +42,6 @@ import com.google.android.material.internal.CollapsingTextHelper;
 import com.google.android.material.internal.DescendantOffsetUtils;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes3.dex */
 public class CollapsingToolbarLayout extends FrameLayout {
@@ -691,7 +690,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         setScrimsShown(z2, ViewCompat.isLaidOut(this) && !isInEditMode());
     }
 
-    public void setStatusBarScrim(@Nullable Drawable drawable) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarScrim(@Nullable Drawable drawable) throws SecurityException {
         Drawable drawable2 = this.statusBarScrim;
         if (drawable2 != drawable) {
             if (drawable2 != null) {
@@ -712,11 +711,11 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
     }
 
-    public void setStatusBarScrimColor(@ColorInt int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarScrimColor(@ColorInt int i) throws SecurityException {
         setStatusBarScrim(new ColorDrawable(i));
     }
 
-    public void setStatusBarScrimResource(@DrawableRes int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarScrimResource(@DrawableRes int i) throws SecurityException {
         setStatusBarScrim(ContextCompat.getDrawable(getContext(), i));
     }
 
@@ -791,7 +790,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public CollapsingToolbarLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public CollapsingToolbarLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws SecurityException {
         int i2 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         this.refreshToolbar = true;

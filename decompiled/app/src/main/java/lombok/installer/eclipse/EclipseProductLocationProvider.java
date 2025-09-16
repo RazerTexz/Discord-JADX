@@ -83,7 +83,7 @@ public class EclipseProductLocationProvider implements IdeLocationProvider {
         return null;
     }
 
-    private IdeLocation findEclipseIniFromExe(File exePath, int loopCounter) throws IOException, CorruptedIdeLocationException {
+    private IdeLocation findEclipseIniFromExe(File exePath, int loopCounter) throws CorruptedIdeLocationException {
         String iniName = this.descriptor.getIniFileName();
         File ini = new File(exePath.getParentFile(), iniName);
         if (ini.isFile()) {

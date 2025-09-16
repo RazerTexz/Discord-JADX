@@ -54,7 +54,7 @@ public class ExternalizableSerializer extends Serializer {
         return this.objectOutput;
     }
 
-    private static boolean hasInheritableReplaceMethod(Class cls, String str) throws NoSuchMethodException, SecurityException {
+    private static boolean hasInheritableReplaceMethod(Class cls, String str) throws SecurityException {
         Method declaredMethod;
         while (true) {
             if (cls == null) {
@@ -75,7 +75,7 @@ public class ExternalizableSerializer extends Serializer {
         return hasInheritableReplaceMethod(cls, "writeReplace") || hasInheritableReplaceMethod(cls, "readResolve");
     }
 
-    private Object readExternal(Kryo kryo, Input input, Class cls) throws ClassNotFoundException, IOException {
+    private Object readExternal(Kryo kryo, Input input, Class cls) {
         try {
             Externalizable externalizable = (Externalizable) kryo.newInstance(cls);
             externalizable.readExternal(getObjectInput(kryo, input));
@@ -89,7 +89,7 @@ public class ExternalizableSerializer extends Serializer {
         }
     }
 
-    private void writeExternal(Kryo kryo, Output output, Object obj) throws IOException {
+    private void writeExternal(Kryo kryo, Output output, Object obj) {
         try {
             ((Externalizable) obj).writeExternal(getObjectOutput(kryo, output));
         } catch (IOException e) {
@@ -106,7 +106,7 @@ public class ExternalizableSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws IOException {
+    public void write(Kryo kryo, Output output, Object obj) {
         JavaSerializer javaSerializerIfRequired = getJavaSerializerIfRequired(obj.getClass());
         if (javaSerializerIfRequired == null) {
             writeExternal(kryo, output, obj);

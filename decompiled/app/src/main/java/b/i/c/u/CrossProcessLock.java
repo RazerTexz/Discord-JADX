@@ -28,7 +28,7 @@ public class CrossProcessLock {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static CrossProcessLock a(Context context, String str) throws IOException {
+    public static CrossProcessLock a(Context context, String str) {
         Throwable e;
         FileChannel channel;
         FileLock fileLockLock;
@@ -82,7 +82,7 @@ public class CrossProcessLock {
         }
     }
 
-    public void b() throws IOException {
+    public void b() {
         try {
             this.f1779b.release();
             this.a.close();

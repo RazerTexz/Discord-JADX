@@ -40,7 +40,7 @@ public class SingleThreadCachedScheduler implements ThreadScheduler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws InterruptedException {
+        public void run() {
             try {
                 Thread.sleep(this.val$millisecondsDelay);
             } catch (InterruptedException e) {

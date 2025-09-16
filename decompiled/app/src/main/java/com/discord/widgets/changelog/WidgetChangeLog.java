@@ -336,7 +336,7 @@ public final class WidgetChangeLog extends AppFragment {
         getBinding().d.setOnClickListener(new AnonymousClass3());
     }
 
-    private final void configureMedia(String videoUrl) throws NumberFormatException {
+    private final void configureMedia(String videoUrl) {
         boolean zEndsWith$default = StringsJVM.endsWith$default(videoUrl, ".mp4", false, 2, null);
         VideoView videoView = getBinding().h;
         Intrinsics3.checkNotNullExpressionValue(videoView, "binding.changeLogVideo");
@@ -465,7 +465,7 @@ public final class WidgetChangeLog extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment
-    public void onViewBound(View view) throws NumberFormatException {
+    public void onViewBound(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         this.openedTimestamp = ClockFactory.get().currentTimeMillis();

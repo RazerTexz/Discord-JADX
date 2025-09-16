@@ -101,7 +101,7 @@ public final class RestAPIBuilder {
         return restAPIBuilder.build(cls, (i & 2) != 0 ? false : z2, (i & 4) != 0 ? 10000L : j, (i & 8) != 0 ? null : list, (i & 16) == 0 ? str : null, (i & 32) != 0 ? true : z3, (i & 64) != 0 ? CONTENT_TYPE_JSON : str2);
     }
 
-    private final <T> T buildApi(OkHttpClient client, Class<T> api, String baseApiUrl, boolean serializeNulls, boolean addVersion, String contentType) throws NumberFormatException, SecurityException {
+    private final <T> T buildApi(OkHttpClient client, Class<T> api, String baseApiUrl, boolean serializeNulls, boolean addVersion, String contentType) throws SecurityException {
         String str;
         String str2;
         GsonBuilder gsonBuilder = new GsonBuilder();

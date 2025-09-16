@@ -65,7 +65,7 @@ public class Main {
         }
 
         @Override // lombok.core.LombokApp
-        public int runApp(List<String> args) throws IOException {
+        public int runApp(List<String> args) {
             try {
                 InputStream in = Main.class.getResourceAsStream("/LICENSE");
                 try {

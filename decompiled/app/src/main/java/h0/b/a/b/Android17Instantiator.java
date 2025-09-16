@@ -16,7 +16,7 @@ public class Android17Instantiator<T> implements ObjectInstantiator<T> {
     public final Method f3729b;
     public final Integer c;
 
-    public Android17Instantiator(Class<T> cls) throws NoSuchMethodException, SecurityException {
+    public Android17Instantiator(Class<T> cls) {
         this.a = cls;
         try {
             Method declaredMethod = ObjectStreamClass.class.getDeclaredMethod("newInstance", Class.class, Integer.TYPE);

@@ -28,7 +28,7 @@ public final class AndroidCertificateChainCleaner extends CertificateChainCleane
     }
 
     @Override // f0.e0.m.CertificateChainCleaner
-    public List<Certificate> a(List<? extends Certificate> list, String str) throws CertificateException, SSLPeerUnverifiedException {
+    public List<Certificate> a(List<? extends Certificate> list, String str) throws SSLPeerUnverifiedException {
         Intrinsics3.checkParameterIsNotNull(list, "chain");
         Intrinsics3.checkParameterIsNotNull(str, "hostname");
         Object[] array = list.toArray(new X509Certificate[0]);

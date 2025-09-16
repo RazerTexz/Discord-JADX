@@ -2,7 +2,6 @@ package b.i.a.f.i.b;
 
 import com.google.android.gms.measurement.internal.zzn;
 import com.google.android.gms.measurement.internal.zzz;
-import java.io.IOException;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
@@ -17,7 +16,7 @@ public final class e5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IOException {
+    public final void run() {
         this.k.a.R();
         if (this.j.l.w0() == null) {
             k9 k9Var = this.k.a;

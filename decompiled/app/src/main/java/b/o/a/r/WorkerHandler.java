@@ -64,7 +64,7 @@ public class WorkerHandler {
         }
     }
 
-    public WorkerHandler(@NonNull String str) throws InterruptedException {
+    public WorkerHandler(@NonNull String str) {
         this.d = str;
         a aVar = new a(this, str);
         this.e = aVar;

@@ -143,7 +143,7 @@ public final class SpotifyHelper {
         }
     }
 
-    public final boolean isSpotifyInstalled(Context context) throws PackageManager.NameNotFoundException {
+    public final boolean isSpotifyInstalled(Context context) {
         Intrinsics3.checkNotNullParameter(context, "context");
         try {
             context.getPackageManager().getPackageInfo(SPOTIFY_PACKAGE_NAME, 0);

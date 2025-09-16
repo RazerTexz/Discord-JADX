@@ -527,7 +527,7 @@ public final class f {
         }
     }
 
-    public static boolean D0(@RecentlyNonNull Context context, int i) throws PackageManager.NameNotFoundException {
+    public static boolean D0(@RecentlyNonNull Context context, int i) {
         if (!z1(context, i, "com.google.android.gms")) {
             return false;
         }

@@ -102,7 +102,7 @@ public class ImagePipelineFactory {
         a = new ImagePipelineFactory(imagePipelineConfigInterface);
     }
 
-    public final ImagePipeline2 a() throws NoSuchMethodException, SecurityException {
+    public final ImagePipeline2 a() throws SecurityException {
         ImageDecoder2 imageDecoder2C;
         ImageDecoder2 imageDecoder2B;
         if (Build.VERSION.SDK_INT >= 24) {

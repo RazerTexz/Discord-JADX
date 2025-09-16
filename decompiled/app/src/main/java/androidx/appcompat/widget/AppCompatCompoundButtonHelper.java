@@ -30,7 +30,7 @@ public class AppCompatCompoundButtonHelper {
         this.mView = compoundButton;
     }
 
-    public void applyButtonTint() throws NoSuchFieldException {
+    public void applyButtonTint() {
         Drawable buttonDrawable = CompoundButtonCompat.getButtonDrawable(this.mView);
         if (buttonDrawable != null) {
             if (this.mHasButtonTint || this.mHasButtonTintMode) {

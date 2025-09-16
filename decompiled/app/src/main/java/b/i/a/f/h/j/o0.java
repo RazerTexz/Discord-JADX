@@ -158,7 +158,7 @@ public final class o0 extends e {
         }
     }
 
-    public final String R(j0 j0Var, boolean z2) throws NumberFormatException {
+    public final String R(j0 j0Var, boolean z2) {
         long j;
         StringBuilder sb = new StringBuilder();
         try {

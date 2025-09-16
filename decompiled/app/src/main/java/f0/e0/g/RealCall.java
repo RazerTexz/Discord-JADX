@@ -159,7 +159,7 @@ public final class RealCall implements Call2 {
         }
 
         @Override // g0.AsyncTimeout
-        public void l() throws IOException {
+        public void l() {
             RealCall.this.cancel();
         }
     }
@@ -194,7 +194,7 @@ public final class RealCall implements Call2 {
     }
 
     @Override // f0.Call2
-    public void cancel() throws IOException {
+    public void cancel() {
         Socket socket;
         if (this.v) {
             return;
@@ -300,7 +300,7 @@ public final class RealCall implements Call2 {
         realConnection4.o.add(new b(this, this.n));
     }
 
-    public final <E extends IOException> E g(E e) throws IOException {
+    public final <E extends IOException> E g(E e) {
         E interruptedIOException;
         Socket socketM;
         byte[] bArr = Util7.a;

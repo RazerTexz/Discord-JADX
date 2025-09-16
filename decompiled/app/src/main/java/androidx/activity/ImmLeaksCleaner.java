@@ -28,7 +28,7 @@ public final class ImmLeaksCleaner implements LifecycleEventObserver {
     }
 
     @MainThread
-    private static void initializeReflectiveFields() throws NoSuchFieldException {
+    private static void initializeReflectiveFields() {
         try {
             sReflectedFieldsInitialized = 2;
             Field declaredField = InputMethodManager.class.getDeclaredField("mServedView");
@@ -46,7 +46,7 @@ public final class ImmLeaksCleaner implements LifecycleEventObserver {
     }
 
     @Override // androidx.view.LifecycleEventObserver
-    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws IllegalArgumentException {
         if (event != Lifecycle.Event.ON_DESTROY) {
             return;
         }

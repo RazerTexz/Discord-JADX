@@ -3,7 +3,6 @@ package b.i.c.m;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.os.Build;
 import android.util.Log;
 import b.d.b.a.outline;
@@ -73,7 +72,7 @@ public final /* synthetic */ class CrashlyticsRegistrar2 implements ComponentFac
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Object a(ComponentContainer componentContainer) throws Resources.NotFoundException, PackageManager.NameNotFoundException {
+    public Object a(ComponentContainer componentContainer) {
         DisabledBreadcrumbSource disabledBreadcrumbSource;
         UnavailableAnalyticsEventLogger unavailableAnalyticsEventLogger;
         boolean z2;

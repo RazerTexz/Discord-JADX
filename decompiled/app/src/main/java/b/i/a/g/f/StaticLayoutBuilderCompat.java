@@ -56,7 +56,7 @@ public final class StaticLayoutBuilderCompat {
         this.g = charSequence.length();
     }
 
-    public StaticLayout a() throws NoSuchMethodException, SecurityException, a {
+    public StaticLayout a() throws a {
         if (this.d == null) {
             this.d = "";
         }

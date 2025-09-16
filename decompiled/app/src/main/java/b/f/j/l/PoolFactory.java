@@ -90,7 +90,7 @@ public class PoolFactory {
         return this.a.c.d;
     }
 
-    public PooledByteBufferFactory c(int i) throws NoSuchMethodException, SecurityException {
+    public PooledByteBufferFactory c(int i) throws SecurityException {
         MemoryChunkPool memoryChunkPool;
         if (this.f == null) {
             if (i == 0) {

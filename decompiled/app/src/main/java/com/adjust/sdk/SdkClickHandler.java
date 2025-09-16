@@ -49,7 +49,7 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws JSONException {
+        public void run() {
             IActivityHandler iActivityHandler = (IActivityHandler) SdkClickHandler.access$300(SdkClickHandler.this).get();
             SharedPreferencesManager sharedPreferencesManager = new SharedPreferencesManager(iActivityHandler.getContext());
             try {

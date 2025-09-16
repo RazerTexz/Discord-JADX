@@ -61,7 +61,7 @@ public class TelephonyManagerCompat {
     @Nullable
     @RequiresPermission("android.permission.READ_PHONE_STATE")
     @SuppressLint({"MissingPermission"})
-    public static String getImei(@NonNull TelephonyManager telephonyManager) throws NoSuchMethodException, SecurityException {
+    public static String getImei(@NonNull TelephonyManager telephonyManager) {
         int subscriptionId;
         int i = Build.VERSION.SDK_INT;
         if (i >= 26) {
@@ -87,7 +87,7 @@ public class TelephonyManagerCompat {
     }
 
     @SuppressLint({"SoonBlockedPrivateApi"})
-    public static int getSubscriptionId(@NonNull TelephonyManager telephonyManager) throws NoSuchMethodException, SecurityException {
+    public static int getSubscriptionId(@NonNull TelephonyManager telephonyManager) {
         int i = Build.VERSION.SDK_INT;
         if (i >= 30) {
             return Api30Impl.getSubscriptionId(telephonyManager);

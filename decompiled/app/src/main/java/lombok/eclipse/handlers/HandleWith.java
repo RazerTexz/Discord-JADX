@@ -108,7 +108,7 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
         return iArr2;
     }
 
-    public boolean generateWithForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelWith) throws IllegalAccessException, IllegalArgumentException {
+    public boolean generateWithForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelWith) throws IllegalArgumentException {
         if (checkForTypeLevelWith && EclipseHandlerUtil.hasAnnotation((Class<? extends Annotation>) With.class, typeNode)) {
             return true;
         }
@@ -135,7 +135,7 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
         return true;
     }
 
-    public void generateWithForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) throws IllegalAccessException, IllegalArgumentException {
+    public void generateWithForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) throws IllegalArgumentException {
         Iterator<EclipseNode> it = fieldNode.down().iterator();
         while (it.hasNext()) {
             EclipseNode child = it.next();
@@ -148,7 +148,7 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<With> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation ast, EclipseNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+    public void handle(AnnotationValues<With> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation ast, EclipseNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.WITH_FLAG_USAGE, "@With");
         EclipseNode node = annotationNode.up();
         AccessLevel level = annotation.getInstance().value();
@@ -173,13 +173,13 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
         }
     }
 
-    public void createWithForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public void createWithForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onParam) throws IllegalArgumentException {
         for (EclipseNode fieldNode : fieldNodes) {
             createWithForField(level, fieldNode, sourceNode, whineIfExists, onMethod, onParam);
         }
     }
 
-    public void createWithForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public void createWithForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onParam) throws IllegalArgumentException {
         ASTNode source = sourceNode.get();
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             sourceNode.addError("@With is only supported on a class or a field.");

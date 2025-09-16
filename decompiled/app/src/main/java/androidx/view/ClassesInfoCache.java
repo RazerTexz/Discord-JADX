@@ -36,7 +36,7 @@ public final class ClassesInfoCache {
             }
         }
 
-        private static void invokeMethodsForEvent(List<MethodReference> list, LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        private static void invokeMethodsForEvent(List<MethodReference> list, LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalArgumentException {
             if (list != null) {
                 for (int size = list.size() - 1; size >= 0; size--) {
                     list.get(size).invokeCallback(lifecycleOwner, event, obj);
@@ -44,7 +44,7 @@ public final class ClassesInfoCache {
             }
         }
 
-        public void invokeCallbacks(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void invokeCallbacks(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalArgumentException {
             invokeMethodsForEvent(this.mEventToHandlers.get(event), lifecycleOwner, event, obj);
             invokeMethodsForEvent(this.mEventToHandlers.get(Lifecycle.Event.ON_ANY), lifecycleOwner, event, obj);
         }
@@ -75,7 +75,7 @@ public final class ClassesInfoCache {
             return this.mMethod.getName().hashCode() + (this.mCallType * 31);
         }
 
-        public void invokeCallback(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void invokeCallback(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalArgumentException {
             try {
                 int i = this.mCallType;
                 if (i == 0) {

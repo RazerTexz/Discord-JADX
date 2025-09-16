@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 /* loaded from: classes3.dex */
 public class a {
     @RecentlyNullable
-    public static MessageDigest a(@RecentlyNonNull String str) throws NoSuchAlgorithmException {
+    public static MessageDigest a(@RecentlyNonNull String str) {
         MessageDigest messageDigest;
         for (int i = 0; i < 2; i++) {
             try {

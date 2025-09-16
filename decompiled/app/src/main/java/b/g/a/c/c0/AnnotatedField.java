@@ -89,7 +89,7 @@ public final class AnnotatedField extends AnnotatedMember implements Serializabl
         return new AnnotatedField(this.j, this.l, annotationMap);
     }
 
-    public Object readResolve() throws NoSuchFieldException {
+    public Object readResolve() {
         a aVar = this._serialization;
         Class<?> cls = aVar.clazz;
         try {

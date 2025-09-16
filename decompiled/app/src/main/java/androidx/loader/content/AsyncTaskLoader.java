@@ -60,7 +60,7 @@ public abstract class AsyncTaskLoader<D> extends Loader<D> {
             AsyncTaskLoader.this.executePendingTask();
         }
 
-        public void waitForLoader() throws InterruptedException {
+        public void waitForLoader() {
             try {
                 this.mDone.await();
             } catch (InterruptedException unused) {
@@ -219,7 +219,7 @@ public abstract class AsyncTaskLoader<D> extends Loader<D> {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-    public void waitForLoader() throws InterruptedException {
+    public void waitForLoader() {
         AsyncTaskLoader<D>.LoadTask loadTask = this.mTask;
         if (loadTask != null) {
             loadTask.waitForLoader();

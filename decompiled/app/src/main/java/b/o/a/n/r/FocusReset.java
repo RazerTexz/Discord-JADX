@@ -1,6 +1,5 @@
 package b.o.a.n.r;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -25,7 +24,7 @@ public class FocusReset extends BaseReset {
     }
 
     @Override // b.o.a.n.r.BaseReset
-    public void m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) throws CameraAccessException {
+    public void m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) {
         boolean z2;
         int iIntValue = ((Integer) k(CameraCharacteristics.CONTROL_MAX_REGIONS_AF, 0)).intValue();
         boolean z3 = true;

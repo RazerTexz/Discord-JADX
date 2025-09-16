@@ -56,7 +56,7 @@ public class Platform3 {
         a = "Dalvik".equals(System.getProperty("java.vm.name")) ? new a() : new Platform3(true);
     }
 
-    public Platform3(boolean z2) throws NoSuchMethodException, SecurityException {
+    public Platform3(boolean z2) {
         this.f3758b = z2;
         Constructor<MethodHandles.Lookup> declaredConstructor = null;
         if (z2) {

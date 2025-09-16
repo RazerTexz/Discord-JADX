@@ -35,7 +35,7 @@ public final class KPropertyImpl5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static final Caller2 access$computeCallerForAccessor(KPropertyImpl.a aVar, boolean z2) throws NoSuchMethodException, SecurityException {
+    public static final Caller2 access$computeCallerForAccessor(KPropertyImpl.a aVar, boolean z2) throws SecurityException {
         RuntimeTypeMapper.e setterSignature;
         Method setterMethod;
         Caller2 aVar2;

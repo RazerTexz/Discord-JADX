@@ -17,7 +17,7 @@ public final class GaplessInfoHolder {
     public int f1294b = -1;
     public int c = -1;
 
-    public final boolean a(String str) throws NumberFormatException {
+    public final boolean a(String str) {
         Matcher matcher = a.matcher(str);
         if (!matcher.find()) {
             return false;

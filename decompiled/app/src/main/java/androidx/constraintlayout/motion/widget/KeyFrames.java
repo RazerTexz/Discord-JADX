@@ -7,7 +7,6 @@ import androidx.constraintlayout.widget.ConstraintAttribute;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -36,7 +35,7 @@ public class KeyFrames {
         }
     }
 
-    public KeyFrames(Context context, XmlPullParser xmlPullParser) throws XmlPullParserException, IllegalAccessException, InstantiationException, IOException, IllegalArgumentException, InvocationTargetException {
+    public KeyFrames(Context context, XmlPullParser xmlPullParser) {
         Key keyNewInstance;
         Exception e;
         HashMap<String, ConstraintAttribute> map;

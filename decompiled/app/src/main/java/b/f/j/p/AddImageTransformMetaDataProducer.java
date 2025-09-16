@@ -1,7 +1,6 @@
 package b.f.j.p;
 
 import b.f.j.j.EncodedImage2;
-import java.io.IOException;
 
 /* compiled from: AddImageTransformMetaDataProducer.java */
 /* renamed from: b.f.j.p.a, reason: use source file name */
@@ -17,7 +16,7 @@ public class AddImageTransformMetaDataProducer implements Producer2<EncodedImage
         }
 
         @Override // b.f.j.p.BaseConsumer
-        public void i(Object obj, int i) throws IOException {
+        public void i(Object obj, int i) {
             EncodedImage2 encodedImage2 = (EncodedImage2) obj;
             if (encodedImage2 == null) {
                 this.f632b.b(null, i);

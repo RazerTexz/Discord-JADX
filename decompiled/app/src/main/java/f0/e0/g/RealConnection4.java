@@ -665,7 +665,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         return false;
     }
 
-    public final boolean i(boolean z2) throws SocketException {
+    public final boolean i(boolean z2) {
         long j;
         byte[] bArr = Util7.a;
         long jNanoTime = System.nanoTime();

@@ -290,7 +290,7 @@ public class CmdReader<T> {
         return make((String[]) out.toArray(new String[out.size()]));
     }
 
-    public T make(String[] in) throws IllegalAccessException, NoSuchMethodException, SecurityException, InvalidCommandLineException, IllegalArgumentException {
+    public T make(String[] in) throws SecurityException, InvalidCommandLineException, IllegalArgumentException {
         T obj = construct();
         if (in == null) {
             in = new String[0];
@@ -373,7 +373,7 @@ public class CmdReader<T> {
             this.val$obj = obj;
         }
 
-        void handle(ParseItem item, String value) throws IllegalAccessException, IllegalArgumentException {
+        void handle(ParseItem item, String value) throws IllegalArgumentException {
             item.set(this.val$obj, value);
             this.used.add(item);
         }
@@ -459,7 +459,7 @@ public class CmdReader<T> {
         }
     }
 
-    private T construct() throws NoSuchMethodException, SecurityException {
+    private T construct() throws SecurityException {
         try {
             Constructor<T> constructor = this.settingsDescriptor.getDeclaredConstructor(new Class[0]);
             constructor.setAccessible(true);

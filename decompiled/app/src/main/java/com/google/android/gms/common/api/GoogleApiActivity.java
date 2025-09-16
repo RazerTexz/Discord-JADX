@@ -57,7 +57,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
     }
 
     @Override // android.app.Activity
-    public void onCreate(@Nullable Bundle bundle) throws IntentSender.SendIntentException {
+    public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
         if (bundle != null) {
             this.k = bundle.getInt("resolution");

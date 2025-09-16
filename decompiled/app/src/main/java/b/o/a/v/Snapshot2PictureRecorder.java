@@ -66,7 +66,7 @@ public class Snapshot2PictureRecorder extends SnapshotGlPictureRecorder {
         }
 
         @Override // b.o.a.n.o.BaseAction
-        public void j(@NonNull ActionHolder actionHolder) throws CameraAccessException {
+        public void j(@NonNull ActionHolder actionHolder) {
             this.c = actionHolder;
             SnapshotPictureRecorder.m.a(1, "FlashAction:", "Parameters locked, opening torch.");
             ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.FLASH_MODE, 2);

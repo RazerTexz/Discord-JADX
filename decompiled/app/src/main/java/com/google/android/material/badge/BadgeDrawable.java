@@ -34,12 +34,10 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.resources.TextAppearance;
 import com.google.android.material.shape.MaterialShapeDrawable;
-import java.io.IOException;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 import java.text.NumberFormat;
-import org.xmlpull.v1.XmlPullParserException;
 
 /* loaded from: classes3.dex */
 public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDrawableDelegate {
@@ -163,7 +161,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     }
 
     @NonNull
-    public static BadgeDrawable createFromResource(@NonNull Context context, @XmlRes int i) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    public static BadgeDrawable createFromResource(@NonNull Context context, @XmlRes int i) {
         AttributeSet drawableXml = DrawableUtils.parseDrawableXml(context, i, "badge");
         int styleAttribute = drawableXml.getStyleAttribute();
         if (styleAttribute == 0) {

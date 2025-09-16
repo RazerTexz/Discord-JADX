@@ -35,7 +35,6 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.view.AbsSavedState;
 import androidx.customview.widget.ViewDragHelper;
 import b.d.b.a.outline;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -458,7 +457,7 @@ public class DrawerLayout extends ViewGroup {
         return this.mChildHitRect.contains((int) f, (int) f2);
     }
 
-    private boolean mirror(Drawable drawable, int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private boolean mirror(Drawable drawable, int i) throws SecurityException {
         if (drawable == null || !DrawableCompat.isAutoMirrored(drawable)) {
             return false;
         }
@@ -466,7 +465,7 @@ public class DrawerLayout extends ViewGroup {
         return true;
     }
 
-    private Drawable resolveLeftShadow() throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private Drawable resolveLeftShadow() throws SecurityException {
         int layoutDirection = ViewCompat.getLayoutDirection(this);
         if (layoutDirection == 0) {
             Drawable drawable = this.mShadowStart;
@@ -484,7 +483,7 @@ public class DrawerLayout extends ViewGroup {
         return this.mShadowLeft;
     }
 
-    private Drawable resolveRightShadow() throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private Drawable resolveRightShadow() throws SecurityException {
         int layoutDirection = ViewCompat.getLayoutDirection(this);
         if (layoutDirection == 0) {
             Drawable drawable = this.mShadowEnd;

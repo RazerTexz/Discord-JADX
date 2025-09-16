@@ -125,13 +125,13 @@ public class ConstraintLayoutStates {
         }
     }
 
-    public ConstraintLayoutStates(Context context, ConstraintLayout constraintLayout, int i) throws XmlPullParserException, Resources.NotFoundException, IOException, NumberFormatException {
+    public ConstraintLayoutStates(Context context, ConstraintLayout constraintLayout, int i) throws Resources.NotFoundException, NumberFormatException {
         this.mConstraintLayout = constraintLayout;
         load(context, i);
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    private void load(Context context, int i) throws XmlPullParserException, Resources.NotFoundException, IOException, NumberFormatException {
+    private void load(Context context, int i) throws Resources.NotFoundException, NumberFormatException {
         XmlResourceParser xml = context.getResources().getXml(i);
         State state = null;
         try {
@@ -197,7 +197,7 @@ public class ConstraintLayoutStates {
         }
     }
 
-    private void parseConstraintSet(Context context, XmlPullParser xmlPullParser) throws XmlPullParserException, NumberFormatException, IOException {
+    private void parseConstraintSet(Context context, XmlPullParser xmlPullParser) throws NumberFormatException {
         ConstraintSet constraintSet = new ConstraintSet();
         int attributeCount = xmlPullParser.getAttributeCount();
         for (int i = 0; i < attributeCount; i++) {

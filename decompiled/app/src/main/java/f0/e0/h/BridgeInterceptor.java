@@ -32,7 +32,7 @@ public final class BridgeInterceptor implements Interceptor {
     }
 
     @Override // okhttp3.Interceptor
-    public Response intercept(Interceptor.Chain chain) throws IOException, NumberFormatException {
+    public Response intercept(Interceptor.Chain chain) throws IOException {
         boolean z2;
         ResponseBody responseBody;
         Intrinsics3.checkParameterIsNotNull(chain, "chain");

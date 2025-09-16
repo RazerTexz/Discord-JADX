@@ -1,7 +1,6 @@
 package lombok.javac;
 
 import com.sun.tools.javac.tree.JCTree;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import lombok.permit.Permit;
 
@@ -17,7 +16,7 @@ public class PackageName {
         }
     }
 
-    public static String getPackageName(JCTree.JCCompilationUnit cu) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static String getPackageName(JCTree.JCCompilationUnit cu) {
         JCTree t = getPackageNode(cu);
         if (t != null) {
             return t.toString();
@@ -25,7 +24,7 @@ public class PackageName {
         return null;
     }
 
-    public static JCTree getPackageNode(JCTree.JCCompilationUnit cu) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static JCTree getPackageNode(JCTree.JCCompilationUnit cu) {
         if (packageNameMethod != null) {
             try {
                 Object pkg = packageNameMethod.invoke(cu, new Object[0]);

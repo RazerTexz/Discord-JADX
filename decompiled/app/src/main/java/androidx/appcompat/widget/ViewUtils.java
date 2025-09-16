@@ -30,7 +30,7 @@ public class ViewUtils {
     private ViewUtils() {
     }
 
-    public static void computeFitSystemWindows(View view, Rect rect, Rect rect2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void computeFitSystemWindows(View view, Rect rect, Rect rect2) {
         Method method = sComputeFitSystemWindowsMethod;
         if (method != null) {
             try {
@@ -45,7 +45,7 @@ public class ViewUtils {
         return ViewCompat.getLayoutDirection(view) == 1;
     }
 
-    public static void makeOptionalFitsSystemWindows(View view) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void makeOptionalFitsSystemWindows(View view) throws SecurityException, IllegalArgumentException {
         try {
             Method method = view.getClass().getMethod("makeOptionalFitsSystemWindows", new Class[0]);
             if (!method.isAccessible()) {

@@ -33,7 +33,7 @@ public class CommentCollectingParserFactory extends ParserFactory {
         return (JavacParser) x2;
     }
 
-    public static void setInCompiler(JavaCompiler compiler, Context context) throws IllegalAccessException, IllegalArgumentException {
+    public static void setInCompiler(JavaCompiler compiler, Context context) {
         context.put(key(), (Object) null);
         try {
             Field field = Permit.getField(JavaCompiler.class, "parserFactory");

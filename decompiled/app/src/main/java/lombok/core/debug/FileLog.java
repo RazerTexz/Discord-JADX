@@ -15,11 +15,11 @@ public class FileLog {
         return fos;
     }
 
-    public static void log(String message) throws IOException {
+    public static void log(String message) {
         log(message, null);
     }
 
-    public static synchronized void log(String message, Throwable t) throws IOException {
+    public static synchronized void log(String message, Throwable t) {
         try {
             if (fos == null) {
                 fos = new FileOutputStream(new File(System.getProperty("user.home"), "LOMBOK-DEBUG-OUT.txt"));

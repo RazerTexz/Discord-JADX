@@ -32,7 +32,6 @@ import androidx.core.view.PointerIconCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.PopupWindowCompat;
 import b.d.b.a.outline;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /* loaded from: classes.dex */
@@ -106,7 +105,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void run() throws IllegalArgumentException {
             View anchorView = ListPopupWindow.this.getAnchorView();
             if (anchorView == null || anchorView.getWindowToken() == null) {
                 return;
@@ -149,7 +148,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // android.database.DataSetObserver
-        public void onChanged() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onChanged() throws IllegalArgumentException {
             if (ListPopupWindow.this.isShowing()) {
                 ListPopupWindow.this.show();
             }
@@ -170,7 +169,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // android.widget.AbsListView.OnScrollListener
-        public void onScrollStateChanged(AbsListView absListView, int i) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onScrollStateChanged(AbsListView absListView, int i) throws IllegalArgumentException {
             if (i != 1 || ListPopupWindow.this.isInputMethodNotNeeded() || ListPopupWindow.this.mPopup.getContentView() == null) {
                 return;
             }
@@ -209,7 +208,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void run() throws IllegalArgumentException {
             DropDownListView dropDownListView = ListPopupWindow.this.mDropDownList;
             if (dropDownListView == null || !ViewCompat.isAttachedToWindow(dropDownListView) || ListPopupWindow.this.mDropDownList.getCount() <= ListPopupWindow.this.mDropDownList.getChildCount()) {
                 return;
@@ -380,7 +379,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
     }
 
-    private void setPopupClipToScreenEnabled(boolean z2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void setPopupClipToScreenEnabled(boolean z2) {
         if (Build.VERSION.SDK_INT > 28) {
             this.mPopup.setIsClippedToScreen(z2);
             return;
@@ -529,7 +528,7 @@ public class ListPopupWindow implements ShowableListMenu {
         return this.mPopup.isShowing();
     }
 
-    public boolean onKeyDown(int i, @NonNull KeyEvent keyEvent) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public boolean onKeyDown(int i, @NonNull KeyEvent keyEvent) throws IllegalArgumentException {
         if (isShowing() && i != 62 && (this.mDropDownList.getSelectedItemPosition() >= 0 || !isConfirmKey(i))) {
             int selectedItemPosition = this.mDropDownList.getSelectedItemPosition();
             boolean z2 = !this.mPopup.isAboveAnchor();
@@ -732,7 +731,7 @@ public class ListPopupWindow implements ShowableListMenu {
         this.mPromptPosition = i;
     }
 
-    public void setPromptView(@Nullable View view) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setPromptView(@Nullable View view) throws IllegalArgumentException {
         boolean zIsShowing = isShowing();
         if (zIsShowing) {
             removePromptView();
@@ -773,7 +772,7 @@ public class ListPopupWindow implements ShowableListMenu {
     }
 
     @Override // androidx.appcompat.view.menu.ShowableListMenu
-    public void show() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void show() throws IllegalArgumentException {
         int iBuildDropDown = buildDropDown();
         boolean zIsInputMethodNotNeeded = isInputMethodNotNeeded();
         PopupWindowCompat.setWindowLayoutType(this.mPopup, this.mDropDownWindowLayoutType);

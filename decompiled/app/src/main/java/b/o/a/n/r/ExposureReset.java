@@ -1,6 +1,5 @@
 package b.o.a.n.r;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -26,7 +25,7 @@ public class ExposureReset extends BaseReset {
     }
 
     @Override // b.o.a.n.o.BaseAction, b.o.a.n.o.Action2
-    public void b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) throws CameraAccessException {
+    public void b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
         if (this.f1935b == 0) {
             ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AE_LOCK, Boolean.FALSE);
             ((Camera2Engine) actionHolder).k1();
@@ -35,7 +34,7 @@ public class ExposureReset extends BaseReset {
     }
 
     @Override // b.o.a.n.r.BaseReset
-    public void m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) throws CameraAccessException {
+    public void m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) {
         int iIntValue = ((Integer) k(CameraCharacteristics.CONTROL_MAX_REGIONS_AE, 0)).intValue();
         if (meteringRectangle != null && iIntValue > 0) {
             ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AE_REGIONS, new MeteringRectangle[]{meteringRectangle});

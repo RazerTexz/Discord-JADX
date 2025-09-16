@@ -13,7 +13,7 @@ public final class CancellationSignal {
         void onCancel();
     }
 
-    private void waitForCancelFinishedLocked() throws InterruptedException {
+    private void waitForCancelFinishedLocked() {
         while (this.mCancelInProgress) {
             try {
                 wait();

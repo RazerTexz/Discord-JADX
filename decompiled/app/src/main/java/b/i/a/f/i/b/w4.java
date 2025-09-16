@@ -1,7 +1,6 @@
 package b.i.a.f.i.b;
 
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -26,7 +25,7 @@ public final class w4 implements Runnable {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void run() throws IllegalStateException, Resources.NotFoundException, PackageManager.NameNotFoundException, ClassNotFoundException {
+    public final void run() throws IllegalStateException, Resources.NotFoundException {
         d dVarG;
         String strConcat;
         s3 s3Var;

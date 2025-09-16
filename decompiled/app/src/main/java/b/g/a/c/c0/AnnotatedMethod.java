@@ -140,7 +140,7 @@ public final class AnnotatedMethod extends AnnotatedWithParams implements Serial
         return clsArr[i];
     }
 
-    public Object readResolve() throws NoSuchMethodException, SecurityException {
+    public Object readResolve() {
         a aVar = this._serialization;
         Class<?> cls = aVar.clazz;
         try {

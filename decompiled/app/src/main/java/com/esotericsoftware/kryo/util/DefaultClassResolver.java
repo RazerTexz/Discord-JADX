@@ -8,7 +8,6 @@ import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Registration;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
-import java.io.IOException;
 
 /* loaded from: classes.dex */
 public class DefaultClassResolver implements ClassResolver {
@@ -70,7 +69,7 @@ public class DefaultClassResolver implements ClassResolver {
         return registration;
     }
 
-    public Registration readName(Input input) throws ClassNotFoundException, KryoException {
+    public Registration readName(Input input) throws KryoException {
         int varInt = input.readVarInt(true);
         if (this.nameIdToClass == null) {
             this.nameIdToClass = new IntMap<>();
@@ -149,7 +148,7 @@ public class DefaultClassResolver implements ClassResolver {
     }
 
     @Override // com.esotericsoftware.kryo.ClassResolver
-    public Registration writeClass(Output output, Class cls) throws IOException, KryoException {
+    public Registration writeClass(Output output, Class cls) throws KryoException {
         if (cls == null) {
             Log.a aVar = Log.a;
             output.writeVarInt(0, true);
@@ -165,7 +164,7 @@ public class DefaultClassResolver implements ClassResolver {
         return registration;
     }
 
-    public void writeName(Output output, Class cls, Registration registration) throws IOException, KryoException {
+    public void writeName(Output output, Class cls, Registration registration) throws KryoException {
         int i;
         output.writeVarInt(1, true);
         IdentityObjectIntMap<Class> identityObjectIntMap = this.classToNameId;

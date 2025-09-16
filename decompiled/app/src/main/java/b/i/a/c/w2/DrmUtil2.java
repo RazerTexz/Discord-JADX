@@ -18,7 +18,7 @@ public final class DrmUtil2 {
     }
 
     @DoNotInline
-    public static int b(Throwable th) throws NumberFormatException {
+    public static int b(Throwable th) {
         String[] strArrSplit;
         int length;
         String diagnosticInfo = ((MediaDrm.MediaDrmStateException) th).getDiagnosticInfo();

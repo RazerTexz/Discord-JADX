@@ -9,7 +9,6 @@ import com.esotericsoftware.kryo.io.Output;
 import d0.d0._Ranges;
 import d0.t.Iterators4;
 import d0.z.d.Intrinsics3;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import kotlin.Metadata;
@@ -24,7 +23,7 @@ public final class SnowflakePartitionMapSerializer extends Serializer<SnowflakeP
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, SnowflakePartitionMap<?> snowflakePartitionMap) throws IOException, KryoException {
+    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, SnowflakePartitionMap<?> snowflakePartitionMap) throws KryoException {
         write2(kryo, output, snowflakePartitionMap);
     }
 
@@ -46,7 +45,7 @@ public final class SnowflakePartitionMapSerializer extends Serializer<SnowflakeP
     }
 
     /* renamed from: write, reason: avoid collision after fix types in other method */
-    public void write2(Kryo kryo, Output output, SnowflakePartitionMap<?> target) throws IOException, KryoException {
+    public void write2(Kryo kryo, Output output, SnowflakePartitionMap<?> target) throws KryoException {
         Intrinsics3.checkNotNullParameter(kryo, "kryo");
         Intrinsics3.checkNotNullParameter(output, "output");
         Intrinsics3.checkNotNullParameter(target, "target");

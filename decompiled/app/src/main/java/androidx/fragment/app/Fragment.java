@@ -1965,7 +1965,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
 
     @NonNull
     @Deprecated
-    public static Fragment instantiate(@NonNull Context context, @NonNull String str, @Nullable Bundle bundle) throws IllegalAccessException, java.lang.InstantiationException, IllegalArgumentException, InvocationTargetException {
+    public static Fragment instantiate(@NonNull Context context, @NonNull String str, @Nullable Bundle bundle) throws IllegalArgumentException {
         try {
             Fragment fragmentNewInstance = FragmentFactory.loadFragmentClass(context.getClassLoader(), str).getConstructor(new Class[0]).newInstance(new Object[0]);
             if (bundle != null) {

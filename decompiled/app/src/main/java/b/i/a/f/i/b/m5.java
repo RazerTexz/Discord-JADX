@@ -1,7 +1,6 @@
 package b.i.a.f.i.b;
 
 import com.google.android.gms.measurement.internal.zzaq;
-import java.io.IOException;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
 /* loaded from: classes3.dex */
@@ -17,7 +16,7 @@ public final class m5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IOException {
+    public final void run() throws IllegalStateException {
         this.l.a.R();
         this.l.a.m(this.j, this.k);
     }

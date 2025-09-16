@@ -37,7 +37,7 @@ public final class FormatPreferences {
         this(preferences, null, null);
     }
 
-    public FormatPreferences(Map<String, String> preferences, String indent, Boolean filledEmpties) throws NumberFormatException {
+    public FormatPreferences(Map<String, String> preferences, String indent, Boolean filledEmpties) {
         this.rawMap = preferences;
         preferences = preferences == null ? Collections.emptyMap() : preferences;
         String indent_ = preferences.get("indent");

@@ -66,7 +66,7 @@ public class RawDocumentFile extends DocumentFile {
 
     @Override // androidx.documentfile.provider.DocumentFile
     @Nullable
-    public DocumentFile createFile(String str, String str2) throws IOException {
+    public DocumentFile createFile(String str, String str2) {
         String extensionFromMimeType = MimeTypeMap.getSingleton().getExtensionFromMimeType(str);
         if (extensionFromMimeType != null) {
             str2 = outline.y(str2, ".", extensionFromMimeType);

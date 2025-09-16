@@ -637,7 +637,7 @@ public class ConstraintSet {
             this.mBarrierAllowsGoneWidgets = layout.mBarrierAllowsGoneWidgets;
         }
 
-        public void dump(MotionScene motionScene, StringBuilder sb) throws IllegalAccessException, IllegalArgumentException {
+        public void dump(MotionScene motionScene, StringBuilder sb) throws IllegalArgumentException {
             Field[] declaredFields = getClass().getDeclaredFields();
             sb.append("\n");
             for (Field field : declaredFields) {
@@ -1216,7 +1216,7 @@ public class ConstraintSet {
         }
     }
 
-    private int[] convertReferenceString(View view, String str) throws IllegalAccessException, IllegalArgumentException {
+    private int[] convertReferenceString(View view, String str) {
         int iIntValue;
         Object designInformation;
         String[] strArrSplit = str.split(",");
@@ -2134,7 +2134,7 @@ public class ConstraintSet {
         connect(iArr[iArr.length - 1], 4, i3, i4, 0);
     }
 
-    public void dump(MotionScene motionScene, int... iArr) throws IllegalAccessException, IllegalArgumentException {
+    public void dump(MotionScene motionScene, int... iArr) throws IllegalArgumentException {
         HashSet hashSet;
         Set<Integer> setKeySet = this.mConstraints.keySet();
         if (iArr.length != 0) {
@@ -2768,7 +2768,7 @@ public class ConstraintSet {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void load(Context context, XmlPullParser xmlPullParser) throws XmlPullParserException, IOException {
+    public void load(Context context, XmlPullParser xmlPullParser) {
         Constraint constraintFillFromAttributeList;
         try {
             int eventType = xmlPullParser.getEventType();

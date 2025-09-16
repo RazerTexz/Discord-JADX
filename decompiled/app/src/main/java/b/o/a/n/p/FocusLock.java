@@ -1,6 +1,5 @@
 package b.o.a.n.p;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -58,7 +57,7 @@ public class FocusLock extends BaseLock {
     }
 
     @Override // b.o.a.n.p.BaseLock
-    public void o(@NonNull ActionHolder actionHolder) throws CameraAccessException {
+    public void o(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AF_MODE, 1);
         Camera2Engine camera2Engine = (Camera2Engine) actionHolder;
         camera2Engine.f1921i0.set(CaptureRequest.CONTROL_AF_TRIGGER, 2);

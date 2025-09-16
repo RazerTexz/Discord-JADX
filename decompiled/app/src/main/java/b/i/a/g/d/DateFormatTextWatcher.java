@@ -58,7 +58,7 @@ public abstract class DateFormatTextWatcher extends TextWatcherAdapter {
     public abstract void b(@Nullable Long l);
 
     @Override // com.google.android.material.internal.TextWatcherAdapter, android.text.TextWatcher
-    public void onTextChanged(@NonNull CharSequence charSequence, int i, int i2, int i3) throws ParseException {
+    public void onTextChanged(@NonNull CharSequence charSequence, int i, int i2, int i3) {
         this.j.removeCallbacks(this.n);
         this.j.removeCallbacks(this.o);
         this.j.setError(null);

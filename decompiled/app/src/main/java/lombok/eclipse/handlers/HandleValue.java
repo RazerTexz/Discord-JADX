@@ -1,6 +1,5 @@
 package lombok.eclipse.handlers;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collections;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
@@ -25,7 +24,7 @@ public class HandleValue extends EclipseAnnotationHandler<Value> {
     private HandleConstructor handleConstructor = new HandleConstructor();
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Value> annotation, Annotation ast, EclipseNode annotationNode) throws IllegalAccessException, InstantiationException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<Value> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.VALUE_FLAG_USAGE, "@Value");
         Value ann = annotation.getInstance();
         EclipseNode typeNode = annotationNode.up();

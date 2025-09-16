@@ -1,6 +1,5 @@
 package b.o.a.n.p;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -51,7 +50,7 @@ public class ExposureLock extends BaseLock {
     }
 
     @Override // b.o.a.n.p.BaseLock
-    public void o(@NonNull ActionHolder actionHolder) throws CameraAccessException {
+    public void o(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER, Integer.valueOf(Build.VERSION.SDK_INT >= 23 ? 2 : 0));
         Camera2Engine camera2Engine = (Camera2Engine) actionHolder;
         camera2Engine.f1921i0.set(CaptureRequest.CONTROL_AE_LOCK, Boolean.TRUE);

@@ -1,7 +1,6 @@
 package f0.e0.j;
 
 import f0.e0.f.Task2;
-import java.io.IOException;
 
 /* compiled from: TaskQueue.kt */
 /* renamed from: f0.e0.j.k, reason: use source file name */
@@ -16,7 +15,7 @@ public final class TaskQueue8 extends Task2 {
     }
 
     @Override // f0.e0.f.Task2
-    public long a() throws IOException {
+    public long a() {
         this.e.q(false, 2, 0);
         return -1L;
     }

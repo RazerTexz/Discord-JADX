@@ -3,7 +3,6 @@ package androidx.view;
 import androidx.annotation.NonNull;
 import androidx.view.ClassesInfoCache;
 import androidx.view.Lifecycle;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class ReflectiveGenericLifecycleObserver implements LifecycleEventObserver {
@@ -16,7 +15,7 @@ public class ReflectiveGenericLifecycleObserver implements LifecycleEventObserve
     }
 
     @Override // androidx.view.LifecycleEventObserver
-    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws IllegalArgumentException {
         this.mInfo.invokeCallbacks(lifecycleOwner, event, this.mWrapped);
     }
 }

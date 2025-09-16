@@ -170,7 +170,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    public DecoderReuseEvaluation K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22) throws NumberFormatException {
+    public DecoderReuseEvaluation K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22) {
         DecoderReuseEvaluation decoderReuseEvaluationC = mediaCodecInfo.c(format2, format22);
         int i = decoderReuseEvaluationC.e;
         if (C0(mediaCodecInfo, format22) > this.Q0) {
@@ -492,7 +492,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    public int y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException, NumberFormatException {
+    public int y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException {
         if (!MimeTypes.h(format2.w)) {
             return 0;
         }

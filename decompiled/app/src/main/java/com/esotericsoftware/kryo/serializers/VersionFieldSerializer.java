@@ -7,7 +7,6 @@ import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
-import java.io.IOException;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -79,7 +78,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, T t) throws IOException, KryoException {
+    public void write(Kryo kryo, Output output, T t) throws KryoException {
         FieldSerializer.CachedField[] fields = getFields();
         output.writeVarInt(this.typeVersion, true);
         for (FieldSerializer.CachedField cachedField : fields) {

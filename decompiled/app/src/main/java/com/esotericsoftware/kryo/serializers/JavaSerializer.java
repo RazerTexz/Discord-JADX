@@ -52,7 +52,7 @@ public class JavaSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws IOException {
+    public void write(Kryo kryo, Output output, Object obj) {
         try {
             ObjectMap graphContext = kryo.getGraphContext();
             ObjectOutputStream objectOutputStream = (ObjectOutputStream) graphContext.get(this);

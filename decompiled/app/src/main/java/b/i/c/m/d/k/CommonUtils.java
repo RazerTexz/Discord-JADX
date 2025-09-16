@@ -104,7 +104,7 @@ public class CommonUtils {
         return activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
     }
 
-    public static void c(Closeable closeable, String str) throws IOException {
+    public static void c(Closeable closeable, String str) {
         if (closeable != null) {
             try {
                 closeable.close();
@@ -235,7 +235,7 @@ public class CommonUtils {
         return null;
     }
 
-    public static boolean j(Context context, String str, boolean z2) throws Resources.NotFoundException {
+    public static boolean j(Context context, String str, boolean z2) {
         Resources resources;
         if (context != null && (resources = context.getResources()) != null) {
             int iN = n(context, str, "bool");
@@ -262,7 +262,7 @@ public class CommonUtils {
         return z2 ? i | 4 : i;
     }
 
-    public static String l(Context context) throws Resources.NotFoundException {
+    public static String l(Context context) {
         int iN = n(context, "com.google.firebase.crashlytics.mapping_file_id", "string");
         if (iN == 0) {
             iN = n(context, "com.crashlytics.android.build_id", "string");
@@ -277,7 +277,7 @@ public class CommonUtils {
         return (s(context) || ((SensorManager) context.getSystemService("sensor")).getDefaultSensor(8) == null) ? false : true;
     }
 
-    public static int n(Context context, String str, String str2) throws Resources.NotFoundException {
+    public static int n(Context context, String str, String str2) {
         String packageName;
         Resources resources = context.getResources();
         int i = context.getApplicationContext().getApplicationInfo().icon;
@@ -370,7 +370,7 @@ public class CommonUtils {
         throw new IllegalArgumentException("value must be zero or greater");
     }
 
-    public static String w(String str) throws NoSuchAlgorithmException {
+    public static String w(String str) {
         byte[] bytes = str.getBytes();
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(Constants.SHA1);

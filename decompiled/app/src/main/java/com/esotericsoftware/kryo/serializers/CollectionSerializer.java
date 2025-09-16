@@ -5,7 +5,6 @@ import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
-import java.io.IOException;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -72,7 +71,7 @@ public class CollectionSerializer extends Serializer<Collection> {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Collection collection) throws IOException, KryoException {
+    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Collection collection) throws KryoException {
         write2(kryo, output, collection);
     }
 
@@ -127,7 +126,7 @@ public class CollectionSerializer extends Serializer<Collection> {
     }
 
     /* renamed from: write, reason: avoid collision after fix types in other method */
-    public void write2(Kryo kryo, Output output, Collection collection) throws IOException, KryoException {
+    public void write2(Kryo kryo, Output output, Collection collection) throws KryoException {
         output.writeVarInt(collection.size(), true);
         Serializer serializer = this.serializer;
         Class cls = this.genericType;

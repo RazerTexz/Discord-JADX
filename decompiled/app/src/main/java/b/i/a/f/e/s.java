@@ -2,7 +2,6 @@ package b.i.a.f.e;
 
 import com.adjust.sdk.Constants;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 import java.util.concurrent.Callable;
 
@@ -20,7 +19,7 @@ public final /* synthetic */ class s implements Callable {
     }
 
     @Override // java.util.concurrent.Callable
-    public final Object call() throws NoSuchAlgorithmException {
+    public final Object call() {
         boolean z2 = this.j;
         String str = this.k;
         x xVar = this.l;

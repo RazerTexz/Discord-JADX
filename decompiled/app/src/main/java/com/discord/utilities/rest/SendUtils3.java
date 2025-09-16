@@ -10,7 +10,6 @@ import com.lytefast.flexinput.model.Attachment;
 import d0.t._Collections;
 import d0.y.Closeable;
 import d0.z.d.Intrinsics3;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +35,7 @@ public final /* data */ class SendUtils3 {
         private Companion() {
         }
 
-        private final boolean isUriValid(Uri uri, ContentResolver contentResolver) throws FileNotFoundException {
+        private final boolean isUriValid(Uri uri, ContentResolver contentResolver) {
             try {
                 InputStream inputStreamOpenInputStream = contentResolver.openInputStream(uri);
                 if (inputStreamOpenInputStream != null) {

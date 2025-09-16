@@ -23,7 +23,6 @@ import androidx.annotation.Nullable;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
 import com.discord.models.domain.ModelAuditLogEntry;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 /* loaded from: classes.dex */
@@ -117,12 +116,12 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
             set2(viewBounds, pointF);
         }
 
         /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(ViewBounds viewBounds, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void set2(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
             viewBounds.setTopLeft(pointF);
         }
     }
@@ -144,12 +143,12 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
             set2(viewBounds, pointF);
         }
 
         /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(ViewBounds viewBounds, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void set2(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
             viewBounds.setBottomRight(pointF);
         }
     }
@@ -171,12 +170,12 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
             set2(view, pointF);
         }
 
         /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(View view, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void set2(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
             ViewUtils.setLeftTopRightBottom(view, view.getLeft(), view.getTop(), Math.round(pointF.x), Math.round(pointF.y));
         }
     }
@@ -198,12 +197,12 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
             set2(view, pointF);
         }
 
         /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(View view, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void set2(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
             ViewUtils.setLeftTopRightBottom(view, Math.round(pointF.x), Math.round(pointF.y), view.getRight(), view.getBottom());
         }
     }
@@ -225,12 +224,12 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
             set2(view, pointF);
         }
 
         /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(View view, PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void set2(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
             int iRound = Math.round(pointF.x);
             int iRound2 = Math.round(pointF.y);
             ViewUtils.setLeftTopRightBottom(view, iRound, iRound2, view.getWidth() + iRound, view.getHeight() + iRound2);
@@ -273,7 +272,7 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-        public void onAnimationEnd(Animator animator) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onAnimationEnd(Animator animator) throws SecurityException, IllegalArgumentException {
             if (this.mIsCanceled) {
                 return;
             }
@@ -329,13 +328,13 @@ public class ChangeBounds extends Transition {
             this.mView = view;
         }
 
-        private void setLeftTopRightBottom() throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        private void setLeftTopRightBottom() throws SecurityException, IllegalArgumentException {
             ViewUtils.setLeftTopRightBottom(this.mView, this.mLeft, this.mTop, this.mRight, this.mBottom);
             this.mTopLeftCalls = 0;
             this.mBottomRightCalls = 0;
         }
 
-        public void setBottomRight(PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void setBottomRight(PointF pointF) throws SecurityException, IllegalArgumentException {
             this.mRight = Math.round(pointF.x);
             this.mBottom = Math.round(pointF.y);
             int i = this.mBottomRightCalls + 1;
@@ -345,7 +344,7 @@ public class ChangeBounds extends Transition {
             }
         }
 
-        public void setTopLeft(PointF pointF) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void setTopLeft(PointF pointF) throws SecurityException, IllegalArgumentException {
             this.mLeft = Math.round(pointF.x);
             this.mTop = Math.round(pointF.y);
             int i = this.mTopLeftCalls + 1;
@@ -406,7 +405,7 @@ public class ChangeBounds extends Transition {
 
     @Override // androidx.transition.Transition
     @Nullable
-    public Animator createAnimator(@NonNull ViewGroup viewGroup, @Nullable TransitionValues transitionValues, @Nullable TransitionValues transitionValues2) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public Animator createAnimator(@NonNull ViewGroup viewGroup, @Nullable TransitionValues transitionValues, @Nullable TransitionValues transitionValues2) throws SecurityException, IllegalArgumentException {
         int i;
         View view;
         int i2;

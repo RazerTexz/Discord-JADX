@@ -96,7 +96,7 @@ public final class AnnotatedConstructor extends AnnotatedWithParams {
         return this.j.a(genericParameterTypes[i]);
     }
 
-    public Object readResolve() throws NoSuchMethodException, SecurityException {
+    public Object readResolve() {
         a aVar = this._serialization;
         Class<?> cls = aVar.clazz;
         try {

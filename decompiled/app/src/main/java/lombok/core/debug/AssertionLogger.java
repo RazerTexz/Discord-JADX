@@ -2,7 +2,6 @@ package lombok.core.debug;
 
 import com.adjust.sdk.Constants;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -44,7 +43,7 @@ public class AssertionLogger {
         return new String(ID);
     }
 
-    private static synchronized void logToFile(String msg) throws IOException {
+    private static synchronized void logToFile(String msg) {
         if (msg == null) {
             return;
         }
@@ -57,7 +56,7 @@ public class AssertionLogger {
         }
     }
 
-    private static void logIntro() throws IOException {
+    private static void logIntro() {
         String version;
         if (loggedIntro.getAndSet(true)) {
             return;
@@ -70,7 +69,7 @@ public class AssertionLogger {
         logToFile(String.format("{%s} [%s -- START %s]\n", PROCESS_ID, new Date(), version));
     }
 
-    public static <T extends Throwable> T assertLog(String message, T throwable) throws IOException {
+    public static <T extends Throwable> T assertLog(String message, T throwable) {
         if (LOG_PATH == null) {
             return throwable;
         }
@@ -90,7 +89,7 @@ public class AssertionLogger {
         return throwable;
     }
 
-    public static void assertLog(String message) throws IOException {
+    public static void assertLog(String message) {
         if (LOG_PATH == null) {
             return;
         }

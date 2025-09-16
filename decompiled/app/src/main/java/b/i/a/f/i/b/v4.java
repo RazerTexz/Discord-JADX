@@ -46,7 +46,7 @@ public final class v4 extends Thread {
     }
 
     @Override // java.lang.Thread, java.lang.Runnable
-    public final void run() throws InterruptedException {
+    public final void run() {
         boolean z2 = false;
         while (!z2) {
             try {

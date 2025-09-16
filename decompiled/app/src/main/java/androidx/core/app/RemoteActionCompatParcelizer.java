@@ -4,7 +4,6 @@ import android.app.PendingIntent;
 import androidx.annotation.RestrictTo;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.versionedparcelable.VersionedParcel;
-import java.lang.reflect.InvocationTargetException;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
@@ -20,7 +19,7 @@ public class RemoteActionCompatParcelizer {
         return remoteActionCompat;
     }
 
-    public static void write(RemoteActionCompat remoteActionCompat, VersionedParcel versionedParcel) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void write(RemoteActionCompat remoteActionCompat, VersionedParcel versionedParcel) throws IllegalArgumentException {
         versionedParcel.setSerializationFlags(false, false);
         versionedParcel.writeVersionedParcelable(remoteActionCompat.mIcon, 1);
         versionedParcel.writeCharSequence(remoteActionCompat.mTitle, 2);

@@ -729,7 +729,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    public void r(String str, String str2) throws MediaEngineConnection.FailedConnectionException {
+    public void r(String str, String str2) {
         Object obj;
         Object next;
         Intrinsics3.checkNotNullParameter(str, "audioCodec");

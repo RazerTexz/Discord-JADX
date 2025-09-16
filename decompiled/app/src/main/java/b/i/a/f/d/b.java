@@ -63,7 +63,7 @@ public class b {
     }
 
     @AnyThread
-    public final Task<Bundle> b(Bundle bundle) throws RemoteException {
+    public final Task<Bundle> b(Bundle bundle) {
         String string;
         synchronized (b.class) {
             int i = a;

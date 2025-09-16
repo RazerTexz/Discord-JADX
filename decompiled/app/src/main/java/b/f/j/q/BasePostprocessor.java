@@ -17,7 +17,7 @@ public abstract class BasePostprocessor implements Postprocessor {
     public static final Bitmap.Config FALLBACK_BITMAP_CONFIGURATION = Bitmap.Config.ARGB_8888;
     private static Method sCopyBitmap;
 
-    private static void internalCopyBitmap(Bitmap bitmap, Bitmap bitmap2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void internalCopyBitmap(Bitmap bitmap, Bitmap bitmap2) throws IllegalArgumentException {
         if (!NativeCodeSetup.a || bitmap.getConfig() != bitmap2.getConfig()) {
             new Canvas(bitmap).drawBitmap(bitmap2, 0.0f, 0.0f, (Paint) null);
             return;
@@ -74,7 +74,7 @@ public abstract class BasePostprocessor implements Postprocessor {
     public void process(Bitmap bitmap) {
     }
 
-    public void process(Bitmap bitmap, Bitmap bitmap2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void process(Bitmap bitmap, Bitmap bitmap2) throws IllegalArgumentException {
         internalCopyBitmap(bitmap, bitmap2);
         process(bitmap);
     }

@@ -68,7 +68,7 @@ public class Installer {
         }
     }
 
-    public static boolean isSelf(String jar) throws IOException {
+    public static boolean isSelf(String jar) {
         String self = ClassRootFinder.findClassRootOfClass(Installer.class);
         if (self == null) {
             return false;
@@ -216,7 +216,7 @@ public class Installer {
         }
     }
 
-    public static int cliInstaller(boolean uninstall, List<String> rawArgs) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException {
+    public static int cliInstaller(boolean uninstall, List<String> rawArgs) throws SecurityException, IllegalArgumentException {
         CmdReader<CmdArgs> reader = CmdReader.of(CmdArgs.class);
         try {
             CmdArgs args = reader.make((String[]) rawArgs.toArray(new String[0]));

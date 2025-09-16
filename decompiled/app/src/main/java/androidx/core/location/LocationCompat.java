@@ -62,7 +62,7 @@ public final class LocationCompat {
         return Api18Impl.isMock(location);
     }
 
-    public static void setMock(@NonNull Location location, boolean z2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void setMock(@NonNull Location location, boolean z2) throws IllegalArgumentException {
         try {
             getSetIsFromMockProviderMethod().invoke(location, Boolean.valueOf(z2));
         } catch (IllegalAccessException e) {

@@ -285,7 +285,7 @@ public class Delombok {
         }
     }
 
-    public static void main(String[] rawArgs) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException {
+    public static void main(String[] rawArgs) throws SecurityException, IllegalArgumentException {
         try {
             rawArgs = fileExpand(rawArgs);
         } catch (IOException e) {
@@ -787,7 +787,7 @@ public class Delombok {
         }
     }
 
-    public boolean delombok() throws IllegalAccessException, ClassNotFoundException, IOException, IllegalArgumentException, InvocationTargetException {
+    public boolean delombok() throws IOException, IllegalArgumentException {
         JavaCompiler delegate;
         Writer rawWriter;
         LombokOptions options = LombokOptionsFactory.getDelombokOptions(this.context);
@@ -987,7 +987,7 @@ public class Delombok {
         }
     }
 
-    private static void callFlowMethodOnJavaCompiler(JavaCompiler compiler, Object arg) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void callFlowMethodOnJavaCompiler(JavaCompiler compiler, Object arg) {
         if (flowMethod == null) {
             try {
                 flowMethod = Permit.getMethod(JavaCompiler.class, "flow", Queue.class);

@@ -116,7 +116,7 @@ public final class TextViewCompat {
             return str == null || context.checkSelfPermission(str) == 0;
         }
 
-        private void recomputeProcessTextMenuItems(Menu menu) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+        private void recomputeProcessTextMenuItems(Menu menu) {
             Context context = this.mTextView.getContext();
             PackageManager packageManager = context.getPackageManager();
             if (!this.mInitializedMenuBuilderReferences) {
@@ -170,7 +170,7 @@ public final class TextViewCompat {
         }
 
         @Override // android.view.ActionMode.Callback
-        public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+        public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
             recomputeProcessTextMenuItems(menu);
             return this.mCallback.onPrepareActionMode(actionMode, menu);
         }
@@ -347,7 +347,7 @@ public final class TextViewCompat {
         return builder.build();
     }
 
-    private static Field retrieveField(String str) throws NoSuchFieldException {
+    private static Field retrieveField(String str) {
         Field declaredField = null;
         try {
             declaredField = TextView.class.getDeclaredField(str);

@@ -13,7 +13,7 @@ public class ViewUtilsApi23 extends ViewUtilsApi22 {
 
     @Override // androidx.transition.ViewUtilsBase
     @SuppressLint({"NewApi"})
-    public void setTransitionVisibility(@NonNull View view, int i) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public void setTransitionVisibility(@NonNull View view, int i) throws IllegalArgumentException {
         if (Build.VERSION.SDK_INT == 28) {
             super.setTransitionVisibility(view, i);
         } else if (sTryHiddenSetTransitionVisibility) {

@@ -106,7 +106,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         return iArr2;
     }
 
-    public boolean generateSetterForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelSetter, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public boolean generateSetterForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelSetter, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
         if (checkForTypeLevelSetter && EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Setter.class, typeNode)) {
             return true;
         }
@@ -133,7 +133,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         return true;
     }
 
-    public void generateSetterForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public void generateSetterForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
         if (EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Setter.class, fieldNode)) {
             return;
         }
@@ -141,7 +141,7 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Setter> annotation, Annotation ast, EclipseNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+    public void handle(AnnotationValues<Setter> annotation, Annotation ast, EclipseNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.SETTER_FLAG_USAGE, "@Setter");
         EclipseNode node = annotationNode.up();
         AccessLevel level = annotation.getInstance().value();
@@ -160,13 +160,13 @@ public class HandleSetter extends EclipseAnnotationHandler<Setter> {
         }
     }
 
-    public void createSetterForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public void createSetterForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
         for (EclipseNode fieldNode : fieldNodes) {
             createSetterForField(level, fieldNode, sourceNode, whineIfExists, onMethod, onParam);
         }
     }
 
-    public void createSetterForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public void createSetterForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<Annotation> onMethod, List<Annotation> onParam) throws IllegalArgumentException {
         ASTNode source = sourceNode.get();
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             sourceNode.addError("@Setter is only supported on a class or a field.");

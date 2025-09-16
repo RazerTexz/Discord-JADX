@@ -142,7 +142,7 @@ public final class CacheDataSink implements DataSink {
     }
 
     @Override // b.i.a.c.e3.DataSink
-    public void write(byte[] bArr, int i, int i2) throws IOException {
+    public void write(byte[] bArr, int i, int i2) throws CacheDataSinkException {
         DataSpec dataSpec = this.d;
         if (dataSpec == null) {
             return;

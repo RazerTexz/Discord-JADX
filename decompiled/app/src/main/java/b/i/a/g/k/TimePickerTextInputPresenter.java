@@ -45,7 +45,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.d, TimePicke
         }
 
         @Override // com.google.android.material.internal.TextWatcherAdapter, android.text.TextWatcher
-        public void afterTextChanged(Editable editable) throws NumberFormatException {
+        public void afterTextChanged(Editable editable) {
             try {
                 if (TextUtils.isEmpty(editable)) {
                     TimeModel timeModel = TimePickerTextInputPresenter.this.k;
@@ -69,7 +69,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.d, TimePicke
         }
 
         @Override // com.google.android.material.internal.TextWatcherAdapter, android.text.TextWatcher
-        public void afterTextChanged(Editable editable) throws NumberFormatException {
+        public void afterTextChanged(Editable editable) {
             try {
                 if (TextUtils.isEmpty(editable)) {
                     TimePickerTextInputPresenter.this.k.c(0);

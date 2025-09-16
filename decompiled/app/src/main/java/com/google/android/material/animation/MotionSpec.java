@@ -6,7 +6,6 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.Log;
 import android.util.Property;
@@ -54,7 +53,7 @@ public class MotionSpec {
     }
 
     @Nullable
-    public static MotionSpec createFromResource(@NonNull Context context, @AnimatorRes int i) throws Resources.NotFoundException {
+    public static MotionSpec createFromResource(@NonNull Context context, @AnimatorRes int i) {
         try {
             Animator animatorLoadAnimator = AnimatorInflater.loadAnimator(context, i);
             if (animatorLoadAnimator instanceof AnimatorSet) {

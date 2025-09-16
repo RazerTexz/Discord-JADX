@@ -3,7 +3,6 @@ package com.esotericsoftware.kryo.io;
 import com.discord.api.permission.Permission;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.util.UnsafeUtil;
-import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -21,7 +20,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
         this.bufaddress = this.niobuffer.address();
     }
 
-    private final void writeLittleEndianInt(int i) throws IOException, KryoException {
+    private final void writeLittleEndianInt(int i) throws KryoException {
         if (isLittleEndian) {
             writeInt(i);
         } else {
@@ -29,7 +28,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
         }
     }
 
-    private final void writeLittleEndianLong(long j) throws IOException, KryoException {
+    private final void writeLittleEndianLong(long j) throws KryoException {
         if (isLittleEndian) {
             writeLong(j);
         } else {
@@ -44,19 +43,19 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeBoolean(boolean z2) throws IOException, KryoException {
+    public final void writeBoolean(boolean z2) throws KryoException {
         this.niobuffer.position(this.position);
         super.writeBoolean(z2);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeByte(int i) throws IOException, KryoException {
+    public final void writeByte(int i) throws KryoException {
         this.niobuffer.position(this.position);
         super.writeByte(i);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public void writeBytes(byte[] bArr) throws IOException, KryoException {
+    public void writeBytes(byte[] bArr) throws KryoException {
         if (bArr == null) {
             throw new IllegalArgumentException("bytes cannot be null.");
         }
@@ -64,50 +63,50 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeChar(char c) throws IOException, KryoException {
+    public final void writeChar(char c) throws KryoException {
         require(2);
         UnsafeUtil.unsafe().putChar(this.bufaddress + this.position, c);
         this.position += 2;
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeChars(char[] cArr) throws IOException, KryoException {
+    public final void writeChars(char[] cArr) throws KryoException {
         writeBytes(cArr, UnsafeUtil.charArrayBaseOffset, 0L, cArr.length << 1);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeDouble(double d) throws IOException, KryoException {
+    public final void writeDouble(double d) throws KryoException {
         require(8);
         UnsafeUtil.unsafe().putDouble(this.bufaddress + this.position, d);
         this.position += 8;
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeDoubles(double[] dArr) throws IOException, KryoException {
+    public final void writeDoubles(double[] dArr) throws KryoException {
         writeBytes(dArr, UnsafeUtil.doubleArrayBaseOffset, 0L, dArr.length << 3);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeFloat(float f) throws IOException, KryoException {
+    public final void writeFloat(float f) throws KryoException {
         require(4);
         UnsafeUtil.unsafe().putFloat(this.bufaddress + this.position, f);
         this.position += 4;
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeFloats(float[] fArr) throws IOException, KryoException {
+    public final void writeFloats(float[] fArr) throws KryoException {
         writeBytes(fArr, UnsafeUtil.floatArrayBaseOffset, 0L, fArr.length << 2);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeInt(int i) throws IOException, KryoException {
+    public final void writeInt(int i) throws KryoException {
         require(4);
         UnsafeUtil.unsafe().putInt(this.bufaddress + this.position, i);
         this.position += 4;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public final void writeInts(int[] iArr, boolean z2) throws IOException, KryoException {
+    public final void writeInts(int[] iArr, boolean z2) throws KryoException {
         if (this.varIntsEnabled) {
             super.writeInts(iArr, z2);
         } else {
@@ -116,14 +115,14 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeLong(long j) throws IOException, KryoException {
+    public final void writeLong(long j) throws KryoException {
         require(8);
         UnsafeUtil.unsafe().putLong(this.bufaddress + this.position, j);
         this.position += 8;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public final void writeLongs(long[] jArr, boolean z2) throws IOException, KryoException {
+    public final void writeLongs(long[] jArr, boolean z2) throws KryoException {
         if (this.varIntsEnabled) {
             super.writeLongs(jArr, z2);
         } else {
@@ -132,19 +131,19 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeShort(int i) throws IOException, KryoException {
+    public final void writeShort(int i) throws KryoException {
         require(2);
         UnsafeUtil.unsafe().putShort(this.bufaddress + this.position, (short) i);
         this.position += 2;
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeShorts(short[] sArr) throws IOException, KryoException {
+    public final void writeShorts(short[] sArr) throws KryoException {
         writeBytes(sArr, UnsafeUtil.shortArrayBaseOffset, 0L, sArr.length << 1);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final int writeVarInt(int i, boolean z2) throws IOException, KryoException {
+    public final int writeVarInt(int i, boolean z2) throws KryoException {
         long j = i;
         if (!z2) {
             j = (j >> 31) ^ (j << 1);
@@ -182,7 +181,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final int writeVarLong(long j, boolean z2) throws IOException, KryoException {
+    public final int writeVarLong(long j, boolean z2) throws KryoException {
         long j2 = !z2 ? (j << 1) ^ (j >> 63) : j;
         int i = (int) (j2 & 127);
         long j3 = j2 >>> 7;
@@ -248,12 +247,12 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public void writeByte(byte b2) throws IOException, KryoException {
+    public void writeByte(byte b2) throws KryoException {
         this.niobuffer.position(this.position);
         super.writeByte(b2);
     }
 
-    public final void writeBytes(Object obj, long j, long j2) throws IOException, KryoException {
+    public final void writeBytes(Object obj, long j, long j2) throws KryoException {
         writeBytes(obj, UnsafeUtil.byteArrayBaseOffset, j, j2);
     }
 
@@ -263,7 +262,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
         updateBufferAddress();
     }
 
-    private final void writeBytes(Object obj, long j, long j2, long j3) throws IOException, KryoException {
+    private final void writeBytes(Object obj, long j, long j2, long j3) throws KryoException {
         int iMin = Math.min(this.capacity - this.position, (int) j3);
         long j4 = j3;
         long j5 = j2;
@@ -282,7 +281,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final int writeInt(int i, boolean z2) throws IOException, KryoException {
+    public final int writeInt(int i, boolean z2) throws KryoException {
         if (!this.varIntsEnabled) {
             writeInt(i);
             return 4;
@@ -291,7 +290,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final int writeLong(long j, boolean z2) throws IOException, KryoException {
+    public final int writeLong(long j, boolean z2) throws KryoException {
         if (!this.varIntsEnabled) {
             writeLong(j);
             return 8;
@@ -300,12 +299,12 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeInts(int[] iArr) throws IOException, KryoException {
+    public final void writeInts(int[] iArr) throws KryoException {
         writeBytes(iArr, UnsafeUtil.intArrayBaseOffset, 0L, iArr.length << 2);
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferOutput, com.esotericsoftware.kryo.io.Output
-    public final void writeLongs(long[] jArr) throws IOException, KryoException {
+    public final void writeLongs(long[] jArr) throws KryoException {
         writeBytes(jArr, UnsafeUtil.longArrayBaseOffset, 0L, jArr.length << 3);
     }
 

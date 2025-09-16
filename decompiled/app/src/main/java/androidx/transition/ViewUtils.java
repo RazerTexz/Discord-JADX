@@ -8,7 +8,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class ViewUtils {
@@ -113,7 +112,7 @@ public class ViewUtils {
         IMPL.setAnimationMatrix(view, matrix);
     }
 
-    public static void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) throws SecurityException, IllegalArgumentException {
         IMPL.setLeftTopRightBottom(view, i, i2, i3, i4);
     }
 
@@ -121,7 +120,7 @@ public class ViewUtils {
         IMPL.setTransitionAlpha(view, f);
     }
 
-    public static void setTransitionVisibility(@NonNull View view, int i) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public static void setTransitionVisibility(@NonNull View view, int i) throws IllegalArgumentException {
         IMPL.setTransitionVisibility(view, i);
     }
 

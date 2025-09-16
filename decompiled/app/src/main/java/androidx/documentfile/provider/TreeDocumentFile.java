@@ -8,7 +8,6 @@ import android.provider.DocumentsContract;
 import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 @RequiresApi(21)
@@ -23,7 +22,7 @@ public class TreeDocumentFile extends DocumentFile {
         this.mUri = uri;
     }
 
-    private static void closeQuietly(@Nullable AutoCloseable autoCloseable) throws Exception {
+    private static void closeQuietly(@Nullable AutoCloseable autoCloseable) {
         if (autoCloseable != null) {
             try {
                 autoCloseable.close();
@@ -121,7 +120,7 @@ public class TreeDocumentFile extends DocumentFile {
     }
 
     @Override // androidx.documentfile.provider.DocumentFile
-    public DocumentFile[] listFiles() throws Exception {
+    public DocumentFile[] listFiles() {
         ContentResolver contentResolver = this.mContext.getContentResolver();
         Uri uri = this.mUri;
         Uri uriBuildChildDocumentsUriUsingTree = DocumentsContract.buildChildDocumentsUriUsingTree(uri, DocumentsContract.getDocumentId(uri));
@@ -148,7 +147,7 @@ public class TreeDocumentFile extends DocumentFile {
     }
 
     @Override // androidx.documentfile.provider.DocumentFile
-    public boolean renameTo(String str) throws FileNotFoundException {
+    public boolean renameTo(String str) {
         try {
             Uri uriRenameDocument = DocumentsContract.renameDocument(this.mContext.getContentResolver(), this.mUri, str);
             if (uriRenameDocument != null) {

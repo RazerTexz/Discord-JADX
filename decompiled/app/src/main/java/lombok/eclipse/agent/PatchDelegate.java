@@ -1,6 +1,5 @@
 package lombok.eclipse.agent;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -237,7 +236,7 @@ public class PatchDelegate {
         EcjAugments.Annotation_applied.set(annotation, true);
     }
 
-    private static void fillMethodBindingsForFields(CompilationUnitDeclaration cud, ClassScope scope, List<BindingTuple> methodsToDelegate) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void fillMethodBindingsForFields(CompilationUnitDeclaration cud, ClassScope scope, List<BindingTuple> methodsToDelegate) {
         TypeDeclaration decl = scope.referenceContext;
         if (decl != null && decl.fields != null) {
             for (FieldDeclaration field : decl.fields) {
@@ -294,7 +293,7 @@ public class PatchDelegate {
         }
     }
 
-    private static void fillMethodBindingsForMethods(CompilationUnitDeclaration cud, ClassScope scope, List<BindingTuple> methodsToDelegate) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void fillMethodBindingsForMethods(CompilationUnitDeclaration cud, ClassScope scope, List<BindingTuple> methodsToDelegate) {
         TypeDeclaration decl = scope.referenceContext;
         if (decl != null && decl.methods != null) {
             for (MethodDeclaration methodDeclaration : decl.methods) {
@@ -819,7 +818,7 @@ public class PatchDelegate {
         }
     }
 
-    private static void addAllMethodBindings(List<BindingTuple> list, TypeBinding binding, Set<String> banList, char[] fieldName, ASTNode responsible) throws DelegateRecursion, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void addAllMethodBindings(List<BindingTuple> list, TypeBinding binding, Set<String> banList, char[] fieldName, ASTNode responsible) throws DelegateRecursion {
         banList.addAll(METHODS_IN_OBJECT);
         addAllMethodBindings0(list, binding, banList, fieldName, responsible);
     }
@@ -835,7 +834,7 @@ public class PatchDelegate {
         }
     }
 
-    private static void addAllMethodBindings0(List<BindingTuple> list, TypeBinding binding, Set<String> banList, char[] fieldName, ASTNode responsible) throws DelegateRecursion, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void addAllMethodBindings0(List<BindingTuple> list, TypeBinding binding, Set<String> banList, char[] fieldName, ASTNode responsible) throws DelegateRecursion {
         TypeBinding inner;
         ClassScope cs;
         ClassScope scope;

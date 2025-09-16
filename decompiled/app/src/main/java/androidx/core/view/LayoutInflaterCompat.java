@@ -41,7 +41,7 @@ public final class LayoutInflaterCompat {
     private LayoutInflaterCompat() {
     }
 
-    private static void forceSetFactory2(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    private static void forceSetFactory2(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) throws IllegalArgumentException {
         if (!sCheckedField) {
             try {
                 Field declaredField = LayoutInflater.class.getDeclaredField("mFactory2");

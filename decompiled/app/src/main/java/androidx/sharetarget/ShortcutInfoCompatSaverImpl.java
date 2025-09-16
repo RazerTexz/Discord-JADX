@@ -28,7 +28,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -84,7 +83,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IllegalStateException, IOException, IllegalArgumentException {
+        public void run() {
             ShortcutInfoCompatSaverImpl.this.deleteDanglingBitmaps(this.val$containers);
             ShortcutsInfoSerialization.saveAsXml(this.val$containers, ShortcutInfoCompatSaverImpl.this.mTargetsXmlFile);
         }
@@ -101,7 +100,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
 
         @Override // java.lang.Runnable
-        public void run() throws ExecutionException, InterruptedException {
+        public void run() {
             try {
                 this.val$future.get();
                 this.val$output.set(null);
@@ -232,7 +231,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
             }
 
             @Override // java.lang.Runnable
-            public void run() throws ExecutionException, InterruptedException {
+            public void run() {
                 ShortcutInfoCompatSaverImpl.this.mScheduledBitmapTasks.remove(this.val$id);
                 if (this.val$future.isCancelled()) {
                     return;
@@ -284,7 +283,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             ShortcutInfoCompatSaverImpl.this.saveBitmap(this.val$bitmap, this.val$path);
         }
     }
@@ -445,7 +444,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
     }
 
     @WorkerThread
-    public void saveBitmap(Bitmap bitmap, String str) throws IOException {
+    public void saveBitmap(Bitmap bitmap, String str) {
         if (bitmap == null) {
             throw new IllegalArgumentException("bitmap is null");
         }

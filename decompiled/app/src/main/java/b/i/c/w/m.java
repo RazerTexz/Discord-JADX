@@ -29,7 +29,7 @@ public final class m {
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public void a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException, NumberFormatException {
+        public void a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             int iIntValue;
             m mVar = (m) obj;
             ObjectEncoderContext objectEncoderContext2 = objectEncoderContext;

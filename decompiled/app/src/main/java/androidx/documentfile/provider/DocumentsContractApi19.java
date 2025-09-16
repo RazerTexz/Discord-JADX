@@ -40,7 +40,7 @@ public class DocumentsContractApi19 {
         return true;
     }
 
-    private static void closeQuietly(@Nullable AutoCloseable autoCloseable) throws Exception {
+    private static void closeQuietly(@Nullable AutoCloseable autoCloseable) {
         if (autoCloseable != null) {
             try {
                 autoCloseable.close();
@@ -51,7 +51,7 @@ public class DocumentsContractApi19 {
         }
     }
 
-    public static boolean exists(Context context, Uri uri) throws Exception {
+    public static boolean exists(Context context, Uri uri) {
         Cursor cursorQuery = null;
         try {
             cursorQuery = context.getContentResolver().query(uri, new String[]{"document_id"}, null, null, null);
@@ -112,7 +112,7 @@ public class DocumentsContractApi19 {
         return (int) queryForLong(context, uri, str, i);
     }
 
-    private static long queryForLong(Context context, Uri uri, String str, long j) throws Exception {
+    private static long queryForLong(Context context, Uri uri, String str, long j) {
         Cursor cursorQuery = null;
         try {
             cursorQuery = context.getContentResolver().query(uri, new String[]{str}, null, null, null);
@@ -126,7 +126,7 @@ public class DocumentsContractApi19 {
     }
 
     @Nullable
-    private static String queryForString(Context context, Uri uri, String str, @Nullable String str2) throws Exception {
+    private static String queryForString(Context context, Uri uri, String str, @Nullable String str2) {
         Cursor cursorQuery = null;
         try {
             cursorQuery = context.getContentResolver().query(uri, new String[]{str}, null, null, null);

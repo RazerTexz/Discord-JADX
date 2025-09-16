@@ -67,7 +67,7 @@ public final class SubripDecoder extends SimpleSubtitleDecoder2 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Subtitle j(byte[] bArr, int i, boolean z2) throws NumberFormatException {
+    public Subtitle j(byte[] bArr, int i, boolean z2) {
         ParsableByteArray parsableByteArray;
         String strG;
         long[] jArr;

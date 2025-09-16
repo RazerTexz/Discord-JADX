@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -83,7 +82,7 @@ public class ParcelUtils {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-    public static void toOutputStream(VersionedParcelable versionedParcelable, OutputStream outputStream) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void toOutputStream(VersionedParcelable versionedParcelable, OutputStream outputStream) throws IllegalArgumentException {
         VersionedParcelStream versionedParcelStream = new VersionedParcelStream(null, outputStream);
         versionedParcelStream.writeVersionedParcelable(versionedParcelable);
         versionedParcelStream.closeField();

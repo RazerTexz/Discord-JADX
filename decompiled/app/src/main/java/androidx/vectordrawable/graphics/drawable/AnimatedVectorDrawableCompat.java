@@ -164,7 +164,7 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
     }
 
     @Nullable
-    public static AnimatedVectorDrawableCompat create(@NonNull Context context, @DrawableRes int i) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    public static AnimatedVectorDrawableCompat create(@NonNull Context context, @DrawableRes int i) throws Resources.NotFoundException {
         int next;
         if (Build.VERSION.SDK_INT >= 24) {
             AnimatedVectorDrawableCompat animatedVectorDrawableCompat = new AnimatedVectorDrawableCompat(context);

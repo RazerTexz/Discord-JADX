@@ -466,7 +466,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return getPosition(viewR);
     }
 
-    public final int fixLayoutEndGap(int i, RecyclerView.Recycler recycler, RecyclerView.State state, boolean z2) throws NoSuchFieldException {
+    public final int fixLayoutEndGap(int i, RecyclerView.Recycler recycler, RecyclerView.State state, boolean z2) {
         int iT;
         int endAfterPadding;
         if (!i() && this.o) {
@@ -490,7 +490,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return endAfterPadding + iT;
     }
 
-    public final int fixLayoutStartGap(int i, RecyclerView.Recycler recycler, RecyclerView.State state, boolean z2) throws NoSuchFieldException {
+    public final int fixLayoutStartGap(int i, RecyclerView.Recycler recycler, RecyclerView.State state, boolean z2) {
         int iT;
         int startAfterPadding;
         if (i() || !this.o) {
@@ -957,7 +957,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) throws NoSuchFieldException {
+    public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
         boolean z2;
         boolean z3;
         int i;
@@ -1332,7 +1332,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
-    public int scrollHorizontallyBy(int i, RecyclerView.Recycler recycler, RecyclerView.State state) throws NoSuchFieldException {
+    public int scrollHorizontallyBy(int i, RecyclerView.Recycler recycler, RecyclerView.State state) {
         if (!i() || (this.l == 0 && i())) {
             int iT = t(i, recycler, state);
             this.D.clear();
@@ -1356,7 +1356,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
-    public int scrollVerticallyBy(int i, RecyclerView.Recycler recycler, RecyclerView.State state) throws NoSuchFieldException {
+    public int scrollVerticallyBy(int i, RecyclerView.Recycler recycler, RecyclerView.State state) {
         if (i() || (this.l == 0 && !i())) {
             int iT = t(i, recycler, state);
             this.D.clear();
@@ -1384,7 +1384,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final int t(int i, RecyclerView.Recycler recycler, RecyclerView.State state) throws NoSuchFieldException {
+    public final int t(int i, RecyclerView.Recycler recycler, RecyclerView.State state) {
         int i2;
         if (getChildCount() == 0 || i == 0) {
             return 0;

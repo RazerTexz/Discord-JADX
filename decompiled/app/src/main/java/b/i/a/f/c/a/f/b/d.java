@@ -24,7 +24,7 @@ public final class d extends AsyncTaskLoader<Void> {
     }
 
     @Override // androidx.loader.content.AsyncTaskLoader
-    public final Void loadInBackground() throws InterruptedException {
+    public final Void loadInBackground() {
         Iterator<b.i.a.f.e.h.c> it = this.f1336b.iterator();
         if (it.hasNext()) {
             Objects.requireNonNull(it.next());

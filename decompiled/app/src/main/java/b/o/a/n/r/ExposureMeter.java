@@ -1,6 +1,5 @@
 package b.o.a.n.r;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -104,7 +103,7 @@ public class ExposureMeter extends BaseMeter {
     }
 
     @Override // b.o.a.n.r.BaseMeter
-    public void o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) throws CameraAccessException {
+    public void o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) {
         i.a(1, "onStarted:", "with areas:", list);
         if (this.j && !list.isEmpty()) {
             ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AE_REGIONS, (MeteringRectangle[]) list.subList(0, Math.min(((Integer) k(CameraCharacteristics.CONTROL_MAX_REGIONS_AE, 0)).intValue(), list.size())).toArray(new MeteringRectangle[0]));

@@ -23,11 +23,11 @@ public class LiveInjector {
         int JNI_GetCreatedJavaVMs(PointerByReference pointerByReference, int i, IntByReference intByReference);
     }
 
-    public void injectSelf() throws IllegalStateException, NumberFormatException, ClassNotFoundException {
+    public void injectSelf() throws IllegalStateException, NumberFormatException {
         inject(ClassRootFinder.findClassRootOfSelf());
     }
 
-    public void inject(String jarFile) throws IllegalStateException, NumberFormatException, ClassNotFoundException {
+    public void inject(String jarFile) throws IllegalStateException, NumberFormatException {
         File f = new File(jarFile);
         if (!f.isFile()) {
             throw new IllegalArgumentException("Live Injection is not possible unless the classpath root to inject is a jar file.");
@@ -39,7 +39,7 @@ public class LiveInjector {
         }
     }
 
-    private void fastInject(String jarFile) throws IllegalStateException, ClassNotFoundException {
+    private void fastInject(String jarFile) throws IllegalStateException {
         try {
             Class.forName("sun.instrument.InstrumentationImpl");
             LibJVM libjvm = (LibJVM) Native.load(LibJVM.class);

@@ -15,7 +15,7 @@ public class CommentCatcher {
     public static final FieldAugment<JCTree.JCCompilationUnit, List<CommentInfo>> JCCompilationUnit_comments = FieldAugment.augment(JCTree.JCCompilationUnit.class, List.class, "lombok$comments");
     public static final FieldAugment<JCTree.JCCompilationUnit, List<Integer>> JCCompilationUnit_textBlockStarts = FieldAugment.augment(JCTree.JCCompilationUnit.class, List.class, "lombok$textBlockStarts");
 
-    public static CommentCatcher create(Context context, boolean findTextBlocks) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+    public static CommentCatcher create(Context context, boolean findTextBlocks) {
         registerCommentsCollectingScannerFactory(context, findTextBlocks);
         JavaCompiler compiler = new JavaCompiler(context);
         setInCompiler(compiler, context);
@@ -50,7 +50,7 @@ public class CommentCatcher {
         return list == null ? Collections.emptyList() : list;
     }
 
-    private static void registerCommentsCollectingScannerFactory(Context context, boolean findTextBlocks) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+    private static void registerCommentsCollectingScannerFactory(Context context, boolean findTextBlocks) {
         Class<?> scannerFactory;
         try {
             int javaCompilerVersion = Javac.getJavaCompilerVersion();
@@ -72,7 +72,7 @@ public class CommentCatcher {
         }
     }
 
-    private static void setInCompiler(JavaCompiler compiler, Context context) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+    private static void setInCompiler(JavaCompiler compiler, Context context) {
         Class<?> parserFactory;
         try {
             int javaCompilerVersion = Javac.getJavaCompilerVersion();

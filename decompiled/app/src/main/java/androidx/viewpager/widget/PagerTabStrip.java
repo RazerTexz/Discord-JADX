@@ -1,7 +1,6 @@
 package androidx.viewpager.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -51,7 +50,7 @@ public class PagerTabStrip extends PagerTitleStrip {
         }
 
         @Override // android.view.View.OnClickListener
-        public void onClick(View view) throws Resources.NotFoundException {
+        public void onClick(View view) {
             PagerTabStrip.this.mPager.setCurrentItem(r2.getCurrentItem() - 1);
         }
     }
@@ -62,7 +61,7 @@ public class PagerTabStrip extends PagerTitleStrip {
         }
 
         @Override // android.view.View.OnClickListener
-        public void onClick(View view) throws Resources.NotFoundException {
+        public void onClick(View view) {
             ViewPager viewPager = PagerTabStrip.this.mPager;
             viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
         }
@@ -103,7 +102,7 @@ public class PagerTabStrip extends PagerTitleStrip {
     }
 
     @Override // android.view.View
-    public boolean onTouchEvent(MotionEvent motionEvent) throws Resources.NotFoundException {
+    public boolean onTouchEvent(MotionEvent motionEvent) {
         int action = motionEvent.getAction();
         if (action != 0 && this.mIgnoreTap) {
             return false;

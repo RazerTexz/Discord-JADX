@@ -1234,7 +1234,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static int F0(MediaCodecInfo mediaCodecInfo, Format2 format2) throws NumberFormatException {
+    public static int F0(MediaCodecInfo mediaCodecInfo, Format2 format2) {
         char c;
         int iF;
         int iIntValue;
@@ -1526,7 +1526,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    public DecoderReuseEvaluation K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22) throws NumberFormatException {
+    public DecoderReuseEvaluation K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22) {
         DecoderReuseEvaluation decoderReuseEvaluationC = mediaCodecInfo.c(format2, format22);
         int i = decoderReuseEvaluationC.e;
         int i2 = format22.B;
@@ -2085,7 +2085,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean m0(long j, long j2, @Nullable MediaCodecAdapter mediaCodecAdapter, @Nullable ByteBuffer byteBuffer, int i, int i2, int i3, long j3, boolean z2, boolean z3, Format2 format2) throws ExoPlaybackException, InterruptedException {
+    public boolean m0(long j, long j2, @Nullable MediaCodecAdapter mediaCodecAdapter, @Nullable ByteBuffer byteBuffer, int i, int i2, int i3, long j3, boolean z2, boolean z3, Format2 format2) throws ExoPlaybackException {
         boolean z4;
         long j4;
         boolean z5;
@@ -2433,7 +2433,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    public int y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException, NumberFormatException {
+    public int y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException {
         int i = 0;
         if (!MimeTypes.j(format2.w)) {
             return 0;

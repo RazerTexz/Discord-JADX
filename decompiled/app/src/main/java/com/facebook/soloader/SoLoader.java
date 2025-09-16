@@ -63,7 +63,7 @@ public class SoLoader {
         private Api14Utils() {
         }
 
-        public static String a() throws NoSuchMethodException, SecurityException {
+        public static String a() {
             ClassLoader classLoader = SoLoader.class.getClassLoader();
             if (classLoader == null || (classLoader instanceof BaseDexClassLoader)) {
                 try {
@@ -96,7 +96,7 @@ public class SoLoader {
             this.e = method;
         }
 
-        public final String a(String str) throws NoSuchAlgorithmException, IOException {
+        public final String a(String str) {
             try {
                 File file = new File(str);
                 MessageDigest messageDigest = MessageDigest.getInstance(Constants.MD5);

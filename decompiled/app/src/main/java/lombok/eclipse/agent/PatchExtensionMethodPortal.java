@@ -32,7 +32,7 @@ public class PatchExtensionMethodPortal {
         }
     }
 
-    public static void errorNoMethodFor(Object problemReporter, Object messageSend, Object recType, Object params) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void errorNoMethodFor(Object problemReporter, Object messageSend, Object recType, Object params) throws IllegalArgumentException {
         try {
             Reflection.errorNoMethodFor.invoke(null, problemReporter, messageSend, recType, params);
         } catch (IllegalAccessException e) {
@@ -48,7 +48,7 @@ public class PatchExtensionMethodPortal {
         }
     }
 
-    public static void invalidMethod(Object problemReporter, Object messageSend, Object method) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void invalidMethod(Object problemReporter, Object messageSend, Object method) throws IllegalArgumentException {
         try {
             Reflection.invalidMethod.invoke(null, problemReporter, messageSend, method);
         } catch (IllegalAccessException e) {

@@ -3,7 +3,6 @@ package b.i.c.m.d.k;
 import android.os.Process;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicLong;
@@ -17,7 +16,7 @@ public class CLSUUID {
     /* renamed from: b, reason: collision with root package name */
     public static String f1684b;
 
-    public CLSUUID(IdManager idManager) throws NoSuchAlgorithmException {
+    public CLSUUID(IdManager idManager) {
         long time = new Date().getTime();
         ByteBuffer byteBufferAllocate = ByteBuffer.allocate(4);
         byteBufferAllocate.putInt((int) (time / 1000));

@@ -56,7 +56,7 @@ public final class SamsungConnect extends ContinuationImpl6 implements Function2
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final Object invokeSuspend(Object obj) throws NumberFormatException {
+    public final Object invokeSuspend(Object obj) {
         String queryParameter;
         String query;
         Intrinsics2.getCOROUTINE_SUSPENDED();

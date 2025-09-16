@@ -15,7 +15,7 @@ public class InputChunked extends Input {
         this.chunkSize = -1;
     }
 
-    private void readChunkSize() throws IOException {
+    private void readChunkSize() {
         try {
             InputStream inputStream = getInputStream();
             int i = 0;
@@ -38,7 +38,7 @@ public class InputChunked extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public int fill(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public int fill(byte[] bArr, int i, int i2) throws KryoException {
         int i3 = this.chunkSize;
         if (i3 == -1) {
             readChunkSize();
@@ -54,7 +54,7 @@ public class InputChunked extends Input {
         return iFill;
     }
 
-    public void nextChunks() throws IOException, KryoException {
+    public void nextChunks() throws KryoException {
         if (this.chunkSize == -1) {
             readChunkSize();
         }

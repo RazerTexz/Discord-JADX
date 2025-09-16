@@ -1,6 +1,5 @@
 package b.o.a.n.r;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -67,7 +66,7 @@ public class WhiteBalanceMeter extends BaseMeter {
     }
 
     @Override // b.o.a.n.r.BaseMeter
-    public void o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) throws CameraAccessException {
+    public void o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) {
         i.a(1, "onStarted:", "with areas:", list);
         int iIntValue = ((Integer) k(CameraCharacteristics.CONTROL_MAX_REGIONS_AWB, 0)).intValue();
         if (list.isEmpty() || iIntValue <= 0) {

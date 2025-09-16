@@ -16,7 +16,7 @@ public final class c0 extends Lambda implements Function0<Unit> {
     }
 
     @Override // kotlin.jvm.functions.Function0
-    public Unit invoke() throws NumberFormatException {
+    public Unit invoke() {
         this.this$0.this$0.q();
         return Unit.a;
     }

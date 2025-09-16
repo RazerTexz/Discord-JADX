@@ -5,7 +5,6 @@ import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import lombok.ConfigurationKeys;
 import lombok.core.AST;
@@ -74,7 +73,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<UtilityClass> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<UtilityClass> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.UTILITY_CLASS_FLAG_USAGE, "@UtilityClass");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) UtilityClass.class);
         JavacNode typeNode = annotationNode.up();
@@ -203,7 +202,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         throw new UnsupportedOperationException("Method not decompiled: lombok.javac.handlers.HandleUtilityClass.checkLegality(lombok.javac.JavacNode, lombok.javac.JavacNode):boolean");
     }
 
-    private void changeModifiersAndGenerateConstructor(JavacNode typeNode, JavacNode errorNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void changeModifiersAndGenerateConstructor(JavacNode typeNode, JavacNode errorNode) {
         JCTree.JCClassDecl classDecl = typeNode.get();
         boolean makeConstructor = true;
         classDecl.mods.flags |= 16;
@@ -244,7 +243,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         }
     }
 
-    private void createPrivateDefaultConstructor(JavacNode typeNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void createPrivateDefaultConstructor(JavacNode typeNode) {
         JavacTreeMaker maker = typeNode.getTreeMaker();
         JCTree.JCModifiers mods = maker.Modifiers(2L, List.nil());
         Name name = typeNode.toName("<init>");

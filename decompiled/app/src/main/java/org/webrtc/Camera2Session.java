@@ -106,7 +106,7 @@ public class Camera2Session implements CameraSession {
         }
 
         @Override // android.hardware.camera2.CameraDevice.StateCallback
-        public void onOpened(CameraDevice cameraDevice) throws CameraAccessException {
+        public void onOpened(CameraDevice cameraDevice) {
             Camera2Session.access$000(Camera2Session.this);
             Logging.d(Camera2Session.TAG, "Camera opened.");
             Camera2Session.access$702(Camera2Session.this, cameraDevice);
@@ -189,7 +189,7 @@ public class Camera2Session implements CameraSession {
         }
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
-        public void onConfigured(CameraCaptureSession cameraCaptureSession) throws CameraAccessException {
+        public void onConfigured(CameraCaptureSession cameraCaptureSession) {
             Camera2Session.access$000(Camera2Session.this);
             Logging.d(Camera2Session.TAG, "Camera capture session configured.");
             Camera2Session.access$102(Camera2Session.this, cameraCaptureSession);
@@ -220,7 +220,7 @@ public class Camera2Session implements CameraSession {
         STOPPED
     }
 
-    private Camera2Session(CameraSession.CreateSessionCallback createSessionCallback, CameraSession.Events events, Context context, CameraManager cameraManager, SurfaceTextureHelper surfaceTextureHelper, String str, int i, int i2, int i3) throws CameraAccessException {
+    private Camera2Session(CameraSession.CreateSessionCallback createSessionCallback, CameraSession.Events events, Context context, CameraManager cameraManager, SurfaceTextureHelper surfaceTextureHelper, String str, int i, int i2, int i3) {
         Logging.d(TAG, "Create new camera2 session on camera " + str);
         this.constructionTimeNs = System.nanoTime();
         this.cameraThreadHandler = new Handler();
@@ -381,7 +381,7 @@ public class Camera2Session implements CameraSession {
         return (this.cameraOrientation + iB) % 360;
     }
 
-    private void openCamera() throws CameraAccessException {
+    private void openCamera() {
         checkIsOnCameraThread();
         StringBuilder sbU = outline.U("Opening camera ");
         sbU.append(this.cameraId);
@@ -407,7 +407,7 @@ public class Camera2Session implements CameraSession {
         }
     }
 
-    private void start() throws CameraAccessException {
+    private void start() {
         checkIsOnCameraThread();
         Logging.d(TAG, "start");
         try {

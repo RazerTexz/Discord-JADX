@@ -81,7 +81,7 @@ public class SelfDestructiveThread {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Exception {
+        public void run() {
             Object objCall;
             try {
                 objCall = this.val$callable.call();

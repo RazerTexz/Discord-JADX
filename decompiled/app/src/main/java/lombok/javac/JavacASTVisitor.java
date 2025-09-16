@@ -189,7 +189,7 @@ public interface JavacASTVisitor {
         }
 
         @Override // lombok.javac.JavacASTVisitor
-        public void visitMethod(JavacNode node, JCTree.JCMethodDecl method) throws NoSuchFieldException {
+        public void visitMethod(JavacNode node, JCTree.JCMethodDecl method) {
             String type;
             JCTree.JCVariableDecl recv;
             if (method.name.contentEquals("<init>")) {

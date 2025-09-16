@@ -27,7 +27,7 @@ public class o implements Closeable {
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
+    public void close() {
         try {
             InputStream inputStream = this.l;
             Logger logger = b.i.a.f.h.i.c.a;

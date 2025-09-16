@@ -2,7 +2,6 @@ package com.esotericsoftware.kryo.io;
 
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.util.UnsafeUtil;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
@@ -31,14 +30,14 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public byte[] readBytes(int i) throws IOException, KryoException {
+    public byte[] readBytes(int i) throws KryoException {
         byte[] bArr = new byte[i];
         readBytes(bArr, 0L, i);
         return bArr;
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public char readChar() throws IOException, KryoException {
+    public char readChar() throws KryoException {
         require(2);
         char c = UnsafeUtil.unsafe().getChar(this.bufaddress + this.position);
         this.position += 2;
@@ -46,7 +45,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public final char[] readChars(int i) throws IOException, KryoException {
+    public final char[] readChars(int i) throws KryoException {
         int i2 = i << 1;
         char[] cArr = new char[i];
         readBytes(cArr, UnsafeUtil.charArrayBaseOffset, 0L, i2);
@@ -54,7 +53,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public double readDouble() throws IOException, KryoException {
+    public double readDouble() throws KryoException {
         require(8);
         double d = UnsafeUtil.unsafe().getDouble(this.bufaddress + this.position);
         this.position += 8;
@@ -62,7 +61,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public final double[] readDoubles(int i) throws IOException, KryoException {
+    public final double[] readDoubles(int i) throws KryoException {
         int i2 = i << 3;
         double[] dArr = new double[i];
         readBytes(dArr, UnsafeUtil.doubleArrayBaseOffset, 0L, i2);
@@ -70,7 +69,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public float readFloat() throws IOException, KryoException {
+    public float readFloat() throws KryoException {
         require(4);
         float f = UnsafeUtil.unsafe().getFloat(this.bufaddress + this.position);
         this.position += 4;
@@ -78,7 +77,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public final float[] readFloats(int i) throws IOException, KryoException {
+    public final float[] readFloats(int i) throws KryoException {
         int i2 = i << 2;
         float[] fArr = new float[i];
         readBytes(fArr, UnsafeUtil.floatArrayBaseOffset, 0L, i2);
@@ -86,7 +85,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public int readInt() throws IOException, KryoException {
+    public int readInt() throws KryoException {
         require(4);
         int i = UnsafeUtil.unsafe().getInt(this.bufaddress + this.position);
         this.position += 4;
@@ -94,7 +93,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public final int[] readInts(int i, boolean z2) throws IOException, KryoException {
+    public final int[] readInts(int i, boolean z2) throws KryoException {
         if (this.varIntsEnabled) {
             return super.readInts(i, z2);
         }
@@ -105,7 +104,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public long readLong() throws IOException, KryoException {
+    public long readLong() throws KryoException {
         require(8);
         long j = UnsafeUtil.unsafe().getLong(this.bufaddress + this.position);
         this.position += 8;
@@ -113,7 +112,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public final long[] readLongs(int i, boolean z2) throws IOException, KryoException {
+    public final long[] readLongs(int i, boolean z2) throws KryoException {
         if (this.varIntsEnabled) {
             return super.readLongs(i, z2);
         }
@@ -124,7 +123,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public short readShort() throws IOException, KryoException {
+    public short readShort() throws KryoException {
         require(2);
         short s2 = UnsafeUtil.unsafe().getShort(this.bufaddress + this.position);
         this.position += 2;
@@ -132,7 +131,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     }
 
     @Override // com.esotericsoftware.kryo.io.ByteBufferInput, com.esotericsoftware.kryo.io.Input
-    public final short[] readShorts(int i) throws IOException, KryoException {
+    public final short[] readShorts(int i) throws KryoException {
         int i2 = i << 1;
         short[] sArr = new short[i];
         readBytes(sArr, UnsafeUtil.shortArrayBaseOffset, 0L, i2);
@@ -151,7 +150,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
         updateBufferAddress();
     }
 
-    public final void readBytes(Object obj, long j, long j2) throws IOException, KryoException {
+    public final void readBytes(Object obj, long j, long j2) throws KryoException {
         if (obj.getClass().isArray()) {
             readBytes(obj, UnsafeUtil.byteArrayBaseOffset, j, (int) j2);
             return;
@@ -181,7 +180,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
         updateBufferAddress();
     }
 
-    private final void readBytes(Object obj, long j, long j2, int i) throws IOException, KryoException {
+    private final void readBytes(Object obj, long j, long j2, int i) throws KryoException {
         int iMin = Math.min(this.limit - this.position, i);
         int i2 = i;
         long j3 = j2;

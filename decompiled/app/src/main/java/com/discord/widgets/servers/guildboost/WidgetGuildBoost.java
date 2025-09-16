@@ -468,13 +468,13 @@ public final class WidgetGuildBoost extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(GuildBoostViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(GuildBoostViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(GuildBoostViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public final void invoke2(GuildBoostViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildBoost.access$configureUI((WidgetGuildBoost) this.receiver, viewState);
         }
@@ -515,7 +515,7 @@ public final class WidgetGuildBoost extends AppFragment {
         widgetGuildBoost.configureLevelBubbles(i);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetGuildBoost widgetGuildBoost, GuildBoostViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetGuildBoost widgetGuildBoost, GuildBoostViewModel.ViewState viewState) {
         widgetGuildBoost.configureUI(viewState);
     }
 
@@ -585,7 +585,7 @@ public final class WidgetGuildBoost extends AppFragment {
         setActionBarSubtitle(guildName);
     }
 
-    private final void configureUI(GuildBoostViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void configureUI(GuildBoostViewModel.ViewState viewState) {
         if (viewState instanceof GuildBoostViewModel.ViewState.Loading) {
             AppViewFlipper appViewFlipper = getBinding().f2535b;
             Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.boostStatusFlipper");
@@ -619,7 +619,7 @@ public final class WidgetGuildBoost extends AppFragment {
         textView.setText(StringResourceUtils.getQuantityString(resources, requireContext(), R.plurals.premium_guild_perks_modal_header_subscription_count_subscriptions, premiumSubscriptionCount, Integer.valueOf(premiumSubscriptionCount)));
     }
 
-    private final void configureViewpager(int premiumTier, int subscriptionCount) throws Resources.NotFoundException {
+    private final void configureViewpager(int premiumTier, int subscriptionCount) {
         PerksPagerAdapter perksPagerAdapter = this.pagerAdapter;
         if (perksPagerAdapter == null) {
             Intrinsics3.throwUninitializedPropertyAccessException("pagerAdapter");

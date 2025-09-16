@@ -88,7 +88,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    public TtmlDecoder() throws XmlPullParserException {
+    public TtmlDecoder() {
         super("TtmlDecoder");
         try {
             XmlPullParserFactory xmlPullParserFactoryNewInstance = XmlPullParserFactory.newInstance();
@@ -125,7 +125,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    public static a n(XmlPullParser xmlPullParser, a aVar) throws SubtitleDecoderException, NumberFormatException {
+    public static a n(XmlPullParser xmlPullParser, a aVar) throws SubtitleDecoderException {
         String attributeValue = xmlPullParser.getAttributeValue("http://www.w3.org/ns/ttml#parameter", "cellResolution");
         if (attributeValue == null) {
             return aVar;
@@ -238,7 +238,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static Map<String, TtmlStyle> q(XmlPullParser xmlPullParser, Map<String, TtmlStyle> map, a aVar, @Nullable c cVar, Map<String, TtmlRegion> map2, Map<String, String> map3) throws XmlPullParserException, IOException, NumberFormatException {
+    public static Map<String, TtmlStyle> q(XmlPullParser xmlPullParser, Map<String, TtmlStyle> map, a aVar, @Nullable c cVar, Map<String, TtmlRegion> map2, Map<String, String> map3) throws XmlPullParserException, IOException {
         String strR0;
         TtmlRegion ttmlRegion;
         float f;
@@ -983,7 +983,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     }
 
     @Nullable
-    public static c v(XmlPullParser xmlPullParser) throws NumberFormatException {
+    public static c v(XmlPullParser xmlPullParser) {
         String strR0 = AnimatableValueParser.r0(xmlPullParser, "extent");
         if (strR0 == null) {
             return null;
@@ -1007,7 +1007,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     }
 
     @Override // b.i.a.c.b3.SimpleSubtitleDecoder2
-    public Subtitle j(byte[] bArr, int i, boolean z2) throws XmlPullParserException, SubtitleDecoderException, NumberFormatException, IOException {
+    public Subtitle j(byte[] bArr, int i, boolean z2) throws SubtitleDecoderException, NumberFormatException {
         b bVar;
         try {
             XmlPullParser xmlPullParserNewPullParser = this.w.newPullParser();

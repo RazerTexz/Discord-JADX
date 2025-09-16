@@ -90,7 +90,7 @@ public class TypefaceCompat {
 
     @Nullable
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-    public static Typeface createFromResourcesFamilyXml(@NonNull Context context, @NonNull FontResourcesParserCompat.FamilyResourceEntry familyResourceEntry, @NonNull Resources resources, int i, int i2, @Nullable ResourcesCompat.FontCallback fontCallback, @Nullable Handler handler, boolean z2) throws NoSuchFieldException {
+    public static Typeface createFromResourcesFamilyXml(@NonNull Context context, @NonNull FontResourcesParserCompat.FamilyResourceEntry familyResourceEntry, @NonNull Resources resources, int i, int i2, @Nullable ResourcesCompat.FontCallback fontCallback, @Nullable Handler handler, boolean z2) {
         Typeface typefaceCreateFromFontFamilyFilesResourceEntry;
         if (familyResourceEntry instanceof FontResourcesParserCompat.ProviderResourceEntry) {
             FontResourcesParserCompat.ProviderResourceEntry providerResourceEntry = (FontResourcesParserCompat.ProviderResourceEntry) familyResourceEntry;
@@ -139,7 +139,7 @@ public class TypefaceCompat {
     }
 
     @Nullable
-    private static Typeface getBestFontFromFamily(Context context, Typeface typeface, int i) throws NoSuchFieldException {
+    private static Typeface getBestFontFromFamily(Context context, Typeface typeface, int i) {
         TypefaceCompatBaseImpl typefaceCompatBaseImpl = sTypefaceCompatImpl;
         FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamily = typefaceCompatBaseImpl.getFontFamily(typeface);
         if (fontFamily == null) {

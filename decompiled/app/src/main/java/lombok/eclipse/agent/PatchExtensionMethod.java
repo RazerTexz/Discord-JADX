@@ -90,7 +90,7 @@ public class PatchExtensionMethod {
         private static final Method shortMethod = getMethod("invalidMethod", MessageSend.class, MethodBinding.class);
         private static final Method longMethod = getMethod("invalidMethod", MessageSend.class, MethodBinding.class, Scope.class);
 
-        private static Method getMethod(String name, Class<?>... clsArr) throws NoSuchMethodException, SecurityException {
+        private static Method getMethod(String name, Class<?>... clsArr) {
             try {
                 Method m = ProblemReporter.class.getMethod(name, clsArr);
                 m.setAccessible(true);
@@ -107,7 +107,7 @@ public class PatchExtensionMethod {
             this.scope = scope;
         }
 
-        static void invoke(ProblemReporter problemReporter, MessageSend messageSend, MethodBinding method, Scope scope) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        static void invoke(ProblemReporter problemReporter, MessageSend messageSend, MethodBinding method, Scope scope) throws IllegalArgumentException {
             if (messageSend != null) {
                 try {
                     if (shortMethod != null) {
@@ -131,7 +131,7 @@ public class PatchExtensionMethod {
         }
 
         @Override // lombok.eclipse.agent.PatchExtensionMethod.PostponedError
-        public void fire() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void fire() throws IllegalArgumentException {
             MessageSend messageSend = this.messageSendRef.get();
             invoke(this.problemReporter, messageSend, this.method, this.scope);
         }
@@ -155,7 +155,7 @@ public class PatchExtensionMethod {
         }
     }
 
-    public static EclipseNode getTypeNode(TypeDeclaration decl) throws IllegalAccessException, IllegalArgumentException {
+    public static EclipseNode getTypeNode(TypeDeclaration decl) {
         CompilationUnitDeclaration cud = decl.scope.compilationUnitScope().referenceContext;
         EclipseAST astNode = TransformEclipseAST.getAST(cud, false);
         EclipseNode node = astNode.get(decl);
@@ -244,7 +244,7 @@ public class PatchExtensionMethod {
         MessageSend_postponedErrors.set(messageSend, new PostponedNonStaticAccessToStaticMethodError(problemReporter, location, method));
     }
 
-    public static TypeBinding resolveType(TypeBinding resolvedType, MessageSend methodCall, BlockScope scope) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static TypeBinding resolveType(TypeBinding resolvedType, MessageSend methodCall, BlockScope scope) throws IllegalArgumentException {
         TypeBinding param;
         List<Extension> extensions = new ArrayList<>();
         TypeDeclaration decl = scope.classScope().referenceContext;

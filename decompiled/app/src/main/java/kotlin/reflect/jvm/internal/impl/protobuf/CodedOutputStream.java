@@ -178,7 +178,7 @@ public final class CodedOutputStream {
         return computeRawVarint64Size(encodeZigZag64(j));
     }
 
-    public static int computeStringSizeNoTag(String str) throws UnsupportedEncodingException {
+    public static int computeStringSizeNoTag(String str) {
         try {
             byte[] bytes = str.getBytes(Constants.ENCODING);
             return computeRawVarint32Size(bytes.length) + bytes.length;

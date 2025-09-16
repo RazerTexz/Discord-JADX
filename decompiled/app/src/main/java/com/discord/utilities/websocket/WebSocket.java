@@ -363,7 +363,7 @@ public final class WebSocket {
         webSocket.state = state;
     }
 
-    private final okhttp3.WebSocket createWebSocket(String url, SSLSocketFactory socketFactory, WebSocketListener listener) throws NumberFormatException {
+    private final okhttp3.WebSocket createWebSocket(String url, SSLSocketFactory socketFactory, WebSocketListener listener) {
         OkHttpClient.a aVar = new OkHttpClient.a();
         if (socketFactory != null) {
             Platform2.a aVar2 = Platform2.c;

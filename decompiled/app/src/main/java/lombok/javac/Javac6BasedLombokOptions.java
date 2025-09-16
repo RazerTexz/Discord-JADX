@@ -35,7 +35,7 @@ public class Javac6BasedLombokOptions extends LombokOptions {
     }
 
     @Override // lombok.javac.LombokOptions
-    public void putJavacOption(String optionName, String value) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void putJavacOption(String optionName, String value) throws IllegalArgumentException {
         try {
             options_put.invoke(this, optionName_valueOf.invoke(null, optionName), value);
         } catch (IllegalAccessException e) {

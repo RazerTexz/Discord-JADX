@@ -19,7 +19,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
     public ByteBuffer k;
     public final long l;
 
-    public AshmemMemoryChunk(int i) throws ErrnoException {
+    public AshmemMemoryChunk(int i) {
         AnimatableValueParser.i(Boolean.valueOf(i > 0));
         try {
             SharedMemory sharedMemoryCreate = SharedMemory.create("AshmemMemoryChunk", i);

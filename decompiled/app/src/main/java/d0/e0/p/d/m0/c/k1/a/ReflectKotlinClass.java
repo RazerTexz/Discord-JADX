@@ -61,7 +61,7 @@ public final class ReflectKotlinClass {
         return new ClassLiteralValue(classId4, i);
     }
 
-    public final void b(KotlinJvmBinaryClass.c cVar, Annotation annotation) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public final void b(KotlinJvmBinaryClass.c cVar, Annotation annotation) throws SecurityException, IllegalArgumentException, InvocationTargetException {
         Class<?> javaClass = JvmClassMapping.getJavaClass(JvmClassMapping.getAnnotationClass(annotation));
         KotlinJvmBinaryClass.a aVarVisitAnnotation = cVar.visitAnnotation(reflectClassUtil.getClassId(javaClass), new ReflectAnnotationSource(annotation));
         if (aVarVisitAnnotation == null) {
@@ -70,7 +70,7 @@ public final class ReflectKotlinClass {
         c(aVarVisitAnnotation, annotation, javaClass);
     }
 
-    public final void c(KotlinJvmBinaryClass.a aVar, Annotation annotation, Class<?> cls) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public final void c(KotlinJvmBinaryClass.a aVar, Annotation annotation, Class<?> cls) throws SecurityException, IllegalArgumentException, InvocationTargetException {
         Method[] declaredMethods = cls.getDeclaredMethods();
         Intrinsics3.checkNotNullExpressionValue(declaredMethods, "annotationType.declaredMethods");
         int length = declaredMethods.length;

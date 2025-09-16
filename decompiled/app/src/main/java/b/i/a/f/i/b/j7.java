@@ -1,7 +1,5 @@
 package b.i.a.f.i.b;
 
-import java.lang.reflect.InvocationTargetException;
-
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
 /* loaded from: classes3.dex */
 public final class j7 implements Runnable {
@@ -20,7 +18,7 @@ public final class j7 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final void run() throws IllegalStateException {
         this.n.B(this.j, this.k, this.l, this.m, null);
     }
 }

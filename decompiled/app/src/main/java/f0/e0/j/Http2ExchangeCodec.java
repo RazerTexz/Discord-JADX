@@ -178,7 +178,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // f0.e0.h.ExchangeCodec
-    public Response.a d(boolean z2) throws NumberFormatException, IOException {
+    public Response.a d(boolean z2) throws IOException {
         Headers headers;
         Http2Stream http2Stream = this.c;
         if (http2Stream == null) {

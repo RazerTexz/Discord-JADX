@@ -15,7 +15,6 @@ import androidx.core.view.accessibility.AccessibilityClickableSpanCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collections;
 import java.util.List;
 
@@ -160,7 +159,7 @@ public class AccessibilityDelegateCompat {
         return this.mOriginalDelegate.onRequestSendAccessibilityEvent(viewGroup, view, accessibilityEvent);
     }
 
-    public boolean performAccessibilityAction(View view, int i, Bundle bundle) throws IllegalAccessException, InstantiationException, IllegalArgumentException, InvocationTargetException {
+    public boolean performAccessibilityAction(View view, int i, Bundle bundle) {
         List<AccessibilityNodeInfoCompat.AccessibilityActionCompat> actionList = getActionList(view);
         boolean zPerformAccessibilityAction = false;
         int i2 = 0;

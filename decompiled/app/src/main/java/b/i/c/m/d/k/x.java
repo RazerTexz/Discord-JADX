@@ -499,7 +499,7 @@ public class x {
         }
     }
 
-    public static Task b(x xVar) throws NumberFormatException, ClassNotFoundException {
+    public static Task b(x xVar) {
         boolean z2;
         Task taskO;
         Objects.requireNonNull(xVar);
@@ -1108,7 +1108,7 @@ public class x {
         }
     }
 
-    public final void g(long j2) throws IOException {
+    public final void g(long j2) {
         try {
             new File(l(), ".ae" + j2).createNewFile();
         } catch (IOException unused) {

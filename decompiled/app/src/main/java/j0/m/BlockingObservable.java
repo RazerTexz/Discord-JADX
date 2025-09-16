@@ -47,7 +47,7 @@ public final class BlockingObservable<T> {
         this.a = observable;
     }
 
-    public final T a(Observable<? extends T> observable) throws InterruptedException {
+    public final T a(Observable<? extends T> observable) {
         AtomicReference atomicReference = new AtomicReference();
         AtomicReference atomicReference2 = new AtomicReference();
         CountDownLatch countDownLatch = new CountDownLatch(1);

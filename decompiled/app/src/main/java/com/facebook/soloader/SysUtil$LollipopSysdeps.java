@@ -22,7 +22,7 @@ public final class SysUtil$LollipopSysdeps {
     }
 
     @DoNotOptimize
-    public static void fallocateIfSupported(FileDescriptor fileDescriptor, long j) throws IOException, ErrnoException {
+    public static void fallocateIfSupported(FileDescriptor fileDescriptor, long j) throws IOException {
         int i;
         try {
             Os.posix_fallocate(fileDescriptor, 0L, j);

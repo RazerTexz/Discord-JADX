@@ -21,7 +21,7 @@ public final class e implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IOException {
+    public final void run() {
         Status status = Status.l;
         try {
             String strValueOf = String.valueOf(this.k);

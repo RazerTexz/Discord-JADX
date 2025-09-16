@@ -171,7 +171,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
 
         @Override // f0.e0.i.Http1ExchangeCodec.a, g0.Source2
-        public long i0(Buffer3 buffer3, long j) throws IOException, NumberFormatException {
+        public long i0(Buffer3 buffer3, long j) throws IOException {
             Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
             boolean z2 = true;
             if (!(j >= 0)) {
@@ -464,7 +464,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // f0.e0.h.ExchangeCodec
-    public void cancel() throws IOException {
+    public void cancel() {
         Socket socket = this.e.f3620b;
         if (socket != null) {
             Util7.e(socket);

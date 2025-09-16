@@ -15,7 +15,7 @@ public abstract class ViewModel {
     private final Map<String, Object> mBagOfTags = new HashMap();
     private volatile boolean mCleared = false;
 
-    private static void closeWithRuntimeException(Object obj) throws IOException {
+    private static void closeWithRuntimeException(Object obj) {
         if (obj instanceof Closeable) {
             try {
                 ((Closeable) obj).close();
@@ -56,7 +56,7 @@ public abstract class ViewModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public <T> T setTagIfAbsent(String str, T t) throws IOException {
+    public <T> T setTagIfAbsent(String str, T t) {
         Object obj;
         synchronized (this.mBagOfTags) {
             obj = this.mBagOfTags.get(str);

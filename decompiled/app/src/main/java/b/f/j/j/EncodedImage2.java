@@ -192,7 +192,7 @@ public class EncodedImage2 implements Closeable {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void q() throws IOException {
+    public final void q() {
         boolean z2;
         int i;
         boolean z3;

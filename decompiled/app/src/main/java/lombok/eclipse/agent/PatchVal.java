@@ -353,7 +353,7 @@ public class PatchVal {
         return newAnn;
     }
 
-    private static TypeBinding getForEachComponentType(Expression collection, BlockScope scope) throws IllegalAccessException, AbortCompilation, IllegalArgumentException {
+    private static TypeBinding getForEachComponentType(Expression collection, BlockScope scope) throws AbortCompilation, IllegalArgumentException {
         if (collection != null) {
             TypeBinding resolved = collection.resolvedType;
             if (resolved == null) {
@@ -391,7 +391,7 @@ public class PatchVal {
     }
 
     /* JADX INFO: Thrown type has an unknown type hierarchy: org.eclipse.jdt.internal.compiler.problem.AbortCompilation */
-    private static TypeBinding resolveForExpression(Expression collection, BlockScope scope) throws IllegalAccessException, AbortCompilation, IllegalArgumentException {
+    private static TypeBinding resolveForExpression(Expression collection, BlockScope scope) throws AbortCompilation, IllegalArgumentException {
         try {
             return collection.resolveType(scope);
         } catch (ArrayIndexOutOfBoundsException unused) {
@@ -440,7 +440,7 @@ public class PatchVal {
         }
     }
 
-    private static void clearIgnoreFurtherInvestigationField(ReferenceContext currentContext) throws IllegalAccessException, IllegalArgumentException {
+    private static void clearIgnoreFurtherInvestigationField(ReferenceContext currentContext) throws IllegalArgumentException {
         if (currentContext instanceof AbstractMethodDeclaration) {
             AbstractMethodDeclaration methodDeclaration = (AbstractMethodDeclaration) currentContext;
             methodDeclaration.ignoreFurtherInvestigation = false;
@@ -484,7 +484,7 @@ public class PatchVal {
         }
     }
 
-    private static void setValue(Field field, Object object, Object value) throws IllegalAccessException, IllegalArgumentException {
+    private static void setValue(Field field, Object object, Object value) throws IllegalArgumentException {
         try {
             field.set(object, value);
         } catch (IllegalAccessException e) {

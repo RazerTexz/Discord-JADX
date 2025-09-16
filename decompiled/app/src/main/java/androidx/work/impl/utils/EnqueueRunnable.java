@@ -256,7 +256,7 @@ public class EnqueueRunnable implements Runnable {
         }
     }
 
-    private static boolean usesScheduler(@NonNull WorkManagerImpl workManagerImpl, @NonNull String str) throws ClassNotFoundException {
+    private static boolean usesScheduler(@NonNull WorkManagerImpl workManagerImpl, @NonNull String str) {
         try {
             Class<?> cls = Class.forName(str);
             Iterator<Scheduler> it = workManagerImpl.getSchedulers().iterator();

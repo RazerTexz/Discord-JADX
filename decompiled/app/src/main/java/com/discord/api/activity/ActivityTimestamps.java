@@ -16,7 +16,7 @@ public final /* data */ class ActivityTimestamps {
         this.end = str2;
     }
 
-    public final long a(String number) throws NumberFormatException {
+    public final long a(String number) {
         if (number == null || number.length() == 0) {
             return 0L;
         }

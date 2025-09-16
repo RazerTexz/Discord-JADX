@@ -2,7 +2,6 @@ package com.discord.widgets.settings;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.view.View;
@@ -320,7 +319,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
 
         @Override // android.view.View.OnClickListener
-        public final void onClick(View view) throws CameraAccessException {
+        public final void onClick(View view) {
             WidgetSettingsAppearance.access$getBinding$p(WidgetSettingsAppearance.this).l.g(true, true);
             int andIncrement = WidgetSettingsAppearance.access$getHolyLightEasterEggCounter$p(WidgetSettingsAppearance.this).getAndIncrement();
             if (andIncrement != 0) {
@@ -558,13 +557,13 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Long l) throws CameraAccessException {
+        public /* bridge */ /* synthetic */ Unit invoke(Long l) {
             invoke2(l);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Long l) throws CameraAccessException {
+        public final void invoke2(Long l) {
             View view = WidgetSettingsAppearance.access$getBinding$p(WidgetSettingsAppearance.this).g;
             Intrinsics3.checkNotNullExpressionValue(view, "binding.settingsAppearanceHolyLight");
             view.setVisibility(8);
@@ -667,11 +666,11 @@ public final class WidgetSettingsAppearance extends AppFragment {
         widgetSettingsAppearance.toastManager = toastManager;
     }
 
-    public static final /* synthetic */ void access$showHolyLight(WidgetSettingsAppearance widgetSettingsAppearance) throws CameraAccessException {
+    public static final /* synthetic */ void access$showHolyLight(WidgetSettingsAppearance widgetSettingsAppearance) {
         widgetSettingsAppearance.showHolyLight();
     }
 
-    public static final /* synthetic */ void access$tryEnableTorchMode(WidgetSettingsAppearance widgetSettingsAppearance, boolean z2) throws CameraAccessException {
+    public static final /* synthetic */ void access$tryEnableTorchMode(WidgetSettingsAppearance widgetSettingsAppearance, boolean z2) {
         widgetSettingsAppearance.tryEnableTorchMode(z2);
     }
 
@@ -766,7 +765,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
         linkifiedTextView.setText(getString(R.string.user_settings_appearance_preview_message_1));
     }
 
-    private final void showHolyLight() throws CameraAccessException {
+    private final void showHolyLight() {
         AppToast.d(getContext(), R.string.theme_holy_light_reveal, 0, this.toastManager);
         tryEnableTorchMode(true);
         View view = getBinding().g;
@@ -777,7 +776,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), WidgetSettingsAppearance.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
-    private final void tryEnableTorchMode(boolean enabled) throws CameraAccessException {
+    private final void tryEnableTorchMode(boolean enabled) {
         String str;
         if (Build.VERSION.SDK_INT >= 23) {
             Context context = getContext();

@@ -21,7 +21,6 @@ import androidx.annotation.RestrictTo;
 import androidx.core.os.BuildCompat;
 import androidx.core.view.accessibility.AccessibilityViewCommand;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -211,7 +210,7 @@ public class AccessibilityNodeInfoCompat {
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-        public boolean perform(View view, Bundle bundle) throws IllegalAccessException, InstantiationException, IllegalArgumentException, InvocationTargetException {
+        public boolean perform(View view, Bundle bundle) {
             AccessibilityViewCommand.CommandArguments commandArgumentsNewInstance;
             if (this.mCommand == null) {
                 return false;

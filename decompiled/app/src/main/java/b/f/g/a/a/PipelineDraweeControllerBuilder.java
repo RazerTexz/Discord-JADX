@@ -138,7 +138,7 @@ public class PipelineDraweeControllerBuilder extends AbstractDraweeControllerBui
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public PipelineDraweeControllerBuilder g(String str) throws NumberFormatException {
+    public PipelineDraweeControllerBuilder g(String str) {
         Uri uri;
         if (str != null && !str.isEmpty()) {
             return f(Uri.parse(str));

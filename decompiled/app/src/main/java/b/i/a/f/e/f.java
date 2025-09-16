@@ -77,7 +77,7 @@ public class f {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean b(int i) throws PackageManager.NameNotFoundException {
+    public boolean b(int i) {
         g0 g0VarB;
         int length;
         boolean zH;

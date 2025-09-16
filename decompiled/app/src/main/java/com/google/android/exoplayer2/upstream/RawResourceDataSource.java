@@ -59,7 +59,7 @@ public final class RawResourceDataSource extends BaseDataSource {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public long a(DataSpec dataSpec) throws DataSourceException, Resources.NotFoundException, NumberFormatException {
+    public long a(DataSpec dataSpec) throws RawResourceDataSourceException {
         int identifier;
         Uri uri = dataSpec.a;
         this.g = uri;
@@ -219,7 +219,7 @@ public final class RawResourceDataSource extends BaseDataSource {
     }
 
     @Override // b.i.a.c.e3.DataReader
-    public int read(byte[] bArr, int i, int i2) throws IOException {
+    public int read(byte[] bArr, int i, int i2) throws RawResourceDataSourceException {
         if (i2 == 0) {
             return 0;
         }

@@ -20,7 +20,6 @@ import b.i.a.c.x2.k0.PsExtractor;
 import b.i.a.c.x2.k0.TsExtractor;
 import b.i.a.c.x2.l0.WavExtractor;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -72,7 +71,7 @@ public final class DefaultExtractorsFactory implements ExtractorsFactory2 {
         return (Extractor[]) arrayList.toArray(new Extractor[arrayList.size()]);
     }
 
-    public final void c(int i, List<Extractor> list) throws IllegalAccessException, InstantiationException, IllegalArgumentException, InvocationTargetException {
+    public final void c(int i, List<Extractor> list) {
         Extractor extractorNewInstance;
         Constructor<? extends Extractor> constructor;
         switch (i) {

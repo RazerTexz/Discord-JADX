@@ -167,7 +167,7 @@ public final class StoreStageChannelSelfPresence extends StoreV2 {
     }
 
     @Store3
-    private final void updateActivity() throws NumberFormatException {
+    private final void updateActivity() {
         ActivityParty party;
         ActivityParty party2;
         Activity activityCreateStageChannelListeningActivity = ActivityUtils.createStageChannelListeningActivity();

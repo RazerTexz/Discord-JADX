@@ -14,7 +14,6 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -74,7 +73,7 @@ public final class DrawableCompat {
         return drawable.getColorFilter();
     }
 
-    public static int getLayoutDirection(@NonNull Drawable drawable) throws NoSuchMethodException, SecurityException {
+    public static int getLayoutDirection(@NonNull Drawable drawable) throws SecurityException {
         if (Build.VERSION.SDK_INT >= 23) {
             return drawable.getLayoutDirection();
         }
@@ -125,7 +124,7 @@ public final class DrawableCompat {
         drawable.setHotspotBounds(i, i2, i3, i4);
     }
 
-    public static boolean setLayoutDirection(@NonNull Drawable drawable, int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static boolean setLayoutDirection(@NonNull Drawable drawable, int i) throws SecurityException {
         if (Build.VERSION.SDK_INT >= 23) {
             return drawable.setLayoutDirection(i);
         }

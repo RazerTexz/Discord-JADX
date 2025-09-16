@@ -64,7 +64,7 @@ public final class DisplayCompat {
     }
 
     @Nullable
-    private static String getSystemProperty(String str) throws ClassNotFoundException {
+    private static String getSystemProperty(String str) {
         try {
             Class<?> cls = Class.forName("android.os.SystemProperties");
             return (String) cls.getMethod("get", String.class).invoke(cls, str);
@@ -102,7 +102,7 @@ public final class DisplayCompat {
     }
 
     @Nullable
-    private static Point parsePhysicalDisplaySizeFromSystemProperties(@NonNull String str, @NonNull Display display) throws ClassNotFoundException {
+    private static Point parsePhysicalDisplaySizeFromSystemProperties(@NonNull String str, @NonNull Display display) {
         if (display.getDisplayId() != 0) {
             return null;
         }

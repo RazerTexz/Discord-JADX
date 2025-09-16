@@ -9,7 +9,6 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.util.Util;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -52,13 +51,13 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, BigDecimal bigDecimal) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, BigDecimal bigDecimal) throws KryoException {
             write2(kryo, output, bigDecimal);
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
         /* renamed from: read, reason: avoid collision after fix types in other method */
-        public BigDecimal read2(Kryo kryo, Input input, Class<BigDecimal> cls) throws NoSuchMethodException, SecurityException, KryoException {
+        public BigDecimal read2(Kryo kryo, Input input, Class<BigDecimal> cls) throws KryoException {
             BigInteger bigInteger = this.bigIntegerSerializer.read2(kryo, input, BigInteger.class);
             if (bigInteger == null) {
                 return null;
@@ -82,7 +81,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, BigDecimal bigDecimal) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, BigDecimal bigDecimal) throws KryoException {
             if (bigDecimal == null) {
                 output.writeVarInt(0, true);
             } else if (bigDecimal == BigDecimal.ZERO) {
@@ -107,13 +106,13 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, BigInteger bigInteger) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, BigInteger bigInteger) throws KryoException {
             write2(kryo, output, bigInteger);
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
         /* renamed from: read, reason: avoid collision after fix types in other method */
-        public BigInteger read2(Kryo kryo, Input input, Class<BigInteger> cls) throws NoSuchMethodException, SecurityException, KryoException {
+        public BigInteger read2(Kryo kryo, Input input, Class<BigInteger> cls) throws KryoException {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -149,7 +148,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, BigInteger bigInteger) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, BigInteger bigInteger) throws KryoException {
             if (bigInteger == null) {
                 output.writeVarInt(0, true);
                 return;
@@ -176,7 +175,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Boolean bool) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Boolean bool) throws KryoException {
             write2(kryo, output, bool);
         }
 
@@ -187,7 +186,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Boolean bool) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Boolean bool) throws KryoException {
             output.writeBoolean(bool.booleanValue());
         }
     }
@@ -203,7 +202,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Byte b2) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Byte b2) throws KryoException {
             write2(kryo, output, b2);
         }
 
@@ -214,7 +213,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Byte b2) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Byte b2) throws KryoException {
             output.writeByte(b2.byteValue());
         }
     }
@@ -234,7 +233,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Calendar calendar) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Calendar calendar) throws KryoException {
             write2(kryo, output, calendar);
         }
 
@@ -259,7 +258,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Calendar calendar) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Calendar calendar) throws KryoException {
             this.timeZoneSerializer.write2(kryo, output, calendar.getTimeZone());
             output.writeLong(calendar.getTimeInMillis(), true);
             output.writeBoolean(calendar.isLenient());
@@ -284,7 +283,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Character ch) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Character ch) throws KryoException {
             write2(kryo, output, ch);
         }
 
@@ -295,7 +294,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Character ch) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Character ch) throws KryoException {
             output.writeChar(ch.charValue());
         }
     }
@@ -311,7 +310,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Charset charset) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Charset charset) throws KryoException {
             write2(kryo, output, charset);
         }
 
@@ -322,7 +321,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Charset charset) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Charset charset) throws KryoException {
             output.writeString(charset.name());
         }
     }
@@ -339,7 +338,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Class cls) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Class cls) throws KryoException {
             write2(kryo, output, cls);
         }
 
@@ -353,7 +352,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Class cls) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Class cls) throws KryoException {
             kryo.writeClass(output, cls);
             output.writeByte((cls == null || !cls.isPrimitive()) ? 0 : 1);
         }
@@ -499,7 +498,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Currency currency) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Currency currency) throws KryoException {
             write2(kryo, output, currency);
         }
 
@@ -514,13 +513,13 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Currency currency) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Currency currency) throws KryoException {
             output.writeString(currency == null ? null : currency.getCurrencyCode());
         }
     }
 
     public static class DateSerializer extends Serializer<Date> {
-        private Date create(Kryo kryo, Class<? extends Date> cls, long j) throws NoSuchMethodException, SecurityException, KryoException {
+        private Date create(Kryo kryo, Class<? extends Date> cls, long j) throws KryoException {
             if (cls == Date.class || cls == null) {
                 return new Date(j);
             }
@@ -593,7 +592,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Double d) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Double d) throws KryoException {
             write2(kryo, output, d);
         }
 
@@ -604,7 +603,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Double d) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Double d) throws KryoException {
             output.writeDouble(d.doubleValue());
         }
     }
@@ -629,7 +628,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Enum r3) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Enum r3) throws KryoException {
             write2(kryo, output, r3);
         }
 
@@ -655,7 +654,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Enum r3) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Enum r3) throws KryoException {
             if (r3 == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -729,7 +728,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Float f) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Float f) throws KryoException {
             write2(kryo, output, f);
         }
 
@@ -740,7 +739,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Float f) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Float f) throws KryoException {
             output.writeFloat(f.floatValue());
         }
     }
@@ -874,7 +873,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Locale locale) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Locale locale) throws KryoException {
             write2(kryo, output, locale);
         }
 
@@ -885,7 +884,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Locale locale) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Locale locale) throws KryoException {
             output.writeAscii(locale.getLanguage());
             output.writeAscii(locale.getCountry());
             output.writeString(locale.getVariant());
@@ -930,7 +929,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Short sh) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Short sh) throws KryoException {
             write2(kryo, output, sh);
         }
 
@@ -941,7 +940,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Short sh) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Short sh) throws KryoException {
             output.writeShort(sh.shortValue());
         }
     }
@@ -962,7 +961,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, StringBuffer stringBuffer) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, StringBuffer stringBuffer) throws KryoException {
             write2(kryo, output, stringBuffer);
         }
 
@@ -982,7 +981,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, StringBuffer stringBuffer) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, StringBuffer stringBuffer) throws KryoException {
             output.writeString(stringBuffer);
         }
     }
@@ -1003,7 +1002,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, StringBuilder sb) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, StringBuilder sb) throws KryoException {
             write2(kryo, output, sb);
         }
 
@@ -1019,7 +1018,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, StringBuilder sb) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, StringBuilder sb) throws KryoException {
             output.writeString(sb);
         }
     }
@@ -1036,7 +1035,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, String str) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, String str) throws KryoException {
             write2(kryo, output, str);
         }
 
@@ -1047,7 +1046,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, String str) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, String str) throws KryoException {
             output.writeString(str);
         }
     }
@@ -1063,7 +1062,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, TimeZone timeZone) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, TimeZone timeZone) throws KryoException {
             write2(kryo, output, timeZone);
         }
 
@@ -1074,13 +1073,13 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, TimeZone timeZone) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, TimeZone timeZone) throws KryoException {
             output.writeString(timeZone.getID());
         }
     }
 
     public static class TreeMapSerializer extends MapSerializer {
-        private TreeMap createTreeMap(Class<? extends Map> cls, Comparator comparator) throws NoSuchMethodException, SecurityException {
+        private TreeMap createTreeMap(Class<? extends Map> cls, Comparator comparator) {
             if (cls == TreeMap.class || cls == null) {
                 return new TreeMap(comparator);
             }
@@ -1123,7 +1122,7 @@ public class DefaultSerializers {
     }
 
     public static class TreeSetSerializer extends CollectionSerializer {
-        private TreeSet createTreeSet(Class<? extends Collection> cls, Comparator comparator) throws NoSuchMethodException, SecurityException {
+        private TreeSet createTreeSet(Class<? extends Collection> cls, Comparator comparator) {
             if (cls == TreeSet.class || cls == null) {
                 return new TreeSet(comparator);
             }
@@ -1152,7 +1151,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.CollectionSerializer, com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Collection collection) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Collection collection) throws KryoException {
             write2(kryo, output, collection);
         }
 
@@ -1169,7 +1168,7 @@ public class DefaultSerializers {
 
         @Override // com.esotericsoftware.kryo.serializers.CollectionSerializer
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Collection collection) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Collection collection) throws KryoException {
             kryo.writeClassAndObject(output, ((TreeSet) collection).comparator());
             super.write2(kryo, output, collection);
         }
@@ -1186,7 +1185,7 @@ public class DefaultSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, URL url) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, URL url) throws KryoException {
             write2(kryo, output, url);
         }
 
@@ -1201,7 +1200,7 @@ public class DefaultSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, URL url) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, URL url) throws KryoException {
             output.writeString(url.toExternalForm());
         }
     }

@@ -24,7 +24,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import d0.z.d.FunctionReferenceImpl;
 import d0.z.d.Intrinsics3;
-import java.io.IOException;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -88,7 +87,7 @@ public final class ImageUploadDialog extends AppDialog {
         }
 
         @Override // android.view.View.OnClickListener
-        public final void onClick(View view) throws IOException {
+        public final void onClick(View view) {
             int i = this.j;
             if (i != 0) {
                 if (i != 1) {

@@ -13,7 +13,6 @@ import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.material.R;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes3.dex */
 public class Slider extends BaseSlider<Slider, OnChangeListener, OnSliderTouchListener> {
@@ -226,12 +225,12 @@ public class Slider extends BaseSlider<Slider, OnChangeListener, OnSliderTouchLi
     }
 
     @Override // com.google.android.material.slider.BaseSlider
-    public /* bridge */ /* synthetic */ void setHaloRadius(@IntRange(from = 0) @Dimension int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public /* bridge */ /* synthetic */ void setHaloRadius(@IntRange(from = 0) @Dimension int i) {
         super.setHaloRadius(i);
     }
 
     @Override // com.google.android.material.slider.BaseSlider
-    public /* bridge */ /* synthetic */ void setHaloRadiusResource(@DimenRes int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public /* bridge */ /* synthetic */ void setHaloRadiusResource(@DimenRes int i) {
         super.setHaloRadiusResource(i);
     }
 

@@ -20,7 +20,7 @@ public final /* synthetic */ class k implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws RemoteException {
+    public final void run() {
         g gVar = this.j;
         while (true) {
             synchronized (gVar) {

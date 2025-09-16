@@ -200,7 +200,7 @@ public class ActivityChooserModel extends DataSetObservable {
 
         @Override // android.os.AsyncTask
         /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
-        public Void doInBackground2(Object... objArr) throws IOException {
+        public Void doInBackground2(Object... objArr) {
             List list = (List) objArr[0];
             String str = (String) objArr[1];
             try {
@@ -346,7 +346,7 @@ public class ActivityChooserModel extends DataSetObservable {
         }
     }
 
-    private boolean readHistoricalDataIfNeeded() throws IOException {
+    private boolean readHistoricalDataIfNeeded() {
         if (!this.mCanReadHistoricalData || !this.mHistoricalRecordsChanged || TextUtils.isEmpty(this.mHistoryFileName)) {
             return false;
         }
@@ -371,7 +371,7 @@ public class ActivityChooserModel extends DataSetObservable {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private void readHistoricalDataImpl() throws IOException {
+    private void readHistoricalDataImpl() {
         FileInputStream fileInputStreamOpenFileInput;
         try {
             try {

@@ -101,7 +101,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         }
 
         @Override // android.os.Handler
-        public void handleMessage(Message message) throws NumberFormatException {
+        public void handleMessage(Message message) {
             byte[] bArr = (byte[]) message.obj;
             if (bArr == null) {
                 return;
@@ -211,7 +211,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
     }
 
     @Override // b.i.a.c.w2.DrmSessionManager2
-    public final void a() throws NumberFormatException {
+    public final void a() {
         int i = this.p;
         this.p = i + 1;
         if (i != 0) {
@@ -301,7 +301,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
     }
 
     @Nullable
-    public final DrmSession e(Looper looper, @Nullable DrmSessionEventListener.a aVar, Format2 format2, boolean z2) throws NumberFormatException {
+    public final DrmSession e(Looper looper, @Nullable DrmSessionEventListener.a aVar, Format2 format2, boolean z2) {
         List<DrmInitData.SchemeData> listI;
         if (this.f2931x == null) {
             this.f2931x = new c(looper);
@@ -382,7 +382,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         return defaultDrmSessionH;
     }
 
-    public final DefaultDrmSession g(@Nullable List<DrmInitData.SchemeData> list, boolean z2, @Nullable DrmSessionEventListener.a aVar) throws NumberFormatException {
+    public final DefaultDrmSession g(@Nullable List<DrmInitData.SchemeData> list, boolean z2, @Nullable DrmSessionEventListener.a aVar) {
         Objects.requireNonNull(this.q);
         boolean z3 = this.h | z2;
         UUID uuid = this.f2929b;
@@ -403,7 +403,7 @@ public class DefaultDrmSessionManager implements DrmSessionManager2 {
         return defaultDrmSession;
     }
 
-    public final DefaultDrmSession h(@Nullable List<DrmInitData.SchemeData> list, boolean z2, @Nullable DrmSessionEventListener.a aVar, boolean z3) throws NumberFormatException {
+    public final DefaultDrmSession h(@Nullable List<DrmInitData.SchemeData> list, boolean z2, @Nullable DrmSessionEventListener.a aVar, boolean z3) {
         DefaultDrmSession defaultDrmSessionG = g(list, z2, aVar);
         if (f(defaultDrmSessionG) && !this.o.isEmpty()) {
             l();

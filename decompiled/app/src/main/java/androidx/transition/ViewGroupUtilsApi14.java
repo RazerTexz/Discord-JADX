@@ -29,7 +29,7 @@ public class ViewGroupUtilsApi14 {
     private ViewGroupUtilsApi14() {
     }
 
-    private static void cancelLayoutTransition(LayoutTransition layoutTransition) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private static void cancelLayoutTransition(LayoutTransition layoutTransition) throws SecurityException, IllegalArgumentException {
         if (!sCancelMethodFetched) {
             try {
                 Method declaredMethod = LayoutTransition.class.getDeclaredMethod("cancel", new Class[0]);
@@ -58,7 +58,7 @@ public class ViewGroupUtilsApi14 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static void suppressLayout(@NonNull ViewGroup viewGroup, boolean z2) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void suppressLayout(@NonNull ViewGroup viewGroup, boolean z2) throws SecurityException, IllegalArgumentException {
         LayoutTransition layoutTransition;
         boolean z3 = false;
         if (sEmptyLayoutTransition == null) {

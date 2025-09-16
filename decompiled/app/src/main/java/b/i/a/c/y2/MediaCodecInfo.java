@@ -102,7 +102,7 @@ public final class MediaCodecInfo {
         return new MediaCodecInfo(str, str2, str3, codecCapabilities, z2, z3, z4, z7, z8, z9);
     }
 
-    public DecoderReuseEvaluation c(Format2 format2, Format2 format22) throws NumberFormatException {
+    public DecoderReuseEvaluation c(Format2 format2, Format2 format22) {
         boolean z2 = false;
         int i = !Util2.a(format2.w, format22.w) ? 8 : 0;
         if (this.g) {
@@ -170,7 +170,7 @@ public final class MediaCodecInfo {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean e(Format2 format2) throws MediaCodecUtil.DecoderQueryException, NumberFormatException {
+    public boolean e(Format2 format2) throws MediaCodecUtil.DecoderQueryException {
         boolean z2;
         boolean z3;
         boolean z4;
@@ -309,7 +309,7 @@ public final class MediaCodecInfo {
         return true;
     }
 
-    public boolean f(Format2 format2) throws NumberFormatException {
+    public boolean f(Format2 format2) {
         if (this.g) {
             return this.e;
         }

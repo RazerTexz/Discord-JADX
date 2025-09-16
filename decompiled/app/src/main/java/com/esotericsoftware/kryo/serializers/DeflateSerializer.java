@@ -47,7 +47,7 @@ public class DeflateSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws IOException, KryoException {
+    public void write(Kryo kryo, Output output, Object obj) throws KryoException {
         OutputChunked outputChunked = new OutputChunked(output, 256);
         Deflater deflater = new Deflater(this.compressionLevel, this.noHeaders);
         try {

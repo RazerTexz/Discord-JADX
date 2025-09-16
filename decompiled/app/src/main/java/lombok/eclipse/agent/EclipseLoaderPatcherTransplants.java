@@ -26,7 +26,7 @@ public class EclipseLoaderPatcherTransplants {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static Class overrideLoadResult(ClassLoader original, String name, boolean resolve) throws NoSuchFieldException, NoSuchMethodException, SecurityException, ClassNotFoundException {
+    public static Class overrideLoadResult(ClassLoader original, String name, boolean resolve) throws ClassNotFoundException {
         byte[] bytes;
         int len;
         try {

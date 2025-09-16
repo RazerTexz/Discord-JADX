@@ -131,7 +131,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         return iArr2;
     }
 
-    public boolean generateWithByForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelWithBy) throws IllegalAccessException, IllegalArgumentException {
+    public boolean generateWithByForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelWithBy) throws IllegalArgumentException {
         if (checkForTypeLevelWithBy && EclipseHandlerUtil.hasAnnotation((Class<? extends Annotation>) WithBy.class, typeNode)) {
             return true;
         }
@@ -158,7 +158,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         return true;
     }
 
-    public void generateWithByForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) throws IllegalAccessException, IllegalArgumentException {
+    public void generateWithByForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) throws IllegalArgumentException {
         Iterator<EclipseNode> it = fieldNode.down().iterator();
         while (it.hasNext()) {
             EclipseNode child = it.next();
@@ -171,7 +171,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<WithBy> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation ast, EclipseNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+    public void handle(AnnotationValues<WithBy> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation ast, EclipseNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.WITHBY_FLAG_USAGE, "@WithBy");
         EclipseNode node = annotationNode.up();
         AccessLevel level = annotation.getInstance().value();
@@ -192,13 +192,13 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         }
     }
 
-    public void createWithByForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) throws IllegalAccessException, IllegalArgumentException {
+    public void createWithByForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) throws IllegalArgumentException {
         for (EclipseNode fieldNode : fieldNodes) {
             createWithByForField(level, fieldNode, sourceNode, whineIfExists, onMethod);
         }
     }
 
-    public void createWithByForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) throws IllegalAccessException, IllegalArgumentException {
+    public void createWithByForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) throws IllegalArgumentException {
         ASTNode source = sourceNode.get();
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             sourceNode.addError("@WithBy is only supported on a class or a field.");
@@ -247,7 +247,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
     /* JADX WARN: Type inference failed for: r0v132, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     /* JADX WARN: Type inference failed for: r0v145, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     /* JADX WARN: Type inference failed for: r2v4, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
-    public MethodDeclaration createWithBy(TypeDeclaration parent, EclipseNode fieldNode, String name, int modifier, EclipseNode sourceNode, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, boolean makeAbstract) throws IllegalAccessException, IllegalArgumentException {
+    public MethodDeclaration createWithBy(TypeDeclaration parent, EclipseNode fieldNode, String name, int modifier, EclipseNode sourceNode, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, boolean makeAbstract) throws IllegalArgumentException {
         Statement nullCheck;
         ASTNode source = sourceNode.get();
         if (name == null) {

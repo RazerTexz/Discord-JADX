@@ -3,7 +3,6 @@ package lombok.delombok;
 import com.sun.tools.javac.parser.Tokens;
 import com.sun.tools.javac.tree.DocCommentTable;
 import com.sun.tools.javac.tree.JCTree;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,7 +17,7 @@ import lombok.javac.handlers.JavacHandlerUtil;
 public class DocCommentIntegrator {
     private static final Pattern CONTENT_STRIPPER = Pattern.compile("^(?:\\s*\\*)?(.*?)$", 8);
 
-    public List<CommentInfo> integrate(List<CommentInfo> comments, JCTree.JCCompilationUnit unit) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public List<CommentInfo> integrate(List<CommentInfo> comments, JCTree.JCCompilationUnit unit) {
         List<CommentInfo> out = new ArrayList<>();
         CommentInfo lastExcisedComment = null;
         JCTree lastNode = null;
@@ -45,7 +44,7 @@ public class DocCommentIntegrator {
         return out;
     }
 
-    private boolean attach(JCTree.JCCompilationUnit top, JCTree node, CommentInfo cmt) throws IllegalAccessException, IllegalArgumentException {
+    private boolean attach(JCTree.JCCompilationUnit top, JCTree node, CommentInfo cmt) {
         String docCommentContent = cmt.content;
         if (docCommentContent.startsWith("/**")) {
             docCommentContent = docCommentContent.substring(3);
@@ -107,7 +106,7 @@ public class DocCommentIntegrator {
         }
     }
 
-    private JCTree findJavadocableNodeOnOrAfter(JCTree.JCCompilationUnit unit, int endPos) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private JCTree findJavadocableNodeOnOrAfter(JCTree.JCCompilationUnit unit, int endPos) {
         JCTree pid = PackageName.getPackageNode(unit);
         if (pid != null && endPos <= pid.pos) {
             return null;

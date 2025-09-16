@@ -93,7 +93,7 @@ public final class Util7 {
         return mapUnmodifiableMap;
     }
 
-    public static final int B(String str, int i) throws NumberFormatException {
+    public static final int B(String str, int i) {
         if (str != null) {
             try {
                 long j = Long.parseLong(str);
@@ -161,7 +161,7 @@ public final class Util7 {
         }
     }
 
-    public static final void d(Closeable closeable) throws IOException {
+    public static final void d(Closeable closeable) {
         Intrinsics3.checkParameterIsNotNull(closeable, "$this$closeQuietly");
         try {
             closeable.close();
@@ -171,7 +171,7 @@ public final class Util7 {
         }
     }
 
-    public static final void e(Socket socket) throws IOException {
+    public static final void e(Socket socket) {
         Intrinsics3.checkParameterIsNotNull(socket, "$this$closeQuietly");
         try {
             socket.close();

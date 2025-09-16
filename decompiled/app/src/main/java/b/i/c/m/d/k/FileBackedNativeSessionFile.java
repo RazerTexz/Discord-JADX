@@ -48,7 +48,7 @@ public class FileBackedNativeSessionFile implements NativeSessionFile {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public CrashlyticsReport.c.a b() throws IOException {
+    public CrashlyticsReport.c.a b() {
         byte[] byteArray;
         InputStream inputStreamH;
         ByteArrayOutputStream byteArrayOutputStream;

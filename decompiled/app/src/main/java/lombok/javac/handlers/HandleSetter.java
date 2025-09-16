@@ -8,7 +8,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Iterator;
 import lombok.AccessLevel;
@@ -101,7 +100,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
         return iArr2;
     }
 
-    public void generateSetterForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelSetter, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateSetterForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelSetter, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) {
         if (checkForTypeLevelSetter && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) Setter.class, typeNode)) {
             return;
         }
@@ -127,7 +126,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
         }
     }
 
-    public void generateSetterForField(JavacNode fieldNode, JavacNode sourceNode, AccessLevel level, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateSetterForField(JavacNode fieldNode, JavacNode sourceNode, AccessLevel level, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) {
         if (JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) Setter.class, fieldNode)) {
             return;
         }
@@ -135,7 +134,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Setter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<Setter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.SETTER_FLAG_USAGE, "@Setter");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) Setter.class);
@@ -157,13 +156,13 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
         }
     }
 
-    public void createSetterForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createSetterForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) {
         for (JavacNode fieldNode : fieldNodes) {
             createSetterForField(level, fieldNode, errorNode, whineIfExists, onMethod, onParam);
         }
     }
 
-    public void createSetterForField(AccessLevel level, JavacNode fieldNode, JavacNode sourceNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createSetterForField(AccessLevel level, JavacNode fieldNode, JavacNode sourceNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) {
         Type returnType;
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             fieldNode.addError("@Setter is only supported on a class or a field.");
@@ -254,7 +253,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
         return createSetterWithRecv(access, deprecate, field, treeMaker, setterName, paramName, booleanFieldToSet, methodType, returnStatement, source, onMethod, onParam, null);
     }
 
-    public static JCTree.JCMethodDecl createSetterWithRecv(long access, boolean deprecate, JavacNode field, JavacTreeMaker treeMaker, String setterName, Name paramName, Name booleanFieldToSet, JCTree.JCExpression methodType, JCTree.JCStatement returnStatement, JavacNode source, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam, JCTree.JCVariableDecl recv) throws IllegalAccessException, IllegalArgumentException {
+    public static JCTree.JCMethodDecl createSetterWithRecv(long access, boolean deprecate, JavacNode field, JavacTreeMaker treeMaker, String setterName, Name paramName, Name booleanFieldToSet, JCTree.JCExpression methodType, JCTree.JCStatement returnStatement, JavacNode source, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam, JCTree.JCVariableDecl recv) {
         JCTree.JCStatement nullCheck;
         JCTree.JCMethodDecl methodDef;
         if (setterName == null) {

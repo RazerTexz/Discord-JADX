@@ -8,7 +8,6 @@ import com.esotericsoftware.kryo.io.UnsafeMemoryOutput;
 import com.esotericsoftware.kryo.io.UnsafeOutput;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import com.esotericsoftware.kryo.util.UnsafeUtil;
-import java.io.IOException;
 import java.lang.reflect.Field;
 import sun.misc.Unsafe;
 
@@ -31,7 +30,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeBoolean(UnsafeUtil.unsafe().getBoolean(obj, this.offset));
         }
     }
@@ -52,7 +51,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeByte(UnsafeUtil.unsafe().getByte(obj, this.offset));
         }
     }
@@ -79,7 +78,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeChar(UnsafeUtil.unsafe().getChar(obj, this.offset));
         }
     }
@@ -100,7 +99,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeDouble(UnsafeUtil.unsafe().getDouble(obj, this.offset));
         }
     }
@@ -121,7 +120,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeFloat(UnsafeUtil.unsafe().getFloat(obj, this.offset));
         }
     }
@@ -146,7 +145,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             if (this.varIntsEnabled) {
                 output.writeInt(UnsafeUtil.unsafe().getInt(obj, this.offset), false);
             } else {
@@ -175,7 +174,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             if (this.varIntsEnabled) {
                 output.writeLong(UnsafeUtil.unsafe().getLong(obj, this.offset), false);
             } else {
@@ -273,7 +272,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public final void write(Output output, Object obj) throws IOException, KryoException {
+        public final void write(Output output, Object obj) throws KryoException {
             long j;
             long j2;
             if (output instanceof UnsafeOutput) {
@@ -320,7 +319,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeShort(UnsafeUtil.unsafe().getShort(obj, this.offset));
         }
     }
@@ -341,7 +340,7 @@ public class UnsafeCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeString((String) UnsafeUtil.unsafe().getObject(obj, this.offset));
         }
     }

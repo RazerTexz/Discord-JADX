@@ -3,7 +3,6 @@ package android.support.v4.app;
 import androidx.annotation.RestrictTo;
 import androidx.core.app.RemoteActionCompat;
 import androidx.versionedparcelable.VersionedParcel;
-import java.lang.reflect.InvocationTargetException;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
@@ -12,7 +11,7 @@ public final class RemoteActionCompatParcelizer extends androidx.core.app.Remote
         return androidx.core.app.RemoteActionCompatParcelizer.read(versionedParcel);
     }
 
-    public static void write(RemoteActionCompat remoteActionCompat, VersionedParcel versionedParcel) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void write(RemoteActionCompat remoteActionCompat, VersionedParcel versionedParcel) throws IllegalArgumentException {
         androidx.core.app.RemoteActionCompatParcelizer.write(remoteActionCompat, versionedParcel);
     }
 }

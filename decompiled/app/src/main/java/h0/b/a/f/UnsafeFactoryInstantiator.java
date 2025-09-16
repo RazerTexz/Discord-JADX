@@ -14,7 +14,7 @@ public class UnsafeFactoryInstantiator<T> implements ObjectInstantiator<T> {
     /* renamed from: b, reason: collision with root package name */
     public final Class<T> f3733b;
 
-    public UnsafeFactoryInstantiator(Class<T> cls) throws NoSuchFieldException {
+    public UnsafeFactoryInstantiator(Class<T> cls) {
         if (a == null) {
             try {
                 Field declaredField = Unsafe.class.getDeclaredField("theUnsafe");

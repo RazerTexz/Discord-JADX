@@ -85,7 +85,7 @@ public abstract class DefaultDecoder implements PlatformDecoder {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public CloseableReference<Bitmap> b(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, int i, ColorSpace colorSpace) throws IOException {
+    public CloseableReference<Bitmap> b(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, int i, ColorSpace colorSpace) {
         boolean z2;
         ImageFormat imageFormat = encodedImage2.l;
         if ((imageFormat == DefaultImageFormats.a || imageFormat == DefaultImageFormats.l) && encodedImage2.k == null) {

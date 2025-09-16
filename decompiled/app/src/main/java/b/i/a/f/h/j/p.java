@@ -84,7 +84,7 @@ public final class p extends SQLiteOpenHelper {
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper
-    public final void onCreate(SQLiteDatabase sQLiteDatabase) throws NumberFormatException {
+    public final void onCreate(SQLiteDatabase sQLiteDatabase) {
         int i;
         String path = sQLiteDatabase.getPath();
         try {

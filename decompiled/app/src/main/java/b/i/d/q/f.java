@@ -17,7 +17,7 @@ public class f<T> implements ObjectConstructor<T> {
     public final /* synthetic */ Class f1807b;
     public final /* synthetic */ Type c;
 
-    public f(g gVar, Class cls, Type type) throws NoSuchFieldException, NoSuchMethodException, ClassNotFoundException, SecurityException {
+    public f(g gVar, Class cls, Type type) {
         UnsafeAllocator5 unsafeAllocator4;
         this.f1807b = cls;
         this.c = type;

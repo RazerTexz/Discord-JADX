@@ -23,7 +23,6 @@ import com.google.android.gms.measurement.internal.zzaq;
 import com.google.android.gms.measurement.internal.zzku;
 import com.google.android.gms.measurement.internal.zzz;
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -566,7 +565,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final boolean K(b.i.a.f.h.l.e1 e1Var, boolean z2) {
+    public final boolean K(b.i.a.f.h.l.e1 e1Var, boolean z2) throws IllegalStateException {
         b();
         n();
         AnimatableValueParser.w(e1Var.G1());
@@ -700,7 +699,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final boolean O(String str, int i2, b.i.a.f.h.l.l0 l0Var) {
+    public final boolean O(String str, int i2, b.i.a.f.h.l.l0 l0Var) throws IllegalStateException {
         n();
         b();
         AnimatableValueParser.w(str);
@@ -730,7 +729,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final boolean P(String str, int i2, b.i.a.f.h.l.o0 o0Var) {
+    public final boolean P(String str, int i2, b.i.a.f.h.l.o0 o0Var) throws IllegalStateException {
         n();
         b();
         AnimatableValueParser.w(str);
@@ -947,7 +946,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final void V(String str, String str2) {
+    public final void V(String str, String str2) throws IllegalStateException {
         AnimatableValueParser.w(str);
         AnimatableValueParser.w(str2);
         b();
@@ -1126,7 +1125,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final int a0(String str, String str2) {
+    public final int a0(String str, String str2) throws IllegalStateException {
         AnimatableValueParser.w(str);
         AnimatableValueParser.w(str2);
         b();
@@ -1565,7 +1564,7 @@ public final class g extends i9 {
         }
     }
 
-    public final long v(b.i.a.f.h.l.e1 e1Var) throws NoSuchAlgorithmException, IOException {
+    public final long v(b.i.a.f.h.l.e1 e1Var) throws IOException {
         b();
         n();
         AnimatableValueParser.w(e1Var.G1());

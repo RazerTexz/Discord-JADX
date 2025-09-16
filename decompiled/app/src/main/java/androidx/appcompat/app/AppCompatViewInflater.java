@@ -85,7 +85,7 @@ public class AppCompatViewInflater {
         }
 
         @Override // android.view.View.OnClickListener
-        public void onClick(@NonNull View view) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void onClick(@NonNull View view) throws IllegalArgumentException {
             if (this.mResolvedMethod == null) {
                 resolveMethod(this.mHostView.getContext());
             }
@@ -111,7 +111,7 @@ public class AppCompatViewInflater {
         }
     }
 
-    private View createViewByPrefix(Context context, String str, String str2) throws InflateException, NoSuchMethodException, SecurityException, ClassNotFoundException {
+    private View createViewByPrefix(Context context, String str, String str2) throws InflateException, ClassNotFoundException {
         String str3;
         SimpleArrayMap<String, Constructor<? extends View>> simpleArrayMap = sConstructorMap;
         Constructor<? extends View> constructor = simpleArrayMap.get(str);

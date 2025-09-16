@@ -278,7 +278,7 @@ public class CachedContentIndex {
         @Nullable
         public ReusableBufferedOutputStream g;
 
-        public b(File file, @Nullable byte[] bArr, boolean z2) throws NoSuchPaddingException, NoSuchAlgorithmException {
+        public b(File file, @Nullable byte[] bArr, boolean z2) {
             Cipher cipher;
             SecretKeySpec secretKeySpec;
             AnimatableValueParser.D((bArr == null && z2) ? false : true);

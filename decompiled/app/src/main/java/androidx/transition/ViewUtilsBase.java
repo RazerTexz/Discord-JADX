@@ -21,7 +21,7 @@ public class ViewUtilsBase {
     private float[] mMatrixValues;
 
     @SuppressLint({"PrivateApi"})
-    private void fetchSetFrame() throws NoSuchMethodException, SecurityException {
+    private void fetchSetFrame() throws SecurityException {
         if (sSetFrameFetched) {
             return;
         }
@@ -87,7 +87,7 @@ public class ViewUtilsBase {
         view.setScaleY(f3);
     }
 
-    public void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) throws SecurityException, IllegalArgumentException {
         fetchSetFrame();
         Method method = sSetFrameMethod;
         if (method != null) {
@@ -109,7 +109,7 @@ public class ViewUtilsBase {
         }
     }
 
-    public void setTransitionVisibility(@NonNull View view, int i) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public void setTransitionVisibility(@NonNull View view, int i) throws IllegalArgumentException {
         if (!sViewFlagsFieldFetched) {
             try {
                 Field declaredField = View.class.getDeclaredField("mViewFlags");

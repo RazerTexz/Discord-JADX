@@ -19,10 +19,8 @@ import java.awt.event.ActionListener;
 import java.awt.font.TextAttribute;
 import java.io.File;
 import java.io.FilenameFilter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -256,7 +254,7 @@ public class InstallerGUI {
         return container;
     }
 
-    private String readChangeLog() throws IOException {
+    private String readChangeLog() {
         InputStream in = Installer.class.getResourceAsStream("/latestchanges.html");
         try {
             char[] buff = new char[8192];
@@ -1104,7 +1102,7 @@ public class InstallerGUI {
             return iArr2;
         }
 
-        public void actionPerformed(ActionEvent event) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+        public void actionPerformed(ActionEvent event) {
             this.val$hyperlink.setForeground(new Color(85, Opcodes.I2B, 90));
             try {
                 Object desktop = Class.forName("java.awt.Desktop").getMethod("getDesktop", new Class[0]).invoke(null, new Object[0]);

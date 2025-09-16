@@ -25,7 +25,7 @@ public class JDK14Util {
         f697b = e;
     }
 
-    public JDK14Util() throws NoSuchMethodException, ClassNotFoundException, RuntimeException {
+    public JDK14Util() throws RuntimeException {
         try {
             this.c = Class.class.getMethod("getRecordComponents", new Class[0]);
             Class<?> cls = Class.forName("java.lang.reflect.RecordComponent");

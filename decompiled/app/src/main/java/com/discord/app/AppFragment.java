@@ -124,7 +124,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public Unit invoke() throws IOException {
+        public Unit invoke() {
             MediaPicker mediaPicker = MediaPicker.a;
             AppFragment appFragment = AppFragment.this;
             CharSequence charSequenceK = FormatUtils.k(appFragment, R.string.choose_an_application, new Object[0], null, 4);
@@ -303,7 +303,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     @Override // androidx.fragment.app.Fragment
-    public void onActivityResult(int requestCode, int resultCode, Intent data) throws IOException {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         RequestType requestType;
         super.onActivityResult(requestCode, resultCode, data);
         MediaPicker mediaPicker = MediaPicker.a;

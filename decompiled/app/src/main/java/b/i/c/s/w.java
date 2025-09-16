@@ -44,7 +44,7 @@ public class w {
             this.e = j;
         }
 
-        public static String a(String str, String str2, long j) throws JSONException {
+        public static String a(String str, String str2, long j) {
             try {
                 JSONObject jSONObject = new JSONObject();
                 jSONObject.put("token", str);

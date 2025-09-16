@@ -136,7 +136,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             boolean zH1 = camera2Engine.h1(camera2Engine.f1921i0, this.j);
             Camera2Engine camera2Engine2 = Camera2Engine.this;
@@ -172,7 +172,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             CaptureRequest.Builder builder = camera2Engine.f1921i0;
             Location location = camera2Engine.C;
@@ -193,7 +193,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             if (camera2Engine.m1(camera2Engine.f1921i0, this.j)) {
                 Camera2Engine.this.k1();
@@ -211,7 +211,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             if (camera2Engine.i1(camera2Engine.f1921i0, this.j)) {
                 Camera2Engine.this.k1();
@@ -235,7 +235,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             if (camera2Engine.n1(camera2Engine.f1921i0, this.j)) {
                 Camera2Engine.this.k1();
@@ -264,7 +264,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             if (camera2Engine.g1(camera2Engine.f1921i0, this.j)) {
                 Camera2Engine.this.k1();
@@ -285,7 +285,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         }
 
         @Override // java.lang.Runnable
-        public void run() throws CameraAccessException {
+        public void run() {
             Camera2Engine camera2Engine = Camera2Engine.this;
             if (camera2Engine.j1(camera2Engine.f1921i0, this.j)) {
                 Camera2Engine.this.k1();
@@ -687,7 +687,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // b.o.a.n.CameraEngine
     @NonNull
-    public Task<Void> P() throws CameraAccessException {
+    public Task<Void> P() {
         Handler handler;
         int i2;
         CameraLogger cameraLogger = CameraEngine.j;
@@ -797,7 +797,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     @Override // b.o.a.n.CameraEngine
     @NonNull
     @SuppressLint({"MissingPermission"})
-    public Task<CameraOptions> Q() throws CameraAccessException {
+    public Task<CameraOptions> Q() {
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
         try {
             this.f1916d0.openCamera(this.f1917e0, new m(taskCompletionSource), (Handler) null);
@@ -809,7 +809,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
 
     @Override // b.o.a.n.CameraEngine
     @NonNull
-    public Task<Void> R() throws CameraAccessException {
+    public Task<Void> R() {
         CameraLogger cameraLogger = CameraEngine.j;
         cameraLogger.a(1, "onStartPreview:", "Dispatching onCameraPreviewStreamSizeChanged.");
         ((CameraView.b) this.m).h();
@@ -936,7 +936,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // b.o.a.n.CameraBaseEngine
-    public void Y0(@NonNull PictureResult.a aVar, boolean z2) throws CameraAccessException {
+    public void Y0(@NonNull PictureResult.a aVar, boolean z2) {
         if (z2) {
             CameraEngine.j.a(1, "onTakePicture:", "doMetering is true. Delaying.");
             TimeoutAction timeoutAction = new TimeoutAction(2500L, p1(null));
@@ -993,7 +993,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
     }
 
     @Override // b.o.a.n.CameraEngine
-    public final boolean c(@NonNull Facing facing) throws CameraAccessException {
+    public final boolean c(@NonNull Facing facing) {
         CameraCharacteristics cameraCharacteristics;
         Objects.requireNonNull(this.k0);
         int iIntValue = Camera2Mapper.f1937b.get(facing).intValue();
@@ -1210,7 +1210,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         this.n.b("has frame processors (" + z2 + ")", true, new j(z2));
     }
 
-    public void k1() throws CameraAccessException {
+    public void k1() {
         l1(true, 3);
     }
 
@@ -1222,7 +1222,7 @@ public class Camera2Engine extends CameraBaseEngine implements ImageReader.OnIma
         cameraStateOrchestrator.b("hdr (" + hdr + ")", true, new CameraStateOrchestrator3(cameraStateOrchestrator, CameraState2.ENGINE, new d(hdr2)));
     }
 
-    public final void l1(boolean z2, int i2) throws CameraAccessException {
+    public final void l1(boolean z2, int i2) {
         if ((this.n.f != CameraState2.PREVIEW || O()) && z2) {
             return;
         }

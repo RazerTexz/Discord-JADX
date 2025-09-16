@@ -66,7 +66,7 @@ public final class g {
         this.a = map;
     }
 
-    public <T> ObjectConstructor<T> a(TypeToken<T> typeToken) throws NoSuchMethodException, SecurityException {
+    public <T> ObjectConstructor<T> a(TypeToken<T> typeToken) throws SecurityException {
         h hVar;
         Type type = typeToken.getType();
         Class<? super T> rawType = typeToken.getRawType();

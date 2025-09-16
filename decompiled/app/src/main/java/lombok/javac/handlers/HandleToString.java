@@ -3,7 +3,6 @@ package lombok.javac.handlers;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.sun.tools.javac.tree.JCTree;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.List;
 import lombok.ConfigurationKeys;
@@ -70,7 +69,7 @@ public class HandleToString extends JavacAnnotationHandler<ToString> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<ToString> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<ToString> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.TO_STRING_FLAG_USAGE, "@ToString");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) ToString.class);
         ToString ann = annotation.getInstance();
@@ -90,7 +89,7 @@ public class HandleToString extends JavacAnnotationHandler<ToString> {
         generateToString(annotationNode.up(), annotationNode, members, includeNames, callSuper, true, fieldAccess);
     }
 
-    public void generateToStringForType(JavacNode typeNode, JavacNode errorNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateToStringForType(JavacNode typeNode, JavacNode errorNode) {
         if (JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) ToString.class, typeNode)) {
             return;
         }
@@ -106,7 +105,7 @@ public class HandleToString extends JavacAnnotationHandler<ToString> {
         generateToString(typeNode, errorNode, members, includeFieldNames, null, false, access);
     }
 
-    public void generateToString(JavacNode typeNode, JavacNode source, List<InclusionExclusionUtils.Included<JavacNode, ToString.Include>> members, boolean includeFieldNames, Boolean callSuper, boolean whineIfExists, HandlerUtil.FieldAccess fieldAccess) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateToString(JavacNode typeNode, JavacNode source, List<InclusionExclusionUtils.Included<JavacNode, ToString.Include>> members, boolean includeFieldNames, Boolean callSuper, boolean whineIfExists, HandlerUtil.FieldAccess fieldAccess) {
         boolean notAClass = true;
         if (typeNode.get() instanceof JCTree.JCClassDecl) {
             long flags = typeNode.get().mods.flags;

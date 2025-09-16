@@ -4,7 +4,6 @@ import android.os.Build;
 import android.os.Trace;
 import android.util.Log;
 import androidx.annotation.NonNull;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 @Deprecated
@@ -36,7 +35,7 @@ public final class TraceCompat {
     private TraceCompat() {
     }
 
-    public static void beginAsyncSection(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void beginAsyncSection(@NonNull String str, int i) {
         if (Build.VERSION.SDK_INT >= 29) {
             Trace.beginAsyncSection(str, i);
             return;
@@ -52,7 +51,7 @@ public final class TraceCompat {
         Trace.beginSection(str);
     }
 
-    public static void endAsyncSection(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void endAsyncSection(@NonNull String str, int i) {
         if (Build.VERSION.SDK_INT >= 29) {
             Trace.endAsyncSection(str, i);
             return;
@@ -80,7 +79,7 @@ public final class TraceCompat {
         }
     }
 
-    public static void setCounter(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void setCounter(@NonNull String str, int i) {
         if (Build.VERSION.SDK_INT >= 29) {
             Trace.setCounter(str, i);
             return;

@@ -98,7 +98,7 @@ public class Frame3 {
         return 16777217;
     }
 
-    public static boolean g(SymbolTable2 symbolTable2, int i, int[] iArr, int i2) throws ClassNotFoundException {
+    public static boolean g(SymbolTable2 symbolTable2, int i, int[] iArr, int i2) {
         int iMin;
         int iN;
         int i3;

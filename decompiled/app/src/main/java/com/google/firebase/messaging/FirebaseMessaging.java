@@ -117,7 +117,7 @@ public class FirebaseMessaging {
         }
     }
 
-    public FirebaseMessaging(FirebaseApp2 firebaseApp2, FirebaseInstanceId firebaseInstanceId, Provider2<UserAgentPublisher> provider2, Provider2<HeartBeatInfo> provider22, g gVar, @Nullable TransportFactory transportFactory, Subscriber2 subscriber2) throws ClassNotFoundException {
+    public FirebaseMessaging(FirebaseApp2 firebaseApp2, FirebaseInstanceId firebaseInstanceId, Provider2<UserAgentPublisher> provider2, Provider2<HeartBeatInfo> provider22, g gVar, @Nullable TransportFactory transportFactory, Subscriber2 subscriber2) {
         try {
             Class.forName("com.google.firebase.iid.FirebaseInstanceIdReceiver");
             a = transportFactory;

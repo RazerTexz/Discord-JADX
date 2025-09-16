@@ -37,7 +37,6 @@ import d0.z.d.FunctionReferenceImpl;
 import d0.z.d.Intrinsics3;
 import d0.z.d.Lambda;
 import d0.z.d.Reflection2;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -522,7 +521,7 @@ public final class WidgetTabsHost extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
-    public void onActivityResult(int requestCode, int resultCode, Intent data) throws IOException {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 4008) {
             GoogleSmartLockManager.INSTANCE.handleResult(resultCode, data);

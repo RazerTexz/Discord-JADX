@@ -19,7 +19,7 @@ public final class y extends Lambda implements Function0<Unit> {
     }
 
     @Override // kotlin.jvm.functions.Function0
-    public Unit invoke() throws NumberFormatException {
+    public Unit invoke() {
         RtcConnection.j(this.this$0, false, "Unable to prepare media engine.", this.$throwable, false, 8);
         return Unit.a;
     }

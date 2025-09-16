@@ -376,7 +376,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         return null;
     }
 
-    private static List<JCTree> getResourcesForTryNode(JCTree.JCTry tryNode) throws IllegalAccessException, IllegalArgumentException {
+    private static List<JCTree> getResourcesForTryNode(JCTree.JCTry tryNode) {
         if (!JCTRY_RESOURCES_FIELD_INITIALIZED) {
             JCTRY_RESOURCES_FIELD = Permit.permissiveGetField(JCTree.JCTry.class, "resources");
             JCTRY_RESOURCES_FIELD_INITIALIZED = true;
@@ -596,7 +596,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         }
     }
 
-    public void removeFromDeferredDiagnostics(int startPos, int endPos) throws IllegalAccessException, IllegalArgumentException {
+    public void removeFromDeferredDiagnostics(int startPos, int endPos) {
         JCTree.JCCompilationUnit self = top().get();
         new CompilerMessageSuppressor(getContext()).removeAllBetween(self.sourcefile, startPos, endPos);
     }

@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /* loaded from: classes.dex */
@@ -53,7 +52,7 @@ public class ActionBarDrawerToggleHoneycomb {
         return drawable;
     }
 
-    public static SetIndicatorInfo setActionBarDescription(SetIndicatorInfo setIndicatorInfo, Activity activity, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static SetIndicatorInfo setActionBarDescription(SetIndicatorInfo setIndicatorInfo, Activity activity, int i) {
         if (setIndicatorInfo == null) {
             setIndicatorInfo = new SetIndicatorInfo(activity);
         }
@@ -67,7 +66,7 @@ public class ActionBarDrawerToggleHoneycomb {
         return setIndicatorInfo;
     }
 
-    public static SetIndicatorInfo setActionBarUpIndicator(Activity activity, Drawable drawable, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static SetIndicatorInfo setActionBarUpIndicator(Activity activity, Drawable drawable, int i) {
         SetIndicatorInfo setIndicatorInfo = new SetIndicatorInfo(activity);
         if (setIndicatorInfo.setHomeAsUpIndicator != null) {
             try {

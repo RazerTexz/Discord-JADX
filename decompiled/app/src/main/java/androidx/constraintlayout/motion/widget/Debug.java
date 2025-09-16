@@ -13,7 +13,7 @@ import java.lang.reflect.Modifier;
 
 /* loaded from: classes.dex */
 public class Debug {
-    public static void dumpLayoutParams(ViewGroup viewGroup, String str) throws IllegalAccessException, SecurityException, IllegalArgumentException {
+    public static void dumpLayoutParams(ViewGroup viewGroup, String str) throws SecurityException, IllegalArgumentException {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
         StringBuilder sbU = outline.U(".(");
         sbU.append(stackTraceElement.getFileName());
@@ -44,7 +44,7 @@ public class Debug {
         }
     }
 
-    public static void dumpPoc(Object obj) throws IllegalAccessException, SecurityException, IllegalArgumentException {
+    public static void dumpPoc(Object obj) throws SecurityException, IllegalArgumentException {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
         StringBuilder sbU = outline.U(".(");
         sbU.append(stackTraceElement.getFileName());
@@ -184,7 +184,7 @@ public class Debug {
         }
     }
 
-    public static String getName(Context context, int[] iArr) throws Resources.NotFoundException {
+    public static String getName(Context context, int[] iArr) {
         String resourceEntryName;
         try {
             String str = iArr.length + "[";
@@ -209,7 +209,7 @@ public class Debug {
         }
     }
 
-    public static void dumpLayoutParams(ViewGroup.LayoutParams layoutParams, String str) throws IllegalAccessException, SecurityException, IllegalArgumentException {
+    public static void dumpLayoutParams(ViewGroup.LayoutParams layoutParams, String str) throws SecurityException, IllegalArgumentException {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
         StringBuilder sbU = outline.U(".(");
         sbU.append(stackTraceElement.getFileName());

@@ -38,7 +38,7 @@ public class CameraUtils implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public void run() throws IOException {
+    public void run() {
         byte[] bArr = this.j;
         File file = this.k;
         if (!file.exists() || file.delete()) {

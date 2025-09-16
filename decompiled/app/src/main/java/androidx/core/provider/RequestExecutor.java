@@ -101,7 +101,7 @@ public class RequestExecutor {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Exception {
+        public void run() {
             T tCall;
             try {
                 tCall = this.mCallable.call();

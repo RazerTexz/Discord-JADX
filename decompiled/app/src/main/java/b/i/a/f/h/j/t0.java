@@ -22,7 +22,7 @@ public final class t0<T extends Context & x0> {
         this.c = t;
     }
 
-    public static boolean c(Context context) throws PackageManager.NameNotFoundException {
+    public static boolean c(Context context) {
         Objects.requireNonNull(context, "null reference");
         Boolean bool = a;
         if (bool != null) {

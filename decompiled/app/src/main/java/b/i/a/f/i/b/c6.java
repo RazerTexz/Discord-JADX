@@ -21,7 +21,6 @@ import com.google.android.gms.measurement.internal.zzap;
 import com.google.android.gms.measurement.internal.zzaq;
 import com.google.android.gms.measurement.internal.zzku;
 import com.google.android.gms.measurement.internal.zzn;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -213,7 +212,7 @@ public final class c6 extends a5 {
     }
 
     @WorkerThread
-    public final void E(String str, String str2, long j, Bundle bundle) throws IllegalStateException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final void E(String str, String str2, long j, Bundle bundle) throws IllegalStateException {
         b();
         F(str, str2, j, bundle, true, this.d == null || t9.r0(str2), false, null);
     }
@@ -227,7 +226,7 @@ public final class c6 extends a5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void F(String str, String str2, long j, Bundle bundle, boolean z2, boolean z3, boolean z4, String str3) throws IllegalStateException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final void F(String str, String str2, long j, Bundle bundle, boolean z2, boolean z3, boolean z4, String str3) throws IllegalStateException {
         Bundle bundle2;
         ArrayList arrayList;
         boolean zX;

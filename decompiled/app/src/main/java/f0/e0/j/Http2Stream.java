@@ -465,7 +465,7 @@ public final class Http2Stream {
         }
     }
 
-    public final void l() throws InterruptedException, InterruptedIOException {
+    public final void l() throws InterruptedIOException {
         try {
             wait();
         } catch (InterruptedException unused) {

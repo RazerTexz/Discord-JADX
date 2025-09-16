@@ -17,7 +17,7 @@ import org.objectweb.asm.Opcodes;
 public abstract class FieldAccess2 {
     public String[] a;
 
-    public static FieldAccess2 a(Class cls) throws ClassNotFoundException {
+    public static FieldAccess2 a(Class cls) {
         Class<?> clsA;
         ArrayList arrayList = new ArrayList();
         Class superclass = cls;

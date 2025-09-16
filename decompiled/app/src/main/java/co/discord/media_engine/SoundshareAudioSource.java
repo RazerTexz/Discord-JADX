@@ -57,7 +57,7 @@ public final class SoundshareAudioSource {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws IllegalStateException, SecurityException, IllegalArgumentException {
+        public void run() throws SecurityException, IllegalArgumentException {
             Process.setThreadPriority(-19);
             Companion.access$assertTrue(SoundshareAudioSource.INSTANCE, this.audioRecord.getRecordingState() == 3);
             while (this.keepAlive) {

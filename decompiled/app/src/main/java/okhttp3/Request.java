@@ -186,7 +186,7 @@ public final class Request {
             return this;
         }
 
-        public a f(String str) throws NumberFormatException {
+        public a f(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "url");
             if (StringsJVM.startsWith(str, "ws:", true)) {
                 StringBuilder sbU = outline.U("http:");

@@ -24,7 +24,7 @@ import java.util.List;
 /* renamed from: d0.e0.p.d.m0.c.k1.b.r, reason: use source file name */
 /* loaded from: classes3.dex */
 public abstract class ReflectJavaMember2 extends ReflectJavaElement implements ReflectJavaAnnotationOwner, ReflectJavaModifierListOwner, d0.e0.p.d.m0.e.a.k0.q {
-    public final List<a0> a(Type[] typeArr, Annotation[][] annotationArr, boolean z2) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public final List<a0> a(Type[] typeArr, Annotation[][] annotationArr, boolean z2) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
         String str;
         Intrinsics3.checkNotNullParameter(typeArr, "parameterTypes");
         Intrinsics3.checkNotNullParameter(annotationArr, "parameterAnnotations");

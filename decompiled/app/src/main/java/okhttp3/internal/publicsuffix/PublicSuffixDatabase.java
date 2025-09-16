@@ -127,7 +127,7 @@ public final class PublicSuffixDatabase {
         }
     }
 
-    public final String a(String str) throws InterruptedException {
+    public final String a(String str) {
         String strA;
         String str2;
         String strA2;

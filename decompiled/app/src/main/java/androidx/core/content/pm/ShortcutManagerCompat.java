@@ -65,7 +65,7 @@ public class ShortcutManagerCompat {
         }
 
         @Override // android.content.BroadcastReceiver
-        public void onReceive(Context context, Intent intent) throws IntentSender.SendIntentException {
+        public void onReceive(Context context, Intent intent) {
             try {
                 this.val$callback.sendIntent(context, 0, null, null, null);
             } catch (IntentSender.SendIntentException unused) {
@@ -440,7 +440,7 @@ public class ShortcutManagerCompat {
         }
     }
 
-    public static boolean requestPinShortcut(@NonNull Context context, @NonNull ShortcutInfoCompat shortcutInfoCompat, @Nullable IntentSender intentSender) throws PackageManager.NameNotFoundException {
+    public static boolean requestPinShortcut(@NonNull Context context, @NonNull ShortcutInfoCompat shortcutInfoCompat, @Nullable IntentSender intentSender) {
         if (Build.VERSION.SDK_INT >= 26) {
             return ((ShortcutManager) context.getSystemService(ShortcutManager.class)).requestPinShortcut(shortcutInfoCompat.toShortcutInfo(), intentSender);
         }

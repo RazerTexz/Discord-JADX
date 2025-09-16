@@ -4,7 +4,6 @@ import com.discord.api.permission.Permission;
 import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -24,7 +23,7 @@ import lombok.javac.handlers.JavacHandlerUtil;
 public class HandleFieldNameConstants extends JavacAnnotationHandler<FieldNameConstants> {
     private static final IdentifierName FIELDS = IdentifierName.valueOf("Fields");
 
-    public void generateFieldNameConstantsForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean asEnum, IdentifierName innerTypeName, boolean onlyExplicit, boolean uppercase) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateFieldNameConstantsForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean asEnum, IdentifierName innerTypeName, boolean onlyExplicit, boolean uppercase) {
         JCTree.JCClassDecl typeDecl = null;
         if (typeNode.get() instanceof JCTree.JCClassDecl) {
             typeDecl = (JCTree.JCClassDecl) typeNode.get();
@@ -70,7 +69,7 @@ public class HandleFieldNameConstants extends JavacAnnotationHandler<FieldNameCo
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<FieldNameConstants> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<FieldNameConstants> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.FIELD_NAME_CONSTANTS_FLAG_USAGE, "@FieldNameConstants");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) FieldNameConstants.class);
         JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");
@@ -105,7 +104,7 @@ public class HandleFieldNameConstants extends JavacAnnotationHandler<FieldNameCo
         }
     }
 
-    private void createInnerTypeFieldNameConstants(JavacNode typeNode, JavacNode errorNode, JCTree pos, AccessLevel level, List<JavacNode> fields, boolean asEnum, IdentifierName innerTypeName, boolean uppercase) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void createInnerTypeFieldNameConstants(JavacNode typeNode, JavacNode errorNode, JCTree pos, AccessLevel level, List<JavacNode> fields, boolean asEnum, IdentifierName innerTypeName, boolean uppercase) {
         boolean genConstr;
         JCTree.JCIdent jCIdentChainDots;
         JCTree.JCNewClass jCNewClassLiteral;

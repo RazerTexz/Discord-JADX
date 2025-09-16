@@ -146,7 +146,7 @@ public class FirebaseApp2 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public FirebaseApp2(Context context, String str, FirebaseOptions firebaseOptions) throws PackageManager.NameNotFoundException, ClassNotFoundException {
+    public FirebaseApp2(Context context, String str, FirebaseOptions firebaseOptions) {
         Bundle bundle;
         List<String> listEmptyList;
         PackageManager packageManager;

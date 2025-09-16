@@ -28,7 +28,7 @@ public final class l0 extends z {
     }
 
     @Override // b.i.a.f.e.k.z
-    public final boolean d() throws RemoteException {
+    public final boolean d() {
         try {
             IBinder iBinder = this.g;
             Objects.requireNonNull(iBinder, "null reference");

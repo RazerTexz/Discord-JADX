@@ -330,7 +330,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
     }
 
     @SuppressLint({"PrivateApi"})
-    private boolean handleAccessibilityExit(@NonNull MotionEvent motionEvent) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private boolean handleAccessibilityExit(@NonNull MotionEvent motionEvent) throws SecurityException, IllegalArgumentException {
         if (motionEvent.getAction() == 10) {
             try {
                 Field declaredField = ExploreByTouchHelper.class.getDeclaredField("mHoveredVirtualViewId");

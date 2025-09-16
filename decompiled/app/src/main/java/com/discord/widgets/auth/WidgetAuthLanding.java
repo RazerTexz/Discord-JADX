@@ -29,7 +29,6 @@ import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
 import d0.z.d.FunctionReferenceImpl;
 import d0.z.d.Intrinsics3;
 import d0.z.d.Reflection2;
-import java.io.IOException;
 import java.io.Serializable;
 import kotlin.Lazy;
 import kotlin.Metadata;
@@ -254,7 +253,7 @@ public final class WidgetAuthLanding extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
-    public void onActivityResult(int requestCode, int resultCode, Intent data) throws IOException {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 4009) {
             GoogleSmartLockManager.INSTANCE.handleResult(resultCode, data);

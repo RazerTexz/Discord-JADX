@@ -111,7 +111,7 @@ public class DropDownListView extends ListView {
         }
     }
 
-    public DropDownListView(@NonNull Context context, boolean z2) throws NoSuchFieldException {
+    public DropDownListView(@NonNull Context context, boolean z2) {
         super(context, null, R.attr.dropDownListViewStyle);
         this.mSelectorRect = new Rect();
         this.mSelectionLeftPadding = 0;
@@ -157,7 +157,7 @@ public class DropDownListView extends ListView {
         selector.draw(canvas);
     }
 
-    private void positionSelectorCompat(int i, View view) throws IllegalAccessException, IllegalArgumentException {
+    private void positionSelectorCompat(int i, View view) throws IllegalArgumentException {
         Rect rect = this.mSelectorRect;
         rect.set(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
         rect.left -= this.mSelectionLeftPadding;
@@ -177,7 +177,7 @@ public class DropDownListView extends ListView {
         }
     }
 
-    private void positionSelectorLikeFocusCompat(int i, View view) throws IllegalAccessException, IllegalArgumentException {
+    private void positionSelectorLikeFocusCompat(int i, View view) throws IllegalArgumentException {
         Drawable selector = getSelector();
         boolean z2 = (selector == null || i == -1) ? false : true;
         if (z2) {
@@ -193,7 +193,7 @@ public class DropDownListView extends ListView {
         }
     }
 
-    private void positionSelectorLikeTouchCompat(int i, View view, float f, float f2) throws IllegalAccessException, IllegalArgumentException {
+    private void positionSelectorLikeTouchCompat(int i, View view, float f, float f2) throws IllegalArgumentException {
         positionSelectorLikeFocusCompat(i, view);
         Drawable selector = getSelector();
         if (selector == null || i == -1) {
@@ -202,7 +202,7 @@ public class DropDownListView extends ListView {
         DrawableCompat.setHotspot(selector, f, f2);
     }
 
-    private void setPressedItem(View view, int i, float f, float f2) throws IllegalAccessException, IllegalArgumentException {
+    private void setPressedItem(View view, int i, float f, float f2) throws IllegalArgumentException {
         View childAt;
         this.mDrawsInPressedState = true;
         drawableHotspotChanged(f, f2);
@@ -368,7 +368,7 @@ public class DropDownListView extends ListView {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean onForwardedEvent(MotionEvent motionEvent, int i) throws IllegalAccessException, IllegalArgumentException {
+    public boolean onForwardedEvent(MotionEvent motionEvent, int i) throws IllegalArgumentException {
         boolean z2;
         boolean z3;
         int actionMasked = motionEvent.getActionMasked();

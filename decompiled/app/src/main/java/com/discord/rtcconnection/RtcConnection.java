@@ -663,7 +663,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         this.mediaEngineConnectionListener = new b0(this);
     }
 
-    public static void j(RtcConnection rtcConnection, boolean z2, String str, Throwable th, boolean z3, int i) throws NumberFormatException {
+    public static void j(RtcConnection rtcConnection, boolean z2, String str, Throwable th, boolean z3, int i) {
         if ((i & 4) != 0) {
             th = null;
         }
@@ -972,7 +972,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    public final void q() throws NumberFormatException {
+    public final void q() {
         this.logger.recordBreadcrumb("reconnect", this.loggingTag);
         if (this.connected) {
             this.connectStartTime = Long.valueOf(this.clock.currentTimeMillis());

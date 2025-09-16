@@ -55,7 +55,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             try {
                 ParcelFileDescriptor parcelFileDescriptorOpenFileDescriptor = this.val$resolver.openFileDescriptor(this.val$uri, "r");
                 if (parcelFileDescriptorOpenFileDescriptor == null) {
@@ -149,7 +149,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
             this.mResultFuture = resolvableFuture;
         }
 
-        private void saveFileBlocking(File file) throws IOException {
+        private void saveFileBlocking(File file) {
             FileOutputStream fileOutputStreamStartWrite;
             if (Build.VERSION.SDK_INT < 22) {
                 try {

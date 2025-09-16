@@ -411,7 +411,7 @@ public class WebRtcAudioTrack {
     }
 
     @CalledByNative
-    private boolean startPlayout() throws IllegalStateException {
+    private boolean startPlayout() {
         this.threadChecker.checkIsOnValidThread();
         this.volumeLogger.start();
         Logging.d(TAG, "startPlayout");
@@ -442,7 +442,7 @@ public class WebRtcAudioTrack {
     }
 
     @CalledByNative
-    private boolean stopPlayout() throws IllegalStateException {
+    private boolean stopPlayout() {
         this.threadChecker.checkIsOnValidThread();
         this.volumeLogger.stop();
         Logging.d(TAG, "stopPlayout");

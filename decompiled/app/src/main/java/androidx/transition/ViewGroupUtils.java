@@ -17,7 +17,7 @@ public class ViewGroupUtils {
     private ViewGroupUtils() {
     }
 
-    public static int getChildDrawingOrder(@NonNull ViewGroup viewGroup, int i) throws NoSuchMethodException, SecurityException {
+    public static int getChildDrawingOrder(@NonNull ViewGroup viewGroup, int i) throws SecurityException {
         if (Build.VERSION.SDK_INT >= 29) {
             return viewGroup.getChildDrawingOrder(i);
         }

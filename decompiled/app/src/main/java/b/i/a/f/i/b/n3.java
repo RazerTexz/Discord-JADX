@@ -51,7 +51,7 @@ public final class n3 extends a5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void w() throws Resources.NotFoundException, PackageManager.NameNotFoundException {
+    public final void w() throws Resources.NotFoundException {
         Status status;
         boolean z2;
         Integer numValueOf;

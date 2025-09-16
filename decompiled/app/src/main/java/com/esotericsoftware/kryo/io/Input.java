@@ -452,7 +452,7 @@ public class Input extends InputStream {
     }
 
     @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException, KryoException {
+    public void close() throws KryoException {
         InputStream inputStream = this.inputStream;
         if (inputStream != null) {
             try {

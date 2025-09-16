@@ -255,7 +255,7 @@ public class Eclipse {
         return ecjCompilerVersionCached;
     }
 
-    private static boolean ecjSupportsJava7Features() throws NoSuchFieldException {
+    private static boolean ecjSupportsJava7Features() {
         try {
             TryStatement.class.getDeclaredField("resources");
             return true;
@@ -264,7 +264,7 @@ public class Eclipse {
         }
     }
 
-    public static CaseStatement createCaseStatement(Expression expr) throws IllegalAccessException, IllegalArgumentException {
+    public static CaseStatement createCaseStatement(Expression expr) {
         CaseStatement stat = new CaseStatement(expr, 0, 0);
         if (expr == null) {
             return stat;

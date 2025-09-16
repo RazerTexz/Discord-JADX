@@ -25,7 +25,7 @@ public final class StatusLine {
         this.c = str;
     }
 
-    public static final StatusLine a(String str) throws NumberFormatException, IOException {
+    public static final StatusLine a(String str) throws IOException {
         String strSubstring;
         Protocol2 protocol2 = Protocol2.HTTP_1_0;
         Intrinsics3.checkParameterIsNotNull(str, "statusLine");

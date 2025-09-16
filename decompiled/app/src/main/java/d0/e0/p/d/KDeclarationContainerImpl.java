@@ -265,7 +265,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         return g(str, Strings4.indexOf$default((CharSequence) str, ')', 0, false, 6, (Object) null) + 1, str.length());
     }
 
-    public final Method f(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2, boolean z2) throws NoSuchMethodException, SecurityException {
+    public final Method f(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2, boolean z2) throws SecurityException {
         Method methodF;
         if (z2) {
             clsArr[0] = cls;
@@ -365,7 +365,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         throw new KotlinReflectionInternalError(sb.toString());
     }
 
-    public final Method findMethodBySignature(String str, String str2) throws NoSuchMethodException, SecurityException {
+    public final Method findMethodBySignature(String str, String str2) throws SecurityException {
         Method methodF;
         Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkNotNullParameter(str2, "desc");
@@ -517,7 +517,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final Method i(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2) throws NoSuchMethodException, SecurityException {
+    public final Method i(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2) throws SecurityException {
         boolean z2;
         try {
             Method declaredMethod = cls.getDeclaredMethod(str, (Class[]) Arrays.copyOf(clsArr, clsArr.length));

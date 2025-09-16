@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.RestrictTo;
-import java.lang.reflect.InvocationTargetException;
 
 @SuppressLint({"BanParcelableUsage"})
 @RestrictTo({RestrictTo.Scope.LIBRARY})
@@ -52,7 +51,7 @@ public class ParcelImpl implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void writeToParcel(Parcel parcel, int i) throws IllegalArgumentException {
         new VersionedParcelParcel(parcel).writeVersionedParcelable(this.mParcel);
     }
 

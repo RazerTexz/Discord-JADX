@@ -1,7 +1,6 @@
 package lombok.patcher.scripts;
 
 import com.adjust.sdk.Constants;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.patcher.Hook;
@@ -87,7 +86,7 @@ public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
         }
 
         @Override // lombok.patcher.PatchScript.MethodPatcher, org.objectweb.asm.ClassVisitor
-        public void visitEnd() throws IOException {
+        public void visitEnd() {
             for (WrapperMethodDescriptor wmd : this.val$descriptors) {
                 SetSymbolDuringMethodCallScript.access$3(SetSymbolDuringMethodCallScript.this, this, wmd);
             }

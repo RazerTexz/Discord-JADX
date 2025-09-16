@@ -41,7 +41,7 @@ public class MetadataBackendRegistry implements BackendRegistry {
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public BackendFactory a(String str) throws PackageManager.NameNotFoundException {
+        public BackendFactory a(String str) {
             Bundle bundle;
             Map<String, String> mapEmptyMap;
             PackageManager packageManager;

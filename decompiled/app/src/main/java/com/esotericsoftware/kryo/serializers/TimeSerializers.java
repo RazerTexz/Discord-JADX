@@ -6,7 +6,6 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.util.Util;
-import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -37,7 +36,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Duration duration) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Duration duration) throws KryoException {
             write2(kryo, output, duration);
         }
 
@@ -48,7 +47,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Duration duration) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, Duration duration) throws KryoException {
             output.writeLong(duration.getSeconds());
             output.writeInt(duration.getNano(), true);
         }
@@ -101,7 +100,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, LocalDate localDate) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, LocalDate localDate) throws KryoException {
             write2(kryo, output, localDate);
         }
 
@@ -112,7 +111,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, LocalDate localDate) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, LocalDate localDate) throws KryoException {
             write(output, localDate);
         }
 
@@ -124,7 +123,7 @@ public final class TimeSerializers {
             return LocalDate.of(input.readInt(true), input.readByte(), input.readByte());
         }
 
-        public static void write(Output output, LocalDate localDate) throws IOException, KryoException {
+        public static void write(Output output, LocalDate localDate) throws KryoException {
             output.writeInt(localDate.getYear(), true);
             output.writeByte(localDate.getMonthValue());
             output.writeByte(localDate.getDayOfMonth());
@@ -142,7 +141,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, LocalDateTime localDateTime) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, LocalDateTime localDateTime) throws KryoException {
             write2(kryo, output, localDateTime);
         }
 
@@ -153,7 +152,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, LocalDateTime localDateTime) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, LocalDateTime localDateTime) throws KryoException {
             LocalDateSerializer.write(output, localDateTime.toLocalDate());
             LocalTimeSerializer.write(output, localDateTime.toLocalTime());
         }
@@ -174,7 +173,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, LocalTime localTime) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, LocalTime localTime) throws KryoException {
             write2(kryo, output, localTime);
         }
 
@@ -185,7 +184,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, LocalTime localTime) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, LocalTime localTime) throws KryoException {
             write(output, localTime);
         }
 
@@ -227,7 +226,7 @@ public final class TimeSerializers {
             return LocalTime.of(i3, b2, i, i2);
         }
 
-        public static void write(Output output, LocalTime localTime) throws IOException, KryoException {
+        public static void write(Output output, LocalTime localTime) throws KryoException {
             if (localTime.getNano() == 0) {
                 if (localTime.getSecond() == 0) {
                     if (localTime.getMinute() == 0) {
@@ -262,7 +261,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, MonthDay monthDay) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, MonthDay monthDay) throws KryoException {
             write2(kryo, output, monthDay);
         }
 
@@ -273,7 +272,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, MonthDay monthDay) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, MonthDay monthDay) throws KryoException {
             output.writeByte(monthDay.getMonthValue());
             output.writeByte(monthDay.getDayOfMonth());
         }
@@ -294,7 +293,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OffsetDateTime offsetDateTime) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OffsetDateTime offsetDateTime) throws KryoException {
             write2(kryo, output, offsetDateTime);
         }
 
@@ -305,7 +304,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OffsetDateTime offsetDateTime) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, OffsetDateTime offsetDateTime) throws KryoException {
             LocalDateSerializer.write(output, offsetDateTime.toLocalDate());
             LocalTimeSerializer.write(output, offsetDateTime.toLocalTime());
             ZoneOffsetSerializer.write(output, offsetDateTime.getOffset());
@@ -327,7 +326,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OffsetTime offsetTime) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OffsetTime offsetTime) throws KryoException {
             write2(kryo, output, offsetTime);
         }
 
@@ -338,7 +337,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OffsetTime offsetTime) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, OffsetTime offsetTime) throws KryoException {
             LocalTimeSerializer.write(output, offsetTime.toLocalTime());
             ZoneOffsetSerializer.write(output, offsetTime.getOffset());
         }
@@ -392,7 +391,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, YearMonth yearMonth) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, YearMonth yearMonth) throws KryoException {
             write2(kryo, output, yearMonth);
         }
 
@@ -403,7 +402,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, YearMonth yearMonth) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, YearMonth yearMonth) throws KryoException {
             output.writeInt(yearMonth.getYear(), true);
             output.writeByte(yearMonth.getMonthValue());
         }
@@ -455,7 +454,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, ZoneId zoneId) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, ZoneId zoneId) throws KryoException {
             write2(kryo, output, zoneId);
         }
 
@@ -466,7 +465,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, ZoneId zoneId) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, ZoneId zoneId) throws KryoException {
             write(output, zoneId);
         }
 
@@ -478,7 +477,7 @@ public final class TimeSerializers {
             return ZoneId.of(input.readString());
         }
 
-        public static void write(Output output, ZoneId zoneId) throws IOException, KryoException {
+        public static void write(Output output, ZoneId zoneId) throws KryoException {
             output.writeString(zoneId.getId());
         }
     }
@@ -494,7 +493,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, ZoneOffset zoneOffset) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, ZoneOffset zoneOffset) throws KryoException {
             write2(kryo, output, zoneOffset);
         }
 
@@ -505,7 +504,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, ZoneOffset zoneOffset) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, ZoneOffset zoneOffset) throws KryoException {
             write(output, zoneOffset);
         }
 
@@ -518,7 +517,7 @@ public final class TimeSerializers {
             return b2 == 127 ? ZoneOffset.ofTotalSeconds(input.readInt()) : ZoneOffset.ofTotalSeconds(b2 * 900);
         }
 
-        public static void write(Output output, ZoneOffset zoneOffset) throws IOException, KryoException {
+        public static void write(Output output, ZoneOffset zoneOffset) throws KryoException {
             int totalSeconds = zoneOffset.getTotalSeconds();
             int i = totalSeconds % 900 == 0 ? totalSeconds / 900 : Opcodes.LAND;
             output.writeByte(i);
@@ -539,7 +538,7 @@ public final class TimeSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, ZonedDateTime zonedDateTime) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, ZonedDateTime zonedDateTime) throws KryoException {
             write2(kryo, output, zonedDateTime);
         }
 
@@ -550,7 +549,7 @@ public final class TimeSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, ZonedDateTime zonedDateTime) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, ZonedDateTime zonedDateTime) throws KryoException {
             LocalDateSerializer.write(output, zonedDateTime.toLocalDate());
             LocalTimeSerializer.write(output, zonedDateTime.toLocalTime());
             ZoneIdSerializer.write(output, zonedDateTime.getZone());

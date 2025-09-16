@@ -43,7 +43,7 @@ public class PackageFactory {
         return packageBuilder.buildClickPackage(Constants.INSTALL_REFERRER);
     }
 
-    public static ActivityPackage buildReftagSdkClickPackage(String str, long j, ActivityState activityState, AdjustConfig adjustConfig, DeviceInfo deviceInfo, SessionParameters sessionParameters) throws UnsupportedEncodingException {
+    public static ActivityPackage buildReftagSdkClickPackage(String str, long j, ActivityState activityState, AdjustConfig adjustConfig, DeviceInfo deviceInfo, SessionParameters sessionParameters) {
         String strDecode = Constants.MALFORMED;
         if (str == null || str.length() == 0) {
             return null;

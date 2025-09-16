@@ -123,7 +123,7 @@ public class Permit {
         return (Constructor) setAccessible(c.getDeclaredConstructor(clsArr));
     }
 
-    private static Object reflectiveStaticFieldAccess(Class<?> c, String fName) throws NoSuchFieldException {
+    private static Object reflectiveStaticFieldAccess(Class<?> c, String fName) {
         try {
             Field f = c.getDeclaredField(fName);
             f.setAccessible(true);

@@ -178,7 +178,7 @@ public final class HttpUrl {
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public final a e(HttpUrl httpUrl, String str) throws NumberFormatException {
+        public final a e(HttpUrl httpUrl, String str) {
             int i;
             char c;
             char c2;

@@ -181,7 +181,7 @@ public final class HttpHeaders {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static final void d(CookieJar2 cookieJar2, HttpUrl httpUrl, Headers headers) throws NumberFormatException {
+    public static final void d(CookieJar2 cookieJar2, HttpUrl httpUrl, Headers headers) {
         int i;
         List listEmptyList;
         List<Cookie> listEmptyList2;

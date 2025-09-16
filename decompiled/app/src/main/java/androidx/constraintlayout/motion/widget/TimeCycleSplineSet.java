@@ -151,7 +151,7 @@ public abstract class TimeCycleSplineSet {
         public boolean mNoMethod = false;
 
         @Override // androidx.constraintlayout.motion.widget.TimeCycleSplineSet
-        public boolean setProperty(View view, float f, long j, KeyCache keyCache) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public boolean setProperty(View view, float f, long j, KeyCache keyCache) throws SecurityException, IllegalArgumentException {
             if (view instanceof MotionLayout) {
                 ((MotionLayout) view).setProgress(get(f, j, view, keyCache));
             } else {

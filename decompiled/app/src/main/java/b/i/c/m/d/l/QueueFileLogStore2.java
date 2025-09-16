@@ -41,7 +41,7 @@ public class QueueFileLogStore2 implements FileLogStore {
     }
 
     @Override // b.i.c.m.d.l.FileLogStore
-    public void a() throws IOException {
+    public void a() {
         CommonUtils.c(this.d, "There was a problem closing the Crashlytics log file.");
         this.d = null;
     }
@@ -90,7 +90,7 @@ public class QueueFileLogStore2 implements FileLogStore {
     }
 
     @Override // b.i.c.m.d.l.FileLogStore
-    public void d() throws IOException {
+    public void d() {
         CommonUtils.c(this.d, "There was a problem closing the Crashlytics log file.");
         this.d = null;
         this.f1711b.delete();

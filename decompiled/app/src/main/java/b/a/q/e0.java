@@ -19,7 +19,7 @@ public final class e0 extends Lambda implements Function1<Exception, Unit> {
     }
 
     @Override // kotlin.jvm.functions.Function1
-    public Unit invoke(Exception exc) throws NumberFormatException {
+    public Unit invoke(Exception exc) {
         Exception exc2 = exc;
         Intrinsics3.checkNotNullParameter(exc2, "it");
         RtcConnection rtcConnection = this.this$0;

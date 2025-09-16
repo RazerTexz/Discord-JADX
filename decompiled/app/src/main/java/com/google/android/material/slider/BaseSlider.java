@@ -60,7 +60,6 @@ import com.google.android.material.slider.BaseOnSliderTouchListener;
 import com.google.android.material.slider.BaseSlider;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import com.google.android.material.tooltip.TooltipDrawable;
-import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.ArrayList;
@@ -837,7 +836,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         return Math.round(f2 * ((fArr.length / 2) - 1));
     }
 
-    private void processAttributes(Context context, AttributeSet attributeSet, int i) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException, InvocationTargetException {
+    private void processAttributes(Context context, AttributeSet attributeSet, int i) throws Resources.NotFoundException {
         TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, R.styleable.Slider, i, DEF_STYLE_RES, new int[0]);
         this.valueFrom = typedArrayObtainStyledAttributes.getFloat(R.styleable.Slider_android_valueFrom, 0.0f);
         this.valueTo = typedArrayObtainStyledAttributes.getFloat(R.styleable.Slider_android_valueTo, 1.0f);
@@ -1505,7 +1504,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         postInvalidate();
     }
 
-    public void setHaloRadius(@IntRange(from = 0) @Dimension int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void setHaloRadius(@IntRange(from = 0) @Dimension int i) {
         if (i == this.haloRadius) {
             return;
         }
@@ -1518,7 +1517,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    public void setHaloRadiusResource(@DimenRes int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void setHaloRadiusResource(@DimenRes int i) {
         setHaloRadius(getResources().getDimensionPixelSize(i));
     }
 
@@ -1713,7 +1712,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         return (this.valueTo - this.valueFrom) / fCalculateStepIncrement <= i ? fCalculateStepIncrement : Math.round(r1 / r4) * fCalculateStepIncrement;
     }
 
-    public BaseSlider(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException, InvocationTargetException {
+    public BaseSlider(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, DEF_STYLE_RES), attributeSet, i);
         this.labels = new ArrayList();
         this.changeListeners = new ArrayList();

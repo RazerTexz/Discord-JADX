@@ -31,7 +31,6 @@ import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -75,7 +74,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-        public void onGlobalLayout() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onGlobalLayout() throws IllegalArgumentException {
             if (!CascadingMenuPopup.this.isShowing() || CascadingMenuPopup.this.mShowingMenus.size() <= 0 || CascadingMenuPopup.this.mShowingMenus.get(0).window.isModal()) {
                 return;
             }
@@ -292,7 +291,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
         return iArr[0] - i < 0 ? 1 : 0;
     }
 
-    private void showMenu(@NonNull MenuBuilder menuBuilder) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private void showMenu(@NonNull MenuBuilder menuBuilder) throws IllegalArgumentException {
         CascadingMenuInfo cascadingMenuInfo;
         View viewFindParentViewForSubmenu;
         int i;
@@ -381,7 +380,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     }
 
     @Override // androidx.appcompat.view.menu.MenuPopup
-    public void addMenu(MenuBuilder menuBuilder) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void addMenu(MenuBuilder menuBuilder) throws IllegalArgumentException {
         menuBuilder.addMenuPresenter(this, this.mContext);
         if (isShowing()) {
             showMenu(menuBuilder);
@@ -514,7 +513,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     }
 
     @Override // androidx.appcompat.view.menu.MenuPresenter
-    public boolean onSubMenuSelected(SubMenuBuilder subMenuBuilder) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public boolean onSubMenuSelected(SubMenuBuilder subMenuBuilder) throws IllegalArgumentException {
         for (CascadingMenuInfo cascadingMenuInfo : this.mShowingMenus) {
             if (subMenuBuilder == cascadingMenuInfo.menu) {
                 cascadingMenuInfo.getListView().requestFocus();
@@ -581,7 +580,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     }
 
     @Override // androidx.appcompat.view.menu.ShowableListMenu
-    public void show() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void show() throws IllegalArgumentException {
         if (isShowing()) {
             return;
         }

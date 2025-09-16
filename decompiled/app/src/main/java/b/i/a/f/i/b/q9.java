@@ -23,7 +23,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Collections;
@@ -599,7 +598,7 @@ public final class q9 extends i9 {
     }
 
     @Nullable
-    public final List<Integer> U() throws NumberFormatException {
+    public final List<Integer> U() {
         Context context = this.f1538b.k.f1570b;
         List<j3<?>> list = p.a;
         b.i.a.f.h.l.y1 y1VarA = b.i.a.f.h.l.y1.a(context.getContentResolver(), b.i.a.f.h.l.i2.a("com.google.android.gms.measurement"));
@@ -640,7 +639,7 @@ public final class q9 extends i9 {
     }
 
     @WorkerThread
-    public final long t(byte[] bArr) throws NoSuchAlgorithmException {
+    public final long t(byte[] bArr) {
         e().b();
         MessageDigest messageDigestX0 = t9.x0();
         if (messageDigestX0 != null) {

@@ -17,7 +17,7 @@ public class CanvasUtils {
     }
 
     @SuppressLint({"SoonBlockedPrivateApi"})
-    public static void enableZ(@NonNull Canvas canvas, boolean z2) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void enableZ(@NonNull Canvas canvas, boolean z2) throws SecurityException, IllegalArgumentException {
         Method method;
         int i = Build.VERSION.SDK_INT;
         if (i >= 29) {

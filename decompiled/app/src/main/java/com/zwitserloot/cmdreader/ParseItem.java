@@ -198,7 +198,7 @@ class ParseItem {
         return this.description;
     }
 
-    void set(Object o, String value) throws IllegalAccessException, IllegalArgumentException {
+    void set(Object o, String value) throws IllegalArgumentException {
         Object v = stringToObject(value);
         try {
             if (this.isCollection) {

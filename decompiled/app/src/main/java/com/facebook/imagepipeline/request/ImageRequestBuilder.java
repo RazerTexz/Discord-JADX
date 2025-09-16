@@ -48,7 +48,7 @@ public class ImageRequestBuilder {
         return imageRequestBuilder;
     }
 
-    public ImageRequest a() throws NumberFormatException {
+    public ImageRequest a() {
         Uri uri = this.a;
         if (uri == null) {
             throw new BuilderException("Source must be set!");

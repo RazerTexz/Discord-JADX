@@ -24,7 +24,7 @@ public class e {
     /* JADX WARN: Type inference failed for: r0v1, types: [java.util.Map<java.lang.String, java.lang.String>] */
     /* JADX WARN: Type inference failed for: r0v2, types: [java.util.HashMap] */
     @RecentlyNonNull
-    public static Map<String, String> a(@RecentlyNonNull URI uri, @RecentlyNonNull String str) throws UnsupportedEncodingException {
+    public static Map<String, String> a(@RecentlyNonNull URI uri, @RecentlyNonNull String str) {
         String strDecode;
         ?? EmptyMap = Collections.emptyMap();
         String rawQuery = uri.getRawQuery();

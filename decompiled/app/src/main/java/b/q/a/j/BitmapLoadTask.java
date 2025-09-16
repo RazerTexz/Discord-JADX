@@ -253,7 +253,7 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public a doInBackground(Void[] voidArr) throws IOException {
+    public a doInBackground(Void[] voidArr) {
         int i;
         int iA;
         int i2;

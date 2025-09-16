@@ -183,7 +183,7 @@ public final class ClassUtil {
         throw new RuntimeException(exc);
     }
 
-    public static <T> T g(Class<T> cls, boolean z2) throws NoSuchMethodException, SecurityException, IllegalArgumentException {
+    public static <T> T g(Class<T> cls, boolean z2) throws IllegalArgumentException {
         Constructor<T> declaredConstructor;
         try {
             declaredConstructor = cls.getDeclaredConstructor(new Class[0]);

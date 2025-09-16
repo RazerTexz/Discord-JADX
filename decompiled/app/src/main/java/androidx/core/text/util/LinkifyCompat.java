@@ -78,7 +78,7 @@ public final class LinkifyCompat {
         textView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
-    public static boolean addLinks(@NonNull Spannable spannable, int i) throws UnsupportedEncodingException {
+    public static boolean addLinks(@NonNull Spannable spannable, int i) {
         if (shouldAddLinksFallbackToFramework()) {
             return Linkify.addLinks(spannable, i);
         }
@@ -139,7 +139,7 @@ public final class LinkifyCompat {
         }
     }
 
-    private static void gatherMapLinks(ArrayList<LinkSpec> arrayList, Spannable spannable) throws UnsupportedEncodingException {
+    private static void gatherMapLinks(ArrayList<LinkSpec> arrayList, Spannable spannable) {
         int iIndexOf;
         String string = spannable.toString();
         int i = 0;

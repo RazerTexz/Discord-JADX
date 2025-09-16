@@ -9,7 +9,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Iterator;
 import lombok.AccessLevel;
@@ -102,7 +101,7 @@ public class HandleWith extends JavacAnnotationHandler<With> {
         return iArr2;
     }
 
-    public void generateWithForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelWith) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateWithForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelWith) {
         if (checkForTypeLevelWith && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) With.class, typeNode)) {
             return;
         }
@@ -128,7 +127,7 @@ public class HandleWith extends JavacAnnotationHandler<With> {
         }
     }
 
-    public void generateWithForField(JavacNode fieldNode, JCDiagnostic.DiagnosticPosition pos, AccessLevel level) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateWithForField(JavacNode fieldNode, JCDiagnostic.DiagnosticPosition pos, AccessLevel level) {
         if (JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) With.class, fieldNode)) {
             return;
         }
@@ -136,7 +135,7 @@ public class HandleWith extends JavacAnnotationHandler<With> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<With> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<With> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.WITH_FLAG_USAGE, "@With");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) With.class, "lombok.experimental.Wither");
@@ -164,13 +163,13 @@ public class HandleWith extends JavacAnnotationHandler<With> {
         }
     }
 
-    public void createWithForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createWithForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) {
         for (JavacNode fieldNode : fieldNodes) {
             createWithForField(level, fieldNode, errorNode, whineIfExists, onMethod, onParam);
         }
     }
 
-    public void createWithForField(AccessLevel level, JavacNode fieldNode, JavacNode source, boolean strictMode, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createWithForField(AccessLevel level, JavacNode fieldNode, JavacNode source, boolean strictMode, List<JCTree.JCAnnotation> onMethod, List<JCTree.JCAnnotation> onParam) {
         JavacNode typeNode = fieldNode.up();
         boolean makeAbstract = (typeNode == null || typeNode.getKind() != AST.Kind.TYPE || (typeNode.get().mods.flags & Permission.VIEW_CHANNEL) == 0) ? false : true;
         if (fieldNode.getKind() != AST.Kind.FIELD) {

@@ -106,7 +106,7 @@ public class LottieCompositionFactory {
     }
 
     @WorkerThread
-    public static LottieResult<LottieComposition> b(InputStream inputStream, @Nullable String str) throws IOException {
+    public static LottieResult<LottieComposition> b(InputStream inputStream, @Nullable String str) {
         try {
             Intrinsics3.checkParameterIsNotNull(inputStream, "$this$source");
             JvmOkio jvmOkio = new JvmOkio(inputStream, new Timeout2());
@@ -119,7 +119,7 @@ public class LottieCompositionFactory {
         }
     }
 
-    public static LottieResult<LottieComposition> c(JsonReader2 jsonReader2, @Nullable String str, boolean z2) throws IOException {
+    public static LottieResult<LottieComposition> c(JsonReader2 jsonReader2, @Nullable String str, boolean z2) {
         try {
             try {
                 LottieComposition lottieCompositionA = LottieCompositionMoshiParser.a(jsonReader2);
@@ -149,7 +149,7 @@ public class LottieCompositionFactory {
     }
 
     @WorkerThread
-    public static LottieResult<LottieComposition> d(ZipInputStream zipInputStream, @Nullable String str) throws IOException {
+    public static LottieResult<LottieComposition> d(ZipInputStream zipInputStream, @Nullable String str) {
         try {
             return e(zipInputStream, str);
         } finally {
@@ -158,7 +158,7 @@ public class LottieCompositionFactory {
     }
 
     @WorkerThread
-    public static LottieResult<LottieComposition> e(ZipInputStream zipInputStream, @Nullable String str) throws IOException {
+    public static LottieResult<LottieComposition> e(ZipInputStream zipInputStream, @Nullable String str) {
         LottieImageAsset next;
         HashMap map = new HashMap();
         try {

@@ -281,7 +281,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
     /* JADX WARN: Type inference failed for: r2v51, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     /* JADX WARN: Type inference failed for: r2v62, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Builder> annotation, Annotation ast, EclipseNode annotationNode) throws IllegalAccessException, SecurityException, IllegalArgumentException {
+    public void handle(AnnotationValues<Builder> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
         boolean generateBuilderMethod;
         TypeReference buildMethodReturnType;
         TypeReference[] buildMethodThrownExceptions;

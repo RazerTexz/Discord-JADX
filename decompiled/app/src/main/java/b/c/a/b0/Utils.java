@@ -11,7 +11,6 @@ import android.graphics.RectF;
 import android.os.Build;
 import b.c.a.L;
 import java.io.Closeable;
-import java.io.IOException;
 
 /* compiled from: Utils.java */
 /* renamed from: b.c.a.b0.g, reason: use source file name */
@@ -79,7 +78,7 @@ public final class Utils {
         L.a("applyTrimPathIfNeeded");
     }
 
-    public static void b(Closeable closeable) throws IOException {
+    public static void b(Closeable closeable) {
         if (closeable != null) {
             try {
                 closeable.close();

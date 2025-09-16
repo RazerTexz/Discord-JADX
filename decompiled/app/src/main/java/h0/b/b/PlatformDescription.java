@@ -30,7 +30,7 @@ public final class PlatformDescription {
         d = System.getProperty("com.google.appengine.runtime.version");
     }
 
-    public static int a() throws ClassNotFoundException {
+    public static int a() {
         if (!b("Dalvik")) {
             return 0;
         }

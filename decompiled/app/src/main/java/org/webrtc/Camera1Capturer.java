@@ -1,7 +1,6 @@
 package org.webrtc;
 
 import android.content.Context;
-import java.io.IOException;
 import org.webrtc.CameraSession;
 import org.webrtc.CameraVideoCapturer;
 
@@ -20,7 +19,7 @@ public class Camera1Capturer extends CameraCapturer {
     }
 
     @Override // org.webrtc.CameraCapturer
-    public void createCameraSession(CameraSession.CreateSessionCallback createSessionCallback, CameraSession.Events events, Context context, SurfaceTextureHelper surfaceTextureHelper, String str, int i, int i2, int i3) throws IOException {
+    public void createCameraSession(CameraSession.CreateSessionCallback createSessionCallback, CameraSession.Events events, Context context, SurfaceTextureHelper surfaceTextureHelper, String str, int i, int i2, int i3) {
         Camera1Session.create(createSessionCallback, events, this.captureToTexture, context, surfaceTextureHelper, Camera1Enumerator.getCameraIndex(str), i, i2, i3);
     }
 

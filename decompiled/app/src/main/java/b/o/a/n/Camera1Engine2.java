@@ -351,7 +351,7 @@ public class Camera1Engine2 extends CameraBaseEngine implements Camera.PreviewCa
 
     @Override // b.o.a.n.CameraEngine
     @NonNull
-    public Task<Void> P() throws IOException {
+    public Task<Void> P() {
         CameraLogger cameraLogger = CameraEngine.j;
         cameraLogger.a(1, "onStartBind:", "Started");
         try {
@@ -465,7 +465,7 @@ public class Camera1Engine2 extends CameraBaseEngine implements Camera.PreviewCa
 
     @Override // b.o.a.n.CameraEngine
     @NonNull
-    public Task<Void> S() throws IOException {
+    public Task<Void> S() {
         this.f1931s = null;
         this.r = null;
         try {

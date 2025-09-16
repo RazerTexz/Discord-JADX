@@ -3,7 +3,6 @@ package lombok.javac.handlers;
 import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.List;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
 import lombok.Data;
@@ -22,7 +21,7 @@ public class HandleData extends JavacAnnotationHandler<Data> {
     private HandleToString handleToString = new HandleToString();
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Data> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<Data> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.DATA_FLAG_USAGE, "@Data");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) Data.class);
         JavacNode typeNode = annotationNode.up();

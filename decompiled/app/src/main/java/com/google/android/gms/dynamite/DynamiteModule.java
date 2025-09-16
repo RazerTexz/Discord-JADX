@@ -91,7 +91,7 @@ public final class DynamiteModule {
         this.l = context;
     }
 
-    public static int a(@RecentlyNonNull Context context, @RecentlyNonNull String str) throws NoSuchFieldException, ClassNotFoundException {
+    public static int a(@RecentlyNonNull Context context, @RecentlyNonNull String str) {
         try {
             ClassLoader classLoader = context.getApplicationContext().getClassLoader();
             StringBuilder sb = new StringBuilder(String.valueOf(str).length() + 61);

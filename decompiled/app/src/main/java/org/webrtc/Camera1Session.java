@@ -163,7 +163,7 @@ public class Camera1Session implements CameraSession {
         }
     }
 
-    public static void create(CameraSession.CreateSessionCallback createSessionCallback, CameraSession.Events events, boolean z2, Context context, SurfaceTextureHelper surfaceTextureHelper, int i, int i2, int i3, int i4) throws IOException {
+    public static void create(CameraSession.CreateSessionCallback createSessionCallback, CameraSession.Events events, boolean z2, Context context, SurfaceTextureHelper surfaceTextureHelper, int i, int i2, int i3, int i4) {
         long jNanoTime = System.nanoTime();
         Logging.d(TAG, "Open camera " + i);
         events.onCameraOpening();

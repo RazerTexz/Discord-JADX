@@ -27,7 +27,6 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
-import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.WeakHashMap;
 import org.xmlpull.v1.XmlPullParser;
@@ -256,7 +255,7 @@ public final class ResourceManagerInternal {
         return (drawable instanceof VectorDrawableCompat) || PLATFORM_VD_CLAZZ.equals(drawable.getClass().getName());
     }
 
-    private Drawable loadDrawableFromDelegates(@NonNull Context context, @DrawableRes int i) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    private Drawable loadDrawableFromDelegates(@NonNull Context context, @DrawableRes int i) throws Resources.NotFoundException {
         int next;
         SimpleArrayMap<String, InflateDelegate> simpleArrayMap = this.mDelegates;
         if (simpleArrayMap == null || simpleArrayMap.isEmpty()) {

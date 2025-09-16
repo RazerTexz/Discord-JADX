@@ -168,7 +168,7 @@ public abstract class u4<MessageType extends u4<MessageType, BuilderType>, Build
     public static class f<ContainingType extends c6, Type> extends i4<ContainingType, Type> {
     }
 
-    public static <T extends u4<?, ?>> T m(Class<T> cls) throws ClassNotFoundException {
+    public static <T extends u4<?, ?>> T m(Class<T> cls) {
         u4<?, ?> u4Var = zzd.get(cls);
         if (u4Var == null) {
             try {

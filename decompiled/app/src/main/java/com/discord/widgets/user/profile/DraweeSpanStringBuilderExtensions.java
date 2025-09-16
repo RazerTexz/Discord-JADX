@@ -23,7 +23,7 @@ import kotlin.Metadata;
 /* loaded from: classes.dex */
 public final class DraweeSpanStringBuilderExtensions {
     /* JADX WARN: Type inference failed for: r0v2, types: [REQUEST, com.facebook.imagepipeline.request.ImageRequest] */
-    public static final DraweeSpanStringBuilder setAvatar(DraweeSpanStringBuilder draweeSpanStringBuilder, Context context, String str, boolean z2, Integer num, @ColorInt Integer num2, Character ch) throws NumberFormatException {
+    public static final DraweeSpanStringBuilder setAvatar(DraweeSpanStringBuilder draweeSpanStringBuilder, Context context, String str, boolean z2, Integer num, @ColorInt Integer num2, Character ch) {
         Intrinsics3.checkNotNullParameter(draweeSpanStringBuilder, "$this$setAvatar");
         Intrinsics3.checkNotNullParameter(context, "context");
         if (str != null) {

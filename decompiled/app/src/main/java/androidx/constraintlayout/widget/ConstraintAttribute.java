@@ -161,7 +161,7 @@ public class ConstraintAttribute {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    public static void setAttributes(View view, HashMap<String, ConstraintAttribute> map) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void setAttributes(View view, HashMap<String, ConstraintAttribute> map) throws SecurityException, IllegalArgumentException {
         Class<?> cls = view.getClass();
         for (String str : map.keySet()) {
             ConstraintAttribute constraintAttribute = map.get(str);

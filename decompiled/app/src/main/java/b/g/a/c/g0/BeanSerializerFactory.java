@@ -79,7 +79,6 @@ import b.g.a.c.z.SerializerFactoryConfig;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -185,7 +184,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public BeanPropertyWriter h(SerializerProvider serializerProvider, BeanPropertyDefinition beanPropertyDefinition, PropertyBuilder propertyBuilder, boolean z2, AnnotatedMember annotatedMember) throws IllegalAccessException, InstantiationException, JsonMappingException, IllegalArgumentException, InvocationTargetException {
+    public BeanPropertyWriter h(SerializerProvider serializerProvider, BeanPropertyDefinition beanPropertyDefinition, PropertyBuilder propertyBuilder, boolean z2, AnnotatedMember annotatedMember) throws JsonMappingException {
         TypeSerializer typeSerializerC;
         boolean z3;
         boolean z4;

@@ -4,7 +4,6 @@ import com.discord.api.permission.Permission;
 import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.Context;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -133,7 +132,7 @@ public class HandleSneakyThrows extends JavacAnnotationHandler<SneakyThrows> {
         }
     }
 
-    public JCTree.JCStatement buildTryCatchBlock(JavacNode node, com.sun.tools.javac.util.List<JCTree.JCStatement> contents, String exception, JCTree source) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public JCTree.JCStatement buildTryCatchBlock(JavacNode node, com.sun.tools.javac.util.List<JCTree.JCStatement> contents, String exception, JCTree source) throws IllegalArgumentException {
         JavacTreeMaker maker = node.getTreeMaker();
         Context context = node.getContext();
         JCTree.JCBlock tryBlock = (JCTree.JCBlock) JavacHandlerUtil.setGeneratedBy(maker.Block(0L, contents), source, context);

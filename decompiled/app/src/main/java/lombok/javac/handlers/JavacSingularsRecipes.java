@@ -8,7 +8,6 @@ import com.sun.tools.javac.util.Context;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -351,14 +350,14 @@ public class JavacSingularsRecipes {
             }
         }
 
-        protected void doGenerateMethods(CheckerFrameworkVersion cfv, SingularData data, boolean deprecate, JavacNode builderType, JCTree source, boolean fluent, ExpressionMaker returnTypeMaker, StatementMaker returnStatementMaker, AccessLevel access) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        protected void doGenerateMethods(CheckerFrameworkVersion cfv, SingularData data, boolean deprecate, JavacNode builderType, JCTree source, boolean fluent, ExpressionMaker returnTypeMaker, StatementMaker returnStatementMaker, AccessLevel access) {
             JavacTreeMaker maker = builderType.getTreeMaker();
             generateSingularMethod(cfv, deprecate, maker, returnTypeMaker.make(), returnStatementMaker.make(), data, builderType, source, fluent, access);
             generatePluralMethod(cfv, deprecate, maker, returnTypeMaker.make(), returnStatementMaker.make(), data, builderType, source, fluent, access);
             generateClearMethod(cfv, deprecate, maker, returnTypeMaker.make(), returnStatementMaker.make(), data, builderType, source, access);
         }
 
-        private void finishAndInjectMethod(CheckerFrameworkVersion cfv, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, boolean deprecate, ListBuffer<JCTree.JCStatement> statements, Name methodName, com.sun.tools.javac.util.List<JCTree.JCVariableDecl> jcVariableDecls, com.sun.tools.javac.util.List<JCTree.JCAnnotation> methodAnnotations, AccessLevel access, Boolean ignoreNullCollections) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        private void finishAndInjectMethod(CheckerFrameworkVersion cfv, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, boolean deprecate, ListBuffer<JCTree.JCStatement> statements, Name methodName, com.sun.tools.javac.util.List<JCTree.JCVariableDecl> jcVariableDecls, com.sun.tools.javac.util.List<JCTree.JCAnnotation> methodAnnotations, AccessLevel access, Boolean ignoreNullCollections) {
             if (returnStatement != null) {
                 statements.append(returnStatement);
             }
@@ -389,7 +388,7 @@ public class JavacSingularsRecipes {
             JavacHandlerUtil.injectMethod(builderType, method);
         }
 
-        private void generateClearMethod(CheckerFrameworkVersion cfv, boolean deprecate, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, AccessLevel access) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        private void generateClearMethod(CheckerFrameworkVersion cfv, boolean deprecate, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, AccessLevel access) {
             JCTree.JCStatement clearStatement = generateClearStatements(maker, data, builderType);
             ListBuffer<JCTree.JCStatement> statements = new ListBuffer<>();
             statements.add(clearStatement);
@@ -397,7 +396,7 @@ public class JavacSingularsRecipes {
             finishAndInjectMethod(cfv, maker, returnType, returnStatement, data, builderType, source, deprecate, statements, methodName, com.sun.tools.javac.util.List.nil(), com.sun.tools.javac.util.List.nil(), access, null);
         }
 
-        private void generateSingularMethod(CheckerFrameworkVersion cfv, boolean deprecate, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, boolean fluent, AccessLevel access) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        private void generateSingularMethod(CheckerFrameworkVersion cfv, boolean deprecate, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, boolean fluent, AccessLevel access) {
             ListBuffer<JCTree.JCStatement> statements = generateSingularMethodStatements(maker, data, builderType, source);
             com.sun.tools.javac.util.List<JCTree.JCVariableDecl> params = generateSingularMethodParameters(maker, data, builderType, source);
             Name name = data.getSingularName();
@@ -427,7 +426,7 @@ public class JavacSingularsRecipes {
             return maker.Exec(maker.Apply(com.sun.tools.javac.util.List.nil(), thisDotFieldDotAdd, com.sun.tools.javac.util.List.of(maker.Ident(argumentName))));
         }
 
-        private void generatePluralMethod(CheckerFrameworkVersion cfv, boolean deprecate, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, boolean fluent, AccessLevel access) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        private void generatePluralMethod(CheckerFrameworkVersion cfv, boolean deprecate, JavacTreeMaker maker, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, SingularData data, JavacNode builderType, JCTree source, boolean fluent, AccessLevel access) {
             ListBuffer<JCTree.JCStatement> statements = generatePluralMethodStatements(maker, data, builderType, source);
             Name name = data.getPluralName();
             String setterPrefix = data.getSetterPrefix();

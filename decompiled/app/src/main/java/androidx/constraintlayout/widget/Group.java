@@ -1,7 +1,6 @@
 package androidx.constraintlayout.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.AttributeSet;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -18,7 +17,7 @@ public class Group extends ConstraintHelper {
     }
 
     @Override // androidx.constraintlayout.widget.ConstraintHelper, android.view.View
-    public void onAttachedToWindow() throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    public void onAttachedToWindow() {
         super.onAttachedToWindow();
         applyLayoutFeatures();
     }

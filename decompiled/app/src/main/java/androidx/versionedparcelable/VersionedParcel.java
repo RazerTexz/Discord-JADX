@@ -216,7 +216,7 @@ public abstract class VersionedParcel {
         return readInt();
     }
 
-    private <T> void writeCollection(Collection<T> collection, int i) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    private <T> void writeCollection(Collection<T> collection, int i) throws IllegalArgumentException {
         setOutputField(i);
         writeCollection(collection);
     }
@@ -462,7 +462,7 @@ public abstract class VersionedParcel {
     public void setSerializationFlags(boolean z2, boolean z3) {
     }
 
-    public <T> void writeArray(T[] tArr, int i) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    public <T> void writeArray(T[] tArr, int i) throws IllegalArgumentException {
         setOutputField(i);
         writeArray(tArr);
     }
@@ -594,7 +594,7 @@ public abstract class VersionedParcel {
         writeIntArray(iArr);
     }
 
-    public <T> void writeList(List<T> list, int i) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    public <T> void writeList(List<T> list, int i) throws IllegalArgumentException {
         writeCollection(list, i);
     }
 
@@ -610,7 +610,7 @@ public abstract class VersionedParcel {
         writeLongArray(jArr);
     }
 
-    public <K, V> void writeMap(Map<K, V> map, int i) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    public <K, V> void writeMap(Map<K, V> map, int i) throws IllegalArgumentException {
         setOutputField(i);
         if (map == null) {
             writeInt(-1);
@@ -642,12 +642,12 @@ public abstract class VersionedParcel {
         writeParcelable(parcelable);
     }
 
-    public void writeSerializable(Serializable serializable, int i) throws IOException {
+    public void writeSerializable(Serializable serializable, int i) {
         setOutputField(i);
         writeSerializable(serializable);
     }
 
-    public <T> void writeSet(Set<T> set, int i) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    public <T> void writeSet(Set<T> set, int i) throws IllegalArgumentException {
         writeCollection(set, i);
     }
 
@@ -706,7 +706,7 @@ public abstract class VersionedParcel {
         writeStrongInterface(iInterface);
     }
 
-    public <T extends VersionedParcelable> void writeToParcel(T t, VersionedParcel versionedParcel) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public <T extends VersionedParcelable> void writeToParcel(T t, VersionedParcel versionedParcel) throws IllegalArgumentException {
         try {
             getWriteMethod(t.getClass()).invoke(null, t, versionedParcel);
         } catch (ClassNotFoundException e) {
@@ -723,12 +723,12 @@ public abstract class VersionedParcel {
         }
     }
 
-    public void writeVersionedParcelable(VersionedParcelable versionedParcelable, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void writeVersionedParcelable(VersionedParcelable versionedParcelable, int i) throws IllegalArgumentException {
         setOutputField(i);
         writeVersionedParcelable(versionedParcelable);
     }
 
-    private <T> void writeCollection(Collection<T> collection) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    private <T> void writeCollection(Collection<T> collection) throws IllegalArgumentException {
         if (collection == null) {
             writeInt(-1);
         }
@@ -784,7 +784,7 @@ public abstract class VersionedParcel {
         }
     }
 
-    private void writeSerializable(Serializable serializable) throws IOException {
+    private void writeSerializable(Serializable serializable) {
         if (serializable == null) {
             writeString(null);
             return;
@@ -912,7 +912,7 @@ public abstract class VersionedParcel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public <T> void writeArray(T[] tArr) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    public <T> void writeArray(T[] tArr) throws IllegalArgumentException {
         if (tArr == 0) {
             writeInt(-1);
             return;
@@ -1019,7 +1019,7 @@ public abstract class VersionedParcel {
         writeInt(-1);
     }
 
-    public void writeVersionedParcelable(VersionedParcelable versionedParcelable) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void writeVersionedParcelable(VersionedParcelable versionedParcelable) throws IllegalArgumentException {
         if (versionedParcelable == null) {
             writeString(null);
             return;

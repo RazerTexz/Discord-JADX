@@ -14,7 +14,7 @@ public class Android10Instantiator<T> implements ObjectInstantiator<T> {
     /* renamed from: b, reason: collision with root package name */
     public final Method f3728b;
 
-    public Android10Instantiator(Class<T> cls) throws NoSuchMethodException, SecurityException {
+    public Android10Instantiator(Class<T> cls) {
         this.a = cls;
         try {
             Method declaredMethod = ObjectInputStream.class.getDeclaredMethod("newInstance", Class.class, Class.class);

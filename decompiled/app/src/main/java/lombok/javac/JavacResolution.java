@@ -189,7 +189,7 @@ public class JavacResolution {
         }
     }
 
-    public Map<JCTree, JCTree> resolveMethodMember(JavacNode node) throws IllegalAccessException, IllegalArgumentException {
+    public Map<JCTree, JCTree> resolveMethodMember(JavacNode node) {
         ArrayDeque<JCTree> stack = new ArrayDeque<>();
         JavacNode javacNodeUp = node;
         while (true) {
@@ -243,7 +243,7 @@ public class JavacResolution {
         }
     }
 
-    private static void setEnvOfMemberEnter(MemberEnter memberEnter, Env<AttrContext> env) throws IllegalAccessException, IllegalArgumentException {
+    private static void setEnvOfMemberEnter(MemberEnter memberEnter, Env<AttrContext> env) {
         Field f = getMemberEnterDotEnv();
         try {
             f.set(memberEnter, env);
@@ -251,7 +251,7 @@ public class JavacResolution {
         }
     }
 
-    private void memberEnterAndAttribute(JCTree copy, Env<AttrContext> env, Context context) throws IllegalAccessException, IllegalArgumentException {
+    private void memberEnterAndAttribute(JCTree copy, Env<AttrContext> env, Context context) {
         MemberEnter memberEnter = MemberEnter.instance(context);
         Env<AttrContext> oldEnv = getEnvOfMemberEnter(memberEnter);
         setEnvOfMemberEnter(memberEnter, env);
@@ -265,7 +265,7 @@ public class JavacResolution {
         attrib(copy, env);
     }
 
-    public void resolveClassMember(JavacNode node) throws IllegalAccessException, IllegalArgumentException {
+    public void resolveClassMember(JavacNode node) {
         ArrayDeque<JCTree> stack = new ArrayDeque<>();
         JavacNode javacNodeUp = node;
         while (true) {

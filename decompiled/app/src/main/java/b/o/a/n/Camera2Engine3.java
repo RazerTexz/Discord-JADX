@@ -1,6 +1,5 @@
 package b.o.a.n;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CaptureRequest;
 import androidx.annotation.NonNull;
 import b.o.a.n.o.ActionHolder;
@@ -17,7 +16,7 @@ public class Camera2Engine3 extends BaseAction {
     }
 
     @Override // b.o.a.n.o.BaseAction
-    public void j(@NonNull ActionHolder actionHolder) throws CameraAccessException {
+    public void j(@NonNull ActionHolder actionHolder) {
         this.c = actionHolder;
         this.e.f1(((Camera2Engine) actionHolder).f1921i0);
         Camera2Engine camera2Engine = (Camera2Engine) actionHolder;

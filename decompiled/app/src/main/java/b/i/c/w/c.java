@@ -27,7 +27,6 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import b.d.b.a.outline;
 import com.google.android.gms.tasks.Task;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
@@ -69,7 +68,7 @@ public class c {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean a() throws JSONException, PackageManager.NameNotFoundException, IOException {
+    public boolean a() {
         boolean z2;
         o oVar;
         Bundle bundle;

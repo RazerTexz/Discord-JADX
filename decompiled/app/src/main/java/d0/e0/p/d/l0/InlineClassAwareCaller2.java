@@ -105,7 +105,7 @@ public final class InlineClassAwareCaller2 {
         return createInlineClassAwareCallerIfNeeded(caller2, callableMemberDescriptor, z2);
     }
 
-    public static final Method getBoxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) throws NoSuchMethodException, SecurityException {
+    public static final Method getBoxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) throws SecurityException {
         Intrinsics3.checkNotNullParameter(cls, "$this$getBoxMethod");
         Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "descriptor");
         try {
@@ -117,7 +117,7 @@ public final class InlineClassAwareCaller2 {
         }
     }
 
-    public static final Method getUnboxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) throws NoSuchMethodException, SecurityException {
+    public static final Method getUnboxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) throws SecurityException {
         Intrinsics3.checkNotNullParameter(cls, "$this$getUnboxMethod");
         Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "descriptor");
         try {

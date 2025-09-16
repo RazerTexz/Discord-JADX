@@ -22,7 +22,7 @@ public final class CheckedTextViewCompat {
         }
 
         @Nullable
-        public static Drawable getCheckMarkDrawable(@NonNull CheckedTextView checkedTextView) throws NoSuchFieldException {
+        public static Drawable getCheckMarkDrawable(@NonNull CheckedTextView checkedTextView) {
             if (!sResolved) {
                 try {
                     Field declaredField = CheckedTextView.class.getDeclaredField("mCheckMarkDrawable");

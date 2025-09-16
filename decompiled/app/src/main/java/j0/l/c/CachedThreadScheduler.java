@@ -3,7 +3,6 @@ package j0.l.c;
 import j0.l.c.ScheduledAction;
 import j0.l.e.RxThreadFactory;
 import j0.r.Subscriptions;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -88,7 +87,7 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
             }
         }
 
-        public a(ThreadFactory threadFactory, long j, TimeUnit timeUnit) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public a(ThreadFactory threadFactory, long j, TimeUnit timeUnit) throws SecurityException {
             ScheduledFuture<?> scheduledFutureScheduleWithFixedDelay;
             this.a = threadFactory;
             long nanos = timeUnit != null ? timeUnit.toNanos(j) : 0L;

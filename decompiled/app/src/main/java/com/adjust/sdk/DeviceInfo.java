@@ -1,7 +1,6 @@
 package com.adjust.sdk;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -92,7 +91,7 @@ public class DeviceInfo {
         return sbU.toString();
     }
 
-    private String getAppInstallTime(Context context) throws PackageManager.NameNotFoundException {
+    private String getAppInstallTime(Context context) {
         try {
             return Util.dateFormatter.format(new Date(context.getPackageManager().getPackageInfo(context.getPackageName(), 4096).firstInstallTime));
         } catch (Exception unused) {
@@ -100,7 +99,7 @@ public class DeviceInfo {
         }
     }
 
-    private String getAppUpdateTime(Context context) throws PackageManager.NameNotFoundException {
+    private String getAppUpdateTime(Context context) {
         try {
             return Util.dateFormatter.format(new Date(context.getPackageManager().getPackageInfo(context.getPackageName(), 4096).lastUpdateTime));
         } catch (Exception unused) {

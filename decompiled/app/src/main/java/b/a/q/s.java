@@ -25,7 +25,7 @@ public final class s extends Lambda implements Function0<Unit> {
     }
 
     @Override // kotlin.jvm.functions.Function0
-    public Unit invoke() throws NumberFormatException {
+    public Unit invoke() {
         w wVar = this.this$0.j;
         RtcConnection rtcConnection = wVar.this$0;
         String str = wVar.$endpoint;

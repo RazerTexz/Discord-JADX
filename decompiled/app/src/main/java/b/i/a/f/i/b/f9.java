@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import androidx.annotation.WorkerThread;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
@@ -48,7 +47,7 @@ public final class f9 {
     }
 
     @WorkerThread
-    public final void c(long j, boolean z2) throws IllegalStateException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final void c(long j, boolean z2) throws IllegalStateException {
         this.a.b();
         if (this.a.a.d()) {
             this.a.l().v.b(j);

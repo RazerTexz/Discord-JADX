@@ -579,7 +579,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    public final boolean d() throws NumberFormatException {
+    public final boolean d() {
         this.H.a();
         if (this.B != c.DISCONNECTED) {
             j("Cannot start a new connection, connection state is not disconnected");
@@ -607,7 +607,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         debugPrintable2.appendKeyValue("resumable", Boolean.valueOf(this.C));
     }
 
-    public final void e() throws NumberFormatException {
+    public final void e() {
         StringBuilder sbU = outline.U("[CONNECT] ");
         sbU.append(this.D);
         i(sbU.toString());

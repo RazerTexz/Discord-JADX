@@ -44,7 +44,7 @@ public class PersistedInstallation {
     }
 
     @NonNull
-    public PersistedInstallationEntry a(@NonNull PersistedInstallationEntry persistedInstallationEntry) throws JSONException, IOException {
+    public PersistedInstallationEntry a(@NonNull PersistedInstallationEntry persistedInstallationEntry) {
         File fileCreateTempFile;
         try {
             JSONObject jSONObject = new JSONObject();
@@ -70,7 +70,7 @@ public class PersistedInstallation {
     }
 
     @NonNull
-    public PersistedInstallationEntry b() throws IOException {
+    public PersistedInstallationEntry b() {
         JSONObject jSONObject;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         byte[] bArr = new byte[16384];

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.constraintlayout.widget.R;
 import b.d.b.a.outline;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -227,7 +226,7 @@ public class KeyTrigger extends Key {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void conditionallyFire(float f, View view) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void conditionallyFire(float f, View view) {
         boolean z2;
         boolean z3;
         boolean z4;

@@ -40,7 +40,7 @@ public final class VersionTable {
         }
     }
 
-    public static void b(SQLiteDatabase sQLiteDatabase, int i, String str, int i2) throws SQLException, DatabaseIOException {
+    public static void b(SQLiteDatabase sQLiteDatabase, int i, String str, int i2) throws DatabaseIOException {
         try {
             sQLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS ExoPlayerVersions (feature INTEGER NOT NULL,instance_uid TEXT NOT NULL,version INTEGER NOT NULL,PRIMARY KEY (feature, instance_uid))");
             ContentValues contentValues = new ContentValues();

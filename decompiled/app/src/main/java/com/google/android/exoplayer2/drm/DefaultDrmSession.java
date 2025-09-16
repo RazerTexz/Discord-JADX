@@ -252,7 +252,7 @@ public class DefaultDrmSession implements DrmSession {
         }
 
         @Override // android.os.Handler
-        public void handleMessage(Message message) throws NumberFormatException {
+        public void handleMessage(Message message) {
             Pair pair = (Pair) message.obj;
             Object obj = pair.first;
             Object obj2 = pair.second;
@@ -350,7 +350,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    public void a(@Nullable DrmSessionEventListener.a aVar) throws NumberFormatException {
+    public void a(@Nullable DrmSessionEventListener.a aVar) {
         int i = this.o;
         if (i < 0) {
             StringBuilder sb = new StringBuilder(51);
@@ -548,7 +548,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @RequiresNonNull({"sessionId"})
-    public final void i(boolean z2) throws NumberFormatException {
+    public final void i(boolean z2) {
         Pair pair;
         String str;
         long jMin;
@@ -653,7 +653,7 @@ public class DefaultDrmSession implements DrmSession {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void k(Exception exc, int i) throws NumberFormatException {
+    public final void k(Exception exc, int i) {
         int iB;
         int i2 = Util2.a;
         if (i2 >= 21 && DrmUtil2.a(exc)) {
@@ -688,7 +688,7 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    public final void l(Exception exc, boolean z2) throws NumberFormatException {
+    public final void l(Exception exc, boolean z2) {
         if (!(exc instanceof NotProvisionedException)) {
             k(exc, z2 ? 1 : 2);
             return;
@@ -703,7 +703,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @EnsuresNonNullIf(expression = {"sessionId"}, result = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS)
-    public final boolean m() throws NumberFormatException {
+    public final boolean m() {
         if (j()) {
             return true;
         }
@@ -730,7 +730,7 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    public final void n(byte[] bArr, int i, boolean z2) throws NumberFormatException {
+    public final void n(byte[] bArr, int i, boolean z2) {
         try {
             ExoMediaDrm.a aVarK = this.f2925b.k(bArr, this.a, i, this.h);
             this.v = aVarK;

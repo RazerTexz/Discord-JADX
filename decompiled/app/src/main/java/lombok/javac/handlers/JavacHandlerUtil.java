@@ -19,7 +19,6 @@ import com.sun.tools.javac.util.Options;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -1454,7 +1453,7 @@ public class JavacHandlerUtil {
         JCAnnotatedTypeReflect() {
         }
 
-        private static void initByLoader(ClassLoader classLoader) throws ClassNotFoundException {
+        private static void initByLoader(ClassLoader classLoader) {
             if (TYPE != null) {
                 return;
             }
@@ -1494,7 +1493,7 @@ public class JavacHandlerUtil {
             }
         }
 
-        static void setAnnotations(JCTree obj, List<JCTree.JCAnnotation> anns) throws IllegalAccessException, IllegalArgumentException {
+        static void setAnnotations(JCTree obj, List<JCTree.JCAnnotation> anns) {
             init(obj.getClass());
             try {
                 ANNOTATIONS.set(obj, anns);
@@ -1511,7 +1510,7 @@ public class JavacHandlerUtil {
             }
         }
 
-        static JCTree.JCExpression create(List<JCTree.JCAnnotation> annotations, JCTree.JCExpression underlyingType) throws ClassNotFoundException {
+        static JCTree.JCExpression create(List<JCTree.JCAnnotation> annotations, JCTree.JCExpression underlyingType) {
             initByLoader(underlyingType.getClass().getClassLoader());
             try {
                 return (JCTree.JCExpression) CONSTRUCTOR.newInstance(annotations, underlyingType);
@@ -1568,7 +1567,7 @@ public class JavacHandlerUtil {
             enterMethod = e;
         }
 
-        static void remove(Symbol.ClassSymbol from, Symbol toRemove) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        static void remove(Symbol.ClassSymbol from, Symbol toRemove) {
             if (from == null) {
                 return;
             }
@@ -1582,7 +1581,7 @@ public class JavacHandlerUtil {
             }
         }
 
-        static void enter(Symbol.ClassSymbol from, Symbol toEnter) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        static void enter(Symbol.ClassSymbol from, Symbol toEnter) {
             if (from == null) {
                 return;
             }
@@ -1597,11 +1596,11 @@ public class JavacHandlerUtil {
         }
     }
 
-    public static void injectMethod(JavacNode typeNode, JCTree.JCMethodDecl method) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void injectMethod(JavacNode typeNode, JCTree.JCMethodDecl method) {
         injectMethod(typeNode, method, null, null);
     }
 
-    public static void injectMethod(JavacNode typeNode, JCTree.JCMethodDecl method, List<Type> paramTypes, Type returnType) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void injectMethod(JavacNode typeNode, JCTree.JCMethodDecl method, List<Type> paramTypes, Type returnType) {
         Context context = typeNode.getContext();
         Symtab symtab = Symtab.instance(context);
         JCTree.JCClassDecl type = typeNode.get();
@@ -1665,7 +1664,7 @@ public class JavacHandlerUtil {
         typeNode.add(method, AST.Kind.METHOD);
     }
 
-    private static void fixMethodMirror(Context context, Element typeMirror, long access, Name methodName, List<Type> paramTypes, List<Symbol.VarSymbol> params, Type returnType) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void fixMethodMirror(Context context, Element typeMirror, long access, Name methodName, List<Type> paramTypes, List<Symbol.VarSymbol> params, Type returnType) {
         if (typeMirror == null || paramTypes == null || returnType == null) {
             return;
         }
@@ -2113,7 +2112,7 @@ public class JavacHandlerUtil {
         return problematic.toList();
     }
 
-    static List<JCTree.JCAnnotation> unboxAndRemoveAnnotationParameter(JCTree.JCAnnotation ast, String parameterName, String errorName, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+    static List<JCTree.JCAnnotation> unboxAndRemoveAnnotationParameter(JCTree.JCAnnotation ast, String parameterName, String errorName, JavacNode annotationNode) throws IllegalArgumentException {
         ListBuffer<JCTree.JCExpression> params = new ListBuffer<>();
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
         Iterator it = ast.args.iterator();
@@ -2266,7 +2265,7 @@ public class JavacHandlerUtil {
         return namePlusTypeParamsToTypeReference(maker, parentType, typeName, instance, params, List.nil());
     }
 
-    public static JCTree.JCExpression namePlusTypeParamsToTypeReference(JavacTreeMaker maker, JavacNode parentType, Name typeName, boolean instance, List<JCTree.JCTypeParameter> params, List<JCTree.JCAnnotation> annotations) throws ClassNotFoundException {
+    public static JCTree.JCExpression namePlusTypeParamsToTypeReference(JavacTreeMaker maker, JavacNode parentType, Name typeName, boolean instance, List<JCTree.JCTypeParameter> params, List<JCTree.JCAnnotation> annotations) {
         JCTree.JCExpression r = null;
         if (parentType != null && parentType.getKind() == AST.Kind.TYPE) {
             JCTree.JCClassDecl td = parentType.get();
@@ -2671,7 +2670,7 @@ public class JavacHandlerUtil {
         return p.equals("Object") || p.equals("java.lang.Object");
     }
 
-    public static void createRelevantNullableAnnotation(JavacNode typeNode, JCTree.JCMethodDecl mth) throws IllegalAccessException, IllegalArgumentException {
+    public static void createRelevantNullableAnnotation(JavacNode typeNode, JCTree.JCMethodDecl mth) {
         NullAnnotationLibrary lib = (NullAnnotationLibrary) typeNode.getAst().readConfiguration(ConfigurationKeys.ADD_NULL_ANNOTATIONS);
         if (lib == null) {
             return;
@@ -2679,7 +2678,7 @@ public class JavacHandlerUtil {
         applyAnnotationToMethodDecl(typeNode, mth, lib.getNullableAnnotation(), lib.isTypeUse());
     }
 
-    public static void createRelevantNonNullAnnotation(JavacNode typeNode, JCTree.JCMethodDecl mth) throws IllegalAccessException, IllegalArgumentException {
+    public static void createRelevantNonNullAnnotation(JavacNode typeNode, JCTree.JCMethodDecl mth) {
         NullAnnotationLibrary lib = (NullAnnotationLibrary) typeNode.getAst().readConfiguration(ConfigurationKeys.ADD_NULL_ANNOTATIONS);
         if (lib == null) {
             return;
@@ -2687,7 +2686,7 @@ public class JavacHandlerUtil {
         applyAnnotationToMethodDecl(typeNode, mth, lib.getNonNullAnnotation(), lib.isTypeUse());
     }
 
-    public static void createRelevantNonNullAnnotation(JavacNode typeNode, JCTree.JCVariableDecl arg) throws IllegalAccessException, IllegalArgumentException {
+    public static void createRelevantNonNullAnnotation(JavacNode typeNode, JCTree.JCVariableDecl arg) {
         NullAnnotationLibrary lib = (NullAnnotationLibrary) typeNode.getAst().readConfiguration(ConfigurationKeys.ADD_NULL_ANNOTATIONS);
         if (lib == null) {
             return;
@@ -2695,7 +2694,7 @@ public class JavacHandlerUtil {
         applyAnnotationToVarDecl(typeNode, arg, lib.getNonNullAnnotation(), lib.isTypeUse());
     }
 
-    public static void createRelevantNullableAnnotation(JavacNode typeNode, JCTree.JCVariableDecl arg) throws IllegalAccessException, IllegalArgumentException {
+    public static void createRelevantNullableAnnotation(JavacNode typeNode, JCTree.JCVariableDecl arg) {
         NullAnnotationLibrary lib = (NullAnnotationLibrary) typeNode.getAst().readConfiguration(ConfigurationKeys.ADD_NULL_ANNOTATIONS);
         if (lib == null) {
             return;
@@ -2703,7 +2702,7 @@ public class JavacHandlerUtil {
         applyAnnotationToVarDecl(typeNode, arg, lib.getNullableAnnotation(), lib.isTypeUse());
     }
 
-    private static void applyAnnotationToMethodDecl(JavacNode typeNode, JCTree.JCMethodDecl mth, String annType, boolean typeUse) throws IllegalAccessException, IllegalArgumentException {
+    private static void applyAnnotationToMethodDecl(JavacNode typeNode, JCTree.JCMethodDecl mth, String annType, boolean typeUse) {
         if (annType == null) {
             return;
         }
@@ -2734,7 +2733,7 @@ public class JavacHandlerUtil {
         mth.mods.annotations = mth.mods.annotations == null ? List.of(m) : mth.mods.annotations.prepend(m);
     }
 
-    private static void applyAnnotationToVarDecl(JavacNode typeNode, JCTree.JCVariableDecl arg, String annType, boolean typeUse) throws IllegalAccessException, IllegalArgumentException {
+    private static void applyAnnotationToVarDecl(JavacNode typeNode, JCTree.JCVariableDecl arg, String annType, boolean typeUse) {
         if (annType == null) {
             return;
         }

@@ -23,7 +23,7 @@ public final /* synthetic */ class k2 implements z2 {
     }
 
     @Override // b.i.a.f.h.l.z2
-    public final Object a() throws IOException {
+    public final Object a() {
         x2 y2Var;
         Context contextCreateDeviceProtectedStorageContext = this.j;
         String str = Build.TYPE;

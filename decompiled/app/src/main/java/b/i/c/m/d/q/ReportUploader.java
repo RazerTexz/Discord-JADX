@@ -70,7 +70,7 @@ public class ReportUploader {
             ReportUploader.this.h = null;
         }
 
-        public final void b(List<Report2> list, boolean z2) throws InterruptedException {
+        public final void b(List<Report2> list, boolean z2) {
             Logger3 logger3 = Logger3.a;
             StringBuilder sbU = outline.U("Starting report processing in ");
             sbU.append(this.l);

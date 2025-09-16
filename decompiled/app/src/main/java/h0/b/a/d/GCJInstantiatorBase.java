@@ -21,7 +21,7 @@ public abstract class GCJInstantiatorBase<T> implements ObjectInstantiator<T> {
     public static class a extends ObjectInputStream {
     }
 
-    public GCJInstantiatorBase(Class<T> cls) throws NoSuchMethodException, SecurityException {
+    public GCJInstantiatorBase(Class<T> cls) {
         this.c = cls;
         if (a == null) {
             try {

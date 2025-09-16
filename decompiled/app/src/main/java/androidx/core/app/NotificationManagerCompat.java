@@ -412,7 +412,7 @@ public final class NotificationManagerCompat {
         return extras != null && extras.getBoolean(EXTRA_USE_SIDE_CHANNEL);
     }
 
-    public boolean areNotificationsEnabled() throws ClassNotFoundException {
+    public boolean areNotificationsEnabled() {
         if (Build.VERSION.SDK_INT >= 24) {
             return this.mNotificationManager.areNotificationsEnabled();
         }

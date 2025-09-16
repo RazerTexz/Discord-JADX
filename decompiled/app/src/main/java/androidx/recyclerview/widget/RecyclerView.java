@@ -4265,7 +4265,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    private void createLayoutManager(Context context, String str, AttributeSet attributeSet, int i, int i2) throws NoSuchMethodException, SecurityException {
+    private void createLayoutManager(Context context, String str, AttributeSet attributeSet, int i, int i2) throws SecurityException {
         Constructor constructor;
         if (str != null) {
             String strTrim = str.trim();
@@ -7309,7 +7309,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    public RecyclerView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws NoSuchMethodException, SecurityException {
+    public RecyclerView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws SecurityException {
         super(context, attributeSet, i);
         this.mObserver = new RecyclerViewDataObserver();
         this.mRecycler = new Recycler();

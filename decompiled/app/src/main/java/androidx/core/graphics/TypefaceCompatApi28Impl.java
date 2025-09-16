@@ -16,7 +16,7 @@ public class TypefaceCompatApi28Impl extends TypefaceCompatApi26Impl {
     private static final int RESOLVE_BY_FONT_TABLE = -1;
 
     @Override // androidx.core.graphics.TypefaceCompatApi26Impl
-    public Typeface createFromFamiliesWithDefault(Object obj) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    public Typeface createFromFamiliesWithDefault(Object obj) {
         try {
             Object objNewInstance = Array.newInstance(this.mFontFamily, 1);
             Array.set(objNewInstance, 0, obj);

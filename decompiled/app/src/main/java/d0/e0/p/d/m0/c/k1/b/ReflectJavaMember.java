@@ -39,7 +39,7 @@ public final class ReflectJavaMember {
         }
     }
 
-    public final a buildCache(Member member) throws NoSuchMethodException, SecurityException {
+    public final a buildCache(Member member) throws SecurityException {
         Intrinsics3.checkNotNullParameter(member, "member");
         Class<?> cls = member.getClass();
         try {
@@ -49,7 +49,7 @@ public final class ReflectJavaMember {
         }
     }
 
-    public final List<String> loadParameterNames(Member member) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public final List<String> loadParameterNames(Member member) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
         Method getName;
         Intrinsics3.checkNotNullParameter(member, "member");
         a aVarBuildCache = f3289b;

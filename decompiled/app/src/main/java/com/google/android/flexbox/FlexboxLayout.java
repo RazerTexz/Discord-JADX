@@ -474,7 +474,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // android.view.View
-    public void onMeasure(int i, int i2) throws NoSuchFieldException {
+    public void onMeasure(int i, int i2) {
         boolean z2;
         if (this.w == null) {
             this.w = new SparseIntArray(getChildCount());

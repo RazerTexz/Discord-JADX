@@ -152,7 +152,6 @@ import d0.z.d.Intrinsics3;
 import d0.z.d.Lambda;
 import d0.z.d.Reflection2;
 import j0.k.Func1;
-import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -2665,7 +2664,7 @@ public final class WidgetCallFullscreen extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
-    public void onActivityResult(int requestCode, int resultCode, Intent data) throws IOException {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         StreamNavigator.handleActivityResult(requestCode, resultCode, data, new AnonymousClass1());
     }

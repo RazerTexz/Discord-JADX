@@ -35,7 +35,7 @@ public class ImageViewUtils {
         }
     }
 
-    private static void fetchDrawMatrixField() throws NoSuchFieldException {
+    private static void fetchDrawMatrixField() {
         if (sDrawMatrixFieldFetched) {
             return;
         }

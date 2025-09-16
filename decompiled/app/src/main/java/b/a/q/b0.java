@@ -41,7 +41,7 @@ public final class b0 implements MediaEngineConnection.d {
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
-    public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<Codec2> list) throws NumberFormatException {
+    public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<Codec2> list) {
         Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
         Intrinsics3.checkNotNullParameter(transportInfo, "transportInfo");
         Intrinsics3.checkNotNullParameter(list, "supportedVideoCodecs");
@@ -93,7 +93,7 @@ public final class b0 implements MediaEngineConnection.d {
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
-    public void onConnectionStateChange(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.ConnectionState connectionState) throws NumberFormatException {
+    public void onConnectionStateChange(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.ConnectionState connectionState) {
         RtcConnection.State state;
         Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
         Intrinsics3.checkNotNullParameter(connectionState, "connectionState");
@@ -142,7 +142,7 @@ public final class b0 implements MediaEngineConnection.d {
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
-    public void onError(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.FailedConnectionException failedConnectionException) throws NumberFormatException {
+    public void onError(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.FailedConnectionException failedConnectionException) {
         Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
         Intrinsics3.checkNotNullParameter(failedConnectionException, "exception");
         RtcConnection rtcConnection = this.a;

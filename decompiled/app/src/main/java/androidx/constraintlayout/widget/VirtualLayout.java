@@ -1,7 +1,6 @@
 package androidx.constraintlayout.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
@@ -35,7 +34,7 @@ public abstract class VirtualLayout extends ConstraintHelper {
     }
 
     @Override // androidx.constraintlayout.widget.ConstraintHelper, android.view.View
-    public void onAttachedToWindow() throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    public void onAttachedToWindow() {
         ViewParent parent;
         super.onAttachedToWindow();
         if ((this.mApplyVisibilityOnAttach || this.mApplyElevationOnAttach) && (parent = getParent()) != null && (parent instanceof ConstraintLayout)) {

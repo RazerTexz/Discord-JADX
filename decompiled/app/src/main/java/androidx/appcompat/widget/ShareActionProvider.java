@@ -12,7 +12,6 @@ import androidx.appcompat.R;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.view.ActionProvider;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class ShareActionProvider extends ActionProvider {
@@ -89,7 +88,7 @@ public class ShareActionProvider extends ActionProvider {
     }
 
     @Override // androidx.core.view.ActionProvider
-    public View onCreateActionView() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public View onCreateActionView() throws IllegalArgumentException {
         ActivityChooserView activityChooserView = new ActivityChooserView(this.mContext);
         if (!activityChooserView.isInEditMode()) {
             activityChooserView.setActivityChooserModel(ActivityChooserModel.get(this.mContext, this.mShareHistoryFileName));

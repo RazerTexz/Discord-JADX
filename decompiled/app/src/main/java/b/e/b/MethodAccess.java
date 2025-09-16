@@ -29,7 +29,7 @@ public abstract class MethodAccess {
         }
     }
 
-    public static MethodAccess b(Class cls) throws SecurityException, ClassNotFoundException {
+    public static MethodAccess b(Class cls) throws SecurityException {
         Class[][] clsArr;
         String str;
         MethodVisitor2 methodVisitor2;

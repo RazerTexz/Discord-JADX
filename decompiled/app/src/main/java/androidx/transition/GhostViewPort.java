@@ -9,7 +9,6 @@ import android.view.ViewTreeObserver;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
-import java.lang.reflect.InvocationTargetException;
 
 @SuppressLint({"ViewConstructor"})
 /* loaded from: classes.dex */
@@ -54,7 +53,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
         setLayerType(2, null);
     }
 
-    public static GhostViewPort addGhost(View view, ViewGroup viewGroup, Matrix matrix) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static GhostViewPort addGhost(View view, ViewGroup viewGroup, Matrix matrix) throws SecurityException, IllegalArgumentException {
         GhostViewHolder ghostViewHolder;
         if (!(view.getParent() instanceof ViewGroup)) {
             throw new IllegalArgumentException("Ghosted views must be parented by a ViewGroup");
@@ -98,7 +97,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
         ViewUtils.transformMatrixToLocal(viewGroup, matrix);
     }
 
-    public static void copySize(View view, View view2) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void copySize(View view, View view2) throws SecurityException, IllegalArgumentException {
         ViewUtils.setLeftTopRightBottom(view2, view2.getLeft(), view2.getTop(), view.getWidth() + view2.getLeft(), view.getHeight() + view2.getTop());
     }
 
@@ -122,7 +121,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public void onAttachedToWindow() throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public void onAttachedToWindow() throws IllegalArgumentException {
         super.onAttachedToWindow();
         setGhostView(this.mView, this);
         this.mView.getViewTreeObserver().addOnPreDrawListener(this.mOnPreDrawListener);
@@ -133,7 +132,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public void onDetachedFromWindow() throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public void onDetachedFromWindow() throws IllegalArgumentException {
         this.mView.getViewTreeObserver().removeOnPreDrawListener(this.mOnPreDrawListener);
         ViewUtils.setTransitionVisibility(this.mView, 0);
         setGhostView(this.mView, null);
@@ -144,7 +143,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     }
 
     @Override // android.view.View
-    public void onDraw(Canvas canvas) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void onDraw(Canvas canvas) throws SecurityException, IllegalArgumentException {
         CanvasUtils.enableZ(canvas, true);
         canvas.setMatrix(this.mMatrix);
         ViewUtils.setTransitionVisibility(this.mView, 0);
@@ -169,7 +168,7 @@ public class GhostViewPort extends ViewGroup implements GhostView {
     }
 
     @Override // android.view.View, androidx.transition.GhostView
-    public void setVisibility(int i) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public void setVisibility(int i) throws IllegalArgumentException {
         super.setVisibility(i);
         if (getGhostView(this.mView) == this) {
             ViewUtils.setTransitionVisibility(this.mView, i == 0 ? 4 : 0);

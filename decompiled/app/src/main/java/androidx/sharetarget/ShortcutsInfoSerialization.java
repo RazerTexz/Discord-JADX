@@ -68,7 +68,7 @@ public class ShortcutsInfoSerialization {
     }
 
     @WorkerThread
-    public static Map<String, ShortcutContainer> loadFromXml(File file, Context context) throws IOException {
+    public static Map<String, ShortcutContainer> loadFromXml(File file, Context context) {
         FileInputStream fileInputStream;
         ShortcutContainer shortcutContainer;
         ShortcutInfoCompat shortcutInfoCompat;
@@ -188,7 +188,7 @@ public class ShortcutsInfoSerialization {
         return new ShortcutContainer(rank.build(), attributeValue5, attributeValue6);
     }
 
-    public static void saveAsXml(List<ShortcutContainer> list, File file) throws IllegalStateException, IOException, IllegalArgumentException {
+    public static void saveAsXml(List<ShortcutContainer> list, File file) {
         FileOutputStream fileOutputStreamStartWrite;
         AtomicFile atomicFile = new AtomicFile(file);
         FileOutputStream fileOutputStream = null;

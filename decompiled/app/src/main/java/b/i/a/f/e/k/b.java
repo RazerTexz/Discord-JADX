@@ -153,7 +153,7 @@ public abstract class b<T extends IInterface> {
         handler.sendMessage(handler.obtainMessage(i3, bVar.w.get(), 16));
     }
 
-    public static /* synthetic */ boolean D(b bVar) throws ClassNotFoundException {
+    public static /* synthetic */ boolean D(b bVar) {
         if (bVar.u || TextUtils.isEmpty(bVar.x()) || TextUtils.isEmpty(null)) {
             return false;
         }

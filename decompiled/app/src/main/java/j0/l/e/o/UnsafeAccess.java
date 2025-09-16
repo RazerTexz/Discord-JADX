@@ -24,7 +24,7 @@ public final class UnsafeAccess {
         a = unsafe;
     }
 
-    public static long a(Class<?> cls, String str) throws NoSuchFieldException {
+    public static long a(Class<?> cls, String str) {
         try {
             return a.objectFieldOffset(cls.getDeclaredField(str));
         } catch (NoSuchFieldException e) {

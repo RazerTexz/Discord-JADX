@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
-import java.lang.reflect.InvocationTargetException;
 import org.xmlpull.v1.XmlPullParser;
 
 /* loaded from: classes.dex */
@@ -153,7 +152,7 @@ public class ChangeTransform extends Transition {
         }
 
         @Override // androidx.transition.TransitionListenerAdapter, androidx.transition.Transition.TransitionListener
-        public void onTransitionEnd(@NonNull Transition transition) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onTransitionEnd(@NonNull Transition transition) throws SecurityException, IllegalArgumentException {
             transition.removeListener(this);
             GhostViewUtils.removeGhost(this.mView);
             this.mView.setTag(R.id.transition_transform, null);

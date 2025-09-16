@@ -107,7 +107,7 @@ public final class SavedStateRegistry {
     }
 
     @MainThread
-    public void runOnNextRecreation(@NonNull Class<? extends AutoRecreated> cls) throws NoSuchMethodException, SecurityException {
+    public void runOnNextRecreation(@NonNull Class<? extends AutoRecreated> cls) throws SecurityException {
         if (!this.mAllowingSavingState) {
             throw new IllegalStateException("Can not perform this action after onSaveInstanceState");
         }

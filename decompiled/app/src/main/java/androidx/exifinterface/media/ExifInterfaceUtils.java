@@ -68,7 +68,7 @@ public class ExifInterfaceUtils {
         }
     }
 
-    public static void closeQuietly(Closeable closeable) throws IOException {
+    public static void closeQuietly(Closeable closeable) {
         if (closeable != null) {
             try {
                 closeable.close();
@@ -107,7 +107,7 @@ public class ExifInterfaceUtils {
         }
     }
 
-    public static long parseSubSeconds(String str) throws NumberFormatException {
+    public static long parseSubSeconds(String str) {
         try {
             int iMin = Math.min(str.length(), 3);
             long j = Long.parseLong(str.substring(0, iMin));

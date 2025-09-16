@@ -32,7 +32,7 @@ public abstract class AbstractParser<MessageType extends MessageLite> implements
         return parseFrom(inputStream, extensionRegistryLite);
     }
 
-    public MessageType parsePartialDelimitedFrom(InputStream inputStream, ExtensionRegistryLite extensionRegistryLite) throws IOException {
+    public MessageType parsePartialDelimitedFrom(InputStream inputStream, ExtensionRegistryLite extensionRegistryLite) throws InvalidProtocolBufferException {
         try {
             int i = inputStream.read();
             if (i == -1) {

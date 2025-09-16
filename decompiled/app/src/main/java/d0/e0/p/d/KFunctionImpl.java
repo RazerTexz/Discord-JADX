@@ -65,7 +65,7 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements Functi
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public final Caller2<? extends Member> invoke() throws NoSuchMethodException, SecurityException {
+        public final Caller2<? extends Member> invoke() throws SecurityException {
             Object constructor;
             Caller2 caller2Access$createInstanceMethodCaller;
             AnnotationConstructorCaller.a aVar = AnnotationConstructorCaller.a.POSITIONAL_CALL;

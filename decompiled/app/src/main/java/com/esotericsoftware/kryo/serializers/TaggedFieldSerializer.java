@@ -9,7 +9,6 @@ import com.esotericsoftware.kryo.io.InputChunked;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.io.OutputChunked;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
-import java.io.IOException;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -99,7 +98,7 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public T read(Kryo kryo, Input input, Class<T> cls) throws IOException, KryoException {
+    public T read(Kryo kryo, Input input, Class<T> cls) throws KryoException {
         boolean z2;
         FieldSerializer.CachedField cachedField;
         T tCreate = create(kryo, input, cls);
@@ -166,7 +165,7 @@ public class TaggedFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, T t) throws IOException, KryoException {
+    public void write(Kryo kryo, Output output, T t) throws KryoException {
         FieldSerializer.CachedField[] fields = getFields();
         output.writeVarInt(this.writeFieldCount, true);
         int length = fields.length;

@@ -1,7 +1,6 @@
 package com.discord.utilities.simple_pager;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -129,7 +128,7 @@ public final class SimplePager extends ViewPager {
     }
 
     @Override // androidx.viewpager.widget.ViewPager, android.view.View
-    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) throws Resources.NotFoundException {
+    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if (!this.wrapHeight) {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
             return;

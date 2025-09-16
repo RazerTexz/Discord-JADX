@@ -19,7 +19,7 @@ public class SleepingAction implements Action0 {
     }
 
     @Override // rx.functions.Action0
-    public void call() throws InterruptedException {
+    public void call() {
         if (this.k.isUnsubscribed()) {
             return;
         }

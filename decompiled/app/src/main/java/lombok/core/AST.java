@@ -228,7 +228,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         return false;
     }
 
-    protected Collection<L> buildWithField(Class<L> nodeType, N statement, FieldAccess fa) throws IllegalAccessException, IllegalArgumentException {
+    protected Collection<L> buildWithField(Class<L> nodeType, N statement, FieldAccess fa) throws IllegalArgumentException {
         List<L> list = new ArrayList<>();
         buildWithField0(nodeType, statement, fa, list);
         return list;
@@ -243,7 +243,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         return false;
     }
 
-    private boolean replaceStatementInField(FieldAccess fa, N statement, N oldN, N newN) throws IllegalAccessException, IllegalArgumentException {
+    private boolean replaceStatementInField(FieldAccess fa, N statement, N oldN, N newN) throws IllegalArgumentException {
         try {
             Object o = fa.field.get(statement);
             if (o == null) {
@@ -321,7 +321,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private void buildWithField0(Class<L> nodeType, N child, FieldAccess fa, Collection<L> list) throws IllegalAccessException, IllegalArgumentException {
+    private void buildWithField0(Class<L> nodeType, N child, FieldAccess fa, Collection<L> list) throws IllegalArgumentException {
         try {
             Object o = fa.field.get(child);
             if (o == null) {

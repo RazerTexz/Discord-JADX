@@ -1,7 +1,6 @@
 package androidx.constraintlayout.helper.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
@@ -159,7 +158,7 @@ public class Layer extends ConstraintHelper {
     }
 
     @Override // androidx.constraintlayout.widget.ConstraintHelper, android.view.View
-    public void onAttachedToWindow() throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    public void onAttachedToWindow() {
         super.onAttachedToWindow();
         this.mContainer = (ConstraintLayout) getParent();
         if (this.mApplyVisibilityOnAttach || this.mApplyElevationOnAttach) {

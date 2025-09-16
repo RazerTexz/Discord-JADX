@@ -30,7 +30,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-import java.util.zip.DataFormatException;
 import kotlin.TypeCastException;
 import kotlin.jvm.internal.Ref$IntRef;
 import kotlin.jvm.internal.Ref$ObjectRef;
@@ -322,7 +321,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     }
 
     @Override // f0.e0.n.WebSocketReader.a
-    public void g(int i, String str) throws IOException {
+    public void g(int i, String str) {
         c cVar;
         WebSocketReader webSocketReader;
         WebSocketWriter webSocketWriter;
@@ -561,7 +560,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         this.e = new WebSocketReader(z3, cVar.k, this, webSocketExtensions.a, z3 ^ true ? webSocketExtensions.c : webSocketExtensions.e);
     }
 
-    public final void k() throws DataFormatException, IOException {
+    public final void k() throws IOException {
         while (this.n == -1) {
             WebSocketReader webSocketReader = this.e;
             if (webSocketReader == null) {

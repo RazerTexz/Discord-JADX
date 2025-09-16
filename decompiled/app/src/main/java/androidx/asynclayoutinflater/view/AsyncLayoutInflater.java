@@ -96,7 +96,7 @@ public final class AsyncLayoutInflater {
             return sInstance;
         }
 
-        public void enqueue(InflateRequest inflateRequest) throws InterruptedException {
+        public void enqueue(InflateRequest inflateRequest) {
             try {
                 this.mQueue.put(inflateRequest);
             } catch (InterruptedException e) {
@@ -119,13 +119,13 @@ public final class AsyncLayoutInflater {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws InterruptedException {
+        public void run() {
             while (true) {
                 runInner();
             }
         }
 
-        public void runInner() throws InterruptedException {
+        public void runInner() {
             try {
                 InflateRequest inflateRequestTake = this.mQueue.take();
                 try {
@@ -149,7 +149,7 @@ public final class AsyncLayoutInflater {
     }
 
     @UiThread
-    public void inflate(@LayoutRes int i, @Nullable ViewGroup viewGroup, @NonNull OnInflateFinishedListener onInflateFinishedListener) throws InterruptedException {
+    public void inflate(@LayoutRes int i, @Nullable ViewGroup viewGroup, @NonNull OnInflateFinishedListener onInflateFinishedListener) {
         Objects.requireNonNull(onInflateFinishedListener, "callback argument may not be null!");
         InflateRequest inflateRequestObtainRequest = this.mInflateThread.obtainRequest();
         inflateRequestObtainRequest.inflater = this;

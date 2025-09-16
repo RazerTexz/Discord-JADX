@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InterruptedIOException;
 import java.io.OutputStream;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -101,7 +100,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         this.k = z3;
     }
 
-    public static void x(@Nullable HttpURLConnection httpURLConnection, long j) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void x(@Nullable HttpURLConnection httpURLConnection, long j) {
         int i;
         if (httpURLConnection == null || (i = Util2.a) < 19 || i > 20) {
             return;
@@ -137,7 +136,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public long a(DataSpec dataSpec) throws IOException, NumberFormatException {
+    public long a(DataSpec dataSpec) throws HttpDataSource$HttpDataSourceException, NumberFormatException {
         byte[] bArrK;
         boolean z2;
         long j;
@@ -342,7 +341,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public int read(byte[] bArr, int i, int i2) throws IOException {
+    public int read(byte[] bArr, int i, int i2) throws HttpDataSource$HttpDataSourceException {
         int i3;
         if (i2 == 0) {
             return 0;

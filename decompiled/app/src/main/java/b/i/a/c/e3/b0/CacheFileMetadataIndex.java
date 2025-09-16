@@ -103,7 +103,7 @@ public final class CacheFileMetadataIndex {
     }
 
     @WorkerThread
-    public void d(String str, long j, long j2) throws SQLException, DatabaseIOException {
+    public void d(String str, long j, long j2) throws DatabaseIOException {
         Objects.requireNonNull(this.c);
         try {
             SQLiteDatabase writableDatabase = this.f929b.getWritableDatabase();

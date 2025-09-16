@@ -150,7 +150,7 @@ public final class AutocompleteCommandUtils {
         return dDoubleValue >= ((double) (-9007199254740991L)) && dDoubleValue <= ((double) 9007199254740991L);
     }
 
-    private final Number parseNumber(String str) throws ParseException {
+    private final Number parseNumber(String str) {
         if (str == null) {
             return null;
         }

@@ -49,7 +49,7 @@ public final class AssetManagement {
         fileOutputStream.close();
     }
 
-    public final void ensureKrispModelsCopied(boolean enabled) throws IOException {
+    public final void ensureKrispModelsCopied(boolean enabled) {
         if (!enabled) {
             cleanup();
             return;

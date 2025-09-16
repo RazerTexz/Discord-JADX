@@ -109,7 +109,7 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
         return spannableString;
     }
 
-    private Drawable getActivityIcon(ComponentName componentName) throws PackageManager.NameNotFoundException {
+    private Drawable getActivityIcon(ComponentName componentName) {
         PackageManager packageManager = this.mContext.getPackageManager();
         try {
             ActivityInfo activityInfo = packageManager.getActivityInfo(componentName, 128);
@@ -131,7 +131,7 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
         }
     }
 
-    private Drawable getActivityIconWithCache(ComponentName componentName) throws PackageManager.NameNotFoundException {
+    private Drawable getActivityIconWithCache(ComponentName componentName) {
         String strFlattenToShortString = componentName.flattenToShortString();
         if (!this.mOutsideDrawablesCache.containsKey(strFlattenToShortString)) {
             Drawable activityIcon = getActivityIcon(componentName);
@@ -149,12 +149,12 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
         return getStringOrNull(cursor, cursor.getColumnIndex(str));
     }
 
-    private Drawable getDefaultIcon1() throws PackageManager.NameNotFoundException {
+    private Drawable getDefaultIcon1() {
         Drawable activityIconWithCache = getActivityIconWithCache(this.mSearchable.getSearchActivity());
         return activityIconWithCache != null ? activityIconWithCache : this.mContext.getPackageManager().getDefaultActivityIcon();
     }
 
-    private Drawable getDrawable(Uri uri) throws IOException {
+    private Drawable getDrawable(Uri uri) {
         try {
             if ("android.resource".equals(uri.getScheme())) {
                 try {
@@ -184,7 +184,7 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
         return null;
     }
 
-    private Drawable getDrawableFromResourceValue(String str) throws NumberFormatException, IOException {
+    private Drawable getDrawableFromResourceValue(String str) {
         if (str == null || str.isEmpty() || "0".equals(str)) {
             return null;
         }
@@ -212,7 +212,7 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
         }
     }
 
-    private Drawable getIcon1(Cursor cursor) throws NumberFormatException, IOException {
+    private Drawable getIcon1(Cursor cursor) {
         int i = this.mIconName1Col;
         if (i == -1) {
             return null;
@@ -367,7 +367,7 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
         return columnString;
     }
 
-    public Drawable getDrawableFromResourceUri(Uri uri) throws PackageManager.NameNotFoundException, NumberFormatException, FileNotFoundException {
+    public Drawable getDrawableFromResourceUri(Uri uri) throws FileNotFoundException {
         int identifier;
         String authority = uri.getAuthority();
         if (TextUtils.isEmpty(authority)) {

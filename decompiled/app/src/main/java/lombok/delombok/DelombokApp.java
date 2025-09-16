@@ -82,7 +82,7 @@ public class DelombokApp extends LombokApp {
             this.val$toolsJar = file;
         }
 
-        private Class<?> loadStreamAsClass(String name, boolean resolve, InputStream in) throws IOException, ClassNotFoundException {
+        private Class<?> loadStreamAsClass(String name, boolean resolve, InputStream in) throws ClassNotFoundException {
             try {
                 try {
                     byte[] b2 = new byte[65536];
@@ -192,7 +192,7 @@ public class DelombokApp extends LombokApp {
         }
     }
 
-    private void runDirectly(List<String> args) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException {
+    private void runDirectly(List<String> args) throws SecurityException, IllegalArgumentException {
         Delombok.main((String[]) args.toArray(new String[0]));
     }
 

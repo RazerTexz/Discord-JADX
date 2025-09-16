@@ -69,7 +69,7 @@ public final class ActivityUtils {
     }
 
     @Store3
-    public static final Activity createStageChannelListeningActivity() throws NumberFormatException {
+    public static final Activity createStageChannelListeningActivity() {
         Guild guild;
         int size;
         String strValueOf;
@@ -222,7 +222,7 @@ public final class ActivityUtils {
         return sbU.toString();
     }
 
-    private static final ActivityUtils2 unpackStageChannelParty(Activity activity) throws NumberFormatException {
+    private static final ActivityUtils2 unpackStageChannelParty(Activity activity) {
         ActivityParty party;
         String id2;
         if (activity == null || (party = activity.getParty()) == null || (id2 = party.getId()) == null || !StringsJVM.startsWith$default(id2, STAGE_PRESENCE_PARTY_PREFIX, false, 2, null)) {

@@ -10,7 +10,7 @@ import org.objenesis.ObjenesisException;
 public class AccessibleInstantiator<T> implements ObjectInstantiator {
     public Constructor<T> a;
 
-    public AccessibleInstantiator(Class<T> cls) throws NoSuchMethodException, SecurityException {
+    public AccessibleInstantiator(Class<T> cls) {
         try {
             Constructor<T> declaredConstructor = cls.getDeclaredConstructor(null);
             this.a = declaredConstructor;

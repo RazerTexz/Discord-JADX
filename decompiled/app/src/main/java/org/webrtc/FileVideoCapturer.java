@@ -89,7 +89,7 @@ public class FileVideoCapturer implements VideoCapturer {
         }
 
         @Override // org.webrtc.FileVideoCapturer.VideoReader
-        public void close() throws IOException {
+        public void close() {
             try {
                 this.mediaFile.close();
             } catch (IOException e) {
@@ -98,7 +98,7 @@ public class FileVideoCapturer implements VideoCapturer {
         }
 
         @Override // org.webrtc.FileVideoCapturer.VideoReader
-        public VideoFrame getNextFrame() throws IOException {
+        public VideoFrame getNextFrame() {
             long nanos = TimeUnit.MILLISECONDS.toNanos(SystemClock.elapsedRealtime());
             JavaI420Buffer javaI420BufferAllocate = JavaI420Buffer.allocate(this.frameWidth, this.frameHeight);
             ByteBuffer dataY = javaI420BufferAllocate.getDataY();

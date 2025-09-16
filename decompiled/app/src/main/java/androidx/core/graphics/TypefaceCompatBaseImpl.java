@@ -84,7 +84,7 @@ public class TypefaceCompatBaseImpl {
         boolean isItalic(T t);
     }
 
-    private void addFontFamily(Typeface typeface, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry) throws NoSuchFieldException {
+    private void addFontFamily(Typeface typeface, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry) {
         long uniqueKey = getUniqueKey(typeface);
         if (uniqueKey != 0) {
             this.mFontFamilies.put(Long.valueOf(uniqueKey), fontFamilyFilesResourceEntry);
@@ -110,7 +110,7 @@ public class TypefaceCompatBaseImpl {
         return t;
     }
 
-    private static long getUniqueKey(@Nullable Typeface typeface) throws NoSuchFieldException {
+    private static long getUniqueKey(@Nullable Typeface typeface) {
         if (typeface == null) {
             return 0L;
         }
@@ -128,7 +128,7 @@ public class TypefaceCompatBaseImpl {
     }
 
     @Nullable
-    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) throws NoSuchFieldException {
+    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) {
         FontResourcesParserCompat.FontFileResourceEntry fontFileResourceEntryFindBestEntry = findBestEntry(fontFamilyFilesResourceEntry, i);
         if (fontFileResourceEntryFindBestEntry == null) {
             return null;
@@ -207,7 +207,7 @@ public class TypefaceCompatBaseImpl {
     }
 
     @Nullable
-    public FontResourcesParserCompat.FontFamilyFilesResourceEntry getFontFamily(Typeface typeface) throws NoSuchFieldException {
+    public FontResourcesParserCompat.FontFamilyFilesResourceEntry getFontFamily(Typeface typeface) {
         long uniqueKey = getUniqueKey(typeface);
         if (uniqueKey == 0) {
             return null;

@@ -76,7 +76,7 @@ public final class CompilerMessageSuppressor {
         this.context = context;
     }
 
-    public void disableLoggers() throws IllegalAccessException, IllegalArgumentException {
+    public void disableLoggers() {
         this.contextDiagnosticListener = (DiagnosticListener) this.context.get(DiagnosticListener.class);
         this.context.put(DiagnosticListener.class, (Object) null);
         errWriterField.pauze(this.log);
@@ -141,7 +141,7 @@ public final class CompilerMessageSuppressor {
         return getDeferredField(handler);
     }
 
-    public void enableLoggers() throws IllegalAccessException, IllegalArgumentException {
+    public void enableLoggers() {
         if (this.contextDiagnosticListener != null) {
             this.context.put(DiagnosticListener.class, this.contextDiagnosticListener);
             this.contextDiagnosticListener = null;
@@ -190,7 +190,7 @@ public final class CompilerMessageSuppressor {
         }
     }
 
-    public void removeAllBetween(JavaFileObject sourcefile, int startPos, int endPos) throws IllegalAccessException, IllegalArgumentException {
+    public void removeAllBetween(JavaFileObject sourcefile, int startPos, int endPos) {
         DiagnosticListener<?> listener = (DiagnosticListener) this.context.get(DiagnosticListener.class);
         if (listener instanceof CapturingDiagnosticListener) {
             ((CapturingDiagnosticListener) listener).suppress(startPos, endPos);
@@ -238,7 +238,7 @@ public final class CompilerMessageSuppressor {
         }
     }
 
-    private static WriterField createWriterField(Writers w) throws ClassNotFoundException {
+    private static WriterField createWriterField(Writers w) {
         try {
             Field writers = getDeclaredField(Log.class, "writer");
             if (writers != null) {
@@ -302,7 +302,7 @@ public final class CompilerMessageSuppressor {
         }
 
         @Override // lombok.javac.CompilerMessageSuppressor.WriterField
-        public void pauze(Log log) throws IllegalAccessException, IllegalArgumentException {
+        public void pauze(Log log) {
             try {
                 this.writer = (PrintWriter) this.field.get(log);
                 this.field.set(log, NO_WRITER);
@@ -311,7 +311,7 @@ public final class CompilerMessageSuppressor {
         }
 
         @Override // lombok.javac.CompilerMessageSuppressor.WriterField
-        public void resume(Log log) throws IllegalAccessException, IllegalArgumentException {
+        public void resume(Log log) {
             if (this.writer != null) {
                 try {
                     this.field.set(log, this.writer);

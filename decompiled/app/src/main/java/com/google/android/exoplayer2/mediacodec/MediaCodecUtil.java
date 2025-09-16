@@ -261,7 +261,7 @@ public final class MediaCodecUtil {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static Pair<Integer, Integer> c(Format2 format2) throws NumberFormatException {
+    public static Pair<Integer, Integer> c(Format2 format2) {
         int i;
         int i2;
         int i3;
@@ -937,7 +937,7 @@ public final class MediaCodecUtil {
         return listUnmodifiableList;
     }
 
-    public static ArrayList<b.i.a.c.y2.MediaCodecInfo> f(b bVar, c cVar) throws Exception {
+    public static ArrayList<b.i.a.c.y2.MediaCodecInfo> f(b bVar, c cVar) throws DecoderQueryException {
         String strB;
         String str;
         String str2;

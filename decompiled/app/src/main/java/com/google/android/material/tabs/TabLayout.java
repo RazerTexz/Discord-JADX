@@ -824,7 +824,7 @@ public class TabLayout extends HorizontalScrollView {
         }
 
         @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
-        public void onTabSelected(@NonNull Tab tab) throws Resources.NotFoundException {
+        public void onTabSelected(@NonNull Tab tab) {
             this.viewPager.setCurrentItem(tab.getPosition());
         }
 

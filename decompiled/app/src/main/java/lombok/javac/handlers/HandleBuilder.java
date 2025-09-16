@@ -7,7 +7,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.regex.Matcher;
@@ -191,7 +190,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Builder> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<Builder> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         boolean generateBuilderMethod;
         JCTree.JCExpression buildMethodReturnType;
         List<JCTree.JCExpression> buildMethodThrownExceptions;
@@ -598,7 +597,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         }
     }
 
-    private JCTree.JCMethodDecl generateToBuilderMethod(BuilderJob job, List<JCTree.JCTypeParameter> typeParameters, String prefix) throws IllegalAccessException, IllegalArgumentException {
+    private JCTree.JCMethodDecl generateToBuilderMethod(BuilderJob job, List<JCTree.JCTypeParameter> typeParameters, String prefix) {
         JCTree.JCMethodInvocation inv;
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
@@ -711,7 +710,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         return recv;
     }
 
-    private JCTree.JCMethodDecl generateBuildMethod(BuilderJob job, Name staticName, JCTree.JCExpression returnType, List<JCTree.JCExpression> thrownExceptions, boolean addCleaning) throws IllegalAccessException, IllegalArgumentException {
+    private JCTree.JCMethodDecl generateBuildMethod(BuilderJob job, Name staticName, JCTree.JCExpression returnType, List<JCTree.JCExpression> thrownExceptions, boolean addCleaning) {
         JCTree.JCMethodDecl methodDef;
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCStatement> statements = new ListBuffer<>();
@@ -783,7 +782,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         return maker.MethodDef(maker.Modifiers(10), methodName, JavacHandlerUtil.cloneType(maker, field.vartype, field, fieldNode.getContext()), JavacHandlerUtil.copyTypeParams(fieldNode, params), List.nil(), List.nil(), body, null);
     }
 
-    public JCTree.JCMethodDecl generateBuilderMethod(BuilderJob job) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException {
+    public JCTree.JCMethodDecl generateBuilderMethod(BuilderJob job) {
         JCTree.JCNewClass jCNewClassNewClass;
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
@@ -865,7 +864,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         }
     }
 
-    public void makePrefixedSetterMethodsForBuilder(BuilderJob job, BuilderFieldData bfd, String prefix) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void makePrefixedSetterMethodsForBuilder(BuilderJob job, BuilderFieldData bfd, String prefix) {
         boolean deprecate = JavacHandlerUtil.isFieldDeprecated(bfd.originalFieldNode);
         if (bfd.singularData == null || bfd.singularData.getSingularizer() == null) {
             makePrefixedSetterMethodForBuilder(job, bfd, deprecate, prefix);
@@ -874,7 +873,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         }
     }
 
-    private void makePrefixedSetterMethodForBuilder(BuilderJob job, BuilderFieldData bfd, boolean deprecate, String prefix) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void makePrefixedSetterMethodForBuilder(BuilderJob job, BuilderFieldData bfd, boolean deprecate, String prefix) {
         JavacNode fieldNode = bfd.createdFields.get(0);
         String setterPrefix = !prefix.isEmpty() ? prefix : job.oldFluent ? "" : "set";
         String setterName = HandlerUtil.buildAccessorName(setterPrefix, bfd.name.toString());

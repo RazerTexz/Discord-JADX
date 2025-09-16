@@ -8,7 +8,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import javax.lang.model.type.TypeKind;
 import lombok.AccessLevel;
@@ -142,7 +141,7 @@ public class HandleConstructor {
         private HandleConstructor handleConstructor = new HandleConstructor();
 
         @Override // lombok.javac.JavacAnnotationHandler
-        public void handle(AnnotationValues<NoArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+        public void handle(AnnotationValues<NoArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
             HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.NO_ARGS_CONSTRUCTOR_FLAG_USAGE, "@NoArgsConstructor", ConfigurationKeys.ANY_CONSTRUCTOR_FLAG_USAGE, "any @xArgsConstructor");
             JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) NoArgsConstructor.class);
             JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");
@@ -167,7 +166,7 @@ public class HandleConstructor {
         private HandleConstructor handleConstructor = new HandleConstructor();
 
         @Override // lombok.javac.JavacAnnotationHandler
-        public void handle(AnnotationValues<RequiredArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+        public void handle(AnnotationValues<RequiredArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
             HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.REQUIRED_ARGS_CONSTRUCTOR_FLAG_USAGE, "@RequiredArgsConstructor", ConfigurationKeys.ANY_CONSTRUCTOR_FLAG_USAGE, "any @xArgsConstructor");
             JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) RequiredArgsConstructor.class);
             JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");
@@ -226,7 +225,7 @@ public class HandleConstructor {
         private HandleConstructor handleConstructor = new HandleConstructor();
 
         @Override // lombok.javac.JavacAnnotationHandler
-        public void handle(AnnotationValues<AllArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException {
+        public void handle(AnnotationValues<AllArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
             HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.ALL_ARGS_CONSTRUCTOR_FLAG_USAGE, "@AllArgsConstructor", ConfigurationKeys.ANY_CONSTRUCTOR_FLAG_USAGE, "any @xArgsConstructor");
             JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) AllArgsConstructor.class);
             JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");
@@ -286,7 +285,7 @@ public class HandleConstructor {
         return true;
     }
 
-    public void generateExtraNoArgsConstructor(JavacNode typeNode, JavacNode source) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateExtraNoArgsConstructor(JavacNode typeNode, JavacNode source) {
         Boolean v;
         if (JavacHandlerUtil.isDirectDescendantOfObject(typeNode) && (v = (Boolean) typeNode.getAst().readConfiguration(ConfigurationKeys.NO_ARGS_CONSTRUCTOR_EXTRA_PRIVATE)) != null && v.booleanValue()) {
             generate(typeNode, AccessLevel.PRIVATE, List.nil(), List.nil(), true, null, SkipIfConstructorExists.NO, source, true);
@@ -305,7 +304,7 @@ public class HandleConstructor {
         generate(typeNode, level, onConstructor, fields, allToDefault, staticName, skipIfConstructorExists, source, false);
     }
 
-    private void generate(JavacNode typeNode, AccessLevel level, List<JCTree.JCAnnotation> onConstructor, List<JavacNode> fields, boolean allToDefault, String staticName, SkipIfConstructorExists skipIfConstructorExists, JavacNode source, boolean noArgs) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void generate(JavacNode typeNode, AccessLevel level, List<JCTree.JCAnnotation> onConstructor, List<JavacNode> fields, boolean allToDefault, String staticName, SkipIfConstructorExists skipIfConstructorExists, JavacNode source, boolean noArgs) {
         boolean staticConstrRequired = (staticName == null || staticName.equals("")) ? false : true;
         if (skipIfConstructorExists != SkipIfConstructorExists.NO) {
             Iterator<JavacNode> it = typeNode.down().iterator();
@@ -351,7 +350,7 @@ public class HandleConstructor {
         generateStaticConstructor(staticConstrRequired, typeNode, staticName, level, allToDefault, fields, source, argTypes_);
     }
 
-    private void generateStaticConstructor(boolean staticConstrRequired, JavacNode typeNode, String staticName, AccessLevel level, boolean allToDefault, List<JavacNode> fields, LombokNode<JavacAST, JavacNode, JCTree> source, List<Type> argTypes_) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void generateStaticConstructor(boolean staticConstrRequired, JavacNode typeNode, String staticName, AccessLevel level, boolean allToDefault, List<JavacNode> fields, LombokNode<JavacAST, JavacNode, JCTree> source, List<Type> argTypes_) {
         if (staticConstrRequired) {
             Symbol.ClassSymbol sym = typeNode.get().sym;
             Type returnType = sym == null ? null : sym.type;
@@ -553,7 +552,7 @@ public class HandleConstructor {
         return true;
     }
 
-    public JCTree.JCMethodDecl createStaticConstructor(String name, AccessLevel level, JavacNode typeNode, List<JavacNode> fields, JCTree source) throws IllegalAccessException, IllegalArgumentException {
+    public JCTree.JCMethodDecl createStaticConstructor(String name, AccessLevel level, JavacNode typeNode, List<JavacNode> fields, JCTree source) {
         JavacTreeMaker maker = typeNode.getTreeMaker();
         JCTree.JCClassDecl type = typeNode.get();
         JCTree.JCModifiers mods = maker.Modifiers(8 | JavacHandlerUtil.toJavacModifier(level));

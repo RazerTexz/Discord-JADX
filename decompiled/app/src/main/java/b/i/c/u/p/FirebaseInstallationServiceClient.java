@@ -56,7 +56,7 @@ public class FirebaseInstallationServiceClient {
         this.e = provider22;
     }
 
-    public static void b(HttpURLConnection httpURLConnection, @Nullable String str, @NonNull String str2, @NonNull String str3) throws IOException {
+    public static void b(HttpURLConnection httpURLConnection, @Nullable String str, @NonNull String str2, @NonNull String str3) {
         InputStream errorStream = httpURLConnection.getErrorStream();
         String str4 = null;
         if (errorStream != null) {
@@ -234,7 +234,7 @@ public class FirebaseInstallationServiceClient {
         return bVar.a();
     }
 
-    public final void g(HttpURLConnection httpURLConnection, @Nullable String str, @NonNull String str2) throws JSONException, IOException {
+    public final void g(HttpURLConnection httpURLConnection, @Nullable String str, @NonNull String str2) throws IOException {
         try {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("fid", str);
@@ -247,7 +247,7 @@ public class FirebaseInstallationServiceClient {
         }
     }
 
-    public final void h(HttpURLConnection httpURLConnection) throws JSONException, IOException {
+    public final void h(HttpURLConnection httpURLConnection) throws IOException {
         try {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("sdkVersion", "a:16.3.4");

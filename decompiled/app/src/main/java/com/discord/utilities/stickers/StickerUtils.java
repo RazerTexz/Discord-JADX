@@ -556,7 +556,7 @@ public final class StickerUtils {
         return z2 || (stickerPackPriceForPremiumTier != null && stickerPackPriceForPremiumTier.intValue() == 0);
     }
 
-    public final Sticker parseFromMessageNotificationJson(String data) throws JSONException, NumberFormatException {
+    public final Sticker parseFromMessageNotificationJson(String data) throws NumberFormatException {
         if (data == null) {
             return null;
         }

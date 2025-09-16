@@ -1,6 +1,5 @@
 package b.i.a.f.i.b;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
@@ -15,7 +14,7 @@ public final class u8 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IOException {
+    public final void run() throws IllegalStateException {
         this.j.R();
         k9 k9Var = this.j;
         Runnable runnable = this.k;

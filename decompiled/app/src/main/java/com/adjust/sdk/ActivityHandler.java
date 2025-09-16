@@ -12,7 +12,6 @@ import com.adjust.sdk.scheduler.SingleThreadCachedScheduler;
 import com.adjust.sdk.scheduler.ThreadExecutor;
 import com.adjust.sdk.scheduler.TimerCycle;
 import com.adjust.sdk.scheduler.TimerOnce;
-import java.io.IOException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -65,7 +64,7 @@ public class ActivityHandler implements IActivityHandler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             ActivityHandler.access$000(ActivityHandler.this);
         }
     }
@@ -721,7 +720,7 @@ public class ActivityHandler implements IActivityHandler {
         this.executor.submit(new AnonymousClass1());
     }
 
-    public static /* synthetic */ void access$000(ActivityHandler activityHandler) throws IOException {
+    public static /* synthetic */ void access$000(ActivityHandler activityHandler) {
         activityHandler.initI();
     }
 
@@ -1101,7 +1100,7 @@ public class ActivityHandler implements IActivityHandler {
         return false;
     }
 
-    private void initI() throws IOException {
+    private void initI() {
         Double d;
         SESSION_INTERVAL = AdjustFactory.getSessionInterval();
         SUBSESSION_INTERVAL = AdjustFactory.getSubsessionInterval();
@@ -1382,7 +1381,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    private void readConfigFile(Context context) throws IOException {
+    private void readConfigFile(Context context) {
         try {
             InputStream inputStreamOpen = context.getAssets().open("adjust_config.properties");
             Properties properties = new Properties();

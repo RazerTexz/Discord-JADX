@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import androidx.annotation.RequiresPermission;
 import b.i.a.f.h.j.g;
 import b.i.a.f.h.j.m0;
@@ -18,7 +17,7 @@ public final class AnalyticsReceiver extends BroadcastReceiver {
 
     @Override // android.content.BroadcastReceiver
     @RequiresPermission(allOf = {"android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"})
-    public final void onReceive(Context context, Intent intent) throws PackageManager.NameNotFoundException {
+    public final void onReceive(Context context, Intent intent) {
         if (this.a == null) {
             this.a = new s0();
         }

@@ -128,7 +128,7 @@ public class CrashlyticsCore3 {
         }
     }
 
-    public final void b(SettingsDataProvider settingsDataProvider) throws ExecutionException, InterruptedException, TimeoutException {
+    public final void b(SettingsDataProvider settingsDataProvider) {
         Future<?> futureSubmit = this.l.submit(new a(settingsDataProvider));
         Logger3.a.b("Crashlytics detected incomplete initialization on previous app launch. Will initialize synchronously.");
         try {

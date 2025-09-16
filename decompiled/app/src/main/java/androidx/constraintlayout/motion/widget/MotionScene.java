@@ -175,7 +175,7 @@ public class MotionScene {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private void load(Context context, int i) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    private void load(Context context, int i) throws Resources.NotFoundException {
         XmlResourceParser xml = context.getResources().getXml(i);
         Transition transition = null;
         try {
@@ -293,7 +293,7 @@ public class MotionScene {
         }
     }
 
-    private void parseConstraintSet(Context context, XmlPullParser xmlPullParser) throws XmlPullParserException, IOException {
+    private void parseConstraintSet(Context context, XmlPullParser xmlPullParser) {
         ConstraintSet constraintSet = new ConstraintSet();
         constraintSet.setForceId(false);
         int attributeCount = xmlPullParser.getAttributeCount();
@@ -1001,7 +1001,7 @@ public class MotionScene {
         return this.mConstraintSetMap.get(i);
     }
 
-    public MotionScene(Context context, MotionLayout motionLayout, int i) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    public MotionScene(Context context, MotionLayout motionLayout, int i) throws Resources.NotFoundException {
         this.mMotionLayout = motionLayout;
         load(context, i);
         SparseArray<ConstraintSet> sparseArray = this.mConstraintSetMap;

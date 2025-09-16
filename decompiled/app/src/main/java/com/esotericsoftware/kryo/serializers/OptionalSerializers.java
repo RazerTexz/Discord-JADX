@@ -6,7 +6,6 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.util.Util;
-import java.io.IOException;
 import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
@@ -26,7 +25,7 @@ public final class OptionalSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalDouble optionalDouble) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalDouble optionalDouble) throws KryoException {
             write2(kryo, output, optionalDouble);
         }
 
@@ -37,7 +36,7 @@ public final class OptionalSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OptionalDouble optionalDouble) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, OptionalDouble optionalDouble) throws KryoException {
             output.writeBoolean(optionalDouble.isPresent());
             if (optionalDouble.isPresent()) {
                 output.writeDouble(optionalDouble.getAsDouble());
@@ -60,7 +59,7 @@ public final class OptionalSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalInt optionalInt) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalInt optionalInt) throws KryoException {
             write2(kryo, output, optionalInt);
         }
 
@@ -71,7 +70,7 @@ public final class OptionalSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OptionalInt optionalInt) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, OptionalInt optionalInt) throws KryoException {
             output.writeBoolean(optionalInt.isPresent());
             if (optionalInt.isPresent()) {
                 output.writeInt(optionalInt.getAsInt());
@@ -94,7 +93,7 @@ public final class OptionalSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalLong optionalLong) throws IOException, KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalLong optionalLong) throws KryoException {
             write2(kryo, output, optionalLong);
         }
 
@@ -105,7 +104,7 @@ public final class OptionalSerializers {
         }
 
         /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OptionalLong optionalLong) throws IOException, KryoException {
+        public void write2(Kryo kryo, Output output, OptionalLong optionalLong) throws KryoException {
             output.writeBoolean(optionalLong.isPresent());
             if (optionalLong.isPresent()) {
                 output.writeLong(optionalLong.getAsLong());

@@ -12,7 +12,7 @@ public class PatchValEclipsePortal {
     static final String SINGLEVARIABLEDECLARATION_SIG = "org.eclipse.jdt.core.dom.SingleVariableDeclaration";
     static final String ASTCONVERTER_SIG = "org.eclipse.jdt.core.dom.ASTConverter";
 
-    public static void copyInitializationOfForEachIterable(Object parser) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void copyInitializationOfForEachIterable(Object parser) throws IllegalArgumentException {
         try {
             Reflection.copyInitializationOfForEachIterable.invoke(null, parser);
         } catch (IllegalAccessException e) {
@@ -28,7 +28,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    public static void copyInitializationOfLocalDeclaration(Object parser) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void copyInitializationOfLocalDeclaration(Object parser) throws IllegalArgumentException {
         try {
             Reflection.copyInitializationOfLocalDeclaration.invoke(null, parser);
         } catch (IllegalAccessException e) {
@@ -44,7 +44,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, Object out, Object in) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, Object out, Object in) throws IllegalArgumentException {
         try {
             Reflection.addFinalAndValAnnotationToVariableDeclarationStatement.invoke(null, converter, out, in);
         } catch (IllegalAccessException e) {
@@ -60,7 +60,7 @@ public class PatchValEclipsePortal {
         }
     }
 
-    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, Object out, Object in) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, Object out, Object in) throws IllegalArgumentException {
         try {
             Reflection.addFinalAndValAnnotationToSingleVariableDeclaration.invoke(null, converter, out, in);
         } catch (IllegalAccessException e) {

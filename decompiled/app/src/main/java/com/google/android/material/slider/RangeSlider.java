@@ -17,7 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.material.R;
 import com.google.android.material.internal.ThemeEnforcement;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -294,12 +293,12 @@ public class RangeSlider extends BaseSlider<RangeSlider, OnChangeListener, OnSli
     }
 
     @Override // com.google.android.material.slider.BaseSlider
-    public /* bridge */ /* synthetic */ void setHaloRadius(@IntRange(from = 0) @Dimension int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public /* bridge */ /* synthetic */ void setHaloRadius(@IntRange(from = 0) @Dimension int i) {
         super.setHaloRadius(i);
     }
 
     @Override // com.google.android.material.slider.BaseSlider
-    public /* bridge */ /* synthetic */ void setHaloRadiusResource(@DimenRes int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public /* bridge */ /* synthetic */ void setHaloRadiusResource(@DimenRes int i) {
         super.setHaloRadiusResource(i);
     }
 

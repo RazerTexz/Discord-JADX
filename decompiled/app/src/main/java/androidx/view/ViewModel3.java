@@ -2,7 +2,6 @@ package androidx.view;
 
 import b.i.a.f.e.o.f;
 import d0.z.d.Intrinsics3;
-import java.io.IOException;
 import kotlin.Metadata;
 import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.CoroutineDispatcher;
@@ -19,7 +18,7 @@ import s.a.h1;
 public final class ViewModel3 {
     private static final String JOB_KEY = "androidx.lifecycle.ViewModelCoroutineScope.JOB_KEY";
 
-    public static final CoroutineScope getViewModelScope(ViewModel viewModel) throws IOException {
+    public static final CoroutineScope getViewModelScope(ViewModel viewModel) {
         Intrinsics3.checkNotNullParameter(viewModel, "$this$viewModelScope");
         CoroutineScope coroutineScope = (CoroutineScope) viewModel.getTag(JOB_KEY);
         if (coroutineScope != null) {

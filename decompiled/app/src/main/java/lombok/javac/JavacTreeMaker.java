@@ -215,7 +215,7 @@ public class JavacTreeMaker {
             return false;
         }
 
-        static Object getFieldCached(ConcurrentMap<String, Object> cache, String className, String fieldName) throws IllegalAccessException, IllegalArgumentException {
+        static Object getFieldCached(ConcurrentMap<String, Object> cache, String className, String fieldName) throws IllegalArgumentException {
             Object value = cache.get(fieldName);
             if (value != null) {
                 return value;
@@ -440,7 +440,7 @@ public class JavacTreeMaker {
         }
     }
 
-    private static <J> void set(Object owner, FieldId<J> f, J val) throws IllegalAccessException, IllegalArgumentException {
+    private static <J> void set(Object owner, FieldId<J> f, J val) {
         Field field = getFromCache((FieldId<?>) f);
         try {
             field.set(owner, val);
@@ -897,7 +897,7 @@ public class JavacTreeMaker {
         return (JCTree.JCVariableDecl) get(method, MethodDecl_recvParam);
     }
 
-    public void setReceiverParameter(JCTree.JCMethodDecl method, JCTree.JCVariableDecl param) throws IllegalAccessException, IllegalArgumentException {
+    public void setReceiverParameter(JCTree.JCMethodDecl method, JCTree.JCVariableDecl param) {
         set(method, MethodDecl_recvParam, param);
     }
 }

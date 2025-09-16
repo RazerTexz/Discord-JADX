@@ -44,7 +44,7 @@ public abstract class ConstraintHelper extends View {
         init(null);
     }
 
-    private void addID(String str) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    private void addID(String str) {
         if (str == null || str.length() == 0 || this.myContext == null) {
             return;
         }
@@ -102,7 +102,7 @@ public abstract class ConstraintHelper extends View {
         }
     }
 
-    private int[] convertReferenceString(View view, String str) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    private int[] convertReferenceString(View view, String str) {
         String[] strArrSplit = str.split(",");
         view.getContext();
         int[] iArr = new int[strArrSplit.length];
@@ -117,7 +117,7 @@ public abstract class ConstraintHelper extends View {
         return i != strArrSplit.length ? Arrays.copyOf(iArr, i) : iArr;
     }
 
-    private int findId(String str) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    private int findId(String str) {
         ConstraintLayout constraintLayout = getParent() instanceof ConstraintLayout ? (ConstraintLayout) getParent() : null;
         int iFindId = 0;
         if (isInEditMode() && constraintLayout != null) {
@@ -235,7 +235,7 @@ public abstract class ConstraintHelper extends View {
     }
 
     @Override // android.view.View
-    public void onAttachedToWindow() throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    public void onAttachedToWindow() {
         super.onAttachedToWindow();
         String str = this.mReferenceIds;
         if (str != null) {
@@ -295,7 +295,7 @@ public abstract class ConstraintHelper extends View {
     public void resolveRtl(ConstraintWidget constraintWidget, boolean z2) {
     }
 
-    public void setIds(String str) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException {
+    public void setIds(String str) {
         this.mReferenceIds = str;
         if (str == null) {
             return;
@@ -415,7 +415,7 @@ public abstract class ConstraintHelper extends View {
         applyLayoutFeatures((ConstraintLayout) parent);
     }
 
-    private int findId(ConstraintLayout constraintLayout, String str) throws Resources.NotFoundException {
+    private int findId(ConstraintLayout constraintLayout, String str) {
         Resources resources;
         if (str == null || constraintLayout == null || (resources = this.myContext.getResources()) == null) {
             return 0;

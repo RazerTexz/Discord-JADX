@@ -19,7 +19,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Objects;
 
@@ -62,7 +61,7 @@ public class WindowInsetsCompat {
         }
 
         @Nullable
-        public static WindowInsetsCompat getRootWindowInsets(@NonNull View view) throws IllegalAccessException, IllegalArgumentException {
+        public static WindowInsetsCompat getRootWindowInsets(@NonNull View view) throws IllegalArgumentException {
             if (sReflectionSucceeded && view.isAttachedToWindow()) {
                 try {
                     Object obj = sViewAttachInfoField.get(view.getRootView());
@@ -342,7 +341,7 @@ public class WindowInsetsCompat {
         }
 
         @Nullable
-        private Insets getVisibleInsets(@NonNull View view) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+        private Insets getVisibleInsets(@NonNull View view) throws IllegalArgumentException {
             if (Build.VERSION.SDK_INT >= 30) {
                 throw new UnsupportedOperationException("getVisibleInsets() should not be called on API >= 30. Use WindowInsets.isVisible() instead.");
             }
@@ -372,7 +371,7 @@ public class WindowInsetsCompat {
         }
 
         @SuppressLint({"PrivateApi"})
-        private static void loadReflectionField() throws ClassNotFoundException {
+        private static void loadReflectionField() {
             try {
                 sGetViewRootImplMethod = View.class.getDeclaredMethod("getViewRootImpl", new Class[0]);
                 sViewRootImplClass = Class.forName("android.view.ViewRootImpl");
@@ -391,7 +390,7 @@ public class WindowInsetsCompat {
         }
 
         @Override // androidx.core.view.WindowInsetsCompat.Impl
-        public void copyRootViewBounds(@NonNull View view) throws IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+        public void copyRootViewBounds(@NonNull View view) throws IllegalArgumentException {
             Insets visibleInsets = getVisibleInsets(view);
             if (visibleInsets == null) {
                 visibleInsets = Insets.NONE;

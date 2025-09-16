@@ -26,7 +26,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
     /* renamed from: b, reason: collision with root package name */
     public static BitmapCreator f2908b;
 
-    public static byte[] b(InputStream inputStream, BitmapFactory.Options options) throws IOException {
+    public static byte[] b(InputStream inputStream, BitmapFactory.Options options) {
         byte[] bArr;
         inputStream.mark(20);
         if (options == null || (bArr = options.inTempStorage) == null || bArr.length < 20) {
@@ -87,7 +87,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
     }
 
     @DoNotStrip
-    public static Bitmap hookDecodeFile(String str, BitmapFactory.Options options) throws IOException {
+    public static Bitmap hookDecodeFile(String str, BitmapFactory.Options options) {
         Bitmap bitmapHookDecodeStream = null;
         try {
             FileInputStream fileInputStream = new FileInputStream(str);
@@ -102,7 +102,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
     }
 
     @DoNotStrip
-    public static Bitmap hookDecodeFileDescriptor(FileDescriptor fileDescriptor, Rect rect, BitmapFactory.Options options) throws IOException {
+    public static Bitmap hookDecodeFileDescriptor(FileDescriptor fileDescriptor, Rect rect, BitmapFactory.Options options) {
         StaticWebpNativeLoader.a();
         long jNativeSeek = nativeSeek(fileDescriptor, 0L, false);
         if (jNativeSeek == -1) {
@@ -136,7 +136,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
     }
 
     @DoNotStrip
-    public static Bitmap hookDecodeResource(Resources resources, int i, BitmapFactory.Options options) throws Resources.NotFoundException, IOException {
+    public static Bitmap hookDecodeResource(Resources resources, int i, BitmapFactory.Options options) {
         TypedValue typedValue = new TypedValue();
         Bitmap bitmapHookDecodeResourceStream = null;
         try {
@@ -176,7 +176,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
     }
 
     @DoNotStrip
-    public static Bitmap hookDecodeStream(InputStream inputStream, Rect rect, BitmapFactory.Options options) throws IOException {
+    public static Bitmap hookDecodeStream(InputStream inputStream, Rect rect, BitmapFactory.Options options) {
         StaticWebpNativeLoader.a();
         if (!inputStream.markSupported()) {
             inputStream = new BufferedInputStream(inputStream, 20);

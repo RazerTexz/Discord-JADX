@@ -96,7 +96,7 @@ public class NewThreadWorker extends Scheduler.Worker implements Subscription {
         l.putIfAbsent(scheduledThreadPoolExecutor, scheduledThreadPoolExecutor);
     }
 
-    public static boolean g(ScheduledExecutorService scheduledExecutorService) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static boolean g(ScheduledExecutorService scheduledExecutorService) throws SecurityException {
         Method methodD;
         if (j) {
             if (scheduledExecutorService instanceof ScheduledThreadPoolExecutor) {

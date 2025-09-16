@@ -1,6 +1,5 @@
 package b.i.c.m.e;
 
-import android.content.pm.PackageManager;
 import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
@@ -105,7 +104,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // b.i.c.m.d.CrashlyticsNativeComponent
-    public boolean h(String str) throws PackageManager.NameNotFoundException, IOException {
+    public boolean h(String str) {
         BreakpadController breakpadController = (BreakpadController) this.a;
         File fileA = breakpadController.d.a(str);
         boolean zA = false;

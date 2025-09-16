@@ -53,7 +53,6 @@ import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -1477,7 +1476,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
         super.setOrientation(i);
     }
 
-    public void setStatusBarForeground(@Nullable Drawable drawable) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarForeground(@Nullable Drawable drawable) throws SecurityException {
         Drawable drawable2 = this.statusBarForeground;
         if (drawable2 != drawable) {
             if (drawable2 != null) {
@@ -1498,11 +1497,11 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
         }
     }
 
-    public void setStatusBarForegroundColor(@ColorInt int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarForegroundColor(@ColorInt int i) throws SecurityException {
         setStatusBarForeground(new ColorDrawable(i));
     }
 
-    public void setStatusBarForegroundResource(@DrawableRes int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarForegroundResource(@DrawableRes int i) throws SecurityException {
         setStatusBarForeground(AppCompatResources.getDrawable(getContext(), i));
     }
 
@@ -1554,7 +1553,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
     /* JADX WARN: Finally extract failed */
     /* JADX WARN: Illegal instructions before constructor call */
-    public AppBarLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws IllegalAccessException, Resources.NotFoundException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public AppBarLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException, SecurityException {
         int i2 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         this.totalScrollRange = -1;

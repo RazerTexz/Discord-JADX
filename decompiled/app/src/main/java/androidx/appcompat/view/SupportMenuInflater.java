@@ -29,7 +29,6 @@ import androidx.core.view.MenuItemCompat;
 import b.d.b.a.outline;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -69,7 +68,7 @@ public class SupportMenuInflater extends MenuInflater {
         }
 
         @Override // android.view.MenuItem.OnMenuItemClickListener
-        public boolean onMenuItemClick(MenuItem menuItem) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public boolean onMenuItemClick(MenuItem menuItem) {
             try {
                 if (this.mMethod.getReturnType() == Boolean.TYPE) {
                     return ((Boolean) this.mMethod.invoke(this.mRealOwner, menuItem)).booleanValue();
@@ -135,7 +134,7 @@ public class SupportMenuInflater extends MenuInflater {
             return str.charAt(0);
         }
 
-        private <T> T newInstance(String str, Class<?>[] clsArr, Object[] objArr) throws NoSuchMethodException, SecurityException {
+        private <T> T newInstance(String str, Class<?>[] clsArr, Object[] objArr) {
             try {
                 Constructor<?> constructor = Class.forName(str, false, SupportMenuInflater.this.mContext.getClassLoader()).getConstructor(clsArr);
                 constructor.setAccessible(true);
@@ -146,7 +145,7 @@ public class SupportMenuInflater extends MenuInflater {
             }
         }
 
-        private void setItem(MenuItem menuItem) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        private void setItem(MenuItem menuItem) {
             boolean z2 = false;
             menuItem.setChecked(this.itemChecked).setVisible(this.itemVisible).setEnabled(this.itemEnabled).setCheckable(this.itemCheckable >= 1).setTitleCondensed(this.itemTitleCondensed).setIcon(this.itemIconResId);
             int i = this.itemShowAsAction;
@@ -197,12 +196,12 @@ public class SupportMenuInflater extends MenuInflater {
             }
         }
 
-        public void addItem() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void addItem() {
             this.itemAdded = true;
             setItem(this.menu.add(this.groupId, this.itemId, this.itemCategoryOrder, this.itemTitle));
         }
 
-        public SubMenu addSubMenuItem() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public SubMenu addSubMenuItem() {
             this.itemAdded = true;
             SubMenu subMenuAddSubMenu = this.menu.addSubMenu(this.groupId, this.itemId, this.itemCategoryOrder, this.itemTitle);
             setItem(subMenuAddSubMenu.getItem());
@@ -305,7 +304,7 @@ public class SupportMenuInflater extends MenuInflater {
         return (!(obj instanceof Activity) && (obj instanceof ContextWrapper)) ? findRealOwner(((ContextWrapper) obj).getBaseContext()) : obj;
     }
 
-    private void parseMenu(XmlPullParser xmlPullParser, AttributeSet attributeSet, Menu menu) throws XmlPullParserException, IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    private void parseMenu(XmlPullParser xmlPullParser, AttributeSet attributeSet, Menu menu) throws XmlPullParserException, IOException {
         MenuState menuState = new MenuState(menu);
         int eventType = xmlPullParser.getEventType();
         while (true) {

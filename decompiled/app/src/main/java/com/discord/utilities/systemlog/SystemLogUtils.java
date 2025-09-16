@@ -20,7 +20,6 @@ import j0.l.e.ScalarSynchronousObservable;
 import j0.p.Schedulers2;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -445,7 +444,7 @@ public final class SystemLogUtils {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void processLogs$app_productionGoogleRelease(BufferedReader reader, LinkedList<String> output, Regex filter) throws IOException {
+    public final void processLogs$app_productionGoogleRelease(BufferedReader reader, LinkedList<String> output, Regex filter) {
         Intrinsics3.checkNotNullParameter(reader, "reader");
         Intrinsics3.checkNotNullParameter(output, "output");
         int i = 0;

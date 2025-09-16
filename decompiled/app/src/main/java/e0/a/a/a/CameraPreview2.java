@@ -10,7 +10,6 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import java.io.IOException;
 import java.util.List;
 
 /* compiled from: CameraPreview.java */
@@ -228,7 +227,7 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
     }
 
     @Override // android.view.SurfaceHolder.Callback
-    public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) throws IOException {
+    public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         if (surfaceHolder.getSurface() == null) {
             return;
         }

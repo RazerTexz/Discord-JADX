@@ -76,7 +76,7 @@ public class ObjectInputStreamInstantiator<T> implements ObjectInstantiator<T> {
             }
         }
 
-        public a(Class<?> cls) throws IOException {
+        public a(Class<?> cls) {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             DataOutputStream dataOutputStream = new DataOutputStream(byteArrayOutputStream);
             try {

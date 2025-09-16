@@ -211,7 +211,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @RequiresApi(23)
-    public final void A0() throws ExoPlaybackException, MediaCryptoException {
+    public final void A0() throws ExoPlaybackException {
         try {
             this.N.setMediaDrmSession(X(this.M).c);
             t0(this.M);
@@ -402,7 +402,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @TargetApi(23)
-    public final boolean O() throws ExoPlaybackException, MediaCryptoException {
+    public final boolean O() throws ExoPlaybackException {
         if (this.z0) {
             this.x0 = 1;
             if (this.f2936c0 || this.f2938e0) {
@@ -416,7 +416,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         return true;
     }
 
-    public final boolean P(long j, long j2) throws ExoPlaybackException, MediaCryptoException {
+    public final boolean P(long j, long j2) throws ExoPlaybackException {
         boolean z2;
         boolean z3;
         boolean zM0;
@@ -550,7 +550,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v0 */
     /* JADX WARN: Type inference failed for: r1v3, types: [int] */
-    public final boolean Q() throws ExoPlaybackException, MediaCryptoException {
+    public final boolean Q() throws ExoPlaybackException {
         MediaCodecAdapter mediaCodecAdapter = this.S;
         boolean z2 = 0;
         if (mediaCodecAdapter == null || this.x0 == 2 || this.E0) {
@@ -1178,7 +1178,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     public abstract void k0(DecoderInputBuffer decoderInputBuffer) throws ExoPlaybackException;
 
     @TargetApi(23)
-    public final void l0() throws ExoPlaybackException, MediaCryptoException {
+    public final void l0() throws ExoPlaybackException {
         int i = this.y0;
         if (i == 1) {
             R();
@@ -1205,7 +1205,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         z0(this.T);
     }
 
-    public final boolean n0(int i) throws ExoPlaybackException, MediaCryptoException {
+    public final boolean n0(int i) throws ExoPlaybackException {
         FormatHolder formatHolderA = A();
         this.f2946z.p();
         int I = I(formatHolderA, this.f2946z, i | 4);
@@ -1264,7 +1264,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void q(long j, long j2) throws ExoPlaybackException, MediaCryptoException {
+    public void q(long j, long j2) throws ExoPlaybackException {
         boolean z2;
         boolean z3 = false;
         if (this.H0) {

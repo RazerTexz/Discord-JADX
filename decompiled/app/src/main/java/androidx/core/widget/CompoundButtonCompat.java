@@ -20,7 +20,7 @@ public final class CompoundButtonCompat {
     }
 
     @Nullable
-    public static Drawable getButtonDrawable(@NonNull CompoundButton compoundButton) throws NoSuchFieldException {
+    public static Drawable getButtonDrawable(@NonNull CompoundButton compoundButton) {
         if (Build.VERSION.SDK_INT >= 23) {
             return compoundButton.getButtonDrawable();
         }

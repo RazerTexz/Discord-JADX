@@ -93,7 +93,7 @@ public class AndroidSocketAdapter2 implements SocketAdapter {
     }
 
     @Override // f0.e0.k.i.SocketAdapter
-    public void d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) throws IllegalArgumentException {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
         if (a(sSLSocket)) {

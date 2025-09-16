@@ -17,7 +17,6 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.view.CollapsibleActionView;
 import androidx.core.internal.view.SupportMenuItem;
 import androidx.core.view.ActionProvider;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -353,7 +352,7 @@ public class MenuItemWrapperICS extends BaseMenuWrapper implements MenuItem {
         return this;
     }
 
-    public void setExclusiveCheckable(boolean z2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void setExclusiveCheckable(boolean z2) {
         try {
             if (this.mSetExclusiveCheckableMethod == null) {
                 this.mSetExclusiveCheckableMethod = this.mWrappedObject.getClass().getDeclaredMethod("setExclusiveCheckable", Boolean.TYPE);

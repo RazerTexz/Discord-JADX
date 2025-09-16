@@ -32,7 +32,6 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.ActionProvider;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import java.lang.reflect.InvocationTargetException;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -80,7 +79,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-        public void onGlobalLayout() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onGlobalLayout() throws IllegalArgumentException {
             if (ActivityChooserView.this.isShowingPopup()) {
                 if (!ActivityChooserView.this.isShown()) {
                     ActivityChooserView.this.getListPopupWindow().dismiss();
@@ -119,7 +118,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         }
 
         @Override // androidx.appcompat.widget.ForwardingListener
-        public boolean onForwardingStarted() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public boolean onForwardingStarted() throws IllegalArgumentException {
             ActivityChooserView.this.showPopup();
             return true;
         }
@@ -314,7 +313,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         }
 
         @Override // android.view.View.OnClickListener
-        public void onClick(View view) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onClick(View view) throws IllegalArgumentException {
             ActivityChooserView activityChooserView = ActivityChooserView.this;
             if (view != activityChooserView.mDefaultActivityButton) {
                 if (view != activityChooserView.mExpandActivityOverflowButton) {
@@ -342,7 +341,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         }
 
         @Override // android.widget.AdapterView.OnItemClickListener
-        public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) throws IllegalArgumentException {
             int itemViewType = ((ActivityChooserViewAdapter) adapterView.getAdapter()).getItemViewType(i);
             if (itemViewType != 0) {
                 if (itemViewType != 1) {
@@ -371,7 +370,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         }
 
         @Override // android.view.View.OnLongClickListener
-        public boolean onLongClick(View view) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public boolean onLongClick(View view) throws IllegalArgumentException {
             ActivityChooserView activityChooserView = ActivityChooserView.this;
             if (view != activityChooserView.mDefaultActivityButton) {
                 throw new IllegalArgumentException();
@@ -482,7 +481,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
     }
 
     @Override // androidx.appcompat.widget.ActivityChooserModel.ActivityChooserModelClient
-    public void setActivityChooserModel(ActivityChooserModel activityChooserModel) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setActivityChooserModel(ActivityChooserModel activityChooserModel) throws IllegalArgumentException {
         this.mAdapter.setDataModel(activityChooserModel);
         if (isShowingPopup()) {
             dismissPopup();
@@ -515,7 +514,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         this.mProvider = actionProvider;
     }
 
-    public boolean showPopup() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public boolean showPopup() throws IllegalArgumentException {
         if (isShowingPopup() || !this.mIsAttachedToWindow) {
             return false;
         }
@@ -528,7 +527,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
     /* JADX WARN: Type inference failed for: r0v15 */
     /* JADX WARN: Type inference failed for: r0v6 */
     /* JADX WARN: Type inference failed for: r0v7, types: [boolean, int] */
-    public void showPopupUnchecked(int i) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void showPopupUnchecked(int i) throws IllegalArgumentException {
         if (this.mAdapter.getDataModel() == null) {
             throw new IllegalStateException("No data model. Did you call #setDataModel?");
         }

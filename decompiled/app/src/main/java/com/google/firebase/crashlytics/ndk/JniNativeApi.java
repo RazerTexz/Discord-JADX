@@ -41,7 +41,7 @@ public class JniNativeApi implements NativeApi {
         this.f3110b = context;
     }
 
-    public boolean a(String str, AssetManager assetManager) throws PackageManager.NameNotFoundException {
+    public boolean a(String str, AssetManager assetManager) {
         String str2 = Build.CPU_ABI;
         try {
             PackageInfo packageInfo = this.f3110b.getPackageManager().getPackageInfo(this.f3110b.getPackageName(), 9216);

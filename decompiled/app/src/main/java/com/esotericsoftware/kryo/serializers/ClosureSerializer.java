@@ -5,7 +5,6 @@ import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import java.lang.invoke.SerializedLambda;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /* loaded from: classes.dex */
@@ -27,7 +26,7 @@ public class ClosureSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public Object copy(Kryo kryo, Object obj) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public Object copy(Kryo kryo, Object obj) {
         try {
             Method declaredMethod = obj.getClass().getDeclaredMethod("writeReplace", new Class[0]);
             declaredMethod.setAccessible(true);
@@ -51,7 +50,7 @@ public class ClosureSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void write(Kryo kryo, Output output, Object obj) {
         try {
             Method declaredMethod = obj.getClass().getDeclaredMethod("writeReplace", new Class[0]);
             declaredMethod.setAccessible(true);

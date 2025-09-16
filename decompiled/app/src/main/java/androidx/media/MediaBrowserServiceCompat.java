@@ -1042,7 +1042,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
 
             @Override // java.lang.Runnable
-            public void run() throws RemoteException {
+            public void run() {
                 IBinder iBinderAsBinder = this.val$callbacks.asBinder();
                 MediaBrowserServiceCompat.this.mConnections.remove(iBinderAsBinder);
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.new ConnectionRecord(this.val$pkg, this.val$pid, this.val$uid, this.val$rootHints, this.val$callbacks);
@@ -1190,7 +1190,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
 
             @Override // java.lang.Runnable
-            public void run() throws RemoteException {
+            public void run() {
                 ConnectionRecord connectionRecord;
                 IBinder iBinderAsBinder = this.val$callbacks.asBinder();
                 MediaBrowserServiceCompat.this.mConnections.remove(iBinderAsBinder);

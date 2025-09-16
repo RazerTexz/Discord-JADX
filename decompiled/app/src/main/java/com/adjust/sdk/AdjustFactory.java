@@ -6,7 +6,6 @@ import com.adjust.sdk.UtilNetworking;
 import com.discord.stores.StoreGuildScheduledEvents;
 import java.io.IOException;
 import java.net.URL;
-import java.security.KeyManagementException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -91,7 +90,7 @@ public class AdjustFactory {
         }
 
         @Override // com.adjust.sdk.UtilNetworking.IConnectionOptions
-        public void applyConnectionOptions(HttpsURLConnection httpsURLConnection, String str) throws NoSuchAlgorithmException, KeyManagementException {
+        public void applyConnectionOptions(HttpsURLConnection httpsURLConnection, String str) {
             new UtilNetworking.ConnectionOptions().applyConnectionOptions(httpsURLConnection, str);
             try {
                 SSLContext sSLContext = SSLContext.getInstance("TLS");

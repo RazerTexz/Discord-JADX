@@ -25,7 +25,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setBoolean(obj2, field.getBoolean(obj));
@@ -45,7 +45,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 this.field.setBoolean(obj, input.readBoolean());
             } catch (Exception e) {
@@ -79,7 +79,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setByte(obj2, field.getByte(obj));
@@ -99,7 +99,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 this.field.setByte(obj, input.readByte());
             } catch (Exception e) {
@@ -133,7 +133,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setChar(obj2, field.getChar(obj));
@@ -153,7 +153,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 this.field.setChar(obj, input.readChar());
             } catch (Exception e) {
@@ -187,7 +187,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setDouble(obj2, field.getDouble(obj));
@@ -207,7 +207,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 this.field.setDouble(obj, input.readDouble());
             } catch (Exception e) {
@@ -241,7 +241,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setFloat(obj2, field.getFloat(obj));
@@ -261,7 +261,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 this.field.setFloat(obj, input.readFloat());
             } catch (Exception e) {
@@ -295,7 +295,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setInt(obj2, field.getInt(obj));
@@ -315,7 +315,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 if (this.varIntsEnabled) {
                     this.field.setInt(obj, input.readInt(false));
@@ -357,7 +357,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setLong(obj2, field.getLong(obj));
@@ -377,7 +377,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 if (this.varIntsEnabled) {
                     this.field.setLong(obj, input.readLong(false));
@@ -419,7 +419,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void copy(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException {
+        public void copy(Object obj, Object obj2) {
             try {
                 Field field = this.field;
                 field.setShort(obj2, field.getShort(obj));
@@ -439,7 +439,7 @@ public class ObjectField extends FieldSerializer.CachedField {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.ObjectField, com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void read(Input input, Object obj) throws IllegalAccessException, IllegalArgumentException {
+        public void read(Input input, Object obj) {
             try {
                 this.field.setShort(obj, input.readShort());
             } catch (Exception e) {

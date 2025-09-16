@@ -155,7 +155,7 @@ public class Full2PictureRecorder extends FullPictureRecorder implements ImageRe
         }
     }
 
-    public final void e(@NonNull Image image) throws IOException {
+    public final void e(@NonNull Image image) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(byteArrayOutputStream);
         try {

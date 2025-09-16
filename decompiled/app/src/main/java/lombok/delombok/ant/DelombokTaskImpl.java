@@ -2,7 +2,6 @@ package lombok.delombok.ant;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.UnsupportedCharsetException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -26,7 +25,7 @@ public class DelombokTaskImpl {
     private List<String> formatOptions = new ArrayList();
 
     /* JADX INFO: Thrown type has an unknown type hierarchy: org.apache.tools.ant.BuildException */
-    public void execute(Location location) throws IllegalAccessException, BuildException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+    public void execute(Location location) throws BuildException, IllegalArgumentException {
         if (this.fromDir == null && this.path == null) {
             throw new BuildException("Either 'from' attribute, or nested <fileset> tags are required.");
         }

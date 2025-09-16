@@ -48,7 +48,7 @@ public final class UdpDataSource extends BaseDataSource {
     }
 
     @Override // b.i.a.c.e3.DataSource3
-    public long a(DataSpec dataSpec) throws IOException {
+    public long a(DataSpec dataSpec) throws UdpDataSourceException {
         Uri uri = dataSpec.a;
         this.h = uri;
         String host = uri.getHost();
@@ -78,7 +78,7 @@ public final class UdpDataSource extends BaseDataSource {
     }
 
     @Override // b.i.a.c.e3.DataSource3
-    public void close() throws IOException {
+    public void close() {
         this.h = null;
         MulticastSocket multicastSocket = this.j;
         if (multicastSocket != null) {
@@ -110,7 +110,7 @@ public final class UdpDataSource extends BaseDataSource {
     }
 
     @Override // b.i.a.c.e3.DataReader
-    public int read(byte[] bArr, int i, int i2) throws IOException {
+    public int read(byte[] bArr, int i, int i2) throws UdpDataSourceException {
         if (i2 == 0) {
             return 0;
         }

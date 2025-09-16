@@ -9,7 +9,6 @@ import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.io.OutputChunked;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import com.esotericsoftware.kryo.util.ObjectMap;
-import java.io.IOException;
 
 /* loaded from: classes.dex */
 public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
@@ -20,7 +19,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public T read(Kryo kryo, Input input, Class<T> cls) throws IOException, KryoException {
+    public T read(Kryo kryo, Input input, Class<T> cls) throws KryoException {
         T tCreate = create(kryo, input, cls);
         kryo.reference(tCreate);
         ObjectMap graphContext = kryo.getGraphContext();
@@ -97,7 +96,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, T t) throws IOException, KryoException {
+    public void write(Kryo kryo, Output output, T t) throws KryoException {
         FieldSerializer.CachedField[] fields = getFields();
         ObjectMap graphContext = kryo.getGraphContext();
         if (!graphContext.containsKey(this)) {

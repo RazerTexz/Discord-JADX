@@ -234,7 +234,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
 
     @Override // b.i.a.c.v2.Decoder
     @CallSuper
-    public void release() throws InterruptedException {
+    public void release() {
         synchronized (this.f1145b) {
             this.l = true;
             this.f1145b.notify();

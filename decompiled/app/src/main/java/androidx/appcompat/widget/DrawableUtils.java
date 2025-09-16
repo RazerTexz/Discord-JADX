@@ -16,7 +16,6 @@ import androidx.appcompat.graphics.drawable.DrawableWrapper;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.graphics.drawable.WrappedDrawable;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 
 @SuppressLint({"RestrictedAPI"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -82,7 +81,7 @@ public class DrawableUtils {
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    public static Rect getOpticalBounds(Drawable drawable) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static Rect getOpticalBounds(Drawable drawable) {
         if (Build.VERSION.SDK_INT >= 29) {
             Insets opticalInsets = drawable.getOpticalInsets();
             Rect rect = new Rect();

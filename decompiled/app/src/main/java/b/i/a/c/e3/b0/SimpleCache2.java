@@ -394,7 +394,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    public final SimpleCacheSpan o(String str, long j, long j2) throws DatabaseIOException {
+    public final SimpleCacheSpan o(String str, long j, long j2) {
         SimpleCacheSpan simpleCacheSpanFloor;
         long j3;
         CachedContent cachedContent = this.d.a.get(str);
@@ -455,7 +455,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    public final void q(CacheSpan cacheSpan) throws DatabaseIOException {
+    public final void q(CacheSpan cacheSpan) {
         boolean z2;
         CachedContent cachedContentC = this.d.c(cacheSpan.j);
         if (cachedContentC != null) {
@@ -503,7 +503,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    public final void r() throws DatabaseIOException {
+    public final void r() {
         ArrayList arrayList = new ArrayList();
         Iterator it = Collections.unmodifiableCollection(this.d.a.values()).iterator();
         while (it.hasNext()) {
@@ -520,7 +520,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    public final SimpleCacheSpan s(String str, SimpleCacheSpan simpleCacheSpan) throws SQLException {
+    public final SimpleCacheSpan s(String str, SimpleCacheSpan simpleCacheSpan) {
         File file;
         if (!this.h) {
             return simpleCacheSpan;

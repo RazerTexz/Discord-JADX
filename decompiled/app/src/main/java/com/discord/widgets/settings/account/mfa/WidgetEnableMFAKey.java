@@ -52,7 +52,7 @@ public final class WidgetEnableMFAKey extends AppFragment {
             return companion.isPackageInstalled(str, packageManager);
         }
 
-        private final boolean isPackageInstalled(String packageName, PackageManager packageManager) throws PackageManager.NameNotFoundException {
+        private final boolean isPackageInstalled(String packageName, PackageManager packageManager) {
             try {
                 packageManager.getPackageInfo(packageName, 0);
                 return true;

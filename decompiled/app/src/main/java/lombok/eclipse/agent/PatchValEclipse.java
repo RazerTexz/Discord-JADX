@@ -32,7 +32,7 @@ import org.eclipse.jdt.internal.compiler.parser.Parser;
 public class PatchValEclipse {
     private static final Field FIELD_NAME_INDEX;
 
-    public static void copyInitializationOfForEachIterable(Parser parser) throws IllegalAccessException, IllegalArgumentException {
+    public static void copyInitializationOfForEachIterable(Parser parser) {
         try {
             ForeachStatement[] foreachStatementArr = (ASTNode[]) Reflection.access$0().get(parser);
             int astPtr = ((Integer) Reflection.access$1().get(parser)).intValue();
@@ -59,7 +59,7 @@ public class PatchValEclipse {
         }
     }
 
-    public static void copyInitializationOfLocalDeclaration(Parser parser) throws IllegalAccessException, IllegalArgumentException {
+    public static void copyInitializationOfLocalDeclaration(Parser parser) {
         Expression expression;
         try {
             AbstractVariableDeclaration[] abstractVariableDeclarationArr = (ASTNode[]) Reflection.access$0().get(parser);
@@ -91,17 +91,17 @@ public class PatchValEclipse {
         return PatchVal.couldBe(imports, "lombok.experimental.var", type) || PatchVal.couldBe(imports, "lombok.var", type);
     }
 
-    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, SingleVariableDeclaration out, LocalDeclaration in) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, SingleVariableDeclaration out, LocalDeclaration in) throws IllegalArgumentException {
         List<IExtendedModifier> modifiers = out.modifiers();
         addFinalAndValAnnotationToModifierList(converter, modifiers, out.getAST(), in);
     }
 
-    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, VariableDeclarationStatement out, LocalDeclaration in) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, VariableDeclarationStatement out, LocalDeclaration in) throws IllegalArgumentException {
         List<IExtendedModifier> modifiers = out.modifiers();
         addFinalAndValAnnotationToModifierList(converter, modifiers, out.getAST(), in);
     }
 
-    public static void addFinalAndValAnnotationToModifierList(Object converter, List<IExtendedModifier> modifiers, AST ast, LocalDeclaration in) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void addFinalAndValAnnotationToModifierList(Object converter, List<IExtendedModifier> modifiers, AST ast, LocalDeclaration in) throws IllegalArgumentException {
         Name typeName;
         if (in.annotations == null) {
             return;
@@ -191,7 +191,7 @@ public class PatchValEclipse {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r0v62, types: [char[]] */
-    public static MarkerAnnotation createValVarAnnotation(AST ast, Annotation original, int start, int end) throws IllegalAccessException, IllegalArgumentException {
+    public static MarkerAnnotation createValVarAnnotation(AST ast, Annotation original, int start, int end) {
         char[][] tokens;
         try {
             MarkerAnnotation out = (MarkerAnnotation) Reflection.access$6().newInstance(ast);
@@ -254,7 +254,7 @@ public class PatchValEclipse {
         FIELD_NAME_INDEX = f;
     }
 
-    private static void setIndex(Name name, int index) throws IllegalAccessException, IllegalArgumentException {
+    private static void setIndex(Name name, int index) {
         try {
             if (FIELD_NAME_INDEX != null) {
                 FIELD_NAME_INDEX.set(name, Integer.valueOf(index));

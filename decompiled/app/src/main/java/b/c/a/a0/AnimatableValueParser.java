@@ -1457,7 +1457,7 @@ public class AnimatableValueParser {
         return stageInstance.getPrivacyLevel() == StageInstancePrivacyLevel.PUBLIC;
     }
 
-    public static String W1(CacheKey cacheKey) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public static String W1(CacheKey cacheKey) throws UnsupportedEncodingException {
         byte[] bytes = cacheKey.b().getBytes(Constants.ENCODING);
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(Constants.SHA1);

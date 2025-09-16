@@ -78,7 +78,7 @@ public class ProxyBillingActivity extends Activity {
     }
 
     @Override // android.app.Activity
-    public void onCreate(@Nullable Bundle bundle) throws IntentSender.SendIntentException {
+    public void onCreate(@Nullable Bundle bundle) {
         PendingIntent pendingIntent;
         super.onCreate(bundle);
         if (bundle != null) {

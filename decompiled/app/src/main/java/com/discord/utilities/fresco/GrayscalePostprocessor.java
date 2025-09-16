@@ -9,7 +9,6 @@ import b.f.b.a.SimpleCacheKey;
 import b.f.j.q.BasePostprocessor;
 import com.facebook.cache.common.CacheKey;
 import d0.z.d.Intrinsics3;
-import java.lang.reflect.InvocationTargetException;
 import kotlin.Metadata;
 
 /* compiled from: GrayscalePostprocessor.kt */
@@ -29,7 +28,7 @@ public final class GrayscalePostprocessor extends BasePostprocessor {
     }
 
     @Override // b.f.j.q.BasePostprocessor
-    public void process(Bitmap destBitmap, Bitmap sourceBitmap) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void process(Bitmap destBitmap, Bitmap sourceBitmap) throws IllegalArgumentException {
         super.process(destBitmap, sourceBitmap);
         if (destBitmap == null || sourceBitmap == null) {
             return;

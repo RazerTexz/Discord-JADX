@@ -235,7 +235,7 @@ public class HandleLog {
         return expressions;
     }
 
-    private static final Expression createFactoryTypeParameter(ClassLiteralAccess loggingType, org.eclipse.jdt.internal.compiler.ast.Annotation source) throws IllegalAccessException, IllegalArgumentException {
+    private static final Expression createFactoryTypeParameter(ClassLiteralAccess loggingType, org.eclipse.jdt.internal.compiler.ast.Annotation source) throws IllegalArgumentException {
         TypeReference copy = EclipseHandlerUtil.copyType(loggingType.type, source);
         ClassLiteralAccess result = new ClassLiteralAccess(source.sourceEnd, copy);
         EclipseHandlerUtil.setGeneratedBy(result, source);

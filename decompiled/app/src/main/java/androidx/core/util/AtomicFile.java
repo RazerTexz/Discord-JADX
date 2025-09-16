@@ -9,7 +9,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.SyncFailedException;
 
 /* loaded from: classes.dex */
 public class AtomicFile {
@@ -34,7 +33,7 @@ public class AtomicFile {
         Log.e(LOG_TAG, "Failed to rename " + file + " to " + file2);
     }
 
-    private static boolean sync(@NonNull FileOutputStream fileOutputStream) throws SyncFailedException {
+    private static boolean sync(@NonNull FileOutputStream fileOutputStream) {
         try {
             fileOutputStream.getFD().sync();
             return true;
@@ -49,7 +48,7 @@ public class AtomicFile {
         this.mLegacyBackupName.delete();
     }
 
-    public void failWrite(@Nullable FileOutputStream fileOutputStream) throws IOException {
+    public void failWrite(@Nullable FileOutputStream fileOutputStream) {
         if (fileOutputStream == null) {
             return;
         }
@@ -69,7 +68,7 @@ public class AtomicFile {
         Log.e(LOG_TAG, sbU.toString());
     }
 
-    public void finishWrite(@Nullable FileOutputStream fileOutputStream) throws IOException {
+    public void finishWrite(@Nullable FileOutputStream fileOutputStream) {
         if (fileOutputStream == null) {
             return;
         }

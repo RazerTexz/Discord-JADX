@@ -35,7 +35,7 @@ import org.eclipse.jdt.ui.text.java.IJavaCompletionProposal;
 
 /* loaded from: discord:lombok/eclipse/agent/PatchExtensionMethodCompletionProposal.SCL.lombok */
 public class PatchExtensionMethodCompletionProposal {
-    public static IJavaCompletionProposal[] getJavaCompletionProposals(IJavaCompletionProposal[] javaCompletionProposals, CompletionProposalCollector completionProposalCollector) throws IllegalAccessException, IllegalArgumentException {
+    public static IJavaCompletionProposal[] getJavaCompletionProposals(IJavaCompletionProposal[] javaCompletionProposals, CompletionProposalCollector completionProposalCollector) throws IllegalArgumentException {
         List<IJavaCompletionProposal> proposals = new ArrayList<>(Arrays.asList(javaCompletionProposals));
         if (canExtendCodeAssist()) {
             for (PatchExtensionMethod.Extension extension : getExtensionMethods(completionProposalCollector)) {
@@ -53,7 +53,7 @@ public class PatchExtensionMethodCompletionProposal {
         return (IJavaCompletionProposal[]) proposals.toArray(new IJavaCompletionProposal[0]);
     }
 
-    private static List<PatchExtensionMethod.Extension> getExtensionMethods(CompletionProposalCollector completionProposalCollector) throws IllegalAccessException, IllegalArgumentException {
+    private static List<PatchExtensionMethod.Extension> getExtensionMethods(CompletionProposalCollector completionProposalCollector) {
         List<PatchExtensionMethod.Extension> extensions = new ArrayList<>();
         ClassScope classScope = getClassScope(completionProposalCollector);
         if (classScope != null) {
@@ -134,7 +134,7 @@ public class PatchExtensionMethodCompletionProposal {
         return scope;
     }
 
-    private static void copyNameLookupAndCompletionEngine(CompletionProposalCollector completionProposalCollector, InternalCompletionProposal newProposal) throws IllegalAccessException, IllegalArgumentException {
+    private static void copyNameLookupAndCompletionEngine(CompletionProposalCollector completionProposalCollector, InternalCompletionProposal newProposal) throws IllegalArgumentException {
         try {
             InternalCompletionContext context = (InternalCompletionContext) Reflection.contextField.get(completionProposalCollector);
             InternalExtendedCompletionContext extendedContext = (InternalExtendedCompletionContext) Reflection.extendedContextField.get(context);

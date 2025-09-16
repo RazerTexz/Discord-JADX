@@ -32,7 +32,7 @@ public abstract class a extends BroadcastReceiver {
     }
 
     @WorkerThread
-    public final int a(@NonNull Context context, @NonNull Intent intent) throws PendingIntent.CanceledException {
+    public final int a(@NonNull Context context, @NonNull Intent intent) {
         PendingIntent pendingIntent = (PendingIntent) intent.getParcelableExtra("pending_intent");
         if (pendingIntent != null) {
             try {

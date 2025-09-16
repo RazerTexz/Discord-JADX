@@ -7,12 +7,9 @@ import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import javax.crypto.Cipher;
 import javax.crypto.CipherInputStream;
 import javax.crypto.CipherOutputStream;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
 /* loaded from: classes.dex */
@@ -36,7 +33,7 @@ public class BlowfishSerializer extends Serializer {
         keySpec = new SecretKeySpec(bArr, "Blowfish");
     }
 
-    private static Cipher getCipher(int i) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException {
+    private static Cipher getCipher(int i) {
         try {
             Cipher cipher = Cipher.getInstance("Blowfish");
             cipher.init(i, keySpec);
@@ -57,7 +54,7 @@ public class BlowfishSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws IOException, KryoException {
+    public void write(Kryo kryo, Output output, Object obj) throws KryoException {
         CipherOutputStream cipherOutputStream = new CipherOutputStream(output, getCipher(1));
         AnonymousClass1 anonymousClass1 = new AnonymousClass1(cipherOutputStream, 256);
         this.serializer.write(kryo, anonymousClass1, obj);

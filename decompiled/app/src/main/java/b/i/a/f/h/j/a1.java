@@ -21,7 +21,7 @@ public final class a1 extends e {
     }
 
     @Override // b.i.a.f.h.j.e
-    public final void L() throws PackageManager.NameNotFoundException {
+    public final void L() {
         ApplicationInfo applicationInfo;
         int i;
         Context context = this.j.f1417b;

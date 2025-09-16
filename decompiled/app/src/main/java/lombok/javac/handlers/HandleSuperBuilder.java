@@ -9,7 +9,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -529,7 +528,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void handle(AnnotationValues<SuperBuilder> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<SuperBuilder> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         boolean generateBuilderMethod;
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.SUPERBUILDER_FLAG_USAGE, "@SuperBuilder");
         SuperBuilderJob job = new SuperBuilderJob();
@@ -706,7 +705,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         return JavacHandlerUtil.injectType(job.parentType, builder);
     }
 
-    private void generateBuilderBasedConstructor(SuperBuilderJob job, boolean callBuilderBasedSuperConstructor) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void generateBuilderBasedConstructor(SuperBuilderJob job, boolean callBuilderBasedSuperConstructor) {
         JCTree.JCIdent jCIdentSelect;
         JCTree.JCStatement nullCheck;
         JavacTreeMaker maker = job.getTreeMaker();
@@ -755,7 +754,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         JavacHandlerUtil.injectMethod(job.parentType, constr, null, Javac.createVoidType(job.builderType.getSymbolTable(), Javac.CTC_VOID));
     }
 
-    private JCTree.JCMethodDecl generateBuilderMethod(SuperBuilderJob job) throws IllegalAccessException, IllegalArgumentException {
+    private JCTree.JCMethodDecl generateBuilderMethod(SuperBuilderJob job) {
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
         Iterator it = job.typeParams.iterator();
@@ -777,7 +776,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         return methodDef;
     }
 
-    private JCTree.JCMethodDecl generateToBuilderMethod(SuperBuilderJob job) throws IllegalAccessException, IllegalArgumentException {
+    private JCTree.JCMethodDecl generateToBuilderMethod(SuperBuilderJob job) {
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
         Iterator it = job.typeParams.iterator();
@@ -941,7 +940,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         return methodDef;
     }
 
-    private JCTree.JCMethodDecl generateBuildMethod(SuperBuilderJob job, List<JCTree.JCExpression> thrownExceptions) throws IllegalAccessException, IllegalArgumentException {
+    private JCTree.JCMethodDecl generateBuildMethod(SuperBuilderJob job, List<JCTree.JCExpression> thrownExceptions) {
         JCTree.JCMethodDecl methodDef;
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCStatement> statements = new ListBuffer<>();
@@ -1025,7 +1024,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
     }
 
-    private void generateSetterMethodsForBuilder(SuperBuilderJob job, HandleBuilder.BuilderFieldData fieldNode, String builderGenericName, String setterPrefix) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void generateSetterMethodsForBuilder(SuperBuilderJob job, HandleBuilder.BuilderFieldData fieldNode, String builderGenericName, String setterPrefix) {
         boolean deprecate = JavacHandlerUtil.isFieldDeprecated(fieldNode.originalFieldNode);
         JavacTreeMaker maker = job.getTreeMaker();
         JavacSingularsRecipes.ExpressionMaker returnTypeMaker = new AnonymousClass1(maker, job, builderGenericName);
@@ -1073,7 +1072,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
     }
 
-    private void generateSimpleSetterMethodForBuilder(SuperBuilderJob job, boolean deprecate, JavacNode fieldNode, Name paramName, Name nameOfSetFlag, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, List<JCTree.JCAnnotation> annosOnParam, JavacNode originalFieldNode, String setterPrefix) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void generateSimpleSetterMethodForBuilder(SuperBuilderJob job, boolean deprecate, JavacNode fieldNode, Name paramName, Name nameOfSetFlag, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, List<JCTree.JCAnnotation> annosOnParam, JavacNode originalFieldNode, String setterPrefix) {
         String setterName = HandlerUtil.buildAccessorName(setterPrefix, paramName.toString());
         Name setterName_ = job.builderType.toName(setterName);
         Iterator<JavacNode> it = job.builderType.down().iterator();

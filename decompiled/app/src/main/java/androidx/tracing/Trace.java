@@ -19,7 +19,7 @@ public final class Trace {
     }
 
     @SuppressLint({"NewApi"})
-    public static void beginAsyncSection(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void beginAsyncSection(@NonNull String str, int i) {
         try {
             if (sAsyncTraceBeginMethod == null) {
                 TraceApi29Impl.beginAsyncSection(str, i);
@@ -30,7 +30,7 @@ public final class Trace {
         beginAsyncSectionFallback(str, i);
     }
 
-    private static void beginAsyncSectionFallback(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void beginAsyncSectionFallback(@NonNull String str, int i) {
         try {
             if (sAsyncTraceBeginMethod == null) {
                 sAsyncTraceBeginMethod = android.os.Trace.class.getMethod("asyncTraceBegin", Long.TYPE, String.class, Integer.TYPE);
@@ -46,7 +46,7 @@ public final class Trace {
     }
 
     @SuppressLint({"NewApi"})
-    public static void endAsyncSection(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void endAsyncSection(@NonNull String str, int i) {
         try {
             if (sAsyncTraceEndMethod == null) {
                 TraceApi29Impl.endAsyncSection(str, i);
@@ -57,7 +57,7 @@ public final class Trace {
         endAsyncSectionFallback(str, i);
     }
 
-    private static void endAsyncSectionFallback(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void endAsyncSectionFallback(@NonNull String str, int i) {
         try {
             if (sAsyncTraceEndMethod == null) {
                 sAsyncTraceEndMethod = android.os.Trace.class.getMethod("asyncTraceEnd", Long.TYPE, String.class, Integer.TYPE);
@@ -108,7 +108,7 @@ public final class Trace {
     }
 
     @SuppressLint({"NewApi"})
-    public static void setCounter(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void setCounter(@NonNull String str, int i) {
         try {
             if (sTraceCounterMethod == null) {
                 TraceApi29Impl.setCounter(str, i);
@@ -119,7 +119,7 @@ public final class Trace {
         setCounterFallback(str, i);
     }
 
-    private static void setCounterFallback(@NonNull String str, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private static void setCounterFallback(@NonNull String str, int i) {
         try {
             if (sTraceCounterMethod == null) {
                 sTraceCounterMethod = android.os.Trace.class.getMethod("traceCounter", Long.TYPE, String.class, Integer.TYPE);

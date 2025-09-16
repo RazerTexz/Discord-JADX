@@ -1,6 +1,5 @@
 package b.o.a.n.r;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
@@ -71,7 +70,7 @@ public class FocusMeter extends BaseMeter {
     }
 
     @Override // b.o.a.n.r.BaseMeter
-    public void o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) throws CameraAccessException {
+    public void o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) {
         i.a(1, "onStarted:", "with areas:", list);
         ((Camera2Engine) actionHolder).f1921i0.set(CaptureRequest.CONTROL_AF_TRIGGER, 1);
         int iIntValue = ((Integer) k(CameraCharacteristics.CONTROL_MAX_REGIONS_AF, 0)).intValue();

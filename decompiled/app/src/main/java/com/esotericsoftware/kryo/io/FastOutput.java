@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.io;
 
 import com.esotericsoftware.kryo.KryoException;
-import java.io.IOException;
 import java.io.OutputStream;
 
 /* loaded from: classes.dex */
@@ -10,13 +9,13 @@ public final class FastOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public int writeInt(int i, boolean z2) throws IOException, KryoException {
+    public int writeInt(int i, boolean z2) throws KryoException {
         writeInt(i);
         return 4;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public int writeLong(long j, boolean z2) throws IOException, KryoException {
+    public int writeLong(long j, boolean z2) throws KryoException {
         writeLong(j);
         return 8;
     }

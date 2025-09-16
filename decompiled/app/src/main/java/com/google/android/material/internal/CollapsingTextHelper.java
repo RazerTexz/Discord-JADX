@@ -153,7 +153,7 @@ public final class CollapsingTextHelper {
         return Color.argb((int) ((Color.alpha(i2) * f) + (Color.alpha(i) * f2)), (int) ((Color.red(i2) * f) + (Color.red(i) * f2)), (int) ((Color.green(i2) * f) + (Color.green(i) * f2)), (int) ((Color.blue(i2) * f) + (Color.blue(i) * f2)));
     }
 
-    private void calculateBaseOffsets() throws NoSuchMethodException, SecurityException {
+    private void calculateBaseOffsets() {
         StaticLayout staticLayout;
         float f = this.currentTextSize;
         calculateUsingTextSize(this.collapsedTextSize);
@@ -211,7 +211,7 @@ public final class CollapsingTextHelper {
         setInterpolatedTextSize(f);
     }
 
-    private void calculateCurrentOffsets() throws NoSuchMethodException, SecurityException {
+    private void calculateCurrentOffsets() {
         calculateOffsets(this.expandedFraction);
     }
 
@@ -219,7 +219,7 @@ public final class CollapsingTextHelper {
         return (isDefaultIsRtl() ? TextDirectionHeuristicsCompat.FIRSTSTRONG_RTL : TextDirectionHeuristicsCompat.FIRSTSTRONG_LTR).isRtl(charSequence, 0, charSequence.length());
     }
 
-    private void calculateOffsets(float f) throws NoSuchMethodException, SecurityException {
+    private void calculateOffsets(float f) {
         interpolateBounds(f);
         this.currentDrawX = lerp(this.expandedDrawX, this.collapsedDrawX, f, this.positionInterpolator);
         this.currentDrawY = lerp(this.expandedDrawY, this.collapsedDrawY, f, this.positionInterpolator);
@@ -243,7 +243,7 @@ public final class CollapsingTextHelper {
         ViewCompat.postInvalidateOnAnimation(this.view);
     }
 
-    private void calculateUsingTextSize(float f) throws NoSuchMethodException, SecurityException {
+    private void calculateUsingTextSize(float f) {
         boolean z2;
         float f2;
         boolean z3;
@@ -307,7 +307,7 @@ public final class CollapsingTextHelper {
         }
     }
 
-    private StaticLayout createStaticLayout(int i, float f, boolean z2) throws NoSuchMethodException, SecurityException {
+    private StaticLayout createStaticLayout(int i, float f, boolean z2) {
         StaticLayout staticLayoutA;
         try {
             StaticLayoutBuilderCompat staticLayoutBuilderCompat = new StaticLayoutBuilderCompat(this.text, this.textPaint, (int) f);
@@ -344,7 +344,7 @@ public final class CollapsingTextHelper {
         canvas.drawText(str, 0, Math.min(this.textLayout.getLineEnd(0), str.length()), 0.0f, f4, (Paint) this.textPaint);
     }
 
-    private void ensureExpandedTexture() throws NoSuchMethodException, SecurityException {
+    private void ensureExpandedTexture() {
         if (this.expandedTitleTexture != null || this.expandedBounds.isEmpty() || TextUtils.isEmpty(this.textToDraw)) {
             return;
         }
@@ -464,7 +464,7 @@ public final class CollapsingTextHelper {
         return true;
     }
 
-    private void setInterpolatedTextSize(float f) throws NoSuchMethodException, SecurityException {
+    private void setInterpolatedTextSize(float f) {
         calculateUsingTextSize(f);
         boolean z2 = USE_SCALING_TEXTURE && this.scale != 1.0f;
         this.useTexture = z2;

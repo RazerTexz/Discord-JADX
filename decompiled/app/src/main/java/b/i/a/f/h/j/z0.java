@@ -7,7 +7,7 @@ import android.content.pm.PackageManager;
 
 /* loaded from: classes3.dex */
 public final class z0 {
-    public static boolean a(Context context, String str, boolean z2) throws PackageManager.NameNotFoundException {
+    public static boolean a(Context context, String str, boolean z2) {
         try {
             ActivityInfo receiverInfo = context.getPackageManager().getReceiverInfo(new ComponentName(context, str), 0);
             if (receiverInfo != null && receiverInfo.enabled) {

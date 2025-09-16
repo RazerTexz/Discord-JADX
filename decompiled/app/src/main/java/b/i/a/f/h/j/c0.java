@@ -24,7 +24,7 @@ public final class c0 extends e {
     }
 
     @Override // b.i.a.f.h.j.e
-    public final void L() throws PackageManager.NameNotFoundException {
+    public final void L() {
         try {
             O();
             if (z.b() > 0) {

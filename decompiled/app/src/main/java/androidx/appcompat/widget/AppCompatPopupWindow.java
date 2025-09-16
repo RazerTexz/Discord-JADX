@@ -16,12 +16,12 @@ public class AppCompatPopupWindow extends PopupWindow {
     private static final boolean COMPAT_OVERLAP_ANCHOR = false;
     private boolean mOverlapAnchor;
 
-    public AppCompatPopupWindow(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public AppCompatPopupWindow(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i) throws IllegalArgumentException {
         super(context, attributeSet, i);
         init(context, attributeSet, i, 0);
     }
 
-    private void init(Context context, AttributeSet attributeSet, int i, int i2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    private void init(Context context, AttributeSet attributeSet, int i, int i2) throws IllegalArgumentException {
         TintTypedArray tintTypedArrayObtainStyledAttributes = TintTypedArray.obtainStyledAttributes(context, attributeSet, R.styleable.PopupWindow, i, i2);
         int i3 = R.styleable.PopupWindow_overlapAnchor;
         if (tintTypedArrayObtainStyledAttributes.hasValue(i3)) {
@@ -31,7 +31,7 @@ public class AppCompatPopupWindow extends PopupWindow {
         tintTypedArrayObtainStyledAttributes.recycle();
     }
 
-    private void setSupportOverlapAnchor(boolean z2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    private void setSupportOverlapAnchor(boolean z2) throws IllegalArgumentException {
         if (COMPAT_OVERLAP_ANCHOR) {
             this.mOverlapAnchor = z2;
         } else {
@@ -55,7 +55,7 @@ public class AppCompatPopupWindow extends PopupWindow {
         super.update(view, i, i2, i3, i4);
     }
 
-    public AppCompatPopupWindow(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public AppCompatPopupWindow(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) throws IllegalArgumentException {
         super(context, attributeSet, i, i2);
         init(context, attributeSet, i, i2);
     }

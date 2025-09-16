@@ -25,7 +25,7 @@ public class GhostViewPlatform implements GhostView {
         this.mGhostView = view;
     }
 
-    public static GhostView addGhost(View view, ViewGroup viewGroup, Matrix matrix) throws NoSuchMethodException, SecurityException {
+    public static GhostView addGhost(View view, ViewGroup viewGroup, Matrix matrix) throws SecurityException {
         fetchAddGhostMethod();
         Method method = sAddGhostMethod;
         if (method != null) {
@@ -39,7 +39,7 @@ public class GhostViewPlatform implements GhostView {
         return null;
     }
 
-    private static void fetchAddGhostMethod() throws NoSuchMethodException, SecurityException {
+    private static void fetchAddGhostMethod() throws SecurityException {
         if (sAddGhostMethodFetched) {
             return;
         }
@@ -66,7 +66,7 @@ public class GhostViewPlatform implements GhostView {
         sGhostViewClassFetched = true;
     }
 
-    private static void fetchRemoveGhostMethod() throws NoSuchMethodException, SecurityException {
+    private static void fetchRemoveGhostMethod() throws SecurityException {
         if (sRemoveGhostMethodFetched) {
             return;
         }
@@ -81,7 +81,7 @@ public class GhostViewPlatform implements GhostView {
         sRemoveGhostMethodFetched = true;
     }
 
-    public static void removeGhost(View view) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void removeGhost(View view) throws SecurityException, IllegalArgumentException {
         fetchRemoveGhostMethod();
         Method method = sRemoveGhostMethod;
         if (method != null) {

@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.R;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class AppCompatSeekBarHelper extends AppCompatProgressBarHelper {
@@ -101,7 +100,7 @@ public class AppCompatSeekBarHelper extends AppCompatProgressBarHelper {
     }
 
     @Override // androidx.appcompat.widget.AppCompatProgressBarHelper
-    public void loadFromAttributes(AttributeSet attributeSet, int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void loadFromAttributes(AttributeSet attributeSet, int i) throws SecurityException {
         super.loadFromAttributes(attributeSet, i);
         Context context = this.mView.getContext();
         int[] iArr = R.styleable.AppCompatSeekBar;
@@ -127,7 +126,7 @@ public class AppCompatSeekBarHelper extends AppCompatProgressBarHelper {
         applyTickMarkTint();
     }
 
-    public void setTickMark(@Nullable Drawable drawable) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setTickMark(@Nullable Drawable drawable) throws SecurityException {
         Drawable drawable2 = this.mTickMark;
         if (drawable2 != null) {
             drawable2.setCallback(null);

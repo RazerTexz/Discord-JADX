@@ -22,7 +22,7 @@ public class MultiImageTranscoderFactory implements ImageTranscoderFactory {
         this.d = z3;
     }
 
-    public final ImageTranscoder a(ImageFormat imageFormat, boolean z2) throws ClassNotFoundException {
+    public final ImageTranscoder a(ImageFormat imageFormat, boolean z2) {
         int i = this.a;
         boolean z3 = this.d;
         try {
@@ -35,7 +35,7 @@ public class MultiImageTranscoderFactory implements ImageTranscoderFactory {
     }
 
     @Override // b.f.j.s.ImageTranscoderFactory
-    public ImageTranscoder createImageTranscoder(ImageFormat imageFormat, boolean z2) throws ClassNotFoundException {
+    public ImageTranscoder createImageTranscoder(ImageFormat imageFormat, boolean z2) {
         ImageTranscoderFactory imageTranscoderFactory = this.f644b;
         ImageTranscoder imageTranscoderA = null;
         ImageTranscoder imageTranscoderCreateImageTranscoder = imageTranscoderFactory == null ? null : imageTranscoderFactory.createImageTranscoder(imageFormat, z2);

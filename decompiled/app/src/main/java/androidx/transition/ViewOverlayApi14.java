@@ -163,7 +163,7 @@ public class ViewOverlayApi14 implements ViewOverlayImpl {
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-        public ViewParent invalidateChildInParentFast(int i, int i2, Rect rect) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public ViewParent invalidateChildInParentFast(int i, int i2, Rect rect) throws IllegalArgumentException {
             if (!(this.mHostView instanceof ViewGroup) || sInvalidateChildInParentFastMethod == null) {
                 return null;
             }

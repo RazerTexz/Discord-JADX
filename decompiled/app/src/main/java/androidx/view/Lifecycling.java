@@ -50,7 +50,7 @@ public class Lifecycling {
     }
 
     @Nullable
-    private static Constructor<? extends GeneratedAdapter> generatedConstructor(Class<?> cls) throws NoSuchMethodException, SecurityException {
+    private static Constructor<? extends GeneratedAdapter> generatedConstructor(Class<?> cls) throws SecurityException {
         try {
             Package r0 = cls.getPackage();
             String canonicalName = cls.getCanonicalName();
@@ -84,7 +84,7 @@ public class Lifecycling {
         return new AnonymousClass1(lifecycleEventObserver(obj));
     }
 
-    private static int getObserverConstructorType(Class<?> cls) throws NoSuchMethodException, SecurityException {
+    private static int getObserverConstructorType(Class<?> cls) throws SecurityException {
         Integer num = sCallbackCache.get(cls);
         if (num != null) {
             return num.intValue();
@@ -126,7 +126,7 @@ public class Lifecycling {
         return new CompositeGeneratedAdaptersObserver(generatedAdapterArr);
     }
 
-    private static int resolveObserverCallbackType(Class<?> cls) throws NoSuchMethodException, SecurityException {
+    private static int resolveObserverCallbackType(Class<?> cls) throws SecurityException {
         if (cls.getCanonicalName() == null) {
             return 1;
         }

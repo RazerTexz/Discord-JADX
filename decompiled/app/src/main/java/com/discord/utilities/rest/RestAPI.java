@@ -2038,7 +2038,7 @@ public final class RestAPI implements RestAPIInterface {
         return this._api.joinThread(channelId, location, body);
     }
 
-    public final String jsonObjectOf(Tuples2<String, ? extends Object>... map) throws JSONException {
+    public final String jsonObjectOf(Tuples2<String, ? extends Object>... map) {
         Intrinsics3.checkNotNullParameter(map, "map");
         JSONObject jSONObject = new JSONObject();
         for (Tuples2<String, ? extends Object> tuples2 : map) {

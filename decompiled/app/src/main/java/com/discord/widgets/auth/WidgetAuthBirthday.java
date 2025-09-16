@@ -156,7 +156,7 @@ public final class WidgetAuthBirthday extends AppFragment {
         return (WidgetAuthBirthdayBinding) this.binding.getValue((Fragment) this, $$delegatedProperties[0]);
     }
 
-    private final Long getBirthday() throws ParseException {
+    private final Long getBirthday() {
         try {
             DateFormat dateFormat = this.formatter;
             TextInputLayout textInputLayout = getBinding().c;

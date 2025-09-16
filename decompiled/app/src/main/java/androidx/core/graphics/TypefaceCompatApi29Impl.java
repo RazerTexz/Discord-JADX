@@ -24,7 +24,7 @@ import java.io.InputStream;
 public class TypefaceCompatApi29Impl extends TypefaceCompatBaseImpl {
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) throws IOException {
+    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) {
         try {
             FontResourcesParserCompat.FontFileResourceEntry[] entries = fontFamilyFilesResourceEntry.getEntries();
             int length = entries.length;
@@ -62,7 +62,7 @@ public class TypefaceCompatApi29Impl extends TypefaceCompatBaseImpl {
 
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromFontInfo(Context context, @Nullable CancellationSignal cancellationSignal, @NonNull FontsContractCompat.FontInfo[] fontInfoArr, int i) throws IOException {
+    public Typeface createFromFontInfo(Context context, @Nullable CancellationSignal cancellationSignal, @NonNull FontsContractCompat.FontInfo[] fontInfoArr, int i) {
         ParcelFileDescriptor parcelFileDescriptorOpenFileDescriptor;
         ContentResolver contentResolver = context.getContentResolver();
         try {
@@ -122,7 +122,7 @@ public class TypefaceCompatApi29Impl extends TypefaceCompatBaseImpl {
 
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromResourcesFontFile(Context context, Resources resources, int i, String str, int i2) throws IOException {
+    public Typeface createFromResourcesFontFile(Context context, Resources resources, int i, String str, int i2) {
         try {
             Font fontBuild = new Font.Builder(resources, i).build();
             return new Typeface.CustomFallbackBuilder(new FontFamily.Builder(fontBuild).build()).setStyle(fontBuild.getStyle()).build();

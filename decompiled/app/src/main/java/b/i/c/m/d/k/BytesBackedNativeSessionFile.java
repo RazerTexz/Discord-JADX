@@ -30,7 +30,7 @@ public class BytesBackedNativeSessionFile implements NativeSessionFile {
 
     @Override // b.i.c.m.d.k.NativeSessionFile
     @Nullable
-    public CrashlyticsReport.c.a b() throws IOException {
+    public CrashlyticsReport.c.a b() {
         byte[] byteArray;
         byte[] bArr = this.a;
         if (bArr == null || bArr.length == 0) {

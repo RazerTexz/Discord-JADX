@@ -31,7 +31,7 @@ public class PreferenceInflater {
         init(preferenceManager);
     }
 
-    private Preference createItem(@NonNull String str, @Nullable String[] strArr, AttributeSet attributeSet) throws InflateException, NoSuchMethodException, ClassNotFoundException, SecurityException {
+    private Preference createItem(@NonNull String str, @Nullable String[] strArr, AttributeSet attributeSet) throws InflateException, ClassNotFoundException {
         Class<?> cls;
         Constructor<?> constructor = CONSTRUCTOR_MAP.get(str);
         if (constructor == null) {

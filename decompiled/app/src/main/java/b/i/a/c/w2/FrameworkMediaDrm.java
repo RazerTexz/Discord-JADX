@@ -132,7 +132,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
 
     @Override // b.i.a.c.w2.ExoMediaDrm
     @Nullable
-    public byte[] i(byte[] bArr, byte[] bArr2) throws JSONException, DeniedByServerException, NotProvisionedException {
+    public byte[] i(byte[] bArr, byte[] bArr2) throws DeniedByServerException, NotProvisionedException {
         if (C.c.equals(this.f1151b) && Util2.a < 27) {
             try {
                 JSONObject jSONObject = new JSONObject(Util2.l(bArr2));

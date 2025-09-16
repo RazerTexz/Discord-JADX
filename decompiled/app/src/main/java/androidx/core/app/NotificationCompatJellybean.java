@@ -64,7 +64,7 @@ public class NotificationCompatJellybean {
         return sparseArray;
     }
 
-    private static boolean ensureActionReflectionReadyLocked() throws NoSuchFieldException, ClassNotFoundException {
+    private static boolean ensureActionReflectionReadyLocked() {
         if (sActionsAccessFailed) {
             return false;
         }

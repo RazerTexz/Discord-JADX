@@ -7,7 +7,6 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
 import com.discord.models.domain.ModelAuditLogEntry;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
@@ -72,7 +71,7 @@ public final class h7 extends a5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void B(i7 i7Var, i7 i7Var2, long j, boolean z2, Bundle bundle) throws IllegalStateException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final void B(i7 i7Var, i7 i7Var2, long j, boolean z2, Bundle bundle) throws IllegalStateException {
         boolean z3;
         i7 i7Var3;
         String str;

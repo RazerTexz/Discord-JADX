@@ -159,7 +159,7 @@ public class ViewPager extends ViewGroup {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Resources.NotFoundException {
+        public void run() {
             ViewPager.this.setScrollState(0);
             ViewPager.this.populate();
         }
@@ -246,7 +246,7 @@ public class ViewPager extends ViewGroup {
         }
 
         @Override // androidx.core.view.AccessibilityDelegateCompat
-        public boolean performAccessibilityAction(View view, int i, Bundle bundle) throws Resources.NotFoundException {
+        public boolean performAccessibilityAction(View view, int i, Bundle bundle) {
             if (super.performAccessibilityAction(view, i, bundle)) {
                 return true;
             }
@@ -288,12 +288,12 @@ public class ViewPager extends ViewGroup {
         }
 
         @Override // android.database.DataSetObserver
-        public void onChanged() throws Resources.NotFoundException {
+        public void onChanged() {
             ViewPager.this.dataSetChanged();
         }
 
         @Override // android.database.DataSetObserver
-        public void onInvalidated() throws Resources.NotFoundException {
+        public void onInvalidated() {
             ViewPager.this.dataSetChanged();
         }
     }
@@ -851,7 +851,7 @@ public class ViewPager extends ViewGroup {
         return this.mLeftEdge.isFinished() || this.mRightEdge.isFinished();
     }
 
-    private void scrollToItem(int i, boolean z2, int i2, boolean z3) throws Resources.NotFoundException {
+    private void scrollToItem(int i, boolean z2, int i2, boolean z3) {
         int iMax;
         ItemInfo itemInfoInfoForPosition = infoForPosition(i);
         if (itemInfoInfoForPosition != null) {
@@ -975,7 +975,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    public boolean arrowScroll(int i) throws Resources.NotFoundException {
+    public boolean arrowScroll(int i) {
         boolean zRequestFocus;
         boolean z2;
         View viewFindFocus = findFocus();
@@ -1109,7 +1109,7 @@ public class ViewPager extends ViewGroup {
         ViewCompat.postInvalidateOnAnimation(this);
     }
 
-    public void dataSetChanged() throws Resources.NotFoundException {
+    public void dataSetChanged() {
         int count = this.mAdapter.getCount();
         this.mExpectedAdapterCount = count;
         boolean z2 = this.mItems.size() < (this.mOffscreenPageLimit * 2) + 1 && this.mItems.size() < count;
@@ -1233,7 +1233,7 @@ public class ViewPager extends ViewGroup {
         drawable.setState(getDrawableState());
     }
 
-    public void endFakeDrag() throws Resources.NotFoundException {
+    public void endFakeDrag() {
         if (!this.mFakeDragging) {
             throw new IllegalStateException("No fake drag in progress. Call beginFakeDrag first.");
         }
@@ -1470,7 +1470,7 @@ public class ViewPager extends ViewGroup {
     }
 
     @Override // android.view.ViewGroup
-    public boolean onInterceptTouchEvent(MotionEvent motionEvent) throws Resources.NotFoundException {
+    public boolean onInterceptTouchEvent(MotionEvent motionEvent) {
         int action = motionEvent.getAction() & 255;
         if (action == 3 || action == 1) {
             resetTouch();
@@ -1554,7 +1554,7 @@ public class ViewPager extends ViewGroup {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void onLayout(boolean z2, int i, int i2, int i3, int i4) throws Resources.NotFoundException {
+    public void onLayout(boolean z2, int i, int i2, int i3, int i4) {
         boolean z3;
         ItemInfo itemInfoInfoForChild;
         int iMax;
@@ -1669,7 +1669,7 @@ public class ViewPager extends ViewGroup {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void onMeasure(int i, int i2) throws Resources.NotFoundException {
+    public void onMeasure(int i, int i2) {
         LayoutParams layoutParams;
         LayoutParams layoutParams2;
         int i3;
@@ -1837,7 +1837,7 @@ public class ViewPager extends ViewGroup {
     }
 
     @Override // android.view.View
-    public void onRestoreInstanceState(Parcelable parcelable) throws Resources.NotFoundException {
+    public void onRestoreInstanceState(Parcelable parcelable) {
         if (!(parcelable instanceof SavedState)) {
             super.onRestoreInstanceState(parcelable);
             return;
@@ -1880,7 +1880,7 @@ public class ViewPager extends ViewGroup {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean onTouchEvent(MotionEvent motionEvent) throws Resources.NotFoundException {
+    public boolean onTouchEvent(MotionEvent motionEvent) {
         PagerAdapter pagerAdapter;
         if (this.mFakeDragging) {
             return true;
@@ -1966,7 +1966,7 @@ public class ViewPager extends ViewGroup {
         return true;
     }
 
-    public boolean pageLeft() throws Resources.NotFoundException {
+    public boolean pageLeft() {
         int i = this.mCurItem;
         if (i <= 0) {
             return false;
@@ -1975,7 +1975,7 @@ public class ViewPager extends ViewGroup {
         return true;
     }
 
-    public boolean pageRight() throws Resources.NotFoundException {
+    public boolean pageRight() {
         PagerAdapter pagerAdapter = this.mAdapter;
         if (pagerAdapter == null || this.mCurItem >= pagerAdapter.getCount() - 1) {
             return false;
@@ -1984,7 +1984,7 @@ public class ViewPager extends ViewGroup {
         return true;
     }
 
-    public void populate() throws Resources.NotFoundException {
+    public void populate() {
         populate(this.mCurItem);
     }
 
@@ -2011,7 +2011,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    public void setAdapter(@Nullable PagerAdapter pagerAdapter) throws Resources.NotFoundException {
+    public void setAdapter(@Nullable PagerAdapter pagerAdapter) {
         PagerAdapter pagerAdapter2 = this.mAdapter;
         if (pagerAdapter2 != null) {
             pagerAdapter2.setViewPagerObserver(null);
@@ -2060,12 +2060,12 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    public void setCurrentItem(int i) throws Resources.NotFoundException {
+    public void setCurrentItem(int i) {
         this.mPopulatePending = false;
         setCurrentItemInternal(i, !this.mFirstLayout, false);
     }
 
-    public void setCurrentItemInternal(int i, boolean z2, boolean z3) throws Resources.NotFoundException {
+    public void setCurrentItemInternal(int i, boolean z2, boolean z3) {
         setCurrentItemInternal(i, z2, z3, 0);
     }
 
@@ -2075,7 +2075,7 @@ public class ViewPager extends ViewGroup {
         return onPageChangeListener2;
     }
 
-    public void setOffscreenPageLimit(int i) throws Resources.NotFoundException {
+    public void setOffscreenPageLimit(int i) {
         if (i < 1) {
             Log.w(TAG, "Requested offscreen page limit " + i + " too small; defaulting to 1");
             i = 1;
@@ -2108,7 +2108,7 @@ public class ViewPager extends ViewGroup {
         invalidate();
     }
 
-    public void setPageTransformer(boolean z2, @Nullable PageTransformer pageTransformer) throws Resources.NotFoundException {
+    public void setPageTransformer(boolean z2, @Nullable PageTransformer pageTransformer) {
         setPageTransformer(z2, pageTransformer, 2);
     }
 
@@ -2123,7 +2123,7 @@ public class ViewPager extends ViewGroup {
         dispatchOnScrollStateChanged(i);
     }
 
-    public void smoothScrollTo(int i, int i2) throws Resources.NotFoundException {
+    public void smoothScrollTo(int i, int i2) {
         smoothScrollTo(i, i2, 0);
     }
 
@@ -2170,7 +2170,7 @@ public class ViewPager extends ViewGroup {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void populate(int i) throws Resources.NotFoundException {
+    public void populate(int i) {
         ItemInfo itemInfoInfoForPosition;
         String hexString;
         ItemInfo itemInfoAddNewItem;
@@ -2333,7 +2333,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    public void setCurrentItemInternal(int i, boolean z2, boolean z3, int i2) throws Resources.NotFoundException {
+    public void setCurrentItemInternal(int i, boolean z2, boolean z3, int i2) {
         PagerAdapter pagerAdapter = this.mAdapter;
         if (pagerAdapter == null || pagerAdapter.getCount() <= 0) {
             setScrollingCacheEnabled(false);
@@ -2368,7 +2368,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    public void setPageTransformer(boolean z2, @Nullable PageTransformer pageTransformer, int i) throws Resources.NotFoundException {
+    public void setPageTransformer(boolean z2, @Nullable PageTransformer pageTransformer, int i) {
         boolean z3 = pageTransformer != null;
         boolean z4 = z3 != (this.mPageTransformer != null);
         this.mPageTransformer = pageTransformer;
@@ -2384,7 +2384,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    public void smoothScrollTo(int i, int i2, int i3) throws Resources.NotFoundException {
+    public void smoothScrollTo(int i, int i2, int i3) {
         int scrollX;
         if (getChildCount() == 0) {
             setScrollingCacheEnabled(false);
@@ -2422,7 +2422,7 @@ public class ViewPager extends ViewGroup {
         ViewCompat.postInvalidateOnAnimation(this);
     }
 
-    public void setCurrentItem(int i, boolean z2) throws Resources.NotFoundException {
+    public void setCurrentItem(int i, boolean z2) {
         this.mPopulatePending = false;
         setCurrentItemInternal(i, z2, false);
     }

@@ -43,7 +43,7 @@ public final class AppSignatureHelper extends ContextWrapper {
             return companion.hash(str, str2);
         }
 
-        private final String hash(String packageName, String signature) throws NoSuchAlgorithmException {
+        private final String hash(String packageName, String signature) {
             String str = packageName + ' ' + signature;
             try {
                 MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");

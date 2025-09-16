@@ -61,7 +61,6 @@ import d0.w.i.a.ContinuationImpl6;
 import d0.w.i.a.DebugMetadata;
 import d0.z.d.Intrinsics3;
 import d0.z.d.Lambda;
-import java.io.IOException;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
@@ -845,7 +844,7 @@ public final class WidgetSettingsAccount extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
-    public void onActivityResult(int requestCode, int resultCode, Intent data) throws IOException {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 4008) {
             GoogleSmartLockManager.INSTANCE.handleResult(resultCode, data);

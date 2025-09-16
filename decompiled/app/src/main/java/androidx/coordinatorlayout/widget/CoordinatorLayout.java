@@ -49,7 +49,6 @@ import com.google.android.material.badge.BadgeDrawable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -545,7 +544,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static Behavior parseBehavior(Context context, AttributeSet attributeSet, String str) throws NoSuchMethodException, SecurityException {
+    public static Behavior parseBehavior(Context context, AttributeSet attributeSet, String str) {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
@@ -1489,7 +1488,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
         this.mOnHierarchyChangeListener = onHierarchyChangeListener;
     }
 
-    public void setStatusBarBackground(@Nullable Drawable drawable) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarBackground(@Nullable Drawable drawable) throws SecurityException {
         Drawable drawable2 = this.mStatusBarBackground;
         if (drawable2 != drawable) {
             if (drawable2 != null) {
@@ -1509,11 +1508,11 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
         }
     }
 
-    public void setStatusBarBackgroundColor(@ColorInt int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarBackgroundColor(@ColorInt int i) throws SecurityException {
         setStatusBarBackground(new ColorDrawable(i));
     }
 
-    public void setStatusBarBackgroundResource(@DrawableRes int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void setStatusBarBackgroundResource(@DrawableRes int i) throws SecurityException {
         setStatusBarBackground(i != 0 ? ContextCompat.getDrawable(getContext(), i) : null);
     }
 

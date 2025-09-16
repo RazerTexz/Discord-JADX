@@ -89,7 +89,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // f0.e0.f.Task2
-        public long a() throws IOException {
+        public long a() {
             Http2Connection http2Connection;
             boolean z2;
             synchronized (this.e) {
@@ -218,7 +218,7 @@ public final class Http2Connection implements Closeable {
             }
 
             @Override // f0.e0.f.Task2
-            public long a() throws IOException {
+            public long a() {
                 this.e.k.q(true, this.f, this.g);
                 return -1L;
             }
@@ -676,7 +676,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // f0.e0.f.Task2
-        public long a() throws IOException {
+        public long a() {
             try {
                 Http2Connection http2Connection = this.e;
                 int i = this.f;
@@ -710,7 +710,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // f0.e0.f.Task2
-        public long a() throws IOException {
+        public long a() {
             try {
                 this.e.K.q(this.f, this.g);
                 return -1L;
@@ -780,7 +780,7 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    public final void a(ErrorCode2 errorCode2, ErrorCode2 errorCode22, IOException iOException) throws IOException {
+    public final void a(ErrorCode2 errorCode2, ErrorCode2 errorCode22, IOException iOException) {
         int i;
         Intrinsics3.checkParameterIsNotNull(errorCode2, "connectionCode");
         Intrinsics3.checkParameterIsNotNull(errorCode22, "streamCode");
@@ -830,7 +830,7 @@ public final class Http2Connection implements Closeable {
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
+    public void close() {
         a(ErrorCode2.NO_ERROR, ErrorCode2.CANCEL, null);
     }
 
@@ -907,7 +907,7 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    public final void q(boolean z2, int i, int i2) throws IOException {
+    public final void q(boolean z2, int i, int i2) {
         try {
             this.K.f(z2, i, i2);
         } catch (IOException e2) {

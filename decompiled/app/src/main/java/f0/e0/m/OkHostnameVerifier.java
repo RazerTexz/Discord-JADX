@@ -26,7 +26,7 @@ import kotlin.TypeCastException;
 public final class OkHostnameVerifier implements HostnameVerifier {
     public static final OkHostnameVerifier a = new OkHostnameVerifier();
 
-    public final List<String> a(X509Certificate x509Certificate, int i) throws CertificateParsingException {
+    public final List<String> a(X509Certificate x509Certificate, int i) {
         Object obj;
         try {
             Collection<List<?>> subjectAlternativeNames = x509Certificate.getSubjectAlternativeNames();
@@ -49,7 +49,7 @@ public final class OkHostnameVerifier implements HostnameVerifier {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final boolean b(String str, X509Certificate x509Certificate) throws CertificateParsingException {
+    public final boolean b(String str, X509Certificate x509Certificate) {
         boolean zAreEqual;
         int length;
         Intrinsics3.checkParameterIsNotNull(str, "host");

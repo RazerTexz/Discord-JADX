@@ -62,7 +62,7 @@ public class Output extends OutputStream {
         return (j >>> 56) == 0 ? 8 : 9;
     }
 
-    private void writeAscii_slow(String str, int i) throws IOException, KryoException {
+    private void writeAscii_slow(String str, int i) throws KryoException {
         if (i == 0) {
             return;
         }
@@ -84,7 +84,7 @@ public class Output extends OutputStream {
         }
     }
 
-    private void writeString_slow(CharSequence charSequence, int i, int i2) throws IOException, KryoException {
+    private void writeString_slow(CharSequence charSequence, int i, int i2) throws KryoException {
         while (i2 < i) {
             int i3 = this.position;
             int i4 = this.capacity;
@@ -125,7 +125,7 @@ public class Output extends OutputStream {
         }
     }
 
-    private void writeUtf8Length(int i) throws IOException, KryoException {
+    private void writeUtf8Length(int i) throws KryoException {
         int i2 = i >>> 6;
         if (i2 == 0) {
             require(1);
@@ -205,7 +205,7 @@ public class Output extends OutputStream {
     }
 
     @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException, KryoException {
+    public void close() throws KryoException {
         flush();
         OutputStream outputStream = this.outputStream;
         if (outputStream != null) {
@@ -217,7 +217,7 @@ public class Output extends OutputStream {
     }
 
     @Override // java.io.OutputStream, java.io.Flushable
-    public void flush() throws IOException, KryoException {
+    public void flush() throws KryoException {
         OutputStream outputStream = this.outputStream;
         if (outputStream == null) {
             return;
@@ -244,7 +244,7 @@ public class Output extends OutputStream {
         return this.position;
     }
 
-    public boolean require(int i) throws IOException, KryoException {
+    public boolean require(int i) throws KryoException {
         if (this.capacity - this.position >= i) {
             return false;
         }
@@ -309,7 +309,7 @@ public class Output extends OutputStream {
     }
 
     @Override // java.io.OutputStream
-    public void write(int i) throws IOException, KryoException {
+    public void write(int i) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -319,7 +319,7 @@ public class Output extends OutputStream {
         bArr[i2] = (byte) i;
     }
 
-    public void writeAscii(String str) throws IOException, KryoException {
+    public void writeAscii(String str) throws KryoException {
         if (str == null) {
             writeByte(128);
             return;
@@ -347,7 +347,7 @@ public class Output extends OutputStream {
         bArr[i3] = (byte) (128 | bArr[i3]);
     }
 
-    public void writeBoolean(boolean z2) throws IOException, KryoException {
+    public void writeBoolean(boolean z2) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -357,7 +357,7 @@ public class Output extends OutputStream {
         bArr[i] = z2 ? (byte) 1 : (byte) 0;
     }
 
-    public void writeByte(byte b2) throws IOException, KryoException {
+    public void writeByte(byte b2) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -367,14 +367,14 @@ public class Output extends OutputStream {
         bArr[i] = b2;
     }
 
-    public void writeBytes(byte[] bArr) throws IOException, KryoException {
+    public void writeBytes(byte[] bArr) throws KryoException {
         if (bArr == null) {
             throw new IllegalArgumentException("bytes cannot be null.");
         }
         writeBytes(bArr, 0, bArr.length);
     }
 
-    public void writeChar(char c) throws IOException, KryoException {
+    public void writeChar(char c) throws KryoException {
         require(2);
         byte[] bArr = this.buffer;
         int i = this.position;
@@ -385,33 +385,33 @@ public class Output extends OutputStream {
         bArr[i2] = (byte) c;
     }
 
-    public void writeChars(char[] cArr) throws IOException, KryoException {
+    public void writeChars(char[] cArr) throws KryoException {
         for (char c : cArr) {
             writeChar(c);
         }
     }
 
-    public void writeDouble(double d) throws IOException, KryoException {
+    public void writeDouble(double d) throws KryoException {
         writeLong(Double.doubleToLongBits(d));
     }
 
-    public void writeDoubles(double[] dArr) throws IOException, KryoException {
+    public void writeDoubles(double[] dArr) throws KryoException {
         for (double d : dArr) {
             writeDouble(d);
         }
     }
 
-    public void writeFloat(float f) throws IOException, KryoException {
+    public void writeFloat(float f) throws KryoException {
         writeInt(Float.floatToIntBits(f));
     }
 
-    public void writeFloats(float[] fArr) throws IOException, KryoException {
+    public void writeFloats(float[] fArr) throws KryoException {
         for (float f : fArr) {
             writeFloat(f);
         }
     }
 
-    public void writeInt(int i) throws IOException, KryoException {
+    public void writeInt(int i) throws KryoException {
         require(4);
         byte[] bArr = this.buffer;
         int i2 = this.position;
@@ -434,7 +434,7 @@ public class Output extends OutputStream {
         }
     }
 
-    public void writeLong(long j) throws IOException, KryoException {
+    public void writeLong(long j) throws KryoException {
         require(8);
         byte[] bArr = this.buffer;
         int i = this.position;
@@ -469,7 +469,7 @@ public class Output extends OutputStream {
         }
     }
 
-    public void writeShort(int i) throws IOException, KryoException {
+    public void writeShort(int i) throws KryoException {
         require(2);
         byte[] bArr = this.buffer;
         int i2 = this.position;
@@ -480,13 +480,13 @@ public class Output extends OutputStream {
         bArr[i3] = (byte) i;
     }
 
-    public void writeShorts(short[] sArr) throws IOException, KryoException {
+    public void writeShorts(short[] sArr) throws KryoException {
         for (short s2 : sArr) {
             writeShort(s2);
         }
     }
 
-    public void writeString(String str) throws IOException, KryoException {
+    public void writeString(String str) throws KryoException {
         boolean z2;
         if (str == null) {
             writeByte(128);
@@ -544,7 +544,7 @@ public class Output extends OutputStream {
         }
     }
 
-    public int writeVarInt(int i, boolean z2) throws IOException, KryoException {
+    public int writeVarInt(int i, boolean z2) throws KryoException {
         if (!z2) {
             i = (i >> 31) ^ (i << 1);
         }
@@ -622,7 +622,7 @@ public class Output extends OutputStream {
         return 5;
     }
 
-    public int writeVarLong(long j, boolean z2) throws IOException, KryoException {
+    public int writeVarLong(long j, boolean z2) throws KryoException {
         long j2 = !z2 ? (j << 1) ^ (j >> 63) : j;
         long j3 = j2 >>> 7;
         if (j3 == 0) {
@@ -863,7 +863,7 @@ public class Output extends OutputStream {
     }
 
     @Override // java.io.OutputStream
-    public void write(byte[] bArr) throws IOException, KryoException {
+    public void write(byte[] bArr) throws KryoException {
         if (bArr != null) {
             writeBytes(bArr, 0, bArr.length);
             return;
@@ -871,7 +871,7 @@ public class Output extends OutputStream {
         throw new IllegalArgumentException("bytes cannot be null.");
     }
 
-    public void writeByte(int i) throws IOException, KryoException {
+    public void writeByte(int i) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -881,7 +881,7 @@ public class Output extends OutputStream {
         bArr[i2] = (byte) i;
     }
 
-    public void writeBytes(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public void writeBytes(byte[] bArr, int i, int i2) throws KryoException {
         if (bArr != null) {
             int iMin = Math.min(this.capacity - this.position, i2);
             while (true) {
@@ -900,20 +900,20 @@ public class Output extends OutputStream {
         }
     }
 
-    public void writeInts(int[] iArr) throws IOException, KryoException {
+    public void writeInts(int[] iArr) throws KryoException {
         for (int i : iArr) {
             writeInt(i);
         }
     }
 
-    public void writeLongs(long[] jArr) throws IOException, KryoException {
+    public void writeLongs(long[] jArr) throws KryoException {
         for (long j : jArr) {
             writeLong(j);
         }
     }
 
     @Override // java.io.OutputStream
-    public void write(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public void write(byte[] bArr, int i, int i2) throws KryoException {
         writeBytes(bArr, i, i2);
     }
 
@@ -955,7 +955,7 @@ public class Output extends OutputStream {
         throw new IllegalArgumentException("outputStream cannot be null.");
     }
 
-    public void writeString(CharSequence charSequence) throws IOException, KryoException {
+    public void writeString(CharSequence charSequence) throws KryoException {
         if (charSequence == null) {
             writeByte(128);
             return;

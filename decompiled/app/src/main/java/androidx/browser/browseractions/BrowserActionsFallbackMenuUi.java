@@ -152,7 +152,7 @@ public class BrowserActionsFallbackMenuUi implements AdapterView.OnItemClickList
     }
 
     @Override // android.widget.AdapterView.OnItemClickListener
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) throws PendingIntent.CanceledException {
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
         BrowserActionItem browserActionItem = this.mMenuItems.get(i);
         if (browserActionItem.getAction() != null) {
             try {

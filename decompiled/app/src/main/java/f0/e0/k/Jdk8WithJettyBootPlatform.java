@@ -115,7 +115,7 @@ public final class Jdk8WithJettyBootPlatform extends Platform2 {
     }
 
     @Override // f0.e0.k.Platform2
-    public void a(SSLSocket sSLSocket) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void a(SSLSocket sSLSocket) throws IllegalArgumentException {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         try {
             this.f.invoke(null, sSLSocket);
@@ -127,7 +127,7 @@ public final class Jdk8WithJettyBootPlatform extends Platform2 {
     }
 
     @Override // f0.e0.k.Platform2
-    public void d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) throws IllegalArgumentException {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");

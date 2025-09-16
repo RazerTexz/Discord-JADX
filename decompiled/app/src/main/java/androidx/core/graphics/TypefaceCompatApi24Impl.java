@@ -13,7 +13,6 @@ import androidx.annotation.RestrictTo;
 import androidx.collection.SimpleArrayMap;
 import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.provider.FontsContractCompat;
-import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -66,7 +65,7 @@ public class TypefaceCompatApi24Impl extends TypefaceCompatBaseImpl {
         }
     }
 
-    private static Typeface createFromFamiliesWithDefault(Object obj) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    private static Typeface createFromFamiliesWithDefault(Object obj) {
         try {
             Object objNewInstance = Array.newInstance(sFontFamily, 1);
             Array.set(objNewInstance, 0, obj);
@@ -110,7 +109,7 @@ public class TypefaceCompatApi24Impl extends TypefaceCompatBaseImpl {
 
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromFontInfo(Context context, @Nullable CancellationSignal cancellationSignal, @NonNull FontsContractCompat.FontInfo[] fontInfoArr, int i) throws IOException, ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    public Typeface createFromFontInfo(Context context, @Nullable CancellationSignal cancellationSignal, @NonNull FontsContractCompat.FontInfo[] fontInfoArr, int i) {
         Object objNewFamily = newFamily();
         if (objNewFamily == null) {
             return null;

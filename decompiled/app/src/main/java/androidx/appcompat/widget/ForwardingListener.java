@@ -65,7 +65,7 @@ public abstract class ForwardingListener implements View.OnTouchListener, View.O
         }
     }
 
-    private boolean onTouchForwarded(MotionEvent motionEvent) throws IllegalAccessException, IllegalArgumentException {
+    private boolean onTouchForwarded(MotionEvent motionEvent) throws IllegalArgumentException {
         DropDownListView dropDownListView;
         View view = this.mSrc;
         ShowableListMenu popup = getPopup();

@@ -150,7 +150,7 @@ public class g {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public g(Context context, String str, String str2, String str3, Bundle bundle) throws ClassNotFoundException {
+    public g(Context context, String str, String str2, String str3, Bundle bundle) {
         boolean z2;
         boolean z3;
         if (str == null || !e(str2, str3)) {
@@ -239,7 +239,7 @@ public class g {
         }
     }
 
-    public static boolean e(String str, String str2) throws ClassNotFoundException {
+    public static boolean e(String str, String str2) {
         boolean z2;
         if (str2 != null && str != null) {
             try {

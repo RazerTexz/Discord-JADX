@@ -54,7 +54,7 @@ public final class FileDataSource extends BaseDataSource {
     }
 
     @Override // b.i.a.c.e3.DataSource3
-    public long a(DataSpec dataSpec) throws IOException {
+    public long a(DataSpec dataSpec) throws FileDataSourceException {
         Uri uri = dataSpec.a;
         this.f = uri;
         r(dataSpec);
@@ -119,7 +119,7 @@ public final class FileDataSource extends BaseDataSource {
     }
 
     @Override // b.i.a.c.e3.DataReader
-    public int read(byte[] bArr, int i, int i2) throws IOException {
+    public int read(byte[] bArr, int i, int i2) throws FileDataSourceException {
         if (i2 == 0) {
             return 0;
         }

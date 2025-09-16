@@ -415,7 +415,7 @@ public class ConstraintLayout extends ViewGroup {
         this.mLastMeasureHeightMode = 0;
     }
 
-    private void setChildrenConstraints() throws Resources.NotFoundException {
+    private void setChildrenConstraints() {
         boolean zIsInEditMode = isInEditMode();
         int childCount = getChildCount();
         for (int i = 0; i < childCount; i++) {
@@ -482,7 +482,7 @@ public class ConstraintLayout extends ViewGroup {
         }
     }
 
-    private boolean updateHierarchy() throws Resources.NotFoundException {
+    private boolean updateHierarchy() {
         int childCount = getChildCount();
         boolean z2 = false;
         int i = 0;
@@ -1769,7 +1769,7 @@ public class ConstraintLayout extends ViewGroup {
             ((androidx.constraintlayout.solver.widgets.Guideline) this.widget).setOrientation(this.orientation);
         }
 
-        public LayoutParams(Context context, AttributeSet attributeSet) throws NumberFormatException {
+        public LayoutParams(Context context, AttributeSet attributeSet) {
             int i;
             super(context, attributeSet);
             this.guideBegin = -1;

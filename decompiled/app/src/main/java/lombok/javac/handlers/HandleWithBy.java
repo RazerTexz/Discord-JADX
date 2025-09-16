@@ -10,7 +10,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Iterator;
 import javax.lang.model.type.TypeKind;
@@ -110,7 +109,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
         return iArr2;
     }
 
-    public void generateWithByForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelWithBy) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateWithByForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelWithBy) {
         if (checkForTypeLevelWithBy && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) WithBy.class, typeNode)) {
             return;
         }
@@ -136,7 +135,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
         }
     }
 
-    public void generateWithByForField(JavacNode fieldNode, JCDiagnostic.DiagnosticPosition pos, AccessLevel level) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateWithByForField(JavacNode fieldNode, JCDiagnostic.DiagnosticPosition pos, AccessLevel level) {
         if (JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) WithBy.class, fieldNode)) {
             return;
         }
@@ -144,7 +143,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<WithBy> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<WithBy> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.WITHBY_FLAG_USAGE, "@WithBy");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) WithBy.class);
@@ -168,13 +167,13 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
         }
     }
 
-    public void createWithByForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createWithByForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, List<JCTree.JCAnnotation> onMethod) {
         for (JavacNode fieldNode : fieldNodes) {
             createWithByForField(level, fieldNode, errorNode, whineIfExists, onMethod);
         }
     }
 
-    public void createWithByForField(AccessLevel level, JavacNode fieldNode, JavacNode source, boolean strictMode, List<JCTree.JCAnnotation> onMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createWithByForField(AccessLevel level, JavacNode fieldNode, JavacNode source, boolean strictMode, List<JCTree.JCAnnotation> onMethod) {
         JavacNode typeNode = fieldNode.up();
         boolean makeAbstract = (typeNode == null || typeNode.getKind() != AST.Kind.TYPE || (typeNode.get().mods.flags & Permission.VIEW_CHANNEL) == 0) ? false : true;
         if (fieldNode.getKind() != AST.Kind.FIELD) {
@@ -228,7 +227,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
         JavacHandlerUtil.injectMethod(typeNode, createdWithBy, List.of(JavacHandlerUtil.getMirrorForFieldType(fieldNode)), returnType);
     }
 
-    public JCTree.JCMethodDecl createWithBy(long access, JavacNode field, JavacTreeMaker maker, JavacNode source, List<JCTree.JCAnnotation> onMethod, boolean makeAbstract) throws IllegalAccessException, IllegalArgumentException {
+    public JCTree.JCMethodDecl createWithBy(long access, JavacNode field, JavacTreeMaker maker, JavacNode source, List<JCTree.JCAnnotation> onMethod, boolean makeAbstract) {
         String withByName = JavacHandlerUtil.toWithByName(field);
         if (withByName == null) {
             return null;

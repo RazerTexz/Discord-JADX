@@ -2,7 +2,6 @@ package androidx.media;
 
 import androidx.annotation.RestrictTo;
 import androidx.versionedparcelable.VersionedParcel;
-import java.lang.reflect.InvocationTargetException;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 /* loaded from: classes.dex */
@@ -13,7 +12,7 @@ public class AudioAttributesCompatParcelizer {
         return audioAttributesCompat;
     }
 
-    public static void write(AudioAttributesCompat audioAttributesCompat, VersionedParcel versionedParcel) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void write(AudioAttributesCompat audioAttributesCompat, VersionedParcel versionedParcel) throws IllegalArgumentException {
         versionedParcel.setSerializationFlags(false, false);
         versionedParcel.writeVersionedParcelable(audioAttributesCompat.mImpl, 1);
     }

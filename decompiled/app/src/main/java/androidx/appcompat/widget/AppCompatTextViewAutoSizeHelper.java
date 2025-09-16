@@ -25,7 +25,6 @@ import androidx.appcompat.R;
 import androidx.core.view.ViewCompat;
 import b.d.b.a.outline;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -228,7 +227,7 @@ public class AppCompatTextViewAutoSizeHelper {
         }
     }
 
-    private void setRawTextSize(float f) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void setRawTextSize(float f) {
         if (f != this.mTextView.getPaint().getTextSize()) {
             this.mTextView.getPaint().setTextSize(f);
             boolean zIsInLayout = this.mTextView.isInLayout();

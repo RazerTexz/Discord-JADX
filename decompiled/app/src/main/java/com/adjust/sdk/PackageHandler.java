@@ -3,7 +3,6 @@ package com.adjust.sdk;
 import android.content.Context;
 import com.adjust.sdk.scheduler.SingleThreadCachedScheduler;
 import com.adjust.sdk.scheduler.ThreadScheduler;
-import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +47,7 @@ public class PackageHandler implements IPackageHandler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             PackageHandler.access$100(PackageHandler.this, this.val$activityPackage);
         }
     }
@@ -70,7 +69,7 @@ public class PackageHandler implements IPackageHandler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             PackageHandler.access$300(PackageHandler.this);
         }
     }
@@ -97,7 +96,7 @@ public class PackageHandler implements IPackageHandler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             PackageHandler.this.updatePackagesI(this.val$sessionParametersCopy);
         }
     }
@@ -108,7 +107,7 @@ public class PackageHandler implements IPackageHandler {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IOException {
+        public void run() {
             PackageHandler.access$600(PackageHandler.this);
         }
     }
@@ -122,7 +121,7 @@ public class PackageHandler implements IPackageHandler {
         packageHandler.initI();
     }
 
-    public static /* synthetic */ void access$100(PackageHandler packageHandler, ActivityPackage activityPackage) throws IOException {
+    public static /* synthetic */ void access$100(PackageHandler packageHandler, ActivityPackage activityPackage) {
         packageHandler.addI(activityPackage);
     }
 
@@ -130,7 +129,7 @@ public class PackageHandler implements IPackageHandler {
         packageHandler.sendFirstI();
     }
 
-    public static /* synthetic */ void access$300(PackageHandler packageHandler) throws IOException {
+    public static /* synthetic */ void access$300(PackageHandler packageHandler) {
         packageHandler.sendNextI();
     }
 
@@ -142,11 +141,11 @@ public class PackageHandler implements IPackageHandler {
         return packageHandler.isSending;
     }
 
-    public static /* synthetic */ void access$600(PackageHandler packageHandler) throws IOException {
+    public static /* synthetic */ void access$600(PackageHandler packageHandler) {
         packageHandler.flushI();
     }
 
-    private void addI(ActivityPackage activityPackage) throws IOException {
+    private void addI(ActivityPackage activityPackage) {
         this.packageQueue.add(activityPackage);
         this.logger.debug("Added package %d (%s)", Integer.valueOf(this.packageQueue.size()), activityPackage);
         this.logger.verbose("%s", activityPackage.getExtendedString());
@@ -161,7 +160,7 @@ public class PackageHandler implements IPackageHandler {
         deletePackageQueue(context);
     }
 
-    private void flushI() throws IOException {
+    private void flushI() {
         this.packageQueue.clear();
         writePackageQueueI();
     }
@@ -200,7 +199,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    private void sendNextI() throws IOException {
+    private void sendNextI() {
         if (this.packageQueue.isEmpty()) {
             return;
         }
@@ -211,7 +210,7 @@ public class PackageHandler implements IPackageHandler {
         sendFirstI();
     }
 
-    private void writePackageQueueI() throws IOException {
+    private void writePackageQueueI() {
         Util.writeObject(this.packageQueue, this.context, PACKAGE_QUEUE_FILENAME, PACKAGE_QUEUE_NAME);
         this.logger.debug("Package handler wrote %d packages", Integer.valueOf(this.packageQueue.size()));
     }
@@ -327,7 +326,7 @@ public class PackageHandler implements IPackageHandler {
         this.scheduler.submit(new AnonymousClass6(sessionParameters != null ? sessionParameters.deepCopy() : null));
     }
 
-    public void updatePackagesI(SessionParameters sessionParameters) throws IOException {
+    public void updatePackagesI(SessionParameters sessionParameters) {
         if (sessionParameters == null) {
             return;
         }

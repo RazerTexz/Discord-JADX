@@ -29,7 +29,7 @@ public final class DrawableUtils {
     }
 
     @NonNull
-    public static AttributeSet parseDrawableXml(@NonNull Context context, @XmlRes int i, @NonNull CharSequence charSequence) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    public static AttributeSet parseDrawableXml(@NonNull Context context, @XmlRes int i, @NonNull CharSequence charSequence) {
         int next;
         try {
             XmlResourceParser xml = context.getResources().getXml(i);
@@ -56,7 +56,7 @@ public final class DrawableUtils {
     }
 
     @TargetApi(21)
-    public static void setRippleDrawableRadius(@Nullable RippleDrawable rippleDrawable, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void setRippleDrawableRadius(@Nullable RippleDrawable rippleDrawable, int i) {
         if (Build.VERSION.SDK_INT >= 23) {
             rippleDrawable.setRadius(i);
             return;

@@ -76,7 +76,7 @@ public final class TextInformationFrame extends Id3Frame {
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame, com.google.android.exoplayer2.metadata.Metadata.Entry
-    public void n(MediaMetadata.b bVar) throws NumberFormatException {
+    public void n(MediaMetadata.b bVar) {
         String str = this.j;
         str.hashCode();
         char c = 65535;

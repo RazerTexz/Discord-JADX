@@ -60,7 +60,7 @@ public class FileProvider extends ContentProvider {
             this.mAuthority = str;
         }
 
-        public void addRoot(String str, File file) throws IOException {
+        public void addRoot(String str, File file) {
             if (TextUtils.isEmpty(str)) {
                 throw new IllegalArgumentException("Name must not be empty");
             }
@@ -72,7 +72,7 @@ public class FileProvider extends ContentProvider {
         }
 
         @Override // androidx.core.content.FileProvider.PathStrategy
-        public File getFileForUri(Uri uri) throws IOException {
+        public File getFileForUri(Uri uri) {
             String encodedPath = uri.getEncodedPath();
             int iIndexOf = encodedPath.indexOf(47, 1);
             String strDecode = Uri.decode(encodedPath.substring(1, iIndexOf));
@@ -94,7 +94,7 @@ public class FileProvider extends ContentProvider {
         }
 
         @Override // androidx.core.content.FileProvider.PathStrategy
-        public Uri getUriForFile(File file) throws IOException {
+        public Uri getUriForFile(File file) {
             try {
                 String canonicalPath = file.getCanonicalPath();
                 Map.Entry<String, File> entry = null;

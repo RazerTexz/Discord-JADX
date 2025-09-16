@@ -112,7 +112,7 @@ public abstract class SplineSet {
         public boolean mNoMethod = false;
 
         @Override // androidx.constraintlayout.motion.widget.SplineSet
-        public void setProperty(View view, float f) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void setProperty(View view, float f) throws SecurityException, IllegalArgumentException {
             if (view instanceof MotionLayout) {
                 ((MotionLayout) view).setProgress(get(f));
                 return;

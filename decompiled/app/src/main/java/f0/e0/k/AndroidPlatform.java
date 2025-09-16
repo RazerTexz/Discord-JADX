@@ -65,7 +65,7 @@ public final class AndroidPlatform extends Platform2 {
         }
 
         @Override // f0.e0.m.TrustRootIndex
-        public X509Certificate a(X509Certificate x509Certificate) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public X509Certificate a(X509Certificate x509Certificate) throws IllegalArgumentException {
             Intrinsics3.checkParameterIsNotNull(x509Certificate, "cert");
             try {
                 Object objInvoke = this.f3648b.invoke(this.a, x509Certificate);
@@ -116,7 +116,7 @@ public final class AndroidPlatform extends Platform2 {
         d = z2;
     }
 
-    public AndroidPlatform() throws NoSuchMethodException, ClassNotFoundException, SecurityException {
+    public AndroidPlatform() throws NoSuchMethodException, SecurityException {
         StandardAndroidSocketAdapter standardAndroidSocketAdapter;
         Method method;
         Method method2;
@@ -175,7 +175,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // f0.e0.k.Platform2
-    public TrustRootIndex c(X509TrustManager x509TrustManager) throws NoSuchMethodException, SecurityException {
+    public TrustRootIndex c(X509TrustManager x509TrustManager) throws SecurityException {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         try {
             Method declaredMethod = x509TrustManager.getClass().getDeclaredMethod("findTrustAnchorByIssuerAndSignature", X509Certificate.class);
@@ -247,7 +247,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // f0.e0.k.Platform2
-    public Object g(String str) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public Object g(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "closer");
         CloseGuard closeGuard = this.g;
         Objects.requireNonNull(closeGuard);
@@ -285,7 +285,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // f0.e0.k.Platform2
-    public void k(String str, Object obj) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void k(String str, Object obj) {
         Intrinsics3.checkParameterIsNotNull(str, "message");
         CloseGuard closeGuard = this.g;
         Objects.requireNonNull(closeGuard);

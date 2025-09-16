@@ -54,7 +54,7 @@ public class Util {
         return cls == Integer.TYPE ? Integer.class : cls == Float.TYPE ? Float.class : cls == Boolean.TYPE ? Boolean.class : cls == Long.TYPE ? Long.class : cls == Byte.TYPE ? Byte.class : cls == Character.TYPE ? Character.class : cls == Short.TYPE ? Short.class : cls == Double.TYPE ? Double.class : Void.class;
     }
 
-    public static boolean isClassAvailable(String str) throws ClassNotFoundException {
+    public static boolean isClassAvailable(String str) {
         Boolean bool = classAvailabilities.get(str);
         if (bool == null) {
             try {

@@ -10,7 +10,6 @@ import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,7 +54,7 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Delegate> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<Delegate> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         DelegateReceiver delegateReceiver;
         Type delegateType;
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.DELEGATE_FLAG_USAGE, "@Delegate");
@@ -168,7 +167,7 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
         }
     }
 
-    public void generateAndAdd(MethodSig sig, JavacNode annotation, Name delegateName, DelegateReceiver delegateReceiver) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateAndAdd(MethodSig sig, JavacNode annotation, Name delegateName, DelegateReceiver delegateReceiver) {
         List<JCTree.JCMethodDecl> toAdd = new ArrayList<>();
         try {
             toAdd.add(createDelegateMethod(sig, annotation, delegateName, delegateReceiver));

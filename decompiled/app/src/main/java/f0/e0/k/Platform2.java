@@ -24,7 +24,6 @@ import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.security.GeneralSecurityException;
-import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -255,7 +254,7 @@ public class Platform2 {
         return sSLContext;
     }
 
-    public SSLSocketFactory m(X509TrustManager x509TrustManager) throws KeyManagementException {
+    public SSLSocketFactory m(X509TrustManager x509TrustManager) {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         try {
             SSLContext sSLContextL = l();

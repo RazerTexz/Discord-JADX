@@ -378,7 +378,7 @@ public class Javac {
         return false;
     }
 
-    public static void initDocComments(JCTree.JCCompilationUnit cu) throws IllegalAccessException, IllegalArgumentException {
+    public static void initDocComments(JCTree.JCCompilationUnit cu) {
         try {
             JCCOMPILATIONUNIT_DOCCOMMENTS.set(cu, new HashMap());
         } catch (IllegalAccessException e) {
@@ -387,7 +387,7 @@ public class Javac {
         }
     }
 
-    public static int getEndPosition(JCDiagnostic.DiagnosticPosition pos, JCTree.JCCompilationUnit top) throws IllegalAccessException, IllegalArgumentException {
+    public static int getEndPosition(JCDiagnostic.DiagnosticPosition pos, JCTree.JCCompilationUnit top) throws IllegalArgumentException {
         try {
             Object endPositions = JCCOMPILATIONUNIT_ENDPOSITIONS.get(top);
             return ((Integer) getEndPosition.invoke(pos, endPositions)).intValue();
@@ -398,7 +398,7 @@ public class Javac {
         }
     }
 
-    public static void storeEnd(JCTree tree, int pos, JCTree.JCCompilationUnit top) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void storeEnd(JCTree tree, int pos, JCTree.JCCompilationUnit top) throws IllegalArgumentException {
         try {
             Object endPositions = JCCOMPILATIONUNIT_ENDPOSITIONS.get(top);
             storeEnd.invoke(endPositions, tree, Integer.valueOf(pos));

@@ -192,7 +192,7 @@ public class ScriptManager {
         }
     }
 
-    private static boolean classpathContains(String property, String path) throws IOException {
+    private static boolean classpathContains(String property, String path) {
         String pathCanonical = new File(path).getAbsolutePath();
         try {
             pathCanonical = new File(path).getCanonicalPath();
@@ -211,7 +211,7 @@ public class ScriptManager {
         return false;
     }
 
-    public void addToSystemClasspath(Instrumentation instrumentation, String pathToJar) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void addToSystemClasspath(Instrumentation instrumentation, String pathToJar) throws SecurityException, IllegalArgumentException {
         if (pathToJar == null) {
             throw new NullPointerException("pathToJar");
         }
@@ -236,7 +236,7 @@ public class ScriptManager {
         }
     }
 
-    public void addToBootClasspath(Instrumentation instrumentation, String pathToJar) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void addToBootClasspath(Instrumentation instrumentation, String pathToJar) throws SecurityException, IllegalArgumentException {
         if (pathToJar == null) {
             throw new NullPointerException("pathToJar");
         }

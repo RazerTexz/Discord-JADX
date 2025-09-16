@@ -121,12 +121,12 @@ public class StateSet {
         }
     }
 
-    public StateSet(Context context, XmlPullParser xmlPullParser) throws XmlPullParserException, IOException {
+    public StateSet(Context context, XmlPullParser xmlPullParser) {
         load(context, xmlPullParser);
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    private void load(Context context, XmlPullParser xmlPullParser) throws XmlPullParserException, IOException {
+    private void load(Context context, XmlPullParser xmlPullParser) {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlPullParser), R.styleable.StateSet);
         int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
         for (int i = 0; i < indexCount; i++) {

@@ -6,7 +6,6 @@ import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
-import java.io.IOException;
 
 /* loaded from: classes.dex */
 public class AsmCacheFields {
@@ -25,7 +24,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeBoolean(this.access.c(obj, this.accessIndex));
         }
     }
@@ -44,7 +43,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeByte(this.access.d(obj, this.accessIndex));
         }
     }
@@ -66,7 +65,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeChar(this.access.e(obj, this.accessIndex));
         }
     }
@@ -85,7 +84,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeDouble(this.access.f(obj, this.accessIndex));
         }
     }
@@ -104,7 +103,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeFloat(this.access.g(obj, this.accessIndex));
         }
     }
@@ -127,7 +126,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             if (this.varIntsEnabled) {
                 output.writeInt(this.access.i(obj, this.accessIndex), false);
             } else {
@@ -154,7 +153,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             if (this.varIntsEnabled) {
                 output.writeLong(this.access.j(obj, this.accessIndex), false);
             } else {
@@ -226,7 +225,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeShort(this.access.k(obj, this.accessIndex));
         }
     }
@@ -245,7 +244,7 @@ public class AsmCacheFields {
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
-        public void write(Output output, Object obj) throws IOException, KryoException {
+        public void write(Output output, Object obj) throws KryoException {
             output.writeString(this.access.l(obj, this.accessIndex));
         }
     }

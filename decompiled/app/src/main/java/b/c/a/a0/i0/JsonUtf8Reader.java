@@ -779,7 +779,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // b.c.a.a0.i0.JsonReader2
-    public double n() throws IOException, NumberFormatException {
+    public double n() throws IOException {
         int I = this.v;
         if (I == 0) {
             I = I();
@@ -828,7 +828,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // b.c.a.a0.i0.JsonReader2
-    public int q() throws IOException, NumberFormatException {
+    public int q() throws IOException {
         int I = this.v;
         if (I == 0) {
             I = I();

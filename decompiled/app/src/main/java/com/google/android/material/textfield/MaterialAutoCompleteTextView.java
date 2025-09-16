@@ -20,7 +20,6 @@ import com.google.android.material.R;
 import com.google.android.material.internal.ManufacturerUtils;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes3.dex */
 public class MaterialAutoCompleteTextView extends AppCompatAutoCompleteTextView {
@@ -146,7 +145,7 @@ public class MaterialAutoCompleteTextView extends AppCompatAutoCompleteTextView 
     }
 
     @Override // android.widget.AutoCompleteTextView
-    public void showDropDown() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void showDropDown() throws IllegalArgumentException {
         AccessibilityManager accessibilityManager = this.accessibilityManager;
         if (accessibilityManager == null || !accessibilityManager.isTouchExplorationEnabled()) {
             super.showDropDown();

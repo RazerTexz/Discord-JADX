@@ -31,7 +31,6 @@ import androidx.appcompat.text.AllCapsTransformationMethod;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.TextViewCompat;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class SwitchCompat extends CompoundButton {
@@ -441,7 +440,7 @@ public class SwitchCompat extends CompoundButton {
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
-    public void onDraw(Canvas canvas) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void onDraw(Canvas canvas) {
         int width;
         super.onDraw(canvas);
         Rect rect = this.mTempRect;
@@ -521,7 +520,7 @@ public class SwitchCompat extends CompoundButton {
     }
 
     @Override // android.widget.TextView, android.view.View
-    public void onLayout(boolean z2, int i, int i2, int i3, int i4) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void onLayout(boolean z2, int i, int i2, int i3, int i4) {
         int iMax;
         int width;
         int paddingLeft;
@@ -571,7 +570,7 @@ public class SwitchCompat extends CompoundButton {
     }
 
     @Override // android.widget.TextView, android.view.View
-    public void onMeasure(int i, int i2) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void onMeasure(int i, int i2) {
         int intrinsicWidth;
         int intrinsicHeight;
         int iMax;

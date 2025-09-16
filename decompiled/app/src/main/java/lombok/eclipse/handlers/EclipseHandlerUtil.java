@@ -428,7 +428,7 @@ public class EclipseHandlerUtil {
             }
         }
 
-        public static void reflectSet(Field f, Object o, Object v) throws IllegalAccessException, IllegalArgumentException {
+        public static void reflectSet(Field f, Object o, Object v) throws IllegalArgumentException {
             try {
                 f.set(o, v);
             } catch (IllegalAccessException e) {
@@ -658,7 +658,7 @@ public class EclipseHandlerUtil {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r0v100, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[]] */
-    public static TypeReference copyType(TypeReference ref, ASTNode source) throws IllegalAccessException, IllegalArgumentException {
+    public static TypeReference copyType(TypeReference ref, ASTNode source) throws IllegalArgumentException {
         if (ref instanceof ParameterizedQualifiedTypeReference) {
             ParameterizedQualifiedTypeReference iRef = (ParameterizedQualifiedTypeReference) ref;
             TypeReference[][] args = null;
@@ -769,7 +769,7 @@ public class EclipseHandlerUtil {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private static void copyTypeAnns(TypeReference in, TypeReference out) throws IllegalAccessException, IllegalArgumentException {
+    private static void copyTypeAnns(TypeReference in, TypeReference out) throws IllegalArgumentException {
         try {
             ASTNode[][] aSTNodeArr = (Annotation[][]) EclipseReflectiveMembers.reflect(EclipseReflectiveMembers.TYPE_REFERENCE__ANNOTATIONS, in);
             if (aSTNodeArr == null) {
@@ -2406,7 +2406,7 @@ public class EclipseHandlerUtil {
         return problematic;
     }
 
-    public static CastExpression makeCastExpression(Expression ref, TypeReference castTo, ASTNode source) throws IllegalAccessException, InstantiationException, IllegalArgumentException, InvocationTargetException {
+    public static CastExpression makeCastExpression(Expression ref, TypeReference castTo, ASTNode source) throws IllegalArgumentException {
         CastExpression result;
         try {
             if (castExpressionConstructorIsTypeRefBased) {
@@ -2813,7 +2813,7 @@ public class EclipseHandlerUtil {
         }
     }
 
-    private static boolean eclipseMode() throws ClassNotFoundException {
+    private static boolean eclipseMode() {
         if (eclipseMode != null) {
             return eclipseMode.booleanValue();
         }

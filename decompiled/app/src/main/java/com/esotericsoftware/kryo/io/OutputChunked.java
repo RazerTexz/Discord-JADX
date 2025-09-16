@@ -42,7 +42,7 @@ public class OutputChunked extends Output {
         }
     }
 
-    public void endChunks() throws IOException, KryoException {
+    public void endChunks() throws KryoException {
         flush();
         Log.a aVar = Log.a;
         try {
@@ -53,7 +53,7 @@ public class OutputChunked extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream, java.io.Flushable
-    public void flush() throws IOException, KryoException {
+    public void flush() throws KryoException {
         if (position() > 0) {
             try {
                 writeChunkSize();

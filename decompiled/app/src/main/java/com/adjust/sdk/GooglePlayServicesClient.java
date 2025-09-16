@@ -34,7 +34,7 @@ public class GooglePlayServicesClient {
         }
 
         @Override // android.content.ServiceConnection
-        public void onServiceConnected(ComponentName componentName, IBinder iBinder) throws InterruptedException {
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             try {
                 this.queue.put(iBinder);
             } catch (InterruptedException unused) {

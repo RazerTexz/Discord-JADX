@@ -18,7 +18,6 @@ import androidx.appcompat.R;
 import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.appcompat.widget.MenuPopupWindow;
 import androidx.core.view.ViewCompat;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public final class StandardMenuPopup extends MenuPopup implements PopupWindow.OnDismissListener, AdapterView.OnItemClickListener, MenuPresenter, View.OnKeyListener {
@@ -50,7 +49,7 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-        public void onGlobalLayout() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void onGlobalLayout() throws IllegalArgumentException {
             if (!StandardMenuPopup.this.isShowing() || StandardMenuPopup.this.mPopup.isModal()) {
                 return;
             }
@@ -100,7 +99,7 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         menuBuilder.addMenuPresenter(this, context);
     }
 
-    private boolean tryShow() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private boolean tryShow() throws IllegalArgumentException {
         View view;
         if (isShowing()) {
             return true;

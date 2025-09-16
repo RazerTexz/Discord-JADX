@@ -11,7 +11,7 @@ import org.objenesis.ObjenesisException;
 public class SunReflectionFactoryInstantiator<T> implements ObjectInstantiator<T> {
     public final Constructor<T> a;
 
-    public SunReflectionFactoryInstantiator(Class<T> cls) throws IllegalAccessException, NoSuchMethodException, SecurityException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+    public SunReflectionFactoryInstantiator(Class<T> cls) throws SecurityException {
         try {
             Constructor constructor = Object.class.getConstructor(null);
             try {

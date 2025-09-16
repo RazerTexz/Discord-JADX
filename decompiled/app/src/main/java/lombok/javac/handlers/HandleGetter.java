@@ -6,7 +6,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -107,7 +106,7 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
         return iArr2;
     }
 
-    public void generateGetterForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelGetter, List<JCTree.JCAnnotation> onMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateGetterForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean checkForTypeLevelGetter, List<JCTree.JCAnnotation> onMethod) {
         if (checkForTypeLevelGetter && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) Getter.class, typeNode)) {
             return;
         }
@@ -138,7 +137,7 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
         return !fieldDecl.name.toString().startsWith("$") && (fieldDecl.mods.flags & 8) == 0;
     }
 
-    public void generateGetterForField(JavacNode fieldNode, JCDiagnostic.DiagnosticPosition pos, AccessLevel level, boolean lazy, List<JCTree.JCAnnotation> onMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateGetterForField(JavacNode fieldNode, JCDiagnostic.DiagnosticPosition pos, AccessLevel level, boolean lazy, List<JCTree.JCAnnotation> onMethod) {
         if (JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) Getter.class, fieldNode)) {
             return;
         }
@@ -146,7 +145,7 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Getter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<Getter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.GETTER_FLAG_USAGE, "@Getter");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) Getter.class);
@@ -181,13 +180,13 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
         }
     }
 
-    public void createGetterForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, boolean lazy, List<JCTree.JCAnnotation> onMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createGetterForFields(AccessLevel level, Collection<JavacNode> fieldNodes, JavacNode errorNode, boolean whineIfExists, boolean lazy, List<JCTree.JCAnnotation> onMethod) {
         for (JavacNode fieldNode : fieldNodes) {
             createGetterForField(level, fieldNode, errorNode, whineIfExists, lazy, onMethod);
         }
     }
 
-    public void createGetterForField(AccessLevel level, JavacNode fieldNode, JavacNode source, boolean whineIfExists, boolean lazy, List<JCTree.JCAnnotation> onMethod) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void createGetterForField(AccessLevel level, JavacNode fieldNode, JavacNode source, boolean whineIfExists, boolean lazy, List<JCTree.JCAnnotation> onMethod) {
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             source.addError("@Getter is only supported on a class or a field.");
             return;

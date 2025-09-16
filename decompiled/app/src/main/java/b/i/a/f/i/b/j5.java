@@ -3,7 +3,6 @@ package b.i.a.f.i.b;
 import com.google.android.gms.measurement.internal.zzap;
 import com.google.android.gms.measurement.internal.zzaq;
 import com.google.android.gms.measurement.internal.zzn;
-import java.io.IOException;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
@@ -20,7 +19,7 @@ public final class j5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IOException {
+    public final void run() throws IllegalStateException {
         zzap zzapVar;
         z4 z4Var = this.l;
         zzaq zzaqVar = this.j;

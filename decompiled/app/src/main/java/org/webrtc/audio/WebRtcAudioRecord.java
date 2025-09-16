@@ -103,7 +103,7 @@ public class WebRtcAudioRecord {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws IllegalStateException, SecurityException, IllegalArgumentException {
+        public void run() throws SecurityException, IllegalArgumentException {
             Process.setThreadPriority(-19);
             Logging.d(WebRtcAudioRecord.TAG, "AudioRecordThread" + WebRtcAudioUtils.getThreadInfo());
             WebRtcAudioRecord.access$100(WebRtcAudioRecord.access$000(WebRtcAudioRecord.this).getRecordingState() == 3);
@@ -490,7 +490,7 @@ public class WebRtcAudioRecord {
     }
 
     @CalledByNative
-    private boolean startRecording() throws IllegalStateException {
+    private boolean startRecording() {
         Logging.d(TAG, "startRecording");
         assertTrue(this.audioRecord != null);
         assertTrue(this.audioThread == null);

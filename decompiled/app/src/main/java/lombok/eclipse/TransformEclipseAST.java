@@ -91,7 +91,7 @@ public class TransformEclipseAST {
         transform(parser, ast);
     }
 
-    public static EclipseAST getAST(CompilationUnitDeclaration ast, boolean forceRebuild) throws IllegalAccessException, IllegalArgumentException {
+    public static EclipseAST getAST(CompilationUnitDeclaration ast, boolean forceRebuild) {
         EclipseAST existing = null;
         if (astCacheField != null) {
             try {

@@ -21,7 +21,7 @@ public final class BundleCompat {
         private BundleCompatBaseImpl() {
         }
 
-        public static IBinder getBinder(Bundle bundle, String str) throws NoSuchMethodException, SecurityException {
+        public static IBinder getBinder(Bundle bundle, String str) throws SecurityException {
             if (!sGetIBinderMethodFetched) {
                 try {
                     Method method = Bundle.class.getMethod("getIBinder", String.class);
@@ -44,7 +44,7 @@ public final class BundleCompat {
             return null;
         }
 
-        public static void putBinder(Bundle bundle, String str, IBinder iBinder) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public static void putBinder(Bundle bundle, String str, IBinder iBinder) throws SecurityException {
             if (!sPutIBinderMethodFetched) {
                 try {
                     Method method = Bundle.class.getMethod("putIBinder", String.class, IBinder.class);

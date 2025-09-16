@@ -1,7 +1,6 @@
 package b.i.a.f.i.b;
 
 import android.os.Bundle;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
@@ -22,7 +21,7 @@ public final class k7 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final void run() throws IllegalStateException {
         h7 h7Var = this.n;
         Bundle bundle = this.j;
         i7 i7Var = this.k;

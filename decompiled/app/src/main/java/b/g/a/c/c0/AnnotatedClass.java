@@ -489,7 +489,7 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
         return listEmptyList;
     }
 
-    public Iterable<AnnotatedMethod> h() throws NoSuchMethodException, SecurityException {
+    public Iterable<AnnotatedMethod> h() {
         boolean z2;
         Class<?> clsA;
         AnnotatedMethodMap annotatedMethodMap = this.v;

@@ -17,7 +17,7 @@ public abstract class ConstructorAccess<T> {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static <T> ConstructorAccess<T> a(Class<T> cls) throws ClassNotFoundException {
+    public static <T> ConstructorAccess<T> a(Class<T> cls) {
         int modifiers;
         Class<?> clsA;
         Class<?> enclosingClass = cls.getEnclosingClass();

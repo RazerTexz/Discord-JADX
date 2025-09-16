@@ -287,7 +287,7 @@ public class IconCompat extends CustomVersionedParcelable {
         throw new IllegalArgumentException("Context must not be null.");
     }
 
-    private static Resources getResources(Context context, String str) throws PackageManager.NameNotFoundException {
+    private static Resources getResources(Context context, String str) {
         if ("android".equals(str)) {
             return Resources.getSystem();
         }
@@ -361,7 +361,7 @@ public class IconCompat extends CustomVersionedParcelable {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-    public void addToShortcutIntent(@NonNull Intent intent, @Nullable Drawable drawable, @NonNull Context context) throws PackageManager.NameNotFoundException {
+    public void addToShortcutIntent(@NonNull Intent intent, @Nullable Drawable drawable, @NonNull Context context) {
         Bitmap bitmapCopy;
         checkResource(context);
         int i = this.mType;

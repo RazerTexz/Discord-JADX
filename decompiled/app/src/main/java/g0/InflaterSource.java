@@ -27,7 +27,7 @@ public final class InflaterSource implements Source2 {
         this.m = inflater;
     }
 
-    public final long a(Buffer3 buffer3, long j) throws DataFormatException, IOException {
+    public final long a(Buffer3 buffer3, long j) throws IOException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         if (!(j >= 0)) {
             throw new IllegalArgumentException(outline.t("byteCount < 0: ", j).toString());
@@ -86,7 +86,7 @@ public final class InflaterSource implements Source2 {
     }
 
     @Override // g0.Source2
-    public long i0(Buffer3 buffer3, long j) throws DataFormatException, IOException {
+    public long i0(Buffer3 buffer3, long j) throws IOException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         do {
             long jA = a(buffer3, j);

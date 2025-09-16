@@ -12,7 +12,6 @@ import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.e.m.a;
 import b.i.a.f.e.o.h;
 import b.i.a.f.e.o.i;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,7 +41,7 @@ public class a {
     public int j;
     public AtomicInteger k;
 
-    public a(@NonNull Context context, int i, @NonNull String str) throws IllegalAccessException, PackageManager.NameNotFoundException, IllegalArgumentException, InvocationTargetException {
+    public a(@NonNull Context context, int i, @NonNull String str) {
         a.InterfaceC0038a interfaceC0038a;
         WorkSource workSource = null;
         String packageName = context == null ? null : context.getPackageName();
@@ -194,7 +193,7 @@ public class a {
         d();
     }
 
-    public final List<String> c() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final List<String> c() {
         int iIntValue;
         Method method;
         WorkSource workSource = this.d;

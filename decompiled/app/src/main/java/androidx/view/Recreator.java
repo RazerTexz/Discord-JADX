@@ -45,7 +45,7 @@ public final class Recreator implements GenericLifecycleObserver {
         this.mOwner = savedStateRegistryOwner;
     }
 
-    private void reflectiveNew(String str) throws NoSuchMethodException, SecurityException {
+    private void reflectiveNew(String str) throws SecurityException {
         try {
             Class<? extends U> clsAsSubclass = Class.forName(str, false, Recreator.class.getClassLoader()).asSubclass(SavedStateRegistry.AutoRecreated.class);
             try {
@@ -68,7 +68,7 @@ public final class Recreator implements GenericLifecycleObserver {
     }
 
     @Override // androidx.view.LifecycleEventObserver
-    public void onStateChanged(LifecycleOwner lifecycleOwner, Lifecycle.Event event) throws NoSuchMethodException, SecurityException {
+    public void onStateChanged(LifecycleOwner lifecycleOwner, Lifecycle.Event event) throws SecurityException {
         if (event != Lifecycle.Event.ON_CREATE) {
             throw new AssertionError("Next event must be ON_CREATE");
         }

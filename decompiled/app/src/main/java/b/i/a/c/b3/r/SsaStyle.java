@@ -113,7 +113,7 @@ public final class SsaStyle {
         this.h = z5;
     }
 
-    public static int a(String str) throws NumberFormatException {
+    public static int a(String str) {
         boolean z2;
         try {
             int i = Integer.parseInt(str.trim());
@@ -143,7 +143,7 @@ public final class SsaStyle {
         return -1;
     }
 
-    public static boolean b(String str) throws NumberFormatException {
+    public static boolean b(String str) {
         try {
             int i = Integer.parseInt(str);
             return i == 1 || i == -1;

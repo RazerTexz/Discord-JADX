@@ -21,16 +21,13 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.Closeable;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.NotSerializableException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
@@ -417,7 +414,7 @@ public class Util {
         return stringWriter.toString().contains("Caused by:");
     }
 
-    public static String hash(String str, String str2) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public static String hash(String str, String str2) {
         try {
             byte[] bytes = str.getBytes(Constants.ENCODING);
             MessageDigest messageDigest = MessageDigest.getInstance(str2);
@@ -560,7 +557,7 @@ public class Util {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static <T> T readObject(Context context, String str, String str2, Class<T> cls) throws IOException {
+    public static <T> T readObject(Context context, String str, String str2, Class<T> cls) {
         T t;
         ?? OpenFileInput;
         T tCast = null;
@@ -692,7 +689,7 @@ public class Util {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static <T> void writeObject(T t, Context context, String str, String str2) throws IOException {
+    public static <T> void writeObject(T t, Context context, String str, String str2) {
         ?? OpenFileOutput;
         Closeable closeable;
         BufferedOutputStream bufferedOutputStream;

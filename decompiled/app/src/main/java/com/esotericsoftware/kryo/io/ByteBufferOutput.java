@@ -43,7 +43,7 @@ public class ByteBufferOutput extends Output {
         }
     }
 
-    private void writeString_slow(CharSequence charSequence, int i, int i2) throws IOException, KryoException {
+    private void writeString_slow(CharSequence charSequence, int i, int i2) throws KryoException {
         while (i2 < i) {
             int i3 = this.position;
             int i4 = this.capacity;
@@ -85,7 +85,7 @@ public class ByteBufferOutput extends Output {
         }
     }
 
-    private void writeUtf8Length(int i) throws IOException, KryoException {
+    private void writeUtf8Length(int i) throws KryoException {
         int i2 = i >>> 6;
         if (i2 == 0) {
             require(1);
@@ -137,7 +137,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException, KryoException {
+    public void close() throws KryoException {
         flush();
         OutputStream outputStream = this.outputStream;
         if (outputStream != null) {
@@ -149,7 +149,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream, java.io.Flushable
-    public void flush() throws IOException, KryoException {
+    public void flush() throws KryoException {
         if (this.outputStream == null) {
             return;
         }
@@ -191,7 +191,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public boolean require(int i) throws IOException, KryoException {
+    public boolean require(int i) throws KryoException {
         if (this.capacity - this.position >= i) {
             return false;
         }
@@ -268,7 +268,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream
-    public void write(int i) throws IOException, KryoException {
+    public void write(int i) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -277,7 +277,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeAscii(String str) throws IOException, KryoException {
+    public void writeAscii(String str) throws KryoException {
         if (str == null) {
             writeByte(128);
             return;
@@ -300,14 +300,14 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeBoolean(boolean z2) throws IOException, KryoException {
+    public void writeBoolean(boolean z2) throws KryoException {
         require(1);
         this.niobuffer.put(z2 ? (byte) 1 : (byte) 0);
         this.position++;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeByte(byte b2) throws IOException, KryoException {
+    public void writeByte(byte b2) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -316,7 +316,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeBytes(byte[] bArr) throws IOException, KryoException {
+    public void writeBytes(byte[] bArr) throws KryoException {
         if (bArr == null) {
             throw new IllegalArgumentException("bytes cannot be null.");
         }
@@ -324,14 +324,14 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeChar(char c) throws IOException, KryoException {
+    public void writeChar(char c) throws KryoException {
         require(2);
         this.niobuffer.putChar(c);
         this.position += 2;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeChars(char[] cArr) throws IOException, KryoException {
+    public void writeChars(char[] cArr) throws KryoException {
         if (this.capacity - this.position < cArr.length * 2 || !isNativeOrder()) {
             super.writeChars(cArr);
             return;
@@ -341,14 +341,14 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeDouble(double d) throws IOException, KryoException {
+    public void writeDouble(double d) throws KryoException {
         require(8);
         this.niobuffer.putDouble(d);
         this.position += 8;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeDoubles(double[] dArr) throws IOException, KryoException {
+    public void writeDoubles(double[] dArr) throws KryoException {
         if (this.capacity - this.position < dArr.length * 8 || !isNativeOrder()) {
             super.writeDoubles(dArr);
             return;
@@ -358,14 +358,14 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeFloat(float f) throws IOException, KryoException {
+    public void writeFloat(float f) throws KryoException {
         require(4);
         this.niobuffer.putFloat(f);
         this.position += 4;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeFloats(float[] fArr) throws IOException, KryoException {
+    public void writeFloats(float[] fArr) throws KryoException {
         if (this.capacity - this.position < fArr.length * 4 || !isNativeOrder()) {
             super.writeFloats(fArr);
             return;
@@ -375,14 +375,14 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeInt(int i) throws IOException, KryoException {
+    public void writeInt(int i) throws KryoException {
         require(4);
         this.niobuffer.putInt(i);
         this.position += 4;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeInts(int[] iArr) throws IOException, KryoException {
+    public void writeInts(int[] iArr) throws KryoException {
         if (this.capacity - this.position < iArr.length * 4 || !isNativeOrder()) {
             super.writeInts(iArr);
             return;
@@ -392,13 +392,13 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeLong(long j) throws IOException, KryoException {
+    public void writeLong(long j) throws KryoException {
         require(8);
         this.niobuffer.putLong(j);
         this.position += 8;
     }
 
-    public int writeLongS(long j, boolean z2) throws IOException, KryoException {
+    public int writeLongS(long j, boolean z2) throws KryoException {
         long j2 = !z2 ? (j << 1) ^ (j >> 63) : j;
         long j3 = j2 >>> 7;
         if (j3 == 0) {
@@ -499,7 +499,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeLongs(long[] jArr) throws IOException, KryoException {
+    public void writeLongs(long[] jArr) throws KryoException {
         if (this.capacity - this.position < jArr.length * 8 || !isNativeOrder()) {
             super.writeLongs(jArr);
             return;
@@ -509,14 +509,14 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeShort(int i) throws IOException, KryoException {
+    public void writeShort(int i) throws KryoException {
         require(2);
         this.niobuffer.putShort((short) i);
         this.position += 2;
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeShorts(short[] sArr) throws IOException, KryoException {
+    public void writeShorts(short[] sArr) throws KryoException {
         if (this.capacity - this.position < sArr.length * 2 || !isNativeOrder()) {
             super.writeShorts(sArr);
             return;
@@ -526,7 +526,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeString(String str) throws IOException, KryoException {
+    public void writeString(String str) throws KryoException {
         boolean z2;
         this.niobuffer.position(this.position);
         if (str == null) {
@@ -586,7 +586,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public int writeVarInt(int i, boolean z2) throws IOException, KryoException {
+    public int writeVarInt(int i, boolean z2) throws KryoException {
         this.niobuffer.position(this.position);
         if (!z2) {
             i = (i >> 31) ^ (i << 1);
@@ -638,7 +638,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public int writeVarLong(long j, boolean z2) throws IOException, KryoException {
+    public int writeVarLong(long j, boolean z2) throws KryoException {
         long j2 = !z2 ? (j << 1) ^ (j >> 63) : j;
         int i = (int) (j2 & 127);
         long j3 = j2 >>> 7;
@@ -750,7 +750,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeBytes(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public void writeBytes(byte[] bArr, int i, int i2) throws KryoException {
         if (bArr != null) {
             int iMin = Math.min(this.capacity - this.position, i2);
             while (true) {
@@ -774,7 +774,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream
-    public void write(byte[] bArr) throws IOException, KryoException {
+    public void write(byte[] bArr) throws KryoException {
         if (bArr != null) {
             writeBytes(bArr, 0, bArr.length);
             return;
@@ -783,7 +783,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeByte(int i) throws IOException, KryoException {
+    public void writeByte(int i) throws KryoException {
         if (this.position == this.capacity) {
             require(1);
         }
@@ -802,7 +802,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public int writeInt(int i, boolean z2) throws IOException, KryoException {
+    public int writeInt(int i, boolean z2) throws KryoException {
         if (!this.varIntsEnabled) {
             writeInt(i);
             return 4;
@@ -811,7 +811,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public int writeLong(long j, boolean z2) throws IOException, KryoException {
+    public int writeLong(long j, boolean z2) throws KryoException {
         if (!this.varIntsEnabled) {
             writeLong(j);
             return 8;
@@ -834,7 +834,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output, java.io.OutputStream
-    public void write(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public void write(byte[] bArr, int i, int i2) throws KryoException {
         writeBytes(bArr, i, i2);
     }
 
@@ -863,7 +863,7 @@ public class ByteBufferOutput extends Output {
     }
 
     @Override // com.esotericsoftware.kryo.io.Output
-    public void writeString(CharSequence charSequence) throws IOException, KryoException {
+    public void writeString(CharSequence charSequence) throws KryoException {
         if (charSequence == null) {
             writeByte(128);
             return;

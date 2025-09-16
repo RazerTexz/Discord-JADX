@@ -41,7 +41,7 @@ public class CopyLock {
         return reentrantLock;
     }
 
-    public void lock() throws IOException {
+    public void lock() {
         this.mThreadLock.lock();
         if (this.mFileLevelLock) {
             try {

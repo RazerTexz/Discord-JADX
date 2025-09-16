@@ -7,7 +7,6 @@ import androidx.annotation.WorkerThread;
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import java.math.BigInteger;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -35,7 +34,7 @@ public final class q8 extends i9 {
 
     @WorkerThread
     @Deprecated
-    public final String t(String str) throws NoSuchAlgorithmException {
+    public final String t(String str) {
         b();
         String str2 = (String) u(str).first;
         MessageDigest messageDigestX0 = t9.x0();

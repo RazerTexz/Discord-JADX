@@ -21,7 +21,7 @@ public class AsynchronousMediaCodecBufferEnqueuer extends Handler {
     }
 
     @Override // android.os.Handler
-    public void handleMessage(Message message) throws MediaCodec.CryptoException {
+    public void handleMessage(Message message) {
         AsynchronousMediaCodecBufferEnqueuer2.a aVar;
         AsynchronousMediaCodecBufferEnqueuer2 asynchronousMediaCodecBufferEnqueuer2 = this.a;
         Objects.requireNonNull(asynchronousMediaCodecBufferEnqueuer2);

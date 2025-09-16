@@ -12,7 +12,7 @@ public final /* synthetic */ class n implements ExoMediaDrm.c {
     public static final /* synthetic */ n a = new n();
 
     @Override // b.i.a.c.w2.ExoMediaDrm.c
-    public final ExoMediaDrm a(UUID uuid) throws UnsupportedDrmException {
+    public final ExoMediaDrm a(UUID uuid) {
         int i = FrameworkMediaDrm.a;
         try {
             try {

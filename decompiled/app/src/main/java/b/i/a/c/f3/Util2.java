@@ -82,7 +82,7 @@ public final class Util2 {
         return (j2 == -9223372036854775807L || j2 == Long.MIN_VALUE) ? j2 : j2 * 1000;
     }
 
-    public static String C(String str) throws MissingResourceException {
+    public static String C(String str) {
         if (str == null) {
             return null;
         }
@@ -475,7 +475,7 @@ public final class Util2 {
     }
 
     @Nullable
-    public static String v(String str) throws ClassNotFoundException {
+    public static String v(String str) {
         try {
             Class<?> cls = Class.forName("android.os.SystemProperties");
             return (String) cls.getMethod("get", String.class).invoke(cls, str);

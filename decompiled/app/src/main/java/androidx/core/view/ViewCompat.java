@@ -906,7 +906,7 @@ public class ViewCompat {
         return windowInsetsCompat;
     }
 
-    public static void dispatchFinishTemporaryDetach(@NonNull View view) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void dispatchFinishTemporaryDetach(@NonNull View view) {
         if (Build.VERSION.SDK_INT >= 24) {
             view.dispatchFinishTemporaryDetach();
             return;
@@ -942,7 +942,7 @@ public class ViewCompat {
         return view.dispatchNestedScroll(i, i2, i3, i4, iArr);
     }
 
-    public static void dispatchStartTemporaryDetach(@NonNull View view) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void dispatchStartTemporaryDetach(@NonNull View view) {
         if (Build.VERSION.SDK_INT >= 24) {
             view.dispatchStartTemporaryDetach();
             return;
@@ -1733,7 +1733,7 @@ public class ViewCompat {
     }
 
     @Deprecated
-    public static void setChildrenDrawingOrderEnabled(ViewGroup viewGroup, boolean z2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public static void setChildrenDrawingOrderEnabled(ViewGroup viewGroup, boolean z2) {
         if (sChildrenDrawingOrderMethod == null) {
             try {
                 sChildrenDrawingOrderMethod = ViewGroup.class.getDeclaredMethod("setChildrenDrawingOrderEnabled", Boolean.TYPE);

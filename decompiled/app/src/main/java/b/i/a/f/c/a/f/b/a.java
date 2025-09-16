@@ -87,7 +87,7 @@ public class a {
         }
     }
 
-    public void d(GoogleSignInAccount googleSignInAccount, GoogleSignInOptions googleSignInOptions) throws JSONException {
+    public void d(GoogleSignInAccount googleSignInAccount, GoogleSignInOptions googleSignInOptions) {
         Objects.requireNonNull(googleSignInAccount, "null reference");
         Objects.requireNonNull(googleSignInOptions, "null reference");
         e("defaultGoogleSignInAccount", googleSignInAccount.r);

@@ -31,7 +31,7 @@ public final class JvmOkio3 extends AsyncTimeout {
     }
 
     @Override // g0.AsyncTimeout
-    public void l() throws IOException {
+    public void l() {
         try {
             this.m.close();
         } catch (AssertionError e) {

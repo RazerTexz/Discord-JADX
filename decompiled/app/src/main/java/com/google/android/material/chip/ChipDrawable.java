@@ -4,7 +4,6 @@ import android.R;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -53,12 +52,9 @@ import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.resources.TextAppearance;
 import com.google.android.material.ripple.RippleUtils;
 import com.google.android.material.shape.MaterialShapeDrawable;
-import java.io.IOException;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import org.objectweb.asm.Opcodes;
-import org.xmlpull.v1.XmlPullParserException;
 
 /* loaded from: classes3.dex */
 public class ChipDrawable extends MaterialShapeDrawable implements TintAwareDrawable, Drawable.Callback, TextDrawableHelper.TextDrawableDelegate {
@@ -223,7 +219,7 @@ public class ChipDrawable extends MaterialShapeDrawable implements TintAwareDraw
         }
     }
 
-    private void applyChildDrawable(@Nullable Drawable drawable) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private void applyChildDrawable(@Nullable Drawable drawable) throws SecurityException {
         if (drawable == null) {
             return;
         }
@@ -354,7 +350,7 @@ public class ChipDrawable extends MaterialShapeDrawable implements TintAwareDraw
     }
 
     @NonNull
-    public static ChipDrawable createFromResource(@NonNull Context context, @XmlRes int i) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    public static ChipDrawable createFromResource(@NonNull Context context, @XmlRes int i) {
         AttributeSet drawableXml = DrawableUtils.parseDrawableXml(context, i, "chip");
         int styleAttribute = drawableXml.getStyleAttribute();
         if (styleAttribute == 0) {

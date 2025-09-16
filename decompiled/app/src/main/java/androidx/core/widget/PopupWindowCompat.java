@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.PopupWindow;
 import androidx.annotation.NonNull;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /* loaded from: classes.dex */
@@ -22,7 +21,7 @@ public final class PopupWindowCompat {
     private PopupWindowCompat() {
     }
 
-    public static boolean getOverlapAnchor(@NonNull PopupWindow popupWindow) throws NoSuchFieldException {
+    public static boolean getOverlapAnchor(@NonNull PopupWindow popupWindow) {
         if (Build.VERSION.SDK_INT >= 23) {
             return popupWindow.getOverlapAnchor();
         }
@@ -48,7 +47,7 @@ public final class PopupWindowCompat {
         }
     }
 
-    public static int getWindowLayoutType(@NonNull PopupWindow popupWindow) throws NoSuchMethodException, SecurityException {
+    public static int getWindowLayoutType(@NonNull PopupWindow popupWindow) {
         if (Build.VERSION.SDK_INT >= 23) {
             return popupWindow.getWindowLayoutType();
         }
@@ -71,7 +70,7 @@ public final class PopupWindowCompat {
         return 0;
     }
 
-    public static void setOverlapAnchor(@NonNull PopupWindow popupWindow, boolean z2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public static void setOverlapAnchor(@NonNull PopupWindow popupWindow, boolean z2) throws IllegalArgumentException {
         if (Build.VERSION.SDK_INT >= 23) {
             popupWindow.setOverlapAnchor(z2);
             return;
@@ -96,7 +95,7 @@ public final class PopupWindowCompat {
         }
     }
 
-    public static void setWindowLayoutType(@NonNull PopupWindow popupWindow, int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public static void setWindowLayoutType(@NonNull PopupWindow popupWindow, int i) {
         if (Build.VERSION.SDK_INT >= 23) {
             popupWindow.setWindowLayoutType(i);
             return;

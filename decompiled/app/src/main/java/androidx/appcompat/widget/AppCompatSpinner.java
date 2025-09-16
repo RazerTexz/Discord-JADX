@@ -39,7 +39,6 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.view.menu.ShowableListMenu;
 import androidx.core.view.TintableBackgroundView;
 import androidx.core.view.ViewCompat;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class AppCompatSpinner extends Spinner implements TintableBackgroundView {
@@ -369,7 +368,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             }
 
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-            public void onGlobalLayout() throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+            public void onGlobalLayout() throws IllegalArgumentException {
                 DropdownPopup dropdownPopup = DropdownPopup.this;
                 if (!dropdownPopup.isVisibleToUser(AppCompatSpinner.this)) {
                     DropdownPopup.this.dismiss();
@@ -406,7 +405,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             setOnItemClickListener(new AnonymousClass1(AppCompatSpinner.this));
         }
 
-        public static /* synthetic */ void access$001(DropdownPopup dropdownPopup) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public static /* synthetic */ void access$001(DropdownPopup dropdownPopup) throws IllegalArgumentException {
             super.show();
         }
 
@@ -474,7 +473,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         }
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.SpinnerPopup
-        public void show(int i, int i2) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        public void show(int i, int i2) throws IllegalArgumentException {
             ViewTreeObserver viewTreeObserver;
             boolean zIsShowing = isShowing();
             computeContentWidth();

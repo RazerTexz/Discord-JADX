@@ -24,7 +24,7 @@ public class ByteBufferInput extends Input {
         return this.byteOrder == nativeOrder;
     }
 
-    private int optional(int i) throws IOException, KryoException {
+    private int optional(int i) throws KryoException {
         int i2 = this.limit - this.position;
         if (i2 >= i) {
             return i;
@@ -87,7 +87,7 @@ public class ByteBufferInput extends Input {
         return readAscii_slow();
     }
 
-    private String readAscii_slow() throws IOException, KryoException {
+    private String readAscii_slow() throws KryoException {
         int i = this.position - 1;
         this.position = i;
         int i2 = this.limit;
@@ -122,7 +122,7 @@ public class ByteBufferInput extends Input {
         }
     }
 
-    private int readInt_slow(boolean z2) throws IOException, KryoException {
+    private int readInt_slow(boolean z2) throws KryoException {
         this.position++;
         byte b2 = this.niobuffer.get();
         int i = b2 & 127;
@@ -152,7 +152,7 @@ public class ByteBufferInput extends Input {
         return z2 ? i : (i >>> 1) ^ (-(i & 1));
     }
 
-    private long readLong_slow(boolean z2) throws IOException, KryoException {
+    private long readLong_slow(boolean z2) throws KryoException {
         this.position++;
         byte b2 = this.niobuffer.get();
         long j = b2 & 127;
@@ -202,7 +202,7 @@ public class ByteBufferInput extends Input {
         return (-(j & 1)) ^ (j >>> 1);
     }
 
-    private void readUtf8(int i) throws IOException, KryoException {
+    private void readUtf8(int i) throws KryoException {
         char[] cArr = this.chars;
         int iMin = Math.min(require(1), i);
         int i2 = this.position;
@@ -255,7 +255,7 @@ public class ByteBufferInput extends Input {
         return i5 | ((this.niobuffer.get() & 127) << 27);
     }
 
-    private int readUtf8Length_slow(int i) throws IOException, KryoException {
+    private int readUtf8Length_slow(int i) throws KryoException {
         int i2 = i & 63;
         if ((i & 64) == 0) {
             return i2;
@@ -286,7 +286,7 @@ public class ByteBufferInput extends Input {
         return i5 | ((this.niobuffer.get() & 127) << 27);
     }
 
-    private void readUtf8_slow(int i, int i2) throws IOException, KryoException {
+    private void readUtf8_slow(int i, int i2) throws KryoException {
         char[] cArr = this.chars;
         while (i2 < i) {
             if (this.position == this.limit) {
@@ -418,7 +418,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input, java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException, KryoException {
+    public void close() throws KryoException {
         InputStream inputStream = this.inputStream;
         if (inputStream != null) {
             try {
@@ -428,7 +428,7 @@ public class ByteBufferInput extends Input {
         }
     }
 
-    public int fill(ByteBuffer byteBuffer, int i, int i2) throws IOException, KryoException {
+    public int fill(ByteBuffer byteBuffer, int i, int i2) throws KryoException {
         InputStream inputStream = this.inputStream;
         if (inputStream == null) {
             return -1;
@@ -475,14 +475,14 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public boolean readBoolean() throws IOException, KryoException {
+    public boolean readBoolean() throws KryoException {
         require(1);
         this.position++;
         return this.niobuffer.get() == 1;
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public byte readByte() throws IOException, KryoException {
+    public byte readByte() throws KryoException {
         this.niobuffer.position(this.position);
         require(1);
         this.position++;
@@ -490,21 +490,21 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public int readByteUnsigned() throws IOException, KryoException {
+    public int readByteUnsigned() throws KryoException {
         require(1);
         this.position++;
         return this.niobuffer.get() & 255;
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public byte[] readBytes(int i) throws IOException, KryoException {
+    public byte[] readBytes(int i) throws KryoException {
         byte[] bArr = new byte[i];
         readBytes(bArr, 0, i);
         return bArr;
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public char readChar() throws IOException, KryoException {
+    public char readChar() throws KryoException {
         require(2);
         this.position += 2;
         return this.niobuffer.getChar();
@@ -525,7 +525,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public double readDouble() throws IOException, KryoException {
+    public double readDouble() throws KryoException {
         require(8);
         this.position += 8;
         return this.niobuffer.getDouble();
@@ -546,7 +546,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public float readFloat() throws IOException, KryoException {
+    public float readFloat() throws KryoException {
         require(4);
         this.position += 4;
         return this.niobuffer.getFloat();
@@ -567,7 +567,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public int readInt() throws IOException, KryoException {
+    public int readInt() throws KryoException {
         require(4);
         this.position += 4;
         return this.niobuffer.getInt();
@@ -588,7 +588,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public long readLong() throws IOException, KryoException {
+    public long readLong() throws KryoException {
         require(8);
         this.position += 8;
         return this.niobuffer.getLong();
@@ -609,14 +609,14 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public short readShort() throws IOException, KryoException {
+    public short readShort() throws KryoException {
         require(2);
         this.position += 2;
         return this.niobuffer.getShort();
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public int readShortUnsigned() throws IOException, KryoException {
+    public int readShortUnsigned() throws KryoException {
         require(2);
         this.position += 2;
         return this.niobuffer.getShort();
@@ -637,7 +637,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public String readString() throws IOException, KryoException {
+    public String readString() throws KryoException {
         this.niobuffer.position(this.position);
         int iRequire = require(1);
         this.position++;
@@ -661,7 +661,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public StringBuilder readStringBuilder() throws IOException, KryoException {
+    public StringBuilder readStringBuilder() throws KryoException {
         this.niobuffer.position(this.position);
         int iRequire = require(1);
         this.position++;
@@ -764,14 +764,14 @@ public class ByteBufferInput extends Input {
         return (-(j & 1)) ^ (j >>> 1);
     }
 
-    public void release() throws IOException, KryoException {
+    public void release() throws KryoException {
         close();
         UnsafeUtil.releaseBuffer(this.niobuffer);
         this.niobuffer = null;
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public final int require(int i) throws IOException, KryoException {
+    public final int require(int i) throws KryoException {
         int i2 = this.limit;
         int i3 = i2 - this.position;
         if (i3 >= i) {
@@ -866,7 +866,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public void readBytes(byte[] bArr) throws IOException, KryoException {
+    public void readBytes(byte[] bArr) throws KryoException {
         readBytes(bArr, 0, bArr.length);
     }
 
@@ -891,7 +891,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input
-    public void readBytes(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public void readBytes(byte[] bArr, int i, int i2) throws KryoException {
         if (bArr != null) {
             int iMin = Math.min(this.limit - this.position, i2);
             while (true) {
@@ -943,7 +943,7 @@ public class ByteBufferInput extends Input {
     }
 
     @Override // com.esotericsoftware.kryo.io.Input, java.io.InputStream
-    public int read(byte[] bArr, int i, int i2) throws IOException, KryoException {
+    public int read(byte[] bArr, int i, int i2) throws KryoException {
         this.niobuffer.position(this.position);
         if (bArr != null) {
             int iMin = Math.min(this.limit - this.position, i2);

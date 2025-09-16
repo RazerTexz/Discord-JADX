@@ -50,7 +50,6 @@ import androidx.cursoradapter.widget.CursorAdapter;
 import androidx.customview.view.AbsSavedState;
 import b.d.b.a.outline;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.WeakHashMap;
 import org.objectweb.asm.Opcodes;
@@ -188,7 +187,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
 
         @Override // android.view.View.OnClickListener
-        public void onClick(View view) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void onClick(View view) {
             SearchView searchView = SearchView.this;
             if (view == searchView.mSearchButton) {
                 searchView.onSearchClicked();
@@ -292,7 +291,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         private Method mEnsureImeVisible;
 
         @SuppressLint({"DiscouragedPrivateApi", "SoonBlockedPrivateApi"})
-        public PreQAutoCompleteTextViewReflector() throws NoSuchMethodException, SecurityException {
+        public PreQAutoCompleteTextViewReflector() throws SecurityException {
             this.mDoBeforeTextChanged = null;
             this.mDoAfterTextChanged = null;
             this.mEnsureImeVisible = null;
@@ -323,7 +322,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
             }
         }
 
-        public void doAfterTextChanged(AutoCompleteTextView autoCompleteTextView) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void doAfterTextChanged(AutoCompleteTextView autoCompleteTextView) {
             preApi29Check();
             Method method = this.mDoAfterTextChanged;
             if (method != null) {
@@ -334,7 +333,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
             }
         }
 
-        public void doBeforeTextChanged(AutoCompleteTextView autoCompleteTextView) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void doBeforeTextChanged(AutoCompleteTextView autoCompleteTextView) {
             preApi29Check();
             Method method = this.mDoBeforeTextChanged;
             if (method != null) {
@@ -345,7 +344,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
             }
         }
 
-        public void ensureImeVisible(AutoCompleteTextView autoCompleteTextView) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void ensureImeVisible(AutoCompleteTextView autoCompleteTextView) {
             preApi29Check();
             Method method = this.mEnsureImeVisible;
             if (method != null) {
@@ -455,7 +454,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
             return this.mThreshold <= 0 || super.enoughToFilter();
         }
 
-        public void ensureImeVisible() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void ensureImeVisible() {
             if (Build.VERSION.SDK_INT < 29) {
                 SearchView.PRE_API_29_HIDDEN_METHOD_INVOKER.ensureImeVisible(this);
                 return;
@@ -487,7 +486,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
 
         @Override // android.widget.AutoCompleteTextView, android.widget.TextView, android.view.View
-        public void onFocusChanged(boolean z2, int i, Rect rect) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void onFocusChanged(boolean z2, int i, Rect rect) {
             super.onFocusChanged(z2, i, rect);
             this.mSearchView.onTextFocusChanged();
         }
@@ -518,7 +517,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
 
         @Override // android.widget.AutoCompleteTextView, android.widget.TextView, android.view.View
-        public void onWindowFocusChanged(boolean z2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void onWindowFocusChanged(boolean z2) {
             super.onWindowFocusChanged(z2);
             if (z2 && this.mSearchView.hasFocus() && getVisibility() == 0) {
                 this.mHasPendingShowSoftInputRequest = true;
@@ -947,7 +946,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         this.mClearingFocus = false;
     }
 
-    public void forceSuggestionQuery() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void forceSuggestionQuery() {
         if (Build.VERSION.SDK_INT >= 29) {
             this.mSearchSrcTextView.refreshAutoCompleteResults();
             return;
@@ -1175,7 +1174,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
     }
 
-    public boolean onSuggestionsKey(View view, int i, KeyEvent keyEvent) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public boolean onSuggestionsKey(View view, int i, KeyEvent keyEvent) {
         if (this.mSearchable != null && this.mSuggestionsAdapter != null && keyEvent.getAction() == 0 && keyEvent.hasNoModifiers()) {
             if (i == 66 || i == 84 || i == 61) {
                 return onItemClicked(this.mSearchSrcTextView.getListSelection(), 0, null);
@@ -1208,7 +1207,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         this.mOldQueryText = charSequence.toString();
     }
 
-    public void onTextFocusChanged() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void onTextFocusChanged() {
         updateViewsVisibility(isIconified());
         postUpdateFocusedState();
         if (this.mSearchSrcTextView.hasFocus()) {

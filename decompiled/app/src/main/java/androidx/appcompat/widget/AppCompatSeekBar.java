@@ -7,7 +7,6 @@ import android.widget.SeekBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.R;
-import java.lang.reflect.InvocationTargetException;
 
 /* loaded from: classes.dex */
 public class AppCompatSeekBar extends SeekBar {
@@ -39,7 +38,7 @@ public class AppCompatSeekBar extends SeekBar {
         this(context, attributeSet, R.attr.seekBarStyle);
     }
 
-    public AppCompatSeekBar(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public AppCompatSeekBar(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws SecurityException {
         super(context, attributeSet, i);
         ThemeUtils.checkAppCompatTheme(this, getContext());
         AppCompatSeekBarHelper appCompatSeekBarHelper = new AppCompatSeekBarHelper(this);

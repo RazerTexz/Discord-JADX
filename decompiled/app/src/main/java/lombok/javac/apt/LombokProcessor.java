@@ -64,7 +64,7 @@ public class LombokProcessor extends AbstractProcessor {
     private CleanupRegistry cleanup = new CleanupRegistry();
     private int dummyCount = 0;
 
-    public void init(ProcessingEnvironment procEnv) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void init(ProcessingEnvironment procEnv) {
         super.init(procEnv);
         if (System.getProperty("lombok.disable") != null) {
             this.lombokDisabled = true;
@@ -102,7 +102,7 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    private String listAnnotationProcessorsBeforeOurs() throws IllegalAccessException, IllegalArgumentException {
+    private String listAnnotationProcessorsBeforeOurs() {
         try {
             Object discoveredProcessors = javacProcessingEnvironment_discoveredProcs.get(this.javacProcessingEnv);
             ArrayList<?> states = (ArrayList) discoveredProcessors_procStateList.get(discoveredProcessors);
@@ -130,7 +130,7 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    private void placePostCompileAndDontMakeForceRoundDummiesHook() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void placePostCompileAndDontMakeForceRoundDummiesHook() {
         stopJavacProcessingEnvironmentFromClosingOurClassloader();
         forceMultipleRoundsInNetBeansEditor();
         Context context = this.javacProcessingEnv.getContext();
@@ -157,7 +157,7 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    private void replaceFileManagerJdk9(Context context, JavaFileManager newFiler) throws IllegalAccessException, IllegalArgumentException {
+    private void replaceFileManagerJdk9(Context context, JavaFileManager newFiler) {
         try {
             JavaCompiler compiler = (JavaCompiler) Permit.getMethod(JavaCompiler.class, "instance", Context.class).invoke(null, context);
             try {
@@ -410,7 +410,7 @@ public class LombokProcessor extends AbstractProcessor {
         return SourceVersion.latest();
     }
 
-    public JavacProcessingEnvironment getJavacProcessingEnvironment(Object procEnv) throws IllegalArgumentException {
+    public JavacProcessingEnvironment getJavacProcessingEnvironment(Object procEnv) {
         if (procEnv instanceof JavacProcessingEnvironment) {
             return (JavacProcessingEnvironment) procEnv;
         }
@@ -436,7 +436,7 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    public JavacFiler getJavacFiler(Object filer) throws IllegalArgumentException {
+    public JavacFiler getJavacFiler(Object filer) {
         if (filer instanceof JavacFiler) {
             return (JavacFiler) filer;
         }
@@ -486,7 +486,7 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    private Object tryGetProxyDelegateToField(Class<?> delegateClass, Object instance) throws IllegalArgumentException {
+    private Object tryGetProxyDelegateToField(Class<?> delegateClass, Object instance) {
         try {
             InvocationHandler handler = Proxy.getInvocationHandler(instance);
             return Permit.getField(handler.getClass(), "val$delegateTo").get(handler);

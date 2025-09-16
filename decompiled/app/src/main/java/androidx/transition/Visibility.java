@@ -78,7 +78,7 @@ public abstract class Visibility extends Transition {
             suppressLayout(true);
         }
 
-        private void hideViewWhenNotCanceled() throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+        private void hideViewWhenNotCanceled() throws IllegalArgumentException {
             if (!this.mCanceled) {
                 ViewUtils.setTransitionVisibility(this.mView, this.mFinalVisibility);
                 ViewGroup viewGroup = this.mParent;
@@ -104,12 +104,12 @@ public abstract class Visibility extends Transition {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-        public void onAnimationEnd(Animator animator) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+        public void onAnimationEnd(Animator animator) throws IllegalArgumentException {
             hideViewWhenNotCanceled();
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener, androidx.transition.AnimatorUtils.AnimatorPauseListenerCompat
-        public void onAnimationPause(Animator animator) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+        public void onAnimationPause(Animator animator) throws IllegalArgumentException {
             if (this.mCanceled) {
                 return;
             }
@@ -121,7 +121,7 @@ public abstract class Visibility extends Transition {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener, androidx.transition.AnimatorUtils.AnimatorPauseListenerCompat
-        public void onAnimationResume(Animator animator) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+        public void onAnimationResume(Animator animator) throws IllegalArgumentException {
             if (this.mCanceled) {
                 return;
             }
@@ -137,7 +137,7 @@ public abstract class Visibility extends Transition {
         }
 
         @Override // androidx.transition.Transition.TransitionListener
-        public void onTransitionEnd(@NonNull Transition transition) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+        public void onTransitionEnd(@NonNull Transition transition) throws IllegalArgumentException {
             hideViewWhenNotCanceled();
             transition.removeListener(this);
         }
@@ -324,7 +324,7 @@ public abstract class Visibility extends Transition {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Animator onDisappear(ViewGroup viewGroup, TransitionValues transitionValues, int i, TransitionValues transitionValues2, int i2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public Animator onDisappear(ViewGroup viewGroup, TransitionValues transitionValues, int i, TransitionValues transitionValues2, int i2) throws IllegalArgumentException {
         View view;
         boolean z2;
         boolean z3;

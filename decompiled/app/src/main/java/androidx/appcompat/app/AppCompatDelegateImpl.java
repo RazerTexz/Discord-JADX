@@ -97,7 +97,6 @@ import androidx.view.Lifecycle;
 import androidx.view.LifecycleOwner;
 import b.d.b.a.outline;
 import java.lang.Thread;
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import org.objectweb.asm.Opcodes;
 import org.webrtc.MediaStreamTrack;
@@ -219,7 +218,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
-        public WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
             int systemWindowInsetTop = windowInsetsCompat.getSystemWindowInsetTop();
             int iUpdateStatusGuard = AppCompatDelegateImpl.this.updateStatusGuard(windowInsetsCompat, null);
             if (systemWindowInsetTop != iUpdateStatusGuard) {
@@ -962,7 +961,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         return configuration2;
     }
 
-    private ViewGroup createSubDecor() throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    private ViewGroup createSubDecor() throws SecurityException, IllegalArgumentException {
         ViewGroup viewGroup;
         TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(androidx.appcompat.R.styleable.AppCompatTheme);
         int i = androidx.appcompat.R.styleable.AppCompatTheme_windowActionBar;
@@ -1290,7 +1289,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         this.mInvalidatePanelMenuPosted = true;
     }
 
-    private boolean isActivityManifestHandlingUiMode() throws PackageManager.NameNotFoundException {
+    private boolean isActivityManifestHandlingUiMode() {
         if (!this.mActivityHandlesUiModeChecked && (this.mHost instanceof Activity)) {
             PackageManager packageManager = this.mContext.getPackageManager();
             if (packageManager == null) {
@@ -1598,7 +1597,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private boolean updateForNightMode(int i, boolean z2) throws IllegalAccessException, NoSuchFieldException, PackageManager.NameNotFoundException, IllegalArgumentException {
+    private boolean updateForNightMode(int i, boolean z2) throws IllegalArgumentException {
         boolean z3;
         Configuration configurationCreateOverrideConfigurationForDayNight = createOverrideConfigurationForDayNight(this.mContext, i, null);
         boolean zIsActivityManifestHandlingUiMode = isActivityManifestHandlingUiMode();
@@ -1629,7 +1628,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private void updateResourcesConfigurationForNightMode(int i, boolean z2, @Nullable Configuration configuration) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    private void updateResourcesConfigurationForNightMode(int i, boolean z2, @Nullable Configuration configuration) throws IllegalArgumentException {
         Resources resources = this.mContext.getResources();
         Configuration configuration2 = new Configuration(resources.getConfiguration());
         if (configuration != null) {
@@ -2007,7 +2006,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     @Override // androidx.appcompat.app.AppCompatDelegate
-    public void onConfigurationChanged(Configuration configuration) throws IllegalAccessException, NoSuchFieldException, PackageManager.NameNotFoundException, IllegalArgumentException {
+    public void onConfigurationChanged(Configuration configuration) throws IllegalArgumentException {
         ActionBar supportActionBar;
         if (this.mHasActionBar && this.mSubDecorInstalled && (supportActionBar = getSupportActionBar()) != null) {
             supportActionBar.onConfigurationChanged(configuration);
@@ -2017,7 +2016,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     @Override // androidx.appcompat.app.AppCompatDelegate
-    public void onCreate(Bundle bundle) throws IllegalAccessException, NoSuchFieldException, PackageManager.NameNotFoundException, IllegalArgumentException {
+    public void onCreate(Bundle bundle) throws IllegalArgumentException {
         this.mBaseContextAttached = true;
         applyDayNight(false);
         ensureWindow();
@@ -2353,7 +2352,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         return this.mActionMode;
     }
 
-    public ActionMode startSupportActionModeFromWindow(@NonNull ActionMode.Callback callback) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public ActionMode startSupportActionModeFromWindow(@NonNull ActionMode.Callback callback) {
         ActionMode actionModeOnWindowStartingSupportActionMode;
         Context contextThemeWrapper;
         AppCompatCallback appCompatCallback;
@@ -2445,7 +2444,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         return this.mActionMode;
     }
 
-    public final int updateStatusGuard(@Nullable WindowInsetsCompat windowInsetsCompat, @Nullable Rect rect) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public final int updateStatusGuard(@Nullable WindowInsetsCompat windowInsetsCompat, @Nullable Rect rect) {
         boolean z2;
         boolean z3;
         int systemWindowInsetTop = windowInsetsCompat != null ? windowInsetsCompat.getSystemWindowInsetTop() : rect != null ? rect.top : 0;
@@ -2535,7 +2534,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         this(dialog.getContext(), dialog.getWindow(), appCompatCallback, dialog);
     }
 
-    private boolean applyDayNight(boolean z2) throws IllegalAccessException, NoSuchFieldException, PackageManager.NameNotFoundException, IllegalArgumentException {
+    private boolean applyDayNight(boolean z2) throws IllegalArgumentException {
         if (this.mIsDestroyed) {
             return false;
         }

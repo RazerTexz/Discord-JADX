@@ -7,7 +7,6 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.zip.CRC32;
-import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 
 /* compiled from: GzipSource.kt */
@@ -74,7 +73,7 @@ public final class GzipSource implements Source2 {
     }
 
     @Override // g0.Source2
-    public long i0(Buffer3 buffer3, long j) throws DataFormatException, IOException {
+    public long i0(Buffer3 buffer3, long j) throws IOException {
         long j2;
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         if (!(j >= 0)) {

@@ -10,7 +10,7 @@ import java.util.Locale;
 
 /* loaded from: classes.dex */
 public class MacAddressUtil {
-    public static String getMacAddress(Context context) throws IOException {
+    public static String getMacAddress(Context context) {
         String rawMacAddress = getRawMacAddress(context);
         if (rawMacAddress == null) {
             return null;
@@ -18,7 +18,7 @@ public class MacAddressUtil {
         return removeSpaceString(rawMacAddress.toUpperCase(Locale.US));
     }
 
-    private static String getRawMacAddress(Context context) throws IOException {
+    private static String getRawMacAddress(Context context) {
         String strLoadAddress = loadAddress("wlan0");
         if (strLoadAddress != null) {
             return strLoadAddress;
@@ -38,7 +38,7 @@ public class MacAddressUtil {
         }
     }
 
-    private static String loadAddress(String str) throws IOException {
+    private static String loadAddress(String str) {
         try {
             StringBuilder sb = new StringBuilder(1000);
             BufferedReader bufferedReader = new BufferedReader(new FileReader("/sys/class/net/" + str + "/address"), 1024);

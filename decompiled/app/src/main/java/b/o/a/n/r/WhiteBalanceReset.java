@@ -1,6 +1,5 @@
 package b.o.a.n.r;
 
-import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.params.MeteringRectangle;
@@ -23,7 +22,7 @@ public class WhiteBalanceReset extends BaseReset {
     }
 
     @Override // b.o.a.n.r.BaseReset
-    public void m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) throws CameraAccessException {
+    public void m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) {
         f.a(2, "onStarted:", "with area:", meteringRectangle);
         int iIntValue = ((Integer) k(CameraCharacteristics.CONTROL_MAX_REGIONS_AWB, 0)).intValue();
         if (meteringRectangle != null && iIntValue > 0) {

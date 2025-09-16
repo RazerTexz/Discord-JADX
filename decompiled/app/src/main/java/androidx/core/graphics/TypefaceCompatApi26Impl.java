@@ -81,7 +81,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
         this.mCreateFromFamiliesWithDefault = methodObtainCreateFromFamiliesWithDefaultMethod;
     }
 
-    private void abortCreation(Object obj) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    private void abortCreation(Object obj) {
         try {
             this.mAbortCreation.invoke(obj, new Object[0]);
         } catch (IllegalAccessException | InvocationTargetException unused) {
@@ -129,7 +129,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
     }
 
     @Nullable
-    public Typeface createFromFamiliesWithDefault(Object obj) throws ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    public Typeface createFromFamiliesWithDefault(Object obj) {
         try {
             Object objNewInstance = Array.newInstance(this.mFontFamily, 1);
             Array.set(objNewInstance, 0, obj);
@@ -141,7 +141,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
 
     @Override // androidx.core.graphics.TypefaceCompatApi21Impl, androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) {
         if (!isFontFamilyPrivateAPIAvailable()) {
             return super.createFromFontFamilyFilesResourceEntry(context, fontFamilyFilesResourceEntry, resources, i);
         }
@@ -163,7 +163,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
 
     @Override // androidx.core.graphics.TypefaceCompatApi21Impl, androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromFontInfo(Context context, @Nullable CancellationSignal cancellationSignal, @NonNull FontsContractCompat.FontInfo[] fontInfoArr, int i) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    public Typeface createFromFontInfo(Context context, @Nullable CancellationSignal cancellationSignal, @NonNull FontsContractCompat.FontInfo[] fontInfoArr, int i) {
         Typeface typefaceCreateFromFamiliesWithDefault;
         if (fontInfoArr.length < 1) {
             return null;
@@ -216,7 +216,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
 
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable
-    public Typeface createFromResourcesFontFile(Context context, Resources resources, int i, String str, int i2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public Typeface createFromResourcesFontFile(Context context, Resources resources, int i, String str, int i2) {
         if (!isFontFamilyPrivateAPIAvailable()) {
             return super.createFromResourcesFontFile(context, resources, i, str, i2);
         }

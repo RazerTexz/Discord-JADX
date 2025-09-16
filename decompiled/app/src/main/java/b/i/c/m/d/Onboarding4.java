@@ -3,7 +3,6 @@ package b.i.c.m.d;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.util.Log;
 import b.i.c.FirebaseApp2;
 import b.i.c.m.d.k.CommonUtils;
@@ -72,7 +71,7 @@ public class Onboarding4 {
         return new AppRequestData(str, str2, this.l.e, this.h, this.g, CommonUtils.f(CommonUtils.l(this.c), str2, this.h, this.g), this.j, DeliveryMechanism.f(this.i).g(), this.k, "0");
     }
 
-    public String c() throws Resources.NotFoundException {
+    public String c() {
         Context context = this.c;
         int iN = CommonUtils.n(context, "com.crashlytics.ApiEndpoint", "string");
         return iN > 0 ? context.getString(iN) : "";

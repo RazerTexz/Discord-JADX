@@ -81,7 +81,7 @@ public abstract class PatchScript {
         throw new IllegalStateException("If you're going to call runASM, then you need to implement createClassVisitor");
     }
 
-    private static byte[] readStream(String resourceName) throws IOException {
+    private static byte[] readStream(String resourceName) {
         InputStream wrapStream = null;
         try {
             try {
@@ -163,7 +163,7 @@ public abstract class PatchScript {
         }
     }
 
-    protected static void insertMethod(Hook methodToInsert, MethodVisitor target) throws IOException {
+    protected static void insertMethod(Hook methodToInsert, MethodVisitor target) {
         byte[] classData = readStream(AutocompleteViewModel.COMMAND_DISCOVER_TOKEN + methodToInsert.getClassSpec() + ".class");
         ClassReader reader = new ClassReader(classData);
         ClassVisitor methodFinder = new AnonymousClass1(methodToInsert, target);
@@ -190,7 +190,7 @@ public abstract class PatchScript {
         }
     }
 
-    protected static void transplantMethod(String resourceName, Hook methodToTransplant, ClassVisitor target) throws IOException {
+    protected static void transplantMethod(String resourceName, Hook methodToTransplant, ClassVisitor target) {
         byte[] classData = readStream(resourceName);
         ClassReader reader = new ClassReader(classData);
         ClassVisitor methodFinder = new AnonymousClass2(methodToTransplant, target);
@@ -315,7 +315,7 @@ public abstract class PatchScript {
         }
 
         @Override // org.objectweb.asm.ClassVisitor
-        public void visitEnd() throws IOException {
+        public void visitEnd() {
             for (Hook transplant : this.transplants) {
                 String resourceName = AutocompleteViewModel.COMMAND_DISCOVER_TOKEN + this.transplantMapper.mapResourceName(this.classFileFormatVersion, String.valueOf(transplant.getClassSpec()) + ".class");
                 PatchScript.transplantMethod(resourceName, transplant, this.cv);

@@ -67,7 +67,7 @@ public class KeyEventDispatcher {
         return keyEvent.dispatch(activity, decorView != null ? decorView.getKeyDispatcherState() : null, activity);
     }
 
-    private static boolean dialogSuperDispatchKeyEventPre28(Dialog dialog, KeyEvent keyEvent) throws NoSuchFieldException {
+    private static boolean dialogSuperDispatchKeyEventPre28(Dialog dialog, KeyEvent keyEvent) {
         DialogInterface.OnKeyListener dialogKeyListenerPre28 = getDialogKeyListenerPre28(dialog);
         if (dialogKeyListenerPre28 != null && dialogKeyListenerPre28.onKey(dialog, keyEvent.getKeyCode(), keyEvent)) {
             return true;
@@ -94,7 +94,7 @@ public class KeyEventDispatcher {
         return Build.VERSION.SDK_INT >= 28 ? component.superDispatchKeyEvent(keyEvent) : callback instanceof Activity ? activitySuperDispatchKeyEventPre28((Activity) callback, keyEvent) : callback instanceof Dialog ? dialogSuperDispatchKeyEventPre28((Dialog) callback, keyEvent) : (view != null && ViewCompat.dispatchUnhandledKeyEventBeforeCallback(view, keyEvent)) || component.superDispatchKeyEvent(keyEvent);
     }
 
-    private static DialogInterface.OnKeyListener getDialogKeyListenerPre28(Dialog dialog) throws NoSuchFieldException {
+    private static DialogInterface.OnKeyListener getDialogKeyListenerPre28(Dialog dialog) {
         if (!sDialogFieldsFetched) {
             try {
                 Field declaredField = Dialog.class.getDeclaredField("mOnKeyListener");

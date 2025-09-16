@@ -67,7 +67,7 @@ public final class IcyHeaders implements Metadata.Entry {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static IcyHeaders a(Map<String, List<String>> map) throws NumberFormatException {
+    public static IcyHeaders a(Map<String, List<String>> map) {
         boolean z2;
         int i;
         List<String> list;

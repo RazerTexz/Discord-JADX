@@ -2048,7 +2048,7 @@ public class ExifInterface {
         }
     }
 
-    private static Pair<Integer, Integer> guessDataFormat(String str) throws NumberFormatException {
+    private static Pair<Integer, Integer> guessDataFormat(String str) {
         if (str.contains(",")) {
             String[] strArrSplit = str.split(",", -1);
             Pair<Integer, Integer> pairGuessDataFormat = guessDataFormat(strArrSplit[0]);
@@ -2583,7 +2583,7 @@ public class ExifInterface {
         }
     }
 
-    private static Long parseDateTime(@Nullable String str, @Nullable String str2, @Nullable String str3) throws NumberFormatException {
+    private static Long parseDateTime(@Nullable String str, @Nullable String str2, @Nullable String str3) {
         if (str != null && NON_ZERO_TIME_PATTERN.matcher(str).matches()) {
             ParsePosition parsePosition = new ParsePosition(0);
             try {
@@ -3529,7 +3529,7 @@ public class ExifInterface {
         return size2;
     }
 
-    public void flipHorizontally() throws NumberFormatException {
+    public void flipHorizontally() {
         int i = 1;
         switch (getAttributeInt(TAG_ORIENTATION, 1)) {
             case 1:
@@ -3562,7 +3562,7 @@ public class ExifInterface {
         setAttribute(TAG_ORIENTATION, Integer.toString(i));
     }
 
-    public void flipVertically() throws NumberFormatException {
+    public void flipVertically() {
         int i = 1;
         switch (getAttributeInt(TAG_ORIENTATION, 1)) {
             case 1:
@@ -3953,11 +3953,11 @@ public class ExifInterface {
         return i == 6 || i == 7;
     }
 
-    public void resetOrientation() throws NumberFormatException {
+    public void resetOrientation() {
         setAttribute(TAG_ORIENTATION, Integer.toString(1));
     }
 
-    public void rotate(int i) throws NumberFormatException {
+    public void rotate(int i) {
         if (i % 90 != 0) {
             throw new IllegalArgumentException("degree should be a multiple of 90");
         }
@@ -4175,13 +4175,13 @@ public class ExifInterface {
         }
     }
 
-    public void setAltitude(double d) throws NumberFormatException {
+    public void setAltitude(double d) {
         String str = d >= 0.0d ? "0" : "1";
         setAttribute(TAG_GPS_ALTITUDE, new Rational(Math.abs(d)).toString());
         setAttribute(TAG_GPS_ALTITUDE_REF, str);
     }
 
-    public void setAttribute(@NonNull String str, @Nullable String str2) throws NumberFormatException {
+    public void setAttribute(@NonNull String str, @Nullable String str2) {
         ExifTag exifTag;
         int i;
         String string;
@@ -4356,7 +4356,7 @@ public class ExifInterface {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    public void setDateTime(@NonNull Long l) throws NumberFormatException {
+    public void setDateTime(@NonNull Long l) {
         Objects.requireNonNull(l, "Timestamp should not be null.");
         if (l.longValue() < 0) {
             throw new IllegalArgumentException("Timestamp should a positive value.");
@@ -4369,7 +4369,7 @@ public class ExifInterface {
         setAttribute(TAG_SUBSEC_TIME, string);
     }
 
-    public void setGpsInfo(Location location) throws NumberFormatException {
+    public void setGpsInfo(Location location) {
         if (location == null) {
             return;
         }
@@ -4383,7 +4383,7 @@ public class ExifInterface {
         setAttribute(TAG_GPS_TIMESTAMP, strArrSplit[1]);
     }
 
-    public void setLatLong(double d, double d2) throws NumberFormatException {
+    public void setLatLong(double d, double d2) {
         if (d < -90.0d || d > 90.0d || Double.isNaN(d)) {
             throw new IllegalArgumentException("Latitude value " + d + " is not valid.");
         }

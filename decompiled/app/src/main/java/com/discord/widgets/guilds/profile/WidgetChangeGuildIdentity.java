@@ -50,7 +50,6 @@ import d0.t.Collections2;
 import d0.z.d.Intrinsics3;
 import d0.z.d.Lambda;
 import d0.z.d.Reflection2;
-import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.Lazy;
@@ -498,7 +497,7 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r2v2, types: [com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
-    public void onImageChosen(Uri uri, String mimeType) throws IOException {
+    public void onImageChosen(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageChosen(uri, mimeType);

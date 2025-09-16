@@ -1,7 +1,6 @@
 package lombok.eclipse.handlers;
 
 import com.adjust.sdk.Constants;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -116,7 +115,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<EqualsAndHashCode> annotation, Annotation ast, EclipseNode annotationNode) throws IllegalAccessException, InstantiationException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<EqualsAndHashCode> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.EQUALS_AND_HASH_CODE_FLAG_USAGE, "@EqualsAndHashCode");
         EqualsAndHashCode ann = annotation.getInstance();
         List<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members = InclusionExclusionUtils.handleEqualsAndHashCodeMarking(annotationNode.up(), annotation, annotationNode);
@@ -135,7 +134,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         generateMethods(annotationNode.up(), annotationNode, members, callSuper, true, cacheHashCode, fieldAccess, onParam);
     }
 
-    public void generateEqualsAndHashCodeForType(EclipseNode typeNode, EclipseNode errorNode) throws IllegalAccessException, InstantiationException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void generateEqualsAndHashCodeForType(EclipseNode typeNode, EclipseNode errorNode) throws SecurityException, IllegalArgumentException {
         if (EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) EqualsAndHashCode.class, typeNode)) {
             return;
         }
@@ -145,7 +144,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         generateMethods(typeNode, errorNode, members, null, false, false, access, new ArrayList());
     }
 
-    public void generateMethods(EclipseNode typeNode, EclipseNode errorNode, List<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, Boolean callSuper, boolean whineIfExists, boolean cacheHashCode, HandlerUtil.FieldAccess fieldAccess, List<Annotation> onParam) throws IllegalAccessException, InstantiationException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void generateMethods(EclipseNode typeNode, EclipseNode errorNode, List<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, Boolean callSuper, boolean whineIfExists, boolean cacheHashCode, HandlerUtil.FieldAccess fieldAccess, List<Annotation> onParam) throws SecurityException, IllegalArgumentException {
         TypeDeclaration typeDecl = null;
         if (typeNode.get() instanceof TypeDeclaration) {
             typeDecl = (TypeDeclaration) typeNode.get();
@@ -591,7 +590,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
 
     /* JADX WARN: Type inference failed for: r1v252, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     /* JADX WARN: Type inference failed for: r2v50, types: [char[], char[][]] */
-    public MethodDeclaration createEquals(EclipseNode type, Collection<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, boolean callSuper, ASTNode source, HandlerUtil.FieldAccess fieldAccess, boolean needsCanEqual, List<Annotation> onParam) throws IllegalAccessException, InstantiationException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public MethodDeclaration createEquals(EclipseNode type, Collection<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, boolean callSuper, ASTNode source, HandlerUtil.FieldAccess fieldAccess, boolean needsCanEqual, List<Annotation> onParam) throws SecurityException, IllegalArgumentException {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
         long p = (pS << 32) | pE;
@@ -909,7 +908,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         return ifStatement;
     }
 
-    public Expression longToIntForHashCode(Expression ref1, Expression ref2, ASTNode source) throws IllegalAccessException, InstantiationException, IllegalArgumentException, InvocationTargetException {
+    public Expression longToIntForHashCode(Expression ref1, Expression ref2, ASTNode source) throws IllegalArgumentException {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
         IntLiteral int32 = EclipseHandlerUtil.makeIntLiteral("32".toCharArray(), source);

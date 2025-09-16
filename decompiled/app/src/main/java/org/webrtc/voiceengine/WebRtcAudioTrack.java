@@ -63,7 +63,7 @@ public class WebRtcAudioTrack {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws IllegalStateException, SecurityException, IllegalArgumentException {
+        public void run() throws SecurityException, IllegalArgumentException {
             Process.setThreadPriority(-19);
             Logging.d(WebRtcAudioTrack.TAG, "AudioTrackThread" + WebRtcAudioUtils.getThreadInfo());
             WebRtcAudioTrack.access$100(WebRtcAudioTrack.access$000(WebRtcAudioTrack.this).getPlayState() == 3);

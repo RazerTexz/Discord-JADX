@@ -1,7 +1,6 @@
 package b.i.c.m.d.k;
 
 import android.content.Context;
-import android.content.res.Resources;
 import androidx.annotation.NonNull;
 import b.i.c.m.d.q.ReportUploader;
 import b.i.c.m.d.q.d.CompositeCreateReportSpiCall;
@@ -18,7 +17,7 @@ public class h0 implements ReportUploader.b {
         this.a = xVar;
     }
 
-    public ReportUploader a(@NonNull AppSettingsData appSettingsData) throws Resources.NotFoundException {
+    public ReportUploader a(@NonNull AppSettingsData appSettingsData) {
         String str = appSettingsData.c;
         String str2 = appSettingsData.d;
         String str3 = appSettingsData.e;

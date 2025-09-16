@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 /* renamed from: d0.w.i.a.f, reason: use source file name */
 /* loaded from: classes3.dex */
 public final class DebugMetadata2 {
-    public static final StackTraceElement getStackTraceElement(ContinuationImpl continuationImpl) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+    public static final StackTraceElement getStackTraceElement(ContinuationImpl continuationImpl) {
         int iIntValue;
         String strC;
         Intrinsics3.checkNotNullParameter(continuationImpl, "$this$getStackTraceElementImpl");

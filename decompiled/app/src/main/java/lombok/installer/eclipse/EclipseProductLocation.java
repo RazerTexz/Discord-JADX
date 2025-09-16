@@ -132,7 +132,7 @@ public final class EclipseProductLocation extends IdeLocation {
     }
 
     @Override // lombok.installer.IdeLocation
-    public void uninstall() throws UninstallException, IOException {
+    public void uninstall() throws UninstallException {
         List<File> lombokJarsForWhichCantDeleteSelf = new ArrayList<>();
         StringBuilder newContents = new StringBuilder();
         if (this.eclipseIniPath.exists()) {
@@ -222,7 +222,7 @@ public final class EclipseProductLocation extends IdeLocation {
     }
 
     @Override // lombok.installer.IdeLocation
-    public String install() throws InstallException, IOException {
+    public String install() throws InstallException {
         String pathPrefix;
         FileOutputStream out;
         boolean fullPathRequired = !"false".equals(System.getProperty("lombok.installer.fullpath", "true"));

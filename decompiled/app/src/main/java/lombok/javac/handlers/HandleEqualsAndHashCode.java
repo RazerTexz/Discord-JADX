@@ -7,7 +7,6 @@ import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -170,7 +169,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<EqualsAndHashCode> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void handle(AnnotationValues<EqualsAndHashCode> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.EQUALS_AND_HASH_CODE_FLAG_USAGE, "@EqualsAndHashCode");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) EqualsAndHashCode.class);
         JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, EqualsAndHashCode.CacheStrategy.class.getName());
@@ -189,7 +188,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
         generateMethods(typeNode, annotationNode, members, callSuper, true, cacheHashCode, fieldAccess, onParam);
     }
 
-    public void generateEqualsAndHashCodeForType(JavacNode typeNode, JavacNode source) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateEqualsAndHashCodeForType(JavacNode typeNode, JavacNode source) {
         if (JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) EqualsAndHashCode.class, typeNode)) {
             return;
         }
@@ -199,7 +198,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
         generateMethods(typeNode, source, members, null, false, false, access, com.sun.tools.javac.util.List.nil());
     }
 
-    public void generateMethods(JavacNode typeNode, JavacNode source, List<InclusionExclusionUtils.Included<JavacNode, EqualsAndHashCode.Include>> members, Boolean callSuper, boolean whineIfExists, boolean cacheHashCode, HandlerUtil.FieldAccess fieldAccess, com.sun.tools.javac.util.List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void generateMethods(JavacNode typeNode, JavacNode source, List<InclusionExclusionUtils.Included<JavacNode, EqualsAndHashCode.Include>> members, Boolean callSuper, boolean whineIfExists, boolean cacheHashCode, HandlerUtil.FieldAccess fieldAccess, com.sun.tools.javac.util.List<JCTree.JCAnnotation> onParam) {
         boolean notAClass = true;
         if (typeNode.get() instanceof JCTree.JCClassDecl) {
             long flags = typeNode.get().mods.flags;
@@ -443,7 +442,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
         return maker.TypeApply(expr, wildcards.toList());
     }
 
-    public JCTree.JCMethodDecl createEquals(JavacNode typeNode, List<InclusionExclusionUtils.Included<JavacNode, EqualsAndHashCode.Include>> members, boolean callSuper, HandlerUtil.FieldAccess fieldAccess, boolean needsCanEqual, JCTree source, com.sun.tools.javac.util.List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public JCTree.JCMethodDecl createEquals(JavacNode typeNode, List<InclusionExclusionUtils.Included<JavacNode, EqualsAndHashCode.Include>> members, boolean callSuper, HandlerUtil.FieldAccess fieldAccess, boolean needsCanEqual, JCTree source, com.sun.tools.javac.util.List<JCTree.JCAnnotation> onParam) {
         JCTree.JCExpression objectType;
         JavacTreeMaker maker = typeNode.getTreeMaker();
         Name oName = typeNode.toName("o");
@@ -528,7 +527,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
         return JavacHandlerUtil.recursiveSetGeneratedBy(maker.MethodDef(mods, typeNode.toName("equals"), jCPrimitiveTypeTreeTypeIdent, com.sun.tools.javac.util.List.nil(), params, com.sun.tools.javac.util.List.nil(), body, null), source, typeNode.getContext());
     }
 
-    public JCTree.JCMethodDecl createCanEqual(JavacNode typeNode, JCTree source, com.sun.tools.javac.util.List<JCTree.JCAnnotation> onParam) throws IllegalAccessException, IllegalArgumentException {
+    public JCTree.JCMethodDecl createCanEqual(JavacNode typeNode, JCTree source, com.sun.tools.javac.util.List<JCTree.JCAnnotation> onParam) {
         JavacTreeMaker maker = typeNode.getTreeMaker();
         com.sun.tools.javac.util.List<JCTree.JCAnnotation> annsOnMethod = com.sun.tools.javac.util.List.nil();
         CheckerFrameworkVersion checkerFramework = JavacHandlerUtil.getCheckerFrameworkVersion(typeNode);

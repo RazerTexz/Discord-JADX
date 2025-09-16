@@ -537,7 +537,7 @@ public class ClassWriter extends ClassVisitor {
         return this.symbolTable.addConstantNameAndType(name, descriptor);
     }
 
-    protected String getCommonSuperClass(String type1, String type2) throws ClassNotFoundException {
+    protected String getCommonSuperClass(String type1, String type2) {
         ClassLoader classLoader = getClassLoader();
         try {
             Class<?> class1 = Class.forName(type1.replace(MentionUtils.SLASH_CHAR, '.'), false, classLoader);

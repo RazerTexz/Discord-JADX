@@ -11,7 +11,6 @@ import f0.e0.f.TaskQueue2;
 import f0.e0.f.TaskRunner;
 import f0.e0.g.RealCall;
 import f0.e0.k.Platform2;
-import java.io.IOException;
 import java.lang.ref.Reference;
 import java.util.Iterator;
 import java.util.List;
@@ -38,7 +37,7 @@ public final class RealConnectionPool {
         }
 
         @Override // f0.e0.f.Task2
-        public long a() throws IOException {
+        public long a() {
             RealConnectionPool realConnectionPool = RealConnectionPool.this;
             long jNanoTime = System.nanoTime();
             Iterator<RealConnection4> it = realConnectionPool.d.iterator();

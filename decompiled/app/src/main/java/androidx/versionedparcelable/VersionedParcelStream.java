@@ -15,7 +15,6 @@ import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.Charset;
 import java.util.Set;
@@ -130,7 +129,7 @@ public class VersionedParcelStream extends VersionedParcel {
         }
     }
 
-    private void writeObject(Object obj) throws IllegalAccessException, IOException, IllegalArgumentException, InvocationTargetException {
+    private void writeObject(Object obj) throws IllegalArgumentException {
         if (obj == null) {
             writeInt(0);
             return;
@@ -236,7 +235,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public Bundle readBundle() throws IOException {
+    public Bundle readBundle() {
         int i = readInt();
         if (i < 0) {
             return null;
@@ -249,7 +248,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public byte[] readByteArray() throws IOException {
+    public byte[] readByteArray() {
         try {
             int i = this.mCurrentInput.readInt();
             if (i <= 0) {
@@ -278,7 +277,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public boolean readField(int i) throws IOException {
+    public boolean readField(int i) {
         while (true) {
             try {
                 int i2 = this.mFieldId;
@@ -339,7 +338,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public String readString() throws IOException {
+    public String readString() {
         try {
             int i = this.mCurrentInput.readInt();
             if (i <= 0) {
@@ -375,7 +374,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeBoolean(boolean z2) throws IOException {
+    public void writeBoolean(boolean z2) {
         try {
             this.mCurrentOutput.writeBoolean(z2);
         } catch (IOException e) {
@@ -384,7 +383,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeBundle(Bundle bundle) throws IOException {
+    public void writeBundle(Bundle bundle) {
         try {
             if (bundle == null) {
                 this.mCurrentOutput.writeInt(-1);
@@ -402,7 +401,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeByteArray(byte[] bArr) throws IOException {
+    public void writeByteArray(byte[] bArr) {
         try {
             if (bArr != null) {
                 this.mCurrentOutput.writeInt(bArr.length);
@@ -423,7 +422,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeDouble(double d) throws IOException {
+    public void writeDouble(double d) {
         try {
             this.mCurrentOutput.writeDouble(d);
         } catch (IOException e) {
@@ -432,7 +431,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeFloat(float f) throws IOException {
+    public void writeFloat(float f) {
         try {
             this.mCurrentOutput.writeFloat(f);
         } catch (IOException e) {
@@ -441,7 +440,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeInt(int i) throws IOException {
+    public void writeInt(int i) {
         try {
             this.mCurrentOutput.writeInt(i);
         } catch (IOException e) {
@@ -450,7 +449,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeLong(long j) throws IOException {
+    public void writeLong(long j) {
         try {
             this.mCurrentOutput.writeLong(j);
         } catch (IOException e) {
@@ -466,7 +465,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeString(String str) throws IOException {
+    public void writeString(String str) {
         try {
             if (str != null) {
                 byte[] bytes = str.getBytes(UTF_16);
@@ -555,7 +554,7 @@ public class VersionedParcelStream extends VersionedParcel {
     }
 
     @Override // androidx.versionedparcelable.VersionedParcel
-    public void writeByteArray(byte[] bArr, int i, int i2) throws IOException {
+    public void writeByteArray(byte[] bArr, int i, int i2) {
         try {
             if (bArr != null) {
                 this.mCurrentOutput.writeInt(i2);
