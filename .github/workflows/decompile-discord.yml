@@ -51,7 +51,7 @@ jobs:
             --fs-case-sensitive \
             --respect-bytecode-access-modifiers \
             --use-source-name-as-class-name-alias if-better \
-            --output-dir no-inline \
+            --output-dir inlined \
             "$FILE" \
             || true
 
@@ -67,8 +67,8 @@ jobs:
           name: decompiled
           path: decompiled
 
-      - name: Upload No Inline
+      - name: Upload Inlined
         uses: actions/upload-artifact@v4
         with:
-          name: no-inline
-          path: no-inline
+          name: inlined
+          path: inlined
