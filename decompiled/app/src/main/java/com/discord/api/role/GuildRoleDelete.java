@@ -1,8 +1,8 @@
 package com.discord.api.role;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildhash.GuildHashes;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildRoleDelete.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class GuildRoleDelete {
             return false;
         }
         GuildRoleDelete guildRoleDelete = (GuildRoleDelete) other;
-        return this.guildId == guildRoleDelete.guildId && this.roleId == guildRoleDelete.roleId && Intrinsics3.areEqual(this.guildHashes, guildRoleDelete.guildHashes);
+        return this.guildId == guildRoleDelete.guildId && this.roleId == guildRoleDelete.roleId && m.areEqual(this.guildHashes, guildRoleDelete.guildHashes);
     }
 
     public int hashCode() {
@@ -46,7 +46,7 @@ public final /* data */ class GuildRoleDelete {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleDelete(guildId=");
+        StringBuilder sbU = a.U("GuildRoleDelete(guildId=");
         sbU.append(this.guildId);
         sbU.append(", roleId=");
         sbU.append(this.roleId);

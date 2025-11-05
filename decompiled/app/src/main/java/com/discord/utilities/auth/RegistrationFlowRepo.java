@@ -4,8 +4,8 @@ import androidx.core.app.NotificationCompat;
 import com.discord.models.domain.ModelInvite;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class RegistrationFlowRepo {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(RegistrationFlowRepo2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(RegistrationFlowRepo$Companion$INSTANCE$2.INSTANCE);
     private Long birthday;
     private String email;
     private Map<String, ? extends List<String>> errors;
@@ -121,7 +121,7 @@ public final class RegistrationFlowRepo {
     }
 
     public final void setPassword(String str) {
-        Intrinsics3.checkNotNullParameter(str, "<set-?>");
+        m.checkNotNullParameter(str, "<set-?>");
         this.password = str;
     }
 
@@ -138,13 +138,13 @@ public final class RegistrationFlowRepo {
     }
 
     public final void setUsername(String str) {
-        Intrinsics3.checkNotNullParameter(str, "<set-?>");
+        m.checkNotNullParameter(str, "<set-?>");
         this.username = str;
     }
 
     public final void trackTransition(String step, String actionType, List<String> details) {
-        Intrinsics3.checkNotNullParameter(step, "step");
-        Intrinsics3.checkNotNullParameter(actionType, "actionType");
+        m.checkNotNullParameter(step, "step");
+        m.checkNotNullParameter(actionType, "actionType");
         if (this.isRegistering) {
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             Map<String, Object> mapModelInviteToProperties = analyticsTracker.modelInviteToProperties(this.invite, new LinkedHashMap());

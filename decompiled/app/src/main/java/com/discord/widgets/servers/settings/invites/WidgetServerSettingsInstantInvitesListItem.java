@@ -24,7 +24,7 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.user.SettingsMemberView;
 import com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Arrays;
 
 /* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
@@ -75,7 +75,7 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsInstantInvitesListItem(WidgetServerSettingsInstantInvites.Adapter adapter) {
         super(R.layout.widget_server_settings_instant_invite_list_item, adapter);
-        Intrinsics3.checkNotNullParameter(adapter, "adapter");
+        m.checkNotNullParameter(adapter, "adapter");
         View view = this.itemView;
         int i = R.id.invite_barrier_1;
         Barrier barrier = (Barrier) view.findViewById(R.id.invite_barrier_1);
@@ -114,7 +114,7 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
                                                     SettingsMemberView settingsMemberView = (SettingsMemberView) view.findViewById(R.id.settings_member);
                                                     if (settingsMemberView != null) {
                                                         WidgetServerSettingsInstantInviteListItemBinding widgetServerSettingsInstantInviteListItemBinding = new WidgetServerSettingsInstantInviteListItemBinding((CardView) view, barrier, barrier2, textView, textView2, linearLayout, frameLayout, linearLayout2, textView3, imageView, textView4, linearLayout3, settingsMemberView);
-                                                        Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsInstantInviteListItemBinding, "WidgetServerSettingsInst…temBinding.bind(itemView)");
+                                                        m.checkNotNullExpressionValue(widgetServerSettingsInstantInviteListItemBinding, "WidgetServerSettingsInst…temBinding.bind(itemView)");
                                                         this.binding = widgetServerSettingsInstantInviteListItemBinding;
                                                         return;
                                                     }
@@ -168,12 +168,12 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
         int i3 = (int) ((timeToExpiration / 3600000) % j2);
         int i4 = (int) ((timeToExpiration / 86400000) % j2);
         TextView textView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
+        m.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
         String str = String.format("%02d:%02d:%02d:%02d", Arrays.copyOf(new Object[]{Integer.valueOf(i4), Integer.valueOf(i3), Integer.valueOf(i2), Integer.valueOf(i)}, 4));
-        Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(this, *args)");
+        m.checkNotNullExpressionValue(str, "java.lang.String.format(this, *args)");
         textView.setText(str);
         TextView textView2 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.inviteExpirationTime");
+        m.checkNotNullExpressionValue(textView2, "binding.inviteExpirationTime");
         textView2.setTextColor(ColorCompat.getColor(textView2, R.color.status_green_500_dark));
     }
 
@@ -181,7 +181,7 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
         if (invite.getMaxAge() == 0) {
             this.binding.d.setText(R.string.max_age_never);
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
+            m.checkNotNullExpressionValue(textView, "binding.inviteExpirationTime");
             textView.setTextColor(ColorCompat.getColor(textView, R.color.grey_1));
             cancelTimer();
             return;
@@ -191,7 +191,7 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
             cancelTimer();
             return;
         }
-        if ((!Intrinsics3.areEqual(invite.code, this.currentInviteCode)) || this.currentInviteCode == null) {
+        if ((!m.areEqual(invite.code, this.currentInviteCode)) || this.currentInviteCode == null) {
             setCountdownText(invite.getTimeToExpirationMillis());
             cancelTimer();
             this.currentInviteCode = invite.code;
@@ -211,45 +211,45 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetServerSettingsInstantInvites.Model.InviteItem data) {
         String strD;
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, (int) data);
         User inviter = data.getInvite().getInviter();
         this.binding.a.setOnClickListener(new AnonymousClass1(data));
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteCode");
+        m.checkNotNullExpressionValue(textView, "binding.inviteCode");
         textView.setText(data.getInvite().code);
         TextView textView2 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.inviteUses");
+        m.checkNotNullExpressionValue(textView2, "binding.inviteUses");
         textView2.setText(getUsesText(data.getInvite()));
         TextView textView3 = this.binding.f2574b;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.inviteChannel");
+        m.checkNotNullExpressionValue(textView3, "binding.inviteChannel");
         Channel channel = data.getInvite().getChannel();
         if (channel != null) {
             TextView textView4 = this.binding.f2574b;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.inviteChannel");
+            m.checkNotNullExpressionValue(textView4, "binding.inviteChannel");
             Context context = textView4.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.inviteChannel.context");
+            m.checkNotNullExpressionValue(context, "binding.inviteChannel.context");
             strD = ChannelUtils.d(channel, context, true);
         } else {
             strD = null;
         }
         ViewExtensions.setTextAndVisibilityBy(textView3, strD);
         SettingsMemberView settingsMemberView = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(settingsMemberView, "binding.settingsMember");
+        m.checkNotNullExpressionValue(settingsMemberView, "binding.settingsMember");
         settingsMemberView.setVisibility(inviter != null ? 0 : 8);
         if (inviter != null) {
             this.binding.f.a(new CoreUser(inviter), data.getGuildMember());
             SettingsMemberView settingsMemberView2 = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(settingsMemberView2, "binding.settingsMember");
+            m.checkNotNullExpressionValue(settingsMemberView2, "binding.settingsMember");
             settingsMemberView2.setVisibility(0);
         } else {
             SettingsMemberView settingsMemberView3 = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(settingsMemberView3, "binding.settingsMember");
+            m.checkNotNullExpressionValue(settingsMemberView3, "binding.settingsMember");
             settingsMemberView3.setVisibility(8);
         }
         setupExpirationTime(data.getInvite());
         TextView textView5 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.inviteExpirationTime");
-        Intrinsics3.checkNotNullExpressionValue(OneShotPreDrawListener.add(textView5, new WidgetServerSettingsInstantInvitesListItem$onConfigure$$inlined$doOnPreDraw$1(textView5)), "View.doOnPreDraw(\n    crossinline action: (view: View) -> Unit\n): OneShotPreDrawListener = OneShotPreDrawListener.add(this) { action(this) }");
+        m.checkNotNullExpressionValue(textView5, "binding.inviteExpirationTime");
+        m.checkNotNullExpressionValue(OneShotPreDrawListener.add(textView5, new WidgetServerSettingsInstantInvitesListItem$onConfigure$$inlined$doOnPreDraw$1(textView5)), "View.doOnPreDraw(\n    crossinline action: (view: View) -> Unit\n): OneShotPreDrawListener = OneShotPreDrawListener.add(this) { action(this) }");
     }
 }

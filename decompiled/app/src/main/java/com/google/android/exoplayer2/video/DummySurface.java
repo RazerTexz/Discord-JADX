@@ -14,9 +14,9 @@ import android.os.Message;
 import android.view.Surface;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import b.c.a.a0.AnimatableValueParser;
-import b.i.a.c.f3.Log2;
-import b.i.a.c.f3.Util2;
+import b.c.a.a0.d;
+import b.i.a.c.f3.e0;
+import b.i.a.c.f3.q;
 import com.google.android.exoplayer2.util.EGLSurfaceTexture;
 import com.google.android.exoplayer2.util.GlUtil;
 import java.util.Objects;
@@ -65,7 +65,7 @@ public final class DummySurface extends Surface {
             int[] iArr2 = new int[1];
             boolean zEglChooseConfig = EGL14.eglChooseConfig(eGLDisplayEglGetDisplay, EGLSurfaceTexture.j, 0, eGLConfigArr, 0, 1, iArr2, 0);
             if (!zEglChooseConfig || iArr2[0] <= 0 || eGLConfigArr[0] == null) {
-                throw new EGLSurfaceTexture.GlException(Util2.k("eglChooseConfig failed: success=%b, numConfigs[0]=%d, configs[0]=%s", Boolean.valueOf(zEglChooseConfig), Integer.valueOf(iArr2[0]), eGLConfigArr[0]), null);
+                throw new EGLSurfaceTexture.GlException(e0.k("eglChooseConfig failed: success=%b, numConfigs[0]=%d, configs[0]=%s", Boolean.valueOf(zEglChooseConfig), Integer.valueOf(iArr2[0]), eGLConfigArr[0]), null);
             }
             EGLConfig eGLConfig = eGLConfigArr[0];
             EGLContext eGLContextEglCreateContext = EGL14.eglCreateContext(eGLSurfaceTexture.m, eGLConfig, EGL14.EGL_NO_CONTEXT, i == 0 ? new int[]{12440, 2, 12344} : new int[]{12440, 2, 12992, 1, 12344}, 0);
@@ -122,7 +122,7 @@ public final class DummySurface extends Surface {
                 if (eGLContext != null) {
                     EGL14.eglDestroyContext(eGLSurfaceTexture.m, eGLContext);
                 }
-                if (Util2.a >= 19) {
+                if (e0.a >= 19) {
                     EGL14.eglReleaseThread();
                 }
                 EGLDisplay eGLDisplay3 = eGLSurfaceTexture.m;
@@ -160,13 +160,13 @@ public final class DummySurface extends Surface {
                         notify();
                     }
                 } catch (Error e) {
-                    Log2.b("DummySurface", "Failed to initialize dummy surface", e);
+                    q.b("DummySurface", "Failed to initialize dummy surface", e);
                     this.l = e;
                     synchronized (this) {
                         notify();
                     }
                 } catch (RuntimeException e2) {
-                    Log2.b("DummySurface", "Failed to initialize dummy surface", e2);
+                    q.b("DummySurface", "Failed to initialize dummy surface", e2);
                     this.m = e2;
                     synchronized (this) {
                         notify();
@@ -191,9 +191,9 @@ public final class DummySurface extends Surface {
     public static int a(Context context) {
         String strEglQueryString;
         String strEglQueryString2;
-        int i = Util2.a;
+        int i = e0.a;
         boolean z2 = false;
-        if (!(i >= 24 && (i >= 26 || !("samsung".equals(Util2.c) || "XT1650".equals(Util2.d))) && ((i >= 26 || context.getPackageManager().hasSystemFeature("android.hardware.vr.high_performance")) && (strEglQueryString2 = EGL14.eglQueryString(EGL14.eglGetDisplay(0), 12373)) != null && strEglQueryString2.contains("EGL_EXT_protected_content")))) {
+        if (!(i >= 24 && (i >= 26 || !("samsung".equals(e0.c) || "XT1650".equals(e0.d))) && ((i >= 26 || context.getPackageManager().hasSystemFeature("android.hardware.vr.high_performance")) && (strEglQueryString2 = EGL14.eglQueryString(EGL14.eglGetDisplay(0), 12373)) != null && strEglQueryString2.contains("EGL_EXT_protected_content")))) {
             return 0;
         }
         if (i >= 17 && (strEglQueryString = EGL14.eglQueryString(EGL14.eglGetDisplay(0), 12373)) != null && strEglQueryString.contains("EGL_KHR_surfaceless_context")) {
@@ -212,7 +212,7 @@ public final class DummySurface extends Surface {
 
     public static DummySurface c(Context context, boolean z2) {
         boolean z3 = false;
-        AnimatableValueParser.D(!z2 || b(context));
+        d.D(!z2 || b(context));
         b bVar = new b();
         int i = z2 ? j : 0;
         bVar.start();

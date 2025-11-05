@@ -2,7 +2,6 @@ package b.i.c.w;
 
 import android.util.Log;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
@@ -29,7 +28,7 @@ public final class v {
         }
         this.f1798b = strSubstring;
         this.c = str;
-        this.d = outline.k(outline.b(str2, outline.b(str, 1)), str, "!", str2);
+        this.d = b.d.b.a.a.k(b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 1)), str, "!", str2);
     }
 
     public final boolean equals(@Nullable Object obj) {

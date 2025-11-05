@@ -14,8 +14,8 @@ import com.discord.simpleast.core.node.Node;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.spans.ClickableSpan;
 import com.discord.utilities.textprocessing.node.ChannelMentionNode.RenderContext;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -36,7 +36,7 @@ public final class ChannelMentionNode<T extends RenderContext> extends Node<T> {
 
     /* compiled from: ChannelMentionNode.kt */
     /* renamed from: com.discord.utilities.textprocessing.node.ChannelMentionNode$render$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Function1 $onClick;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -53,7 +53,7 @@ public final class ChannelMentionNode<T extends RenderContext> extends Node<T> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             this.$onClick.invoke(Long.valueOf(ChannelMentionNode.this.getChannelId()));
         }
     }
@@ -78,8 +78,8 @@ public final class ChannelMentionNode<T extends RenderContext> extends Node<T> {
 
     public void render(SpannableStringBuilder builder, T renderContext) {
         String str;
-        Intrinsics3.checkNotNullParameter(builder, "builder");
-        Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
+        m.checkNotNullParameter(builder, "builder");
+        m.checkNotNullParameter(renderContext, "renderContext");
         Context context = renderContext.getContext();
         int length = builder.length();
         ArrayList arrayList = new ArrayList(3);
@@ -96,7 +96,7 @@ public final class ChannelMentionNode<T extends RenderContext> extends Node<T> {
         }
         arrayList.add(new BackgroundColorSpan(ColorCompat.getThemedColor(context, R.attr.theme_chat_mention_background)));
         StringBuilder sb = new StringBuilder();
-        Intrinsics3.checkNotNullParameter(Channel.INSTANCE, "$this$DISPLAY_PREFIX_GUILD");
+        m.checkNotNullParameter(Channel.INSTANCE, "$this$DISPLAY_PREFIX_GUILD");
         sb.append("#");
         sb.append(str);
         builder.append((CharSequence) sb.toString());

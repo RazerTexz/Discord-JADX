@@ -16,7 +16,7 @@ import androidx.work.impl.foreground.SystemForegroundDispatcher;
 import androidx.work.impl.foreground.SystemForegroundService;
 import androidx.work.impl.utils.WakeLocks;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -51,15 +51,15 @@ public class Processor implements ExecutionListener, ForegroundProcessor {
         private ExecutionListener mExecutionListener;
 
         @NonNull
-        private ListenableFuture8<Boolean> mFuture;
+        private a<Boolean> mFuture;
 
         @NonNull
         private String mWorkSpecId;
 
-        public FutureListener(@NonNull ExecutionListener executionListener, @NonNull String str, @NonNull ListenableFuture8<Boolean> listenableFuture8) {
+        public FutureListener(@NonNull ExecutionListener executionListener, @NonNull String str, @NonNull a<Boolean> aVar) {
             this.mExecutionListener = executionListener;
             this.mWorkSpecId = str;
-            this.mFuture = listenableFuture8;
+            this.mFuture = aVar;
         }
 
         @Override // java.lang.Runnable
@@ -242,7 +242,7 @@ public class Processor implements ExecutionListener, ForegroundProcessor {
                 return false;
             }
             WorkerWrapper workerWrapperBuild = new WorkerWrapper.Builder(this.mAppContext, this.mConfiguration, this.mWorkTaskExecutor, this, this.mWorkDatabase, str).withSchedulers(this.mSchedulers).withRuntimeExtras(runtimeExtras).build();
-            ListenableFuture8<Boolean> future = workerWrapperBuild.getFuture();
+            a<Boolean> future = workerWrapperBuild.getFuture();
             future.addListener(new FutureListener(this, str, future), this.mWorkTaskExecutor.getMainThreadExecutor());
             this.mEnqueuedWorkMap.put(str, workerWrapperBuild);
             this.mWorkTaskExecutor.getBackgroundExecutor().execute(workerWrapperBuild);

@@ -12,12 +12,11 @@ import com.discord.utilities.error.Error;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.recycler.DiffCreator;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.MapsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.p.Schedulers2;
+import d0.t.g0;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.p.a;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.Unit;
@@ -62,7 +61,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
     /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<DiffUtil.DiffResult, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<DiffUtil.DiffResult, Unit> {
         public final /* synthetic */ List $newData;
         public final /* synthetic */ List $oldData;
 
@@ -87,7 +86,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
     /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -100,17 +99,17 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             MGRecyclerAdapterSimple mGRecyclerAdapterSimple = MGRecyclerAdapterSimple.this;
             Throwable throwable = error.getThrowable();
-            Intrinsics3.checkNotNullExpressionValue(throwable, "error.throwable");
+            m.checkNotNullExpressionValue(throwable, "error.throwable");
             MGRecyclerAdapterSimple.access$handleError(mGRecyclerAdapterSimple, throwable);
         }
     }
 
     /* compiled from: MGRecyclerAdapterSimple.kt */
     /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass4() {
             super(1);
         }
@@ -123,7 +122,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MGRecyclerAdapterSimple.access$setDiffingSubscription$p(MGRecyclerAdapterSimple.this, subscription);
         }
     }
@@ -171,7 +170,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     private final void handleError(Throwable throwable) {
-        AppLog.g.e("Unable to configure recycler.", throwable, MapsJVM.mapOf(Tuples.to("adapterClass", getClass().getSimpleName())));
+        AppLog.g.e("Unable to configure recycler.", throwable, g0.mapOf(d0.o.to("adapterClass", getClass().getSimpleName())));
     }
 
     public final List<D> getInternalData() {
@@ -194,7 +193,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     public void setData(List<? extends D> data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         unsubscribeFromUpdates();
         List<? extends D> list = this.internalData;
         if (list.isEmpty()) {
@@ -210,8 +209,8 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
                 return;
             }
         }
-        Observable observableX = Observable.D(new AnonymousClass1(list, data)).X(Schedulers2.a());
-        Intrinsics3.checkNotNullExpressionValue(observableX, "Observable\n            .…Schedulers.computation())");
+        Observable observableX = Observable.D(new AnonymousClass1(list, data)).X(a.a());
+        m.checkNotNullExpressionValue(observableX, "Observable\n            .…Schedulers.computation())");
         Observable observableUi = ObservableExtensionsKt.ui(observableX);
         Class<?> cls = getClass();
         AnonymousClass2 anonymousClass2 = new AnonymousClass2(list, data);
@@ -219,7 +218,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     }
 
     public final void setOnUpdated(Function2<? super List<? extends D>, ? super List<? extends D>, Unit> onUpdated) {
-        Intrinsics3.checkNotNullParameter(onUpdated, "onUpdated");
+        m.checkNotNullParameter(onUpdated, "onUpdated");
         this.onUpdated = onUpdated;
     }
 
@@ -234,9 +233,9 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MGRecyclerAdapterSimple(RecyclerView recyclerView, boolean z2) {
         super(recyclerView);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(recyclerView, "recycler");
         this.deferredDiffs = z2;
-        this.internalData = Collections2.emptyList();
+        this.internalData = n.emptyList();
         this.diffCreator = new DiffCreator<>(null);
     }
 

@@ -3,8 +3,7 @@ package androidx.concurrent.futures;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.CancellationException;
@@ -21,7 +20,7 @@ import java.util.logging.Logger;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
-public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V> {
+public abstract class AbstractResolvableFuture<V> implements a<V> {
     public static final AtomicHelper ATOMIC_HELPER;
     private static final Object NULL;
     private static final long SPIN_THRESHOLD_NANOS = 1000;
@@ -158,12 +157,12 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
     }
 
     public static final class SetFuture<V> implements Runnable {
-        public final ListenableFuture8<? extends V> future;
+        public final a<? extends V> future;
         public final AbstractResolvableFuture<V> owner;
 
-        public SetFuture(AbstractResolvableFuture<V> abstractResolvableFuture, ListenableFuture8<? extends V> listenableFuture8) {
+        public SetFuture(AbstractResolvableFuture<V> abstractResolvableFuture, a<? extends V> aVar) {
             this.owner = abstractResolvableFuture;
-            this.future = listenableFuture8;
+            this.future = aVar;
         }
 
         @Override // java.lang.Runnable
@@ -368,27 +367,27 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
         return obj;
     }
 
-    public static Object getFutureValue(ListenableFuture8<?> listenableFuture8) {
-        if (listenableFuture8 instanceof AbstractResolvableFuture) {
-            Object obj = ((AbstractResolvableFuture) listenableFuture8).value;
+    public static Object getFutureValue(a<?> aVar) {
+        if (aVar instanceof AbstractResolvableFuture) {
+            Object obj = ((AbstractResolvableFuture) aVar).value;
             if (!(obj instanceof Cancellation)) {
                 return obj;
             }
             Cancellation cancellation = (Cancellation) obj;
             return cancellation.wasInterrupted ? cancellation.cause != null ? new Cancellation(false, cancellation.cause) : Cancellation.CAUSELESS_CANCELLED : obj;
         }
-        boolean zIsCancelled = listenableFuture8.isCancelled();
+        boolean zIsCancelled = aVar.isCancelled();
         if ((!GENERATE_CANCELLATION_CAUSES) && zIsCancelled) {
             return Cancellation.CAUSELESS_CANCELLED;
         }
         try {
-            Object uninterruptibly = getUninterruptibly(listenableFuture8);
+            Object uninterruptibly = getUninterruptibly(aVar);
             return uninterruptibly == null ? NULL : uninterruptibly;
         } catch (CancellationException e) {
             if (zIsCancelled) {
                 return new Cancellation(false, e);
             }
-            return new Failure(new IllegalArgumentException("get() threw CancellationException, despite reporting isCancelled() == false: " + listenableFuture8, e));
+            return new Failure(new IllegalArgumentException("get() threw CancellationException, despite reporting isCancelled() == false: " + aVar, e));
         } catch (ExecutionException e2) {
             return new Failure(e2.getCause());
         } catch (Throwable th) {
@@ -459,7 +458,7 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
         return obj == this ? "this future" : String.valueOf(obj);
     }
 
-    @Override // b.i.b.d.a.ListenableFuture8
+    @Override // b.i.b.d.a.a
     public final void addListener(Runnable runnable, Executor executor) {
         checkNotNull(runnable);
         checkNotNull(executor);
@@ -499,12 +498,12 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
                 if (!(obj instanceof SetFuture)) {
                     return true;
                 }
-                ListenableFuture8<? extends V> listenableFuture8 = ((SetFuture) obj).future;
-                if (!(listenableFuture8 instanceof AbstractResolvableFuture)) {
-                    listenableFuture8.cancel(z2);
+                a<? extends V> aVar = ((SetFuture) obj).future;
+                if (!(aVar instanceof AbstractResolvableFuture)) {
+                    aVar.cancel(z2);
                     return true;
                 }
-                abstractResolvableFuture = (AbstractResolvableFuture) listenableFuture8;
+                abstractResolvableFuture = (AbstractResolvableFuture) aVar;
                 obj = abstractResolvableFuture.value;
                 if (!(obj == null) && !(obj instanceof SetFuture)) {
                     return true;
@@ -573,7 +572,7 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
         String lowerCase = string2.toLowerCase(locale);
         String strW = "Waited " + j + " " + timeUnit.toString().toLowerCase(locale);
         if (nanos + 1000 < 0) {
-            String strW2 = outline.w(strW, " (plus ");
+            String strW2 = b.d.b.a.a.w(strW, " (plus ");
             long j2 = -nanos;
             long jConvert = timeUnit.convert(j2, TimeUnit.NANOSECONDS);
             long nanos2 = j2 - timeUnit.toNanos(jConvert);
@@ -581,19 +580,19 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
             if (jConvert > 0) {
                 String strW3 = strW2 + jConvert + " " + lowerCase;
                 if (z2) {
-                    strW3 = outline.w(strW3, ",");
+                    strW3 = b.d.b.a.a.w(strW3, ",");
                 }
-                strW2 = outline.w(strW3, " ");
+                strW2 = b.d.b.a.a.w(strW3, " ");
             }
             if (z2) {
                 strW2 = strW2 + nanos2 + " nanoseconds ";
             }
-            strW = outline.w(strW2, "delay)");
+            strW = b.d.b.a.a.w(strW2, "delay)");
         }
         if (isDone()) {
-            throw new TimeoutException(outline.w(strW, " but future completed as timeout expired"));
+            throw new TimeoutException(b.d.b.a.a.w(strW, " but future completed as timeout expired"));
         }
-        throw new TimeoutException(outline.y(strW, " for ", string));
+        throw new TimeoutException(b.d.b.a.a.y(strW, " for ", string));
     }
 
     public void interruptTask() {
@@ -620,12 +619,12 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
     public String pendingToString() {
         Object obj = this.value;
         if (obj instanceof SetFuture) {
-            return outline.J(outline.U("setFuture=["), userObjectToString(((SetFuture) obj).future), "]");
+            return b.d.b.a.a.J(b.d.b.a.a.U("setFuture=["), userObjectToString(((SetFuture) obj).future), "]");
         }
         if (!(this instanceof ScheduledFuture)) {
             return null;
         }
-        StringBuilder sbU = outline.U("remaining delay=[");
+        StringBuilder sbU = b.d.b.a.a.U("remaining delay=[");
         sbU.append(((ScheduledFuture) this).getDelay(TimeUnit.MILLISECONDS));
         sbU.append(" ms]");
         return sbU.toString();
@@ -650,22 +649,22 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
         return true;
     }
 
-    public boolean setFuture(ListenableFuture8<? extends V> listenableFuture8) {
+    public boolean setFuture(a<? extends V> aVar) {
         Failure failure;
-        checkNotNull(listenableFuture8);
+        checkNotNull(aVar);
         Object obj = this.value;
         if (obj == null) {
-            if (listenableFuture8.isDone()) {
-                if (!ATOMIC_HELPER.casValue(this, null, getFutureValue(listenableFuture8))) {
+            if (aVar.isDone()) {
+                if (!ATOMIC_HELPER.casValue(this, null, getFutureValue(aVar))) {
                     return false;
                 }
                 complete(this);
                 return true;
             }
-            SetFuture setFuture = new SetFuture(this, listenableFuture8);
+            SetFuture setFuture = new SetFuture(this, aVar);
             if (ATOMIC_HELPER.casValue(this, null, setFuture)) {
                 try {
-                    listenableFuture8.addListener(setFuture, DirectExecutor.INSTANCE);
+                    aVar.addListener(setFuture, DirectExecutor.INSTANCE);
                 } catch (Throwable th) {
                     try {
                         failure = new Failure(th);
@@ -679,7 +678,7 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
             obj = this.value;
         }
         if (obj instanceof Cancellation) {
-            listenableFuture8.cancel(((Cancellation) obj).wasInterrupted);
+            aVar.cancel(((Cancellation) obj).wasInterrupted);
         }
         return false;
     }
@@ -697,7 +696,7 @@ public abstract class AbstractResolvableFuture<V> implements ListenableFuture8<V
             try {
                 string = pendingToString();
             } catch (RuntimeException e) {
-                StringBuilder sbU = outline.U("Exception thrown from implementation: ");
+                StringBuilder sbU = b.d.b.a.a.U("Exception thrown from implementation: ");
                 sbU.append(e.getClass());
                 string = sbU.toString();
             }

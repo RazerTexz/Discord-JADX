@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPaymentAttempted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPaymentAttempted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPaymentAttempted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long paymentId = null;
     private final Long createdAt = null;
@@ -52,7 +52,7 @@ public final /* data */ class TrackPaymentAttempted implements AnalyticsSchema, 
             return false;
         }
         TrackPaymentAttempted trackPaymentAttempted = (TrackPaymentAttempted) other;
-        return Intrinsics3.areEqual(this.paymentId, trackPaymentAttempted.paymentId) && Intrinsics3.areEqual(this.createdAt, trackPaymentAttempted.createdAt) && Intrinsics3.areEqual(this.paymentType, trackPaymentAttempted.paymentType) && Intrinsics3.areEqual(this.paymentGateway, trackPaymentAttempted.paymentGateway) && Intrinsics3.areEqual(this.price, trackPaymentAttempted.price) && Intrinsics3.areEqual(this.currency, trackPaymentAttempted.currency) && Intrinsics3.areEqual(this.amount, trackPaymentAttempted.amount) && Intrinsics3.areEqual(this.amountRefunded, trackPaymentAttempted.amountRefunded) && Intrinsics3.areEqual(this.tax, trackPaymentAttempted.tax) && Intrinsics3.areEqual(this.taxInclusive, trackPaymentAttempted.taxInclusive) && Intrinsics3.areEqual(this.skuId, trackPaymentAttempted.skuId) && Intrinsics3.areEqual(this.skuType, trackPaymentAttempted.skuType) && Intrinsics3.areEqual(this.skuSubscriptionPlanId, trackPaymentAttempted.skuSubscriptionPlanId) && Intrinsics3.areEqual(this.subscriptionId, trackPaymentAttempted.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackPaymentAttempted.subscriptionType) && Intrinsics3.areEqual(this.subscriptionPaymentGatewayPlanId, trackPaymentAttempted.subscriptionPaymentGatewayPlanId) && Intrinsics3.areEqual(this.subscriptionPlanId, trackPaymentAttempted.subscriptionPlanId) && Intrinsics3.areEqual(this.subscriptionCreatedAt, trackPaymentAttempted.subscriptionCreatedAt) && Intrinsics3.areEqual(this.subscriptionCurrentPeriodStart, trackPaymentAttempted.subscriptionCurrentPeriodStart) && Intrinsics3.areEqual(this.subscriptionCurrentPeriodEnd, trackPaymentAttempted.subscriptionCurrentPeriodEnd) && Intrinsics3.areEqual(this.paymentSourceId, trackPaymentAttempted.paymentSourceId) && Intrinsics3.areEqual(this.paymentSourceCountry, trackPaymentAttempted.paymentSourceCountry) && Intrinsics3.areEqual(this.failureMessage, trackPaymentAttempted.failureMessage) && Intrinsics3.areEqual(this.loadId, trackPaymentAttempted.loadId) && Intrinsics3.areEqual(this.isGift, trackPaymentAttempted.isGift) && Intrinsics3.areEqual(this.captured, trackPaymentAttempted.captured);
+        return m.areEqual(this.paymentId, trackPaymentAttempted.paymentId) && m.areEqual(this.createdAt, trackPaymentAttempted.createdAt) && m.areEqual(this.paymentType, trackPaymentAttempted.paymentType) && m.areEqual(this.paymentGateway, trackPaymentAttempted.paymentGateway) && m.areEqual(this.price, trackPaymentAttempted.price) && m.areEqual(this.currency, trackPaymentAttempted.currency) && m.areEqual(this.amount, trackPaymentAttempted.amount) && m.areEqual(this.amountRefunded, trackPaymentAttempted.amountRefunded) && m.areEqual(this.tax, trackPaymentAttempted.tax) && m.areEqual(this.taxInclusive, trackPaymentAttempted.taxInclusive) && m.areEqual(this.skuId, trackPaymentAttempted.skuId) && m.areEqual(this.skuType, trackPaymentAttempted.skuType) && m.areEqual(this.skuSubscriptionPlanId, trackPaymentAttempted.skuSubscriptionPlanId) && m.areEqual(this.subscriptionId, trackPaymentAttempted.subscriptionId) && m.areEqual(this.subscriptionType, trackPaymentAttempted.subscriptionType) && m.areEqual(this.subscriptionPaymentGatewayPlanId, trackPaymentAttempted.subscriptionPaymentGatewayPlanId) && m.areEqual(this.subscriptionPlanId, trackPaymentAttempted.subscriptionPlanId) && m.areEqual(this.subscriptionCreatedAt, trackPaymentAttempted.subscriptionCreatedAt) && m.areEqual(this.subscriptionCurrentPeriodStart, trackPaymentAttempted.subscriptionCurrentPeriodStart) && m.areEqual(this.subscriptionCurrentPeriodEnd, trackPaymentAttempted.subscriptionCurrentPeriodEnd) && m.areEqual(this.paymentSourceId, trackPaymentAttempted.paymentSourceId) && m.areEqual(this.paymentSourceCountry, trackPaymentAttempted.paymentSourceCountry) && m.areEqual(this.failureMessage, trackPaymentAttempted.failureMessage) && m.areEqual(this.loadId, trackPaymentAttempted.loadId) && m.areEqual(this.isGift, trackPaymentAttempted.isGift) && m.areEqual(this.captured, trackPaymentAttempted.captured);
     }
 
     public int hashCode() {
@@ -111,7 +111,7 @@ public final /* data */ class TrackPaymentAttempted implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPaymentAttempted(paymentId=");
+        StringBuilder sbU = a.U("TrackPaymentAttempted(paymentId=");
         sbU.append(this.paymentId);
         sbU.append(", createdAt=");
         sbU.append(this.createdAt);
@@ -162,6 +162,6 @@ public final /* data */ class TrackPaymentAttempted implements AnalyticsSchema, 
         sbU.append(", isGift=");
         sbU.append(this.isGift);
         sbU.append(", captured=");
-        return outline.D(sbU, this.captured, ")");
+        return a.D(sbU, this.captured, ")");
     }
 }

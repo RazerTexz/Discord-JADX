@@ -18,7 +18,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
 import androidx.annotation.RecentlyNullable;
 import androidx.annotation.WorkerThread;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.Feature;
 import com.google.android.gms.common.api.Scope;
@@ -56,7 +55,7 @@ public abstract class b<T extends IInterface> {
     public final a p;
 
     @Nullable
-    public final InterfaceC0037b q;
+    public final InterfaceC0114b q;
     public final int r;
 
     /* renamed from: s, reason: collision with root package name */
@@ -90,7 +89,7 @@ public abstract class b<T extends IInterface> {
 
     /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     /* renamed from: b.i.a.f.e.k.b$b, reason: collision with other inner class name */
-    public interface InterfaceC0037b {
+    public interface InterfaceC0114b {
         void g(@RecentlyNonNull ConnectionResult connectionResult);
     }
 
@@ -110,9 +109,9 @@ public abstract class b<T extends IInterface> {
                 b bVar = b.this;
                 bVar.b(null, bVar.v());
             } else {
-                InterfaceC0037b interfaceC0037b = b.this.q;
-                if (interfaceC0037b != null) {
-                    interfaceC0037b.g(connectionResult);
+                InterfaceC0114b interfaceC0114b = b.this.q;
+                if (interfaceC0114b != null) {
+                    interfaceC0114b.g(connectionResult);
                 }
             }
         }
@@ -122,18 +121,18 @@ public abstract class b<T extends IInterface> {
     public interface e {
     }
 
-    public b(@RecentlyNonNull Context context, @RecentlyNonNull Looper looper, @RecentlyNonNull b.i.a.f.e.k.e eVar, @RecentlyNonNull b.i.a.f.e.c cVar, int i, @Nullable a aVar, @Nullable InterfaceC0037b interfaceC0037b, @Nullable String str) {
-        AnimatableValueParser.z(context, "Context must not be null");
+    public b(@RecentlyNonNull Context context, @RecentlyNonNull Looper looper, @RecentlyNonNull b.i.a.f.e.k.e eVar, @RecentlyNonNull b.i.a.f.e.c cVar, int i, @Nullable a aVar, @Nullable InterfaceC0114b interfaceC0114b, @Nullable String str) {
+        b.c.a.a0.d.z(context, "Context must not be null");
         this.d = context;
-        AnimatableValueParser.z(looper, "Looper must not be null");
-        AnimatableValueParser.z(eVar, "Supervisor must not be null");
+        b.c.a.a0.d.z(looper, "Looper must not be null");
+        b.c.a.a0.d.z(eVar, "Supervisor must not be null");
         this.e = eVar;
-        AnimatableValueParser.z(cVar, "API availability must not be null");
+        b.c.a.a0.d.z(cVar, "API availability must not be null");
         this.f = cVar;
         this.g = new h0(this, looper);
         this.r = i;
         this.p = aVar;
-        this.q = interfaceC0037b;
+        this.q = interfaceC0114b;
         this.f1379s = str;
     }
 
@@ -188,7 +187,7 @@ public abstract class b<T extends IInterface> {
 
     public final void F(int i, @Nullable T t) {
         v0 v0Var;
-        AnimatableValueParser.l((i == 4) == (t != null));
+        b.c.a.a0.d.l((i == 4) == (t != null));
         synchronized (this.h) {
             try {
                 this.o = i;
@@ -332,7 +331,7 @@ public abstract class b<T extends IInterface> {
     }
 
     public void g(@RecentlyNonNull c cVar) {
-        AnimatableValueParser.z(cVar, "Connection progress callbacks cannot be null.");
+        b.c.a.a0.d.z(cVar, "Connection progress callbacks cannot be null.");
         this.k = cVar;
         F(2, null);
     }
@@ -402,7 +401,7 @@ public abstract class b<T extends IInterface> {
         }
         F(1, null);
         d dVar = new d();
-        AnimatableValueParser.z(dVar, "Connection progress callbacks cannot be null.");
+        b.c.a.a0.d.z(dVar, "Connection progress callbacks cannot be null.");
         this.k = dVar;
         Handler handler = this.g;
         handler.sendMessage(handler.obtainMessage(3, this.w.get(), iB, null));
@@ -443,7 +442,7 @@ public abstract class b<T extends IInterface> {
                     throw new IllegalStateException("Not connected. Call connect() and wait for onConnected() to be called.");
                 }
                 t = this.l;
-                AnimatableValueParser.z(t, "Client is connected but service is null");
+                b.c.a.a0.d.z(t, "Client is connected but service is null");
             } catch (Throwable th) {
                 throw th;
             }

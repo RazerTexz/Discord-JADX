@@ -12,7 +12,7 @@ import androidx.cardview.widget.CardView;
 import com.discord.R;
 import com.discord.databinding.ViewMemberVerificationBinding;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -64,17 +64,17 @@ public final class MemberVerificationView extends CardView {
         this.binding.e.setText(verificationTitleText);
         this.binding.c.setOnClickListener(new AnonymousClass1(verificationCallback));
         TextView textView = this.binding.f2201b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.memberVerificationVerifiedCheck");
+        m.checkNotNullExpressionValue(textView, "binding.memberVerificationVerifiedCheck");
         textView.setVisibility(isVerified ? 0 : 8);
         MaterialButton materialButton = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.memberVerificationVerifyButton");
+        m.checkNotNullExpressionValue(materialButton, "binding.memberVerificationVerifyButton");
         materialButton.setVisibility(isVerified ^ true ? 0 : 8);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MemberVerificationView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(R.layout.view_member_verification, this);
         int i2 = R.id.member_verification_verified_check;
         TextView textView = (TextView) findViewById(R.id.member_verification_verified_check);
@@ -89,7 +89,7 @@ public final class MemberVerificationView extends CardView {
                     TextView textView2 = (TextView) findViewById(R.id.member_verification_verify_text);
                     if (textView2 != null) {
                         ViewMemberVerificationBinding viewMemberVerificationBinding = new ViewMemberVerificationBinding(this, textView, materialButton, imageView, textView2);
-                        Intrinsics3.checkNotNullExpressionValue(viewMemberVerificationBinding, "ViewMemberVerificationBi…ater.from(context), this)");
+                        m.checkNotNullExpressionValue(viewMemberVerificationBinding, "ViewMemberVerificationBi…ater.from(context), this)");
                         this.binding = viewMemberVerificationBinding;
                         return;
                     }

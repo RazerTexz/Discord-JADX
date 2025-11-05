@@ -13,7 +13,7 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AnimationUtils;
 import android.widget.TableRow;
 import androidx.exifinterface.media.ExifInterface;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -47,7 +47,7 @@ public final class FloatingButtonMenuInitializer {
         }
 
         public Animator createAnimator(ViewGroup view) {
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(view, "view");
             AnimatorSet animatorSet = new AnimatorSet();
             animatorSet.playTogether(ObjectAnimator.ofFloat(this.$mainFab, (Property<View, Float>) View.SCALE_X, 0.0f, 1.0f), ObjectAnimator.ofFloat(this.$mainFab, (Property<View, Float>) View.SCALE_Y, 0.0f, 1.0f));
             return animatorSet;
@@ -65,7 +65,7 @@ public final class FloatingButtonMenuInitializer {
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animation) {
-            Intrinsics3.checkNotNullParameter(animation, "animation");
+            m.checkNotNullParameter(animation, "animation");
             this.$row.setVisibility(0);
         }
     }
@@ -91,12 +91,12 @@ public final class FloatingButtonMenuInitializer {
 
     /* JADX WARN: Multi-variable type inference failed */
     public FloatingButtonMenuInitializer(Context context, Map<Integer, ? extends View.OnClickListener> map) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(map, "onClickListenerMap");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(map, "onClickListenerMap");
         this.context = context;
         this.onClickListenerMap = map;
-        this.animatorFactoryFadeIn = new FloatingButtonMenuInitializer2(this);
-        this.animatorFactorySlideUp = new FloatingButtonMenuInitializer3();
+        this.animatorFactoryFadeIn = new FloatingButtonMenuInitializer$animatorFactoryFadeIn$1(this);
+        this.animatorFactorySlideUp = new FloatingButtonMenuInitializer$animatorFactorySlideUp$1();
     }
 
     public static final /* synthetic */ Animator access$configureEntranceAnimator(FloatingButtonMenuInitializer floatingButtonMenuInitializer, Animator[] animatorArr) {
@@ -116,7 +116,7 @@ public final class FloatingButtonMenuInitializer {
         animatorSet.playTogether((Animator[]) Arrays.copyOf(menuRowAnimators, menuRowAnimators.length));
         animatorSet.setInterpolator(AnimationUtils.loadInterpolator(this.context, R.interpolator.accelerate_decelerate));
         AnimatorSet duration = animatorSet.setDuration(this.context.getResources().getInteger(R.integer.config_shortAnimTime));
-        Intrinsics3.checkNotNullExpressionValue(duration, "animatorEntrance.setDura…n(totalDuration.toLong())");
+        m.checkNotNullExpressionValue(duration, "animatorEntrance.setDura…n(totalDuration.toLong())");
         return duration;
     }
 
@@ -166,9 +166,9 @@ public final class FloatingButtonMenuInitializer {
     }
 
     public final FloatingButtonMenuInitializer initialize(ViewGroup menuContainer, View mainFab, View.OnClickListener defaultRowOnClickListener) {
-        Intrinsics3.checkNotNullParameter(menuContainer, "menuContainer");
-        Intrinsics3.checkNotNullParameter(mainFab, "mainFab");
-        Intrinsics3.checkNotNullParameter(defaultRowOnClickListener, "defaultRowOnClickListener");
+        m.checkNotNullParameter(menuContainer, "menuContainer");
+        m.checkNotNullParameter(mainFab, "mainFab");
+        m.checkNotNullParameter(defaultRowOnClickListener, "defaultRowOnClickListener");
         int childCount = menuContainer.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View childAt = menuContainer.getChildAt(i);

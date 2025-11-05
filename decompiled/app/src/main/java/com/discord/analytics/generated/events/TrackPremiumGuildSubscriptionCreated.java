@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPremiumGuildSubscriptionCreated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumGuildSubscriptionCreated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPremiumGuildSubscriptionCreated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long premiumGuildSubscriptionId = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackPremiumGuildSubscriptionCreated implements An
             return false;
         }
         TrackPremiumGuildSubscriptionCreated trackPremiumGuildSubscriptionCreated = (TrackPremiumGuildSubscriptionCreated) other;
-        return Intrinsics3.areEqual(this.guildId, trackPremiumGuildSubscriptionCreated.guildId) && Intrinsics3.areEqual(this.premiumGuildSubscriptionId, trackPremiumGuildSubscriptionCreated.premiumGuildSubscriptionId) && Intrinsics3.areEqual(this.currentTier, trackPremiumGuildSubscriptionCreated.currentTier) && Intrinsics3.areEqual(this.previousTier, trackPremiumGuildSubscriptionCreated.previousTier) && Intrinsics3.areEqual(this.premiumSubscriptionCount, trackPremiumGuildSubscriptionCreated.premiumSubscriptionCount) && Intrinsics3.areEqual(this.slotId, trackPremiumGuildSubscriptionCreated.slotId) && Intrinsics3.areEqual(this.tierReached, trackPremiumGuildSubscriptionCreated.tierReached);
+        return m.areEqual(this.guildId, trackPremiumGuildSubscriptionCreated.guildId) && m.areEqual(this.premiumGuildSubscriptionId, trackPremiumGuildSubscriptionCreated.premiumGuildSubscriptionId) && m.areEqual(this.currentTier, trackPremiumGuildSubscriptionCreated.currentTier) && m.areEqual(this.previousTier, trackPremiumGuildSubscriptionCreated.previousTier) && m.areEqual(this.premiumSubscriptionCount, trackPremiumGuildSubscriptionCreated.premiumSubscriptionCount) && m.areEqual(this.slotId, trackPremiumGuildSubscriptionCreated.slotId) && m.areEqual(this.tierReached, trackPremiumGuildSubscriptionCreated.tierReached);
     }
 
     public int hashCode() {
@@ -54,7 +54,7 @@ public final /* data */ class TrackPremiumGuildSubscriptionCreated implements An
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPremiumGuildSubscriptionCreated(guildId=");
+        StringBuilder sbU = a.U("TrackPremiumGuildSubscriptionCreated(guildId=");
         sbU.append(this.guildId);
         sbU.append(", premiumGuildSubscriptionId=");
         sbU.append(this.premiumGuildSubscriptionId);
@@ -67,6 +67,6 @@ public final /* data */ class TrackPremiumGuildSubscriptionCreated implements An
         sbU.append(", slotId=");
         sbU.append(this.slotId);
         sbU.append(", tierReached=");
-        return outline.G(sbU, this.tierReached, ")");
+        return a.G(sbU, this.tierReached, ")");
     }
 }

@@ -4,7 +4,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 import androidx.annotation.GuardedBy;
-import b.d.b.a.outline;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
@@ -68,7 +67,7 @@ public final class q3 extends r5 {
             String strValueOf = String.valueOf(Math.abs(l.longValue()));
             long jRound = Math.round(Math.pow(10.0d, strValueOf.length() - 1));
             long jRound2 = Math.round(Math.pow(10.0d, strValueOf.length()) - 1.0d);
-            StringBuilder sbR = outline.R(str.length() + str.length() + 43, str, jRound, "...");
+            StringBuilder sbR = b.d.b.a.a.R(str.length() + str.length() + 43, str, jRound, "...");
             sbR.append(str);
             sbR.append(jRound2);
             return sbR.toString();
@@ -186,7 +185,7 @@ public final class q3 extends r5 {
         }
         String strValueOf = String.valueOf(pair.second);
         String str = (String) pair.first;
-        return outline.k(outline.b(str, strValueOf.length() + 1), strValueOf, ":", str);
+        return b.d.b.a.a.k(b.d.b.a.a.b(str, strValueOf.length() + 1), strValueOf, ":", str);
     }
 
     public final String F() {

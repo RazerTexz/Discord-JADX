@@ -1,14 +1,14 @@
 package kotlin.reflect;
 
-import d0.e0.KAnnotatedElement;
-import d0.e0.KClassifier;
-import d0.e0.KTypeProjection;
+import d0.e0.b;
+import d0.e0.d;
+import d0.e0.i;
 import java.util.List;
 
 /* compiled from: KType.kt */
 /* loaded from: classes3.dex */
-public interface KType extends KAnnotatedElement {
-    List<KTypeProjection> getArguments();
+public interface KType extends b {
+    List<i> getArguments();
 
-    KClassifier getClassifier();
+    d getClassifier();
 }

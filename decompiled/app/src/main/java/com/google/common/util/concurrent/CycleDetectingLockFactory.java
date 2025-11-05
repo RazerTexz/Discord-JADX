@@ -1,9 +1,9 @@
 package com.google.common.util.concurrent;
 
 import b.i.a.f.e.o.f;
-import b.i.b.b.ImmutableSet2;
-import b.i.b.b.MapMaker;
-import b.i.b.b.MapMakerInternalMap;
+import b.i.b.b.r;
+import b.i.b.b.u;
+import b.i.b.b.v;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.util.ArrayList;
 import java.util.logging.Logger;
@@ -36,7 +36,7 @@ public class CycleDetectingLockFactory {
 
     public static class b extends IllegalStateException {
         static {
-            ImmutableSet2.r(CycleDetectingLockFactory.class.getName(), b.class.getName(), c.class.getName());
+            r.r(CycleDetectingLockFactory.class.getName(), b.class.getName(), c.class.getName());
         }
     }
 
@@ -44,9 +44,9 @@ public class CycleDetectingLockFactory {
     }
 
     static {
-        MapMaker mapMaker = new MapMaker();
-        mapMaker.d(MapMakerInternalMap.p.k);
-        mapMaker.c();
+        u uVar = new u();
+        uVar.d(v.p.k);
+        uVar.c();
         Logger.getLogger(CycleDetectingLockFactory.class.getName());
         new a();
     }

@@ -1,8 +1,8 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.utilities.time.TimeUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ModelGuildBoostSlot.kt */
 /* loaded from: classes.dex */
@@ -80,7 +80,7 @@ public final /* data */ class ModelGuildBoostSlot {
             return false;
         }
         ModelGuildBoostSlot modelGuildBoostSlot = (ModelGuildBoostSlot) other;
-        return Intrinsics3.areEqual(this.cooldownEndsAt, modelGuildBoostSlot.cooldownEndsAt) && this.id == modelGuildBoostSlot.id && this.subscriptionId == modelGuildBoostSlot.subscriptionId && Intrinsics3.areEqual(this.premiumGuildSubscription, modelGuildBoostSlot.premiumGuildSubscription) && this.canceled == modelGuildBoostSlot.canceled;
+        return m.areEqual(this.cooldownEndsAt, modelGuildBoostSlot.cooldownEndsAt) && this.id == modelGuildBoostSlot.id && this.subscriptionId == modelGuildBoostSlot.subscriptionId && m.areEqual(this.premiumGuildSubscription, modelGuildBoostSlot.premiumGuildSubscription) && this.canceled == modelGuildBoostSlot.canceled;
     }
 
     public final boolean getCanceled() {
@@ -122,7 +122,7 @@ public final /* data */ class ModelGuildBoostSlot {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelGuildBoostSlot(cooldownEndsAt=");
+        StringBuilder sbU = a.U("ModelGuildBoostSlot(cooldownEndsAt=");
         sbU.append(this.cooldownEndsAt);
         sbU.append(", id=");
         sbU.append(this.id);
@@ -131,6 +131,6 @@ public final /* data */ class ModelGuildBoostSlot {
         sbU.append(", premiumGuildSubscription=");
         sbU.append(this.premiumGuildSubscription);
         sbU.append(", canceled=");
-        return outline.O(sbU, this.canceled, ")");
+        return a.O(sbU, this.canceled, ")");
     }
 }

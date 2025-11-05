@@ -4,7 +4,7 @@ import android.graphics.Matrix;
 import android.graphics.Point;
 import android.opengl.GLES20;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.nio.ByteBuffer;
 import org.webrtc.RendererCommon;
 import org.webrtc.VideoFrame;
@@ -200,7 +200,7 @@ public class VideoFrameDrawer {
             glDrawer.drawYuv(this.yuvUploader.getYuvTextures(), RendererCommon.convertMatrixFromAndroidGraphicsMatrix(this.renderMatrix), this.renderWidth, this.renderHeight, i, i2, i3, i4);
             return;
         }
-        StringBuilder sbU = outline.U("Illegal frame size: ");
+        StringBuilder sbU = a.U("Illegal frame size: ");
         sbU.append(this.renderWidth);
         sbU.append("x");
         sbU.append(this.renderHeight);

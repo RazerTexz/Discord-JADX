@@ -1,7 +1,7 @@
 package s.a;
 
-import b.d.b.a.outline;
-import com.discord.widgets.chat.input.MentionUtils;
+import b.d.b.a.a;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlinx.coroutines.Job;
@@ -23,16 +23,16 @@ public final class d1 extends g1<Job> {
         return Unit.a;
     }
 
-    @Override // s.a.CompletionHandler2
+    @Override // s.a.y
     public void q(Throwable th) {
         this.n.invoke(th);
     }
 
-    @Override // s.a.a.LockFreeLinkedList3
+    @Override // s.a.a.k
     public String toString() {
-        StringBuilder sbU = outline.U("InvokeOnCompletion[");
+        StringBuilder sbU = a.U("InvokeOnCompletion[");
         sbU.append(d1.class.getSimpleName());
-        sbU.append(MentionUtils.MENTIONS_CHAR);
+        sbU.append(MentionUtilsKt.MENTIONS_CHAR);
         sbU.append(b.i.a.f.e.o.f.l0(this));
         sbU.append(']');
         return sbU.toString();

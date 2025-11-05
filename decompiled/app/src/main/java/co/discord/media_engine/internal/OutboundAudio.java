@@ -2,8 +2,7 @@ package co.discord.media_engine.internal;
 
 import a0.a.a.a;
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -34,7 +33,7 @@ public final /* data */ class OutboundAudio {
     private final Long voiceActivityDetectorProcessTime;
 
     public OutboundAudio(int i, long j, String str, int i2, int i3, int i4, double d, double d2, float f, int i5, int i6, long j2, double d3, double d4, long j3, long j4, long j5, boolean z2, long j6, long j7, Boolean bool, Long l, Boolean bool2, Long l2) {
-        Intrinsics3.checkNotNullParameter(str, "codecName");
+        m.checkNotNullParameter(str, "codecName");
         this.audioLevel = i;
         this.bytesSent = j;
         this.codecName = str;
@@ -186,7 +185,7 @@ public final /* data */ class OutboundAudio {
     }
 
     public final OutboundAudio copy(int audioLevel, long bytesSent, String codecName, int codecPayloadType, int delayMedian, int delayStd, double echoReturnLoss, double echoReturnLossEnchancement, float fractionLost, int jitter, int packetsLost, long packetsSent, double residualEchoLikelihood, double residualEchoLikelihoodRecentMax, long rtt, long speaking, long ssrc, boolean typingNoiseDetected, long framesCaptured, long framesRendered, Boolean noiseCancellerIsEnabled, Long noiseCancellerProcessTime, Boolean voiceActivityDetectorIsEnabled, Long voiceActivityDetectorProcessTime) {
-        Intrinsics3.checkNotNullParameter(codecName, "codecName");
+        m.checkNotNullParameter(codecName, "codecName");
         return new OutboundAudio(audioLevel, bytesSent, codecName, codecPayloadType, delayMedian, delayStd, echoReturnLoss, echoReturnLossEnchancement, fractionLost, jitter, packetsLost, packetsSent, residualEchoLikelihood, residualEchoLikelihoodRecentMax, rtt, speaking, ssrc, typingNoiseDetected, framesCaptured, framesRendered, noiseCancellerIsEnabled, noiseCancellerProcessTime, voiceActivityDetectorIsEnabled, voiceActivityDetectorProcessTime);
     }
 
@@ -198,7 +197,7 @@ public final /* data */ class OutboundAudio {
             return false;
         }
         OutboundAudio outboundAudio = (OutboundAudio) other;
-        return this.audioLevel == outboundAudio.audioLevel && this.bytesSent == outboundAudio.bytesSent && Intrinsics3.areEqual(this.codecName, outboundAudio.codecName) && this.codecPayloadType == outboundAudio.codecPayloadType && this.delayMedian == outboundAudio.delayMedian && this.delayStd == outboundAudio.delayStd && Double.compare(this.echoReturnLoss, outboundAudio.echoReturnLoss) == 0 && Double.compare(this.echoReturnLossEnchancement, outboundAudio.echoReturnLossEnchancement) == 0 && Float.compare(this.fractionLost, outboundAudio.fractionLost) == 0 && this.jitter == outboundAudio.jitter && this.packetsLost == outboundAudio.packetsLost && this.packetsSent == outboundAudio.packetsSent && Double.compare(this.residualEchoLikelihood, outboundAudio.residualEchoLikelihood) == 0 && Double.compare(this.residualEchoLikelihoodRecentMax, outboundAudio.residualEchoLikelihoodRecentMax) == 0 && this.rtt == outboundAudio.rtt && this.speaking == outboundAudio.speaking && this.ssrc == outboundAudio.ssrc && this.typingNoiseDetected == outboundAudio.typingNoiseDetected && this.framesCaptured == outboundAudio.framesCaptured && this.framesRendered == outboundAudio.framesRendered && Intrinsics3.areEqual(this.noiseCancellerIsEnabled, outboundAudio.noiseCancellerIsEnabled) && Intrinsics3.areEqual(this.noiseCancellerProcessTime, outboundAudio.noiseCancellerProcessTime) && Intrinsics3.areEqual(this.voiceActivityDetectorIsEnabled, outboundAudio.voiceActivityDetectorIsEnabled) && Intrinsics3.areEqual(this.voiceActivityDetectorProcessTime, outboundAudio.voiceActivityDetectorProcessTime);
+        return this.audioLevel == outboundAudio.audioLevel && this.bytesSent == outboundAudio.bytesSent && m.areEqual(this.codecName, outboundAudio.codecName) && this.codecPayloadType == outboundAudio.codecPayloadType && this.delayMedian == outboundAudio.delayMedian && this.delayStd == outboundAudio.delayStd && Double.compare(this.echoReturnLoss, outboundAudio.echoReturnLoss) == 0 && Double.compare(this.echoReturnLossEnchancement, outboundAudio.echoReturnLossEnchancement) == 0 && Float.compare(this.fractionLost, outboundAudio.fractionLost) == 0 && this.jitter == outboundAudio.jitter && this.packetsLost == outboundAudio.packetsLost && this.packetsSent == outboundAudio.packetsSent && Double.compare(this.residualEchoLikelihood, outboundAudio.residualEchoLikelihood) == 0 && Double.compare(this.residualEchoLikelihoodRecentMax, outboundAudio.residualEchoLikelihoodRecentMax) == 0 && this.rtt == outboundAudio.rtt && this.speaking == outboundAudio.speaking && this.ssrc == outboundAudio.ssrc && this.typingNoiseDetected == outboundAudio.typingNoiseDetected && this.framesCaptured == outboundAudio.framesCaptured && this.framesRendered == outboundAudio.framesRendered && m.areEqual(this.noiseCancellerIsEnabled, outboundAudio.noiseCancellerIsEnabled) && m.areEqual(this.noiseCancellerProcessTime, outboundAudio.noiseCancellerProcessTime) && m.areEqual(this.voiceActivityDetectorIsEnabled, outboundAudio.voiceActivityDetectorIsEnabled) && m.areEqual(this.voiceActivityDetectorProcessTime, outboundAudio.voiceActivityDetectorProcessTime);
     }
 
     public final int getAudioLevel() {
@@ -319,7 +318,7 @@ public final /* data */ class OutboundAudio {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("OutboundAudio(audioLevel=");
+        StringBuilder sbU = b.d.b.a.a.U("OutboundAudio(audioLevel=");
         sbU.append(this.audioLevel);
         sbU.append(", bytesSent=");
         sbU.append(this.bytesSent);
@@ -366,6 +365,6 @@ public final /* data */ class OutboundAudio {
         sbU.append(", voiceActivityDetectorIsEnabled=");
         sbU.append(this.voiceActivityDetectorIsEnabled);
         sbU.append(", voiceActivityDetectorProcessTime=");
-        return outline.G(sbU, this.voiceActivityDetectorProcessTime, ")");
+        return b.d.b.a.a.G(sbU, this.voiceActivityDetectorProcessTime, ")");
     }
 }

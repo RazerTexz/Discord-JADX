@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackStoreSkuMetadata.kt */
 /* loaded from: classes.dex */
@@ -22,7 +22,7 @@ public final /* data */ class TrackStoreSkuMetadata {
             return false;
         }
         TrackStoreSkuMetadata trackStoreSkuMetadata = (TrackStoreSkuMetadata) other;
-        return Intrinsics3.areEqual(this.skuId, trackStoreSkuMetadata.skuId) && Intrinsics3.areEqual(this.skuType, trackStoreSkuMetadata.skuType) && Intrinsics3.areEqual(this.applicationId, trackStoreSkuMetadata.applicationId) && Intrinsics3.areEqual(this.applicationName, trackStoreSkuMetadata.applicationName) && Intrinsics3.areEqual(this.storeTitle, trackStoreSkuMetadata.storeTitle) && Intrinsics3.areEqual(this.distributionType, trackStoreSkuMetadata.distributionType) && Intrinsics3.areEqual(this.quantity, trackStoreSkuMetadata.quantity);
+        return m.areEqual(this.skuId, trackStoreSkuMetadata.skuId) && m.areEqual(this.skuType, trackStoreSkuMetadata.skuType) && m.areEqual(this.applicationId, trackStoreSkuMetadata.applicationId) && m.areEqual(this.applicationName, trackStoreSkuMetadata.applicationName) && m.areEqual(this.storeTitle, trackStoreSkuMetadata.storeTitle) && m.areEqual(this.distributionType, trackStoreSkuMetadata.distributionType) && m.areEqual(this.quantity, trackStoreSkuMetadata.quantity);
     }
 
     public int hashCode() {
@@ -43,7 +43,7 @@ public final /* data */ class TrackStoreSkuMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStoreSkuMetadata(skuId=");
+        StringBuilder sbU = a.U("TrackStoreSkuMetadata(skuId=");
         sbU.append(this.skuId);
         sbU.append(", skuType=");
         sbU.append(this.skuType);
@@ -56,6 +56,6 @@ public final /* data */ class TrackStoreSkuMetadata {
         sbU.append(", distributionType=");
         sbU.append(this.distributionType);
         sbU.append(", quantity=");
-        return outline.G(sbU, this.quantity, ")");
+        return a.G(sbU, this.quantity, ")");
     }
 }

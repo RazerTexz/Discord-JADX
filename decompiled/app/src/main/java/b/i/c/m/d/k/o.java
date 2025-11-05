@@ -1,10 +1,6 @@
 package b.i.c.m.d.k;
 
 import android.util.Log;
-import b.d.b.a.outline;
-import b.i.c.m.d.Logger3;
-import b.i.c.m.d.p.ClsFileOutputStream;
-import b.i.c.m.d.p.CodedOutputStream2;
 import java.util.Date;
 import java.util.Objects;
 
@@ -28,11 +24,11 @@ public class o implements Runnable {
     @Override // java.lang.Runnable
     public void run() throws Throwable {
         String str;
-        ClsFileOutputStream clsFileOutputStream;
-        ClsFileOutputStream clsFileOutputStream2;
+        b.i.c.m.d.p.b bVar;
+        b.i.c.m.d.p.b bVar2;
         int i;
-        CodedOutputStream2 codedOutputStream2I;
-        ClsFileOutputStream clsFileOutputStream3;
+        b.i.c.m.d.p.c cVarI;
+        b.i.c.m.d.p.b bVar3;
         int i2;
         if (this.m.p()) {
             return;
@@ -40,105 +36,105 @@ public class o implements Runnable {
         long time = this.j.getTime() / 1000;
         String strI = this.m.i();
         if (strI == null) {
-            Logger3.a.b("Tried to write a non-fatal exception while no session was open.");
+            b.i.c.m.d.b.a.b("Tried to write a non-fatal exception while no session was open.");
             return;
         }
-        SessionReportingCoordinator3 sessionReportingCoordinator3 = this.m.A;
+        d1 d1Var = this.m.A;
         Throwable th = this.k;
         Thread thread = this.l;
         String strReplaceAll = strI.replaceAll("-", "");
-        Objects.requireNonNull(sessionReportingCoordinator3);
-        Logger3 logger3 = Logger3.a;
-        outline.o0("Persisting non-fatal event for session ", strReplaceAll, logger3);
-        sessionReportingCoordinator3.a(th, thread, strReplaceAll, "error", time, false);
+        Objects.requireNonNull(d1Var);
+        b.i.c.m.d.b bVar4 = b.i.c.m.d.b.a;
+        b.d.b.a.a.o0("Persisting non-fatal event for session ", strReplaceAll, bVar4);
+        d1Var.a(th, thread, strReplaceAll, "error", time, false);
         x xVar = this.m;
         Thread thread2 = this.l;
         Throwable th2 = this.k;
         Objects.requireNonNull(xVar);
-        CodedOutputStream2 codedOutputStream2 = null;
+        b.i.c.m.d.p.c cVar = null;
         try {
-            logger3.b("Crashlytics is logging non-fatal exception \"" + th2 + "\" from thread " + thread2.getName());
-            ClsFileOutputStream clsFileOutputStream4 = new ClsFileOutputStream(xVar.l(), strI + "SessionEvent" + CommonUtils.v(xVar.h.getAndIncrement()));
+            bVar4.b("Crashlytics is logging non-fatal exception \"" + th2 + "\" from thread " + thread2.getName());
+            b.i.c.m.d.p.b bVar5 = new b.i.c.m.d.p.b(xVar.l(), strI + "SessionEvent" + h.v(xVar.h.getAndIncrement()));
             try {
-                codedOutputStream2I = CodedOutputStream2.i(clsFileOutputStream4);
+                cVarI = b.i.c.m.d.p.c.i(bVar5);
                 i2 = 6;
-                clsFileOutputStream2 = clsFileOutputStream4;
+                bVar2 = bVar5;
                 str = "Failed to flush to non-fatal file.";
             } catch (Exception e) {
                 e = e;
-                clsFileOutputStream2 = clsFileOutputStream4;
+                bVar2 = bVar5;
                 str = "Failed to flush to non-fatal file.";
                 i2 = 6;
             } catch (Throwable th3) {
                 th = th3;
-                clsFileOutputStream2 = clsFileOutputStream4;
+                bVar2 = bVar5;
                 str = "Failed to flush to non-fatal file.";
-                codedOutputStream2I = codedOutputStream2;
-                clsFileOutputStream = clsFileOutputStream2;
-                codedOutputStream2 = codedOutputStream2I;
-                CommonUtils.h(codedOutputStream2, str);
-                CommonUtils.c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
+                cVarI = cVar;
+                bVar = bVar2;
+                cVar = cVarI;
+                h.h(cVar, str);
+                h.c(bVar, "Failed to close non-fatal file output stream.");
                 throw th;
             }
         } catch (Exception e2) {
             e = e2;
             str = "Failed to flush to non-fatal file.";
-            clsFileOutputStream2 = null;
+            bVar2 = null;
             i = 6;
         } catch (Throwable th4) {
             th = th4;
             str = "Failed to flush to non-fatal file.";
-            clsFileOutputStream = null;
-            CommonUtils.h(codedOutputStream2, str);
-            CommonUtils.c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
+            bVar = null;
+            h.h(cVar, str);
+            h.c(bVar, "Failed to close non-fatal file output stream.");
             throw th;
         }
         try {
             try {
-                xVar.y(codedOutputStream2I, thread2, th2, time, "error", false);
-                clsFileOutputStream3 = clsFileOutputStream2;
-                codedOutputStream2 = codedOutputStream2I;
+                xVar.y(cVarI, thread2, th2, time, "error", false);
+                bVar3 = bVar2;
+                cVar = cVarI;
                 i = 6;
             } catch (Exception e3) {
                 e = e3;
-                codedOutputStream2 = codedOutputStream2I;
+                cVar = cVarI;
                 i = i2;
                 try {
-                    if (Logger3.a.a(i)) {
+                    if (b.i.c.m.d.b.a.a(i)) {
                         Log.e("FirebaseCrashlytics", "An error occurred in the non-fatal exception logger", e);
                     }
-                    clsFileOutputStream3 = clsFileOutputStream2;
-                    CommonUtils.h(codedOutputStream2, str);
-                    CommonUtils.c(clsFileOutputStream3, "Failed to close non-fatal file output stream.");
+                    bVar3 = bVar2;
+                    h.h(cVar, str);
+                    h.c(bVar3, "Failed to close non-fatal file output stream.");
                     xVar.v(strI, 64);
                     return;
                 } catch (Throwable th5) {
                     th = th5;
-                    codedOutputStream2I = codedOutputStream2;
-                    clsFileOutputStream = clsFileOutputStream2;
-                    codedOutputStream2 = codedOutputStream2I;
-                    CommonUtils.h(codedOutputStream2, str);
-                    CommonUtils.c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
+                    cVarI = cVar;
+                    bVar = bVar2;
+                    cVar = cVarI;
+                    h.h(cVar, str);
+                    h.c(bVar, "Failed to close non-fatal file output stream.");
                     throw th;
                 }
             } catch (Throwable th6) {
                 th = th6;
-                clsFileOutputStream = clsFileOutputStream2;
-                codedOutputStream2 = codedOutputStream2I;
-                CommonUtils.h(codedOutputStream2, str);
-                CommonUtils.c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
+                bVar = bVar2;
+                cVar = cVarI;
+                h.h(cVar, str);
+                h.c(bVar, "Failed to close non-fatal file output stream.");
                 throw th;
             }
             xVar.v(strI, 64);
             return;
         } catch (Exception e4) {
-            if (Logger3.a.a(i)) {
+            if (b.i.c.m.d.b.a.a(i)) {
                 Log.e("FirebaseCrashlytics", "An error occurred when trimming non-fatal files.", e4);
                 return;
             }
             return;
         }
-        CommonUtils.h(codedOutputStream2, str);
-        CommonUtils.c(clsFileOutputStream3, "Failed to close non-fatal file output stream.");
+        h.h(cVar, str);
+        h.c(bVar3, "Failed to close non-fatal file output stream.");
     }
 }

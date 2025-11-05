@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.list.utils;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.role.GuildRole;
 import com.discord.api.user.User;
@@ -17,8 +17,8 @@ import com.discord.utilities.textprocessing.MessageRenderContext;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapter;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Unit;
@@ -43,10 +43,10 @@ public final class EmbeddedMessageParser {
         private final Map<Long, GuildRole> roleMentions;
 
         public ParserData(Context context, Map<Long, GuildRole> map, Map<Long, String> map2, boolean z2, StoreMessageState.State state, Integer num, Message message, WidgetChatListAdapter widgetChatListAdapter) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(map2, "nickOrUsernames");
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(map2, "nickOrUsernames");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(widgetChatListAdapter, "adapter");
             this.context = context;
             this.roleMentions = map;
             this.nickOrUsernames = map2;
@@ -100,10 +100,10 @@ public final class EmbeddedMessageParser {
         }
 
         public final ParserData copy(Context context, Map<Long, GuildRole> roleMentions, Map<Long, String> nickOrUsernames, boolean animateEmojis, StoreMessageState.State messageState, Integer maxNodes, Message message, WidgetChatListAdapter adapter) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(adapter, "adapter");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(adapter, "adapter");
             return new ParserData(context, roleMentions, nickOrUsernames, animateEmojis, messageState, maxNodes, message, adapter);
         }
 
@@ -115,7 +115,7 @@ public final class EmbeddedMessageParser {
                 return false;
             }
             ParserData parserData = (ParserData) other;
-            return Intrinsics3.areEqual(this.context, parserData.context) && Intrinsics3.areEqual(this.roleMentions, parserData.roleMentions) && Intrinsics3.areEqual(this.nickOrUsernames, parserData.nickOrUsernames) && this.animateEmojis == parserData.animateEmojis && Intrinsics3.areEqual(this.messageState, parserData.messageState) && Intrinsics3.areEqual(this.maxNodes, parserData.maxNodes) && Intrinsics3.areEqual(this.message, parserData.message) && Intrinsics3.areEqual(this.adapter, parserData.adapter);
+            return m.areEqual(this.context, parserData.context) && m.areEqual(this.roleMentions, parserData.roleMentions) && m.areEqual(this.nickOrUsernames, parserData.nickOrUsernames) && this.animateEmojis == parserData.animateEmojis && m.areEqual(this.messageState, parserData.messageState) && m.areEqual(this.maxNodes, parserData.maxNodes) && m.areEqual(this.message, parserData.message) && m.areEqual(this.adapter, parserData.adapter);
         }
 
         public final WidgetChatListAdapter getAdapter() {
@@ -175,7 +175,7 @@ public final class EmbeddedMessageParser {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ParserData(context=");
+            StringBuilder sbU = a.U("ParserData(context=");
             sbU.append(this.context);
             sbU.append(", roleMentions=");
             sbU.append(this.roleMentions);
@@ -198,7 +198,7 @@ public final class EmbeddedMessageParser {
 
     /* compiled from: EmbeddedMessageParser.kt */
     /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function3<Context, String, String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function3<Context, String, String, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -213,15 +213,15 @@ public final class EmbeddedMessageParser {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
-            Intrinsics3.checkNotNullParameter(context, "clickContext");
-            Intrinsics3.checkNotNullParameter(str, "url");
+            m.checkNotNullParameter(context, "clickContext");
+            m.checkNotNullParameter(str, "url");
             UriHandler.handleOrUntrusted(context, str, str2);
         }
     }
 
     /* compiled from: EmbeddedMessageParser.kt */
     /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
         public final /* synthetic */ ParserData $parserData;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -238,14 +238,14 @@ public final class EmbeddedMessageParser {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "url");
+            m.checkNotNullParameter(str, "url");
             this.$parserData.getAdapter().getEventHandler().onUrlLongClicked(str);
         }
     }
 
     /* compiled from: EmbeddedMessageParser.kt */
     /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Long, Unit> {
         public final /* synthetic */ ParserData $parserData;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -268,7 +268,7 @@ public final class EmbeddedMessageParser {
 
     /* compiled from: EmbeddedMessageParser.kt */
     /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Long, Unit> {
         public final /* synthetic */ ParserData $parserData;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -301,7 +301,7 @@ public final class EmbeddedMessageParser {
     }
 
     public final DraweeSpanStringBuilder parse(ParserData parserData) {
-        Intrinsics3.checkNotNullParameter(parserData, "parserData");
+        m.checkNotNullParameter(parserData, "parserData");
         MessageRenderContext messageRenderContext = getMessageRenderContext(parserData);
         User author = parserData.getMessage().getAuthor();
         MessagePreprocessor messagePreprocessor = getMessagePreprocessor(author != null ? author.getId() : 0L, parserData.getMessage(), parserData.getMessageState(), parserData.getMaxNodes());
@@ -312,7 +312,7 @@ public final class EmbeddedMessageParser {
         Context context = parserData.getContext();
         String property = System.getProperty("line.separator");
         Objects.requireNonNull(property);
-        Intrinsics3.checkNotNullExpressionValue(property, "Objects.requireNonNull(S…operty(\"line.separator\"))");
+        m.checkNotNullExpressionValue(property, "Objects.requireNonNull(S…operty(\"line.separator\"))");
         return DiscordParser.parseChannelMessage(context, new Regex(property).replace(content, " "), messageRenderContext, messagePreprocessor, DiscordParser.ParserOptions.REPLY, false);
     }
 }

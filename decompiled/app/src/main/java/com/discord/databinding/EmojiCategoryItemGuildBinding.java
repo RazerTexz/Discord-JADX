@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ExpressionPickerCategorySelectionOverlineViewBinding;
+import b.a.i.n;
 import com.discord.widgets.chat.input.emoji.GuildIcon;
 
 /* loaded from: classes.dex */
@@ -18,12 +18,12 @@ public final class EmojiCategoryItemGuildBinding implements ViewBinding {
     public final GuildIcon f2099b;
 
     @NonNull
-    public final ExpressionPickerCategorySelectionOverlineViewBinding c;
+    public final n c;
 
-    public EmojiCategoryItemGuildBinding(@NonNull FrameLayout frameLayout, @NonNull GuildIcon guildIcon, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+    public EmojiCategoryItemGuildBinding(@NonNull FrameLayout frameLayout, @NonNull GuildIcon guildIcon, @NonNull n nVar) {
         this.a = frameLayout;
         this.f2099b = guildIcon;
-        this.c = expressionPickerCategorySelectionOverlineViewBinding;
+        this.c = nVar;
     }
 
     @Override // androidx.viewbinding.ViewBinding

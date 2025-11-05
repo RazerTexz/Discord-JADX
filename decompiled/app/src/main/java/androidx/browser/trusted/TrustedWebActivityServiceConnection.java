@@ -10,9 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
-import x.a.a.d.ITrustedWebActivityCallback;
-import x.a.a.d.ITrustedWebActivityService;
+import x.a.a.d.a;
+import x.a.a.d.b;
 
 /* loaded from: classes.dex */
 public final class TrustedWebActivityServiceConnection {
@@ -23,17 +22,17 @@ public final class TrustedWebActivityServiceConnection {
     private static final String KEY_PLATFORM_ID = "android.support.customtabs.trusted.PLATFORM_ID";
     private static final String KEY_PLATFORM_TAG = "android.support.customtabs.trusted.PLATFORM_TAG";
     private final ComponentName mComponentName;
-    private final ITrustedWebActivityService mService;
+    private final b mService;
 
     /* renamed from: androidx.browser.trusted.TrustedWebActivityServiceConnection$1, reason: invalid class name */
-    public class AnonymousClass1 extends ITrustedWebActivityCallback.a {
+    public class AnonymousClass1 extends a.AbstractBinderC0654a {
         public final /* synthetic */ TrustedWebActivityCallback val$callback;
 
         public AnonymousClass1(TrustedWebActivityCallback trustedWebActivityCallback) {
             this.val$callback = trustedWebActivityCallback;
         }
 
-        @Override // x.a.a.d.ITrustedWebActivityCallback
+        @Override // x.a.a.d.a
         public void onExtraCallback(String str, Bundle bundle) throws RemoteException {
             this.val$callback.onExtraCallback(str, bundle);
         }
@@ -150,19 +149,19 @@ public final class TrustedWebActivityServiceConnection {
         }
     }
 
-    public TrustedWebActivityServiceConnection(@NonNull ITrustedWebActivityService iTrustedWebActivityService, @NonNull ComponentName componentName) {
-        this.mService = iTrustedWebActivityService;
+    public TrustedWebActivityServiceConnection(@NonNull b bVar, @NonNull ComponentName componentName) {
+        this.mService = bVar;
         this.mComponentName = componentName;
     }
 
     public static void ensureBundleContains(Bundle bundle, String str) {
         if (!bundle.containsKey(str)) {
-            throw new IllegalArgumentException(outline.w("Bundle must contain ", str));
+            throw new IllegalArgumentException(b.d.b.a.a.w("Bundle must contain ", str));
         }
     }
 
     @Nullable
-    private static ITrustedWebActivityCallback wrapCallback(@Nullable TrustedWebActivityCallback trustedWebActivityCallback) {
+    private static a wrapCallback(@Nullable TrustedWebActivityCallback trustedWebActivityCallback) {
         if (trustedWebActivityCallback == null) {
             return null;
         }
@@ -204,7 +203,7 @@ public final class TrustedWebActivityServiceConnection {
 
     @Nullable
     public Bundle sendExtraCommand(@NonNull String str, @NonNull Bundle bundle, @Nullable TrustedWebActivityCallback trustedWebActivityCallback) throws RemoteException {
-        ITrustedWebActivityCallback iTrustedWebActivityCallbackWrapCallback = wrapCallback(trustedWebActivityCallback);
-        return this.mService.extraCommand(str, bundle, iTrustedWebActivityCallbackWrapCallback == null ? null : iTrustedWebActivityCallbackWrapCallback.asBinder());
+        a aVarWrapCallback = wrapCallback(trustedWebActivityCallback);
+        return this.mService.extraCommand(str, bundle, aVarWrapCallback == null ? null : aVarWrapCallback.asBinder());
     }
 }

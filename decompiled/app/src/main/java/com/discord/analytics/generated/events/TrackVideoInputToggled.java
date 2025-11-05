@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackVideoInputToggled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoInputToggled implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackVideoInputToggled implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -49,7 +49,7 @@ public final /* data */ class TrackVideoInputToggled implements AnalyticsSchema,
             return false;
         }
         TrackVideoInputToggled trackVideoInputToggled = (TrackVideoInputToggled) other;
-        return Intrinsics3.areEqual(this.channelId, trackVideoInputToggled.channelId) && Intrinsics3.areEqual(this.channelType, trackVideoInputToggled.channelType) && Intrinsics3.areEqual(this.guildId, trackVideoInputToggled.guildId) && Intrinsics3.areEqual(this.nonce, trackVideoInputToggled.nonce) && Intrinsics3.areEqual(this.voiceStateCount, trackVideoInputToggled.voiceStateCount) && Intrinsics3.areEqual(this.videoStreamCount, trackVideoInputToggled.videoStreamCount) && Intrinsics3.areEqual(this.videoEnabled, trackVideoInputToggled.videoEnabled) && Intrinsics3.areEqual(this.gameName, trackVideoInputToggled.gameName) && Intrinsics3.areEqual(this.gameExeName, trackVideoInputToggled.gameExeName) && Intrinsics3.areEqual(this.gameId, trackVideoInputToggled.gameId) && Intrinsics3.areEqual(this.videoInputType, trackVideoInputToggled.videoInputType) && Intrinsics3.areEqual(this.videoInputResolution, trackVideoInputToggled.videoInputResolution) && Intrinsics3.areEqual(this.videoInputFrameRate, trackVideoInputToggled.videoInputFrameRate) && Intrinsics3.areEqual(this.soundshareSession, trackVideoInputToggled.soundshareSession) && Intrinsics3.areEqual(this.shareGameName, trackVideoInputToggled.shareGameName) && Intrinsics3.areEqual(this.shareGameId, trackVideoInputToggled.shareGameId) && Intrinsics3.areEqual(this.gamePlatform, trackVideoInputToggled.gamePlatform) && Intrinsics3.areEqual(this.source, trackVideoInputToggled.source) && Intrinsics3.areEqual(this.videoToggleSource, trackVideoInputToggled.videoToggleSource) && Intrinsics3.areEqual(this.mediaSessionId, trackVideoInputToggled.mediaSessionId) && Intrinsics3.areEqual(this.enabledInputs, trackVideoInputToggled.enabledInputs) && Intrinsics3.areEqual(this.previewEnabled, trackVideoInputToggled.previewEnabled);
+        return m.areEqual(this.channelId, trackVideoInputToggled.channelId) && m.areEqual(this.channelType, trackVideoInputToggled.channelType) && m.areEqual(this.guildId, trackVideoInputToggled.guildId) && m.areEqual(this.nonce, trackVideoInputToggled.nonce) && m.areEqual(this.voiceStateCount, trackVideoInputToggled.voiceStateCount) && m.areEqual(this.videoStreamCount, trackVideoInputToggled.videoStreamCount) && m.areEqual(this.videoEnabled, trackVideoInputToggled.videoEnabled) && m.areEqual(this.gameName, trackVideoInputToggled.gameName) && m.areEqual(this.gameExeName, trackVideoInputToggled.gameExeName) && m.areEqual(this.gameId, trackVideoInputToggled.gameId) && m.areEqual(this.videoInputType, trackVideoInputToggled.videoInputType) && m.areEqual(this.videoInputResolution, trackVideoInputToggled.videoInputResolution) && m.areEqual(this.videoInputFrameRate, trackVideoInputToggled.videoInputFrameRate) && m.areEqual(this.soundshareSession, trackVideoInputToggled.soundshareSession) && m.areEqual(this.shareGameName, trackVideoInputToggled.shareGameName) && m.areEqual(this.shareGameId, trackVideoInputToggled.shareGameId) && m.areEqual(this.gamePlatform, trackVideoInputToggled.gamePlatform) && m.areEqual(this.source, trackVideoInputToggled.source) && m.areEqual(this.videoToggleSource, trackVideoInputToggled.videoToggleSource) && m.areEqual(this.mediaSessionId, trackVideoInputToggled.mediaSessionId) && m.areEqual(this.enabledInputs, trackVideoInputToggled.enabledInputs) && m.areEqual(this.previewEnabled, trackVideoInputToggled.previewEnabled);
     }
 
     public int hashCode() {
@@ -100,7 +100,7 @@ public final /* data */ class TrackVideoInputToggled implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVideoInputToggled(channelId=");
+        StringBuilder sbU = a.U("TrackVideoInputToggled(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -143,6 +143,6 @@ public final /* data */ class TrackVideoInputToggled implements AnalyticsSchema,
         sbU.append(", enabledInputs=");
         sbU.append(this.enabledInputs);
         sbU.append(", previewEnabled=");
-        return outline.D(sbU, this.previewEnabled, ")");
+        return a.D(sbU, this.previewEnabled, ")");
     }
 }

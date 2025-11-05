@@ -3,7 +3,7 @@ package com.google.android.gms.auth.api.signin.internal;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.c.a.f.b.s;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.internal.ReflectedParcelable;
@@ -17,7 +17,7 @@ public final class SignInConfiguration extends AbstractSafeParcelable implements
     public GoogleSignInOptions k;
 
     public SignInConfiguration(String str, GoogleSignInOptions googleSignInOptions) {
-        AnimatableValueParser.w(str);
+        d.w(str);
         this.j = str;
         this.k = googleSignInOptions;
     }
@@ -49,9 +49,9 @@ public final class SignInConfiguration extends AbstractSafeParcelable implements
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 2, this.j, false);
-        AnimatableValueParser.s2(parcel, 5, this.k, i, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        int iY2 = d.y2(parcel, 20293);
+        d.t2(parcel, 2, this.j, false);
+        d.s2(parcel, 5, this.k, i, false);
+        d.A2(parcel, iY2);
     }
 }

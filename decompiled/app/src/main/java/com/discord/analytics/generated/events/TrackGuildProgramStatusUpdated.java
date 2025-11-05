@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildProgramStatusUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildProgramStatusUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackGuildProgramStatusUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long programType = null;
     private final CharSequence programName = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackGuildProgramStatusUpdated implements Analytic
             return false;
         }
         TrackGuildProgramStatusUpdated trackGuildProgramStatusUpdated = (TrackGuildProgramStatusUpdated) other;
-        return Intrinsics3.areEqual(this.programType, trackGuildProgramStatusUpdated.programType) && Intrinsics3.areEqual(this.programName, trackGuildProgramStatusUpdated.programName) && Intrinsics3.areEqual(this.statusType, trackGuildProgramStatusUpdated.statusType) && Intrinsics3.areEqual(this.status, trackGuildProgramStatusUpdated.status) && Intrinsics3.areEqual(this.guildId, trackGuildProgramStatusUpdated.guildId) && Intrinsics3.areEqual(this.actionSource, trackGuildProgramStatusUpdated.actionSource);
+        return m.areEqual(this.programType, trackGuildProgramStatusUpdated.programType) && m.areEqual(this.programName, trackGuildProgramStatusUpdated.programName) && m.areEqual(this.statusType, trackGuildProgramStatusUpdated.statusType) && m.areEqual(this.status, trackGuildProgramStatusUpdated.status) && m.areEqual(this.guildId, trackGuildProgramStatusUpdated.guildId) && m.areEqual(this.actionSource, trackGuildProgramStatusUpdated.actionSource);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackGuildProgramStatusUpdated implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildProgramStatusUpdated(programType=");
+        StringBuilder sbU = a.U("TrackGuildProgramStatusUpdated(programType=");
         sbU.append(this.programType);
         sbU.append(", programName=");
         sbU.append(this.programName);
@@ -62,6 +62,6 @@ public final /* data */ class TrackGuildProgramStatusUpdated implements Analytic
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", actionSource=");
-        return outline.E(sbU, this.actionSource, ")");
+        return a.E(sbU, this.actionSource, ")");
     }
 }

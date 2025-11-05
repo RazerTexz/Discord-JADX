@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
@@ -29,7 +29,7 @@ public class JavaSerializer extends Serializer {
             try {
                 return Class.forName(objectStreamClass.getName(), false, this.loader);
             } catch (ClassNotFoundException e) {
-                StringBuilder sbU = outline.U("Class not found: ");
+                StringBuilder sbU = a.U("Class not found: ");
                 sbU.append(objectStreamClass.getName());
                 throw new RuntimeException(sbU.toString(), e);
             }

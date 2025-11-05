@@ -4,30 +4,28 @@ import android.annotation.SuppressLint;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 import androidx.annotation.VisibleForTesting;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import b.f.d.d.Throwables;
-import b.f.d.e.FLog;
-import b.f.d.g.MemoryTrimmableRegistry;
-import b.f.d.g.Pool2;
-import b.f.j.l.Bucket2;
-import b.f.j.l.PoolParams;
-import b.f.j.l.PoolStatsTracker;
+import b.c.a.a0.d;
+import b.f.d.d.m;
+import b.f.d.g.c;
+import b.f.d.g.e;
+import b.f.j.l.f;
+import b.f.j.l.y;
+import b.f.j.l.z;
 import java.util.Collections;
 import java.util.IdentityHashMap;
 import java.util.Objects;
 import java.util.Set;
 
 /* loaded from: classes3.dex */
-public abstract class BasePool<V> implements Pool2<V> {
+public abstract class BasePool<V> implements e<V> {
     public final Class<?> a = getClass();
 
     /* renamed from: b, reason: collision with root package name */
-    public final MemoryTrimmableRegistry f2896b;
-    public final PoolParams c;
+    public final c f2896b;
+    public final y c;
 
     @VisibleForTesting
-    public final SparseArray<Bucket2<V>> d;
+    public final SparseArray<f<V>> d;
 
     @VisibleForTesting
     public final Set<V> e;
@@ -38,13 +36,13 @@ public abstract class BasePool<V> implements Pool2<V> {
 
     @VisibleForTesting
     public final a h;
-    public final PoolStatsTracker i;
+    public final z i;
     public boolean j;
 
     public static class InvalidSizeException extends RuntimeException {
         /* JADX WARN: Illegal instructions before constructor call */
         public InvalidSizeException(Object obj) {
-            StringBuilder sbU = outline.U("Invalid size: ");
+            StringBuilder sbU = b.d.b.a.a.U("Invalid size: ");
             sbU.append(obj.toString());
             super(sbU.toString());
         }
@@ -56,7 +54,7 @@ public abstract class BasePool<V> implements Pool2<V> {
     public static class PoolSizeViolationException extends RuntimeException {
         /* JADX WARN: Illegal instructions before constructor call */
         public PoolSizeViolationException(int i, int i2, int i3, int i4) {
-            StringBuilder sbW = outline.W("Pool hard cap violation? Hard cap = ", i, " Used size = ", i2, " Free size = ");
+            StringBuilder sbW = b.d.b.a.a.W("Pool hard cap violation? Hard cap = ", i, " Used size = ", i2, " Free size = ");
             sbW.append(i3);
             sbW.append(" Request size = ");
             sbW.append(i4);
@@ -78,7 +76,7 @@ public abstract class BasePool<V> implements Pool2<V> {
             int i2;
             int i3 = this.f2897b;
             if (i3 < i || (i2 = this.a) <= 0) {
-                FLog.p("com.facebook.imagepipeline.memory.BasePool.Counter", "Unexpected decrement of %d. Current numBytes = %d, count = %d", Integer.valueOf(i), Integer.valueOf(this.f2897b), Integer.valueOf(this.a));
+                b.f.d.e.a.p("com.facebook.imagepipeline.memory.BasePool.Counter", "Unexpected decrement of %d. Current numBytes = %d, count = %d", Integer.valueOf(i), Integer.valueOf(this.f2897b), Integer.valueOf(this.a));
             } else {
                 this.a = i2 - 1;
                 this.f2897b = i3 - i;
@@ -91,28 +89,28 @@ public abstract class BasePool<V> implements Pool2<V> {
         }
     }
 
-    public BasePool(MemoryTrimmableRegistry memoryTrimmableRegistry, PoolParams poolParams, PoolStatsTracker poolStatsTracker) {
-        Objects.requireNonNull(memoryTrimmableRegistry);
-        this.f2896b = memoryTrimmableRegistry;
-        Objects.requireNonNull(poolParams);
-        this.c = poolParams;
-        Objects.requireNonNull(poolStatsTracker);
-        this.i = poolStatsTracker;
-        SparseArray<Bucket2<V>> sparseArray = new SparseArray<>();
+    public BasePool(c cVar, y yVar, z zVar) {
+        Objects.requireNonNull(cVar);
+        this.f2896b = cVar;
+        Objects.requireNonNull(yVar);
+        this.c = yVar;
+        Objects.requireNonNull(zVar);
+        this.i = zVar;
+        SparseArray<f<V>> sparseArray = new SparseArray<>();
         this.d = sparseArray;
         SparseIntArray sparseIntArray = new SparseIntArray(0);
         synchronized (this) {
             sparseArray.clear();
-            SparseIntArray sparseIntArray2 = poolParams.c;
+            SparseIntArray sparseIntArray2 = yVar.c;
             if (sparseIntArray2 != null) {
                 for (int i = 0; i < sparseIntArray2.size(); i++) {
                     int iKeyAt = sparseIntArray2.keyAt(i);
                     int iValueAt = sparseIntArray2.valueAt(i);
                     int i2 = sparseIntArray.get(iKeyAt, 0);
-                    SparseArray<Bucket2<V>> sparseArray2 = this.d;
+                    SparseArray<f<V>> sparseArray2 = this.d;
                     int iK = k(iKeyAt);
                     Objects.requireNonNull(this.c);
-                    sparseArray2.put(iKeyAt, new Bucket2<>(iK, iValueAt, i2, false));
+                    sparseArray2.put(iKeyAt, new f<>(iK, iValueAt, i2, false));
                 }
                 this.f = false;
             } else {
@@ -131,14 +129,14 @@ public abstract class BasePool<V> implements Pool2<V> {
         if (this.j) {
             return true;
         }
-        PoolParams poolParams = this.c;
-        int i2 = poolParams.a;
+        y yVar = this.c;
+        int i2 = yVar.a;
         int i3 = this.g.f2897b;
         if (i > i2 - i3) {
             this.i.f();
             return false;
         }
-        int i4 = poolParams.f602b;
+        int i4 = yVar.f602b;
         if (i > i4 - (i3 + this.h.f2897b)) {
             r(i4 - i);
         }
@@ -152,23 +150,23 @@ public abstract class BasePool<V> implements Pool2<V> {
     @VisibleForTesting
     public abstract void g(V v);
 
-    @Override // b.f.d.g.Pool2
+    @Override // b.f.d.g.e
     public V get(int i) throws Throwable {
         V vL;
         synchronized (this) {
-            AnimatableValueParser.B(!n() || this.h.f2897b == 0);
+            d.B(!n() || this.h.f2897b == 0);
         }
         int i2 = i(i);
         synchronized (this) {
-            Bucket2<V> bucket2H = h(i2);
-            if (bucket2H != null && (vL = l(bucket2H)) != null) {
-                AnimatableValueParser.B(this.e.add(vL));
+            f<V> fVarH = h(i2);
+            if (fVarH != null && (vL = l(fVarH)) != null) {
+                d.B(this.e.add(vL));
                 int iK = k(j(vL));
                 this.g.b(iK);
                 this.h.a(iK);
                 this.i.b(iK);
                 p();
-                if (FLog.h(2)) {
+                if (b.f.d.e.a.h(2)) {
                     System.identityHashCode(vL);
                 }
                 return vL;
@@ -178,8 +176,8 @@ public abstract class BasePool<V> implements Pool2<V> {
                 throw new PoolSizeViolationException(this.c.a, this.g.f2897b, this.h.f2897b, iK2);
             }
             this.g.b(iK2);
-            if (bucket2H != null) {
-                bucket2H.e++;
+            if (fVarH != null) {
+                fVarH.e++;
             }
             V vE = null;
             try {
@@ -187,15 +185,15 @@ public abstract class BasePool<V> implements Pool2<V> {
             } catch (Throwable th) {
                 synchronized (this) {
                     this.g.a(iK2);
-                    Bucket2<V> bucket2H2 = h(i2);
-                    if (bucket2H2 != null) {
-                        bucket2H2.b();
+                    f<V> fVarH2 = h(i2);
+                    if (fVarH2 != null) {
+                        fVarH2.b();
                     }
-                    Throwables.a(th);
+                    m.a(th);
                 }
             }
             synchronized (this) {
-                AnimatableValueParser.B(this.e.add(vE));
+                d.B(this.e.add(vE));
                 synchronized (this) {
                     if (n()) {
                         r(this.c.f602b);
@@ -205,7 +203,7 @@ public abstract class BasePool<V> implements Pool2<V> {
             }
             this.i.a(iK2);
             p();
-            if (FLog.h(2)) {
+            if (b.f.d.e.a.h(2)) {
                 System.identityHashCode(vE);
             }
             return vE;
@@ -213,15 +211,15 @@ public abstract class BasePool<V> implements Pool2<V> {
     }
 
     @VisibleForTesting
-    public synchronized Bucket2<V> h(int i) {
-        Bucket2<V> bucket2 = this.d.get(i);
-        if (bucket2 == null && this.f) {
-            FLog.h(2);
-            Bucket2<V> bucket2Q = q(i);
-            this.d.put(i, bucket2Q);
-            return bucket2Q;
+    public synchronized f<V> h(int i) {
+        f<V> fVar = this.d.get(i);
+        if (fVar == null && this.f) {
+            b.f.d.e.a.h(2);
+            f<V> fVarQ = q(i);
+            this.d.put(i, fVarQ);
+            return fVarQ;
         }
-        return bucket2;
+        return fVar;
     }
 
     public abstract int i(int i);
@@ -230,11 +228,11 @@ public abstract class BasePool<V> implements Pool2<V> {
 
     public abstract int k(int i);
 
-    public synchronized V l(Bucket2<V> bucket2) {
+    public synchronized V l(f<V> fVar) {
         V vC;
-        vC = bucket2.c();
+        vC = fVar.c();
         if (vC != null) {
-            bucket2.e++;
+            fVar.e++;
         }
         return vC;
     }
@@ -260,7 +258,7 @@ public abstract class BasePool<V> implements Pool2<V> {
 
     @SuppressLint({"InvalidAccessToGuardedField"})
     public final void p() {
-        if (FLog.h(2)) {
+        if (b.f.d.e.a.h(2)) {
             a aVar = this.g;
             int i = aVar.a;
             int i2 = aVar.f2897b;
@@ -270,10 +268,10 @@ public abstract class BasePool<V> implements Pool2<V> {
         }
     }
 
-    public Bucket2<V> q(int i) {
+    public f<V> q(int i) {
         int iK = k(i);
         Objects.requireNonNull(this.c);
-        return new Bucket2<>(iK, Integer.MAX_VALUE, 0, false);
+        return new f<>(iK, Integer.MAX_VALUE, 0, false);
     }
 
     @VisibleForTesting
@@ -284,46 +282,46 @@ public abstract class BasePool<V> implements Pool2<V> {
         if (iMin <= 0) {
             return;
         }
-        if (FLog.h(2)) {
-            FLog.j(this.a, "trimToSize: TargetSize = %d; Initial Size = %d; Bytes to free = %d", Integer.valueOf(i), Integer.valueOf(this.g.f2897b + this.h.f2897b), Integer.valueOf(iMin));
+        if (b.f.d.e.a.h(2)) {
+            b.f.d.e.a.j(this.a, "trimToSize: TargetSize = %d; Initial Size = %d; Bytes to free = %d", Integer.valueOf(i), Integer.valueOf(this.g.f2897b + this.h.f2897b), Integer.valueOf(iMin));
         }
         p();
         for (int i4 = 0; i4 < this.d.size() && iMin > 0; i4++) {
-            Bucket2<V> bucket2ValueAt = this.d.valueAt(i4);
-            Objects.requireNonNull(bucket2ValueAt);
-            Bucket2<V> bucket2 = bucket2ValueAt;
+            f<V> fVarValueAt = this.d.valueAt(i4);
+            Objects.requireNonNull(fVarValueAt);
+            f<V> fVar = fVarValueAt;
             while (iMin > 0) {
-                V vC = bucket2.c();
+                V vC = fVar.c();
                 if (vC == null) {
                     break;
                 }
                 g(vC);
-                int i5 = bucket2.a;
+                int i5 = fVar.a;
                 iMin -= i5;
                 this.h.a(i5);
             }
         }
         p();
-        if (FLog.h(2)) {
+        if (b.f.d.e.a.h(2)) {
             int i6 = this.g.f2897b;
             int i7 = this.h.f2897b;
         }
     }
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x007f  */
-    @Override // b.f.d.g.Pool2, b.f.d.h.ResourceReleaser
+    @Override // b.f.d.g.e, b.f.d.h.f
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public void release(V v) {
-        Bucket2<V> bucket2;
+        f<V> fVar;
         Objects.requireNonNull(v);
         int iJ = j(v);
         int iK = k(iJ);
         synchronized (this) {
             try {
                 synchronized (this) {
-                    bucket2 = this.d.get(iJ);
+                    fVar = this.d.get(iJ);
                 }
             } catch (Throwable th) {
                 throw th;
@@ -331,29 +329,29 @@ public abstract class BasePool<V> implements Pool2<V> {
         }
         boolean z2 = true;
         if (!this.e.remove(v)) {
-            FLog.c(this.a, "release (free, value unrecognized) (object, size) = (%x, %s)", Integer.valueOf(System.identityHashCode(v)), Integer.valueOf(iJ));
+            b.f.d.e.a.c(this.a, "release (free, value unrecognized) (object, size) = (%x, %s)", Integer.valueOf(System.identityHashCode(v)), Integer.valueOf(iJ));
             g(v);
             this.i.e(iK);
-        } else if (bucket2 == null) {
-            if (bucket2 != null) {
-                bucket2.b();
+        } else if (fVar == null) {
+            if (fVar != null) {
+                fVar.b();
             }
-            if (FLog.h(2)) {
+            if (b.f.d.e.a.h(2)) {
                 System.identityHashCode(v);
             }
             g(v);
             this.g.a(iK);
             this.i.e(iK);
         } else {
-            if (bucket2.e + bucket2.c.size() <= bucket2.f594b) {
+            if (fVar.e + fVar.c.size() <= fVar.f594b) {
                 z2 = false;
             }
             if (!z2 && !n() && o(v)) {
-                bucket2.d(v);
+                fVar.d(v);
                 this.h.b(iK);
                 this.g.a(iK);
                 this.i.g(iK);
-                if (FLog.h(2)) {
+                if (b.f.d.e.a.h(2)) {
                     System.identityHashCode(v);
                 }
             }

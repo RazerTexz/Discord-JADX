@@ -8,9 +8,9 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -25,15 +25,15 @@ public final class GoogleSmartLockRepo {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GoogleSmartLockRepo2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(GoogleSmartLockRepo$Companion$INSTANCE$2.INSTANCE);
     private boolean disableAutoLogin;
     private String pendingIdChange;
     private PublishSubject<GoogleSmartLockManager.SmartLockCredentials> smartLockLogin;
-    private GoogleSmartLockRepo3 smartLockLoginAttempt;
+    private SmartLockSignInAttempt smartLockLoginAttempt;
 
     /* compiled from: GoogleSmartLockRepo.kt */
     /* renamed from: com.discord.utilities.auth.GoogleSmartLockRepo$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -73,11 +73,11 @@ public final class GoogleSmartLockRepo {
     }
 
     public GoogleSmartLockRepo(StoreAuthentication storeAuthentication) {
-        Intrinsics3.checkNotNullParameter(storeAuthentication, "storeAuth");
+        m.checkNotNullParameter(storeAuthentication, "storeAuth");
         PublishSubject<GoogleSmartLockManager.SmartLockCredentials> publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.smartLockLogin = publishSubjectK0;
-        this.smartLockLoginAttempt = new GoogleSmartLockRepo3(false, false, 3, null);
+        this.smartLockLoginAttempt = new SmartLockSignInAttempt(false, false, 3, null);
         ObservableExtensionsKt.appSubscribe$default(storeAuthentication.getPreLogoutSignal$app_productionGoogleRelease(), GoogleSmartLockRepo.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
@@ -93,7 +93,7 @@ public final class GoogleSmartLockRepo {
         return this.pendingIdChange;
     }
 
-    public final GoogleSmartLockRepo3 getSmartLockLoginAttempt() {
+    public final SmartLockSignInAttempt getSmartLockLoginAttempt() {
         return this.smartLockLoginAttempt;
     }
 
@@ -112,12 +112,12 @@ public final class GoogleSmartLockRepo {
     }
 
     public final void onSmartLockCredentialsFailed() {
-        this.smartLockLoginAttempt = GoogleSmartLockRepo3.copy$default(this.smartLockLoginAttempt, false, false, 1, null);
+        this.smartLockLoginAttempt = SmartLockSignInAttempt.copy$default(this.smartLockLoginAttempt, false, false, 1, null);
         AnalyticsTracker.INSTANCE.smartLockLoginCredentialsFailed();
     }
 
     public final void setAttemptToSignInWithSmartLock(boolean usedAutomaticCredentials) {
-        this.smartLockLoginAttempt = new GoogleSmartLockRepo3(usedAutomaticCredentials, false, 2, null);
+        this.smartLockLoginAttempt = new SmartLockSignInAttempt(usedAutomaticCredentials, false, 2, null);
     }
 
     public final void setDisableAutoLogin(boolean z2) {
@@ -129,15 +129,15 @@ public final class GoogleSmartLockRepo {
     }
 
     public final void setSmartLockLogin(String id2, String password) {
-        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-        Intrinsics3.checkNotNullParameter(password, WidgetSettingsAccountChangePassword.CURRENT_PASSWORD_FIELD);
+        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(password, WidgetSettingsAccountChangePassword.CURRENT_PASSWORD_FIELD);
         PublishSubject<GoogleSmartLockManager.SmartLockCredentials> publishSubject = this.smartLockLogin;
         publishSubject.k.onNext(new GoogleSmartLockManager.SmartLockCredentials(id2, password));
     }
 
-    public final void setSmartLockLoginAttempt(GoogleSmartLockRepo3 googleSmartLockRepo3) {
-        Intrinsics3.checkNotNullParameter(googleSmartLockRepo3, "<set-?>");
-        this.smartLockLoginAttempt = googleSmartLockRepo3;
+    public final void setSmartLockLoginAttempt(SmartLockSignInAttempt smartLockSignInAttempt) {
+        m.checkNotNullParameter(smartLockSignInAttempt, "<set-?>");
+        this.smartLockLoginAttempt = smartLockSignInAttempt;
     }
 
     public /* synthetic */ GoogleSmartLockRepo(StoreAuthentication storeAuthentication, int i, DefaultConstructorMarker defaultConstructorMarker) {

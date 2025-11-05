@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 public interface a {
 
     /* renamed from: b.i.c.j.a.a$a, reason: collision with other inner class name */
-    public interface InterfaceC0046a {
+    public interface InterfaceC0136a {
     }
 
     public interface b {
@@ -17,5 +17,5 @@ public interface a {
 
     void b(@NonNull String str, @NonNull String str2, Object obj);
 
-    InterfaceC0046a c(String str, b bVar);
+    InterfaceC0136a c(String str, b bVar);
 }

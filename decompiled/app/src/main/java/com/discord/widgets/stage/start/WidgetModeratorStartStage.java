@@ -10,30 +10,30 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppTransitionActivity;
 import com.discord.databinding.WidgetModeratorStartStageBinding;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.calls.CallEventsButtonView;
-import com.discord.widgets.guildscheduledevent.GuildScheduledEventModel2;
+import com.discord.widgets.guildscheduledevent.GuildScheduledEventModelKt;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect;
 import com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent;
 import com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet;
 import com.discord.widgets.stage.start.ModeratorStartStageItem;
 import com.discord.widgets.stage.start.ModeratorStartStageViewModel;
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreen;
-import d0.LazyJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -44,7 +44,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetModeratorStartStage.kt */
 /* loaded from: classes2.dex */
 public final class WidgetModeratorStartStage extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetModeratorStartStage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetModeratorStartStageBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetModeratorStartStage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetModeratorStartStageBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -69,11 +69,11 @@ public final class WidgetModeratorStartStage extends AppFragment {
         }
 
         public final void launch(Context context, long channelId, long guildId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_CHANNEL_ID", channelId);
             intent.putExtra("com.discord.intent.extra.EXTRA_GUILD_ID", guildId);
-            AppScreen2.d(context, WidgetModeratorStartStage.class, intent);
+            j.d(context, WidgetModeratorStartStage.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -83,7 +83,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
 
     /* compiled from: WidgetModeratorStartStage.kt */
     /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$handleListItemClick$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -103,7 +103,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
 
     /* compiled from: WidgetModeratorStartStage.kt */
     /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBound$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<ModeratorStartStageItem, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<ModeratorStartStageItem, Unit> {
         public AnonymousClass1(WidgetModeratorStartStage widgetModeratorStartStage) {
             super(1, widgetModeratorStartStage, WidgetModeratorStartStage.class, "handleListItemClick", "handleListItemClick(Lcom/discord/widgets/stage/start/ModeratorStartStageItem;)V", 0);
         }
@@ -116,7 +116,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModeratorStartStageItem moderatorStartStageItem) {
-            Intrinsics3.checkNotNullParameter(moderatorStartStageItem, "p1");
+            m.checkNotNullParameter(moderatorStartStageItem, "p1");
             WidgetModeratorStartStage.access$handleListItemClick((WidgetModeratorStartStage) this.receiver, moderatorStartStageItem);
         }
     }
@@ -139,7 +139,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
 
     /* compiled from: WidgetModeratorStartStage.kt */
     /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<ModeratorStartStageViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<ModeratorStartStageViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetModeratorStartStage widgetModeratorStartStage) {
             super(1, widgetModeratorStartStage, WidgetModeratorStartStage.class, "configureUi", "configureUi(Lcom/discord/widgets/stage/start/ModeratorStartStageViewModel$ViewState;)V", 0);
         }
@@ -152,20 +152,20 @@ public final class WidgetModeratorStartStage extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModeratorStartStageViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetModeratorStartStage.access$configureUi((WidgetModeratorStartStage) this.receiver, viewState);
         }
     }
 
     public WidgetModeratorStartStage() {
         super(R.layout.widget_moderator_start_stage);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetModeratorStartStage2.INSTANCE, null, 2, null);
-        this.channelId = LazyJVM.lazy(new WidgetModeratorStartStage3(this));
-        this.guildId = LazyJVM.lazy(new WidgetModeratorStartStage4(this));
-        WidgetModeratorStartStage6 widgetModeratorStartStage6 = new WidgetModeratorStartStage6(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(ModeratorStartStageViewModel.class), new WidgetModeratorStartStage$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetModeratorStartStage6));
-        this.previewLauncher = WidgetPreviewGuildScheduledEvent.INSTANCE.createJoinOnStartActivityRegistration(this, new WidgetModeratorStartStage5(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetModeratorStartStage$binding$2.INSTANCE, null, 2, null);
+        this.channelId = g.lazy(new WidgetModeratorStartStage$channelId$2(this));
+        this.guildId = g.lazy(new WidgetModeratorStartStage$guildId$2(this));
+        WidgetModeratorStartStage$viewModel$2 widgetModeratorStartStage$viewModel$2 = new WidgetModeratorStartStage$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(ModeratorStartStageViewModel.class), new WidgetModeratorStartStage$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetModeratorStartStage$viewModel$2));
+        this.previewLauncher = WidgetPreviewGuildScheduledEvent.INSTANCE.createJoinOnStartActivityRegistration(this, new WidgetModeratorStartStage$previewLauncher$1(this));
     }
 
     public static final /* synthetic */ void access$configureUi(WidgetModeratorStartStage widgetModeratorStartStage, ModeratorStartStageViewModel.ViewState viewState) {
@@ -191,7 +191,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
     private final void configureToolbar(ModeratorStartStageViewModel.ViewState viewState) {
         CallEventsButtonView callEventsButtonView = getBinding().d;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         callEventsButtonView.a(parentFragmentManager, getGuildId(), getChannelId(), viewState.getChannelEvents());
     }
 
@@ -203,7 +203,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
         configureToolbar(viewState);
         ModeratorStartStageAdapter moderatorStartStageAdapter = this.adapter;
         if (moderatorStartStageAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         moderatorStartStageAdapter.setData(viewState.getItems());
     }
@@ -228,7 +228,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
         if (item instanceof ModeratorStartStageItem.ListItem.StaticOption.StartStage) {
             WidgetStageStartEventBottomSheet.Companion companion = WidgetStageStartEventBottomSheet.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, getChannelId(), new AnonymousClass1());
             return;
         }
@@ -242,7 +242,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
             }
         } else {
             ModeratorStartStageItem.ListItem.Event event = (ModeratorStartStageItem.ListItem.Event) item;
-            WidgetPreviewGuildScheduledEvent.Companion.launch$default(WidgetPreviewGuildScheduledEvent.INSTANCE, requireContext(), GuildScheduledEventModel2.toModel(event.getEvent()), new WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData(event.getEvent().getId(), WidgetPreviewGuildScheduledEvent.Companion.Action.START_EVENT), this.previewLauncher, false, 16, null);
+            WidgetPreviewGuildScheduledEvent.Companion.launch$default(WidgetPreviewGuildScheduledEvent.INSTANCE, requireContext(), GuildScheduledEventModelKt.toModel(event.getEvent()), new WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData(event.getEvent().getId(), WidgetPreviewGuildScheduledEvent.Companion.Action.START_EVENT), this.previewLauncher, false, 16, null);
         }
     }
 
@@ -256,16 +256,16 @@ public final class WidgetModeratorStartStage extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         RecyclerView recyclerView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
+        m.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
         this.adapter = new ModeratorStartStageAdapter(recyclerView, new AnonymousClass1(this));
         RecyclerView recyclerView2 = getBinding().c;
         recyclerView2.setLayoutManager(new LinearLayoutManager(recyclerView2.getContext()));
         ModeratorStartStageAdapter moderatorStartStageAdapter = this.adapter;
         if (moderatorStartStageAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         recyclerView2.setAdapter(moderatorStartStageAdapter);
         getBinding().f2497b.setOnClickListener(new AnonymousClass3());

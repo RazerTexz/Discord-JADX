@@ -3,26 +3,14 @@ package b.a.q.m0.c;
 import android.content.Context;
 import android.os.Build;
 import androidx.annotation.AnyThread;
-import b.a.q.MediaEngineExecutorService;
 import b.a.q.e0;
-import b.a.q.k0.EchoCancellation;
-import b.a.q.m0.Codec2;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import co.discord.media_engine.DeviceDescription4;
 import co.discord.media_engine.RtcRegion;
+import co.discord.media_engine.VideoInputDeviceDescription;
 import com.discord.rtcconnection.mediaengine.MediaEngine;
 import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
 import com.discord.utilities.logging.Logger;
 import com.hammerandchisel.libdiscord.Discord;
-import d0.t.CollectionsJVM;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.t.n0;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -41,29 +29,29 @@ import rx.functions.Action1;
 /* compiled from: MediaEngineLegacy.kt */
 /* loaded from: classes.dex */
 public final class k implements MediaEngine {
-    public static final Set<String> a = Sets5.setOf((Object[]) new String[]{"Pixel", "Pixel XL", "Pixel 3a XL", "Pixel 4", "Pixel 4 XL", "Pixel 5"});
+    public static final Set<String> a = n0.setOf((Object[]) new String[]{"Pixel", "Pixel XL", "Pixel 3a XL", "Pixel 4", "Pixel 4 XL", "Pixel 5"});
 
     /* renamed from: b, reason: collision with root package name */
-    public static final Set<String> f271b = Sets5.setOf((Object[]) new String[]{"Pixel 3a", "Redmi Note 8 Pro", "Redmi Note 8 pro"});
-    public final NoiseCancellationConfig c;
+    public static final Set<String> f271b = n0.setOf((Object[]) new String[]{"Pixel 3a", "Redmi Note 8 Pro", "Redmi Note 8 pro"});
+    public final u c;
     public final List<MediaEngineConnection> d;
     public boolean e;
     public Discord f;
-    public List<Codec2> g;
+    public List<b.a.q.m0.a> g;
     public MediaEngine.OpenSLUsageMode h;
     public MediaEngine.EchoCancellationInfo i;
     public final Context j;
     public final MediaEngine.c k;
-    public final MediaEngineExecutorService l;
+    public final b.a.q.c l;
     public final MediaEngine.OpenSLESConfig m;
     public final Logger n;
-    public final EchoCancellation o;
+    public final b.a.q.k0.g o;
     public final MediaEngine.b p;
     public final Set<String> q;
     public final Set<String> r;
 
     /* compiled from: MediaEngineLegacy.kt */
-    public static final class a extends Lambda implements Function0<Unit> {
+    public static final class a extends d0.z.d.o implements Function0<Unit> {
         public a() {
             super(0);
         }
@@ -79,19 +67,19 @@ public final class k implements MediaEngine {
     }
 
     /* compiled from: MediaEngineLegacy.kt */
-    public static final class b extends Lambda implements Function1<MediaEngine.c, Unit> {
-        public final /* synthetic */ MediaEngineConnectionLegacy5 $connection;
+    public static final class b extends d0.z.d.o implements Function1<MediaEngine.c, Unit> {
+        public final /* synthetic */ b.a.q.m0.c.e $connection;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public b(MediaEngineConnectionLegacy5 mediaEngineConnectionLegacy5) {
+        public b(b.a.q.m0.c.e eVar) {
             super(1);
-            this.$connection = mediaEngineConnectionLegacy5;
+            this.$connection = eVar;
         }
 
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(MediaEngine.c cVar) {
             MediaEngine.c cVar2 = cVar;
-            Intrinsics3.checkNotNullParameter(cVar2, "it");
+            d0.z.d.m.checkNotNullParameter(cVar2, "it");
             cVar2.onNewConnection(this.$connection);
             return Unit.a;
         }
@@ -101,7 +89,7 @@ public final class k implements MediaEngine {
     public static final class c extends MediaEngineConnection.a {
 
         /* compiled from: MediaEngineLegacy.kt */
-        public static final class a extends Lambda implements Function0<Unit> {
+        public static final class a extends d0.z.d.o implements Function0<Unit> {
             public a() {
                 super(0);
             }
@@ -117,7 +105,7 @@ public final class k implements MediaEngine {
         }
 
         /* compiled from: MediaEngineLegacy.kt */
-        public static final class b extends Lambda implements Function0<Unit> {
+        public static final class b extends d0.z.d.o implements Function0<Unit> {
             public final /* synthetic */ MediaEngineConnection $connection;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -135,11 +123,11 @@ public final class k implements MediaEngine {
 
         /* compiled from: MediaEngineLegacy.kt */
         /* renamed from: b.a.q.m0.c.k$c$c, reason: collision with other inner class name */
-        public static final class C0016c extends Lambda implements Function0<Unit> {
+        public static final class C0044c extends d0.z.d.o implements Function0<Unit> {
             public final /* synthetic */ MediaEngineConnection $connection;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0016c(MediaEngineConnection mediaEngineConnection) {
+            public C0044c(MediaEngineConnection mediaEngineConnection) {
                 super(0);
                 this.$connection = mediaEngineConnection;
             }
@@ -152,7 +140,7 @@ public final class k implements MediaEngine {
         }
 
         /* compiled from: MediaEngineLegacy.kt */
-        public static final class d extends Lambda implements Function0<Unit> {
+        public static final class d extends d0.z.d.o implements Function0<Unit> {
             public final /* synthetic */ MediaEngineConnection $connection;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -172,17 +160,17 @@ public final class k implements MediaEngine {
         }
 
         @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
-        public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<Codec2> list) {
-            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-            Intrinsics3.checkNotNullParameter(transportInfo, "transportInfo");
-            Intrinsics3.checkNotNullParameter(list, "supportedVideoCodecs");
+        public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<b.a.q.m0.a> list) {
+            d0.z.d.m.checkNotNullParameter(mediaEngineConnection, "connection");
+            d0.z.d.m.checkNotNullParameter(transportInfo, "transportInfo");
+            d0.z.d.m.checkNotNullParameter(list, "supportedVideoCodecs");
             k.this.o(new a());
         }
 
         @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
         public void onConnectionStateChange(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.ConnectionState connectionState) {
-            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-            Intrinsics3.checkNotNullParameter(connectionState, "connectionState");
+            d0.z.d.m.checkNotNullParameter(mediaEngineConnection, "connection");
+            d0.z.d.m.checkNotNullParameter(connectionState, "connectionState");
             if (connectionState == MediaEngineConnection.ConnectionState.DISCONNECTED) {
                 k.this.o(new b(mediaEngineConnection));
             }
@@ -190,14 +178,14 @@ public final class k implements MediaEngine {
 
         @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
         public void onDestroy(MediaEngineConnection mediaEngineConnection) {
-            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-            k.this.o(new C0016c(mediaEngineConnection));
+            d0.z.d.m.checkNotNullParameter(mediaEngineConnection, "connection");
+            k.this.o(new C0044c(mediaEngineConnection));
         }
 
         @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.a, com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
         public void onError(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.FailedConnectionException failedConnectionException) {
-            Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-            Intrinsics3.checkNotNullParameter(failedConnectionException, "exception");
+            d0.z.d.m.checkNotNullParameter(mediaEngineConnection, "connection");
+            d0.z.d.m.checkNotNullParameter(failedConnectionException, "exception");
             k.this.o(new d(mediaEngineConnection));
         }
     }
@@ -218,26 +206,26 @@ public final class k implements MediaEngine {
     }
 
     /* compiled from: MediaEngineLegacy.kt */
-    public static final class e<T> implements Action1<List<? extends Codec2>> {
+    public static final class e<T> implements Action1<List<? extends b.a.q.m0.a>> {
         public e() {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Action1
-        public void call(List<? extends Codec2> list) {
-            List<? extends Codec2> list2 = list;
+        public void call(List<? extends b.a.q.m0.a> list) {
+            List<? extends b.a.q.m0.a> list2 = list;
             k kVar = k.this;
-            Intrinsics3.checkNotNullExpressionValue(list2, "codecs");
+            d0.z.d.m.checkNotNullExpressionValue(list2, "codecs");
             kVar.g = list2;
         }
     }
 
     /* compiled from: MediaEngineLegacy.kt */
-    public static final class f<T, R> implements Func1<List<? extends Codec2>, Unit> {
+    public static final class f<T, R> implements j0.k.b<List<? extends b.a.q.m0.a>, Unit> {
         public static final f j = new f();
 
-        @Override // j0.k.Func1
-        public Unit call(List<? extends Codec2> list) {
+        @Override // j0.k.b
+        public Unit call(List<? extends b.a.q.m0.a> list) {
             return Unit.a;
         }
     }
@@ -258,13 +246,13 @@ public final class k implements MediaEngine {
 
     /* compiled from: MediaEngineLegacy.kt */
     public static final class h implements Discord.BuiltinAECCallback {
-        public final /* synthetic */ EchoCancellation a;
+        public final /* synthetic */ b.a.q.k0.g a;
 
         /* renamed from: b, reason: collision with root package name */
         public final /* synthetic */ k f272b;
 
         /* compiled from: MediaEngineLegacy.kt */
-        public static final class a extends Lambda implements Function0<Unit> {
+        public static final class a extends d0.z.d.o implements Function0<Unit> {
             public final /* synthetic */ boolean $available;
             public final /* synthetic */ boolean $enabled;
             public final /* synthetic */ boolean $requestEnabled;
@@ -289,8 +277,8 @@ public final class k implements MediaEngine {
             }
         }
 
-        public h(EchoCancellation echoCancellation, Discord discord, k kVar) {
-            this.a = echoCancellation;
+        public h(b.a.q.k0.g gVar, Discord discord, k kVar) {
+            this.a = gVar;
             this.f272b = kVar;
         }
 
@@ -308,14 +296,14 @@ public final class k implements MediaEngine {
         @Override // org.webrtc.Logging.ExternalReporter
         public final void e(String str, String str2, Throwable th) {
             Logger logger = k.this.n;
-            Intrinsics3.checkNotNullExpressionValue(str, "tag");
-            Intrinsics3.checkNotNullExpressionValue(str2, "message");
+            d0.z.d.m.checkNotNullExpressionValue(str, "tag");
+            d0.z.d.m.checkNotNullExpressionValue(str2, "message");
             Logger.e$default(logger, str, str2, th, null, 8, null);
         }
     }
 
     /* compiled from: MediaEngineLegacy.kt */
-    public static final /* synthetic */ class j extends FunctionReferenceImpl implements Function1<MediaEngine.c, Unit> {
+    public static final /* synthetic */ class j extends d0.z.d.k implements Function1<MediaEngine.c, Unit> {
         public static final j j = new j();
 
         public j() {
@@ -325,7 +313,7 @@ public final class k implements MediaEngine {
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(MediaEngine.c cVar) {
             MediaEngine.c cVar2 = cVar;
-            Intrinsics3.checkNotNullParameter(cVar2, "p1");
+            d0.z.d.m.checkNotNullParameter(cVar2, "p1");
             cVar2.onNativeEngineInitialized();
             return Unit.a;
         }
@@ -333,11 +321,11 @@ public final class k implements MediaEngine {
 
     /* compiled from: MediaEngineLegacy.kt */
     /* renamed from: b.a.q.m0.c.k$k, reason: collision with other inner class name */
-    public static final class C0017k extends Lambda implements Function0<Unit> {
+    public static final class C0045k extends d0.z.d.o implements Function0<Unit> {
         public final /* synthetic */ MediaEngine.VoiceConfig $voiceConfig;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C0017k(MediaEngine.VoiceConfig voiceConfig) {
+        public C0045k(MediaEngine.VoiceConfig voiceConfig) {
             super(0);
             this.$voiceConfig = voiceConfig;
         }
@@ -345,9 +333,9 @@ public final class k implements MediaEngine {
         @Override // kotlin.jvm.functions.Function0
         public Unit invoke() {
             boolean z2;
-            StringBuilder sbU = outline.U("updateVoiceConfig: ");
+            StringBuilder sbU = b.d.b.a.a.U("updateVoiceConfig: ");
             sbU.append(this.$voiceConfig);
-            AnimatableValueParser.b1("MediaEngineLegacy", sbU.toString());
+            b.c.a.a0.d.b1("MediaEngineLegacy", sbU.toString());
             MediaEngine.VoiceConfig voiceConfig = this.$voiceConfig;
             k kVar = k.this;
             float f = voiceConfig.outputVolume;
@@ -358,15 +346,15 @@ public final class k implements MediaEngine {
             k kVar2 = k.this;
             boolean z3 = voiceConfig.echoCancellation;
             kVar2.l.a();
-            EchoCancellation echoCancellation = kVar2.o;
-            if (echoCancellation.g && echoCancellation.d) {
+            b.a.q.k0.g gVar = kVar2.o;
+            if (gVar.g && gVar.d) {
                 z2 = false;
             } else {
-                EchoCancellation echoCancellation2 = kVar2.o;
-                z2 = echoCancellation2.f && !echoCancellation2.d ? true : z3;
+                b.a.q.k0.g gVar2 = kVar2.o;
+                z2 = gVar2.f && !gVar2.d ? true : z3;
             }
             if (z2 != z3) {
-                AnimatableValueParser.b1("MediaEngineLegacy", "ignoring call to setEchoCancellation(" + z3 + "), config=" + kVar2.o);
+                b.c.a.a0.d.b1("MediaEngineLegacy", "ignoring call to setEchoCancellation(" + z3 + "), config=" + kVar2.o);
             }
             Discord discord2 = kVar2.f;
             if (discord2 != null) {
@@ -400,28 +388,28 @@ public final class k implements MediaEngine {
         }
     }
 
-    public k(Context context, MediaEngine.c cVar, MediaEngineExecutorService mediaEngineExecutorService, MediaEngine.OpenSLESConfig openSLESConfig, Logger logger, EchoCancellation echoCancellation, MediaEngine.b bVar, Set set, Set set2, int i2) {
+    public k(Context context, MediaEngine.c cVar, b.a.q.c cVar2, MediaEngine.OpenSLESConfig openSLESConfig, Logger logger, b.a.q.k0.g gVar, MediaEngine.b bVar, Set set, Set set2, int i2) {
         Set<String> set3 = (i2 & 128) != 0 ? a : null;
         Set<String> set4 = (i2 & 256) != 0 ? f271b : null;
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(cVar, "listener");
-        Intrinsics3.checkNotNullParameter(mediaEngineExecutorService, "mediaEngineThreadExecutor");
-        Intrinsics3.checkNotNullParameter(openSLESConfig, "openSLESConfig");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        Intrinsics3.checkNotNullParameter(echoCancellation, "echoCancellation");
-        Intrinsics3.checkNotNullParameter(bVar, "echoCancellationCallback");
-        Intrinsics3.checkNotNullParameter(set3, "defaultOpenSLAllowList");
-        Intrinsics3.checkNotNullParameter(set4, "defaultOpenSLExcludeList");
+        d0.z.d.m.checkNotNullParameter(context, "context");
+        d0.z.d.m.checkNotNullParameter(cVar, "listener");
+        d0.z.d.m.checkNotNullParameter(cVar2, "mediaEngineThreadExecutor");
+        d0.z.d.m.checkNotNullParameter(openSLESConfig, "openSLESConfig");
+        d0.z.d.m.checkNotNullParameter(logger, "logger");
+        d0.z.d.m.checkNotNullParameter(gVar, "echoCancellation");
+        d0.z.d.m.checkNotNullParameter(bVar, "echoCancellationCallback");
+        d0.z.d.m.checkNotNullParameter(set3, "defaultOpenSLAllowList");
+        d0.z.d.m.checkNotNullParameter(set4, "defaultOpenSLExcludeList");
         this.j = context;
         this.k = cVar;
-        this.l = mediaEngineExecutorService;
+        this.l = cVar2;
         this.m = openSLESConfig;
         this.n = logger;
-        this.o = echoCancellation;
+        this.o = gVar;
         this.p = bVar;
         this.q = set3;
         this.r = set4;
-        this.c = new NoiseCancellationConfig();
+        this.c = new u();
         this.d = new ArrayList();
         this.e = true;
         this.h = MediaEngine.OpenSLUsageMode.ALLOW_LIST;
@@ -440,27 +428,27 @@ public final class k implements MediaEngine {
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     public Observable<Unit> a() {
         if (this.g != null) {
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(Unit.a);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(Unit)");
-            return scalarSynchronousObservable;
+            j0.l.e.k kVar = new j0.l.e.k(Unit.a);
+            d0.z.d.m.checkNotNullExpressionValue(kVar, "Observable.just(Unit)");
+            return kVar;
         }
         p();
         if (this.f == null) {
             Observable<Unit> observableX = Observable.x(new IllegalStateException("Failed to initialize native media engine"));
-            Intrinsics3.checkNotNullExpressionValue(observableX, "Observable.error(Illegal…ze native media engine\"))");
+            d0.z.d.m.checkNotNullExpressionValue(observableX, "Observable.error(Illegal…ze native media engine\"))");
             return observableX;
         }
         Observable observableO = Observable.o(new q(this), Emitter.BackpressureMode.NONE);
-        Intrinsics3.checkNotNullExpressionValue(observableO, "Observable.create({ emit…er.BackpressureMode.NONE)");
+        d0.z.d.m.checkNotNullExpressionValue(observableO, "Observable.create({ emit…er.BackpressureMode.NONE)");
         Observable<Unit> observableG = observableO.u(new e()).G(f.j);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "getSupportedVideoCodecs(…s }\n        .map { Unit }");
+        d0.z.d.m.checkNotNullExpressionValue(observableG, "getSupportedVideoCodecs(…s }\n        .map { Unit }");
         return observableG;
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     public void b(RtcRegion[] rtcRegionArr, Function1<? super String[], Unit> function1) {
-        Intrinsics3.checkNotNullParameter(rtcRegionArr, "regionsWithIps");
-        Intrinsics3.checkNotNullParameter(function1, "callback");
+        d0.z.d.m.checkNotNullParameter(rtcRegionArr, "regionsWithIps");
+        d0.z.d.m.checkNotNullParameter(function1, "callback");
         p();
         Discord discord = this.f;
         if (discord != null) {
@@ -469,21 +457,21 @@ public final class k implements MediaEngine {
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
-    public MediaEngineExecutorService c() {
+    public b.a.q.c c() {
         return this.l;
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     @AnyThread
     public void d(MediaEngine.VoiceConfig voiceConfig) {
-        Intrinsics3.checkNotNullParameter(voiceConfig, "voiceConfig");
-        o(new C0017k(voiceConfig));
+        d0.z.d.m.checkNotNullParameter(voiceConfig, "voiceConfig");
+        o(new C0045k(voiceConfig));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     public Observable<MediaEngine.AudioInfo> e() {
         Observable<MediaEngine.AudioInfo> observableO = Observable.o(new d(), Emitter.BackpressureMode.LATEST);
-        Intrinsics3.checkNotNullExpressionValue(observableO, "Observable.create({ emit….BackpressureMode.LATEST)");
+        d0.z.d.m.checkNotNullExpressionValue(observableO, "Observable.create({ emit….BackpressureMode.LATEST)");
         return observableO;
     }
 
@@ -497,9 +485,9 @@ public final class k implements MediaEngine {
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     public synchronized MediaEngineConnection g(long j2, MediaEngine.a aVar, MediaEngineConnection.Type type, Function1<? super Exception, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(aVar, "options");
-        Intrinsics3.checkNotNullParameter(type, "type");
-        Intrinsics3.checkNotNullParameter(function1, "onFailure");
+        d0.z.d.m.checkNotNullParameter(aVar, "options");
+        d0.z.d.m.checkNotNullParameter(type, "type");
+        d0.z.d.m.checkNotNullParameter(function1, "onFailure");
         if (!(this.g != null)) {
             ((e0) function1).invoke(new IllegalStateException("connect() called on unprepared media engine."));
             return null;
@@ -512,27 +500,27 @@ public final class k implements MediaEngine {
         o(new a());
         Logger.i$default(this.n, "MediaEngineLegacy", "Connecting with options: " + aVar, null, 4, null);
         c cVar = new c();
-        MediaEngineExecutorService mediaEngineExecutorService = this.l;
+        b.a.q.c cVar2 = this.l;
         Logger logger = this.n;
-        NoiseCancellationConfig noiseCancellationConfig = this.c;
-        List<Codec2> list = this.g;
+        u uVar = this.c;
+        List<b.a.q.m0.a> list = this.g;
         if (list == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("supportedVideoCodecs");
+            d0.z.d.m.throwUninitializedPropertyAccessException("supportedVideoCodecs");
         }
-        MediaEngineConnectionLegacy5 mediaEngineConnectionLegacy5 = new MediaEngineConnectionLegacy5(mediaEngineExecutorService, logger, noiseCancellationConfig, discord, list, type, j2, aVar, CollectionsJVM.listOf(cVar));
-        this.d.add(mediaEngineConnectionLegacy5);
-        n(new b(mediaEngineConnectionLegacy5));
-        return mediaEngineConnectionLegacy5;
+        b.a.q.m0.c.e eVar = new b.a.q.m0.c.e(cVar2, logger, uVar, discord, list, type, j2, aVar, d0.t.m.listOf(cVar));
+        this.d.add(eVar);
+        n(new b(eVar));
+        return eVar;
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     public synchronized List<MediaEngineConnection> getConnections() {
-        return _Collections.toList(this.d);
+        return d0.t.u.toList(this.d);
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
     public void h(MediaEngine.OpenSLUsageMode openSLUsageMode) {
-        Intrinsics3.checkNotNullParameter(openSLUsageMode, "openSLUsageMode");
+        d0.z.d.m.checkNotNullParameter(openSLUsageMode, "openSLUsageMode");
         if (this.f != null) {
             Logger.e$default(this.n, "MediaEngineLegacy", "setting openSLUsageMode too late", null, null, 12, null);
         }
@@ -545,8 +533,8 @@ public final class k implements MediaEngine {
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine
-    public void j(Function1<? super DeviceDescription4[], Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "devicesCallback");
+    public void j(Function1<? super VideoInputDeviceDescription[], Unit> function1) {
+        d0.z.d.m.checkNotNullParameter(function1, "devicesCallback");
         p();
         Discord discord = this.f;
         if (discord != null) {
@@ -591,11 +579,11 @@ public final class k implements MediaEngine {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v0, types: [b.a.q.m0.c.t] */
     public final Future<?> o(Function0<Unit> function0) {
-        MediaEngineExecutorService mediaEngineExecutorService = this.l;
+        b.a.q.c cVar = this.l;
         if (function0 != null) {
             function0 = new t(function0);
         }
-        return mediaEngineExecutorService.submit((Runnable) function0);
+        return cVar.submit((Runnable) function0);
     }
 
     public final void p() {
@@ -603,7 +591,7 @@ public final class k implements MediaEngine {
             return;
         }
         Logger logger = this.n;
-        StringBuilder sbU = outline.U("initializing voice engine. OpenSL ES: ");
+        StringBuilder sbU = b.d.b.a.a.U("initializing voice engine. OpenSL ES: ");
         sbU.append(this.m);
         sbU.append(", OpenSL usage mode: ");
         sbU.append(this.h);
@@ -617,12 +605,12 @@ public final class k implements MediaEngine {
                 zContains = true;
             }
             Logger logger2 = this.n;
-            StringBuilder sbU2 = outline.U("OpenSL ES default. mode: ");
+            StringBuilder sbU2 = b.d.b.a.a.U("OpenSL ES default. mode: ");
             sbU2.append(this.h);
             sbU2.append(", enableOpenSL: ");
             sbU2.append(zContains);
             sbU2.append(", model: '");
-            Logger.i$default(logger2, "MediaEngineLegacy", outline.H(sbU2, Build.MODEL, '\''), null, 4, null);
+            Logger.i$default(logger2, "MediaEngineLegacy", b.d.b.a.a.H(sbU2, Build.MODEL, '\''), null, 4, null);
             WebRtcAudioManager.setBlacklistDeviceForOpenSLESUsage(!zContains);
         } else if (iOrdinal == 1) {
             WebRtcAudioManager.setBlacklistDeviceForOpenSLESUsage(false);
@@ -632,9 +620,9 @@ public final class k implements MediaEngine {
         Logging.externalReporter = new i();
         try {
             Discord discord = new Discord(this.j, 2);
-            EchoCancellation echoCancellation = this.o;
-            if (echoCancellation.e) {
-                discord.enableBuiltInAEC(true, new h(echoCancellation, discord, this));
+            b.a.q.k0.g gVar = this.o;
+            if (gVar.e) {
+                discord.enableBuiltInAEC(true, new h(gVar, discord, this));
             }
             discord.setAudioInputEnabled(this.e);
             this.f = discord;

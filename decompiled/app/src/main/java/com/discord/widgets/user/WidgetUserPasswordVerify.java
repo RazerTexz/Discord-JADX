@@ -10,10 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.o;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.user.User;
 import com.discord.app.AppFragment;
@@ -22,7 +20,7 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.auth.GoogleSmartLockManager;
-import com.discord.utilities.auth.GoogleSmartLockManager3;
+import com.discord.utilities.auth.GoogleSmartLockManagerKt;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
@@ -30,13 +28,13 @@ import com.discord.utilities.stateful.StatefulViews;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.validators.ValidationManager;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -52,7 +50,7 @@ import rx.functions.Action1;
 /* compiled from: WidgetUserPasswordVerify.kt */
 /* loaded from: classes.dex */
 public final class WidgetUserPasswordVerify extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetUserPasswordVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserPasswordVerifyBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetUserPasswordVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserPasswordVerifyBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -86,7 +84,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
 
         private final void launch(Context context, ActivityResultLauncher<Intent> launcher, Bundle extras) {
             AnalyticsTracker.openModal$default("Account Settings Password Verification", "", null, 4, null);
-            AppScreen2.g.f(context, launcher, WidgetUserPasswordVerify.class, new Intent().putExtras(extras));
+            j.g.f(context, launcher, WidgetUserPasswordVerify.class, new Intent().putExtras(extras));
         }
 
         public static /* synthetic */ void launchUpdateAccountSettings$default(Companion companion, Context context, ActivityResultLauncher activityResultLauncher, String str, String str2, String str3, String str4, int i, Object obj) {
@@ -94,16 +92,16 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
 
         public final void launchRemovePhoneNumber(Context context, ActivityResultLauncher<Intent> launcher) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(launcher, "launcher");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(launcher, "launcher");
             Bundle bundle = new Bundle();
             bundle.putSerializable(WidgetUserPasswordVerify.INTENT_EXTRA_ACTION, Action.RemovePhoneNumber);
             launch(context, launcher, bundle);
         }
 
         public final void launchUpdateAccountSettings(Context context, ActivityResultLauncher<Intent> launcher, String email, String username, String discriminator, String email_token) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(launcher, "launcher");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(launcher, "launcher");
             Bundle bundle = new Bundle();
             bundle.putSerializable(WidgetUserPasswordVerify.INTENT_EXTRA_ACTION, Action.UpdateAccountInfo);
             bundle.putString(WidgetUserPasswordVerify.INTENT_EXTRA_EMAIL, email);
@@ -114,10 +112,10 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
 
         public final void launchUpdatePhoneNumber(Context context, ActivityResultLauncher<Intent> launcher, String phoneToken, String source) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(launcher, "launcher");
-            Intrinsics3.checkNotNullParameter(phoneToken, "phoneToken");
-            Intrinsics3.checkNotNullParameter(source, "source");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(launcher, "launcher");
+            m.checkNotNullParameter(phoneToken, "phoneToken");
+            m.checkNotNullParameter(source, "source");
             Bundle bundle = new Bundle();
             bundle.putSerializable(WidgetUserPasswordVerify.INTENT_EXTRA_ACTION, Action.UpdatePhoneNumber);
             bundle.putString(WidgetUserPasswordVerify.INTENT_EXTRA_PHONE_TOKEN, phoneToken);
@@ -126,10 +124,10 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(AppFragment fragment, Function0<Unit> callback) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(callback, "callback");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetUserPasswordVerify2(callback));
-            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(callback, "callback");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetUserPasswordVerify$Companion$registerForResult$1(callback));
+            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -153,7 +151,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
 
     /* compiled from: WidgetUserPasswordVerify.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<TextView, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<TextView, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -166,7 +164,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            Intrinsics3.checkNotNullParameter(textView, "it");
+            m.checkNotNullParameter(textView, "it");
             WidgetUserPasswordVerify.access$saveInfo(WidgetUserPasswordVerify.this);
         }
     }
@@ -214,7 +212,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetUserPasswordVerify widgetUserPasswordVerify = WidgetUserPasswordVerify.this;
-            Intrinsics3.checkNotNullExpressionValue(error, "it");
+            m.checkNotNullExpressionValue(error, "it");
             error.setShowErrorToasts(!WidgetUserPasswordVerify.access$maybeHandleApiError(widgetUserPasswordVerify, error));
         }
     }
@@ -240,7 +238,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             GoogleSmartLockManager googleSmartLockManager;
             StoreStream.INSTANCE.getAuthentication().setAuthed(user.getToken());
             Context context = WidgetUserPasswordVerify.this.getContext();
-            if (context != null && (googleSmartLockManager = GoogleSmartLockManager3.googleSmartLockManager(context)) != null) {
+            if (context != null && (googleSmartLockManager = GoogleSmartLockManagerKt.googleSmartLockManager(context)) != null) {
                 googleSmartLockManager.updateAccountInfo(this.$newEmail, this.$password);
             }
             WidgetUserPasswordVerify.access$finishWithSuccess(WidgetUserPasswordVerify.this);
@@ -261,7 +259,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetUserPasswordVerify widgetUserPasswordVerify = WidgetUserPasswordVerify.this;
-            Intrinsics3.checkNotNullExpressionValue(error, "it");
+            m.checkNotNullExpressionValue(error, "it");
             error.setShowErrorToasts(!WidgetUserPasswordVerify.access$maybeHandleApiError(widgetUserPasswordVerify, error));
         }
     }
@@ -297,16 +295,16 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetUserPasswordVerify widgetUserPasswordVerify = WidgetUserPasswordVerify.this;
-            Intrinsics3.checkNotNullExpressionValue(error, "it");
+            m.checkNotNullExpressionValue(error, "it");
             error.setShowErrorToasts(!WidgetUserPasswordVerify.access$maybeHandleApiError(widgetUserPasswordVerify, error));
         }
     }
 
     public WidgetUserPasswordVerify() {
         super(R.layout.widget_user_password_verify);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetUserPasswordVerify3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetUserPasswordVerify$binding$2.INSTANCE, null, 2, null);
         this.state = new StatefulViews(R.id.edit_account_password_wrap);
-        this.validationManager = LazyJVM.lazy(new WidgetUserPasswordVerify4(this));
+        this.validationManager = g.lazy(new WidgetUserPasswordVerify$validationManager$2(this));
     }
 
     public static final /* synthetic */ void access$finishWithSuccess(WidgetUserPasswordVerify widgetUserPasswordVerify) {
@@ -327,7 +325,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
 
     private final void finishWithSuccess() {
         StatefulViews.clear$default(this.state, false, 1, null);
-        AppToast.i(this, R.string.saved_settings, 0, 4);
+        b.a.d.m.i(this, R.string.saved_settings, 0, 4);
         FragmentActivity activity = getActivity();
         if (activity != null) {
             activity.setResult(-1);
@@ -352,21 +350,21 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
         ValidationManager validationManager = getValidationManager();
         Error.Response response = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+        m.checkNotNullExpressionValue(response, "error.response");
         Map<String, List<String>> messages = response.getMessages();
-        Intrinsics3.checkNotNullExpressionValue(messages, "error.response.messages");
+        m.checkNotNullExpressionValue(messages, "error.response.messages");
         return validationManager.setErrors(messages).isEmpty();
     }
 
     private final void removePhoneNumber(String password) {
-        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userPhoneDelete(new RestAPIParams.DeletePhone(password)), false, 1, null), this, null, 2, null), getBinding().f2686b, 0L, 2, null).k(o.h(new AnonymousClass1(), getContext(), new AnonymousClass2()));
+        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userPhoneDelete(new RestAPIParams.DeletePhone(password)), false, 1, null), this, null, 2, null), getBinding().f2686b, 0L, 2, null).k(b.a.d.o.h(new AnonymousClass1(), getContext(), new AnonymousClass2()));
     }
 
     private final void saveInfo() {
         if (ValidationManager.validate$default(getValidationManager(), false, 1, null)) {
             AppFragment.hideKeyboard$default(this, null, 1, null);
             TextInputLayout textInputLayout = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountPasswordWrap");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountPasswordWrap");
             String textOrEmpty = ViewExtensions.getTextOrEmpty(textInputLayout);
             Serializable serializableExtra = getMostRecentIntent().getSerializableExtra(INTENT_EXTRA_ACTION);
             Objects.requireNonNull(serializableExtra, "null cannot be cast to non-null type com.discord.widgets.user.WidgetUserPasswordVerify.Companion.Action");
@@ -388,22 +386,22 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         String stringExtra = getMostRecentIntent().getStringExtra(INTENT_EXTRA_USERNAME);
         String stringExtra2 = getMostRecentIntent().getStringExtra(INTENT_EXTRA_DISCRIMINATOR);
         String stringExtra3 = getMostRecentIntent().getStringExtra(INTENT_EXTRA_EMAIL);
-        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().patchUser(new RestAPIParams.UserInfo(null, stringExtra3, getMostRecentIntent().getStringExtra(INTENT_EXTRA_EMAIL_TOKEN), password, null, stringExtra, StoreStream.INSTANCE.getNotifications().getPushToken(), null, stringExtra2, null, null, 1681, null)), false, 1, null), this, null, 2, null), getBinding().f2686b, 0L, 2, null).k(o.h(new AnonymousClass1(stringExtra3, password), getContext(), new AnonymousClass2()));
+        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().patchUser(new RestAPIParams.UserInfo(null, stringExtra3, getMostRecentIntent().getStringExtra(INTENT_EXTRA_EMAIL_TOKEN), password, null, stringExtra, StoreStream.INSTANCE.getNotifications().getPushToken(), null, stringExtra2, null, null, 1681, null)), false, 1, null), this, null, 2, null), getBinding().f2686b, 0L, 2, null).k(b.a.d.o.h(new AnonymousClass1(stringExtra3, password), getContext(), new AnonymousClass2()));
     }
 
     private final void updatePhoneNumber(String password) {
         String stringExtra = getMostRecentIntent().getStringExtra(INTENT_EXTRA_PHONE_TOKEN);
-        Intrinsics3.checkNotNull(stringExtra);
-        Intrinsics3.checkNotNullExpressionValue(stringExtra, "mostRecentIntent.getStri…TENT_EXTRA_PHONE_TOKEN)!!");
+        m.checkNotNull(stringExtra);
+        m.checkNotNullExpressionValue(stringExtra, "mostRecentIntent.getStri…TENT_EXTRA_PHONE_TOKEN)!!");
         String stringExtra2 = getMostRecentIntent().getStringExtra(INTENT_EXTRA_SOURCE_TYPE);
-        Intrinsics3.checkNotNull(stringExtra2);
-        Intrinsics3.checkNotNullExpressionValue(stringExtra2, "mostRecentIntent.getStri…TENT_EXTRA_SOURCE_TYPE)!!");
-        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userPhoneWithToken(new RestAPIParams.VerificationPhoneCode(stringExtra, password, stringExtra2)), false, 1, null), this, null, 2, null), getBinding().f2686b, 0L, 2, null).k(o.h(new AnonymousClass1(), getContext(), new AnonymousClass2()));
+        m.checkNotNull(stringExtra2);
+        m.checkNotNullExpressionValue(stringExtra2, "mostRecentIntent.getStri…TENT_EXTRA_SOURCE_TYPE)!!");
+        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userPhoneWithToken(new RestAPIParams.VerificationPhoneCode(stringExtra, password, stringExtra2)), false, 1, null), this, null, 2, null), getBinding().f2686b, 0L, 2, null).k(b.a.d.o.h(new AnonymousClass1(), getContext(), new AnonymousClass2()));
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setActionBarSubtitle(R.string.user_settings);
         setActionBarTitle(R.string.user_settings_account_verify_password_title_in_title_case);
@@ -411,10 +409,10 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         StatefulViews statefulViews = this.state;
         FloatingActionButton floatingActionButton = getBinding().d;
         TextInputLayout textInputLayout = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountPasswordWrap");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountPasswordWrap");
         statefulViews.setupTextWatcherWithSaveAction(this, floatingActionButton, textInputLayout);
         TextInputLayout textInputLayout2 = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.editAccountPasswordWrap");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.editAccountPasswordWrap");
         ViewExtensions.setOnImeActionDone$default(textInputLayout2, false, new AnonymousClass1(), 1, null);
         getBinding().d.setOnClickListener(new AnonymousClass2());
     }

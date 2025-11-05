@@ -3,9 +3,9 @@ package com.google.android.exoplayer2.metadata;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,13 +15,13 @@ public final class Metadata implements Parcelable {
     public final Entry[] j;
 
     public interface Entry extends Parcelable {
-        void n(MediaMetadata.b bVar);
+        void n(p1.b bVar);
 
         @Nullable
         byte[] o0();
 
         @Nullable
-        Format2 y();
+        j1 y();
     }
 
     public class a implements Parcelable.Creator<Metadata> {
@@ -45,7 +45,7 @@ public final class Metadata implements Parcelable {
             return this;
         }
         Entry[] entryArr2 = this.j;
-        int i = Util2.a;
+        int i = e0.a;
         Object[] objArrCopyOf = Arrays.copyOf(entryArr2, entryArr2.length + entryArr.length);
         System.arraycopy(entryArr, 0, objArrCopyOf, entryArr2.length, entryArr.length);
         return new Metadata((Entry[]) objArrCopyOf);

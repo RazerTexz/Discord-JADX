@@ -1,9 +1,9 @@
 package com.discord.utilities.search;
 
-import d0.g0.Strings4;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.g0.w;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.Set;
 import kotlin.text.Regex;
 
@@ -24,13 +24,13 @@ public final class SearchUtils {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final boolean fuzzyMatch(String query, String target) {
-        Intrinsics3.checkNotNullParameter(query, "query");
-        Intrinsics3.checkNotNullParameter(target, "target");
+        m.checkNotNullParameter(query, "query");
+        m.checkNotNullParameter(target, "target");
         if (query.length() > target.length()) {
             return false;
         }
         if (query.length() == target.length()) {
-            return Intrinsics3.areEqual(query, target);
+            return m.areEqual(query, target);
         }
         int length = query.length();
         int i = 0;
@@ -51,7 +51,7 @@ public final class SearchUtils {
     }
 
     public final Set<String> getQueriesFromSearchText(String searchText) {
-        Intrinsics3.checkNotNullParameter(searchText, "searchText");
-        return searchText.length() == 0 ? Sets5.emptySet() : _Collections.toSet(Strings4.split$default((CharSequence) new Regex("(\\n|\\t|\\s)").replace(new Regex("([!.;,\\-—–?\"'])").replace(Strings4.trim(searchText).toString(), ""), " "), new char[]{' '}, false, 0, 6, (Object) null));
+        m.checkNotNullParameter(searchText, "searchText");
+        return searchText.length() == 0 ? n0.emptySet() : u.toSet(w.split$default((CharSequence) new Regex("(\\n|\\t|\\s)").replace(new Regex("([!.;,\\-—–?\"'])").replace(w.trim(searchText).toString(), ""), " "), new char[]{' '}, false, 0, 6, (Object) null));
     }
 }

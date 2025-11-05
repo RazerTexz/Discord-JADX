@@ -1,25 +1,24 @@
 package b.i.a.c.t2;
 
-import b.i.a.c.f3.Util2;
-import b.i.a.c.t2.AudioRendererEventListener2;
+import b.i.a.c.t2.r;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class c implements Runnable {
-    public final /* synthetic */ AudioRendererEventListener2.a j;
+    public final /* synthetic */ r.a j;
     public final /* synthetic */ Exception k;
 
-    public /* synthetic */ c(AudioRendererEventListener2.a aVar, Exception exc) {
+    public /* synthetic */ c(r.a aVar, Exception exc) {
         this.j = aVar;
         this.k = exc;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        AudioRendererEventListener2.a aVar = this.j;
+        r.a aVar = this.j;
         Exception exc = this.k;
-        AudioRendererEventListener2 audioRendererEventListener2 = aVar.f1126b;
-        int i = Util2.a;
-        audioRendererEventListener2.T(exc);
+        r rVar = aVar.f1126b;
+        int i = b.i.a.c.f3.e0.a;
+        rVar.T(exc);
     }
 }

@@ -4,7 +4,7 @@ import android.view.View;
 import com.discord.models.user.User;
 import com.discord.widgets.friends.FriendsListViewModel;
 import com.discord.widgets.friends.WidgetFriendsListAdapter;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
@@ -22,7 +22,7 @@ public final class WidgetFriendsListAdapter$ItemPendingUser$onConfigure$1 implem
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         Function2<View, User, Unit> onClickUserProfile = WidgetFriendsListAdapter.ItemPendingUser.access$getAdapter$p(this.this$0).getOnClickUserProfile();
-        Intrinsics3.checkNotNullExpressionValue(view, "view");
+        m.checkNotNullExpressionValue(view, "view");
         onClickUserProfile.invoke(view, ((FriendsListViewModel.Item.PendingFriendRequest) this.$data).getUser());
     }
 }

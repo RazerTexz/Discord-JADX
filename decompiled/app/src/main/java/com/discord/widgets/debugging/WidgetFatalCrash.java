@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.BuildConfig;
 import com.discord.R;
 import com.discord.app.AppFragment;
@@ -19,8 +19,8 @@ import com.discord.databinding.WidgetFatalCrashBinding;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -30,7 +30,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetFatalCrash.kt */
 /* loaded from: classes2.dex */
 public final class WidgetFatalCrash extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetFatalCrash.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFatalCrashBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetFatalCrash.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFatalCrashBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -53,19 +53,19 @@ public final class WidgetFatalCrash extends AppFragment {
             simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
             bundle.putString(WidgetFatalCrash.INTENT_EXTRA_CRASH_TIME, simpleDateFormat.format(new Date()) + " GMT");
             Intent intentPutExtras = new Intent().putExtras(bundle);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtras, "Intent().putExtras(extras)");
+            m.checkNotNullExpressionValue(intentPutExtras, "Intent().putExtras(extras)");
             return intentPutExtras;
         }
 
         public final void launch(Context context, Throwable throwable, String crashSource) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(throwable, "throwable");
-            Intrinsics3.checkNotNullParameter(crashSource, "crashSource");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(throwable, "throwable");
+            m.checkNotNullParameter(crashSource, "crashSource");
             AppLog appLog = AppLog.g;
             String simpleName = WidgetFatalCrash.class.getSimpleName();
-            Intrinsics3.checkNotNullExpressionValue(simpleName, "WidgetFatalCrash::class.java.simpleName");
+            m.checkNotNullExpressionValue(simpleName, "WidgetFatalCrash::class.java.simpleName");
             Logger.e$default(appLog, simpleName, new Throwable(crashSource, throwable), null, 4, null);
-            AppScreen2.d(context, WidgetFatalCrash.class, createIntent(crashSource));
+            j.d(context, WidgetFatalCrash.class, createIntent(crashSource));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -75,7 +75,7 @@ public final class WidgetFatalCrash extends AppFragment {
 
     public WidgetFatalCrash() {
         super(R.layout.widget_fatal_crash);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetFatalCrash2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetFatalCrash$binding$2.INSTANCE, null, 2, null);
     }
 
     private final WidgetFatalCrashBinding getBinding() {
@@ -88,30 +88,30 @@ public final class WidgetFatalCrash extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         LinkifiedTextView linkifiedTextView = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.fatalCrashTestersInvite");
-        linkifiedTextView.setText(FormatUtils.k(this, R.string.crash_testers_invite, new Object[]{"https://discord.gg/discord-testers"}, null, 4));
+        m.checkNotNullExpressionValue(linkifiedTextView, "binding.fatalCrashTestersInvite");
+        linkifiedTextView.setText(b.k(this, R.string.crash_testers_invite, new Object[]{"https://discord.gg/discord-testers"}, null, 4));
         Bundle extras = getMostRecentIntent().getExtras();
         TextView textView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.fatalCrashSource");
+        m.checkNotNullExpressionValue(textView, "binding.fatalCrashSource");
         Object[] objArr = new Object[1];
         objArr[0] = extras != null ? extras.getString(INTENT_EXTRA_CRASH_SOURCE, getString(R.string.status_unknown)) : null;
-        textView.setText(FormatUtils.k(this, R.string.crash_source, objArr, null, 4));
+        textView.setText(b.k(this, R.string.crash_source, objArr, null, 4));
         TextView textView2 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.fatalCrashTime");
+        m.checkNotNullExpressionValue(textView2, "binding.fatalCrashTime");
         Object[] objArr2 = new Object[1];
         objArr2[0] = extras != null ? extras.getString(INTENT_EXTRA_CRASH_TIME) : null;
-        textView2.setText(FormatUtils.k(this, R.string.crash_timestamp, objArr2, null, 4));
+        textView2.setText(b.k(this, R.string.crash_timestamp, objArr2, null, 4));
         TextView textView3 = getBinding().f2384b;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.fatalCrashAppVersion");
-        textView3.setText(FormatUtils.k(this, R.string.crash_app_version, new Object[]{BuildConfig.VERSION_NAME}, null, 4));
+        m.checkNotNullExpressionValue(textView3, "binding.fatalCrashAppVersion");
+        textView3.setText(b.k(this, R.string.crash_app_version, new Object[]{BuildConfig.VERSION_NAME}, null, 4));
         TextView textView4 = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.fatalCrashOsVersion");
-        textView4.setText(FormatUtils.k(this, R.string.crash_device_version, new Object[]{String.valueOf(Build.VERSION.SDK_INT)}, null, 4));
+        m.checkNotNullExpressionValue(textView4, "binding.fatalCrashOsVersion");
+        textView4.setText(b.k(this, R.string.crash_device_version, new Object[]{String.valueOf(Build.VERSION.SDK_INT)}, null, 4));
         TextView textView5 = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.fatalCrashDevice");
-        textView5.setText(FormatUtils.k(this, R.string.crash_device, new Object[]{Build.MODEL + ' ' + Build.PRODUCT}, null, 4));
+        m.checkNotNullExpressionValue(textView5, "binding.fatalCrashDevice");
+        textView5.setText(b.k(this, R.string.crash_device, new Object[]{Build.MODEL + ' ' + Build.PRODUCT}, null, 4));
     }
 }

@@ -1,9 +1,9 @@
 package com.discord.models.domain.auth;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.auth.RequiredAction;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -14,18 +14,18 @@ public final /* data */ class ModelLoginResult {
     private final List<RequiredAction> requiredActions;
     private final String ticket;
     private final String token;
-    private final ModelLoginResult2 userSettings;
+    private final ModelUserSettingsBootstrap userSettings;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public ModelLoginResult(boolean z2, String str, String str2, ModelLoginResult2 modelLoginResult2, List<? extends RequiredAction> list) {
+    public ModelLoginResult(boolean z2, String str, String str2, ModelUserSettingsBootstrap modelUserSettingsBootstrap, List<? extends RequiredAction> list) {
         this.mfa = z2;
         this.ticket = str;
         this.token = str2;
-        this.userSettings = modelLoginResult2;
+        this.userSettings = modelUserSettingsBootstrap;
         this.requiredActions = list;
     }
 
-    public static /* synthetic */ ModelLoginResult copy$default(ModelLoginResult modelLoginResult, boolean z2, String str, String str2, ModelLoginResult2 modelLoginResult2, List list, int i, Object obj) {
+    public static /* synthetic */ ModelLoginResult copy$default(ModelLoginResult modelLoginResult, boolean z2, String str, String str2, ModelUserSettingsBootstrap modelUserSettingsBootstrap, List list, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = modelLoginResult.mfa;
         }
@@ -38,13 +38,13 @@ public final /* data */ class ModelLoginResult {
         }
         String str4 = str2;
         if ((i & 8) != 0) {
-            modelLoginResult2 = modelLoginResult.userSettings;
+            modelUserSettingsBootstrap = modelLoginResult.userSettings;
         }
-        ModelLoginResult2 modelLoginResult22 = modelLoginResult2;
+        ModelUserSettingsBootstrap modelUserSettingsBootstrap2 = modelUserSettingsBootstrap;
         if ((i & 16) != 0) {
             list = modelLoginResult.requiredActions;
         }
-        return modelLoginResult.copy(z2, str3, str4, modelLoginResult22, list);
+        return modelLoginResult.copy(z2, str3, str4, modelUserSettingsBootstrap2, list);
     }
 
     /* renamed from: component1, reason: from getter */
@@ -63,7 +63,7 @@ public final /* data */ class ModelLoginResult {
     }
 
     /* renamed from: component4, reason: from getter */
-    public final ModelLoginResult2 getUserSettings() {
+    public final ModelUserSettingsBootstrap getUserSettings() {
         return this.userSettings;
     }
 
@@ -71,7 +71,7 @@ public final /* data */ class ModelLoginResult {
         return this.requiredActions;
     }
 
-    public final ModelLoginResult copy(boolean mfa, String ticket, String token, ModelLoginResult2 userSettings, List<? extends RequiredAction> requiredActions) {
+    public final ModelLoginResult copy(boolean mfa, String ticket, String token, ModelUserSettingsBootstrap userSettings, List<? extends RequiredAction> requiredActions) {
         return new ModelLoginResult(mfa, ticket, token, userSettings, requiredActions);
     }
 
@@ -83,7 +83,7 @@ public final /* data */ class ModelLoginResult {
             return false;
         }
         ModelLoginResult modelLoginResult = (ModelLoginResult) other;
-        return this.mfa == modelLoginResult.mfa && Intrinsics3.areEqual(this.ticket, modelLoginResult.ticket) && Intrinsics3.areEqual(this.token, modelLoginResult.token) && Intrinsics3.areEqual(this.userSettings, modelLoginResult.userSettings) && Intrinsics3.areEqual(this.requiredActions, modelLoginResult.requiredActions);
+        return this.mfa == modelLoginResult.mfa && m.areEqual(this.ticket, modelLoginResult.ticket) && m.areEqual(this.token, modelLoginResult.token) && m.areEqual(this.userSettings, modelLoginResult.userSettings) && m.areEqual(this.requiredActions, modelLoginResult.requiredActions);
     }
 
     public final boolean getMfa() {
@@ -102,7 +102,7 @@ public final /* data */ class ModelLoginResult {
         return this.token;
     }
 
-    public final ModelLoginResult2 getUserSettings() {
+    public final ModelUserSettingsBootstrap getUserSettings() {
         return this.userSettings;
     }
 
@@ -121,14 +121,14 @@ public final /* data */ class ModelLoginResult {
         int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.token;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        ModelLoginResult2 modelLoginResult2 = this.userSettings;
-        int iHashCode3 = (iHashCode2 + (modelLoginResult2 != null ? modelLoginResult2.hashCode() : 0)) * 31;
+        ModelUserSettingsBootstrap modelUserSettingsBootstrap = this.userSettings;
+        int iHashCode3 = (iHashCode2 + (modelUserSettingsBootstrap != null ? modelUserSettingsBootstrap.hashCode() : 0)) * 31;
         List<RequiredAction> list = this.requiredActions;
         return iHashCode3 + (list != null ? list.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelLoginResult(mfa=");
+        StringBuilder sbU = a.U("ModelLoginResult(mfa=");
         sbU.append(this.mfa);
         sbU.append(", ticket=");
         sbU.append(this.ticket);
@@ -137,10 +137,10 @@ public final /* data */ class ModelLoginResult {
         sbU.append(", userSettings=");
         sbU.append(this.userSettings);
         sbU.append(", requiredActions=");
-        return outline.L(sbU, this.requiredActions, ")");
+        return a.L(sbU, this.requiredActions, ")");
     }
 
-    public /* synthetic */ ModelLoginResult(boolean z2, String str, String str2, ModelLoginResult2 modelLoginResult2, List list, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? false : z2, str, str2, modelLoginResult2, list);
+    public /* synthetic */ ModelLoginResult(boolean z2, String str, String str2, ModelUserSettingsBootstrap modelUserSettingsBootstrap, List list, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this((i & 1) != 0 ? false : z2, str, str2, modelUserSettingsBootstrap, list);
     }
 }

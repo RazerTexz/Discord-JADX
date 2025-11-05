@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackApplicationAddToServerClick.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationAddToServerClick implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackApplicationAddToServerClick implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final CharSequence authType = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackApplicationAddToServerClick implements Analyt
             return false;
         }
         TrackApplicationAddToServerClick trackApplicationAddToServerClick = (TrackApplicationAddToServerClick) other;
-        return Intrinsics3.areEqual(this.applicationId, trackApplicationAddToServerClick.applicationId) && Intrinsics3.areEqual(this.authType, trackApplicationAddToServerClick.authType);
+        return m.areEqual(this.applicationId, trackApplicationAddToServerClick.applicationId) && m.areEqual(this.authType, trackApplicationAddToServerClick.authType);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackApplicationAddToServerClick implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackApplicationAddToServerClick(applicationId=");
+        StringBuilder sbU = a.U("TrackApplicationAddToServerClick(applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", authType=");
-        return outline.E(sbU, this.authType, ")");
+        return a.E(sbU, this.authType, ")");
     }
 }

@@ -48,7 +48,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
 import androidx.core.view.accessibility.AccessibilityViewCommand;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
@@ -1844,7 +1844,7 @@ public class ViewCompat {
                 }
                 i++;
             }
-            StringBuilder sbU = outline.U("A MIME type set here must not start with *: ");
+            StringBuilder sbU = a.U("A MIME type set here must not start with *: ");
             sbU.append(Arrays.toString(strArr));
             Preconditions.checkArgument(!z2, sbU.toString());
         }

@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuildTemplate;
-import com.discord.analytics.generated.traits.TrackGuildTemplate2;
+import com.discord.analytics.generated.traits.TrackGuildTemplateReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackCreateGuildViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCreateGuildViewed implements AnalyticsSchema, TrackBase2, TrackGuildTemplate2, TrackLocationMetadata2 {
+public final /* data */ class TrackCreateGuildViewed implements AnalyticsSchema, TrackBaseReceiver, TrackGuildTemplateReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackGuildTemplate trackGuildTemplate;
     private TrackLocationMetadata trackLocationMetadata;
@@ -27,7 +27,7 @@ public final /* data */ class TrackCreateGuildViewed implements AnalyticsSchema,
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackCreateGuildViewed) && Intrinsics3.areEqual(this.flowStep, ((TrackCreateGuildViewed) other).flowStep);
+            return (other instanceof TrackCreateGuildViewed) && m.areEqual(this.flowStep, ((TrackCreateGuildViewed) other).flowStep);
         }
         return true;
     }
@@ -41,6 +41,6 @@ public final /* data */ class TrackCreateGuildViewed implements AnalyticsSchema,
     }
 
     public String toString() {
-        return outline.E(outline.U("TrackCreateGuildViewed(flowStep="), this.flowStep, ")");
+        return a.E(a.U("TrackCreateGuildViewed(flowStep="), this.flowStep, ")");
     }
 }

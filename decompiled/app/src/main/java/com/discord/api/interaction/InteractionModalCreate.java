@@ -1,10 +1,10 @@
 package com.discord.api.interaction;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.botuikit.Component;
 import com.discord.api.commands.Application;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 import java.util.List;
 
@@ -50,7 +50,7 @@ public final /* data */ class InteractionModalCreate implements Serializable {
             return false;
         }
         InteractionModalCreate interactionModalCreate = (InteractionModalCreate) other;
-        return this.id == interactionModalCreate.id && Intrinsics3.areEqual(this.customId, interactionModalCreate.customId) && Intrinsics3.areEqual(this.application, interactionModalCreate.application) && Intrinsics3.areEqual(this.title, interactionModalCreate.title) && Intrinsics3.areEqual(this.components, interactionModalCreate.components) && Intrinsics3.areEqual(this.nonce, interactionModalCreate.nonce);
+        return this.id == interactionModalCreate.id && m.areEqual(this.customId, interactionModalCreate.customId) && m.areEqual(this.application, interactionModalCreate.application) && m.areEqual(this.title, interactionModalCreate.title) && m.areEqual(this.components, interactionModalCreate.components) && m.areEqual(this.nonce, interactionModalCreate.nonce);
     }
 
     public final long getId() {
@@ -73,7 +73,7 @@ public final /* data */ class InteractionModalCreate implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InteractionModalCreate(id=");
+        StringBuilder sbU = a.U("InteractionModalCreate(id=");
         sbU.append(this.id);
         sbU.append(", customId=");
         sbU.append(this.customId);
@@ -84,6 +84,6 @@ public final /* data */ class InteractionModalCreate implements Serializable {
         sbU.append(", components=");
         sbU.append(this.components);
         sbU.append(", nonce=");
-        return outline.J(sbU, this.nonce, ")");
+        return a.J(sbU, this.nonce, ")");
     }
 }

@@ -6,13 +6,13 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.discord.R;
 import com.discord.databinding.WidgetServerSettingsSecurityBinding;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetServerSettingsSecurity.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetServerSettingsSecurity$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetServerSettingsSecurityBinding> {
+public final /* synthetic */ class WidgetServerSettingsSecurity$binding$2 extends k implements Function1<View, WidgetServerSettingsSecurityBinding> {
     public static final WidgetServerSettingsSecurity$binding$2 INSTANCE = new WidgetServerSettingsSecurity$binding$2();
 
     public WidgetServerSettingsSecurity$binding$2() {
@@ -26,7 +26,7 @@ public final /* synthetic */ class WidgetServerSettingsSecurity$binding$2 extend
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsSecurityBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.mfa_description_text;
         TextView textView = (TextView) view.findViewById(R.id.mfa_description_text);
         if (textView != null) {

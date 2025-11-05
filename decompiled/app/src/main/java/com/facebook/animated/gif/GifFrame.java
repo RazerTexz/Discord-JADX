@@ -1,64 +1,64 @@
 package com.facebook.animated.gif;
 
 import android.graphics.Bitmap;
-import b.f.d.d.DoNotStrip;
-import b.f.j.a.a.AnimatedImageFrame;
+import b.f.d.d.c;
+import b.f.j.a.a.d;
 
 /* loaded from: classes.dex */
-public class GifFrame implements AnimatedImageFrame {
+public class GifFrame implements d {
 
-    @DoNotStrip
+    @c
     private long mNativeContext;
 
-    @DoNotStrip
+    @c
     public GifFrame(long j) {
         this.mNativeContext = j;
     }
 
-    @DoNotStrip
+    @c
     private native void nativeDispose();
 
-    @DoNotStrip
+    @c
     private native void nativeFinalize();
 
-    @DoNotStrip
+    @c
     private native int nativeGetDisposalMode();
 
-    @DoNotStrip
+    @c
     private native int nativeGetDurationMs();
 
-    @DoNotStrip
+    @c
     private native int nativeGetHeight();
 
-    @DoNotStrip
+    @c
     private native int nativeGetTransparentPixelColor();
 
-    @DoNotStrip
+    @c
     private native int nativeGetWidth();
 
-    @DoNotStrip
+    @c
     private native int nativeGetXOffset();
 
-    @DoNotStrip
+    @c
     private native int nativeGetYOffset();
 
-    @DoNotStrip
+    @c
     private native boolean nativeHasTransparency();
 
-    @DoNotStrip
+    @c
     private native void nativeRenderFrame(int i, int i2, Bitmap bitmap);
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public void a(int i, int i2, Bitmap bitmap) {
         nativeRenderFrame(i, i2, bitmap);
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int b() {
         return nativeGetXOffset();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int c() {
         return nativeGetYOffset();
     }
@@ -67,7 +67,7 @@ public class GifFrame implements AnimatedImageFrame {
         return nativeGetDisposalMode();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public void dispose() {
         nativeDispose();
     }
@@ -76,12 +76,12 @@ public class GifFrame implements AnimatedImageFrame {
         nativeFinalize();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int getHeight() {
         return nativeGetHeight();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int getWidth() {
         return nativeGetWidth();
     }

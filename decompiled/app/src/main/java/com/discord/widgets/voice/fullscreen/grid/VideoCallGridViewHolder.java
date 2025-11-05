@@ -7,8 +7,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.core.view.DisplayCutoutCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.a.y.PileView2;
+import b.a.k.b;
+import b.a.y.a0;
 import com.discord.R;
 import com.discord.api.application.ApplicationAsset;
 import com.discord.databinding.VideoCallGridItemEmbeddedActivityBinding;
@@ -22,8 +22,8 @@ import com.discord.views.calls.VideoCallParticipantView;
 import com.discord.widgets.voice.fullscreen.CallParticipant;
 import com.discord.widgets.voice.fullscreen.grid.VideoCallGridAdapter;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -44,56 +44,56 @@ public abstract class VideoCallGridViewHolder extends RecyclerView.ViewHolder {
 
         /* JADX WARN: Illegal instructions before constructor call */
         public EmbeddedActivity(VideoCallGridItemEmbeddedActivityBinding videoCallGridItemEmbeddedActivityBinding) {
-            Intrinsics3.checkNotNullParameter(videoCallGridItemEmbeddedActivityBinding, "binding");
+            m.checkNotNullParameter(videoCallGridItemEmbeddedActivityBinding, "binding");
             FrameLayout frameLayout = videoCallGridItemEmbeddedActivityBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+            m.checkNotNullExpressionValue(frameLayout, "binding.root");
             super(frameLayout, null);
             this.binding = videoCallGridItemEmbeddedActivityBinding;
             this.distinctChangeDetector = new MGImages.DistinctChangeDetector();
         }
 
         public final void configure(CallParticipant.EmbeddedActivityParticipant callParticipant, Function1<? super CallParticipant, Unit> onTapped) {
-            Intrinsics3.checkNotNullParameter(callParticipant, "callParticipant");
-            Intrinsics3.checkNotNullParameter(onTapped, "onTapped");
+            m.checkNotNullParameter(callParticipant, "callParticipant");
+            m.checkNotNullParameter(onTapped, "onTapped");
             ApplicationAsset backgroundAsset = callParticipant.getBackgroundAsset();
             String assetImage = backgroundAsset != null ? IconUtils.INSTANCE.getAssetImage(Long.valueOf(callParticipant.getApplication().getId()), String.valueOf(backgroundAsset.getId()), 1024) : null;
             SimpleDraweeView simpleDraweeView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.appBackgroundImage");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.appBackgroundImage");
             simpleDraweeView.setVisibility(assetImage != null ? 0 : 8);
             View view = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(view, "binding.appBackgroundOverlay");
+            m.checkNotNullExpressionValue(view, "binding.appBackgroundOverlay");
             view.setVisibility(assetImage != null ? 0 : 8);
             if (assetImage != null) {
                 MGImages mGImages = MGImages.INSTANCE;
                 SimpleDraweeView simpleDraweeView2 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.appBackgroundImage");
+                m.checkNotNullExpressionValue(simpleDraweeView2, "binding.appBackgroundImage");
                 Uri uri = Uri.parse(assetImage);
-                Intrinsics3.checkNotNullExpressionValue(uri, "Uri.parse(backgroundAssetUrl)");
+                m.checkNotNullExpressionValue(uri, "Uri.parse(backgroundAssetUrl)");
                 mGImages.setImage(simpleDraweeView2, uri, this.distinctChangeDetector);
             }
-            this.binding.a.setOnClickListener(new VideoCallGridViewHolder2(onTapped, callParticipant));
+            this.binding.a.setOnClickListener(new VideoCallGridViewHolder$EmbeddedActivity$configure$1(onTapped, callParticipant));
             FrameLayout frameLayout = this.binding.a;
-            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+            m.checkNotNullExpressionValue(frameLayout, "binding.root");
             Resources resources = frameLayout.getResources();
             TextView textView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.activityPreviewTitle");
+            m.checkNotNullExpressionValue(textView, "binding.activityPreviewTitle");
             CharSequence name = callParticipant.getEmbeddedActivity().getName();
             if (name == null) {
-                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-                name = FormatUtils.i(resources, R.string.embedded_activities_unknown_activity_name, new Object[0], null, 4);
+                m.checkNotNullExpressionValue(resources, "resources");
+                name = b.i(resources, R.string.embedded_activities_unknown_activity_name, new Object[0], null, 4);
             }
             textView.setText(name);
             List<UserGuildMember> participantsInActivity = callParticipant.getParticipantsInActivity();
             int iDpToPixels = DimenUtils.dpToPixels(16);
-            Intrinsics3.checkNotNullParameter(participantsInActivity, "userGuildMembers");
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(participantsInActivity, 10));
+            m.checkNotNullParameter(participantsInActivity, "userGuildMembers");
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(participantsInActivity, 10));
             for (UserGuildMember userGuildMember : participantsInActivity) {
                 arrayList.add(IconUtils.INSTANCE.getForGuildMemberOrUser(userGuildMember.getUser(), userGuildMember.getGuildMember(), Integer.valueOf(iDpToPixels), false));
             }
-            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+            ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(arrayList, 10));
             Iterator it = arrayList.iterator();
             while (it.hasNext()) {
-                arrayList2.add(new PileView.c(new PileView2((String) it.next()), null));
+                arrayList2.add(new PileView.c(new a0((String) it.next()), null));
             }
             this.binding.f2169b.setItems(arrayList2);
         }
@@ -110,30 +110,30 @@ public abstract class VideoCallGridViewHolder extends RecyclerView.ViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserOrStream(VideoCallParticipantView videoCallParticipantView) {
             super(videoCallParticipantView, null);
-            Intrinsics3.checkNotNullParameter(videoCallParticipantView, "videoCallParticipantView");
+            m.checkNotNullParameter(videoCallParticipantView, "videoCallParticipantView");
             this.videoCallParticipantView = videoCallParticipantView;
         }
 
         public final void configure(CallParticipant.UserOrStreamParticipant callParticipant, Function1<? super CallParticipant, Unit> onTapped, Function1<? super CallParticipant, Unit> onLongClicked, Function1<? super String, Unit> onWatchStreamClicked, DisplayCutoutCompat displayCutout, int spanCount, Function2<? super VideoCallParticipantView.StreamResolution, ? super VideoCallParticipantView.StreamFps, Unit> onStreamQualityIndicatorShown, Function2<? super VideoCallParticipantView.StreamResolution, ? super VideoCallParticipantView.StreamFps, Unit> onStreamQualityIndicatorClicked, VideoCallGridAdapter.CallUiInsets callUiInsets, boolean controlsVisible) {
-            Intrinsics3.checkNotNullParameter(callParticipant, "callParticipant");
-            Intrinsics3.checkNotNullParameter(onTapped, "onTapped");
-            Intrinsics3.checkNotNullParameter(onLongClicked, "onLongClicked");
-            Intrinsics3.checkNotNullParameter(onWatchStreamClicked, "onWatchStreamClicked");
-            Intrinsics3.checkNotNullParameter(onStreamQualityIndicatorShown, "onStreamQualityIndicatorShown");
-            Intrinsics3.checkNotNullParameter(onStreamQualityIndicatorClicked, "onStreamQualityIndicatorClicked");
-            Intrinsics3.checkNotNullParameter(callUiInsets, "callUiInsets");
+            m.checkNotNullParameter(callParticipant, "callParticipant");
+            m.checkNotNullParameter(onTapped, "onTapped");
+            m.checkNotNullParameter(onLongClicked, "onLongClicked");
+            m.checkNotNullParameter(onWatchStreamClicked, "onWatchStreamClicked");
+            m.checkNotNullParameter(onStreamQualityIndicatorShown, "onStreamQualityIndicatorShown");
+            m.checkNotNullParameter(onStreamQualityIndicatorClicked, "onStreamQualityIndicatorClicked");
+            m.checkNotNullParameter(callUiInsets, "callUiInsets");
             View view = this.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             Resources resources = view.getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "itemView.resources");
+            m.checkNotNullExpressionValue(resources, "itemView.resources");
             this.videoCallParticipantView.c(callParticipant.getParticipantData(), displayCutout, resources.getConfiguration().orientation != 2 ? getAdapterPosition() < spanCount : getAdapterPosition() % spanCount == 0, callUiInsets, controlsVisible);
             this.videoCallParticipantView.setOnWatchStreamClicked(onWatchStreamClicked);
-            this.videoCallParticipantView.setOnClickListener(new VideoCallGridViewHolder3(onTapped, callParticipant));
-            ViewExtensions.setOnLongClickListenerConsumeClick(this.videoCallParticipantView, new VideoCallGridViewHolder4(onLongClicked, callParticipant));
+            this.videoCallParticipantView.setOnClickListener(new VideoCallGridViewHolder$UserOrStream$configure$1(onTapped, callParticipant));
+            ViewExtensions.setOnLongClickListenerConsumeClick(this.videoCallParticipantView, new VideoCallGridViewHolder$UserOrStream$configure$2(onLongClicked, callParticipant));
             VideoCallParticipantView videoCallParticipantView = this.videoCallParticipantView;
             Objects.requireNonNull(videoCallParticipantView);
-            Intrinsics3.checkNotNullParameter(onStreamQualityIndicatorShown, "onShown");
-            Intrinsics3.checkNotNullParameter(onStreamQualityIndicatorClicked, "onClicked");
+            m.checkNotNullParameter(onStreamQualityIndicatorShown, "onShown");
+            m.checkNotNullParameter(onStreamQualityIndicatorClicked, "onClicked");
             videoCallParticipantView.onStreamQualityIndicatorShown = onStreamQualityIndicatorShown;
             videoCallParticipantView.onStreamQualityIndicatorClicked = onStreamQualityIndicatorClicked;
         }

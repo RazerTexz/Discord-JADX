@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.e.k.j;
 import b.i.a.f.e.r;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -65,14 +65,14 @@ public class Feature extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@RecentlyNonNull Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 1, this.j, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.t2(parcel, 1, this.j, false);
         int i2 = this.k;
         parcel.writeInt(262146);
         parcel.writeInt(i2);
         long jW0 = w0();
         parcel.writeInt(524291);
         parcel.writeLong(jW0);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

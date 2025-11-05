@@ -7,14 +7,14 @@ import com.discord.api.commands.ApplicationCommandType;
 import com.discord.api.commands.CommandChoice;
 import com.discord.models.commands.Application;
 import com.discord.models.commands.ApplicationCommand;
-import com.discord.models.commands.ApplicationCommand3;
-import com.discord.models.commands.ApplicationCommand5;
 import com.discord.models.commands.ApplicationCommandOption;
+import com.discord.models.commands.ApplicationSubCommand;
+import com.discord.models.commands.RemoteApplicationCommand;
 import com.discord.widgets.chat.input.models.ApplicationCommandValue;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import d0.g0.t;
+import d0.t.n;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,16 +23,16 @@ import kotlin.jvm.functions.Function1;
 /* compiled from: StoreApplicationCommands.kt */
 /* loaded from: classes2.dex */
 public final class StoreApplicationCommandsKt {
-    private static final ApplicationCommand3 expandSubCommand(ApplicationCommand applicationCommand, ApplicationCommandOption applicationCommandOption) {
+    private static final ApplicationSubCommand expandSubCommand(ApplicationCommand applicationCommand, ApplicationCommandOption applicationCommandOption) {
         String name = applicationCommandOption.getName();
         long applicationId = applicationCommand.getApplicationId();
         String str = applicationCommand.getName() + " " + applicationCommandOption.getName();
         String description = applicationCommandOption.getDescription();
         List<ApplicationCommandOption> options = applicationCommandOption.getOptions();
         if (options == null) {
-            options = Collections2.emptyList();
+            options = n.emptyList();
         }
-        return new ApplicationCommand3(applicationCommand, name, null, applicationId, str, description, null, options, applicationCommand.getGuildId(), null, null, applicationCommand.getVersion(), 1604, null);
+        return new ApplicationSubCommand(applicationCommand, name, null, applicationId, str, description, null, options, applicationCommand.getGuildId(), null, null, applicationCommand.getVersion(), 1604, null);
     }
 
     private static final List<ApplicationCommand> expandSubCommandGroup(ApplicationCommand applicationCommand, ApplicationCommandOption applicationCommandOption) {
@@ -48,9 +48,9 @@ public final class StoreApplicationCommandsKt {
                     String description = applicationCommandOption2.getDescription();
                     List<ApplicationCommandOption> options2 = applicationCommandOption2.getOptions();
                     if (options2 == null) {
-                        options2 = Collections2.emptyList();
+                        options2 = n.emptyList();
                     }
-                    arrayList.add(new ApplicationCommand3(applicationCommand, name, name2, applicationId, str, description, null, options2, applicationCommand.getGuildId(), null, null, applicationCommand.getVersion(), 1600, null));
+                    arrayList.add(new ApplicationSubCommand(applicationCommand, name, name2, applicationId, str, description, null, options2, applicationCommand.getGuildId(), null, null, applicationCommand.getVersion(), 1600, null));
                 }
             }
         }
@@ -76,14 +76,14 @@ public final class StoreApplicationCommandsKt {
 
     public static final List<ApplicationCommandValue> flatten(List<ApplicationCommandValue> list) {
         List<ApplicationCommandValue> options;
-        Intrinsics3.checkNotNullParameter(list, "$this$flatten");
+        m.checkNotNullParameter(list, "$this$flatten");
         ArrayList arrayList = new ArrayList();
         for (ApplicationCommandValue applicationCommandValue : list) {
             arrayList.add(applicationCommandValue);
             if (applicationCommandValue.getType() == ApplicationCommandType.SUBCOMMAND.getType()) {
                 List<ApplicationCommandValue> options2 = applicationCommandValue.getOptions();
                 if (options2 == null) {
-                    options2 = Collections2.emptyList();
+                    options2 = n.emptyList();
                 }
                 arrayList.addAll(options2);
             } else if (applicationCommandValue.getType() == ApplicationCommandType.SUBCOMMAND_GROUP.getType() && (options = applicationCommandValue.getOptions()) != null) {
@@ -91,7 +91,7 @@ public final class StoreApplicationCommandsKt {
                 while (it.hasNext()) {
                     List<ApplicationCommandValue> options3 = ((ApplicationCommandValue) it.next()).getOptions();
                     if (options3 == null) {
-                        options3 = Collections2.emptyList();
+                        options3 = n.emptyList();
                     }
                     arrayList.addAll(options3);
                 }
@@ -101,10 +101,10 @@ public final class StoreApplicationCommandsKt {
     }
 
     public static final List<ApplicationCommand> flattenSubCommands(List<? extends ApplicationCommand> list) {
-        Intrinsics3.checkNotNullParameter(list, "$this$flattenSubCommands");
+        m.checkNotNullParameter(list, "$this$flattenSubCommands");
         ArrayList arrayList = new ArrayList();
         for (ApplicationCommand applicationCommand : list) {
-            if (applicationCommand instanceof ApplicationCommand5) {
+            if (applicationCommand instanceof RemoteApplicationCommand) {
                 arrayList.addAll(expandSubCommands(applicationCommand));
             } else {
                 arrayList.add(applicationCommand);
@@ -114,13 +114,13 @@ public final class StoreApplicationCommandsKt {
     }
 
     public static final String getDescriptionText(ApplicationCommand applicationCommand, Resources resources) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(applicationCommand, "$this$getDescriptionText");
-        Intrinsics3.checkNotNullParameter(resources, "resources");
+        m.checkNotNullParameter(applicationCommand, "$this$getDescriptionText");
+        m.checkNotNullParameter(resources, "resources");
         Integer descriptionRes = applicationCommand.getDescriptionRes();
         if (descriptionRes != null) {
             String string = resources.getString(descriptionRes.intValue());
-            Intrinsics3.checkNotNullExpressionValue(string, "resources.getString(it)");
-            String strReplace$default = StringsJVM.replace$default(string, "¯_(ツ)_/¯", "¯\\_(ツ)_/¯", false, 4, (Object) null);
+            m.checkNotNullExpressionValue(string, "resources.getString(it)");
+            String strReplace$default = t.replace$default(string, "¯_(ツ)_/¯", "¯\\_(ツ)_/¯", false, 4, (Object) null);
             if (strReplace$default != null) {
                 return strReplace$default;
             }
@@ -129,8 +129,8 @@ public final class StoreApplicationCommandsKt {
     }
 
     public static final String getErrorText(ApplicationCommandOption applicationCommandOption, Resources resources) {
-        Intrinsics3.checkNotNullParameter(applicationCommandOption, "$this$getErrorText");
-        Intrinsics3.checkNotNullParameter(resources, "resources");
+        m.checkNotNullParameter(applicationCommandOption, "$this$getErrorText");
+        m.checkNotNullParameter(resources, "resources");
         if (applicationCommandOption.getType() == ApplicationCommandType.STRING) {
             List<CommandChoice> choices = applicationCommandOption.getChoices();
             if (!(choices == null || choices.isEmpty())) {
@@ -144,15 +144,15 @@ public final class StoreApplicationCommandsKt {
     public static final List<ApplicationCommandValue> mapApplicationCommandValues(List<ApplicationCommandValue> list, Function1<? super ApplicationCommandValue, ApplicationCommandValue> function1) {
         ArrayList arrayList;
         ArrayList arrayList2;
-        Intrinsics3.checkNotNullParameter(list, "$this$mapApplicationCommandValues");
-        Intrinsics3.checkNotNullParameter(function1, "mappingFunction");
-        ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
+        m.checkNotNullParameter(list, "$this$mapApplicationCommandValues");
+        m.checkNotNullParameter(function1, "mappingFunction");
+        ArrayList arrayList3 = new ArrayList(o.collectionSizeOrDefault(list, 10));
         for (ApplicationCommandValue applicationCommandValueCopy$default : list) {
             ArrayList arrayList4 = null;
             if (applicationCommandValueCopy$default.getType() == ApplicationCommandType.SUBCOMMAND.getType()) {
                 List<ApplicationCommandValue> options = applicationCommandValueCopy$default.getOptions();
                 if (options != null) {
-                    arrayList4 = new ArrayList(Iterables2.collectionSizeOrDefault(options, 10));
+                    arrayList4 = new ArrayList(o.collectionSizeOrDefault(options, 10));
                     Iterator<T> it = options.iterator();
                     while (it.hasNext()) {
                         arrayList4.add(function1.invoke(it.next()));
@@ -162,11 +162,11 @@ public final class StoreApplicationCommandsKt {
             } else if (applicationCommandValueCopy$default.getType() == ApplicationCommandType.SUBCOMMAND_GROUP.getType()) {
                 List<ApplicationCommandValue> options2 = applicationCommandValueCopy$default.getOptions();
                 if (options2 != null) {
-                    ArrayList arrayList5 = new ArrayList(Iterables2.collectionSizeOrDefault(options2, 10));
+                    ArrayList arrayList5 = new ArrayList(o.collectionSizeOrDefault(options2, 10));
                     for (ApplicationCommandValue applicationCommandValue : options2) {
                         List<ApplicationCommandValue> options3 = applicationCommandValue.getOptions();
                         if (options3 != null) {
-                            ArrayList arrayList6 = new ArrayList(Iterables2.collectionSizeOrDefault(options3, 10));
+                            ArrayList arrayList6 = new ArrayList(o.collectionSizeOrDefault(options3, 10));
                             Iterator<T> it2 = options3.iterator();
                             while (it2.hasNext()) {
                                 arrayList6.add(function1.invoke(it2.next()));
@@ -189,13 +189,13 @@ public final class StoreApplicationCommandsKt {
     }
 
     public static final Application toDomainApplication(com.discord.api.commands.Application application) {
-        Intrinsics3.checkNotNullParameter(application, "$this$toDomainApplication");
+        m.checkNotNullParameter(application, "$this$toDomainApplication");
         return new Application(application.getId(), application.getName(), application.getIcon(), null, application.getCommandCount(), application.getBot(), false, 72, null);
     }
 
     public static final List<ApplicationCommand> toDomainCommands(List<com.discord.api.commands.ApplicationCommand> list) {
-        Intrinsics3.checkNotNullParameter(list, "$this$toDomainCommands");
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
+        m.checkNotNullParameter(list, "$this$toDomainCommands");
+        ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(list, 10));
         Iterator<T> it = list.iterator();
         while (it.hasNext()) {
             arrayList.add(toSlashCommand((com.discord.api.commands.ApplicationCommand) it.next()));
@@ -205,32 +205,32 @@ public final class StoreApplicationCommandsKt {
 
     public static final ApplicationCommand toSlashCommand(com.discord.api.commands.ApplicationCommand applicationCommand) {
         List listEmptyList;
-        Intrinsics3.checkNotNullParameter(applicationCommand, "$this$toSlashCommand");
+        m.checkNotNullParameter(applicationCommand, "$this$toSlashCommand");
         String strValueOf = String.valueOf(applicationCommand.getId());
         long applicationId = applicationCommand.getApplicationId();
         String name = applicationCommand.getName();
         String description = applicationCommand.getDescription();
         List<com.discord.api.commands.ApplicationCommandOption> listG = applicationCommand.g();
         if (listG != null) {
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listG, 10));
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(listG, 10));
             Iterator<T> it = listG.iterator();
             while (it.hasNext()) {
                 arrayList.add(toSlashCommandOption((com.discord.api.commands.ApplicationCommandOption) it.next()));
             }
             listEmptyList = arrayList;
         } else {
-            listEmptyList = Collections2.emptyList();
+            listEmptyList = n.emptyList();
         }
         String version = applicationCommand.getVersion();
         List<ApplicationCommandPermission> listH = applicationCommand.h();
         Boolean defaultPermissions = applicationCommand.getDefaultPermissions();
         String guildId = applicationCommand.getGuildId();
-        return new ApplicationCommand5(strValueOf, applicationId, name, description, listEmptyList, guildId != null ? Long.valueOf(Long.parseLong(guildId)) : null, version, defaultPermissions, listH, null, 512, null);
+        return new RemoteApplicationCommand(strValueOf, applicationId, name, description, listEmptyList, guildId != null ? Long.valueOf(Long.parseLong(guildId)) : null, version, defaultPermissions, listH, null, 512, null);
     }
 
     public static final ApplicationCommandOption toSlashCommandOption(com.discord.api.commands.ApplicationCommandOption applicationCommandOption) {
         ArrayList arrayList;
-        Intrinsics3.checkNotNullParameter(applicationCommandOption, "$this$toSlashCommandOption");
+        m.checkNotNullParameter(applicationCommandOption, "$this$toSlashCommandOption");
         ApplicationCommandType type = applicationCommandOption.getType();
         String name = applicationCommandOption.getName();
         String description = applicationCommandOption.getDescription();
@@ -242,7 +242,7 @@ public final class StoreApplicationCommandsKt {
         Number maxValue = applicationCommandOption.getMaxValue();
         List<com.discord.api.commands.ApplicationCommandOption> listI = applicationCommandOption.i();
         if (listI != null) {
-            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(listI, 10));
+            ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(listI, 10));
             Iterator<T> it = listI.iterator();
             while (it.hasNext()) {
                 arrayList2.add(toSlashCommandOption((com.discord.api.commands.ApplicationCommandOption) it.next()));
@@ -256,8 +256,8 @@ public final class StoreApplicationCommandsKt {
 
     public static final String getDescriptionText(ApplicationCommandOption applicationCommandOption, Resources resources) {
         String string;
-        Intrinsics3.checkNotNullParameter(applicationCommandOption, "$this$getDescriptionText");
-        Intrinsics3.checkNotNullParameter(resources, "resources");
+        m.checkNotNullParameter(applicationCommandOption, "$this$getDescriptionText");
+        m.checkNotNullParameter(resources, "resources");
         Integer descriptionRes = applicationCommandOption.getDescriptionRes();
         return (descriptionRes == null || (string = resources.getString(descriptionRes.intValue())) == null) ? applicationCommandOption.getDescription() : string;
     }

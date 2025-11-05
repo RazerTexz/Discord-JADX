@@ -1,8 +1,8 @@
 package co.discord.media_engine.internal;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -33,7 +33,7 @@ public final /* data */ class InboundAudio {
     private final long ssrc;
 
     public InboundAudio(int i, long j, String str, int i2, long j2, int i3, int i4, int i5, int i6, int i7, long j3, long j4, long j5, long j6, long j7, long j8, long j9, long j10, long j11, long j12, long j13, long j14, long j15, long j16) {
-        Intrinsics3.checkNotNullParameter(str, "codecName");
+        m.checkNotNullParameter(str, "codecName");
         this.audioLevel = i;
         this.bytesReceived = j;
         this.codecName = str;
@@ -185,7 +185,7 @@ public final /* data */ class InboundAudio {
     }
 
     public final InboundAudio copy(int audioLevel, long bytesReceived, String codecName, int codecPayloadType, long delayEstimate, int decodingCNG, int decodingMutedOutput, int decodingNormal, int decodingPLC, int decodingPLCCNG, long jitter, long jitterBuffer, long jitterBufferPreferred, long packetsLost, long packetsReceived, long opSilence, long opNormal, long opMerge, long opExpand, long opAccelerate, long opPreemptiveExpand, long opCNG, long speaking, long ssrc) {
-        Intrinsics3.checkNotNullParameter(codecName, "codecName");
+        m.checkNotNullParameter(codecName, "codecName");
         return new InboundAudio(audioLevel, bytesReceived, codecName, codecPayloadType, delayEstimate, decodingCNG, decodingMutedOutput, decodingNormal, decodingPLC, decodingPLCCNG, jitter, jitterBuffer, jitterBufferPreferred, packetsLost, packetsReceived, opSilence, opNormal, opMerge, opExpand, opAccelerate, opPreemptiveExpand, opCNG, speaking, ssrc);
     }
 
@@ -197,7 +197,7 @@ public final /* data */ class InboundAudio {
             return false;
         }
         InboundAudio inboundAudio = (InboundAudio) other;
-        return this.audioLevel == inboundAudio.audioLevel && this.bytesReceived == inboundAudio.bytesReceived && Intrinsics3.areEqual(this.codecName, inboundAudio.codecName) && this.codecPayloadType == inboundAudio.codecPayloadType && this.delayEstimate == inboundAudio.delayEstimate && this.decodingCNG == inboundAudio.decodingCNG && this.decodingMutedOutput == inboundAudio.decodingMutedOutput && this.decodingNormal == inboundAudio.decodingNormal && this.decodingPLC == inboundAudio.decodingPLC && this.decodingPLCCNG == inboundAudio.decodingPLCCNG && this.jitter == inboundAudio.jitter && this.jitterBuffer == inboundAudio.jitterBuffer && this.jitterBufferPreferred == inboundAudio.jitterBufferPreferred && this.packetsLost == inboundAudio.packetsLost && this.packetsReceived == inboundAudio.packetsReceived && this.opSilence == inboundAudio.opSilence && this.opNormal == inboundAudio.opNormal && this.opMerge == inboundAudio.opMerge && this.opExpand == inboundAudio.opExpand && this.opAccelerate == inboundAudio.opAccelerate && this.opPreemptiveExpand == inboundAudio.opPreemptiveExpand && this.opCNG == inboundAudio.opCNG && this.speaking == inboundAudio.speaking && this.ssrc == inboundAudio.ssrc;
+        return this.audioLevel == inboundAudio.audioLevel && this.bytesReceived == inboundAudio.bytesReceived && m.areEqual(this.codecName, inboundAudio.codecName) && this.codecPayloadType == inboundAudio.codecPayloadType && this.delayEstimate == inboundAudio.delayEstimate && this.decodingCNG == inboundAudio.decodingCNG && this.decodingMutedOutput == inboundAudio.decodingMutedOutput && this.decodingNormal == inboundAudio.decodingNormal && this.decodingPLC == inboundAudio.decodingPLC && this.decodingPLCCNG == inboundAudio.decodingPLCCNG && this.jitter == inboundAudio.jitter && this.jitterBuffer == inboundAudio.jitterBuffer && this.jitterBufferPreferred == inboundAudio.jitterBufferPreferred && this.packetsLost == inboundAudio.packetsLost && this.packetsReceived == inboundAudio.packetsReceived && this.opSilence == inboundAudio.opSilence && this.opNormal == inboundAudio.opNormal && this.opMerge == inboundAudio.opMerge && this.opExpand == inboundAudio.opExpand && this.opAccelerate == inboundAudio.opAccelerate && this.opPreemptiveExpand == inboundAudio.opPreemptiveExpand && this.opCNG == inboundAudio.opCNG && this.speaking == inboundAudio.speaking && this.ssrc == inboundAudio.ssrc;
     }
 
     public final int getAudioLevel() {
@@ -303,7 +303,7 @@ public final /* data */ class InboundAudio {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InboundAudio(audioLevel=");
+        StringBuilder sbU = a.U("InboundAudio(audioLevel=");
         sbU.append(this.audioLevel);
         sbU.append(", bytesReceived=");
         sbU.append(this.bytesReceived);
@@ -350,6 +350,6 @@ public final /* data */ class InboundAudio {
         sbU.append(", speaking=");
         sbU.append(this.speaking);
         sbU.append(", ssrc=");
-        return outline.C(sbU, this.ssrc, ")");
+        return a.C(sbU, this.ssrc, ")");
     }
 }

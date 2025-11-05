@@ -1,11 +1,11 @@
 package com.discord.models.sticker.dto;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelSku;
 import com.discord.models.store.dto.ModelStoreAsset;
 import com.discord.utilities.time.TimeUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ModelStickerPackStoreListing.kt */
 /* loaded from: classes.dex */
@@ -17,8 +17,8 @@ public final /* data */ class ModelStickerPackStoreListing {
     private final String unpublishedAt;
 
     public ModelStickerPackStoreListing(ModelSku modelSku, long j, String str, String str2, ModelStoreAsset modelStoreAsset) {
-        Intrinsics3.checkNotNullParameter(modelSku, "sku");
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        m.checkNotNullParameter(modelSku, "sku");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         this.sku = modelSku;
         this.id = j;
         this.description = str;
@@ -74,8 +74,8 @@ public final /* data */ class ModelStickerPackStoreListing {
     }
 
     public final ModelStickerPackStoreListing copy(ModelSku sku, long id2, String description, String unpublishedAt, ModelStoreAsset thumbnail) {
-        Intrinsics3.checkNotNullParameter(sku, "sku");
-        Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        m.checkNotNullParameter(sku, "sku");
+        m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         return new ModelStickerPackStoreListing(sku, id2, description, unpublishedAt, thumbnail);
     }
 
@@ -87,7 +87,7 @@ public final /* data */ class ModelStickerPackStoreListing {
             return false;
         }
         ModelStickerPackStoreListing modelStickerPackStoreListing = (ModelStickerPackStoreListing) other;
-        return Intrinsics3.areEqual(this.sku, modelStickerPackStoreListing.sku) && this.id == modelStickerPackStoreListing.id && Intrinsics3.areEqual(this.description, modelStickerPackStoreListing.description) && Intrinsics3.areEqual(this.unpublishedAt, modelStickerPackStoreListing.unpublishedAt) && Intrinsics3.areEqual(this.thumbnail, modelStickerPackStoreListing.thumbnail);
+        return m.areEqual(this.sku, modelStickerPackStoreListing.sku) && this.id == modelStickerPackStoreListing.id && m.areEqual(this.description, modelStickerPackStoreListing.description) && m.areEqual(this.unpublishedAt, modelStickerPackStoreListing.unpublishedAt) && m.areEqual(this.thumbnail, modelStickerPackStoreListing.thumbnail);
     }
 
     public final String getDescription() {
@@ -128,7 +128,7 @@ public final /* data */ class ModelStickerPackStoreListing {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelStickerPackStoreListing(sku=");
+        StringBuilder sbU = a.U("ModelStickerPackStoreListing(sku=");
         sbU.append(this.sku);
         sbU.append(", id=");
         sbU.append(this.id);

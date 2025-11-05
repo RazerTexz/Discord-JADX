@@ -2,7 +2,6 @@ package b.i.a.f.h.j;
 
 import android.content.SharedPreferences;
 import androidx.recyclerview.widget.RecyclerView;
-import b.c.a.a0.AnimatableValueParser;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -15,8 +14,8 @@ public final class r0 {
 
     public r0(p0 p0Var, String str, long j, q0 q0Var) {
         this.f1425b = p0Var;
-        AnimatableValueParser.w(str);
-        AnimatableValueParser.l(j > 0);
+        b.c.a.a0.d.w(str);
+        b.c.a.a0.d.l(j > 0);
         this.a = str;
     }
 

@@ -3,7 +3,6 @@ package b.i.a.f.i.b;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.WorkerThread;
-import b.c.a.a0.AnimatableValueParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,7 +20,7 @@ public final class i4 {
 
     public i4(d4 d4Var, String str) {
         this.e = d4Var;
-        AnimatableValueParser.w(str);
+        b.c.a.a0.d.w(str);
         this.a = str;
         this.f1536b = new Bundle();
     }

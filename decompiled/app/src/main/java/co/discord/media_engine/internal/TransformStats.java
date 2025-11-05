@@ -8,8 +8,8 @@ import co.discord.media_engine.Resolution;
 import co.discord.media_engine.Stats;
 import co.discord.media_engine.StatsCodec;
 import com.google.gson.Gson;
-import d0.t._Arrays;
-import d0.z.d.Intrinsics3;
+import d0.t.k;
+import d0.z.d.m;
 import java.util.LinkedHashMap;
 import org.webrtc.MediaStreamTrack;
 
@@ -45,7 +45,7 @@ public final class TransformStats {
         Substream[] substreams;
         OutboundVideo[] videos;
         OutboundAudio audio;
-        Intrinsics3.checkNotNullParameter(stats, "stats");
+        m.checkNotNullParameter(stats, "stats");
         NativeStats nativeStats = (NativeStats) f.E1(NativeStats.class).cast(gson.g(stats, NativeStats.class));
         Outbound outbound = nativeStats.getOutbound();
         if (outbound == null || (audio = outbound.getAudio()) == null) {
@@ -72,7 +72,7 @@ public final class TransformStats {
             outboundRtpAudio = new OutboundRtpAudio(MediaStreamTrack.AUDIO_TRACK_KIND, ssrc, statsCodec, bytesSent, packetsSent, iMax, fractionLost, audioLevel, z2, framesCaptured, framesRendered, zBooleanValue, jLongValue, zBooleanValue2, voiceActivityDetectorProcessTime != null ? voiceActivityDetectorProcessTime.longValue() : 0L);
         }
         Outbound outbound2 = nativeStats.getOutbound();
-        OutboundVideo outboundVideo = (outbound2 == null || (videos = outbound2.getVideos()) == null) ? null : (OutboundVideo) _Arrays.firstOrNull(videos);
+        OutboundVideo outboundVideo = (outbound2 == null || (videos = outbound2.getVideos()) == null) ? null : (OutboundVideo) k.firstOrNull(videos);
         if (outboundVideo == null || (substreams = outboundVideo.getSubstreams()) == null) {
             substream = null;
         } else {

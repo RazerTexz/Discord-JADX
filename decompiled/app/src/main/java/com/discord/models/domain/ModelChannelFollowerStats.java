@@ -1,8 +1,8 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import org.objectweb.asm.Opcodes;
 
@@ -99,7 +99,7 @@ public final /* data */ class ModelChannelFollowerStats {
             return false;
         }
         ModelChannelFollowerStats modelChannelFollowerStats = (ModelChannelFollowerStats) other;
-        return this.lastFetched == modelChannelFollowerStats.lastFetched && Intrinsics3.areEqual(this.channelsFollowing, modelChannelFollowerStats.channelsFollowing) && Intrinsics3.areEqual(this.guildMembers, modelChannelFollowerStats.guildMembers) && Intrinsics3.areEqual(this.guildsFollowing, modelChannelFollowerStats.guildsFollowing) && Intrinsics3.areEqual(this.usersSeenEver, modelChannelFollowerStats.usersSeenEver) && Intrinsics3.areEqual(this.subscribersGainedSinceLastPost, modelChannelFollowerStats.subscribersGainedSinceLastPost) && Intrinsics3.areEqual(this.subscribersLostSinceLastPost, modelChannelFollowerStats.subscribersLostSinceLastPost);
+        return this.lastFetched == modelChannelFollowerStats.lastFetched && m.areEqual(this.channelsFollowing, modelChannelFollowerStats.channelsFollowing) && m.areEqual(this.guildMembers, modelChannelFollowerStats.guildMembers) && m.areEqual(this.guildsFollowing, modelChannelFollowerStats.guildsFollowing) && m.areEqual(this.usersSeenEver, modelChannelFollowerStats.usersSeenEver) && m.areEqual(this.subscribersGainedSinceLastPost, modelChannelFollowerStats.subscribersGainedSinceLastPost) && m.areEqual(this.subscribersLostSinceLastPost, modelChannelFollowerStats.subscribersLostSinceLastPost);
     }
 
     public final Integer getChannelsFollowing() {
@@ -148,7 +148,7 @@ public final /* data */ class ModelChannelFollowerStats {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelChannelFollowerStats(lastFetched=");
+        StringBuilder sbU = a.U("ModelChannelFollowerStats(lastFetched=");
         sbU.append(this.lastFetched);
         sbU.append(", channelsFollowing=");
         sbU.append(this.channelsFollowing);
@@ -161,7 +161,7 @@ public final /* data */ class ModelChannelFollowerStats {
         sbU.append(", subscribersGainedSinceLastPost=");
         sbU.append(this.subscribersGainedSinceLastPost);
         sbU.append(", subscribersLostSinceLastPost=");
-        return outline.F(sbU, this.subscribersLostSinceLastPost, ")");
+        return a.F(sbU, this.subscribersLostSinceLastPost, ")");
     }
 
     public /* synthetic */ ModelChannelFollowerStats(long j, Integer num, Integer num2, Integer num3, Integer num4, Integer num5, Integer num6, int i, DefaultConstructorMarker defaultConstructorMarker) {

@@ -4,9 +4,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.WidgetDiscordHubEmailInputBinding;
-import b.a.i.WidgetHubEmailFlowConfirmationBinding;
-import b.a.i.WidgetHubEmailFlowWaitlistBinding;
+import b.a.i.e5;
+import b.a.i.o5;
+import b.a.i.p5;
 import com.discord.views.LoadingButton;
 import com.google.android.material.button.MaterialButton;
 
@@ -18,10 +18,10 @@ public final class WidgetHubEmailFlowBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final WidgetHubEmailFlowConfirmationBinding f2473b;
+    public final o5 f2473b;
 
     @NonNull
-    public final WidgetDiscordHubEmailInputBinding c;
+    public final e5 c;
 
     @NonNull
     public final MaterialButton d;
@@ -30,15 +30,15 @@ public final class WidgetHubEmailFlowBinding implements ViewBinding {
     public final LoadingButton e;
 
     @NonNull
-    public final WidgetHubEmailFlowWaitlistBinding f;
+    public final p5 f;
 
-    public WidgetHubEmailFlowBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull WidgetHubEmailFlowConfirmationBinding widgetHubEmailFlowConfirmationBinding, @NonNull WidgetDiscordHubEmailInputBinding widgetDiscordHubEmailInputBinding, @NonNull MaterialButton materialButton, @NonNull LoadingButton loadingButton, @NonNull WidgetHubEmailFlowWaitlistBinding widgetHubEmailFlowWaitlistBinding) {
+    public WidgetHubEmailFlowBinding(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull o5 o5Var, @NonNull e5 e5Var, @NonNull MaterialButton materialButton, @NonNull LoadingButton loadingButton, @NonNull p5 p5Var) {
         this.a = linearLayout;
-        this.f2473b = widgetHubEmailFlowConfirmationBinding;
-        this.c = widgetDiscordHubEmailInputBinding;
+        this.f2473b = o5Var;
+        this.c = e5Var;
         this.d = materialButton;
         this.e = loadingButton;
-        this.f = widgetHubEmailFlowWaitlistBinding;
+        this.f = p5Var;
     }
 
     @Override // androidx.viewbinding.ViewBinding

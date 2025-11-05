@@ -1,8 +1,8 @@
 package com.discord.utilities;
 
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: Quad.kt */
 /* loaded from: classes2.dex */
@@ -64,7 +64,7 @@ public final /* data */ class Quad<A, B, C, D> {
             return false;
         }
         Quad quad = (Quad) other;
-        return Intrinsics3.areEqual(this.first, quad.first) && Intrinsics3.areEqual(this.second, quad.second) && Intrinsics3.areEqual(this.third, quad.third) && Intrinsics3.areEqual(this.fourth, quad.fourth);
+        return m.areEqual(this.first, quad.first) && m.areEqual(this.second, quad.second) && m.areEqual(this.third, quad.third) && m.areEqual(this.fourth, quad.fourth);
     }
 
     public final A getFirst() {
@@ -95,7 +95,7 @@ public final /* data */ class Quad<A, B, C, D> {
     }
 
     public String toString() {
-        StringBuilder sbQ = outline.Q('(');
+        StringBuilder sbQ = a.Q('(');
         sbQ.append(this.first);
         sbQ.append(", ");
         sbQ.append(this.second);

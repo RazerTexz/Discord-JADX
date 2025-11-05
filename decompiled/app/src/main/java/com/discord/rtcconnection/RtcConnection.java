@@ -5,24 +5,19 @@ import android.util.Log;
 import androidx.annotation.AnyThread;
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
-import b.a.q.MediaEngineExecutorService;
-import b.a.q.MediaSinkWantsLadder3;
-import b.a.q.MediaSinkWantsManager2;
-import b.a.q.MediaSinkWantsManager5;
 import b.a.q.a0;
 import b.a.q.b0;
 import b.a.q.f0;
+import b.a.q.g;
 import b.a.q.g0;
 import b.a.q.h0;
-import b.a.q.n0.RtcControlSocket;
-import b.a.q.o0.RtcStatsCollector4;
-import b.a.q.o0.VideoQuality;
+import b.a.q.j;
+import b.a.q.n0.a;
 import b.a.q.p;
 import b.a.q.q;
 import b.a.q.r;
 import b.a.q.x;
 import b.a.q.z;
-import b.d.b.a.outline;
 import co.discord.media_engine.InboundRtpAudio;
 import co.discord.media_engine.OutboundRtpAudio;
 import co.discord.media_engine.Stats;
@@ -32,20 +27,16 @@ import com.discord.rtcconnection.MediaSinkWantsManager;
 import com.discord.rtcconnection.mediaengine.MediaEngine;
 import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
 import com.discord.rtcconnection.mediaengine.ThumbnailEmitter;
+import com.discord.utilities.debug.DebugPrintBuilder;
 import com.discord.utilities.debug.DebugPrintable;
-import com.discord.utilities.debug.DebugPrintable2;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.networking.Backoff;
 import com.discord.utilities.networking.NetworkMonitor;
 import com.discord.utilities.time.Clock;
-import d0.Tuples;
-import d0.a0.MathJVM;
-import d0.g0.StringNumberConversions;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.s;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -71,7 +62,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     public int pingBadCount;
 
     /* renamed from: B, reason: from kotlin metadata */
-    public final VideoQuality videoQuality;
+    public final b.a.q.o0.e videoQuality;
 
     /* renamed from: C, reason: from kotlin metadata */
     public Long connectStartTime;
@@ -167,7 +158,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     public final CopyOnWriteArrayList<c> listeners;
 
     /* renamed from: o, reason: from kotlin metadata */
-    public RtcStatsCollector4 rtcStatsCollector;
+    public b.a.q.o0.d rtcStatsCollector;
 
     /* renamed from: p, reason: from kotlin metadata */
     public boolean sentVideo;
@@ -191,7 +182,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     public List<Long> pings;
 
     /* renamed from: w, reason: from kotlin metadata */
-    public RtcControlSocket socket;
+    public a socket;
 
     /* renamed from: x, reason: collision with root package name and from kotlin metadata */
     public MediaEngineConnection mediaEngineConnection;
@@ -230,7 +221,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         public final String streamKey;
 
         public Metadata(String str, String str2, Long l, Long l2, String str3) {
-            Intrinsics3.checkNotNullParameter(str, "rtcConnectionId");
+            m.checkNotNullParameter(str, "rtcConnectionId");
             this.rtcConnectionId = str;
             this.mediaSessionId = str2;
             this.channelId = l;
@@ -246,7 +237,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
                 return false;
             }
             Metadata metadata = (Metadata) other;
-            return Intrinsics3.areEqual(this.rtcConnectionId, metadata.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, metadata.mediaSessionId) && Intrinsics3.areEqual(this.channelId, metadata.channelId) && Intrinsics3.areEqual(this.guildId, metadata.guildId) && Intrinsics3.areEqual(this.streamKey, metadata.streamKey);
+            return m.areEqual(this.rtcConnectionId, metadata.rtcConnectionId) && m.areEqual(this.mediaSessionId, metadata.mediaSessionId) && m.areEqual(this.channelId, metadata.channelId) && m.areEqual(this.guildId, metadata.guildId) && m.areEqual(this.streamKey, metadata.streamKey);
         }
 
         public int hashCode() {
@@ -263,7 +254,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Metadata(rtcConnectionId=");
+            StringBuilder sbU = b.d.b.a.a.U("Metadata(rtcConnectionId=");
             sbU.append(this.rtcConnectionId);
             sbU.append(", mediaSessionId=");
             sbU.append(this.mediaSessionId);
@@ -272,7 +263,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             sbU.append(", guildId=");
             sbU.append(this.guildId);
             sbU.append(", streamKey=");
-            return outline.J(sbU, this.streamKey, ")");
+            return b.d.b.a.a.J(sbU, this.streamKey, ")");
         }
     }
 
@@ -351,7 +342,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
 
             @Override // com.discord.rtcconnection.RtcConnection.State
             public String toString() {
-                return outline.O(outline.U("Disconnected(willReconnect="), this.a, ")");
+                return b.d.b.a.a.O(b.d.b.a.a.U("Disconnected(willReconnect="), this.a, ")");
             }
         }
 
@@ -399,7 +390,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
                 return super.toString();
             }
             String simpleName = getClass().getSimpleName();
-            Intrinsics3.checkNotNullExpressionValue(simpleName, "javaClass.simpleName");
+            m.checkNotNullExpressionValue(simpleName, "javaClass.simpleName");
             return simpleName;
         }
 
@@ -417,7 +408,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         public final Metadata metadata;
 
         public StateChange(State state, Metadata metadata) {
-            Intrinsics3.checkNotNullParameter(state, "state");
+            m.checkNotNullParameter(state, "state");
             this.state = state;
             this.metadata = metadata;
         }
@@ -430,7 +421,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
                 return false;
             }
             StateChange stateChange = (StateChange) other;
-            return Intrinsics3.areEqual(this.state, stateChange.state) && Intrinsics3.areEqual(this.metadata, stateChange.metadata);
+            return m.areEqual(this.state, stateChange.state) && m.areEqual(this.metadata, stateChange.metadata);
         }
 
         public int hashCode() {
@@ -441,7 +432,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StateChange(state=");
+            StringBuilder sbU = b.d.b.a.a.U("StateChange(state=");
             sbU.append(this.state);
             sbU.append(", metadata=");
             sbU.append(this.metadata);
@@ -454,8 +445,8 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     public static abstract class b implements c {
         @Override // com.discord.rtcconnection.RtcConnection.c
         public void onAnalyticsEvent(AnalyticsEvent analyticsEvent, Map<String, Object> map) {
-            Intrinsics3.checkNotNullParameter(analyticsEvent, "event");
-            Intrinsics3.checkNotNullParameter(map, "properties");
+            m.checkNotNullParameter(analyticsEvent, "event");
+            m.checkNotNullParameter(map, "properties");
         }
 
         @Override // com.discord.rtcconnection.RtcConnection.c
@@ -470,7 +461,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
 
         @Override // com.discord.rtcconnection.RtcConnection.c
         public void onMediaEngineConnectionConnected(RtcConnection rtcConnection) {
-            Intrinsics3.checkNotNullParameter(rtcConnection, "connection");
+            m.checkNotNullParameter(rtcConnection, "connection");
         }
 
         @Override // com.discord.rtcconnection.RtcConnection.c
@@ -479,7 +470,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
 
         @Override // com.discord.rtcconnection.RtcConnection.c
         public void onQualityUpdate(Quality quality) {
-            Intrinsics3.checkNotNullParameter(quality, "quality");
+            m.checkNotNullParameter(quality, "quality");
         }
 
         @Override // com.discord.rtcconnection.RtcConnection.c
@@ -491,12 +482,12 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
 
         @Override // com.discord.rtcconnection.RtcConnection.c
         public void onUserCreated(RtcConnection rtcConnection, long j) {
-            Intrinsics3.checkNotNullParameter(rtcConnection, "connection");
+            m.checkNotNullParameter(rtcConnection, "connection");
         }
 
         @Override // com.discord.rtcconnection.RtcConnection.c
         public void onVideoMetadata(VideoMetadata videoMetadata) {
-            Intrinsics3.checkNotNullParameter(videoMetadata, "metadata");
+            m.checkNotNullParameter(videoMetadata, "metadata");
         }
 
         @Override // com.discord.rtcconnection.RtcConnection.c
@@ -560,7 +551,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
 
             public String toString() {
-                return outline.C(outline.U("Stream(senderId="), this.a, ")");
+                return b.d.b.a.a.C(b.d.b.a.a.U("Stream(senderId="), this.a, ")");
             }
         }
 
@@ -569,7 +560,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     }
 
     /* compiled from: RtcConnection.kt */
-    public static final class e extends Lambda implements Function0<Unit> {
+    public static final class e extends o implements Function0<Unit> {
         public e() {
             super(0);
         }
@@ -590,17 +581,17 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         String str6 = (i & 8192) != 0 ? null : str3;
         boolean z4 = (i & 16384) != 0 ? false : z3;
         String str7 = (i & 65536) != 0 ? null : str5;
-        Intrinsics3.checkNotNullParameter(str, "sessionId");
-        Intrinsics3.checkNotNullParameter(str2, "rtcServerId");
-        Intrinsics3.checkNotNullParameter(mediaEngine, "mediaEngine");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(dVar2, "rtcConnectionType");
+        m.checkNotNullParameter(str, "sessionId");
+        m.checkNotNullParameter(str2, "rtcServerId");
+        m.checkNotNullParameter(mediaEngine, "mediaEngine");
+        m.checkNotNullParameter(logger, "logger");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(dVar2, "rtcConnectionType");
         boolean z5 = z4;
-        Intrinsics3.checkNotNullParameter(networkMonitor, "networkMonitor");
-        Intrinsics3.checkNotNullParameter(linkedHashMap, "mutedUsers");
-        Intrinsics3.checkNotNullParameter(linkedHashMap2, "userVolumes");
-        Intrinsics3.checkNotNullParameter(str4, "loggingTagPrefix");
+        m.checkNotNullParameter(networkMonitor, "networkMonitor");
+        m.checkNotNullParameter(linkedHashMap, "mutedUsers");
+        m.checkNotNullParameter(linkedHashMap2, "userVolumes");
+        m.checkNotNullParameter(str4, "loggingTagPrefix");
         this.guildId = l;
         this.channelId = j2;
         this.sessionId = str;
@@ -617,13 +608,13 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         this.enableMediaSinkWants = z5;
         this.loggingTagPrefix = str4;
         this.streamKey = str7;
-        StringBuilder sbX = outline.X(str4, "->RtcConnection ");
+        StringBuilder sbX = b.d.b.a.a.X(str4, "->RtcConnection ");
         int i2 = j + 1;
         j = i2;
         sbX.append(i2);
         this.loggingTag = sbX.toString();
         String string = UUID.randomUUID().toString();
-        Intrinsics3.checkNotNullExpressionValue(string, "UUID.randomUUID().toString()");
+        m.checkNotNullExpressionValue(string, "UUID.randomUUID().toString()");
         this.id = string;
         CopyOnWriteArrayList<c> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
         this.listeners = copyOnWriteArrayList;
@@ -632,21 +623,21 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         this.connectionStateChange = stateChange;
         this.connectionStateSubject = BehaviorSubject.l0(stateChange);
         this.pings = new ArrayList();
-        VideoQuality videoQuality = new VideoQuality(logger, clock);
-        videoQuality.f.add(new x(this));
-        this.videoQuality = videoQuality;
+        b.a.q.o0.e eVar = new b.a.q.o0.e(logger, clock);
+        eVar.f.add(new x(this));
+        this.videoQuality = eVar;
         if (z5) {
             subscriptionV = null;
-            mediaSinkWantsManager = new MediaSinkWantsManager(j3, mediaEngine.c(), new MediaSinkWantsLadder3(null, 1), logger, this);
+            mediaSinkWantsManager = new MediaSinkWantsManager(j3, mediaEngine.c(), new b.a.q.e(null, 1), logger, this);
         } else {
             mediaSinkWantsManager = null;
             subscriptionV = null;
         }
         this.localMediaSinkWantsManager = mediaSinkWantsManager;
         if (z5) {
-            Intrinsics3.checkNotNull(mediaSinkWantsManager);
-            Observable<Map<String, MediaSinkWantsManager9>> observableR = mediaSinkWantsManager.f.r();
-            Intrinsics3.checkNotNullExpressionValue(observableR, "mediaSinkWantsSubject.distinctUntilChanged()");
+            m.checkNotNull(mediaSinkWantsManager);
+            Observable<Map<String, EncodeQuality>> observableR = mediaSinkWantsManager.f.r();
+            m.checkNotNullExpressionValue(observableR, "mediaSinkWantsSubject.distinctUntilChanged()");
             subscriptionV = Observable.j(observableR, this.connectionStateSubject, z.j).V(new g0(new a0(this)));
         }
         this.localMediaSinkWantsSubscription = subscriptionV;
@@ -669,9 +660,9 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         } else {
             rtcConnection.logger.i(rtcConnection.loggingTag, str, th);
         }
-        RtcStatsCollector4 rtcStatsCollector4 = rtcConnection.rtcStatsCollector;
-        if (rtcStatsCollector4 != null) {
-            rtcStatsCollector4.a();
+        b.a.q.o0.d dVar = rtcConnection.rtcStatsCollector;
+        if (dVar != null) {
+            dVar.a();
         }
         rtcConnection.rtcStatsCollector = null;
         MediaEngineConnection mediaEngineConnection = rtcConnection.mediaEngineConnection;
@@ -719,7 +710,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     }
 
     public final void c(c listener) {
-        Intrinsics3.checkNotNullParameter(listener, "listener");
+        m.checkNotNullParameter(listener, "listener");
         this.listeners.add(listener);
     }
 
@@ -741,8 +732,8 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     }
 
     @Override // com.discord.utilities.debug.DebugPrintable
-    public void debugPrint(DebugPrintable2 dp) {
-        Intrinsics3.checkNotNullParameter(dp, "dp");
+    public void debugPrint(DebugPrintBuilder dp) {
+        m.checkNotNullParameter(dp, "dp");
         dp.appendKeyValue(ModelAuditLogEntry.CHANGE_KEY_ID, this.id);
         dp.appendKeyValue("mediaSessionId", this.mediaSessionId);
         dp.appendKeyValue("parentMediaSessionId", this.parentMediaSessionId);
@@ -765,16 +756,16 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
 
     public final void f(String reason) {
         this.reconnectBackoff.cancel();
-        RtcControlSocket rtcControlSocket = this.socket;
-        if (rtcControlSocket != null) {
-            rtcControlSocket.q.clear();
-            rtcControlSocket.c();
+        a aVar = this.socket;
+        if (aVar != null) {
+            aVar.q.clear();
+            aVar.c();
         }
         this.socket = null;
-        VideoQuality videoQuality = this.videoQuality;
-        synchronized (videoQuality) {
-            videoQuality.o.stop();
-            videoQuality.h = Long.valueOf(videoQuality.q.currentTimeMillis());
+        b.a.q.o0.e eVar = this.videoQuality;
+        synchronized (eVar) {
+            eVar.o.stop();
+            eVar.h = Long.valueOf(eVar.q.currentTimeMillis());
         }
         if (!(this.connectionStateChange.state instanceof State.d)) {
             n(false, reason);
@@ -791,7 +782,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
         MediaSinkWantsManager mediaSinkWantsManager = this.localMediaSinkWantsManager;
         if (mediaSinkWantsManager != null) {
-            mediaSinkWantsManager.b(new MediaSinkWantsManager2(mediaSinkWantsManager));
+            mediaSinkWantsManager.b(new g(mediaSinkWantsManager));
         }
         Subscription subscription = this.localMediaSinkWantsSubscription;
         if (subscription != null) {
@@ -849,13 +840,13 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
 
     public final void l(long senderId, Map<String, ? extends Object> properties) {
         if (properties != null) {
-            k(senderId, Maps6.plus(properties, MapsJVM.mapOf(Tuples.to("participant_type", "receiver"))));
+            k(senderId, d0.t.h0.plus(properties, d0.t.g0.mapOf(d0.o.to("participant_type", "receiver"))));
         }
     }
 
     public final void m(long senderId, Map<String, ? extends Object> properties) {
         if (properties != null) {
-            k(senderId, Maps6.plus(properties, MapsJVM.mapOf(Tuples.to("participant_type", this.rtcConnectionType instanceof d.b ? "streamer" : NotificationCompat.MessagingStyle.Message.KEY_SENDER))));
+            k(senderId, d0.t.h0.plus(properties, d0.t.g0.mapOf(d0.o.to("participant_type", this.rtcConnectionType instanceof d.b ? "streamer" : NotificationCompat.MessagingStyle.Message.KEY_SENDER))));
         }
     }
 
@@ -864,22 +855,22 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         String str;
         Stats stats;
         VoiceQuality voiceQuality;
-        Map<String, Object> mapMutableMapOf = Maps6.mutableMapOf(Tuples.to("ping_bad_count", Integer.valueOf(this.pingBadCount)), Tuples.to("connect_count", Integer.valueOf(this.connectCount)), Tuples.to("channel_count", 1));
+        Map<String, Object> mapMutableMapOf = d0.t.h0.mutableMapOf(d0.o.to("ping_bad_count", Integer.valueOf(this.pingBadCount)), d0.o.to("connect_count", Integer.valueOf(this.connectCount)), d0.o.to("channel_count", 1));
         b(mapMutableMapOf);
         mapMutableMapOf.put("reconnect", Boolean.valueOf(willReconnect));
         if (reason != null) {
             mapMutableMapOf.put(ModelAuditLogEntry.CHANGE_KEY_REASON, reason);
         }
-        double dAverageOfLong = _Collections.averageOfLong(this.pings);
+        double dAverageOfLong = u.averageOfLong(this.pings);
         if (!Double.isNaN(dAverageOfLong)) {
-            mapMutableMapOf.put("ping_average", Integer.valueOf(MathJVM.roundToInt(dAverageOfLong)));
+            mapMutableMapOf.put("ping_average", Integer.valueOf(d0.a0.a.roundToInt(dAverageOfLong)));
         }
         String str2 = this.mediaSessionId;
         if (str2 != null) {
             mapMutableMapOf.put("media_session_id", str2);
         }
-        RtcStatsCollector4 rtcStatsCollector4 = this.rtcStatsCollector;
-        if (rtcStatsCollector4 != null && (stats = (Stats) _Collections.lastOrNull(rtcStatsCollector4.a)) != null) {
+        b.a.q.o0.d dVar = this.rtcStatsCollector;
+        if (dVar != null && (stats = (Stats) u.lastOrNull(dVar.a)) != null) {
             OutboundRtpAudio outboundRtpAudio = stats.getOutboundRtpAudio();
             if (outboundRtpAudio != null) {
                 mapMutableMapOf.put("packets_sent", Long.valueOf(outboundRtpAudio.getPacketsSent()));
@@ -893,8 +884,8 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
             mapMutableMapOf.put("packets_received", Long.valueOf(packetsReceived));
             mapMutableMapOf.put("packets_received_lost", Long.valueOf(packetsLost));
-            RtcStatsCollector4 rtcStatsCollector42 = this.rtcStatsCollector;
-            if (rtcStatsCollector42 != null && (voiceQuality = rtcStatsCollector42.f) != null) {
+            b.a.q.o0.d dVar2 = this.rtcStatsCollector;
+            if (dVar2 != null && (voiceQuality = dVar2.f) != null) {
                 voiceQuality.getDurationStats(mapMutableMapOf);
                 voiceQuality.getMosStats(mapMutableMapOf);
                 voiceQuality.getPacketStats(mapMutableMapOf);
@@ -923,12 +914,12 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
         p(AnalyticsEvent.VOICE_DISCONNECT, mapMutableMapOf);
         if (this.rtcConnectionType instanceof d.a) {
-            VideoQuality videoQuality = this.videoQuality;
-            synchronized (videoQuality) {
-                list = _Collections.toList(videoQuality.m.keySet());
+            b.a.q.o0.e eVar = this.videoQuality;
+            synchronized (eVar) {
+                list = u.toList(eVar.m.keySet());
             }
             for (String str3 : list) {
-                Long longOrNull = StringNumberConversions.toLongOrNull(str3);
+                Long longOrNull = s.toLongOrNull(str3);
                 if (longOrNull != null) {
                     l(longOrNull.longValue(), this.videoQuality.c(str3));
                 }
@@ -943,7 +934,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         String str;
         properties.put("rtc_connection_id", this.id);
         d dVar = this.rtcConnectionType;
-        if (Intrinsics3.areEqual(dVar, d.a.a)) {
+        if (m.areEqual(dVar, d.a.a)) {
             str = "default";
         } else {
             if (!(dVar instanceof d.b)) {
@@ -972,10 +963,10 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             this.connectStartTime = Long.valueOf(this.clock.currentTimeMillis());
         }
         this.connectCount++;
-        RtcControlSocket rtcControlSocket = this.socket;
-        if (rtcControlSocket != null) {
-            rtcControlSocket.c();
-            rtcControlSocket.d();
+        a aVar = this.socket;
+        if (aVar != null) {
+            aVar.c();
+            aVar.d();
         }
     }
 
@@ -987,11 +978,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     /* JADX WARN: Type inference failed for: r1v0, types: [b.a.q.f0] */
     @AnyThread
     public final void s(Function0<Unit> action) {
-        MediaEngineExecutorService mediaEngineExecutorServiceC = this.mediaEngine.c();
+        b.a.q.c cVarC = this.mediaEngine.c();
         if (action != null) {
             action = new f0(action);
         }
-        mediaEngineExecutorServiceC.l.execute((Runnable) action);
+        cVarC.l.execute((Runnable) action);
     }
 
     public final void t(Intent intent, ThumbnailEmitter thumbnailEmitter) {
@@ -1009,7 +1000,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     }
 
     public final void u(State state) {
-        if (!Intrinsics3.areEqual(this.connectionStateChange.state, state)) {
+        if (!m.areEqual(this.connectionStateChange.state, state)) {
             StateChange stateChange = new StateChange(state, i());
             this.connectionStateChange = stateChange;
             Iterator<T> it = this.listeners.iterator();
@@ -1030,7 +1021,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     public final void w(Long userId) {
         MediaSinkWantsManager mediaSinkWantsManager = this.localMediaSinkWantsManager;
         if (mediaSinkWantsManager != null) {
-            mediaSinkWantsManager.b(new MediaSinkWantsManager5(mediaSinkWantsManager, userId));
+            mediaSinkWantsManager.b(new j(mediaSinkWantsManager, userId));
         }
     }
 }

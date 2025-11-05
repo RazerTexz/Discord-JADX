@@ -1,14 +1,14 @@
 package com.discord.widgets.chat.input.emoji;
 
 import com.discord.models.guild.Guild;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.LinkedHashMap;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: EmojiPickerViewModel.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class EmojiPickerViewModel$handleStoreState$frequentItems$1 extends FunctionReferenceImpl implements Function1<Long, Guild> {
+public final /* synthetic */ class EmojiPickerViewModel$handleStoreState$frequentItems$1 extends k implements Function1<Long, Guild> {
     public EmojiPickerViewModel$handleStoreState$frequentItems$1(LinkedHashMap linkedHashMap) {
         super(1, linkedHashMap, LinkedHashMap.class, "get", "get(Ljava/lang/Object;)Ljava/lang/Object;", 0);
     }
@@ -20,7 +20,7 @@ public final /* synthetic */ class EmojiPickerViewModel$handleStoreState$frequen
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Guild invoke2(Long l) {
-        Intrinsics3.checkNotNullParameter(l, "p1");
+        m.checkNotNullParameter(l, "p1");
         return (Guild) ((LinkedHashMap) this.receiver).get(l);
     }
 }

@@ -5,9 +5,9 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.FormatUtils;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.HubAddServerConfirmationDialogBinding;
@@ -15,10 +15,10 @@ import com.discord.models.guild.Guild;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Reflection2;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
@@ -26,7 +26,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetHubAddServerConfirmationDialog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetHubAddServerConfirmationDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetHubAddServerConfirmationDialog.class, "binding", "getBinding()Lcom/discord/databinding/HubAddServerConfirmationDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetHubAddServerConfirmationDialog.class, "binding", "getBinding()Lcom/discord/databinding/HubAddServerConfirmationDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -42,12 +42,12 @@ public final class WidgetHubAddServerConfirmationDialog extends AppDialog {
         private Companion() {
         }
 
-        public final WidgetHubAddServerConfirmationDialog show(FragmentManager fragmentManager, WidgetHubAddServerConfirmationDialog2 args) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(args, "args");
+        public final WidgetHubAddServerConfirmationDialog show(FragmentManager fragmentManager, AddServerConfirmationArgs args) {
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(args, "args");
             WidgetHubAddServerConfirmationDialog widgetHubAddServerConfirmationDialog = new WidgetHubAddServerConfirmationDialog();
-            widgetHubAddServerConfirmationDialog.setArguments(AnimatableValueParser.e2(args));
-            widgetHubAddServerConfirmationDialog.show(fragmentManager, Reflection2.getOrCreateKotlinClass(WidgetHubAddServerConfirmationDialog.class).toString());
+            widgetHubAddServerConfirmationDialog.setArguments(d.e2(args));
+            widgetHubAddServerConfirmationDialog.show(fragmentManager, a0.getOrCreateKotlinClass(WidgetHubAddServerConfirmationDialog.class).toString());
             return widgetHubAddServerConfirmationDialog;
         }
 
@@ -70,12 +70,12 @@ public final class WidgetHubAddServerConfirmationDialog extends AppDialog {
 
     public WidgetHubAddServerConfirmationDialog() {
         super(R.layout.hub_add_server_confirmation_dialog);
-        this.args = LazyJVM.lazy(new WidgetHubAddServerConfirmationDialog$$special$$inlined$args$1(this, "intent_args_key"));
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetHubAddServerConfirmationDialog3.INSTANCE, null, 2, null);
+        this.args = g.lazy(new WidgetHubAddServerConfirmationDialog$$special$$inlined$args$1(this, "intent_args_key"));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetHubAddServerConfirmationDialog$binding$2.INSTANCE, null, 2, null);
     }
 
-    private final WidgetHubAddServerConfirmationDialog2 getArgs() {
-        return (WidgetHubAddServerConfirmationDialog2) this.args.getValue();
+    private final AddServerConfirmationArgs getArgs() {
+        return (AddServerConfirmationArgs) this.args.getValue();
     }
 
     private final HubAddServerConfirmationDialogBinding getBinding() {
@@ -88,10 +88,10 @@ public final class WidgetHubAddServerConfirmationDialog extends AppDialog {
         requireDialog().setCanceledOnTouchOutside(true);
         getBinding().d.setOnClickListener(new AnonymousClass1());
         TextView textView = getBinding().f2125b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.addServerConfirmationDialogDescription");
+        m.checkNotNullExpressionValue(textView, "binding.addServerConfirmationDialogDescription");
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-        FormatUtils.a(textView, FormatUtils.h(contextRequireContext, R.string.hub_add_server_confirmation_subtitle, new Object[]{getArgs().getHubName()}, null, 4));
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        b.a(textView, b.h(contextRequireContext, R.string.hub_add_server_confirmation_subtitle, new Object[]{getArgs().getHubName()}, null, 4));
         getBinding().c.b();
         Guild guild = StoreStream.INSTANCE.getGuilds().getGuild(getArgs().getGuildId());
         if (guild != null) {

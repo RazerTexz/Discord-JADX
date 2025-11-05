@@ -4,7 +4,6 @@ import android.content.ComponentName;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import androidx.annotation.RecentlyNonNull;
-import b.c.a.a0.AnimatableValueParser;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +17,7 @@ public class a implements ServiceConnection {
 
     @RecentlyNonNull
     public IBinder a(long j, @RecentlyNonNull TimeUnit timeUnit) throws InterruptedException, TimeoutException {
-        AnimatableValueParser.x("BlockingServiceConnection.getServiceWithTimeout() called on main thread");
+        b.c.a.a0.d.x("BlockingServiceConnection.getServiceWithTimeout() called on main thread");
         if (this.j) {
             throw new IllegalStateException("Cannot call get on this connection more than once");
         }

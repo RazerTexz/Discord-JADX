@@ -9,9 +9,9 @@ import com.discord.stores.StoreEmoji;
 import com.discord.stores.StoreGuildsSorted;
 import com.discord.stores.StoreUserSettings;
 import com.discord.widgets.chat.input.emoji.EmojiPickerViewModel;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import j0.k.b;
+import j0.l.e.k;
 import java.util.LinkedHashMap;
 import java.util.Set;
 import rx.Observable;
@@ -20,7 +20,7 @@ import rx.subjects.BehaviorSubject;
 
 /* compiled from: EmojiPickerViewModel.kt */
 /* loaded from: classes2.dex */
-public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> implements Func1<StoreEmoji.EmojiContext, Observable<? extends EmojiPickerViewModel.StoreState>> {
+public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> implements b<StoreEmoji.EmojiContext, Observable<? extends EmojiPickerViewModel.StoreState>> {
     public final /* synthetic */ BehaviorSubject $searchSubject;
     public final /* synthetic */ BehaviorSubject $selectedCategoryItemIdSubject;
     public final /* synthetic */ StoreAccessibility $storeAccessibility;
@@ -43,15 +43,15 @@ public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> impl
         }
 
         public final EmojiPickerViewModel.StoreState call(EmojiSet emojiSet, LinkedHashMap<Long, Guild> linkedHashMap, String str, boolean z2, boolean z3, long j) {
-            Intrinsics3.checkNotNullParameter(linkedHashMap, "allGuilds");
-            Intrinsics3.checkNotNullParameter(str, "searchInputString");
+            m.checkNotNullParameter(linkedHashMap, "allGuilds");
+            m.checkNotNullParameter(str, "searchInputString");
             if (emojiSet == null) {
                 return EmojiPickerViewModel.StoreState.Uninitialized.INSTANCE;
             }
             StoreEmoji.EmojiContext emojiContext = this.$emojiContext;
             boolean z4 = z2 && !z3;
             Set<Emoji> set = emojiSet.favoriteEmoji;
-            Intrinsics3.checkNotNullExpressionValue(set, "emojiSet.favoriteEmoji");
+            m.checkNotNullExpressionValue(set, "emojiSet.favoriteEmoji");
             return new EmojiPickerViewModel.StoreState.Emoji(emojiSet, emojiContext, linkedHashMap, str, z4, j, set);
         }
     }
@@ -65,13 +65,13 @@ public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> impl
         this.$selectedCategoryItemIdSubject = behaviorSubject2;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public /* bridge */ /* synthetic */ Observable<? extends EmojiPickerViewModel.StoreState> call(StoreEmoji.EmojiContext emojiContext) {
         return call2(emojiContext);
     }
 
     /* renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends EmojiPickerViewModel.StoreState> call2(StoreEmoji.EmojiContext emojiContext) {
-        return emojiContext == null ? new ScalarSynchronousObservable(EmojiPickerViewModel.StoreState.Uninitialized.INSTANCE) : Observable.f(this.$storeEmoji.getEmojiSet(emojiContext, true, true), this.$storeGuildsSorted.observeOrderedGuilds(), this.$searchSubject, StoreUserSettings.observeIsAnimatedEmojisEnabled$default(this.$storeUserSettings, false, 1, null), this.$storeAccessibility.observeReducedMotionEnabled(), this.$selectedCategoryItemIdSubject, new AnonymousClass1(emojiContext));
+        return emojiContext == null ? new k(EmojiPickerViewModel.StoreState.Uninitialized.INSTANCE) : Observable.f(this.$storeEmoji.getEmojiSet(emojiContext, true, true), this.$storeGuildsSorted.observeOrderedGuilds(), this.$searchSubject, StoreUserSettings.observeIsAnimatedEmojisEnabled$default(this.$storeUserSettings, false, 1, null), this.$storeAccessibility.observeReducedMotionEnabled(), this.$selectedCategoryItemIdSubject, new AnonymousClass1(emojiContext));
     }
 }

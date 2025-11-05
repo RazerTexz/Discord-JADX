@@ -1,26 +1,26 @@
 package rx.subscriptions;
 
-import j0.l.d.SequentialSubscription;
-import j0.l.d.Unsubscribed;
+import j0.l.d.a;
+import j0.l.d.b;
 import rx.Subscription;
 
 /* loaded from: classes3.dex */
 public final class SerialSubscription implements Subscription {
-    public final SequentialSubscription j = new SequentialSubscription();
+    public final a j = new a();
 
     public void a(Subscription subscription) {
         Subscription subscription2;
         if (subscription == null) {
             throw new IllegalArgumentException("Subscription can not be null");
         }
-        SequentialSubscription sequentialSubscription = this.j;
+        a aVar = this.j;
         do {
-            subscription2 = sequentialSubscription.get();
-            if (subscription2 == Unsubscribed.INSTANCE) {
+            subscription2 = aVar.get();
+            if (subscription2 == b.INSTANCE) {
                 subscription.unsubscribe();
                 return;
             }
-        } while (!sequentialSubscription.compareAndSet(subscription2, subscription));
+        } while (!aVar.compareAndSet(subscription2, subscription));
         if (subscription2 != null) {
             subscription2.unsubscribe();
         }

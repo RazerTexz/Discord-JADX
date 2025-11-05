@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: ModelRemoteAuthHandshake.kt */
 /* loaded from: classes.dex */
@@ -9,7 +9,7 @@ public final /* data */ class ModelRemoteAuthHandshake {
     private final String handshakeToken;
 
     public ModelRemoteAuthHandshake(String str) {
-        Intrinsics3.checkNotNullParameter(str, "handshakeToken");
+        m.checkNotNullParameter(str, "handshakeToken");
         this.handshakeToken = str;
     }
 
@@ -26,13 +26,13 @@ public final /* data */ class ModelRemoteAuthHandshake {
     }
 
     public final ModelRemoteAuthHandshake copy(String handshakeToken) {
-        Intrinsics3.checkNotNullParameter(handshakeToken, "handshakeToken");
+        m.checkNotNullParameter(handshakeToken, "handshakeToken");
         return new ModelRemoteAuthHandshake(handshakeToken);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ModelRemoteAuthHandshake) && Intrinsics3.areEqual(this.handshakeToken, ((ModelRemoteAuthHandshake) other).handshakeToken);
+            return (other instanceof ModelRemoteAuthHandshake) && m.areEqual(this.handshakeToken, ((ModelRemoteAuthHandshake) other).handshakeToken);
         }
         return true;
     }
@@ -50,6 +50,6 @@ public final /* data */ class ModelRemoteAuthHandshake {
     }
 
     public String toString() {
-        return outline.J(outline.U("ModelRemoteAuthHandshake(handshakeToken="), this.handshakeToken, ")");
+        return a.J(a.U("ModelRemoteAuthHandshake(handshakeToken="), this.handshakeToken, ")");
     }
 }

@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: InviteEntry.kt */
 /* loaded from: classes2.dex */
@@ -16,7 +16,7 @@ public final /* data */ class InviteEntry extends ChatListEntry {
     private final long userId;
 
     public InviteEntry(long j, long j2, String str, long j3, String str2) {
-        Intrinsics3.checkNotNullParameter(str, "inviteCode");
+        m.checkNotNullParameter(str, "inviteCode");
         this.userId = j;
         this.messageId = j2;
         this.inviteCode = str;
@@ -56,7 +56,7 @@ public final /* data */ class InviteEntry extends ChatListEntry {
     }
 
     public final InviteEntry copy(long userId, long messageId, String inviteCode, long guildId, String eventId) {
-        Intrinsics3.checkNotNullParameter(inviteCode, "inviteCode");
+        m.checkNotNullParameter(inviteCode, "inviteCode");
         return new InviteEntry(userId, messageId, inviteCode, guildId, eventId);
     }
 
@@ -68,7 +68,7 @@ public final /* data */ class InviteEntry extends ChatListEntry {
             return false;
         }
         InviteEntry inviteEntry = (InviteEntry) other;
-        return this.userId == inviteEntry.userId && this.messageId == inviteEntry.messageId && Intrinsics3.areEqual(this.inviteCode, inviteEntry.inviteCode) && this.guildId == inviteEntry.guildId && Intrinsics3.areEqual(this.eventId, inviteEntry.eventId);
+        return this.userId == inviteEntry.userId && this.messageId == inviteEntry.messageId && m.areEqual(this.inviteCode, inviteEntry.inviteCode) && this.guildId == inviteEntry.guildId && m.areEqual(this.eventId, inviteEntry.eventId);
     }
 
     public final String getEventId() {
@@ -110,7 +110,7 @@ public final /* data */ class InviteEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InviteEntry(userId=");
+        StringBuilder sbU = a.U("InviteEntry(userId=");
         sbU.append(this.userId);
         sbU.append(", messageId=");
         sbU.append(this.messageId);
@@ -119,6 +119,6 @@ public final /* data */ class InviteEntry extends ChatListEntry {
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", eventId=");
-        return outline.J(sbU, this.eventId, ")");
+        return a.J(sbU, this.eventId, ")");
     }
 }

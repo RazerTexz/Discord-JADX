@@ -2,14 +2,14 @@ package com.discord.utilities.intent;
 
 import androidx.fragment.app.FragmentActivity;
 import com.discord.widgets.friends.WidgetFriendsAdd;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: RouteHandlers.kt */
 /* loaded from: classes2.dex */
-public final class RouteHandlers$selectFeature$settingMap$10 extends Lambda implements Function1<FragmentActivity, Unit> {
+public final class RouteHandlers$selectFeature$settingMap$10 extends o implements Function1<FragmentActivity, Unit> {
     public static final RouteHandlers$selectFeature$settingMap$10 INSTANCE = new RouteHandlers$selectFeature$settingMap$10();
 
     public RouteHandlers$selectFeature$settingMap$10() {
@@ -24,7 +24,7 @@ public final class RouteHandlers$selectFeature$settingMap$10 extends Lambda impl
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(FragmentActivity fragmentActivity) {
-        Intrinsics3.checkNotNullParameter(fragmentActivity, "ctx");
+        m.checkNotNullParameter(fragmentActivity, "ctx");
         WidgetFriendsAdd.Companion.show$default(WidgetFriendsAdd.INSTANCE, fragmentActivity, null, "Deep Link", 2, null);
     }
 }

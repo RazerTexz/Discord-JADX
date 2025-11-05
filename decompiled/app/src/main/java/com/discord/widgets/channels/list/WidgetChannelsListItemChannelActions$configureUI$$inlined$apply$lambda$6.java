@@ -1,7 +1,7 @@
 package com.discord.widgets.channels.list;
 
 import android.view.View;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions;
 import com.discord.widgets.channels.settings.WidgetChannelNotificationSettings;
 
@@ -16,6 +16,6 @@ public final class WidgetChannelsListItemChannelActions$configureUI$$inlined$app
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        WidgetChannelNotificationSettings.Companion.launch$default(WidgetChannelNotificationSettings.INSTANCE, outline.x(view, "it", "it.context"), this.$this_configureUI$inlined.getChannel().getId(), false, 4, null);
+        WidgetChannelNotificationSettings.Companion.launch$default(WidgetChannelNotificationSettings.INSTANCE, a.x(view, "it", "it.context"), this.$this_configureUI$inlined.getChannel().getId(), false, 4, null);
     }
 }

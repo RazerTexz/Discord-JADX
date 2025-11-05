@@ -13,16 +13,15 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
-import com.discord.app.AppLogger2;
 import com.discord.app.AppViewFlipper;
+import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetServerSettingsAuditLogBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreChannels;
@@ -31,11 +30,11 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import com.discord.widgets.servers.WidgetServerSettingsChannels;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -52,7 +51,7 @@ import rx.functions.Action1;
 /* compiled from: WidgetServerSettingsAuditLog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLog extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerSettingsAuditLog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsAuditLogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsAuditLog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsAuditLogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -69,7 +68,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
     private final FragmentViewBindingDelegate binding;
     private long guildId;
     private boolean loadingAuditLogs;
-    private final AppLogger2 loggingConfig;
+    private final LoggingConfig loggingConfig;
 
     /* compiled from: WidgetServerSettingsAuditLog.kt */
     public static final class Companion {
@@ -77,12 +76,12 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
 
         public final void create(Context context, long guildId, String guildName) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(guildName, "guildName");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(guildName, "guildName");
             StoreStream.INSTANCE.getAnalytics().onGuildSettingsPaneViewed("AUDIT_LOG", guildId);
             Intent intentPutExtra = new Intent().putExtra(WidgetServerSettingsAuditLog.INTENT_EXTRA_GUILD_ID, guildId).putExtra(WidgetServerSettingsAuditLog.INTENT_EXTRA_GUILD_NAME, guildName);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…RA_GUILD_NAME, guildName)");
-            AppScreen2.d(context, WidgetServerSettingsAuditLog.class, intentPutExtra);
+            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…RA_GUILD_NAME, guildName)");
+            j.d(context, WidgetServerSettingsAuditLog.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -143,7 +142,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
                 if (channel != null) {
                     boolean zV = ChannelUtils.v(channel);
                     if (zV) {
-                        StringBuilder sbQ = outline.Q(MentionUtils.CHANNELS_CHAR);
+                        StringBuilder sbQ = a.Q(MentionUtilsKt.CHANNELS_CHAR);
                         sbQ.append(ChannelUtils.c(channel));
                         return sbQ.toString();
                     }
@@ -163,8 +162,8 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
                             }
                             next2 = it.next();
                             ModelAuditLogEntry.Change change = (ModelAuditLogEntry.Change) next2;
-                            Intrinsics3.checkNotNullExpressionValue(change, "it");
-                            if (Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_NAME)) {
+                            m.checkNotNullExpressionValue(change, "it");
+                            if (m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_NAME)) {
                                 break;
                             }
                         }
@@ -184,8 +183,8 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
                                 }
                                 next = it2.next();
                                 ModelAuditLogEntry.Change change3 = (ModelAuditLogEntry.Change) next;
-                                Intrinsics3.checkNotNullExpressionValue(change3, "it");
-                                if (Intrinsics3.areEqual(change3.getKey(), "type")) {
+                                m.checkNotNullExpressionValue(change3, "it");
+                                if (m.areEqual(change3.getKey(), "type")) {
                                     break;
                                 }
                             }
@@ -203,7 +202,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
                                     }
                                     return str;
                                 }
-                                return MentionUtils.CHANNELS_CHAR + str;
+                                return MentionUtilsKt.CHANNELS_CHAR + str;
                             }
                         }
                     }
@@ -212,10 +211,10 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             }
 
             public final Observable<Model> get(long guildId, Context context) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable<Model> observableR = Observable.f(companion.getAuditLog().observeAuditLogState(guildId), companion.getGuilds().observeGuild(guildId), StoreChannels.observeChannelsForGuild$default(companion.getChannels(), guildId, null, 2, null), ObservableExtensionsKt.leadingEdgeThrottle(companion.getUsers().observeAllUsers(), 3L, TimeUnit.SECONDS), companion.getGuilds().observeRoles(guildId), companion.getGuilds().observeComputed(guildId), new WidgetServerSettingsAuditLog2(guildId, context)).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
+                Observable<Model> observableR = Observable.f(companion.getAuditLog().observeAuditLogState(guildId), companion.getGuilds().observeGuild(guildId), StoreChannels.observeChannelsForGuild$default(companion.getChannels(), guildId, null, 2, null), ObservableExtensionsKt.leadingEdgeThrottle(companion.getUsers().observeAllUsers(), 3L, TimeUnit.SECONDS), companion.getGuilds().observeRoles(guildId), companion.getGuilds().observeComputed(guildId), new WidgetServerSettingsAuditLog$Model$Companion$get$1(guildId, context)).r();
+                m.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -234,9 +233,9 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(List<? extends MGRecyclerDataPayload> list, CharSequence charSequence, CharSequence charSequence2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "auditLogEntryItems");
-                Intrinsics3.checkNotNullParameter(charSequence, "usernameFilterText");
-                Intrinsics3.checkNotNullParameter(charSequence2, "actionFilterText");
+                m.checkNotNullParameter(list, "auditLogEntryItems");
+                m.checkNotNullParameter(charSequence, "usernameFilterText");
+                m.checkNotNullParameter(charSequence2, "actionFilterText");
                 this.auditLogEntryItems = list;
                 this.usernameFilterText = charSequence;
                 this.actionFilterText = charSequence2;
@@ -278,27 +277,27 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
 
         /* compiled from: WidgetServerSettingsAuditLog.kt */
         /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class ViewOnClickListenerC03161 implements View.OnClickListener {
+        public static final class ViewOnClickListenerC04361 implements View.OnClickListener {
 
             /* compiled from: WidgetServerSettingsAuditLog.kt */
             /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C03171 implements PopupMenu.OnMenuItemClickListener {
+            public static final class C04371 implements PopupMenu.OnMenuItemClickListener {
                 public final /* synthetic */ View $view;
 
-                public C03171(View view) {
+                public C04371(View view) {
                     this.$view = view;
                 }
 
                 /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
                 @Override // androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener
                 public final boolean onMenuItemClick(MenuItem menuItem) {
-                    Intrinsics3.checkNotNullExpressionValue(menuItem, "it");
+                    m.checkNotNullExpressionValue(menuItem, "it");
                     switch (menuItem.getItemId()) {
                         case R.id.menu_audit_log_sort_actions /* 2131364361 */:
-                            WidgetServerSettingsAuditLogFilter.INSTANCE.show(outline.x(this.$view, "view", "view.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 1);
+                            WidgetServerSettingsAuditLogFilter.INSTANCE.show(a.x(this.$view, "view", "view.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 1);
                             return true;
                         case R.id.menu_audit_log_sort_users /* 2131364362 */:
-                            WidgetServerSettingsAuditLogFilter.INSTANCE.show(outline.x(this.$view, "view", "view.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 0);
+                            WidgetServerSettingsAuditLogFilter.INSTANCE.show(a.x(this.$view, "view", "view.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 0);
                             return true;
                         default:
                             return true;
@@ -306,14 +305,14 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
                 }
             }
 
-            public ViewOnClickListenerC03161() {
+            public ViewOnClickListenerC04361() {
             }
 
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
                 PopupMenu popupMenu = new PopupMenu(new ContextThemeWrapper(WidgetServerSettingsAuditLog.this.getContext(), 2131951663), view);
                 popupMenu.getMenuInflater().inflate(R.menu.menu_audit_log_sort, popupMenu.getMenu());
-                popupMenu.setOnMenuItemClickListener(new C03171(view));
+                popupMenu.setOnMenuItemClickListener(new C04371(view));
                 popupMenu.show();
             }
         }
@@ -333,7 +332,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             if (menuItemFindItem == null || (actionView = menuItemFindItem.getActionView()) == null) {
                 return;
             }
-            actionView.setOnClickListener(new ViewOnClickListenerC03161());
+            actionView.setOnClickListener(new ViewOnClickListenerC04361());
         }
     }
 
@@ -342,7 +341,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
     public static final class AnonymousClass2 extends RecyclerView.OnScrollListener {
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            m.checkNotNullParameter(recyclerView, "recyclerView");
             super.onScrollStateChanged(recyclerView, newState);
             if (recyclerView.canScrollVertically(1)) {
                 return;
@@ -359,7 +358,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetServerSettingsAuditLogFilter.INSTANCE.show(outline.x(view, "it", "it.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 0);
+            WidgetServerSettingsAuditLogFilter.INSTANCE.show(a.x(view, "it", "it.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 0);
         }
     }
 
@@ -371,13 +370,13 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            WidgetServerSettingsAuditLogFilter.INSTANCE.show(outline.x(view, "it", "it.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 1);
+            WidgetServerSettingsAuditLogFilter.INSTANCE.show(a.x(view, "it", "it.context"), WidgetServerSettingsAuditLog.access$getGuildId$p(WidgetServerSettingsAuditLog.this), 1);
         }
     }
 
     /* compiled from: WidgetServerSettingsAuditLog.kt */
     /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
         public AnonymousClass1(WidgetServerSettingsAuditLog widgetServerSettingsAuditLog) {
             super(1, widgetServerSettingsAuditLog, WidgetServerSettingsAuditLog.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/auditlog/WidgetServerSettingsAuditLog$Model;)V", 0);
         }
@@ -390,15 +389,15 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            Intrinsics3.checkNotNullParameter(model, "p1");
+            m.checkNotNullParameter(model, "p1");
             WidgetServerSettingsAuditLog.access$configureUI((WidgetServerSettingsAuditLog) this.receiver, model);
         }
     }
 
     public WidgetServerSettingsAuditLog() {
         super(R.layout.widget_server_settings_audit_log);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsAuditLog3.INSTANCE, null, 2, null);
-        this.loggingConfig = new AppLogger2(false, null, WidgetServerSettingsAuditLog4.INSTANCE, 3);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsAuditLog$binding$2.INSTANCE, null, 2, null);
+        this.loggingConfig = new LoggingConfig(false, null, WidgetServerSettingsAuditLog$loggingConfig$1.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsAuditLog widgetServerSettingsAuditLog, Model model) {
@@ -416,7 +415,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
     private final void configureUI(Model model) {
         if (model instanceof Model.Loading) {
             AppViewFlipper appViewFlipper = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsAuditLogsViewFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsAuditLogsViewFlipper");
             appViewFlipper.setDisplayedChild(0);
             return;
         }
@@ -426,22 +425,22 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
                 widgetServerSettingsAuditLogAdapter.configure(((Model.Loaded) model).getAuditLogEntryItems());
             }
             AppViewFlipper appViewFlipper2 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsAuditLogsViewFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsAuditLogsViewFlipper");
             appViewFlipper2.setDisplayedChild(1);
             TextView textView = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.serverSettingsAuditLogsUserFilter");
+            m.checkNotNullExpressionValue(textView, "binding.serverSettingsAuditLogsUserFilter");
             Model.Loaded loaded = (Model.Loaded) model;
             textView.setText(loaded.getUsernameFilterText());
             TextView textView2 = getBinding().f2539b;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.serverSettingsAuditLogsActionFilter");
+            m.checkNotNullExpressionValue(textView2, "binding.serverSettingsAuditLogsActionFilter");
             textView2.setText(loaded.getActionFilterText());
             if (!loaded.getAuditLogEntryItems().isEmpty()) {
                 AppViewFlipper appViewFlipper3 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(appViewFlipper3, "binding.serverSettingsAuditLogsViewResultsFlipper");
+                m.checkNotNullExpressionValue(appViewFlipper3, "binding.serverSettingsAuditLogsViewResultsFlipper");
                 appViewFlipper3.setDisplayedChild(0);
             } else {
                 AppViewFlipper appViewFlipper4 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(appViewFlipper4, "binding.serverSettingsAuditLogsViewResultsFlipper");
+                m.checkNotNullExpressionValue(appViewFlipper4, "binding.serverSettingsAuditLogsViewResultsFlipper");
                 appViewFlipper4.setDisplayedChild(1);
             }
             this.loadingAuditLogs = false;
@@ -457,7 +456,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
+    public LoggingConfig getLoggingConfig() {
         return this.loggingConfig;
     }
 
@@ -472,13 +471,13 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         long longExtra = getMostRecentIntent().getLongExtra(INTENT_EXTRA_GUILD_ID, -1L);
         this.guildId = longExtra;
         if (longExtra == -1) {
-            AppToast.g(getContext(), R.string.crash_unexpected, 0, null, 12);
+            b.a.d.m.g(getContext(), R.string.crash_unexpected, 0, null, 12);
             AppActivity appActivity = getAppActivity();
             if (appActivity != null) {
                 appActivity.finish();
@@ -490,9 +489,9 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         getBinding().c.addOnScrollListener(new AnonymousClass2());
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
         RecyclerView recyclerView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.serverSettingsAuditLogsRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.serverSettingsAuditLogsRecycler");
         WidgetServerSettingsAuditLogAdapter widgetServerSettingsAuditLogAdapter = (WidgetServerSettingsAuditLogAdapter) companion.configure(new WidgetServerSettingsAuditLogAdapter(recyclerView));
-        widgetServerSettingsAuditLogAdapter.setOnAuditLogAvatarClicked(new WidgetServerSettingsAuditLog5(this));
+        widgetServerSettingsAuditLogAdapter.setOnAuditLogAvatarClicked(new WidgetServerSettingsAuditLog$onViewBound$$inlined$apply$lambda$1(this));
         this.adapter = widgetServerSettingsAuditLogAdapter;
         getBinding().d.setOnClickListener(new AnonymousClass4());
         getBinding().f2539b.setOnClickListener(new AnonymousClass5());

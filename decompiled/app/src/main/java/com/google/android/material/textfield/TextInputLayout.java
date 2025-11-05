@@ -55,15 +55,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.widget.TextViewCompat;
 import androidx.customview.view.AbsSavedState;
-import b.d.b.a.outline;
-import b.i.a.g.j.ClearTextEndIconDelegate;
-import b.i.a.g.j.CustomEndIconDelegate;
-import b.i.a.g.j.CutoutDrawable;
-import b.i.a.g.j.DropdownMenuEndIconDelegate;
-import b.i.a.g.j.EndIconDelegate;
-import b.i.a.g.j.IndicatorViewController;
-import b.i.a.g.j.NoEndIconDelegate;
-import b.i.a.g.j.PasswordToggleEndIconDelegate;
+import b.i.a.g.j.f;
+import b.i.a.g.j.g;
+import b.i.a.g.j.h;
+import b.i.a.g.j.m;
+import b.i.a.g.j.n;
+import b.i.a.g.j.o;
+import b.i.a.g.j.p;
 import com.google.android.material.R;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.badge.BadgeDrawable;
@@ -152,7 +150,7 @@ public class TextInputLayout extends LinearLayout {
     private Drawable endDummyDrawable;
     private int endDummyDrawableWidth;
     private final LinkedHashSet<OnEndIconChangedListener> endIconChangedListeners;
-    private final SparseArray<EndIconDelegate> endIconDelegates;
+    private final SparseArray<m> endIconDelegates;
 
     @NonNull
     private final FrameLayout endIconFrame;
@@ -194,7 +192,7 @@ public class TextInputLayout extends LinearLayout {
     @ColorInt
     private int hoveredStrokeColor;
     private boolean inDrawableStateChanged;
-    private final IndicatorViewController indicatorViewController;
+    private final n indicatorViewController;
 
     @NonNull
     private final FrameLayout inputFrame;
@@ -362,7 +360,7 @@ public class TextInputLayout extends LinearLayout {
 
         @NonNull
         public String toString() {
-            StringBuilder sbU = outline.U("TextInputLayout.SavedState{");
+            StringBuilder sbU = b.d.b.a.a.U("TextInputLayout.SavedState{");
             sbU.append(Integer.toHexString(System.identityHashCode(this)));
             sbU.append(" error=");
             sbU.append((Object) this.j);
@@ -567,12 +565,12 @@ public class TextInputLayout extends LinearLayout {
             this.boxUnderline = new MaterialShapeDrawable();
         } else {
             if (i != 2) {
-                throw new IllegalArgumentException(outline.B(new StringBuilder(), this.boxBackgroundMode, " is illegal; only @BoxBackgroundMode constants are supported."));
+                throw new IllegalArgumentException(b.d.b.a.a.B(new StringBuilder(), this.boxBackgroundMode, " is illegal; only @BoxBackgroundMode constants are supported."));
             }
-            if (!this.hintEnabled || (this.boxBackground instanceof CutoutDrawable)) {
+            if (!this.hintEnabled || (this.boxBackground instanceof g)) {
                 this.boxBackground = new MaterialShapeDrawable(this.shapeAppearanceModel);
             } else {
-                this.boxBackground = new CutoutDrawable(this.shapeAppearanceModel);
+                this.boxBackground = new g(this.shapeAppearanceModel);
             }
             this.boxUnderline = null;
         }
@@ -661,7 +659,7 @@ public class TextInputLayout extends LinearLayout {
 
     private void closeCutout() {
         if (cutoutEnabled()) {
-            ((CutoutDrawable) this.boxBackground).a(0.0f, 0.0f, 0.0f, 0.0f);
+            ((g) this.boxBackground).a(0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
 
@@ -685,7 +683,7 @@ public class TextInputLayout extends LinearLayout {
     }
 
     private boolean cutoutEnabled() {
-        return this.hintEnabled && !TextUtils.isEmpty(this.hint) && (this.boxBackground instanceof CutoutDrawable);
+        return this.hintEnabled && !TextUtils.isEmpty(this.hint) && (this.boxBackground instanceof g);
     }
 
     private void dispatchOnEditTextAttached() {
@@ -727,7 +725,7 @@ public class TextInputLayout extends LinearLayout {
         } else {
             this.collapsingTextHelper.setExpansionFraction(0.0f);
         }
-        if (cutoutEnabled() && (!((CutoutDrawable) this.boxBackground).k.isEmpty())) {
+        if (cutoutEnabled() && (!((g) this.boxBackground).k.isEmpty())) {
             closeCutout();
         }
         this.hintExpanded = true;
@@ -736,9 +734,9 @@ public class TextInputLayout extends LinearLayout {
         updateSuffixTextVisibility();
     }
 
-    private EndIconDelegate getEndIconDelegate() {
-        EndIconDelegate endIconDelegate = this.endIconDelegates.get(this.endIconMode);
-        return endIconDelegate != null ? endIconDelegate : this.endIconDelegates.get(0);
+    private m getEndIconDelegate() {
+        m mVar = this.endIconDelegates.get(this.endIconMode);
+        return mVar != null ? mVar : this.endIconDelegates.get(0);
     }
 
     @Nullable
@@ -809,9 +807,9 @@ public class TextInputLayout extends LinearLayout {
             this.collapsingTextHelper.getCollapsedTextActualBounds(rectF, this.editText.getWidth(), this.editText.getGravity());
             applyCutoutPadding(rectF);
             rectF.offset(-getPaddingLeft(), -getPaddingTop());
-            CutoutDrawable cutoutDrawable = (CutoutDrawable) this.boxBackground;
-            Objects.requireNonNull(cutoutDrawable);
-            cutoutDrawable.a(rectF.left, rectF.top, rectF.right, rectF.bottom);
+            g gVar = (g) this.boxBackground;
+            Objects.requireNonNull(gVar);
+            gVar.a(rectF.left, rectF.top, rectF.right, rectF.bottom);
         }
     }
 
@@ -1237,7 +1235,7 @@ public class TextInputLayout extends LinearLayout {
 
     @VisibleForTesting
     public boolean cutoutIsOpen() {
-        return cutoutEnabled() && (((CutoutDrawable) this.boxBackground).k.isEmpty() ^ true);
+        return cutoutEnabled() && (((g) this.boxBackground).k.isEmpty() ^ true);
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -1423,9 +1421,9 @@ public class TextInputLayout extends LinearLayout {
 
     @Nullable
     public CharSequence getError() {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        if (indicatorViewController.k) {
-            return indicatorViewController.j;
+        n nVar = this.indicatorViewController;
+        if (nVar.k) {
+            return nVar.j;
         }
         return null;
     }
@@ -1452,9 +1450,9 @@ public class TextInputLayout extends LinearLayout {
 
     @Nullable
     public CharSequence getHelperText() {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        if (indicatorViewController.q) {
-            return indicatorViewController.p;
+        n nVar = this.indicatorViewController;
+        if (nVar.q) {
+            return nVar.p;
         }
         return null;
     }
@@ -1588,8 +1586,8 @@ public class TextInputLayout extends LinearLayout {
 
     @VisibleForTesting
     public final boolean isHelperTextDisplayed() {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        return (indicatorViewController.h != 2 || indicatorViewController.r == null || TextUtils.isEmpty(indicatorViewController.p)) ? false : true;
+        n nVar = this.indicatorViewController;
+        return (nVar.h != 2 || nVar.r == null || TextUtils.isEmpty(nVar.p)) ? false : true;
     }
 
     public boolean isHelperTextEnabled() {
@@ -1920,7 +1918,7 @@ public class TextInputLayout extends LinearLayout {
             getEndIconDelegate().a();
             applyEndIconTint();
         } else {
-            StringBuilder sbU = outline.U("The current box background mode ");
+            StringBuilder sbU = b.d.b.a.a.U("The current box background mode ");
             sbU.append(this.boxBackgroundMode);
             sbU.append(" is not supported by the end icon mode ");
             sbU.append(i);
@@ -1973,70 +1971,70 @@ public class TextInputLayout extends LinearLayout {
             this.indicatorViewController.i();
             return;
         }
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.c();
-        indicatorViewController.j = charSequence;
-        indicatorViewController.l.setText(charSequence);
-        int i = indicatorViewController.h;
+        n nVar = this.indicatorViewController;
+        nVar.c();
+        nVar.j = charSequence;
+        nVar.l.setText(charSequence);
+        int i = nVar.h;
         if (i != 1) {
-            indicatorViewController.i = 1;
+            nVar.i = 1;
         }
-        indicatorViewController.l(i, indicatorViewController.i, indicatorViewController.k(indicatorViewController.l, charSequence));
+        nVar.l(i, nVar.i, nVar.k(nVar.l, charSequence));
     }
 
     public void setErrorContentDescription(@Nullable CharSequence charSequence) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.m = charSequence;
-        TextView textView = indicatorViewController.l;
+        n nVar = this.indicatorViewController;
+        nVar.m = charSequence;
+        TextView textView = nVar.l;
         if (textView != null) {
             textView.setContentDescription(charSequence);
         }
     }
 
     public void setErrorEnabled(boolean z2) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        if (indicatorViewController.k == z2) {
+        n nVar = this.indicatorViewController;
+        if (nVar.k == z2) {
             return;
         }
-        indicatorViewController.c();
+        nVar.c();
         if (z2) {
-            AppCompatTextView appCompatTextView = new AppCompatTextView(indicatorViewController.a);
-            indicatorViewController.l = appCompatTextView;
+            AppCompatTextView appCompatTextView = new AppCompatTextView(nVar.a);
+            nVar.l = appCompatTextView;
             appCompatTextView.setId(R.id.textinput_error);
-            indicatorViewController.l.setTextAlignment(5);
-            Typeface typeface = indicatorViewController.u;
+            nVar.l.setTextAlignment(5);
+            Typeface typeface = nVar.u;
             if (typeface != null) {
-                indicatorViewController.l.setTypeface(typeface);
+                nVar.l.setTypeface(typeface);
             }
-            int i = indicatorViewController.n;
-            indicatorViewController.n = i;
-            TextView textView = indicatorViewController.l;
+            int i = nVar.n;
+            nVar.n = i;
+            TextView textView = nVar.l;
             if (textView != null) {
-                indicatorViewController.f1627b.setTextAppearanceCompatWithErrorFallback(textView, i);
+                nVar.f1627b.setTextAppearanceCompatWithErrorFallback(textView, i);
             }
-            ColorStateList colorStateList = indicatorViewController.o;
-            indicatorViewController.o = colorStateList;
-            TextView textView2 = indicatorViewController.l;
+            ColorStateList colorStateList = nVar.o;
+            nVar.o = colorStateList;
+            TextView textView2 = nVar.l;
             if (textView2 != null && colorStateList != null) {
                 textView2.setTextColor(colorStateList);
             }
-            CharSequence charSequence = indicatorViewController.m;
-            indicatorViewController.m = charSequence;
-            TextView textView3 = indicatorViewController.l;
+            CharSequence charSequence = nVar.m;
+            nVar.m = charSequence;
+            TextView textView3 = nVar.l;
             if (textView3 != null) {
                 textView3.setContentDescription(charSequence);
             }
-            indicatorViewController.l.setVisibility(4);
-            ViewCompat.setAccessibilityLiveRegion(indicatorViewController.l, 1);
-            indicatorViewController.a(indicatorViewController.l, 0);
+            nVar.l.setVisibility(4);
+            ViewCompat.setAccessibilityLiveRegion(nVar.l, 1);
+            nVar.a(nVar.l, 0);
         } else {
-            indicatorViewController.i();
-            indicatorViewController.j(indicatorViewController.l, 0);
-            indicatorViewController.l = null;
-            indicatorViewController.f1627b.updateEditTextBackground();
-            indicatorViewController.f1627b.updateTextInputBoxState();
+            nVar.i();
+            nVar.j(nVar.l, 0);
+            nVar.l = null;
+            nVar.f1627b.updateEditTextBackground();
+            nVar.f1627b.updateTextInputBoxState();
         }
-        indicatorViewController.k = z2;
+        nVar.k = z2;
     }
 
     public void setErrorIconDrawable(@DrawableRes int i) {
@@ -2077,18 +2075,18 @@ public class TextInputLayout extends LinearLayout {
     }
 
     public void setErrorTextAppearance(@StyleRes int i) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.n = i;
-        TextView textView = indicatorViewController.l;
+        n nVar = this.indicatorViewController;
+        nVar.n = i;
+        TextView textView = nVar.l;
         if (textView != null) {
-            indicatorViewController.f1627b.setTextAppearanceCompatWithErrorFallback(textView, i);
+            nVar.f1627b.setTextAppearanceCompatWithErrorFallback(textView, i);
         }
     }
 
     public void setErrorTextColor(@Nullable ColorStateList colorStateList) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.o = colorStateList;
-        TextView textView = indicatorViewController.l;
+        n nVar = this.indicatorViewController;
+        nVar.o = colorStateList;
+        TextView textView = nVar.l;
         if (textView == null || colorStateList == null) {
             return;
         }
@@ -2113,21 +2111,21 @@ public class TextInputLayout extends LinearLayout {
         if (!isHelperTextEnabled()) {
             setHelperTextEnabled(true);
         }
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.c();
-        indicatorViewController.p = charSequence;
-        indicatorViewController.r.setText(charSequence);
-        int i = indicatorViewController.h;
+        n nVar = this.indicatorViewController;
+        nVar.c();
+        nVar.p = charSequence;
+        nVar.r.setText(charSequence);
+        int i = nVar.h;
         if (i != 2) {
-            indicatorViewController.i = 2;
+            nVar.i = 2;
         }
-        indicatorViewController.l(i, indicatorViewController.i, indicatorViewController.k(indicatorViewController.r, charSequence));
+        nVar.l(i, nVar.i, nVar.k(nVar.r, charSequence));
     }
 
     public void setHelperTextColor(@Nullable ColorStateList colorStateList) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.t = colorStateList;
-        TextView textView = indicatorViewController.r;
+        n nVar = this.indicatorViewController;
+        nVar.t = colorStateList;
+        TextView textView = nVar.r;
         if (textView == null || colorStateList == null) {
             return;
         }
@@ -2135,54 +2133,54 @@ public class TextInputLayout extends LinearLayout {
     }
 
     public void setHelperTextEnabled(boolean z2) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        if (indicatorViewController.q == z2) {
+        n nVar = this.indicatorViewController;
+        if (nVar.q == z2) {
             return;
         }
-        indicatorViewController.c();
+        nVar.c();
         if (z2) {
-            AppCompatTextView appCompatTextView = new AppCompatTextView(indicatorViewController.a);
-            indicatorViewController.r = appCompatTextView;
+            AppCompatTextView appCompatTextView = new AppCompatTextView(nVar.a);
+            nVar.r = appCompatTextView;
             appCompatTextView.setId(R.id.textinput_helper_text);
-            indicatorViewController.r.setTextAlignment(5);
-            Typeface typeface = indicatorViewController.u;
+            nVar.r.setTextAlignment(5);
+            Typeface typeface = nVar.u;
             if (typeface != null) {
-                indicatorViewController.r.setTypeface(typeface);
+                nVar.r.setTypeface(typeface);
             }
-            indicatorViewController.r.setVisibility(4);
-            ViewCompat.setAccessibilityLiveRegion(indicatorViewController.r, 1);
-            int i = indicatorViewController.f1628s;
-            indicatorViewController.f1628s = i;
-            TextView textView = indicatorViewController.r;
+            nVar.r.setVisibility(4);
+            ViewCompat.setAccessibilityLiveRegion(nVar.r, 1);
+            int i = nVar.f1628s;
+            nVar.f1628s = i;
+            TextView textView = nVar.r;
             if (textView != null) {
                 TextViewCompat.setTextAppearance(textView, i);
             }
-            ColorStateList colorStateList = indicatorViewController.t;
-            indicatorViewController.t = colorStateList;
-            TextView textView2 = indicatorViewController.r;
+            ColorStateList colorStateList = nVar.t;
+            nVar.t = colorStateList;
+            TextView textView2 = nVar.r;
             if (textView2 != null && colorStateList != null) {
                 textView2.setTextColor(colorStateList);
             }
-            indicatorViewController.a(indicatorViewController.r, 1);
+            nVar.a(nVar.r, 1);
         } else {
-            indicatorViewController.c();
-            int i2 = indicatorViewController.h;
+            nVar.c();
+            int i2 = nVar.h;
             if (i2 == 2) {
-                indicatorViewController.i = 0;
+                nVar.i = 0;
             }
-            indicatorViewController.l(i2, indicatorViewController.i, indicatorViewController.k(indicatorViewController.r, null));
-            indicatorViewController.j(indicatorViewController.r, 1);
-            indicatorViewController.r = null;
-            indicatorViewController.f1627b.updateEditTextBackground();
-            indicatorViewController.f1627b.updateTextInputBoxState();
+            nVar.l(i2, nVar.i, nVar.k(nVar.r, null));
+            nVar.j(nVar.r, 1);
+            nVar.r = null;
+            nVar.f1627b.updateEditTextBackground();
+            nVar.f1627b.updateTextInputBoxState();
         }
-        indicatorViewController.q = z2;
+        nVar.q = z2;
     }
 
     public void setHelperTextTextAppearance(@StyleRes int i) {
-        IndicatorViewController indicatorViewController = this.indicatorViewController;
-        indicatorViewController.f1628s = i;
-        TextView textView = indicatorViewController.r;
+        n nVar = this.indicatorViewController;
+        nVar.f1628s = i;
+        TextView textView = nVar.r;
         if (textView != null) {
             TextViewCompat.setTextAppearance(textView, i);
         }
@@ -2417,14 +2415,14 @@ public class TextInputLayout extends LinearLayout {
         if (typeface != this.typeface) {
             this.typeface = typeface;
             this.collapsingTextHelper.setTypefaces(typeface);
-            IndicatorViewController indicatorViewController = this.indicatorViewController;
-            if (typeface != indicatorViewController.u) {
-                indicatorViewController.u = typeface;
-                TextView textView = indicatorViewController.l;
+            n nVar = this.indicatorViewController;
+            if (typeface != nVar.u) {
+                nVar.u = typeface;
+                TextView textView = nVar.l;
                 if (textView != null) {
                     textView.setTypeface(typeface);
                 }
-                TextView textView2 = indicatorViewController.r;
+                TextView textView2 = nVar.r;
                 if (textView2 != null) {
                     textView2.setTypeface(typeface);
                 }
@@ -2492,8 +2490,8 @@ public class TextInputLayout extends LinearLayout {
             this.boxStrokeColor = textView.getCurrentTextColor();
         }
         if (getErrorIconDrawable() != null) {
-            IndicatorViewController indicatorViewController = this.indicatorViewController;
-            if (indicatorViewController.k && indicatorViewController.e()) {
+            n nVar = this.indicatorViewController;
+            if (nVar.k && nVar.e()) {
                 z2 = true;
             }
         }
@@ -2501,9 +2499,9 @@ public class TextInputLayout extends LinearLayout {
         refreshErrorIconDrawableState();
         refreshStartIconDrawableState();
         refreshEndIconDrawableState();
-        EndIconDelegate endIconDelegate = getEndIconDelegate();
+        m endIconDelegate = getEndIconDelegate();
         Objects.requireNonNull(endIconDelegate);
-        if (endIconDelegate instanceof DropdownMenuEndIconDelegate) {
+        if (endIconDelegate instanceof h) {
             tintEndIconOnError(this.indicatorViewController.e());
         }
         if (z3 && isEnabled()) {
@@ -2613,7 +2611,7 @@ public class TextInputLayout extends LinearLayout {
         int i3;
         int i4 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i4), attributeSet, i);
-        this.indicatorViewController = new IndicatorViewController(this);
+        this.indicatorViewController = new n(this);
         this.tmpRect = new Rect();
         this.tmpBoundsRect = new Rect();
         this.tmpRectF = new RectF();
@@ -2807,11 +2805,11 @@ public class TextInputLayout extends LinearLayout {
         } else {
             i3 = 0;
         }
-        this.endIconDelegates.append(-1, new CustomEndIconDelegate(this));
-        this.endIconDelegates.append(i3, new NoEndIconDelegate(this));
-        this.endIconDelegates.append(1, new PasswordToggleEndIconDelegate(this));
-        this.endIconDelegates.append(2, new ClearTextEndIconDelegate(this));
-        this.endIconDelegates.append(3, new DropdownMenuEndIconDelegate(this));
+        this.endIconDelegates.append(-1, new f(this));
+        this.endIconDelegates.append(i3, new o(this));
+        this.endIconDelegates.append(1, new p(this));
+        this.endIconDelegates.append(2, new b.i.a.g.j.a(this));
+        this.endIconDelegates.append(3, new h(this));
         int i21 = R.styleable.TextInputLayout_endIconMode;
         if (tintTypedArrayObtainTintedStyledAttributes.hasValue(i21)) {
             setEndIconMode(tintTypedArrayObtainTintedStyledAttributes.getInt(i21, 0));

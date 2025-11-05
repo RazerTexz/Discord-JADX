@@ -1,31 +1,31 @@
 package com.facebook.common.time;
 
 import android.os.SystemClock;
-import b.f.d.d.DoNotStrip;
-import b.f.d.k.MonotonicClock;
+import b.f.d.d.c;
+import b.f.d.k.b;
 
-@DoNotStrip
+@c
 /* loaded from: classes.dex */
-public class AwakeTimeSinceBootClock implements MonotonicClock {
+public class AwakeTimeSinceBootClock implements b {
 
-    @DoNotStrip
+    @c
     private static final AwakeTimeSinceBootClock INSTANCE = new AwakeTimeSinceBootClock();
 
     private AwakeTimeSinceBootClock() {
     }
 
-    @DoNotStrip
+    @c
     public static AwakeTimeSinceBootClock get() {
         return INSTANCE;
     }
 
-    @Override // b.f.d.k.MonotonicClock
-    @DoNotStrip
+    @Override // b.f.d.k.b
+    @c
     public long now() {
         return SystemClock.uptimeMillis();
     }
 
-    @DoNotStrip
+    @c
     public long nowNanos() {
         return System.nanoTime();
     }

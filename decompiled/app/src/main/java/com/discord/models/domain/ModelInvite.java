@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
 import android.content.res.Resources;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.guild.Guild;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
@@ -119,7 +119,7 @@ public class ModelInvite implements Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelInvite.Settings(maxAge=");
+            StringBuilder sbU = a.U("ModelInvite.Settings(maxAge=");
             sbU.append(getMaxAge());
             sbU.append(", maxUses=");
             sbU.append(getMaxUses());
@@ -345,7 +345,7 @@ public class ModelInvite implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelInvite(inviter=");
+        StringBuilder sbU = a.U("ModelInvite(inviter=");
         sbU.append(getInviter());
         sbU.append(", guild=");
         sbU.append(getGuild());

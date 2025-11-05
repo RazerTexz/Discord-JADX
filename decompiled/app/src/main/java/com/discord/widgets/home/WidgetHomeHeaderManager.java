@@ -11,8 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.core.view.ViewKt;
 import androidx.fragment.app.FragmentManager;
-import b.a.i.WidgetHomePanelCenterChatBinding;
-import b.d.b.a.outline;
+import b.a.i.j5;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -23,10 +23,10 @@ import com.discord.models.presence.Presence;
 import com.discord.stores.StoreChannelsSelected;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.channel.ChannelInviteLaunchUtils;
-import com.discord.utilities.channel.GuildChannelIconUtils2;
+import com.discord.utilities.channel.GuildChannelIconUtilsKt;
 import com.discord.utilities.device.DeviceUtils;
 import com.discord.utilities.drawable.DrawableCompat;
-import com.discord.utilities.toolbar.ToolbarUtils2;
+import com.discord.utilities.toolbar.ToolbarUtilsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.StatusView;
 import com.discord.views.ToolbarTitleLayout;
@@ -34,7 +34,7 @@ import com.discord.widgets.channels.threads.browser.WidgetThreadBrowser;
 import com.discord.widgets.friends.WidgetFriendsAdd;
 import com.discord.widgets.search.WidgetSearch;
 import com.discord.widgets.user.calls.PrivateCallLauncher;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.functions.Action1;
@@ -121,7 +121,7 @@ public final class WidgetHomeHeaderManager {
                 return false;
             }
             HeaderData headerData = (HeaderData) other;
-            return Intrinsics3.areEqual(this.title, headerData.title) && Intrinsics3.areEqual(this.subtitle, headerData.subtitle) && Intrinsics3.areEqual(this.drawableRes, headerData.drawableRes) && this.leftButtonIsBack == headerData.leftButtonIsBack && Intrinsics3.areEqual(this.trailingDrawable, headerData.trailingDrawable);
+            return m.areEqual(this.title, headerData.title) && m.areEqual(this.subtitle, headerData.subtitle) && m.areEqual(this.drawableRes, headerData.drawableRes) && this.leftButtonIsBack == headerData.leftButtonIsBack && m.areEqual(this.trailingDrawable, headerData.trailingDrawable);
         }
 
         public final Integer getDrawableRes() {
@@ -163,7 +163,7 @@ public final class WidgetHomeHeaderManager {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("HeaderData(title=");
+            StringBuilder sbU = a.U("HeaderData(title=");
             sbU.append(this.title);
             sbU.append(", subtitle=");
             sbU.append(this.subtitle);
@@ -172,7 +172,7 @@ public final class WidgetHomeHeaderManager {
             sbU.append(", leftButtonIsBack=");
             sbU.append(this.leftButtonIsBack);
             sbU.append(", trailingDrawable=");
-            return outline.F(sbU, this.trailingDrawable, ")");
+            return a.F(sbU, this.trailingDrawable, ")");
         }
 
         public /* synthetic */ HeaderData(CharSequence charSequence, CharSequence charSequence2, Integer num, boolean z2, Integer num2, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -223,63 +223,63 @@ public final class WidgetHomeHeaderManager {
             Integer numValueOf = channel != null ? Integer.valueOf(channel.getType()) : null;
             if ((numValueOf != null && numValueOf.intValue() == 3) || (numValueOf != null && numValueOf.intValue() == 1)) {
                 MenuItem menuItemFindItem = menu.findItem(R.id.menu_chat_search);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_chat_search)");
+                m.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_chat_search)");
                 menuItemFindItem.setVisible(false);
                 MenuItem menuItemFindItem2 = menu.findItem(R.id.menu_chat_side_panel);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem2, "menu.findItem(R.id.menu_chat_side_panel)");
+                m.checkNotNullExpressionValue(menuItemFindItem2, "menu.findItem(R.id.menu_chat_side_panel)");
                 menuItemFindItem2.setVisible(true);
                 MenuItem menuItemFindItem3 = menu.findItem(R.id.menu_chat_thread_browser);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem3, "menu.findItem(R.id.menu_chat_thread_browser)");
+                m.checkNotNullExpressionValue(menuItemFindItem3, "menu.findItem(R.id.menu_chat_thread_browser)");
                 menuItemFindItem3.setVisible(false);
             } else if ((numValueOf != null && numValueOf.intValue() == 5) || ((numValueOf != null && numValueOf.intValue() == 15) || (numValueOf != null && numValueOf.intValue() == 0))) {
                 MenuItem menuItemFindItem4 = menu.findItem(R.id.menu_chat_side_panel);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem4, "menu.findItem(R.id.menu_chat_side_panel)");
+                m.checkNotNullExpressionValue(menuItemFindItem4, "menu.findItem(R.id.menu_chat_side_panel)");
                 menuItemFindItem4.setVisible(true);
                 if (zIsSmallScreen) {
                     MenuItem menuItemFindItem5 = menu.findItem(R.id.menu_chat_search);
-                    Intrinsics3.checkNotNullExpressionValue(menuItemFindItem5, "menu.findItem(R.id.menu_chat_search)");
+                    m.checkNotNullExpressionValue(menuItemFindItem5, "menu.findItem(R.id.menu_chat_search)");
                     menuItemFindItem5.setVisible(!this.$this_getOnConfigureAction.getThreadExperimentEnabled());
                     MenuItem menuItemFindItem6 = menu.findItem(R.id.menu_chat_thread_browser);
-                    Intrinsics3.checkNotNullExpressionValue(menuItemFindItem6, "menu.findItem(R.id.menu_chat_thread_browser)");
+                    m.checkNotNullExpressionValue(menuItemFindItem6, "menu.findItem(R.id.menu_chat_thread_browser)");
                     menuItemFindItem6.setVisible(z4);
                 } else {
                     MenuItem menuItemFindItem7 = menu.findItem(R.id.menu_chat_search);
-                    Intrinsics3.checkNotNullExpressionValue(menuItemFindItem7, "menu.findItem(R.id.menu_chat_search)");
+                    m.checkNotNullExpressionValue(menuItemFindItem7, "menu.findItem(R.id.menu_chat_search)");
                     menuItemFindItem7.setVisible(true);
                     MenuItem menuItemFindItem8 = menu.findItem(R.id.menu_chat_thread_browser);
-                    Intrinsics3.checkNotNullExpressionValue(menuItemFindItem8, "menu.findItem(R.id.menu_chat_thread_browser)");
+                    m.checkNotNullExpressionValue(menuItemFindItem8, "menu.findItem(R.id.menu_chat_thread_browser)");
                     menuItemFindItem8.setVisible(z4);
                 }
             } else if ((numValueOf != null && numValueOf.intValue() == 10) || ((numValueOf != null && numValueOf.intValue() == 12) || (numValueOf != null && numValueOf.intValue() == 11))) {
                 MenuItem menuItemFindItem9 = menu.findItem(R.id.menu_chat_side_panel);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem9, "menu.findItem(R.id.menu_chat_side_panel)");
+                m.checkNotNullExpressionValue(menuItemFindItem9, "menu.findItem(R.id.menu_chat_side_panel)");
                 menuItemFindItem9.setVisible(!ChannelUtils.j(this.$this_getOnConfigureAction.getChannel()));
                 MenuItem menuItemFindItem10 = menu.findItem(R.id.menu_chat_search);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem10, "menu.findItem(R.id.menu_chat_search)");
+                m.checkNotNullExpressionValue(menuItemFindItem10, "menu.findItem(R.id.menu_chat_search)");
                 menuItemFindItem10.setVisible(!zIsSmallScreen);
                 MenuItem menuItemFindItem11 = menu.findItem(R.id.menu_chat_thread_browser);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem11, "menu.findItem(R.id.menu_chat_thread_browser)");
+                m.checkNotNullExpressionValue(menuItemFindItem11, "menu.findItem(R.id.menu_chat_thread_browser)");
                 menuItemFindItem11.setVisible(false);
             } else if (numValueOf != null && numValueOf.intValue() == 14) {
                 MenuItem menuItemFindItem12 = menu.findItem(R.id.menu_chat_search);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem12, "menu.findItem(R.id.menu_chat_search)");
+                m.checkNotNullExpressionValue(menuItemFindItem12, "menu.findItem(R.id.menu_chat_search)");
                 menuItemFindItem12.setVisible(false);
                 MenuItem menuItemFindItem13 = menu.findItem(R.id.menu_chat_side_panel);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem13, "menu.findItem(R.id.menu_chat_side_panel)");
+                m.checkNotNullExpressionValue(menuItemFindItem13, "menu.findItem(R.id.menu_chat_side_panel)");
                 menuItemFindItem13.setVisible(true);
                 MenuItem menuItemFindItem14 = menu.findItem(R.id.menu_chat_thread_browser);
-                Intrinsics3.checkNotNullExpressionValue(menuItemFindItem14, "menu.findItem(R.id.menu_chat_thread_browser)");
+                m.checkNotNullExpressionValue(menuItemFindItem14, "menu.findItem(R.id.menu_chat_thread_browser)");
                 menuItemFindItem14.setVisible(false);
             }
             boolean z5 = this.$this_getOnConfigureAction.getChannel() != null && ChannelUtils.B(this.$this_getOnConfigureAction.getChannel());
             MenuItem menuItemFindItem15 = menu.findItem(R.id.menu_chat_start_call);
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem15, "menu.findItem(R.id.menu_chat_start_call)");
+            m.checkNotNullExpressionValue(menuItemFindItem15, "menu.findItem(R.id.menu_chat_start_call)");
             menuItemFindItem15.setVisible((this.$this_getOnConfigureAction.isCallConnected() || !z5 || z3) ? false : true);
             MenuItem menuItemFindItem16 = menu.findItem(R.id.menu_chat_start_video_call);
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem16, "menu.findItem(R.id.menu_chat_start_video_call)");
+            m.checkNotNullExpressionValue(menuItemFindItem16, "menu.findItem(R.id.menu_chat_start_video_call)");
             menuItemFindItem16.setVisible((this.$this_getOnConfigureAction.isCallConnected() || !z5 || z3) ? false : true);
             MenuItem menuItemFindItem17 = menu.findItem(R.id.menu_chat_stop_call);
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem17, "menu.findItem(R.id.menu_chat_stop_call)");
+            m.checkNotNullExpressionValue(menuItemFindItem17, "menu.findItem(R.id.menu_chat_stop_call)");
             if (this.$this_getOnConfigureAction.isCallConnected() && !z3) {
                 z2 = true;
             }
@@ -320,11 +320,11 @@ public final class WidgetHomeHeaderManager {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public void call2(MenuItem menuItem, Context context) {
-            Intrinsics3.checkNotNullParameter(menuItem, "menuItem");
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(menuItem, "menuItem");
+            m.checkNotNullParameter(context, "context");
             AppFragment appFragment = this.$appFragment;
             FragmentManager parentFragmentManager = appFragment.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "appFragment.parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "appFragment.parentFragmentManager");
             PrivateCallLauncher privateCallLauncher = new PrivateCallLauncher(appFragment, appFragment, context, parentFragmentManager);
             switch (menuItem.getItemId()) {
                 case R.id.menu_chat_add_friend /* 2131364371 */:
@@ -412,7 +412,7 @@ public final class WidgetHomeHeaderManager {
         }
         String strD = ChannelUtils.d(widgetHomeModel.getChannel(), context, false);
         Channel parentChannel = widgetHomeModel.getParentChannel();
-        return new HeaderData(strD, parentChannel != null ? ChannelUtils.d(parentChannel, context, false) : null, Integer.valueOf(GuildChannelIconUtils2.guildChannelIcon(widgetHomeModel.getChannel())), ((StoreChannelsSelected.ResolvedSelectedChannel.Channel) widgetHomeModel.getSelectedChannel()).getPeekParent() != null || ChannelUtils.J(widgetHomeModel.getChannel()), null, 16, null);
+        return new HeaderData(strD, parentChannel != null ? ChannelUtils.d(parentChannel, context, false) : null, Integer.valueOf(GuildChannelIconUtilsKt.guildChannelIcon(widgetHomeModel.getChannel())), ((StoreChannelsSelected.ResolvedSelectedChannel.Channel) widgetHomeModel.getSelectedChannel()).getPeekParent() != null || ChannelUtils.J(widgetHomeModel.getChannel()), null, 16, null);
     }
 
     private final Action1<Menu> getOnConfigureAction(WidgetHomeModel widgetHomeModel, Resources resources) {
@@ -430,9 +430,9 @@ public final class WidgetHomeHeaderManager {
     public final void configure(WidgetHome widgetHome, WidgetHomeModel model, WidgetHomeBinding binding) {
         int themedDrawableRes$default;
         int i;
-        Intrinsics3.checkNotNullParameter(widgetHome, "widgetHome");
-        Intrinsics3.checkNotNullParameter(model, "model");
-        Intrinsics3.checkNotNullParameter(binding, "binding");
+        m.checkNotNullParameter(widgetHome, "widgetHome");
+        m.checkNotNullParameter(model, "model");
+        m.checkNotNullParameter(binding, "binding");
         widgetHome.lockCloseRightPanel(model.getChannel() == null || !(ChannelUtils.B(model.getChannel()) || ChannelUtils.v(model.getChannel())) || ChannelUtils.j(model.getChannel()));
         Channel channel = model.getChannel();
         Integer numValueOf = channel != null ? Integer.valueOf(channel.getType()) : null;
@@ -441,15 +441,15 @@ public final class WidgetHomeHeaderManager {
         } else if (numValueOf != null && numValueOf.intValue() == 15) {
             widgetHome.bindToolbar(binding.d.f136b);
         } else {
-            WidgetHomePanelCenterChatBinding widgetHomePanelCenterChatBinding = binding.d.c;
-            Intrinsics3.checkNotNullExpressionValue(widgetHomePanelCenterChatBinding, "binding.panelCenter.widgetHomePanelCenterChat");
-            widgetHome.bindToolbar(widgetHomePanelCenterChatBinding.a);
+            j5 j5Var = binding.d.c;
+            m.checkNotNullExpressionValue(j5Var, "binding.panelCenter.widgetHomePanelCenterChat");
+            widgetHome.bindToolbar(j5Var.a);
         }
         widgetHome.setActionBarTitleLayoutExpandedTappableArea();
         Context context = widgetHome.getContext();
         if (context != null) {
             WidgetHomeHeaderManager widgetHomeHeaderManager = INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            m.checkNotNullExpressionValue(context, "context");
             HeaderData headerData = widgetHomeHeaderManager.getHeaderData(model, context);
             CharSequence title = headerData.getTitle();
             CharSequence subtitle = headerData.getSubtitle();
@@ -478,14 +478,14 @@ public final class WidgetHomeHeaderManager {
             widgetHome.setActionBarSubtitle(subtitle);
             Toolbar toolbar = widgetHome.getToolbar();
             if (toolbar != null) {
-                toolbar.setNavigationOnClickListener(new WidgetHomeHeaderManager2(model, widgetHome, model, binding));
+                toolbar.setNavigationOnClickListener(new WidgetHomeHeaderManager$configure$$inlined$apply$lambda$1(model, widgetHome, model, binding));
             }
         }
-        widgetHome.setActionBarTitleClick(new WidgetHomeHeaderManager3(model, widgetHome, model, binding));
+        widgetHome.setActionBarTitleClick(new WidgetHomeHeaderManager$configure$$inlined$apply$lambda$2(model, widgetHome, model, binding));
         WidgetHomeHeaderManager widgetHomeHeaderManager2 = INSTANCE;
         AnonymousClass1 onSelectedAction = widgetHomeHeaderManager2.getOnSelectedAction(model, widgetHome, widgetHome.getPanelLayout());
         Resources resources = widgetHome.getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "widgetHome.resources");
+        m.checkNotNullExpressionValue(resources, "widgetHome.resources");
         Toolbar actionBarOptionsMenu = widgetHome.setActionBarOptionsMenu(R.menu.menu_chat_toolbar, onSelectedAction, widgetHomeHeaderManager2.getOnConfigureAction(model, resources));
         Channel channel2 = model.getChannel();
         boolean zN = channel2 != null ? ChannelUtils.n(channel2, model.getDmPresence()) : false;
@@ -493,7 +493,7 @@ public final class WidgetHomeHeaderManager {
         if (actionBarTitleLayout != null) {
             Presence dmPresence = model.getDmPresence();
             StatusView statusView = actionBarTitleLayout.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(statusView, "binding.toolbarPresence");
+            m.checkNotNullExpressionValue(statusView, "binding.toolbarPresence");
             statusView.setVisibility(zN ? 0 : 8);
             actionBarTitleLayout.binding.c.setPresence(dmPresence);
         }
@@ -505,7 +505,7 @@ public final class WidgetHomeHeaderManager {
         ViewExtensions.setTextAndVisibilityBy(unreadCountView, numValueOf3 != null ? String.valueOf(numValueOf3.intValue()) : null);
         Toolbar toolbar2 = widgetHome.getToolbar();
         if (toolbar2 != null) {
-            ToolbarUtils2.positionUnreadCountView(toolbar2, unreadCountView);
+            ToolbarUtilsKt.positionUnreadCountView(toolbar2, unreadCountView);
         }
         widgetHomeHeaderManager2.configureThreadBrowserIconBehavior(actionBarOptionsMenu, model, model.getChannel(), widgetHome.getContext());
     }

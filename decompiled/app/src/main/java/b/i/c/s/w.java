@@ -7,8 +7,6 @@ import android.util.Log;
 import androidx.annotation.GuardedBy;
 import androidx.collection.ArrayMap;
 import androidx.core.content.ContextCompat;
-import b.d.b.a.outline;
-import b.i.c.FirebaseApp2;
 import com.google.firebase.iid.FirebaseInstanceId;
 import java.io.File;
 import java.io.IOException;
@@ -53,7 +51,7 @@ public class w {
                 return jSONObject.toString();
             } catch (JSONException e) {
                 String strValueOf = String.valueOf(e);
-                outline.h0(strValueOf.length() + 24, "Failed to encode token: ", strValueOf, "FirebaseInstanceId");
+                b.d.b.a.a.h0(strValueOf.length() + 24, "Failed to encode token: ", strValueOf, "FirebaseInstanceId");
                 return null;
             }
         }
@@ -70,7 +68,7 @@ public class w {
                 return new a(jSONObject.getString("token"), jSONObject.getString("appVersion"), jSONObject.getLong("timestamp"));
             } catch (JSONException e) {
                 String strValueOf = String.valueOf(e);
-                outline.h0(strValueOf.length() + 23, "Failed to parse token: ", strValueOf, "FirebaseInstanceId");
+                b.d.b.a.a.h0(strValueOf.length() + 23, "Failed to parse token: ", strValueOf, "FirebaseInstanceId");
                 return null;
             }
         }
@@ -96,7 +94,7 @@ public class w {
                 Log.i("FirebaseInstanceId", "App restored, clearing state");
                 c();
                 w wVar = FirebaseInstanceId.f3111b;
-                synchronized (FirebaseInstanceId.getInstance(FirebaseApp2.b())) {
+                synchronized (FirebaseInstanceId.getInstance(b.i.c.c.b())) {
                     FirebaseInstanceId.f3111b.c();
                 }
             }
@@ -109,11 +107,11 @@ public class w {
     }
 
     public static String a(String str, String str2) {
-        return outline.k(str2.length() + outline.b(str, 3), str, "|S|", str2);
+        return b.d.b.a.a.k(str2.length() + b.d.b.a.a.b(str, 3), str, "|S|", str2);
     }
 
     public final String b(String str, String str2, String str3) {
-        StringBuilder sbS = outline.S(outline.b(str3, outline.b(str2, outline.b(str, 4))), str, "|T|", str2, "|");
+        StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str3, b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 4))), str, "|T|", str2, "|");
         sbS.append(str3);
         return sbS.toString();
     }

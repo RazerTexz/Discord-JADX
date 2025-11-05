@@ -1,48 +1,44 @@
 package b.a.q;
 
-import b.a.q.n0.RtcControlSocket;
-import com.discord.rtcconnection.MediaSinkWantsManager9;
+import com.discord.rtcconnection.EncodeQuality;
 import com.discord.rtcconnection.RtcConnection;
-import d0.t.MapsJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: RtcConnection.kt */
 /* loaded from: classes.dex */
-public final /* synthetic */ class a0 extends FunctionReferenceImpl implements Function1<Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State>, Unit> {
+public final /* synthetic */ class a0 extends d0.z.d.k implements Function1<Pair<? extends Map<String, ? extends EncodeQuality>, ? extends RtcConnection.State>, Unit> {
     public a0(RtcConnection rtcConnection) {
         super(1, rtcConnection, RtcConnection.class, "onLocalMediaSinkWants", "onLocalMediaSinkWants(Lkotlin/Pair;)V", 0);
     }
 
     @Override // kotlin.jvm.functions.Function1
-    public Unit invoke(Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State> tuples2) {
-        Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State> tuples22 = tuples2;
-        Intrinsics3.checkNotNullParameter(tuples22, "p1");
+    public Unit invoke(Pair<? extends Map<String, ? extends EncodeQuality>, ? extends RtcConnection.State> pair) {
+        Pair<? extends Map<String, ? extends EncodeQuality>, ? extends RtcConnection.State> pair2 = pair;
+        d0.z.d.m.checkNotNullParameter(pair2, "p1");
         RtcConnection rtcConnection = (RtcConnection) this.receiver;
         if (rtcConnection.enableMediaSinkWants) {
-            Map<String, ? extends MediaSinkWantsManager9> mapComponent1 = tuples22.component1();
-            if (Intrinsics3.areEqual(tuples22.component2(), RtcConnection.State.f.a)) {
+            Map<String, ? extends EncodeQuality> mapComponent1 = pair2.component1();
+            if (d0.z.d.m.areEqual(pair2.component2(), RtcConnection.State.f.a)) {
                 rtcConnection.logger.i(rtcConnection.loggingTag, "local MediaSinkWants: " + mapComponent1, null);
-                RtcControlSocket rtcControlSocket = rtcConnection.socket;
-                if (rtcControlSocket == null) {
+                b.a.q.n0.a aVar = rtcConnection.socket;
+                if (aVar == null) {
                     RtcConnection.o(rtcConnection, "onLocalMediaSinkWants() socket was null.", null, null, 6);
                 } else {
-                    LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(mapComponent1.size()));
+                    LinkedHashMap linkedHashMap = new LinkedHashMap(d0.t.g0.mapCapacity(mapComponent1.size()));
                     Iterator<T> it = mapComponent1.entrySet().iterator();
                     while (it.hasNext()) {
                         Map.Entry entry = (Map.Entry) it.next();
-                        linkedHashMap.put(entry.getKey(), Integer.valueOf(((MediaSinkWantsManager9) entry.getValue()).getValue()));
+                        linkedHashMap.put(entry.getKey(), Integer.valueOf(((EncodeQuality) entry.getValue()).getValue()));
                     }
-                    Intrinsics3.checkNotNullParameter(linkedHashMap, "wants");
-                    rtcControlSocket.H.a();
-                    if (rtcControlSocket.r >= 5) {
-                        rtcControlSocket.n(15, linkedHashMap);
+                    d0.z.d.m.checkNotNullParameter(linkedHashMap, "wants");
+                    aVar.H.a();
+                    if (aVar.r >= 5) {
+                        aVar.n(15, linkedHashMap);
                     }
                 }
             }

@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleableRes;
 import androidx.collection.SimpleArrayMap;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class MotionSpec {
             arrayList.add(animatorLoadAnimator);
             return createSpecFromAnimators(arrayList);
         } catch (Exception e) {
-            StringBuilder sbU = outline.U("Can't load animation resource ID #0x");
+            StringBuilder sbU = a.U("Can't load animation resource ID #0x");
             sbU.append(Integer.toHexString(i));
             Log.w(TAG, sbU.toString(), e);
             return null;
@@ -148,7 +148,7 @@ public class MotionSpec {
 
     @NonNull
     public String toString() {
-        StringBuilder sbQ = outline.Q('\n');
+        StringBuilder sbQ = a.Q('\n');
         sbQ.append(getClass().getName());
         sbQ.append('{');
         sbQ.append(Integer.toHexString(System.identityHashCode(this)));

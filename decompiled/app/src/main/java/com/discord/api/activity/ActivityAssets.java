@@ -1,7 +1,7 @@
 package com.discord.api.activity;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: ActivityAssets.kt */
 /* loaded from: classes.dex */
@@ -46,7 +46,7 @@ public final /* data */ class ActivityAssets {
             return false;
         }
         ActivityAssets activityAssets = (ActivityAssets) other;
-        return Intrinsics3.areEqual(this.largeImage, activityAssets.largeImage) && Intrinsics3.areEqual(this.largeText, activityAssets.largeText) && Intrinsics3.areEqual(this.smallImage, activityAssets.smallImage) && Intrinsics3.areEqual(this.smallText, activityAssets.smallText);
+        return m.areEqual(this.largeImage, activityAssets.largeImage) && m.areEqual(this.largeText, activityAssets.largeText) && m.areEqual(this.smallImage, activityAssets.smallImage) && m.areEqual(this.smallText, activityAssets.smallText);
     }
 
     public int hashCode() {
@@ -61,13 +61,13 @@ public final /* data */ class ActivityAssets {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ActivityAssets(largeImage=");
+        StringBuilder sbU = a.U("ActivityAssets(largeImage=");
         sbU.append(this.largeImage);
         sbU.append(", largeText=");
         sbU.append(this.largeText);
         sbU.append(", smallImage=");
         sbU.append(this.smallImage);
         sbU.append(", smallText=");
-        return outline.J(sbU, this.smallText, ")");
+        return a.J(sbU, this.smallText, ")");
     }
 }

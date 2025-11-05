@@ -1,15 +1,15 @@
 package com.discord.utilities.search.query.node.answer;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.search.network.SearchQuery;
 import com.discord.utilities.search.query.FilterType;
 import com.discord.utilities.search.validation.SearchData;
-import com.discord.widgets.chat.input.MentionUtils;
-import d0.t.SetsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import com.discord.widgets.chat.input.MentionUtilsKt;
+import d0.t.m0;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.Set;
 
 /* compiled from: ChannelNode.kt */
@@ -18,7 +18,7 @@ public final /* data */ class ChannelNode extends AnswerNode {
     private final String channelName;
 
     public ChannelNode(String str) {
-        Intrinsics3.checkNotNullParameter(str, "channelName");
+        m.checkNotNullParameter(str, "channelName");
         this.channelName = str;
     }
 
@@ -35,13 +35,13 @@ public final /* data */ class ChannelNode extends AnswerNode {
     }
 
     public final ChannelNode copy(String channelName) {
-        Intrinsics3.checkNotNullParameter(channelName, "channelName");
+        m.checkNotNullParameter(channelName, "channelName");
         return new ChannelNode(channelName);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ChannelNode) && Intrinsics3.areEqual(this.channelName, ((ChannelNode) other).channelName);
+            return (other instanceof ChannelNode) && m.areEqual(this.channelName, ((ChannelNode) other).channelName);
         }
         return true;
     }
@@ -57,7 +57,7 @@ public final /* data */ class ChannelNode extends AnswerNode {
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public Set<FilterType> getValidFilters() {
-        return SetsJVM.setOf(FilterType.IN);
+        return m0.setOf(FilterType.IN);
     }
 
     public int hashCode() {
@@ -70,27 +70,27 @@ public final /* data */ class ChannelNode extends AnswerNode {
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public boolean isValid(SearchData searchData) {
-        Intrinsics3.checkNotNullParameter(searchData, "searchData");
+        m.checkNotNullParameter(searchData, "searchData");
         return searchData.getChannelNameIndex().containsKey(this.channelName);
     }
 
     public String toString() {
-        return outline.J(outline.U("ChannelNode(channelName="), this.channelName, ")");
+        return a.J(a.U("ChannelNode(channelName="), this.channelName, ")");
     }
 
     @Override // com.discord.utilities.search.query.node.answer.AnswerNode
     public void updateQuery(SearchQuery.Builder queryBuilder, SearchData searchData, FilterType filterType) {
         Long l;
-        Intrinsics3.checkNotNullParameter(queryBuilder, "queryBuilder");
-        Intrinsics3.checkNotNullParameter(searchData, "searchData");
-        if (_Collections.contains(getValidFilters(), filterType) && (l = searchData.getChannelNameIndex().get(this.channelName)) != null) {
+        m.checkNotNullParameter(queryBuilder, "queryBuilder");
+        m.checkNotNullParameter(searchData, "searchData");
+        if (u.contains(getValidFilters(), filterType) && (l = searchData.getChannelNameIndex().get(this.channelName)) != null) {
             queryBuilder.appendParam(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID, String.valueOf(l.longValue()));
         }
     }
 
     @Override // com.discord.utilities.search.query.node.QueryNode
     public String getText() {
-        StringBuilder sbQ = outline.Q(MentionUtils.CHANNELS_CHAR);
+        StringBuilder sbQ = a.Q(MentionUtilsKt.CHANNELS_CHAR);
         sbQ.append(this.channelName);
         return sbQ.toString();
     }

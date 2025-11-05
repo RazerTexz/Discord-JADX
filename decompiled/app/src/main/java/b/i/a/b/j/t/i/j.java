@@ -2,9 +2,7 @@ package b.i.a.b.j.t.i;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import b.i.a.b.Encoding2;
-import b.i.a.b.j.EventInternal;
-import b.i.a.b.j.TransportContext;
+import b.i.a.b.j.f;
 import b.i.a.b.j.t.i.t;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.ArrayList;
@@ -20,29 +18,29 @@ public final /* synthetic */ class j implements t.b {
     public final t a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final TransportContext f799b;
+    public final b.i.a.b.j.i f799b;
 
-    public j(t tVar, TransportContext transportContext) {
+    public j(t tVar, b.i.a.b.j.i iVar) {
         this.a = tVar;
-        this.f799b = transportContext;
+        this.f799b = iVar;
     }
 
     @Override // b.i.a.b.j.t.i.t.b
     public Object apply(Object obj) {
         t tVar = this.a;
-        TransportContext transportContext = this.f799b;
+        b.i.a.b.j.i iVar = this.f799b;
         SQLiteDatabase sQLiteDatabase = (SQLiteDatabase) obj;
-        Encoding2 encoding2 = t.j;
+        b.i.a.b.b bVar = t.j;
         Objects.requireNonNull(tVar);
         ArrayList arrayList = new ArrayList();
-        Long lC = tVar.c(sQLiteDatabase, transportContext);
+        Long lC = tVar.c(sQLiteDatabase, iVar);
         if (lC != null) {
-            t.n(sQLiteDatabase.query("events", new String[]{"_id", "transport_name", "timestamp_ms", "uptime_ms", "payload_encoding", "payload", ModelAuditLogEntry.CHANGE_KEY_CODE, "inline"}, "context_id = ?", new String[]{lC.toString()}, null, null, null, String.valueOf(tVar.n.c())), new k(tVar, arrayList, transportContext));
+            t.n(sQLiteDatabase.query("events", new String[]{"_id", "transport_name", "timestamp_ms", "uptime_ms", "payload_encoding", "payload", ModelAuditLogEntry.CHANGE_KEY_CODE, "inline"}, "context_id = ?", new String[]{lC.toString()}, null, null, null, String.valueOf(tVar.n.c())), new k(tVar, arrayList, iVar));
         }
         HashMap map = new HashMap();
         StringBuilder sb = new StringBuilder("event_id IN (");
         for (int i = 0; i < arrayList.size(); i++) {
-            sb.append(((PersistedEvent) arrayList.get(i)).b());
+            sb.append(((h) arrayList.get(i)).b());
             if (i < arrayList.size() - 1) {
                 sb.append(',');
             }
@@ -66,13 +64,13 @@ public final /* synthetic */ class j implements t.b {
         cursorQuery.close();
         ListIterator listIterator = arrayList.listIterator();
         while (listIterator.hasNext()) {
-            PersistedEvent persistedEvent = (PersistedEvent) listIterator.next();
-            if (map.containsKey(Long.valueOf(persistedEvent.b()))) {
-                EventInternal.a aVarI = persistedEvent.a().i();
-                for (t.c cVar : (Set) map.get(Long.valueOf(persistedEvent.b()))) {
+            h hVar = (h) listIterator.next();
+            if (map.containsKey(Long.valueOf(hVar.b()))) {
+                f.a aVarI = hVar.a().i();
+                for (t.c cVar : (Set) map.get(Long.valueOf(hVar.b()))) {
                     aVarI.a(cVar.a, cVar.f802b);
                 }
-                listIterator.set(new AutoValue_PersistedEvent(persistedEvent.b(), persistedEvent.c(), aVarI.b()));
+                listIterator.set(new b(hVar.b(), hVar.c(), aVarI.b()));
             }
         }
         return arrayList;

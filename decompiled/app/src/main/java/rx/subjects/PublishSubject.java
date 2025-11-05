@@ -1,7 +1,7 @@
 package rx.subjects;
 
 import b.i.a.f.e.o.f;
-import j0.Observer2;
+import j0.g;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
@@ -15,7 +15,7 @@ import rx.exceptions.MissingBackpressureException;
 public final class PublishSubject<T> extends Subject<T, T> {
     public final b<T> k;
 
-    public static final class a<T> extends AtomicLong implements Producer, Subscription, Observer2<T> {
+    public static final class a<T> extends AtomicLong implements Producer, Subscription, g<T> {
         private static final long serialVersionUID = 6451806817170721536L;
         public final Subscriber<? super T> actual;
         public final b<T> parent;
@@ -44,21 +44,21 @@ public final class PublishSubject<T> extends Subject<T, T> {
             }
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onCompleted() {
             if (get() != Long.MIN_VALUE) {
                 this.actual.onCompleted();
             }
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onError(Throwable th) {
             if (get() != Long.MIN_VALUE) {
                 this.actual.onError(th);
             }
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onNext(T t) {
             long j = get();
             if (j != Long.MIN_VALUE) {
@@ -81,7 +81,7 @@ public final class PublishSubject<T> extends Subject<T, T> {
         }
     }
 
-    public static final class b<T> extends AtomicReference<a<T>[]> implements Observable.a<T>, Observer2<T> {
+    public static final class b<T> extends AtomicReference<a<T>[]> implements Observable.a<T>, g<T> {
         public static final a[] j = new a[0];
         public static final a[] k = new a[0];
         private static final long serialVersionUID = -7568940796666027140L;
@@ -161,14 +161,14 @@ public final class PublishSubject<T> extends Subject<T, T> {
             }
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onCompleted() {
             for (a<T> aVar : getAndSet(k)) {
                 aVar.onCompleted();
             }
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onError(Throwable th) {
             this.error = th;
             ArrayList arrayList = null;
@@ -185,7 +185,7 @@ public final class PublishSubject<T> extends Subject<T, T> {
             f.n1(arrayList);
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onNext(T t) {
             for (a<T> aVar : get()) {
                 aVar.onNext(t);
@@ -202,17 +202,17 @@ public final class PublishSubject<T> extends Subject<T, T> {
         return new PublishSubject<>(new b());
     }
 
-    @Override // j0.Observer2
+    @Override // j0.g
     public void onCompleted() {
         this.k.onCompleted();
     }
 
-    @Override // j0.Observer2
+    @Override // j0.g
     public void onError(Throwable th) {
         this.k.onError(th);
     }
 
-    @Override // j0.Observer2
+    @Override // j0.g
     public void onNext(T t) {
         this.k.onNext(t);
     }

@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
-import b.e.a.Log;
+import b.e.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.io.Input;
@@ -46,7 +45,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
             }
         }
         this.removedFields.clear();
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
@@ -55,7 +54,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
         kryo.reference(tCreate);
         int varInt = input.readVarInt(true);
         if (!this.compatible && varInt != this.typeVersion) {
-            StringBuilder sbV = outline.V("Version not compatible: ", varInt, " <-> ");
+            StringBuilder sbV = b.d.b.a.a.V("Version not compatible: ", varInt, " <-> ");
             sbV.append(this.typeVersion);
             throw new KryoException(sbV.toString());
         }
@@ -63,7 +62,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
         int length = fields.length;
         for (int i = 0; i < length; i++) {
             if (this.fieldVersion[i] > varInt) {
-                Log.a aVar = Log.a;
+                a.C0064a c0064a = a.a;
             } else {
                 fields[i].read(input, tCreate);
             }

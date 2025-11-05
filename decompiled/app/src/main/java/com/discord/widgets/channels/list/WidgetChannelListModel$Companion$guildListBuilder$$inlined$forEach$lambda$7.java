@@ -1,13 +1,13 @@
 package com.discord.widgets.channels.list;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.stores.StoreThreadsJoined;
 import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.widgets.channels.list.items.ChannelListItemThread;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -18,7 +18,7 @@ import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7 extends Lambda implements Function1<Channel, Collection<? extends ChannelListItemThread>> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7 extends o implements Function1<Channel, Collection<? extends ChannelListItemThread>> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -87,18 +87,18 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Collection<ChannelListItemThread> invoke2(Channel channel) {
         List listEmptyList;
-        Intrinsics3.checkNotNullParameter(channel, "parentChannel");
-        Collection<Channel> collection = (Collection) outline.d(channel, this.$threadParentMap$inlined);
+        m.checkNotNullParameter(channel, "parentChannel");
+        Collection<Channel> collection = (Collection) a.d(channel, this.$threadParentMap$inlined);
         if (collection != null) {
             listEmptyList = new ArrayList();
             for (Channel channel2 : collection) {
-                ChannelListItemThread channelListItemThreadInvoke2 = this.$toChannelListItemThread$4.invoke2(channel2, (StoreThreadsJoined.JoinedThread) outline.d(channel2, this.$joinedThreads$inlined));
+                ChannelListItemThread channelListItemThreadInvoke2 = this.$toChannelListItemThread$4.invoke2(channel2, (StoreThreadsJoined.JoinedThread) a.d(channel2, this.$joinedThreads$inlined));
                 if (channelListItemThreadInvoke2 != null) {
                     listEmptyList.add(channelListItemThreadInvoke2);
                 }
             }
         } else {
-            listEmptyList = Collections2.emptyList();
+            listEmptyList = n.emptyList();
         }
         int size = listEmptyList.size();
         WidgetChannelListModel$Companion$guildListBuilder$6$7$1 widgetChannelListModel$Companion$guildListBuilder$6$7$1 = WidgetChannelListModel$Companion$guildListBuilder$6$7$1.INSTANCE;
@@ -106,7 +106,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
         for (Object obj : listEmptyList) {
             int i2 = i + 1;
             if (i < 0) {
-                Collections2.throwIndexOverflow();
+                n.throwIndexOverflow();
             }
             ((ChannelListItemThread) obj).setSpineType(WidgetChannelListModel$Companion$guildListBuilder$6$7$1.INSTANCE.invoke(i, size));
             i = i2;

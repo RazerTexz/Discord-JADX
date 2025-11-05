@@ -1,5 +1,6 @@
 package com.discord.widgets.guildscheduledevent;
 
+import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +10,7 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventListItem;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -33,7 +34,7 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
             Objects.requireNonNull(view, "rootView");
             GuildScheduledEventItemView guildScheduledEventItemView = (GuildScheduledEventItemView) view;
             GuildScheduledEventListItemBinding guildScheduledEventListItemBinding = new GuildScheduledEventListItemBinding(guildScheduledEventItemView, guildScheduledEventItemView);
-            Intrinsics3.checkNotNullExpressionValue(guildScheduledEventListItemBinding, "GuildScheduledEventListItemBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(guildScheduledEventListItemBinding, "GuildScheduledEventListItemBinding.bind(itemView)");
             this.binding = guildScheduledEventListItemBinding;
         }
 
@@ -46,16 +47,16 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, GuildScheduledEventListItem guildScheduledEventListItem) {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, GuildScheduledEventListItem guildScheduledEventListItem) throws Resources.NotFoundException {
             onConfigure2(i, guildScheduledEventListItem);
         }
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, GuildScheduledEventListItem data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+        public void onConfigure2(int position, GuildScheduledEventListItem data) throws Resources.NotFoundException {
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             GuildScheduledEventListItem.Event event = (GuildScheduledEventListItem.Event) data;
-            this.binding.f2121b.configureInEventList(event, new GuildScheduledEventListAdapter2(this, event), new GuildScheduledEventListAdapter3(this, event), new GuildScheduledEventListAdapter4(this, event), new GuildScheduledEventListAdapter5(this, event), new GuildScheduledEventListAdapter6(this, event));
+            this.binding.f2121b.configureInEventList(event, new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$1(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$2(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$3(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$4(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$5(this, event));
         }
     }
 
@@ -63,12 +64,12 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
     /* JADX WARN: Multi-variable type inference failed */
     public GuildScheduledEventListAdapter(RecyclerView recyclerView, Function1<? super GuildScheduledEventListItem.Event, Unit> function1, Function1<? super GuildScheduledEventListItem.Event, Unit> function12, Function1<? super GuildScheduledEventListItem.Event, Unit> function13, Function1<? super GuildScheduledEventListItem.Event, Unit> function14, Function1<? super GuildScheduledEventListItem.Event, Unit> function15) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
-        Intrinsics3.checkNotNullParameter(function1, "onRsvpClicked");
-        Intrinsics3.checkNotNullParameter(function12, "onEventStartClicked");
-        Intrinsics3.checkNotNullParameter(function13, "onCardClicked");
-        Intrinsics3.checkNotNullParameter(function14, "onJoinClicked");
-        Intrinsics3.checkNotNullParameter(function15, "onShareClicked");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(function1, "onRsvpClicked");
+        m.checkNotNullParameter(function12, "onEventStartClicked");
+        m.checkNotNullParameter(function13, "onCardClicked");
+        m.checkNotNullParameter(function14, "onJoinClicked");
+        m.checkNotNullParameter(function15, "onShareClicked");
         this.onRsvpClicked = function1;
         this.onEventStartClicked = function12;
         this.onCardClicked = function13;
@@ -103,7 +104,7 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, GuildScheduledEventListItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new EventViewHolder();
         }

@@ -16,7 +16,7 @@ public final class a0<T, R> implements Observable.c<T, R> {
         this.l = function13;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public Object call(Object obj) {
         return ((Observable) obj).Y(new z(this));
     }

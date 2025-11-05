@@ -3,7 +3,7 @@ package com.discord.utilities.locale;
 import android.content.Context;
 import android.content.res.Resources;
 import androidx.core.os.ConfigurationCompat;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Locale;
 
 /* compiled from: LocaleManager.kt */
@@ -12,13 +12,13 @@ public final class LocaleManager {
     public final Locale getPrimaryLocale(Context context) {
         if (context == null) {
             Locale locale = Locale.getDefault();
-            Intrinsics3.checkNotNullExpressionValue(locale, "Locale.getDefault()");
+            m.checkNotNullExpressionValue(locale, "Locale.getDefault()");
             return locale;
         }
         Resources resources = context.getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
+        m.checkNotNullExpressionValue(resources, "context.resources");
         Locale locale2 = ConfigurationCompat.getLocales(resources.getConfiguration()).get(0);
-        Intrinsics3.checkNotNullExpressionValue(locale2, "ConfigurationCompat.getL…sources.configuration)[0]");
+        m.checkNotNullExpressionValue(locale2, "ConfigurationCompat.getL…sources.configuration)[0]");
         return locale2;
     }
 }

@@ -3,7 +3,7 @@ package androidx.room.util;
 import android.database.Cursor;
 import androidx.annotation.RestrictTo;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -55,7 +55,7 @@ public class ViewInfo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ViewInfo{name='");
+        StringBuilder sbU = a.U("ViewInfo{name='");
         sbU.append(this.name);
         sbU.append('\'');
         sbU.append(", sql='");

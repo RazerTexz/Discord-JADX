@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalActionLetterLeague.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalActionLetterLeague implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalActionLetterLeague implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence actionName = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackActivityInternalActionLetterLeague implements
             return false;
         }
         TrackActivityInternalActionLetterLeague trackActivityInternalActionLetterLeague = (TrackActivityInternalActionLetterLeague) other;
-        return Intrinsics3.areEqual(this.actionName, trackActivityInternalActionLetterLeague.actionName) && Intrinsics3.areEqual(this.bag, trackActivityInternalActionLetterLeague.bag) && Intrinsics3.areEqual(this.scoringMode, trackActivityInternalActionLetterLeague.scoringMode) && Intrinsics3.areEqual(this.numPlayers, trackActivityInternalActionLetterLeague.numPlayers) && Intrinsics3.areEqual(this.numSpectators, trackActivityInternalActionLetterLeague.numSpectators) && Intrinsics3.areEqual(this.phase, trackActivityInternalActionLetterLeague.phase) && Intrinsics3.areEqual(this.durationS, trackActivityInternalActionLetterLeague.durationS) && Intrinsics3.areEqual(this.score, trackActivityInternalActionLetterLeague.score) && Intrinsics3.areEqual(this.turnType, trackActivityInternalActionLetterLeague.turnType) && Intrinsics3.areEqual(this.word, trackActivityInternalActionLetterLeague.word);
+        return m.areEqual(this.actionName, trackActivityInternalActionLetterLeague.actionName) && m.areEqual(this.bag, trackActivityInternalActionLetterLeague.bag) && m.areEqual(this.scoringMode, trackActivityInternalActionLetterLeague.scoringMode) && m.areEqual(this.numPlayers, trackActivityInternalActionLetterLeague.numPlayers) && m.areEqual(this.numSpectators, trackActivityInternalActionLetterLeague.numSpectators) && m.areEqual(this.phase, trackActivityInternalActionLetterLeague.phase) && m.areEqual(this.durationS, trackActivityInternalActionLetterLeague.durationS) && m.areEqual(this.score, trackActivityInternalActionLetterLeague.score) && m.areEqual(this.turnType, trackActivityInternalActionLetterLeague.turnType) && m.areEqual(this.word, trackActivityInternalActionLetterLeague.word);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackActivityInternalActionLetterLeague implements
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalActionLetterLeague(actionName=");
+        StringBuilder sbU = a.U("TrackActivityInternalActionLetterLeague(actionName=");
         sbU.append(this.actionName);
         sbU.append(", bag=");
         sbU.append(this.bag);
@@ -85,6 +85,6 @@ public final /* data */ class TrackActivityInternalActionLetterLeague implements
         sbU.append(", turnType=");
         sbU.append(this.turnType);
         sbU.append(", word=");
-        return outline.E(sbU, this.word, ")");
+        return a.E(sbU, this.word, ")");
     }
 }

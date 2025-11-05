@@ -13,11 +13,9 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import androidx.core.view.ViewCompat;
-import b.h.a.a.AndroidStockBlurImpl;
-import b.h.a.a.AndroidXBlurImpl;
-import b.h.a.a.BlurImpl;
-import b.h.a.a.EmptyBlurImpl;
-import b.h.a.a.SupportLibraryBlurImpl;
+import b.h.a.a.c;
+import b.h.a.a.d;
+import b.h.a.a.e;
 import com.github.mmin18.realtimeblurview.R;
 
 /* loaded from: classes3.dex */
@@ -29,7 +27,7 @@ public class RealtimeBlurView extends View {
     public float m;
     public int n;
     public float o;
-    public final BlurImpl p;
+    public final c p;
     public boolean q;
     public Bitmap r;
 
@@ -229,13 +227,13 @@ public class RealtimeBlurView extends View {
         return null;
     }
 
-    public BlurImpl getBlurImpl() {
+    public c getBlurImpl() {
         if (k == 0) {
             try {
-                AndroidStockBlurImpl androidStockBlurImpl = new AndroidStockBlurImpl();
+                b.h.a.a.a aVar = new b.h.a.a.a();
                 Bitmap bitmapCreateBitmap = Bitmap.createBitmap(4, 4, Bitmap.Config.ARGB_8888);
-                androidStockBlurImpl.b(getContext(), bitmapCreateBitmap, 4.0f);
-                androidStockBlurImpl.release();
+                aVar.b(getContext(), bitmapCreateBitmap, 4.0f);
+                aVar.release();
                 bitmapCreateBitmap.recycle();
                 k = 3;
             } catch (Throwable unused) {
@@ -244,10 +242,10 @@ public class RealtimeBlurView extends View {
         if (k == 0) {
             try {
                 getClass().getClassLoader().loadClass("androidx.renderscript.RenderScript");
-                AndroidXBlurImpl androidXBlurImpl = new AndroidXBlurImpl();
+                b.h.a.a.b bVar = new b.h.a.a.b();
                 Bitmap bitmapCreateBitmap2 = Bitmap.createBitmap(4, 4, Bitmap.Config.ARGB_8888);
-                androidXBlurImpl.b(getContext(), bitmapCreateBitmap2, 4.0f);
-                androidXBlurImpl.release();
+                bVar.b(getContext(), bitmapCreateBitmap2, 4.0f);
+                bVar.release();
                 bitmapCreateBitmap2.recycle();
                 k = 1;
             } catch (Throwable unused2) {
@@ -256,10 +254,10 @@ public class RealtimeBlurView extends View {
         if (k == 0) {
             try {
                 getClass().getClassLoader().loadClass("androidx.renderscript.RenderScript");
-                SupportLibraryBlurImpl supportLibraryBlurImpl = new SupportLibraryBlurImpl();
+                e eVar = new e();
                 Bitmap bitmapCreateBitmap3 = Bitmap.createBitmap(4, 4, Bitmap.Config.ARGB_8888);
-                supportLibraryBlurImpl.b(getContext(), bitmapCreateBitmap3, 4.0f);
-                supportLibraryBlurImpl.release();
+                eVar.b(getContext(), bitmapCreateBitmap3, 4.0f);
+                eVar.release();
                 bitmapCreateBitmap3.recycle();
                 k = 2;
             } catch (Throwable unused3) {
@@ -269,7 +267,7 @@ public class RealtimeBlurView extends View {
             k = -1;
         }
         int i = k;
-        return i != 1 ? i != 2 ? i != 3 ? new EmptyBlurImpl() : new AndroidStockBlurImpl() : new SupportLibraryBlurImpl() : new AndroidXBlurImpl();
+        return i != 1 ? i != 2 ? i != 3 ? new d() : new b.h.a.a.a() : new e() : new b.h.a.a.b();
     }
 
     @Override // android.view.View

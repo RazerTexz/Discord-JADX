@@ -8,8 +8,8 @@ import androidx.annotation.MainThread;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -49,15 +49,15 @@ import com.discord.stores.StoreThreadDraft;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserRelationships;
 import com.discord.stores.StoreUserSettings;
-import com.discord.utilities.KotlinExtensions;
-import com.discord.utilities.attachments.AttachmentUtils;
+import com.discord.utilities.KotlinExtensionsKt;
+import com.discord.utilities.attachments.AttachmentUtilsKt;
 import com.discord.utilities.channel.ChannelSelector;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.guilds.GuildVerificationLevelUtils;
 import com.discord.utilities.guilds.MemberVerificationUtils;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.premium.PremiumUtils;
-import com.discord.utilities.rest.SendUtils5;
+import com.discord.utilities.rest.SendUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.utilities.time.ClockFactory;
@@ -67,20 +67,17 @@ import com.discord.widgets.chat.input.autocomplete.Autocompletable;
 import com.discord.widgets.chat.input.autocomplete.EmojiUpsellPlaceholder;
 import com.discord.widgets.chat.input.emoji.EmojiAutocompletePremiumUpsellFeatureFlag;
 import com.discord.widgets.chat.input.models.ApplicationCommandData;
-import com.discord.widgets.chat.input.models.ApplicationCommandData4;
+import com.discord.widgets.chat.input.models.ApplicationCommandDataKt;
 import com.discord.widgets.forums.ForumPostCreateManager;
 import com.discord.widgets.forums.ForumUtils;
 import com.discord.widgets.user.account.WidgetUserAccountVerifyBase;
 import com.discord.widgets.user.email.WidgetUserEmailVerify;
 import com.discord.widgets.user.phone.WidgetUserPhoneManage;
 import com.lytefast.flexinput.model.Attachment;
-import d0.t.CollectionsJVM;
-import d0.t.Iterables2;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -98,7 +95,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel extends AppViewModel<ViewState> {
+public final class ChatInputViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -121,7 +118,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass1(ChatInputViewModel chatInputViewModel) {
             super(1, chatInputViewModel, ChatInputViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/ChatInputViewModel$StoreState;)V", 0);
         }
@@ -134,14 +131,14 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             ChatInputViewModel.access$handleStoreState((ChatInputViewModel) this.receiver, storeState);
         }
     }
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<StoreChat.Event, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<StoreChat.Event, Unit> {
         public AnonymousClass2(ChatInputViewModel chatInputViewModel) {
             super(1, chatInputViewModel, ChatInputViewModel.class, "handleStoreChatEvent", "handleStoreChatEvent(Lcom/discord/stores/StoreChat$Event;)V", 0);
         }
@@ -154,7 +151,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreChat.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "p1");
+            m.checkNotNullParameter(event, "p1");
             ChatInputViewModel.access$handleStoreChatEvent((ChatInputViewModel) this.receiver, event);
         }
     }
@@ -170,8 +167,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         private final float maxAttachmentSizeMB;
 
         public AttachmentContext(ArrayList<Attachment<?>> arrayList, boolean z2, boolean z3, boolean z4, List<Float> list, float f, float f2) {
-            Intrinsics3.checkNotNullParameter(arrayList, "attachments");
-            Intrinsics3.checkNotNullParameter(list, "attachmentSizes");
+            m.checkNotNullParameter(arrayList, "attachments");
+            m.checkNotNullParameter(list, "attachmentSizes");
             this.attachments = arrayList;
             this.hasImage = z2;
             this.hasVideo = z3;
@@ -245,8 +242,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
 
         public final AttachmentContext copy(ArrayList<Attachment<?>> attachments, boolean hasImage, boolean hasVideo, boolean hasGif, List<Float> attachmentSizes, float currentFileSizeMB, float maxAttachmentSizeMB) {
-            Intrinsics3.checkNotNullParameter(attachments, "attachments");
-            Intrinsics3.checkNotNullParameter(attachmentSizes, "attachmentSizes");
+            m.checkNotNullParameter(attachments, "attachments");
+            m.checkNotNullParameter(attachmentSizes, "attachmentSizes");
             return new AttachmentContext(attachments, hasImage, hasVideo, hasGif, attachmentSizes, currentFileSizeMB, maxAttachmentSizeMB);
         }
 
@@ -258,7 +255,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             AttachmentContext attachmentContext = (AttachmentContext) other;
-            return Intrinsics3.areEqual(this.attachments, attachmentContext.attachments) && this.hasImage == attachmentContext.hasImage && this.hasVideo == attachmentContext.hasVideo && this.hasGif == attachmentContext.hasGif && Intrinsics3.areEqual(this.attachmentSizes, attachmentContext.attachmentSizes) && Float.compare(this.currentFileSizeMB, attachmentContext.currentFileSizeMB) == 0 && Float.compare(this.maxAttachmentSizeMB, attachmentContext.maxAttachmentSizeMB) == 0;
+            return m.areEqual(this.attachments, attachmentContext.attachments) && this.hasImage == attachmentContext.hasImage && this.hasVideo == attachmentContext.hasVideo && this.hasGif == attachmentContext.hasGif && m.areEqual(this.attachmentSizes, attachmentContext.attachmentSizes) && Float.compare(this.currentFileSizeMB, attachmentContext.currentFileSizeMB) == 0 && Float.compare(this.maxAttachmentSizeMB, attachmentContext.maxAttachmentSizeMB) == 0;
         }
 
         public final List<Float> getAttachmentSizes() {
@@ -312,7 +309,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("AttachmentContext(attachments=");
+            StringBuilder sbU = a.U("AttachmentContext(attachments=");
             sbU.append(this.attachments);
             sbU.append(", hasImage=");
             sbU.append(this.hasImage);
@@ -358,7 +355,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
         private final Observable<StoreState.Loaded.PendingReply> getPendingReplyStateObservable(long channelId, StorePendingReplies storePendingReplies) {
             Observable<StoreState.Loaded.PendingReply> observableR = storePendingReplies.observePendingReply(channelId).Y(ChatInputViewModel$Companion$getPendingReplyStateObservable$1.INSTANCE).r();
-            Intrinsics3.checkNotNullExpressionValue(observableR, "storePendingReplies\n    …  .distinctUntilChanged()");
+            m.checkNotNullExpressionValue(observableR, "storePendingReplies\n    …  .distinctUntilChanged()");
             return observableR;
         }
 
@@ -368,7 +365,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
         private final Observable<StoreState> observeStoreState(StoreChannelsSelected storeChannelsSelected, StoreUser storeUsers, StoreChat storeChat, StoreUserRelationships storeUserRelationships, StorePermissions storePermissions, StoreLurking storeLurking, StoreSlowMode storeSlowMode, StoreGuilds storeGuilds, StorePendingReplies storePendingReplies, StoreGuildJoinRequest storeGuildJoinRequest, StoreThreadDraft storeThreadDraft) {
             Observable observableY = storeChannelsSelected.observeResolvedSelectedChannel().Y(new ChatInputViewModel$Companion$observeStoreState$1(storeUsers, storeChat, storeUserRelationships, storePermissions, storeGuilds, storeLurking, storeSlowMode, storePendingReplies, storeGuildJoinRequest, storeThreadDraft));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "storeChannelsSelected.ob…      }\n        }\n      }");
+            m.checkNotNullExpressionValue(observableY, "storeChannelsSelected.ob…      }\n        }\n      }");
             return observableY;
         }
 
@@ -387,7 +384,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public AppendChatText(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 this.text = str;
             }
 
@@ -404,13 +401,13 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public final AppendChatText copy(String text) {
-                Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 return new AppendChatText(text);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof AppendChatText) && Intrinsics3.areEqual(this.text, ((AppendChatText) other).text);
+                    return (other instanceof AppendChatText) && m.areEqual(this.text, ((AppendChatText) other).text);
                 }
                 return true;
             }
@@ -428,7 +425,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                return outline.J(outline.U("AppendChatText(text="), this.text, ")");
+                return a.J(a.U("AppendChatText(text="), this.text, ")");
             }
         }
 
@@ -475,7 +472,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public FilesTooLarge(int i, float f, float f2, boolean z2, List<? extends Attachment<?>> list, boolean z3, boolean z4, boolean z5, Function0<Unit> function0) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "attachments");
+                m.checkNotNullParameter(list, "attachments");
                 this.maxFileSizeMB = i;
                 this.currentFileSizeMB = f;
                 this.maxAttachmentSizeMB = f2;
@@ -535,7 +532,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public final FilesTooLarge copy(int maxFileSizeMB, float currentFileSizeMB, float maxAttachmentSizeMB, boolean isUserPremium, List<? extends Attachment<?>> attachments, boolean hasImage, boolean hasVideo, boolean hasGif, Function0<Unit> onResendCompressed) {
-                Intrinsics3.checkNotNullParameter(attachments, "attachments");
+                m.checkNotNullParameter(attachments, "attachments");
                 return new FilesTooLarge(maxFileSizeMB, currentFileSizeMB, maxAttachmentSizeMB, isUserPremium, attachments, hasImage, hasVideo, hasGif, onResendCompressed);
             }
 
@@ -547,7 +544,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 FilesTooLarge filesTooLarge = (FilesTooLarge) other;
-                return this.maxFileSizeMB == filesTooLarge.maxFileSizeMB && Float.compare(this.currentFileSizeMB, filesTooLarge.currentFileSizeMB) == 0 && Float.compare(this.maxAttachmentSizeMB, filesTooLarge.maxAttachmentSizeMB) == 0 && this.isUserPremium == filesTooLarge.isUserPremium && Intrinsics3.areEqual(this.attachments, filesTooLarge.attachments) && this.hasImage == filesTooLarge.hasImage && this.hasVideo == filesTooLarge.hasVideo && this.hasGif == filesTooLarge.hasGif && Intrinsics3.areEqual(this.onResendCompressed, filesTooLarge.onResendCompressed);
+                return this.maxFileSizeMB == filesTooLarge.maxFileSizeMB && Float.compare(this.currentFileSizeMB, filesTooLarge.currentFileSizeMB) == 0 && Float.compare(this.maxAttachmentSizeMB, filesTooLarge.maxAttachmentSizeMB) == 0 && this.isUserPremium == filesTooLarge.isUserPremium && m.areEqual(this.attachments, filesTooLarge.attachments) && this.hasImage == filesTooLarge.hasImage && this.hasVideo == filesTooLarge.hasVideo && this.hasGif == filesTooLarge.hasGif && m.areEqual(this.onResendCompressed, filesTooLarge.onResendCompressed);
             }
 
             public final List<Attachment<?>> getAttachments() {
@@ -616,7 +613,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("FilesTooLarge(maxFileSizeMB=");
+                StringBuilder sbU = a.U("FilesTooLarge(maxFileSizeMB=");
                 sbU.append(this.maxFileSizeMB);
                 sbU.append(", currentFileSizeMB=");
                 sbU.append(this.currentFileSizeMB);
@@ -698,10 +695,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("MessageTooLong(currentCharacterCount=");
+                StringBuilder sbU = a.U("MessageTooLong(currentCharacterCount=");
                 sbU.append(this.currentCharacterCount);
                 sbU.append(", maxCharacterCount=");
-                return outline.B(sbU, this.maxCharacterCount, ")");
+                return a.B(sbU, this.maxCharacterCount, ")");
             }
         }
 
@@ -712,7 +709,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SetChatText(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 this.text = str;
             }
 
@@ -729,13 +726,13 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public final SetChatText copy(String text) {
-                Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 return new SetChatText(text);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof SetChatText) && Intrinsics3.areEqual(this.text, ((SetChatText) other).text);
+                    return (other instanceof SetChatText) && m.areEqual(this.text, ((SetChatText) other).text);
                 }
                 return true;
             }
@@ -753,7 +750,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                return outline.J(outline.U("SetChatText(text="), this.text, ")");
+                return a.J(a.U("SetChatText(text="), this.text, ")");
             }
         }
 
@@ -865,7 +862,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("ShowPremiumUpsell(page=");
+                StringBuilder sbU = a.U("ShowPremiumUpsell(page=");
                 sbU.append(this.page);
                 sbU.append(", headerResId=");
                 sbU.append(this.headerResId);
@@ -874,7 +871,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 sbU.append(", showOtherPages=");
                 sbU.append(this.showOtherPages);
                 sbU.append(", showLearnMore=");
-                return outline.O(sbU, this.showLearnMore, ")");
+                return a.O(sbU, this.showLearnMore, ")");
             }
 
             public ShowPremiumUpsell(int i, @StringRes int i2, @StringRes int i3, boolean z2, boolean z3) {
@@ -932,7 +929,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 private final GuildMember repliedAuthorGuildMember;
 
                 public PendingReply(StorePendingReplies.PendingReply pendingReply, User user, GuildMember guildMember) {
-                    Intrinsics3.checkNotNullParameter(pendingReply, "pendingReply");
+                    m.checkNotNullParameter(pendingReply, "pendingReply");
                     this.pendingReply = pendingReply;
                     this.repliedAuthor = user;
                     this.repliedAuthorGuildMember = guildMember;
@@ -967,7 +964,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 }
 
                 public final PendingReply copy(StorePendingReplies.PendingReply pendingReply, User repliedAuthor, GuildMember repliedAuthorGuildMember) {
-                    Intrinsics3.checkNotNullParameter(pendingReply, "pendingReply");
+                    m.checkNotNullParameter(pendingReply, "pendingReply");
                     return new PendingReply(pendingReply, repliedAuthor, repliedAuthorGuildMember);
                 }
 
@@ -979,7 +976,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                         return false;
                     }
                     PendingReply pendingReply = (PendingReply) other;
-                    return Intrinsics3.areEqual(this.pendingReply, pendingReply.pendingReply) && Intrinsics3.areEqual(this.repliedAuthor, pendingReply.repliedAuthor) && Intrinsics3.areEqual(this.repliedAuthorGuildMember, pendingReply.repliedAuthorGuildMember);
+                    return m.areEqual(this.pendingReply, pendingReply.pendingReply) && m.areEqual(this.repliedAuthor, pendingReply.repliedAuthor) && m.areEqual(this.repliedAuthorGuildMember, pendingReply.repliedAuthorGuildMember);
                 }
 
                 public final StorePendingReplies.PendingReply getPendingReply() {
@@ -1004,7 +1001,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = outline.U("PendingReply(pendingReply=");
+                    StringBuilder sbU = a.U("PendingReply(pendingReply=");
                     sbU.append(this.pendingReply);
                     sbU.append(", repliedAuthor=");
                     sbU.append(this.repliedAuthor);
@@ -1018,10 +1015,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(Channel channel, MeUser meUser, StoreChat.EditingMessage editingMessage, Integer num, Long l, GuildVerificationLevel guildVerificationLevel, boolean z2, boolean z3, Guild guild, PendingReply pendingReply, StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft threadDraft, GuildMember guildMember, GuildJoinRequest guildJoinRequest, StoreThreadDraft.ThreadDraftState threadDraftState, boolean z4) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(meUser, "me");
-                Intrinsics3.checkNotNullParameter(guildVerificationLevel, "verificationLevelTriggered");
-                Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(meUser, "me");
+                m.checkNotNullParameter(guildVerificationLevel, "verificationLevelTriggered");
+                m.checkNotNullParameter(threadDraftState, "threadDraftState");
                 this.channel = channel;
                 this.me = meUser;
                 this.editingMessage = editingMessage;
@@ -1119,10 +1116,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loaded copy(Channel channel, MeUser me2, StoreChat.EditingMessage editingMessage, Integer relationshipType, Long channelPermissions, GuildVerificationLevel verificationLevelTriggered, boolean isLurking, boolean isOnCooldown, Guild guild, PendingReply pendingReply, StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft selectedThreadDraft, GuildMember meGuildMember, GuildJoinRequest guildJoinRequest, StoreThreadDraft.ThreadDraftState threadDraftState, boolean isForumPostCreateInProgress) {
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(me2, "me");
-                Intrinsics3.checkNotNullParameter(verificationLevelTriggered, "verificationLevelTriggered");
-                Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(me2, "me");
+                m.checkNotNullParameter(verificationLevelTriggered, "verificationLevelTriggered");
+                m.checkNotNullParameter(threadDraftState, "threadDraftState");
                 return new Loaded(channel, me2, editingMessage, relationshipType, channelPermissions, verificationLevelTriggered, isLurking, isOnCooldown, guild, pendingReply, selectedThreadDraft, meGuildMember, guildJoinRequest, threadDraftState, isForumPostCreateInProgress);
             }
 
@@ -1134,7 +1131,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.channel, loaded.channel) && Intrinsics3.areEqual(this.me, loaded.me) && Intrinsics3.areEqual(this.editingMessage, loaded.editingMessage) && Intrinsics3.areEqual(this.relationshipType, loaded.relationshipType) && Intrinsics3.areEqual(this.channelPermissions, loaded.channelPermissions) && Intrinsics3.areEqual(this.verificationLevelTriggered, loaded.verificationLevelTriggered) && this.isLurking == loaded.isLurking && this.isOnCooldown == loaded.isOnCooldown && Intrinsics3.areEqual(this.guild, loaded.guild) && Intrinsics3.areEqual(this.pendingReply, loaded.pendingReply) && Intrinsics3.areEqual(this.selectedThreadDraft, loaded.selectedThreadDraft) && Intrinsics3.areEqual(this.meGuildMember, loaded.meGuildMember) && Intrinsics3.areEqual(this.guildJoinRequest, loaded.guildJoinRequest) && Intrinsics3.areEqual(this.threadDraftState, loaded.threadDraftState) && this.isForumPostCreateInProgress == loaded.isForumPostCreateInProgress;
+                return m.areEqual(this.channel, loaded.channel) && m.areEqual(this.me, loaded.me) && m.areEqual(this.editingMessage, loaded.editingMessage) && m.areEqual(this.relationshipType, loaded.relationshipType) && m.areEqual(this.channelPermissions, loaded.channelPermissions) && m.areEqual(this.verificationLevelTriggered, loaded.verificationLevelTriggered) && this.isLurking == loaded.isLurking && this.isOnCooldown == loaded.isOnCooldown && m.areEqual(this.guild, loaded.guild) && m.areEqual(this.pendingReply, loaded.pendingReply) && m.areEqual(this.selectedThreadDraft, loaded.selectedThreadDraft) && m.areEqual(this.meGuildMember, loaded.meGuildMember) && m.areEqual(this.guildJoinRequest, loaded.guildJoinRequest) && m.areEqual(this.threadDraftState, loaded.threadDraftState) && this.isForumPostCreateInProgress == loaded.isForumPostCreateInProgress;
             }
 
             public final Channel getChannel() {
@@ -1240,7 +1237,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(channel=");
+                StringBuilder sbU = a.U("Loaded(channel=");
                 sbU.append(this.channel);
                 sbU.append(", me=");
                 sbU.append(this.me);
@@ -1269,7 +1266,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 sbU.append(", threadDraftState=");
                 sbU.append(this.threadDraftState);
                 sbU.append(", isForumPostCreateInProgress=");
-                return outline.O(sbU, this.isForumPostCreateInProgress, ")");
+                return a.O(sbU, this.isForumPostCreateInProgress, ")");
             }
         }
 
@@ -1345,8 +1342,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                     public Replying(MessageReference messageReference, boolean z2, boolean z3, User user, GuildMember guildMember) {
                         super(null);
-                        Intrinsics3.checkNotNullParameter(messageReference, "messageReference");
-                        Intrinsics3.checkNotNullParameter(user, "repliedAuthor");
+                        m.checkNotNullParameter(messageReference, "messageReference");
+                        m.checkNotNullParameter(user, "repliedAuthor");
                         this.messageReference = messageReference;
                         this.shouldMention = z2;
                         this.showMentionToggle = z3;
@@ -1402,8 +1399,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     }
 
                     public final Replying copy(MessageReference messageReference, boolean shouldMention, boolean showMentionToggle, User repliedAuthor, GuildMember repliedAuthorGuildMember) {
-                        Intrinsics3.checkNotNullParameter(messageReference, "messageReference");
-                        Intrinsics3.checkNotNullParameter(repliedAuthor, "repliedAuthor");
+                        m.checkNotNullParameter(messageReference, "messageReference");
+                        m.checkNotNullParameter(repliedAuthor, "repliedAuthor");
                         return new Replying(messageReference, shouldMention, showMentionToggle, repliedAuthor, repliedAuthorGuildMember);
                     }
 
@@ -1415,7 +1412,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                             return false;
                         }
                         Replying replying = (Replying) other;
-                        return Intrinsics3.areEqual(this.messageReference, replying.messageReference) && this.shouldMention == replying.shouldMention && this.showMentionToggle == replying.showMentionToggle && Intrinsics3.areEqual(this.repliedAuthor, replying.repliedAuthor) && Intrinsics3.areEqual(this.repliedAuthorGuildMember, replying.repliedAuthorGuildMember);
+                        return m.areEqual(this.messageReference, replying.messageReference) && this.shouldMention == replying.shouldMention && this.showMentionToggle == replying.showMentionToggle && m.areEqual(this.repliedAuthor, replying.repliedAuthor) && m.areEqual(this.repliedAuthorGuildMember, replying.repliedAuthorGuildMember);
                     }
 
                     public final MessageReference getMessageReference() {
@@ -1457,7 +1454,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     }
 
                     public String toString() {
-                        StringBuilder sbU = outline.U("Replying(messageReference=");
+                        StringBuilder sbU = a.U("Replying(messageReference=");
                         sbU.append(this.messageReference);
                         sbU.append(", shouldMention=");
                         sbU.append(this.shouldMention);
@@ -1483,10 +1480,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(Channel channel, long j, MeUser meUser, GuildMember guildMember, StoreChat.EditingMessage editingMessage, boolean z2, GuildVerificationLevel guildVerificationLevel, boolean z3, boolean z4, boolean z5, int i, boolean z6, PendingReplyState pendingReplyState, boolean z7, boolean z8, boolean z9, boolean z10, boolean z11, boolean z12, boolean z13, long j2, StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft threadDraft, boolean z14, ApplicationStatus applicationStatus, StoreThreadDraft.ThreadDraftState threadDraftState, boolean z15) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(guildVerificationLevel, "verificationLevelTriggered");
-                Intrinsics3.checkNotNullParameter(pendingReplyState, "pendingReplyState");
-                Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(guildVerificationLevel, "verificationLevelTriggered");
+                m.checkNotNullParameter(pendingReplyState, "pendingReplyState");
+                m.checkNotNullParameter(threadDraftState, "threadDraftState");
                 this.channel = channel;
                 this.channelId = j;
                 this.me = meUser;
@@ -1650,10 +1647,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loaded copy(Channel channel, long channelId, MeUser me2, GuildMember meGuildMember, StoreChat.EditingMessage editingMessage, boolean ableToSendMessage, GuildVerificationLevel verificationLevelTriggered, boolean isLurking, boolean isSystemDM, boolean isOnCooldown, int maxFileSizeMB, boolean shouldShowFollow, PendingReplyState pendingReplyState, boolean shouldBadgeChatInput, boolean isBlocked, boolean isInputShowing, boolean isVerificationLevelTriggered, boolean isEditing, boolean isReplying, boolean isCommunicationDisabled, long timeoutLeftMs, StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft selectedThreadDraft, boolean shouldShowVerificationGate, ApplicationStatus joinRequestStatus, StoreThreadDraft.ThreadDraftState threadDraftState, boolean showCreateThreadOption) {
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(verificationLevelTriggered, "verificationLevelTriggered");
-                Intrinsics3.checkNotNullParameter(pendingReplyState, "pendingReplyState");
-                Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(verificationLevelTriggered, "verificationLevelTriggered");
+                m.checkNotNullParameter(pendingReplyState, "pendingReplyState");
+                m.checkNotNullParameter(threadDraftState, "threadDraftState");
                 return new Loaded(channel, channelId, me2, meGuildMember, editingMessage, ableToSendMessage, verificationLevelTriggered, isLurking, isSystemDM, isOnCooldown, maxFileSizeMB, shouldShowFollow, pendingReplyState, shouldBadgeChatInput, isBlocked, isInputShowing, isVerificationLevelTriggered, isEditing, isReplying, isCommunicationDisabled, timeoutLeftMs, selectedThreadDraft, shouldShowVerificationGate, joinRequestStatus, threadDraftState, showCreateThreadOption);
             }
 
@@ -1665,7 +1662,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.channel, loaded.channel) && this.channelId == loaded.channelId && Intrinsics3.areEqual(this.me, loaded.me) && Intrinsics3.areEqual(this.meGuildMember, loaded.meGuildMember) && Intrinsics3.areEqual(this.editingMessage, loaded.editingMessage) && this.ableToSendMessage == loaded.ableToSendMessage && Intrinsics3.areEqual(this.verificationLevelTriggered, loaded.verificationLevelTriggered) && this.isLurking == loaded.isLurking && this.isSystemDM == loaded.isSystemDM && this.isOnCooldown == loaded.isOnCooldown && this.maxFileSizeMB == loaded.maxFileSizeMB && this.shouldShowFollow == loaded.shouldShowFollow && Intrinsics3.areEqual(this.pendingReplyState, loaded.pendingReplyState) && this.shouldBadgeChatInput == loaded.shouldBadgeChatInput && this.isBlocked == loaded.isBlocked && this.isInputShowing == loaded.isInputShowing && this.isVerificationLevelTriggered == loaded.isVerificationLevelTriggered && this.isEditing == loaded.isEditing && this.isReplying == loaded.isReplying && this.isCommunicationDisabled == loaded.isCommunicationDisabled && this.timeoutLeftMs == loaded.timeoutLeftMs && Intrinsics3.areEqual(this.selectedThreadDraft, loaded.selectedThreadDraft) && this.shouldShowVerificationGate == loaded.shouldShowVerificationGate && Intrinsics3.areEqual(this.joinRequestStatus, loaded.joinRequestStatus) && Intrinsics3.areEqual(this.threadDraftState, loaded.threadDraftState) && this.showCreateThreadOption == loaded.showCreateThreadOption;
+                return m.areEqual(this.channel, loaded.channel) && this.channelId == loaded.channelId && m.areEqual(this.me, loaded.me) && m.areEqual(this.meGuildMember, loaded.meGuildMember) && m.areEqual(this.editingMessage, loaded.editingMessage) && this.ableToSendMessage == loaded.ableToSendMessage && m.areEqual(this.verificationLevelTriggered, loaded.verificationLevelTriggered) && this.isLurking == loaded.isLurking && this.isSystemDM == loaded.isSystemDM && this.isOnCooldown == loaded.isOnCooldown && this.maxFileSizeMB == loaded.maxFileSizeMB && this.shouldShowFollow == loaded.shouldShowFollow && m.areEqual(this.pendingReplyState, loaded.pendingReplyState) && this.shouldBadgeChatInput == loaded.shouldBadgeChatInput && this.isBlocked == loaded.isBlocked && this.isInputShowing == loaded.isInputShowing && this.isVerificationLevelTriggered == loaded.isVerificationLevelTriggered && this.isEditing == loaded.isEditing && this.isReplying == loaded.isReplying && this.isCommunicationDisabled == loaded.isCommunicationDisabled && this.timeoutLeftMs == loaded.timeoutLeftMs && m.areEqual(this.selectedThreadDraft, loaded.selectedThreadDraft) && this.shouldShowVerificationGate == loaded.shouldShowVerificationGate && m.areEqual(this.joinRequestStatus, loaded.joinRequestStatus) && m.areEqual(this.threadDraftState, loaded.threadDraftState) && this.showCreateThreadOption == loaded.showCreateThreadOption;
             }
 
             public final boolean getAbleToSendMessage() {
@@ -1875,7 +1872,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(channel=");
+                StringBuilder sbU = a.U("Loaded(channel=");
                 sbU.append(this.channel);
                 sbU.append(", channelId=");
                 sbU.append(this.channelId);
@@ -1926,7 +1923,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 sbU.append(", threadDraftState=");
                 sbU.append(this.threadDraftState);
                 sbU.append(", showCreateThreadOption=");
-                return outline.O(sbU, this.showCreateThreadOption, ")");
+                return a.O(sbU, this.showCreateThreadOption, ")");
             }
         }
 
@@ -1964,11 +1961,11 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Channel, Observable<? extends Channel>> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<Channel, Observable<? extends Channel>> {
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Channel> call(Channel channel) {
             return call2(channel);
         }
@@ -1976,14 +1973,14 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             Observable<R> observableG = ChatInputViewModel.access$getStoreChannels$p(ChatInputViewModel.this).observeChannel(channel.getId()).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+            m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
             return ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableG, 0L, false, 3, null));
         }
     }
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ ViewState.Loaded $loadedViewState;
         public final /* synthetic */ Function1 $onThreadCreated;
 
@@ -2015,7 +2012,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ ViewState.Loaded $loadedViewState;
 
@@ -2034,18 +2031,18 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             ThreadUtils.INSTANCE.handleThreadCreateError(this.$context, error, this.$loadedViewState.getChannelId());
         }
     }
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$observeChatInputViewState$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Long, Long> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<Long, Long> {
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Long call(Long l) {
             return call2(l);
         }
@@ -2091,7 +2088,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendCommand$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -2110,7 +2107,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ Function1 $sendMessage;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -2127,7 +2124,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "thread");
+            m.checkNotNullParameter(channel, "thread");
             this.$sendMessage.invoke(Long.valueOf(channel.getId()));
         }
     }
@@ -2216,7 +2213,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             threadName = "";
         }
         Observable observableA = ObservableExtensionsKt.restSubscribeOn$default(threadUtils.createThread(channelId, parentMessageId, i, threadName, Integer.valueOf(getAutoArchiveDuration()), location), false, 1, null).A(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableA, "ThreadUtils.createThread…utationLatest()\n        }");
+        m.checkNotNullExpressionValue(observableA, "ThreadUtils.createThread…utationLatest()\n        }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableA, this, null, 2, null), ChatInputViewModel.class, (Context) null, (Function1) null, new AnonymousClass3(context, loadedViewState), (Function0) null, (Function0) null, new AnonymousClass2(loadedViewState, onThreadCreated), 54, (Object) null);
     }
 
@@ -2316,7 +2313,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 viewState = null;
             }
             ViewState.Loaded loaded3 = (ViewState.Loaded) viewState;
-            boolean z14 = !Intrinsics3.areEqual(loaded3 != null ? loaded3.getEditingMessage() : null, loaded2.getEditingMessage());
+            boolean z14 = !m.areEqual(loaded3 != null ? loaded3.getEditingMessage() : null, loaded2.getEditingMessage());
             ViewState viewState2 = getViewState();
             if (!(viewState2 instanceof ViewState.Loaded)) {
                 viewState2 = null;
@@ -2368,7 +2365,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     }
 
     public final boolean handleEmojiAutocompleteUpsellClicked(Autocompletable item) {
-        Intrinsics3.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(item, "item");
         if (!this.isEmojiAutocompleteUpsellEnabled || !(item instanceof EmojiUpsellPlaceholder)) {
             return false;
         }
@@ -2379,18 +2376,18 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     }
 
     public final void jumpToMessageReference(MessageReference messageReference) {
-        Intrinsics3.checkNotNullParameter(messageReference, "messageReference");
+        m.checkNotNullParameter(messageReference, "messageReference");
         StoreMessagesLoader storeMessagesLoader = this.storeMessagesLoader;
         Long channelId = messageReference.getChannelId();
-        Intrinsics3.checkNotNull(channelId);
+        m.checkNotNull(channelId);
         long jLongValue = channelId.longValue();
         Long messageId = messageReference.getMessageId();
-        Intrinsics3.checkNotNull(messageId);
+        m.checkNotNull(messageId);
         storeMessagesLoader.jumpToMessage(jLongValue, messageId.longValue());
     }
 
     public final void lurkGuild(Fragment fragment) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -2400,16 +2397,16 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             StoreLurking storeLurking = this.storeLurking;
             long guildId = loaded.getChannel().getGuildId();
             Context contextRequireContext = fragment.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "fragment.requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "fragment.requireContext()");
             storeLurking.postJoinGuildAsMember(guildId, contextRequireContext);
         }
     }
 
     public final Observable<ViewState> observeChatInputViewState() {
         Observable<Long> observableE = Observable.E(0L, 1L, TimeUnit.SECONDS);
-        Intrinsics3.checkNotNullExpressionValue(observableE, "Observable.interval(0L, 1L, TimeUnit.SECONDS)");
+        m.checkNotNullExpressionValue(observableE, "Observable.interval(0L, 1L, TimeUnit.SECONDS)");
         Observable<ViewState> observableJ = Observable.j(ObservableExtensionsKt.ui(observableE).G(new AnonymousClass1()).r(), observeViewState(), new AnonymousClass2());
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…     } ?: viewState\n    }");
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…     } ?: viewState\n    }");
         return observableJ;
     }
 
@@ -2423,23 +2420,23 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     }
 
     public final void onCommandUsed(ApplicationCommandData applicationCommandData) {
-        Intrinsics3.checkNotNullParameter(applicationCommandData, "applicationCommandData");
+        m.checkNotNullParameter(applicationCommandData, "applicationCommandData");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
         }
         ViewState.Loaded loaded = (ViewState.Loaded) viewState;
         if (loaded != null) {
-            this.storeApplicationCommandsFrecency.onCommandUsed(loaded.getChannel().getGuildId() != 0 ? Long.valueOf(loaded.getChannel().getGuildId()) : null, ApplicationCommandData4.getCommandId(applicationCommandData));
+            this.storeApplicationCommandsFrecency.onCommandUsed(loaded.getChannel().getGuildId() != 0 ? Long.valueOf(loaded.getChannel().getGuildId()) : null, ApplicationCommandDataKt.getCommandId(applicationCommandData));
         }
     }
 
     public final void sendCommand(Context context, MessageManager messageManager, ApplicationCommandData applicationCommandData, Map<ApplicationCommandOption, ? extends Attachment<?>> attachments, boolean autocomplete, boolean compressedImages, Function1<? super Boolean, Unit> onValidationResult) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(messageManager, "messageManager");
-        Intrinsics3.checkNotNullParameter(applicationCommandData, "applicationCommandData");
-        Intrinsics3.checkNotNullParameter(attachments, "attachments");
-        Intrinsics3.checkNotNullParameter(onValidationResult, "onValidationResult");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(messageManager, "messageManager");
+        m.checkNotNullParameter(applicationCommandData, "applicationCommandData");
+        m.checkNotNullParameter(attachments, "attachments");
+        m.checkNotNullParameter(onValidationResult, "onValidationResult");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -2449,7 +2446,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             onValidationResult.invoke(Boolean.FALSE);
             return;
         }
-        AttachmentContext attachmentContext = toAttachmentContext(_Collections.toList(attachments.values()), context);
+        AttachmentContext attachmentContext = toAttachmentContext(u.toList(attachments.values()), context);
         ChatInputViewModel$sendCommand$commandResendCompressedHandler$1 chatInputViewModel$sendCommand$commandResendCompressedHandler$1 = (compressedImages || !attachmentContext.getHasImage()) ? null : new ChatInputViewModel$sendCommand$commandResendCompressedHandler$1(this, context, attachmentContext, attachments, messageManager, applicationCommandData, autocomplete);
         if (!applicationCommandData.getValidInputs() && !autocomplete) {
             onCommandInputsInvalid();
@@ -2469,11 +2466,11 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     }
 
     public final void sendMessage(Context context, MessageManager messageManager, MessageContent messageContent, List<? extends Attachment<?>> attachmentsRaw, boolean compressedImages, Function1<? super Boolean, Unit> onValidationResult) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(messageManager, "messageManager");
-        Intrinsics3.checkNotNullParameter(messageContent, "messageContent");
-        Intrinsics3.checkNotNullParameter(attachmentsRaw, "attachmentsRaw");
-        Intrinsics3.checkNotNullParameter(onValidationResult, "onValidationResult");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(messageManager, "messageManager");
+        m.checkNotNullParameter(messageContent, "messageContent");
+        m.checkNotNullParameter(attachmentsRaw, "attachmentsRaw");
+        m.checkNotNullParameter(onValidationResult, "onValidationResult");
         Object viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -2530,8 +2527,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     }
 
     public final void sendSticker(Sticker sticker, MessageManager messageManager) {
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
-        Intrinsics3.checkNotNullParameter(messageManager, "messageManager");
+        m.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(messageManager, "messageManager");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -2541,22 +2538,22 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return;
         }
         this.storeStickers.onStickerUsed(sticker);
-        MessageManager.sendMessage$default(messageManager, null, null, null, null, CollectionsJVM.listOf(sticker), false, null, null, null, 495, null);
+        MessageManager.sendMessage$default(messageManager, null, null, null, null, d0.t.m.listOf(sticker), false, null, null, null, 495, null);
     }
 
     public final AttachmentContext toAttachmentContext(List<? extends Attachment<?>> list, Context context) {
         boolean z2;
         boolean z3;
         boolean z4;
-        Intrinsics3.checkNotNullParameter(list, "$this$toAttachmentContext");
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(list, "$this$toAttachmentContext");
+        m.checkNotNullParameter(context, "context");
         ArrayList<Attachment> arrayList = new ArrayList(list);
         if (arrayList.isEmpty()) {
             z2 = false;
         } else {
             for (Attachment attachment : arrayList) {
-                Intrinsics3.checkNotNullExpressionValue(attachment, "attachment");
-                if (AttachmentUtils.isImage(attachment, context.getContentResolver())) {
+                m.checkNotNullExpressionValue(attachment, "attachment");
+                if (AttachmentUtilsKt.isImage(attachment, context.getContentResolver())) {
                     z2 = true;
                     break;
                 }
@@ -2567,8 +2564,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             z3 = false;
         } else {
             for (Attachment attachment2 : arrayList) {
-                Intrinsics3.checkNotNullExpressionValue(attachment2, "attachment");
-                if (AttachmentUtils.isVideo(attachment2, context.getContentResolver())) {
+                m.checkNotNullExpressionValue(attachment2, "attachment");
+                if (AttachmentUtilsKt.isVideo(attachment2, context.getContentResolver())) {
                     z3 = true;
                     break;
                 }
@@ -2579,24 +2576,24 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             z4 = false;
         } else {
             for (Attachment attachment3 : arrayList) {
-                Intrinsics3.checkNotNullExpressionValue(attachment3, "attachment");
-                if (AttachmentUtils.isGif(attachment3, context.getContentResolver())) {
+                m.checkNotNullExpressionValue(attachment3, "attachment");
+                if (AttachmentUtilsKt.isGif(attachment3, context.getContentResolver())) {
                     z4 = true;
                     break;
                 }
             }
             z4 = false;
         }
-        ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+        ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
             Uri uri = ((Attachment) it.next()).getUri();
             ContentResolver contentResolver = context.getContentResolver();
-            Intrinsics3.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
-            arrayList2.add(Float.valueOf(SendUtils5.computeFileSizeMegabytes(uri, contentResolver)));
+            m.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
+            arrayList2.add(Float.valueOf(SendUtilsKt.computeFileSizeMegabytes(uri, contentResolver)));
         }
-        float fSumOfFloat = _Collections.sumOfFloat(arrayList2);
-        Float fM111maxOrNull = _Collections.m111maxOrNull((Iterable<Float>) arrayList2);
+        float fSumOfFloat = u.sumOfFloat(arrayList2);
+        Float fM111maxOrNull = u.m111maxOrNull((Iterable<Float>) arrayList2);
         return new AttachmentContext(arrayList, z2, z3, z4, arrayList2, fSumOfFloat, fM111maxOrNull != null ? fM111maxOrNull.floatValue() : 0.0f);
     }
 
@@ -2612,7 +2609,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             if (replying != null) {
                 StorePendingReplies storePendingReplies = this.storePendingReplies;
                 Long channelId = replying.getMessageReference().getChannelId();
-                Intrinsics3.checkNotNull(channelId);
+                m.checkNotNull(channelId);
                 storePendingReplies.onSetPendingReplyShouldMention(channelId.longValue(), !replying.getShouldMention());
             }
         }
@@ -2624,7 +2621,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     */
     public final void verifyAccount(Context context) {
         Unit unit;
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -2644,27 +2641,27 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 WidgetUserPhoneManage.INSTANCE.launch(context, WidgetUserAccountVerifyBase.Mode.UNFORCED, WidgetUserPhoneManage.Companion.Source.GUILD_PHONE_REQUIRED);
                 unit = Unit.a;
             }
-            KotlinExtensions.getExhaustive(unit);
+            KotlinExtensionsKt.getExhaustive(unit);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChatInputViewModel(StoreChat storeChat, StoreChannels storeChannels, StoreMessagesLoader storeMessagesLoader, StoreLurking storeLurking, StoreStickers storeStickers, StorePendingReplies storePendingReplies, StoreApplicationInteractions storeApplicationInteractions, StoreApplicationCommands storeApplicationCommands, StoreApplicationCommandFrecency storeApplicationCommandFrecency, StoreUserSettings storeUserSettings, StoreAnalytics storeAnalytics, StoreThreadDraft storeThreadDraft, StoreGuilds storeGuilds, boolean z2, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeChat, "storeChat");
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(storeMessagesLoader, "storeMessagesLoader");
-        Intrinsics3.checkNotNullParameter(storeLurking, "storeLurking");
-        Intrinsics3.checkNotNullParameter(storeStickers, "storeStickers");
-        Intrinsics3.checkNotNullParameter(storePendingReplies, "storePendingReplies");
-        Intrinsics3.checkNotNullParameter(storeApplicationInteractions, "storeApplicationInteractions");
-        Intrinsics3.checkNotNullParameter(storeApplicationCommands, "storeApplicationCommands");
-        Intrinsics3.checkNotNullParameter(storeApplicationCommandFrecency, "storeApplicationCommandsFrecency");
-        Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(storeThreadDraft, "storeThreadDraft");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(storeChat, "storeChat");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(storeMessagesLoader, "storeMessagesLoader");
+        m.checkNotNullParameter(storeLurking, "storeLurking");
+        m.checkNotNullParameter(storeStickers, "storeStickers");
+        m.checkNotNullParameter(storePendingReplies, "storePendingReplies");
+        m.checkNotNullParameter(storeApplicationInteractions, "storeApplicationInteractions");
+        m.checkNotNullParameter(storeApplicationCommands, "storeApplicationCommands");
+        m.checkNotNullParameter(storeApplicationCommandFrecency, "storeApplicationCommandsFrecency");
+        m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(storeThreadDraft, "storeThreadDraft");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.storeChat = storeChat;
         this.storeChannels = storeChannels;
         this.storeMessagesLoader = storeMessagesLoader;
@@ -2680,7 +2677,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         this.storeGuilds = storeGuilds;
         this.isEmojiAutocompleteUpsellEnabled = z2;
         PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.eventSubject = publishSubjectK0;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), ChatInputViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(storeChat.observeEvents(), this, null, 2, null), ChatInputViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);

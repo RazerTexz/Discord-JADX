@@ -7,7 +7,7 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.util.DebugUtils;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 
@@ -233,7 +233,7 @@ public class Loader<D> {
         StringBuilder sb = new StringBuilder(64);
         DebugUtils.buildShortClassTag(this, sb);
         sb.append(" id=");
-        return outline.B(sb, this.mId, "}");
+        return a.B(sb, this.mId, "}");
     }
 
     @MainThread

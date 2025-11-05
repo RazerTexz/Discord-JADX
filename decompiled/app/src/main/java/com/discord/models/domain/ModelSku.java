@@ -1,10 +1,10 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.application.Application;
 import com.discord.api.premium.PremiumTier;
 import com.discord.models.domain.Model;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -63,7 +63,7 @@ public final /* data */ class ModelSku {
         }
 
         public String toString() {
-            return outline.B(outline.U("ExternalSkuStrategy(type="), this.type, ")");
+            return a.B(a.U("ExternalSkuStrategy(type="), this.type, ")");
         }
 
         /* renamed from: getType, reason: collision with other method in class */
@@ -180,10 +180,10 @@ public final /* data */ class ModelSku {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelPremiumSkuPrice(amount=");
+            StringBuilder sbU = a.U("ModelPremiumSkuPrice(amount=");
             sbU.append(this.amount);
             sbU.append(", percentage=");
-            return outline.B(sbU, this.percentage, ")");
+            return a.B(sbU, this.percentage, ")");
         }
     }
 
@@ -203,7 +203,7 @@ public final /* data */ class ModelSku {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelSku parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = outline.c0(reader, "reader");
+            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
             ref$ObjectRefC0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
@@ -219,7 +219,7 @@ public final /* data */ class ModelSku {
             ref$ObjectRef6.element = null;
             Ref$ObjectRef ref$ObjectRef7 = new Ref$ObjectRef();
             ref$ObjectRef7.element = null;
-            reader.nextObject(new ModelSku2(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4, ref$ObjectRef5, ref$ObjectRef6, ref$ObjectRef7));
+            reader.nextObject(new ModelSku$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4, ref$ObjectRef5, ref$ObjectRef6, ref$ObjectRef7));
             Long l = (Long) ref$ObjectRefC0.element;
             long jLongValue = l != null ? l.longValue() : 0L;
             String str = (String) ref$ObjectRef.element;
@@ -231,14 +231,14 @@ public final /* data */ class ModelSku {
             long jLongValue2 = l2 != null ? l2.longValue() : 0L;
             Application application = (Application) ref$ObjectRef3.element;
             Boolean bool = (Boolean) ref$ObjectRef4.element;
-            Intrinsics3.checkNotNull(bool);
+            m.checkNotNull(bool);
             boolean zBooleanValue = bool.booleanValue();
             Integer num = (Integer) ref$ObjectRef5.element;
-            Intrinsics3.checkNotNull(num);
+            m.checkNotNull(num);
             int iIntValue = num.intValue();
             Price price = (Price) ref$ObjectRef6.element;
             Integer num2 = (Integer) ref$ObjectRef7.element;
-            Intrinsics3.checkNotNull(num2);
+            m.checkNotNull(num2);
             return new ModelSku(jLongValue, str2, jLongValue2, application, zBooleanValue, iIntValue, price, num2.intValue(), null);
         }
     }
@@ -265,11 +265,11 @@ public final /* data */ class ModelSku {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // com.discord.models.domain.Model.Parser
             public Price parse(Model.JsonReader reader) throws IOException {
-                Ref$ObjectRef ref$ObjectRefC0 = outline.c0(reader, "reader");
+                Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
                 ref$ObjectRefC0.element = null;
                 Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                 ref$ObjectRef.element = null;
-                reader.nextObject(new ModelSku3(ref$ObjectRefC0, reader, ref$ObjectRef));
+                reader.nextObject(new ModelSku$Price$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef));
                 Integer num = (Integer) ref$ObjectRefC0.element;
                 int iIntValue = num != null ? num.intValue() : -1;
                 String str = (String) ref$ObjectRef.element;
@@ -281,7 +281,7 @@ public final /* data */ class ModelSku {
         }
 
         public Price(int i, String str, Map<PremiumTier, ModelPremiumSkuPrice> map) {
-            Intrinsics3.checkNotNullParameter(str, "currency");
+            m.checkNotNullParameter(str, "currency");
             this.amount = i;
             this.currency = str;
             this.premium = map;
@@ -316,7 +316,7 @@ public final /* data */ class ModelSku {
         }
 
         public final Price copy(int amount, String currency, Map<PremiumTier, ModelPremiumSkuPrice> premium) {
-            Intrinsics3.checkNotNullParameter(currency, "currency");
+            m.checkNotNullParameter(currency, "currency");
             return new Price(amount, currency, premium);
         }
 
@@ -328,7 +328,7 @@ public final /* data */ class ModelSku {
                 return false;
             }
             Price price = (Price) other;
-            return this.amount == price.amount && Intrinsics3.areEqual(this.currency, price.currency) && Intrinsics3.areEqual(this.premium, price.premium);
+            return this.amount == price.amount && m.areEqual(this.currency, price.currency) && m.areEqual(this.premium, price.premium);
         }
 
         public final int getAmount() {
@@ -352,12 +352,12 @@ public final /* data */ class ModelSku {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Price(amount=");
+            StringBuilder sbU = a.U("Price(amount=");
             sbU.append(this.amount);
             sbU.append(", currency=");
             sbU.append(this.currency);
             sbU.append(", premium=");
-            return outline.M(sbU, this.premium, ")");
+            return a.M(sbU, this.premium, ")");
         }
 
         public /* synthetic */ Price(int i, String str, Map map, int i2, DefaultConstructorMarker defaultConstructorMarker) {
@@ -373,7 +373,7 @@ public final /* data */ class ModelSku {
     }
 
     public ModelSku(long j, String str, long j2, Application application, boolean z2, int i, Price price, int i2, Map<Integer, ExternalSkuStrategy> map) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.applicationId = j;
         this.name = str;
         this.id = j2;
@@ -434,7 +434,7 @@ public final /* data */ class ModelSku {
     }
 
     public final ModelSku copy(long applicationId, String name, long id2, Application application, boolean premium, int type, Price price, int flags, Map<Integer, ExternalSkuStrategy> externalSkuStrategies) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new ModelSku(applicationId, name, id2, application, premium, type, price, flags, externalSkuStrategies);
     }
 
@@ -446,7 +446,7 @@ public final /* data */ class ModelSku {
             return false;
         }
         ModelSku modelSku = (ModelSku) other;
-        return this.applicationId == modelSku.applicationId && Intrinsics3.areEqual(this.name, modelSku.name) && this.id == modelSku.id && Intrinsics3.areEqual(this.application, modelSku.application) && this.premium == modelSku.premium && this.type == modelSku.type && Intrinsics3.areEqual(this.price, modelSku.price) && this.flags == modelSku.flags && Intrinsics3.areEqual(this.externalSkuStrategies, modelSku.externalSkuStrategies);
+        return this.applicationId == modelSku.applicationId && m.areEqual(this.name, modelSku.name) && this.id == modelSku.id && m.areEqual(this.application, modelSku.application) && this.premium == modelSku.premium && this.type == modelSku.type && m.areEqual(this.price, modelSku.price) && this.flags == modelSku.flags && m.areEqual(this.externalSkuStrategies, modelSku.externalSkuStrategies);
     }
 
     public final Application getApplication() {
@@ -483,7 +483,7 @@ public final /* data */ class ModelSku {
 
     public final SkuCategory getSkuCategory() {
         long j = this.id;
-        return j == ModelSku4.PREMIUM_TIER_1_SKU_ID ? SkuCategory.NITRO_CLASSIC : j == ModelSku4.PREMIUM_TIER_2_SKU_ID ? SkuCategory.NITRO : SkuCategory.GAME;
+        return j == ModelSkuKt.PREMIUM_TIER_1_SKU_ID ? SkuCategory.NITRO_CLASSIC : j == ModelSkuKt.PREMIUM_TIER_2_SKU_ID ? SkuCategory.NITRO : SkuCategory.GAME;
     }
 
     public final int getType() {
@@ -521,7 +521,7 @@ public final /* data */ class ModelSku {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelSku(applicationId=");
+        StringBuilder sbU = a.U("ModelSku(applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -538,6 +538,6 @@ public final /* data */ class ModelSku {
         sbU.append(", flags=");
         sbU.append(this.flags);
         sbU.append(", externalSkuStrategies=");
-        return outline.M(sbU, this.externalSkuStrategies, ")");
+        return a.M(sbU, this.externalSkuStrategies, ")");
     }
 }

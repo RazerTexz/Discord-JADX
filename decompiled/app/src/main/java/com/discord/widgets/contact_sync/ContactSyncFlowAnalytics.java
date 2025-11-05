@@ -4,8 +4,8 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
+import d0.t.h0;
+import d0.z.d.m;
 import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -38,7 +38,7 @@ public final class ContactSyncFlowAnalytics {
         }
 
         public final void trackStart(boolean isOnboarding, Map<String, ? extends Object> additionalProps) {
-            Map<String, ? extends Object> mutableMap = Maps6.toMutableMap(additionalProps != null ? additionalProps : Maps6.emptyMap());
+            Map<String, ? extends Object> mutableMap = h0.toMutableMap(additionalProps != null ? additionalProps : h0.emptyMap());
             mutableMap.put("has_phone_number", Boolean.valueOf(StoreStream.INSTANCE.getUsers().getMeSnapshot().getPhoneNumber() != null));
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             analyticsTracker.relationshipSyncFlow(ContactSyncFlowAnalytics.CONTACT_SYNC_FLOW_KEY, "Flow Initialized", "Landing", 0, false, false, mutableMap);
@@ -57,7 +57,7 @@ public final class ContactSyncFlowAnalytics {
     }
 
     public ContactSyncFlowAnalytics(boolean z2, Clock clock) {
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(clock, "clock");
         this.isOnboarding = z2;
         this.clock = clock;
         this.lastStepTimestamp = clock.currentTimeMillis();
@@ -99,7 +99,7 @@ public final class ContactSyncFlowAnalytics {
     }
 
     public final void trackFlowStep(String toStep, boolean skip, boolean back, Map<String, ? extends Object> additionalProps) {
-        Intrinsics3.checkNotNullParameter(toStep, "toStep");
+        m.checkNotNullParameter(toStep, "toStep");
         long jCurrentTimeMillis = this.clock.currentTimeMillis();
         AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
         analyticsTracker.relationshipSyncFlow(CONTACT_SYNC_FLOW_KEY, this.lastStep, toStep, (int) ((jCurrentTimeMillis - this.lastStepTimestamp) / 1000), skip, back, additionalProps);

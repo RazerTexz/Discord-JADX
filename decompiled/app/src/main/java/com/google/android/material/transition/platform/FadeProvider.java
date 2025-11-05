@@ -9,7 +9,7 @@ import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import b.i.a.g.l.l.TransitionUtils5;
+import b.i.a.g.l.l.k;
 
 @RequiresApi(21)
 /* loaded from: classes3.dex */
@@ -35,7 +35,7 @@ public final class FadeProvider implements VisibilityAnimatorProvider {
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
         public void onAnimationUpdate(ValueAnimator valueAnimator) {
-            this.a.setAlpha(TransitionUtils5.e(this.f3095b, this.c, this.d, this.e, ((Float) valueAnimator.getAnimatedValue()).floatValue()));
+            this.a.setAlpha(k.e(this.f3095b, this.c, this.d, this.e, ((Float) valueAnimator.getAnimatedValue()).floatValue()));
         }
     }
 

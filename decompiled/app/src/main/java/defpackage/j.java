@@ -1,12 +1,12 @@
 package defpackage;
 
-import j0.k.Func1;
+import j0.k.b;
 import java.util.Map;
 import java.util.Set;
 
 /* compiled from: java-style lambda group */
 /* loaded from: classes2.dex */
-public final class j<T, R> implements Func1<Map<Long, ? extends Integer>, Set<? extends Long>> {
+public final class j<T, R> implements b<Map<Long, ? extends Integer>, Set<? extends Long>> {
     public static final j j = new j(0);
     public static final j k = new j(1);
     public final /* synthetic */ int l;
@@ -15,7 +15,7 @@ public final class j<T, R> implements Func1<Map<Long, ? extends Integer>, Set<? 
         this.l = i;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public final Set<? extends Long> call(Map<Long, ? extends Integer> map) {
         int i = this.l;
         if (i == 0) {

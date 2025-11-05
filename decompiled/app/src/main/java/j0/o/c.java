@@ -1,16 +1,15 @@
 package j0.o;
 
-import j0.k.Func1;
 import java.util.Objects;
 import rx.Observable;
 
 /* compiled from: RxJavaHooks.java */
 /* loaded from: classes3.dex */
-public final class c implements Func1<Observable.a, Observable.a> {
-    @Override // j0.k.Func1
+public final class c implements j0.k.b<Observable.a, Observable.a> {
+    @Override // j0.k.b
     public Observable.a call(Observable.a aVar) {
         Observable.a aVar2 = aVar;
-        Objects.requireNonNull(RxJavaPlugins.a.c());
+        Objects.requireNonNull(o.a.c());
         return aVar2;
     }
 }

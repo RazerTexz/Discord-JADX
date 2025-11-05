@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackTemporaryPaymentAuthAttempted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackTemporaryPaymentAuthAttempted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackTemporaryPaymentAuthAttempted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long paymentId = null;
     private final Long createdAt = null;
@@ -52,7 +52,7 @@ public final /* data */ class TrackTemporaryPaymentAuthAttempted implements Anal
             return false;
         }
         TrackTemporaryPaymentAuthAttempted trackTemporaryPaymentAuthAttempted = (TrackTemporaryPaymentAuthAttempted) other;
-        return Intrinsics3.areEqual(this.paymentId, trackTemporaryPaymentAuthAttempted.paymentId) && Intrinsics3.areEqual(this.createdAt, trackTemporaryPaymentAuthAttempted.createdAt) && Intrinsics3.areEqual(this.paymentType, trackTemporaryPaymentAuthAttempted.paymentType) && Intrinsics3.areEqual(this.paymentGateway, trackTemporaryPaymentAuthAttempted.paymentGateway) && Intrinsics3.areEqual(this.price, trackTemporaryPaymentAuthAttempted.price) && Intrinsics3.areEqual(this.currency, trackTemporaryPaymentAuthAttempted.currency) && Intrinsics3.areEqual(this.amount, trackTemporaryPaymentAuthAttempted.amount) && Intrinsics3.areEqual(this.amountRefunded, trackTemporaryPaymentAuthAttempted.amountRefunded) && Intrinsics3.areEqual(this.tax, trackTemporaryPaymentAuthAttempted.tax) && Intrinsics3.areEqual(this.taxInclusive, trackTemporaryPaymentAuthAttempted.taxInclusive) && Intrinsics3.areEqual(this.skuId, trackTemporaryPaymentAuthAttempted.skuId) && Intrinsics3.areEqual(this.skuType, trackTemporaryPaymentAuthAttempted.skuType) && Intrinsics3.areEqual(this.skuSubscriptionPlanId, trackTemporaryPaymentAuthAttempted.skuSubscriptionPlanId) && Intrinsics3.areEqual(this.subscriptionId, trackTemporaryPaymentAuthAttempted.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackTemporaryPaymentAuthAttempted.subscriptionType) && Intrinsics3.areEqual(this.subscriptionPaymentGatewayPlanId, trackTemporaryPaymentAuthAttempted.subscriptionPaymentGatewayPlanId) && Intrinsics3.areEqual(this.subscriptionPlanId, trackTemporaryPaymentAuthAttempted.subscriptionPlanId) && Intrinsics3.areEqual(this.subscriptionCreatedAt, trackTemporaryPaymentAuthAttempted.subscriptionCreatedAt) && Intrinsics3.areEqual(this.subscriptionCurrentPeriodStart, trackTemporaryPaymentAuthAttempted.subscriptionCurrentPeriodStart) && Intrinsics3.areEqual(this.subscriptionCurrentPeriodEnd, trackTemporaryPaymentAuthAttempted.subscriptionCurrentPeriodEnd) && Intrinsics3.areEqual(this.paymentSourceId, trackTemporaryPaymentAuthAttempted.paymentSourceId) && Intrinsics3.areEqual(this.paymentSourceCountry, trackTemporaryPaymentAuthAttempted.paymentSourceCountry) && Intrinsics3.areEqual(this.failureMessage, trackTemporaryPaymentAuthAttempted.failureMessage) && Intrinsics3.areEqual(this.loadId, trackTemporaryPaymentAuthAttempted.loadId) && Intrinsics3.areEqual(this.isGift, trackTemporaryPaymentAuthAttempted.isGift) && Intrinsics3.areEqual(this.captured, trackTemporaryPaymentAuthAttempted.captured);
+        return m.areEqual(this.paymentId, trackTemporaryPaymentAuthAttempted.paymentId) && m.areEqual(this.createdAt, trackTemporaryPaymentAuthAttempted.createdAt) && m.areEqual(this.paymentType, trackTemporaryPaymentAuthAttempted.paymentType) && m.areEqual(this.paymentGateway, trackTemporaryPaymentAuthAttempted.paymentGateway) && m.areEqual(this.price, trackTemporaryPaymentAuthAttempted.price) && m.areEqual(this.currency, trackTemporaryPaymentAuthAttempted.currency) && m.areEqual(this.amount, trackTemporaryPaymentAuthAttempted.amount) && m.areEqual(this.amountRefunded, trackTemporaryPaymentAuthAttempted.amountRefunded) && m.areEqual(this.tax, trackTemporaryPaymentAuthAttempted.tax) && m.areEqual(this.taxInclusive, trackTemporaryPaymentAuthAttempted.taxInclusive) && m.areEqual(this.skuId, trackTemporaryPaymentAuthAttempted.skuId) && m.areEqual(this.skuType, trackTemporaryPaymentAuthAttempted.skuType) && m.areEqual(this.skuSubscriptionPlanId, trackTemporaryPaymentAuthAttempted.skuSubscriptionPlanId) && m.areEqual(this.subscriptionId, trackTemporaryPaymentAuthAttempted.subscriptionId) && m.areEqual(this.subscriptionType, trackTemporaryPaymentAuthAttempted.subscriptionType) && m.areEqual(this.subscriptionPaymentGatewayPlanId, trackTemporaryPaymentAuthAttempted.subscriptionPaymentGatewayPlanId) && m.areEqual(this.subscriptionPlanId, trackTemporaryPaymentAuthAttempted.subscriptionPlanId) && m.areEqual(this.subscriptionCreatedAt, trackTemporaryPaymentAuthAttempted.subscriptionCreatedAt) && m.areEqual(this.subscriptionCurrentPeriodStart, trackTemporaryPaymentAuthAttempted.subscriptionCurrentPeriodStart) && m.areEqual(this.subscriptionCurrentPeriodEnd, trackTemporaryPaymentAuthAttempted.subscriptionCurrentPeriodEnd) && m.areEqual(this.paymentSourceId, trackTemporaryPaymentAuthAttempted.paymentSourceId) && m.areEqual(this.paymentSourceCountry, trackTemporaryPaymentAuthAttempted.paymentSourceCountry) && m.areEqual(this.failureMessage, trackTemporaryPaymentAuthAttempted.failureMessage) && m.areEqual(this.loadId, trackTemporaryPaymentAuthAttempted.loadId) && m.areEqual(this.isGift, trackTemporaryPaymentAuthAttempted.isGift) && m.areEqual(this.captured, trackTemporaryPaymentAuthAttempted.captured);
     }
 
     public int hashCode() {
@@ -111,7 +111,7 @@ public final /* data */ class TrackTemporaryPaymentAuthAttempted implements Anal
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackTemporaryPaymentAuthAttempted(paymentId=");
+        StringBuilder sbU = a.U("TrackTemporaryPaymentAuthAttempted(paymentId=");
         sbU.append(this.paymentId);
         sbU.append(", createdAt=");
         sbU.append(this.createdAt);
@@ -162,6 +162,6 @@ public final /* data */ class TrackTemporaryPaymentAuthAttempted implements Anal
         sbU.append(", isGift=");
         sbU.append(this.isGift);
         sbU.append(", captured=");
-        return outline.D(sbU, this.captured, ")");
+        return a.D(sbU, this.captured, ")");
     }
 }

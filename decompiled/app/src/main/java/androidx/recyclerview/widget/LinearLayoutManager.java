@@ -14,7 +14,7 @@ import androidx.annotation.RestrictTo;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.List;
 
 /* loaded from: classes.dex */
@@ -112,7 +112,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("AnchorInfo{mPosition=");
+            StringBuilder sbU = a.U("AnchorInfo{mPosition=");
             sbU.append(this.mPosition);
             sbU.append(", mCoordinate=");
             sbU.append(this.mCoordinate);
@@ -184,7 +184,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         }
 
         public void log() {
-            StringBuilder sbU = outline.U("avail:");
+            StringBuilder sbU = a.U("avail:");
             sbU.append(this.mAvailable);
             sbU.append(", ind:");
             sbU.append(this.mCurrentPosition);
@@ -429,7 +429,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         Log.d(TAG, "internal representation of views on the screen");
         for (int i = 0; i < getChildCount(); i++) {
             View childAt = getChildAt(i);
-            StringBuilder sbU = outline.U("item ");
+            StringBuilder sbU = a.U("item ");
             sbU.append(getPosition(childAt));
             sbU.append(", coord:");
             sbU.append(this.mOrientationHelper.getDecoratedStart(childAt));
@@ -1440,7 +1440,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
 
     public void setOrientation(int i) {
         if (i != 0 && i != 1) {
-            throw new IllegalArgumentException(outline.q("invalid orientation:", i));
+            throw new IllegalArgumentException(a.q("invalid orientation:", i));
         }
         assertNotInLayoutOrScroll(null);
         if (i != this.mOrientation || this.mOrientationHelper == null) {
@@ -1496,7 +1496,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
     }
 
     public void validateChildOrder() {
-        StringBuilder sbU = outline.U("validating child count ");
+        StringBuilder sbU = a.U("validating child count ");
         sbU.append(getChildCount());
         Log.d(TAG, sbU.toString());
         if (getChildCount() < 1) {
@@ -1511,7 +1511,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
                 int decoratedStart2 = this.mOrientationHelper.getDecoratedStart(childAt);
                 if (position2 < position) {
                     logChildren();
-                    StringBuilder sbU2 = outline.U("detected invalid position. loc invalid? ");
+                    StringBuilder sbU2 = a.U("detected invalid position. loc invalid? ");
                     sbU2.append(decoratedStart2 < decoratedStart);
                     throw new RuntimeException(sbU2.toString());
                 }
@@ -1528,7 +1528,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
             int decoratedStart3 = this.mOrientationHelper.getDecoratedStart(childAt2);
             if (position3 < position) {
                 logChildren();
-                StringBuilder sbU3 = outline.U("detected invalid position. loc invalid? ");
+                StringBuilder sbU3 = a.U("detected invalid position. loc invalid? ");
                 sbU3.append(decoratedStart3 < decoratedStart);
                 throw new RuntimeException(sbU3.toString());
             }

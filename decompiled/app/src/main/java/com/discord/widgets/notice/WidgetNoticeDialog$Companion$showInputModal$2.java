@@ -1,16 +1,16 @@
 package com.discord.widgets.notice;
 
 import android.view.View;
-import b.i.c.m.d.k.CommonUtils;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import b.i.c.m.d.k.h;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetNoticeDialog.kt */
 /* loaded from: classes2.dex */
-public final class WidgetNoticeDialog$Companion$showInputModal$2 extends Lambda implements Function1<View, Unit> {
+public final class WidgetNoticeDialog$Companion$showInputModal$2 extends o implements Function1<View, Unit> {
     public final /* synthetic */ Function0 $onCancelClicked;
     public final /* synthetic */ boolean $shouldHideKeyboard;
 
@@ -29,10 +29,10 @@ public final class WidgetNoticeDialog$Companion$showInputModal$2 extends Lambda 
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         this.$onCancelClicked.invoke();
         if (this.$shouldHideKeyboard) {
-            CommonUtils.r(view.getContext(), view);
+            h.r(view.getContext(), view);
         }
     }
 }

@@ -23,7 +23,6 @@ import android.view.View;
 import androidx.constraintlayout.motion.widget.Key;
 import androidx.core.view.ViewCompat;
 import b.i.a.f.e.o.f;
-import b.k.a.a.AlphaPatternDrawable;
 
 /* loaded from: classes3.dex */
 public class ColorPickerView extends View {
@@ -40,7 +39,7 @@ public class ColorPickerView extends View {
     public Rect K;
     public Rect L;
     public Point M;
-    public AlphaPatternDrawable N;
+    public b.k.a.a.a N;
     public c O;
     public int j;
     public int k;
@@ -480,9 +479,9 @@ public class ColorPickerView extends View {
             int i12 = rect4.left + 1;
             int i13 = rect4.bottom;
             this.L = new Rect(i12, (i13 - this.k) + 1, rect4.right - 1, i13 - 1);
-            AlphaPatternDrawable alphaPatternDrawable = new AlphaPatternDrawable(f.S(getContext(), 4.0f));
-            this.N = alphaPatternDrawable;
-            alphaPatternDrawable.setBounds(Math.round(this.L.left), Math.round(this.L.top), Math.round(this.L.right), Math.round(this.L.bottom));
+            b.k.a.a.a aVar = new b.k.a.a.a(f.S(getContext(), 4.0f));
+            this.N = aVar;
+            aVar.setBounds(Math.round(this.L.left), Math.round(this.L.top), Math.round(this.L.right), Math.round(this.L.bottom));
         }
     }
 

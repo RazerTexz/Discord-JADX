@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
+import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkActionBugReportSubmit.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionBugReportSubmit implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
+public final /* data */ class TrackNetworkActionBugReportSubmit implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackNetworkMetadata trackNetworkMetadata;
@@ -20,7 +20,7 @@ public final /* data */ class TrackNetworkActionBugReportSubmit implements Analy
     private final CharSequence asanaInboxId = null;
     private final transient String analyticsSchemaTypeName = "network_action_bug_report_submit";
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
     public void b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
@@ -39,7 +39,7 @@ public final /* data */ class TrackNetworkActionBugReportSubmit implements Analy
             return false;
         }
         TrackNetworkActionBugReportSubmit trackNetworkActionBugReportSubmit = (TrackNetworkActionBugReportSubmit) other;
-        return Intrinsics3.areEqual(this.priority, trackNetworkActionBugReportSubmit.priority) && Intrinsics3.areEqual(this.asanaInboxId, trackNetworkActionBugReportSubmit.asanaInboxId);
+        return m.areEqual(this.priority, trackNetworkActionBugReportSubmit.priority) && m.areEqual(this.asanaInboxId, trackNetworkActionBugReportSubmit.asanaInboxId);
     }
 
     public int hashCode() {
@@ -50,9 +50,9 @@ public final /* data */ class TrackNetworkActionBugReportSubmit implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkActionBugReportSubmit(priority=");
+        StringBuilder sbU = a.U("TrackNetworkActionBugReportSubmit(priority=");
         sbU.append(this.priority);
         sbU.append(", asanaInboxId=");
-        return outline.E(sbU, this.asanaInboxId, ")");
+        return a.E(sbU, this.asanaInboxId, ")");
     }
 }

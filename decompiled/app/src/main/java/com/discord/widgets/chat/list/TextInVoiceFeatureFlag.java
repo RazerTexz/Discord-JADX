@@ -7,9 +7,9 @@ import com.discord.models.guild.Guild;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.g;
+import d0.z.d.m;
+import j0.l.e.k;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
@@ -21,7 +21,7 @@ public final class TextInVoiceFeatureFlag {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(TextInVoiceFeatureFlag2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(TextInVoiceFeatureFlag$Companion$INSTANCE$2.INSTANCE);
     private final StoreExperiments storeExperiments;
     private final StoreGuilds storeGuilds;
 
@@ -63,8 +63,8 @@ public final class TextInVoiceFeatureFlag {
     }
 
     public TextInVoiceFeatureFlag(StoreExperiments storeExperiments, StoreGuilds storeGuilds) {
-        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeExperiments, "storeExperiments");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
         this.storeExperiments = storeExperiments;
         this.storeGuilds = storeGuilds;
     }
@@ -86,12 +86,12 @@ public final class TextInVoiceFeatureFlag {
 
     public final Observable<Boolean> observeEnabled(Long guildId) {
         if (guildId == null) {
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(Boolean.FALSE);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(false)");
-            return scalarSynchronousObservable;
+            k kVar = new k(Boolean.FALSE);
+            m.checkNotNullExpressionValue(kVar, "Observable.just(false)");
+            return kVar;
         }
         Observable<Boolean> observableJ = Observable.j(this.storeExperiments.observeGuildExperiment("2022-03_text_in_voice", guildId.longValue(), true), this.storeGuilds.observeGuild(guildId.longValue()), new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…xperiment, guild)\n      }");
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…xperiment, guild)\n      }");
         return observableJ;
     }
 

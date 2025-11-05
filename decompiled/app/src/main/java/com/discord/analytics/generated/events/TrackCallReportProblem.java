@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackCallReportProblem.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCallReportProblem implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackCallReportProblem implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -53,7 +53,7 @@ public final /* data */ class TrackCallReportProblem implements AnalyticsSchema,
             return false;
         }
         TrackCallReportProblem trackCallReportProblem = (TrackCallReportProblem) other;
-        return Intrinsics3.areEqual(this.channelId, trackCallReportProblem.channelId) && Intrinsics3.areEqual(this.channelType, trackCallReportProblem.channelType) && Intrinsics3.areEqual(this.guildId, trackCallReportProblem.guildId) && Intrinsics3.areEqual(this.rtcConnectionId, trackCallReportProblem.rtcConnectionId) && Intrinsics3.areEqual(this.duration, trackCallReportProblem.duration) && Intrinsics3.areEqual(this.voiceStateCount, trackCallReportProblem.voiceStateCount) && Intrinsics3.areEqual(this.videoStreamCount, trackCallReportProblem.videoStreamCount) && Intrinsics3.areEqual(this.videoEnabled, trackCallReportProblem.videoEnabled) && Intrinsics3.areEqual(this.mediaSessionId, trackCallReportProblem.mediaSessionId) && Intrinsics3.areEqual(this.rating, trackCallReportProblem.rating) && Intrinsics3.areEqual(this.feedback, trackCallReportProblem.feedback) && Intrinsics3.areEqual(this.reasonCode, trackCallReportProblem.reasonCode) && Intrinsics3.areEqual(this.reasonDescription, trackCallReportProblem.reasonDescription) && Intrinsics3.areEqual(this.audioInputMode, trackCallReportProblem.audioInputMode) && Intrinsics3.areEqual(this.automaticAudioInputSensitivityEnabled, trackCallReportProblem.automaticAudioInputSensitivityEnabled) && Intrinsics3.areEqual(this.audioInputSensitivity, trackCallReportProblem.audioInputSensitivity) && Intrinsics3.areEqual(this.echoCancellationEnabled, trackCallReportProblem.echoCancellationEnabled) && Intrinsics3.areEqual(this.noiseSuppressionEnabled, trackCallReportProblem.noiseSuppressionEnabled) && Intrinsics3.areEqual(this.noiseCancellationEnabled, trackCallReportProblem.noiseCancellationEnabled) && Intrinsics3.areEqual(this.automaticGainControlEnabled, trackCallReportProblem.automaticGainControlEnabled) && Intrinsics3.areEqual(this.audioOutputMode, trackCallReportProblem.audioOutputMode) && Intrinsics3.areEqual(this.voiceOutputVolume, trackCallReportProblem.voiceOutputVolume) && Intrinsics3.areEqual(this.videoHardwareScalingEnabled, trackCallReportProblem.videoHardwareScalingEnabled) && Intrinsics3.areEqual(this.audioMode, trackCallReportProblem.audioMode) && Intrinsics3.areEqual(this.inputDeviceName, trackCallReportProblem.inputDeviceName) && Intrinsics3.areEqual(this.outputDeviceName, trackCallReportProblem.outputDeviceName) && Intrinsics3.areEqual(this.videoDeviceName, trackCallReportProblem.videoDeviceName);
+        return m.areEqual(this.channelId, trackCallReportProblem.channelId) && m.areEqual(this.channelType, trackCallReportProblem.channelType) && m.areEqual(this.guildId, trackCallReportProblem.guildId) && m.areEqual(this.rtcConnectionId, trackCallReportProblem.rtcConnectionId) && m.areEqual(this.duration, trackCallReportProblem.duration) && m.areEqual(this.voiceStateCount, trackCallReportProblem.voiceStateCount) && m.areEqual(this.videoStreamCount, trackCallReportProblem.videoStreamCount) && m.areEqual(this.videoEnabled, trackCallReportProblem.videoEnabled) && m.areEqual(this.mediaSessionId, trackCallReportProblem.mediaSessionId) && m.areEqual(this.rating, trackCallReportProblem.rating) && m.areEqual(this.feedback, trackCallReportProblem.feedback) && m.areEqual(this.reasonCode, trackCallReportProblem.reasonCode) && m.areEqual(this.reasonDescription, trackCallReportProblem.reasonDescription) && m.areEqual(this.audioInputMode, trackCallReportProblem.audioInputMode) && m.areEqual(this.automaticAudioInputSensitivityEnabled, trackCallReportProblem.automaticAudioInputSensitivityEnabled) && m.areEqual(this.audioInputSensitivity, trackCallReportProblem.audioInputSensitivity) && m.areEqual(this.echoCancellationEnabled, trackCallReportProblem.echoCancellationEnabled) && m.areEqual(this.noiseSuppressionEnabled, trackCallReportProblem.noiseSuppressionEnabled) && m.areEqual(this.noiseCancellationEnabled, trackCallReportProblem.noiseCancellationEnabled) && m.areEqual(this.automaticGainControlEnabled, trackCallReportProblem.automaticGainControlEnabled) && m.areEqual(this.audioOutputMode, trackCallReportProblem.audioOutputMode) && m.areEqual(this.voiceOutputVolume, trackCallReportProblem.voiceOutputVolume) && m.areEqual(this.videoHardwareScalingEnabled, trackCallReportProblem.videoHardwareScalingEnabled) && m.areEqual(this.audioMode, trackCallReportProblem.audioMode) && m.areEqual(this.inputDeviceName, trackCallReportProblem.inputDeviceName) && m.areEqual(this.outputDeviceName, trackCallReportProblem.outputDeviceName) && m.areEqual(this.videoDeviceName, trackCallReportProblem.videoDeviceName);
     }
 
     public int hashCode() {
@@ -114,7 +114,7 @@ public final /* data */ class TrackCallReportProblem implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackCallReportProblem(channelId=");
+        StringBuilder sbU = a.U("TrackCallReportProblem(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -167,6 +167,6 @@ public final /* data */ class TrackCallReportProblem implements AnalyticsSchema,
         sbU.append(", outputDeviceName=");
         sbU.append(this.outputDeviceName);
         sbU.append(", videoDeviceName=");
-        return outline.E(sbU, this.videoDeviceName, ")");
+        return a.E(sbU, this.videoDeviceName, ")");
     }
 }

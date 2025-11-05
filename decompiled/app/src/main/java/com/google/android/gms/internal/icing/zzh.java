@@ -3,7 +3,7 @@ package com.google.android.gms.internal.icing;
 import android.accounts.Account;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.h.k.m;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Arrays;
@@ -27,7 +27,7 @@ public final class zzh extends AbstractSafeParcelable {
     public final boolean equals(Object obj) {
         if (obj instanceof zzh) {
             zzh zzhVar = (zzh) obj;
-            if (AnimatableValueParser.h0(this.k, zzhVar.k) && AnimatableValueParser.h0(Boolean.valueOf(this.l), Boolean.valueOf(zzhVar.l)) && AnimatableValueParser.h0(this.m, zzhVar.m) && Arrays.equals(this.j, zzhVar.j)) {
+            if (d.h0(this.k, zzhVar.k) && d.h0(Boolean.valueOf(this.l), Boolean.valueOf(zzhVar.l)) && d.h0(this.m, zzhVar.m) && Arrays.equals(this.j, zzhVar.j)) {
                 return true;
             }
         }
@@ -40,13 +40,13 @@ public final class zzh extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.v2(parcel, 1, this.j, i, false);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.v2(parcel, 1, this.j, i, false);
+        d.t2(parcel, 2, this.k, false);
         boolean z2 = this.l;
         parcel.writeInt(262147);
         parcel.writeInt(z2 ? 1 : 0);
-        AnimatableValueParser.s2(parcel, 4, this.m, i, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.s2(parcel, 4, this.m, i, false);
+        d.A2(parcel, iY2);
     }
 }

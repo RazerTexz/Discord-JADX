@@ -10,13 +10,10 @@ import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
-import b.i.a.b.AutoValue_Event;
-import b.i.a.b.Encoding2;
-import b.i.a.b.Priority3;
-import b.i.a.b.TransportFactory;
+import b.i.a.b.b;
+import b.i.a.b.g;
 import b.i.a.f.e.o.j.a;
-import b.i.c.FirebaseApp2;
-import b.i.c.p.h.JsonDataEncoderBuilder4;
+import b.i.c.p.h.d;
 import b.i.c.s.v;
 import b.i.c.w.c;
 import b.i.c.w.m;
@@ -96,9 +93,9 @@ public class FirebaseMessagingService extends EnhancedIntentService {
         if (q.c(intent)) {
             if (intent != null) {
                 if ("1".equals(intent.getStringExtra("google.c.a.tc"))) {
-                    FirebaseApp2 firebaseApp2B = FirebaseApp2.b();
-                    firebaseApp2B.a();
-                    b.i.c.j.a.a aVar = (b.i.c.j.a.a) firebaseApp2B.g.a(b.i.c.j.a.a.class);
+                    b.i.c.c cVarB = b.i.c.c.b();
+                    cVarB.a();
+                    b.i.c.j.a.a aVar = (b.i.c.j.a.a) cVarB.g.a(b.i.c.j.a.a.class);
                     if (Log.isLoggable("FirebaseMessaging", 3)) {
                         Log.d("FirebaseMessaging", "Received event with track-conversion=true. Setting user property and reengagement event");
                     }
@@ -141,10 +138,10 @@ public class FirebaseMessagingService extends EnhancedIntentService {
                 }
                 if (!ACTION_DIRECT_BOOT_REMOTE_INTENT.equals(intent.getAction())) {
                     try {
-                        FirebaseApp2.b();
-                        FirebaseApp2 firebaseApp2B = FirebaseApp2.b();
-                        firebaseApp2B.a();
-                        Context context = firebaseApp2B.d;
+                        b.i.c.c.b();
+                        b.i.c.c cVarB = b.i.c.c.b();
+                        cVarB.a();
+                        Context context = cVarB.d;
                         SharedPreferences sharedPreferences = context.getSharedPreferences("com.google.firebase.messaging", 0);
                         if (sharedPreferences.contains("export_to_big_query")) {
                             z2 = sharedPreferences.getBoolean("export_to_big_query", false);
@@ -162,10 +159,10 @@ public class FirebaseMessagingService extends EnhancedIntentService {
                     }
                 }
                 if (z2) {
-                    TransportFactory transportFactory = FirebaseMessaging.a;
-                    if (transportFactory != null) {
+                    g gVar = FirebaseMessaging.a;
+                    if (gVar != null) {
                         try {
-                            transportFactory.a("FCM_CLIENT_EVENT_LOGGING", String.class, new Encoding2("json"), p.a).a(new AutoValue_Event(null, ((JsonDataEncoderBuilder4) q.a).a(new m.b(new m("MESSAGE_DELIVERED", intent))), Priority3.VERY_LOW));
+                            gVar.a("FCM_CLIENT_EVENT_LOGGING", String.class, new b("json"), p.a).a(new b.i.a.b.a(null, ((d) q.a).a(new m.b(new m("MESSAGE_DELIVERED", intent))), b.i.a.b.d.VERY_LOW));
                         } catch (EncodingException unused3) {
                             Log.d("FirebaseMessaging", "Failed to encode big query analytics payload. Skip sending");
                         }

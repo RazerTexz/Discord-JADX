@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackChannel.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class TrackChannel {
             return false;
         }
         TrackChannel trackChannel = (TrackChannel) other;
-        return Intrinsics3.areEqual(this.channelId, trackChannel.channelId) && Intrinsics3.areEqual(this.channelType, trackChannel.channelType) && Intrinsics3.areEqual(this.channelSizeTotal, trackChannel.channelSizeTotal) && Intrinsics3.areEqual(this.channelSizeOnline, trackChannel.channelSizeOnline) && Intrinsics3.areEqual(this.channelMemberPerms, trackChannel.channelMemberPerms) && Intrinsics3.areEqual(this.channelHidden, trackChannel.channelHidden);
+        return m.areEqual(this.channelId, trackChannel.channelId) && m.areEqual(this.channelType, trackChannel.channelType) && m.areEqual(this.channelSizeTotal, trackChannel.channelSizeTotal) && m.areEqual(this.channelSizeOnline, trackChannel.channelSizeOnline) && m.areEqual(this.channelMemberPerms, trackChannel.channelMemberPerms) && m.areEqual(this.channelHidden, trackChannel.channelHidden);
     }
 
     public int hashCode() {
@@ -58,7 +58,7 @@ public final /* data */ class TrackChannel {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackChannel(channelId=");
+        StringBuilder sbU = a.U("TrackChannel(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -69,6 +69,6 @@ public final /* data */ class TrackChannel {
         sbU.append(", channelMemberPerms=");
         sbU.append(this.channelMemberPerms);
         sbU.append(", channelHidden=");
-        return outline.D(sbU, this.channelHidden, ")");
+        return a.D(sbU, this.channelHidden, ")");
     }
 }

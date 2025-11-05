@@ -12,7 +12,7 @@ import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import androidx.core.view.ViewCompat;
 import androidx.view.Lifecycle;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
@@ -138,10 +138,10 @@ public abstract class FragmentTransaction {
                 this.mSharedElementTargetNames = new ArrayList<>();
             } else {
                 if (this.mSharedElementTargetNames.contains(str)) {
-                    throw new IllegalArgumentException(outline.y("A shared element with the target name '", str, "' has already been added to the transaction."));
+                    throw new IllegalArgumentException(a.y("A shared element with the target name '", str, "' has already been added to the transaction."));
                 }
                 if (this.mSharedElementSourceNames.contains(transitionName)) {
-                    throw new IllegalArgumentException(outline.y("A shared element with the source name '", transitionName, "' has already been added to the transaction."));
+                    throw new IllegalArgumentException(a.y("A shared element with the source name '", transitionName, "' has already been added to the transaction."));
                 }
             }
             this.mSharedElementSourceNames.add(transitionName);
@@ -193,7 +193,7 @@ public abstract class FragmentTransaction {
         Class<?> cls = fragment.getClass();
         int modifiers = cls.getModifiers();
         if (cls.isAnonymousClass() || !Modifier.isPublic(modifiers) || (cls.isMemberClass() && !Modifier.isStatic(modifiers))) {
-            StringBuilder sbU = outline.U("Fragment ");
+            StringBuilder sbU = a.U("Fragment ");
             sbU.append(cls.getCanonicalName());
             sbU.append(" must be a public static class to be  properly recreated from instance state.");
             throw new IllegalStateException(sbU.toString());
@@ -205,7 +205,7 @@ public abstract class FragmentTransaction {
                 sb.append("Can't change tag of fragment ");
                 sb.append(fragment);
                 sb.append(": was ");
-                throw new IllegalStateException(outline.K(sb, fragment.mTag, " now ", str));
+                throw new IllegalStateException(a.K(sb, fragment.mTag, " now ", str));
             }
             fragment.mTag = str;
         }

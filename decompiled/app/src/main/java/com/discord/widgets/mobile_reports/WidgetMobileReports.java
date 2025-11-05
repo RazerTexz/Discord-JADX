@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.ProgressBar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppScreen2;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.report.NodeElementResult;
 import com.discord.api.report.ReportNodeChild;
@@ -18,15 +18,15 @@ import com.discord.databinding.WidgetMobileReportsBinding;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.widgets.mobile_reports.MobileReportArgs;
 import com.discord.widgets.mobile_reports.MobileReportsViewModel;
-import com.discord.widgets.mobile_reports.WidgetMobileReports2;
-import d0.LazyJVM;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.t.u;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -38,7 +38,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetMobileReports.kt */
 /* loaded from: classes2.dex */
 public final class WidgetMobileReports extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetMobileReports.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMobileReportsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetMobileReports.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMobileReportsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -58,23 +58,23 @@ public final class WidgetMobileReports extends AppFragment {
         }
 
         public final void launchDirectoryServerReport(Context context, long guildId, long hubId, long channelId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.d(context, WidgetMobileReports.class, new WidgetMobileReports2.DirectoryServer(guildId, hubId, channelId));
+            m.checkNotNullParameter(context, "context");
+            j.d(context, WidgetMobileReports.class, new MobileReportArgs.DirectoryServer(guildId, hubId, channelId));
         }
 
         public final void launchGuildScheduledEventReport(Context context, long guildId, long eventId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.d(context, WidgetMobileReports.class, new WidgetMobileReports2.GuildScheduledEvent(guildId, eventId));
+            m.checkNotNullParameter(context, "context");
+            j.d(context, WidgetMobileReports.class, new MobileReportArgs.GuildScheduledEvent(guildId, eventId));
         }
 
         public final void launchMessageReport(Context context, long messageId, long channelId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.d(context, WidgetMobileReports.class, new WidgetMobileReports2.Message(messageId, channelId));
+            m.checkNotNullParameter(context, "context");
+            j.d(context, WidgetMobileReports.class, new MobileReportArgs.Message(messageId, channelId));
         }
 
         public final void launchStageChannelReport(Context context, long channelId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.d(context, WidgetMobileReports.class, new WidgetMobileReports2.StageChannel(channelId));
+            m.checkNotNullParameter(context, "context");
+            j.d(context, WidgetMobileReports.class, new MobileReportArgs.StageChannel(channelId));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -84,7 +84,7 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ MobileReportsViewModel.ViewState.Menu $viewState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -107,13 +107,13 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public final /* synthetic */ ReportsMenuNode $nextNodeView;
         public final /* synthetic */ MobileReportsViewModel.ViewState.Menu $viewState;
 
         /* compiled from: WidgetMobileReports.kt */
         /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -153,7 +153,7 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<ReportNodeChild, MobileReportsViewModel.NodeState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function2<ReportNodeChild, MobileReportsViewModel.NodeState, Unit> {
         public AnonymousClass1() {
             super(2);
         }
@@ -166,17 +166,17 @@ public final class WidgetMobileReports extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ReportNodeChild reportNodeChild, MobileReportsViewModel.NodeState nodeState) {
-            Intrinsics3.checkNotNullParameter(reportNodeChild, "destination");
-            Intrinsics3.checkNotNullParameter(nodeState, "nodeState");
+            m.checkNotNullParameter(reportNodeChild, "destination");
+            m.checkNotNullParameter(nodeState, "nodeState");
             MobileReportsViewModel mobileReportsViewModelAccess$getViewModel$p = WidgetMobileReports.access$getViewModel$p(WidgetMobileReports.this);
             MobileReportsViewModel.CheckboxElement checkboxElement = nodeState.getCheckboxElement();
-            mobileReportsViewModelAccess$getViewModel$p.handleNext(reportNodeChild, checkboxElement != null ? new NodeElementResult(checkboxElement.getName(), _Collections.toList(checkboxElement.getSelections())) : null);
+            mobileReportsViewModelAccess$getViewModel$p.handleNext(reportNodeChild, checkboxElement != null ? new NodeElementResult(checkboxElement.getName(), u.toList(checkboxElement.getSelections())) : null);
         }
     }
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -195,7 +195,7 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public AnonymousClass3() {
             super(0);
         }
@@ -217,7 +217,7 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass4 extends o implements Function0<Unit> {
         public AnonymousClass4() {
             super(0);
         }
@@ -236,7 +236,7 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$onViewBound$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Boolean> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function0<Boolean> {
         public AnonymousClass1(MobileReportsViewModel mobileReportsViewModel) {
             super(0, mobileReportsViewModel, MobileReportsViewModel.class, "handleBack", "handleBack()Z", 0);
         }
@@ -254,7 +254,7 @@ public final class WidgetMobileReports extends AppFragment {
 
     /* compiled from: WidgetMobileReports.kt */
     /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<MobileReportsViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<MobileReportsViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -268,7 +268,7 @@ public final class WidgetMobileReports extends AppFragment {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MobileReportsViewModel.ViewState viewState) {
             AppActivity appActivity;
-            Intrinsics3.checkNotNullParameter(viewState, "viewState");
+            m.checkNotNullParameter(viewState, "viewState");
             if (viewState instanceof MobileReportsViewModel.ViewState.Menu) {
                 WidgetMobileReports.access$configureUI(WidgetMobileReports.this, (MobileReportsViewModel.ViewState.Menu) viewState);
             } else {
@@ -282,18 +282,18 @@ public final class WidgetMobileReports extends AppFragment {
 
     public WidgetMobileReports() {
         super(R.layout.widget_mobile_reports);
-        this.args = LazyJVM.lazy(new WidgetMobileReports$$special$$inlined$args$1(this, "intent_args_key"));
-        WidgetMobileReports5 widgetMobileReports5 = new WidgetMobileReports5(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(MobileReportsViewModel.class), new WidgetMobileReports$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetMobileReports5));
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetMobileReports3.INSTANCE, null, 2, null);
+        this.args = g.lazy(new WidgetMobileReports$$special$$inlined$args$1(this, "intent_args_key"));
+        WidgetMobileReports$viewModel$2 widgetMobileReports$viewModel$2 = new WidgetMobileReports$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(MobileReportsViewModel.class), new WidgetMobileReports$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetMobileReports$viewModel$2));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetMobileReports$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetMobileReports widgetMobileReports, MobileReportsViewModel.ViewState.Menu menu) {
         widgetMobileReports.configureUI(menu);
     }
 
-    public static final /* synthetic */ WidgetMobileReports2 access$getArgs$p(WidgetMobileReports widgetMobileReports) {
+    public static final /* synthetic */ MobileReportArgs access$getArgs$p(WidgetMobileReports widgetMobileReports) {
         return widgetMobileReports.getArgs();
     }
 
@@ -308,7 +308,7 @@ public final class WidgetMobileReports extends AppFragment {
     private final void configureUI(MobileReportsViewModel.ViewState.Menu viewState) {
         setActionBarDisplayHomeAsUpEnabled(!viewState.shouldHideBackArrow());
         ProgressBar progressBar = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.mobileReportsProgressBar");
+        m.checkNotNullExpressionValue(progressBar, "binding.mobileReportsProgressBar");
         progressBar.setVisibility(8);
         ReportsMenuNode reportsMenuNode = (ReportsMenuNode) getBinding().f2496b.getChildAt(0);
         MobileReportsViewModel.NodeState nodeStateGenNodeState = viewState.genNodeState();
@@ -319,7 +319,7 @@ public final class WidgetMobileReports extends AppFragment {
             ViewExtensions.fadeIn$default(reportsMenuNodeCreateNodeView, 0L, null, null, new AnonymousClass1(viewState), 7, null);
             return;
         }
-        if (!(!Intrinsics3.areEqual(reportsMenuNode.getPrevViewState() != null ? r3.getNode() : null, nodeStateGenNodeState.getNode()))) {
+        if (!(!m.areEqual(reportsMenuNode.getPrevViewState() != null ? r3.getNode() : null, nodeStateGenNodeState.getNode()))) {
             reportsMenuNode.setup(nodeStateGenNodeState);
             setActionBarDisplayHomeAsUpEnabled(!viewState.shouldHideBackArrow());
         } else {
@@ -339,8 +339,8 @@ public final class WidgetMobileReports extends AppFragment {
         return reportsMenuNode;
     }
 
-    private final WidgetMobileReports2 getArgs() {
-        return (WidgetMobileReports2) this.args.getValue();
+    private final MobileReportArgs getArgs() {
+        return (MobileReportArgs) this.args.getValue();
     }
 
     private final WidgetMobileReportsBinding getBinding() {
@@ -353,10 +353,10 @@ public final class WidgetMobileReports extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setActionBarDisplayHomeAsUpEnabled(false);
-        AppFragment.setOnBackPressed$default(this, new WidgetMobileReports4(new AnonymousClass1(getViewModel())), 0, 2, null);
+        AppFragment.setOnBackPressed$default(this, new WidgetMobileReports$sam$rx_functions_Func0$0(new AnonymousClass1(getViewModel())), 0, 2, null);
     }
 
     @Override // com.discord.app.AppFragment

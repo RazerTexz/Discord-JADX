@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivitySessionJoined.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivitySessionJoined implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackActivitySessionJoined implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long guildId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackActivitySessionJoined implements AnalyticsSch
             return false;
         }
         TrackActivitySessionJoined trackActivitySessionJoined = (TrackActivitySessionJoined) other;
-        return Intrinsics3.areEqual(this.channelId, trackActivitySessionJoined.channelId) && Intrinsics3.areEqual(this.guildId, trackActivitySessionJoined.guildId) && Intrinsics3.areEqual(this.mediaSessionId, trackActivitySessionJoined.mediaSessionId) && Intrinsics3.areEqual(this.activitySessionId, trackActivitySessionJoined.activitySessionId) && Intrinsics3.areEqual(this.applicationId, trackActivitySessionJoined.applicationId);
+        return m.areEqual(this.channelId, trackActivitySessionJoined.channelId) && m.areEqual(this.guildId, trackActivitySessionJoined.guildId) && m.areEqual(this.mediaSessionId, trackActivitySessionJoined.mediaSessionId) && m.areEqual(this.activitySessionId, trackActivitySessionJoined.activitySessionId) && m.areEqual(this.applicationId, trackActivitySessionJoined.applicationId);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class TrackActivitySessionJoined implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivitySessionJoined(channelId=");
+        StringBuilder sbU = a.U("TrackActivitySessionJoined(channelId=");
         sbU.append(this.channelId);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -57,6 +57,6 @@ public final /* data */ class TrackActivitySessionJoined implements AnalyticsSch
         sbU.append(", activitySessionId=");
         sbU.append(this.activitySessionId);
         sbU.append(", applicationId=");
-        return outline.G(sbU, this.applicationId, ")");
+        return a.G(sbU, this.applicationId, ")");
     }
 }

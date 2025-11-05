@@ -1,31 +1,28 @@
 package com.facebook.imagepipeline.nativecode;
 
-import b.f.d.d.DoNotStrip;
-import b.f.i.DefaultImageFormats;
-import b.f.i.ImageFormat;
-import b.f.j.s.ImageTranscoder;
-import b.f.j.s.ImageTranscoderFactory;
+import b.f.d.d.c;
+import b.f.j.s.b;
 
-@DoNotStrip
+@c
 /* loaded from: classes3.dex */
-public class NativeJpegTranscoderFactory implements ImageTranscoderFactory {
+public class NativeJpegTranscoderFactory implements b.f.j.s.c {
     public final int a;
 
     /* renamed from: b, reason: collision with root package name */
     public final boolean f2900b;
     public final boolean c;
 
-    @DoNotStrip
+    @c
     public NativeJpegTranscoderFactory(int i, boolean z2, boolean z3) {
         this.a = i;
         this.f2900b = z2;
         this.c = z3;
     }
 
-    @Override // b.f.j.s.ImageTranscoderFactory
-    @DoNotStrip
-    public ImageTranscoder createImageTranscoder(ImageFormat imageFormat, boolean z2) {
-        if (imageFormat != DefaultImageFormats.a) {
+    @Override // b.f.j.s.c
+    @c
+    public b createImageTranscoder(b.f.i.c cVar, boolean z2) {
+        if (cVar != b.f.i.b.a) {
             return null;
         }
         return new NativeJpegTranscoder(z2, this.a, this.f2900b, this.c);

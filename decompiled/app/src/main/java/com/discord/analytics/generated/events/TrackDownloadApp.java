@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackMarketingSite;
-import com.discord.analytics.generated.traits.TrackMarketingSite2;
+import com.discord.analytics.generated.traits.TrackMarketingSiteReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackDownloadApp.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDownloadApp implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
+public final /* data */ class TrackDownloadApp implements AnalyticsSchema, TrackBaseReceiver, TrackMarketingSiteReceiver {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
     private final Boolean hasEMail = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackDownloadApp implements AnalyticsSchema, Track
             return false;
         }
         TrackDownloadApp trackDownloadApp = (TrackDownloadApp) other;
-        return Intrinsics3.areEqual(this.hasEMail, trackDownloadApp.hasEMail) && Intrinsics3.areEqual(this.platform, trackDownloadApp.platform) && Intrinsics3.areEqual(this.ptb, trackDownloadApp.ptb) && Intrinsics3.areEqual(this.referringLocation, trackDownloadApp.referringLocation) && Intrinsics3.areEqual(this.released, trackDownloadApp.released) && Intrinsics3.areEqual(this.pageName, trackDownloadApp.pageName) && Intrinsics3.areEqual(this.staticExperimentUuid, trackDownloadApp.staticExperimentUuid) && Intrinsics3.areEqual(this.qrCode, trackDownloadApp.qrCode);
+        return m.areEqual(this.hasEMail, trackDownloadApp.hasEMail) && m.areEqual(this.platform, trackDownloadApp.platform) && m.areEqual(this.ptb, trackDownloadApp.ptb) && m.areEqual(this.referringLocation, trackDownloadApp.referringLocation) && m.areEqual(this.released, trackDownloadApp.released) && m.areEqual(this.pageName, trackDownloadApp.pageName) && m.areEqual(this.staticExperimentUuid, trackDownloadApp.staticExperimentUuid) && m.areEqual(this.qrCode, trackDownloadApp.qrCode);
     }
 
     public int hashCode() {
@@ -60,7 +60,7 @@ public final /* data */ class TrackDownloadApp implements AnalyticsSchema, Track
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDownloadApp(hasEMail=");
+        StringBuilder sbU = a.U("TrackDownloadApp(hasEMail=");
         sbU.append(this.hasEMail);
         sbU.append(", platform=");
         sbU.append(this.platform);
@@ -75,6 +75,6 @@ public final /* data */ class TrackDownloadApp implements AnalyticsSchema, Track
         sbU.append(", staticExperimentUuid=");
         sbU.append(this.staticExperimentUuid);
         sbU.append(", qrCode=");
-        return outline.D(sbU, this.qrCode, ")");
+        return a.D(sbU, this.qrCode, ")");
     }
 }

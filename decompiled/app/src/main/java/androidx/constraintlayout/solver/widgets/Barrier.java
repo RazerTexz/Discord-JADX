@@ -4,7 +4,7 @@ import androidx.constraintlayout.solver.LinearSystem;
 import androidx.constraintlayout.solver.SolverVariable;
 import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 
 /* loaded from: classes.dex */
@@ -248,20 +248,20 @@ public class Barrier extends HelperWidget {
 
     @Override // androidx.constraintlayout.solver.widgets.ConstraintWidget
     public String toString() {
-        StringBuilder sbU = outline.U("[Barrier] ");
+        StringBuilder sbU = a.U("[Barrier] ");
         sbU.append(getDebugName());
         sbU.append(" {");
         String string = sbU.toString();
         for (int i = 0; i < this.mWidgetsCount; i++) {
             ConstraintWidget constraintWidget = this.mWidgets[i];
             if (i > 0) {
-                string = outline.w(string, ", ");
+                string = a.w(string, ", ");
             }
-            StringBuilder sbU2 = outline.U(string);
+            StringBuilder sbU2 = a.U(string);
             sbU2.append(constraintWidget.getDebugName());
             string = sbU2.toString();
         }
-        return outline.w(string, "}");
+        return a.w(string, "}");
     }
 
     public Barrier(String str) {

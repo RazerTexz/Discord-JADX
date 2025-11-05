@@ -2,7 +2,6 @@ package b.a.q.m0.c;
 
 import androidx.annotation.NonNull;
 import com.hammerandchisel.libdiscord.Discord;
-import d0.z.d.Intrinsics3;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: MediaEngineLegacy.kt */
@@ -16,7 +15,7 @@ public final class r implements Discord.GetRankedRtcRegionsCallback {
 
     @Override // com.hammerandchisel.libdiscord.Discord.GetRankedRtcRegionsCallback
     public final /* synthetic */ void onRankedRtcRegions(@NonNull String[] strArr) {
-        Intrinsics3.checkNotNullParameter(strArr, "p0");
-        Intrinsics3.checkNotNullExpressionValue(this.a.invoke(strArr), "invoke(...)");
+        d0.z.d.m.checkNotNullParameter(strArr, "p0");
+        d0.z.d.m.checkNotNullExpressionValue(this.a.invoke(strArr), "invoke(...)");
     }
 }

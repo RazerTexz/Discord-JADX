@@ -1,19 +1,19 @@
 package b.i.a.c;
 
-import b.i.a.c.Player2;
-import b.i.a.c.f3.ListenerSet;
+import b.i.a.c.f3.p;
+import b.i.a.c.y1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class p implements ListenerSet.a {
-    public final /* synthetic */ MediaMetadata a;
+public final /* synthetic */ class p implements p.a {
+    public final /* synthetic */ p1 a;
 
-    public /* synthetic */ p(MediaMetadata mediaMetadata) {
-        this.a = mediaMetadata;
+    public /* synthetic */ p(p1 p1Var) {
+        this.a = p1Var;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((Player2.c) obj).A(this.a);
+        ((y1.c) obj).A(this.a);
     }
 }

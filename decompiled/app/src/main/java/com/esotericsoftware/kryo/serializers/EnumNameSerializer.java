@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
@@ -35,7 +35,7 @@ public class EnumNameSerializer extends Serializer<Enum> {
         try {
             return Enum.valueOf(this.enumType, str);
         } catch (IllegalArgumentException e) {
-            StringBuilder sbU = outline.U("Invalid name for enum \"");
+            StringBuilder sbU = a.U("Invalid name for enum \"");
             sbU.append(this.enumType.getName());
             sbU.append("\": ");
             sbU.append(str);

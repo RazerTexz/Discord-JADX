@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.c.w.s;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Map;
@@ -22,8 +22,8 @@ public final class RemoteMessage extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.p2(parcel, 2, this.j, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        int iY2 = d.y2(parcel, 20293);
+        d.p2(parcel, 2, this.j, false);
+        d.A2(parcel, iY2);
     }
 }

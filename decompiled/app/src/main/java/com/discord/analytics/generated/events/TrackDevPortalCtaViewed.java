@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackDevPortalCtaViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDevPortalCtaViewed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackDevPortalCtaViewed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence ctaName = null;
     private final transient String analyticsSchemaTypeName = "dev_portal_cta_viewed";
@@ -21,7 +21,7 @@ public final /* data */ class TrackDevPortalCtaViewed implements AnalyticsSchema
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackDevPortalCtaViewed) && Intrinsics3.areEqual(this.ctaName, ((TrackDevPortalCtaViewed) other).ctaName);
+            return (other instanceof TrackDevPortalCtaViewed) && m.areEqual(this.ctaName, ((TrackDevPortalCtaViewed) other).ctaName);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackDevPortalCtaViewed implements AnalyticsSchema
     }
 
     public String toString() {
-        return outline.E(outline.U("TrackDevPortalCtaViewed(ctaName="), this.ctaName, ")");
+        return a.E(a.U("TrackDevPortalCtaViewed(ctaName="), this.ctaName, ")");
     }
 }

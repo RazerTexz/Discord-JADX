@@ -3,8 +3,8 @@ package com.discord.utilities.recycler;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -21,7 +21,7 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     /* compiled from: SpeedOnScrollListener.kt */
     /* renamed from: com.discord.utilities.recycler.SpeedOnScrollListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -64,7 +64,7 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
     public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
         if (newState == 0) {
             this.thresholdCallback.invoke(Boolean.valueOf(0 < this.maxScrolledPxPerMs));
         }
@@ -72,7 +72,7 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
         long jCurrentTimeMillis = this.clock.currentTimeMillis();
         if (this.timeStamp == -1) {
             this.timeStamp = jCurrentTimeMillis;
@@ -88,8 +88,8 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
 
     /* JADX WARN: Multi-variable type inference failed */
     public SpeedOnScrollListener(long j, Function1<? super Boolean, Unit> function1, int i, Clock clock) {
-        Intrinsics3.checkNotNullParameter(function1, "thresholdCallback");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(function1, "thresholdCallback");
+        m.checkNotNullParameter(clock, "clock");
         this.maxScrolledPxPerMs = j;
         this.thresholdCallback = function1;
         this.orientation = i;

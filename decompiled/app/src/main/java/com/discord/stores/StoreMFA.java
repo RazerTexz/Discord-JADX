@@ -1,10 +1,10 @@
 package com.discord.stores;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.stores.updates.ObservationDeck;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import rx.Observable;
@@ -30,7 +30,7 @@ public final class StoreMFA extends StoreV2 {
         private final boolean isTogglingSMSBackup;
 
         public State(MFAActivationState mFAActivationState, boolean z2) {
-            Intrinsics3.checkNotNullParameter(mFAActivationState, "activationState");
+            m.checkNotNullParameter(mFAActivationState, "activationState");
             this.activationState = mFAActivationState;
             this.isTogglingSMSBackup = z2;
         }
@@ -56,7 +56,7 @@ public final class StoreMFA extends StoreV2 {
         }
 
         public final State copy(MFAActivationState activationState, boolean isTogglingSMSBackup) {
-            Intrinsics3.checkNotNullParameter(activationState, "activationState");
+            m.checkNotNullParameter(activationState, "activationState");
             return new State(activationState, isTogglingSMSBackup);
         }
 
@@ -68,7 +68,7 @@ public final class StoreMFA extends StoreV2 {
                 return false;
             }
             State state = (State) other;
-            return Intrinsics3.areEqual(this.activationState, state.activationState) && this.isTogglingSMSBackup == state.isTogglingSMSBackup;
+            return m.areEqual(this.activationState, state.activationState) && this.isTogglingSMSBackup == state.isTogglingSMSBackup;
         }
 
         public final MFAActivationState getActivationState() {
@@ -92,16 +92,16 @@ public final class StoreMFA extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("State(activationState=");
+            StringBuilder sbU = a.U("State(activationState=");
             sbU.append(this.activationState);
             sbU.append(", isTogglingSMSBackup=");
-            return outline.O(sbU, this.isTogglingSMSBackup, ")");
+            return a.O(sbU, this.isTogglingSMSBackup, ")");
         }
     }
 
     /* compiled from: StoreMFA.kt */
     /* renamed from: com.discord.stores.StoreMFA$observeState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<State> {
+    public static final class AnonymousClass1 extends o implements Function0<State> {
         public AnonymousClass1() {
             super(0);
         }
@@ -120,7 +120,7 @@ public final class StoreMFA extends StoreV2 {
 
     /* compiled from: StoreMFA.kt */
     /* renamed from: com.discord.stores.StoreMFA$togglingSMSBackup$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -141,7 +141,7 @@ public final class StoreMFA extends StoreV2 {
 
     /* compiled from: StoreMFA.kt */
     /* renamed from: com.discord.stores.StoreMFA$updatePendingMFAState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ MFAActivationState $newActivationState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -165,9 +165,9 @@ public final class StoreMFA extends StoreV2 {
     }
 
     public StoreMFA(StoreStream storeStream, Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
@@ -182,9 +182,9 @@ public final class StoreMFA extends StoreV2 {
         storeMFA.state = state;
     }
 
-    @Store3
+    @StoreThread
     public final void handleUserUpdated(User user) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         if (user.getId() == this.stream.getUsers().getMe().getId()) {
             this.state = new State(MFAActivationState.NONE, false);
             markChanged();
@@ -193,7 +193,7 @@ public final class StoreMFA extends StoreV2 {
 
     public final Observable<State> observeState() {
         Observable<State> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
@@ -202,7 +202,7 @@ public final class StoreMFA extends StoreV2 {
     }
 
     public final void updatePendingMFAState(MFAActivationState newActivationState) {
-        Intrinsics3.checkNotNullParameter(newActivationState, "newActivationState");
+        m.checkNotNullParameter(newActivationState, "newActivationState");
         this.dispatcher.schedule(new AnonymousClass1(newActivationState));
     }
 }

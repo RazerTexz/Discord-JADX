@@ -16,7 +16,7 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.constraintlayout.widget.ConstraintAttribute;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -171,7 +171,7 @@ public class MotionController {
 
     private void insertKey(MotionPaths motionPaths) {
         if (Collections.binarySearch(this.mMotionPaths, motionPaths) == 0) {
-            StringBuilder sbU = outline.U(" KeyPath positon \"");
+            StringBuilder sbU = a.U(" KeyPath positon \"");
             sbU.append(motionPaths.position);
             sbU.append("\" outside of range");
             Log.e(TAG, sbU.toString());
@@ -795,12 +795,12 @@ public class MotionController {
             MotionPaths motionPaths = this.mStartMotionPath;
             float f2 = motionPaths.f28x;
             MotionPaths motionPaths2 = this.mEndMotionPath;
-            float fA = outline.a(motionPaths2.f28x, f2, adjustedPosition, f2);
+            float fA = a.a(motionPaths2.f28x, f2, adjustedPosition, f2);
             float f3 = motionPaths.f29y;
-            float fA2 = outline.a(motionPaths2.f29y, f3, adjustedPosition, f3);
+            float fA2 = a.a(motionPaths2.f29y, f3, adjustedPosition, f3);
             float f4 = motionPaths.width;
             float f5 = motionPaths2.width;
-            float fA3 = outline.a(f5, f4, adjustedPosition, f4);
+            float fA3 = a.a(f5, f4, adjustedPosition, f4);
             float f6 = motionPaths.height;
             float f7 = motionPaths2.height;
             float f8 = fA + 0.5f;
@@ -808,7 +808,7 @@ public class MotionController {
             float f9 = fA2 + 0.5f;
             int i4 = (int) f9;
             int i5 = (int) (f8 + fA3);
-            int iA = (int) (f9 + outline.a(f7, f6, adjustedPosition, f6));
+            int iA = (int) (f9 + a.a(f7, f6, adjustedPosition, f6));
             int i6 = i5 - i3;
             int i7 = iA - i4;
             if (f5 != f4 || f7 != f6) {
@@ -1121,9 +1121,9 @@ public class MotionController {
                 break;
             }
             if (iArr3[i15] < MotionPaths.names.length) {
-                String strJ = outline.J(new StringBuilder(), MotionPaths.names[this.mInterpolateVariables[i15]], " [");
+                String strJ = a.J(new StringBuilder(), MotionPaths.names[this.mInterpolateVariables[i15]], " [");
                 for (int i16 = 0; i16 < size; i16++) {
-                    StringBuilder sbU = outline.U(strJ);
+                    StringBuilder sbU = a.U(strJ);
                     sbU.append(dArr[i16][i15]);
                     strJ = sbU.toString();
                 }
@@ -1207,7 +1207,7 @@ public class MotionController {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U(" start: x: ");
+        StringBuilder sbU = a.U(" start: x: ");
         sbU.append(this.mStartMotionPath.f28x);
         sbU.append(" y: ");
         sbU.append(this.mStartMotionPath.f29y);

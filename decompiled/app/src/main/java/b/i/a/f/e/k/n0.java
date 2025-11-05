@@ -3,7 +3,6 @@ package b.i.a.f.e.k;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.Feature;
 import com.google.android.gms.common.internal.ConnectionTelemetryConfiguration;
 import com.google.android.gms.common.internal.zzi;
@@ -13,7 +12,7 @@ import com.google.android.gms.common.internal.zzi;
 public final class n0 implements Parcelable.Creator<zzi> {
     @Override // android.os.Parcelable.Creator
     public final zzi createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         Bundle bundleM = null;
         Feature[] featureArr = null;
         ConnectionTelemetryConfiguration connectionTelemetryConfiguration = null;
@@ -22,18 +21,18 @@ public final class n0 implements Parcelable.Creator<zzi> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                bundleM = AnimatableValueParser.M(parcel, i);
+                bundleM = b.c.a.a0.d.M(parcel, i);
             } else if (c == 2) {
-                featureArr = (Feature[]) AnimatableValueParser.U(parcel, i, Feature.CREATOR);
+                featureArr = (Feature[]) b.c.a.a0.d.U(parcel, i, Feature.CREATOR);
             } else if (c == 3) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c != 4) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                connectionTelemetryConfiguration = (ConnectionTelemetryConfiguration) AnimatableValueParser.Q(parcel, i, ConnectionTelemetryConfiguration.CREATOR);
+                connectionTelemetryConfiguration = (ConnectionTelemetryConfiguration) b.c.a.a0.d.Q(parcel, i, ConnectionTelemetryConfiguration.CREATOR);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zzi(bundleM, featureArr, iG1, connectionTelemetryConfiguration);
     }
 

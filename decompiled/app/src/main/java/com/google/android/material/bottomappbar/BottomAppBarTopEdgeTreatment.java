@@ -3,7 +3,7 @@ package com.google.android.material.bottomappbar;
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.google.android.material.shape.EdgeTreatment;
 import com.google.android.material.shape.ShapePath;
 
@@ -40,7 +40,7 @@ public class BottomAppBarTopEdgeTreatment extends EdgeTreatment implements Clone
         float f5 = ((this.fabMargin * 2.0f) + f4) / 2.0f;
         float f6 = f3 * this.roundedCornerRadius;
         float f7 = f2 + this.horizontalOffset;
-        float fA = outline.a(1.0f, f3, f5, this.cradleVerticalOffset * f3);
+        float fA = a.a(1.0f, f3, f5, this.cradleVerticalOffset * f3);
         if (fA / f5 >= 1.0f) {
             shapePath.lineTo(f, 0.0f);
             return;

@@ -6,9 +6,9 @@ import androidx.core.app.NotificationCompat;
 import com.discord.api.user.UserSurvey;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import j0.k.b;
+import j0.l.e.k;
 import rx.Observable;
 
 /* compiled from: SurveyUtils.kt */
@@ -36,11 +36,11 @@ public final class SurveyUtils {
         }
 
         public Survey(String str, String str2, String str3, String str4, String str5) {
-            Intrinsics3.checkNotNullParameter(str, "surveyId");
-            Intrinsics3.checkNotNullParameter(str2, "surveyURL");
-            Intrinsics3.checkNotNullParameter(str3, "noticeKey");
-            Intrinsics3.checkNotNullParameter(str4, "surveyBody");
-            Intrinsics3.checkNotNullParameter(str5, "surveyTitle");
+            m.checkNotNullParameter(str, "surveyId");
+            m.checkNotNullParameter(str2, "surveyURL");
+            m.checkNotNullParameter(str3, "noticeKey");
+            m.checkNotNullParameter(str4, "surveyBody");
+            m.checkNotNullParameter(str5, "surveyTitle");
             this.surveyId = str;
             this.surveyURL = str2;
             this.noticeKey = str3;
@@ -71,10 +71,10 @@ public final class SurveyUtils {
 
     /* compiled from: SurveyUtils.kt */
     /* renamed from: com.discord.utilities.surveys.SurveyUtils$getSurveyToShow$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<UserSurvey, Survey> {
+    public static final class AnonymousClass1<T, R> implements b<UserSurvey, Survey> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Survey call(UserSurvey userSurvey) {
             return call2(userSurvey);
         }
@@ -95,12 +95,12 @@ public final class SurveyUtils {
         try {
             Application application = applicationContext;
             if (application == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("applicationContext");
+                m.throwUninitializedPropertyAccessException("applicationContext");
             }
             PackageManager packageManager = application.getPackageManager();
             Application application2 = applicationContext;
             if (application2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("applicationContext");
+                m.throwUninitializedPropertyAccessException("applicationContext");
             }
             return ClockFactory.get().currentTimeMillis() - packageManager.getPackageInfo(application2.getPackageName(), 0).firstInstallTime >= MIN_APP_INSTALL_TIME;
         } catch (PackageManager.NameNotFoundException unused) {
@@ -111,16 +111,16 @@ public final class SurveyUtils {
     public final Observable<Survey> getSurveyToShow() {
         if (isInstallOldEnough()) {
             Observable observableG = StoreStream.INSTANCE.getUserSurvey().observeUserSurvey().G(AnonymousClass1.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "StoreStream\n        .get…  )\n          }\n        }");
+            m.checkNotNullExpressionValue(observableG, "StoreStream\n        .get…  )\n          }\n        }");
             return observableG;
         }
-        ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(Survey.None.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(Survey.None)");
-        return scalarSynchronousObservable;
+        k kVar = new k(Survey.None.INSTANCE);
+        m.checkNotNullExpressionValue(kVar, "Observable.just(Survey.None)");
+        return kVar;
     }
 
     public final void init(Application applicationContext2) {
-        Intrinsics3.checkNotNullParameter(applicationContext2, "applicationContext");
+        m.checkNotNullParameter(applicationContext2, "applicationContext");
         applicationContext = applicationContext2;
     }
 }

@@ -12,8 +12,8 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.WidgetSearchSuggestionItemHeaderBinding;
 import com.discord.databinding.WidgetSearchSuggestionItemHeaderHistoryBinding;
@@ -33,7 +33,7 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.mg_recycler.SingleTypePayload;
 import com.discord.utilities.search.query.FilterType;
 import com.discord.utilities.search.query.node.QueryNode;
-import com.discord.utilities.search.query.node.answer.HasNode2;
+import com.discord.utilities.search.query.node.answer.HasAnswerOption;
 import com.discord.utilities.search.strings.ContextSearchStringProvider;
 import com.discord.utilities.search.strings.SearchStringProvider;
 import com.discord.utilities.search.suggestion.entries.ChannelSuggestion;
@@ -47,7 +47,7 @@ import com.discord.utilities.user.UserUtils;
 import com.discord.views.StatusView;
 import com.discord.views.UserListItemView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
@@ -72,7 +72,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
     private Function1<? super ChannelSuggestion, Unit> onChannelClicked;
     private Function0<Unit> onClearHistoryClicked;
     private Function1<? super FilterType, Unit> onFilterClicked;
-    private Function1<? super HasNode2, Unit> onHasClicked;
+    private Function1<? super HasAnswerOption, Unit> onHasClicked;
     private Function1<? super List<? extends QueryNode>, Unit> onRecentQueryClicked;
     private Function1<? super UserSuggestion, Unit> onUserClicked;
 
@@ -82,32 +82,32 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
 
         public final SingleTypePayload<FilterSuggestion> getFilterItem(FilterSuggestion data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new SingleTypePayload<>(data, data.getCategory().name(), 2);
         }
 
         public final SingleTypePayload<HasSuggestion> getHasItem(HasSuggestion data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new SingleTypePayload<>(data, data.getHasAnswerOption().name(), 5);
         }
 
         public final SingleTypePayload<SearchSuggestion.Category> getHeaderItem(SearchSuggestion.Category category) {
-            Intrinsics3.checkNotNullParameter(category, "category");
+            m.checkNotNullParameter(category, "category");
             return new SingleTypePayload<>(category, category.name(), category == SearchSuggestion.Category.RECENT_QUERY ? 1 : 0);
         }
 
         public final SingleTypePayload<ChannelSuggestion> getInChannelItem(ChannelSuggestion data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new SingleTypePayload<>(data, String.valueOf(data.getChannelId()), 4);
         }
 
         public final SingleTypePayload<RecentQuerySuggestion> getRecentQueryItem(RecentQuerySuggestion data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new SingleTypePayload<>(data, String.valueOf(data.hashCode()), 6);
         }
 
         public final SingleTypePayload<UserSuggestion> getUserItem(UserSuggestion data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new SingleTypePayload<>(data, data.getTargetType().name() + data.getUserId(), 3);
         }
 
@@ -157,7 +157,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public FilterViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestions_item_suggestion, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
             View view = this.itemView;
             int i = R.id.suggestion_example_answer;
             TextView textView = (TextView) view.findViewById(R.id.suggestion_example_answer);
@@ -170,7 +170,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
                     ImageView imageView = (ImageView) view.findViewById(R.id.suggestion_example_icon);
                     if (imageView != null) {
                         WidgetSearchSuggestionsItemSuggestionBinding widgetSearchSuggestionsItemSuggestionBinding = new WidgetSearchSuggestionsItemSuggestionBinding(relativeLayout, textView, relativeLayout, textView2, imageView);
-                        Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionsItemSuggestionBinding, "WidgetSearchSuggestionsI…ionBinding.bind(itemView)");
+                        m.checkNotNullExpressionValue(widgetSearchSuggestionsItemSuggestionBinding, "WidgetSearchSuggestionsI…ionBinding.bind(itemView)");
                         this.binding = widgetSearchSuggestionsItemSuggestionBinding;
                         return;
                     }
@@ -244,23 +244,23 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         @SuppressLint({"SetTextI18n"})
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             FilterType filterType = ((FilterSuggestion) ((SingleTypePayload) data).getData()).getFilterType();
             int filterText = getFilterText(filterType);
             int answerText = getAnswerText(filterType);
             this.binding.c.setOnClickListener(new WidgetSearchSuggestionsAdapter$FilterViewHolder$onConfigure$1(this, filterType));
             ImageView imageView = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.suggestionExampleIcon");
+            m.checkNotNullExpressionValue(imageView, "binding.suggestionExampleIcon");
             Context context = imageView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.suggestionExampleIcon.context");
+            m.checkNotNullExpressionValue(context, "binding.suggestionExampleIcon.context");
             imageView.setImageDrawable(getIconDrawable(context, filterType));
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.suggestionExampleFilter");
-            textView.setText(FormatUtils.l("**" + FormatUtils.h(outline.x(this.itemView, "itemView", "itemView.context"), filterText, new Object[0], null, 4) + "**:", new Object[0], null, 2));
+            m.checkNotNullExpressionValue(textView, "binding.suggestionExampleFilter");
+            textView.setText(b.l("**" + b.h(a.x(this.itemView, "itemView", "itemView.context"), filterText, new Object[0], null, 4) + "**:", new Object[0], null, 2));
             TextView textView2 = this.binding.f2530b;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.suggestionExampleAnswer");
-            textView2.setText(FormatUtils.h(outline.x(this.itemView, "itemView", "itemView.context"), answerText, new Object[0], null, 4));
+            m.checkNotNullExpressionValue(textView2, "binding.suggestionExampleAnswer");
+            textView2.setText(b.h(a.x(this.itemView, "itemView", "itemView.context"), answerText, new Object[0], null, 4));
         }
     }
 
@@ -279,28 +279,28 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
                 static {
-                    HasNode2.values();
+                    HasAnswerOption.values();
                     int[] iArr = new int[7];
                     $EnumSwitchMapping$0 = iArr;
-                    iArr[HasNode2.FILE.ordinal()] = 1;
-                    iArr[HasNode2.VIDEO.ordinal()] = 2;
-                    iArr[HasNode2.IMAGE.ordinal()] = 3;
-                    iArr[HasNode2.SOUND.ordinal()] = 4;
-                    iArr[HasNode2.STICKER.ordinal()] = 5;
-                    iArr[HasNode2.EMBED.ordinal()] = 6;
-                    iArr[HasNode2.LINK.ordinal()] = 7;
+                    iArr[HasAnswerOption.FILE.ordinal()] = 1;
+                    iArr[HasAnswerOption.VIDEO.ordinal()] = 2;
+                    iArr[HasAnswerOption.IMAGE.ordinal()] = 3;
+                    iArr[HasAnswerOption.SOUND.ordinal()] = 4;
+                    iArr[HasAnswerOption.STICKER.ordinal()] = 5;
+                    iArr[HasAnswerOption.EMBED.ordinal()] = 6;
+                    iArr[HasAnswerOption.LINK.ordinal()] = 7;
                 }
             }
 
             private Companion() {
             }
 
-            public static final /* synthetic */ int access$getIconRes(Companion companion, HasNode2 hasNode2) {
-                return companion.getIconRes(hasNode2);
+            public static final /* synthetic */ int access$getIconRes(Companion companion, HasAnswerOption hasAnswerOption) {
+                return companion.getIconRes(hasAnswerOption);
             }
 
             @DrawableRes
-            private final int getIconRes(HasNode2 hasAnswerOption) {
+            private final int getIconRes(HasAnswerOption hasAnswerOption) {
                 switch (hasAnswerOption) {
                     case LINK:
                         return R.drawable.ic_diag_link_24dp;
@@ -329,7 +329,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HasViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestions_item_has, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
             View view = this.itemView;
             RelativeLayout relativeLayout = (RelativeLayout) view;
             int i = R.id.search_suggestions_item_has_icon;
@@ -339,11 +339,11 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
                 TextView textView = (TextView) view.findViewById(R.id.search_suggestions_item_has_text);
                 if (textView != null) {
                     WidgetSearchSuggestionsItemHasBinding widgetSearchSuggestionsItemHasBinding = new WidgetSearchSuggestionsItemHasBinding((RelativeLayout) view, relativeLayout, imageView, textView);
-                    Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionsItemHasBinding, "WidgetSearchSuggestionsI…HasBinding.bind(itemView)");
+                    m.checkNotNullExpressionValue(widgetSearchSuggestionsItemHasBinding, "WidgetSearchSuggestionsI…HasBinding.bind(itemView)");
                     this.binding = widgetSearchSuggestionsItemHasBinding;
-                    Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.searchSuggestionItemHasContainer");
+                    m.checkNotNullExpressionValue(relativeLayout, "binding.searchSuggestionItemHasContainer");
                     Context context = relativeLayout.getContext();
-                    Intrinsics3.checkNotNullExpressionValue(context, "binding.searchSuggestionItemHasContainer.context");
+                    m.checkNotNullExpressionValue(context, "binding.searchSuggestionItemHasContainer.context");
                     this.searchStringProvider = new ContextSearchStringProvider(context);
                     return;
                 }
@@ -363,11 +363,11 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         @SuppressLint({"SetTextI18n"})
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             HasSuggestion hasSuggestion = (HasSuggestion) ((SingleTypePayload) data).getData();
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemHasText");
+            m.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemHasText");
             textView.setText(hasSuggestion.getHasAnswerOption().getLocalizedInputText(this.searchStringProvider));
             this.binding.c.setImageResource(Companion.access$getIconRes(INSTANCE, hasSuggestion.getHasAnswerOption()));
             this.binding.f2528b.setOnClickListener(new WidgetSearchSuggestionsAdapter$HasViewHolder$onConfigure$1(this, hasSuggestion));
@@ -397,12 +397,12 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HeaderViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestion_item_header, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             TextView textView = (TextView) view;
             WidgetSearchSuggestionItemHeaderBinding widgetSearchSuggestionItemHeaderBinding = new WidgetSearchSuggestionItemHeaderBinding(textView, textView);
-            Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionItemHeaderBinding, "WidgetSearchSuggestionIt…derBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(widgetSearchSuggestionItemHeaderBinding, "WidgetSearchSuggestionIt…derBinding.bind(itemView)");
             this.binding = widgetSearchSuggestionItemHeaderBinding;
         }
 
@@ -438,7 +438,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             this.binding.f2524b.setText(getCategoryLabel((SearchSuggestion.Category) ((SingleTypePayload) data).getData()));
         }
@@ -451,7 +451,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HistoryHeaderViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestion_item_header_history, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
             View view = this.itemView;
             int i = R.id.suggestion_item_header_history_clear_icon;
             ImageView imageView = (ImageView) view.findViewById(R.id.suggestion_item_header_history_clear_icon);
@@ -463,7 +463,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
                     TextView textView = (TextView) view.findViewById(R.id.suggestion_item_header_history_text);
                     if (textView != null) {
                         WidgetSearchSuggestionItemHeaderHistoryBinding widgetSearchSuggestionItemHeaderHistoryBinding = new WidgetSearchSuggestionItemHeaderHistoryBinding((RelativeLayout) view, imageView, viewFindViewById, textView);
-                        Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionItemHeaderHistoryBinding, "WidgetSearchSuggestionIt…oryBinding.bind(itemView)");
+                        m.checkNotNullExpressionValue(widgetSearchSuggestionItemHeaderHistoryBinding, "WidgetSearchSuggestionIt…oryBinding.bind(itemView)");
                         this.binding = widgetSearchSuggestionItemHeaderHistoryBinding;
                         return;
                     }
@@ -483,7 +483,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             this.binding.f2525b.setOnClickListener(new WidgetSearchSuggestionsAdapter$HistoryHeaderViewHolder$onConfigure$1(this));
         }
@@ -496,7 +496,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public InChannelViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestions_item_channel, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
             View view = this.itemView;
             RelativeLayout relativeLayout = (RelativeLayout) view;
             int i = R.id.search_suggestions_item_channel_icon;
@@ -506,7 +506,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
                 TextView textView = (TextView) view.findViewById(R.id.search_suggestions_item_channel_text);
                 if (textView != null) {
                     WidgetSearchSuggestionsItemChannelBinding widgetSearchSuggestionsItemChannelBinding = new WidgetSearchSuggestionsItemChannelBinding((RelativeLayout) view, relativeLayout, imageView, textView);
-                    Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionsItemChannelBinding, "WidgetSearchSuggestionsI…nelBinding.bind(itemView)");
+                    m.checkNotNullExpressionValue(widgetSearchSuggestionsItemChannelBinding, "WidgetSearchSuggestionsI…nelBinding.bind(itemView)");
                     this.binding = widgetSearchSuggestionsItemChannelBinding;
                     return;
                 }
@@ -525,11 +525,11 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             ChannelSuggestion channelSuggestion = (ChannelSuggestion) ((SingleTypePayload) data).getData();
             TextView textView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemChannelText");
+            m.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemChannelText");
             textView.setText(channelSuggestion.getChannelName());
             this.binding.f2527b.setOnClickListener(new WidgetSearchSuggestionsAdapter$InChannelViewHolder$onConfigure$1(this, channelSuggestion));
         }
@@ -542,7 +542,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RecentQueryViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestions_item_recent_query, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "widgetSearchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "widgetSearchSuggestionsAdapter");
             View view = this.itemView;
             RelativeLayout relativeLayout = (RelativeLayout) view;
             int i = R.id.search_suggestions_item_recent_query_icon;
@@ -552,7 +552,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
                 TextView textView = (TextView) view.findViewById(R.id.search_suggestions_item_recent_query_text);
                 if (textView != null) {
                     WidgetSearchSuggestionsItemRecentQueryBinding widgetSearchSuggestionsItemRecentQueryBinding = new WidgetSearchSuggestionsItemRecentQueryBinding((RelativeLayout) view, relativeLayout, imageView, textView);
-                    Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionsItemRecentQueryBinding, "WidgetSearchSuggestionsI…eryBinding.bind(itemView)");
+                    m.checkNotNullExpressionValue(widgetSearchSuggestionsItemRecentQueryBinding, "WidgetSearchSuggestionsI…eryBinding.bind(itemView)");
                     this.binding = widgetSearchSuggestionsItemRecentQueryBinding;
                     return;
                 }
@@ -571,15 +571,15 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             List<QueryNode> query = ((RecentQuerySuggestion) ((SingleTypePayload) data).getData()).getQuery();
             TextView textView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemRecentQueryText");
+            m.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemRecentQueryText");
             View view = this.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "itemView.context");
+            m.checkNotNullExpressionValue(context, "itemView.context");
             textView.setText(AstRenderer.render(query, context));
             this.binding.f2529b.setOnClickListener(new WidgetSearchSuggestionsAdapter$RecentQueryViewHolder$onConfigure$1(this, query));
         }
@@ -592,12 +592,12 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserViewHolder(WidgetSearchSuggestionsAdapter widgetSearchSuggestionsAdapter) {
             super(R.layout.widget_search_suggestions_item_user, widgetSearchSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
+            m.checkNotNullParameter(widgetSearchSuggestionsAdapter, "searchSuggestionsAdapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             UserListItemView userListItemView = (UserListItemView) view;
             WidgetSearchSuggestionsItemUserBinding widgetSearchSuggestionsItemUserBinding = new WidgetSearchSuggestionsItemUserBinding(userListItemView, userListItemView);
-            Intrinsics3.checkNotNullExpressionValue(widgetSearchSuggestionsItemUserBinding, "WidgetSearchSuggestionsI…serBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(widgetSearchSuggestionsItemUserBinding, "WidgetSearchSuggestionsI…serBinding.bind(itemView)");
             this.binding = widgetSearchSuggestionsItemUserBinding;
         }
 
@@ -612,7 +612,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             UserSuggestion userSuggestion = (UserSuggestion) ((SingleTypePayload) data).getData();
             UserListItemView userListItemView = this.binding.f2531b;
@@ -620,7 +620,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             GuildMember guildMember = userSuggestion.getGuildMember();
             int i = UserListItemView.j;
             Objects.requireNonNull(userListItemView);
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             StringBuilder sb = new StringBuilder();
             sb.append(user.getUsername());
             UserUtils userUtils = UserUtils.INSTANCE;
@@ -629,25 +629,25 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             String nick = guildMember != null ? guildMember.getNick() : null;
             if (nick == null || nick.length() == 0) {
                 TextView textView = userListItemView.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(textView, "binding.userListItemName");
+                m.checkNotNullExpressionValue(textView, "binding.userListItemName");
                 textView.setText(string);
                 TextView textView2 = userListItemView.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.userListItemNameSecondary");
+                m.checkNotNullExpressionValue(textView2, "binding.userListItemNameSecondary");
                 textView2.setText("");
             } else {
                 TextView textView3 = userListItemView.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.userListItemName");
+                m.checkNotNullExpressionValue(textView3, "binding.userListItemName");
                 textView3.setText(nick);
                 TextView textView4 = userListItemView.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.userListItemNameSecondary");
+                m.checkNotNullExpressionValue(textView4, "binding.userListItemNameSecondary");
                 textView4.setText(string);
             }
             SimpleDraweeView simpleDraweeView = userListItemView.binding.f99b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.userListItemAvatar");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.userListItemAvatar");
             IconUtils.setIcon$default(simpleDraweeView, user, R.dimen.avatar_size_standard, null, null, guildMember, 24, null);
             userListItemView.binding.e.setPresence(null);
             StatusView statusView = userListItemView.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(statusView, "binding.userListItemStatus");
+            m.checkNotNullExpressionValue(statusView, "binding.userListItemStatus");
             statusView.setVisibility(userUtils.isStatusVisible(user, (Presence) null, false) ? 0 : 8);
             this.binding.f2531b.setOnClickListener(new WidgetSearchSuggestionsAdapter$UserViewHolder$onConfigure$1(this, userSuggestion));
         }
@@ -656,7 +656,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetSearchSuggestionsAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(recyclerView, "recycler");
         this.onFilterClicked = WidgetSearchSuggestionsAdapter$onFilterClicked$1.INSTANCE;
         this.onUserClicked = WidgetSearchSuggestionsAdapter$onUserClicked$1.INSTANCE;
         this.onChannelClicked = WidgetSearchSuggestionsAdapter$onChannelClicked$1.INSTANCE;
@@ -677,7 +677,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         return this.onFilterClicked;
     }
 
-    public final Function1<HasNode2, Unit> getOnHasClicked() {
+    public final Function1<HasAnswerOption, Unit> getOnHasClicked() {
         return this.onHasClicked;
     }
 
@@ -695,38 +695,38 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
     }
 
     public final void setOnChannelClicked(Function1<? super ChannelSuggestion, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onChannelClicked = function1;
     }
 
     public final void setOnClearHistoryClicked(Function0<Unit> function0) {
-        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
+        m.checkNotNullParameter(function0, "<set-?>");
         this.onClearHistoryClicked = function0;
     }
 
     public final void setOnFilterClicked(Function1<? super FilterType, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onFilterClicked = function1;
     }
 
-    public final void setOnHasClicked(Function1<? super HasNode2, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+    public final void setOnHasClicked(Function1<? super HasAnswerOption, Unit> function1) {
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onHasClicked = function1;
     }
 
     public final void setOnRecentQueryClicked(Function1<? super List<? extends QueryNode>, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onRecentQueryClicked = function1;
     }
 
     public final void setOnUserClicked(Function1<? super UserSuggestion, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onUserClicked = function1;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, MGRecyclerDataPayload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         switch (viewType) {
             case 0:
                 return new HeaderViewHolder(this);

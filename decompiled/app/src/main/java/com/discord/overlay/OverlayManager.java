@@ -3,14 +3,13 @@ package com.discord.overlay;
 import android.content.Context;
 import android.view.View;
 import android.view.WindowManager;
-import b.a.n.OverlayManager2;
-import b.a.n.OverlayManager3;
-import b.a.n.TrashEventListener;
-import b.a.n.h.OverlayTrashWrap;
+import b.a.n.b;
+import b.a.n.f;
+import b.a.n.h.a;
 import com.discord.overlay.views.OverlayBubbleWrap;
 import com.discord.utilities.display.DisplayUtils;
-import d0.t.MutableCollections;
-import d0.z.d.Intrinsics3;
+import d0.t.r;
+import d0.z.d.m;
 import defpackage.n;
 import java.io.Closeable;
 import java.util.ArrayList;
@@ -36,10 +35,10 @@ public class OverlayManager implements Closeable {
     public Function1<? super View, Unit> onOverlayBubbleRemoved;
 
     /* renamed from: n, reason: from kotlin metadata */
-    public OverlayTrashWrap trashWrap;
+    public a trashWrap;
 
     /* renamed from: o, reason: from kotlin metadata */
-    public TrashEventListener trashEventListener;
+    public f trashEventListener;
 
     /* renamed from: p, reason: from kotlin metadata */
     public View.OnTouchListener bubbleOnTouchListener;
@@ -62,8 +61,8 @@ public class OverlayManager implements Closeable {
         } else {
             windowManager2 = null;
         }
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(windowManager2, "windowManager");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(windowManager2, "windowManager");
         this.context = context;
         this.windowManager = windowManager2;
         ArrayList<OverlayBubbleWrap> arrayList = new ArrayList<>(5);
@@ -71,18 +70,18 @@ public class OverlayManager implements Closeable {
         this.activeBubbles = arrayList;
         this.onOverlayBubbleAdded = n.j;
         this.onOverlayBubbleRemoved = n.k;
-        this.bubbleOnTouchListener = new OverlayManager2(this);
+        this.bubbleOnTouchListener = new b.a.n.a(this);
     }
 
     public final void a(OverlayBubbleWrap bubble) {
-        Intrinsics3.checkNotNullParameter(bubble, "bubble");
+        m.checkNotNullParameter(bubble, "bubble");
         this.windowManager.addView(bubble, bubble.getWindowLayoutParams());
         this.overlaysOnDisplay.add(bubble);
         this.onOverlayBubbleAdded.invoke(bubble);
     }
 
     public final void b(OverlayBubbleWrap bubble) {
-        Intrinsics3.checkNotNullParameter(bubble, "bubble");
+        m.checkNotNullParameter(bubble, "bubble");
         if (bubble.getCenterX() > DisplayUtils.getScreenSize(this.context).centerX()) {
             OverlayBubbleWrap.c(bubble, Integer.MAX_VALUE, (int) bubble.getY(), null, 4, null);
         } else {
@@ -91,32 +90,32 @@ public class OverlayManager implements Closeable {
     }
 
     public final void c(OverlayBubbleWrap bubble) {
-        if (Intrinsics3.areEqual(this.bubbleInTrashZone, bubble)) {
+        if (m.areEqual(this.bubbleInTrashZone, bubble)) {
             return;
         }
         this.bubbleInTrashZone = bubble;
-        OverlayTrashWrap overlayTrashWrap = this.trashWrap;
-        if (overlayTrashWrap != null) {
-            overlayTrashWrap.a(bubble);
+        a aVar = this.trashWrap;
+        if (aVar != null) {
+            aVar.a(bubble);
         }
-        TrashEventListener trashEventListener = this.trashEventListener;
-        if (trashEventListener != null) {
-            trashEventListener.a(bubble);
+        f fVar = this.trashEventListener;
+        if (fVar != null) {
+            fVar.a(bubble);
         }
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public void close() {
-        MutableCollections.removeAll((List) this.overlaysOnDisplay, (Function1) new OverlayManager3(this));
-        OverlayTrashWrap overlayTrashWrap = this.trashWrap;
-        if (overlayTrashWrap != null) {
-            this.windowManager.removeView(overlayTrashWrap);
+        r.removeAll((List) this.overlaysOnDisplay, (Function1) new b(this));
+        a aVar = this.trashWrap;
+        if (aVar != null) {
+            this.windowManager.removeView(aVar);
         }
         this.trashWrap = null;
     }
 
     public final void d(OverlayBubbleWrap bubble) {
-        Intrinsics3.checkNotNullParameter(bubble, "bubble");
+        m.checkNotNullParameter(bubble, "bubble");
         if (this.overlaysOnDisplay.remove(bubble)) {
             this.windowManager.removeViewImmediate(bubble);
             this.onOverlayBubbleRemoved.invoke(bubble);

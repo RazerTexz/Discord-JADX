@@ -1,8 +1,8 @@
 package com.discord.widgets.status;
 
 import androidx.annotation.MainThread;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
 import rx.subjects.BehaviorSubject;
@@ -121,12 +121,12 @@ public final class WidgetGlobalStatusIndicatorState {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("State(isVisible=");
+            StringBuilder sbU = a.U("State(isVisible=");
             sbU.append(this.isVisible);
             sbU.append(", isCustomBackground=");
             sbU.append(this.isCustomBackground);
             sbU.append(", isViewingCall=");
-            return outline.O(sbU, this.isViewingCall, ")");
+            return a.O(sbU, this.isViewingCall, ")");
         }
     }
 
@@ -137,19 +137,19 @@ public final class WidgetGlobalStatusIndicatorState {
     public static /* synthetic */ void updateState$default(WidgetGlobalStatusIndicatorState widgetGlobalStatusIndicatorState, boolean z2, boolean z3, boolean z4, int i, Object obj) {
         if ((i & 1) != 0) {
             BehaviorSubject<State> behaviorSubject = widgetGlobalStatusIndicatorState.stateSubject;
-            Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "stateSubject");
+            m.checkNotNullExpressionValue(behaviorSubject, "stateSubject");
             State stateN0 = behaviorSubject.n0();
             z2 = stateN0 != null ? stateN0.isVisible() : false;
         }
         if ((i & 2) != 0) {
             BehaviorSubject<State> behaviorSubject2 = widgetGlobalStatusIndicatorState.stateSubject;
-            Intrinsics3.checkNotNullExpressionValue(behaviorSubject2, "stateSubject");
+            m.checkNotNullExpressionValue(behaviorSubject2, "stateSubject");
             State stateN02 = behaviorSubject2.n0();
             z3 = stateN02 != null ? stateN02.isCustomBackground() : false;
         }
         if ((i & 4) != 0) {
             BehaviorSubject<State> behaviorSubject3 = widgetGlobalStatusIndicatorState.stateSubject;
-            Intrinsics3.checkNotNullExpressionValue(behaviorSubject3, "stateSubject");
+            m.checkNotNullExpressionValue(behaviorSubject3, "stateSubject");
             State stateN03 = behaviorSubject3.n0();
             z4 = stateN03 != null ? stateN03.isViewingCall() : false;
         }
@@ -158,7 +158,7 @@ public final class WidgetGlobalStatusIndicatorState {
 
     public final Observable<State> observeState() {
         Observable<State> observableR = this.stateSubject.r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "stateSubject.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "stateSubject.distinctUntilChanged()");
         return observableR;
     }
 

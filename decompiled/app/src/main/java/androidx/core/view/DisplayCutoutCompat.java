@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi;
 import androidx.core.graphics.Insets;
 import androidx.core.os.BuildCompat;
 import androidx.core.util.ObjectsCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -114,7 +114,7 @@ public final class DisplayCutoutCompat {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("DisplayCutoutCompat{");
+        StringBuilder sbU = a.U("DisplayCutoutCompat{");
         sbU.append(this.mDisplayCutout);
         sbU.append("}");
         return sbU.toString();

@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
 import androidx.work.Logger;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
@@ -32,7 +32,7 @@ public class WorkTimer {
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(@NonNull Runnable runnable) {
             Thread threadNewThread = Executors.defaultThreadFactory().newThread(runnable);
-            StringBuilder sbU = outline.U("WorkManager-WorkTimer-thread-");
+            StringBuilder sbU = a.U("WorkManager-WorkTimer-thread-");
             sbU.append(this.mThreadsCreated);
             threadNewThread.setName(sbU.toString());
             this.mThreadsCreated++;

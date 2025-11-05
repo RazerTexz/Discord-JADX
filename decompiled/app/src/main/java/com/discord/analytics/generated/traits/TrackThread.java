@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackThread.kt */
 /* loaded from: classes.dex */
@@ -21,7 +21,7 @@ public final /* data */ class TrackThread {
             return false;
         }
         TrackThread trackThread = (TrackThread) other;
-        return Intrinsics3.areEqual(this.threadApproximateMemberCount, trackThread.threadApproximateMemberCount) && Intrinsics3.areEqual(this.threadApproximateMessageCount, trackThread.threadApproximateMessageCount) && Intrinsics3.areEqual(this.threadArchived, trackThread.threadArchived) && Intrinsics3.areEqual(this.threadLocked, trackThread.threadLocked) && Intrinsics3.areEqual(this.threadAutoArchiveDurationMinutes, trackThread.threadAutoArchiveDurationMinutes) && Intrinsics3.areEqual(this.threadApproximateCreationDate, trackThread.threadApproximateCreationDate);
+        return m.areEqual(this.threadApproximateMemberCount, trackThread.threadApproximateMemberCount) && m.areEqual(this.threadApproximateMessageCount, trackThread.threadApproximateMessageCount) && m.areEqual(this.threadArchived, trackThread.threadArchived) && m.areEqual(this.threadLocked, trackThread.threadLocked) && m.areEqual(this.threadAutoArchiveDurationMinutes, trackThread.threadAutoArchiveDurationMinutes) && m.areEqual(this.threadApproximateCreationDate, trackThread.threadApproximateCreationDate);
     }
 
     public int hashCode() {
@@ -40,7 +40,7 @@ public final /* data */ class TrackThread {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackThread(threadApproximateMemberCount=");
+        StringBuilder sbU = a.U("TrackThread(threadApproximateMemberCount=");
         sbU.append(this.threadApproximateMemberCount);
         sbU.append(", threadApproximateMessageCount=");
         sbU.append(this.threadApproximateMessageCount);
@@ -51,6 +51,6 @@ public final /* data */ class TrackThread {
         sbU.append(", threadAutoArchiveDurationMinutes=");
         sbU.append(this.threadAutoArchiveDurationMinutes);
         sbU.append(", threadApproximateCreationDate=");
-        return outline.G(sbU, this.threadApproximateCreationDate, ")");
+        return a.G(sbU, this.threadApproximateCreationDate, ")");
     }
 }

@@ -2,7 +2,7 @@ package androidx.recyclerview.widget;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collection;
@@ -127,7 +127,7 @@ public class SortedList<T> {
     private void addToData(int i, T t) {
         int i2 = this.mSize;
         if (i > i2) {
-            StringBuilder sbV = outline.V("cannot add item to ", i, " because size is ");
+            StringBuilder sbV = a.V("cannot add item to ", i, " because size is ");
             sbV.append(this.mSize);
             throw new IndexOutOfBoundsException(sbV.toString());
         }
@@ -461,7 +461,7 @@ public class SortedList<T> {
             T[] tArr = this.mOldData;
             return (tArr == null || i < (i2 = this.mNewDataStart)) ? this.mData[i] : tArr[(i - i2) + this.mOldDataStart];
         }
-        StringBuilder sbV = outline.V("Asked to get item at ", i, " but size is ");
+        StringBuilder sbV = a.V("Asked to get item at ", i, " but size is ");
         sbV.append(this.mSize);
         throw new IndexOutOfBoundsException(sbV.toString());
     }

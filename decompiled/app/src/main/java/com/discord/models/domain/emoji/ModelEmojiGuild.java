@@ -1,9 +1,9 @@
 package com.discord.models.domain.emoji;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ModelEmojiGuild.kt */
@@ -19,9 +19,9 @@ public final /* data */ class ModelEmojiGuild {
     private final User user;
 
     public ModelEmojiGuild(long j, String str, boolean z2, List<Long> list, boolean z3, User user, boolean z4, boolean z5) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(list, "roles");
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(list, "roles");
+        m.checkNotNullParameter(user, "user");
         this.id = j;
         this.name = str;
         this.managed = z2;
@@ -76,9 +76,9 @@ public final /* data */ class ModelEmojiGuild {
     }
 
     public final ModelEmojiGuild copy(long id2, String name, boolean managed, List<Long> roles, boolean requiredColons, User user, boolean animated, boolean available) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(roles, "roles");
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(roles, "roles");
+        m.checkNotNullParameter(user, "user");
         return new ModelEmojiGuild(id2, name, managed, roles, requiredColons, user, animated, available);
     }
 
@@ -90,7 +90,7 @@ public final /* data */ class ModelEmojiGuild {
             return false;
         }
         ModelEmojiGuild modelEmojiGuild = (ModelEmojiGuild) other;
-        return this.id == modelEmojiGuild.id && Intrinsics3.areEqual(this.name, modelEmojiGuild.name) && this.managed == modelEmojiGuild.managed && Intrinsics3.areEqual(this.roles, modelEmojiGuild.roles) && this.requiredColons == modelEmojiGuild.requiredColons && Intrinsics3.areEqual(this.user, modelEmojiGuild.user) && this.animated == modelEmojiGuild.animated && this.available == modelEmojiGuild.available;
+        return this.id == modelEmojiGuild.id && m.areEqual(this.name, modelEmojiGuild.name) && this.managed == modelEmojiGuild.managed && m.areEqual(this.roles, modelEmojiGuild.roles) && this.requiredColons == modelEmojiGuild.requiredColons && m.areEqual(this.user, modelEmojiGuild.user) && this.animated == modelEmojiGuild.animated && this.available == modelEmojiGuild.available;
     }
 
     public final boolean getAnimated() {
@@ -158,7 +158,7 @@ public final /* data */ class ModelEmojiGuild {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelEmojiGuild(id=");
+        StringBuilder sbU = a.U("ModelEmojiGuild(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -173,6 +173,6 @@ public final /* data */ class ModelEmojiGuild {
         sbU.append(", animated=");
         sbU.append(this.animated);
         sbU.append(", available=");
-        return outline.O(sbU, this.available, ")");
+        return a.O(sbU, this.available, ")");
     }
 }

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
 import b.a.d.o;
-import b.a.i.WidgetServerSettingsConfirmDisableIntegrationBinding;
+import b.a.i.y5;
 import com.discord.R;
 import com.discord.api.user.User;
 import com.discord.databinding.WidgetServerSettingsIntegrationListItemBinding;
@@ -25,7 +25,7 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.servers.WidgetServerSettingsIntegrations;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import rx.Observable;
 import rx.functions.Action1;
 
@@ -70,10 +70,10 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
             /* renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Void r3) {
                 CheckedSetting checkedSetting = WidgetServerSettingsIntegrationsListItem.access$getBinding$p(WidgetServerSettingsIntegrationsListItem.this).h;
-                Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
+                m.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
                 checkedSetting.setChecked(true);
                 CheckedSetting checkedSetting2 = WidgetServerSettingsIntegrationsListItem.access$getBinding$p(WidgetServerSettingsIntegrationsListItem.this).h;
-                Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.integrationSyncSwitch");
+                m.checkNotNullExpressionValue(checkedSetting2, "binding.integrationSyncSwitch");
                 checkedSetting2.setEnabled(false);
                 WidgetServerSettingsIntegrationsListItem.access$showSyncingUI(WidgetServerSettingsIntegrationsListItem.this, true);
             }
@@ -92,12 +92,12 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
-            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
+            m.checkNotNullExpressionValue(bool, "checked");
             if (!bool.booleanValue()) {
                 Observable observableUi = ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().enableIntegration(this.$data.getGuildId(), new RestAPIParams.EnableIntegration(this.$data.getIntegration().getType(), String.valueOf(this.$integrationId))), false, 1, null));
                 AnonymousClass1 anonymousClass1 = new AnonymousClass1();
                 CheckedSetting checkedSetting = WidgetServerSettingsIntegrationsListItem.access$getBinding$p(WidgetServerSettingsIntegrationsListItem.this).h;
-                Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
+                m.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
                 observableUi.k(o.j(anonymousClass1, checkedSetting.getContext(), null, 4));
                 return;
             }
@@ -106,9 +106,9 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
             long j = this.$integrationId;
             boolean z2 = this.$isTwitch;
             CheckedSetting checkedSetting2 = WidgetServerSettingsIntegrationsListItem.access$getBinding$p(WidgetServerSettingsIntegrationsListItem.this).h;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.integrationSyncSwitch");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.integrationSyncSwitch");
             Context context = checkedSetting2.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.integrationSyncSwitch.context");
+            m.checkNotNullExpressionValue(context, "binding.integrationSyncSwitch.context");
             WidgetServerSettingsIntegrationsListItem.access$showDisableSyncDialog(widgetServerSettingsIntegrationsListItem, guildId, j, z2, context);
         }
     }
@@ -169,7 +169,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsIntegrationsListItem(WidgetServerSettingsIntegrations.Adapter adapter) {
         super(R.layout.widget_server_settings_integration_list_item, adapter);
-        Intrinsics3.checkNotNullParameter(adapter, "adapter");
+        m.checkNotNullParameter(adapter, "adapter");
         View view = this.itemView;
         int i = R.id.integration_header_container;
         RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.integration_header_container);
@@ -199,7 +199,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
                                         ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.integration_syncing_progress_bar);
                                         if (progressBar != null) {
                                             WidgetServerSettingsIntegrationListItemBinding widgetServerSettingsIntegrationListItemBinding = new WidgetServerSettingsIntegrationListItemBinding((FrameLayout) view, relativeLayout, viewFindViewById, imageView, textView, linearLayout, textView2, imageView2, checkedSetting, progressBar);
-                                            Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsIntegrationListItemBinding, "WidgetServerSettingsInte…temBinding.bind(itemView)");
+                                            m.checkNotNullExpressionValue(widgetServerSettingsIntegrationListItemBinding, "WidgetServerSettingsInte…temBinding.bind(itemView)");
                                             this.binding = widgetServerSettingsIntegrationListItemBinding;
                                             return;
                                         }
@@ -245,9 +245,9 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
                     TextView textView2 = (TextView) viewInflate.findViewById(R.id.server_settings_confirm_disable_integration_header);
                     if (textView2 != null) {
                         LinearLayout linearLayout = (LinearLayout) viewInflate;
-                        Intrinsics3.checkNotNullExpressionValue(new WidgetServerSettingsConfirmDisableIntegrationBinding(linearLayout, textView, materialButton, materialButton2, textView2), "WidgetServerSettingsConf…om(context), null, false)");
+                        m.checkNotNullExpressionValue(new y5(linearLayout, textView, materialButton, materialButton2, textView2), "WidgetServerSettingsConf…om(context), null, false)");
                         AlertDialog alertDialogCreate = new AlertDialog.Builder(context).setView(linearLayout).create();
-                        Intrinsics3.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(cont…ew(binding.root).create()");
+                        m.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(cont…ew(binding.root).create()");
                         materialButton.setOnClickListener(new AnonymousClass1(alertDialogCreate));
                         materialButton2.setOnClickListener(new AnonymousClass2(guildId, integrationId, alertDialogCreate, context));
                         textView.setText(isTwitch ? R.string.disable_integration_twitch_body : R.string.disable_integration_youtube_body);
@@ -262,13 +262,13 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
 
     private final void showSyncingUI(boolean isSyncing) {
         ImageView imageView = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.integrationSettingsIcon");
+        m.checkNotNullExpressionValue(imageView, "binding.integrationSettingsIcon");
         imageView.setVisibility(isSyncing ^ true ? 0 : 8);
         ProgressBar progressBar = this.binding.i;
-        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.integrationSyncingProgressBar");
+        m.checkNotNullExpressionValue(progressBar, "binding.integrationSyncingProgressBar");
         progressBar.setVisibility(isSyncing ? 0 : 8);
         View view = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(view, "binding.integrationHeaderDisabledOverlay");
+        m.checkNotNullExpressionValue(view, "binding.integrationHeaderDisabledOverlay");
         view.setVisibility(isSyncing ? 0 : 8);
         if (isSyncing) {
             this.binding.f2576b.setOnClickListener(null);
@@ -282,9 +282,9 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
 
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetServerSettingsIntegrations.Model.IntegrationItem data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, (int) data);
-        boolean zAreEqual = Intrinsics3.areEqual(data.getIntegration().getType(), "twitch");
+        boolean zAreEqual = m.areEqual(data.getIntegration().getType(), "twitch");
         boolean zIsSyncing = data.getIntegration().isSyncing();
         boolean zIsEnabled = data.getIntegration().isEnabled();
         long id2 = data.getIntegration().getId();
@@ -294,22 +294,22 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
             this.binding.f2576b.setOnClickListener(new AnonymousClass1(id2));
         }
         TextView textView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.integrationName");
+        m.checkNotNullExpressionValue(textView, "binding.integrationName");
         textView.setText(data.getIntegration().getDisplayName());
         TextView textView2 = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.integrationOwnerName");
+        m.checkNotNullExpressionValue(textView2, "binding.integrationOwnerName");
         User user = data.getIntegration().getUser();
         textView2.setText(user != null ? user.getUsername() : null);
         this.binding.d.setImageResource(zAreEqual ? R.drawable.asset_account_sync_twitch : R.drawable.asset_account_sync_youtube);
         View view = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(view, "binding.integrationHeaderDisabledOverlay");
+        m.checkNotNullExpressionValue(view, "binding.integrationHeaderDisabledOverlay");
         view.setVisibility(zIsSyncing || !zIsEnabled ? 0 : 8);
         showSyncingUI(zIsSyncing);
         CheckedSetting checkedSetting = this.binding.h;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
+        m.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
         checkedSetting.setChecked(zIsEnabled);
         CheckedSetting checkedSetting2 = this.binding.h;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.integrationSyncSwitch");
+        m.checkNotNullExpressionValue(checkedSetting2, "binding.integrationSyncSwitch");
         checkedSetting2.setEnabled(!zIsSyncing);
         if (zIsSyncing) {
             this.binding.h.setOnCheckedListener(null);

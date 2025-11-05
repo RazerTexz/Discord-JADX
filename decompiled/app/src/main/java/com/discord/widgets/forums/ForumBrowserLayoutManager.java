@@ -2,7 +2,7 @@ package com.discord.widgets.forums;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
@@ -14,7 +14,7 @@ public final class ForumBrowserLayoutManager extends LinearLayoutManager {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ForumBrowserLayoutManager(RecyclerView recyclerView) {
         super(recyclerView.getContext(), 1, false);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -27,7 +27,7 @@ public final class ForumBrowserLayoutManager extends LinearLayoutManager {
     }
 
     public final void setOnLayoutCompletedCallback(Function0<Unit> onLayoutCompleted) {
-        Intrinsics3.checkNotNullParameter(onLayoutCompleted, "onLayoutCompleted");
+        m.checkNotNullParameter(onLayoutCompleted, "onLayoutCompleted");
         this.onLayoutCompletedCallback = onLayoutCompleted;
     }
 }

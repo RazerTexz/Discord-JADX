@@ -8,7 +8,6 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import androidx.annotation.DoNotInline;
 import androidx.annotation.RequiresApi;
-import b.d.b.a.outline;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -218,7 +217,7 @@ public final class PlaybackStateCompat implements Parcelable {
         sb.append(", custom actions=");
         sb.append(this.r);
         sb.append(", active item id=");
-        return outline.C(sb, this.f21s, "}");
+        return b.d.b.a.a.C(sb, this.f21s, "}");
     }
 
     @Override // android.os.Parcelable
@@ -268,7 +267,7 @@ public final class PlaybackStateCompat implements Parcelable {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Action:mName='");
+            StringBuilder sbU = b.d.b.a.a.U("Action:mName='");
             sbU.append((Object) this.k);
             sbU.append(", mIcon=");
             sbU.append(this.l);

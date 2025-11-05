@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ExpressionPickerCategorySelectionOverlineViewBinding;
+import b.a.i.n;
 
 /* loaded from: classes.dex */
 public final class StickerCategoryItemRecentBinding implements ViewBinding {
@@ -14,11 +14,11 @@ public final class StickerCategoryItemRecentBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final ExpressionPickerCategorySelectionOverlineViewBinding f2150b;
+    public final n f2150b;
 
-    public StickerCategoryItemRecentBinding(@NonNull FrameLayout frameLayout, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+    public StickerCategoryItemRecentBinding(@NonNull FrameLayout frameLayout, @NonNull n nVar) {
         this.a = frameLayout;
-        this.f2150b = expressionPickerCategorySelectionOverlineViewBinding;
+        this.f2150b = nVar;
     }
 
     @Override // androidx.viewbinding.ViewBinding

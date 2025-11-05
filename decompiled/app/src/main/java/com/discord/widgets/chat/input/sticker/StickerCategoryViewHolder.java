@@ -11,7 +11,7 @@ import com.discord.rlottie.RLottieImageView;
 import com.discord.views.sticker.StickerView;
 import com.discord.widgets.chat.input.sticker.StickerCategoryItem;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -27,23 +27,23 @@ public abstract class StickerCategoryViewHolder extends RecyclerView.ViewHolder 
 
         /* JADX WARN: Illegal instructions before constructor call */
         public Guild(StickerCategoryItemGuildBinding stickerCategoryItemGuildBinding) {
-            Intrinsics3.checkNotNullParameter(stickerCategoryItemGuildBinding, "binding");
+            m.checkNotNullParameter(stickerCategoryItemGuildBinding, "binding");
             FrameLayout frameLayout = stickerCategoryItemGuildBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+            m.checkNotNullExpressionValue(frameLayout, "binding.root");
             super(frameLayout, null);
             this.binding = stickerCategoryItemGuildBinding;
         }
 
         public final void configure(StickerCategoryItem.GuildItem guildItem, Function1<? super StickerCategoryItem.GuildItem, Unit> onGuildClicked) {
-            Intrinsics3.checkNotNullParameter(guildItem, "guildItem");
-            Intrinsics3.checkNotNullParameter(onGuildClicked, "onGuildClicked");
+            m.checkNotNullParameter(guildItem, "guildItem");
+            m.checkNotNullParameter(onGuildClicked, "onGuildClicked");
             this.binding.c.updateView(guildItem.getGuild());
             View view = this.binding.f2148b.f163b;
-            Intrinsics3.checkNotNullExpressionValue(view, "binding.overline.express…CategorySelectionOverline");
+            m.checkNotNullExpressionValue(view, "binding.overline.express…CategorySelectionOverline");
             view.setVisibility(guildItem.getIsSelected() ? 0 : 8);
-            this.itemView.setOnClickListener(new StickerCategoryViewHolder2(onGuildClicked, guildItem));
+            this.itemView.setOnClickListener(new StickerCategoryViewHolder$Guild$configure$1(onGuildClicked, guildItem));
             View view2 = this.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view2, "itemView");
+            m.checkNotNullExpressionValue(view2, "itemView");
             view2.setContentDescription(guildItem.getGuild().getName());
         }
     }
@@ -54,33 +54,33 @@ public abstract class StickerCategoryViewHolder extends RecyclerView.ViewHolder 
 
         /* JADX WARN: Illegal instructions before constructor call */
         public Pack(StickerCategoryItemPackBinding stickerCategoryItemPackBinding) {
-            Intrinsics3.checkNotNullParameter(stickerCategoryItemPackBinding, "binding");
+            m.checkNotNullParameter(stickerCategoryItemPackBinding, "binding");
             FrameLayout frameLayout = stickerCategoryItemPackBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+            m.checkNotNullExpressionValue(frameLayout, "binding.root");
             super(frameLayout, null);
             this.binding = stickerCategoryItemPackBinding;
         }
 
         public final void configure(StickerCategoryItem.PackItem packItem, Function1<? super StickerCategoryItem.PackItem, Unit> onPackClicked) {
-            Intrinsics3.checkNotNullParameter(packItem, "packItem");
-            Intrinsics3.checkNotNullParameter(onPackClicked, "onPackClicked");
+            m.checkNotNullParameter(packItem, "packItem");
+            m.checkNotNullParameter(onPackClicked, "onPackClicked");
             this.binding.c.d(packItem.getPack().getCoverSticker(), 2);
-            this.binding.c.setOnClickListener(new StickerCategoryViewHolder3(onPackClicked, packItem));
+            this.binding.c.setOnClickListener(new StickerCategoryViewHolder$Pack$configure$1(onPackClicked, packItem));
             StickerView stickerView = this.binding.c;
             SimpleDraweeView simpleDraweeView = stickerView.binding.f191b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.stickerViewImageview");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.stickerViewImageview");
             simpleDraweeView.setImportantForAccessibility(4);
             RLottieImageView rLottieImageView = stickerView.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(rLottieImageView, "binding.stickerViewLottie");
+            m.checkNotNullExpressionValue(rLottieImageView, "binding.stickerViewLottie");
             rLottieImageView.setImportantForAccessibility(4);
             ImageView imageView = stickerView.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.stickerViewPlaceholder");
+            m.checkNotNullExpressionValue(imageView, "binding.stickerViewPlaceholder");
             imageView.setImportantForAccessibility(4);
             StickerView stickerView2 = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(stickerView2, "binding.stickerCategoryItemPackAvatar");
+            m.checkNotNullExpressionValue(stickerView2, "binding.stickerCategoryItemPackAvatar");
             stickerView2.setContentDescription(packItem.getPack().getName());
             View view = this.binding.f2149b.f163b;
-            Intrinsics3.checkNotNullExpressionValue(view, "binding.overline.express…CategorySelectionOverline");
+            m.checkNotNullExpressionValue(view, "binding.overline.express…CategorySelectionOverline");
             view.setVisibility(packItem.getIsSelected() ? 0 : 8);
         }
     }
@@ -91,20 +91,20 @@ public abstract class StickerCategoryViewHolder extends RecyclerView.ViewHolder 
 
         /* JADX WARN: Illegal instructions before constructor call */
         public Recent(StickerCategoryItemRecentBinding stickerCategoryItemRecentBinding) {
-            Intrinsics3.checkNotNullParameter(stickerCategoryItemRecentBinding, "binding");
+            m.checkNotNullParameter(stickerCategoryItemRecentBinding, "binding");
             FrameLayout frameLayout = stickerCategoryItemRecentBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+            m.checkNotNullExpressionValue(frameLayout, "binding.root");
             super(frameLayout, null);
             this.binding = stickerCategoryItemRecentBinding;
         }
 
         public final void configure(StickerCategoryItem.RecentItem categoryItem, Function0<Unit> onRecentClicked) {
-            Intrinsics3.checkNotNullParameter(categoryItem, "categoryItem");
-            Intrinsics3.checkNotNullParameter(onRecentClicked, "onRecentClicked");
+            m.checkNotNullParameter(categoryItem, "categoryItem");
+            m.checkNotNullParameter(onRecentClicked, "onRecentClicked");
             View view = this.binding.f2150b.f163b;
-            Intrinsics3.checkNotNullExpressionValue(view, "binding.overline.express…CategorySelectionOverline");
+            m.checkNotNullExpressionValue(view, "binding.overline.express…CategorySelectionOverline");
             view.setVisibility(categoryItem.getIsSelected() ? 0 : 8);
-            this.itemView.setOnClickListener(new StickerCategoryViewHolder4(onRecentClicked));
+            this.itemView.setOnClickListener(new StickerCategoryViewHolder$Recent$configure$1(onRecentClicked));
         }
     }
 

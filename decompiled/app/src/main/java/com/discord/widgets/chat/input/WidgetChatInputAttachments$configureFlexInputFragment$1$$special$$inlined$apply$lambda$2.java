@@ -3,14 +3,14 @@ package com.discord.widgets.chat.input;
 import android.content.Context;
 import androidx.core.view.inputmethod.InputContentInfoCompat;
 import com.discord.widgets.chat.input.WidgetChatInputAttachments;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetChatInputAttachments.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChatInputAttachments$configureFlexInputFragment$1$$special$$inlined$apply$lambda$2 extends Lambda implements Function1<InputContentInfoCompat, Unit> {
+public final class WidgetChatInputAttachments$configureFlexInputFragment$1$$special$$inlined$apply$lambda$2 extends o implements Function1<InputContentInfoCompat, Unit> {
     public final /* synthetic */ WidgetChatInputAttachments.AnonymousClass1 this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -27,10 +27,10 @@ public final class WidgetChatInputAttachments$configureFlexInputFragment$1$$spec
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(InputContentInfoCompat inputContentInfoCompat) {
-        Intrinsics3.checkNotNullParameter(inputContentInfoCompat, "it");
+        m.checkNotNullParameter(inputContentInfoCompat, "it");
         WidgetChatInputAttachments widgetChatInputAttachments = WidgetChatInputAttachments.this;
         Context context = WidgetChatInputAttachments.access$getFlexInputFragment$p(widgetChatInputAttachments).l().getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "flexInputFragment.getTextInput().context");
+        m.checkNotNullExpressionValue(context, "flexInputFragment.getTextInput().context");
         WidgetChatInputAttachments.access$setAttachmentFromPicker(widgetChatInputAttachments, context, inputContentInfoCompat);
     }
 }

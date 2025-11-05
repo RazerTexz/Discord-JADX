@@ -11,7 +11,6 @@ import android.os.Message;
 import android.view.Surface;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import h0.c.EglBase2;
 import h0.c.e;
 import h0.c.f;
 import h0.c.g;
@@ -20,6 +19,7 @@ import h0.c.i;
 import h0.c.j;
 import h0.c.k;
 import h0.c.l;
+import h0.c.n0;
 import java.nio.ByteBuffer;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -235,7 +235,7 @@ public class EglRenderer implements VideoSink {
     private void lambda$init$0(EglBase.Context context, int[] iArr) {
         if (context != null) {
             logD("EglBase.create shared context");
-            this.eglBase = EglBase2.b(context, iArr);
+            this.eglBase = n0.b(context, iArr);
         } else {
             logD("EglBase10.create context");
             Object obj = EglBase.lock;

@@ -1,9 +1,8 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.commands.CommandChoice;
-import d0.t.CollectionsJVM;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -39,7 +38,7 @@ public final /* data */ class ApplicationCommandChoiceAutocompletable extends Au
     }
 
     public final ApplicationCommandChoiceAutocompletable copy(CommandChoice choice, String optionName) {
-        Intrinsics3.checkNotNullParameter(choice, "choice");
+        m.checkNotNullParameter(choice, "choice");
         return new ApplicationCommandChoiceAutocompletable(choice, optionName);
     }
 
@@ -51,7 +50,7 @@ public final /* data */ class ApplicationCommandChoiceAutocompletable extends Au
             return false;
         }
         ApplicationCommandChoiceAutocompletable applicationCommandChoiceAutocompletable = (ApplicationCommandChoiceAutocompletable) other;
-        return Intrinsics3.areEqual(this.choice, applicationCommandChoiceAutocompletable.choice) && Intrinsics3.areEqual(this.optionName, applicationCommandChoiceAutocompletable.optionName);
+        return m.areEqual(this.choice, applicationCommandChoiceAutocompletable.choice) && m.areEqual(this.optionName, applicationCommandChoiceAutocompletable.optionName);
     }
 
     public final CommandChoice getChoice() {
@@ -84,18 +83,18 @@ public final /* data */ class ApplicationCommandChoiceAutocompletable extends Au
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ApplicationCommandChoiceAutocompletable(choice=");
+        StringBuilder sbU = a.U("ApplicationCommandChoiceAutocompletable(choice=");
         sbU.append(this.choice);
         sbU.append(", optionName=");
-        return outline.J(sbU, this.optionName, ")");
+        return a.J(sbU, this.optionName, ")");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ApplicationCommandChoiceAutocompletable(CommandChoice commandChoice, String str) {
         super(null);
-        Intrinsics3.checkNotNullParameter(commandChoice, "choice");
+        m.checkNotNullParameter(commandChoice, "choice");
         this.choice = commandChoice;
         this.optionName = str;
-        this.textMatchers = CollectionsJVM.listOf(commandChoice.getName());
+        this.textMatchers = d0.t.m.listOf(commandChoice.getName());
     }
 }

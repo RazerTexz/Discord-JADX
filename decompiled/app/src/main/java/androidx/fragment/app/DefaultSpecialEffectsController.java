@@ -19,7 +19,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewGroupCompat;
 import androidx.fragment.app.FragmentAnim;
 import androidx.fragment.app.SpecialEffectsController;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -415,7 +415,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                 if (fragmentTransitionImpl2 == null) {
                     fragmentTransitionImpl2 = handlingImpl;
                 } else if (handlingImpl != null && fragmentTransitionImpl2 != handlingImpl) {
-                    StringBuilder sbU = outline.U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
+                    StringBuilder sbU = a.U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
                     sbU.append(transitionInfo.getOperation().getFragment());
                     sbU.append(" returned Transition ");
                     sbU.append(transitionInfo.getTransition());
@@ -864,7 +864,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
             if (handlingImpl == null || handlingImpl2 == null || handlingImpl == handlingImpl2) {
                 return handlingImpl != null ? handlingImpl : handlingImpl2;
             }
-            StringBuilder sbU = outline.U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
+            StringBuilder sbU = a.U("Mixing framework transitions and AndroidX transitions is not allowed. Fragment ");
             sbU.append(getOperation().getFragment());
             sbU.append(" returned Transition ");
             sbU.append(this.mTransition);

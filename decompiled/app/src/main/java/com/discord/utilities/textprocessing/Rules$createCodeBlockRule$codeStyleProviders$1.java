@@ -6,8 +6,8 @@ import androidx.exifinterface.media.ExifInterface;
 import com.discord.R;
 import com.discord.simpleast.core.node.StyleNode;
 import com.discord.utilities.textprocessing.node.BasicRenderContext;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 
 /* compiled from: Rules.kt */
 /* loaded from: classes2.dex */
@@ -21,7 +21,7 @@ public final class Rules$createCodeBlockRule$codeStyleProviders$1<RC> implements
 
     /* JADX WARN: Incorrect types in method signature: (TRC;)Ljava/lang/Iterable<*>; */
     public final Iterable get(BasicRenderContext basicRenderContext) {
-        Intrinsics3.checkNotNullParameter(basicRenderContext, "it");
-        return Collections2.listOf(new TextAppearanceSpan(basicRenderContext.getContext(), R.style.Code_TextAppearance), new RelativeSizeSpan(0.85f));
+        m.checkNotNullParameter(basicRenderContext, "it");
+        return n.listOf(new TextAppearanceSpan(basicRenderContext.getContext(), R.style.Code_TextAppearance), new RelativeSizeSpan(0.85f));
     }
 }

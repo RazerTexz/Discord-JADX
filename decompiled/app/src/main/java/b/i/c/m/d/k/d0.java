@@ -1,13 +1,6 @@
 package b.i.c.m.d.k;
 
 import android.util.Log;
-import b.d.b.a.outline;
-import b.i.c.m.d.Logger3;
-import b.i.c.m.d.p.ClsFileOutputStream;
-import b.i.c.m.d.p.CodedOutputStream2;
-import b.i.c.m.d.s.SettingsController;
-import b.i.c.m.d.s.SettingsDataProvider;
-import b.i.c.m.d.s.h.Settings2;
 import com.google.android.gms.tasks.Task;
 import java.io.File;
 import java.io.FilenameFilter;
@@ -25,15 +18,15 @@ public class d0 implements Callable<Task<Void>> {
     public final /* synthetic */ Date j;
     public final /* synthetic */ Throwable k;
     public final /* synthetic */ Thread l;
-    public final /* synthetic */ SettingsDataProvider m;
+    public final /* synthetic */ b.i.c.m.d.s.d m;
     public final /* synthetic */ x n;
 
-    public d0(x xVar, Date date, Throwable th, Thread thread, SettingsDataProvider settingsDataProvider) {
+    public d0(x xVar, Date date, Throwable th, Thread thread, b.i.c.m.d.s.d dVar) {
         this.n = xVar;
         this.j = date;
         this.k = th;
         this.l = thread;
-        this.m = settingsDataProvider;
+        this.m = dVar;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:26:0x00ec  */
@@ -45,57 +38,57 @@ public class d0 implements Callable<Task<Void>> {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public Task<Void> call() throws Exception {
-        ClsFileOutputStream clsFileOutputStream;
-        CodedOutputStream2 codedOutputStream2I;
+        b.i.c.m.d.p.b bVar;
+        b.i.c.m.d.p.c cVarI;
         File[] fileArrListFiles;
         File[] fileArrListFiles2;
         long time = this.j.getTime() / 1000;
         String strI = this.n.i();
-        CodedOutputStream2 codedOutputStream2 = null;
+        b.i.c.m.d.p.c cVar = null;
         if (strI == null) {
-            Logger3.a.d("Tried to write a fatal exception while no session was open.");
+            b.i.c.m.d.b.a.d("Tried to write a fatal exception while no session was open.");
             return b.i.a.f.e.o.f.Z(null);
         }
         this.n.k.a();
-        SessionReportingCoordinator3 sessionReportingCoordinator3 = this.n.A;
+        d1 d1Var = this.n.A;
         Throwable th = this.k;
         Thread thread = this.l;
         String strReplaceAll = strI.replaceAll("-", "");
-        Objects.requireNonNull(sessionReportingCoordinator3);
-        outline.o0("Persisting fatal event for session ", strReplaceAll, Logger3.a);
-        sessionReportingCoordinator3.a(th, thread, strReplaceAll, "crash", time, true);
+        Objects.requireNonNull(d1Var);
+        b.d.b.a.a.o0("Persisting fatal event for session ", strReplaceAll, b.i.c.m.d.b.a);
+        d1Var.a(th, thread, strReplaceAll, "crash", time, true);
         x xVar = this.n;
         Thread thread2 = this.l;
         Throwable th2 = this.k;
         Objects.requireNonNull(xVar);
         try {
-            clsFileOutputStream = new ClsFileOutputStream(xVar.l(), strI + "SessionCrash");
+            bVar = new b.i.c.m.d.p.b(xVar.l(), strI + "SessionCrash");
             try {
-                codedOutputStream2I = CodedOutputStream2.i(clsFileOutputStream);
+                cVarI = b.i.c.m.d.p.c.i(bVar);
                 try {
                     try {
-                        xVar.y(codedOutputStream2I, thread2, th2, time, "crash", true);
+                        xVar.y(cVarI, thread2, th2, time, "crash", true);
                     } catch (Exception e) {
                         e = e;
-                        if (Logger3.a.a(6)) {
+                        if (b.i.c.m.d.b.a.a(6)) {
                             Log.e("FirebaseCrashlytics", "An error occurred in the fatal exception logger", e);
                         }
-                        CommonUtils.h(codedOutputStream2I, "Failed to flush to session begin file.");
-                        CommonUtils.c(clsFileOutputStream, "Failed to close fatal exception file output stream.");
+                        h.h(cVarI, "Failed to flush to session begin file.");
+                        h.c(bVar, "Failed to close fatal exception file output stream.");
                         this.n.g(this.j.getTime());
-                        Settings2 settings2C = ((SettingsController) this.m).c();
-                        int i = settings2C.b().a;
-                        Objects.requireNonNull(settings2C.b());
+                        b.i.c.m.d.s.h.e eVarC = ((b.i.c.m.d.s.c) this.m).c();
+                        int i = eVarC.b().a;
+                        Objects.requireNonNull(eVarC.b());
                         this.n.f(i, false);
                         x.a(this.n);
                         x xVar2 = this.n;
                         File fileM = xVar2.m();
                         File fileK = xVar2.k();
                         Comparator<File> comparator = x.d;
-                        FilenameFilter filenameFilter = Utils3.a;
+                        FilenameFilter filenameFilter = h1.a;
                         ArrayList arrayList = new ArrayList();
                         fileArrListFiles = fileM.listFiles();
-                        FilenameFilter filenameFilter2 = Utils3.a;
+                        FilenameFilter filenameFilter2 = h1.a;
                         fileArrListFiles2 = fileK.listFiles(filenameFilter2);
                         if (fileArrListFiles == null) {
                         }
@@ -103,51 +96,51 @@ public class d0 implements Callable<Task<Void>> {
                         }
                         arrayList.addAll(Arrays.asList(fileArrListFiles));
                         arrayList.addAll(Arrays.asList(fileArrListFiles2));
-                        int iC = 4 - Utils3.c(arrayList, 4, comparator);
-                        Utils3.b(xVar2.l(), x.f1699b, iC - Utils3.b(xVar2.n(), filenameFilter2, iC, comparator), comparator);
+                        int iC = 4 - h1.c(arrayList, 4, comparator);
+                        h1.b(xVar2.l(), x.f1699b, iC - h1.b(xVar2.n(), filenameFilter2, iC, comparator), comparator);
                         if (this.n.j.b()) {
                         }
                     }
                 } catch (Throwable th3) {
                     th = th3;
-                    codedOutputStream2 = codedOutputStream2I;
-                    CommonUtils.h(codedOutputStream2, "Failed to flush to session begin file.");
-                    CommonUtils.c(clsFileOutputStream, "Failed to close fatal exception file output stream.");
+                    cVar = cVarI;
+                    h.h(cVar, "Failed to flush to session begin file.");
+                    h.c(bVar, "Failed to close fatal exception file output stream.");
                     throw th;
                 }
             } catch (Exception e2) {
                 e = e2;
-                codedOutputStream2I = null;
+                cVarI = null;
             } catch (Throwable th4) {
                 th = th4;
-                CommonUtils.h(codedOutputStream2, "Failed to flush to session begin file.");
-                CommonUtils.c(clsFileOutputStream, "Failed to close fatal exception file output stream.");
+                h.h(cVar, "Failed to flush to session begin file.");
+                h.c(bVar, "Failed to close fatal exception file output stream.");
                 throw th;
             }
         } catch (Exception e3) {
             e = e3;
-            codedOutputStream2I = null;
-            clsFileOutputStream = null;
+            cVarI = null;
+            bVar = null;
         } catch (Throwable th5) {
             th = th5;
-            clsFileOutputStream = null;
+            bVar = null;
         }
-        CommonUtils.h(codedOutputStream2I, "Failed to flush to session begin file.");
-        CommonUtils.c(clsFileOutputStream, "Failed to close fatal exception file output stream.");
+        h.h(cVarI, "Failed to flush to session begin file.");
+        h.c(bVar, "Failed to close fatal exception file output stream.");
         this.n.g(this.j.getTime());
-        Settings2 settings2C2 = ((SettingsController) this.m).c();
-        int i2 = settings2C2.b().a;
-        Objects.requireNonNull(settings2C2.b());
+        b.i.c.m.d.s.h.e eVarC2 = ((b.i.c.m.d.s.c) this.m).c();
+        int i2 = eVarC2.b().a;
+        Objects.requireNonNull(eVarC2.b());
         this.n.f(i2, false);
         x.a(this.n);
         x xVar22 = this.n;
         File fileM2 = xVar22.m();
         File fileK2 = xVar22.k();
         Comparator<File> comparator2 = x.d;
-        FilenameFilter filenameFilter3 = Utils3.a;
+        FilenameFilter filenameFilter3 = h1.a;
         ArrayList arrayList2 = new ArrayList();
         fileArrListFiles = fileM2.listFiles();
-        FilenameFilter filenameFilter22 = Utils3.a;
+        FilenameFilter filenameFilter22 = h1.a;
         fileArrListFiles2 = fileK2.listFiles(filenameFilter22);
         if (fileArrListFiles == null) {
             fileArrListFiles = new File[0];
@@ -157,12 +150,12 @@ public class d0 implements Callable<Task<Void>> {
         }
         arrayList2.addAll(Arrays.asList(fileArrListFiles));
         arrayList2.addAll(Arrays.asList(fileArrListFiles2));
-        int iC2 = 4 - Utils3.c(arrayList2, 4, comparator2);
-        Utils3.b(xVar22.l(), x.f1699b, iC2 - Utils3.b(xVar22.n(), filenameFilter22, iC2, comparator2), comparator2);
+        int iC2 = 4 - h1.c(arrayList2, 4, comparator2);
+        h1.b(xVar22.l(), x.f1699b, iC2 - h1.b(xVar22.n(), filenameFilter22, iC2, comparator2), comparator2);
         if (this.n.j.b()) {
             return b.i.a.f.e.o.f.Z(null);
         }
         Executor executor = this.n.m.a;
-        return ((SettingsController) this.m).a().r(executor, new c0(this, executor));
+        return ((b.i.c.m.d.s.c) this.m).a().r(executor, new c0(this, executor));
     }
 }

@@ -7,7 +7,7 @@ import androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer;
 import androidx.constraintlayout.solver.widgets.Guideline;
 import androidx.constraintlayout.solver.widgets.HelperWidget;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -273,7 +273,7 @@ public class DependencyGraph {
         while (it.hasNext()) {
             strGenerateDisplayGraph = generateDisplayGraph(it.next(), strGenerateDisplayGraph);
         }
-        String strW = outline.w(strGenerateDisplayGraph, "\n}\n");
+        String strW = a.w(strGenerateDisplayGraph, "\n}\n");
         System.out.println("content:<<\n" + strW + "\n>>");
     }
 
@@ -303,19 +303,19 @@ public class DependencyGraph {
 
     private String generateChainDisplayGraph(ChainRun chainRun, String str) {
         int i = chainRun.orientation;
-        StringBuilder sbU = outline.U("cluster_");
+        StringBuilder sbU = a.U("cluster_");
         sbU.append(chainRun.widget.getDebugName());
         String string = sbU.toString();
-        String strY = outline.y("subgraph ", i == 0 ? outline.w(string, "_h") : outline.w(string, "_v"), " {\n");
+        String strY = a.y("subgraph ", i == 0 ? a.w(string, "_h") : a.w(string, "_v"), " {\n");
         Iterator<WidgetRun> it = chainRun.widgets.iterator();
         String strGenerateDisplayGraph = "";
         while (it.hasNext()) {
             WidgetRun next = it.next();
             String debugName = next.widget.getDebugName();
-            strY = outline.y(strY, i == 0 ? outline.w(debugName, "_HORIZONTAL") : outline.w(debugName, "_VERTICAL"), ";\n");
+            strY = a.y(strY, i == 0 ? a.w(debugName, "_HORIZONTAL") : a.w(debugName, "_VERTICAL"), ";\n");
             strGenerateDisplayGraph = generateDisplayGraph(next, strGenerateDisplayGraph);
         }
-        return outline.y(str, strGenerateDisplayGraph, outline.w(strY, "}\n"));
+        return a.y(str, strGenerateDisplayGraph, a.w(strY, "}\n"));
     }
 
     private String generateDisplayGraph(WidgetRun widgetRun, String str) {
@@ -325,7 +325,7 @@ public class DependencyGraph {
         if (!(widgetRun instanceof HelperReferences) && dependencyNode.dependencies.isEmpty() && (dependencyNode2.dependencies.isEmpty() && dependencyNode.targets.isEmpty()) && dependencyNode2.targets.isEmpty()) {
             return str;
         }
-        StringBuilder sbU = outline.U(str);
+        StringBuilder sbU = a.U(str);
         sbU.append(nodeDefinition(widgetRun));
         String string = sbU.toString();
         boolean zIsCenteredConnection = isCenteredConnection(dependencyNode, dependencyNode2);
@@ -338,19 +338,19 @@ public class DependencyGraph {
             ConstraintWidget.DimensionBehaviour horizontalDimensionBehaviour = widgetRun.widget.getHorizontalDimensionBehaviour();
             if (horizontalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.FIXED || horizontalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.WRAP_CONTENT) {
                 if (!dependencyNode.targets.isEmpty() && dependencyNode2.targets.isEmpty()) {
-                    StringBuilder sbU2 = outline.U("\n");
+                    StringBuilder sbU2 = a.U("\n");
                     sbU2.append(dependencyNode2.name());
                     sbU2.append(" -> ");
                     sbU2.append(dependencyNode.name());
                     sbU2.append("\n");
-                    strGenerateDisplayNode = outline.w(strGenerateDisplayNode, sbU2.toString());
+                    strGenerateDisplayNode = a.w(strGenerateDisplayNode, sbU2.toString());
                 } else if (dependencyNode.targets.isEmpty() && !dependencyNode2.targets.isEmpty()) {
-                    StringBuilder sbU3 = outline.U("\n");
+                    StringBuilder sbU3 = a.U("\n");
                     sbU3.append(dependencyNode.name());
                     sbU3.append(" -> ");
                     sbU3.append(dependencyNode2.name());
                     sbU3.append("\n");
-                    strGenerateDisplayNode = outline.w(strGenerateDisplayNode, sbU3.toString());
+                    strGenerateDisplayNode = a.w(strGenerateDisplayNode, sbU3.toString());
                 }
             } else if (horizontalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT && widgetRun.widget.getDimensionRatio() > 0.0f) {
                 widgetRun.widget.getDebugName();
@@ -359,19 +359,19 @@ public class DependencyGraph {
             ConstraintWidget.DimensionBehaviour verticalDimensionBehaviour = widgetRun.widget.getVerticalDimensionBehaviour();
             if (verticalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.FIXED || verticalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.WRAP_CONTENT) {
                 if (!dependencyNode.targets.isEmpty() && dependencyNode2.targets.isEmpty()) {
-                    StringBuilder sbU4 = outline.U("\n");
+                    StringBuilder sbU4 = a.U("\n");
                     sbU4.append(dependencyNode2.name());
                     sbU4.append(" -> ");
                     sbU4.append(dependencyNode.name());
                     sbU4.append("\n");
-                    strGenerateDisplayNode = outline.w(strGenerateDisplayNode, sbU4.toString());
+                    strGenerateDisplayNode = a.w(strGenerateDisplayNode, sbU4.toString());
                 } else if (dependencyNode.targets.isEmpty() && !dependencyNode2.targets.isEmpty()) {
-                    StringBuilder sbU5 = outline.U("\n");
+                    StringBuilder sbU5 = a.U("\n");
                     sbU5.append(dependencyNode.name());
                     sbU5.append(" -> ");
                     sbU5.append(dependencyNode2.name());
                     sbU5.append("\n");
-                    strGenerateDisplayNode = outline.w(strGenerateDisplayNode, sbU5.toString());
+                    strGenerateDisplayNode = a.w(strGenerateDisplayNode, sbU5.toString());
                 }
             } else if (verticalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT && widgetRun.widget.getDimensionRatio() > 0.0f) {
                 widgetRun.widget.getDebugName();
@@ -382,28 +382,28 @@ public class DependencyGraph {
 
     private String generateDisplayNode(DependencyNode dependencyNode, boolean z2, String str) {
         for (DependencyNode dependencyNode2 : dependencyNode.targets) {
-            StringBuilder sbU = outline.U("\n");
+            StringBuilder sbU = a.U("\n");
             sbU.append(dependencyNode.name());
-            StringBuilder sbX = outline.X(sbU.toString(), " -> ");
+            StringBuilder sbX = a.X(sbU.toString(), " -> ");
             sbX.append(dependencyNode2.name());
             String string = sbX.toString();
             if (dependencyNode.margin > 0 || z2 || (dependencyNode.run instanceof HelperReferences)) {
-                String strW = outline.w(string, "[");
+                String strW = a.w(string, "[");
                 if (dependencyNode.margin > 0) {
-                    strW = outline.B(outline.X(strW, "label=\""), dependencyNode.margin, "\"");
+                    strW = a.B(a.X(strW, "label=\""), dependencyNode.margin, "\"");
                     if (z2) {
-                        strW = outline.w(strW, ",");
+                        strW = a.w(strW, ",");
                     }
                 }
                 if (z2) {
-                    strW = outline.w(strW, " style=dashed ");
+                    strW = a.w(strW, " style=dashed ");
                 }
                 if (dependencyNode.run instanceof HelperReferences) {
-                    strW = outline.w(strW, " style=bold,color=gray ");
+                    strW = a.w(strW, " style=bold,color=gray ");
                 }
-                string = outline.w(strW, "]");
+                string = a.w(strW, "]");
             }
-            str = outline.w(str, outline.w(string, "\n"));
+            str = a.w(str, a.w(string, "\n"));
         }
         return str;
     }
@@ -448,59 +448,59 @@ public class DependencyGraph {
         ConstraintWidget constraintWidget = widgetRun.widget;
         ConstraintWidget.DimensionBehaviour horizontalDimensionBehaviour = !z2 ? constraintWidget.getHorizontalDimensionBehaviour() : constraintWidget.getVerticalDimensionBehaviour();
         RunGroup runGroup = widgetRun.runGroup;
-        String strW3 = outline.w(outline.w(outline.w(!z2 ? outline.w(debugName, "_HORIZONTAL") : outline.w(debugName, "_VERTICAL"), " [shape=none, label=<"), "<TABLE BORDER=\"0\" CELLSPACING=\"0\" CELLPADDING=\"2\">"), "  <TR>");
+        String strW3 = a.w(a.w(a.w(!z2 ? a.w(debugName, "_HORIZONTAL") : a.w(debugName, "_VERTICAL"), " [shape=none, label=<"), "<TABLE BORDER=\"0\" CELLSPACING=\"0\" CELLPADDING=\"2\">"), "  <TR>");
         if (z2) {
-            String strW4 = outline.w(strW3, "    <TD ");
+            String strW4 = a.w(strW3, "    <TD ");
             if (widgetRun.start.resolved) {
-                strW4 = outline.w(strW4, " BGCOLOR=\"green\"");
+                strW4 = a.w(strW4, " BGCOLOR=\"green\"");
             }
-            strW = outline.w(strW4, " PORT=\"TOP\" BORDER=\"1\">T</TD>");
+            strW = a.w(strW4, " PORT=\"TOP\" BORDER=\"1\">T</TD>");
         } else {
-            String strW5 = outline.w(strW3, "    <TD ");
+            String strW5 = a.w(strW3, "    <TD ");
             if (widgetRun.start.resolved) {
-                strW5 = outline.w(strW5, " BGCOLOR=\"green\"");
+                strW5 = a.w(strW5, " BGCOLOR=\"green\"");
             }
-            strW = outline.w(strW5, " PORT=\"LEFT\" BORDER=\"1\">L</TD>");
+            strW = a.w(strW5, " PORT=\"LEFT\" BORDER=\"1\">L</TD>");
         }
-        String strW6 = outline.w(strW, "    <TD BORDER=\"1\" ");
+        String strW6 = a.w(strW, "    <TD BORDER=\"1\" ");
         boolean z3 = widgetRun.dimension.resolved;
         if (z3 && !widgetRun.widget.measured) {
-            strW6 = outline.w(strW6, " BGCOLOR=\"green\" ");
+            strW6 = a.w(strW6, " BGCOLOR=\"green\" ");
         } else if (z3 && widgetRun.widget.measured) {
-            strW6 = outline.w(strW6, " BGCOLOR=\"lightgray\" ");
+            strW6 = a.w(strW6, " BGCOLOR=\"lightgray\" ");
         } else if (!z3 && widgetRun.widget.measured) {
-            strW6 = outline.w(strW6, " BGCOLOR=\"yellow\" ");
+            strW6 = a.w(strW6, " BGCOLOR=\"yellow\" ");
         }
         if (horizontalDimensionBehaviour == ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT) {
-            strW6 = outline.w(strW6, "style=\"dashed\"");
+            strW6 = a.w(strW6, "style=\"dashed\"");
         }
         if (runGroup != null) {
-            StringBuilder sbU = outline.U(" [");
+            StringBuilder sbU = a.U(" [");
             sbU.append(runGroup.groupIndex + 1);
             sbU.append(AutocompleteViewModel.COMMAND_DISCOVER_TOKEN);
-            strB = outline.B(sbU, RunGroup.index, "]");
+            strB = a.B(sbU, RunGroup.index, "]");
         } else {
             strB = "";
         }
         String str = strW6 + ">" + debugName + strB + " </TD>";
         if (z2) {
-            String strW7 = outline.w(str, "    <TD ");
+            String strW7 = a.w(str, "    <TD ");
             if ((widgetRun instanceof VerticalWidgetRun) && ((VerticalWidgetRun) widgetRun).baseline.resolved) {
-                strW7 = outline.w(strW7, " BGCOLOR=\"green\"");
+                strW7 = a.w(strW7, " BGCOLOR=\"green\"");
             }
-            String strW8 = outline.w(outline.w(strW7, " PORT=\"BASELINE\" BORDER=\"1\">b</TD>"), "    <TD ");
+            String strW8 = a.w(a.w(strW7, " PORT=\"BASELINE\" BORDER=\"1\">b</TD>"), "    <TD ");
             if (widgetRun.end.resolved) {
-                strW8 = outline.w(strW8, " BGCOLOR=\"green\"");
+                strW8 = a.w(strW8, " BGCOLOR=\"green\"");
             }
-            strW2 = outline.w(strW8, " PORT=\"BOTTOM\" BORDER=\"1\">B</TD>");
+            strW2 = a.w(strW8, " PORT=\"BOTTOM\" BORDER=\"1\">B</TD>");
         } else {
-            String strW9 = outline.w(str, "    <TD ");
+            String strW9 = a.w(str, "    <TD ");
             if (widgetRun.end.resolved) {
-                strW9 = outline.w(strW9, " BGCOLOR=\"green\"");
+                strW9 = a.w(strW9, " BGCOLOR=\"green\"");
             }
-            strW2 = outline.w(strW9, " PORT=\"RIGHT\" BORDER=\"1\">R</TD>");
+            strW2 = a.w(strW9, " PORT=\"RIGHT\" BORDER=\"1\">R</TD>");
         }
-        return outline.w(outline.w(strW2, "  </TR></TABLE>"), ">];\n");
+        return a.w(a.w(strW2, "  </TR></TABLE>"), ">];\n");
     }
 
     public void buildGraph() {

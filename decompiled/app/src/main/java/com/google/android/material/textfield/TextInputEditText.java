@@ -16,7 +16,7 @@ import android.view.inputmethod.InputConnection;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.google.android.material.R;
 import com.google.android.material.internal.ManufacturerUtils;
 import com.google.android.material.internal.ThemeEnforcement;
@@ -44,7 +44,7 @@ public class TextInputEditText extends AppCompatEditText {
         }
         StringBuilder sb = new StringBuilder();
         sb.append((Object) text);
-        sb.append(TextUtils.isEmpty(string) ? "" : outline.w(", ", string));
+        sb.append(TextUtils.isEmpty(string) ? "" : a.w(", ", string));
         return sb.toString();
     }
 

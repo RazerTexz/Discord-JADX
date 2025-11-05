@@ -2,30 +2,30 @@ package b.i.a.c.g3.z;
 
 import android.graphics.SurfaceTexture;
 import android.view.Surface;
-import b.i.a.c.g3.z.SphericalGLSurfaceView;
+import b.i.a.c.g3.z.k;
 import java.util.Iterator;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class b implements Runnable {
-    public final /* synthetic */ SphericalGLSurfaceView j;
+    public final /* synthetic */ k j;
     public final /* synthetic */ SurfaceTexture k;
 
-    public /* synthetic */ b(SphericalGLSurfaceView sphericalGLSurfaceView, SurfaceTexture surfaceTexture) {
-        this.j = sphericalGLSurfaceView;
+    public /* synthetic */ b(k kVar, SurfaceTexture surfaceTexture) {
+        this.j = kVar;
         this.k = surfaceTexture;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        SphericalGLSurfaceView sphericalGLSurfaceView = this.j;
+        k kVar = this.j;
         SurfaceTexture surfaceTexture = this.k;
-        SurfaceTexture surfaceTexture2 = sphericalGLSurfaceView.q;
-        Surface surface = sphericalGLSurfaceView.r;
+        SurfaceTexture surfaceTexture2 = kVar.q;
+        Surface surface = kVar.r;
         Surface surface2 = new Surface(surfaceTexture);
-        sphericalGLSurfaceView.q = surfaceTexture;
-        sphericalGLSurfaceView.r = surface2;
-        Iterator<SphericalGLSurfaceView.b> it = sphericalGLSurfaceView.j.iterator();
+        kVar.q = surfaceTexture;
+        kVar.r = surface2;
+        Iterator<k.b> it = kVar.j.iterator();
         while (it.hasNext()) {
             it.next().u(surface2);
         }

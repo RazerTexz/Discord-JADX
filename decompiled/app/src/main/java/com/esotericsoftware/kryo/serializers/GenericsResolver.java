@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.Log;
+import b.e.a.a;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -28,7 +28,7 @@ public final class GenericsResolver {
     }
 
     public void pushScope(Class cls, Generics generics) {
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
         this.stack.addFirst(generics);
     }
 }

@@ -3,7 +3,7 @@ package androidx.core.view.animation;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.view.animation.Interpolator;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class PathInterpolatorApi14 implements Interpolator {
@@ -65,7 +65,7 @@ public class PathInterpolatorApi14 implements Interpolator {
         float f3 = (f - fArr[i]) / f2;
         float[] fArr2 = this.mY;
         float f4 = fArr2[i];
-        return outline.a(fArr2[length], f4, f3, f4);
+        return a.a(fArr2[length], f4, f3, f4);
     }
 
     public PathInterpolatorApi14(float f, float f2) {

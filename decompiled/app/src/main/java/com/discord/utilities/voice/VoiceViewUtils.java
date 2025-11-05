@@ -4,12 +4,12 @@ import android.content.Context;
 import android.os.Build;
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.rtcconnection.RtcConnection;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.streams.StreamContext;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 
 /* compiled from: VoiceViewUtils.kt */
@@ -59,11 +59,11 @@ public final class VoiceViewUtils {
 
     public final CharSequence getConnectedText(Context context, RtcConnection.State rtcConnectionState, StreamContext streamContext, boolean hasVideo) {
         int i;
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         RtcConnection.State.f fVar = RtcConnection.State.f.a;
         if (rtcConnectionState == fVar && streamContext != null && streamContext.isCurrentUserParticipating()) {
             if (streamContext.isSelfStream()) {
-                return FormatUtils.h(context, R.string.connection_status_stream_self_connected, new Object[0], null, 4);
+                return b.h(context, R.string.connection_status_stream_self_connected, new Object[0], null, 4);
             }
             Object[] objArr = new Object[1];
             String userNickname = streamContext.getUserNickname();
@@ -71,28 +71,28 @@ public final class VoiceViewUtils {
                 userNickname = streamContext.getUser().getUsername();
             }
             objArr[0] = userNickname;
-            return FormatUtils.h(context, R.string.connection_status_stream_connected, objArr, null, 4);
+            return b.h(context, R.string.connection_status_stream_connected, objArr, null, 4);
         }
-        if (Intrinsics3.areEqual(rtcConnectionState, RtcConnection.State.c.a)) {
+        if (m.areEqual(rtcConnectionState, RtcConnection.State.c.a)) {
             i = R.string.connection_status_connecting;
-        } else if (Intrinsics3.areEqual(rtcConnectionState, RtcConnection.State.e.a)) {
+        } else if (m.areEqual(rtcConnectionState, RtcConnection.State.e.a)) {
             i = R.string.connection_status_no_route;
-        } else if (Intrinsics3.areEqual(rtcConnectionState, RtcConnection.State.b.a)) {
+        } else if (m.areEqual(rtcConnectionState, RtcConnection.State.b.a)) {
             i = R.string.connection_status_awaiting_endpoint;
-        } else if (Intrinsics3.areEqual(rtcConnectionState, RtcConnection.State.a.a)) {
+        } else if (m.areEqual(rtcConnectionState, RtcConnection.State.a.a)) {
             i = R.string.connection_status_authenticating;
-        } else if (Intrinsics3.areEqual(rtcConnectionState, RtcConnection.State.g.a)) {
+        } else if (m.areEqual(rtcConnectionState, RtcConnection.State.g.a)) {
             i = R.string.connection_status_rtc_connecting;
-        } else if (Intrinsics3.areEqual(rtcConnectionState, fVar)) {
+        } else if (m.areEqual(rtcConnectionState, fVar)) {
             i = hasVideo ? R.string.connection_status_video_connected : R.string.connection_status_voice_connected;
         } else {
-            if (!(rtcConnectionState instanceof RtcConnection.State.d) && !Intrinsics3.areEqual(rtcConnectionState, RtcConnection.State.h.a) && rtcConnectionState != null) {
+            if (!(rtcConnectionState instanceof RtcConnection.State.d) && !m.areEqual(rtcConnectionState, RtcConnection.State.h.a) && rtcConnectionState != null) {
                 throw new NoWhenBranchMatchedException();
             }
             i = R.string.connection_status_disconnected;
         }
         String string = context.getString(i);
-        Intrinsics3.checkNotNullExpressionValue(string, "context.getString(resId)");
+        m.checkNotNullExpressionValue(string, "context.getString(resId)");
         return string;
     }
 
@@ -105,9 +105,9 @@ public final class VoiceViewUtils {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final int getConnectionStatusColor(RtcConnection.State connectionState, RtcConnection.Quality connectionQuality, Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        if (!Intrinsics3.areEqual(connectionState, RtcConnection.State.f.a)) {
-            return (Intrinsics3.areEqual(connectionState, RtcConnection.State.b.a) || Intrinsics3.areEqual(connectionState, RtcConnection.State.c.a) || Intrinsics3.areEqual(connectionState, RtcConnection.State.a.a) || Intrinsics3.areEqual(connectionState, RtcConnection.State.g.a)) ? ColorCompat.getColor(context, R.color.status_yellow_500) : Intrinsics3.areEqual(connectionState, RtcConnection.State.e.a) ? ColorCompat.getColor(context, R.color.status_red_500) : ((connectionState instanceof RtcConnection.State.d) || Intrinsics3.areEqual(connectionState, RtcConnection.State.h.a)) ? ColorCompat.getColor(context, R.color.status_red_500) : ColorCompat.getColor(context, R.color.status_red_500);
+        m.checkNotNullParameter(context, "context");
+        if (!m.areEqual(connectionState, RtcConnection.State.f.a)) {
+            return (m.areEqual(connectionState, RtcConnection.State.b.a) || m.areEqual(connectionState, RtcConnection.State.c.a) || m.areEqual(connectionState, RtcConnection.State.a.a) || m.areEqual(connectionState, RtcConnection.State.g.a)) ? ColorCompat.getColor(context, R.color.status_yellow_500) : m.areEqual(connectionState, RtcConnection.State.e.a) ? ColorCompat.getColor(context, R.color.status_red_500) : ((connectionState instanceof RtcConnection.State.d) || m.areEqual(connectionState, RtcConnection.State.h.a)) ? ColorCompat.getColor(context, R.color.status_red_500) : ColorCompat.getColor(context, R.color.status_red_500);
         }
         if (connectionQuality != null) {
             int iOrdinal = connectionQuality.ordinal();

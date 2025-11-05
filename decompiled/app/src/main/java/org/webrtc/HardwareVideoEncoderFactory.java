@@ -4,8 +4,8 @@ import android.media.MediaCodecInfo;
 import android.media.MediaCodecList;
 import android.os.Build;
 import androidx.annotation.Nullable;
-import b.a.DiscordMediaCodec;
-import h0.c.VideoEncoderFactory2;
+import b.a.c;
+import h0.c.s0;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -127,7 +127,7 @@ public class HardwareVideoEncoderFactory implements VideoEncoderFactory {
     }
 
     private boolean isHardwareSupportedInCurrentSdkH264(MediaCodecInfo mediaCodecInfo) {
-        for (String str : DiscordMediaCodec.f56b) {
+        for (String str : c.f56b) {
             if (str.equalsIgnoreCase(Build.MODEL)) {
                 return false;
             }
@@ -136,7 +136,7 @@ public class HardwareVideoEncoderFactory implements VideoEncoderFactory {
             return mediaCodecInfo.isHardwareAccelerated();
         }
         String lowerCase = mediaCodecInfo.getName().toLowerCase(Locale.ROOT);
-        for (String str2 : DiscordMediaCodec.a) {
+        for (String str2 : c.a) {
             if (lowerCase.startsWith(str2)) {
                 return true;
             }
@@ -193,12 +193,12 @@ public class HardwareVideoEncoderFactory implements VideoEncoderFactory {
 
     @Override // org.webrtc.VideoEncoderFactory
     public /* synthetic */ VideoEncoderFactory.VideoEncoderSelector getEncoderSelector() {
-        return VideoEncoderFactory2.a(this);
+        return s0.a(this);
     }
 
     @Override // org.webrtc.VideoEncoderFactory
     public /* synthetic */ VideoCodecInfo[] getImplementations() {
-        return VideoEncoderFactory2.b(this);
+        return s0.b(this);
     }
 
     @Override // org.webrtc.VideoEncoderFactory

@@ -6,13 +6,13 @@ import android.widget.TextView;
 import androidx.core.widget.NestedScrollView;
 import com.discord.R;
 import com.discord.databinding.WidgetSettingsVoiceInputModeBinding;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetSettingsVoice.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetSettingsVoice$InputModeSelector$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetSettingsVoiceInputModeBinding> {
+public final /* synthetic */ class WidgetSettingsVoice$InputModeSelector$binding$2 extends k implements Function1<View, WidgetSettingsVoiceInputModeBinding> {
     public static final WidgetSettingsVoice$InputModeSelector$binding$2 INSTANCE = new WidgetSettingsVoice$InputModeSelector$binding$2();
 
     public WidgetSettingsVoice$InputModeSelector$binding$2() {
@@ -21,7 +21,7 @@ public final /* synthetic */ class WidgetSettingsVoice$InputModeSelector$binding
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsVoiceInputModeBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.guild_actions_overview_header_tv;
         TextView textView = (TextView) view.findViewById(R.id.guild_actions_overview_header_tv);
         if (textView != null) {

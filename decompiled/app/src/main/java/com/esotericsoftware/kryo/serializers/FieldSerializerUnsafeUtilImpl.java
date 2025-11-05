@@ -1,7 +1,7 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.Log;
-import b.e.b.FieldAccess2;
+import b.e.a.a;
+import b.e.b.c;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import com.esotericsoftware.kryo.serializers.UnsafeCacheFields;
 import com.esotericsoftware.kryo.util.IntArray;
@@ -53,12 +53,12 @@ public final class FieldSerializerUnsafeUtilImpl implements FieldSerializerUnsaf
             Field field2 = list.get(i3);
             if (this.serializer.access != null) {
                 i2 = size;
-                int iH = intArray.get(i + i3) == 1 ? ((FieldAccess2) this.serializer.access).h(field2.getName()) : -1;
+                int iH = intArray.get(i + i3) == 1 ? ((c) this.serializer.access).h(field2.getName()) : -1;
                 long jObjectFieldOffset = UnsafeUtil.unsafe().objectFieldOffset(field2);
                 long jFieldSizeOf = jObjectFieldOffset + fieldSizeOf(field2.getType());
                 if (field2.getType().isPrimitive() && z2) {
                     if (i4 > 1) {
-                        Log.a aVar = Log.a;
+                        a.C0064a c0064a = a.a;
                         UnsafeCacheFields.UnsafeRegionField unsafeRegionField = new UnsafeCacheFields.UnsafeRegionField(j, j2 - j);
                         unsafeRegionField.field = field;
                         list2.add(unsafeRegionField);
@@ -100,7 +100,7 @@ public final class FieldSerializerUnsafeUtilImpl implements FieldSerializerUnsaf
                     list2.add(this.serializer.newCachedField(field, list2.size(), i5));
                 }
             } else {
-                Log.a aVar2 = Log.a;
+                a.C0064a c0064a2 = a.a;
                 UnsafeCacheFields.UnsafeRegionField unsafeRegionField2 = new UnsafeCacheFields.UnsafeRegionField(j, j2 - j);
                 unsafeRegionField2.field = field;
                 list2.add(unsafeRegionField2);

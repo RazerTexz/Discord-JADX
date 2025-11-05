@@ -5,15 +5,15 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppViewModelDelegates2;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetConfirmRemoveCommunityDialogBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Reflection2;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.a0;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
@@ -21,7 +21,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetConfirmRemoveCommunityDialog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetConfirmRemoveCommunityDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetConfirmRemoveCommunityDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetConfirmRemoveCommunityDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetConfirmRemoveCommunityDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetConfirmRemoveCommunityDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -39,7 +39,7 @@ public final class WidgetConfirmRemoveCommunityDialog extends AppDialog {
         }
 
         public final void show(FragmentManager supportFragmentManager, long guildId) {
-            Intrinsics3.checkNotNullParameter(supportFragmentManager, "supportFragmentManager");
+            m.checkNotNullParameter(supportFragmentManager, "supportFragmentManager");
             WidgetConfirmRemoveCommunityDialog widgetConfirmRemoveCommunityDialog = new WidgetConfirmRemoveCommunityDialog();
             Bundle bundle = new Bundle();
             bundle.putLong("INTENT_EXTRA_GUILD_ID", guildId);
@@ -79,8 +79,8 @@ public final class WidgetConfirmRemoveCommunityDialog extends AppDialog {
 
     public WidgetConfirmRemoveCommunityDialog() {
         super(R.layout.widget_confirm_remove_community_dialog);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetConfirmRemoveCommunityDialog2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetServerSettingsCommunityOverviewViewModel.class), new WidgetConfirmRemoveCommunityDialog$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(new WidgetConfirmRemoveCommunityDialog3(this)));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetConfirmRemoveCommunityDialog$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetServerSettingsCommunityOverviewViewModel.class), new WidgetConfirmRemoveCommunityDialog$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(new WidgetConfirmRemoveCommunityDialog$viewModel$2(this)));
     }
 
     public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(WidgetConfirmRemoveCommunityDialog widgetConfirmRemoveCommunityDialog) {
@@ -101,7 +101,7 @@ public final class WidgetConfirmRemoveCommunityDialog extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         getBinding().c.setOnClickListener(new AnonymousClass1());
         getBinding().f2353b.setOnClickListener(new AnonymousClass2());

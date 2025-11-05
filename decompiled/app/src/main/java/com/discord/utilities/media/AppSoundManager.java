@@ -8,11 +8,11 @@ import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import com.discord.app.AppLog;
 import com.discord.utilities.logging.Logger;
-import d0.LazyJVM;
-import d0.Result2;
-import d0.Result3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.k;
+import d0.l;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -31,7 +31,7 @@ public final class AppSoundManager {
         public static final Provider INSTANCE = new Provider();
 
         /* renamed from: INSTANCE$delegate, reason: from kotlin metadata */
-        private static final Lazy INSTANCE = LazyJVM.lazy(AppSoundManager2.INSTANCE);
+        private static final Lazy INSTANCE = g.lazy(AppSoundManager$Provider$INSTANCE$2.INSTANCE);
 
         private Provider() {
         }
@@ -50,18 +50,18 @@ public final class AppSoundManager {
         private MediaPlayer mediaPlayer;
 
         public SoundPlayer(Context context, AppSound appSound, Function0<Unit> function0) throws IllegalStateException, Resources.NotFoundException, IOException, IllegalArgumentException {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(appSound, "sound");
-            Intrinsics3.checkNotNullParameter(function0, "onCompletion");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(appSound, "sound");
+            m.checkNotNullParameter(function0, "onCompletion");
             MediaPlayer mediaPlayer = new MediaPlayer();
             this.mediaPlayer = mediaPlayer;
             if (mediaPlayer != null) {
                 mediaPlayer.setAudioAttributes(new AudioAttributes.Builder().setContentType(appSound.getContentType()).setUsage(appSound.getUsage()).build());
                 AssetFileDescriptor assetFileDescriptorOpenRawResourceFd = context.getResources().openRawResourceFd(appSound.getResId());
-                Intrinsics3.checkNotNullExpressionValue(assetFileDescriptorOpenRawResourceFd, "assetFileDescriptor");
+                m.checkNotNullExpressionValue(assetFileDescriptorOpenRawResourceFd, "assetFileDescriptor");
                 mediaPlayer.setDataSource(assetFileDescriptorOpenRawResourceFd.getFileDescriptor(), assetFileDescriptorOpenRawResourceFd.getStartOffset(), assetFileDescriptorOpenRawResourceFd.getLength());
                 mediaPlayer.setLooping(appSound.getShouldLoop());
-                mediaPlayer.setOnCompletionListener(new AppSoundManager3(this, appSound, context, function0));
+                mediaPlayer.setOnCompletionListener(new AppSoundManager$SoundPlayer$$special$$inlined$apply$lambda$1(this, appSound, context, function0));
                 try {
                     mediaPlayer.prepare();
                 } catch (IOException unused) {
@@ -73,23 +73,23 @@ public final class AppSoundManager {
         public final boolean isPlaying() {
             Object objM97constructorimpl;
             try {
-                Result2.a aVar = Result2.j;
+                k.a aVar = k.j;
                 MediaPlayer mediaPlayer = this.mediaPlayer;
                 boolean z2 = true;
                 if (mediaPlayer == null || !mediaPlayer.isPlaying()) {
                     z2 = false;
                 }
-                objM97constructorimpl = Result2.m97constructorimpl(Boolean.valueOf(z2));
+                objM97constructorimpl = k.m97constructorimpl(Boolean.valueOf(z2));
             } catch (Throwable th) {
-                Result2.a aVar2 = Result2.j;
-                objM97constructorimpl = Result2.m97constructorimpl(Result3.createFailure(th));
+                k.a aVar2 = k.j;
+                objM97constructorimpl = k.m97constructorimpl(l.createFailure(th));
             }
-            Throwable thM99exceptionOrNullimpl = Result2.m99exceptionOrNullimpl(objM97constructorimpl);
+            Throwable thM99exceptionOrNullimpl = k.m99exceptionOrNullimpl(objM97constructorimpl);
             if (thM99exceptionOrNullimpl != null) {
                 AppLog.g.w("Error checking if MediaPlayer is playing", thM99exceptionOrNullimpl);
             }
             Boolean bool = Boolean.FALSE;
-            if (Result2.m101isFailureimpl(objM97constructorimpl)) {
+            if (k.m101isFailureimpl(objM97constructorimpl)) {
                 objM97constructorimpl = bool;
             }
             return ((Boolean) objM97constructorimpl).booleanValue();
@@ -108,7 +108,7 @@ public final class AppSoundManager {
             Object objM97constructorimpl;
             Unit unit;
             try {
-                Result2.a aVar = Result2.j;
+                k.a aVar = k.j;
                 MediaPlayer mediaPlayer = this.mediaPlayer;
                 if (mediaPlayer != null) {
                     mediaPlayer.start();
@@ -116,12 +116,12 @@ public final class AppSoundManager {
                 } else {
                     unit = null;
                 }
-                objM97constructorimpl = Result2.m97constructorimpl(unit);
+                objM97constructorimpl = k.m97constructorimpl(unit);
             } catch (Throwable th) {
-                Result2.a aVar2 = Result2.j;
-                objM97constructorimpl = Result2.m97constructorimpl(Result3.createFailure(th));
+                k.a aVar2 = k.j;
+                objM97constructorimpl = k.m97constructorimpl(l.createFailure(th));
             }
-            Throwable thM99exceptionOrNullimpl = Result2.m99exceptionOrNullimpl(objM97constructorimpl);
+            Throwable thM99exceptionOrNullimpl = k.m99exceptionOrNullimpl(objM97constructorimpl);
             if (thM99exceptionOrNullimpl != null) {
                 Logger.e$default(AppLog.g, "Error starting MediaPlayer in invalid state", thM99exceptionOrNullimpl, null, 4, null);
             }
@@ -131,7 +131,7 @@ public final class AppSoundManager {
             Object objM97constructorimpl;
             Unit unit;
             try {
-                Result2.a aVar = Result2.j;
+                k.a aVar = k.j;
                 MediaPlayer mediaPlayer = this.mediaPlayer;
                 if (mediaPlayer != null) {
                     mediaPlayer.stop();
@@ -139,12 +139,12 @@ public final class AppSoundManager {
                 } else {
                     unit = null;
                 }
-                objM97constructorimpl = Result2.m97constructorimpl(unit);
+                objM97constructorimpl = k.m97constructorimpl(unit);
             } catch (Throwable th) {
-                Result2.a aVar2 = Result2.j;
-                objM97constructorimpl = Result2.m97constructorimpl(Result3.createFailure(th));
+                k.a aVar2 = k.j;
+                objM97constructorimpl = k.m97constructorimpl(l.createFailure(th));
             }
-            Throwable thM99exceptionOrNullimpl = Result2.m99exceptionOrNullimpl(objM97constructorimpl);
+            Throwable thM99exceptionOrNullimpl = k.m99exceptionOrNullimpl(objM97constructorimpl);
             if (thM99exceptionOrNullimpl != null) {
                 AppLog.g.w("Called stop on uninitialized MediaPlayer", thM99exceptionOrNullimpl);
             }
@@ -153,7 +153,7 @@ public final class AppSoundManager {
 
     /* compiled from: AppSoundManager.kt */
     /* renamed from: com.discord.utilities.media.AppSoundManager$play$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ AppSound $sound;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -178,18 +178,18 @@ public final class AppSoundManager {
     }
 
     public AppSoundManager(Application application) {
-        Intrinsics3.checkNotNullParameter(application, "application");
+        m.checkNotNullParameter(application, "application");
         this.context = application;
         this.soundPlayers = new LinkedHashMap();
     }
 
     public final boolean isPlaying(AppSound sound) {
-        Intrinsics3.checkNotNullParameter(sound, "sound");
+        m.checkNotNullParameter(sound, "sound");
         return this.soundPlayers.containsKey(Integer.valueOf(sound.getResId()));
     }
 
     public final void play(AppSound sound) {
-        Intrinsics3.checkNotNullParameter(sound, "sound");
+        m.checkNotNullParameter(sound, "sound");
         if (isPlaying(sound)) {
             SoundPlayer soundPlayer = this.soundPlayers.get(Integer.valueOf(sound.getResId()));
             if (soundPlayer != null) {
@@ -209,7 +209,7 @@ public final class AppSoundManager {
 
     public final void stop(AppSound sound) {
         SoundPlayer soundPlayer;
-        Intrinsics3.checkNotNullParameter(sound, "sound");
+        m.checkNotNullParameter(sound, "sound");
         SoundPlayer soundPlayer2 = this.soundPlayers.get(Integer.valueOf(sound.getResId()));
         if (soundPlayer2 != null && soundPlayer2.isPlaying() && (soundPlayer = this.soundPlayers.get(Integer.valueOf(sound.getResId()))) != null) {
             soundPlayer.stop();

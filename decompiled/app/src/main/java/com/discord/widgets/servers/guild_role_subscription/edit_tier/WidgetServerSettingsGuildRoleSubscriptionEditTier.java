@@ -8,12 +8,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.viewpager2.widget.ViewPager2;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates2;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppViewFlipper;
@@ -21,19 +20,19 @@ import com.discord.databinding.WidgetServerSettingsGuildRoleSubscriptionEditTier
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.utilities.view.recycler.ViewPager2Extensions;
+import com.discord.utilities.view.recycler.ViewPager2ExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionTierViewModel;
 import com.discord.widgets.servers.guild_role_subscription.edit_tier.GuildRoleSubscriptionConfirmationDialog;
 import com.discord.widgets.servers.guild_role_subscription.edit_tier.ServerSettingsGuildRoleSubscriptionEditTierViewModel;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -46,7 +45,7 @@ import rx.Observable;
 /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerSettingsGuildRoleSubscriptionEditTier.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsGuildRoleSubscriptionEditTierBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsGuildRoleSubscriptionEditTier.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsGuildRoleSubscriptionEditTierBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -55,7 +54,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
     private static final int SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_EDIT_TIER_VIEW_FLIPPER_LOADED_STATE = 1;
     private static final int SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_EDIT_TIER_VIEW_FLIPPER_LOADING_STATE = 0;
     private static final int TIER_PAGE_SIZE = 3;
-    private WidgetServerSettingsGuildRoleSubscriptionEditTier2 adapter;
+    private ServerSettingsGuildRoleSubscriptionEditTierAdapter adapter;
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -81,12 +80,12 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
 
         public final void launch(Context context, long guildId, long guildRoleSubscriptionGroupListingId, long guildRoleSubscriptionTierListingId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("com.discord.intent.extra.EXTRA_GUILD_ID", guildId);
             intent.putExtra(WidgetServerSettingsGuildRoleSubscriptionEditTier.INTENT_EXTRA_GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ID, guildRoleSubscriptionGroupListingId);
             intent.putExtra(WidgetServerSettingsGuildRoleSubscriptionEditTier.INTENT_EXTRA_GUILD_ROLE_SUBSCRIPTION_TIER_LISTING_ID, guildRoleSubscriptionTierListingId);
-            AppScreen2.d(context, WidgetServerSettingsGuildRoleSubscriptionEditTier.class, intent);
+            j.d(context, WidgetServerSettingsGuildRoleSubscriptionEditTier.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -112,7 +111,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
 
         /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
         /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -136,13 +135,13 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         public final void onClick(View view) {
             GuildRoleSubscriptionConfirmationDialog.Companion companion = GuildRoleSubscriptionConfirmationDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             String string = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getString(R.string.guild_role_subscription_publish_tier_dialog_title);
-            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.guild…ublish_tier_dialog_title)");
+            m.checkNotNullExpressionValue(string, "getString(R.string.guild…ublish_tier_dialog_title)");
             String string2 = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getString(R.string.guild_role_subscription_publish_tier_dialog_description);
-            Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.guild…_tier_dialog_description)");
+            m.checkNotNullExpressionValue(string2, "getString(R.string.guild…_tier_dialog_description)");
             String string3 = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getString(R.string.guild_role_subscription_publish_tier_cta);
-            Intrinsics3.checkNotNullExpressionValue(string3, "getString(R.string.guild…ription_publish_tier_cta)");
+            m.checkNotNullExpressionValue(string3, "getString(R.string.guild…ription_publish_tier_cta)");
             companion.show(parentFragmentManager, string, string2, string3, false, new AnonymousClass1());
         }
     }
@@ -153,7 +152,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
 
         /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
         /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -177,20 +176,20 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         public final void onClick(View view) {
             GuildRoleSubscriptionConfirmationDialog.Companion companion = GuildRoleSubscriptionConfirmationDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             String string = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getString(R.string.guild_role_subscription_tier_delete_confirmation_title);
-            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.guild…elete_confirmation_title)");
+            m.checkNotNullExpressionValue(string, "getString(R.string.guild…elete_confirmation_title)");
             String string2 = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getString(R.string.guild_role_subscription_tier_delete_confirmation_title);
-            Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.guild…elete_confirmation_title)");
+            m.checkNotNullExpressionValue(string2, "getString(R.string.guild…elete_confirmation_title)");
             String string3 = WidgetServerSettingsGuildRoleSubscriptionEditTier.this.getString(R.string.guild_role_subscription_tier_delete_cta);
-            Intrinsics3.checkNotNullExpressionValue(string3, "getString(R.string.guild…cription_tier_delete_cta)");
+            m.checkNotNullExpressionValue(string3, "getString(R.string.guild…cription_tier_delete_cta)");
             companion.show(parentFragmentManager, string, string2, string3, true, new AnonymousClass1());
         }
     }
 
     /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -204,14 +203,14 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState viewState) {
             WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier = WidgetServerSettingsGuildRoleSubscriptionEditTier.this;
-            Intrinsics3.checkNotNullExpressionValue(viewState, "it");
+            m.checkNotNullExpressionValue(viewState, "it");
             WidgetServerSettingsGuildRoleSubscriptionEditTier.access$configureUI(widgetServerSettingsGuildRoleSubscriptionEditTier, viewState);
         }
     }
 
     /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -230,7 +229,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
 
     /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -243,14 +242,14 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "it");
+            m.checkNotNullParameter(event, "it");
             WidgetServerSettingsGuildRoleSubscriptionEditTier.access$handleEvents(WidgetServerSettingsGuildRoleSubscriptionEditTier.this, event);
         }
     }
 
     /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$setupAdapter$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<TabLayout.Tab, Integer, Unit> {
+    public static final class AnonymousClass1 extends o implements Function2<TabLayout.Tab, Integer, Unit> {
         public AnonymousClass1() {
             super(2);
         }
@@ -262,7 +261,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
 
         public final void invoke(TabLayout.Tab tab, int i) {
-            Intrinsics3.checkNotNullParameter(tab, "tab");
+            m.checkNotNullParameter(tab, "tab");
             tab.setText(WidgetServerSettingsGuildRoleSubscriptionEditTier.access$getAdapter$p(WidgetServerSettingsGuildRoleSubscriptionEditTier.this).getTabStringResId(i));
         }
     }
@@ -282,7 +281,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
             if (tab != null) {
                 int position = tab.getPosition();
                 MaterialButton materialButton = WidgetServerSettingsGuildRoleSubscriptionEditTier.access$getBinding$p(WidgetServerSettingsGuildRoleSubscriptionEditTier.this).f;
-                Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.serverSettingsGu…ubscriptionEditTierDelete");
+                m.checkNotNullExpressionValue(materialButton, "binding.serverSettingsGu…ubscriptionEditTierDelete");
                 materialButton.setVisibility(WidgetServerSettingsGuildRoleSubscriptionEditTier.access$getAdapter$p(WidgetServerSettingsGuildRoleSubscriptionEditTier.this).isDetailsTab(position) ? 0 : 8);
             }
         }
@@ -294,26 +293,26 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
 
     public WidgetServerSettingsGuildRoleSubscriptionEditTier() {
         super(R.layout.widget_server_settings_guild_role_subscription_edit_tier);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsGuildRoleSubscriptionEditTier3.INSTANCE, null, 2, null);
-        this.guildId = LazyJVM.lazy(new WidgetServerSettingsGuildRoleSubscriptionEditTier4(this));
-        this.guildRoleSubscriptionGroupListingId = LazyJVM.lazy(new WidgetServerSettingsGuildRoleSubscriptionEditTier5(this));
-        this.guildRoleSubscriptionTierListingId = LazyJVM.lazy(new WidgetServerSettingsGuildRoleSubscriptionEditTier6(this));
-        WidgetServerSettingsGuildRoleSubscriptionEditTier8 widgetServerSettingsGuildRoleSubscriptionEditTier8 = new WidgetServerSettingsGuildRoleSubscriptionEditTier8(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(ServerSettingsGuildRoleSubscriptionEditTierViewModel.class), new WidgetServerSettingsGuildRoleSubscriptionEditTier$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetServerSettingsGuildRoleSubscriptionEditTier8));
-        this.tierViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildRoleSubscriptionTierViewModel.class), new WidgetServerSettingsGuildRoleSubscriptionEditTier$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(WidgetServerSettingsGuildRoleSubscriptionEditTier7.INSTANCE));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsGuildRoleSubscriptionEditTier$binding$2.INSTANCE, null, 2, null);
+        this.guildId = g.lazy(new WidgetServerSettingsGuildRoleSubscriptionEditTier$guildId$2(this));
+        this.guildRoleSubscriptionGroupListingId = g.lazy(new WidgetServerSettingsGuildRoleSubscriptionEditTier$guildRoleSubscriptionGroupListingId$2(this));
+        this.guildRoleSubscriptionTierListingId = g.lazy(new WidgetServerSettingsGuildRoleSubscriptionEditTier$guildRoleSubscriptionTierListingId$2(this));
+        WidgetServerSettingsGuildRoleSubscriptionEditTier$viewModel$2 widgetServerSettingsGuildRoleSubscriptionEditTier$viewModel$2 = new WidgetServerSettingsGuildRoleSubscriptionEditTier$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(ServerSettingsGuildRoleSubscriptionEditTierViewModel.class), new WidgetServerSettingsGuildRoleSubscriptionEditTier$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetServerSettingsGuildRoleSubscriptionEditTier$viewModel$2));
+        this.tierViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildRoleSubscriptionTierViewModel.class), new WidgetServerSettingsGuildRoleSubscriptionEditTier$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetServerSettingsGuildRoleSubscriptionEditTier$tierViewModel$2.INSTANCE));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier, ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState viewState) {
         widgetServerSettingsGuildRoleSubscriptionEditTier.configureUI(viewState);
     }
 
-    public static final /* synthetic */ WidgetServerSettingsGuildRoleSubscriptionEditTier2 access$getAdapter$p(WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier) {
-        WidgetServerSettingsGuildRoleSubscriptionEditTier2 widgetServerSettingsGuildRoleSubscriptionEditTier2 = widgetServerSettingsGuildRoleSubscriptionEditTier.adapter;
-        if (widgetServerSettingsGuildRoleSubscriptionEditTier2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+    public static final /* synthetic */ ServerSettingsGuildRoleSubscriptionEditTierAdapter access$getAdapter$p(WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier) {
+        ServerSettingsGuildRoleSubscriptionEditTierAdapter serverSettingsGuildRoleSubscriptionEditTierAdapter = widgetServerSettingsGuildRoleSubscriptionEditTier.adapter;
+        if (serverSettingsGuildRoleSubscriptionEditTierAdapter == null) {
+            m.throwUninitializedPropertyAccessException("adapter");
         }
-        return widgetServerSettingsGuildRoleSubscriptionEditTier2;
+        return serverSettingsGuildRoleSubscriptionEditTierAdapter;
     }
 
     public static final /* synthetic */ WidgetServerSettingsGuildRoleSubscriptionEditTierBinding access$getBinding$p(WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier) {
@@ -340,20 +339,20 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         widgetServerSettingsGuildRoleSubscriptionEditTier.handleEvents(event);
     }
 
-    public static final /* synthetic */ void access$setAdapter$p(WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier, WidgetServerSettingsGuildRoleSubscriptionEditTier2 widgetServerSettingsGuildRoleSubscriptionEditTier2) {
-        widgetServerSettingsGuildRoleSubscriptionEditTier.adapter = widgetServerSettingsGuildRoleSubscriptionEditTier2;
+    public static final /* synthetic */ void access$setAdapter$p(WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier, ServerSettingsGuildRoleSubscriptionEditTierAdapter serverSettingsGuildRoleSubscriptionEditTierAdapter) {
+        widgetServerSettingsGuildRoleSubscriptionEditTier.adapter = serverSettingsGuildRoleSubscriptionEditTierAdapter;
     }
 
     private final void configureUI(ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState viewState) {
-        if (Intrinsics3.areEqual(viewState, ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState.Loading.INSTANCE)) {
+        if (m.areEqual(viewState, ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState.Loading.INSTANCE)) {
             AppViewFlipper appViewFlipper = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsGu…iptionEditTierViewFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper, "binding.serverSettingsGu…iptionEditTierViewFlipper");
             appViewFlipper.setDisplayedChild(0);
             return;
         }
         if (!(viewState instanceof ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState.Loaded)) {
-            if (Intrinsics3.areEqual(viewState, ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState.Failed.INSTANCE)) {
-                AppToast.i(this, R.string.default_failure_to_perform_action_message, 0, 4);
+            if (m.areEqual(viewState, ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState.Failed.INSTANCE)) {
+                b.a.d.m.i(this, R.string.default_failure_to_perform_action_message, 0, 4);
                 requireActivity().finish();
                 return;
             }
@@ -364,10 +363,10 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         floatingActionButton.setVisibility(loaded.getHasChanges() ? 0 : 8);
         floatingActionButton.setEnabled(!loaded.isSubmitting());
         AppViewFlipper appViewFlipper2 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsGu…iptionEditTierViewFlipper");
+        m.checkNotNullExpressionValue(appViewFlipper2, "binding.serverSettingsGu…iptionEditTierViewFlipper");
         appViewFlipper2.setDisplayedChild(1);
         Group group = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(group, "binding.guildRoleSubscriptionEditTierPublishGroup");
+        m.checkNotNullExpressionValue(group, "binding.guildRoleSubscriptionEditTierPublishGroup");
         group.setVisibility(loaded.isPublished() ^ true ? 0 : 8);
         setActionBarTitle(loaded.getTierName());
     }
@@ -417,7 +416,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
             }
             if (event instanceof ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event.DeleteFailure) {
                 handleError(((ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event.DeleteFailure) event).getError());
-            } else if (Intrinsics3.areEqual(event, ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event.DeleteSuccess.INSTANCE)) {
+            } else if (m.areEqual(event, ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event.DeleteSuccess.INSTANCE)) {
                 AppFragment.hideKeyboard$default(this, null, 1, null);
                 requireActivity().finish();
             }
@@ -425,30 +424,30 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
     }
 
     private final void setupAdapter() {
-        WidgetServerSettingsGuildRoleSubscriptionEditTier2 widgetServerSettingsGuildRoleSubscriptionEditTier2 = new WidgetServerSettingsGuildRoleSubscriptionEditTier2(this, getGuildId());
-        this.adapter = widgetServerSettingsGuildRoleSubscriptionEditTier2;
-        if (widgetServerSettingsGuildRoleSubscriptionEditTier2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+        ServerSettingsGuildRoleSubscriptionEditTierAdapter serverSettingsGuildRoleSubscriptionEditTierAdapter = new ServerSettingsGuildRoleSubscriptionEditTierAdapter(this, getGuildId());
+        this.adapter = serverSettingsGuildRoleSubscriptionEditTierAdapter;
+        if (serverSettingsGuildRoleSubscriptionEditTierAdapter == null) {
+            m.throwUninitializedPropertyAccessException("adapter");
         }
-        widgetServerSettingsGuildRoleSubscriptionEditTier2.setPageSize(3);
+        serverSettingsGuildRoleSubscriptionEditTierAdapter.setPageSize(3);
         ViewPager2 viewPager2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(viewPager2, "binding.guildRoleSubscriptionEditTierViewPager");
-        WidgetServerSettingsGuildRoleSubscriptionEditTier2 widgetServerSettingsGuildRoleSubscriptionEditTier22 = this.adapter;
-        if (widgetServerSettingsGuildRoleSubscriptionEditTier22 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+        m.checkNotNullExpressionValue(viewPager2, "binding.guildRoleSubscriptionEditTierViewPager");
+        ServerSettingsGuildRoleSubscriptionEditTierAdapter serverSettingsGuildRoleSubscriptionEditTierAdapter2 = this.adapter;
+        if (serverSettingsGuildRoleSubscriptionEditTierAdapter2 == null) {
+            m.throwUninitializedPropertyAccessException("adapter");
         }
-        viewPager2.setAdapter(widgetServerSettingsGuildRoleSubscriptionEditTier22);
+        viewPager2.setAdapter(serverSettingsGuildRoleSubscriptionEditTierAdapter2);
         TabLayout tabLayout = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(tabLayout, "binding.guildRoleSubscriptionEditTierTabs");
+        m.checkNotNullExpressionValue(tabLayout, "binding.guildRoleSubscriptionEditTierTabs");
         ViewPager2 viewPager22 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(viewPager22, "binding.guildRoleSubscriptionEditTierViewPager");
-        ViewPager2Extensions.setUpWithViewPager2(tabLayout, viewPager22, new AnonymousClass1());
+        m.checkNotNullExpressionValue(viewPager22, "binding.guildRoleSubscriptionEditTierViewPager");
+        ViewPager2ExtensionsKt.setUpWithViewPager2(tabLayout, viewPager22, new AnonymousClass1());
         getBinding().d.addOnTabSelectedListener((TabLayout.OnTabSelectedListener) new AnonymousClass2());
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setActionBarDisplayHomeAsUpEnabled(true);
         setActionBarSubtitle(R.string.guild_settings_role_subscription_tier_edit_subtitle);
@@ -462,10 +461,10 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetServerSettingsGuildRoleSubscriptionEditTier.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         Observable<GuildRoleSubscriptionTierViewModel.ViewState> observableR2 = getTierViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR2, "tierViewModel\n        .o…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR2, "tierViewModel\n        .o…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR2, this, null, 2, null), WidgetServerSettingsGuildRoleSubscriptionEditTier.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetServerSettingsGuildRoleSubscriptionEditTier.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
     }

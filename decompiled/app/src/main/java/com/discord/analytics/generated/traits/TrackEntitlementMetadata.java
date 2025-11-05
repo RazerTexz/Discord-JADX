@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackEntitlementMetadata.kt */
 /* loaded from: classes.dex */
@@ -21,7 +21,7 @@ public final /* data */ class TrackEntitlementMetadata {
             return false;
         }
         TrackEntitlementMetadata trackEntitlementMetadata = (TrackEntitlementMetadata) other;
-        return Intrinsics3.areEqual(this.entitlementId, trackEntitlementMetadata.entitlementId) && Intrinsics3.areEqual(this.entitlementCreatorId, trackEntitlementMetadata.entitlementCreatorId) && Intrinsics3.areEqual(this.entitlementSubscriptionPlanId, trackEntitlementMetadata.entitlementSubscriptionPlanId) && Intrinsics3.areEqual(this.entitlementPaymentId, trackEntitlementMetadata.entitlementPaymentId) && Intrinsics3.areEqual(this.giftCodeBatchId, trackEntitlementMetadata.giftCodeBatchId) && Intrinsics3.areEqual(this.giftStyle, trackEntitlementMetadata.giftStyle);
+        return m.areEqual(this.entitlementId, trackEntitlementMetadata.entitlementId) && m.areEqual(this.entitlementCreatorId, trackEntitlementMetadata.entitlementCreatorId) && m.areEqual(this.entitlementSubscriptionPlanId, trackEntitlementMetadata.entitlementSubscriptionPlanId) && m.areEqual(this.entitlementPaymentId, trackEntitlementMetadata.entitlementPaymentId) && m.areEqual(this.giftCodeBatchId, trackEntitlementMetadata.giftCodeBatchId) && m.areEqual(this.giftStyle, trackEntitlementMetadata.giftStyle);
     }
 
     public int hashCode() {
@@ -40,7 +40,7 @@ public final /* data */ class TrackEntitlementMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackEntitlementMetadata(entitlementId=");
+        StringBuilder sbU = a.U("TrackEntitlementMetadata(entitlementId=");
         sbU.append(this.entitlementId);
         sbU.append(", entitlementCreatorId=");
         sbU.append(this.entitlementCreatorId);
@@ -51,6 +51,6 @@ public final /* data */ class TrackEntitlementMetadata {
         sbU.append(", giftCodeBatchId=");
         sbU.append(this.giftCodeBatchId);
         sbU.append(", giftStyle=");
-        return outline.G(sbU, this.giftStyle, ")");
+        return a.G(sbU, this.giftStyle, ")");
     }
 }

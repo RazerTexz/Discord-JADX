@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.Size;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -89,11 +89,11 @@ public final class PackageInfoCompat {
         Set<byte[]> setKeySet = map.keySet();
         for (byte[] bArr : setKeySet) {
             if (bArr == null) {
-                throw new IllegalArgumentException(outline.w("Cert byte array cannot be null when verifying ", str));
+                throw new IllegalArgumentException(a.w("Cert byte array cannot be null when verifying ", str));
             }
             Integer num = map.get(bArr);
             if (num == null) {
-                throw new IllegalArgumentException(outline.w("Type must be specified for cert when verifying ", str));
+                throw new IllegalArgumentException(a.w("Type must be specified for cert when verifying ", str));
             }
             int iIntValue = num.intValue();
             if (iIntValue != 0 && iIntValue != 1) {

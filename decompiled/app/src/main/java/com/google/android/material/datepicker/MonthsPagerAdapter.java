@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.i.a.g.d.MonthAdapter;
-import b.i.a.g.d.MonthsPagerAdapter2;
+import b.i.a.g.d.g;
+import b.i.a.g.d.h;
 import com.google.android.material.R;
 import com.google.android.material.datepicker.MaterialCalendar;
 import java.util.Iterator;
@@ -53,7 +53,7 @@ public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
         if (openAt.f(end) > 0) {
             throw new IllegalArgumentException("currentPage cannot be after lastPage");
         }
-        int dayHeight = MaterialCalendar.getDayHeight(context) * MonthAdapter.j;
+        int dayHeight = MaterialCalendar.getDayHeight(context) * g.j;
         int dayHeight2 = MaterialDatePicker.isFullscreen(context) ? MaterialCalendar.getDayHeight(context) : 0;
         this.a = context;
         this.e = dayHeight + dayHeight2;
@@ -90,26 +90,26 @@ public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
         viewHolder2.monthTitle.setText(monthM.l(viewHolder2.itemView.getContext()));
         MaterialCalendarGridView materialCalendarGridView = (MaterialCalendarGridView) viewHolder2.monthGrid.findViewById(R.id.month_grid);
         if (materialCalendarGridView.a() == null || !monthM.equals(materialCalendarGridView.a().k)) {
-            MonthAdapter monthAdapter = new MonthAdapter(monthM, this.c, this.f3036b);
+            g gVar = new g(monthM, this.c, this.f3036b);
             materialCalendarGridView.setNumColumns(monthM.m);
-            materialCalendarGridView.setAdapter((ListAdapter) monthAdapter);
+            materialCalendarGridView.setAdapter((ListAdapter) gVar);
         } else {
             materialCalendarGridView.invalidate();
-            MonthAdapter monthAdapterA = materialCalendarGridView.a();
-            Iterator<Long> it = monthAdapterA.m.iterator();
+            g gVarA = materialCalendarGridView.a();
+            Iterator<Long> it = gVarA.m.iterator();
             while (it.hasNext()) {
-                monthAdapterA.f(materialCalendarGridView, it.next().longValue());
+                gVarA.f(materialCalendarGridView, it.next().longValue());
             }
-            DateSelector<?> dateSelector = monthAdapterA.l;
+            DateSelector<?> dateSelector = gVarA.l;
             if (dateSelector != null) {
                 Iterator<Long> it2 = dateSelector.getSelectedDays().iterator();
                 while (it2.hasNext()) {
-                    monthAdapterA.f(materialCalendarGridView, it2.next().longValue());
+                    gVarA.f(materialCalendarGridView, it2.next().longValue());
                 }
-                monthAdapterA.m = monthAdapterA.l.getSelectedDays();
+                gVarA.m = gVarA.l.getSelectedDays();
             }
         }
-        materialCalendarGridView.setOnItemClickListener(new MonthsPagerAdapter2(this, materialCalendarGridView));
+        materialCalendarGridView.setOnItemClickListener(new h(this, materialCalendarGridView));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

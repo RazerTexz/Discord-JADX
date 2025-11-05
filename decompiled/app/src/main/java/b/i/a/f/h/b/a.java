@@ -6,7 +6,6 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.RemoteException;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.api.Status;
 
 /* compiled from: com.google.android.gms:play-services-auth-api-phone@@17.4.0 */
@@ -39,7 +38,7 @@ public class a extends Binder implements IInterface {
         }
         Parcelable.Creator<Status> creator = Status.CREATOR;
         int i3 = c.a;
-        AnimatableValueParser.a2(parcel.readInt() == 0 ? null : creator.createFromParcel(parcel), null, ((k) fVar).a);
+        b.c.a.a0.d.a2(parcel.readInt() == 0 ? null : creator.createFromParcel(parcel), null, ((k) fVar).a);
         return true;
     }
 }

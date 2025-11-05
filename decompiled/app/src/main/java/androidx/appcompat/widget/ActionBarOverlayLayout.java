@@ -32,7 +32,7 @@ import androidx.core.view.NestedScrollingParent3;
 import androidx.core.view.NestedScrollingParentHelper;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 @SuppressLint({"UnknownNullness"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -220,7 +220,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         if (view instanceof Toolbar) {
             return ((Toolbar) view).getWrapper();
         }
-        StringBuilder sbU = outline.U("Can't make a decor toolbar out of ");
+        StringBuilder sbU = a.U("Can't make a decor toolbar out of ");
         sbU.append(view.getClass().getSimpleName());
         throw new IllegalStateException(sbU.toString());
     }

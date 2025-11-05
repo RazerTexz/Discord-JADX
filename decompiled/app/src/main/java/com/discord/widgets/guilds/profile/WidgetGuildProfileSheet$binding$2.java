@@ -14,13 +14,13 @@ import com.discord.app.AppViewFlipper;
 import com.discord.databinding.WidgetGuildProfileSheetBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGuildProfileSheet.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetGuildProfileSheet$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildProfileSheetBinding> {
+public final /* synthetic */ class WidgetGuildProfileSheet$binding$2 extends k implements Function1<View, WidgetGuildProfileSheetBinding> {
     public static final WidgetGuildProfileSheet$binding$2 INSTANCE = new WidgetGuildProfileSheet$binding$2();
 
     public WidgetGuildProfileSheet$binding$2() {
@@ -34,7 +34,7 @@ public final /* synthetic */ class WidgetGuildProfileSheet$binding$2 extends Fun
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildProfileSheetBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.guild_profile_sheet_actions_top_barrier;
         Barrier barrier = (Barrier) view.findViewById(R.id.guild_profile_sheet_actions_top_barrier);
         if (barrier != null) {

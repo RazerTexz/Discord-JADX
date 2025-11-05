@@ -2,7 +2,7 @@ package com.discord.models.guild;
 
 import a0.a.a.b;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.emoji.GuildEmoji;
 import com.discord.api.guild.GuildExplicitContentFilter;
 import com.discord.api.guild.GuildFeature;
@@ -14,11 +14,11 @@ import com.discord.api.role.GuildRole;
 import com.discord.api.sticker.Sticker;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelNotificationSettings;
-import com.discord.utilities.guilds.GuildUtils;
-import d0.t.Collections2;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import com.discord.utilities.guilds.GuildUtilsKt;
+import d0.t.n;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -68,14 +68,14 @@ public final /* data */ class Guild {
 
     /* JADX WARN: Multi-variable type inference failed */
     public Guild(List<GuildRole> list, List<GuildEmoji> list2, List<Sticker> list3, String str, String str2, int i, long j, String str3, long j2, String str4, GuildVerificationLevel guildVerificationLevel, GuildExplicitContentFilter guildExplicitContentFilter, boolean z2, int i2, int i3, Long l, Long l2, Set<? extends GuildFeature> set, int i4, String str5, String str6, int i5, int i6, int i7, String str7, Long l3, Long l4, String str8, GuildWelcomeScreen guildWelcomeScreen, GuildMaxVideoChannelUsers guildMaxVideoChannelUsers, String str9, int i8, boolean z3, GuildHubType guildHubType) {
-        Intrinsics3.checkNotNullParameter(list, "roles");
-        Intrinsics3.checkNotNullParameter(list2, "emojis");
-        Intrinsics3.checkNotNullParameter(list3, "stickers");
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(guildVerificationLevel, "verificationLevel");
-        Intrinsics3.checkNotNullParameter(guildExplicitContentFilter, "explicitContentFilter");
-        Intrinsics3.checkNotNullParameter(set, "features");
-        Intrinsics3.checkNotNullParameter(guildMaxVideoChannelUsers, "maxVideoChannelUsers");
+        m.checkNotNullParameter(list, "roles");
+        m.checkNotNullParameter(list2, "emojis");
+        m.checkNotNullParameter(list3, "stickers");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(guildVerificationLevel, "verificationLevel");
+        m.checkNotNullParameter(guildExplicitContentFilter, "explicitContentFilter");
+        m.checkNotNullParameter(set, "features");
+        m.checkNotNullParameter(guildMaxVideoChannelUsers, "maxVideoChannelUsers");
         this.roles = list;
         this.emojis = list2;
         this.stickers = list3;
@@ -110,7 +110,7 @@ public final /* data */ class Guild {
         this.approximatePresenceCount = i8;
         this.nsfw = z3;
         this.hubType = guildHubType;
-        this.shortName = GuildUtils.computeShortName(str);
+        this.shortName = GuildUtilsKt.computeShortName(str);
     }
 
     public static /* synthetic */ Guild copy$default(Guild guild, List list, List list2, List list3, String str, String str2, int i, long j, String str3, long j2, String str4, GuildVerificationLevel guildVerificationLevel, GuildExplicitContentFilter guildExplicitContentFilter, boolean z2, int i2, int i3, Long l, Long l2, Set set, int i4, String str5, String str6, int i5, int i6, int i7, String str7, Long l3, Long l4, String str8, GuildWelcomeScreen guildWelcomeScreen, GuildMaxVideoChannelUsers guildMaxVideoChannelUsers, String str9, int i8, boolean z3, GuildHubType guildHubType, int i9, int i10, Object obj) {
@@ -300,14 +300,14 @@ public final /* data */ class Guild {
     }
 
     public final Guild copy(List<GuildRole> roles, List<GuildEmoji> emojis, List<Sticker> stickers, String name, String description, int defaultMessageNotifications, long id2, String region, long ownerId, String icon, GuildVerificationLevel verificationLevel, GuildExplicitContentFilter explicitContentFilter, boolean unavailable, int mfaLevel, int afkTimeout, Long afkChannelId, Long systemChannelId, Set<? extends GuildFeature> features, int memberCount, String banner, String splash, int premiumTier, int premiumSubscriptionCount, int systemChannelFlags, String joinedAt, Long rulesChannelId, Long publicUpdatesChannelId, String preferredLocale, GuildWelcomeScreen welcomeScreen, GuildMaxVideoChannelUsers maxVideoChannelUsers, String vanityUrlCode, int approximatePresenceCount, boolean nsfw, GuildHubType hubType) {
-        Intrinsics3.checkNotNullParameter(roles, "roles");
-        Intrinsics3.checkNotNullParameter(emojis, "emojis");
-        Intrinsics3.checkNotNullParameter(stickers, "stickers");
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(verificationLevel, "verificationLevel");
-        Intrinsics3.checkNotNullParameter(explicitContentFilter, "explicitContentFilter");
-        Intrinsics3.checkNotNullParameter(features, "features");
-        Intrinsics3.checkNotNullParameter(maxVideoChannelUsers, "maxVideoChannelUsers");
+        m.checkNotNullParameter(roles, "roles");
+        m.checkNotNullParameter(emojis, "emojis");
+        m.checkNotNullParameter(stickers, "stickers");
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(verificationLevel, "verificationLevel");
+        m.checkNotNullParameter(explicitContentFilter, "explicitContentFilter");
+        m.checkNotNullParameter(features, "features");
+        m.checkNotNullParameter(maxVideoChannelUsers, "maxVideoChannelUsers");
         return new Guild(roles, emojis, stickers, name, description, defaultMessageNotifications, id2, region, ownerId, icon, verificationLevel, explicitContentFilter, unavailable, mfaLevel, afkTimeout, afkChannelId, systemChannelId, features, memberCount, banner, splash, premiumTier, premiumSubscriptionCount, systemChannelFlags, joinedAt, rulesChannelId, publicUpdatesChannelId, preferredLocale, welcomeScreen, maxVideoChannelUsers, vanityUrlCode, approximatePresenceCount, nsfw, hubType);
     }
 
@@ -319,7 +319,7 @@ public final /* data */ class Guild {
             return false;
         }
         Guild guild = (Guild) other;
-        return Intrinsics3.areEqual(this.roles, guild.roles) && Intrinsics3.areEqual(this.emojis, guild.emojis) && Intrinsics3.areEqual(this.stickers, guild.stickers) && Intrinsics3.areEqual(this.name, guild.name) && Intrinsics3.areEqual(this.description, guild.description) && this.defaultMessageNotifications == guild.defaultMessageNotifications && this.id == guild.id && Intrinsics3.areEqual(this.region, guild.region) && this.ownerId == guild.ownerId && Intrinsics3.areEqual(this.icon, guild.icon) && Intrinsics3.areEqual(this.verificationLevel, guild.verificationLevel) && Intrinsics3.areEqual(this.explicitContentFilter, guild.explicitContentFilter) && this.unavailable == guild.unavailable && this.mfaLevel == guild.mfaLevel && this.afkTimeout == guild.afkTimeout && Intrinsics3.areEqual(this.afkChannelId, guild.afkChannelId) && Intrinsics3.areEqual(this.systemChannelId, guild.systemChannelId) && Intrinsics3.areEqual(this.features, guild.features) && this.memberCount == guild.memberCount && Intrinsics3.areEqual(this.banner, guild.banner) && Intrinsics3.areEqual(this.splash, guild.splash) && this.premiumTier == guild.premiumTier && this.premiumSubscriptionCount == guild.premiumSubscriptionCount && this.systemChannelFlags == guild.systemChannelFlags && Intrinsics3.areEqual(this.joinedAt, guild.joinedAt) && Intrinsics3.areEqual(this.rulesChannelId, guild.rulesChannelId) && Intrinsics3.areEqual(this.publicUpdatesChannelId, guild.publicUpdatesChannelId) && Intrinsics3.areEqual(this.preferredLocale, guild.preferredLocale) && Intrinsics3.areEqual(this.welcomeScreen, guild.welcomeScreen) && Intrinsics3.areEqual(this.maxVideoChannelUsers, guild.maxVideoChannelUsers) && Intrinsics3.areEqual(this.vanityUrlCode, guild.vanityUrlCode) && this.approximatePresenceCount == guild.approximatePresenceCount && this.nsfw == guild.nsfw && Intrinsics3.areEqual(this.hubType, guild.hubType);
+        return m.areEqual(this.roles, guild.roles) && m.areEqual(this.emojis, guild.emojis) && m.areEqual(this.stickers, guild.stickers) && m.areEqual(this.name, guild.name) && m.areEqual(this.description, guild.description) && this.defaultMessageNotifications == guild.defaultMessageNotifications && this.id == guild.id && m.areEqual(this.region, guild.region) && this.ownerId == guild.ownerId && m.areEqual(this.icon, guild.icon) && m.areEqual(this.verificationLevel, guild.verificationLevel) && m.areEqual(this.explicitContentFilter, guild.explicitContentFilter) && this.unavailable == guild.unavailable && this.mfaLevel == guild.mfaLevel && this.afkTimeout == guild.afkTimeout && m.areEqual(this.afkChannelId, guild.afkChannelId) && m.areEqual(this.systemChannelId, guild.systemChannelId) && m.areEqual(this.features, guild.features) && this.memberCount == guild.memberCount && m.areEqual(this.banner, guild.banner) && m.areEqual(this.splash, guild.splash) && this.premiumTier == guild.premiumTier && this.premiumSubscriptionCount == guild.premiumSubscriptionCount && this.systemChannelFlags == guild.systemChannelFlags && m.areEqual(this.joinedAt, guild.joinedAt) && m.areEqual(this.rulesChannelId, guild.rulesChannelId) && m.areEqual(this.publicUpdatesChannelId, guild.publicUpdatesChannelId) && m.areEqual(this.preferredLocale, guild.preferredLocale) && m.areEqual(this.welcomeScreen, guild.welcomeScreen) && m.areEqual(this.maxVideoChannelUsers, guild.maxVideoChannelUsers) && m.areEqual(this.vanityUrlCode, guild.vanityUrlCode) && this.approximatePresenceCount == guild.approximatePresenceCount && this.nsfw == guild.nsfw && m.areEqual(this.hubType, guild.hubType);
     }
 
     public final Long getAfkChannelId() {
@@ -463,7 +463,7 @@ public final /* data */ class Guild {
     }
 
     public final boolean hasFeature(GuildFeature feature) {
-        Intrinsics3.checkNotNullParameter(feature, "feature");
+        m.checkNotNullParameter(feature, "feature");
         return this.features.contains(feature);
     }
 
@@ -537,11 +537,11 @@ public final /* data */ class Guild {
     }
 
     public final Guild merge(com.discord.api.guild.Guild apiGuild) {
-        Intrinsics3.checkNotNullParameter(apiGuild, "apiGuild");
-        List listEmptyList = Collections2.emptyList();
+        m.checkNotNullParameter(apiGuild, "apiGuild");
+        List listEmptyList = n.emptyList();
         List<GuildEmoji> listK = apiGuild.k();
         if (listK == null) {
-            listK = Collections2.emptyList();
+            listK = n.emptyList();
         }
         String name = apiGuild.getName();
         String description = apiGuild.getDescription();
@@ -576,7 +576,7 @@ public final /* data */ class Guild {
         int afkTimeout = apiGuild.getAfkTimeout() != 0 ? apiGuild.getAfkTimeout() : this.afkTimeout;
         Long afkChannelId = apiGuild.getAfkChannelId();
         Long systemChannelId = apiGuild.getSystemChannelId();
-        Set set = _Collections.toSet(apiGuild.m());
+        Set set = u.toSet(apiGuild.m());
         String banner = apiGuild.getBanner();
         String splash = apiGuild.getSplash();
         if (splash == null) {
@@ -624,7 +624,7 @@ public final /* data */ class Guild {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Guild(roles=");
+        StringBuilder sbU = a.U("Guild(roles=");
         sbU.append(this.roles);
         sbU.append(", emojis=");
         sbU.append(this.emojis);
@@ -697,16 +697,16 @@ public final /* data */ class Guild {
     }
 
     public /* synthetic */ Guild(List list, List list2, List list3, String str, String str2, int i, long j, String str3, long j2, String str4, GuildVerificationLevel guildVerificationLevel, GuildExplicitContentFilter guildExplicitContentFilter, boolean z2, int i2, int i3, Long l, Long l2, Set set, int i4, String str5, String str6, int i5, int i6, int i7, String str7, Long l3, Long l4, String str8, GuildWelcomeScreen guildWelcomeScreen, GuildMaxVideoChannelUsers guildMaxVideoChannelUsers, String str9, int i8, boolean z3, GuildHubType guildHubType, int i9, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i9 & 1) != 0 ? Collections2.emptyList() : list, (i9 & 2) != 0 ? Collections2.emptyList() : list2, (i9 & 4) != 0 ? Collections2.emptyList() : list3, (i9 & 8) != 0 ? "" : str, (i9 & 16) != 0 ? null : str2, (i9 & 32) != 0 ? ModelNotificationSettings.FREQUENCY_ALL : i, (i9 & 64) != 0 ? 0L : j, (i9 & 128) != 0 ? null : str3, (i9 & 256) == 0 ? j2 : 0L, (i9 & 512) != 0 ? null : str4, (i9 & 1024) != 0 ? GuildVerificationLevel.NONE : guildVerificationLevel, (i9 & 2048) != 0 ? GuildExplicitContentFilter.NONE : guildExplicitContentFilter, (i9 & 4096) != 0 ? false : z2, (i9 & 8192) != 0 ? 0 : i2, (i9 & 16384) != 0 ? 0 : i3, (i9 & 32768) != 0 ? null : l, (i9 & 65536) != 0 ? null : l2, (i9 & 131072) != 0 ? Sets5.emptySet() : set, (i9 & 262144) != 0 ? 0 : i4, (i9 & 524288) != 0 ? null : str5, (i9 & 1048576) != 0 ? null : str6, (i9 & 2097152) != 0 ? 0 : i5, (i9 & 4194304) != 0 ? 0 : i6, (i9 & 8388608) != 0 ? 0 : i7, (i9 & 16777216) != 0 ? null : str7, (i9 & 33554432) != 0 ? null : l3, (i9 & 67108864) != 0 ? null : l4, (i9 & 134217728) != 0 ? null : str8, (i9 & 268435456) != 0 ? null : guildWelcomeScreen, (i9 & 536870912) != 0 ? GuildMaxVideoChannelUsers.Unlimited.INSTANCE : guildMaxVideoChannelUsers, (i9 & BasicMeasure.EXACTLY) != 0 ? null : str9, (i9 & Integer.MIN_VALUE) != 0 ? 0 : i8, (i10 & 1) == 0 ? z3 : false, (i10 & 2) != 0 ? null : guildHubType);
+        this((i9 & 1) != 0 ? n.emptyList() : list, (i9 & 2) != 0 ? n.emptyList() : list2, (i9 & 4) != 0 ? n.emptyList() : list3, (i9 & 8) != 0 ? "" : str, (i9 & 16) != 0 ? null : str2, (i9 & 32) != 0 ? ModelNotificationSettings.FREQUENCY_ALL : i, (i9 & 64) != 0 ? 0L : j, (i9 & 128) != 0 ? null : str3, (i9 & 256) == 0 ? j2 : 0L, (i9 & 512) != 0 ? null : str4, (i9 & 1024) != 0 ? GuildVerificationLevel.NONE : guildVerificationLevel, (i9 & 2048) != 0 ? GuildExplicitContentFilter.NONE : guildExplicitContentFilter, (i9 & 4096) != 0 ? false : z2, (i9 & 8192) != 0 ? 0 : i2, (i9 & 16384) != 0 ? 0 : i3, (i9 & 32768) != 0 ? null : l, (i9 & 65536) != 0 ? null : l2, (i9 & 131072) != 0 ? n0.emptySet() : set, (i9 & 262144) != 0 ? 0 : i4, (i9 & 524288) != 0 ? null : str5, (i9 & 1048576) != 0 ? null : str6, (i9 & 2097152) != 0 ? 0 : i5, (i9 & 4194304) != 0 ? 0 : i6, (i9 & 8388608) != 0 ? 0 : i7, (i9 & 16777216) != 0 ? null : str7, (i9 & 33554432) != 0 ? null : l3, (i9 & 67108864) != 0 ? null : l4, (i9 & 134217728) != 0 ? null : str8, (i9 & 268435456) != 0 ? null : guildWelcomeScreen, (i9 & 536870912) != 0 ? GuildMaxVideoChannelUsers.Unlimited.INSTANCE : guildMaxVideoChannelUsers, (i9 & BasicMeasure.EXACTLY) != 0 ? null : str9, (i9 & Integer.MIN_VALUE) != 0 ? 0 : i8, (i10 & 1) == 0 ? z3 : false, (i10 & 2) != 0 ? null : guildHubType);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     public Guild(com.discord.api.guild.Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "apiGuild");
+        m.checkNotNullParameter(guild, "apiGuild");
         List<GuildRole> listG = guild.G();
-        List<GuildRole> listEmptyList = listG == null ? Collections2.emptyList() : listG;
+        List<GuildRole> listEmptyList = listG == null ? n.emptyList() : listG;
         List<GuildEmoji> listK = guild.k();
-        List<GuildEmoji> listEmptyList2 = listK == null ? Collections2.emptyList() : listK;
+        List<GuildEmoji> listEmptyList2 = listK == null ? n.emptyList() : listK;
         String name = guild.getName();
         String description = guild.getDescription();
         Integer defaultMessageNotifications = guild.getDefaultMessageNotifications();
@@ -724,7 +724,7 @@ public final /* data */ class Guild {
         int afkTimeout = guild.getAfkTimeout();
         Long afkChannelId = guild.getAfkChannelId();
         Long systemChannelId = guild.getSystemChannelId();
-        Set set = _Collections.toSet(guild.m());
+        Set set = u.toSet(guild.m());
         int memberCount = guild.getMemberCount();
         String banner = guild.getBanner();
         String splash = guild.getSplash();

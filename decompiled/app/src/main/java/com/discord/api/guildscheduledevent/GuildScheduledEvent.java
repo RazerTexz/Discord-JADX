@@ -1,11 +1,11 @@
 package com.discord.api.guildscheduledevent;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guild.Guild;
 import com.discord.api.stageinstance.StageInstancePrivacyLevel;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: GuildScheduledEvent.kt */
@@ -31,12 +31,12 @@ public final /* data */ class GuildScheduledEvent {
     private final GuildScheduledEventMeUser userRsvp;
 
     public GuildScheduledEvent(long j, long j2, Long l, Long l2, String str, String str2, String str3, UtcDateTime utcDateTime, UtcDateTime utcDateTime2, StageInstancePrivacyLevel stageInstancePrivacyLevel, GuildScheduledEventStatus guildScheduledEventStatus, GuildScheduledEventEntityType guildScheduledEventEntityType, Long l3, GuildScheduledEventEntityMetadata guildScheduledEventEntityMetadata, List<Long> list, Integer num, GuildScheduledEventMeUser guildScheduledEventMeUser, Guild guild) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(utcDateTime, "scheduledStartTime");
-        Intrinsics3.checkNotNullParameter(stageInstancePrivacyLevel, "privacyLevel");
-        Intrinsics3.checkNotNullParameter(guildScheduledEventStatus, "status");
-        Intrinsics3.checkNotNullParameter(guildScheduledEventEntityType, "entityType");
-        Intrinsics3.checkNotNullParameter(list, "skuIds");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(utcDateTime, "scheduledStartTime");
+        m.checkNotNullParameter(stageInstancePrivacyLevel, "privacyLevel");
+        m.checkNotNullParameter(guildScheduledEventStatus, "status");
+        m.checkNotNullParameter(guildScheduledEventEntityType, "entityType");
+        m.checkNotNullParameter(list, "skuIds");
         this.id = j;
         this.guildId = j2;
         this.channelId = l;
@@ -78,12 +78,12 @@ public final /* data */ class GuildScheduledEvent {
         Integer num2 = (i & 32768) != 0 ? guildScheduledEvent.userCount : num;
         GuildScheduledEventMeUser guildScheduledEventMeUser2 = (i & 65536) != 0 ? guildScheduledEvent.userRsvp : null;
         Guild guild2 = (i & 131072) != 0 ? guildScheduledEvent.guild : null;
-        Intrinsics3.checkNotNullParameter(str4, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(utcDateTime3, "scheduledStartTime");
-        Intrinsics3.checkNotNullParameter(stageInstancePrivacyLevel2, "privacyLevel");
-        Intrinsics3.checkNotNullParameter(guildScheduledEventStatus2, "status");
-        Intrinsics3.checkNotNullParameter(guildScheduledEventEntityType2, "entityType");
-        Intrinsics3.checkNotNullParameter(list2, "skuIds");
+        m.checkNotNullParameter(str4, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(utcDateTime3, "scheduledStartTime");
+        m.checkNotNullParameter(stageInstancePrivacyLevel2, "privacyLevel");
+        m.checkNotNullParameter(guildScheduledEventStatus2, "status");
+        m.checkNotNullParameter(guildScheduledEventEntityType2, "entityType");
+        m.checkNotNullParameter(list2, "skuIds");
         return new GuildScheduledEvent(j3, j4, l4, l5, str4, str5, str7, utcDateTime3, utcDateTime5, stageInstancePrivacyLevel2, guildScheduledEventStatus2, guildScheduledEventEntityType2, l6, guildScheduledEventEntityMetadata2, list2, num2, guildScheduledEventMeUser2, guild2);
     }
 
@@ -115,7 +115,7 @@ public final /* data */ class GuildScheduledEvent {
             return false;
         }
         GuildScheduledEvent guildScheduledEvent = (GuildScheduledEvent) other;
-        return this.id == guildScheduledEvent.id && this.guildId == guildScheduledEvent.guildId && Intrinsics3.areEqual(this.channelId, guildScheduledEvent.channelId) && Intrinsics3.areEqual(this.creatorId, guildScheduledEvent.creatorId) && Intrinsics3.areEqual(this.name, guildScheduledEvent.name) && Intrinsics3.areEqual(this.description, guildScheduledEvent.description) && Intrinsics3.areEqual(this.image, guildScheduledEvent.image) && Intrinsics3.areEqual(this.scheduledStartTime, guildScheduledEvent.scheduledStartTime) && Intrinsics3.areEqual(this.scheduledEndTime, guildScheduledEvent.scheduledEndTime) && Intrinsics3.areEqual(this.privacyLevel, guildScheduledEvent.privacyLevel) && Intrinsics3.areEqual(this.status, guildScheduledEvent.status) && Intrinsics3.areEqual(this.entityType, guildScheduledEvent.entityType) && Intrinsics3.areEqual(this.entityId, guildScheduledEvent.entityId) && Intrinsics3.areEqual(this.entityMetadata, guildScheduledEvent.entityMetadata) && Intrinsics3.areEqual(this.skuIds, guildScheduledEvent.skuIds) && Intrinsics3.areEqual(this.userCount, guildScheduledEvent.userCount) && Intrinsics3.areEqual(this.userRsvp, guildScheduledEvent.userRsvp) && Intrinsics3.areEqual(this.guild, guildScheduledEvent.guild);
+        return this.id == guildScheduledEvent.id && this.guildId == guildScheduledEvent.guildId && m.areEqual(this.channelId, guildScheduledEvent.channelId) && m.areEqual(this.creatorId, guildScheduledEvent.creatorId) && m.areEqual(this.name, guildScheduledEvent.name) && m.areEqual(this.description, guildScheduledEvent.description) && m.areEqual(this.image, guildScheduledEvent.image) && m.areEqual(this.scheduledStartTime, guildScheduledEvent.scheduledStartTime) && m.areEqual(this.scheduledEndTime, guildScheduledEvent.scheduledEndTime) && m.areEqual(this.privacyLevel, guildScheduledEvent.privacyLevel) && m.areEqual(this.status, guildScheduledEvent.status) && m.areEqual(this.entityType, guildScheduledEvent.entityType) && m.areEqual(this.entityId, guildScheduledEvent.entityId) && m.areEqual(this.entityMetadata, guildScheduledEvent.entityMetadata) && m.areEqual(this.skuIds, guildScheduledEvent.skuIds) && m.areEqual(this.userCount, guildScheduledEvent.userCount) && m.areEqual(this.userRsvp, guildScheduledEvent.userRsvp) && m.areEqual(this.guild, guildScheduledEvent.guild);
     }
 
     /* renamed from: f, reason: from getter */
@@ -215,7 +215,7 @@ public final /* data */ class GuildScheduledEvent {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildScheduledEvent(id=");
+        StringBuilder sbU = a.U("GuildScheduledEvent(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);

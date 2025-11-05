@@ -1,8 +1,8 @@
 package com.discord.api.emoji;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildhash.GuildHashes;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: GuildEmojisUpdate.kt */
@@ -34,7 +34,7 @@ public final /* data */ class GuildEmojisUpdate {
             return false;
         }
         GuildEmojisUpdate guildEmojisUpdate = (GuildEmojisUpdate) other;
-        return this.guildId == guildEmojisUpdate.guildId && Intrinsics3.areEqual(this.emojis, guildEmojisUpdate.emojis) && Intrinsics3.areEqual(this.guildHashes, guildEmojisUpdate.guildHashes);
+        return this.guildId == guildEmojisUpdate.guildId && m.areEqual(this.emojis, guildEmojisUpdate.emojis) && m.areEqual(this.guildHashes, guildEmojisUpdate.guildHashes);
     }
 
     public int hashCode() {
@@ -47,7 +47,7 @@ public final /* data */ class GuildEmojisUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildEmojisUpdate(guildId=");
+        StringBuilder sbU = a.U("GuildEmojisUpdate(guildId=");
         sbU.append(this.guildId);
         sbU.append(", emojis=");
         sbU.append(this.emojis);

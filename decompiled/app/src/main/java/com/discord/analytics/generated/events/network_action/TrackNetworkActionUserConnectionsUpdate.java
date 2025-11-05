@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
+import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkActionUserConnectionsUpdate.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
+public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Boolean friendSync;
     private final CharSequence name;
@@ -39,7 +39,7 @@ public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements
         this.analyticsSchemaTypeName = "network_action_user_connections_update";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
     public void b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
@@ -58,7 +58,7 @@ public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements
             return false;
         }
         TrackNetworkActionUserConnectionsUpdate trackNetworkActionUserConnectionsUpdate = (TrackNetworkActionUserConnectionsUpdate) other;
-        return Intrinsics3.areEqual(this.name, trackNetworkActionUserConnectionsUpdate.name) && Intrinsics3.areEqual(this.friendSync, trackNetworkActionUserConnectionsUpdate.friendSync) && Intrinsics3.areEqual(this.visibility, trackNetworkActionUserConnectionsUpdate.visibility) && Intrinsics3.areEqual(this.showActivity, trackNetworkActionUserConnectionsUpdate.showActivity);
+        return m.areEqual(this.name, trackNetworkActionUserConnectionsUpdate.name) && m.areEqual(this.friendSync, trackNetworkActionUserConnectionsUpdate.friendSync) && m.areEqual(this.visibility, trackNetworkActionUserConnectionsUpdate.visibility) && m.areEqual(this.showActivity, trackNetworkActionUserConnectionsUpdate.showActivity);
     }
 
     public int hashCode() {
@@ -73,13 +73,13 @@ public final /* data */ class TrackNetworkActionUserConnectionsUpdate implements
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkActionUserConnectionsUpdate(name=");
+        StringBuilder sbU = a.U("TrackNetworkActionUserConnectionsUpdate(name=");
         sbU.append(this.name);
         sbU.append(", friendSync=");
         sbU.append(this.friendSync);
         sbU.append(", visibility=");
         sbU.append(this.visibility);
         sbU.append(", showActivity=");
-        return outline.D(sbU, this.showActivity, ")");
+        return a.D(sbU, this.showActivity, ")");
     }
 }

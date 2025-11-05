@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackFriendSyncPerformed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendSyncPerformed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackFriendSyncPerformed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean isBackgroundSync = null;
     private final CharSequence platformType = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackFriendSyncPerformed implements AnalyticsSchem
             return false;
         }
         TrackFriendSyncPerformed trackFriendSyncPerformed = (TrackFriendSyncPerformed) other;
-        return Intrinsics3.areEqual(this.isBackgroundSync, trackFriendSyncPerformed.isBackgroundSync) && Intrinsics3.areEqual(this.platformType, trackFriendSyncPerformed.platformType) && Intrinsics3.areEqual(this.numExternalFriendsAdded, trackFriendSyncPerformed.numExternalFriendsAdded) && Intrinsics3.areEqual(this.numExternalFriendsRemoved, trackFriendSyncPerformed.numExternalFriendsRemoved) && Intrinsics3.areEqual(this.numSuggestionsMutual, trackFriendSyncPerformed.numSuggestionsMutual) && Intrinsics3.areEqual(this.numReverseSuggestionsMutual, trackFriendSyncPerformed.numReverseSuggestionsMutual) && Intrinsics3.areEqual(this.numSuggestionsNonmutual, trackFriendSyncPerformed.numSuggestionsNonmutual) && Intrinsics3.areEqual(this.numReverseSuggestionsNonmutual, trackFriendSyncPerformed.numReverseSuggestionsNonmutual) && Intrinsics3.areEqual(this.uploadedContactsLength, trackFriendSyncPerformed.uploadedContactsLength) && Intrinsics3.areEqual(this.externalFriendListLength, trackFriendSyncPerformed.externalFriendListLength) && Intrinsics3.areEqual(this.friendSyncEnabled, trackFriendSyncPerformed.friendSyncEnabled);
+        return m.areEqual(this.isBackgroundSync, trackFriendSyncPerformed.isBackgroundSync) && m.areEqual(this.platformType, trackFriendSyncPerformed.platformType) && m.areEqual(this.numExternalFriendsAdded, trackFriendSyncPerformed.numExternalFriendsAdded) && m.areEqual(this.numExternalFriendsRemoved, trackFriendSyncPerformed.numExternalFriendsRemoved) && m.areEqual(this.numSuggestionsMutual, trackFriendSyncPerformed.numSuggestionsMutual) && m.areEqual(this.numReverseSuggestionsMutual, trackFriendSyncPerformed.numReverseSuggestionsMutual) && m.areEqual(this.numSuggestionsNonmutual, trackFriendSyncPerformed.numSuggestionsNonmutual) && m.areEqual(this.numReverseSuggestionsNonmutual, trackFriendSyncPerformed.numReverseSuggestionsNonmutual) && m.areEqual(this.uploadedContactsLength, trackFriendSyncPerformed.uploadedContactsLength) && m.areEqual(this.externalFriendListLength, trackFriendSyncPerformed.externalFriendListLength) && m.areEqual(this.friendSyncEnabled, trackFriendSyncPerformed.friendSyncEnabled);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackFriendSyncPerformed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackFriendSyncPerformed(isBackgroundSync=");
+        StringBuilder sbU = a.U("TrackFriendSyncPerformed(isBackgroundSync=");
         sbU.append(this.isBackgroundSync);
         sbU.append(", platformType=");
         sbU.append(this.platformType);
@@ -87,6 +87,6 @@ public final /* data */ class TrackFriendSyncPerformed implements AnalyticsSchem
         sbU.append(", externalFriendListLength=");
         sbU.append(this.externalFriendListLength);
         sbU.append(", friendSyncEnabled=");
-        return outline.D(sbU, this.friendSyncEnabled, ")");
+        return a.D(sbU, this.friendSyncEnabled, ")");
     }
 }

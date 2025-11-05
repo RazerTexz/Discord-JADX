@@ -1,9 +1,9 @@
 package com.discord.api.channel;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ChannelRecipient.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class ChannelRecipient {
             return false;
         }
         ChannelRecipient channelRecipient = (ChannelRecipient) other;
-        return Intrinsics3.areEqual(this.nick, channelRecipient.nick) && this.channelId == channelRecipient.channelId && Intrinsics3.areEqual(this.user, channelRecipient.user);
+        return m.areEqual(this.nick, channelRecipient.nick) && this.channelId == channelRecipient.channelId && m.areEqual(this.user, channelRecipient.user);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class ChannelRecipient {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ChannelRecipient(nick=");
+        StringBuilder sbU = a.U("ChannelRecipient(nick=");
         sbU.append(this.nick);
         sbU.append(", channelId=");
         sbU.append(this.channelId);

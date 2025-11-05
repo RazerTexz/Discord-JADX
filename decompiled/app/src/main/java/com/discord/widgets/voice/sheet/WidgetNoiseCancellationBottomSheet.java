@@ -7,22 +7,21 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppHelpDesk;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetVoiceNoiseCancellationBottomSheetBinding;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.voice.sheet.WidgetNoiseCancellationBottomSheetViewModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -33,7 +32,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetNoiseCancellationBottomSheet.kt */
 /* loaded from: classes.dex */
 public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetNoiseCancellationBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceNoiseCancellationBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetNoiseCancellationBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceNoiseCancellationBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -50,10 +49,10 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
         }
 
         public final void show(Fragment fragment) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(fragment, "fragment");
             WidgetNoiseCancellationBottomSheet widgetNoiseCancellationBottomSheet = new WidgetNoiseCancellationBottomSheet();
             FragmentManager parentFragmentManager = fragment.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
             widgetNoiseCancellationBottomSheet.show(parentFragmentManager, WidgetNoiseCancellationBottomSheet.class.getName());
         }
 
@@ -77,7 +76,7 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
 
     /* compiled from: WidgetNoiseCancellationBottomSheet.kt */
     /* renamed from: com.discord.widgets.voice.sheet.WidgetNoiseCancellationBottomSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetNoiseCancellationBottomSheetViewModel.Event, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<WidgetNoiseCancellationBottomSheetViewModel.Event, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -90,17 +89,17 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetNoiseCancellationBottomSheetViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(event, "event");
             WidgetNoiseCancellationBottomSheet.access$handleEvent(WidgetNoiseCancellationBottomSheet.this, event);
         }
     }
 
     public WidgetNoiseCancellationBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetNoiseCancellationBottomSheet2.INSTANCE, null, 2, null);
-        WidgetNoiseCancellationBottomSheet3 widgetNoiseCancellationBottomSheet3 = WidgetNoiseCancellationBottomSheet3.INSTANCE;
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetNoiseCancellationBottomSheetViewModel.class), new WidgetNoiseCancellationBottomSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetNoiseCancellationBottomSheet3));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetNoiseCancellationBottomSheet$binding$2.INSTANCE, null, 2, null);
+        WidgetNoiseCancellationBottomSheet$viewModel$2 widgetNoiseCancellationBottomSheet$viewModel$2 = WidgetNoiseCancellationBottomSheet$viewModel$2.INSTANCE;
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetNoiseCancellationBottomSheetViewModel.class), new WidgetNoiseCancellationBottomSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetNoiseCancellationBottomSheet$viewModel$2));
     }
 
     public static final /* synthetic */ WidgetNoiseCancellationBottomSheetViewModel access$getViewModel$p(WidgetNoiseCancellationBottomSheet widgetNoiseCancellationBottomSheet) {
@@ -113,10 +112,10 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
 
     private final void configureUI() {
         TextView textView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.noiseCancellationLearnMore");
-        FormatUtils.n(textView, R.string.learn_more_link, new Object[]{AppHelpDesk.a.a(360040843952L, null)}, null, 4);
+        m.checkNotNullExpressionValue(textView, "binding.noiseCancellationLearnMore");
+        b.n(textView, R.string.learn_more_link, new Object[]{f.a.a(360040843952L, null)}, null, 4);
         TextView textView2 = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.noiseCancellationLearnMore");
+        m.checkNotNullExpressionValue(textView2, "binding.noiseCancellationLearnMore");
         textView2.setMovementMethod(LinkMovementMethod.getInstance());
         getBinding().f2704b.setOnClickListener(new AnonymousClass1());
     }
@@ -131,7 +130,7 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
 
     private final void handleEvent(WidgetNoiseCancellationBottomSheetViewModel.Event event) {
         if (event instanceof WidgetNoiseCancellationBottomSheetViewModel.Event.ShowToast) {
-            AppToast.g(requireContext(), ((WidgetNoiseCancellationBottomSheetViewModel.Event.ShowToast) event).getToastResId(), 0, null, 12);
+            b.a.d.m.g(requireContext(), ((WidgetNoiseCancellationBottomSheetViewModel.Event.ShowToast) event).getToastResId(), 0, null, 12);
         }
     }
 

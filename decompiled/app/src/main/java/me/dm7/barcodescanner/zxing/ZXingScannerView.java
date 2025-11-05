@@ -8,29 +8,24 @@ import android.os.Looper;
 import android.util.AttributeSet;
 import android.util.Log;
 import b.i.a.f.e.o.f;
-import b.i.e.BarcodeFormat;
-import b.i.e.BinaryBitmap;
-import b.i.e.DecodeHintType;
-import b.i.e.InvertedLuminanceSource;
-import b.i.e.MultiFormatReader;
-import b.i.e.PlanarYUVLuminanceSource;
-import b.i.e.n.HybridBinarizer;
+import b.i.e.c;
+import b.i.e.e;
+import b.i.e.g;
+import b.i.e.h;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
-import e0.a.a.a.BarcodeScannerView;
-import e0.a.a.a.CameraPreview2;
-import e0.a.a.a.ViewFinderView;
+import e0.a.a.a.d;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumMap;
 import java.util.List;
 
 /* loaded from: classes3.dex */
-public class ZXingScannerView extends BarcodeScannerView {
-    public static final List<BarcodeFormat> D;
-    public MultiFormatReader E;
-    public List<BarcodeFormat> F;
+public class ZXingScannerView extends e0.a.a.a.a {
+    public static final List<b.i.e.a> D;
+    public g E;
+    public List<b.i.e.a> F;
     public b G;
 
     public class a implements Runnable {
@@ -45,9 +40,9 @@ public class ZXingScannerView extends BarcodeScannerView {
             ZXingScannerView zXingScannerView = ZXingScannerView.this;
             b bVar = zXingScannerView.G;
             zXingScannerView.G = null;
-            CameraPreview2 cameraPreview2 = zXingScannerView.k;
-            if (cameraPreview2 != null) {
-                cameraPreview2.e();
+            d dVar = zXingScannerView.k;
+            if (dVar != null) {
+                dVar.e();
             }
             if (bVar != null) {
                 bVar.handleResult(this.j);
@@ -62,23 +57,23 @@ public class ZXingScannerView extends BarcodeScannerView {
     static {
         ArrayList arrayList = new ArrayList();
         D = arrayList;
-        arrayList.add(BarcodeFormat.AZTEC);
-        arrayList.add(BarcodeFormat.CODABAR);
-        arrayList.add(BarcodeFormat.CODE_39);
-        arrayList.add(BarcodeFormat.CODE_93);
-        arrayList.add(BarcodeFormat.CODE_128);
-        arrayList.add(BarcodeFormat.DATA_MATRIX);
-        arrayList.add(BarcodeFormat.EAN_8);
-        arrayList.add(BarcodeFormat.EAN_13);
-        arrayList.add(BarcodeFormat.ITF);
-        arrayList.add(BarcodeFormat.MAXICODE);
-        arrayList.add(BarcodeFormat.PDF_417);
-        arrayList.add(BarcodeFormat.QR_CODE);
-        arrayList.add(BarcodeFormat.RSS_14);
-        arrayList.add(BarcodeFormat.RSS_EXPANDED);
-        arrayList.add(BarcodeFormat.UPC_A);
-        arrayList.add(BarcodeFormat.UPC_E);
-        arrayList.add(BarcodeFormat.UPC_EAN_EXTENSION);
+        arrayList.add(b.i.e.a.AZTEC);
+        arrayList.add(b.i.e.a.CODABAR);
+        arrayList.add(b.i.e.a.CODE_39);
+        arrayList.add(b.i.e.a.CODE_93);
+        arrayList.add(b.i.e.a.CODE_128);
+        arrayList.add(b.i.e.a.DATA_MATRIX);
+        arrayList.add(b.i.e.a.EAN_8);
+        arrayList.add(b.i.e.a.EAN_13);
+        arrayList.add(b.i.e.a.ITF);
+        arrayList.add(b.i.e.a.MAXICODE);
+        arrayList.add(b.i.e.a.PDF_417);
+        arrayList.add(b.i.e.a.QR_CODE);
+        arrayList.add(b.i.e.a.RSS_14);
+        arrayList.add(b.i.e.a.RSS_EXPANDED);
+        arrayList.add(b.i.e.a.UPC_A);
+        arrayList.add(b.i.e.a.UPC_E);
+        arrayList.add(b.i.e.a.UPC_EAN_EXTENSION);
     }
 
     public ZXingScannerView(Context context, AttributeSet attributeSet) {
@@ -86,11 +81,11 @@ public class ZXingScannerView extends BarcodeScannerView {
         c();
     }
 
-    public PlanarYUVLuminanceSource b(byte[] bArr, int i, int i2) {
+    public h b(byte[] bArr, int i, int i2) {
         Rect rect;
         synchronized (this) {
             if (this.m == null) {
-                Rect framingRect = ((ViewFinderView) this.l).getFramingRect();
+                Rect framingRect = ((e0.a.a.a.g) this.l).getFramingRect();
                 int width = this.l.getWidth();
                 int height = this.l.getHeight();
                 if (framingRect != null && width != 0 && height != 0) {
@@ -113,22 +108,22 @@ public class ZXingScannerView extends BarcodeScannerView {
             return null;
         }
         try {
-            return new PlanarYUVLuminanceSource(bArr, i, i2, rect.left, rect.top, rect.width(), rect.height(), false);
+            return new h(bArr, i, i2, rect.left, rect.top, rect.width(), rect.height(), false);
         } catch (Exception unused) {
             return null;
         }
     }
 
     public final void c() {
-        EnumMap enumMap = new EnumMap(DecodeHintType.class);
-        enumMap.put((EnumMap) DecodeHintType.POSSIBLE_FORMATS, (DecodeHintType) getFormats());
-        MultiFormatReader multiFormatReader = new MultiFormatReader();
-        this.E = multiFormatReader;
-        multiFormatReader.c(enumMap);
+        EnumMap enumMap = new EnumMap(b.i.e.d.class);
+        enumMap.put((EnumMap) b.i.e.d.POSSIBLE_FORMATS, (b.i.e.d) getFormats());
+        g gVar = new g();
+        this.E = gVar;
+        gVar.c(enumMap);
     }
 
-    public Collection<BarcodeFormat> getFormats() {
-        List<BarcodeFormat> list = this.F;
+    public Collection<b.i.e.a> getFormats() {
+        List<b.i.e.a> list = this.F;
         return list == null ? D : list;
     }
 
@@ -184,16 +179,16 @@ public class ZXingScannerView extends BarcodeScannerView {
                     i4 = i11;
                 }
             }
-            PlanarYUVLuminanceSource planarYUVLuminanceSourceB = b(bArr2, i2, i);
+            h hVarB = b(bArr2, i2, i);
             Result resultB2 = null;
-            if (planarYUVLuminanceSourceB != null) {
-                BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(planarYUVLuminanceSourceB));
+            if (hVarB != null) {
+                c cVar = new c(new b.i.e.n.h(hVarB));
                 try {
-                    MultiFormatReader multiFormatReader = this.E;
-                    if (multiFormatReader.f1824b == null) {
-                        multiFormatReader.c(null);
+                    g gVar = this.E;
+                    if (gVar.f1824b == null) {
+                        gVar.c(null);
                     }
-                    resultB = multiFormatReader.b(binaryBitmap);
+                    resultB = gVar.b(cVar);
                     this.E.reset();
                 } catch (ReaderException | ArrayIndexOutOfBoundsException | NullPointerException unused) {
                     this.E.reset();
@@ -202,13 +197,13 @@ public class ZXingScannerView extends BarcodeScannerView {
                     throw th;
                 }
                 if (resultB == null) {
-                    BinaryBitmap binaryBitmap2 = new BinaryBitmap(new HybridBinarizer(new InvertedLuminanceSource(planarYUVLuminanceSourceB)));
+                    c cVar2 = new c(new b.i.e.n.h(new e(hVarB)));
                     try {
-                        MultiFormatReader multiFormatReader2 = this.E;
-                        if (multiFormatReader2.f1824b == null) {
-                            multiFormatReader2.c(null);
+                        g gVar2 = this.E;
+                        if (gVar2.f1824b == null) {
+                            gVar2.c(null);
                         }
-                        resultB2 = multiFormatReader2.b(binaryBitmap2);
+                        resultB2 = gVar2.b(cVar2);
                         this.E.reset();
                     } catch (NotFoundException unused2) {
                     } finally {
@@ -228,7 +223,7 @@ public class ZXingScannerView extends BarcodeScannerView {
         }
     }
 
-    public void setFormats(List<BarcodeFormat> list) {
+    public void setFormats(List<b.i.e.a> list) {
         this.F = list;
         c();
     }

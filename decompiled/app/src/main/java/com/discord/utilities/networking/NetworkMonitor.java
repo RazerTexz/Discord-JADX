@@ -10,9 +10,9 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import com.discord.utilities.io.NetworkUtils;
 import com.discord.utilities.logging.Logger;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import rx.Observable;
@@ -33,10 +33,10 @@ public final class NetworkMonitor {
 
     /* compiled from: NetworkMonitor.kt */
     /* renamed from: com.discord.utilities.networking.NetworkMonitor$observeIsConnected$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<State, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<State, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(State state) {
             return call2(state);
         }
@@ -55,8 +55,8 @@ public final class NetworkMonitor {
 
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(intent, "intent");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(intent, "intent");
             Logger.i$default(NetworkMonitor.access$getLogger$p(NetworkMonitor.this), "[NetworkMonitor]", "Got airplane mode broadcast intent.", null, 4, null);
             NetworkMonitor.updateNetworkState$default(NetworkMonitor.this, context, null, 2, null);
         }
@@ -70,8 +70,8 @@ public final class NetworkMonitor {
 
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(intent, "intent");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(intent, "intent");
             Logger.i$default(NetworkMonitor.access$getLogger$p(NetworkMonitor.this), "[NetworkMonitor]", "Got connectivity action broadcast intent.", null, 4, null);
             NetworkMonitor.access$updateNetworkState(NetworkMonitor.this, context, intent);
         }
@@ -79,15 +79,15 @@ public final class NetworkMonitor {
 
     /* compiled from: NetworkMonitor.kt */
     /* renamed from: com.discord.utilities.networking.NetworkMonitor$registerConnectivityNetworkMonitor$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ ConnectivityManager $connectivityManager;
-        public final /* synthetic */ NetworkMonitor2 $networkCallback;
+        public final /* synthetic */ NetworkMonitor$registerConnectivityNetworkMonitor$networkCallback$1 $networkCallback;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(ConnectivityManager connectivityManager, NetworkMonitor2 networkMonitor2) {
+        public AnonymousClass1(ConnectivityManager connectivityManager, NetworkMonitor$registerConnectivityNetworkMonitor$networkCallback$1 networkMonitor$registerConnectivityNetworkMonitor$networkCallback$1) {
             super(0);
             this.$connectivityManager = connectivityManager;
-            this.$networkCallback = networkMonitor2;
+            this.$networkCallback = networkMonitor$registerConnectivityNetworkMonitor$networkCallback$1;
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -107,8 +107,8 @@ public final class NetworkMonitor {
     }
 
     public NetworkMonitor(Context context, Logger logger) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(logger, "logger");
         this.logger = logger;
         this.networkStateSubject = BehaviorSubject.l0(getState$default(this, context, null, 2, null));
         registerConnectivityNetworkMonitor(context);
@@ -155,11 +155,11 @@ public final class NetworkMonitor {
         }
         ConnectivityManager connectivityManager = (ConnectivityManager) systemService;
         if (connectivityManager != null) {
-            NetworkMonitor2 networkMonitor2 = new NetworkMonitor2(this, context);
-            AnonymousClass1 anonymousClass1 = new AnonymousClass1(connectivityManager, networkMonitor2);
+            NetworkMonitor$registerConnectivityNetworkMonitor$networkCallback$1 networkMonitor$registerConnectivityNetworkMonitor$networkCallback$1 = new NetworkMonitor$registerConnectivityNetworkMonitor$networkCallback$1(this, context);
+            AnonymousClass1 anonymousClass1 = new AnonymousClass1(connectivityManager, networkMonitor$registerConnectivityNetworkMonitor$networkCallback$1);
             if (Build.VERSION.SDK_INT >= 24) {
                 try {
-                    connectivityManager.registerDefaultNetworkCallback(networkMonitor2);
+                    connectivityManager.registerDefaultNetworkCallback(networkMonitor$registerConnectivityNetworkMonitor$networkCallback$1);
                 } catch (Exception unused) {
                     anonymousClass1.invoke2();
                 }
@@ -184,13 +184,13 @@ public final class NetworkMonitor {
 
     public final Observable<Boolean> observeIsConnected() {
         Observable<Boolean> observableR = observeState().G(AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observeState().map { sta… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observeState().map { sta… }.distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<State> observeState() {
         Observable<State> observableR = this.networkStateSubject.K().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "networkStateSubject.onBa…().distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "networkStateSubject.onBa…().distinctUntilChanged()");
         return observableR;
     }
 }

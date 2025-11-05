@@ -1,7 +1,5 @@
 package b.i.a.f.i.b;
 
-import b.c.a.a0.AnimatableValueParser;
-
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
 /* loaded from: classes3.dex */
 public final class l {
@@ -20,12 +18,12 @@ public final class l {
     public final Boolean k;
 
     public l(String str, String str2, long j, long j2, long j3, long j4, long j5, Long l, Long l2, Long l3, Boolean bool) {
-        AnimatableValueParser.w(str);
-        AnimatableValueParser.w(str2);
-        AnimatableValueParser.l(j >= 0);
-        AnimatableValueParser.l(j2 >= 0);
-        AnimatableValueParser.l(j3 >= 0);
-        AnimatableValueParser.l(j5 >= 0);
+        b.c.a.a0.d.w(str);
+        b.c.a.a0.d.w(str2);
+        b.c.a.a0.d.l(j >= 0);
+        b.c.a.a0.d.l(j2 >= 0);
+        b.c.a.a0.d.l(j3 >= 0);
+        b.c.a.a0.d.l(j5 >= 0);
         this.a = str;
         this.f1548b = str2;
         this.c = j;

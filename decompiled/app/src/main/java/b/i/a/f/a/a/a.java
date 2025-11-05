@@ -2,7 +2,6 @@ package b.i.a.f.a.a;
 
 import android.net.Uri;
 import android.util.Log;
-import b.d.b.a.outline;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -46,7 +45,7 @@ public final class a extends Thread {
         } catch (IOException e) {
             e = e;
             message = e.getMessage();
-            sb = new StringBuilder(outline.b(message, outline.b(string, 27)));
+            sb = new StringBuilder(b.d.b.a.a.b(message, b.d.b.a.a.b(string, 27)));
             str = "Error while pinging URL: ";
             exc = e;
             sb.append(str);
@@ -56,7 +55,7 @@ public final class a extends Thread {
             Log.w("HttpUrlPinger", sb.toString(), exc);
         } catch (IndexOutOfBoundsException e2) {
             message = e2.getMessage();
-            sb = new StringBuilder(outline.b(message, outline.b(string, 32)));
+            sb = new StringBuilder(b.d.b.a.a.b(message, b.d.b.a.a.b(string, 32)));
             str = "Error while parsing ping URL: ";
             exc = e2;
             sb.append(str);
@@ -67,7 +66,7 @@ public final class a extends Thread {
         } catch (RuntimeException e3) {
             e = e3;
             message = e.getMessage();
-            sb = new StringBuilder(outline.b(message, outline.b(string, 27)));
+            sb = new StringBuilder(b.d.b.a.a.b(message, b.d.b.a.a.b(string, 27)));
             str = "Error while pinging URL: ";
             exc = e;
             sb.append(str);

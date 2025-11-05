@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.thread.ThreadMetadata;
@@ -24,11 +24,11 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.utilities.time.TimeUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.google.android.material.radiobutton.MaterialRadioButton;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -40,7 +40,7 @@ import rx.subscriptions.CompositeSubscription;
 /* compiled from: WidgetThreadArchiveActions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetThreadArchiveActions extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetThreadArchiveActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadArchiveActionsSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetThreadArchiveActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadArchiveActionsSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -56,9 +56,9 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long channelId, long guildId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetThreadArchiveActions widgetThreadArchiveActions = new WidgetThreadArchiveActions();
-            Bundle bundleT = outline.T(WidgetThreadArchiveActions.INTENT_EXTRA_CHANNEL_ID, channelId);
+            Bundle bundleT = a.T(WidgetThreadArchiveActions.INTENT_EXTRA_CHANNEL_ID, channelId);
             bundleT.putLong("INTENT_EXTRA_GUILD_ID", guildId);
             widgetThreadArchiveActions.setArguments(bundleT);
             widgetThreadArchiveActions.show(fragmentManager, WidgetThreadArchiveActions.class.getName());
@@ -85,10 +85,10 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
 
             public final Observable<Model> get(long channelId, long guildId) {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable observableI = Observable.i(companion.getChannels().observeChannel(channelId), companion.getGuilds().observeGuild(guildId), companion.getPermissions().observePermissionsForChannel(channelId), WidgetThreadArchiveActions2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…            }\n          }");
+                Observable observableI = Observable.i(companion.getChannels().observeChannel(channelId), companion.getGuilds().observeGuild(guildId), companion.getPermissions().observePermissionsForChannel(channelId), WidgetThreadArchiveActions$Model$Companion$get$1.INSTANCE);
+                m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…            }\n          }");
                 Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableI).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -98,7 +98,7 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
         }
 
         public Model(Channel channel, Guild guild, boolean z2) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             this.channel = channel;
             this.guild = guild;
             this.isModerator = z2;
@@ -133,7 +133,7 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
         }
 
         public final Model copy(Channel channel, Guild guild, boolean isModerator) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             return new Model(channel, guild, isModerator);
         }
 
@@ -145,7 +145,7 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.channel, model.channel) && Intrinsics3.areEqual(this.guild, model.guild) && this.isModerator == model.isModerator;
+            return m.areEqual(this.channel, model.channel) && m.areEqual(this.guild, model.guild) && this.isModerator == model.isModerator;
         }
 
         public final Channel getChannel() {
@@ -175,18 +175,18 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(channel=");
+            StringBuilder sbU = a.U("Model(channel=");
             sbU.append(this.channel);
             sbU.append(", guild=");
             sbU.append(this.guild);
             sbU.append(", isModerator=");
-            return outline.O(sbU, this.isModerator, ")");
+            return a.O(sbU, this.isModerator, ")");
         }
     }
 
     /* compiled from: WidgetThreadArchiveActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetThreadArchiveActions$archiveThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -199,14 +199,14 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "it");
+            m.checkNotNullParameter(channel, "it");
             WidgetThreadArchiveActions.this.dismiss();
         }
     }
 
     /* compiled from: WidgetThreadArchiveActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetThreadArchiveActions$bindSubscriptions$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
         public AnonymousClass1(WidgetThreadArchiveActions widgetThreadArchiveActions) {
             super(1, widgetThreadArchiveActions, WidgetThreadArchiveActions.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/list/WidgetThreadArchiveActions$Model;)V", 0);
         }
@@ -302,7 +302,7 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
 
     /* compiled from: WidgetThreadArchiveActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetThreadArchiveActions$setAutoArchiveDuration$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -315,14 +315,14 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "it");
+            m.checkNotNullParameter(channel, "it");
             WidgetThreadArchiveActions.this.dismiss();
         }
     }
 
     public WidgetThreadArchiveActions() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetThreadArchiveActions3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetThreadArchiveActions$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$archiveThread(WidgetThreadArchiveActions widgetThreadArchiveActions, Channel channel, boolean z2) {
@@ -350,39 +350,39 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
             return;
         }
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         Channel channel = model.getChannel();
         model.getGuild();
         new Traits.Location(Traits.Location.Page.GUILD_CHANNEL, Traits.Location.Section.THREAD_ARCHIVAL_DURATION_SHEET, Traits.Location.Obj.LIST_ITEM, null, null, 24, null);
         LinearLayout linearLayout = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.autoArchiveHeader");
+        m.checkNotNullExpressionValue(linearLayout, "binding.autoArchiveHeader");
         boolean z2 = false;
         linearLayout.setVisibility(0);
         long jComputeThreadAutoArchiveTimeMs = ThreadUtils.INSTANCE.computeThreadAutoArchiveTimeMs(channel);
         TextView textView = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.subtitle");
-        textView.setText(FormatUtils.h(contextRequireContext, R.string.auto_archive_thread_at_long, new Object[]{TimeUtils.toReadableTimeString$default(contextRequireContext, jComputeThreadAutoArchiveTimeMs, null, 4, null)}, null, 4));
+        m.checkNotNullExpressionValue(textView, "binding.subtitle");
+        textView.setText(b.h(contextRequireContext, R.string.auto_archive_thread_at_long, new Object[]{TimeUtils.toReadableTimeString$default(contextRequireContext, jComputeThreadAutoArchiveTimeMs, null, 4, null)}, null, 4));
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
         Integer numValueOf = threadMetadata != null ? Integer.valueOf(threadMetadata.getAutoArchiveDuration()) : null;
         TextView textView2 = getBinding().f2667b;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.archiveNow");
+        m.checkNotNullExpressionValue(textView2, "binding.archiveNow");
         textView2.setVisibility(0);
         getBinding().f2667b.setOnClickListener(new AnonymousClass1(channel, model));
         getBinding().d.setOnClickListener(new AnonymousClass2(channel));
         MaterialRadioButton materialRadioButton = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton, "binding.optionOneHourRadio");
+        m.checkNotNullExpressionValue(materialRadioButton, "binding.optionOneHourRadio");
         materialRadioButton.setChecked(numValueOf != null && numValueOf.intValue() == 60);
         getBinding().j.setOnClickListener(new AnonymousClass3(channel));
         MaterialRadioButton materialRadioButton2 = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton2, "binding.optionTwentyFourHoursRadio");
+        m.checkNotNullExpressionValue(materialRadioButton2, "binding.optionTwentyFourHoursRadio");
         materialRadioButton2.setChecked(numValueOf != null && numValueOf.intValue() == 1440);
         getBinding().h.setOnClickListener(new AnonymousClass4(channel));
         MaterialRadioButton materialRadioButton3 = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton3, "binding.optionThreeDaysRadio");
+        m.checkNotNullExpressionValue(materialRadioButton3, "binding.optionThreeDaysRadio");
         materialRadioButton3.setChecked(numValueOf != null && numValueOf.intValue() == 4320);
         getBinding().f.setOnClickListener(new AnonymousClass5(channel));
         MaterialRadioButton materialRadioButton4 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton4, "binding.optionSevenDaysRadio");
+        m.checkNotNullExpressionValue(materialRadioButton4, "binding.optionSevenDaysRadio");
         if (numValueOf != null && numValueOf.intValue() == 10080) {
             z2 = true;
         }
@@ -403,7 +403,7 @@ public final class WidgetThreadArchiveActions extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
         super.bindSubscriptions(compositeSubscription);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getArgumentsOrDefault().getLong(INTENT_EXTRA_CHANNEL_ID, -1L), getArgumentsOrDefault().getLong("INTENT_EXTRA_GUILD_ID", -1L)), this, null, 2, null), WidgetThreadArchiveActions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
     }

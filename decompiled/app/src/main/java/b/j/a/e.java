@@ -1,12 +1,9 @@
 package b.j.a;
 
 import android.webkit.JavascriptInterface;
-import b.d.b.a.outline;
-import b.g.a.b.p.SegmentedStringWriter;
-import b.g.a.b.t.BufferRecycler;
-import b.g.a.b.t.TextBuffer;
-import b.g.a.c.ObjectMapper;
-import b.g.a.c.i0.ClassUtil;
+import b.g.a.b.p.i;
+import b.g.a.b.t.k;
+import b.g.a.c.r;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.hcaptcha.sdk.HCaptchaConfig;
@@ -63,32 +60,32 @@ public class e implements Serializable {
     @JavascriptInterface
     public String getConfig() throws JsonProcessingException {
         char[] cArr;
-        ObjectMapper objectMapper = new ObjectMapper(null, null, null);
+        r rVar = new r(null, null, null);
         HCaptchaConfig hCaptchaConfig = this.hCaptchaConfig;
-        SegmentedStringWriter segmentedStringWriter = new SegmentedStringWriter(objectMapper._jsonFactory.a());
+        i iVar = new i(rVar._jsonFactory.a());
         try {
-            objectMapper.b(objectMapper.c(segmentedStringWriter), hCaptchaConfig);
-            String strC = segmentedStringWriter.j.c();
-            TextBuffer textBuffer = segmentedStringWriter.j;
-            textBuffer.c = -1;
-            textBuffer.h = 0;
-            textBuffer.j = null;
-            if (textBuffer.e) {
-                textBuffer.e = false;
-                textBuffer.d.clear();
-                textBuffer.f = 0;
-                textBuffer.h = 0;
+            rVar.b(rVar.c(iVar), hCaptchaConfig);
+            String strC = iVar.j.c();
+            k kVar = iVar.j;
+            kVar.c = -1;
+            kVar.h = 0;
+            kVar.j = null;
+            if (kVar.e) {
+                kVar.e = false;
+                kVar.d.clear();
+                kVar.f = 0;
+                kVar.h = 0;
             }
-            BufferRecycler bufferRecycler = textBuffer.f678b;
-            if (bufferRecycler != null && (cArr = textBuffer.g) != null) {
-                textBuffer.g = null;
-                bufferRecycler.d.set(2, cArr);
+            b.g.a.b.t.a aVar = kVar.f678b;
+            if (aVar != null && (cArr = kVar.g) != null) {
+                kVar.g = null;
+                aVar.d.set(2, cArr);
             }
             return strC;
         } catch (JsonProcessingException e) {
             throw e;
         } catch (IOException e2) {
-            throw new JsonMappingException(null, String.format("Unexpected IOException (of type %s): %s", e2.getClass().getName(), ClassUtil.h(e2)));
+            throw new JsonMappingException(null, String.format("Unexpected IOException (of type %s): %s", e2.getClass().getName(), b.g.a.c.i0.d.h(e2)));
         }
     }
 
@@ -120,7 +117,7 @@ public class e implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("HCaptchaJSInterface(hCaptchaConfig=");
+        StringBuilder sbU = b.d.b.a.a.U("HCaptchaJSInterface(hCaptchaConfig=");
         sbU.append(this.hCaptchaConfig);
         sbU.append(", onLoadedListener=");
         sbU.append(this.onLoadedListener);

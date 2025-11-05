@@ -3,7 +3,7 @@ package com.discord.p000native.engine;
 import android.content.Context;
 import co.discord.media_engine.CameraEnumeratorProvider;
 import co.discord.media_engine.SharedEglBaseContext;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import org.webrtc.EglBase;
 import org.webrtc.VideoFrame;
 
@@ -75,15 +75,15 @@ public final class NativeEngine {
     }
 
     public NativeEngine(Context context, int i) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         this.logLevel = i;
         Context applicationContext = context.getApplicationContext();
-        Intrinsics3.checkNotNullExpressionValue(applicationContext, "context.applicationContext");
+        m.checkNotNullExpressionValue(applicationContext, "context.applicationContext");
         CameraEnumeratorProvider.maybeInit(applicationContext);
         Context applicationContext2 = context.getApplicationContext();
-        Intrinsics3.checkNotNullExpressionValue(applicationContext2, "context.applicationContext");
+        m.checkNotNullExpressionValue(applicationContext2, "context.applicationContext");
         EglBase.Context eglContext = SharedEglBaseContext.getEglContext();
-        Intrinsics3.checkNotNullExpressionValue(eglContext, "SharedEglBaseContext.getEglContext()");
+        m.checkNotNullExpressionValue(eglContext, "SharedEglBaseContext.getEglContext()");
         this.nativeInstance = nativeCreateInstance(applicationContext2, eglContext, i);
     }
 

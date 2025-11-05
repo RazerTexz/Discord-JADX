@@ -1,17 +1,15 @@
 package s.a;
 
-import s.a.a.Symbol3;
-
 /* compiled from: JobSupport.kt */
 /* loaded from: classes3.dex */
 public final class i1 {
-    public static final Symbol3 a = new Symbol3("COMPLETING_ALREADY");
+    public static final s.a.a.t a = new s.a.a.t("COMPLETING_ALREADY");
 
     /* renamed from: b, reason: collision with root package name */
-    public static final Symbol3 f3841b = new Symbol3("COMPLETING_WAITING_CHILDREN");
-    public static final Symbol3 c = new Symbol3("COMPLETING_RETRY");
-    public static final Symbol3 d = new Symbol3("TOO_LATE_TO_CANCEL");
-    public static final Symbol3 e = new Symbol3("SEALED");
+    public static final s.a.a.t f3841b = new s.a.a.t("COMPLETING_WAITING_CHILDREN");
+    public static final s.a.a.t c = new s.a.a.t("COMPLETING_RETRY");
+    public static final s.a.a.t d = new s.a.a.t("TOO_LATE_TO_CANCEL");
+    public static final s.a.a.t e = new s.a.a.t("SEALED");
     public static final p0 f = new p0(false);
     public static final p0 g = new p0(true);
 

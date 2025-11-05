@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStageInstanceStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageInstanceStarted implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
+public final /* data */ class TrackStageInstanceStarted implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -30,13 +30,13 @@ public final /* data */ class TrackStageInstanceStarted implements AnalyticsSche
     private final Boolean sendStartNotification = null;
     private final transient String analyticsSchemaTypeName = "stage_instance_started";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -55,7 +55,7 @@ public final /* data */ class TrackStageInstanceStarted implements AnalyticsSche
             return false;
         }
         TrackStageInstanceStarted trackStageInstanceStarted = (TrackStageInstanceStarted) other;
-        return Intrinsics3.areEqual(this.stageInstanceId, trackStageInstanceStarted.stageInstanceId) && Intrinsics3.areEqual(this.topic, trackStageInstanceStarted.topic) && Intrinsics3.areEqual(this.privacyLevel, trackStageInstanceStarted.privacyLevel) && Intrinsics3.areEqual(this.numParticipants, trackStageInstanceStarted.numParticipants) && Intrinsics3.areEqual(this.updaterId, trackStageInstanceStarted.updaterId) && Intrinsics3.areEqual(this.guildScheduledEventId, trackStageInstanceStarted.guildScheduledEventId) && Intrinsics3.areEqual(this.totalUniqueListeners, trackStageInstanceStarted.totalUniqueListeners) && Intrinsics3.areEqual(this.maxConcurrentListeners, trackStageInstanceStarted.maxConcurrentListeners) && Intrinsics3.areEqual(this.totalUniqueSpeakers, trackStageInstanceStarted.totalUniqueSpeakers) && Intrinsics3.areEqual(this.maxConcurrentSpeakers, trackStageInstanceStarted.maxConcurrentSpeakers) && Intrinsics3.areEqual(this.sendStartNotification, trackStageInstanceStarted.sendStartNotification);
+        return m.areEqual(this.stageInstanceId, trackStageInstanceStarted.stageInstanceId) && m.areEqual(this.topic, trackStageInstanceStarted.topic) && m.areEqual(this.privacyLevel, trackStageInstanceStarted.privacyLevel) && m.areEqual(this.numParticipants, trackStageInstanceStarted.numParticipants) && m.areEqual(this.updaterId, trackStageInstanceStarted.updaterId) && m.areEqual(this.guildScheduledEventId, trackStageInstanceStarted.guildScheduledEventId) && m.areEqual(this.totalUniqueListeners, trackStageInstanceStarted.totalUniqueListeners) && m.areEqual(this.maxConcurrentListeners, trackStageInstanceStarted.maxConcurrentListeners) && m.areEqual(this.totalUniqueSpeakers, trackStageInstanceStarted.totalUniqueSpeakers) && m.areEqual(this.maxConcurrentSpeakers, trackStageInstanceStarted.maxConcurrentSpeakers) && m.areEqual(this.sendStartNotification, trackStageInstanceStarted.sendStartNotification);
     }
 
     public int hashCode() {
@@ -84,7 +84,7 @@ public final /* data */ class TrackStageInstanceStarted implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStageInstanceStarted(stageInstanceId=");
+        StringBuilder sbU = a.U("TrackStageInstanceStarted(stageInstanceId=");
         sbU.append(this.stageInstanceId);
         sbU.append(", topic=");
         sbU.append(this.topic);
@@ -105,6 +105,6 @@ public final /* data */ class TrackStageInstanceStarted implements AnalyticsSche
         sbU.append(", maxConcurrentSpeakers=");
         sbU.append(this.maxConcurrentSpeakers);
         sbU.append(", sendStartNotification=");
-        return outline.D(sbU, this.sendStartNotification, ")");
+        return a.D(sbU, this.sendStartNotification, ")");
     }
 }

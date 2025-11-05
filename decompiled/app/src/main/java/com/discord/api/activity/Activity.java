@@ -1,8 +1,8 @@
 package com.discord.api.activity;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: Activity.kt */
@@ -28,8 +28,8 @@ public final /* data */ class Activity {
     private final String url;
 
     public Activity(String str, ActivityType activityType, String str2, long j, ActivityTimestamps activityTimestamps, Long l, String str3, String str4, ActivityEmoji activityEmoji, ActivityParty activityParty, ActivityAssets activityAssets, Integer num, String str5, String str6, ActivityMetadata activityMetadata, ActivityPlatform activityPlatform, List<? extends ActivityPlatform> list, List<String> list2) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(activityType, "type");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(activityType, "type");
         this.name = str;
         this.type = activityType;
         this.url = null;
@@ -82,7 +82,7 @@ public final /* data */ class Activity {
             return false;
         }
         Activity activity = (Activity) other;
-        return Intrinsics3.areEqual(this.name, activity.name) && Intrinsics3.areEqual(this.type, activity.type) && Intrinsics3.areEqual(this.url, activity.url) && this.createdAt == activity.createdAt && Intrinsics3.areEqual(this.timestamps, activity.timestamps) && Intrinsics3.areEqual(this.applicationId, activity.applicationId) && Intrinsics3.areEqual(this.details, activity.details) && Intrinsics3.areEqual(this.state, activity.state) && Intrinsics3.areEqual(this.emoji, activity.emoji) && Intrinsics3.areEqual(this.party, activity.party) && Intrinsics3.areEqual(this.assets, activity.assets) && Intrinsics3.areEqual(this.flags, activity.flags) && Intrinsics3.areEqual(this.syncId, activity.syncId) && Intrinsics3.areEqual(this.sessionId, activity.sessionId) && Intrinsics3.areEqual(this.metadata, activity.metadata) && Intrinsics3.areEqual(this.platform, activity.platform) && Intrinsics3.areEqual(this.supportedPlatforms, activity.supportedPlatforms) && Intrinsics3.areEqual(this.buttons, activity.buttons);
+        return m.areEqual(this.name, activity.name) && m.areEqual(this.type, activity.type) && m.areEqual(this.url, activity.url) && this.createdAt == activity.createdAt && m.areEqual(this.timestamps, activity.timestamps) && m.areEqual(this.applicationId, activity.applicationId) && m.areEqual(this.details, activity.details) && m.areEqual(this.state, activity.state) && m.areEqual(this.emoji, activity.emoji) && m.areEqual(this.party, activity.party) && m.areEqual(this.assets, activity.assets) && m.areEqual(this.flags, activity.flags) && m.areEqual(this.syncId, activity.syncId) && m.areEqual(this.sessionId, activity.sessionId) && m.areEqual(this.metadata, activity.metadata) && m.areEqual(this.platform, activity.platform) && m.areEqual(this.supportedPlatforms, activity.supportedPlatforms) && m.areEqual(this.buttons, activity.buttons);
     }
 
     /* renamed from: f, reason: from getter */
@@ -179,7 +179,7 @@ public final /* data */ class Activity {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Activity(name=");
+        StringBuilder sbU = a.U("Activity(name=");
         sbU.append(this.name);
         sbU.append(", type=");
         sbU.append(this.type);
@@ -214,6 +214,6 @@ public final /* data */ class Activity {
         sbU.append(", supportedPlatforms=");
         sbU.append(this.supportedPlatforms);
         sbU.append(", buttons=");
-        return outline.L(sbU, this.buttons, ")");
+        return a.L(sbU, this.buttons, ")");
     }
 }

@@ -39,7 +39,7 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.core.util.Preconditions;
 import androidx.core.view.ViewCompat;
 import androidx.versionedparcelable.CustomVersionedParcelable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -387,7 +387,7 @@ public class IconCompat extends CustomVersionedParcelable {
                 drawable2.setBounds(0, 0, bitmapCopy.getWidth(), bitmapCopy.getHeight());
                 drawable2.draw(new Canvas(bitmapCopy));
             } catch (PackageManager.NameNotFoundException e) {
-                StringBuilder sbU = outline.U("Can't find package ");
+                StringBuilder sbU = a.U("Can't find package ");
                 sbU.append(this.mObj1);
                 throw new IllegalArgumentException(sbU.toString(), e);
             }
@@ -752,13 +752,13 @@ public class IconCompat extends CustomVersionedParcelable {
                     break;
                 } else {
                     if (context == null) {
-                        StringBuilder sbU = outline.U("Context is required to resolve the file uri of the icon: ");
+                        StringBuilder sbU = a.U("Context is required to resolve the file uri of the icon: ");
                         sbU.append(getUri());
                         throw new IllegalArgumentException(sbU.toString());
                     }
                     InputStream uriInputStream = getUriInputStream(context);
                     if (uriInputStream == null) {
-                        StringBuilder sbU2 = outline.U("Cannot load adaptive icon from uri: ");
+                        StringBuilder sbU2 = a.U("Cannot load adaptive icon from uri: ");
                         sbU2.append(getUri());
                         throw new IllegalStateException(sbU2.toString());
                     }

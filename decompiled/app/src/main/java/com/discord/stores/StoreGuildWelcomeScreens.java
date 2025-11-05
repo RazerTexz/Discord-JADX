@@ -1,17 +1,17 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guild.welcome.GuildWelcomeScreen;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Maps6;
-import d0.t.Sets5;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.t.n0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -80,7 +80,7 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.data, ((Loaded) other).data);
+                    return (other instanceof Loaded) && m.areEqual(this.data, ((Loaded) other).data);
                 }
                 return true;
             }
@@ -98,7 +98,7 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(data=");
+                StringBuilder sbU = a.U("Loaded(data=");
                 sbU.append(this.data);
                 sbU.append(")");
                 return sbU.toString();
@@ -115,20 +115,20 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
 
     /* compiled from: StoreGuildWelcomeScreens.kt */
     /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$fetchIfNonexisting$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreGuildWelcomeScreens.kt */
         /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$fetchIfNonexisting$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01371 extends Lambda implements Function1<GuildWelcomeScreen, Unit> {
+        public static final class C02571 extends o implements Function1<GuildWelcomeScreen, Unit> {
 
             /* compiled from: StoreGuildWelcomeScreens.kt */
             /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01381 extends Lambda implements Function0<Unit> {
+            public static final class C02581 extends o implements Function0<Unit> {
                 public final /* synthetic */ GuildWelcomeScreen $guildWelcomeScreen;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C01381(GuildWelcomeScreen guildWelcomeScreen) {
+                public C02581(GuildWelcomeScreen guildWelcomeScreen) {
                     super(0);
                     this.$guildWelcomeScreen = guildWelcomeScreen;
                 }
@@ -146,7 +146,7 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
                 }
             }
 
-            public C01371() {
+            public C02571() {
                 super(1);
             }
 
@@ -158,19 +158,19 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(GuildWelcomeScreen guildWelcomeScreen) {
-                Intrinsics3.checkNotNullParameter(guildWelcomeScreen, "guildWelcomeScreen");
-                StoreGuildWelcomeScreens.access$getDispatcher$p(StoreGuildWelcomeScreens.this).schedule(new C01381(guildWelcomeScreen));
+                m.checkNotNullParameter(guildWelcomeScreen, "guildWelcomeScreen");
+                StoreGuildWelcomeScreens.access$getDispatcher$p(StoreGuildWelcomeScreens.this).schedule(new C02581(guildWelcomeScreen));
             }
         }
 
         /* compiled from: StoreGuildWelcomeScreens.kt */
         /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$fetchIfNonexisting$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
             /* compiled from: StoreGuildWelcomeScreens.kt */
             /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$fetchIfNonexisting$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01391 extends Lambda implements Function0<Unit> {
-                public C01391() {
+            public static final class C02591 extends o implements Function0<Unit> {
+                public C02591() {
                     super(0);
                 }
 
@@ -199,8 +199,8 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
-                StoreGuildWelcomeScreens.access$getDispatcher$p(StoreGuildWelcomeScreens.this).schedule(new C01391());
+                m.checkNotNullParameter(error, "it");
+                StoreGuildWelcomeScreens.access$getDispatcher$p(StoreGuildWelcomeScreens.this).schedule(new C02591());
             }
         }
 
@@ -223,13 +223,13 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
                 return;
             }
             StoreGuildWelcomeScreens.access$handleGuildWelcomeScreenFetchStart(StoreGuildWelcomeScreens.this, this.$guildId);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn(RestAPI.INSTANCE.getApi().getGuildWelcomeScreen(this.$guildId), false), StoreGuildWelcomeScreens.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C01371(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn(RestAPI.INSTANCE.getApi().getGuildWelcomeScreen(this.$guildId), false), StoreGuildWelcomeScreens.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C02571(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreGuildWelcomeScreens.kt */
     /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$markWelcomeScreenShown$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -256,7 +256,7 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
 
     /* compiled from: StoreGuildWelcomeScreens.kt */
     /* renamed from: com.discord.stores.StoreGuildWelcomeScreens$observeGuildWelcomeScreen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<State> {
+    public static final class AnonymousClass1 extends o implements Function0<State> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -278,7 +278,7 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
     }
 
     public /* synthetic */ StoreGuildWelcomeScreens(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreGuildWelcomeScreens storeGuildWelcomeScreens) {
@@ -305,19 +305,19 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
         storeGuildWelcomeScreens.handleGuildWelcomeScreenFetchStart(j);
     }
 
-    @Store3
+    @StoreThread
     private final void handleGuildWelcomeScreen(long guildId, GuildWelcomeScreen guildWelcomeScreen) {
         this.guildWelcomeScreensState.put(Long.valueOf(guildId), new State.Loaded(guildWelcomeScreen));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     private final void handleGuildWelcomeScreenFetchFailed(long guildId) {
         this.guildWelcomeScreensState.put(Long.valueOf(guildId), State.Failure.INSTANCE);
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     private final void handleGuildWelcomeScreenFetchStart(long guildId) {
         this.guildWelcomeScreensState.put(Long.valueOf(guildId), State.Fetching.INSTANCE);
         markChanged();
@@ -345,7 +345,7 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
 
     public final Observable<State> observeGuildWelcomeScreen(long guildId) {
         Observable<State> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
@@ -357,12 +357,12 @@ public final class StoreGuildWelcomeScreens extends StoreV2 {
     }
 
     public StoreGuildWelcomeScreens(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
-        this.guildWelcomeScreensSnapshot = Maps6.emptyMap();
-        this.guildWelcomeScreensSeenSnapshot = Sets5.emptySet();
+        this.guildWelcomeScreensSnapshot = h0.emptyMap();
+        this.guildWelcomeScreensSeenSnapshot = n0.emptySet();
         this.guildWelcomeScreensState = new HashMap<>();
         this.guildWelcomeScreensSeen = new HashSet<>();
     }

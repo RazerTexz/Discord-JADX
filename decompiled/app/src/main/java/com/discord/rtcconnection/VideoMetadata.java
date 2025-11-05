@@ -1,9 +1,9 @@
 package com.discord.rtcconnection;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.rtcconnection.socket.io.Payloads;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: VideoMetadata.kt */
 /* loaded from: classes.dex */
@@ -25,7 +25,7 @@ public final /* data */ class VideoMetadata {
     public final Payloads.ResolutionType type;
 
     public VideoMetadata(long j, int i, int i2, Integer num, Payloads.ResolutionType resolutionType) {
-        Intrinsics3.checkNotNullParameter(resolutionType, "type");
+        m.checkNotNullParameter(resolutionType, "type");
         this.userID = j;
         this.maxWidth = i;
         this.maxHeight = i2;
@@ -41,7 +41,7 @@ public final /* data */ class VideoMetadata {
             return false;
         }
         VideoMetadata videoMetadata = (VideoMetadata) other;
-        return this.userID == videoMetadata.userID && this.maxWidth == videoMetadata.maxWidth && this.maxHeight == videoMetadata.maxHeight && Intrinsics3.areEqual(this.maxFrameRate, videoMetadata.maxFrameRate) && Intrinsics3.areEqual(this.type, videoMetadata.type);
+        return this.userID == videoMetadata.userID && this.maxWidth == videoMetadata.maxWidth && this.maxHeight == videoMetadata.maxHeight && m.areEqual(this.maxFrameRate, videoMetadata.maxFrameRate) && m.areEqual(this.type, videoMetadata.type);
     }
 
     public int hashCode() {
@@ -53,7 +53,7 @@ public final /* data */ class VideoMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("VideoMetadata(userID=");
+        StringBuilder sbU = a.U("VideoMetadata(userID=");
         sbU.append(this.userID);
         sbU.append(", maxWidth=");
         sbU.append(this.maxWidth);

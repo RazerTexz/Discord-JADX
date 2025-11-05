@@ -1,7 +1,7 @@
 package org.webrtc;
 
 import android.graphics.ImageFormat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -100,7 +100,7 @@ public class CameraEnumerationAndroid {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("[");
+                StringBuilder sbU = a.U("[");
                 sbU.append(this.min / 1000.0f);
                 sbU.append(":");
                 sbU.append(this.max / 1000.0f);

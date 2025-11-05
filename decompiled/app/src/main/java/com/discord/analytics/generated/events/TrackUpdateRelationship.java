@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackUpdateRelationship.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean isInitiator = null;
     private final Long mutualGuilds = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema
             return false;
         }
         TrackUpdateRelationship trackUpdateRelationship = (TrackUpdateRelationship) other;
-        return Intrinsics3.areEqual(this.isInitiator, trackUpdateRelationship.isInitiator) && Intrinsics3.areEqual(this.mutualGuilds, trackUpdateRelationship.mutualGuilds) && Intrinsics3.areEqual(this.otherUser, trackUpdateRelationship.otherUser) && Intrinsics3.areEqual(this.type, trackUpdateRelationship.type) && Intrinsics3.areEqual(this.userGuilds, trackUpdateRelationship.userGuilds);
+        return m.areEqual(this.isInitiator, trackUpdateRelationship.isInitiator) && m.areEqual(this.mutualGuilds, trackUpdateRelationship.mutualGuilds) && m.areEqual(this.otherUser, trackUpdateRelationship.otherUser) && m.areEqual(this.type, trackUpdateRelationship.type) && m.areEqual(this.userGuilds, trackUpdateRelationship.userGuilds);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUpdateRelationship(isInitiator=");
+        StringBuilder sbU = a.U("TrackUpdateRelationship(isInitiator=");
         sbU.append(this.isInitiator);
         sbU.append(", mutualGuilds=");
         sbU.append(this.mutualGuilds);
@@ -57,6 +57,6 @@ public final /* data */ class TrackUpdateRelationship implements AnalyticsSchema
         sbU.append(", type=");
         sbU.append(this.type);
         sbU.append(", userGuilds=");
-        return outline.G(sbU, this.userGuilds, ")");
+        return a.G(sbU, this.userGuilds, ")");
     }
 }

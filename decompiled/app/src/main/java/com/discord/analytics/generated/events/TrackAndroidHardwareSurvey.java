@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAndroidHardwareSurvey.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAndroidHardwareSurvey implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackAndroidHardwareSurvey implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence deviceBoard = null;
     private final CharSequence deviceBrand = null;
@@ -43,7 +43,7 @@ public final /* data */ class TrackAndroidHardwareSurvey implements AnalyticsSch
             return false;
         }
         TrackAndroidHardwareSurvey trackAndroidHardwareSurvey = (TrackAndroidHardwareSurvey) other;
-        return Intrinsics3.areEqual(this.deviceBoard, trackAndroidHardwareSurvey.deviceBoard) && Intrinsics3.areEqual(this.deviceBrand, trackAndroidHardwareSurvey.deviceBrand) && Intrinsics3.areEqual(this.deviceManufacturer, trackAndroidHardwareSurvey.deviceManufacturer) && Intrinsics3.areEqual(this.deviceModel, trackAndroidHardwareSurvey.deviceModel) && Intrinsics3.areEqual(this.deviceProduct, trackAndroidHardwareSurvey.deviceProduct) && Intrinsics3.areEqual(this.deviceSupportedAbis, trackAndroidHardwareSurvey.deviceSupportedAbis) && Intrinsics3.areEqual(this.deviceIs64Bit, trackAndroidHardwareSurvey.deviceIs64Bit) && Intrinsics3.areEqual(this.isLowRamDevice, trackAndroidHardwareSurvey.isLowRamDevice) && Intrinsics3.areEqual(this.memoryClass, trackAndroidHardwareSurvey.memoryClass) && Intrinsics3.areEqual(this.largeMemoryClass, trackAndroidHardwareSurvey.largeMemoryClass) && Intrinsics3.areEqual(this.hardwareDecoders1080, trackAndroidHardwareSurvey.hardwareDecoders1080) && Intrinsics3.areEqual(this.hardwareDecoders720, trackAndroidHardwareSurvey.hardwareDecoders720) && Intrinsics3.areEqual(this.hardwareDecoders480, trackAndroidHardwareSurvey.hardwareDecoders480) && Intrinsics3.areEqual(this.decoders1080, trackAndroidHardwareSurvey.decoders1080) && Intrinsics3.areEqual(this.decoders720, trackAndroidHardwareSurvey.decoders720) && Intrinsics3.areEqual(this.decoders480, trackAndroidHardwareSurvey.decoders480) && Intrinsics3.areEqual(this.testDurationMs, trackAndroidHardwareSurvey.testDurationMs);
+        return m.areEqual(this.deviceBoard, trackAndroidHardwareSurvey.deviceBoard) && m.areEqual(this.deviceBrand, trackAndroidHardwareSurvey.deviceBrand) && m.areEqual(this.deviceManufacturer, trackAndroidHardwareSurvey.deviceManufacturer) && m.areEqual(this.deviceModel, trackAndroidHardwareSurvey.deviceModel) && m.areEqual(this.deviceProduct, trackAndroidHardwareSurvey.deviceProduct) && m.areEqual(this.deviceSupportedAbis, trackAndroidHardwareSurvey.deviceSupportedAbis) && m.areEqual(this.deviceIs64Bit, trackAndroidHardwareSurvey.deviceIs64Bit) && m.areEqual(this.isLowRamDevice, trackAndroidHardwareSurvey.isLowRamDevice) && m.areEqual(this.memoryClass, trackAndroidHardwareSurvey.memoryClass) && m.areEqual(this.largeMemoryClass, trackAndroidHardwareSurvey.largeMemoryClass) && m.areEqual(this.hardwareDecoders1080, trackAndroidHardwareSurvey.hardwareDecoders1080) && m.areEqual(this.hardwareDecoders720, trackAndroidHardwareSurvey.hardwareDecoders720) && m.areEqual(this.hardwareDecoders480, trackAndroidHardwareSurvey.hardwareDecoders480) && m.areEqual(this.decoders1080, trackAndroidHardwareSurvey.decoders1080) && m.areEqual(this.decoders720, trackAndroidHardwareSurvey.decoders720) && m.areEqual(this.decoders480, trackAndroidHardwareSurvey.decoders480) && m.areEqual(this.testDurationMs, trackAndroidHardwareSurvey.testDurationMs);
     }
 
     public int hashCode() {
@@ -84,7 +84,7 @@ public final /* data */ class TrackAndroidHardwareSurvey implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAndroidHardwareSurvey(deviceBoard=");
+        StringBuilder sbU = a.U("TrackAndroidHardwareSurvey(deviceBoard=");
         sbU.append(this.deviceBoard);
         sbU.append(", deviceBrand=");
         sbU.append(this.deviceBrand);
@@ -117,6 +117,6 @@ public final /* data */ class TrackAndroidHardwareSurvey implements AnalyticsSch
         sbU.append(", decoders480=");
         sbU.append(this.decoders480);
         sbU.append(", testDurationMs=");
-        return outline.G(sbU, this.testDurationMs, ")");
+        return a.G(sbU, this.testDurationMs, ")");
     }
 }

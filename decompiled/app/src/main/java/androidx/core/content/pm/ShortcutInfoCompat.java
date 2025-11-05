@@ -21,7 +21,7 @@ import androidx.core.app.Person;
 import androidx.core.content.LocusIdCompat;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.net.UriCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -126,7 +126,7 @@ public class ShortcutInfoCompat {
                     this.mInfo.mExtras.putStringArray(str, (String[]) map.keySet().toArray(new String[0]));
                     for (String str2 : map.keySet()) {
                         List<String> list = map.get(str2);
-                        this.mInfo.mExtras.putStringArray(outline.y(str, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN, str2), list == null ? new String[0] : (String[]) list.toArray(new String[0]));
+                        this.mInfo.mExtras.putStringArray(a.y(str, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN, str2), list == null ? new String[0] : (String[]) list.toArray(new String[0]));
                     }
                 }
             }
@@ -356,7 +356,7 @@ public class ShortcutInfoCompat {
             int i = 0;
             while (i < this.mPersons.length) {
                 PersistableBundle persistableBundle = this.mExtras;
-                StringBuilder sbU = outline.U(EXTRA_PERSON_);
+                StringBuilder sbU = a.U(EXTRA_PERSON_);
                 int i2 = i + 1;
                 sbU.append(i2);
                 persistableBundle.putPersistableBundle(sbU.toString(), this.mPersons[i].toPersistableBundle());
@@ -415,7 +415,7 @@ public class ShortcutInfoCompat {
         Person[] personArr = new Person[i];
         int i2 = 0;
         while (i2 < i) {
-            StringBuilder sbU = outline.U(EXTRA_PERSON_);
+            StringBuilder sbU = a.U(EXTRA_PERSON_);
             int i3 = i2 + 1;
             sbU.append(i3);
             personArr[i2] = Person.fromPersistableBundle(persistableBundle.getPersistableBundle(sbU.toString()));

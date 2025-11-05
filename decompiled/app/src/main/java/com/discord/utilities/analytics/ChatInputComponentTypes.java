@@ -1,6 +1,6 @@
 package com.discord.utilities.analytics;
 
-import com.discord.widgets.chat.AutocompleteUtils;
+import com.discord.widgets.chat.AutocompleteSelectionTypes;
 
 /* compiled from: ChatInputComponentTypes.kt */
 /* loaded from: classes2.dex */

@@ -2,7 +2,6 @@ package b.i.a.f.i.b;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.measurement.internal.zzap;
 import com.google.android.gms.measurement.internal.zzaq;
 
@@ -11,7 +10,7 @@ import com.google.android.gms.measurement.internal.zzaq;
 public final class q implements Parcelable.Creator<zzaq> {
     @Override // android.os.Parcelable.Creator
     public final zzaq createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         String strR = null;
         zzap zzapVar = null;
         String strR2 = null;
@@ -20,18 +19,18 @@ public final class q implements Parcelable.Creator<zzaq> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 2) {
-                strR = AnimatableValueParser.R(parcel, i);
+                strR = b.c.a.a0.d.R(parcel, i);
             } else if (c == 3) {
-                zzapVar = (zzap) AnimatableValueParser.Q(parcel, i, zzap.CREATOR);
+                zzapVar = (zzap) b.c.a.a0.d.Q(parcel, i, zzap.CREATOR);
             } else if (c == 4) {
-                strR2 = AnimatableValueParser.R(parcel, i);
+                strR2 = b.c.a.a0.d.R(parcel, i);
             } else if (c != 5) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                jH1 = AnimatableValueParser.H1(parcel, i);
+                jH1 = b.c.a.a0.d.H1(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zzaq(strR, zzapVar, strR2, jH1);
     }
 

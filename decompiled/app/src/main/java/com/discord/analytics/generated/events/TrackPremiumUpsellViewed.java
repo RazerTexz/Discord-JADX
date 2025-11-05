@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPremiumUpsellViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumUpsellViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSourceMetadata2 {
+public final /* data */ class TrackPremiumUpsellViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackSourceMetadata trackSourceMetadata;
@@ -39,7 +39,7 @@ public final /* data */ class TrackPremiumUpsellViewed implements AnalyticsSchem
             return false;
         }
         TrackPremiumUpsellViewed trackPremiumUpsellViewed = (TrackPremiumUpsellViewed) other;
-        return Intrinsics3.areEqual(this.type, trackPremiumUpsellViewed.type) && Intrinsics3.areEqual(this.isAnimated, trackPremiumUpsellViewed.isAnimated) && Intrinsics3.areEqual(this.isExternal, trackPremiumUpsellViewed.isExternal) && Intrinsics3.areEqual(this.hasSearchQuery, trackPremiumUpsellViewed.hasSearchQuery) && Intrinsics3.areEqual(this.hasPremiumStreamFps, trackPremiumUpsellViewed.hasPremiumStreamFps) && Intrinsics3.areEqual(this.hasPremiumStreamResolution, trackPremiumUpsellViewed.hasPremiumStreamResolution) && Intrinsics3.areEqual(this.duration, trackPremiumUpsellViewed.duration);
+        return m.areEqual(this.type, trackPremiumUpsellViewed.type) && m.areEqual(this.isAnimated, trackPremiumUpsellViewed.isAnimated) && m.areEqual(this.isExternal, trackPremiumUpsellViewed.isExternal) && m.areEqual(this.hasSearchQuery, trackPremiumUpsellViewed.hasSearchQuery) && m.areEqual(this.hasPremiumStreamFps, trackPremiumUpsellViewed.hasPremiumStreamFps) && m.areEqual(this.hasPremiumStreamResolution, trackPremiumUpsellViewed.hasPremiumStreamResolution) && m.areEqual(this.duration, trackPremiumUpsellViewed.duration);
     }
 
     public int hashCode() {
@@ -60,7 +60,7 @@ public final /* data */ class TrackPremiumUpsellViewed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPremiumUpsellViewed(type=");
+        StringBuilder sbU = a.U("TrackPremiumUpsellViewed(type=");
         sbU.append(this.type);
         sbU.append(", isAnimated=");
         sbU.append(this.isAnimated);

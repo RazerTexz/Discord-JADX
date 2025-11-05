@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackOverlay.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class TrackOverlay {
             return false;
         }
         TrackOverlay trackOverlay = (TrackOverlay) other;
-        return Intrinsics3.areEqual(this.gameName, trackOverlay.gameName) && Intrinsics3.areEqual(this.gameId, trackOverlay.gameId) && Intrinsics3.areEqual(this.error, trackOverlay.error) && Intrinsics3.areEqual(this.rendererStarted, trackOverlay.rendererStarted) && Intrinsics3.areEqual(this.rendererStartedAfter, trackOverlay.rendererStartedAfter) && Intrinsics3.areEqual(this.rendererReadyAfter, trackOverlay.rendererReadyAfter) && Intrinsics3.areEqual(this.rendererLoadSucceededAfter, trackOverlay.rendererLoadSucceededAfter) && Intrinsics3.areEqual(this.rendererCrashCount, trackOverlay.rendererCrashCount) && Intrinsics3.areEqual(this.rendererLoadFailures, trackOverlay.rendererLoadFailures) && Intrinsics3.areEqual(this.rendererIgnoredPaints, trackOverlay.rendererIgnoredPaints) && Intrinsics3.areEqual(this.hostCrashCount, trackOverlay.hostCrashCount) && Intrinsics3.areEqual(this.framebufferSource, trackOverlay.framebufferSource) && Intrinsics3.areEqual(this.firstFramebufferAfter, trackOverlay.firstFramebufferAfter) && Intrinsics3.areEqual(this.graphicsWidth, trackOverlay.graphicsWidth) && Intrinsics3.areEqual(this.graphicsHeight, trackOverlay.graphicsHeight) && Intrinsics3.areEqual(this.graphicsApi, trackOverlay.graphicsApi) && Intrinsics3.areEqual(this.graphicsInfoAfter, trackOverlay.graphicsInfoAfter) && Intrinsics3.areEqual(this.cpu, trackOverlay.cpu) && Intrinsics3.areEqual(this.gpu, trackOverlay.gpu);
+        return m.areEqual(this.gameName, trackOverlay.gameName) && m.areEqual(this.gameId, trackOverlay.gameId) && m.areEqual(this.error, trackOverlay.error) && m.areEqual(this.rendererStarted, trackOverlay.rendererStarted) && m.areEqual(this.rendererStartedAfter, trackOverlay.rendererStartedAfter) && m.areEqual(this.rendererReadyAfter, trackOverlay.rendererReadyAfter) && m.areEqual(this.rendererLoadSucceededAfter, trackOverlay.rendererLoadSucceededAfter) && m.areEqual(this.rendererCrashCount, trackOverlay.rendererCrashCount) && m.areEqual(this.rendererLoadFailures, trackOverlay.rendererLoadFailures) && m.areEqual(this.rendererIgnoredPaints, trackOverlay.rendererIgnoredPaints) && m.areEqual(this.hostCrashCount, trackOverlay.hostCrashCount) && m.areEqual(this.framebufferSource, trackOverlay.framebufferSource) && m.areEqual(this.firstFramebufferAfter, trackOverlay.firstFramebufferAfter) && m.areEqual(this.graphicsWidth, trackOverlay.graphicsWidth) && m.areEqual(this.graphicsHeight, trackOverlay.graphicsHeight) && m.areEqual(this.graphicsApi, trackOverlay.graphicsApi) && m.areEqual(this.graphicsInfoAfter, trackOverlay.graphicsInfoAfter) && m.areEqual(this.cpu, trackOverlay.cpu) && m.areEqual(this.gpu, trackOverlay.gpu);
     }
 
     public int hashCode() {
@@ -79,7 +79,7 @@ public final /* data */ class TrackOverlay {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackOverlay(gameName=");
+        StringBuilder sbU = a.U("TrackOverlay(gameName=");
         sbU.append(this.gameName);
         sbU.append(", gameId=");
         sbU.append(this.gameId);
@@ -116,6 +116,6 @@ public final /* data */ class TrackOverlay {
         sbU.append(", cpu=");
         sbU.append(this.cpu);
         sbU.append(", gpu=");
-        return outline.E(sbU, this.gpu, ")");
+        return a.E(sbU, this.gpu, ")");
     }
 }

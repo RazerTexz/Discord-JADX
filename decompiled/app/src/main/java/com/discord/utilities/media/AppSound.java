@@ -1,6 +1,6 @@
 package com.discord.utilities.media;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -237,14 +237,14 @@ public final /* data */ class AppSound {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("AppSound(resId=");
+        StringBuilder sbU = a.U("AppSound(resId=");
         sbU.append(this.resId);
         sbU.append(", shouldLoop=");
         sbU.append(this.shouldLoop);
         sbU.append(", contentType=");
         sbU.append(this.contentType);
         sbU.append(", usage=");
-        return outline.B(sbU, this.usage, ")");
+        return a.B(sbU, this.usage, ")");
     }
 
     public /* synthetic */ AppSound(int i, boolean z2, int i2, int i3, int i4, DefaultConstructorMarker defaultConstructorMarker) {

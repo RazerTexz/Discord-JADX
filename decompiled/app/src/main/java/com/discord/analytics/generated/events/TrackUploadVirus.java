@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackUploadVirus.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUploadVirus implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackUploadVirus implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long messageId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackUploadVirus implements AnalyticsSchema, Track
             return false;
         }
         TrackUploadVirus trackUploadVirus = (TrackUploadVirus) other;
-        return Intrinsics3.areEqual(this.channelId, trackUploadVirus.channelId) && Intrinsics3.areEqual(this.messageId, trackUploadVirus.messageId) && Intrinsics3.areEqual(this.fileName, trackUploadVirus.fileName) && Intrinsics3.areEqual(this.fileHash, trackUploadVirus.fileHash) && Intrinsics3.areEqual(this.virusName, trackUploadVirus.virusName) && Intrinsics3.areEqual(this.hit, trackUploadVirus.hit);
+        return m.areEqual(this.channelId, trackUploadVirus.channelId) && m.areEqual(this.messageId, trackUploadVirus.messageId) && m.areEqual(this.fileName, trackUploadVirus.fileName) && m.areEqual(this.fileHash, trackUploadVirus.fileHash) && m.areEqual(this.virusName, trackUploadVirus.virusName) && m.areEqual(this.hit, trackUploadVirus.hit);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackUploadVirus implements AnalyticsSchema, Track
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUploadVirus(channelId=");
+        StringBuilder sbU = a.U("TrackUploadVirus(channelId=");
         sbU.append(this.channelId);
         sbU.append(", messageId=");
         sbU.append(this.messageId);
@@ -62,6 +62,6 @@ public final /* data */ class TrackUploadVirus implements AnalyticsSchema, Track
         sbU.append(", virusName=");
         sbU.append(this.virusName);
         sbU.append(", hit=");
-        return outline.E(sbU, this.hit, ")");
+        return a.E(sbU, this.hit, ")");
     }
 }

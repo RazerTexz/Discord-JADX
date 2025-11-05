@@ -12,8 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.d.b.a.outline;
-import b.i.b.d.a.ListenableFuture8;
+import b.d.b.a.a;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -62,7 +61,7 @@ public abstract class ListenableWorker {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Failure {mOutputData=");
+                StringBuilder sbU = a.U("Failure {mOutputData=");
                 sbU.append(this.mOutputData);
                 sbU.append('}');
                 return sbU.toString();
@@ -120,7 +119,7 @@ public abstract class ListenableWorker {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Success {mOutputData=");
+                StringBuilder sbU = a.U("Success {mOutputData=");
                 sbU.append(this.mOutputData);
                 sbU.append('}');
                 return sbU.toString();
@@ -253,13 +252,13 @@ public abstract class ListenableWorker {
     }
 
     @NonNull
-    public final ListenableFuture8<Void> setForegroundAsync(@NonNull ForegroundInfo foregroundInfo) {
+    public final b.i.b.d.a.a<Void> setForegroundAsync(@NonNull ForegroundInfo foregroundInfo) {
         this.mRunInForeground = true;
         return this.mWorkerParams.getForegroundUpdater().setForegroundAsync(getApplicationContext(), getId(), foregroundInfo);
     }
 
     @NonNull
-    public final ListenableFuture8<Void> setProgressAsync(@NonNull Data data) {
+    public final b.i.b.d.a.a<Void> setProgressAsync(@NonNull Data data) {
         return this.mWorkerParams.getProgressUpdater().updateProgress(getApplicationContext(), getId(), data);
     }
 
@@ -270,7 +269,7 @@ public abstract class ListenableWorker {
 
     @NonNull
     @MainThread
-    public abstract ListenableFuture8<Result> startWork();
+    public abstract b.i.b.d.a.a<Result> startWork();
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public final void stop() {

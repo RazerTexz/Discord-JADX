@@ -9,7 +9,7 @@ import b.i.a.f.e.h.b;
 /* loaded from: classes3.dex */
 public final class c extends b.i.a.f.e.h.b<a.d.c> {
     public static final a.g<d> j;
-    public static final a.AbstractC0035a<d, a.d.c> k;
+    public static final a.AbstractC0112a<d, a.d.c> k;
     public static final b.i.a.f.e.h.a<a.d.c> l;
 
     static {

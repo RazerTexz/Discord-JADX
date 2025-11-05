@@ -11,8 +11,6 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
 import androidx.annotation.RecentlyNullable;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
 import b.i.a.f.e.k.u0;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.gms.common.GooglePlayServicesIncorrectManifestValueException;
@@ -47,13 +45,13 @@ public class c {
             intent.setData(uriFromParts);
             return intent;
         }
-        if (context != null && AnimatableValueParser.a1(context)) {
+        if (context != null && b.c.a.a0.d.a1(context)) {
             Uri uri2 = u0.a;
             Intent intent2 = new Intent("com.google.android.clockwork.home.UPDATE_ANDROID_WEAR_ACTION");
             intent2.setPackage("com.google.android.wearable.app");
             return intent2;
         }
-        StringBuilder sbU = outline.U("gcore_");
+        StringBuilder sbU = b.d.b.a.a.U("gcore_");
         sbU.append(a);
         sbU.append("-");
         if (!TextUtils.isEmpty(str)) {
@@ -114,17 +112,17 @@ public class c {
             }
         }
         boolean zB = false;
-        if (AnimatableValueParser.a1(context)) {
+        if (b.c.a.a0.d.a1(context)) {
             z2 = false;
         } else {
-            if (AnimatableValueParser.e == null) {
-                AnimatableValueParser.e = Boolean.valueOf(context.getPackageManager().hasSystemFeature("android.hardware.type.iot") || context.getPackageManager().hasSystemFeature("android.hardware.type.embedded"));
+            if (b.c.a.a0.d.e == null) {
+                b.c.a.a0.d.e = Boolean.valueOf(context.getPackageManager().hasSystemFeature("android.hardware.type.iot") || context.getPackageManager().hasSystemFeature("android.hardware.type.embedded"));
             }
-            if (!AnimatableValueParser.e.booleanValue()) {
+            if (!b.c.a.a0.d.e.booleanValue()) {
                 z2 = true;
             }
         }
-        AnimatableValueParser.l(i >= 0);
+        b.c.a.a0.d.l(i >= 0);
         String packageName = context.getPackageName();
         PackageManager packageManager = context.getPackageManager();
         if (z2) {

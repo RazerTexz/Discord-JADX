@@ -7,7 +7,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: EmptyListAdapter.kt */
 /* loaded from: classes3.dex */
@@ -25,15 +25,15 @@ public class EmptyListAdapter extends RecyclerView.Adapter<ViewHolder> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder(EmptyListAdapter emptyListAdapter, View view) {
             super(view);
-            Intrinsics3.checkNotNullParameter(view, "itemView");
+            m.checkNotNullParameter(view, "itemView");
             View viewFindViewById = view.findViewById(EmptyListAdapter.access$getActionBtnId$p(emptyListAdapter));
-            Intrinsics3.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(actionBtnId)");
+            m.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(actionBtnId)");
             this.actionBtn = viewFindViewById;
         }
     }
 
     public EmptyListAdapter(@LayoutRes int i, @IdRes int i2, View.OnClickListener onClickListener) {
-        Intrinsics3.checkNotNullParameter(onClickListener, "onClickListener");
+        m.checkNotNullParameter(onClickListener, "onClickListener");
         this.itemLayoutId = i;
         this.actionBtnId = i2;
         this.onClickListener = onClickListener;
@@ -59,15 +59,15 @@ public class EmptyListAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         holder.actionBtn.setOnClickListener(this.onClickListener);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         View viewInflate = LayoutInflater.from(parent.getContext()).inflate(this.itemLayoutId, parent, false);
-        Intrinsics3.checkNotNullExpressionValue(viewInflate, "view");
+        m.checkNotNullExpressionValue(viewInflate, "view");
         return new ViewHolder(this, viewInflate);
     }
 }

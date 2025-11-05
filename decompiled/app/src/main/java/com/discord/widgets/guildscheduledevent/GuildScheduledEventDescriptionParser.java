@@ -2,7 +2,7 @@ package com.discord.widgets.guildscheduledevent;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.role.GuildRole;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.member.GuildMember;
@@ -13,12 +13,12 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.textprocessing.MessageParseState;
 import com.discord.utilities.textprocessing.MessagePreprocessor;
 import com.discord.utilities.textprocessing.MessageRenderContext;
+import com.discord.utilities.textprocessing.Tags;
 import com.discord.utilities.textprocessing.TagsBuilder;
-import com.discord.utilities.textprocessing.TagsBuilder2;
 import com.discord.utilities.textprocessing.node.SpoilerNode;
 import com.discord.utilities.view.text.LinkifiedTextView;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -40,7 +40,7 @@ public final class GuildScheduledEventDescriptionParser {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GuildScheduledEventDescriptionParser2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(GuildScheduledEventDescriptionParser$Companion$INSTANCE$2.INSTANCE);
     private DescriptionCache savedDescriptionCache;
     private final WeakReference<LinkifiedTextView> weakRefTextView;
 
@@ -78,9 +78,9 @@ public final class GuildScheduledEventDescriptionParser {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public HasDescription(String str, List<Node<MessageRenderContext>> list, Set<Integer> set) {
                 super(str, list, null);
-                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
-                Intrinsics3.checkNotNullParameter(list, "ast");
-                Intrinsics3.checkNotNullParameter(set, "shownSpoilerIndices");
+                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+                m.checkNotNullParameter(list, "ast");
+                m.checkNotNullParameter(set, "shownSpoilerIndices");
                 this.description = str;
                 this.ast = list;
                 this.shownSpoilerIndices = set;
@@ -114,9 +114,9 @@ public final class GuildScheduledEventDescriptionParser {
             }
 
             public final HasDescription copy(String description, List<Node<MessageRenderContext>> ast, Set<Integer> shownSpoilerIndices) {
-                Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
-                Intrinsics3.checkNotNullParameter(ast, "ast");
-                Intrinsics3.checkNotNullParameter(shownSpoilerIndices, "shownSpoilerIndices");
+                m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+                m.checkNotNullParameter(ast, "ast");
+                m.checkNotNullParameter(shownSpoilerIndices, "shownSpoilerIndices");
                 return new HasDescription(description, ast, shownSpoilerIndices);
             }
 
@@ -128,7 +128,7 @@ public final class GuildScheduledEventDescriptionParser {
                     return false;
                 }
                 HasDescription hasDescription = (HasDescription) other;
-                return Intrinsics3.areEqual(this.description, hasDescription.description) && Intrinsics3.areEqual(this.ast, hasDescription.ast) && Intrinsics3.areEqual(this.shownSpoilerIndices, hasDescription.shownSpoilerIndices);
+                return m.areEqual(this.description, hasDescription.description) && m.areEqual(this.ast, hasDescription.ast) && m.areEqual(this.shownSpoilerIndices, hasDescription.shownSpoilerIndices);
             }
 
             public final List<Node<MessageRenderContext>> getAst() {
@@ -153,12 +153,12 @@ public final class GuildScheduledEventDescriptionParser {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("HasDescription(description=");
+                StringBuilder sbU = a.U("HasDescription(description=");
                 sbU.append(this.description);
                 sbU.append(", ast=");
                 sbU.append(this.ast);
                 sbU.append(", shownSpoilerIndices=");
-                return outline.N(sbU, this.shownSpoilerIndices, ")");
+                return a.N(sbU, this.shownSpoilerIndices, ")");
             }
         }
 
@@ -243,7 +243,7 @@ public final class GuildScheduledEventDescriptionParser {
                 return false;
             }
             MessageRenderContextModel messageRenderContextModel = (MessageRenderContextModel) other;
-            return Intrinsics3.areEqual(this.channelNames, messageRenderContextModel.channelNames) && Intrinsics3.areEqual(this.userNames, messageRenderContextModel.userNames) && Intrinsics3.areEqual(this.roles, messageRenderContextModel.roles);
+            return m.areEqual(this.channelNames, messageRenderContextModel.channelNames) && m.areEqual(this.userNames, messageRenderContextModel.userNames) && m.areEqual(this.roles, messageRenderContextModel.roles);
         }
 
         public final Map<Long, String> getChannelNames() {
@@ -268,12 +268,12 @@ public final class GuildScheduledEventDescriptionParser {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("MessageRenderContextModel(channelNames=");
+            StringBuilder sbU = a.U("MessageRenderContextModel(channelNames=");
             sbU.append(this.channelNames);
             sbU.append(", userNames=");
             sbU.append(this.userNames);
             sbU.append(", roles=");
-            return outline.M(sbU, this.roles, ")");
+            return a.M(sbU, this.roles, ")");
         }
 
         public /* synthetic */ MessageRenderContextModel(Map map, Map map2, Map map3, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -294,7 +294,7 @@ public final class GuildScheduledEventDescriptionParser {
         /* JADX WARN: Multi-variable type inference failed */
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final HashMap<Long, String> call2(Map<Long, GuildMember> map, Map<Long, String> map2) {
-            Intrinsics3.checkNotNullExpressionValue(map, "members");
+            m.checkNotNullExpressionValue(map, "members");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Map.Entry<Long, GuildMember> entry : map.entrySet()) {
                 if (entry.getValue().getNick() != null) {
@@ -305,7 +305,7 @@ public final class GuildScheduledEventDescriptionParser {
             for (Map.Entry entry2 : linkedHashMap.entrySet()) {
                 Object key = entry2.getKey();
                 String nick = ((GuildMember) entry2.getValue()).getNick();
-                Intrinsics3.checkNotNull(nick);
+                m.checkNotNull(nick);
                 map3.put(key, nick);
             }
             return map3;
@@ -329,7 +329,7 @@ public final class GuildScheduledEventDescriptionParser {
     }
 
     public GuildScheduledEventDescriptionParser(LinkifiedTextView linkifiedTextView) {
-        Intrinsics3.checkNotNullParameter(linkifiedTextView, "textView");
+        m.checkNotNullParameter(linkifiedTextView, "textView");
         this.weakRefTextView = new WeakReference<>(linkifiedTextView);
         this.savedDescriptionCache = DescriptionCache.NoDescription.INSTANCE;
     }
@@ -343,10 +343,10 @@ public final class GuildScheduledEventDescriptionParser {
     }
 
     private final Observable<MessageRenderContextModel> getRenderContext(long guildId) {
-        TagsBuilder2 tagsBuilder2Build = new TagsBuilder().build();
+        Tags tagsBuild = new TagsBuilder().build();
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        Observable<MessageRenderContextModel> observableI = Observable.i(companion.getChannels().observeNames(), Observable.j(companion.getGuilds().observeComputed(guildId), companion.getUsers().observeUsernames(tagsBuilder2Build.getUsers()), AnonymousClass1.INSTANCE), companion.getGuilds().observeRoles(guildId), AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…      roles\n      )\n    }");
+        Observable<MessageRenderContextModel> observableI = Observable.i(companion.getChannels().observeNames(), Observable.j(companion.getGuilds().observeComputed(guildId), companion.getUsers().observeUsernames(tagsBuild.getUsers()), AnonymousClass1.INSTANCE), companion.getGuilds().observeRoles(guildId), AnonymousClass2.INSTANCE);
+        m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…      roles\n      )\n    }");
         return observableI;
     }
 
@@ -364,7 +364,7 @@ public final class GuildScheduledEventDescriptionParser {
     }
 
     private final List<Node<MessageRenderContext>> parseAndSaveDescription(String description) {
-        if (Intrinsics3.areEqual(this.savedDescriptionCache.getMaybeDescription(), description)) {
+        if (m.areEqual(this.savedDescriptionCache.getMaybeDescription(), description)) {
             return this.savedDescriptionCache.getMaybeAst();
         }
         if (description == null) {
@@ -391,8 +391,8 @@ public final class GuildScheduledEventDescriptionParser {
             }
             linkifiedTextView.setVisibility(0);
             Observable<MessageRenderContextModel> observableZ = getRenderContext(guildId).z();
-            Intrinsics3.checkNotNullExpressionValue(observableZ, "getRenderContext(guildId)\n            .first()");
-            ObservableExtensionsKt.appSubscribe$default(observableZ, LinkifiedTextView.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new GuildScheduledEventDescriptionParser3(linkifiedTextView, this, andSaveDescription, guildId), 62, (Object) null);
+            m.checkNotNullExpressionValue(observableZ, "getRenderContext(guildId)\n            .first()");
+            ObservableExtensionsKt.appSubscribe$default(observableZ, LinkifiedTextView.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new GuildScheduledEventDescriptionParser$configureDescription$$inlined$apply$lambda$1(linkifiedTextView, this, andSaveDescription, guildId), 62, (Object) null);
         }
     }
 }

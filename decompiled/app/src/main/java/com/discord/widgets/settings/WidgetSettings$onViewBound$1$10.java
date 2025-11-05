@@ -1,7 +1,7 @@
 package com.discord.widgets.settings;
 
 import android.view.View;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.app.AppTransitionActivity;
 import com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile;
 
@@ -12,6 +12,6 @@ public final class WidgetSettings$onViewBound$1$10 implements View.OnClickListen
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        WidgetEditUserOrGuildMemberProfile.Companion.launch$default(WidgetEditUserOrGuildMemberProfile.INSTANCE, outline.x(view, "it", "it.context"), AppTransitionActivity.Transition.TYPE_SLIDE_HORIZONTAL, null, 4, null);
+        WidgetEditUserOrGuildMemberProfile.Companion.launch$default(WidgetEditUserOrGuildMemberProfile.INSTANCE, a.x(view, "it", "it.context"), AppTransitionActivity.Transition.TYPE_SLIDE_HORIZONTAL, null, 4, null);
     }
 }

@@ -1,7 +1,7 @@
 package androidx.core.util;
 
 import androidx.annotation.NonNull;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class Pair<F, S> {
@@ -35,7 +35,7 @@ public class Pair<F, S> {
 
     @NonNull
     public String toString() {
-        StringBuilder sbU = outline.U("Pair{");
+        StringBuilder sbU = a.U("Pair{");
         sbU.append(this.first);
         sbU.append(" ");
         sbU.append(this.second);

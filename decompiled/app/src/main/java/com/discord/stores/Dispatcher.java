@@ -3,7 +3,7 @@ package com.discord.stores;
 import androidx.core.app.NotificationCompat;
 import com.discord.app.AppLog;
 import com.discord.utilities.logging.Logger;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import kotlin.Unit;
@@ -16,7 +16,7 @@ import rx.functions.Action0;
 /* loaded from: classes2.dex */
 public final class Dispatcher {
     private final boolean assertCleanDispatches;
-    private final ArrayList<Store2> dispatchHandlers;
+    private final ArrayList<DispatchHandler> dispatchHandlers;
     private Thread dispatcherThread;
     private final Scheduler scheduler;
 
@@ -40,7 +40,7 @@ public final class Dispatcher {
     }
 
     public Dispatcher(Scheduler scheduler, boolean z2) {
-        Intrinsics3.checkNotNullParameter(scheduler, "scheduler");
+        m.checkNotNullParameter(scheduler, "scheduler");
         this.scheduler = scheduler;
         this.assertCleanDispatches = z2;
         this.dispatchHandlers = new ArrayList<>();
@@ -64,28 +64,28 @@ public final class Dispatcher {
         return this.scheduler;
     }
 
-    @Store3
+    @StoreThread
     public final void onDispatchEnded() {
-        Iterator<Store2> it = this.dispatchHandlers.iterator();
+        Iterator<DispatchHandler> it = this.dispatchHandlers.iterator();
         while (it.hasNext()) {
             it.next().onDispatchEnded();
         }
     }
 
-    @Store3
-    public final void registerDispatchHandlers(Store2... dispatchHandlerArgs) {
-        Intrinsics3.checkNotNullParameter(dispatchHandlerArgs, "dispatchHandlerArgs");
-        for (Store2 store2 : dispatchHandlerArgs) {
-            this.dispatchHandlers.add(store2);
+    @StoreThread
+    public final void registerDispatchHandlers(DispatchHandler... dispatchHandlerArgs) {
+        m.checkNotNullParameter(dispatchHandlerArgs, "dispatchHandlerArgs");
+        for (DispatchHandler dispatchHandler : dispatchHandlerArgs) {
+            this.dispatchHandlers.add(dispatchHandler);
         }
     }
 
     public final void schedule(Function0<Unit> action) {
-        Intrinsics3.checkNotNullParameter(action, "action");
+        m.checkNotNullParameter(action, "action");
         if (this.dispatchHandlers.isEmpty()) {
             AppLog appLog = AppLog.g;
             String name = Dispatcher.class.getName();
-            Intrinsics3.checkNotNullExpressionValue(name, "javaClass.name");
+            m.checkNotNullExpressionValue(name, "javaClass.name");
             Logger.e$default(appLog, name, "scheduled an action without registering DispatchHandlers", null, null, 12, null);
         }
         if (this.assertCleanDispatches) {
@@ -94,11 +94,11 @@ public final class Dispatcher {
         this.scheduler.a().a(new AnonymousClass1(action));
     }
 
-    @Store3
-    public final void unregisterDispatchHandlers(Store2... dispatchHandlerArgs) {
-        Intrinsics3.checkNotNullParameter(dispatchHandlerArgs, "dispatchHandlerArgs");
-        for (Store2 store2 : dispatchHandlerArgs) {
-            this.dispatchHandlers.remove(store2);
+    @StoreThread
+    public final void unregisterDispatchHandlers(DispatchHandler... dispatchHandlerArgs) {
+        m.checkNotNullParameter(dispatchHandlerArgs, "dispatchHandlerArgs");
+        for (DispatchHandler dispatchHandler : dispatchHandlerArgs) {
+            this.dispatchHandlers.remove(dispatchHandler);
         }
     }
 

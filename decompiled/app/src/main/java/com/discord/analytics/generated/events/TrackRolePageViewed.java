@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackRolePageViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackRolePageViewed implements AnalyticsSchema, TrackBase2, TrackGuild2 {
+public final /* data */ class TrackRolePageViewed implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final CharSequence tabOpened = null;
@@ -22,13 +22,13 @@ public final /* data */ class TrackRolePageViewed implements AnalyticsSchema, Tr
     private final Long roleNumMembers = null;
     private final transient String analyticsSchemaTypeName = "role_page_viewed";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -47,7 +47,7 @@ public final /* data */ class TrackRolePageViewed implements AnalyticsSchema, Tr
             return false;
         }
         TrackRolePageViewed trackRolePageViewed = (TrackRolePageViewed) other;
-        return Intrinsics3.areEqual(this.tabOpened, trackRolePageViewed.tabOpened) && Intrinsics3.areEqual(this.isEveryone, trackRolePageViewed.isEveryone) && Intrinsics3.areEqual(this.roleId, trackRolePageViewed.roleId) && Intrinsics3.areEqual(this.roleMentionable, trackRolePageViewed.roleMentionable) && Intrinsics3.areEqual(this.roleHoist, trackRolePageViewed.roleHoist) && Intrinsics3.areEqual(this.rolePermissions, trackRolePageViewed.rolePermissions) && Intrinsics3.areEqual(this.roleNumMembers, trackRolePageViewed.roleNumMembers);
+        return m.areEqual(this.tabOpened, trackRolePageViewed.tabOpened) && m.areEqual(this.isEveryone, trackRolePageViewed.isEveryone) && m.areEqual(this.roleId, trackRolePageViewed.roleId) && m.areEqual(this.roleMentionable, trackRolePageViewed.roleMentionable) && m.areEqual(this.roleHoist, trackRolePageViewed.roleHoist) && m.areEqual(this.rolePermissions, trackRolePageViewed.rolePermissions) && m.areEqual(this.roleNumMembers, trackRolePageViewed.roleNumMembers);
     }
 
     public int hashCode() {
@@ -68,7 +68,7 @@ public final /* data */ class TrackRolePageViewed implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackRolePageViewed(tabOpened=");
+        StringBuilder sbU = a.U("TrackRolePageViewed(tabOpened=");
         sbU.append(this.tabOpened);
         sbU.append(", isEveryone=");
         sbU.append(this.isEveryone);
@@ -81,6 +81,6 @@ public final /* data */ class TrackRolePageViewed implements AnalyticsSchema, Tr
         sbU.append(", rolePermissions=");
         sbU.append(this.rolePermissions);
         sbU.append(", roleNumMembers=");
-        return outline.G(sbU, this.roleNumMembers, ")");
+        return a.G(sbU, this.roleNumMembers, ")");
     }
 }

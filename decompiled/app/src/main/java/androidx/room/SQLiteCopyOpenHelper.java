@@ -10,7 +10,7 @@ import androidx.room.util.DBUtil;
 import androidx.room.util.FileUtil;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -61,14 +61,14 @@ public class SQLiteCopyOpenHelper implements SupportSQLiteOpenHelper {
         FileUtil.copy(channel, new FileOutputStream(fileCreateTempFile).getChannel());
         File parentFile = file.getParentFile();
         if (parentFile != null && !parentFile.exists() && !parentFile.mkdirs()) {
-            StringBuilder sbU = outline.U("Failed to create directories for ");
+            StringBuilder sbU = a.U("Failed to create directories for ");
             sbU.append(file.getAbsolutePath());
             throw new IOException(sbU.toString());
         }
         if (fileCreateTempFile.renameTo(file)) {
             return;
         }
-        StringBuilder sbU2 = outline.U("Failed to move intermediate file (");
+        StringBuilder sbU2 = a.U("Failed to move intermediate file (");
         sbU2.append(fileCreateTempFile.getAbsolutePath());
         sbU2.append(") to destination (");
         sbU2.append(file.getAbsolutePath());

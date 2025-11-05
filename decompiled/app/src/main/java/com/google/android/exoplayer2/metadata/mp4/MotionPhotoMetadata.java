@@ -3,10 +3,8 @@ package com.google.android.exoplayer2.metadata.mp4;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.z2.Metadata2;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import b.i.a.f.e.o.f;
 import com.google.android.exoplayer2.metadata.Metadata;
 
@@ -60,13 +58,13 @@ public final class MotionPhotoMetadata implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(MediaMetadata.b bVar) {
-        Metadata2.c(this, bVar);
+    public /* synthetic */ void n(p1.b bVar) {
+        b.i.a.c.z2.a.c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     public /* synthetic */ byte[] o0() {
-        return Metadata2.a(this);
+        return b.i.a.c.z2.a.a(this);
     }
 
     public String toString() {
@@ -75,7 +73,7 @@ public final class MotionPhotoMetadata implements Metadata.Entry {
         long j3 = this.l;
         long j4 = this.m;
         long j5 = this.n;
-        StringBuilder sbR = outline.R(218, "Motion photo metadata: photoStartPosition=", j, ", photoSize=");
+        StringBuilder sbR = b.d.b.a.a.R(218, "Motion photo metadata: photoStartPosition=", j, ", photoSize=");
         sbR.append(j2);
         sbR.append(", photoPresentationTimestampUs=");
         sbR.append(j3);
@@ -96,8 +94,8 @@ public final class MotionPhotoMetadata implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ Format2 y() {
-        return Metadata2.b(this);
+    public /* synthetic */ j1 y() {
+        return b.i.a.c.z2.a.b(this);
     }
 
     public MotionPhotoMetadata(Parcel parcel, a aVar) {

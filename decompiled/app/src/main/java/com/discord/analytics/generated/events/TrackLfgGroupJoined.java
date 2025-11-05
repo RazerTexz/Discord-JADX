@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackLfgGroup;
-import com.discord.analytics.generated.traits.TrackLfgGroup2;
+import com.discord.analytics.generated.traits.TrackLfgGroupReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLfgGroupJoined.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLfgGroupJoined implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackLfgGroup2 {
+public final /* data */ class TrackLfgGroupJoined implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackLfgGroupReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackLfgGroup trackLfgGroup;
@@ -34,7 +34,7 @@ public final /* data */ class TrackLfgGroupJoined implements AnalyticsSchema, Tr
             return false;
         }
         TrackLfgGroupJoined trackLfgGroupJoined = (TrackLfgGroupJoined) other;
-        return Intrinsics3.areEqual(this.browserFiltered, trackLfgGroupJoined.browserFiltered) && Intrinsics3.areEqual(this.groupIndex, trackLfgGroupJoined.groupIndex);
+        return m.areEqual(this.browserFiltered, trackLfgGroupJoined.browserFiltered) && m.areEqual(this.groupIndex, trackLfgGroupJoined.groupIndex);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class TrackLfgGroupJoined implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLfgGroupJoined(browserFiltered=");
+        StringBuilder sbU = a.U("TrackLfgGroupJoined(browserFiltered=");
         sbU.append(this.browserFiltered);
         sbU.append(", groupIndex=");
-        return outline.G(sbU, this.groupIndex, ")");
+        return a.G(sbU, this.groupIndex, ")");
     }
 }

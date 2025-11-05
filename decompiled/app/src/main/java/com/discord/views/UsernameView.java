@@ -9,25 +9,25 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.StringRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.TextViewCompat;
-import b.a.i.ViewUsernameBinding;
+import b.a.i.g4;
 import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
-import com.discord.widgets.user.profile.DraweeSpanStringBuilderExtensions;
+import com.discord.widgets.user.profile.DraweeSpanStringBuilderExtensionsKt;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: UsernameView.kt */
 /* loaded from: classes2.dex */
 public final class UsernameView extends ConstraintLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final ViewUsernameBinding binding;
+    public final g4 binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UsernameView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(getContext()).inflate(R.layout.view_username, this);
         int i = R.id.username_tag;
         TextView textView = (TextView) findViewById(R.id.username_tag);
@@ -35,23 +35,23 @@ public final class UsernameView extends ConstraintLayout {
             i = R.id.username_text;
             SimpleDraweeSpanTextView simpleDraweeSpanTextView = (SimpleDraweeSpanTextView) findViewById(R.id.username_text);
             if (simpleDraweeSpanTextView != null) {
-                ViewUsernameBinding viewUsernameBinding = new ViewUsernameBinding(this, textView, simpleDraweeSpanTextView);
-                Intrinsics3.checkNotNullExpressionValue(viewUsernameBinding, "ViewUsernameBinding.infl…ater.from(context), this)");
-                this.binding = viewUsernameBinding;
+                g4 g4Var = new g4(this, textView, simpleDraweeSpanTextView);
+                m.checkNotNullExpressionValue(g4Var, "ViewUsernameBinding.infl…ater.from(context), this)");
+                this.binding = g4Var;
                 if (attributeSet != null) {
                     TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.a.UsernameView, 0, 0);
-                    Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…eable.UsernameView, 0, 0)");
+                    m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…eable.UsernameView, 0, 0)");
                     try {
-                        Intrinsics3.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.usernameText");
+                        m.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.usernameText");
                         simpleDraweeSpanTextView.setText(typedArrayObtainStyledAttributes.getText(1));
-                        Intrinsics3.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.usernameText");
+                        m.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.usernameText");
                         simpleDraweeSpanTextView.setSingleLine(typedArrayObtainStyledAttributes.getBoolean(3, true));
                         int resourceId = typedArrayObtainStyledAttributes.getResourceId(4, 0);
                         if (resourceId != 0) {
                             TextViewCompat.setTextAppearance(simpleDraweeSpanTextView, resourceId);
                         }
                         simpleDraweeSpanTextView.setTextSize(0, getResources().getDimension(typedArrayObtainStyledAttributes.getResourceId(6, R.dimen.uikit_textsize_medium)));
-                        Intrinsics3.checkNotNullExpressionValue(textView, "binding.usernameTag");
+                        m.checkNotNullExpressionValue(textView, "binding.usernameTag");
                         textView.setText(typedArrayObtainStyledAttributes.getText(0));
                         float f = typedArrayObtainStyledAttributes.getFloat(2, 0.0f);
                         if (f > 0) {
@@ -83,11 +83,11 @@ public final class UsernameView extends ConstraintLayout {
     public final void a(boolean visible, @StringRes int tagText, boolean isVerified) {
         if (!visible) {
             TextView textView = this.binding.f120b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.usernameTag");
+            m.checkNotNullExpressionValue(textView, "binding.usernameTag");
             textView.setVisibility(8);
         } else {
             TextView textView2 = this.binding.f120b;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.usernameTag");
+            m.checkNotNullExpressionValue(textView2, "binding.usernameTag");
             textView2.setVisibility(0);
             this.binding.f120b.setText(tagText);
             setIsVerified(isVerified);
@@ -95,11 +95,11 @@ public final class UsernameView extends ConstraintLayout {
     }
 
     public final void b(CharSequence usernameText, String avatarUrl, boolean animateAvatar, Integer avatarSizePx, @ColorInt Integer roundingOverlayColor) {
-        Intrinsics3.checkNotNullParameter(usernameText, "usernameText");
+        m.checkNotNullParameter(usernameText, "usernameText");
         DraweeSpanStringBuilder draweeSpanStringBuilder = new DraweeSpanStringBuilder();
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
-        DraweeSpanStringBuilder avatar$default = DraweeSpanStringBuilderExtensions.setAvatar$default(draweeSpanStringBuilder, context, avatarUrl, animateAvatar, avatarSizePx, roundingOverlayColor, null, 32, null);
+        m.checkNotNullExpressionValue(context, "context");
+        DraweeSpanStringBuilder avatar$default = DraweeSpanStringBuilderExtensionsKt.setAvatar$default(draweeSpanStringBuilder, context, avatarUrl, animateAvatar, avatarSizePx, roundingOverlayColor, null, 32, null);
         avatar$default.append(usernameText);
         this.binding.c.setDraweeSpanStringBuilder(avatar$default);
     }

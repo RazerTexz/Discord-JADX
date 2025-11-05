@@ -3,21 +3,19 @@ package com.discord.app;
 import android.content.SharedPreferences;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
 import com.discord.BuildConfig;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.systemlog.SystemLogReport;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import d0.g0.Strings4;
-import d0.g0._Strings;
-import d0.t._Arrays;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.q.ReplaySubject;
+import d0.g0.w;
+import d0.g0.y;
+import d0.t.k;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.q.a;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
@@ -47,7 +45,7 @@ public final class AppLog extends Logger {
     public static int minLoggingPriority = 99;
 
     /* renamed from: d, reason: from kotlin metadata */
-    public static final SerializedSubject<LoggedItem, LoggedItem> logsSubject = new SerializedSubject<>(new ReplaySubject(new ReplaySubject.d(new ReplaySubject.c(5000))));
+    public static final SerializedSubject<LoggedItem, LoggedItem> logsSubject = new SerializedSubject<>(new j0.q.a(new a.d(new a.c(5000))));
 
     /* renamed from: f, reason: from kotlin metadata */
     public static final String[] PACKAGE_MARKERS = {BuildConfig.APPLICATION_ID, "co.discord"};
@@ -68,12 +66,12 @@ public final class AppLog extends Logger {
         public final Throwable throwable;
 
         public LoggedItem(int i, String str, Throwable th) {
-            Intrinsics3.checkNotNullParameter(str, "message");
+            m.checkNotNullParameter(str, "message");
             this.priority = i;
             this.message = str;
             this.throwable = th;
             String string = UUID.randomUUID().toString();
-            Intrinsics3.checkNotNullExpressionValue(string, "UUID.randomUUID().toString()");
+            m.checkNotNullExpressionValue(string, "UUID.randomUUID().toString()");
             this.key = string;
         }
 
@@ -85,7 +83,7 @@ public final class AppLog extends Logger {
                 return false;
             }
             LoggedItem loggedItem = (LoggedItem) other;
-            return this.priority == loggedItem.priority && Intrinsics3.areEqual(this.message, loggedItem.message) && Intrinsics3.areEqual(this.throwable, loggedItem.throwable);
+            return this.priority == loggedItem.priority && m.areEqual(this.message, loggedItem.message) && m.areEqual(this.throwable, loggedItem.throwable);
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -107,7 +105,7 @@ public final class AppLog extends Logger {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("LoggedItem(priority=");
+            StringBuilder sbU = b.d.b.a.a.U("LoggedItem(priority=");
             sbU.append(this.priority);
             sbU.append(", message=");
             sbU.append(this.message);
@@ -119,15 +117,15 @@ public final class AppLog extends Logger {
     }
 
     /* compiled from: AppLog.kt */
-    public static final class a extends Lambda implements Function1<String, Unit> {
+    public static final class a extends o implements Function1<String, Unit> {
         public final /* synthetic */ Map $metadata;
         public final /* synthetic */ int $priority;
         public final /* synthetic */ Throwable $throwable;
 
         /* compiled from: AppLog.kt */
         /* renamed from: com.discord.app.AppLog$a$a, reason: collision with other inner class name */
-        public static final class C0064a extends Lambda implements Function2<String, Integer, Unit> {
-            public C0064a() {
+        public static final class C0184a extends o implements Function2<String, Integer, Unit> {
+            public C0184a() {
                 super(2);
             }
 
@@ -138,8 +136,8 @@ public final class AppLog extends Logger {
             }
 
             public final void invoke(String str, int i) {
-                Intrinsics3.checkNotNullParameter(str, "message");
-                Iterator<T> it = _Strings.chunked(str, i).iterator();
+                m.checkNotNullParameter(str, "message");
+                Iterator<T> it = y.chunked(str, i).iterator();
                 while (it.hasNext()) {
                     Log.println(a.this.$priority, AppLog.g.getDefaultTag(), (String) it.next());
                 }
@@ -164,21 +162,21 @@ public final class AppLog extends Logger {
         public final void invoke2(String str) {
             Set setEntrySet;
             String strJoinToString$default;
-            Intrinsics3.checkNotNullParameter(str, "message");
-            C0064a c0064a = new C0064a();
-            c0064a.invoke(str, 1000);
+            m.checkNotNullParameter(str, "message");
+            C0184a c0184a = new C0184a();
+            c0184a.invoke(str, 1000);
             Map map = this.$metadata;
-            if (map != null && (setEntrySet = map.entrySet()) != null && (strJoinToString$default = _Collections.joinToString$default(setEntrySet, "\n\t", null, null, 0, null, null, 62, null)) != null) {
-                c0064a.invoke("Metadata: " + strJoinToString$default, Integer.MAX_VALUE);
+            if (map != null && (setEntrySet = map.entrySet()) != null && (strJoinToString$default = u.joinToString$default(setEntrySet, "\n\t", null, null, 0, null, null, 62, null)) != null) {
+                c0184a.invoke("Metadata: " + strJoinToString$default, Integer.MAX_VALUE);
             }
             String stackTraceString = Log.getStackTraceString(this.$throwable);
-            Intrinsics3.checkNotNullExpressionValue(stackTraceString, "Log.getStackTraceString(throwable)");
-            c0064a.invoke(stackTraceString, 1000);
+            m.checkNotNullExpressionValue(stackTraceString, "Log.getStackTraceString(throwable)");
+            c0184a.invoke(stackTraceString, 1000);
         }
     }
 
     /* compiled from: AppLog.kt */
-    public static final class b extends Lambda implements Function1<String, Unit> {
+    public static final class b extends o implements Function1<String, Unit> {
         public final /* synthetic */ Map $metadata;
         public final /* synthetic */ Throwable $throwable;
 
@@ -198,7 +196,7 @@ public final class AppLog extends Logger {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Set<Map.Entry> setEntrySet;
-            Intrinsics3.checkNotNullParameter(str, "message");
+            m.checkNotNullParameter(str, "message");
             try {
                 if (this.$throwable != null) {
                     AppLog.g.recordBreadcrumb("Message " + str, "Error");
@@ -212,12 +210,12 @@ public final class AppLog extends Logger {
                 Exception exc = new Exception(str, this.$throwable);
                 AppLog appLog = AppLog.g;
                 StackTraceElement[] stackTrace = exc.getStackTrace();
-                Intrinsics3.checkNotNullExpressionValue(stackTrace, "e.stackTrace");
+                m.checkNotNullExpressionValue(stackTrace, "e.stackTrace");
                 exc.setStackTrace(AppLog.a(appLog, stackTrace, str));
                 Throwable cause = exc.getCause();
                 if (cause != null) {
                     StackTraceElement[] stackTrace2 = cause.getStackTrace();
-                    Intrinsics3.checkNotNullExpressionValue(stackTrace2, "cause.stackTrace");
+                    m.checkNotNullExpressionValue(stackTrace2, "cause.stackTrace");
                     cause.setStackTrace(AppLog.a(appLog, stackTrace2, str));
                 }
                 FirebaseCrashlytics.getInstance().recordException(exc);
@@ -231,8 +229,8 @@ public final class AppLog extends Logger {
                     sb.append(this.$throwable.getClass().toString());
                     sb.append(":\n");
                     StackTraceElement[] stackTrace3 = this.$throwable.getStackTrace();
-                    Intrinsics3.checkNotNullExpressionValue(stackTrace3, "throwable.stackTrace");
-                    sb.append(_Arrays.joinToString$default(stackTrace3, "\n", (CharSequence) null, (CharSequence) null, 0, (CharSequence) null, (Function1) null, 62, (Object) null));
+                    m.checkNotNullExpressionValue(stackTrace3, "throwable.stackTrace");
+                    sb.append(k.joinToString$default(stackTrace3, "\n", (CharSequence) null, (CharSequence) null, 0, (CharSequence) null, (Function1) null, 62, (Object) null));
                     analyticsTracker.appExceptionThrown(sb.toString());
                 } catch (Exception e2) {
                     AppLog.g.w("Unable to report to analytics.", e2);
@@ -242,7 +240,7 @@ public final class AppLog extends Logger {
     }
 
     /* compiled from: AppLog.kt */
-    public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function2<String, Throwable, Unit> {
+    public static final /* synthetic */ class c extends d0.z.d.k implements Function2<String, Throwable, Unit> {
         public c(AppLog appLog) {
             super(2, appLog, AppLog.class, "v", "v(Ljava/lang/String;Ljava/lang/Throwable;)V", 0);
         }
@@ -250,7 +248,7 @@ public final class AppLog extends Logger {
         @Override // kotlin.jvm.functions.Function2
         public Unit invoke(String str, Throwable th) {
             String str2 = str;
-            Intrinsics3.checkNotNullParameter(str2, "p1");
+            m.checkNotNullParameter(str2, "p1");
             ((AppLog) this.receiver).v(str2, th);
             return Unit.a;
         }
@@ -279,23 +277,23 @@ public final class AppLog extends Logger {
             }
             StackTraceElement stackTraceElement = stackTraceElementArr[i2];
             String className2 = stackTraceElement.getClassName();
-            Intrinsics3.checkNotNullExpressionValue(className2, "stackTraceElement.className");
-            boolean z3 = Strings4.contains$default((CharSequence) className2, (CharSequence) "MediaEngineLegacy", false, 2, (Object) null) && Intrinsics3.areEqual(stackTraceElement.getMethodName(), "e");
+            m.checkNotNullExpressionValue(className2, "stackTraceElement.className");
+            boolean z3 = w.contains$default((CharSequence) className2, (CharSequence) "MediaEngineLegacy", false, 2, (Object) null) && m.areEqual(stackTraceElement.getMethodName(), "e");
             String className3 = stackTraceElement.getClassName();
-            Intrinsics3.checkNotNullExpressionValue(className3, "stackTraceElement.className");
+            m.checkNotNullExpressionValue(className3, "stackTraceElement.className");
             String name = Logger.class.getName();
-            Intrinsics3.checkNotNullExpressionValue(name, "Logger::class.java.name");
-            if (!Strings4.contains$default((CharSequence) className3, (CharSequence) name, false, 2, (Object) null)) {
+            m.checkNotNullExpressionValue(name, "Logger::class.java.name");
+            if (!w.contains$default((CharSequence) className3, (CharSequence) name, false, 2, (Object) null)) {
                 String className4 = stackTraceElement.getClassName();
-                Intrinsics3.checkNotNullExpressionValue(className4, "stackTraceElement.className");
+                m.checkNotNullExpressionValue(className4, "stackTraceElement.className");
                 String name2 = Logging.class.getName();
-                Intrinsics3.checkNotNullExpressionValue(name2, "Logging::class.java.name");
-                if (!Strings4.contains$default((CharSequence) className4, (CharSequence) name2, false, 2, (Object) null)) {
+                m.checkNotNullExpressionValue(name2, "Logging::class.java.name");
+                if (!w.contains$default((CharSequence) className4, (CharSequence) name2, false, 2, (Object) null)) {
                     String className5 = stackTraceElement.getClassName();
-                    Intrinsics3.checkNotNullExpressionValue(className5, "stackTraceElement.className");
+                    m.checkNotNullExpressionValue(className5, "stackTraceElement.className");
                     String name3 = AppLog.class.getName();
-                    Intrinsics3.checkNotNullExpressionValue(name3, "AppLog::class.java.name");
-                    boolean z4 = Strings4.contains$default((CharSequence) className5, (CharSequence) name3, false, 2, (Object) null);
+                    m.checkNotNullExpressionValue(name3, "AppLog::class.java.name");
+                    boolean z4 = w.contains$default((CharSequence) className5, (CharSequence) name3, false, 2, (Object) null);
                     if ((z4 || z3) ? false : true) {
                         break;
                     }
@@ -320,7 +318,7 @@ public final class AppLog extends Logger {
                     z2 = false;
                     break;
                 }
-                if ((stackTraceElement2 == null || (className = stackTraceElement2.getClassName()) == null || !Strings4.contains$default((CharSequence) className, (CharSequence) strArr[i4], false, 2, (Object) null)) ? false : true) {
+                if ((stackTraceElement2 == null || (className = stackTraceElement2.getClassName()) == null || !w.contains$default((CharSequence) className, (CharSequence) strArr[i4], false, 2, (Object) null)) ? false : true) {
                     z2 = true;
                     break;
                 }
@@ -334,7 +332,7 @@ public final class AppLog extends Logger {
         }
         int i5 = i > 0 ? i : 0;
         StackTraceElement stackTraceElement3 = stackTraceElementArr2[i5];
-        stackTraceElementArr2[i5] = stackTraceElement3 != null ? new StackTraceElement(stackTraceElement3.getClassName(), stackTraceElement3.getMethodName(), outline.y(stackTraceElement3.getFileName(), ", ", str), stackTraceElement3.getLineNumber()) : null;
+        stackTraceElementArr2[i5] = stackTraceElement3 != null ? new StackTraceElement(stackTraceElement3.getClassName(), stackTraceElement3.getMethodName(), b.d.b.a.a.y(stackTraceElement3.getFileName(), ", ", str), stackTraceElement3.getLineNumber()) : null;
         return stackTraceElementArr2;
     }
 
@@ -344,7 +342,7 @@ public final class AppLog extends Logger {
             SharedPreferences sharedPreferences = cache;
             if (sharedPreferences != null) {
                 SharedPreferences.Editor editorEdit = sharedPreferences.edit();
-                Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
+                m.checkNotNullExpressionValue(editorEdit, "editor");
                 if (userId != null) {
                     userId.longValue();
                     editorEdit.putString("LOG_CACHE_KEY_USER_ID", String.valueOf(userId));
@@ -390,9 +388,9 @@ public final class AppLog extends Logger {
     }
 
     public final void c(String message, String category, Throwable throwable, Function2<? super String, ? super Throwable, Unit> loggingFn) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(category, "category");
-        Intrinsics3.checkNotNullParameter(loggingFn, "loggingFn");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(category, "category");
+        m.checkNotNullParameter(loggingFn, "loggingFn");
         if (initCalled) {
             String str = '[' + category + "]: " + message;
             loggingFn.invoke("Breadcrumb, " + str, throwable);
@@ -402,77 +400,77 @@ public final class AppLog extends Logger {
 
     @Override // com.discord.utilities.logging.Logger
     public void d(String tag, String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(tag, "tag");
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(tag, "tag");
+        m.checkNotNullParameter(message, "message");
         d(tag + " -> " + message, throwable);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void e(String message, Throwable throwable, Map<String, String> metadata) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         b(message, 6, throwable, metadata);
     }
 
     public final void f(String from, String to) {
-        Intrinsics3.checkNotNullParameter(from, "from");
-        Intrinsics3.checkNotNullParameter(to, "to");
+        m.checkNotNullParameter(from, "from");
+        m.checkNotNullParameter(to, "to");
         recordBreadcrumb("Navigation [" + from + "] > [" + to + ']', NotificationCompat.CATEGORY_NAVIGATION);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void i(String tag, String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(tag, "tag");
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(tag, "tag");
+        m.checkNotNullParameter(message, "message");
         i(tag + " -> " + message, throwable);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void recordBreadcrumb(String message, String category) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(category, "category");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(category, "category");
         c(message, category, null, new c(this));
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void v(String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         b(message, 2, throwable, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void w(String tag, String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(tag, "tag");
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(tag, "tag");
+        m.checkNotNullParameter(message, "message");
         w(tag + " -> " + message, throwable);
     }
 
     public static final void i(String message) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         g.i(message, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void d(String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         b(message, 3, throwable, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void e(String tag, String message, Throwable throwable, Map<String, String> metadata) {
-        Intrinsics3.checkNotNullParameter(tag, "tag");
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(tag, "tag");
+        m.checkNotNullParameter(message, "message");
         e(tag + " -> " + message, throwable, metadata);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void w(String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         b(message, 5, throwable, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
     public void i(String message, Throwable throwable) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         b(message, 4, throwable, null);
     }
 }

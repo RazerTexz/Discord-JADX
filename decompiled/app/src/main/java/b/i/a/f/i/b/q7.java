@@ -18,7 +18,6 @@ import android.os.RemoteException;
 import android.os.SystemClock;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.h.l.ob;
 import b.i.a.f.h.l.rb;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -312,7 +311,7 @@ public final class q7 extends a5 {
             Context context = n3VarO.a.f1570b;
             String packageName = context.getPackageName();
             t9VarT.b();
-            AnimatableValueParser.w(packageName);
+            b.c.a.a0.d.w(packageName);
             PackageManager packageManager = context.getPackageManager();
             MessageDigest messageDigestX0 = t9.x0();
             long jW = -1;

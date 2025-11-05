@@ -3,11 +3,11 @@ package com.discord.models.domain.emoji;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.emoji.GuildEmoji;
 import com.discord.utilities.icon.IconUtils;
-import com.discord.utilities.string.StringUtils2;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.utilities.string.StringUtilsKt;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -74,7 +74,7 @@ public class ModelEmojiCustom implements Emoji {
     }
 
     private String getColonRegex() {
-        return outline.H(outline.U("((?<!\\\\)):"), getNameDisambiguated(), MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+        return a.H(a.U("((?<!\\\\)):"), getNameDisambiguated(), MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
     }
 
     private String getNameDisambiguated() {
@@ -83,11 +83,11 @@ public class ModelEmojiCustom implements Emoji {
     }
 
     private String getNoColonRegex() {
-        return outline.J(outline.U("([^\\\\:]|^)"), getNameDisambiguated(), "\\b");
+        return a.J(a.U("([^\\\\:]|^)"), getNameDisambiguated(), "\\b");
     }
 
     public static void setCdnUri(String str) {
-        emojiUriFormat = outline.w(str, "/emojis/%s.%s?size=%s&quality=lossless");
+        emojiUriFormat = a.w(str, "/emojis/%s.%s?size=%s&quality=lossless");
     }
 
     public boolean canEqual(Object obj) {
@@ -183,7 +183,7 @@ public class ModelEmojiCustom implements Emoji {
         }
         sb.append(str);
         sb.append(this.name);
-        sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+        sb.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
         sb.append(this.f2741id);
         sb.append('>');
         return sb.toString();
@@ -200,7 +200,7 @@ public class ModelEmojiCustom implements Emoji {
 
     @Override // com.discord.models.domain.emoji.Emoji
     public String getReactionKey() {
-        return this.name + MentionUtils.EMOJIS_AND_STICKERS_CHAR + this.f2741id;
+        return this.name + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + this.f2741id;
     }
 
     @Override // com.discord.models.domain.emoji.Emoji
@@ -281,7 +281,7 @@ public class ModelEmojiCustom implements Emoji {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelEmojiCustom(id=");
+        StringBuilder sbU = a.U("ModelEmojiCustom(id=");
         sbU.append(getId());
         sbU.append(", idStr=");
         sbU.append(getIdStr());
@@ -329,7 +329,7 @@ public class ModelEmojiCustom implements Emoji {
         String str = emojiUriFormat;
         Object[] objArr = new Object[3];
         objArr[0] = Long.valueOf(j);
-        objArr[1] = z2 ? IconUtils.ANIMATED_IMAGE_EXTENSION : StringUtils2.getSTATIC_IMAGE_EXTENSION();
+        objArr[1] = z2 ? IconUtils.ANIMATED_IMAGE_EXTENSION : StringUtilsKt.getSTATIC_IMAGE_EXTENSION();
         objArr[2] = Integer.valueOf(i);
         return String.format(str, objArr);
     }

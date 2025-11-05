@@ -2,7 +2,7 @@ package androidx.browser.trusted;
 
 import androidx.annotation.NonNull;
 import androidx.concurrent.futures.ResolvableFuture;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 
 /* loaded from: classes.dex */
 public class FutureUtils {
@@ -10,7 +10,7 @@ public class FutureUtils {
     }
 
     @NonNull
-    public static <T> ListenableFuture8<T> immediateFailedFuture(@NonNull Throwable th) {
+    public static <T> a<T> immediateFailedFuture(@NonNull Throwable th) {
         ResolvableFuture resolvableFutureCreate = ResolvableFuture.create();
         resolvableFutureCreate.setException(th);
         return resolvableFutureCreate;

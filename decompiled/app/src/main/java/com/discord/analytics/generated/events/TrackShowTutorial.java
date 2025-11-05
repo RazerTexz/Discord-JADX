@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackShowTutorial.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackShowTutorial implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackShowTutorial implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence tutorial = null;
     private final Long applicationId = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackShowTutorial implements AnalyticsSchema, Trac
             return false;
         }
         TrackShowTutorial trackShowTutorial = (TrackShowTutorial) other;
-        return Intrinsics3.areEqual(this.tutorial, trackShowTutorial.tutorial) && Intrinsics3.areEqual(this.applicationId, trackShowTutorial.applicationId);
+        return m.areEqual(this.tutorial, trackShowTutorial.tutorial) && m.areEqual(this.applicationId, trackShowTutorial.applicationId);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackShowTutorial implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackShowTutorial(tutorial=");
+        StringBuilder sbU = a.U("TrackShowTutorial(tutorial=");
         sbU.append(this.tutorial);
         sbU.append(", applicationId=");
-        return outline.G(sbU, this.applicationId, ")");
+        return a.G(sbU, this.applicationId, ")");
     }
 }

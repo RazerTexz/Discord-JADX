@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.input.expression;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.sticker.Sticker;
 import com.discord.models.user.MeUser;
 import com.discord.stores.StoreAnalytics;
@@ -16,8 +16,8 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.input.expression.ExpressionDetailPage;
 import com.discord.widgets.chat.input.expression.ExpressionPickerEvent;
 import com.discord.widgets.chat.input.gifpicker.GifCategoryItem;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.Map;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
@@ -30,7 +30,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: ExpressionTrayViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
+public final class ExpressionTrayViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -45,7 +45,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ExpressionTrayViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.expression.ExpressionTrayViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass1(ExpressionTrayViewModel expressionTrayViewModel) {
             super(1, expressionTrayViewModel, ExpressionTrayViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/expression/ExpressionTrayViewModel$StoreState;)V", 0);
         }
@@ -58,14 +58,14 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             ExpressionTrayViewModel.access$handleStoreState((ExpressionTrayViewModel) this.receiver, storeState);
         }
     }
 
     /* compiled from: ExpressionTrayViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.expression.ExpressionTrayViewModel$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<ExpressionPickerEvent, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<ExpressionPickerEvent, Unit> {
         public AnonymousClass2(ExpressionTrayViewModel expressionTrayViewModel) {
             super(1, expressionTrayViewModel, ExpressionTrayViewModel.class, "handleExpressionPickerEvents", "handleExpressionPickerEvents(Lcom/discord/widgets/chat/input/expression/ExpressionPickerEvent;)V", 0);
         }
@@ -78,7 +78,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ExpressionPickerEvent expressionPickerEvent) {
-            Intrinsics3.checkNotNullParameter(expressionPickerEvent, "p1");
+            m.checkNotNullParameter(expressionPickerEvent, "p1");
             ExpressionTrayViewModel.access$handleExpressionPickerEvents((ExpressionTrayViewModel) this.receiver, expressionPickerEvent);
         }
     }
@@ -93,8 +93,8 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(StoreExpressionPickerNavigation storeExpressionPickerNavigation, StoreChannelsSelected storeChannelsSelected, StoreUser storeUser, StoreGuildStickers storeGuildStickers, StoreGuilds storeGuilds) {
-            Observable<StoreState> observableG = Observable.g(storeExpressionPickerNavigation.observeSelectedTab(), storeChannelsSelected.observeResolvedSelectedChannel(), StoreUser.observeMe$default(storeUser, false, 1, null), storeGuildStickers.observeGuildStickers(), storeGuilds.observeGuilds(), ExpressionTrayViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "Observable.combineLatest…aft\n          )\n        }");
+            Observable<StoreState> observableG = Observable.g(storeExpressionPickerNavigation.observeSelectedTab(), storeChannelsSelected.observeResolvedSelectedChannel(), StoreUser.observeMe$default(storeUser, false, 1, null), storeGuildStickers.observeGuildStickers(), storeGuilds.observeGuilds(), ExpressionTrayViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableG, "Observable.combineLatest…aft\n          )\n        }");
             return observableG;
         }
 
@@ -183,7 +183,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 ShowStickerPicker showStickerPicker = (ShowStickerPicker) other;
-                return Intrinsics3.areEqual(this.stickerPackId, showStickerPicker.stickerPackId) && Intrinsics3.areEqual(this.searchText, showStickerPicker.searchText) && this.inline == showStickerPicker.inline;
+                return m.areEqual(this.stickerPackId, showStickerPicker.stickerPackId) && m.areEqual(this.searchText, showStickerPicker.searchText) && this.inline == showStickerPicker.inline;
             }
 
             public final boolean getInline() {
@@ -213,12 +213,12 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("ShowStickerPicker(stickerPackId=");
+                StringBuilder sbU = a.U("ShowStickerPicker(stickerPackId=");
                 sbU.append(this.stickerPackId);
                 sbU.append(", searchText=");
                 sbU.append(this.searchText);
                 sbU.append(", inline=");
-                return outline.O(sbU, this.inline, ")");
+                return a.O(sbU, this.inline, ")");
             }
 
             public ShowStickerPicker(Long l, String str, boolean z2) {
@@ -248,9 +248,9 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(ExpressionTrayTab expressionTrayTab, Long l, MeUser meUser, Map<Long, ? extends Map<Long, Sticker>> map, Set<Long> set, boolean z2) {
-            Intrinsics3.checkNotNullParameter(expressionTrayTab, "selectedExpressionTab");
-            Intrinsics3.checkNotNullParameter(map, "guildStickers");
-            Intrinsics3.checkNotNullParameter(set, "userGuildIds");
+            m.checkNotNullParameter(expressionTrayTab, "selectedExpressionTab");
+            m.checkNotNullParameter(map, "guildStickers");
+            m.checkNotNullParameter(set, "userGuildIds");
             this.selectedExpressionTab = expressionTrayTab;
             this.guildId = l;
             this.meUser = meUser;
@@ -314,9 +314,9 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(ExpressionTrayTab selectedExpressionTab, Long guildId, MeUser meUser, Map<Long, ? extends Map<Long, Sticker>> guildStickers, Set<Long> userGuildIds, boolean isThreadDraft) {
-            Intrinsics3.checkNotNullParameter(selectedExpressionTab, "selectedExpressionTab");
-            Intrinsics3.checkNotNullParameter(guildStickers, "guildStickers");
-            Intrinsics3.checkNotNullParameter(userGuildIds, "userGuildIds");
+            m.checkNotNullParameter(selectedExpressionTab, "selectedExpressionTab");
+            m.checkNotNullParameter(guildStickers, "guildStickers");
+            m.checkNotNullParameter(userGuildIds, "userGuildIds");
             return new StoreState(selectedExpressionTab, guildId, meUser, guildStickers, userGuildIds, isThreadDraft);
         }
 
@@ -328,7 +328,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.selectedExpressionTab, storeState.selectedExpressionTab) && Intrinsics3.areEqual(this.guildId, storeState.guildId) && Intrinsics3.areEqual(this.meUser, storeState.meUser) && Intrinsics3.areEqual(this.guildStickers, storeState.guildStickers) && Intrinsics3.areEqual(this.userGuildIds, storeState.userGuildIds) && this.isThreadDraft == storeState.isThreadDraft;
+            return m.areEqual(this.selectedExpressionTab, storeState.selectedExpressionTab) && m.areEqual(this.guildId, storeState.guildId) && m.areEqual(this.meUser, storeState.meUser) && m.areEqual(this.guildStickers, storeState.guildStickers) && m.areEqual(this.userGuildIds, storeState.userGuildIds) && this.isThreadDraft == storeState.isThreadDraft;
         }
 
         public final Long getGuildId() {
@@ -376,7 +376,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(selectedExpressionTab=");
+            StringBuilder sbU = a.U("StoreState(selectedExpressionTab=");
             sbU.append(this.selectedExpressionTab);
             sbU.append(", guildId=");
             sbU.append(this.guildId);
@@ -387,7 +387,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             sbU.append(", userGuildIds=");
             sbU.append(this.userGuildIds);
             sbU.append(", isThreadDraft=");
-            return outline.O(sbU, this.isThreadDraft, ")");
+            return a.O(sbU, this.isThreadDraft, ")");
         }
 
         public /* synthetic */ StoreState(ExpressionTrayTab expressionTrayTab, Long l, MeUser meUser, Map map, Set set, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -463,7 +463,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
     }
 
     private final void handleExpressionPickerEvents(ExpressionPickerEvent expressionPickerEvent) {
-        if (Intrinsics3.areEqual(expressionPickerEvent, ExpressionPickerEvent.CloseExpressionPicker.INSTANCE)) {
+        if (m.areEqual(expressionPickerEvent, ExpressionPickerEvent.CloseExpressionPicker.INSTANCE)) {
             hideExpressionPicker();
             return;
         }
@@ -560,17 +560,17 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     public final void selectGifCategory(GifCategoryItem gifCategoryItem) {
-        Intrinsics3.checkNotNullParameter(gifCategoryItem, "gifCategoryItem");
+        m.checkNotNullParameter(gifCategoryItem, "gifCategoryItem");
         updateViewState2(ViewState.copy$default(requireViewState(), null, new ExpressionDetailPage.GifCategoryPage(gifCategoryItem), false, false, 13, null));
     }
 
     public final void selectTab(ExpressionTrayTab expressionTrayTab) {
-        Intrinsics3.checkNotNullParameter(expressionTrayTab, "expressionTrayTab");
+        m.checkNotNullParameter(expressionTrayTab, "expressionTrayTab");
         this.storeExpressionPickerNavigation.onSelectTab(expressionTrayTab);
     }
 
@@ -578,14 +578,14 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         updateViewState2(ViewState.copy$default(requireViewState(), null, null, show, false, 11, null));
     }
 
-    @Override // b.a.d.AppViewModel
+    @Override // b.a.d.d0
     public /* bridge */ /* synthetic */ void updateViewState(ViewState viewState) {
         updateViewState2(viewState);
     }
 
     /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(viewState, "viewState");
         ViewState viewState2 = getViewState();
         ExpressionTrayTab selectedExpressionTab = viewState2 != null ? viewState2.getSelectedExpressionTab() : null;
         ExpressionTrayTab selectedExpressionTab2 = viewState.getSelectedExpressionTab();
@@ -618,7 +618,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         public ViewState(ExpressionTrayTab expressionTrayTab, ExpressionDetailPage expressionDetailPage, boolean z2, boolean z3) {
-            Intrinsics3.checkNotNullParameter(expressionTrayTab, "selectedExpressionTab");
+            m.checkNotNullParameter(expressionTrayTab, "selectedExpressionTab");
             this.selectedExpressionTab = expressionTrayTab;
             this.expressionDetailPage = expressionDetailPage;
             this.showStickersSearchBar = z2;
@@ -670,7 +670,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         public final ViewState copy(ExpressionTrayTab selectedExpressionTab, ExpressionDetailPage expressionDetailPage, boolean showStickersSearchBar, boolean showGifsAndStickers) {
-            Intrinsics3.checkNotNullParameter(selectedExpressionTab, "selectedExpressionTab");
+            m.checkNotNullParameter(selectedExpressionTab, "selectedExpressionTab");
             return new ViewState(selectedExpressionTab, expressionDetailPage, showStickersSearchBar, showGifsAndStickers);
         }
 
@@ -682,7 +682,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.selectedExpressionTab, viewState.selectedExpressionTab) && Intrinsics3.areEqual(this.expressionDetailPage, viewState.expressionDetailPage) && this.showStickersSearchBar == viewState.showStickersSearchBar && this.showGifsAndStickers == viewState.showGifsAndStickers;
+            return m.areEqual(this.selectedExpressionTab, viewState.selectedExpressionTab) && m.areEqual(this.expressionDetailPage, viewState.expressionDetailPage) && this.showStickersSearchBar == viewState.showStickersSearchBar && this.showGifsAndStickers == viewState.showGifsAndStickers;
         }
 
         public final ExpressionDetailPage getExpressionDetailPage() {
@@ -726,14 +726,14 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(selectedExpressionTab=");
+            StringBuilder sbU = a.U("ViewState(selectedExpressionTab=");
             sbU.append(this.selectedExpressionTab);
             sbU.append(", expressionDetailPage=");
             sbU.append(this.expressionDetailPage);
             sbU.append(", showStickersSearchBar=");
             sbU.append(this.showStickersSearchBar);
             sbU.append(", showGifsAndStickers=");
-            return outline.O(sbU, this.showGifsAndStickers, ")");
+            return a.O(sbU, this.showGifsAndStickers, ")");
         }
 
         public /* synthetic */ ViewState(ExpressionTrayTab expressionTrayTab, ExpressionDetailPage expressionDetailPage, boolean z2, boolean z3, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -744,14 +744,14 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ExpressionTrayViewModel(StoreAnalytics storeAnalytics, StoreExpressionPickerNavigation storeExpressionPickerNavigation, StoreChannelsSelected storeChannelsSelected, StoreUser storeUser, StoreGuildStickers storeGuildStickers, StoreGuilds storeGuilds, Observable<StoreState> observable, Observable<ExpressionPickerEvent> observable2) {
         super(new ViewState(ExpressionTrayTab.EMOJI, null, true, true, 2, null));
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(storeExpressionPickerNavigation, "storeExpressionPickerNavigation");
-        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(storeGuildStickers, "storeGuildStickers");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
-        Intrinsics3.checkNotNullParameter(observable2, "expressionPickerNavigationObservable");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(storeExpressionPickerNavigation, "storeExpressionPickerNavigation");
+        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(storeGuildStickers, "storeGuildStickers");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(observable2, "expressionPickerNavigationObservable");
         this.storeAnalytics = storeAnalytics;
         this.storeExpressionPickerNavigation = storeExpressionPickerNavigation;
         this.storeChannelsSelected = storeChannelsSelected;

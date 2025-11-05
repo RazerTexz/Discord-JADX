@@ -1,8 +1,8 @@
 package com.discord.api.commands;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ApplicationCommand.kt */
@@ -51,7 +51,7 @@ public final /* data */ class ApplicationCommand {
             return false;
         }
         ApplicationCommand applicationCommand = (ApplicationCommand) other;
-        return this.id == applicationCommand.id && this.applicationId == applicationCommand.applicationId && Intrinsics3.areEqual(this.name, applicationCommand.name) && Intrinsics3.areEqual(this.description, applicationCommand.description) && Intrinsics3.areEqual(this.options, applicationCommand.options) && Intrinsics3.areEqual(this.version, applicationCommand.version) && Intrinsics3.areEqual(this.guildId, applicationCommand.guildId) && Intrinsics3.areEqual(this.defaultPermissions, applicationCommand.defaultPermissions) && Intrinsics3.areEqual(this.permissions, applicationCommand.permissions);
+        return this.id == applicationCommand.id && this.applicationId == applicationCommand.applicationId && m.areEqual(this.name, applicationCommand.name) && m.areEqual(this.description, applicationCommand.description) && m.areEqual(this.options, applicationCommand.options) && m.areEqual(this.version, applicationCommand.version) && m.areEqual(this.guildId, applicationCommand.guildId) && m.areEqual(this.defaultPermissions, applicationCommand.defaultPermissions) && m.areEqual(this.permissions, applicationCommand.permissions);
     }
 
     /* renamed from: f, reason: from getter */
@@ -93,7 +93,7 @@ public final /* data */ class ApplicationCommand {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ApplicationCommand(id=");
+        StringBuilder sbU = a.U("ApplicationCommand(id=");
         sbU.append(this.id);
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
@@ -110,6 +110,6 @@ public final /* data */ class ApplicationCommand {
         sbU.append(", defaultPermissions=");
         sbU.append(this.defaultPermissions);
         sbU.append(", permissions=");
-        return outline.L(sbU, this.permissions, ")");
+        return a.L(sbU, this.permissions, ")");
     }
 }

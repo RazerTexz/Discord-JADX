@@ -1,7 +1,7 @@
 package defpackage;
 
 import android.view.View;
-import b.a.a.a0.WidgetGiftAcceptDialog;
+import b.a.a.a0.c;
 import com.discord.stores.StoreGifting;
 import com.discord.stores.StoreStream;
 
@@ -25,7 +25,7 @@ public final class g implements View.OnClickListener {
             if (i != 1) {
                 throw null;
             }
-            ((WidgetGiftAcceptDialog) this.k).dismiss();
+            ((c) this.k).dismiss();
         }
     }
 }

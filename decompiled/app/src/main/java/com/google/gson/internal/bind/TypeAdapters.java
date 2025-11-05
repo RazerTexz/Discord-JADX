@@ -1,12 +1,12 @@
 package com.google.gson.internal.bind;
 
-import b.d.b.a.outline;
-import b.i.d.JsonArray;
-import b.i.d.JsonNull;
-import b.i.d.JsonPrimitive;
-import b.i.d.TypeAdapterFactory2;
-import b.i.d.p.SerializedName;
-import b.i.d.q.LazilyParsedNumber;
+import b.d.b.a.a;
+import b.i.d.g;
+import b.i.d.j;
+import b.i.d.k;
+import b.i.d.o;
+import b.i.d.p.b;
+import b.i.d.q.q;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -50,65 +50,65 @@ public final class TypeAdapters {
     public static final TypeAdapter<String> A;
     public static final TypeAdapter<BigDecimal> B;
     public static final TypeAdapter<BigInteger> C;
-    public static final TypeAdapterFactory2 D;
+    public static final o D;
     public static final TypeAdapter<StringBuilder> E;
-    public static final TypeAdapterFactory2 F;
+    public static final o F;
     public static final TypeAdapter<StringBuffer> G;
-    public static final TypeAdapterFactory2 H;
+    public static final o H;
     public static final TypeAdapter<URL> I;
-    public static final TypeAdapterFactory2 J;
+    public static final o J;
     public static final TypeAdapter<URI> K;
-    public static final TypeAdapterFactory2 L;
+    public static final o L;
     public static final TypeAdapter<InetAddress> M;
-    public static final TypeAdapterFactory2 N;
+    public static final o N;
     public static final TypeAdapter<UUID> O;
-    public static final TypeAdapterFactory2 P;
+    public static final o P;
     public static final TypeAdapter<Currency> Q;
-    public static final TypeAdapterFactory2 R;
-    public static final TypeAdapterFactory2 S;
+    public static final o R;
+    public static final o S;
     public static final TypeAdapter<Calendar> T;
-    public static final TypeAdapterFactory2 U;
+    public static final o U;
     public static final TypeAdapter<Locale> V;
-    public static final TypeAdapterFactory2 W;
+    public static final o W;
     public static final TypeAdapter<JsonElement> X;
-    public static final TypeAdapterFactory2 Y;
-    public static final TypeAdapterFactory2 Z;
+    public static final o Y;
+    public static final o Z;
     public static final TypeAdapter<Class> a;
 
     /* renamed from: b, reason: collision with root package name */
-    public static final TypeAdapterFactory2 f3128b;
+    public static final o f3128b;
     public static final TypeAdapter<BitSet> c;
-    public static final TypeAdapterFactory2 d;
+    public static final o d;
     public static final TypeAdapter<Boolean> e;
     public static final TypeAdapter<Boolean> f;
-    public static final TypeAdapterFactory2 g;
+    public static final o g;
     public static final TypeAdapter<Number> h;
-    public static final TypeAdapterFactory2 i;
+    public static final o i;
     public static final TypeAdapter<Number> j;
-    public static final TypeAdapterFactory2 k;
+    public static final o k;
     public static final TypeAdapter<Number> l;
-    public static final TypeAdapterFactory2 m;
+    public static final o m;
     public static final TypeAdapter<AtomicInteger> n;
-    public static final TypeAdapterFactory2 o;
+    public static final o o;
     public static final TypeAdapter<AtomicBoolean> p;
-    public static final TypeAdapterFactory2 q;
+    public static final o q;
     public static final TypeAdapter<AtomicIntegerArray> r;
 
     /* renamed from: s, reason: collision with root package name */
-    public static final TypeAdapterFactory2 f3129s;
+    public static final o f3129s;
     public static final TypeAdapter<Number> t;
     public static final TypeAdapter<Number> u;
     public static final TypeAdapter<Number> v;
     public static final TypeAdapter<Number> w;
 
     /* renamed from: x, reason: collision with root package name */
-    public static final TypeAdapterFactory2 f3130x;
+    public static final o f3130x;
 
     /* renamed from: y, reason: collision with root package name */
     public static final TypeAdapter<Character> f3131y;
 
     /* renamed from: z, reason: collision with root package name */
-    public static final TypeAdapterFactory2 f3132z;
+    public static final o f3132z;
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$1, reason: invalid class name */
     public class AnonymousClass1 extends TypeAdapter<Class> {
@@ -117,7 +117,7 @@ public final class TypeAdapters {
         }
 
         public void b(Class cls) throws IOException {
-            throw new UnsupportedOperationException(outline.o(cls, outline.U("Attempted to serialize java.lang.Class: "), ". Forgot to register a type adapter?"));
+            throw new UnsupportedOperationException(a.o(cls, a.U("Attempted to serialize java.lang.Class: "), ". Forgot to register a type adapter?"));
         }
 
         @Override // com.google.gson.TypeAdapter
@@ -226,7 +226,7 @@ public final class TypeAdapters {
             JsonToken jsonTokenN = jsonReader.N();
             int iOrdinal = jsonTokenN.ordinal();
             if (iOrdinal == 5 || iOrdinal == 6) {
-                return new LazilyParsedNumber(jsonReader.J());
+                return new q(jsonReader.J());
             }
             if (iOrdinal == 8) {
                 jsonReader.H();
@@ -253,7 +253,7 @@ public final class TypeAdapters {
             if (strJ.length() == 1) {
                 return Character.valueOf(strJ.charAt(0));
             }
-            throw new JsonSyntaxException(outline.w("Expecting character, got: ", strJ));
+            throw new JsonSyntaxException(a.w("Expecting character, got: ", strJ));
         }
 
         @Override // com.google.gson.TypeAdapter
@@ -363,7 +363,7 @@ public final class TypeAdapters {
                         if (Integer.parseInt(strJ) != 0) {
                         }
                     } catch (NumberFormatException unused) {
-                        throw new JsonSyntaxException(outline.w("Error: Expecting: bitset number value (1, 0), Found: ", strJ));
+                        throw new JsonSyntaxException(a.w("Error: Expecting: bitset number value (1, 0), Found: ", strJ));
                     }
                 } else if (iOrdinal == 6) {
                     zU = jsonReader.y() != 0;
@@ -511,7 +511,7 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$26, reason: invalid class name */
-    public class AnonymousClass26 implements TypeAdapterFactory2 {
+    public class AnonymousClass26 implements o {
 
         /* renamed from: com.google.gson.internal.bind.TypeAdapters$26$1, reason: invalid class name */
         public class AnonymousClass1 extends TypeAdapter<Timestamp> {
@@ -536,7 +536,7 @@ public final class TypeAdapters {
             }
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() != Timestamp.class) {
                 return null;
@@ -631,13 +631,13 @@ public final class TypeAdapters {
         public JsonElement a(JsonReader jsonReader) throws IOException {
             int iOrdinal = jsonReader.N().ordinal();
             if (iOrdinal == 0) {
-                JsonArray jsonArray = new JsonArray();
+                g gVar = new g();
                 jsonReader.a();
                 while (jsonReader.q()) {
-                    jsonArray.j.add(a(jsonReader));
+                    gVar.j.add(a(jsonReader));
                 }
                 jsonReader.e();
-                return jsonArray;
+                return gVar;
             }
             if (iOrdinal == 2) {
                 JsonObject jsonObject = new JsonObject();
@@ -649,48 +649,48 @@ public final class TypeAdapters {
                 return jsonObject;
             }
             if (iOrdinal == 5) {
-                return new JsonPrimitive(jsonReader.J());
+                return new k(jsonReader.J());
             }
             if (iOrdinal == 6) {
-                return new JsonPrimitive(new LazilyParsedNumber(jsonReader.J()));
+                return new k(new q(jsonReader.J()));
             }
             if (iOrdinal == 7) {
-                return new JsonPrimitive(Boolean.valueOf(jsonReader.u()));
+                return new k(Boolean.valueOf(jsonReader.u()));
             }
             if (iOrdinal != 8) {
                 throw new IllegalArgumentException();
             }
             jsonReader.H();
-            return JsonNull.a;
+            return j.a;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         public void b(JsonWriter jsonWriter, JsonElement jsonElement) throws IOException {
-            if (jsonElement == null || (jsonElement instanceof JsonNull)) {
+            if (jsonElement == null || (jsonElement instanceof j)) {
                 jsonWriter.s();
                 return;
             }
-            if (jsonElement instanceof JsonPrimitive) {
-                JsonPrimitive jsonPrimitiveE = jsonElement.e();
-                Object obj = jsonPrimitiveE.a;
+            if (jsonElement instanceof k) {
+                k kVarE = jsonElement.e();
+                Object obj = kVarE.a;
                 if (obj instanceof Number) {
-                    jsonWriter.D(jsonPrimitiveE.i());
+                    jsonWriter.D(kVarE.i());
                     return;
                 } else if (obj instanceof Boolean) {
-                    jsonWriter.I(jsonPrimitiveE.h());
+                    jsonWriter.I(kVarE.h());
                     return;
                 } else {
-                    jsonWriter.H(jsonPrimitiveE.g());
+                    jsonWriter.H(kVarE.g());
                     return;
                 }
             }
-            boolean z2 = jsonElement instanceof JsonArray;
+            boolean z2 = jsonElement instanceof g;
             if (z2) {
                 jsonWriter.b();
                 if (!z2) {
                     throw new IllegalStateException("Not a JSON Array: " + jsonElement);
                 }
-                Iterator<JsonElement> it = ((JsonArray) jsonElement).iterator();
+                Iterator<JsonElement> it = ((g) jsonElement).iterator();
                 while (it.hasNext()) {
                     b(jsonWriter, it.next());
                 }
@@ -698,7 +698,7 @@ public final class TypeAdapters {
                 return;
             }
             if (!(jsonElement instanceof JsonObject)) {
-                StringBuilder sbU = outline.U("Couldn't write ");
+                StringBuilder sbU = a.U("Couldn't write ");
                 sbU.append(jsonElement.getClass());
                 throw new IllegalArgumentException(sbU.toString());
             }
@@ -754,8 +754,8 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$30, reason: invalid class name */
-    public class AnonymousClass30 implements TypeAdapterFactory2 {
-        @Override // b.i.d.TypeAdapterFactory2
+    public class AnonymousClass30 implements o {
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             Class<? super T> rawType = typeToken.getRawType();
             if (!Enum.class.isAssignableFrom(rawType) || rawType == Enum.class) {
@@ -769,7 +769,7 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$31, reason: invalid class name */
-    public class AnonymousClass31 implements TypeAdapterFactory2 {
+    public class AnonymousClass31 implements o {
         public final /* synthetic */ TypeToken j;
         public final /* synthetic */ TypeAdapter k;
 
@@ -778,7 +778,7 @@ public final class TypeAdapters {
             this.k = typeAdapter;
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.equals(this.j)) {
                 return this.k;
@@ -788,7 +788,7 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$32, reason: invalid class name */
-    public class AnonymousClass32 implements TypeAdapterFactory2 {
+    public class AnonymousClass32 implements o {
         public final /* synthetic */ Class j;
         public final /* synthetic */ TypeAdapter k;
 
@@ -797,7 +797,7 @@ public final class TypeAdapters {
             this.k = typeAdapter;
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() == this.j) {
                 return this.k;
@@ -806,8 +806,8 @@ public final class TypeAdapters {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Factory[type=");
-            outline.k0(this.j, sbU, ",adapter=");
+            StringBuilder sbU = a.U("Factory[type=");
+            a.k0(this.j, sbU, ",adapter=");
             sbU.append(this.k);
             sbU.append("]");
             return sbU.toString();
@@ -815,7 +815,7 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$33, reason: invalid class name */
-    public class AnonymousClass33 implements TypeAdapterFactory2 {
+    public class AnonymousClass33 implements o {
         public final /* synthetic */ Class j;
         public final /* synthetic */ Class k;
         public final /* synthetic */ TypeAdapter l;
@@ -826,7 +826,7 @@ public final class TypeAdapters {
             this.l = typeAdapter;
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             Class<? super T> rawType = typeToken.getRawType();
             if (rawType == this.j || rawType == this.k) {
@@ -836,9 +836,9 @@ public final class TypeAdapters {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Factory[type=");
-            outline.k0(this.k, sbU, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
-            outline.k0(this.j, sbU, ",adapter=");
+            StringBuilder sbU = a.U("Factory[type=");
+            a.k0(this.k, sbU, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
+            a.k0(this.j, sbU, ",adapter=");
             sbU.append(this.l);
             sbU.append("]");
             return sbU.toString();
@@ -846,7 +846,7 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$34, reason: invalid class name */
-    public class AnonymousClass34 implements TypeAdapterFactory2 {
+    public class AnonymousClass34 implements o {
         public final /* synthetic */ Class j;
         public final /* synthetic */ Class k;
         public final /* synthetic */ TypeAdapter l;
@@ -857,7 +857,7 @@ public final class TypeAdapters {
             this.l = typeAdapter;
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             Class<? super T> rawType = typeToken.getRawType();
             if (rawType == this.j || rawType == this.k) {
@@ -867,9 +867,9 @@ public final class TypeAdapters {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Factory[type=");
-            outline.k0(this.j, sbU, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
-            outline.k0(this.k, sbU, ",adapter=");
+            StringBuilder sbU = a.U("Factory[type=");
+            a.k0(this.j, sbU, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
+            a.k0(this.k, sbU, ",adapter=");
             sbU.append(this.l);
             sbU.append("]");
             return sbU.toString();
@@ -877,7 +877,7 @@ public final class TypeAdapters {
     }
 
     /* renamed from: com.google.gson.internal.bind.TypeAdapters$35, reason: invalid class name */
-    public class AnonymousClass35 implements TypeAdapterFactory2 {
+    public class AnonymousClass35 implements o {
         public final /* synthetic */ Class j;
         public final /* synthetic */ TypeAdapter k;
 
@@ -896,7 +896,7 @@ public final class TypeAdapters {
                 if (t1 == null || this.a.isInstance(t1)) {
                     return t1;
                 }
-                StringBuilder sbU = outline.U("Expected a ");
+                StringBuilder sbU = a.U("Expected a ");
                 sbU.append(this.a.getName());
                 sbU.append(" but was ");
                 sbU.append(t1.getClass().getName());
@@ -914,7 +914,7 @@ public final class TypeAdapters {
             this.k = typeAdapter;
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T2> TypeAdapter<T2> create(Gson gson, TypeToken<T2> typeToken) {
             Class<? super T2> rawType = typeToken.getRawType();
             if (this.j.isAssignableFrom(rawType)) {
@@ -924,8 +924,8 @@ public final class TypeAdapters {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Factory[typeHierarchy=");
-            outline.k0(this.j, sbU, ",adapter=");
+            StringBuilder sbU = a.U("Factory[typeHierarchy=");
+            a.k0(this.j, sbU, ",adapter=");
             sbU.append(this.k);
             sbU.append("]");
             return sbU.toString();
@@ -1053,10 +1053,10 @@ public final class TypeAdapters {
             try {
                 for (T t : cls.getEnumConstants()) {
                     String strName = t.name();
-                    SerializedName serializedName = (SerializedName) cls.getField(strName).getAnnotation(SerializedName.class);
-                    if (serializedName != null) {
-                        strName = serializedName.value();
-                        for (String str : serializedName.alternate()) {
+                    b bVar = (b) cls.getField(strName).getAnnotation(b.class);
+                    if (bVar != null) {
+                        strName = bVar.value();
+                        for (String str : bVar.alternate()) {
                             this.a.put(str, t);
                         }
                     }

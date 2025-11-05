@@ -1,6 +1,5 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import a0.a.a.b;
 import android.content.Context;
 import android.text.SpannableString;
 import android.text.SpannedString;
@@ -9,8 +8,8 @@ import android.text.style.StyleSpan;
 import androidx.annotation.ColorInt;
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.commands.ApplicationCommandType;
@@ -18,8 +17,8 @@ import com.discord.api.sticker.Sticker;
 import com.discord.app.AppLog;
 import com.discord.models.commands.Application;
 import com.discord.models.commands.ApplicationCommand;
-import com.discord.models.commands.ApplicationCommand3;
 import com.discord.models.commands.ApplicationCommandOption;
+import com.discord.models.commands.ApplicationSubCommand;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.models.user.User;
 import com.discord.stores.CommandAutocompleteState;
@@ -35,16 +34,16 @@ import com.discord.utilities.logging.Logger;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.textprocessing.FontColorSpan;
 import com.discord.utilities.textprocessing.SimpleRoundedBackgroundSpan;
-import com.discord.widgets.chat.AutocompleteUtils;
+import com.discord.widgets.chat.AutocompleteSelectionTypes;
 import com.discord.widgets.chat.MessageContent;
 import com.discord.widgets.chat.input.AppFlexInputViewModel;
-import com.discord.widgets.chat.input.MentionUtils;
-import com.discord.widgets.chat.input.WidgetChatInputAutocompleteStickerAdapter2;
+import com.discord.widgets.chat.input.AutocompleteStickerItem;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import com.discord.widgets.chat.input.WidgetChatInputDiscoveryCommandsModel;
-import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel4;
-import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel5;
-import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel6;
+import com.discord.widgets.chat.input.autocomplete.AutocompleteViewState;
+import com.discord.widgets.chat.input.autocomplete.Event;
 import com.discord.widgets.chat.input.autocomplete.InputEditTextAction;
+import com.discord.widgets.chat.input.autocomplete.SelectedCommandViewState;
 import com.discord.widgets.chat.input.autocomplete.commands.AutocompleteCommandUtils;
 import com.discord.widgets.chat.input.emoji.EmojiAutocompletePremiumUpsellFeatureFlag;
 import com.discord.widgets.chat.input.models.ApplicationCommandData;
@@ -55,28 +54,26 @@ import com.discord.widgets.chat.input.models.ChatInputMentionsMap;
 import com.discord.widgets.chat.input.models.CommandOptionValue;
 import com.discord.widgets.chat.input.models.InputCommandContext;
 import com.discord.widgets.chat.input.models.InputSelectionModel;
-import com.discord.widgets.chat.input.models.InputSelectionModel2;
+import com.discord.widgets.chat.input.models.InputSelectionModelKt;
 import com.discord.widgets.chat.input.models.MentionInputModel;
 import com.discord.widgets.chat.input.models.MentionToken;
 import com.discord.widgets.chat.input.models.OptionRange;
 import com.lytefast.flexinput.model.Attachment;
-import d0.d0._Ranges;
-import d0.g0.StringNumberConversions;
-import d0.g0.Strings4;
-import d0.g0._Strings;
-import d0.t.Collections2;
-import d0.t.CollectionsJVM;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.t._CollectionsJvm;
-import d0.t._Sets;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import f0.e0.Util7;
-import j0.k.Func1;
+import d0.d0.f;
+import d0.g0.s;
+import d0.g0.w;
+import d0.g0.y;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.n0;
+import d0.t.o0;
+import d0.t.t;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
+import f0.e0.c;
+import j0.k.b;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -90,12 +87,12 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import kotlin.ranges.Ranges2;
+import kotlin.ranges.IntRange;
 import rx.Observable;
 import rx.functions.Action1;
 import rx.functions.Func2;
@@ -103,7 +100,7 @@ import rx.subjects.BehaviorSubject;
 
 /* compiled from: AutocompleteViewModel.kt */
 /* loaded from: classes2.dex */
-public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewModel7> {
+public final class AutocompleteViewModel extends d0<ViewState> {
     public static final String COMMAND_DISCOVER_TOKEN = "/";
 
     /* renamed from: Companion, reason: from kotlin metadata */
@@ -117,7 +114,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     private final int defaultMentionColor;
     private final BehaviorSubject<InputEditTextAction> editTextAction;
     private final boolean emojiAutocompleteUpsellEnabled;
-    private final BehaviorSubject<AutocompleteViewModel5> events;
+    private final BehaviorSubject<Event> events;
     private final AppFlexInputViewModel flexInputViewModel;
     private final BehaviorSubject<MentionInputModel> inputMentionModelSubject;
     private final BehaviorSubject<SelectionState> inputSelectionSubject;
@@ -149,46 +146,46 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$10, reason: invalid class name */
-    public static final class AnonymousClass10<T> implements Action1<Tuples2<? extends ApplicationCommandOption, ? extends String>> {
+    public static final class AnonymousClass10<T> implements Action1<Pair<? extends ApplicationCommandOption, ? extends String>> {
         public AnonymousClass10() {
         }
 
         @Override // rx.functions.Action1
-        public /* bridge */ /* synthetic */ void call(Tuples2<? extends ApplicationCommandOption, ? extends String> tuples2) {
-            call2((Tuples2<ApplicationCommandOption, String>) tuples2);
+        public /* bridge */ /* synthetic */ void call(Pair<? extends ApplicationCommandOption, ? extends String> pair) {
+            call2((Pair<ApplicationCommandOption, String>) pair);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final void call2(Tuples2<ApplicationCommandOption, String> tuples2) {
-            AutocompleteViewModel.this.getStoreApplicationCommands().setAutocompleteLoading(tuples2.getFirst().getName(), tuples2.getSecond());
+        public final void call2(Pair<ApplicationCommandOption, String> pair) {
+            AutocompleteViewModel.this.getStoreApplicationCommands().setAutocompleteLoading(pair.getFirst().getName(), pair.getSecond());
         }
     }
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$11, reason: invalid class name */
-    public static final class AnonymousClass11 extends Lambda implements Function1<Tuples2<? extends ApplicationCommandOption, ? extends String>, Unit> {
+    public static final class AnonymousClass11 extends o implements Function1<Pair<? extends ApplicationCommandOption, ? extends String>, Unit> {
         public AnonymousClass11() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Tuples2<? extends ApplicationCommandOption, ? extends String> tuples2) {
-            invoke2((Tuples2<ApplicationCommandOption, String>) tuples2);
+        public /* bridge */ /* synthetic */ Unit invoke(Pair<? extends ApplicationCommandOption, ? extends String> pair) {
+            invoke2((Pair<ApplicationCommandOption, String>) pair);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Tuples2<ApplicationCommandOption, String> tuples2) {
-            AutocompleteViewModel.access$getEvents$p(AutocompleteViewModel.this).onNext(new AutocompleteViewModel5.RequestAutocompleteData(tuples2.getFirst()));
+        public final void invoke2(Pair<ApplicationCommandOption, String> pair) {
+            AutocompleteViewModel.access$getEvents$p(AutocompleteViewModel.this).onNext(new Event.RequestAutocompleteData(pair.getFirst()));
         }
     }
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$12, reason: invalid class name */
-    public static final class AnonymousClass12<T, R> implements Func1<AutocompleteInputSelectionModel, String> {
+    public static final class AnonymousClass12<T, R> implements b<AutocompleteInputSelectionModel, String> {
         public static final AnonymousClass12 INSTANCE = new AnonymousClass12();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ String call(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
             return call2(autocompleteInputSelectionModel);
         }
@@ -205,7 +202,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass2(AutocompleteViewModel autocompleteViewModel) {
             super(1, autocompleteViewModel, AutocompleteViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/autocomplete/AutocompleteViewModel$StoreState;)V", 0);
         }
@@ -218,7 +215,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             AutocompleteViewModel.access$handleStoreState((AutocompleteViewModel) this.receiver, storeState);
         }
     }
@@ -236,12 +233,12 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final InputSelectionModel call2(SelectionState selectionState, MentionInputModel mentionInputModel) {
-            if (!Intrinsics3.areEqual(selectionState.getInput(), mentionInputModel.getInput().toString())) {
+            if (!m.areEqual(selectionState.getInput(), mentionInputModel.getInput().toString())) {
                 return null;
             }
             AutocompleteViewModel autocompleteViewModel = AutocompleteViewModel.this;
-            Ranges2 selection = selectionState.getSelection();
-            Intrinsics3.checkNotNullExpressionValue(mentionInputModel, "inputModel");
+            IntRange selection = selectionState.getSelection();
+            m.checkNotNullExpressionValue(mentionInputModel, "inputModel");
             return AutocompleteViewModel.access$handleSelectionWithInputModel(autocompleteViewModel, selection, mentionInputModel);
         }
     }
@@ -264,7 +261,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$5, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass5 extends FunctionReferenceImpl implements Function1<InputSelectionModel, Unit> {
+    public static final /* synthetic */ class AnonymousClass5 extends k implements Function1<InputSelectionModel, Unit> {
         public AnonymousClass5(AutocompleteViewModel autocompleteViewModel) {
             super(1, autocompleteViewModel, AutocompleteViewModel.class, "handleInputSelectionModel", "handleInputSelectionModel(Lcom/discord/widgets/chat/input/models/InputSelectionModel;)V", 0);
         }
@@ -277,7 +274,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InputSelectionModel inputSelectionModel) throws IOException {
-            Intrinsics3.checkNotNullParameter(inputSelectionModel, "p1");
+            m.checkNotNullParameter(inputSelectionModel, "p1");
             AutocompleteViewModel.access$handleInputSelectionModel((AutocompleteViewModel) this.receiver, inputSelectionModel);
         }
     }
@@ -300,7 +297,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$7, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass7 extends FunctionReferenceImpl implements Function1<AutocompleteInputSelectionModel, Unit> {
+    public static final /* synthetic */ class AnonymousClass7 extends k implements Function1<AutocompleteInputSelectionModel, Unit> {
         public AnonymousClass7(AutocompleteViewModel autocompleteViewModel) {
             super(1, autocompleteViewModel, AutocompleteViewModel.class, "handleAutocompleteInputSelectionModel", "handleAutocompleteInputSelectionModel(Lcom/discord/widgets/chat/input/models/AutocompleteInputSelectionModel;)V", 0);
         }
@@ -313,7 +310,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
-            Intrinsics3.checkNotNullParameter(autocompleteInputSelectionModel, "p1");
+            m.checkNotNullParameter(autocompleteInputSelectionModel, "p1");
             AutocompleteViewModel.access$handleAutocompleteInputSelectionModel((AutocompleteViewModel) this.receiver, autocompleteInputSelectionModel);
         }
     }
@@ -336,16 +333,16 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     /* compiled from: AutocompleteViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$9, reason: invalid class name */
-    public static final class AnonymousClass9<T, R> implements Func1<AutocompleteInputSelectionModel, Tuples2<? extends ApplicationCommandOption, ? extends String>> {
+    public static final class AnonymousClass9<T, R> implements b<AutocompleteInputSelectionModel, Pair<? extends ApplicationCommandOption, ? extends String>> {
         public static final AnonymousClass9 INSTANCE = new AnonymousClass9();
 
-        @Override // j0.k.Func1
-        public /* bridge */ /* synthetic */ Tuples2<? extends ApplicationCommandOption, ? extends String> call(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
+        @Override // j0.k.b
+        public /* bridge */ /* synthetic */ Pair<? extends ApplicationCommandOption, ? extends String> call(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
             return call2(autocompleteInputSelectionModel);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Tuples2<ApplicationCommandOption, String> call2(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
+        public final Pair<ApplicationCommandOption, String> call2(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
             ApplicationCommandOption selectedCommandOption;
             InputSelectionModel inputSelectionModel = autocompleteInputSelectionModel.getInputSelectionModel();
             if (!(inputSelectionModel instanceof InputSelectionModel.CommandInputSelectionModel)) {
@@ -356,7 +353,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 return null;
             }
             CommandOptionValue commandOptionValue = commandInputSelectionModel.getInputModel().getInputCommandOptionValues().get(selectedCommandOption);
-            return new Tuples2<>(selectedCommandOption, String.valueOf(commandOptionValue != null ? commandOptionValue.getValue() : null));
+            return new Pair<>(selectedCommandOption, String.valueOf(commandOptionValue != null ? commandOptionValue.getValue() : null));
         }
     }
 
@@ -373,13 +370,13 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             Observable observableG;
             if (inputChannelId != null) {
                 observableG = StoreStream.INSTANCE.getChannels().observeChannel(inputChannelId.longValue()).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+                m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
             } else {
                 observableG = StoreStream.INSTANCE.getChannelsSelected().observeSelectedChannel().y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+                m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
             }
-            Observable<StoreState> observableY = observableG.Y(new AutocompleteViewModel2(storeApplicationCommands, storeApplicationCommandsFrecency));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "inputChannel.switchMap {…      )\n        }\n      }");
+            Observable<StoreState> observableY = observableG.Y(new AutocompleteViewModel$Companion$observeStores$1(storeApplicationCommands, storeApplicationCommandsFrecency));
+            m.checkNotNullExpressionValue(observableY, "inputChannel.switchMap {…      )\n        }\n      }");
             return observableY;
         }
 
@@ -392,7 +389,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     public static final /* data */ class InputState {
         private Map<Long, Integer> applicationsPosition;
         private final CharSequence currentInput;
-        private final Map<Ranges2, Autocompletable> inputAutocompleteMap;
+        private final Map<IntRange, Autocompletable> inputAutocompleteMap;
         private final ApplicationCommand selectedCommand;
         private final ApplicationCommandOption showErrorForOption;
 
@@ -401,10 +398,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public InputState(CharSequence charSequence, ApplicationCommand applicationCommand, Map<Long, Integer> map, ApplicationCommandOption applicationCommandOption, Map<Ranges2, ? extends Autocompletable> map2) {
-            Intrinsics3.checkNotNullParameter(charSequence, "currentInput");
-            Intrinsics3.checkNotNullParameter(map, "applicationsPosition");
-            Intrinsics3.checkNotNullParameter(map2, "inputAutocompleteMap");
+        public InputState(CharSequence charSequence, ApplicationCommand applicationCommand, Map<Long, Integer> map, ApplicationCommandOption applicationCommandOption, Map<IntRange, ? extends Autocompletable> map2) {
+            m.checkNotNullParameter(charSequence, "currentInput");
+            m.checkNotNullParameter(map, "applicationsPosition");
+            m.checkNotNullParameter(map2, "inputAutocompleteMap");
             this.currentInput = charSequence;
             this.selectedCommand = applicationCommand;
             this.applicationsPosition = map;
@@ -453,14 +450,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return this.showErrorForOption;
         }
 
-        public final Map<Ranges2, Autocompletable> component5() {
+        public final Map<IntRange, Autocompletable> component5() {
             return this.inputAutocompleteMap;
         }
 
-        public final InputState copy(CharSequence currentInput, ApplicationCommand selectedCommand, Map<Long, Integer> applicationsPosition, ApplicationCommandOption showErrorForOption, Map<Ranges2, ? extends Autocompletable> inputAutocompleteMap) {
-            Intrinsics3.checkNotNullParameter(currentInput, "currentInput");
-            Intrinsics3.checkNotNullParameter(applicationsPosition, "applicationsPosition");
-            Intrinsics3.checkNotNullParameter(inputAutocompleteMap, "inputAutocompleteMap");
+        public final InputState copy(CharSequence currentInput, ApplicationCommand selectedCommand, Map<Long, Integer> applicationsPosition, ApplicationCommandOption showErrorForOption, Map<IntRange, ? extends Autocompletable> inputAutocompleteMap) {
+            m.checkNotNullParameter(currentInput, "currentInput");
+            m.checkNotNullParameter(applicationsPosition, "applicationsPosition");
+            m.checkNotNullParameter(inputAutocompleteMap, "inputAutocompleteMap");
             return new InputState(currentInput, selectedCommand, applicationsPosition, showErrorForOption, inputAutocompleteMap);
         }
 
@@ -472,7 +469,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 return false;
             }
             InputState inputState = (InputState) other;
-            return Intrinsics3.areEqual(this.currentInput, inputState.currentInput) && Intrinsics3.areEqual(this.selectedCommand, inputState.selectedCommand) && Intrinsics3.areEqual(this.applicationsPosition, inputState.applicationsPosition) && Intrinsics3.areEqual(this.showErrorForOption, inputState.showErrorForOption) && Intrinsics3.areEqual(this.inputAutocompleteMap, inputState.inputAutocompleteMap);
+            return m.areEqual(this.currentInput, inputState.currentInput) && m.areEqual(this.selectedCommand, inputState.selectedCommand) && m.areEqual(this.applicationsPosition, inputState.applicationsPosition) && m.areEqual(this.showErrorForOption, inputState.showErrorForOption) && m.areEqual(this.inputAutocompleteMap, inputState.inputAutocompleteMap);
         }
 
         public final Map<Long, Integer> getApplicationsPosition() {
@@ -483,7 +480,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return this.currentInput;
         }
 
-        public final Map<Ranges2, Autocompletable> getInputAutocompleteMap() {
+        public final Map<IntRange, Autocompletable> getInputAutocompleteMap() {
             return this.inputAutocompleteMap;
         }
 
@@ -504,17 +501,17 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             int iHashCode3 = (iHashCode2 + (map != null ? map.hashCode() : 0)) * 31;
             ApplicationCommandOption applicationCommandOption = this.showErrorForOption;
             int iHashCode4 = (iHashCode3 + (applicationCommandOption != null ? applicationCommandOption.hashCode() : 0)) * 31;
-            Map<Ranges2, Autocompletable> map2 = this.inputAutocompleteMap;
+            Map<IntRange, Autocompletable> map2 = this.inputAutocompleteMap;
             return iHashCode4 + (map2 != null ? map2.hashCode() : 0);
         }
 
         public final void setApplicationsPosition(Map<Long, Integer> map) {
-            Intrinsics3.checkNotNullParameter(map, "<set-?>");
+            m.checkNotNullParameter(map, "<set-?>");
             this.applicationsPosition = map;
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("InputState(currentInput=");
+            StringBuilder sbU = a.U("InputState(currentInput=");
             sbU.append(this.currentInput);
             sbU.append(", selectedCommand=");
             sbU.append(this.selectedCommand);
@@ -523,34 +520,34 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             sbU.append(", showErrorForOption=");
             sbU.append(this.showErrorForOption);
             sbU.append(", inputAutocompleteMap=");
-            return outline.M(sbU, this.inputAutocompleteMap, ")");
+            return a.M(sbU, this.inputAutocompleteMap, ")");
         }
 
         public /* synthetic */ InputState(String str, ApplicationCommand applicationCommand, Map map, ApplicationCommandOption applicationCommandOption, Map map2, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i & 1) != 0 ? "" : str, (i & 2) != 0 ? null : applicationCommand, (i & 4) != 0 ? new HashMap() : map, (i & 8) == 0 ? applicationCommandOption : null, (i & 16) != 0 ? Maps6.emptyMap() : map2);
+            this((i & 1) != 0 ? "" : str, (i & 2) != 0 ? null : applicationCommand, (i & 4) != 0 ? new HashMap() : map, (i & 8) == 0 ? applicationCommandOption : null, (i & 16) != 0 ? h0.emptyMap() : map2);
         }
     }
 
     /* compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class SelectionState {
         private final String input;
-        private final Ranges2 selection;
+        private final IntRange selection;
 
-        public SelectionState(String str, Ranges2 ranges2) {
-            Intrinsics3.checkNotNullParameter(str, "input");
-            Intrinsics3.checkNotNullParameter(ranges2, "selection");
+        public SelectionState(String str, IntRange intRange) {
+            m.checkNotNullParameter(str, "input");
+            m.checkNotNullParameter(intRange, "selection");
             this.input = str;
-            this.selection = ranges2;
+            this.selection = intRange;
         }
 
-        public static /* synthetic */ SelectionState copy$default(SelectionState selectionState, String str, Ranges2 ranges2, int i, Object obj) {
+        public static /* synthetic */ SelectionState copy$default(SelectionState selectionState, String str, IntRange intRange, int i, Object obj) {
             if ((i & 1) != 0) {
                 str = selectionState.input;
             }
             if ((i & 2) != 0) {
-                ranges2 = selectionState.selection;
+                intRange = selectionState.selection;
             }
-            return selectionState.copy(str, ranges2);
+            return selectionState.copy(str, intRange);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -559,13 +556,13 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
 
         /* renamed from: component2, reason: from getter */
-        public final Ranges2 getSelection() {
+        public final IntRange getSelection() {
             return this.selection;
         }
 
-        public final SelectionState copy(String input, Ranges2 selection) {
-            Intrinsics3.checkNotNullParameter(input, "input");
-            Intrinsics3.checkNotNullParameter(selection, "selection");
+        public final SelectionState copy(String input, IntRange selection) {
+            m.checkNotNullParameter(input, "input");
+            m.checkNotNullParameter(selection, "selection");
             return new SelectionState(input, selection);
         }
 
@@ -577,26 +574,26 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 return false;
             }
             SelectionState selectionState = (SelectionState) other;
-            return Intrinsics3.areEqual(this.input, selectionState.input) && Intrinsics3.areEqual(this.selection, selectionState.selection);
+            return m.areEqual(this.input, selectionState.input) && m.areEqual(this.selection, selectionState.selection);
         }
 
         public final String getInput() {
             return this.input;
         }
 
-        public final Ranges2 getSelection() {
+        public final IntRange getSelection() {
             return this.selection;
         }
 
         public int hashCode() {
             String str = this.input;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
-            Ranges2 ranges2 = this.selection;
-            return iHashCode + (ranges2 != null ? ranges2.hashCode() : 0);
+            IntRange intRange = this.selection;
+            return iHashCode + (intRange != null ? intRange.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("SelectionState(input=");
+            StringBuilder sbU = a.U("SelectionState(input=");
             sbU.append(this.input);
             sbU.append(", selection=");
             sbU.append(this.selection);
@@ -620,14 +617,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(long j, List<Long> list, Channel channel, List<? extends ApplicationCommand> list2, List<Application> list3, Map<String, ? extends Map<String, ? extends CommandAutocompleteState>> map, Map<LeadingIdentifier, ? extends Set<? extends Autocompletable>> map2, WidgetChatInputDiscoveryCommandsModel widgetChatInputDiscoveryCommandsModel, List<String> list4, List<? extends ApplicationCommand> list5) {
-            Intrinsics3.checkNotNullParameter(list, "userRoles");
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            Intrinsics3.checkNotNullParameter(list2, "queriedCommands");
-            Intrinsics3.checkNotNullParameter(list3, "applications");
-            Intrinsics3.checkNotNullParameter(map, "commandOptionAutocompleteItems");
-            Intrinsics3.checkNotNullParameter(map2, "autocompletables");
-            Intrinsics3.checkNotNullParameter(list4, "frecencyCommandIds");
-            Intrinsics3.checkNotNullParameter(list5, "frecencyCommands");
+            m.checkNotNullParameter(list, "userRoles");
+            m.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(list2, "queriedCommands");
+            m.checkNotNullParameter(list3, "applications");
+            m.checkNotNullParameter(map, "commandOptionAutocompleteItems");
+            m.checkNotNullParameter(map2, "autocompletables");
+            m.checkNotNullParameter(list4, "frecencyCommandIds");
+            m.checkNotNullParameter(list5, "frecencyCommands");
             this.userId = j;
             this.userRoles = list;
             this.channel = channel;
@@ -688,14 +685,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
 
         public final StoreState copy(long userId, List<Long> userRoles, Channel channel, List<? extends ApplicationCommand> queriedCommands, List<Application> applications, Map<String, ? extends Map<String, ? extends CommandAutocompleteState>> commandOptionAutocompleteItems, Map<LeadingIdentifier, ? extends Set<? extends Autocompletable>> autocompletables, WidgetChatInputDiscoveryCommandsModel browserCommands, List<String> frecencyCommandIds, List<? extends ApplicationCommand> frecencyCommands) {
-            Intrinsics3.checkNotNullParameter(userRoles, "userRoles");
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            Intrinsics3.checkNotNullParameter(queriedCommands, "queriedCommands");
-            Intrinsics3.checkNotNullParameter(applications, "applications");
-            Intrinsics3.checkNotNullParameter(commandOptionAutocompleteItems, "commandOptionAutocompleteItems");
-            Intrinsics3.checkNotNullParameter(autocompletables, "autocompletables");
-            Intrinsics3.checkNotNullParameter(frecencyCommandIds, "frecencyCommandIds");
-            Intrinsics3.checkNotNullParameter(frecencyCommands, "frecencyCommands");
+            m.checkNotNullParameter(userRoles, "userRoles");
+            m.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(queriedCommands, "queriedCommands");
+            m.checkNotNullParameter(applications, "applications");
+            m.checkNotNullParameter(commandOptionAutocompleteItems, "commandOptionAutocompleteItems");
+            m.checkNotNullParameter(autocompletables, "autocompletables");
+            m.checkNotNullParameter(frecencyCommandIds, "frecencyCommandIds");
+            m.checkNotNullParameter(frecencyCommands, "frecencyCommands");
             return new StoreState(userId, userRoles, channel, queriedCommands, applications, commandOptionAutocompleteItems, autocompletables, browserCommands, frecencyCommandIds, frecencyCommands);
         }
 
@@ -707,7 +704,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return this.userId == storeState.userId && Intrinsics3.areEqual(this.userRoles, storeState.userRoles) && Intrinsics3.areEqual(this.channel, storeState.channel) && Intrinsics3.areEqual(this.queriedCommands, storeState.queriedCommands) && Intrinsics3.areEqual(this.applications, storeState.applications) && Intrinsics3.areEqual(this.commandOptionAutocompleteItems, storeState.commandOptionAutocompleteItems) && Intrinsics3.areEqual(this.autocompletables, storeState.autocompletables) && Intrinsics3.areEqual(this.browserCommands, storeState.browserCommands) && Intrinsics3.areEqual(this.frecencyCommandIds, storeState.frecencyCommandIds) && Intrinsics3.areEqual(this.frecencyCommands, storeState.frecencyCommands);
+            return this.userId == storeState.userId && m.areEqual(this.userRoles, storeState.userRoles) && m.areEqual(this.channel, storeState.channel) && m.areEqual(this.queriedCommands, storeState.queriedCommands) && m.areEqual(this.applications, storeState.applications) && m.areEqual(this.commandOptionAutocompleteItems, storeState.commandOptionAutocompleteItems) && m.areEqual(this.autocompletables, storeState.autocompletables) && m.areEqual(this.browserCommands, storeState.browserCommands) && m.areEqual(this.frecencyCommandIds, storeState.frecencyCommandIds) && m.areEqual(this.frecencyCommands, storeState.frecencyCommands);
         }
 
         public final List<Application> getApplications() {
@@ -751,7 +748,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
 
         public int hashCode() {
-            int iA = b.a(this.userId) * 31;
+            int iA = a0.a.a.b.a(this.userId) * 31;
             List<Long> list = this.userRoles;
             int iHashCode = (iA + (list != null ? list.hashCode() : 0)) * 31;
             Channel channel = this.channel;
@@ -773,7 +770,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(userId=");
+            StringBuilder sbU = a.U("StoreState(userId=");
             sbU.append(this.userId);
             sbU.append(", userRoles=");
             sbU.append(this.userRoles);
@@ -792,11 +789,11 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             sbU.append(", frecencyCommandIds=");
             sbU.append(this.frecencyCommandIds);
             sbU.append(", frecencyCommands=");
-            return outline.L(sbU, this.frecencyCommands, ")");
+            return a.L(sbU, this.frecencyCommands, ")");
         }
 
         public /* synthetic */ StoreState(long j, List list, Channel channel, List list2, List list3, Map map, Map map2, WidgetChatInputDiscoveryCommandsModel widgetChatInputDiscoveryCommandsModel, List list4, List list5, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this(j, list, channel, (i & 8) != 0 ? Collections2.emptyList() : list2, (i & 16) != 0 ? Collections2.emptyList() : list3, (i & 32) != 0 ? Maps6.emptyMap() : map, (i & 64) != 0 ? Maps6.emptyMap() : map2, (i & 128) != 0 ? null : widgetChatInputDiscoveryCommandsModel, (i & 256) != 0 ? Collections2.emptyList() : list4, (i & 512) != 0 ? Collections2.emptyList() : list5);
+            this(j, list, channel, (i & 8) != 0 ? n.emptyList() : list2, (i & 16) != 0 ? n.emptyList() : list3, (i & 32) != 0 ? h0.emptyMap() : map, (i & 64) != 0 ? h0.emptyMap() : map2, (i & 128) != 0 ? null : widgetChatInputDiscoveryCommandsModel, (i & 256) != 0 ? n.emptyList() : list4, (i & 512) != 0 ? n.emptyList() : list5);
         }
     }
 
@@ -841,8 +838,8 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         autocompleteViewModel.handleInputSelectionModel(inputSelectionModel);
     }
 
-    public static final /* synthetic */ InputSelectionModel access$handleSelectionWithInputModel(AutocompleteViewModel autocompleteViewModel, Ranges2 ranges2, MentionInputModel mentionInputModel) {
-        return autocompleteViewModel.handleSelectionWithInputModel(ranges2, mentionInputModel);
+    public static final /* synthetic */ InputSelectionModel access$handleSelectionWithInputModel(AutocompleteViewModel autocompleteViewModel, IntRange intRange, MentionInputModel mentionInputModel) {
+        return autocompleteViewModel.handleSelectionWithInputModel(intRange, mentionInputModel);
     }
 
     public static final /* synthetic */ void access$handleStoreState(AutocompleteViewModel autocompleteViewModel, StoreState storeState) {
@@ -858,7 +855,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             OptionRange optionRange = model.getInputCommandOptionsRanges().get(applicationCommandOption);
             if (optionRange != null) {
                 int last = optionRange.getParam().getLast();
-                if (!Intrinsics3.areEqual(selectedOption, applicationCommandOption)) {
+                if (!m.areEqual(selectedOption, applicationCommandOption)) {
                     last = optionRange.getValue().getLast();
                 }
                 int i = last;
@@ -869,7 +866,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 if (commandOptionValue != null && (value = commandOptionValue.getValue()) != null) {
                     string = value.toString();
                 }
-                linkedHashMap.put(new Ranges2(optionRange.getParam().getFirst(), i), CollectionsJVM.listOf(new ApplicationCommandSpan(applicationCommandOption, string, optionRange.getParam().getFirst(), i, DimenUtils.dpToPixels(4), DimenUtils.dpToPixels(4), i2, DimenUtils.dpToPixels(4), numValueOf, false, AutocompleteViewModel3.INSTANCE, 512, null)));
+                linkedHashMap.put(new IntRange(optionRange.getParam().getFirst(), i), d0.t.m.listOf(new ApplicationCommandSpan(applicationCommandOption, string, optionRange.getParam().getFirst(), i, DimenUtils.dpToPixels(4), DimenUtils.dpToPixels(4), i2, DimenUtils.dpToPixels(4), numValueOf, false, AutocompleteViewModel$applyCommandOptionSpans$1$1$1.INSTANCE, 512, null)));
             }
             autocompleteViewModel = this;
         }
@@ -880,10 +877,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         AutocompleteCommandUtils autocompleteCommandUtils = AutocompleteCommandUtils.INSTANCE;
         String commandPrefix = autocompleteCommandUtils.getCommandPrefix(input);
         String commandPrefix2 = previousInput != null ? autocompleteCommandUtils.getCommandPrefix(previousInput) : null;
-        if (commandPrefix == null || !(!Intrinsics3.areEqual(commandPrefix, commandPrefix2))) {
+        if (commandPrefix == null || !(!m.areEqual(commandPrefix, commandPrefix2))) {
             return;
         }
-        queryCommandsFromCommandPrefixToken((String) Strings4.split$default((CharSequence) commandPrefix, new String[]{" "}, false, 0, 6, (Object) null).get(0), channel);
+        queryCommandsFromCommandPrefixToken((String) w.split$default((CharSequence) commandPrefix, new String[]{" "}, false, 0, 6, (Object) null).get(0), channel);
     }
 
     private final boolean commandCleared(AutocompleteInputSelectionModel newModel, AutocompleteInputSelectionModel oldModel) {
@@ -914,15 +911,15 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     @MainThread
     private final InputEditTextAction generateSpanUpdates(MentionInputModel model) {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        for (Map.Entry<Ranges2, Autocompletable> entry : model.getInputMentionsMap().entrySet()) {
-            Ranges2 key = entry.getKey();
+        for (Map.Entry<IntRange, Autocompletable> entry : model.getInputMentionsMap().entrySet()) {
+            IntRange key = entry.getKey();
             Autocompletable value = entry.getValue();
             if (!(value instanceof ApplicationCommandAutocompletable)) {
                 if (!(value instanceof RoleAutocompletable)) {
                     value = null;
                 }
                 RoleAutocompletable roleAutocompletable = (RoleAutocompletable) value;
-                linkedHashMap.put(key, Collections2.listOf((Object[]) new MetricAffectingSpan[]{new FontColorSpan(RoleUtils.getOpaqueColor(roleAutocompletable != null ? roleAutocompletable.getRole() : null, this.defaultMentionColor)), new StyleSpan(1)}));
+                linkedHashMap.put(key, n.listOf((Object[]) new MetricAffectingSpan[]{new FontColorSpan(RoleUtils.getOpaqueColor(roleAutocompletable != null ? roleAutocompletable.getRole() : null, this.defaultMentionColor)), new StyleSpan(1)}));
             }
         }
         return new InputEditTextAction.ReplaceCharacterStyleSpans(model.getInput(), linkedHashMap);
@@ -935,11 +932,11 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         return autocompleteViewModel.getApplicationSendData(applicationCommandOption);
     }
 
-    private final AutocompleteViewModel4 getAutocompleteViewState(String token, List<? extends Autocompletable> autocompletables, List<WidgetChatInputAutocompleteStickerAdapter2> stickers, boolean isAutocompletable) {
-        List mutableList = _Collections.toMutableList((Collection) autocompletables);
+    private final AutocompleteViewState getAutocompleteViewState(String token, List<? extends Autocompletable> autocompletables, List<AutocompleteStickerItem> stickers, boolean isAutocompletable) {
+        List mutableList = u.toMutableList((Collection) autocompletables);
         if (this.emojiAutocompleteUpsellEnabled) {
             boolean reducedMotionEnabled = StoreStream.INSTANCE.getAccessibility().getReducedMotionEnabled();
-            List listFilterIsInstance = _CollectionsJvm.filterIsInstance(autocompletables, EmojiAutocompletable.class);
+            List listFilterIsInstance = t.filterIsInstance(autocompletables, EmojiAutocompletable.class);
             ArrayList arrayList = new ArrayList();
             for (Object obj : listFilterIsInstance) {
                 if (!((EmojiAutocompletable) obj).getEmoji().isUsable()) {
@@ -948,20 +945,20 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             }
             if (!arrayList.isEmpty()) {
                 int size = arrayList.size();
-                List listTake = _Collections.take(arrayList, 3);
-                ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(listTake, 10));
+                List listTake = u.take(arrayList, 3);
+                ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(listTake, 10));
                 Iterator it = listTake.iterator();
                 while (it.hasNext()) {
                     arrayList2.add(((EmojiAutocompletable) it.next()).getEmoji());
                 }
-                mutableList.add(new EmojiUpsellPlaceholder(size, arrayList2, reducedMotionEnabled && ((EmojiAutocompletable) _Collections.first((List) arrayList)).getAnimationsEnabled()));
+                mutableList.add(new EmojiUpsellPlaceholder(size, arrayList2, reducedMotionEnabled && ((EmojiAutocompletable) u.first((List) arrayList)).getAnimationsEnabled()));
                 mutableList.removeAll(arrayList);
             }
         }
-        return (isAutocompletable || (mutableList.isEmpty() ^ true) || (stickers.isEmpty() ^ true)) ? new AutocompleteViewModel4.Autocomplete(false, false, isAutocompletable, mutableList, stickers, token, 2, null) : AutocompleteViewModel4.Hidden.INSTANCE;
+        return (isAutocompletable || (mutableList.isEmpty() ^ true) || (stickers.isEmpty() ^ true)) ? new AutocompleteViewState.Autocomplete(false, false, isAutocompletable, mutableList, stickers, token, 2, null) : AutocompleteViewState.Hidden.INSTANCE;
     }
 
-    public static /* synthetic */ AutocompleteViewModel4 getAutocompleteViewState$default(AutocompleteViewModel autocompleteViewModel, String str, List list, List list2, boolean z2, int i, Object obj) {
+    public static /* synthetic */ AutocompleteViewState getAutocompleteViewState$default(AutocompleteViewModel autocompleteViewModel, String str, List list, List list2, boolean z2, int i, Object obj) {
         if ((i & 8) != 0) {
             z2 = false;
         }
@@ -979,41 +976,41 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         return userA;
     }
 
-    private final AutocompleteViewModel6 getSelectedCommandViewState(AutocompleteInputSelectionModel model) {
+    private final SelectedCommandViewState getSelectedCommandViewState(AutocompleteInputSelectionModel model) {
         InputSelectionModel inputSelectionModel = model.getInputSelectionModel();
         if (inputSelectionModel instanceof InputSelectionModel.CommandInputSelectionModel) {
             ApplicationCommand selectedCommand = ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getInputModel().getInputCommandContext().getSelectedCommand();
             Application selectedApplication = ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getInputModel().getInputCommandContext().getSelectedApplication();
-            return (selectedCommand == null || selectedApplication == null) ? AutocompleteViewModel6.Hidden.INSTANCE : new AutocompleteViewModel6.SelectedCommand(selectedCommand, ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getSelectedCommandOption(), model.getShowErrorsForOptions(), ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getInputModel().getInputCommandOptionValidity(), selectedApplication);
+            return (selectedCommand == null || selectedApplication == null) ? SelectedCommandViewState.Hidden.INSTANCE : new SelectedCommandViewState.SelectedCommand(selectedCommand, ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getSelectedCommandOption(), model.getShowErrorsForOptions(), ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getInputModel().getInputCommandOptionValidity(), selectedApplication);
         }
         if (inputSelectionModel instanceof InputSelectionModel.MessageInputSelectionModel) {
-            return AutocompleteViewModel6.Hidden.INSTANCE;
+            return SelectedCommandViewState.Hidden.INSTANCE;
         }
         throw new NoWhenBranchMatchedException();
     }
 
     @MainThread
     private final void handleAutocompleteInputSelectionModel(AutocompleteInputSelectionModel model) {
-        AutocompleteViewModel4 autocompleteViewState;
+        AutocompleteViewState autocompleteViewState;
         CommandAutocompleteState commandAutocompleteState;
         StoreState storeState;
         WidgetChatInputDiscoveryCommandsModel browserCommands;
         WidgetChatInputDiscoveryCommandsModel browserCommands2;
         MentionToken autocompleteToken = model.getAutocompleteToken();
-        AutocompleteViewModel4 autocomplete = null;
+        AutocompleteViewState autocomplete = null;
         jumpedApplicationId = null;
         Long jumpedApplicationId = null;
         autocomplete = null;
         autocomplete = null;
         autocomplete = null;
-        if (Intrinsics3.areEqual(model.getInputSelectionModel().getInputModel().getInput().toString(), COMMAND_DISCOVER_TOKEN)) {
+        if (m.areEqual(model.getInputSelectionModel().getInputModel().getInput().toString(), COMMAND_DISCOVER_TOKEN)) {
             StoreState storeState2 = this.storeState;
             if (storeState2 != null && (browserCommands2 = storeState2.getBrowserCommands()) != null) {
                 jumpedApplicationId = browserCommands2.getJumpedApplicationId();
             }
             if (jumpedApplicationId != null && ((storeState = this.storeState) == null || (browserCommands = storeState.getBrowserCommands()) == null || browserCommands.getJumpedSequenceId() != this.lastJumpedSequenceId)) {
                 Integer num = this.inputState.getApplicationsPosition().get(jumpedApplicationId);
-                this.events.onNext(new AutocompleteViewModel5.ScrollAutocompletablesToApplication(jumpedApplicationId.longValue(), num != null ? num.intValue() : 3));
+                this.events.onNext(new Event.ScrollAutocompletablesToApplication(jumpedApplicationId.longValue(), num != null ? num.intValue() : 3));
             }
             autocompleteViewState = getApplicationCommandsBrowserViewState();
         } else if (autocompleteToken != null) {
@@ -1031,28 +1028,28 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                     z2 = true;
                 }
                 Boolean bool = ((InputSelectionModel.CommandInputSelectionModel) model.getInputSelectionModel()).getInputModel().getInputCommandOptionValidity().get(selectedCommandOption);
-                if (selectedCommandOption != null && selectedCommandOption.getAutocomplete() && !(commandAutocompleteState instanceof CommandAutocompleteState.Choices) && (!Intrinsics3.areEqual(bool, Boolean.TRUE))) {
-                    autocomplete = new AutocompleteViewModel4.Autocomplete(true, commandAutocompleteState instanceof CommandAutocompleteState.Failed, true, Collections2.emptyList(), Collections2.emptyList(), autocompleteToken.getToken());
-                } else if (selectedCommandOption != null && selectedCommandOption.getAutocomplete() && Intrinsics3.areEqual(bool, Boolean.TRUE)) {
-                    autocomplete = AutocompleteViewModel4.Hidden.INSTANCE;
+                if (selectedCommandOption != null && selectedCommandOption.getAutocomplete() && !(commandAutocompleteState instanceof CommandAutocompleteState.Choices) && (!m.areEqual(bool, Boolean.TRUE))) {
+                    autocomplete = new AutocompleteViewState.Autocomplete(true, commandAutocompleteState instanceof CommandAutocompleteState.Failed, true, n.emptyList(), n.emptyList(), autocompleteToken.getToken());
+                } else if (selectedCommandOption != null && selectedCommandOption.getAutocomplete() && m.areEqual(bool, Boolean.TRUE)) {
+                    autocomplete = AutocompleteViewState.Hidden.INSTANCE;
                 }
             }
             if (autocomplete == null) {
                 List<Autocompletable> listFilterMentionsFromToken = AutocompleteModelUtils.INSTANCE.filterMentionsFromToken(autocompleteToken, model.getInputSelectionModel(), model.getFilteredAutocompletables());
                 List<Sticker> stickerMatches = model.getStickerMatches();
-                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(stickerMatches, 10));
+                ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(stickerMatches, 10));
                 Iterator<T> it = stickerMatches.iterator();
                 while (it.hasNext()) {
-                    arrayList.add(new WidgetChatInputAutocompleteStickerAdapter2((Sticker) it.next(), null, 0, 6, null));
+                    arrayList.add(new AutocompleteStickerItem((Sticker) it.next(), null, 0, 6, null));
                 }
                 autocompleteViewState = getAutocompleteViewState(autocompleteToken.getToken(), listFilterMentionsFromToken, arrayList, z2);
             } else {
                 autocompleteViewState = autocomplete;
             }
         } else {
-            autocompleteViewState = AutocompleteViewModel4.Hidden.INSTANCE;
+            autocompleteViewState = AutocompleteViewState.Hidden.INSTANCE;
         }
-        AutocompleteViewModel6 selectedCommandViewState = getSelectedCommandViewState(model);
+        SelectedCommandViewState selectedCommandViewState = getSelectedCommandViewState(model);
         ApplicationCommand applicationCommandNewSelectedCommand = newSelectedCommand(model, this.lastAutocompleteInputSelectionModel);
         if (applicationCommandNewSelectedCommand != null) {
             onNewCommandSelected(applicationCommandNewSelectedCommand);
@@ -1067,7 +1064,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             selectAttachmentOption(applicationCommandOptionHasAddedAttachmentOption);
         }
         this.lastAutocompleteInputSelectionModel = model;
-        updateViewState(new AutocompleteViewModel7(autocompleteViewState, selectedCommandViewState));
+        updateViewState(new ViewState(autocompleteViewState, selectedCommandViewState));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:29:0x00f6  */
@@ -1093,10 +1090,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 inputSelectionModel = null;
             }
             InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel2 = (InputSelectionModel.CommandInputSelectionModel) inputSelectionModel;
-            setEmptySet = _Collections.toMutableSet(autocompleteCommandUtils.getErrorsToShowForCommandParameters(selectedCommand, selectedCommandOption, commandInputSelectionModel2 != null ? commandInputSelectionModel2.getSelectedCommandOption() : null, commandInputSelectionModel.getInputModel().getInputCommandOptionValidity(), commandInputSelectionModel.getInputModel().getInputCommandOptionValues()));
+            setEmptySet = u.toMutableSet(autocompleteCommandUtils.getErrorsToShowForCommandParameters(selectedCommand, selectedCommandOption, commandInputSelectionModel2 != null ? commandInputSelectionModel2.getSelectedCommandOption() : null, commandInputSelectionModel.getInputModel().getInputCommandOptionValidity(), commandInputSelectionModel.getInputModel().getInputCommandOptionValues()));
             ApplicationCommandOption showErrorForOption = this.inputState.getShowErrorForOption();
             if (showErrorForOption != null) {
-                if (Intrinsics3.areEqual(commandInputSelectionModel.getInputModel().getInputCommandOptionValidity().get(showErrorForOption), Boolean.TRUE) || (!Intrinsics3.areEqual(commandInputSelectionModel.getSelectedCommandOption(), showErrorForOption))) {
+                if (m.areEqual(commandInputSelectionModel.getInputModel().getInputCommandOptionValidity().get(showErrorForOption), Boolean.TRUE) || (!m.areEqual(commandInputSelectionModel.getSelectedCommandOption(), showErrorForOption))) {
                     this.inputState = InputState.copy$default(this.inputState, null, null, null, null, null, 23, null);
                 } else {
                     setEmptySet.add(showErrorForOption);
@@ -1104,13 +1101,13 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             }
             replacePillSpans = applyCommandOptionSpans(commandInputSelectionModel.getInputModel(), commandInputSelectionModel.getSelectedCommandOption(), setEmptySet);
         } else {
-            setEmptySet = Sets5.emptySet();
+            setEmptySet = n0.emptySet();
         }
         Set<ApplicationCommandOption> set = setEmptySet;
         this.editTextAction.onNext(replacePillSpans);
         if (z2) {
             InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel3 = (InputSelectionModel.CommandInputSelectionModel) newModel;
-            commandAutocompleteToken = commandInputSelectionModel3.getSelectedCommandOption() != null ? AutocompleteModelUtils.INSTANCE.getCommandAutocompleteToken(commandInputSelectionModel3.getInputModel().getInput(), newModel.getSelection(), commandInputSelectionModel3.getSelectedCommandOption(), InputSelectionModel2.hasSelectedFreeformInput(newModel), commandInputSelectionModel3.getInputModel().getInputCommandOptionsRanges(), commandInputSelectionModel3.getInputModel().getInputCommandOptionValues()) : AutocompleteModelUtils.INSTANCE.getMessageAutocompleteToken(newModel.getInputModel().getInput(), newModel.getSelection());
+            commandAutocompleteToken = commandInputSelectionModel3.getSelectedCommandOption() != null ? AutocompleteModelUtils.INSTANCE.getCommandAutocompleteToken(commandInputSelectionModel3.getInputModel().getInput(), newModel.getSelection(), commandInputSelectionModel3.getSelectedCommandOption(), InputSelectionModelKt.hasSelectedFreeformInput(newModel), commandInputSelectionModel3.getInputModel().getInputCommandOptionsRanges(), commandInputSelectionModel3.getInputModel().getInputCommandOptionValues()) : AutocompleteModelUtils.INSTANCE.getMessageAutocompleteToken(newModel.getInputModel().getInput(), newModel.getSelection());
         }
         MentionToken mentionToken = commandAutocompleteToken;
         AutocompleteModelUtils autocompleteModelUtils = AutocompleteModelUtils.INSTANCE;
@@ -1125,7 +1122,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         User channelBot = getChannelBot(newChannel);
         Long lValueOf = newChannel.getGuildId() == 0 ? null : Long.valueOf(newChannel.getGuildId());
         boolean z2 = true;
-        if (!(!Intrinsics3.areEqual(oldChannel != null ? Long.valueOf(oldChannel.getGuildId()) : null, lValueOf))) {
+        if (!(!m.areEqual(oldChannel != null ? Long.valueOf(oldChannel.getGuildId()) : null, lValueOf))) {
             if ((oldChannel != null ? Long.valueOf(oldChannel.getGuildId()) : null) != null || lValueOf != null) {
                 z2 = false;
             }
@@ -1142,7 +1139,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    private final InputSelectionModel handleSelectionWithInputModel(Ranges2 selection, MentionInputModel inputModel) {
+    private final InputSelectionModel handleSelectionWithInputModel(IntRange selection, MentionInputModel inputModel) {
         if (inputModel instanceof MentionInputModel.VerifiedCommandInputModel) {
             MentionInputModel.VerifiedCommandInputModel verifiedCommandInputModel = (MentionInputModel.VerifiedCommandInputModel) inputModel;
             return new InputSelectionModel.CommandInputSelectionModel(verifiedCommandInputModel, selection, AutocompleteCommandUtils.INSTANCE.getSelectedCommandOption(selection.getFirst(), verifiedCommandInputModel.getInputCommandOptionsRanges()));
@@ -1162,10 +1159,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             StoreState storeState2 = this.storeState;
             handleNewChannel(currentInput, storeState2 != null ? storeState2.getChannel() : null, newState.getChannel());
         }
-        if (!Intrinsics3.areEqual(this.storeState != null ? r0.getFrecencyCommandIds() : null, newState.getFrecencyCommandIds())) {
+        if (!m.areEqual(this.storeState != null ? r0.getFrecencyCommandIds() : null, newState.getFrecencyCommandIds())) {
             this.storeApplicationCommands.requestFrecencyCommands(newState.getChannel().getGuildId());
         }
-        if ((!Intrinsics3.areEqual(this.storeState != null ? r0.getBrowserCommands() : null, newState.getBrowserCommands())) && newState.getBrowserCommands() != null) {
+        if ((!m.areEqual(this.storeState != null ? r0.getBrowserCommands() : null, newState.getBrowserCommands())) && newState.getBrowserCommands() != null) {
             this.inputState = InputState.copy$default(this.inputState, null, null, getCommandBrowserCommandPositions(newState.getBrowserCommands()), null, null, 27, null);
         }
         this.storeState = newState;
@@ -1196,7 +1193,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             setEmptySet = linkedHashMap.keySet();
         }
         if (setEmptySet == null) {
-            setEmptySet = Sets5.emptySet();
+            setEmptySet = n0.emptySet();
         }
         InputSelectionModel inputSelectionModel2 = oldModel != null ? oldModel.getInputSelectionModel() : null;
         if (!(inputSelectionModel2 instanceof InputSelectionModel.CommandInputSelectionModel)) {
@@ -1215,11 +1212,11 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             setEmptySet2 = linkedHashMap2.keySet();
         }
         if (setEmptySet2 == null) {
-            setEmptySet2 = Sets5.emptySet();
+            setEmptySet2 = n0.emptySet();
         }
-        Set setMinus = _Sets.minus(setEmptySet, (Iterable) setEmptySet2);
+        Set setMinus = o0.minus(setEmptySet, (Iterable) setEmptySet2);
         if (setMinus.size() == 1) {
-            return (ApplicationCommandOption) _Collections.first(setMinus);
+            return (ApplicationCommandOption) u.first(setMinus);
         }
         return null;
     }
@@ -1240,7 +1237,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             inputSelectionModel2 = null;
         }
         InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel2 = (InputSelectionModel.CommandInputSelectionModel) inputSelectionModel2;
-        if (!Intrinsics3.areEqual(selectedCommand != null ? selectedCommand.getId() : null, ((commandInputSelectionModel2 == null || (inputModel = commandInputSelectionModel2.getInputModel()) == null || (inputCommandContext = inputModel.getInputCommandContext()) == null) ? null : inputCommandContext.getSelectedCommand()) != null ? r4.getId() : null)) {
+        if (!m.areEqual(selectedCommand != null ? selectedCommand.getId() : null, ((commandInputSelectionModel2 == null || (inputModel = commandInputSelectionModel2.getInputModel()) == null || (inputCommandContext = inputModel.getInputCommandContext()) == null) ? null : inputCommandContext.getSelectedCommand()) != null ? r4.getId() : null)) {
             return selectedCommand;
         }
         return null;
@@ -1258,7 +1255,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             inputSelectionModel2 = null;
         }
         InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel2 = (InputSelectionModel.CommandInputSelectionModel) inputSelectionModel2;
-        if (!Intrinsics3.areEqual(selectedCommandOption != null ? selectedCommandOption.getName() : null, (commandInputSelectionModel2 != null ? commandInputSelectionModel2.getSelectedCommandOption() : null) != null ? r4.getName() : null)) {
+        if (!m.areEqual(selectedCommandOption != null ? selectedCommandOption.getName() : null, (commandInputSelectionModel2 != null ? commandInputSelectionModel2.getSelectedCommandOption() : null) != null ? r4.getName() : null)) {
             return selectedCommandOption;
         }
         return null;
@@ -1266,17 +1263,17 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     private final void onCommandCleared() {
         this.commandAttachments.clear();
-        this.flexInputViewModel.onAttachmentsUpdated(Collections2.emptyList());
+        this.flexInputViewModel.onAttachmentsUpdated(n.emptyList());
     }
 
     private final void onNewCommandSelected(ApplicationCommand newSelectedCommand) {
         this.commandAttachments.clear();
-        this.flexInputViewModel.onAttachmentsUpdated(Collections2.emptyList());
+        this.flexInputViewModel.onAttachmentsUpdated(n.emptyList());
         StoreStream.Companion companion = StoreStream.INSTANCE;
         StoreAnalytics analytics = companion.getAnalytics();
         long id2 = companion.getChannelsSelected().getId();
         long applicationId = newSelectedCommand.getApplicationId();
-        Long longOrNull = StringNumberConversions.toLongOrNull(newSelectedCommand.getId());
+        Long longOrNull = s.toLongOrNull(newSelectedCommand.getId());
         analytics.trackApplicationCommandSelected(id2, applicationId, longOrNull != null ? longOrNull.longValue() : 0L);
     }
 
@@ -1303,7 +1300,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         StoreApplicationCommands storeApplicationCommands = this.storeApplicationCommands;
         Long lValueOf2 = Long.valueOf(guildId);
         String strSubstring = commandPrefix.substring(1);
-        Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
+        m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
         storeApplicationCommands.requestApplicationCommandsQuery(lValueOf2, strSubstring);
     }
 
@@ -1318,10 +1315,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             this.commandAttachments.remove(commandOption);
             this.flexInputViewModel.removeAttachment(attachment);
             InputSelectionModel inputSelectionModel2 = this.lastChatInputModel;
-            if (inputSelectionModel2 == null || (inputModel = inputSelectionModel2.getInputModel()) == null || (input = inputModel.getInput()) == null || (inputSelectionModel = this.lastChatInputModel) == null || (selectedCommand = InputSelectionModel2.getSelectedCommand(inputSelectionModel)) == null || (optionRange = AutocompleteCommandUtils.INSTANCE.findOptionRanges(input, selectedCommand, this.commandAttachments).get(commandOption)) == null) {
+            if (inputSelectionModel2 == null || (inputModel = inputSelectionModel2.getInputModel()) == null || (input = inputModel.getInput()) == null || (inputSelectionModel = this.lastChatInputModel) == null || (selectedCommand = InputSelectionModelKt.getSelectedCommand(inputSelectionModel)) == null || (optionRange = AutocompleteCommandUtils.INSTANCE.findOptionRanges(input, selectedCommand, this.commandAttachments).get(commandOption)) == null) {
                 return;
             }
-            this.editTextAction.onNext(new InputEditTextAction.RemoveText(input, new Ranges2(optionRange.getParam().getFirst(), optionRange.getValue().getLast()), optionRange.getParam().getFirst()));
+            this.editTextAction.onNext(new InputEditTextAction.RemoveText(input, new IntRange(optionRange.getParam().getFirst(), optionRange.getValue().getLast()), optionRange.getParam().getFirst()));
         }
     }
 
@@ -1329,34 +1326,34 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     private final InputEditTextAction replacementSpanCommandParamDeletion(CharSequence input) {
         String string = input.toString();
         SpannedString spannedStringValueOf = SpannedString.valueOf(input);
-        Intrinsics3.checkNotNullExpressionValue(spannedStringValueOf, "valueOf(this)");
+        m.checkNotNullExpressionValue(spannedStringValueOf, "valueOf(this)");
         Object[] spans = spannedStringValueOf.getSpans(0, input.length(), SimpleRoundedBackgroundSpan.class);
-        Intrinsics3.checkNotNullExpressionValue(spans, "getSpans(start, end, T::class.java)");
+        m.checkNotNullExpressionValue(spans, "getSpans(start, end, T::class.java)");
         for (SimpleRoundedBackgroundSpan simpleRoundedBackgroundSpan : (SimpleRoundedBackgroundSpan[]) spans) {
-            Ranges2 ranges2 = new Ranges2(spannedStringValueOf.getSpanStart(simpleRoundedBackgroundSpan), spannedStringValueOf.getSpanEnd(simpleRoundedBackgroundSpan));
-            Character orNull = _Strings.getOrNull(string, ranges2.getLast());
+            IntRange intRange = new IntRange(spannedStringValueOf.getSpanStart(simpleRoundedBackgroundSpan), spannedStringValueOf.getSpanEnd(simpleRoundedBackgroundSpan));
+            Character orNull = y.getOrNull(string, intRange.getLast());
             boolean z2 = orNull != null && orNull.charValue() == ':';
-            int first = ranges2.getFirst();
-            int last = ranges2.getLast();
+            int first = intRange.getFirst();
+            int last = intRange.getLast();
             Objects.requireNonNull(string, "null cannot be cast to non-null type java.lang.String");
             String strSubstring = string.substring(first, last);
-            Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+            m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
             if (simpleRoundedBackgroundSpan instanceof ApplicationCommandSpan) {
                 ApplicationCommandSpan applicationCommandSpan = (ApplicationCommandSpan) simpleRoundedBackgroundSpan;
                 if (applicationCommandSpan.getCommandOption().getType() == ApplicationCommandType.ATTACHMENT) {
                     StringBuilder sb = new StringBuilder();
                     sb.append(applicationCommandSpan.getCommandOption().getName());
-                    sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+                    sb.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
                     Attachment<?> attachment = this.commandAttachments.get(applicationCommandSpan.getCommandOption());
                     sb.append(attachment != null ? attachment.getDisplayName() : null);
-                    if (!Strings4.contains$default((CharSequence) strSubstring, (CharSequence) sb.toString(), false, 2, (Object) null)) {
+                    if (!w.contains$default((CharSequence) strSubstring, (CharSequence) sb.toString(), false, 2, (Object) null)) {
                         removeAttachment(applicationCommandSpan.getCommandOption());
-                        return new InputEditTextAction.RemoveText(string, new Ranges2(ranges2.getFirst(), ranges2.getLast()), Math.min(ranges2.getFirst() + 1, string.length() - (ranges2.getLast() - ranges2.getFirst())));
+                        return new InputEditTextAction.RemoveText(string, new IntRange(intRange.getFirst(), intRange.getLast()), Math.min(intRange.getFirst() + 1, string.length() - (intRange.getLast() - intRange.getFirst())));
                     }
                 }
             }
-            if (!Strings4.contains$default((CharSequence) strSubstring, MentionUtils.EMOJIS_AND_STICKERS_CHAR, false, 2, (Object) null) && !z2) {
-                return new InputEditTextAction.RemoveText(string, new Ranges2(ranges2.getFirst(), ranges2.getLast()), ranges2.getFirst());
+            if (!w.contains$default((CharSequence) strSubstring, MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR, false, 2, (Object) null) && !z2) {
+                return new InputEditTextAction.RemoveText(string, new IntRange(intRange.getFirst(), intRange.getLast()), intRange.getFirst());
             }
         }
         return new InputEditTextAction.None(input);
@@ -1366,10 +1363,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         Attachment<?> attachment = this.commandAttachments.get(applicationCommandsOption);
         if (attachment != null) {
             this.selectedOptionForAttachment = applicationCommandsOption;
-            this.events.onNext(new AutocompleteViewModel5.PreviewAttachment(attachment));
+            this.events.onNext(new Event.PreviewAttachment(attachment));
         } else {
             this.selectedOptionForAttachment = applicationCommandsOption;
-            this.events.onNext(new AutocompleteViewModel5.PickAttachment(applicationCommandsOption));
+            this.events.onNext(new Event.PickAttachment(applicationCommandsOption));
         }
     }
 
@@ -1380,7 +1377,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         if (inputModel instanceof MentionInputModel.VerifiedCommandInputModel) {
             Map<ApplicationCommandOption, Boolean> inputCommandOptionValidity = ((MentionInputModel.VerifiedCommandInputModel) inputModel).getInputCommandOptionValidity();
             for (ApplicationCommandOption applicationCommandOption : inputCommandOptionValidity.keySet()) {
-                if (Intrinsics3.areEqual(inputCommandOptionValidity.get(applicationCommandOption), Boolean.FALSE)) {
+                if (m.areEqual(inputCommandOptionValidity.get(applicationCommandOption), Boolean.FALSE)) {
                     this.inputState = InputState.copy$default(this.inputState, null, null, null, applicationCommandOption, null, 23, null);
                     selectCommandOption(applicationCommandOption);
                     return;
@@ -1391,7 +1388,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     public final void checkEmojiAutocompleteUpsellViewed(List<? extends Autocompletable> visibleItems) {
         Autocompletable autocompletablePrevious;
-        Intrinsics3.checkNotNullParameter(visibleItems, "visibleItems");
+        m.checkNotNullParameter(visibleItems, "visibleItems");
         if (this.emojiAutocompleteUpsellEnabled && this.logEmojiAutocompleteUpsellViewed) {
             ListIterator<? extends Autocompletable> listIterator = visibleItems.listIterator(visibleItems.size());
             while (true) {
@@ -1413,14 +1410,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     }
 
     @MainThread
-    public final AutocompleteViewModel4 getApplicationCommandsBrowserViewState() {
+    public final AutocompleteViewState getApplicationCommandsBrowserViewState() {
         Experiment userExperiment;
         StoreState storeState = this.storeState;
         if (storeState == null || storeState.getBrowserCommands() == null) {
-            return AutocompleteViewModel4.Hidden.INSTANCE;
+            return AutocompleteViewState.Hidden.INSTANCE;
         }
         boolean z2 = (storeState.getFrecencyCommands().isEmpty() ^ true) && (userExperiment = this.storeExperiments.getUserExperiment("2021-09_android_app_commands_frecency", true)) != null && userExperiment.getBucket() == 1;
-        List<ApplicationCommand> frecencyCommands = z2 ? storeState.getFrecencyCommands() : Collections2.emptyList();
+        List<ApplicationCommand> frecencyCommands = z2 ? storeState.getFrecencyCommands() : n.emptyList();
         List<Application> applications = storeState.getApplications();
         ArrayList arrayList = new ArrayList();
         for (Object obj : applications) {
@@ -1429,7 +1426,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 arrayList.add(obj);
             }
         }
-        return new AutocompleteViewModel4.CommandBrowser(frecencyCommands, arrayList, storeState.getBrowserCommands());
+        return new AutocompleteViewState.CommandBrowser(frecencyCommands, arrayList, storeState.getBrowserCommands());
     }
 
     public final ApplicationCommandData getApplicationSendData(ApplicationCommandOption focusedOption) {
@@ -1438,12 +1435,12 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         StoreState storeState = this.storeState;
         List<Application> applications = storeState != null ? storeState.getApplications() : null;
         if (applications == null) {
-            applications = Collections2.emptyList();
+            applications = n.emptyList();
         }
         List<Application> list = applications;
         StoreState storeState2 = this.storeState;
         List<ApplicationCommand> queriedCommands = storeState2 != null ? storeState2.getQueriedCommands() : null;
-        return autocompleteModelUtils.getApplicationSendData(autocompleteInputSelectionModel, focusedOption, list, queriedCommands != null ? queriedCommands : Collections2.emptyList(), this.commandAttachments);
+        return autocompleteModelUtils.getApplicationSendData(autocompleteInputSelectionModel, focusedOption, list, queriedCommands != null ? queriedCommands : n.emptyList(), this.commandAttachments);
     }
 
     public final Long getChannelId() {
@@ -1451,17 +1448,17 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     }
 
     public final Map<ApplicationCommandOption, Attachment<?>> getCommandAttachments() {
-        return Util7.A(this.commandAttachments);
+        return c.A(this.commandAttachments);
     }
 
     @MainThread
     public final Map<Long, Integer> getCommandBrowserCommandPositions(WidgetChatInputDiscoveryCommandsModel discoveryCommands) {
-        Intrinsics3.checkNotNullParameter(discoveryCommands, "discoveryCommands");
+        m.checkNotNullParameter(discoveryCommands, "discoveryCommands");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         int size = 0;
-        for (Tuples2<Application, List<Autocompletable>> tuples2 : discoveryCommands.getCommandsByApplication()) {
-            Application applicationComponent1 = tuples2.component1();
-            List<Autocompletable> listComponent2 = tuples2.component2();
+        for (Pair<Application, List<Autocompletable>> pair : discoveryCommands.getCommandsByApplication()) {
+            Application applicationComponent1 = pair.component1();
+            List<Autocompletable> listComponent2 = pair.component2();
             Iterator<Autocompletable> it = listComponent2.iterator();
             int i = 0;
             while (true) {
@@ -1474,7 +1471,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 }
                 i++;
             }
-            linkedHashMap.put(Long.valueOf(applicationComponent1.getId()), Integer.valueOf(_Ranges.coerceAtLeast(i, 0) + size));
+            linkedHashMap.put(Long.valueOf(applicationComponent1.getId()), Integer.valueOf(f.coerceAtLeast(i, 0) + size));
             size += listComponent2.size();
         }
         return linkedHashMap;
@@ -1518,13 +1515,13 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     public final Observable<InputEditTextAction> observeEditTextActions() {
         BehaviorSubject<InputEditTextAction> behaviorSubject = this.editTextAction;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "editTextAction");
+        m.checkNotNullExpressionValue(behaviorSubject, "editTextAction");
         return behaviorSubject;
     }
 
-    public final Observable<AutocompleteViewModel5> observeEvents() {
-        BehaviorSubject<AutocompleteViewModel5> behaviorSubject = this.events;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "events");
+    public final Observable<Event> observeEvents() {
+        BehaviorSubject<Event> behaviorSubject = this.events;
+        m.checkNotNullExpressionValue(behaviorSubject, "events");
         return behaviorSubject;
     }
 
@@ -1543,7 +1540,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                         break;
                     }
                     Object next = it.next();
-                    if (Intrinsics3.areEqual(inputCommandOptionValidity.get((ApplicationCommandOption) next), Boolean.FALSE)) {
+                    if (m.areEqual(inputCommandOptionValidity.get((ApplicationCommandOption) next), Boolean.FALSE)) {
                         obj = next;
                         break;
                     }
@@ -1551,7 +1548,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 ApplicationCommandOption applicationCommandOption = (ApplicationCommandOption) obj;
                 if (applicationCommandOption != null) {
                     long applicationId = selectedCommand.getApplicationId();
-                    Long longOrNull = selectedCommand instanceof ApplicationCommand3 ? StringNumberConversions.toLongOrNull(((ApplicationCommand3) selectedCommand).getRootCommand().getId()) : StringNumberConversions.toLongOrNull(selectedCommand.getId());
+                    Long longOrNull = selectedCommand instanceof ApplicationSubCommand ? s.toLongOrNull(((ApplicationSubCommand) selectedCommand).getRootCommand().getId()) : s.toLongOrNull(selectedCommand.getId());
                     if (longOrNull != null) {
                         long jLongValue = longOrNull.longValue();
                         selectFirstInvalidCommandOption();
@@ -1563,7 +1560,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     }
 
     public final void onAttachmentRemoved(Attachment<?> attachment) {
-        Intrinsics3.checkNotNullParameter(attachment, "attachment");
+        m.checkNotNullParameter(attachment, "attachment");
         ApplicationCommandOption applicationCommandOption = this.selectedOptionForAttachment;
         if (applicationCommandOption != null) {
             removeAttachment(applicationCommandOption);
@@ -1592,7 +1589,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     @MainThread
     public final InputEditTextAction onDataUpdated(InputState inputState, StoreState storeState) {
         MentionInputModel verifiedMessageInputModel;
-        Intrinsics3.checkNotNullParameter(inputState, "inputState");
+        m.checkNotNullParameter(inputState, "inputState");
         if (storeState == null) {
             return new InputEditTextAction.None(inputState.getCurrentInput());
         }
@@ -1615,7 +1612,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 return inputEditTextActionAppendTextForCommandForInput;
             }
         }
-        InputEditTextAction clearSpans = ((inputState.getCurrentInput().length() == 0) || Intrinsics3.areEqual(inputState.getCurrentInput().toString(), COMMAND_DISCOVER_TOKEN)) ? new InputEditTextAction.ClearSpans(inputState.getCurrentInput()) : generateSpanUpdates(verifiedMessageInputModel);
+        InputEditTextAction clearSpans = ((inputState.getCurrentInput().length() == 0) || m.areEqual(inputState.getCurrentInput().toString(), COMMAND_DISCOVER_TOKEN)) ? new InputEditTextAction.ClearSpans(inputState.getCurrentInput()) : generateSpanUpdates(verifiedMessageInputModel);
         this.inputMentionModelSubject.onNext(verifiedMessageInputModel);
         this.inputState = InputState.copy$default(inputState, null, inputCommandContext.getSelectedCommand(), null, null, chatInputMentionsMapMapInputToMentions.getMentions(), 13, null);
         return clearSpans;
@@ -1624,13 +1621,13 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     @MainThread
     public final InputEditTextAction onInputTextChanged(CharSequence input, int start, int before, int count) {
         Channel channel;
-        Intrinsics3.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(input, "input");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        for (Map.Entry<Ranges2, Autocompletable> entry : this.inputState.getInputAutocompleteMap().entrySet()) {
+        for (Map.Entry<IntRange, Autocompletable> entry : this.inputState.getInputAutocompleteMap().entrySet()) {
             if (input.length() < entry.getKey().getLast() || !entry.getValue().matchesText(input.subSequence(entry.getKey().getFirst(), entry.getKey().getLast()).toString())) {
-                Ranges2 ranges2ShiftOrRemove = AutocompleteModelUtils.INSTANCE.shiftOrRemove(entry.getKey(), start, before, count);
-                if (ranges2ShiftOrRemove != null) {
-                    linkedHashMap.put(ranges2ShiftOrRemove, entry.getValue());
+                IntRange intRangeShiftOrRemove = AutocompleteModelUtils.INSTANCE.shiftOrRemove(entry.getKey(), start, before, count);
+                if (intRangeShiftOrRemove != null) {
+                    linkedHashMap.put(intRangeShiftOrRemove, entry.getValue());
                 }
             } else {
                 linkedHashMap.put(entry.getKey(), entry.getValue());
@@ -1647,26 +1644,26 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
         InputState inputState = this.inputState;
         SpannableString spannableStringValueOf = SpannableString.valueOf(input.toString());
-        Intrinsics3.checkNotNullExpressionValue(spannableStringValueOf, "valueOf(this)");
+        m.checkNotNullExpressionValue(spannableStringValueOf, "valueOf(this)");
         return onDataUpdated(InputState.copy$default(inputState, spannableStringValueOf, null, null, null, null, 30, null), this.storeState);
     }
 
     public final void onSelectionChanged(String input, int start, int finish) {
-        Intrinsics3.checkNotNullParameter(input, "input");
-        this.inputSelectionSubject.onNext(new SelectionState(input, new Ranges2(start, finish)));
+        m.checkNotNullParameter(input, "input");
+        this.inputSelectionSubject.onNext(new SelectionState(input, new IntRange(start, finish)));
     }
 
     public final MessageContent replaceAutocompletableDataWithServerValues(String content) {
         MentionInputModel inputModel;
-        Map<Ranges2, Autocompletable> inputMentionsMap;
-        Intrinsics3.checkNotNullParameter(content, "content");
+        Map<IntRange, Autocompletable> inputMentionsMap;
+        m.checkNotNullParameter(content, "content");
         InputSelectionModel inputSelectionModel = this.lastChatInputModel;
         if (inputSelectionModel == null || (inputModel = inputSelectionModel.getInputModel()) == null || (inputMentionsMap = inputModel.getInputMentionsMap()) == null) {
-            return new MessageContent(content, Collections2.emptyList());
+            return new MessageContent(content, n.emptyList());
         }
-        String strReplaceAutocompleteDataWithServerValues = AutocompleteExtensions.replaceAutocompleteDataWithServerValues(content, inputMentionsMap);
-        List listFilterIsInstance = _CollectionsJvm.filterIsInstance(inputMentionsMap.values(), UserAutocompletable.class);
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listFilterIsInstance, 10));
+        String strReplaceAutocompleteDataWithServerValues = AutocompleteExtensionsKt.replaceAutocompleteDataWithServerValues(content, inputMentionsMap);
+        List listFilterIsInstance = t.filterIsInstance(inputMentionsMap.values(), UserAutocompletable.class);
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listFilterIsInstance, 10));
         Iterator it = listFilterIsInstance.iterator();
         while (it.hasNext()) {
             arrayList.add(((UserAutocompletable) it.next()).getUser());
@@ -1675,7 +1672,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         int i = 0;
         boolean z2 = false;
         while (i <= length) {
-            boolean z3 = Intrinsics3.compare(strReplaceAutocompleteDataWithServerValues.charAt(!z2 ? i : length), 32) <= 0;
+            boolean z3 = m.compare(strReplaceAutocompleteDataWithServerValues.charAt(!z2 ? i : length), 32) <= 0;
             if (z2) {
                 if (!z3) {
                     break;
@@ -1698,10 +1695,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         InputSelectionModel inputSelectionModel;
         MentionInputModel inputModel;
         ?? input;
-        Ranges2 value;
+        IntRange value;
         MentionInputModel inputModel2;
         CharSequence input2;
-        Intrinsics3.checkNotNullParameter(autocompletable, "autocompletable");
+        m.checkNotNullParameter(autocompletable, "autocompletable");
         String str = "";
         if (autocompletable instanceof ApplicationCommandAutocompletable) {
             StringBuilder sb = new StringBuilder();
@@ -1726,14 +1723,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 AutocompleteInputSelectionModel autocompleteInputSelectionModel2 = this.lastAutocompleteInputSelectionModel;
                 autocompleteToken = autocompleteInputSelectionModel2 != null ? autocompleteInputSelectionModel2.getAutocompleteToken() : null;
                 if (!autocompletable.getInputTextMatchers().isEmpty()) {
-                    Ranges2 ranges2 = autocompleteToken != null ? new Ranges2(autocompleteToken.getStartIndex(), autocompleteToken.getToken().length() + autocompleteToken.getStartIndex()) : new Ranges2(str.length(), str.length());
-                    String str2 = (String) _Collections.first((List) autocompletable.getInputTextMatchers());
+                    IntRange intRange = autocompleteToken != null ? new IntRange(autocompleteToken.getStartIndex(), autocompleteToken.getToken().length() + autocompleteToken.getStartIndex()) : new IntRange(str.length(), str.length());
+                    String str2 = (String) u.first((List) autocompletable.getInputTextMatchers());
                     String str3 = str2 + ' ';
                     InputState inputState = this.inputState;
-                    Map mutableMap = Maps6.toMutableMap(inputState.getInputAutocompleteMap());
-                    mutableMap.put(new Ranges2(ranges2.getFirst(), str2.length() + ranges2.getFirst()), autocompletable);
+                    Map mutableMap = h0.toMutableMap(inputState.getInputAutocompleteMap());
+                    mutableMap.put(new IntRange(intRange.getFirst(), str2.length() + intRange.getFirst()), autocompletable);
                     this.inputState = InputState.copy$default(inputState, null, null, null, null, mutableMap, 15, null);
-                    this.editTextAction.onNext(new InputEditTextAction.InsertText(str, str3, ranges2, str3.length() + ranges2.getFirst()));
+                    this.editTextAction.onNext(new InputEditTextAction.InsertText(str, str3, intRange, str3.length() + intRange.getFirst()));
                     return;
                 }
                 return;
@@ -1747,19 +1744,19 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         if (!(!autocompletable.getInputTextMatchers().isEmpty()) || selectedCommandOption == null || optionRange == null) {
             return;
         }
-        String str4 = (String) _Collections.first((List) autocompletable.getInputTextMatchers());
+        String str4 = (String) u.first((List) autocompletable.getInputTextMatchers());
         String str5 = str4 + ' ';
-        Ranges2 selection = inputSelectionModel3.getSelection();
-        if (InputSelectionModel2.hasSelectedFreeformInput(inputSelectionModel3)) {
+        IntRange selection = inputSelectionModel3.getSelection();
+        if (InputSelectionModelKt.hasSelectedFreeformInput(inputSelectionModel3)) {
             AutocompleteInputSelectionModel autocompleteInputSelectionModel3 = this.lastAutocompleteInputSelectionModel;
             autocompleteToken = autocompleteInputSelectionModel3 != null ? autocompleteInputSelectionModel3.getAutocompleteToken() : null;
-            value = new Ranges2(autocompleteToken != null ? autocompleteToken.getStartIndex() : selection.getFirst() - 1, selection.getLast());
+            value = new IntRange(autocompleteToken != null ? autocompleteToken.getStartIndex() : selection.getFirst() - 1, selection.getLast());
         } else {
             value = optionRange.getValue();
         }
         InputState inputState2 = this.inputState;
-        Map mutableMap2 = Maps6.toMutableMap(inputState2.getInputAutocompleteMap());
-        mutableMap2.put(new Ranges2(optionRange.getValue().getFirst(), str4.length() + optionRange.getValue().getFirst()), autocompletable);
+        Map mutableMap2 = h0.toMutableMap(inputState2.getInputAutocompleteMap());
+        mutableMap2.put(new IntRange(optionRange.getValue().getFirst(), str4.length() + optionRange.getValue().getFirst()), autocompletable);
         this.inputState = InputState.copy$default(inputState2, null, null, null, null, mutableMap2, 15, null);
         InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel2 = (InputSelectionModel.CommandInputSelectionModel) inputSelectionModel3;
         this.editTextAction.onNext(new InputEditTextAction.InsertText(commandInputSelectionModel2.getInputModel().getInput(), str5, value, (str5.length() + commandInputSelectionModel2.getInputModel().getInput().length()) - (value.getLast() - value.getFirst())));
@@ -1767,12 +1764,12 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     public final void selectCommandBrowserApplication(Application application) {
         Integer num;
-        Intrinsics3.checkNotNullParameter(application, "application");
+        m.checkNotNullParameter(application, "application");
         StoreState storeState = this.storeState;
         if ((storeState != null ? storeState.getBrowserCommands() : null) == null || (num = this.inputState.getApplicationsPosition().get(Long.valueOf(application.getId()))) == null || !StoreStream.INSTANCE.getApplicationCommands().hasFetchedApplicationCommands(application.getId())) {
             StoreStream.INSTANCE.getApplicationCommands().requestDiscoverCommands(application.getId());
         } else {
-            this.events.onNext(new AutocompleteViewModel5.ScrollAutocompletablesToApplication(application.getId(), num.intValue()));
+            this.events.onNext(new Event.ScrollAutocompletablesToApplication(application.getId(), num.intValue()));
         }
         StoreStream.INSTANCE.getAnalytics().trackApplicationCommandBrowserJump(application.getId());
     }
@@ -1781,7 +1778,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     public final void selectCommandOption(ApplicationCommandOption applicationCommandsOption) {
         InputEditTextAction inputEditTextActionAppendParam$default;
         Attachment<?> attachment;
-        Intrinsics3.checkNotNullParameter(applicationCommandsOption, "applicationCommandsOption");
+        m.checkNotNullParameter(applicationCommandsOption, "applicationCommandsOption");
         InputSelectionModel inputSelectionModel = this.lastChatInputModel;
         if (!(inputSelectionModel instanceof InputSelectionModel.CommandInputSelectionModel)) {
             boolean z2 = inputSelectionModel instanceof InputSelectionModel.MessageInputSelectionModel;
@@ -1789,19 +1786,19 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
         if (applicationCommandsOption.getType() == ApplicationCommandType.ATTACHMENT && (attachment = this.commandAttachments.get(applicationCommandsOption)) != null) {
             this.selectedOptionForAttachment = applicationCommandsOption;
-            this.events.onNext(new AutocompleteViewModel5.PreviewAttachment(attachment));
+            this.events.onNext(new Event.PreviewAttachment(attachment));
             return;
         }
         InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel = (InputSelectionModel.CommandInputSelectionModel) inputSelectionModel;
         OptionRange optionRange = commandInputSelectionModel.getInputModel().getInputCommandOptionsRanges().get(applicationCommandsOption);
-        Ranges2 value = optionRange != null ? optionRange.getValue() : null;
+        IntRange value = optionRange != null ? optionRange.getValue() : null;
         if (value != null) {
             int iOrdinal = applicationCommandsOption.getType().ordinal();
             int i = 1;
             if (iOrdinal != 5 && iOrdinal != 6 && iOrdinal != 7 && iOrdinal != 8) {
                 i = 0;
             }
-            inputEditTextActionAppendParam$default = new InputEditTextAction.SelectText(commandInputSelectionModel.getInputModel().getInput(), new Ranges2(value.getFirst() + i, value.getLast() + (value.getLast() != commandInputSelectionModel.getInputModel().getInput().length() ? -1 : 0)));
+            inputEditTextActionAppendParam$default = new InputEditTextAction.SelectText(commandInputSelectionModel.getInputModel().getInput(), new IntRange(value.getFirst() + i, value.getLast() + (value.getLast() != commandInputSelectionModel.getInputModel().getInput().length() ? -1 : 0)));
         } else {
             inputEditTextActionAppendParam$default = AutocompleteCommandUtils.appendParam$default(AutocompleteCommandUtils.INSTANCE, commandInputSelectionModel.getInputModel().getInput(), applicationCommandsOption, null, 4, null);
         }
@@ -1811,23 +1808,23 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     @MainThread
     public final void selectStickerItem(Sticker sticker) {
         String strReplaceAfterLast$default;
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(sticker, "sticker");
         StoreStream.Companion companion = StoreStream.INSTANCE;
         companion.getExpressionSuggestions().setExpressionSuggestionsEnabled(false);
         String string = this.inputState.getCurrentInput().toString();
-        if (string.length() <= 1 || _Strings.last(string) != ':') {
-            strReplaceAfterLast$default = Strings4.replaceAfterLast$default(string, MentionUtils.EMOJIS_AND_STICKERS_CHAR, "", null, 4, null);
+        if (string.length() <= 1 || y.last(string) != ':') {
+            strReplaceAfterLast$default = w.replaceAfterLast$default(string, MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR, "", null, 4, null);
         } else {
-            String strSubstring = string.substring(0, Strings4.getLastIndex(string));
-            Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
-            strReplaceAfterLast$default = Strings4.replaceAfterLast$default(strSubstring, MentionUtils.EMOJIS_AND_STICKERS_CHAR, "", null, 4, null);
+            String strSubstring = string.substring(0, w.getLastIndex(string));
+            m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+            strReplaceAfterLast$default = w.replaceAfterLast$default(strSubstring, MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR, "", null, 4, null);
         }
-        String strSubstring2 = strReplaceAfterLast$default.substring(0, _Ranges.coerceAtLeast(strReplaceAfterLast$default.length() - 1, 0));
-        Intrinsics3.checkNotNullExpressionValue(strSubstring2, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+        String strSubstring2 = strReplaceAfterLast$default.substring(0, f.coerceAtLeast(strReplaceAfterLast$default.length() - 1, 0));
+        m.checkNotNullExpressionValue(strSubstring2, "(this as java.lang.Strin…ing(startIndex, endIndex)");
         this.editTextAction.onNext(new InputEditTextAction.ReplaceText(string, strSubstring2, strSubstring2.length()));
         AutocompleteInputSelectionModel autocompleteInputSelectionModel = this.lastAutocompleteInputSelectionModel;
         if (autocompleteInputSelectionModel != null) {
-            companion.getAnalytics().trackAutocompleteSelect(companion.getChannelsSelected().getId(), autocompleteInputSelectionModel.getAutocompleteType(), autocompleteInputSelectionModel.getEmojiNumCount(), autocompleteInputSelectionModel.getStickerNumCount(), AutocompleteUtils.STICKER, "sticker", Long.valueOf(sticker.getId()));
+            companion.getAnalytics().trackAutocompleteSelect(companion.getChannelsSelected().getId(), autocompleteInputSelectionModel.getAutocompleteType(), autocompleteInputSelectionModel.getEmojiNumCount(), autocompleteInputSelectionModel.getStickerNumCount(), AutocompleteSelectionTypes.STICKER, "sticker", Long.valueOf(sticker.getId()));
         }
         companion.getStickers().onStickerUsed(sticker);
     }
@@ -1835,7 +1832,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     public final void setAttachment(Attachment<?> attachment) {
         CharSequence input;
         MentionInputModel inputModel;
-        Intrinsics3.checkNotNullParameter(attachment, "attachment");
+        m.checkNotNullParameter(attachment, "attachment");
         ApplicationCommandOption applicationCommandOption = this.selectedOptionForAttachment;
         if (applicationCommandOption != null) {
             this.commandAttachments.put(applicationCommandOption, attachment);
@@ -1844,20 +1841,20 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
                 input = "";
             }
             InputSelectionModel inputSelectionModel2 = this.lastChatInputModel;
-            OptionRange optionRange = AutocompleteCommandUtils.INSTANCE.findOptionRanges(input, inputSelectionModel2 != null ? InputSelectionModel2.getSelectedCommand(inputSelectionModel2) : null, this.commandAttachments).get(applicationCommandOption);
-            Ranges2 ranges2 = optionRange != null ? new Ranges2(optionRange.getParam().getFirst(), optionRange.getValue().getLast()) : new Ranges2(input.length(), input.length());
-            StringBuilder sbQ = outline.Q(' ');
+            OptionRange optionRange = AutocompleteCommandUtils.INSTANCE.findOptionRanges(input, inputSelectionModel2 != null ? InputSelectionModelKt.getSelectedCommand(inputSelectionModel2) : null, this.commandAttachments).get(applicationCommandOption);
+            IntRange intRange = optionRange != null ? new IntRange(optionRange.getParam().getFirst(), optionRange.getValue().getLast()) : new IntRange(input.length(), input.length());
+            StringBuilder sbQ = a.Q(' ');
             sbQ.append(applicationCommandOption.getName());
-            sbQ.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+            sbQ.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
             sbQ.append(attachment.getDisplayName());
             sbQ.append(' ');
             String string = sbQ.toString();
-            this.editTextAction.onNext(new InputEditTextAction.InsertText(input, string, ranges2, (string.length() + input.length()) - (ranges2.getLast() - ranges2.getFirst())));
+            this.editTextAction.onNext(new InputEditTextAction.InsertText(input, string, intRange, (string.length() + input.length()) - (intRange.getLast() - intRange.getFirst())));
         }
     }
 
     public final void setInputState(InputState inputState) {
-        Intrinsics3.checkNotNullParameter(inputState, "<set-?>");
+        m.checkNotNullParameter(inputState, "<set-?>");
         this.inputState = inputState;
     }
 
@@ -1871,11 +1868,11 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AutocompleteViewModel(Long l, AppFlexInputViewModel appFlexInputViewModel, StoreApplicationCommands storeApplicationCommands, StoreExperiments storeExperiments, @ColorInt int i, @ColorInt int i2, @ColorInt int i3, Observable<StoreState> observable) {
-        super(new AutocompleteViewModel7(AutocompleteViewModel4.Hidden.INSTANCE, AutocompleteViewModel6.Hidden.INSTANCE));
-        Intrinsics3.checkNotNullParameter(appFlexInputViewModel, "flexInputViewModel");
-        Intrinsics3.checkNotNullParameter(storeApplicationCommands, "storeApplicationCommands");
-        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        super(new ViewState(AutocompleteViewState.Hidden.INSTANCE, SelectedCommandViewState.Hidden.INSTANCE));
+        m.checkNotNullParameter(appFlexInputViewModel, "flexInputViewModel");
+        m.checkNotNullParameter(storeApplicationCommands, "storeApplicationCommands");
+        m.checkNotNullParameter(storeExperiments, "storeExperiments");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.channelId = l;
         this.flexInputViewModel = appFlexInputViewModel;
         this.storeApplicationCommands = storeApplicationCommands;
@@ -1896,35 +1893,35 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         this.commandAttachments = new LinkedHashMap();
         this.inputState = new InputState(null, null, null, null, null, 31, null);
         Observable observableT = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null).t(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableT, "storeObservable\n        …ore Error\", it)\n        }");
+        m.checkNotNullExpressionValue(observableT, "storeObservable\n        …ore Error\", it)\n        }");
         ObservableExtensionsKt.appSubscribe$default(observableT, AutocompleteViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
         Observable<SelectionState> observableR = behaviorSubjectK03.r();
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectK0, "inputMentionModelSubject");
+        m.checkNotNullExpressionValue(behaviorSubjectK0, "inputMentionModelSubject");
         Observable observableJ = Observable.j(observableR, ObservableExtensionsKt.computationLatest(behaviorSubjectK0), new AnonymousClass3());
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…inputModel)\n      }\n    }");
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…inputModel)\n      }\n    }");
         ObservableExtensionsKt.AnonymousClass1 anonymousClass1 = ObservableExtensionsKt.AnonymousClass1.INSTANCE;
         Observable observableY = observableJ.y(anonymousClass1);
         ObservableExtensionsKt.AnonymousClass2 anonymousClass2 = ObservableExtensionsKt.AnonymousClass2.INSTANCE;
         Observable observableG = observableY.G(anonymousClass2);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
         Observable observableT2 = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableG), this, null, 2, null).t(AnonymousClass4.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableT2, "Observable.combineLatest…del Error\", it)\n        }");
+        m.checkNotNullExpressionValue(observableT2, "Observable.combineLatest…del Error\", it)\n        }");
         ObservableExtensionsKt.appSubscribe$default(observableT2, AutocompleteViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass5(this), 62, (Object) null);
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectK02, "autocompleteInputSelectionModelSubject");
+        m.checkNotNullExpressionValue(behaviorSubjectK02, "autocompleteInputSelectionModelSubject");
         TimeUnit timeUnit = TimeUnit.MILLISECONDS;
         Observable observableT3 = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.leadingEdgeThrottle(behaviorSubjectK02, 100L, timeUnit)), this, null, 2, null).t(AnonymousClass6.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableT3, "autocompleteInputSelecti…del Error\", it)\n        }");
+        m.checkNotNullExpressionValue(observableT3, "autocompleteInputSelecti…del Error\", it)\n        }");
         ObservableExtensionsKt.appSubscribe$default(observableT3, AutocompleteViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass7(this), 62, (Object) null);
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectK02, "autocompleteInputSelectionModelSubject");
+        m.checkNotNullExpressionValue(behaviorSubjectK02, "autocompleteInputSelectionModelSubject");
         Observable observableR2 = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(behaviorSubjectK02), this, null, 2, null).t(AnonymousClass8.INSTANCE).G(AnonymousClass9.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR2, "autocompleteInputSelecti…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR2, "autocompleteInputSelecti…  .distinctUntilChanged()");
         Observable observableG2 = observableR2.y(anonymousClass1).G(anonymousClass2);
-        Intrinsics3.checkNotNullExpressionValue(observableG2, "filter { it != null }.map { it!! }");
+        m.checkNotNullExpressionValue(observableG2, "filter { it != null }.map { it!! }");
         Observable observableP = observableG2.u(new AnonymousClass10()).p(500L, timeUnit);
-        Intrinsics3.checkNotNullExpressionValue(observableP, "autocompleteInputSelecti…0, TimeUnit.MILLISECONDS)");
+        m.checkNotNullExpressionValue(observableP, "autocompleteInputSelecti…0, TimeUnit.MILLISECONDS)");
         ObservableExtensionsKt.appSubscribe$default(observableP, AutocompleteViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass11(), 62, (Object) null);
         Observable observableR3 = behaviorSubjectK02.G(AnonymousClass12.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR3, "autocompleteInputSelecti… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR3, "autocompleteInputSelecti… }.distinctUntilChanged()");
         StoreGuilds.Actions.requestMembers(this, observableR3, true);
         this.lastJumpedSequenceId = -1;
     }

@@ -16,7 +16,7 @@ import androidx.view.Observer;
 import androidx.view.ViewModel;
 import androidx.view.ViewModelProvider;
 import androidx.view.ViewModelStore;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.reflect.Modifier;
@@ -83,7 +83,7 @@ public class LoaderManagerImpl extends LoaderManager {
             printWriter.print(str);
             printWriter.print("mLoader=");
             printWriter.println(this.mLoader);
-            this.mLoader.dump(outline.w(str, "  "), fileDescriptor, printWriter, strArr);
+            this.mLoader.dump(a.w(str, "  "), fileDescriptor, printWriter, strArr);
             if (this.mObserver != null) {
                 printWriter.print(str);
                 printWriter.print("mCallbacks=");
@@ -221,7 +221,7 @@ public class LoaderManagerImpl extends LoaderManager {
         @Override // androidx.view.Observer
         public void onChanged(@Nullable D d) {
             if (LoaderManagerImpl.DEBUG) {
-                StringBuilder sbU = outline.U("  onLoadFinished in ");
+                StringBuilder sbU = a.U("  onLoadFinished in ");
                 sbU.append(this.mLoader);
                 sbU.append(": ");
                 sbU.append(this.mLoader.dataToString(d));
@@ -235,7 +235,7 @@ public class LoaderManagerImpl extends LoaderManager {
         public void reset() {
             if (this.mDeliveredData) {
                 if (LoaderManagerImpl.DEBUG) {
-                    StringBuilder sbU = outline.U("  Resetting: ");
+                    StringBuilder sbU = a.U("  Resetting: ");
                     sbU.append(this.mLoader);
                     Log.v(LoaderManagerImpl.TAG, sbU.toString());
                 }

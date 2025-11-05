@@ -1,86 +1,82 @@
 package com.facebook.animated.gif;
 
 import android.graphics.Bitmap;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.d.DoNotStrip;
-import b.f.j.a.a.AnimatedDrawableFrameInfo;
-import b.f.j.a.a.AnimatedImage;
-import b.f.j.a.a.AnimatedImageFrame;
-import b.f.j.a.b.AnimatedImageDecoder;
-import b.f.j.d.ImageDecodeOptions;
-import b.f.m.n.NativeLoader;
+import b.f.d.d.c;
+import b.f.j.a.a.d;
+import b.f.j.d.b;
+import b.f.m.n.a;
 import java.nio.ByteBuffer;
 
-@DoNotStrip
+@c
 /* loaded from: classes.dex */
-public class GifImage implements AnimatedImage, AnimatedImageDecoder {
+public class GifImage implements b.f.j.a.a.c, b.f.j.a.b.c {
     public static volatile boolean a;
 
     /* renamed from: b, reason: collision with root package name */
     public Bitmap.Config f2881b = null;
 
-    @DoNotStrip
+    @c
     private long mNativeContext;
 
-    @DoNotStrip
+    @c
     public GifImage() {
     }
 
     public static synchronized void k() {
         if (!a) {
             a = true;
-            NativeLoader.c("gifimage");
+            a.c("gifimage");
         }
     }
 
-    @DoNotStrip
+    @c
     private static native GifImage nativeCreateFromDirectByteBuffer(ByteBuffer byteBuffer, int i, boolean z2);
 
-    @DoNotStrip
+    @c
     private static native GifImage nativeCreateFromFileDescriptor(int i, int i2, boolean z2);
 
-    @DoNotStrip
+    @c
     private static native GifImage nativeCreateFromNativeMemory(long j, int i, int i2, boolean z2);
 
-    @DoNotStrip
+    @c
     private native void nativeDispose();
 
-    @DoNotStrip
+    @c
     private native void nativeFinalize();
 
-    @DoNotStrip
+    @c
     private native int nativeGetDuration();
 
-    @DoNotStrip
+    @c
     private native GifFrame nativeGetFrame(int i);
 
-    @DoNotStrip
+    @c
     private native int nativeGetFrameCount();
 
-    @DoNotStrip
+    @c
     private native int[] nativeGetFrameDurations();
 
-    @DoNotStrip
+    @c
     private native int nativeGetHeight();
 
-    @DoNotStrip
+    @c
     private native int nativeGetLoopCount();
 
-    @DoNotStrip
+    @c
     private native int nativeGetSizeInBytes();
 
-    @DoNotStrip
+    @c
     private native int nativeGetWidth();
 
-    @DoNotStrip
+    @c
     private native boolean nativeIsAnimated();
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public int a() {
         return nativeGetFrameCount();
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public int b() {
         int iNativeGetLoopCount = nativeGetLoopCount();
         if (iNativeGetLoopCount == -1) {
@@ -92,26 +88,26 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
         return 0;
     }
 
-    @Override // b.f.j.a.b.AnimatedImageDecoder
-    public AnimatedImage c(ByteBuffer byteBuffer, ImageDecodeOptions imageDecodeOptions) {
+    @Override // b.f.j.a.b.c
+    public b.f.j.a.a.c c(ByteBuffer byteBuffer, b bVar) {
         k();
         byteBuffer.rewind();
-        GifImage gifImageNativeCreateFromDirectByteBuffer = nativeCreateFromDirectByteBuffer(byteBuffer, imageDecodeOptions.c, false);
-        gifImageNativeCreateFromDirectByteBuffer.f2881b = imageDecodeOptions.e;
+        GifImage gifImageNativeCreateFromDirectByteBuffer = nativeCreateFromDirectByteBuffer(byteBuffer, bVar.c, false);
+        gifImageNativeCreateFromDirectByteBuffer.f2881b = bVar.e;
         return gifImageNativeCreateFromDirectByteBuffer;
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public Bitmap.Config d() {
         return this.f2881b;
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
-    public AnimatedImageFrame e(int i) {
+    @Override // b.f.j.a.a.c
+    public d e(int i) {
         return nativeGetFrame(i);
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public boolean f() {
         return false;
     }
@@ -120,8 +116,8 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
         nativeFinalize();
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
-    public AnimatedDrawableFrameInfo g(int i) {
+    @Override // b.f.j.a.a.c
+    public b.f.j.a.a.b g(int i) {
         int i2;
         GifFrame gifFrameNativeGetFrame = nativeGetFrame(i);
         try {
@@ -136,45 +132,45 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
                     i2 = 2;
                 } else if (iD == 3) {
                 }
-                return new AnimatedDrawableFrameInfo(i, iB, iC, width, height, 1, i2);
+                return new b.f.j.a.a.b(i, iB, iC, width, height, 1, i2);
             }
             i2 = 1;
-            return new AnimatedDrawableFrameInfo(i, iB, iC, width, height, 1, i2);
+            return new b.f.j.a.a.b(i, iB, iC, width, height, 1, i2);
         } finally {
             gifFrameNativeGetFrame.dispose();
         }
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public int getHeight() {
         return nativeGetHeight();
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public int getWidth() {
         return nativeGetWidth();
     }
 
-    @Override // b.f.j.a.b.AnimatedImageDecoder
-    public AnimatedImage h(long j, int i, ImageDecodeOptions imageDecodeOptions) {
+    @Override // b.f.j.a.b.c
+    public b.f.j.a.a.c h(long j, int i, b bVar) {
         k();
-        AnimatableValueParser.i(Boolean.valueOf(j != 0));
-        GifImage gifImageNativeCreateFromNativeMemory = nativeCreateFromNativeMemory(j, i, imageDecodeOptions.c, false);
-        gifImageNativeCreateFromNativeMemory.f2881b = imageDecodeOptions.e;
+        b.c.a.a0.d.i(Boolean.valueOf(j != 0));
+        GifImage gifImageNativeCreateFromNativeMemory = nativeCreateFromNativeMemory(j, i, bVar.c, false);
+        gifImageNativeCreateFromNativeMemory.f2881b = bVar.e;
         return gifImageNativeCreateFromNativeMemory;
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public int[] i() {
         return nativeGetFrameDurations();
     }
 
-    @Override // b.f.j.a.a.AnimatedImage
+    @Override // b.f.j.a.a.c
     public int j() {
         return nativeGetSizeInBytes();
     }
 
-    @DoNotStrip
+    @c
     public GifImage(long j) {
         this.mNativeContext = j;
     }

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackSubscriptionMetadata;
-import com.discord.analytics.generated.traits.TrackSubscriptionMetadata2;
+import com.discord.analytics.generated.traits.TrackSubscriptionMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSubscriptionGracePeriodScheduled.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSubscriptionGracePeriodScheduled implements AnalyticsSchema, TrackBase2, TrackSubscriptionMetadata2 {
+public final /* data */ class TrackSubscriptionGracePeriodScheduled implements AnalyticsSchema, TrackBaseReceiver, TrackSubscriptionMetadataReceiver {
     private TrackBase trackBase;
     private TrackSubscriptionMetadata trackSubscriptionMetadata;
     private final Long subscriptionId = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackSubscriptionGracePeriodScheduled implements A
             return false;
         }
         TrackSubscriptionGracePeriodScheduled trackSubscriptionGracePeriodScheduled = (TrackSubscriptionGracePeriodScheduled) other;
-        return Intrinsics3.areEqual(this.subscriptionId, trackSubscriptionGracePeriodScheduled.subscriptionId) && Intrinsics3.areEqual(this.paymentGateway, trackSubscriptionGracePeriodScheduled.paymentGateway) && Intrinsics3.areEqual(this.currentPeriodStart, trackSubscriptionGracePeriodScheduled.currentPeriodStart) && Intrinsics3.areEqual(this.currentPeriodEnd, trackSubscriptionGracePeriodScheduled.currentPeriodEnd) && Intrinsics3.areEqual(this.invoiceId, trackSubscriptionGracePeriodScheduled.invoiceId) && Intrinsics3.areEqual(this.invoiceDueAt, trackSubscriptionGracePeriodScheduled.invoiceDueAt) && Intrinsics3.areEqual(this.gracePeriodDays, trackSubscriptionGracePeriodScheduled.gracePeriodDays);
+        return m.areEqual(this.subscriptionId, trackSubscriptionGracePeriodScheduled.subscriptionId) && m.areEqual(this.paymentGateway, trackSubscriptionGracePeriodScheduled.paymentGateway) && m.areEqual(this.currentPeriodStart, trackSubscriptionGracePeriodScheduled.currentPeriodStart) && m.areEqual(this.currentPeriodEnd, trackSubscriptionGracePeriodScheduled.currentPeriodEnd) && m.areEqual(this.invoiceId, trackSubscriptionGracePeriodScheduled.invoiceId) && m.areEqual(this.invoiceDueAt, trackSubscriptionGracePeriodScheduled.invoiceDueAt) && m.areEqual(this.gracePeriodDays, trackSubscriptionGracePeriodScheduled.gracePeriodDays);
     }
 
     public int hashCode() {
@@ -57,7 +57,7 @@ public final /* data */ class TrackSubscriptionGracePeriodScheduled implements A
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSubscriptionGracePeriodScheduled(subscriptionId=");
+        StringBuilder sbU = a.U("TrackSubscriptionGracePeriodScheduled(subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", paymentGateway=");
         sbU.append(this.paymentGateway);
@@ -70,6 +70,6 @@ public final /* data */ class TrackSubscriptionGracePeriodScheduled implements A
         sbU.append(", invoiceDueAt=");
         sbU.append(this.invoiceDueAt);
         sbU.append(", gracePeriodDays=");
-        return outline.G(sbU, this.gracePeriodDays, ")");
+        return a.G(sbU, this.gracePeriodDays, ")");
     }
 }

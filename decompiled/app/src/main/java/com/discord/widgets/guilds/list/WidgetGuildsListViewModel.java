@@ -4,9 +4,8 @@ import a0.a.a.b;
 import android.content.Context;
 import androidx.fragment.app.FragmentManager;
 import androidx.media.AudioAttributesCompat;
-import b.a.d.AppToast;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -34,14 +33,13 @@ import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.widgets.guilds.list.GuildListItem;
 import com.discord.widgets.guilds.list.WidgetGuildListAdapter;
-import d0.c0.Random;
-import d0.f0._Sequences2;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.MutableCollections;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.c0.c;
+import d0.f0.q;
+import d0.t.n;
+import d0.t.r;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -61,7 +59,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetGuildsListViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
+public final class WidgetGuildsListViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -73,7 +71,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetGuildsListViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -87,7 +85,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetGuildsListViewModel widgetGuildsListViewModel = WidgetGuildsListViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            m.checkNotNullExpressionValue(storeState, "storeState");
             WidgetGuildsListViewModel.access$handleStoreState(widgetGuildsListViewModel, storeState);
         }
     }
@@ -109,13 +107,13 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
             /* JADX WARN: Multi-variable type inference failed */
             public Chunk(long j, long j2, Map<Long, ? extends ModelNotificationSettings> map, Set<Long> set, Map<Long, Integer> map2, Map<Long, ? extends List<Long>> map3, Set<Long> set2, Map<Long, Channel> map4, List<? extends StoreGuildsSorted.Entry> list) {
-                Intrinsics3.checkNotNullParameter(map, "guildSettings");
-                Intrinsics3.checkNotNullParameter(set, "unreadGuildIds");
-                Intrinsics3.checkNotNullParameter(map2, "mentionCounts");
-                Intrinsics3.checkNotNullParameter(map3, "channelIds");
-                Intrinsics3.checkNotNullParameter(set2, "unavailableGuilds");
-                Intrinsics3.checkNotNullParameter(map4, "privateChannels");
-                Intrinsics3.checkNotNullParameter(list, "sortedGuilds");
+                m.checkNotNullParameter(map, "guildSettings");
+                m.checkNotNullParameter(set, "unreadGuildIds");
+                m.checkNotNullParameter(map2, "mentionCounts");
+                m.checkNotNullParameter(map3, "channelIds");
+                m.checkNotNullParameter(set2, "unavailableGuilds");
+                m.checkNotNullParameter(map4, "privateChannels");
+                m.checkNotNullParameter(list, "sortedGuilds");
                 this.selectedGuildId = j;
                 this.selectedVoiceChannelId = j2;
                 this.guildSettings = map;
@@ -170,13 +168,13 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public final Chunk copy(long selectedGuildId, long selectedVoiceChannelId, Map<Long, ? extends ModelNotificationSettings> guildSettings, Set<Long> unreadGuildIds, Map<Long, Integer> mentionCounts, Map<Long, ? extends List<Long>> channelIds, Set<Long> unavailableGuilds, Map<Long, Channel> privateChannels, List<? extends StoreGuildsSorted.Entry> sortedGuilds) {
-                Intrinsics3.checkNotNullParameter(guildSettings, "guildSettings");
-                Intrinsics3.checkNotNullParameter(unreadGuildIds, "unreadGuildIds");
-                Intrinsics3.checkNotNullParameter(mentionCounts, "mentionCounts");
-                Intrinsics3.checkNotNullParameter(channelIds, "channelIds");
-                Intrinsics3.checkNotNullParameter(unavailableGuilds, "unavailableGuilds");
-                Intrinsics3.checkNotNullParameter(privateChannels, "privateChannels");
-                Intrinsics3.checkNotNullParameter(sortedGuilds, "sortedGuilds");
+                m.checkNotNullParameter(guildSettings, "guildSettings");
+                m.checkNotNullParameter(unreadGuildIds, "unreadGuildIds");
+                m.checkNotNullParameter(mentionCounts, "mentionCounts");
+                m.checkNotNullParameter(channelIds, "channelIds");
+                m.checkNotNullParameter(unavailableGuilds, "unavailableGuilds");
+                m.checkNotNullParameter(privateChannels, "privateChannels");
+                m.checkNotNullParameter(sortedGuilds, "sortedGuilds");
                 return new Chunk(selectedGuildId, selectedVoiceChannelId, guildSettings, unreadGuildIds, mentionCounts, channelIds, unavailableGuilds, privateChannels, sortedGuilds);
             }
 
@@ -188,7 +186,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Chunk chunk = (Chunk) other;
-                return this.selectedGuildId == chunk.selectedGuildId && this.selectedVoiceChannelId == chunk.selectedVoiceChannelId && Intrinsics3.areEqual(this.guildSettings, chunk.guildSettings) && Intrinsics3.areEqual(this.unreadGuildIds, chunk.unreadGuildIds) && Intrinsics3.areEqual(this.mentionCounts, chunk.mentionCounts) && Intrinsics3.areEqual(this.channelIds, chunk.channelIds) && Intrinsics3.areEqual(this.unavailableGuilds, chunk.unavailableGuilds) && Intrinsics3.areEqual(this.privateChannels, chunk.privateChannels) && Intrinsics3.areEqual(this.sortedGuilds, chunk.sortedGuilds);
+                return this.selectedGuildId == chunk.selectedGuildId && this.selectedVoiceChannelId == chunk.selectedVoiceChannelId && m.areEqual(this.guildSettings, chunk.guildSettings) && m.areEqual(this.unreadGuildIds, chunk.unreadGuildIds) && m.areEqual(this.mentionCounts, chunk.mentionCounts) && m.areEqual(this.channelIds, chunk.channelIds) && m.areEqual(this.unavailableGuilds, chunk.unavailableGuilds) && m.areEqual(this.privateChannels, chunk.privateChannels) && m.areEqual(this.sortedGuilds, chunk.sortedGuilds);
             }
 
             public final Map<Long, List<Long>> getChannelIds() {
@@ -246,7 +244,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Chunk(selectedGuildId=");
+                StringBuilder sbU = a.U("Chunk(selectedGuildId=");
                 sbU.append(this.selectedGuildId);
                 sbU.append(", selectedVoiceChannelId=");
                 sbU.append(this.selectedVoiceChannelId);
@@ -263,7 +261,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 sbU.append(", privateChannels=");
                 sbU.append(this.privateChannels);
                 sbU.append(", sortedGuilds=");
-                return outline.L(sbU, this.sortedGuilds, ")");
+                return a.L(sbU, this.sortedGuilds, ")");
             }
         }
 
@@ -278,12 +276,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             private final boolean showHubSparkle;
 
             public SecondChunk(Map<Long, GuildJoinRequest> map, List<Guild> list, Set<Long> set, Set<Long> set2, Set<Long> set3, Map<Long, Channel> map2, boolean z2) {
-                Intrinsics3.checkNotNullParameter(map, "guildJoinRequests");
-                Intrinsics3.checkNotNullParameter(list, "pendingGuilds");
-                Intrinsics3.checkNotNullParameter(set, "guildIds");
-                Intrinsics3.checkNotNullParameter(set2, "guildIdsWithActiveStageEvents");
-                Intrinsics3.checkNotNullParameter(set3, "guildIdsWithActiveScheduledEvents");
-                Intrinsics3.checkNotNullParameter(map2, "channels");
+                m.checkNotNullParameter(map, "guildJoinRequests");
+                m.checkNotNullParameter(list, "pendingGuilds");
+                m.checkNotNullParameter(set, "guildIds");
+                m.checkNotNullParameter(set2, "guildIdsWithActiveStageEvents");
+                m.checkNotNullParameter(set3, "guildIdsWithActiveScheduledEvents");
+                m.checkNotNullParameter(map2, "channels");
                 this.guildJoinRequests = map;
                 this.pendingGuilds = list;
                 this.guildIds = set;
@@ -353,12 +351,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public final SecondChunk copy(Map<Long, GuildJoinRequest> guildJoinRequests, List<Guild> pendingGuilds, Set<Long> guildIds, Set<Long> guildIdsWithActiveStageEvents, Set<Long> guildIdsWithActiveScheduledEvents, Map<Long, Channel> channels, boolean showHubSparkle) {
-                Intrinsics3.checkNotNullParameter(guildJoinRequests, "guildJoinRequests");
-                Intrinsics3.checkNotNullParameter(pendingGuilds, "pendingGuilds");
-                Intrinsics3.checkNotNullParameter(guildIds, "guildIds");
-                Intrinsics3.checkNotNullParameter(guildIdsWithActiveStageEvents, "guildIdsWithActiveStageEvents");
-                Intrinsics3.checkNotNullParameter(guildIdsWithActiveScheduledEvents, "guildIdsWithActiveScheduledEvents");
-                Intrinsics3.checkNotNullParameter(channels, "channels");
+                m.checkNotNullParameter(guildJoinRequests, "guildJoinRequests");
+                m.checkNotNullParameter(pendingGuilds, "pendingGuilds");
+                m.checkNotNullParameter(guildIds, "guildIds");
+                m.checkNotNullParameter(guildIdsWithActiveStageEvents, "guildIdsWithActiveStageEvents");
+                m.checkNotNullParameter(guildIdsWithActiveScheduledEvents, "guildIdsWithActiveScheduledEvents");
+                m.checkNotNullParameter(channels, "channels");
                 return new SecondChunk(guildJoinRequests, pendingGuilds, guildIds, guildIdsWithActiveStageEvents, guildIdsWithActiveScheduledEvents, channels, showHubSparkle);
             }
 
@@ -370,7 +368,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 SecondChunk secondChunk = (SecondChunk) other;
-                return Intrinsics3.areEqual(this.guildJoinRequests, secondChunk.guildJoinRequests) && Intrinsics3.areEqual(this.pendingGuilds, secondChunk.pendingGuilds) && Intrinsics3.areEqual(this.guildIds, secondChunk.guildIds) && Intrinsics3.areEqual(this.guildIdsWithActiveStageEvents, secondChunk.guildIdsWithActiveStageEvents) && Intrinsics3.areEqual(this.guildIdsWithActiveScheduledEvents, secondChunk.guildIdsWithActiveScheduledEvents) && Intrinsics3.areEqual(this.channels, secondChunk.channels) && this.showHubSparkle == secondChunk.showHubSparkle;
+                return m.areEqual(this.guildJoinRequests, secondChunk.guildJoinRequests) && m.areEqual(this.pendingGuilds, secondChunk.pendingGuilds) && m.areEqual(this.guildIds, secondChunk.guildIds) && m.areEqual(this.guildIdsWithActiveStageEvents, secondChunk.guildIdsWithActiveStageEvents) && m.areEqual(this.guildIdsWithActiveScheduledEvents, secondChunk.guildIdsWithActiveScheduledEvents) && m.areEqual(this.channels, secondChunk.channels) && this.showHubSparkle == secondChunk.showHubSparkle;
             }
 
             public final Map<Long, Channel> getChannels() {
@@ -424,7 +422,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SecondChunk(guildJoinRequests=");
+                StringBuilder sbU = a.U("SecondChunk(guildJoinRequests=");
                 sbU.append(this.guildJoinRequests);
                 sbU.append(", pendingGuilds=");
                 sbU.append(this.pendingGuilds);
@@ -437,7 +435,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 sbU.append(", channels=");
                 sbU.append(this.channels);
                 sbU.append(", showHubSparkle=");
-                return outline.O(sbU, this.showHubSparkle, ")");
+                return a.O(sbU, this.showHubSparkle, ")");
             }
         }
 
@@ -449,13 +447,13 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
 
         private final Observable<StoreState> observeStores(Clock clock) {
-            WidgetGuildsListViewModel2 widgetGuildsListViewModel2 = WidgetGuildsListViewModel2.INSTANCE;
-            WidgetGuildsListViewModel3 widgetGuildsListViewModel3 = WidgetGuildsListViewModel3.INSTANCE;
-            Observable<Chunk> observableInvoke2 = widgetGuildsListViewModel2.invoke2();
-            Observable<SecondChunk> observableInvoke22 = widgetGuildsListViewModel3.invoke2();
+            WidgetGuildsListViewModel$Companion$observeStores$1 widgetGuildsListViewModel$Companion$observeStores$1 = WidgetGuildsListViewModel$Companion$observeStores$1.INSTANCE;
+            WidgetGuildsListViewModel$Companion$observeStores$2 widgetGuildsListViewModel$Companion$observeStores$2 = WidgetGuildsListViewModel$Companion$observeStores$2.INSTANCE;
+            Observable<Chunk> observableInvoke2 = widgetGuildsListViewModel$Companion$observeStores$1.invoke2();
+            Observable<SecondChunk> observableInvoke22 = widgetGuildsListViewModel$Companion$observeStores$2.invoke2();
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable observableC = Observable.c(observableInvoke2, observableInvoke22, companion.getLurking().getLurkingGuildIds(), companion.getExpandedGuildFolders().observeOpenFolderIds(), StoreUser.observeMe$default(companion.getUsers(), false, 1, null).r().G(new WidgetGuildsListViewModel4(clock)), new StreamContextService(null, null, null, null, null, null, null, null, 255, null).getForAllStreamingUsers(), companion.getPermissions().observePermissionsForAllChannels(), companion.getNavigation().observeLeftPanelState().G(WidgetGuildsListViewModel5.INSTANCE), companion.getTabsNavigation().observeSelectedTab().G(WidgetGuildsListViewModel6.INSTANCE), WidgetGuildsListViewModel7.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableC, "Observable.combineLatest…Sparkle\n        )\n      }");
+            Observable observableC = Observable.c(observableInvoke2, observableInvoke22, companion.getLurking().getLurkingGuildIds(), companion.getExpandedGuildFolders().observeOpenFolderIds(), StoreUser.observeMe$default(companion.getUsers(), false, 1, null).r().G(new WidgetGuildsListViewModel$Companion$observeStores$3(clock)), new StreamContextService(null, null, null, null, null, null, null, null, 255, null).getForAllStreamingUsers(), companion.getPermissions().observePermissionsForAllChannels(), companion.getNavigation().observeLeftPanelState().G(WidgetGuildsListViewModel$Companion$observeStores$4.INSTANCE), companion.getTabsNavigation().observeSelectedTab().G(WidgetGuildsListViewModel$Companion$observeStores$5.INSTANCE), WidgetGuildsListViewModel$Companion$observeStores$6.INSTANCE);
+            m.checkNotNullExpressionValue(observableC, "Observable.combineLatest…Sparkle\n        )\n      }");
             return ObservableExtensionsKt.leadingEdgeThrottle(observableC, 100L, TimeUnit.MILLISECONDS);
         }
 
@@ -474,7 +472,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public AnnounceFolderToggleForAccessibility(GuildListItem.FolderItem folderItem) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(folderItem, "item");
+                m.checkNotNullParameter(folderItem, "item");
                 this.item = folderItem;
             }
 
@@ -491,13 +489,13 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public final AnnounceFolderToggleForAccessibility copy(GuildListItem.FolderItem item) {
-                Intrinsics3.checkNotNullParameter(item, "item");
+                m.checkNotNullParameter(item, "item");
                 return new AnnounceFolderToggleForAccessibility(item);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof AnnounceFolderToggleForAccessibility) && Intrinsics3.areEqual(this.item, ((AnnounceFolderToggleForAccessibility) other).item);
+                    return (other instanceof AnnounceFolderToggleForAccessibility) && m.areEqual(this.item, ((AnnounceFolderToggleForAccessibility) other).item);
                 }
                 return true;
             }
@@ -515,7 +513,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("AnnounceFolderToggleForAccessibility(item=");
+                StringBuilder sbU = a.U("AnnounceFolderToggleForAccessibility(item=");
                 sbU.append(this.item);
                 sbU.append(")");
                 return sbU.toString();
@@ -572,7 +570,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                return outline.C(outline.U("ShowChannelActions(channelId="), this.channelId, ")");
+                return a.C(a.U("ShowChannelActions(channelId="), this.channelId, ")");
             }
         }
 
@@ -644,7 +642,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                return outline.B(outline.U("ShowUnavailableGuilds(unavailableGuildCount="), this.unavailableGuildCount, ")");
+                return a.B(a.U("ShowUnavailableGuilds(unavailableGuildCount="), this.unavailableGuildCount, ")");
             }
         }
 
@@ -684,23 +682,23 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(long j, long j2, Map<Long, ? extends ModelNotificationSettings> map, Set<Long> set, Map<Long, Integer> map2, Map<Long, ? extends List<Long>> map3, Set<Long> set2, Map<Long, Channel> map4, List<? extends StoreGuildsSorted.Entry> list, Map<Long, GuildJoinRequest> map5, List<Guild> list2, Set<Long> set3, Set<Long> set4, Set<Long> set5, Set<Long> set6, Map<Long, Channel> map6, Set<Long> set7, boolean z2, Map<Long, StreamContext> map7, Map<Long, Long> map8, boolean z3, boolean z4, boolean z5) {
-            Intrinsics3.checkNotNullParameter(map, "guildSettings");
-            Intrinsics3.checkNotNullParameter(set, "unreadGuildIds");
-            Intrinsics3.checkNotNullParameter(map2, "mentionCounts");
-            Intrinsics3.checkNotNullParameter(map3, "channelIds");
-            Intrinsics3.checkNotNullParameter(set2, "unavailableGuilds");
-            Intrinsics3.checkNotNullParameter(map4, "privateChannels");
-            Intrinsics3.checkNotNullParameter(list, "sortedGuilds");
-            Intrinsics3.checkNotNullParameter(map5, "guildJoinRequests");
-            Intrinsics3.checkNotNullParameter(list2, "pendingGuilds");
-            Intrinsics3.checkNotNullParameter(set3, "guildIds");
-            Intrinsics3.checkNotNullParameter(set4, "lurkingGuildIds");
-            Intrinsics3.checkNotNullParameter(set5, "guildIdsWithActiveStageEvents");
-            Intrinsics3.checkNotNullParameter(set6, "guildIdsWithActiveScheduledEvents");
-            Intrinsics3.checkNotNullParameter(map6, "channels");
-            Intrinsics3.checkNotNullParameter(set7, "openFolderIds");
-            Intrinsics3.checkNotNullParameter(map7, "allApplicationStreamContexts");
-            Intrinsics3.checkNotNullParameter(map8, "allChannelPermissions");
+            m.checkNotNullParameter(map, "guildSettings");
+            m.checkNotNullParameter(set, "unreadGuildIds");
+            m.checkNotNullParameter(map2, "mentionCounts");
+            m.checkNotNullParameter(map3, "channelIds");
+            m.checkNotNullParameter(set2, "unavailableGuilds");
+            m.checkNotNullParameter(map4, "privateChannels");
+            m.checkNotNullParameter(list, "sortedGuilds");
+            m.checkNotNullParameter(map5, "guildJoinRequests");
+            m.checkNotNullParameter(list2, "pendingGuilds");
+            m.checkNotNullParameter(set3, "guildIds");
+            m.checkNotNullParameter(set4, "lurkingGuildIds");
+            m.checkNotNullParameter(set5, "guildIdsWithActiveStageEvents");
+            m.checkNotNullParameter(set6, "guildIdsWithActiveScheduledEvents");
+            m.checkNotNullParameter(map6, "channels");
+            m.checkNotNullParameter(set7, "openFolderIds");
+            m.checkNotNullParameter(map7, "allApplicationStreamContexts");
+            m.checkNotNullParameter(map8, "allChannelPermissions");
             this.selectedGuildId = j;
             this.selectedVoiceChannelId = j2;
             this.guildSettings = map;
@@ -829,23 +827,23 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(long selectedGuildId, long selectedVoiceChannelId, Map<Long, ? extends ModelNotificationSettings> guildSettings, Set<Long> unreadGuildIds, Map<Long, Integer> mentionCounts, Map<Long, ? extends List<Long>> channelIds, Set<Long> unavailableGuilds, Map<Long, Channel> privateChannels, List<? extends StoreGuildsSorted.Entry> sortedGuilds, Map<Long, GuildJoinRequest> guildJoinRequests, List<Guild> pendingGuilds, Set<Long> guildIds, Set<Long> lurkingGuildIds, Set<Long> guildIdsWithActiveStageEvents, Set<Long> guildIdsWithActiveScheduledEvents, Map<Long, Channel> channels, Set<Long> openFolderIds, boolean isNewUser, Map<Long, StreamContext> allApplicationStreamContexts, Map<Long, Long> allChannelPermissions, boolean isLeftPanelOpened, boolean isOnHomeTab, boolean showHubSparkle) {
-            Intrinsics3.checkNotNullParameter(guildSettings, "guildSettings");
-            Intrinsics3.checkNotNullParameter(unreadGuildIds, "unreadGuildIds");
-            Intrinsics3.checkNotNullParameter(mentionCounts, "mentionCounts");
-            Intrinsics3.checkNotNullParameter(channelIds, "channelIds");
-            Intrinsics3.checkNotNullParameter(unavailableGuilds, "unavailableGuilds");
-            Intrinsics3.checkNotNullParameter(privateChannels, "privateChannels");
-            Intrinsics3.checkNotNullParameter(sortedGuilds, "sortedGuilds");
-            Intrinsics3.checkNotNullParameter(guildJoinRequests, "guildJoinRequests");
-            Intrinsics3.checkNotNullParameter(pendingGuilds, "pendingGuilds");
-            Intrinsics3.checkNotNullParameter(guildIds, "guildIds");
-            Intrinsics3.checkNotNullParameter(lurkingGuildIds, "lurkingGuildIds");
-            Intrinsics3.checkNotNullParameter(guildIdsWithActiveStageEvents, "guildIdsWithActiveStageEvents");
-            Intrinsics3.checkNotNullParameter(guildIdsWithActiveScheduledEvents, "guildIdsWithActiveScheduledEvents");
-            Intrinsics3.checkNotNullParameter(channels, "channels");
-            Intrinsics3.checkNotNullParameter(openFolderIds, "openFolderIds");
-            Intrinsics3.checkNotNullParameter(allApplicationStreamContexts, "allApplicationStreamContexts");
-            Intrinsics3.checkNotNullParameter(allChannelPermissions, "allChannelPermissions");
+            m.checkNotNullParameter(guildSettings, "guildSettings");
+            m.checkNotNullParameter(unreadGuildIds, "unreadGuildIds");
+            m.checkNotNullParameter(mentionCounts, "mentionCounts");
+            m.checkNotNullParameter(channelIds, "channelIds");
+            m.checkNotNullParameter(unavailableGuilds, "unavailableGuilds");
+            m.checkNotNullParameter(privateChannels, "privateChannels");
+            m.checkNotNullParameter(sortedGuilds, "sortedGuilds");
+            m.checkNotNullParameter(guildJoinRequests, "guildJoinRequests");
+            m.checkNotNullParameter(pendingGuilds, "pendingGuilds");
+            m.checkNotNullParameter(guildIds, "guildIds");
+            m.checkNotNullParameter(lurkingGuildIds, "lurkingGuildIds");
+            m.checkNotNullParameter(guildIdsWithActiveStageEvents, "guildIdsWithActiveStageEvents");
+            m.checkNotNullParameter(guildIdsWithActiveScheduledEvents, "guildIdsWithActiveScheduledEvents");
+            m.checkNotNullParameter(channels, "channels");
+            m.checkNotNullParameter(openFolderIds, "openFolderIds");
+            m.checkNotNullParameter(allApplicationStreamContexts, "allApplicationStreamContexts");
+            m.checkNotNullParameter(allChannelPermissions, "allChannelPermissions");
             return new StoreState(selectedGuildId, selectedVoiceChannelId, guildSettings, unreadGuildIds, mentionCounts, channelIds, unavailableGuilds, privateChannels, sortedGuilds, guildJoinRequests, pendingGuilds, guildIds, lurkingGuildIds, guildIdsWithActiveStageEvents, guildIdsWithActiveScheduledEvents, channels, openFolderIds, isNewUser, allApplicationStreamContexts, allChannelPermissions, isLeftPanelOpened, isOnHomeTab, showHubSparkle);
         }
 
@@ -857,7 +855,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return this.selectedGuildId == storeState.selectedGuildId && this.selectedVoiceChannelId == storeState.selectedVoiceChannelId && Intrinsics3.areEqual(this.guildSettings, storeState.guildSettings) && Intrinsics3.areEqual(this.unreadGuildIds, storeState.unreadGuildIds) && Intrinsics3.areEqual(this.mentionCounts, storeState.mentionCounts) && Intrinsics3.areEqual(this.channelIds, storeState.channelIds) && Intrinsics3.areEqual(this.unavailableGuilds, storeState.unavailableGuilds) && Intrinsics3.areEqual(this.privateChannels, storeState.privateChannels) && Intrinsics3.areEqual(this.sortedGuilds, storeState.sortedGuilds) && Intrinsics3.areEqual(this.guildJoinRequests, storeState.guildJoinRequests) && Intrinsics3.areEqual(this.pendingGuilds, storeState.pendingGuilds) && Intrinsics3.areEqual(this.guildIds, storeState.guildIds) && Intrinsics3.areEqual(this.lurkingGuildIds, storeState.lurkingGuildIds) && Intrinsics3.areEqual(this.guildIdsWithActiveStageEvents, storeState.guildIdsWithActiveStageEvents) && Intrinsics3.areEqual(this.guildIdsWithActiveScheduledEvents, storeState.guildIdsWithActiveScheduledEvents) && Intrinsics3.areEqual(this.channels, storeState.channels) && Intrinsics3.areEqual(this.openFolderIds, storeState.openFolderIds) && this.isNewUser == storeState.isNewUser && Intrinsics3.areEqual(this.allApplicationStreamContexts, storeState.allApplicationStreamContexts) && Intrinsics3.areEqual(this.allChannelPermissions, storeState.allChannelPermissions) && this.isLeftPanelOpened == storeState.isLeftPanelOpened && this.isOnHomeTab == storeState.isOnHomeTab && this.showHubSparkle == storeState.showHubSparkle;
+            return this.selectedGuildId == storeState.selectedGuildId && this.selectedVoiceChannelId == storeState.selectedVoiceChannelId && m.areEqual(this.guildSettings, storeState.guildSettings) && m.areEqual(this.unreadGuildIds, storeState.unreadGuildIds) && m.areEqual(this.mentionCounts, storeState.mentionCounts) && m.areEqual(this.channelIds, storeState.channelIds) && m.areEqual(this.unavailableGuilds, storeState.unavailableGuilds) && m.areEqual(this.privateChannels, storeState.privateChannels) && m.areEqual(this.sortedGuilds, storeState.sortedGuilds) && m.areEqual(this.guildJoinRequests, storeState.guildJoinRequests) && m.areEqual(this.pendingGuilds, storeState.pendingGuilds) && m.areEqual(this.guildIds, storeState.guildIds) && m.areEqual(this.lurkingGuildIds, storeState.lurkingGuildIds) && m.areEqual(this.guildIdsWithActiveStageEvents, storeState.guildIdsWithActiveStageEvents) && m.areEqual(this.guildIdsWithActiveScheduledEvents, storeState.guildIdsWithActiveScheduledEvents) && m.areEqual(this.channels, storeState.channels) && m.areEqual(this.openFolderIds, storeState.openFolderIds) && this.isNewUser == storeState.isNewUser && m.areEqual(this.allApplicationStreamContexts, storeState.allApplicationStreamContexts) && m.areEqual(this.allChannelPermissions, storeState.allChannelPermissions) && this.isLeftPanelOpened == storeState.isLeftPanelOpened && this.isOnHomeTab == storeState.isOnHomeTab && this.showHubSparkle == storeState.showHubSparkle;
         }
 
         public final Map<Long, StreamContext> getAllApplicationStreamContexts() {
@@ -1012,7 +1010,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(selectedGuildId=");
+            StringBuilder sbU = a.U("StoreState(selectedGuildId=");
             sbU.append(this.selectedGuildId);
             sbU.append(", selectedVoiceChannelId=");
             sbU.append(this.selectedVoiceChannelId);
@@ -1057,7 +1055,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             sbU.append(", isOnHomeTab=");
             sbU.append(this.isOnHomeTab);
             sbU.append(", showHubSparkle=");
-            return outline.O(sbU, this.showHubSparkle, ")");
+            return a.O(sbU, this.showHubSparkle, ")");
         }
     }
 
@@ -1074,7 +1072,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(List<? extends GuildListItem> list, boolean z2, boolean z3) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "items");
+                m.checkNotNullParameter(list, "items");
                 this.items = list;
                 this.hasChannels = z2;
                 this.wasDragResult = z3;
@@ -1109,7 +1107,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loaded copy(List<? extends GuildListItem> items, boolean hasChannels, boolean wasDragResult) {
-                Intrinsics3.checkNotNullParameter(items, "items");
+                m.checkNotNullParameter(items, "items");
                 return new Loaded(items, hasChannels, wasDragResult);
             }
 
@@ -1121,7 +1119,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.items, loaded.items) && this.hasChannels == loaded.hasChannels && this.wasDragResult == loaded.wasDragResult;
+                return m.areEqual(this.items, loaded.items) && this.hasChannels == loaded.hasChannels && this.wasDragResult == loaded.wasDragResult;
             }
 
             public final boolean getHasChannels() {
@@ -1151,12 +1149,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(items=");
+                StringBuilder sbU = a.U("Loaded(items=");
                 sbU.append(this.items);
                 sbU.append(", hasChannels=");
                 sbU.append(this.hasChannels);
                 sbU.append(", wasDragResult=");
-                return outline.O(sbU, this.wasDragResult, ")");
+                return a.O(sbU, this.wasDragResult, ")");
             }
         }
 
@@ -1179,7 +1177,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetGuildsListViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$createDirectMessageItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Boolean> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Boolean> {
         public final /* synthetic */ ModelNotificationSettings $dmSettings;
         public final /* synthetic */ Map $mentionCounts;
 
@@ -1199,14 +1197,14 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         public final boolean invoke2(Channel channel) {
             ModelNotificationSettings modelNotificationSettings;
             ModelNotificationSettings.ChannelOverride channelOverride;
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             return this.$mentionCounts.containsKey(Long.valueOf(channel.getId())) && ((modelNotificationSettings = this.$dmSettings) == null || (channelOverride = modelNotificationSettings.getChannelOverride(channel.getId())) == null || !channelOverride.isMuted());
         }
     }
 
     /* compiled from: WidgetGuildsListViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$createDirectMessageItems$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, GuildListItem.PrivateChannelItem> {
+    public static final class AnonymousClass2 extends o implements Function1<Channel, GuildListItem.PrivateChannelItem> {
         public final /* synthetic */ Map $mentionCounts;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1222,15 +1220,15 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildListItem.PrivateChannelItem invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "it");
-            Integer num = (Integer) outline.d(channel, this.$mentionCounts);
+            m.checkNotNullParameter(channel, "it");
+            Integer num = (Integer) a.d(channel, this.$mentionCounts);
             return new GuildListItem.PrivateChannelItem(channel, num != null ? num.intValue() : 0);
         }
     }
 
     /* compiled from: WidgetGuildsListViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<StoreGuildsSorted.Entry, Boolean> {
+    public static final class AnonymousClass2 extends o implements Function1<StoreGuildsSorted.Entry, Boolean> {
         public final /* synthetic */ StoreState $storeState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1246,14 +1244,14 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(StoreGuildsSorted.Entry entry) {
-            Intrinsics3.checkNotNullParameter(entry, "it");
+            m.checkNotNullParameter(entry, "it");
             return ((entry instanceof StoreGuildsSorted.Entry.SingletonGuild) && this.$storeState.getLurkingGuildIds().contains(Long.valueOf(((StoreGuildsSorted.Entry.SingletonGuild) entry).getGuild().getId()))) ? false : true;
         }
     }
 
     /* compiled from: WidgetGuildsListViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$onDrop$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<ModelUserSettings, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<ModelUserSettings, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -1268,13 +1266,13 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
-            Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
+            m.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
     /* compiled from: WidgetGuildsListViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$onItemClicked$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -1307,7 +1305,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
     }
 
     private final Sequence<GuildListItem.PrivateChannelItem> createDirectMessageItems(Map<Long, Channel> privateChannels, Map<Long, Integer> mentionCounts, ModelNotificationSettings dmSettings) {
-        return _Sequences2.map(_Sequences2.sortedWith(_Sequences2.filter(_Sequences2.filterNotNull(_Collections.asSequence(privateChannels.values())), new AnonymousClass1(dmSettings, mentionCounts)), ChannelUtils.h(Channel.INSTANCE)), new AnonymousClass2(mentionCounts));
+        return q.map(q.sortedWith(q.filter(q.filterNotNull(u.asSequence(privateChannels.values())), new AnonymousClass1(dmSettings, mentionCounts)), ChannelUtils.h(Channel.INSTANCE)), new AnonymousClass2(mentionCounts));
     }
 
     private final GuildListItem.GuildItem createGuildItem(Guild guild, long selectedGuildId, long selectedVoiceChannelId, Set<Long> unreadGuildIds, Map<Long, ? extends ModelNotificationSettings> guildSettings, int numMentions, Map<Long, ? extends List<Long>> channelIds, Map<Long, Channel> channels, Set<Long> lurkingGuildIds, Set<Long> guildIdsWithActiveStageEvents, Set<Long> guildIdsWithActiveScheduledEvents, Long folderId, Boolean isLastGuildInFolder, Map<Long, StreamContext> allApplicationStreamContexts, Map<Long, Long> allChannelPermissions, ApplicationStatus applicationStatus, boolean isPendingGuild) {
@@ -1345,17 +1343,17 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         GuildListItem.FolderItem folderItem = new GuildListItem.FolderItem(-7L, null, null, openFolderIds.contains(-7L), pendingGuilds, false, false, false, 0, false, false);
         arrayList.add(folderItem);
         if (folderItem.isOpen()) {
-            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(pendingGuilds, 10));
+            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(pendingGuilds, 10));
             int i = 0;
             for (Object obj : pendingGuilds) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    Collections2.throwIndexOverflow();
+                    n.throwIndexOverflow();
                 }
                 Guild guild = (Guild) obj;
                 Long lValueOf = Long.valueOf(folderItem.getFolderId());
-                Boolean boolValueOf = Boolean.valueOf(Collections2.getLastIndex(pendingGuilds) == i);
-                GuildJoinRequest guildJoinRequest = (GuildJoinRequest) outline.e(guild, guildJoinRequests);
+                Boolean boolValueOf = Boolean.valueOf(n.getLastIndex(pendingGuilds) == i);
+                GuildJoinRequest guildJoinRequest = (GuildJoinRequest) a.e(guild, guildJoinRequests);
                 arrayList2.add(createGuildItem(guild, selectedGuildId, selectedVoiceChannelId, unreadGuildIds, guildSettings, 0, channelIds, channels, lurkingGuildIds, guildIdsWithActiveStageEvents, guildIdsWithActiveScheduledEvents, lValueOf, boolValueOf, allApplicationStreamContexts, allChannelPermissions, guildJoinRequest != null ? guildJoinRequest.getApplicationStatus() : null, true));
                 i = i2;
             }
@@ -1392,7 +1390,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         ModelNotificationSettings modelNotificationSettings;
         ArrayList arrayList6 = new ArrayList(storeState.getPendingGuilds().size() + storeState.getSortedGuilds().size() + 3);
         arrayList6.add(new GuildListItem.FriendsItem(storeState.getSelectedGuildId() <= 0));
-        MutableCollections.addAll(arrayList6, createDirectMessageItems(storeState.getPrivateChannels(), storeState.getMentionCounts(), storeState.getGuildSettings().get(0L)));
+        r.addAll(arrayList6, createDirectMessageItems(storeState.getPrivateChannels(), storeState.getMentionCounts(), storeState.getGuildSettings().get(0L)));
         HashMap map4 = new HashMap();
         for (StoreGuildsSorted.Entry entry : storeState.getSortedGuilds()) {
             if (entry instanceof StoreGuildsSorted.Entry.SingletonGuild) {
@@ -1406,11 +1404,11 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 }
             }
         }
-        Sequence sequenceFilter = _Sequences2.filter(_Collections.asSequence(storeState.getSortedGuilds()), _Sequences.INSTANCE);
+        Sequence sequenceFilter = q.filter(u.asSequence(storeState.getSortedGuilds()), WidgetGuildsListViewModel$handleStoreState$$inlined$filterIsInstance$1.INSTANCE);
         Objects.requireNonNull(sequenceFilter, "null cannot be cast to non-null type kotlin.sequences.Sequence<R>");
-        Sequence map5 = _Sequences2.map(_Sequences2.filter(sequenceFilter, new WidgetGuildsListViewModel8(storeState)), new WidgetGuildsListViewModel9(this, storeState, map4));
+        Sequence map5 = q.map(q.filter(sequenceFilter, new WidgetGuildsListViewModel$handleStoreState$lurkerGuildItems$1(storeState)), new WidgetGuildsListViewModel$handleStoreState$lurkerGuildItems$2(this, storeState, map4));
         ArrayList arrayList7 = new ArrayList();
-        for (StoreGuildsSorted.Entry entry2 : _Sequences2.filter(_Collections.asSequence(storeState.getSortedGuilds()), new AnonymousClass2(storeState))) {
+        for (StoreGuildsSorted.Entry entry2 : q.filter(u.asSequence(storeState.getSortedGuilds()), new AnonymousClass2(storeState))) {
             if (entry2 instanceof StoreGuildsSorted.Entry.SingletonGuild) {
                 StoreGuildsSorted.Entry.SingletonGuild singletonGuild = (StoreGuildsSorted.Entry.SingletonGuild) entry2;
                 Guild guild = singletonGuild.getGuild();
@@ -1422,7 +1420,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 if (num2 == null) {
                     num2 = 0;
                 }
-                Intrinsics3.checkNotNullExpressionValue(num2, "mentionCountsByGuild[folder.guild.id] ?: 0");
+                m.checkNotNullExpressionValue(num2, "mentionCountsByGuild[folder.guild.id] ?: 0");
                 int iIntValue = num2.intValue();
                 Map<Long, List<Long>> channelIds = storeState.getChannelIds();
                 Map<Long, Channel> channels = storeState.getChannels();
@@ -1465,7 +1463,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                             if (z10) {
                                 z10 = true;
                             } else {
-                                List list = (List) outline.e(guild2, storeState.getChannelIds());
+                                List list = (List) a.e(guild2, storeState.getChannelIds());
                                 if (!(list != null ? list.contains(Long.valueOf(storeState.getSelectedVoiceChannelId())) : false)) {
                                     z10 = false;
                                 }
@@ -1479,14 +1477,14 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                                     if (ChannelUtils.D(channel)) {
                                     }
                                     if (!z8) {
-                                        z8 = storeState.getUnreadGuildIds().contains(Long.valueOf(guild2.getId())) && ((modelNotificationSettings = (ModelNotificationSettings) outline.e(guild2, storeState.getGuildSettings())) == null || modelNotificationSettings.isMuted() != z7);
+                                        z8 = storeState.getUnreadGuildIds().contains(Long.valueOf(guild2.getId())) && ((modelNotificationSettings = (ModelNotificationSettings) a.e(guild2, storeState.getGuildSettings())) == null || modelNotificationSettings.isMuted() != z7);
                                     }
                                     HashMap map6 = map;
                                     num = (Integer) map6.get(Long.valueOf(guild2.getId()));
                                     if (num == null) {
                                         num = 0;
                                     }
-                                    Intrinsics3.checkNotNullExpressionValue(num, "mentionCountsByGuild[guild.id] ?: 0");
+                                    m.checkNotNullExpressionValue(num, "mentionCountsByGuild[guild.id] ?: 0");
                                     iIntValue2 += num.intValue();
                                     map = map6;
                                 } else {
@@ -1499,7 +1497,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                                 num = (Integer) map62.get(Long.valueOf(guild2.getId()));
                                 if (num == null) {
                                 }
-                                Intrinsics3.checkNotNullExpressionValue(num, "mentionCountsByGuild[guild.id] ?: 0");
+                                m.checkNotNullExpressionValue(num, "mentionCountsByGuild[guild.id] ?: 0");
                                 iIntValue2 += num.intValue();
                                 map = map62;
                             }
@@ -1510,7 +1508,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                             num = (Integer) map622.get(Long.valueOf(guild2.getId()));
                             if (num == null) {
                             }
-                            Intrinsics3.checkNotNullExpressionValue(num, "mentionCountsByGuild[guild.id] ?: 0");
+                            m.checkNotNullExpressionValue(num, "mentionCountsByGuild[guild.id] ?: 0");
                             iIntValue2 += num.intValue();
                             map = map622;
                         }
@@ -1524,12 +1522,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                     arrayList3.add(new GuildListItem.FolderItem(folder.getId(), folder.getColor(), folder.getName(), zContains, folder.getGuilds(), z3, z4, z5, i, z6, false, 1024, null));
                     if (zContains) {
                         List<Guild> guilds = folder.getGuilds();
-                        ArrayList arrayList9 = new ArrayList(Iterables2.collectionSizeOrDefault(guilds, 10));
+                        ArrayList arrayList9 = new ArrayList(d0.t.o.collectionSizeOrDefault(guilds, 10));
                         int i2 = 0;
                         for (Object obj : guilds) {
                             int i3 = i2 + 1;
                             if (i2 < 0) {
-                                Collections2.throwIndexOverflow();
+                                n.throwIndexOverflow();
                             }
                             Guild guild3 = (Guild) obj;
                             long selectedGuildId2 = storeState.getSelectedGuildId();
@@ -1540,7 +1538,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                             if (num3 == null) {
                                 num3 = 0;
                             }
-                            Intrinsics3.checkNotNullExpressionValue(num3, str);
+                            m.checkNotNullExpressionValue(num3, str);
                             int iIntValue3 = num3.intValue();
                             Map<Long, List<Long>> channelIds2 = storeState.getChannelIds();
                             Map<Long, Channel> channels2 = storeState.getChannels();
@@ -1549,10 +1547,10 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                             Set<Long> guildIdsWithActiveScheduledEvents2 = storeState.getGuildIdsWithActiveScheduledEvents();
                             Long lValueOf = Long.valueOf(folder.getId());
                             ArrayList arrayList10 = arrayList9;
-                            Boolean boolValueOf = Boolean.valueOf(Collections2.getLastIndex(folder.getGuilds()) == i2);
+                            Boolean boolValueOf = Boolean.valueOf(n.getLastIndex(folder.getGuilds()) == i2);
                             Map<Long, StreamContext> allApplicationStreamContexts2 = storeState.getAllApplicationStreamContexts();
                             Map<Long, Long> allChannelPermissions2 = storeState.getAllChannelPermissions();
-                            GuildJoinRequest guildJoinRequest2 = (GuildJoinRequest) outline.e(guild3, storeState.getGuildJoinRequests());
+                            GuildJoinRequest guildJoinRequest2 = (GuildJoinRequest) a.e(guild3, storeState.getGuildJoinRequests());
                             arrayList10.add(createGuildItem$default(this, guild3, selectedGuildId2, selectedVoiceChannelId2, unreadGuildIds2, guildSettings2, iIntValue3, channelIds2, channels2, lurkingGuildIds2, guildIdsWithActiveStageEvents2, guildIdsWithActiveScheduledEvents2, lValueOf, boolValueOf, allApplicationStreamContexts2, allChannelPermissions2, guildJoinRequest2 != null ? guildJoinRequest2.getApplicationStatus() : null, false, 65536, null));
                             arrayList9 = arrayList10;
                             i2 = i3;
@@ -1592,7 +1590,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         } else {
             Iterator<Map.Entry<Long, GuildJoinRequest>> it2 = guildJoinRequests.entrySet().iterator();
             while (it2.hasNext()) {
-                if (Collections2.emptyList().contains(it2.next().getKey())) {
+                if (n.emptyList().contains(it2.next().getKey())) {
                     z2 = true;
                     break;
                 }
@@ -1607,7 +1605,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             arrayList = arrayList11;
             arrayList2 = arrayList12;
         }
-        MutableCollections.addAll(arrayList2, sequence2);
+        r.addAll(arrayList2, sequence2);
         GuildListItem.DividerItem dividerItem = GuildListItem.DividerItem.INSTANCE;
         arrayList2.add(dividerItem);
         arrayList2.addAll(arrayList);
@@ -1646,7 +1644,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         if (loaded != null) {
             List<GuildListItem> items = loaded.getItems();
             GuildListItem guildListItem = items.get(fromPosition);
-            if (this.currentTargetOperation != null || (fromPosition > i || Math.abs(fromPosition - i) >= 2) || ((guildListItem instanceof GuildListItem.GuildItem) && (Intrinsics3.areEqual(((GuildListItem.GuildItem) guildListItem).getFolderId(), folderId) ^ true))) {
+            if (this.currentTargetOperation != null || (fromPosition > i || Math.abs(fromPosition - i) >= 2) || ((guildListItem instanceof GuildListItem.GuildItem) && (m.areEqual(((GuildListItem.GuildItem) guildListItem).getFolderId(), folderId) ^ true))) {
                 ArrayList<GuildListItem> arrayList2 = new ArrayList<>(items);
                 untargetCurrentTarget(arrayList2);
                 if (fromPosition < i) {
@@ -1659,7 +1657,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                         GuildListItem.GuildItem guildItem = (GuildListItem.GuildItem) guildListItem;
                         arrayList = arrayList2;
                         arrayList.add(i2, GuildListItem.GuildItem.copy$default(guildItem, null, 0, false, false, false, folderId, false, false, false, null, null, false, false, false, false, 32735, null));
-                        rebuildFolders(arrayList, _Collections.toSet(Collections2.listOfNotNull((Object[]) new Long[]{guildItem.getFolderId(), folderId})));
+                        rebuildFolders(arrayList, u.toSet(n.listOfNotNull((Object[]) new Long[]{guildItem.getFolderId(), folderId})));
                     }
                     updateViewState(ViewState.Loaded.copy$default(loaded, arrayList, false, true, 2, null));
                 }
@@ -1673,23 +1671,23 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
     private final void performTargetOperation(ArrayList<GuildListItem> editingList, int fromPosition, int toPosition) {
         GuildListItem guildListItem = editingList.get(fromPosition);
-        Intrinsics3.checkNotNullExpressionValue(guildListItem, "editingList[fromPosition]");
+        m.checkNotNullExpressionValue(guildListItem, "editingList[fromPosition]");
         GuildListItem guildListItem2 = guildListItem;
         GuildListItem guildListItem3 = editingList.get(toPosition);
-        Intrinsics3.checkNotNullExpressionValue(guildListItem3, "editingList[toPosition]");
+        m.checkNotNullExpressionValue(guildListItem3, "editingList[toPosition]");
         GuildListItem guildListItem4 = guildListItem3;
         boolean z2 = guildListItem2 instanceof GuildListItem.GuildItem;
         if (z2 && (guildListItem4 instanceof GuildListItem.GuildItem)) {
             GuildListItem.GuildItem guildItem = (GuildListItem.GuildItem) guildListItem4;
             GuildListItem.GuildItem guildItem2 = (GuildListItem.GuildItem) guildListItem2;
-            editingList.set(toPosition, new GuildListItem.FolderItem(Random.k.nextLong(), null, null, false, Collections2.listOf((Object[]) new Guild[]{guildItem.getGuild(), guildItem2.getGuild()}), guildItem.isSelected() || guildItem2.isSelected(), guildItem.isConnectedToVoice() || guildItem2.isConnectedToVoice(), guildItem.isConnectedToStageChannel() || guildItem2.isConnectedToStageChannel(), guildItem2.getMentionCount() + guildItem.getMentionCount(), guildItem.getIsUnread() || guildItem2.getIsUnread(), false));
-            Intrinsics3.checkNotNullExpressionValue(editingList.remove(fromPosition), "editingList.removeAt(fromPosition)");
+            editingList.set(toPosition, new GuildListItem.FolderItem(c.k.nextLong(), null, null, false, n.listOf((Object[]) new Guild[]{guildItem.getGuild(), guildItem2.getGuild()}), guildItem.isSelected() || guildItem2.isSelected(), guildItem.isConnectedToVoice() || guildItem2.isConnectedToVoice(), guildItem.isConnectedToStageChannel() || guildItem2.isConnectedToStageChannel(), guildItem2.getMentionCount() + guildItem.getMentionCount(), guildItem.getIsUnread() || guildItem2.getIsUnread(), false));
+            m.checkNotNullExpressionValue(editingList.remove(fromPosition), "editingList.removeAt(fromPosition)");
             return;
         }
         if (z2 && (guildListItem4 instanceof GuildListItem.FolderItem)) {
             GuildListItem.FolderItem folderItem = (GuildListItem.FolderItem) guildListItem4;
             GuildListItem.GuildItem guildItem3 = (GuildListItem.GuildItem) guildListItem2;
-            editingList.set(toPosition, GuildListItem.FolderItem.copy$default(folderItem, 0L, null, null, false, _Collections.plus((Collection<? extends Guild>) _Collections.toMutableList((Collection) folderItem.getGuilds()), guildItem3.getGuild()), folderItem.isAnyGuildSelected() || guildItem3.isSelected(), folderItem.isAnyGuildConnectedToVoice() || guildItem3.isConnectedToVoice(), false, 0, folderItem.getIsUnread() || guildItem3.getIsUnread(), false, 399, null));
+            editingList.set(toPosition, GuildListItem.FolderItem.copy$default(folderItem, 0L, null, null, false, u.plus((Collection<? extends Guild>) u.toMutableList((Collection) folderItem.getGuilds()), guildItem3.getGuild()), folderItem.isAnyGuildSelected() || guildItem3.isSelected(), folderItem.isAnyGuildConnectedToVoice() || guildItem3.isConnectedToVoice(), false, 0, folderItem.getIsUnread() || guildItem3.getIsUnread(), false, 399, null));
             editingList.remove(fromPosition);
         }
     }
@@ -1769,13 +1767,13 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         if (collection == null) {
             return 0;
         }
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(collection, 10));
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(collection, 10));
         Iterator<T> it = collection.iterator();
         while (it.hasNext()) {
             Integer num = mentionCounts.get(Long.valueOf(((Number) it.next()).longValue()));
             arrayList.add(Integer.valueOf(num != null ? num.intValue() : 0));
         }
-        return _Collections.sumOfInt(arrayList);
+        return u.sumOfInt(arrayList);
     }
 
     private final void untargetCurrentTarget(ArrayList<GuildListItem> editingList) {
@@ -1784,7 +1782,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
         if (targetOperation != null) {
             int targetPosition = targetOperation.getTargetPosition();
             GuildListItem guildListItem = editingList.get(targetPosition);
-            Intrinsics3.checkNotNullExpressionValue(guildListItem, "editingList[toPosition]");
+            m.checkNotNullExpressionValue(guildListItem, "editingList[toPosition]");
             GuildListItem guildListItem2 = guildListItem;
             if (guildListItem2 instanceof GuildListItem.GuildItem) {
                 guildListItemCopy$default = GuildListItem.GuildItem.copy$default((GuildListItem.GuildItem) guildListItem2, null, 0, false, false, false, null, false, false, false, null, null, false, false, false, false, 32511, null);
@@ -1798,7 +1796,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> listenForEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -1874,7 +1872,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             }
         }
         StoreStream.INSTANCE.getGuildsSorted().setPositions(arrayList);
-        ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+        ArrayList arrayList3 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
             arrayList3.add(((StoreGuildsSorted.Entry) it.next()).asModelGuildFolder());
@@ -1884,9 +1882,9 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
     }
 
     public final void onItemClicked(GuildListItem item, Context context, FragmentManager fragmentManager) {
-        Intrinsics3.checkNotNullParameter(item, "item");
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
         boolean z2 = !GrowthTeamFeatures.INSTANCE.isHubEnabled();
         if (item instanceof GuildListItem.GuildItem) {
             GuildListItem.GuildItem guildItem = (GuildListItem.GuildItem) item;
@@ -1898,7 +1896,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 StoreNavigation.setNavigationPanelAction$default(StoreStream.INSTANCE.getNavigation(), StoreNavigation.PanelAction.CLOSE, null, 2, null);
                 return;
             } else if (guildItem.getGuild().isHub() && z2) {
-                AppToast.g(context, R.string.discord_u_coming_soon_to_mobile, 0, null, 12);
+                b.a.d.m.g(context, R.string.discord_u_coming_soon_to_mobile, 0, null, 12);
                 return;
             } else {
                 StoreStream.INSTANCE.getGuildSelected().set(guildItem.getGuild().getId());
@@ -1922,7 +1920,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
                 return;
             }
         }
-        if (Intrinsics3.areEqual(item, GuildListItem.CreateItem.INSTANCE)) {
+        if (m.areEqual(item, GuildListItem.CreateItem.INSTANCE)) {
             this.eventSubject.k.onNext(Event.ShowCreateGuild.INSTANCE);
             return;
         }
@@ -1931,7 +1929,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
             this.eventSubject.k.onNext(Event.ShowHubVerification.INSTANCE);
             return;
         }
-        if (Intrinsics3.areEqual(item, GuildListItem.HelpItem.INSTANCE)) {
+        if (m.areEqual(item, GuildListItem.HelpItem.INSTANCE)) {
             this.eventSubject.k.onNext(Event.ShowHelp.INSTANCE);
         } else if (item instanceof GuildListItem.FolderItem) {
             GuildListItem.FolderItem folderItem = (GuildListItem.FolderItem) item;
@@ -1945,7 +1943,7 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
     }
 
     public final void onItemLongPressed(GuildListItem item) {
-        Intrinsics3.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(item, "item");
         if (item instanceof GuildListItem.PrivateChannelItem) {
             PublishSubject<Event> publishSubject = this.eventSubject;
             publishSubject.k.onNext(new Event.ShowChannelActions(((GuildListItem.PrivateChannelItem) item).getChannel().getId()));
@@ -1981,12 +1979,12 @@ public final class WidgetGuildsListViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildsListViewModel(Clock clock, Observable<StoreState> observable) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.clock = clock;
         this.eventSubject = PublishSubject.k0();
         Observable observableR = ObservableExtensionsKt.computationLatest(observable).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "storeObservable\n        …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "storeObservable\n        …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableR, this, null, 2, null), WidgetGuildsListViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 }

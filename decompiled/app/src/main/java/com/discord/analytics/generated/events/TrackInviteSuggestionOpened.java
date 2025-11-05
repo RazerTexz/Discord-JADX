@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackInviteSuggestionOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInviteSuggestionOpened implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackInviteSuggestionOpened implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long numSuggestions = null;
     private final Long numFriends = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackInviteSuggestionOpened implements AnalyticsSc
             return false;
         }
         TrackInviteSuggestionOpened trackInviteSuggestionOpened = (TrackInviteSuggestionOpened) other;
-        return Intrinsics3.areEqual(this.numSuggestions, trackInviteSuggestionOpened.numSuggestions) && Intrinsics3.areEqual(this.numFriends, trackInviteSuggestionOpened.numFriends) && Intrinsics3.areEqual(this.numDms, trackInviteSuggestionOpened.numDms) && Intrinsics3.areEqual(this.numGroupDms, trackInviteSuggestionOpened.numGroupDms) && Intrinsics3.areEqual(this.guildId, trackInviteSuggestionOpened.guildId);
+        return m.areEqual(this.numSuggestions, trackInviteSuggestionOpened.numSuggestions) && m.areEqual(this.numFriends, trackInviteSuggestionOpened.numFriends) && m.areEqual(this.numDms, trackInviteSuggestionOpened.numDms) && m.areEqual(this.numGroupDms, trackInviteSuggestionOpened.numGroupDms) && m.areEqual(this.guildId, trackInviteSuggestionOpened.guildId);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class TrackInviteSuggestionOpened implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackInviteSuggestionOpened(numSuggestions=");
+        StringBuilder sbU = a.U("TrackInviteSuggestionOpened(numSuggestions=");
         sbU.append(this.numSuggestions);
         sbU.append(", numFriends=");
         sbU.append(this.numFriends);
@@ -57,6 +57,6 @@ public final /* data */ class TrackInviteSuggestionOpened implements AnalyticsSc
         sbU.append(", numGroupDms=");
         sbU.append(this.numGroupDms);
         sbU.append(", guildId=");
-        return outline.G(sbU, this.guildId, ")");
+        return a.G(sbU, this.guildId, ")");
     }
 }

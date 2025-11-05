@@ -1,7 +1,6 @@
 package rx.exceptions;
 
-import b.d.b.a.outline;
-import j0.o.RxJavaPlugins;
+import j0.o.o;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
@@ -37,7 +36,7 @@ public final class OnErrorThrowable extends RuntimeException {
         /* JADX WARN: Illegal instructions before constructor call */
         public OnNextValue(Object obj) {
             String strName;
-            StringBuilder sbU = outline.U("OnError while emitting onNext value: ");
+            StringBuilder sbU = b.d.b.a.a.U("OnError while emitting onNext value: ");
             if (obj == null) {
                 strName = "null";
             } else if (a.a.contains(obj.getClass())) {
@@ -47,7 +46,7 @@ public final class OnErrorThrowable extends RuntimeException {
             } else if (obj instanceof Enum) {
                 strName = ((Enum) obj).name();
             } else {
-                Objects.requireNonNull(RxJavaPlugins.a.b());
+                Objects.requireNonNull(o.a.b());
                 strName = obj.getClass().getName() + ".class";
             }
             sbU.append(strName);

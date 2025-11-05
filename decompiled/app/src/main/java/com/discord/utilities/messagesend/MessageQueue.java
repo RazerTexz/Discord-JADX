@@ -16,17 +16,16 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.messagesend.MessageQueue3;
-import com.discord.utilities.messagesend.MessageQueue4;
+import com.discord.utilities.messagesend.MessageRequest;
+import com.discord.utilities.messagesend.MessageResult;
 import com.discord.utilities.networking.Backoff;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rest.SendUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -62,7 +61,7 @@ public final class MessageQueue {
     private InflightRequest inFlightRequest;
     private boolean isDraining;
     private final Backoff networkBackoff;
-    private final ArrayDeque<MessageQueue3> queue;
+    private final ArrayDeque<MessageRequest> queue;
     private Subscription retrySubscription;
 
     /* compiled from: MessageQueue.kt */
@@ -78,17 +77,17 @@ public final class MessageQueue {
     /* compiled from: MessageQueue.kt */
     public static final class DrainListener {
         private AtomicBoolean isCompleted;
-        private final Function1<MessageQueue4, Unit> onCompleted;
+        private final Function1<MessageResult, Unit> onCompleted;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public DrainListener(Function1<? super MessageQueue4, Unit> function1) {
-            Intrinsics3.checkNotNullParameter(function1, "onCompleted");
+        public DrainListener(Function1<? super MessageResult, Unit> function1) {
+            m.checkNotNullParameter(function1, "onCompleted");
             this.onCompleted = function1;
             this.isCompleted = new AtomicBoolean(false);
         }
 
-        public final synchronized void complete(MessageQueue4 result) {
-            Intrinsics3.checkNotNullParameter(result, "result");
+        public final synchronized void complete(MessageResult result) {
+            m.checkNotNullParameter(result, "result");
             if (!this.isCompleted.getAndSet(true)) {
                 this.onCompleted.invoke(result);
             }
@@ -97,20 +96,20 @@ public final class MessageQueue {
 
     /* compiled from: MessageQueue.kt */
     public static final class InflightRequest {
-        private final MessageQueue3 baseRequest;
+        private final MessageRequest baseRequest;
         private final DrainListener drainListener;
         private final Subscription networkSubscription;
 
-        public InflightRequest(MessageQueue3 messageQueue3, Subscription subscription, DrainListener drainListener) {
-            Intrinsics3.checkNotNullParameter(messageQueue3, "baseRequest");
-            Intrinsics3.checkNotNullParameter(subscription, "networkSubscription");
-            Intrinsics3.checkNotNullParameter(drainListener, "drainListener");
-            this.baseRequest = messageQueue3;
+        public InflightRequest(MessageRequest messageRequest, Subscription subscription, DrainListener drainListener) {
+            m.checkNotNullParameter(messageRequest, "baseRequest");
+            m.checkNotNullParameter(subscription, "networkSubscription");
+            m.checkNotNullParameter(drainListener, "drainListener");
+            this.baseRequest = messageRequest;
             this.networkSubscription = subscription;
             this.drainListener = drainListener;
         }
 
-        public final MessageQueue3 getBaseRequest() {
+        public final MessageRequest getBaseRequest() {
             return this.baseRequest;
         }
 
@@ -136,9 +135,9 @@ public final class MessageQueue {
         public final void run() {
             Object next;
             InflightRequest inflightRequestAccess$getInFlightRequest$p = MessageQueue.access$getInFlightRequest$p(MessageQueue.this);
-            if (inflightRequestAccess$getInFlightRequest$p != null && Intrinsics3.areEqual(inflightRequestAccess$getInFlightRequest$p.getBaseRequest().getRequestId(), this.$requestId)) {
+            if (inflightRequestAccess$getInFlightRequest$p != null && m.areEqual(inflightRequestAccess$getInFlightRequest$p.getBaseRequest().getRequestId(), this.$requestId)) {
                 inflightRequestAccess$getInFlightRequest$p.getNetworkSubscription().unsubscribe();
-                inflightRequestAccess$getInFlightRequest$p.getDrainListener().complete(MessageQueue4.UserCancelled.INSTANCE);
+                inflightRequestAccess$getInFlightRequest$p.getDrainListener().complete(MessageResult.UserCancelled.INSTANCE);
                 return;
             }
             Iterator it = MessageQueue.access$getQueue$p(MessageQueue.this).iterator();
@@ -148,22 +147,22 @@ public final class MessageQueue {
                     break;
                 } else {
                     next = it.next();
-                    if (Intrinsics3.areEqual(((MessageQueue3) next).getRequestId(), this.$requestId)) {
+                    if (m.areEqual(((MessageRequest) next).getRequestId(), this.$requestId)) {
                         break;
                     }
                 }
             }
-            MessageQueue3 messageQueue3 = (MessageQueue3) next;
-            if (messageQueue3 != null) {
-                MessageQueue.access$getQueue$p(MessageQueue.this).remove(messageQueue3);
-                messageQueue3.getOnCompleted().invoke(MessageQueue4.UserCancelled.INSTANCE, Boolean.valueOf(MessageQueue.access$getQueue$p(MessageQueue.this).isEmpty()));
+            MessageRequest messageRequest = (MessageRequest) next;
+            if (messageRequest != null) {
+                MessageQueue.access$getQueue$p(MessageQueue.this).remove(messageRequest);
+                messageRequest.getOnCompleted().invoke(MessageResult.UserCancelled.INSTANCE, Boolean.valueOf(MessageQueue.access$getQueue$p(MessageQueue.this).isEmpty()));
             }
         }
     }
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Message, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Message, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -180,14 +179,14 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Message message) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             MessageQueue.access$handleSuccess(MessageQueue.this, message, this.$drainListener);
         }
     }
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -204,19 +203,19 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             MessageQueue.handleError$default(MessageQueue.this, error, this.$drainListener, null, 4, null);
         }
     }
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
-        public final /* synthetic */ MessageQueue3.Edit $editRequest;
+        public final /* synthetic */ MessageRequest.Edit $editRequest;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass4(MessageQueue3.Edit edit, DrainListener drainListener) {
+        public AnonymousClass4(MessageRequest.Edit edit, DrainListener drainListener) {
             super(1);
             this.$editRequest = edit;
             this.$drainListener = drainListener;
@@ -230,7 +229,7 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MessageQueue.access$setInFlightRequest$p(MessageQueue.this, new InflightRequest(this.$editRequest, subscription, this.$drainListener));
         }
     }
@@ -238,9 +237,9 @@ public final class MessageQueue {
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$1, reason: invalid class name */
     public static final class AnonymousClass1<T> implements Action1<SendUtils.SendPayload> {
-        public final /* synthetic */ MessageQueue3.Send $request;
+        public final /* synthetic */ MessageRequest.Send $request;
 
-        public AnonymousClass1(MessageQueue3.Send send) {
+        public AnonymousClass1(MessageRequest.Send send) {
             this.$request = send;
         }
 
@@ -264,14 +263,14 @@ public final class MessageQueue {
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<SendUtils.SendPayload.ReadyToSend, Observable<? extends Message>> {
+    public static final class AnonymousClass2<T, R> implements b<SendUtils.SendPayload.ReadyToSend, Observable<? extends Message>> {
         public final /* synthetic */ com.discord.models.message.Message $message;
 
         public AnonymousClass2(com.discord.models.message.Message message) {
             this.$message = message;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Message> call(SendUtils.SendPayload.ReadyToSend readyToSend) {
             return call2(readyToSend);
         }
@@ -279,7 +278,7 @@ public final class MessageQueue {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Message> call2(SendUtils.SendPayload.ReadyToSend readyToSend) {
             List<SendUtils.FileUpload> uploads = readyToSend.getUploads();
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(uploads, 10));
             Iterator<T> it = uploads.iterator();
             while (it.hasNext()) {
                 arrayList.add(((SendUtils.FileUpload) it.next()).getPart());
@@ -298,7 +297,7 @@ public final class MessageQueue {
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Message, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Message, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -316,14 +315,14 @@ public final class MessageQueue {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Message message) {
             MessageQueue messageQueue = MessageQueue.this;
-            Intrinsics3.checkNotNullExpressionValue(message, "resultMessage");
+            m.checkNotNullExpressionValue(message, "resultMessage");
             MessageQueue.access$handleSuccess(messageQueue, message, this.$drainListener);
         }
     }
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
         public final /* synthetic */ com.discord.models.message.Message $message;
 
@@ -342,19 +341,19 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             MessageQueue.access$handleError(MessageQueue.this, error, this.$drainListener, this.$message);
         }
     }
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
-        public final /* synthetic */ MessageQueue3.Send $request;
+        public final /* synthetic */ MessageRequest.Send $request;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass5(MessageQueue3.Send send, DrainListener drainListener) {
+        public AnonymousClass5(MessageRequest.Send send, DrainListener drainListener) {
             super(1);
             this.$request = send;
             this.$drainListener = drainListener;
@@ -368,7 +367,7 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MessageQueue.access$setInFlightRequest$p(MessageQueue.this, new InflightRequest(this.$request, subscription, this.$drainListener));
         }
     }
@@ -376,9 +375,9 @@ public final class MessageQueue {
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$1, reason: invalid class name */
     public static final class AnonymousClass1<T> implements Action1<SendUtils.SendPayload> {
-        public final /* synthetic */ MessageQueue3.SendApplicationCommand $sendApplicationCommandRequest;
+        public final /* synthetic */ MessageRequest.SendApplicationCommand $sendApplicationCommandRequest;
 
-        public AnonymousClass1(MessageQueue3.SendApplicationCommand sendApplicationCommand) {
+        public AnonymousClass1(MessageRequest.SendApplicationCommand sendApplicationCommand) {
             this.$sendApplicationCommandRequest = sendApplicationCommand;
         }
 
@@ -402,10 +401,10 @@ public final class MessageQueue {
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<SendUtils.SendPayload.ReadyToSendCommand, Observable<? extends Void>> {
+    public static final class AnonymousClass2<T, R> implements b<SendUtils.SendPayload.ReadyToSendCommand, Observable<? extends Void>> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Void> call(SendUtils.SendPayload.ReadyToSendCommand readyToSendCommand) {
             return call2(readyToSendCommand);
         }
@@ -413,7 +412,7 @@ public final class MessageQueue {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Void> call2(SendUtils.SendPayload.ReadyToSendCommand readyToSendCommand) {
             List<SendUtils.FileUpload> uploads = readyToSendCommand.getUploads();
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(uploads, 10));
             Iterator<T> it = uploads.iterator();
             while (it.hasNext()) {
                 arrayList.add(((SendUtils.FileUpload) it.next()).getPart());
@@ -431,12 +430,12 @@ public final class MessageQueue {
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
-        public final /* synthetic */ MessageQueue3.SendApplicationCommand $sendApplicationCommandRequest;
+        public final /* synthetic */ MessageRequest.SendApplicationCommand $sendApplicationCommandRequest;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass3(MessageQueue3.SendApplicationCommand sendApplicationCommand, DrainListener drainListener) {
+        public AnonymousClass3(MessageRequest.SendApplicationCommand sendApplicationCommand, DrainListener drainListener) {
             super(1);
             this.$sendApplicationCommandRequest = sendApplicationCommand;
             this.$drainListener = drainListener;
@@ -456,7 +455,7 @@ public final class MessageQueue {
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -473,19 +472,19 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             MessageQueue.handleError$default(MessageQueue.this, error, this.$drainListener, null, 4, null);
         }
     }
 
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
-        public final /* synthetic */ MessageQueue3.SendApplicationCommand $sendApplicationCommandRequest;
+        public final /* synthetic */ MessageRequest.SendApplicationCommand $sendApplicationCommandRequest;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass5(MessageQueue3.SendApplicationCommand sendApplicationCommand, DrainListener drainListener) {
+        public AnonymousClass5(MessageRequest.SendApplicationCommand sendApplicationCommand, DrainListener drainListener) {
             super(1);
             this.$sendApplicationCommandRequest = sendApplicationCommand;
             this.$drainListener = drainListener;
@@ -499,7 +498,7 @@ public final class MessageQueue {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MessageQueue.access$setInFlightRequest$p(MessageQueue.this, new InflightRequest(this.$sendApplicationCommandRequest, subscription, this.$drainListener));
         }
     }
@@ -507,10 +506,10 @@ public final class MessageQueue {
     /* compiled from: MessageQueue.kt */
     /* renamed from: com.discord.utilities.messagesend.MessageQueue$enqueue$1, reason: invalid class name */
     public static final class AnonymousClass1 implements Runnable {
-        public final /* synthetic */ MessageQueue3 $request;
+        public final /* synthetic */ MessageRequest $request;
 
-        public AnonymousClass1(MessageQueue3 messageQueue3) {
-            this.$request = messageQueue3;
+        public AnonymousClass1(MessageRequest messageRequest) {
+            this.$request = messageRequest;
         }
 
         @Override // java.lang.Runnable
@@ -536,9 +535,9 @@ public final class MessageQueue {
     }
 
     public MessageQueue(ContentResolver contentResolver, ExecutorService executorService, Clock clock) {
-        Intrinsics3.checkNotNullParameter(contentResolver, "contentResolver");
-        Intrinsics3.checkNotNullParameter(executorService, "executorService");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(contentResolver, "contentResolver");
+        m.checkNotNullParameter(executorService, "executorService");
+        m.checkNotNullParameter(clock, "clock");
         this.contentResolver = contentResolver;
         this.executorService = executorService;
         this.clock = clock;
@@ -590,7 +589,7 @@ public final class MessageQueue {
         messageQueue.retrySubscription = subscription;
     }
 
-    private final void doEdit(MessageQueue3.Edit editRequest, DrainListener drainListener) {
+    private final void doEdit(MessageRequest.Edit editRequest, DrainListener drainListener) {
         RestAPI api = RestAPI.INSTANCE.getApi();
         long channelId = editRequest.getChannelId();
         long messageId = editRequest.getMessageId();
@@ -605,13 +604,13 @@ public final class MessageQueue {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private final void doSend(MessageQueue3.Send request, DrainListener drainListener) {
+    private final void doSend(MessageRequest.Send request, DrainListener drainListener) {
         RestAPIParams.Message.Activity activity;
         RestAPIParams.Message.MessageReference messageReference;
         ArrayList arrayList;
         ArrayList arrayList2;
         String sessionId;
-        MessageQueue4.ValidationError validationErrorValidateMessage = request.validateMessage();
+        MessageResult.ValidationError validationErrorValidateMessage = request.validateMessage();
         if (validationErrorValidateMessage != null) {
             drainListener.complete(validationErrorValidateMessage);
             return;
@@ -629,7 +628,7 @@ public final class MessageQueue {
         if (messageReference2 != null) {
             Long guildId = messageReference2.getGuildId();
             Long channelId = messageReference2.getChannelId();
-            Intrinsics3.checkNotNull(channelId);
+            m.checkNotNull(channelId);
             messageReference = new RestAPIParams.Message.MessageReference(guildId, channelId.longValue(), messageReference2.getMessageId());
         } else {
             messageReference = null;
@@ -642,7 +641,7 @@ public final class MessageQueue {
         Long lValueOf = application != null ? Long.valueOf(application.getId()) : null;
         List<StickerPartial> stickerItems = message.getStickerItems();
         if (stickerItems != null) {
-            arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(stickerItems, 10));
+            arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(stickerItems, 10));
             Iterator<T> it = stickerItems.iterator();
             while (it.hasNext()) {
                 arrayList2.add(Long.valueOf(((StickerPartial) it.next()).getId()));
@@ -655,14 +654,14 @@ public final class MessageQueue {
                 String captchaKey = captchaPayload == null ? captchaPayload.getCaptchaKey() : null;
                 CaptchaHelper.CaptchaPayload captchaPayload2 = message.getCaptchaPayload();
                 Observable<SendUtils.SendPayload> observableU = SendUtils.INSTANCE.getSendPayload(this.contentResolver, new RestAPIParams.Message(content, nonce, lValueOf, activity, arrayList, messageReference, allowedMentionsCreate, captchaKey, captchaPayload2 != null ? captchaPayload2.getCaptchaRqtoken() : null), request.getAttachments()).u(new AnonymousClass1(request));
-                Intrinsics3.checkNotNullExpressionValue(observableU, "SendUtils\n        .getSe…  }\n          }\n        }");
+                m.checkNotNullExpressionValue(observableU, "SendUtils\n        .getSe…  }\n          }\n        }");
                 Observable<R> observableG = observableU.y(MessageQueue$doSend$$inlined$filterIs$1.INSTANCE).G(MessageQueue$doSend$$inlined$filterIs$2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
+                m.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
                 Observable observableA = observableG.Z(1).A(new AnonymousClass2(message));
-                Intrinsics3.checkNotNullExpressionValue(observableA, "SendUtils\n        .getSe…ge)\n          }\n        }");
+                m.checkNotNullExpressionValue(observableA, "SendUtils\n        .getSe…ge)\n          }\n        }");
                 ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn(observableA, z2), MessageQueue.class, (Context) null, new AnonymousClass5(request, drainListener), new AnonymousClass4(drainListener, message), (Function0) null, (Function0) null, new AnonymousClass3(drainListener), 50, (Object) null);
             }
-            arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(stickers, 10));
+            arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(stickers, 10));
             Iterator<T> it2 = stickers.iterator();
             while (it2.hasNext()) {
                 arrayList2.add(Long.valueOf(((Sticker) it2.next()).getId()));
@@ -674,21 +673,21 @@ public final class MessageQueue {
         }
         CaptchaHelper.CaptchaPayload captchaPayload22 = message.getCaptchaPayload();
         Observable<SendUtils.SendPayload> observableU2 = SendUtils.INSTANCE.getSendPayload(this.contentResolver, new RestAPIParams.Message(content, nonce, lValueOf, activity, arrayList, messageReference, allowedMentionsCreate, captchaKey, captchaPayload22 != null ? captchaPayload22.getCaptchaRqtoken() : null), request.getAttachments()).u(new AnonymousClass1(request));
-        Intrinsics3.checkNotNullExpressionValue(observableU2, "SendUtils\n        .getSe…  }\n          }\n        }");
+        m.checkNotNullExpressionValue(observableU2, "SendUtils\n        .getSe…  }\n          }\n        }");
         Observable<R> observableG2 = observableU2.y(MessageQueue$doSend$$inlined$filterIs$1.INSTANCE).G(MessageQueue$doSend$$inlined$filterIs$2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG2, "filter { it is T }.map { it as T }");
+        m.checkNotNullExpressionValue(observableG2, "filter { it is T }.map { it as T }");
         Observable observableA2 = observableG2.Z(1).A(new AnonymousClass2(message));
-        Intrinsics3.checkNotNullExpressionValue(observableA2, "SendUtils\n        .getSe…ge)\n          }\n        }");
+        m.checkNotNullExpressionValue(observableA2, "SendUtils\n        .getSe…ge)\n          }\n        }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn(observableA2, z2), MessageQueue.class, (Context) null, new AnonymousClass5(request, drainListener), new AnonymousClass4(drainListener, message), (Function0) null, (Function0) null, new AnonymousClass3(drainListener), 50, (Object) null);
     }
 
-    private final void doSendApplicationCommand(MessageQueue3.SendApplicationCommand sendApplicationCommandRequest, DrainListener drainListener) {
+    private final void doSendApplicationCommand(MessageRequest.SendApplicationCommand sendApplicationCommandRequest, DrainListener drainListener) {
         Observable<SendUtils.SendPayload> observableU = SendUtils.INSTANCE.getSendCommandPayload(this.contentResolver, sendApplicationCommandRequest.getApplicationCommandSendData(), sendApplicationCommandRequest.getAttachments()).u(new AnonymousClass1(sendApplicationCommandRequest));
-        Intrinsics3.checkNotNullExpressionValue(observableU, "SendUtils\n        .getSe…  }\n          }\n        }");
+        m.checkNotNullExpressionValue(observableU, "SendUtils\n        .getSe…  }\n          }\n        }");
         Observable<R> observableG = observableU.y(MessageQueue$doSendApplicationCommand$$inlined$filterIs$1.INSTANCE).G(MessageQueue$doSendApplicationCommand$$inlined$filterIs$2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
+        m.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
         Observable observableA = observableG.z().A(AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableA, "SendUtils\n        .getSe…())\n          }\n        }");
+        m.checkNotNullExpressionValue(observableA, "SendUtils\n        .getSe…())\n          }\n        }");
         Observable observableRestSubscribeOn = ObservableExtensionsKt.restSubscribeOn(observableA, false);
         AnonymousClass3 anonymousClass3 = new AnonymousClass3(sendApplicationCommandRequest, drainListener);
         ObservableExtensionsKt.appSubscribe$default(observableRestSubscribeOn, MessageQueue.class, (Context) null, new AnonymousClass5(sendApplicationCommandRequest, drainListener), new AnonymousClass4(drainListener), (Function0) null, (Function0) null, anonymousClass3, 50, (Object) null);
@@ -699,40 +698,40 @@ public final class MessageQueue {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     private final void handleError(Error error, DrainListener onDrainListener, com.discord.models.message.Message clientMessage) {
-        MessageQueue4 unknownFailure;
-        MessageQueue4 autoModBlock;
+        MessageResult unknownFailure;
+        MessageResult autoModBlock;
         Long l;
         Error.Response response = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+        m.checkNotNullExpressionValue(response, "error.response");
         if (response.getCode() == 20016) {
             Error.Response response2 = error.getResponse();
-            Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
+            m.checkNotNullExpressionValue(response2, "error.response");
             Long retryAfterMs = response2.getRetryAfterMs();
             l = retryAfterMs != null ? retryAfterMs : 100L;
-            Intrinsics3.checkNotNullExpressionValue(l, "error.response.retryAfterMs ?: DEFAULT_RETRY_MS");
-            unknownFailure = new MessageQueue4.Slowmode(l.longValue());
+            m.checkNotNullExpressionValue(l, "error.response.retryAfterMs ?: DEFAULT_RETRY_MS");
+            unknownFailure = new MessageResult.Slowmode(l.longValue());
         } else if (error.getType() == Error.Type.RATE_LIMITED) {
             Error.Response response3 = error.getResponse();
-            Intrinsics3.checkNotNullExpressionValue(response3, "error.response");
+            m.checkNotNullExpressionValue(response3, "error.response");
             Long retryAfterMs2 = response3.getRetryAfterMs();
             l = retryAfterMs2 != null ? retryAfterMs2 : 100L;
-            Intrinsics3.checkNotNullExpressionValue(l, "error.response.retryAfterMs ?: DEFAULT_RETRY_MS");
-            unknownFailure = new MessageQueue4.RateLimited(l.longValue());
+            m.checkNotNullExpressionValue(l, "error.response.retryAfterMs ?: DEFAULT_RETRY_MS");
+            unknownFailure = new MessageResult.RateLimited(l.longValue());
         } else if (error.getType() == Error.Type.NETWORK) {
-            unknownFailure = MessageQueue4.NetworkFailure.INSTANCE;
+            unknownFailure = MessageResult.NetworkFailure.INSTANCE;
         } else if (error.getType() == Error.Type.DISCORD_BAD_REQUEST) {
             Error.Response response4 = error.getResponse();
-            Intrinsics3.checkNotNullExpressionValue(response4, "error.response");
+            m.checkNotNullExpressionValue(response4, "error.response");
             if (!response4.getMessages().containsKey(CaptchaHelper.CAPTCHA_KEY) || clientMessage == null) {
                 Error.Response response5 = error.getResponse();
-                Intrinsics3.checkNotNullExpressionValue(response5, "error.response");
+                m.checkNotNullExpressionValue(response5, "error.response");
                 if (response5.getCode() == 200000) {
-                    autoModBlock = new MessageQueue4.AutoModBlock(error, clientMessage);
+                    autoModBlock = new MessageResult.AutoModBlock(error, clientMessage);
                 } else {
-                    unknownFailure = new MessageQueue4.UnknownFailure(error);
+                    unknownFailure = new MessageResult.UnknownFailure(error);
                 }
             } else {
-                autoModBlock = new MessageQueue4.CaptchaRequired(error, clientMessage.getChannelId(), clientMessage.getNonce());
+                autoModBlock = new MessageResult.CaptchaRequired(error, clientMessage.getChannelId(), clientMessage.getNonce());
             }
             unknownFailure = autoModBlock;
         }
@@ -747,7 +746,7 @@ public final class MessageQueue {
     }
 
     private final void handleSuccess(Message message, DrainListener drainListener) {
-        drainListener.complete(new MessageQueue4.Success(message));
+        drainListener.complete(new MessageResult.Success(message));
     }
 
     private final void onDrainingCompleted() {
@@ -756,34 +755,34 @@ public final class MessageQueue {
     }
 
     private final void processNextRequest() {
-        MessageQueue3 messageQueue3Remove;
-        if (this.queue.isEmpty() || this.retrySubscription != null || this.networkBackoff.getIsPending() || this.isDraining || (messageQueue3Remove = this.queue.remove()) == null) {
+        MessageRequest messageRequestRemove;
+        if (this.queue.isEmpty() || this.retrySubscription != null || this.networkBackoff.getIsPending() || this.isDraining || (messageRequestRemove = this.queue.remove()) == null) {
             return;
         }
-        if (this.clock.currentTimeMillis() - messageQueue3Remove.getAttemptTimestamp() > DEFAULT_MESSAGE_TIMEOUT_MS) {
-            messageQueue3Remove.getOnCompleted().invoke(MessageQueue4.Timeout.INSTANCE, Boolean.valueOf(this.queue.isEmpty()));
+        if (this.clock.currentTimeMillis() - messageRequestRemove.getAttemptTimestamp() > DEFAULT_MESSAGE_TIMEOUT_MS) {
+            messageRequestRemove.getOnCompleted().invoke(MessageResult.Timeout.INSTANCE, Boolean.valueOf(this.queue.isEmpty()));
             this.networkBackoff.succeed();
             processNextRequest();
             return;
         }
         this.isDraining = true;
-        DrainListener drainListener = new DrainListener(new MessageQueue2(this, messageQueue3Remove));
-        if (messageQueue3Remove instanceof MessageQueue3.Send) {
-            doSend((MessageQueue3.Send) messageQueue3Remove, drainListener);
-        } else if (messageQueue3Remove instanceof MessageQueue3.Edit) {
-            doEdit((MessageQueue3.Edit) messageQueue3Remove, drainListener);
-        } else if (messageQueue3Remove instanceof MessageQueue3.SendApplicationCommand) {
-            doSendApplicationCommand((MessageQueue3.SendApplicationCommand) messageQueue3Remove, drainListener);
+        DrainListener drainListener = new DrainListener(new MessageQueue$processNextRequest$listener$1(this, messageRequestRemove));
+        if (messageRequestRemove instanceof MessageRequest.Send) {
+            doSend((MessageRequest.Send) messageRequestRemove, drainListener);
+        } else if (messageRequestRemove instanceof MessageRequest.Edit) {
+            doEdit((MessageRequest.Edit) messageRequestRemove, drainListener);
+        } else if (messageRequestRemove instanceof MessageRequest.SendApplicationCommand) {
+            doSendApplicationCommand((MessageRequest.SendApplicationCommand) messageRequestRemove, drainListener);
         }
     }
 
     public final void cancel(String requestId) {
-        Intrinsics3.checkNotNullParameter(requestId, "requestId");
+        m.checkNotNullParameter(requestId, "requestId");
         this.executorService.submit(new AnonymousClass1(requestId));
     }
 
-    public final void enqueue(MessageQueue3 request) {
-        Intrinsics3.checkNotNullParameter(request, "request");
+    public final void enqueue(MessageRequest request) {
+        m.checkNotNullParameter(request, "request");
         this.executorService.submit(new AnonymousClass1(request));
     }
 

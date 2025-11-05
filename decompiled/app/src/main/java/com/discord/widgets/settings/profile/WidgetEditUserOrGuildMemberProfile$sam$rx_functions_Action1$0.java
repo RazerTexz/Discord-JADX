@@ -1,6 +1,6 @@
 package com.discord.widgets.settings.profile;
 
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 import rx.functions.Action1;
 
@@ -15,6 +15,6 @@ public final class WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0
 
     @Override // rx.functions.Action1
     public final /* synthetic */ void call(Object obj) {
-        Intrinsics3.checkNotNullExpressionValue(this.function.invoke(obj), "invoke(...)");
+        m.checkNotNullExpressionValue(this.function.invoke(obj), "invoke(...)");
     }
 }

@@ -1,8 +1,8 @@
 package com.discord.api.report;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ReportReason.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class ReportReason {
             return false;
         }
         ReportReason reportReason = (ReportReason) other;
-        return this.reason == reportReason.reason && Intrinsics3.areEqual(this.label, reportReason.label) && Intrinsics3.areEqual(this.description, reportReason.description);
+        return this.reason == reportReason.reason && m.areEqual(this.label, reportReason.label) && m.areEqual(this.description, reportReason.description);
     }
 
     public int hashCode() {
@@ -46,11 +46,11 @@ public final /* data */ class ReportReason {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ReportReason(reason=");
+        StringBuilder sbU = a.U("ReportReason(reason=");
         sbU.append(this.reason);
         sbU.append(", label=");
         sbU.append(this.label);
         sbU.append(", description=");
-        return outline.J(sbU, this.description, ")");
+        return a.J(sbU, this.description, ")");
     }
 }

@@ -1,24 +1,24 @@
 package b.i.a.c.s2;
 
-import b.i.a.c.TracksInfo;
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
+import b.i.a.c.f3.p;
+import b.i.a.c.p2;
+import b.i.a.c.s2.h1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class w implements ListenerSet.a {
-    public final /* synthetic */ AnalyticsListener.a a;
+public final /* synthetic */ class w implements p.a {
+    public final /* synthetic */ h1.a a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final /* synthetic */ TracksInfo f1107b;
+    public final /* synthetic */ p2 f1107b;
 
-    public /* synthetic */ w(AnalyticsListener.a aVar, TracksInfo tracksInfo) {
+    public /* synthetic */ w(h1.a aVar, p2 p2Var) {
         this.a = aVar;
-        this.f1107b = tracksInfo;
+        this.f1107b = p2Var;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((AnalyticsListener) obj).i();
+        ((h1) obj).i();
     }
 }

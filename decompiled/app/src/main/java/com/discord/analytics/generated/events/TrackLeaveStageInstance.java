@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLeaveStageInstance.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLeaveStageInstance implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackLeaveStageInstance implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -47,7 +47,7 @@ public final /* data */ class TrackLeaveStageInstance implements AnalyticsSchema
             return false;
         }
         TrackLeaveStageInstance trackLeaveStageInstance = (TrackLeaveStageInstance) other;
-        return Intrinsics3.areEqual(this.channelId, trackLeaveStageInstance.channelId) && Intrinsics3.areEqual(this.channelType, trackLeaveStageInstance.channelType) && Intrinsics3.areEqual(this.channelBitrate, trackLeaveStageInstance.channelBitrate) && Intrinsics3.areEqual(this.guildId, trackLeaveStageInstance.guildId) && Intrinsics3.areEqual(this.nonce, trackLeaveStageInstance.nonce) && Intrinsics3.areEqual(this.rtcConnectionId, trackLeaveStageInstance.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackLeaveStageInstance.mediaSessionId) && Intrinsics3.areEqual(this.duration, trackLeaveStageInstance.duration) && Intrinsics3.areEqual(this.voiceStateCount, trackLeaveStageInstance.voiceStateCount) && Intrinsics3.areEqual(this.videoStreamCount, trackLeaveStageInstance.videoStreamCount) && Intrinsics3.areEqual(this.videoEnabled, trackLeaveStageInstance.videoEnabled) && Intrinsics3.areEqual(this.gameName, trackLeaveStageInstance.gameName) && Intrinsics3.areEqual(this.gamePlatform, trackLeaveStageInstance.gamePlatform) && Intrinsics3.areEqual(this.gameId, trackLeaveStageInstance.gameId) && Intrinsics3.areEqual(this.maxVoiceStateCount, trackLeaveStageInstance.maxVoiceStateCount) && Intrinsics3.areEqual(this.totalVoiceStateCount, trackLeaveStageInstance.totalVoiceStateCount) && Intrinsics3.areEqual(this.maxSpeakerCount, trackLeaveStageInstance.maxSpeakerCount) && Intrinsics3.areEqual(this.totalSpeakerCount, trackLeaveStageInstance.totalSpeakerCount) && Intrinsics3.areEqual(this.maxListenerCount, trackLeaveStageInstance.maxListenerCount) && Intrinsics3.areEqual(this.totalListenerCount, trackLeaveStageInstance.totalListenerCount) && Intrinsics3.areEqual(this.stageInstanceId, trackLeaveStageInstance.stageInstanceId);
+        return m.areEqual(this.channelId, trackLeaveStageInstance.channelId) && m.areEqual(this.channelType, trackLeaveStageInstance.channelType) && m.areEqual(this.channelBitrate, trackLeaveStageInstance.channelBitrate) && m.areEqual(this.guildId, trackLeaveStageInstance.guildId) && m.areEqual(this.nonce, trackLeaveStageInstance.nonce) && m.areEqual(this.rtcConnectionId, trackLeaveStageInstance.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackLeaveStageInstance.mediaSessionId) && m.areEqual(this.duration, trackLeaveStageInstance.duration) && m.areEqual(this.voiceStateCount, trackLeaveStageInstance.voiceStateCount) && m.areEqual(this.videoStreamCount, trackLeaveStageInstance.videoStreamCount) && m.areEqual(this.videoEnabled, trackLeaveStageInstance.videoEnabled) && m.areEqual(this.gameName, trackLeaveStageInstance.gameName) && m.areEqual(this.gamePlatform, trackLeaveStageInstance.gamePlatform) && m.areEqual(this.gameId, trackLeaveStageInstance.gameId) && m.areEqual(this.maxVoiceStateCount, trackLeaveStageInstance.maxVoiceStateCount) && m.areEqual(this.totalVoiceStateCount, trackLeaveStageInstance.totalVoiceStateCount) && m.areEqual(this.maxSpeakerCount, trackLeaveStageInstance.maxSpeakerCount) && m.areEqual(this.totalSpeakerCount, trackLeaveStageInstance.totalSpeakerCount) && m.areEqual(this.maxListenerCount, trackLeaveStageInstance.maxListenerCount) && m.areEqual(this.totalListenerCount, trackLeaveStageInstance.totalListenerCount) && m.areEqual(this.stageInstanceId, trackLeaveStageInstance.stageInstanceId);
     }
 
     public int hashCode() {
@@ -96,7 +96,7 @@ public final /* data */ class TrackLeaveStageInstance implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLeaveStageInstance(channelId=");
+        StringBuilder sbU = a.U("TrackLeaveStageInstance(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -137,6 +137,6 @@ public final /* data */ class TrackLeaveStageInstance implements AnalyticsSchema
         sbU.append(", totalListenerCount=");
         sbU.append(this.totalListenerCount);
         sbU.append(", stageInstanceId=");
-        return outline.G(sbU, this.stageInstanceId, ")");
+        return a.G(sbU, this.stageInstanceId, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAppUiViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppUiViewed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackAppUiViewed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final CharSequence screenName = null;
@@ -43,7 +43,7 @@ public final /* data */ class TrackAppUiViewed implements AnalyticsSchema, Track
             return false;
         }
         TrackAppUiViewed trackAppUiViewed = (TrackAppUiViewed) other;
-        return Intrinsics3.areEqual(this.loadId, trackAppUiViewed.loadId) && Intrinsics3.areEqual(this.screenName, trackAppUiViewed.screenName) && Intrinsics3.areEqual(this.durationMsSinceAppOpened, trackAppUiViewed.durationMsSinceAppOpened) && Intrinsics3.areEqual(this.durationMsSinceRequiredJsBundleLoaded, trackAppUiViewed.durationMsSinceRequiredJsBundleLoaded) && Intrinsics3.areEqual(this.durationMsSinceRequiredJsBundleParsed, trackAppUiViewed.durationMsSinceRequiredJsBundleParsed) && Intrinsics3.areEqual(this.hasCachedData, trackAppUiViewed.hasCachedData) && Intrinsics3.areEqual(this.manifest, trackAppUiViewed.manifest) && Intrinsics3.areEqual(this.totalCompressedByteSize, trackAppUiViewed.totalCompressedByteSize) && Intrinsics3.areEqual(this.totalUncompressedByteSize, trackAppUiViewed.totalUncompressedByteSize) && Intrinsics3.areEqual(this.totalTransferByteSize, trackAppUiViewed.totalTransferByteSize) && Intrinsics3.areEqual(this.jsCompressedByteSize, trackAppUiViewed.jsCompressedByteSize) && Intrinsics3.areEqual(this.jsUncompressedByteSize, trackAppUiViewed.jsUncompressedByteSize) && Intrinsics3.areEqual(this.jsTransferByteSize, trackAppUiViewed.jsTransferByteSize) && Intrinsics3.areEqual(this.cssCompressedByteSize, trackAppUiViewed.cssCompressedByteSize) && Intrinsics3.areEqual(this.cssUncompressedByteSize, trackAppUiViewed.cssUncompressedByteSize) && Intrinsics3.areEqual(this.cssTransferByteSize, trackAppUiViewed.cssTransferByteSize) && Intrinsics3.areEqual(this.theme, trackAppUiViewed.theme);
+        return m.areEqual(this.loadId, trackAppUiViewed.loadId) && m.areEqual(this.screenName, trackAppUiViewed.screenName) && m.areEqual(this.durationMsSinceAppOpened, trackAppUiViewed.durationMsSinceAppOpened) && m.areEqual(this.durationMsSinceRequiredJsBundleLoaded, trackAppUiViewed.durationMsSinceRequiredJsBundleLoaded) && m.areEqual(this.durationMsSinceRequiredJsBundleParsed, trackAppUiViewed.durationMsSinceRequiredJsBundleParsed) && m.areEqual(this.hasCachedData, trackAppUiViewed.hasCachedData) && m.areEqual(this.manifest, trackAppUiViewed.manifest) && m.areEqual(this.totalCompressedByteSize, trackAppUiViewed.totalCompressedByteSize) && m.areEqual(this.totalUncompressedByteSize, trackAppUiViewed.totalUncompressedByteSize) && m.areEqual(this.totalTransferByteSize, trackAppUiViewed.totalTransferByteSize) && m.areEqual(this.jsCompressedByteSize, trackAppUiViewed.jsCompressedByteSize) && m.areEqual(this.jsUncompressedByteSize, trackAppUiViewed.jsUncompressedByteSize) && m.areEqual(this.jsTransferByteSize, trackAppUiViewed.jsTransferByteSize) && m.areEqual(this.cssCompressedByteSize, trackAppUiViewed.cssCompressedByteSize) && m.areEqual(this.cssUncompressedByteSize, trackAppUiViewed.cssUncompressedByteSize) && m.areEqual(this.cssTransferByteSize, trackAppUiViewed.cssTransferByteSize) && m.areEqual(this.theme, trackAppUiViewed.theme);
     }
 
     public int hashCode() {
@@ -84,7 +84,7 @@ public final /* data */ class TrackAppUiViewed implements AnalyticsSchema, Track
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAppUiViewed(loadId=");
+        StringBuilder sbU = a.U("TrackAppUiViewed(loadId=");
         sbU.append(this.loadId);
         sbU.append(", screenName=");
         sbU.append(this.screenName);
@@ -117,6 +117,6 @@ public final /* data */ class TrackAppUiViewed implements AnalyticsSchema, Track
         sbU.append(", cssTransferByteSize=");
         sbU.append(this.cssTransferByteSize);
         sbU.append(", theme=");
-        return outline.E(sbU, this.theme, ")");
+        return a.E(sbU, this.theme, ")");
     }
 }

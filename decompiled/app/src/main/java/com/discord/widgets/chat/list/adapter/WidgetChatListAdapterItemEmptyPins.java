@@ -9,7 +9,7 @@ import com.discord.databinding.WidgetChatListAdapterItemEmptyPinsBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.EmptyPinsEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetChatListAdapterItemEmptyPins.kt */
 /* loaded from: classes2.dex */
@@ -19,7 +19,7 @@ public final class WidgetChatListAdapterItemEmptyPins extends WidgetChatListItem
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemEmptyPins(WidgetChatListAdapter widgetChatListAdapter) {
         super(R.layout.widget_chat_list_adapter_item_empty_pins, widgetChatListAdapter);
-        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
         int i = R.id.chat_list_empty_image;
         ImageView imageView = (ImageView) view.findViewById(R.id.chat_list_empty_image);
@@ -28,7 +28,7 @@ public final class WidgetChatListAdapterItemEmptyPins extends WidgetChatListItem
             TextView textView = (TextView) view.findViewById(R.id.chat_list_empty_pins_text);
             if (textView != null) {
                 WidgetChatListAdapterItemEmptyPinsBinding widgetChatListAdapterItemEmptyPinsBinding = new WidgetChatListAdapterItemEmptyPinsBinding((RelativeLayout) view, imageView, textView);
-                Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemEmptyPinsBinding, "WidgetChatListAdapterIte…insBinding.bind(itemView)");
+                m.checkNotNullExpressionValue(widgetChatListAdapterItemEmptyPinsBinding, "WidgetChatListAdapterIte…insBinding.bind(itemView)");
                 this.binding = widgetChatListAdapterItemEmptyPinsBinding;
                 return;
             }
@@ -44,10 +44,10 @@ public final class WidgetChatListAdapterItemEmptyPins extends WidgetChatListItem
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         TextView textView = this.binding.f2317b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListEmptyPinsText");
+        m.checkNotNullExpressionValue(textView, "binding.chatListEmptyPinsText");
         textView.setText(((EmptyPinsEntry) data).getText());
     }
 }

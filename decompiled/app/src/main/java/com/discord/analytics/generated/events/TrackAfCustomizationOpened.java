@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAfCustomizationOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAfCustomizationOpened implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackAfCustomizationOpened implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final transient String analyticsSchemaTypeName = "af_customization_opened";
@@ -21,7 +21,7 @@ public final /* data */ class TrackAfCustomizationOpened implements AnalyticsSch
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackAfCustomizationOpened) && Intrinsics3.areEqual(this.loadId, ((TrackAfCustomizationOpened) other).loadId);
+            return (other instanceof TrackAfCustomizationOpened) && m.areEqual(this.loadId, ((TrackAfCustomizationOpened) other).loadId);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackAfCustomizationOpened implements AnalyticsSch
     }
 
     public String toString() {
-        return outline.E(outline.U("TrackAfCustomizationOpened(loadId="), this.loadId, ")");
+        return a.E(a.U("TrackAfCustomizationOpened(loadId="), this.loadId, ")");
     }
 }

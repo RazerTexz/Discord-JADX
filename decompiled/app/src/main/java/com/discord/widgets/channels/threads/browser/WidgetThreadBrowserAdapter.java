@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.databinding.ThreadBrowserItemHeaderBinding;
@@ -18,7 +18,7 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -38,14 +38,14 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HeaderItem(WidgetThreadBrowserAdapter widgetThreadBrowserAdapter) {
             super(R.layout.thread_browser_item_header, widgetThreadBrowserAdapter);
-            Intrinsics3.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
+            m.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
             View view = this.itemView;
             TextView textView = (TextView) view.findViewById(R.id.header_name);
             if (textView == null) {
                 throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.header_name)));
             }
             ThreadBrowserItemHeaderBinding threadBrowserItemHeaderBinding = new ThreadBrowserItemHeaderBinding((ConstraintLayout) view, textView);
-            Intrinsics3.checkNotNullExpressionValue(threadBrowserItemHeaderBinding, "ThreadBrowserItemHeaderBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(threadBrowserItemHeaderBinding, "ThreadBrowserItemHeaderBinding.bind(itemView)");
             this.binding = threadBrowserItemHeaderBinding;
         }
 
@@ -56,12 +56,12 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             Item.Header header = (Item.Header) data;
             TextView textView = this.binding.f2158b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.headerName");
-            textView.setText(FormatUtils.h(((WidgetThreadBrowserAdapter) this.adapter).getContext(), header.getStringResId(), new Object[]{Integer.valueOf(header.getCount())}, null, 4).toString());
+            m.checkNotNullExpressionValue(textView, "binding.headerName");
+            textView.setText(b.h(((WidgetThreadBrowserAdapter) this.adapter).getContext(), header.getStringResId(), new Object[]{Integer.valueOf(header.getCount())}, null, 4).toString());
         }
     }
 
@@ -78,7 +78,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Header(String str, int i, int i2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "key");
+                m.checkNotNullParameter(str, "key");
                 this.key = str;
                 this.stringResId = i;
                 this.count = i2;
@@ -113,7 +113,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public final Header copy(String key, int stringResId, int count) {
-                Intrinsics3.checkNotNullParameter(key, "key");
+                m.checkNotNullParameter(key, "key");
                 return new Header(key, stringResId, count);
             }
 
@@ -125,7 +125,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
                     return false;
                 }
                 Header header = (Header) other;
-                return Intrinsics3.areEqual(getKey(), header.getKey()) && this.stringResId == header.stringResId && this.count == header.count;
+                return m.areEqual(getKey(), header.getKey()) && this.stringResId == header.stringResId && this.count == header.count;
             }
 
             public final int getCount() {
@@ -152,12 +152,12 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Header(key=");
+                StringBuilder sbU = a.U("Header(key=");
                 sbU.append(getKey());
                 sbU.append(", stringResId=");
                 sbU.append(this.stringResId);
                 sbU.append(", count=");
-                return outline.B(sbU, this.count, ")");
+                return a.B(sbU, this.count, ")");
             }
         }
 
@@ -186,13 +186,13 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public final Loading copy(String key) {
-                Intrinsics3.checkNotNullParameter(key, "key");
+                m.checkNotNullParameter(key, "key");
                 return new Loading(key);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loading) && Intrinsics3.areEqual(getKey(), ((Loading) other).getKey());
+                    return (other instanceof Loading) && m.areEqual(getKey(), ((Loading) other).getKey());
                 }
                 return true;
             }
@@ -216,7 +216,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loading(key=");
+                StringBuilder sbU = a.U("Loading(key=");
                 sbU.append(getKey());
                 sbU.append(")");
                 return sbU.toString();
@@ -225,7 +225,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loading(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "key");
+                m.checkNotNullParameter(str, "key");
                 this.key = str;
                 this.type = ItemType.LOADING.ordinal();
             }
@@ -240,7 +240,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Thread(ThreadBrowserThreadView.ThreadData threadData) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(threadData, "threadData");
+                m.checkNotNullParameter(threadData, "threadData");
                 this.threadData = threadData;
                 this.type = ItemType.THREAD.ordinal();
                 this.key = String.valueOf(threadData.getChannel().getId());
@@ -259,13 +259,13 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public final Thread copy(ThreadBrowserThreadView.ThreadData threadData) {
-                Intrinsics3.checkNotNullParameter(threadData, "threadData");
+                m.checkNotNullParameter(threadData, "threadData");
                 return new Thread(threadData);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Thread) && Intrinsics3.areEqual(this.threadData, ((Thread) other).threadData);
+                    return (other instanceof Thread) && m.areEqual(this.threadData, ((Thread) other).threadData);
                 }
                 return true;
             }
@@ -293,7 +293,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Thread(threadData=");
+                StringBuilder sbU = a.U("Thread(threadData=");
                 sbU.append(this.threadData);
                 sbU.append(")");
                 return sbU.toString();
@@ -325,13 +325,13 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public final Warning copy(String key) {
-                Intrinsics3.checkNotNullParameter(key, "key");
+                m.checkNotNullParameter(key, "key");
                 return new Warning(key);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Warning) && Intrinsics3.areEqual(getKey(), ((Warning) other).getKey());
+                    return (other instanceof Warning) && m.areEqual(getKey(), ((Warning) other).getKey());
                 }
                 return true;
             }
@@ -355,7 +355,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Warning(key=");
+                StringBuilder sbU = a.U("Warning(key=");
                 sbU.append(getKey());
                 sbU.append(")");
                 return sbU.toString();
@@ -364,7 +364,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Warning(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "key");
+                m.checkNotNullParameter(str, "key");
                 this.key = str;
                 this.type = ItemType.WARNING.ordinal();
             }
@@ -414,7 +414,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public LoadingItem(WidgetThreadBrowserAdapter widgetThreadBrowserAdapter) {
             super(R.layout.thread_browser_item_loading, widgetThreadBrowserAdapter);
-            Intrinsics3.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
+            m.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
         }
     }
 
@@ -425,12 +425,12 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ThreadItem(WidgetThreadBrowserAdapter widgetThreadBrowserAdapter) {
             super(R.layout.thread_browser_item_thread, widgetThreadBrowserAdapter);
-            Intrinsics3.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
+            m.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             ThreadBrowserThreadView threadBrowserThreadView = (ThreadBrowserThreadView) view;
             ThreadBrowserItemThreadBinding threadBrowserItemThreadBinding = new ThreadBrowserItemThreadBinding(threadBrowserThreadView, threadBrowserThreadView);
-            Intrinsics3.checkNotNullExpressionValue(threadBrowserItemThreadBinding, "ThreadBrowserItemThreadBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(threadBrowserItemThreadBinding, "ThreadBrowserItemThreadBinding.bind(itemView)");
             this.binding = threadBrowserItemThreadBinding;
         }
 
@@ -445,12 +445,12 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             Item.Thread thread = (Item.Thread) data;
             this.binding.f2159b.setThreadData(thread.getThreadData());
-            this.binding.f2159b.setOnClickListener(new WidgetThreadBrowserAdapter2(this, thread));
-            this.binding.f2159b.setOnLongClickListener(new WidgetThreadBrowserAdapter3(this, thread));
+            this.binding.f2159b.setOnClickListener(new WidgetThreadBrowserAdapter$ThreadItem$onConfigure$1(this, thread));
+            this.binding.f2159b.setOnLongClickListener(new WidgetThreadBrowserAdapter$ThreadItem$onConfigure$2(this, thread));
         }
     }
 
@@ -461,14 +461,14 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public WarningItem(WidgetThreadBrowserAdapter widgetThreadBrowserAdapter) {
             super(R.layout.thread_browser_item_warning, widgetThreadBrowserAdapter);
-            Intrinsics3.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
+            m.checkNotNullParameter(widgetThreadBrowserAdapter, "adapter");
             View view = this.itemView;
             TextView textView = (TextView) view.findViewById(R.id.warning);
             if (textView == null) {
                 throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.warning)));
             }
             ThreadBrowserItemWarningBinding threadBrowserItemWarningBinding = new ThreadBrowserItemWarningBinding((ConstraintLayout) view, textView);
-            Intrinsics3.checkNotNullExpressionValue(threadBrowserItemWarningBinding, "ThreadBrowserItemWarningBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(threadBrowserItemWarningBinding, "ThreadBrowserItemWarningBinding.bind(itemView)");
             this.binding = threadBrowserItemWarningBinding;
         }
 
@@ -479,11 +479,11 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             TextView textView = this.binding.f2160b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.warning");
-            textView.setText(FormatUtils.h(((WidgetThreadBrowserAdapter) this.adapter).getContext(), R.string.forum_android_warning, new Object[0], null, 4).toString());
+            m.checkNotNullExpressionValue(textView, "binding.warning");
+            textView.setText(b.h(((WidgetThreadBrowserAdapter) this.adapter).getContext(), R.string.forum_android_warning, new Object[0], null, 4).toString());
         }
     }
 
@@ -505,9 +505,9 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
     /* JADX WARN: Multi-variable type inference failed */
     public WidgetThreadBrowserAdapter(RecyclerView recyclerView, Function1<? super Channel, Unit> function1, Function1<? super Channel, Unit> function12) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        Intrinsics3.checkNotNullParameter(function1, "onOpenThread");
-        Intrinsics3.checkNotNullParameter(function12, "onThreadSettings");
+        m.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(function1, "onOpenThread");
+        m.checkNotNullParameter(function12, "onThreadSettings");
         this.onOpenThread = function1;
         this.onThreadSettings = function12;
     }
@@ -518,18 +518,18 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
     }
 
     public final void onThreadClicked(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         this.onOpenThread.invoke(channel);
     }
 
     public final void onThreadLongClicked(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         this.onThreadSettings.invoke(channel);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, Item> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         int iOrdinal = ItemType.INSTANCE.fromOrdinal(viewType).ordinal();
         if (iOrdinal == 0) {
             return new WarningItem(this);

@@ -30,7 +30,6 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityViewCommand;
 import androidx.customview.view.AbsSavedState;
 import androidx.customview.widget.ViewDragHelper;
-import b.d.b.a.outline;
 import com.google.android.material.R;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.resources.MaterialResources;
@@ -1197,7 +1196,7 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
             expandedOffset = getExpandedOffset();
         } else {
             if (!this.hideable || i != 5) {
-                throw new IllegalArgumentException(outline.q("Illegal state argument: ", i));
+                throw new IllegalArgumentException(b.d.b.a.a.q("Illegal state argument: ", i));
             }
             expandedOffset = this.parentHeight;
         }

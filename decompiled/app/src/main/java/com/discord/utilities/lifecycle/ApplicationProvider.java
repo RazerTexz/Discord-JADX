@@ -1,7 +1,7 @@
 package com.discord.utilities.lifecycle;
 
 import android.app.Application;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ApplicationProvider.kt */
 /* loaded from: classes2.dex */
@@ -15,13 +15,13 @@ public final class ApplicationProvider {
     public final Application get() {
         Application application2 = application;
         if (application2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("application");
+            m.throwUninitializedPropertyAccessException("application");
         }
         return application2;
     }
 
     public final void init(Application application2) {
-        Intrinsics3.checkNotNullParameter(application2, "application");
+        m.checkNotNullParameter(application2, "application");
         application = application2;
     }
 }

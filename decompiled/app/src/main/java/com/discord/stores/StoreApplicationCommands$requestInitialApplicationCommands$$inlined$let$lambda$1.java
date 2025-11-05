@@ -1,13 +1,13 @@
 package com.discord.stores;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Ref$IntRef;
 
 /* compiled from: StoreApplicationCommands.kt */
 /* loaded from: classes2.dex */
-public final class StoreApplicationCommands$requestInitialApplicationCommands$$inlined$let$lambda$1 extends Lambda implements Function0<Unit> {
+public final class StoreApplicationCommands$requestInitialApplicationCommands$$inlined$let$lambda$1 extends o implements Function0<Unit> {
     public final /* synthetic */ Ref$IntRef $offset$inlined;
     public final /* synthetic */ StoreApplicationCommands this$0;
 

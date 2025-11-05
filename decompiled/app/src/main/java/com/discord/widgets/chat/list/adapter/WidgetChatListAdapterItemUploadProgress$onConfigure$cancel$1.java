@@ -3,13 +3,13 @@ package com.discord.widgets.chat.list.adapter;
 import com.discord.stores.StoreStream;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.UploadProgressEntry;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChatListAdapterItemUploadProgress$onConfigure$cancel$1 extends Lambda implements Function0<Unit> {
+public final class WidgetChatListAdapterItemUploadProgress$onConfigure$cancel$1 extends o implements Function0<Unit> {
     public final /* synthetic */ ChatListEntry $data;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

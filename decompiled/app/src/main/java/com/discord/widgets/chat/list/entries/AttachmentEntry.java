@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.attachment.MessageAttachment;
 import com.discord.models.message.Message;
 import com.discord.stores.StoreMessageState;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: AttachmentEntry.kt */
 /* loaded from: classes2.dex */
@@ -23,8 +23,8 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
     private final int type;
 
     public AttachmentEntry(int i, long j, Message message, StoreMessageState.State state, MessageAttachment messageAttachment, boolean z2, boolean z3, boolean z4, boolean z5) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(messageAttachment, "attachment");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(messageAttachment, "attachment");
         this.embedIndex = i;
         this.guildId = j;
         this.message = message;
@@ -91,8 +91,8 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
     }
 
     public final AttachmentEntry copy(int embedIndex, long guildId, Message message, StoreMessageState.State messageState, MessageAttachment attachment, boolean isBlockedExpanded, boolean allowAnimatedEmojis, boolean autoPlayGifs, boolean isThreadStarterMessage) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(attachment, "attachment");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(attachment, "attachment");
         return new AttachmentEntry(embedIndex, guildId, message, messageState, attachment, isBlockedExpanded, allowAnimatedEmojis, autoPlayGifs, isThreadStarterMessage);
     }
 
@@ -104,7 +104,7 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
             return false;
         }
         AttachmentEntry attachmentEntry = (AttachmentEntry) other;
-        return this.embedIndex == attachmentEntry.embedIndex && this.guildId == attachmentEntry.guildId && Intrinsics3.areEqual(this.message, attachmentEntry.message) && Intrinsics3.areEqual(this.messageState, attachmentEntry.messageState) && Intrinsics3.areEqual(this.attachment, attachmentEntry.attachment) && this.isBlockedExpanded == attachmentEntry.isBlockedExpanded && this.allowAnimatedEmojis == attachmentEntry.allowAnimatedEmojis && this.autoPlayGifs == attachmentEntry.autoPlayGifs && this.isThreadStarterMessage == attachmentEntry.isThreadStarterMessage;
+        return this.embedIndex == attachmentEntry.embedIndex && this.guildId == attachmentEntry.guildId && m.areEqual(this.message, attachmentEntry.message) && m.areEqual(this.messageState, attachmentEntry.messageState) && m.areEqual(this.attachment, attachmentEntry.attachment) && this.isBlockedExpanded == attachmentEntry.isBlockedExpanded && this.allowAnimatedEmojis == attachmentEntry.allowAnimatedEmojis && this.autoPlayGifs == attachmentEntry.autoPlayGifs && this.isThreadStarterMessage == attachmentEntry.isThreadStarterMessage;
     }
 
     public final boolean getAllowAnimatedEmojis() {
@@ -190,7 +190,7 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("AttachmentEntry(embedIndex=");
+        StringBuilder sbU = a.U("AttachmentEntry(embedIndex=");
         sbU.append(this.embedIndex);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -207,6 +207,6 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
         sbU.append(", autoPlayGifs=");
         sbU.append(this.autoPlayGifs);
         sbU.append(", isThreadStarterMessage=");
-        return outline.O(sbU, this.isThreadStarterMessage, ")");
+        return a.O(sbU, this.isThreadStarterMessage, ")");
     }
 }

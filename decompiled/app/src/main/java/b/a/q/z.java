@@ -1,19 +1,18 @@
 package b.a.q;
 
-import com.discord.rtcconnection.MediaSinkWantsManager9;
+import com.discord.rtcconnection.EncodeQuality;
 import com.discord.rtcconnection.RtcConnection;
-import d0.Tuples;
 import java.util.Map;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import rx.functions.Func2;
 
 /* compiled from: RtcConnection.kt */
 /* loaded from: classes.dex */
-public final class z<T1, T2, R> implements Func2<Map<String, ? extends MediaSinkWantsManager9>, RtcConnection.StateChange, Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State>> {
+public final class z<T1, T2, R> implements Func2<Map<String, ? extends EncodeQuality>, RtcConnection.StateChange, Pair<? extends Map<String, ? extends EncodeQuality>, ? extends RtcConnection.State>> {
     public static final z j = new z();
 
     @Override // rx.functions.Func2
-    public Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State> call(Map<String, ? extends MediaSinkWantsManager9> map, RtcConnection.StateChange stateChange) {
-        return Tuples.to(map, stateChange.state);
+    public Pair<? extends Map<String, ? extends EncodeQuality>, ? extends RtcConnection.State> call(Map<String, ? extends EncodeQuality> map, RtcConnection.StateChange stateChange) {
+        return d0.o.to(map, stateChange.state);
     }
 }

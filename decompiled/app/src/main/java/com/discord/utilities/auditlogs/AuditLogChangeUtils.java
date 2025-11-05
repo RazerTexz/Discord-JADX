@@ -7,8 +7,8 @@ import android.graphics.Typeface;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import androidx.annotation.StringRes;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.guild.GuildExplicitContentFilter;
 import com.discord.api.guild.GuildVerificationLevel;
@@ -25,17 +25,17 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.font.FontUtils;
 import com.discord.utilities.logging.Logger;
-import com.discord.utilities.resources.DurationUtils3;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.DurationUtilsKt;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.spans.TypefaceSpanCompat;
 import com.discord.utilities.time.TimeUtils;
-import d0.f0._Sequences2;
-import d0.g0.Strings4;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.f0.q;
+import d0.g0.t;
+import d0.g0.w;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -46,7 +46,7 @@ import java.util.MissingFormatArgumentException;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -54,8 +54,8 @@ import kotlin.jvm.functions.Function1;
 /* loaded from: classes2.dex */
 public final class AuditLogChangeUtils {
     public static final AuditLogChangeUtils INSTANCE = new AuditLogChangeUtils();
-    private static final List<Integer> RENDERABLE_DELETE_ACTION_TYPES = Collections2.listOf((Object[]) new Integer[]{22, 20, 21});
-    private static final List<String> CHANGE_KEYS_REFERENCING_CHANNEL = Collections2.listOf((Object[]) new String[]{ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_AFK_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_SYSTEM_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_RULES_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_UPDATES_CHANNEL_ID});
+    private static final List<Integer> RENDERABLE_DELETE_ACTION_TYPES = n.listOf((Object[]) new Integer[]{22, 20, 21});
+    private static final List<String> CHANGE_KEYS_REFERENCING_CHANNEL = n.listOf((Object[]) new String[]{ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_AFK_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_SYSTEM_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_RULES_CHANNEL_ID, ModelAuditLogEntry.CHANGE_KEY_UPDATES_CHANNEL_ID});
 
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -96,7 +96,7 @@ public final class AuditLogChangeUtils {
 
     /* compiled from: AuditLogChangeUtils.kt */
     /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Long, Integer> {
+    public static final class AnonymousClass1 extends o implements Function1<Long, Integer> {
         public final /* synthetic */ ModelAuditLogEntry $auditLogEntry;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -117,7 +117,7 @@ public final class AuditLogChangeUtils {
 
     /* compiled from: AuditLogChangeUtils.kt */
     /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Integer, Boolean> {
+    public static final class AnonymousClass2 extends o implements Function1<Integer, Boolean> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -136,7 +136,7 @@ public final class AuditLogChangeUtils {
 
     /* compiled from: AuditLogChangeUtils.kt */
     /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Integer, CharSequence> {
+    public static final class AnonymousClass3 extends o implements Function1<Integer, CharSequence> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -151,13 +151,13 @@ public final class AuditLogChangeUtils {
         }
 
         public final CharSequence invoke(int i) {
-            return FormatUtils.h(this.$context, i, new Object[0], null, 4);
+            return b.h(this.$context, i, new Object[0], null, 4);
         }
     }
 
     /* compiled from: AuditLogChangeUtils.kt */
     /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<CharSequence, Boolean> {
+    public static final class AnonymousClass4 extends o implements Function1<CharSequence, Boolean> {
         public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
 
         public AnonymousClass4() {
@@ -171,7 +171,7 @@ public final class AuditLogChangeUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CharSequence charSequence) {
-            Intrinsics3.checkNotNullParameter(charSequence, "it");
+            m.checkNotNullParameter(charSequence, "it");
             return charSequence.length() == 0;
         }
     }
@@ -183,7 +183,7 @@ public final class AuditLogChangeUtils {
         return auditLogChangeUtils.getStringForPermission(j, modelAuditLogEntry);
     }
 
-    private final Tuples2<HashSet<Long>, HashSet<Long>> calculatePermissionChange(ModelAuditLogEntry.Change change) {
+    private final Pair<HashSet<Long>, HashSet<Long>> calculatePermissionChange(ModelAuditLogEntry.Change change) {
         Object oldValue = change.getOldValue();
         if (!(oldValue instanceof String)) {
             oldValue = null;
@@ -206,7 +206,7 @@ public final class AuditLogChangeUtils {
                 hashSet2.add(Long.valueOf(j5));
             }
         }
-        return new Tuples2<>(hashSet, hashSet2);
+        return new Pair<>(hashSet, hashSet2);
     }
 
     private final String getChangeNumberString(int number) {
@@ -238,7 +238,7 @@ public final class AuditLogChangeUtils {
                     }
                     int channelTypeStringResIdFromValue = getChannelTypeStringResIdFromValue(Integer.valueOf((int) ((Long) oldValue).longValue()));
                     if (channelTypeStringResIdFromValue != 0) {
-                        charSequenceH = FormatUtils.h(context, channelTypeStringResIdFromValue, new Object[0], null, 4);
+                        charSequenceH = b.h(context, channelTypeStringResIdFromValue, new Object[0], null, 4);
                     }
                 }
                 if (change.getNewValue() == null) {
@@ -250,10 +250,10 @@ public final class AuditLogChangeUtils {
                     }
                     int channelTypeStringResIdFromValue2 = getChannelTypeStringResIdFromValue(Integer.valueOf((int) ((Long) newValue).longValue()));
                     if (channelTypeStringResIdFromValue2 != 0) {
-                        charSequenceH2 = FormatUtils.h(context, channelTypeStringResIdFromValue2, new Object[0], null, 4);
+                        charSequenceH2 = b.h(context, channelTypeStringResIdFromValue2, new Object[0], null, 4);
                     }
                 }
-                return (charSequenceH != null || charSequenceH2 == null) ? FormatUtils.h(context, textId, new Object[]{charSequenceH, charSequenceH2}, null, 4) : FormatUtils.h(context, textId, new Object[]{charSequenceH2}, null, 4);
+                return (charSequenceH != null || charSequenceH2 == null) ? b.h(context, textId, new Object[]{charSequenceH, charSequenceH2}, null, 4) : b.h(context, textId, new Object[]{charSequenceH2}, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_COLOR)) {
                 Object[] objArr = new Object[1];
@@ -264,9 +264,9 @@ public final class AuditLogChangeUtils {
                 }
                 objArr2[0] = Integer.valueOf(16777215 & ((int) ((Long) newValue2).longValue()));
                 String str = String.format("#%06X", Arrays.copyOf(objArr2, 1));
-                Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
+                m.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
                 objArr[0] = str;
-                return FormatUtils.h(context, textId, objArr, null, 4);
+                return b.h(context, textId, objArr, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_MAX_AGE)) {
                 Object[] objArr3 = new Object[1];
@@ -274,23 +274,23 @@ public final class AuditLogChangeUtils {
                 if (newValue3 == null) {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
-                objArr3[0] = DurationUtils3.formatInviteExpireAfterString(context, (int) ((Long) newValue3).longValue());
-                return FormatUtils.h(context, textId, objArr3, null, 4);
+                objArr3[0] = DurationUtilsKt.formatInviteExpireAfterString(context, (int) ((Long) newValue3).longValue());
+                return b.h(context, textId, objArr3, null, 4);
             }
-            if (change.getNewValue() != null && auditLogEntry.getTargetType() == ModelAuditLogEntry.TargetType.CHANNEL_OVERWRITE && (Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED) || Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED) || Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET))) {
+            if (change.getNewValue() != null && auditLogEntry.getTargetType() == ModelAuditLogEntry.TargetType.CHANNEL_OVERWRITE && (m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED) || m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED) || m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET))) {
                 return renderPermissions(change, auditLogEntry, context, targets);
             }
-            if (change.getNewValue() != null && (Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED) || Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED))) {
-                return FormatUtils.h(context, textId, new Object[]{getPluralString(context, change).toString() + "\n" + renderPermissionList(change, auditLogEntry, context)}, null, 4);
+            if (change.getNewValue() != null && (m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED) || m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED))) {
+                return b.h(context, textId, new Object[]{getPluralString(context, change).toString() + "\n" + renderPermissionList(change, auditLogEntry, context)}, null, 4);
             }
-            if (change.getNewValue() != null && (Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_ROLES_REMOVE) || Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_ROLES_ADD))) {
-                return FormatUtils.h(context, textId, new Object[]{renderRoles(context, change)}, null, 4);
+            if (change.getNewValue() != null && (m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_ROLES_REMOVE) || m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_ROLES_ADD))) {
+                return b.h(context, textId, new Object[]{renderRoles(context, change)}, null, 4);
             }
             if (change.getNewValue() != null && CHANGE_KEYS_REFERENCING_CHANNEL.contains(change.getKey())) {
                 Object[] objArr4 = new Object[1];
                 Map<Long, ? extends CharSequence> map = targets.get(ModelAuditLogEntry.TargetType.CHANNEL);
                 objArr4[0] = map != null ? map.get(Long.valueOf(Long.parseLong(change.getValue().toString()))) : null;
-                return FormatUtils.h(context, textId, objArr4, null, 4);
+                return b.h(context, textId, objArr4, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_BITRATE)) {
                 Object[] objArr5 = new Object[1];
@@ -299,18 +299,18 @@ public final class AuditLogChangeUtils {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
                 objArr5[0] = Long.valueOf(((Long) newValue4).longValue() / 1000);
-                return FormatUtils.h(context, textId, objArr5, null, 4);
+                return b.h(context, textId, objArr5, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_OWNER_ID)) {
                 Object[] objArr6 = new Object[1];
                 User user = StoreStream.INSTANCE.getUsers().getUsers().get(Long.valueOf(Long.parseLong(change.getNewValue().toString())));
                 objArr6[0] = user != null ? user.getUsername() : null;
-                return FormatUtils.h(context, textId, objArr6, null, 4);
+                return b.h(context, textId, objArr6, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_RATE_LIMIT_PER_USER)) {
                 Object[] objArr7 = new Object[1];
                 Resources resources = context.getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
+                m.checkNotNullExpressionValue(resources, "context.resources");
                 Object newValue5 = change.getNewValue();
                 if (newValue5 == null) {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
@@ -322,8 +322,8 @@ public final class AuditLogChangeUtils {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
                 objArr8[0] = Integer.valueOf((int) ((Long) newValue6).longValue());
-                objArr7[0] = StringResourceUtils.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_channel_rate_limit_per_user_change_newValue, iLongValue, objArr8);
-                return FormatUtils.h(context, textId, objArr7, null, 4);
+                objArr7[0] = StringResourceUtilsKt.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_channel_rate_limit_per_user_change_newValue, iLongValue, objArr8);
+                return b.h(context, textId, objArr7, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_AFK_TIMEOUT)) {
                 Object[] objArr9 = new Object[1];
@@ -332,12 +332,12 @@ public final class AuditLogChangeUtils {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
                 objArr9[0] = Long.valueOf(((Long) newValue7).longValue() / 60);
-                return FormatUtils.h(context, textId, objArr9, null, 4);
+                return b.h(context, textId, objArr9, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_PRUNE_DELETE_DAYS)) {
                 Object[] objArr10 = new Object[1];
                 Resources resources2 = context.getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources2, "context.resources");
+                m.checkNotNullExpressionValue(resources2, "context.resources");
                 Object newValue8 = change.getNewValue();
                 if (newValue8 == null) {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Int");
@@ -349,8 +349,8 @@ public final class AuditLogChangeUtils {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Int");
                 }
                 objArr11[0] = (Integer) newValue9;
-                objArr10[0] = StringResourceUtils.getQuantityString(resources2, context, R.plurals.guild_settings_audit_log_member_prune_delete_days_newValue, iIntValue, objArr11);
-                return FormatUtils.h(context, textId, objArr10, null, 4);
+                objArr10[0] = StringResourceUtilsKt.getQuantityString(resources2, context, R.plurals.guild_settings_audit_log_member_prune_delete_days_newValue, iIntValue, objArr11);
+                return b.h(context, textId, objArr10, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_VIDEO_QUALITY_MODE)) {
                 Object[] objArr12 = new Object[1];
@@ -360,10 +360,10 @@ public final class AuditLogChangeUtils {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
                 objArr12[0] = getStringForVideoQualityMode(companion.a(Integer.valueOf((int) ((Long) newValue10).longValue())), context);
-                return FormatUtils.h(context, textId, objArr12, null, 4);
+                return b.h(context, textId, objArr12, null, 4);
             }
             if (!hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_GUILD_COMMUNICATION_DISABLED)) {
-                return FormatUtils.b(context, textId, new Object[0], new AnonymousClass1(change));
+                return b.b(context, textId, new Object[0], new AnonymousClass1(change));
             }
             Object[] objArr13 = new Object[1];
             Object newValue11 = change.getNewValue();
@@ -371,20 +371,20 @@ public final class AuditLogChangeUtils {
                 throw new NullPointerException("null cannot be cast to non-null type kotlin.String");
             }
             objArr13[0] = TimeUtils.getReadableTimeString(context, (String) newValue11);
-            return FormatUtils.h(context, textId, objArr13, null, 4);
+            return b.h(context, textId, objArr13, null, 4);
         } catch (ClassCastException e) {
             StringBuilder sb = new StringBuilder();
             sb.append(e.getLocalizedMessage() + " for change: ");
             sb.append(change.getKey() + ' ' + change.getNewValue() + ' ' + change.getOldValue());
             String string = sb.toString();
-            Intrinsics3.checkNotNullExpressionValue(string, "StringBuilder()\n        …}\")\n          .toString()");
+            m.checkNotNullExpressionValue(string, "StringBuilder()\n        …}\")\n          .toString()");
             Logger.w$default(AppLog.g, string, null, 2, null);
             return "";
         } catch (MissingFormatArgumentException unused) {
-            StringBuilder sbU = outline.U("Failed to get string for action id: ");
+            StringBuilder sbU = a.U("Failed to get string for action id: ");
             sbU.append(auditLogEntry.getActionTypeId() + " and change: " + change.getKey());
             String string2 = sbU.toString();
-            Intrinsics3.checkNotNullExpressionValue(string2, "StringBuilder()\n        …}\")\n          .toString()");
+            m.checkNotNullExpressionValue(string2, "StringBuilder()\n        …}\")\n          .toString()");
             Logger.e$default(AppLog.g, "Audit Logs", string2, null, null, 12, null);
             return "";
         }
@@ -973,18 +973,18 @@ public final class AuditLogChangeUtils {
                 if (iHashCode != 92906313) {
                     if (iHashCode == 108404047 && key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET)) {
                         Resources resources = context.getResources();
-                        Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
-                        objH = FormatUtils.h(context, R.string.guild_settings_audit_log_channel_permission_overrides_reset, new Object[]{StringResourceUtils.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_reset_count, collection.size(), Integer.valueOf(collection.size())), roleName}, null, 4);
+                        m.checkNotNullExpressionValue(resources, "context.resources");
+                        objH = b.h(context, R.string.guild_settings_audit_log_channel_permission_overrides_reset, new Object[]{StringResourceUtilsKt.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_reset_count, collection.size(), Integer.valueOf(collection.size())), roleName}, null, 4);
                     }
                 } else if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED)) {
                     Resources resources2 = context.getResources();
-                    Intrinsics3.checkNotNullExpressionValue(resources2, "context.resources");
-                    objH = FormatUtils.h(context, R.string.guild_settings_audit_log_channel_permission_overrides_granted, new Object[]{StringResourceUtils.getQuantityString(resources2, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_granted_count, collection.size(), Integer.valueOf(collection.size())), roleName}, null, 4);
+                    m.checkNotNullExpressionValue(resources2, "context.resources");
+                    objH = b.h(context, R.string.guild_settings_audit_log_channel_permission_overrides_granted, new Object[]{StringResourceUtilsKt.getQuantityString(resources2, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_granted_count, collection.size(), Integer.valueOf(collection.size())), roleName}, null, 4);
                 }
             } else if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED)) {
                 Resources resources3 = context.getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources3, "context.resources");
-                objH = FormatUtils.h(context, R.string.guild_settings_audit_log_channel_permission_overrides_denied, new Object[]{StringResourceUtils.getQuantityString(resources3, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_denied_count, collection.size(), Integer.valueOf(collection.size())), roleName}, null, 4);
+                m.checkNotNullExpressionValue(resources3, "context.resources");
+                objH = b.h(context, R.string.guild_settings_audit_log_channel_permission_overrides_denied, new Object[]{StringResourceUtilsKt.getQuantityString(resources3, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_denied_count, collection.size(), Integer.valueOf(collection.size())), roleName}, null, 4);
             }
         }
         return objH.toString();
@@ -1008,29 +1008,29 @@ public final class AuditLogChangeUtils {
                 case 1168893:
                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_ROLES_ADD)) {
                         Resources resources = context.getResources();
-                        Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
-                        return StringResourceUtils.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_member_roles_add_count, collection.size(), Integer.valueOf(collection.size()));
+                        m.checkNotNullExpressionValue(resources, "context.resources");
+                        return StringResourceUtilsKt.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_member_roles_add_count, collection.size(), Integer.valueOf(collection.size()));
                     }
                     break;
                 case 3079692:
                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED)) {
                         Resources resources2 = context.getResources();
-                        Intrinsics3.checkNotNullExpressionValue(resources2, "context.resources");
-                        return StringResourceUtils.getQuantityString(resources2, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_denied_count, collection.size(), Integer.valueOf(collection.size()));
+                        m.checkNotNullExpressionValue(resources2, "context.resources");
+                        return StringResourceUtilsKt.getQuantityString(resources2, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_denied_count, collection.size(), Integer.valueOf(collection.size()));
                     }
                     break;
                 case 92906313:
                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED)) {
                         Resources resources3 = context.getResources();
-                        Intrinsics3.checkNotNullExpressionValue(resources3, "context.resources");
-                        return StringResourceUtils.getQuantityString(resources3, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_granted_count, collection.size(), Integer.valueOf(collection.size()));
+                        m.checkNotNullExpressionValue(resources3, "context.resources");
+                        return StringResourceUtilsKt.getQuantityString(resources3, context, R.plurals.guild_settings_audit_log_channel_permission_overrides_granted_count, collection.size(), Integer.valueOf(collection.size()));
                     }
                     break;
                 case 950750632:
                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_ROLES_REMOVE)) {
                         Resources resources4 = context.getResources();
-                        Intrinsics3.checkNotNullExpressionValue(resources4, "context.resources");
-                        return StringResourceUtils.getQuantityString(resources4, context, R.plurals.guild_settings_audit_log_member_roles_remove_count, collection.size(), Integer.valueOf(collection.size()));
+                        m.checkNotNullExpressionValue(resources4, "context.resources");
+                        return StringResourceUtilsKt.getQuantityString(resources4, context, R.plurals.guild_settings_audit_log_member_roles_remove_count, collection.size(), Integer.valueOf(collection.size()));
                     }
                     break;
             }
@@ -1291,10 +1291,10 @@ public final class AuditLogChangeUtils {
     private final CharSequence getStringForVideoQualityMode(MediaSinkWantsManager.VideoQualityMode mode, Context context) {
         int iOrdinal = mode.ordinal();
         if (iOrdinal == 0) {
-            return FormatUtils.h(context, R.string.video_quality_mode_auto, new Object[0], null, 4);
+            return b.h(context, R.string.video_quality_mode_auto, new Object[0], null, 4);
         }
         if (iOrdinal == 1) {
-            return FormatUtils.h(context, R.string.video_quality_mode_full, new Object[0], null, 4);
+            return b.h(context, R.string.video_quality_mode_full, new Object[0], null, 4);
         }
         throw new NoWhenBranchMatchedException();
     }
@@ -1474,7 +1474,7 @@ public final class AuditLogChangeUtils {
     }
 
     private final boolean hasNewValue(ModelAuditLogEntry.Change change, String str) {
-        return change.getNewValue() != null && Intrinsics3.areEqual(change.getKey(), str);
+        return change.getNewValue() != null && m.areEqual(change.getKey(), str);
     }
 
     private final String renderPermissionList(ModelAuditLogEntry.Change change, ModelAuditLogEntry auditLogEntry, Context context) {
@@ -1483,7 +1483,7 @@ public final class AuditLogChangeUtils {
             value = null;
         }
         Set set = (Set) value;
-        return set != null ? _Sequences2.joinToString$default(_Sequences2.filterNot(_Sequences2.map(_Sequences2.filter(_Sequences2.mapNotNull(_Sequences2.sorted(_Collections.asSequence(set)), new AnonymousClass1(auditLogEntry)), AnonymousClass2.INSTANCE), new AnonymousClass3(context)), AnonymousClass4.INSTANCE), null, null, null, 0, null, null, 63, null) : "";
+        return set != null ? q.joinToString$default(q.filterNot(q.map(q.filter(q.mapNotNull(q.sorted(u.asSequence(set)), new AnonymousClass1(auditLogEntry)), AnonymousClass2.INSTANCE), new AnonymousClass3(context)), AnonymousClass4.INSTANCE), null, null, null, 0, null, null, 63, null) : "";
     }
 
     private final String renderPermissions(ModelAuditLogEntry.Change change, ModelAuditLogEntry auditLogEntry, Context context, Map<ModelAuditLogEntry.TargetType, ? extends Map<Long, ? extends CharSequence>> targets) {
@@ -1497,11 +1497,11 @@ public final class AuditLogChangeUtils {
         boolean z2 = false;
         for (ModelAuditLogEntry.ChangeNameId changeNameId : (List) newValue) {
             if (z2) {
-                string = outline.w(string, ", ");
+                string = a.w(string, ", ");
             } else {
                 z2 = true;
             }
-            StringBuilder sbU = outline.U(string);
+            StringBuilder sbU = a.U(string);
             sbU.append(changeNameId.getName());
             string = sbU.toString();
         }
@@ -1579,7 +1579,7 @@ public final class AuditLogChangeUtils {
                 switch (key.hashCode()) {
                     case -1724546052:
                         if (key.equals(ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION)) {
-                            return StringsJVM.isBlank(change.getValue().toString());
+                            return t.isBlank(change.getValue().toString());
                         }
                         return false;
                     case -1306538777:
@@ -1628,9 +1628,9 @@ public final class AuditLogChangeUtils {
         int i;
         int iOrdinal;
         int guildChangeString;
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(auditLogEntry, "auditLogEntry");
-        Intrinsics3.checkNotNullParameter(targets, "targets");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(auditLogEntry, "auditLogEntry");
+        m.checkNotNullParameter(targets, "targets");
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         Typeface typefaceCreate = Typeface.create(FontUtils.INSTANCE.getThemedFont(context, R.attr.font_monospace), 0);
         List<ModelAuditLogEntry.Change> changes = auditLogEntry.getChanges();
@@ -1638,7 +1638,7 @@ public final class AuditLogChangeUtils {
             int i2 = 0;
             for (ModelAuditLogEntry.Change change : changes) {
                 AuditLogChangeUtils auditLogChangeUtils = INSTANCE;
-                Intrinsics3.checkNotNullExpressionValue(change, "change");
+                m.checkNotNullExpressionValue(change, "change");
                 if (!auditLogChangeUtils.shouldNotRenderChange(auditLogEntry, change)) {
                     ModelAuditLogEntry.TargetType targetType = auditLogEntry.getTargetType();
                     if (targetType != null && (iOrdinal = targetType.ordinal()) != 0) {
@@ -1705,10 +1705,10 @@ public final class AuditLogChangeUtils {
                             spannableStringBuilder.append((CharSequence) (auditLogChangeUtils.getChangeNumberString(i3) + " — "));
                             int length = spannableStringBuilder.length() - 1;
                             spannableStringBuilder.setSpan(new ForegroundColorSpan(auditLogChangeUtils.getTextColor(context, auditLogEntry)), iMax, length, 33);
-                            Intrinsics3.checkNotNullExpressionValue(typefaceCreate, "numberTypeface");
+                            m.checkNotNullExpressionValue(typefaceCreate, "numberTypeface");
                             spannableStringBuilder.setSpan(new TypefaceSpanCompat(typefaceCreate), iMax, length, 33);
-                            spannableStringBuilder.append(FormatUtils.l(auditLogChangeUtils.getChangeTextWithParams(context, auditLogEntry, change, i, targets), new Object[0], null, 2));
-                            if (Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_COLOR) && change.getValue() != null) {
+                            spannableStringBuilder.append(b.l(auditLogChangeUtils.getChangeTextWithParams(context, auditLogEntry, change, i, targets), new Object[0], null, 2));
+                            if (m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_COLOR) && change.getValue() != null) {
                                 Object value = change.getValue();
                                 Long l = (Long) (value instanceof Long ? value : null);
                                 if (l == null || l.longValue() != 0) {
@@ -1716,14 +1716,14 @@ public final class AuditLogChangeUtils {
                                     Object value2 = change.getValue();
                                     Objects.requireNonNull(value2, "null cannot be cast to non-null type kotlin.Long");
                                     String str = String.format("#%06X", Arrays.copyOf(new Object[]{Integer.valueOf(16777215 & ((int) ((Long) value2).longValue()))}, 1));
-                                    Intrinsics3.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
-                                    spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor(str)), Strings4.getLastIndex(spannableStringBuilder), Strings4.getLastIndex(spannableStringBuilder) + 1, 33);
+                                    m.checkNotNullExpressionValue(str, "java.lang.String.format(format, *args)");
+                                    spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor(str)), w.getLastIndex(spannableStringBuilder), w.getLastIndex(spannableStringBuilder) + 1, 33);
                                 }
                             }
                             i2 = i3;
                         } else {
                             AppLog appLog = AppLog.g;
-                            StringBuilder sbU = outline.U("No change text for actiontype: ");
+                            StringBuilder sbU = a.U("No change text for actiontype: ");
                             sbU.append(auditLogEntry.getActionTypeId());
                             sbU.append(" key:");
                             sbU.append(change.getKey());
@@ -1738,7 +1738,7 @@ public final class AuditLogChangeUtils {
 
     public final boolean hasChangesToRender(ModelAuditLogEntry log) {
         boolean z2;
-        Intrinsics3.checkNotNullParameter(log, "log");
+        m.checkNotNullParameter(log, "log");
         List<ModelAuditLogEntry.Change> changes = log.getChanges();
         if (changes == null) {
             return false;
@@ -1748,7 +1748,7 @@ public final class AuditLogChangeUtils {
         } else {
             for (ModelAuditLogEntry.Change change : changes) {
                 AuditLogChangeUtils auditLogChangeUtils = INSTANCE;
-                Intrinsics3.checkNotNullExpressionValue(change, "it");
+                m.checkNotNullExpressionValue(change, "it");
                 if (!auditLogChangeUtils.shouldNotRenderChange(log, change)) {
                     z2 = true;
                     break;
@@ -1760,34 +1760,34 @@ public final class AuditLogChangeUtils {
     }
 
     public final List<ModelAuditLogEntry.Change> transformPermissionChange(ModelAuditLogEntry.Change change) {
-        Intrinsics3.checkNotNullParameter(change, "change");
-        Tuples2<HashSet<Long>, HashSet<Long>> tuples2CalculatePermissionChange = calculatePermissionChange(change);
+        m.checkNotNullParameter(change, "change");
+        Pair<HashSet<Long>, HashSet<Long>> pairCalculatePermissionChange = calculatePermissionChange(change);
         ArrayList arrayList = new ArrayList();
-        if (!tuples2CalculatePermissionChange.getFirst().isEmpty()) {
-            arrayList.add(new ModelAuditLogEntry.Change(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED, null, tuples2CalculatePermissionChange.getFirst()));
+        if (!pairCalculatePermissionChange.getFirst().isEmpty()) {
+            arrayList.add(new ModelAuditLogEntry.Change(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED, null, pairCalculatePermissionChange.getFirst()));
         }
-        if (!tuples2CalculatePermissionChange.getSecond().isEmpty()) {
-            arrayList.add(new ModelAuditLogEntry.Change(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED, null, tuples2CalculatePermissionChange.getSecond()));
+        if (!pairCalculatePermissionChange.getSecond().isEmpty()) {
+            arrayList.add(new ModelAuditLogEntry.Change(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED, null, pairCalculatePermissionChange.getSecond()));
         }
         return arrayList;
     }
 
     public final List<ModelAuditLogEntry.Change> transformPermissionOverride(ModelAuditLogEntry.Change change) {
-        Intrinsics3.checkNotNullParameter(change, "change");
-        Tuples2<HashSet<Long>, HashSet<Long>> tuples2CalculatePermissionChange = calculatePermissionChange(change);
+        m.checkNotNullParameter(change, "change");
+        Pair<HashSet<Long>, HashSet<Long>> pairCalculatePermissionChange = calculatePermissionChange(change);
         ArrayList arrayList = new ArrayList();
-        if (!tuples2CalculatePermissionChange.getFirst().isEmpty()) {
-            arrayList.add(new ModelAuditLogEntry.Change(change.getKey(), null, tuples2CalculatePermissionChange.getFirst()));
+        if (!pairCalculatePermissionChange.getFirst().isEmpty()) {
+            arrayList.add(new ModelAuditLogEntry.Change(change.getKey(), null, pairCalculatePermissionChange.getFirst()));
         }
-        if (!tuples2CalculatePermissionChange.getSecond().isEmpty()) {
-            arrayList.add(new ModelAuditLogEntry.Change(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET, null, tuples2CalculatePermissionChange.getSecond()));
+        if (!pairCalculatePermissionChange.getSecond().isEmpty()) {
+            arrayList.add(new ModelAuditLogEntry.Change(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET, null, pairCalculatePermissionChange.getSecond()));
         }
         return arrayList;
     }
 
     /* compiled from: AuditLogChangeUtils.kt */
     /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$getChangeTextWithParams$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ ModelAuditLogEntry.Change $change;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1800,7 +1800,7 @@ public final class AuditLogChangeUtils {
         public final void invoke2(RenderContext renderContext) {
             String string;
             String string2;
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;
             Object oldValue = this.$change.getOldValue();
             String str = "";

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNotificationClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNotificationClicked implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
+public final /* data */ class TrackNotificationClicked implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final Boolean notifInApp = null;
@@ -45,7 +45,7 @@ public final /* data */ class TrackNotificationClicked implements AnalyticsSchem
             return false;
         }
         TrackNotificationClicked trackNotificationClicked = (TrackNotificationClicked) other;
-        return Intrinsics3.areEqual(this.notifInApp, trackNotificationClicked.notifInApp) && Intrinsics3.areEqual(this.notifType, trackNotificationClicked.notifType) && Intrinsics3.areEqual(this.notifUserId, trackNotificationClicked.notifUserId) && Intrinsics3.areEqual(this.messageId, trackNotificationClicked.messageId) && Intrinsics3.areEqual(this.messageType, trackNotificationClicked.messageType) && Intrinsics3.areEqual(this.hasMessage, trackNotificationClicked.hasMessage) && Intrinsics3.areEqual(this.guildId, trackNotificationClicked.guildId) && Intrinsics3.areEqual(this.channelId, trackNotificationClicked.channelId) && Intrinsics3.areEqual(this.channelType, trackNotificationClicked.channelType) && Intrinsics3.areEqual(this.relType, trackNotificationClicked.relType) && Intrinsics3.areEqual(this.platformType, trackNotificationClicked.platformType) && Intrinsics3.areEqual(this.activityType, trackNotificationClicked.activityType) && Intrinsics3.areEqual(this.activityName, trackNotificationClicked.activityName) && Intrinsics3.areEqual(this.actionType, trackNotificationClicked.actionType) && Intrinsics3.areEqual(this.pushDataSize, trackNotificationClicked.pushDataSize) && Intrinsics3.areEqual(this.messageDataSize, trackNotificationClicked.messageDataSize);
+        return m.areEqual(this.notifInApp, trackNotificationClicked.notifInApp) && m.areEqual(this.notifType, trackNotificationClicked.notifType) && m.areEqual(this.notifUserId, trackNotificationClicked.notifUserId) && m.areEqual(this.messageId, trackNotificationClicked.messageId) && m.areEqual(this.messageType, trackNotificationClicked.messageType) && m.areEqual(this.hasMessage, trackNotificationClicked.hasMessage) && m.areEqual(this.guildId, trackNotificationClicked.guildId) && m.areEqual(this.channelId, trackNotificationClicked.channelId) && m.areEqual(this.channelType, trackNotificationClicked.channelType) && m.areEqual(this.relType, trackNotificationClicked.relType) && m.areEqual(this.platformType, trackNotificationClicked.platformType) && m.areEqual(this.activityType, trackNotificationClicked.activityType) && m.areEqual(this.activityName, trackNotificationClicked.activityName) && m.areEqual(this.actionType, trackNotificationClicked.actionType) && m.areEqual(this.pushDataSize, trackNotificationClicked.pushDataSize) && m.areEqual(this.messageDataSize, trackNotificationClicked.messageDataSize);
     }
 
     public int hashCode() {
@@ -84,7 +84,7 @@ public final /* data */ class TrackNotificationClicked implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNotificationClicked(notifInApp=");
+        StringBuilder sbU = a.U("TrackNotificationClicked(notifInApp=");
         sbU.append(this.notifInApp);
         sbU.append(", notifType=");
         sbU.append(this.notifType);
@@ -115,6 +115,6 @@ public final /* data */ class TrackNotificationClicked implements AnalyticsSchem
         sbU.append(", pushDataSize=");
         sbU.append(this.pushDataSize);
         sbU.append(", messageDataSize=");
-        return outline.G(sbU, this.messageDataSize, ")");
+        return a.G(sbU, this.messageDataSize, ")");
     }
 }

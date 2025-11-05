@@ -1,13 +1,13 @@
 package com.discord.widgets.chat.overlay;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.stores.StoreSlowMode;
 import com.discord.stores.StoreStream;
-import d0.z.d.Intrinsics3;
-import j0.l.a.OnSubscribeLift;
-import j0.l.a.OperatorDistinctUntilChanged2;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import j0.l.a.r;
+import j0.l.a.u0;
+import j0.l.e.k;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
@@ -37,27 +37,27 @@ public abstract class ChatTypingModel {
         }
 
         private final Observable<ChatTypingModel> getTypingObservableForChannel(Channel resolvedChannel) {
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(resolvedChannel);
-            Observable<ChatTypingModel> observableY = Observable.h0(new OnSubscribeLift(scalarSynchronousObservable.j, new OperatorDistinctUntilChanged2(ChatTypingModel3.INSTANCE))).Y(ChatTypingModel4.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableY, "Observable.just(resolved…          }\n            }");
+            k kVar = new k(resolvedChannel);
+            Observable<ChatTypingModel> observableY = Observable.h0(new r(kVar.j, new u0(ChatTypingModel$Companion$getTypingObservableForChannel$1.INSTANCE))).Y(ChatTypingModel$Companion$getTypingObservableForChannel$2.INSTANCE);
+            m.checkNotNullExpressionValue(observableY, "Observable.just(resolved…          }\n            }");
             return observableY;
         }
 
         private final Observable<ChatTypingModel> getTypingObservableForDraft(Channel parentChannel) {
-            Observable observableY = StoreStream.INSTANCE.getSlowMode().observeCooldownSecs(Long.valueOf(parentChannel.getId()), StoreSlowMode.Type.ThreadCreate.INSTANCE).Y(new ChatTypingModel5(parentChannel));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …ldownSecs))\n            }");
+            Observable observableY = StoreStream.INSTANCE.getSlowMode().observeCooldownSecs(Long.valueOf(parentChannel.getId()), StoreSlowMode.Type.ThreadCreate.INSTANCE).Y(new ChatTypingModel$Companion$getTypingObservableForDraft$1(parentChannel));
+            m.checkNotNullExpressionValue(observableY, "StoreStream\n            …ldownSecs))\n            }");
             return observableY;
         }
 
         private final Observable<List<CharSequence>> getTypingUsers(Channel channel) {
-            Observable<List<CharSequence>> observableR = StoreStream.INSTANCE.getUsersTyping().observeTypingUsers(channel.getId()).Y(new ChatTypingModel6(channel)).G(ChatTypingModel7.INSTANCE).r();
-            Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream\n          .g…  .distinctUntilChanged()");
+            Observable<List<CharSequence>> observableR = StoreStream.INSTANCE.getUsersTyping().observeTypingUsers(channel.getId()).Y(new ChatTypingModel$Companion$getTypingUsers$1(channel)).G(ChatTypingModel$Companion$getTypingUsers$2.INSTANCE).r();
+            m.checkNotNullExpressionValue(observableR, "StoreStream\n          .g…  .distinctUntilChanged()");
             return observableR;
         }
 
         public final Observable<ChatTypingModel> get() {
-            Observable<ChatTypingModel> observableR = StoreStream.INSTANCE.getChannelsSelected().observeResolvedSelectedChannel().Y(ChatTypingModel2.INSTANCE).r();
-            Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream.getChannelsS…  .distinctUntilChanged()");
+            Observable<ChatTypingModel> observableR = StoreStream.INSTANCE.getChannelsSelected().observeResolvedSelectedChannel().Y(ChatTypingModel$Companion$get$1.INSTANCE).r();
+            m.checkNotNullExpressionValue(observableR, "StoreStream.getChannelsS…  .distinctUntilChanged()");
             return observableR;
         }
 
@@ -85,7 +85,7 @@ public abstract class ChatTypingModel {
         /* JADX WARN: Multi-variable type inference failed */
         public Typing(List<? extends CharSequence> list, int i, int i2) {
             super(null);
-            Intrinsics3.checkNotNullParameter(list, "typingUsers");
+            m.checkNotNullParameter(list, "typingUsers");
             this.typingUsers = list;
             this.channelRateLimit = i;
             this.cooldownSecs = i2;
@@ -120,7 +120,7 @@ public abstract class ChatTypingModel {
         }
 
         public final Typing copy(List<? extends CharSequence> typingUsers, int channelRateLimit, int cooldownSecs) {
-            Intrinsics3.checkNotNullParameter(typingUsers, "typingUsers");
+            m.checkNotNullParameter(typingUsers, "typingUsers");
             return new Typing(typingUsers, channelRateLimit, cooldownSecs);
         }
 
@@ -132,7 +132,7 @@ public abstract class ChatTypingModel {
                 return false;
             }
             Typing typing = (Typing) other;
-            return Intrinsics3.areEqual(this.typingUsers, typing.typingUsers) && this.channelRateLimit == typing.channelRateLimit && this.cooldownSecs == typing.cooldownSecs;
+            return m.areEqual(this.typingUsers, typing.typingUsers) && this.channelRateLimit == typing.channelRateLimit && this.cooldownSecs == typing.cooldownSecs;
         }
 
         public final int getChannelRateLimit() {
@@ -153,12 +153,12 @@ public abstract class ChatTypingModel {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Typing(typingUsers=");
+            StringBuilder sbU = a.U("Typing(typingUsers=");
             sbU.append(this.typingUsers);
             sbU.append(", channelRateLimit=");
             sbU.append(this.channelRateLimit);
             sbU.append(", cooldownSecs=");
-            return outline.B(sbU, this.cooldownSecs, ")");
+            return a.B(sbU, this.cooldownSecs, ")");
         }
     }
 

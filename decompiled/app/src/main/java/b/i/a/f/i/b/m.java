@@ -2,8 +2,6 @@ package b.i.a.f.i.b;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
 import com.google.android.gms.measurement.internal.zzap;
 import java.util.Iterator;
 import java.util.Objects;
@@ -21,8 +19,8 @@ public final class m {
     public final zzap f;
 
     public m(u4 u4Var, String str, String str2, String str3, long j, long j2, zzap zzapVar) {
-        AnimatableValueParser.w(str2);
-        AnimatableValueParser.w(str3);
+        b.c.a.a0.d.w(str2);
+        b.c.a.a0.d.w(str3);
         Objects.requireNonNull(zzapVar, "null reference");
         this.a = str2;
         this.f1549b = str3;
@@ -43,7 +41,7 @@ public final class m {
         String str = this.a;
         String str2 = this.f1549b;
         String strValueOf = String.valueOf(this.f);
-        StringBuilder sbS = outline.S(strValueOf.length() + outline.b(str2, outline.b(str, 33)), "Event{appId='", str, "', name='", str2);
+        StringBuilder sbS = b.d.b.a.a.S(strValueOf.length() + b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 33)), "Event{appId='", str, "', name='", str2);
         sbS.append("', params=");
         sbS.append(strValueOf);
         sbS.append('}');
@@ -52,8 +50,8 @@ public final class m {
 
     public m(u4 u4Var, String str, String str2, String str3, long j, long j2, Bundle bundle) {
         zzap zzapVar;
-        AnimatableValueParser.w(str2);
-        AnimatableValueParser.w(str3);
+        b.c.a.a0.d.w(str2);
+        b.c.a.a0.d.w(str3);
         this.a = str2;
         this.f1549b = str3;
         this.c = TextUtils.isEmpty(str) ? null : str;

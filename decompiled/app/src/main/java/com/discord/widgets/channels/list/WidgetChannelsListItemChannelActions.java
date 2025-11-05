@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -27,10 +27,10 @@ import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -42,7 +42,7 @@ import rx.subscriptions.CompositeSubscription;
 /* compiled from: WidgetChannelsListItemChannelActions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetChannelsListItemChannelActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelsListItemActionsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelsListItemChannelActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelsListItemActionsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -57,7 +57,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long channelId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetChannelsListItemChannelActions widgetChannelsListItemChannelActions = new WidgetChannelsListItemChannelActions();
             Bundle bundle = new Bundle();
             bundle.putLong(WidgetChannelsListItemChannelActions.INTENT_EXTRA_CHANNEL_ID, channelId);
@@ -90,9 +90,9 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
 
             public final Observable<Model> get(long channelId) {
                 Observable<R> observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(new WidgetChannelsListItemChannelActions$Model$Companion$get$1(channelId));
-                Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream.getChannels(…        }\n              }");
+                m.checkNotNullExpressionValue(observableY, "StoreStream.getChannels(…        }\n              }");
                 Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream.getChannels(…  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "StoreStream.getChannels(…  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -102,7 +102,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
 
         public Model(Channel channel, Guild guild, Long l, boolean z2) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             this.channel = channel;
             this.guild = guild;
             this.permissions = l;
@@ -149,7 +149,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
 
         public final Model copy(Channel channel, Guild guild, Long permissions, boolean isMuted) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             return new Model(channel, guild, permissions, isMuted);
         }
 
@@ -161,7 +161,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.channel, model.channel) && Intrinsics3.areEqual(this.guild, model.guild) && Intrinsics3.areEqual(this.permissions, model.permissions) && this.isMuted == model.isMuted;
+            return m.areEqual(this.channel, model.channel) && m.areEqual(this.guild, model.guild) && m.areEqual(this.permissions, model.permissions) && this.isMuted == model.isMuted;
         }
 
         public final boolean getCanCreateInstantInvite() {
@@ -181,13 +181,13 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
 
         public final CharSequence getMuteChannelText(Context context, Channel channel) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            return (this.isMuted && ChannelUtils.k(channel)) ? FormatUtils.h(context, R.string.unmute_category, new Object[0], null, 4) : (this.isMuted || !ChannelUtils.k(channel)) ? this.isMuted ? FormatUtils.h(context, R.string.unmute_channel_generic, new Object[0], null, 4) : FormatUtils.h(context, R.string.mute_channel_generic, new Object[0], null, 4) : FormatUtils.h(context, R.string.mute_category, new Object[0], null, 4);
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(channel, "channel");
+            return (this.isMuted && ChannelUtils.k(channel)) ? b.h(context, R.string.unmute_category, new Object[0], null, 4) : (this.isMuted || !ChannelUtils.k(channel)) ? this.isMuted ? b.h(context, R.string.unmute_channel_generic, new Object[0], null, 4) : b.h(context, R.string.mute_channel_generic, new Object[0], null, 4) : b.h(context, R.string.mute_category, new Object[0], null, 4);
         }
 
         public final int getMuteIconResId(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             return DrawableCompat.getThemedDrawableRes$default(context, this.isMuted ? R.attr.ic_channel_muted : R.attr.ic_channel_mute, 0, 2, (Object) null);
         }
 
@@ -221,20 +221,20 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(channel=");
+            StringBuilder sbU = a.U("Model(channel=");
             sbU.append(this.channel);
             sbU.append(", guild=");
             sbU.append(this.guild);
             sbU.append(", permissions=");
             sbU.append(this.permissions);
             sbU.append(", isMuted=");
-            return outline.O(sbU, this.isMuted, ")");
+            return a.O(sbU, this.isMuted, ")");
         }
     }
 
     /* compiled from: WidgetChannelsListItemChannelActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$bindSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -253,7 +253,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
 
     public WidgetChannelsListItemChannelActions() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelsListItemChannelActions$binding$2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelsListItemChannelActions$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetChannelsListItemChannelActions widgetChannelsListItemChannelActions, Model model) {
@@ -268,18 +268,18 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
         if (model.getGuild() != null) {
             SimpleDraweeView simpleDraweeView = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.channelsListItemTextActionsIcon");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.channelsListItemTextActionsIcon");
             IconUtils.setIcon$default((ImageView) simpleDraweeView, model.getGuild(), 0, (MGImages.ChangeDetector) null, false, 28, (Object) null);
         } else {
             SimpleDraweeView simpleDraweeView2 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.channelsListItemTextActionsIcon");
+            m.checkNotNullExpressionValue(simpleDraweeView2, "binding.channelsListItemTextActionsIcon");
             IconUtils.setIcon$default(simpleDraweeView2, model.getChannel(), 0, (MGImages.ChangeDetector) null, 12, (Object) null);
         }
         TextView textView = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.channelsListItemTextActionsTitle");
+        m.checkNotNullExpressionValue(textView, "binding.channelsListItemTextActionsTitle");
         Channel channel = model.getChannel();
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         textView.setText(ChannelUtils.e(channel, contextRequireContext, false, 2));
         User userA = ChannelUtils.a(model.getChannel());
         TextView textView2 = getBinding().i;
@@ -293,10 +293,10 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         textView4.setVisibility(ChannelUtils.F(model.getChannel()) || ChannelUtils.k(model.getChannel()) ? 0 : 8);
         setOnClickAndDismissListener(textView4, new WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$3(textView4, this, model));
         Context context = textView4.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         textView4.setCompoundDrawablesWithIntrinsicBounds(model.getMuteIconResId(context), 0, 0, 0);
         Context context2 = textView4.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context2, "context");
+        m.checkNotNullExpressionValue(context2, "context");
         textView4.setText(model.getMuteChannelText(context2, model.getChannel()));
         TextView textView5 = getBinding().l;
         textView5.setVisibility(ThreadUtils.INSTANCE.isThreadsEnabled(model.getChannel().getGuildId()) && ChannelUtils.I(model.getChannel()) && !ChannelUtils.q(model.getChannel()) && !model.getChannel().getNsfw() ? 0 : 8);
@@ -315,7 +315,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         view.setVisibility(z2 ? 0 : 8);
         setOnClickAndDismissListener(view, new WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$7(this, model));
         View view2 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(view2, "binding.developerDivider");
+        m.checkNotNullExpressionValue(view2, "binding.developerDivider");
         view2.setVisibility(model.getIsDeveloper() ? 0 : 8);
         View view3 = getBinding().d;
         view3.setVisibility(model.getIsDeveloper() ? 0 : 8);
@@ -328,7 +328,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
 
     private final String getSettingsText(Channel channel, boolean z2) {
         String string = getString(ChannelUtils.k(channel) ? R.string.edit_category : z2 ? R.string.edit_channel : !z2 ? R.string.channel_settings : R.string.sample_empty_string);
-        Intrinsics3.checkNotNullExpressionValue(string, "getString(\n      when {\n…_empty_string\n      }\n  )");
+        m.checkNotNullExpressionValue(string, "getString(\n      when {\n…_empty_string\n      }\n  )");
         return string;
     }
 
@@ -338,7 +338,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
         super.bindSubscriptions(compositeSubscription);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getArgumentsOrDefault().getLong(INTENT_EXTRA_CHANNEL_ID, -1L)), this, null, 2, null), WidgetChannelsListItemChannelActions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }

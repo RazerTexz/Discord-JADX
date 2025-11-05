@@ -1,12 +1,12 @@
 package com.discord.widgets.guildscheduledevent;
 
 import com.discord.utilities.intent.IntentUtilsKt;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetGuildScheduledEventSettings.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildScheduledEventSettings$guildId$2 extends Lambda implements Function0<Long> {
+public final class WidgetGuildScheduledEventSettings$guildId$2 extends o implements Function0<Long> {
     public final /* synthetic */ WidgetGuildScheduledEventSettings this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

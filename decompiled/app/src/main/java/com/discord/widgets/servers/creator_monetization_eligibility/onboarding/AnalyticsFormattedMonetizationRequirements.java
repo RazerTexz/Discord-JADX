@@ -1,12 +1,12 @@
 package com.discord.widgets.servers.creator_monetization_eligibility.onboarding;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.creatormonetization.CreatorMonetizationEligibilityRequirements;
 import com.discord.api.creatormonetization.CreatorMonetizationEnableRequest;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import java.util.Map;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -17,7 +17,7 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy gsonInstance$delegate = LazyJVM.lazy(AnalyticsFormattedMonetizationRequirements2.INSTANCE);
+    private static final Lazy gsonInstance$delegate = g.lazy(AnalyticsFormattedMonetizationRequirements$Companion$gsonInstance$2.INSTANCE);
     private final boolean canApply;
     private final Integer communicatorCount;
     private final Integer guildMemberCount;
@@ -51,7 +51,7 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
         }
 
         public final AnalyticsFormattedMonetizationRequirements toAnalyticsFormat(CreatorMonetizationEligibilityRequirements creatorMonetizationEligibilityRequirements) {
-            Intrinsics3.checkNotNullParameter(creatorMonetizationEligibilityRequirements, "$this$toAnalyticsFormat");
+            m.checkNotNullParameter(creatorMonetizationEligibilityRequirements, "$this$toAnalyticsFormat");
             boolean sufficient = creatorMonetizationEligibilityRequirements.getSufficient();
             boolean size = creatorMonetizationEligibilityRequirements.getSize();
             boolean age = creatorMonetizationEligibilityRequirements.getAge();
@@ -199,7 +199,7 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
             return false;
         }
         AnalyticsFormattedMonetizationRequirements analyticsFormattedMonetizationRequirements = (AnalyticsFormattedMonetizationRequirements) other;
-        return this.isEligibleForMonetization == analyticsFormattedMonetizationRequirements.isEligibleForMonetization && this.hasSufficientMembers == analyticsFormattedMonetizationRequirements.hasSufficientMembers && this.meetsServerAgeRequirement == analyticsFormattedMonetizationRequirements.meetsServerAgeRequirement && this.noRecentViolations == analyticsFormattedMonetizationRequirements.noRecentViolations && this.weeklyCommunicators == analyticsFormattedMonetizationRequirements.weeklyCommunicators && this.hasMemberRetention == analyticsFormattedMonetizationRequirements.hasMemberRetention && this.notNSFW == analyticsFormattedMonetizationRequirements.notNSFW && this.canApply == analyticsFormattedMonetizationRequirements.canApply && this.isApplicationPending == analyticsFormattedMonetizationRequirements.isApplicationPending && this.minimumAgeInDays == analyticsFormattedMonetizationRequirements.minimumAgeInDays && this.minimumSize == analyticsFormattedMonetizationRequirements.minimumSize && Intrinsics3.areEqual(this.latestRequest, analyticsFormattedMonetizationRequirements.latestRequest) && Intrinsics3.areEqual(this.rejection, analyticsFormattedMonetizationRequirements.rejection) && Intrinsics3.areEqual(this.guildMemberCount, analyticsFormattedMonetizationRequirements.guildMemberCount) && Intrinsics3.areEqual(this.communicatorCount, analyticsFormattedMonetizationRequirements.communicatorCount) && Intrinsics3.areEqual(this.retentionScore, analyticsFormattedMonetizationRequirements.retentionScore);
+        return this.isEligibleForMonetization == analyticsFormattedMonetizationRequirements.isEligibleForMonetization && this.hasSufficientMembers == analyticsFormattedMonetizationRequirements.hasSufficientMembers && this.meetsServerAgeRequirement == analyticsFormattedMonetizationRequirements.meetsServerAgeRequirement && this.noRecentViolations == analyticsFormattedMonetizationRequirements.noRecentViolations && this.weeklyCommunicators == analyticsFormattedMonetizationRequirements.weeklyCommunicators && this.hasMemberRetention == analyticsFormattedMonetizationRequirements.hasMemberRetention && this.notNSFW == analyticsFormattedMonetizationRequirements.notNSFW && this.canApply == analyticsFormattedMonetizationRequirements.canApply && this.isApplicationPending == analyticsFormattedMonetizationRequirements.isApplicationPending && this.minimumAgeInDays == analyticsFormattedMonetizationRequirements.minimumAgeInDays && this.minimumSize == analyticsFormattedMonetizationRequirements.minimumSize && m.areEqual(this.latestRequest, analyticsFormattedMonetizationRequirements.latestRequest) && m.areEqual(this.rejection, analyticsFormattedMonetizationRequirements.rejection) && m.areEqual(this.guildMemberCount, analyticsFormattedMonetizationRequirements.guildMemberCount) && m.areEqual(this.communicatorCount, analyticsFormattedMonetizationRequirements.communicatorCount) && m.areEqual(this.retentionScore, analyticsFormattedMonetizationRequirements.retentionScore);
     }
 
     public final boolean getCanApply() {
@@ -342,12 +342,12 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
 
     public final String toJson() throws JsonIOException {
         String strM = Companion.access$getGsonInstance$p(INSTANCE).m(this);
-        Intrinsics3.checkNotNullExpressionValue(strM, "gsonInstance.toJson(this)");
+        m.checkNotNullExpressionValue(strM, "gsonInstance.toJson(this)");
         return strM;
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("AnalyticsFormattedMonetizationRequirements(isEligibleForMonetization=");
+        StringBuilder sbU = a.U("AnalyticsFormattedMonetizationRequirements(isEligibleForMonetization=");
         sbU.append(this.isEligibleForMonetization);
         sbU.append(", hasSufficientMembers=");
         sbU.append(this.hasSufficientMembers);

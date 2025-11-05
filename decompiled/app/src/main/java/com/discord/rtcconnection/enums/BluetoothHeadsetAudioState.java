@@ -2,9 +2,9 @@ package com.discord.rtcconnection.enums;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.c.a.a0.d;
+import b.d.b.a.a;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: BluetoothHeadsetAudioState.kt */
@@ -37,15 +37,15 @@ public enum BluetoothHeadsetAudioState {
         }
 
         public final b b(Intent intent) {
-            Intrinsics3.checkNotNullParameter(intent, "intent");
-            if (!Intrinsics3.areEqual(intent.getAction(), "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED")) {
+            m.checkNotNullParameter(intent, "intent");
+            if (!m.areEqual(intent.getAction(), "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED")) {
                 throw new IllegalArgumentException("Failed requirement.".toString());
             }
-            Intrinsics3.checkNotNullParameter(intent, "$this$getBluetoothDeviceExtra");
+            m.checkNotNullParameter(intent, "$this$getBluetoothDeviceExtra");
             BluetoothDevice bluetoothDevice = (BluetoothDevice) intent.getParcelableExtra("android.bluetooth.device.extra.DEVICE");
-            Integer numX0 = AnimatableValueParser.x0(intent, "android.bluetooth.profile.extra.PREVIOUS_STATE");
+            Integer numX0 = d.x0(intent, "android.bluetooth.profile.extra.PREVIOUS_STATE");
             BluetoothHeadsetAudioState bluetoothHeadsetAudioStateA = numX0 != null ? BluetoothHeadsetAudioState.INSTANCE.a(numX0.intValue()) : null;
-            Integer numX02 = AnimatableValueParser.x0(intent, "android.bluetooth.profile.extra.STATE");
+            Integer numX02 = d.x0(intent, "android.bluetooth.profile.extra.STATE");
             return new b(numX02 != null ? BluetoothHeadsetAudioState.INSTANCE.a(numX02.intValue()) : null, bluetoothHeadsetAudioStateA, bluetoothDevice);
         }
     }
@@ -72,7 +72,7 @@ public enum BluetoothHeadsetAudioState {
                 return false;
             }
             b bVar = (b) obj;
-            return Intrinsics3.areEqual(this.a, bVar.a) && Intrinsics3.areEqual(this.f2790b, bVar.f2790b) && Intrinsics3.areEqual(this.c, bVar.c);
+            return m.areEqual(this.a, bVar.a) && m.areEqual(this.f2790b, bVar.f2790b) && m.areEqual(this.c, bVar.c);
         }
 
         public int hashCode() {
@@ -85,7 +85,7 @@ public enum BluetoothHeadsetAudioState {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Update(current=");
+            StringBuilder sbU = a.U("Update(current=");
             sbU.append(this.a);
             sbU.append(", previous=");
             sbU.append(this.f2790b);

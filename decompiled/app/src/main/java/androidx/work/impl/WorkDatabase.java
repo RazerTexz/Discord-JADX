@@ -28,7 +28,7 @@ import androidx.work.impl.model.WorkSpecDao;
 import androidx.work.impl.model.WorkTag;
 import androidx.work.impl.model.WorkTagDao;
 import androidx.work.impl.model.WorkTypeConverters;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
@@ -95,7 +95,7 @@ public abstract class WorkDatabase extends RoomDatabase {
 
     @NonNull
     public static String getPruneSQL() {
-        StringBuilder sbU = outline.U(PRUNE_SQL_FORMAT_PREFIX);
+        StringBuilder sbU = a.U(PRUNE_SQL_FORMAT_PREFIX);
         sbU.append(getPruneDate());
         sbU.append(PRUNE_SQL_FORMAT_SUFFIX);
         return sbU.toString();

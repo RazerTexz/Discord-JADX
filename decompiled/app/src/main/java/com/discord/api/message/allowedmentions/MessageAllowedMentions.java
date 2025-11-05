@@ -1,13 +1,13 @@
 package com.discord.api.message.allowedmentions;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: MessageAllowedMentions.kt */
 /* loaded from: classes.dex */
 public final /* data */ class MessageAllowedMentions {
-    private final List<MessageAllowedMentions2> parse;
+    private final List<MessageAllowedMentionsTypes> parse;
     private final Boolean repliedUser;
     private final List<Long> roles;
     private final List<Long> users;
@@ -27,7 +27,7 @@ public final /* data */ class MessageAllowedMentions {
         this.repliedUser = bool;
     }
 
-    public final List<MessageAllowedMentions2> a() {
+    public final List<MessageAllowedMentionsTypes> a() {
         return this.parse;
     }
 
@@ -52,11 +52,11 @@ public final /* data */ class MessageAllowedMentions {
             return false;
         }
         MessageAllowedMentions messageAllowedMentions = (MessageAllowedMentions) other;
-        return Intrinsics3.areEqual(this.parse, messageAllowedMentions.parse) && Intrinsics3.areEqual(this.users, messageAllowedMentions.users) && Intrinsics3.areEqual(this.roles, messageAllowedMentions.roles) && Intrinsics3.areEqual(this.repliedUser, messageAllowedMentions.repliedUser);
+        return m.areEqual(this.parse, messageAllowedMentions.parse) && m.areEqual(this.users, messageAllowedMentions.users) && m.areEqual(this.roles, messageAllowedMentions.roles) && m.areEqual(this.repliedUser, messageAllowedMentions.repliedUser);
     }
 
     public int hashCode() {
-        List<MessageAllowedMentions2> list = this.parse;
+        List<MessageAllowedMentionsTypes> list = this.parse;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         List<Long> list2 = this.users;
         int iHashCode2 = (iHashCode + (list2 != null ? list2.hashCode() : 0)) * 31;
@@ -67,13 +67,13 @@ public final /* data */ class MessageAllowedMentions {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MessageAllowedMentions(parse=");
+        StringBuilder sbU = a.U("MessageAllowedMentions(parse=");
         sbU.append(this.parse);
         sbU.append(", users=");
         sbU.append(this.users);
         sbU.append(", roles=");
         sbU.append(this.roles);
         sbU.append(", repliedUser=");
-        return outline.D(sbU, this.repliedUser, ")");
+        return a.D(sbU, this.repliedUser, ")");
     }
 }

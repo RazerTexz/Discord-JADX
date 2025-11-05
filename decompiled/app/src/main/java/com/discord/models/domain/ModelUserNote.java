@@ -1,8 +1,8 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$LongRef;
 import kotlin.jvm.internal.Ref$ObjectRef;
@@ -34,18 +34,18 @@ public final /* data */ class ModelUserNote {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // com.discord.models.domain.Model.Parser
             public Update parse(Model.JsonReader reader) throws IOException {
-                Intrinsics3.checkNotNullParameter(reader, "reader");
+                m.checkNotNullParameter(reader, "reader");
                 Ref$LongRef ref$LongRef = new Ref$LongRef();
                 ref$LongRef.element = 0L;
                 Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                 ref$ObjectRef.element = "";
-                reader.nextObject(new ModelUserNote2(ref$LongRef, reader, ref$ObjectRef));
+                reader.nextObject(new ModelUserNote$Update$Parser$parse$1(ref$LongRef, reader, ref$ObjectRef));
                 return new Update(ref$LongRef.element, (String) ref$ObjectRef.element);
             }
         }
 
         public Update(long j, String str) {
-            Intrinsics3.checkNotNullParameter(str, "note");
+            m.checkNotNullParameter(str, "note");
             this.id = j;
             this.note = str;
         }
@@ -71,7 +71,7 @@ public final /* data */ class ModelUserNote {
         }
 
         public final Update copy(long id2, String note) {
-            Intrinsics3.checkNotNullParameter(note, "note");
+            m.checkNotNullParameter(note, "note");
             return new Update(id2, note);
         }
 
@@ -83,7 +83,7 @@ public final /* data */ class ModelUserNote {
                 return false;
             }
             Update update = (Update) other;
-            return this.id == update.id && Intrinsics3.areEqual(this.note, update.note);
+            return this.id == update.id && m.areEqual(this.note, update.note);
         }
 
         public final long getId() {
@@ -102,10 +102,10 @@ public final /* data */ class ModelUserNote {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Update(id=");
+            StringBuilder sbU = a.U("Update(id=");
             sbU.append(this.id);
             sbU.append(", note=");
-            return outline.J(sbU, this.note, ")");
+            return a.J(sbU, this.note, ")");
         }
     }
 
@@ -146,7 +146,7 @@ public final /* data */ class ModelUserNote {
             return false;
         }
         ModelUserNote modelUserNote = (ModelUserNote) other;
-        return this.noteUserId == modelUserNote.noteUserId && Intrinsics3.areEqual(this.note, modelUserNote.note);
+        return this.noteUserId == modelUserNote.noteUserId && m.areEqual(this.note, modelUserNote.note);
     }
 
     public final String getNote() {
@@ -165,9 +165,9 @@ public final /* data */ class ModelUserNote {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelUserNote(noteUserId=");
+        StringBuilder sbU = a.U("ModelUserNote(noteUserId=");
         sbU.append(this.noteUserId);
         sbU.append(", note=");
-        return outline.J(sbU, this.note, ")");
+        return a.J(sbU, this.note, ")");
     }
 }

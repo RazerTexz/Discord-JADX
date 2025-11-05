@@ -1,18 +1,17 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create.benefits;
 
 import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel;
-import com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet2;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.widgets.hubs.RadioSelectorItem;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onActiveTrialUserLimitClick$1 extends Lambda implements Function1<GuildRoleSubscriptionTierBenefitsViewModel.ViewState, List<? extends WidgetRadioSelectorBottomSheet2>> {
+public final class WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onActiveTrialUserLimitClick$1 extends o implements Function1<GuildRoleSubscriptionTierBenefitsViewModel.ViewState, List<? extends RadioSelectorItem>> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1 this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -22,22 +21,22 @@ public final class WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$o
     }
 
     @Override // kotlin.jvm.functions.Function1
-    public /* bridge */ /* synthetic */ List<? extends WidgetRadioSelectorBottomSheet2> invoke(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
+    public /* bridge */ /* synthetic */ List<? extends RadioSelectorItem> invoke(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
         return invoke2(viewState);
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
-    public final List<WidgetRadioSelectorBottomSheet2> invoke2(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
-        Intrinsics3.checkNotNullParameter(viewState, "it");
+    public final List<RadioSelectorItem> invoke2(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
+        m.checkNotNullParameter(viewState, "it");
         List<Integer> activeTrialUserLimitOptions = viewState.getActiveTrialUserLimitOptions();
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(activeTrialUserLimitOptions, 10));
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(activeTrialUserLimitOptions, 10));
         int i = 0;
         for (Object obj : activeTrialUserLimitOptions) {
             int i2 = i + 1;
             if (i < 0) {
-                Collections2.throwIndexOverflow();
+                n.throwIndexOverflow();
             }
-            arrayList.add((WidgetRadioSelectorBottomSheet2) WidgetGuildRoleSubscriptionTierBenefits.access$getViewModel$p(this.this$0.this$0).withViewState(new WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onActiveTrialUserLimitClick$1$$special$$inlined$mapIndexed$lambda$1(i, (Integer) obj, this)));
+            arrayList.add((RadioSelectorItem) WidgetGuildRoleSubscriptionTierBenefits.access$getViewModel$p(this.this$0.this$0).withViewState(new WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onActiveTrialUserLimitClick$1$$special$$inlined$mapIndexed$lambda$1(i, (Integer) obj, this)));
             i = i2;
         }
         return arrayList;

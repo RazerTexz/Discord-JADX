@@ -3,7 +3,6 @@ package b.i.a.f.i.b;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
-import b.c.a.a0.AnimatableValueParser;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -58,7 +57,7 @@ public final class a4 {
     @WorkerThread
     public a4(u4 u4Var, String str) {
         Objects.requireNonNull(u4Var, "null reference");
-        AnimatableValueParser.w(str);
+        b.c.a.a0.d.w(str);
         this.a = u4Var;
         this.f1513b = str;
         u4Var.f().b();
@@ -79,7 +78,7 @@ public final class a4 {
 
     @WorkerThread
     public final void C(long j) {
-        AnimatableValueParser.l(j >= 0);
+        b.c.a.a0.d.l(j >= 0);
         this.a.f().b();
         this.E = (this.g != j) | this.E;
         this.g = j;

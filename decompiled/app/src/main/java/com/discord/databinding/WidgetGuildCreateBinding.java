@@ -4,7 +4,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.LayoutIconUploaderBinding;
+import b.a.i.r0;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
 import com.discord.views.ScreenTitleView;
@@ -24,7 +24,7 @@ public final class WidgetGuildCreateBinding implements ViewBinding {
     public final LinkifiedTextView c;
 
     @NonNull
-    public final LayoutIconUploaderBinding d;
+    public final r0 d;
 
     @NonNull
     public final TextInputLayout e;
@@ -32,11 +32,11 @@ public final class WidgetGuildCreateBinding implements ViewBinding {
     @NonNull
     public final ScreenTitleView f;
 
-    public WidgetGuildCreateBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LoadingButton loadingButton, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LayoutIconUploaderBinding layoutIconUploaderBinding, @NonNull TextInputLayout textInputLayout, @NonNull ScreenTitleView screenTitleView) {
+    public WidgetGuildCreateBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LoadingButton loadingButton, @NonNull LinkifiedTextView linkifiedTextView, @NonNull r0 r0Var, @NonNull TextInputLayout textInputLayout, @NonNull ScreenTitleView screenTitleView) {
         this.a = coordinatorLayout;
         this.f2412b = loadingButton;
         this.c = linkifiedTextView;
-        this.d = layoutIconUploaderBinding;
+        this.d = r0Var;
         this.e = textInputLayout;
         this.f = screenTitleView;
     }

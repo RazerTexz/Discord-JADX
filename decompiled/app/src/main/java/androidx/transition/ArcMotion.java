@@ -6,7 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import androidx.core.content.res.TypedArrayUtils;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import org.xmlpull.v1.XmlPullParser;
 
 /* loaded from: classes.dex */
@@ -95,8 +95,8 @@ public class ArcMotion extends PathMotion {
         }
         if (f13 != 0.0f) {
             float fSqrt = (float) Math.sqrt(f13 / f16);
-            fA = outline.a(fA, f9, fSqrt, f9);
-            fA2 = outline.a(fA2, f10, fSqrt, f10);
+            fA = a.a(fA, f9, fSqrt, f9);
+            fA2 = a.a(fA2, f10, fSqrt, f10);
         }
         path.cubicTo((f + fA) / 2.0f, (f2 + fA2) / 2.0f, (fA + f3) / 2.0f, (fA2 + f4) / 2.0f, f3, f4);
         return path;

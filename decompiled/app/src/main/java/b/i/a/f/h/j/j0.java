@@ -1,7 +1,6 @@
 package b.i.a.f.h.j;
 
 import android.text.TextUtils;
-import b.d.b.a.outline;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -94,7 +93,7 @@ public final class j0 {
     }
 
     public final String toString() {
-        StringBuilder sbU = outline.U("ht=");
+        StringBuilder sbU = b.d.b.a.a.U("ht=");
         sbU.append(this.d);
         if (this.c != 0) {
             sbU.append(", dbId=");

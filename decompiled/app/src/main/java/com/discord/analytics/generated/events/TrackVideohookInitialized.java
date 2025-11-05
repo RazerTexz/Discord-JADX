@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackVideohookInitialized.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideohookInitialized implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackVideohookInitialized implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long backend = null;
     private final Long format = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackVideohookInitialized implements AnalyticsSche
             return false;
         }
         TrackVideohookInitialized trackVideohookInitialized = (TrackVideohookInitialized) other;
-        return Intrinsics3.areEqual(this.backend, trackVideohookInitialized.backend) && Intrinsics3.areEqual(this.format, trackVideohookInitialized.format) && Intrinsics3.areEqual(this.framebufferFormat, trackVideohookInitialized.framebufferFormat) && Intrinsics3.areEqual(this.sampleCount, trackVideohookInitialized.sampleCount) && Intrinsics3.areEqual(this.success, trackVideohookInitialized.success) && Intrinsics3.areEqual(this.reinitialization, trackVideohookInitialized.reinitialization) && Intrinsics3.areEqual(this.soundshareSession, trackVideohookInitialized.soundshareSession) && Intrinsics3.areEqual(this.shareGameName, trackVideohookInitialized.shareGameName) && Intrinsics3.areEqual(this.shareGameId, trackVideohookInitialized.shareGameId);
+        return m.areEqual(this.backend, trackVideohookInitialized.backend) && m.areEqual(this.format, trackVideohookInitialized.format) && m.areEqual(this.framebufferFormat, trackVideohookInitialized.framebufferFormat) && m.areEqual(this.sampleCount, trackVideohookInitialized.sampleCount) && m.areEqual(this.success, trackVideohookInitialized.success) && m.areEqual(this.reinitialization, trackVideohookInitialized.reinitialization) && m.areEqual(this.soundshareSession, trackVideohookInitialized.soundshareSession) && m.areEqual(this.shareGameName, trackVideohookInitialized.shareGameName) && m.areEqual(this.shareGameId, trackVideohookInitialized.shareGameId);
     }
 
     public int hashCode() {
@@ -60,7 +60,7 @@ public final /* data */ class TrackVideohookInitialized implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVideohookInitialized(backend=");
+        StringBuilder sbU = a.U("TrackVideohookInitialized(backend=");
         sbU.append(this.backend);
         sbU.append(", format=");
         sbU.append(this.format);
@@ -77,6 +77,6 @@ public final /* data */ class TrackVideohookInitialized implements AnalyticsSche
         sbU.append(", shareGameName=");
         sbU.append(this.shareGameName);
         sbU.append(", shareGameId=");
-        return outline.G(sbU, this.shareGameId, ")");
+        return a.G(sbU, this.shareGameId, ")");
     }
 }

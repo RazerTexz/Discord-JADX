@@ -5,22 +5,17 @@ import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.g.e.ArrayDrawable;
-import b.f.g.e.DrawableParent;
-import b.f.g.e.FadeDrawable;
-import b.f.g.e.ForwardingDrawable;
-import b.f.g.e.MatrixDrawable;
-import b.f.g.e.Rounded;
-import b.f.g.e.RoundedCornersDrawable;
-import b.f.g.e.ScaleTypeDrawable;
+import b.f.g.e.f;
+import b.f.g.e.g;
+import b.f.g.e.h;
+import b.f.g.e.j;
+import b.f.g.e.m;
+import b.f.g.e.p;
 import b.f.g.e.z;
-import b.f.g.f.GenericDraweeHierarchyBuilder;
-import b.f.g.f.RootDrawable;
-import b.f.g.f.RoundingParams;
-import b.f.g.f.WrappingUtils;
-import b.f.g.h.SettableDraweeHierarchy;
-import b.f.j.r.FrescoSystrace;
+import b.f.g.f.b;
+import b.f.g.f.c;
+import b.f.g.f.d;
+import b.f.g.h.a;
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -28,39 +23,39 @@ import java.util.List;
 import java.util.Objects;
 
 /* loaded from: classes.dex */
-public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
+public class GenericDraweeHierarchy implements a {
     public final Drawable a;
 
     /* renamed from: b, reason: collision with root package name */
     public final Resources f2890b;
-    public RoundingParams c;
-    public final RootDrawable d;
-    public final FadeDrawable e;
-    public final ForwardingDrawable f;
+    public c c;
+    public final b d;
+    public final f e;
+    public final g f;
 
-    public GenericDraweeHierarchy(GenericDraweeHierarchyBuilder genericDraweeHierarchyBuilder) {
+    public GenericDraweeHierarchy(b.f.g.f.a aVar) {
         int i;
         ColorDrawable colorDrawable = new ColorDrawable(0);
         this.a = colorDrawable;
-        FrescoSystrace.b();
-        this.f2890b = genericDraweeHierarchyBuilder.c;
-        this.c = genericDraweeHierarchyBuilder.r;
-        ForwardingDrawable forwardingDrawable = new ForwardingDrawable(colorDrawable);
-        this.f = forwardingDrawable;
-        List<Drawable> list = genericDraweeHierarchyBuilder.p;
+        b.f.j.r.b.b();
+        this.f2890b = aVar.c;
+        this.c = aVar.r;
+        g gVar = new g(colorDrawable);
+        this.f = gVar;
+        List<Drawable> list = aVar.p;
         int size = list != null ? list.size() : 1;
-        int i2 = (size == 0 ? 1 : size) + (genericDraweeHierarchyBuilder.q != null ? 1 : 0);
+        int i2 = (size == 0 ? 1 : size) + (aVar.q != null ? 1 : 0);
         Drawable[] drawableArr = new Drawable[i2 + 6];
-        drawableArr[0] = g(genericDraweeHierarchyBuilder.o, null);
-        drawableArr[1] = g(genericDraweeHierarchyBuilder.f, genericDraweeHierarchyBuilder.g);
-        ScalingUtils$ScaleType scalingUtils$ScaleType = genericDraweeHierarchyBuilder.n;
-        forwardingDrawable.setColorFilter(null);
-        drawableArr[2] = WrappingUtils.e(forwardingDrawable, scalingUtils$ScaleType, null);
-        drawableArr[3] = g(genericDraweeHierarchyBuilder.l, genericDraweeHierarchyBuilder.m);
-        drawableArr[4] = g(genericDraweeHierarchyBuilder.h, genericDraweeHierarchyBuilder.i);
-        drawableArr[5] = g(genericDraweeHierarchyBuilder.j, genericDraweeHierarchyBuilder.k);
+        drawableArr[0] = g(aVar.o, null);
+        drawableArr[1] = g(aVar.f, aVar.g);
+        ScalingUtils$ScaleType scalingUtils$ScaleType = aVar.n;
+        gVar.setColorFilter(null);
+        drawableArr[2] = d.e(gVar, scalingUtils$ScaleType, null);
+        drawableArr[3] = g(aVar.l, aVar.m);
+        drawableArr[4] = g(aVar.h, aVar.i);
+        drawableArr[5] = g(aVar.j, aVar.k);
         if (i2 > 0) {
-            List<Drawable> list2 = genericDraweeHierarchyBuilder.p;
+            List<Drawable> list2 = aVar.p;
             if (list2 != null) {
                 Iterator<Drawable> it = list2.iterator();
                 i = 0;
@@ -71,32 +66,32 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
             } else {
                 i = 1;
             }
-            Drawable drawable = genericDraweeHierarchyBuilder.q;
+            Drawable drawable = aVar.q;
             if (drawable != null) {
                 drawableArr[i + 6] = g(drawable, null);
             }
         }
-        FadeDrawable fadeDrawable = new FadeDrawable(drawableArr, false, 2);
-        this.e = fadeDrawable;
-        fadeDrawable.w = genericDraweeHierarchyBuilder.d;
-        if (fadeDrawable.v == 1) {
-            fadeDrawable.v = 0;
+        f fVar = new f(drawableArr, false, 2);
+        this.e = fVar;
+        fVar.w = aVar.d;
+        if (fVar.v == 1) {
+            fVar.v = 0;
         }
-        RootDrawable rootDrawable = new RootDrawable(WrappingUtils.d(fadeDrawable, this.c));
-        this.d = rootDrawable;
-        rootDrawable.mutate();
+        b bVar = new b(d.d(fVar, this.c));
+        this.d = bVar;
+        bVar.mutate();
         m();
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
     }
 
-    @Override // b.f.g.h.SettableDraweeHierarchy
+    @Override // b.f.g.h.a
     public void a(Drawable drawable) {
-        RootDrawable rootDrawable = this.d;
-        rootDrawable.n = drawable;
-        rootDrawable.invalidateSelf();
+        b bVar = this.d;
+        bVar.n = drawable;
+        bVar.invalidateSelf();
     }
 
-    @Override // b.f.g.h.SettableDraweeHierarchy
+    @Override // b.f.g.h.a
     public void b(Throwable th) {
         this.e.e();
         i();
@@ -108,7 +103,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         this.e.f();
     }
 
-    @Override // b.f.g.h.SettableDraweeHierarchy
+    @Override // b.f.g.h.a
     public void c(Throwable th) {
         this.e.e();
         i();
@@ -120,7 +115,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         this.e.f();
     }
 
-    @Override // b.f.g.h.SettableDraweeHierarchy
+    @Override // b.f.g.h.a
     public void d(float f, boolean z2) {
         if (this.e.a(3) == null) {
             return;
@@ -138,9 +133,9 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         return this.d;
     }
 
-    @Override // b.f.g.h.SettableDraweeHierarchy
+    @Override // b.f.g.h.a
     public void f(Drawable drawable, float f, boolean z2) {
-        Drawable drawableC = WrappingUtils.c(drawable, this.c, this.f2890b);
+        Drawable drawableC = d.c(drawable, this.c, this.f2890b);
         drawableC.mutate();
         this.f.o(drawableC);
         this.e.e();
@@ -154,7 +149,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     public final Drawable g(Drawable drawable, ScalingUtils$ScaleType scalingUtils$ScaleType) {
-        return WrappingUtils.e(WrappingUtils.c(drawable, this.c, this.f2890b), scalingUtils$ScaleType, null);
+        return d.e(d.c(drawable, this.c, this.f2890b), scalingUtils$ScaleType, null);
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeHierarchy
@@ -164,10 +159,10 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
 
     public final void h(int i) {
         if (i >= 0) {
-            FadeDrawable fadeDrawable = this.e;
-            fadeDrawable.v = 0;
-            fadeDrawable.B[i] = true;
-            fadeDrawable.invalidateSelf();
+            f fVar = this.e;
+            fVar.v = 0;
+            fVar.B[i] = true;
+            fVar.invalidateSelf();
         }
     }
 
@@ -181,49 +176,49 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
 
     public final void j(int i) {
         if (i >= 0) {
-            FadeDrawable fadeDrawable = this.e;
-            fadeDrawable.v = 0;
-            fadeDrawable.B[i] = false;
-            fadeDrawable.invalidateSelf();
+            f fVar = this.e;
+            fVar.v = 0;
+            fVar.B[i] = false;
+            fVar.invalidateSelf();
         }
     }
 
-    public final DrawableParent k(int i) {
-        FadeDrawable fadeDrawable = this.e;
-        Objects.requireNonNull(fadeDrawable);
-        AnimatableValueParser.i(Boolean.valueOf(i >= 0));
-        AnimatableValueParser.i(Boolean.valueOf(i < fadeDrawable.m.length));
-        DrawableParent[] drawableParentArr = fadeDrawable.m;
-        if (drawableParentArr[i] == null) {
-            drawableParentArr[i] = new ArrayDrawable(fadeDrawable, i);
+    public final b.f.g.e.d k(int i) {
+        f fVar = this.e;
+        Objects.requireNonNull(fVar);
+        b.c.a.a0.d.i(Boolean.valueOf(i >= 0));
+        b.c.a.a0.d.i(Boolean.valueOf(i < fVar.m.length));
+        b.f.g.e.d[] dVarArr = fVar.m;
+        if (dVarArr[i] == null) {
+            dVarArr[i] = new b.f.g.e.a(fVar, i);
         }
-        DrawableParent drawableParent = drawableParentArr[i];
-        if (drawableParent.l() instanceof MatrixDrawable) {
-            drawableParent = (MatrixDrawable) drawableParent.l();
+        b.f.g.e.d dVar = dVarArr[i];
+        if (dVar.l() instanceof h) {
+            dVar = (h) dVar.l();
         }
-        return drawableParent.l() instanceof ScaleTypeDrawable ? (ScaleTypeDrawable) drawableParent.l() : drawableParent;
+        return dVar.l() instanceof p ? (p) dVar.l() : dVar;
     }
 
-    public final ScaleTypeDrawable l(int i) {
-        DrawableParent drawableParentK = k(i);
-        if (drawableParentK instanceof ScaleTypeDrawable) {
-            return (ScaleTypeDrawable) drawableParentK;
+    public final p l(int i) {
+        b.f.g.e.d dVarK = k(i);
+        if (dVarK instanceof p) {
+            return (p) dVarK;
         }
         ScalingUtils$ScaleType scalingUtils$ScaleType = ScalingUtils$ScaleType.a;
-        Drawable drawableE = WrappingUtils.e(drawableParentK.g(WrappingUtils.a), z.l, null);
-        drawableParentK.g(drawableE);
-        AnimatableValueParser.y(drawableE, "Parent has no child drawable!");
-        return (ScaleTypeDrawable) drawableE;
+        Drawable drawableE = d.e(dVarK.g(d.a), z.l, null);
+        dVarK.g(drawableE);
+        b.c.a.a0.d.y(drawableE, "Parent has no child drawable!");
+        return (p) drawableE;
     }
 
     public final void m() {
-        FadeDrawable fadeDrawable = this.e;
-        if (fadeDrawable != null) {
-            fadeDrawable.e();
-            FadeDrawable fadeDrawable2 = this.e;
-            fadeDrawable2.v = 0;
-            Arrays.fill(fadeDrawable2.B, true);
-            fadeDrawable2.invalidateSelf();
+        f fVar = this.e;
+        if (fVar != null) {
+            fVar.e();
+            f fVar2 = this.e;
+            fVar2.v = 0;
+            Arrays.fill(fVar2.B, true);
+            fVar2.invalidateSelf();
             i();
             h(1);
             this.e.g();
@@ -240,7 +235,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         if (drawable == null) {
             this.e.c(i, null);
         } else {
-            k(i).g(WrappingUtils.c(drawable, this.c, this.f2890b));
+            k(i).g(d.c(drawable, this.c, this.f2890b));
         }
     }
 
@@ -273,60 +268,60 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         drawableA.setLevel(Math.round(f * 10000.0f));
     }
 
-    @Override // b.f.g.h.SettableDraweeHierarchy
+    @Override // b.f.g.h.a
     public void reset() {
         this.f.o(this.a);
         m();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public void s(RoundingParams roundingParams) {
-        this.c = roundingParams;
-        RootDrawable rootDrawable = this.d;
-        Drawable drawable = WrappingUtils.a;
-        Drawable drawable2 = rootDrawable.k;
-        if (roundingParams == null || roundingParams.a != 1) {
-            if (drawable2 instanceof RoundedCornersDrawable) {
-                Drawable drawable3 = WrappingUtils.a;
-                rootDrawable.o(((RoundedCornersDrawable) drawable2).o(drawable3));
+    public void s(c cVar) {
+        this.c = cVar;
+        b bVar = this.d;
+        Drawable drawable = d.a;
+        Drawable drawable2 = bVar.k;
+        if (cVar == null || cVar.a != 1) {
+            if (drawable2 instanceof m) {
+                Drawable drawable3 = d.a;
+                bVar.o(((m) drawable2).o(drawable3));
                 drawable3.setCallback(null);
             }
-        } else if (drawable2 instanceof RoundedCornersDrawable) {
-            RoundedCornersDrawable roundedCornersDrawable = (RoundedCornersDrawable) drawable2;
-            WrappingUtils.b(roundedCornersDrawable, roundingParams);
-            roundedCornersDrawable.f514x = roundingParams.d;
-            roundedCornersDrawable.invalidateSelf();
+        } else if (drawable2 instanceof m) {
+            m mVar = (m) drawable2;
+            d.b(mVar, cVar);
+            mVar.f514x = cVar.d;
+            mVar.invalidateSelf();
         } else {
-            rootDrawable.o(WrappingUtils.d(rootDrawable.o(WrappingUtils.a), roundingParams));
+            bVar.o(d.d(bVar.o(d.a), cVar));
         }
         for (int i = 0; i < this.e.l.length; i++) {
-            DrawableParent drawableParentK = k(i);
-            RoundingParams roundingParams2 = this.c;
+            b.f.g.e.d dVarK = k(i);
+            c cVar2 = this.c;
             Resources resources = this.f2890b;
             while (true) {
-                Object objL = drawableParentK.l();
-                if (objL == drawableParentK || !(objL instanceof DrawableParent)) {
+                Object objL = dVarK.l();
+                if (objL == dVarK || !(objL instanceof b.f.g.e.d)) {
                     break;
                 } else {
-                    drawableParentK = (DrawableParent) objL;
+                    dVarK = (b.f.g.e.d) objL;
                 }
             }
-            Drawable drawableL = drawableParentK.l();
-            if (roundingParams2 == null || roundingParams2.a != 2) {
-                if (drawableL instanceof Rounded) {
-                    Rounded rounded = (Rounded) drawableL;
-                    rounded.c(false);
-                    rounded.j(0.0f);
-                    rounded.a(0, 0.0f);
-                    rounded.i(0.0f);
-                    rounded.f(false);
-                    rounded.e(false);
+            Drawable drawableL = dVarK.l();
+            if (cVar2 == null || cVar2.a != 2) {
+                if (drawableL instanceof j) {
+                    j jVar = (j) drawableL;
+                    jVar.c(false);
+                    jVar.j(0.0f);
+                    jVar.a(0, 0.0f);
+                    jVar.i(0.0f);
+                    jVar.f(false);
+                    jVar.e(false);
                 }
-            } else if (drawableL instanceof Rounded) {
-                WrappingUtils.b((Rounded) drawableL, roundingParams2);
+            } else if (drawableL instanceof j) {
+                d.b((j) drawableL, cVar2);
             } else if (drawableL != 0) {
-                drawableParentK.g(WrappingUtils.a);
-                drawableParentK.g(WrappingUtils.a(drawableL, roundingParams2, resources));
+                dVarK.g(d.a);
+                dVarK.g(d.a(drawableL, cVar2, resources));
             }
         }
     }

@@ -1,8 +1,8 @@
 package com.discord.api.guildmember;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.presence.Presence;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: GuildMembersChunk.kt */
@@ -38,7 +38,7 @@ public final /* data */ class GuildMembersChunk {
             return false;
         }
         GuildMembersChunk guildMembersChunk = (GuildMembersChunk) other;
-        return this.guildId == guildMembersChunk.guildId && Intrinsics3.areEqual(this.members, guildMembersChunk.members) && Intrinsics3.areEqual(this.presences, guildMembersChunk.presences) && Intrinsics3.areEqual(this.notFound, guildMembersChunk.notFound);
+        return this.guildId == guildMembersChunk.guildId && m.areEqual(this.members, guildMembersChunk.members) && m.areEqual(this.presences, guildMembersChunk.presences) && m.areEqual(this.notFound, guildMembersChunk.notFound);
     }
 
     public int hashCode() {
@@ -53,13 +53,13 @@ public final /* data */ class GuildMembersChunk {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildMembersChunk(guildId=");
+        StringBuilder sbU = a.U("GuildMembersChunk(guildId=");
         sbU.append(this.guildId);
         sbU.append(", members=");
         sbU.append(this.members);
         sbU.append(", presences=");
         sbU.append(this.presences);
         sbU.append(", notFound=");
-        return outline.L(sbU, this.notFound, ")");
+        return a.L(sbU, this.notFound, ")");
     }
 }

@@ -6,15 +6,14 @@ import com.discord.models.domain.ModelSearchResponse;
 import com.discord.stores.StoreSearch;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.a.OnSubscribeDefer;
-import j0.l.a.OnSubscribeRedo6;
-import j0.l.c.TrampolineScheduler;
-import j0.l.e.InternalObservableUtils;
-import j0.l.e.ScalarSynchronousObservable;
-import j0.p.Schedulers2;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.a.j;
+import j0.l.a.y;
+import j0.l.e.e;
+import j0.l.e.k;
+import j0.p.a;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -46,7 +45,7 @@ public class SearchFetcher {
 
     /* compiled from: SearchFetcher.kt */
     /* renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<AtomicInteger, Integer> {
+    public static final class AnonymousClass1 extends o implements Function1<AtomicInteger, Integer> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -60,7 +59,7 @@ public class SearchFetcher {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Integer invoke2(AtomicInteger atomicInteger) {
-            Intrinsics3.checkNotNullParameter(atomicInteger, "$this$getNullIfZero");
+            m.checkNotNullParameter(atomicInteger, "$this$getNullIfZero");
             int i = atomicInteger.get();
             if (i != 0) {
                 return Integer.valueOf(i);
@@ -82,13 +81,13 @@ public class SearchFetcher {
 
         @Override // rx.functions.Func0, java.util.concurrent.Callable
         public final Observable<Integer> call() {
-            return new ScalarSynchronousObservable(AnonymousClass1.INSTANCE.invoke2(SearchFetcher.access$getIndexingRetryCount$p(SearchFetcher.this)));
+            return new k(AnonymousClass1.INSTANCE.invoke2(SearchFetcher.access$getIndexingRetryCount$p(SearchFetcher.this)));
         }
     }
 
     /* compiled from: SearchFetcher.kt */
     /* renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements Func1<Integer, Observable<? extends ModelSearchResponse>> {
+    public static final class AnonymousClass3<T, R> implements b<Integer, Observable<? extends ModelSearchResponse>> {
         public final /* synthetic */ Long $oldestMessageId;
         public final /* synthetic */ Map $queryParams;
         public final /* synthetic */ SearchQuery $searchQuery;
@@ -101,7 +100,7 @@ public class SearchFetcher {
             this.$searchQuery = searchQuery;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends ModelSearchResponse> call(Integer num) {
             return call2(num);
         }
@@ -136,7 +135,7 @@ public class SearchFetcher {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelSearchResponse modelSearchResponse) {
             SearchFetcher searchFetcher = SearchFetcher.this;
-            Intrinsics3.checkNotNullExpressionValue(modelSearchResponse, "searchResponse");
+            m.checkNotNullExpressionValue(modelSearchResponse, "searchResponse");
             if (SearchFetcher.access$isIndexing(searchFetcher, modelSearchResponse)) {
                 this.$resubscribeDelayMillis.set(modelSearchResponse.getRetryMillis());
                 SearchFetcher.access$getIndexingRetryCount$p(SearchFetcher.this).incrementAndGet();
@@ -146,16 +145,16 @@ public class SearchFetcher {
 
     /* compiled from: SearchFetcher.kt */
     /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Observable<? extends Void>, Observable<?>> {
+    public static final class AnonymousClass2<T, R> implements b<Observable<? extends Void>, Observable<?>> {
         public final /* synthetic */ AtomicLong $resubscribeDelayMillis;
 
         /* compiled from: SearchFetcher.kt */
         /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$2$1, reason: invalid class name */
-        public static final class AnonymousClass1<T, R> implements Func1<Void, Observable<? extends Long>> {
+        public static final class AnonymousClass1<T, R> implements b<Void, Observable<? extends Long>> {
             public AnonymousClass1() {
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends Long> call(Void r1) {
                 return call2(r1);
             }
@@ -170,7 +169,7 @@ public class SearchFetcher {
             this.$resubscribeDelayMillis = atomicLong;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<?> call(Observable<? extends Void> observable) {
             return call2(observable);
         }
@@ -183,11 +182,11 @@ public class SearchFetcher {
 
     /* compiled from: SearchFetcher.kt */
     /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements Func1<ModelSearchResponse, Boolean> {
+    public static final class AnonymousClass3<T, R> implements b<ModelSearchResponse, Boolean> {
         public AnonymousClass3() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(ModelSearchResponse modelSearchResponse) {
             return call2(modelSearchResponse);
         }
@@ -195,7 +194,7 @@ public class SearchFetcher {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(ModelSearchResponse modelSearchResponse) {
             SearchFetcher searchFetcher = SearchFetcher.this;
-            Intrinsics3.checkNotNullExpressionValue(modelSearchResponse, "it");
+            m.checkNotNullExpressionValue(modelSearchResponse, "it");
             return Boolean.valueOf(!SearchFetcher.access$isIndexing(searchFetcher, modelSearchResponse));
         }
     }
@@ -214,8 +213,8 @@ public class SearchFetcher {
 
     private final Observable<ModelSearchResponse> getRestObservable(StoreSearch.SearchTarget searchTarget, Long oldestMessageId, SearchQuery searchQuery) {
         AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
-        Observable observableA = Observable.h0(new OnSubscribeDefer(new AnonymousClass2())).A(new AnonymousClass3(searchTarget, oldestMessageId, searchQuery.getParams(), searchQuery));
-        Intrinsics3.checkNotNullExpressionValue(observableA, "Observable\n        .defe…  )\n          }\n        }");
+        Observable observableA = Observable.h0(new j(new AnonymousClass2())).A(new AnonymousClass3(searchTarget, oldestMessageId, searchQuery.getParams(), searchQuery));
+        m.checkNotNullExpressionValue(observableA, "Observable\n        .defe…  )\n          }\n        }");
         return ObservableExtensionsKt.restSubscribeOn$default(observableA, false, 1, null);
     }
 
@@ -225,14 +224,14 @@ public class SearchFetcher {
     }
 
     public Observable<ModelSearchResponse> makeQuery(StoreSearch.SearchTarget searchTarget, Long oldestMessageId, SearchQuery searchQuery) {
-        Intrinsics3.checkNotNullParameter(searchTarget, "searchTarget");
-        Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
+        m.checkNotNullParameter(searchTarget, "searchTarget");
+        m.checkNotNullParameter(searchQuery, "searchQuery");
         AtomicLong atomicLong = new AtomicLong();
         Observable<ModelSearchResponse> observableU = getRestObservable(searchTarget, oldestMessageId, searchQuery).u(new AnonymousClass1(atomicLong));
-        InternalObservableUtils.c cVar = new InternalObservableUtils.c(new AnonymousClass2(atomicLong));
-        AtomicReference<Schedulers2> atomicReference = Schedulers2.a;
-        Observable<ModelSearchResponse> observableB0 = Observable.h0(new OnSubscribeRedo6(observableU, cVar, false, true, TrampolineScheduler.a)).b0(new AnonymousClass3());
-        Intrinsics3.checkNotNullExpressionValue(observableB0, "getRestObservable(search…ntil { !it.isIndexing() }");
+        e.c cVar = new e.c(new AnonymousClass2(atomicLong));
+        AtomicReference<a> atomicReference = a.a;
+        Observable<ModelSearchResponse> observableB0 = Observable.h0(new y(observableU, cVar, false, true, j0.l.c.m.a)).b0(new AnonymousClass3());
+        m.checkNotNullExpressionValue(observableB0, "getRestObservable(search…ntil { !it.isIndexing() }");
         return observableB0;
     }
 }

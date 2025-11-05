@@ -1,7 +1,7 @@
 package com.discord.widgets.guilds.invite;
 
 import android.view.View;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel;
 
 /* compiled from: WidgetGuildInviteShareSheet.kt */
@@ -20,7 +20,7 @@ public final class WidgetGuildInviteShareSheet$configureEmptyStateUI$$inlined$wi
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         if (this.$invite != null) {
-            GuildInviteUiHelper.copyLinkClick(outline.x(view, "it", "it.context"), this.$invite, this.$viewState$inlined.getChannel(), WidgetGuildInviteShareSheet.access$getAnalyticsSource$p(this.this$0));
+            GuildInviteUiHelperKt.copyLinkClick(a.x(view, "it", "it.context"), this.$invite, this.$viewState$inlined.getChannel(), WidgetGuildInviteShareSheet.access$getAnalyticsSource$p(this.this$0));
         }
     }
 }

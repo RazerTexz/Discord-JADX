@@ -13,33 +13,28 @@ import android.util.Log;
 import android.util.Pair;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import b.i.a.c.Format2;
-import b.i.a.c.PlaybackParameters;
-import b.i.a.c.Renderer2;
-import b.i.a.c.f3.Log2;
-import b.i.a.c.f3.MimeTypes;
-import b.i.a.c.f3.ParsableBitArray;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.t2.Ac3Util;
-import b.i.a.c.t2.Ac4Util;
-import b.i.a.c.t2.AudioAttributes;
-import b.i.a.c.t2.AudioCapabilities;
-import b.i.a.c.t2.AudioRendererEventListener2;
-import b.i.a.c.t2.AudioTimestampPoller;
-import b.i.a.c.t2.AudioTrackPositionTracker;
-import b.i.a.c.t2.AuxEffectInfo;
-import b.i.a.c.t2.ChannelMappingAudioProcessor;
-import b.i.a.c.t2.FloatResamplingAudioProcessor;
-import b.i.a.c.t2.MediaCodecAudioRenderer;
-import b.i.a.c.t2.MpegAudioUtil;
-import b.i.a.c.t2.ResamplingAudioProcessor;
-import b.i.a.c.t2.SilenceSkippingAudioProcessor;
-import b.i.a.c.t2.SonicAudioProcessor;
-import b.i.a.c.t2.TrimmingAudioProcessor;
+import b.i.a.c.f2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.f3.q;
+import b.i.a.c.j1;
+import b.i.a.c.t2.a0;
+import b.i.a.c.t2.b0;
+import b.i.a.c.t2.c0;
+import b.i.a.c.t2.f0;
 import b.i.a.c.t2.i;
 import b.i.a.c.t2.k;
+import b.i.a.c.t2.m;
+import b.i.a.c.t2.n;
+import b.i.a.c.t2.o;
+import b.i.a.c.t2.p;
+import b.i.a.c.t2.r;
+import b.i.a.c.t2.s;
+import b.i.a.c.t2.t;
+import b.i.a.c.t2.u;
+import b.i.a.c.t2.w;
+import b.i.a.c.t2.y;
+import b.i.a.c.t2.z;
+import b.i.a.c.x1;
 import com.discord.api.permission.Permission;
 import com.discord.restapi.RestAPIAbortCodes;
 import com.google.android.exoplayer2.audio.AudioProcessor;
@@ -80,24 +75,24 @@ public final class DefaultAudioSink implements AudioSink {
     public boolean S;
     public boolean T;
     public int U;
-    public AuxEffectInfo V;
+    public u V;
     public boolean W;
     public long X;
     public boolean Y;
     public boolean Z;
 
     @Nullable
-    public final AudioCapabilities a;
+    public final p a;
 
     /* renamed from: b, reason: collision with root package name */
     public final b f2915b;
     public final boolean c;
-    public final ChannelMappingAudioProcessor d;
-    public final TrimmingAudioProcessor e;
+    public final w d;
+    public final f0 e;
     public final AudioProcessor[] f;
     public final AudioProcessor[] g;
     public final ConditionVariable h;
-    public final AudioTrackPositionTracker i;
+    public final t i;
     public final ArrayDeque<e> j;
     public final boolean k;
     public final int l;
@@ -115,12 +110,12 @@ public final class DefaultAudioSink implements AudioSink {
     /* renamed from: s, reason: collision with root package name */
     @Nullable
     public AudioTrack f2916s;
-    public AudioAttributes t;
+    public o t;
 
     @Nullable
     public e u;
     public e v;
-    public PlaybackParameters w;
+    public x1 w;
 
     /* renamed from: x, reason: collision with root package name */
     @Nullable
@@ -156,7 +151,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     public interface b {
-        PlaybackParameters a(PlaybackParameters playbackParameters);
+        x1 a(x1 x1Var);
 
         long b(long j);
 
@@ -166,7 +161,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     public static final class c {
-        public final Format2 a;
+        public final j1 a;
 
         /* renamed from: b, reason: collision with root package name */
         public final int f2920b;
@@ -178,9 +173,9 @@ public final class DefaultAudioSink implements AudioSink {
         public final int h;
         public final AudioProcessor[] i;
 
-        public c(Format2 format2, int i, int i2, int i3, int i4, int i5, int i6, int i7, boolean z2, AudioProcessor[] audioProcessorArr) {
+        public c(j1 j1Var, int i, int i2, int i3, int i4, int i5, int i6, int i7, boolean z2, AudioProcessor[] audioProcessorArr) {
             int iRound;
-            this.a = format2;
+            this.a = j1Var;
             this.f2920b = i;
             this.c = i2;
             this.d = i3;
@@ -194,9 +189,9 @@ public final class DefaultAudioSink implements AudioSink {
                 if (i2 == 0) {
                     float f = z2 ? 8.0f : 1.0f;
                     int minBufferSize = AudioTrack.getMinBufferSize(i4, i5, i6);
-                    AnimatableValueParser.D(minBufferSize != -2);
+                    b.c.a.a0.d.D(minBufferSize != -2);
                     long j = i4;
-                    int iH = Util2.h(minBufferSize * 4, ((int) ((250000 * j) / 1000000)) * i3, Math.max(minBufferSize, ((int) ((j * 750000) / 1000000)) * i3));
+                    int iH = e0.h(minBufferSize * 4, ((int) ((250000 * j) / 1000000)) * i3, Math.max(minBufferSize, ((int) ((j * 750000) / 1000000)) * i3));
                     iRound = f != 1.0f ? Math.round(iH * f) : iH;
                 } else if (i2 == 1) {
                     iRound = e(50000000L);
@@ -211,13 +206,13 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @RequiresApi(21)
-        public static android.media.AudioAttributes d(AudioAttributes audioAttributes, boolean z2) {
-            return z2 ? new AudioAttributes.Builder().setContentType(3).setFlags(16).setUsage(1).build() : audioAttributes.a();
+        public static AudioAttributes d(o oVar, boolean z2) {
+            return z2 ? new AudioAttributes.Builder().setContentType(3).setFlags(16).setUsage(1).build() : oVar.a();
         }
 
-        public AudioTrack a(boolean z2, b.i.a.c.t2.AudioAttributes audioAttributes, int i) throws AudioSink.InitializationException {
+        public AudioTrack a(boolean z2, o oVar, int i) throws AudioSink.InitializationException {
             try {
-                AudioTrack audioTrackB = b(z2, audioAttributes, i);
+                AudioTrack audioTrackB = b(z2, oVar, i);
                 int state = audioTrackB.getState();
                 if (state == 1) {
                     return audioTrackB;
@@ -232,15 +227,15 @@ public final class DefaultAudioSink implements AudioSink {
             }
         }
 
-        public final AudioTrack b(boolean z2, b.i.a.c.t2.AudioAttributes audioAttributes, int i) {
-            int i2 = Util2.a;
+        public final AudioTrack b(boolean z2, o oVar, int i) {
+            int i2 = e0.a;
             if (i2 >= 29) {
-                return new AudioTrack.Builder().setAudioAttributes(d(audioAttributes, z2)).setAudioFormat(DefaultAudioSink.y(this.e, this.f, this.g)).setTransferMode(1).setBufferSizeInBytes(this.h).setSessionId(i).setOffloadedPlayback(this.c == 1).build();
+                return new AudioTrack.Builder().setAudioAttributes(d(oVar, z2)).setAudioFormat(DefaultAudioSink.y(this.e, this.f, this.g)).setTransferMode(1).setBufferSizeInBytes(this.h).setSessionId(i).setOffloadedPlayback(this.c == 1).build();
             }
             if (i2 >= 21) {
-                return new AudioTrack(d(audioAttributes, z2), DefaultAudioSink.y(this.e, this.f, this.g), this.h, 1, i);
+                return new AudioTrack(d(oVar, z2), DefaultAudioSink.y(this.e, this.f, this.g), this.h, 1, i);
             }
-            int iT = Util2.t(audioAttributes.m);
+            int iT = e0.t(oVar.m);
             return i == 0 ? new AudioTrack(iT, this.e, this.f, this.g, this.h, 1) : new AudioTrack(iT, this.e, this.f, this.g, this.h, 1, i);
         }
 
@@ -308,49 +303,49 @@ public final class DefaultAudioSink implements AudioSink {
         public final AudioProcessor[] a;
 
         /* renamed from: b, reason: collision with root package name */
-        public final SilenceSkippingAudioProcessor f2921b;
-        public final SonicAudioProcessor c;
+        public final c0 f2921b;
+        public final b.i.a.c.t2.e0 c;
 
         public d(AudioProcessor... audioProcessorArr) {
-            SilenceSkippingAudioProcessor silenceSkippingAudioProcessor = new SilenceSkippingAudioProcessor();
-            SonicAudioProcessor sonicAudioProcessor = new SonicAudioProcessor();
+            c0 c0Var = new c0();
+            b.i.a.c.t2.e0 e0Var = new b.i.a.c.t2.e0();
             AudioProcessor[] audioProcessorArr2 = new AudioProcessor[audioProcessorArr.length + 2];
             this.a = audioProcessorArr2;
             System.arraycopy(audioProcessorArr, 0, audioProcessorArr2, 0, audioProcessorArr.length);
-            this.f2921b = silenceSkippingAudioProcessor;
-            this.c = sonicAudioProcessor;
-            audioProcessorArr2[audioProcessorArr.length] = silenceSkippingAudioProcessor;
-            audioProcessorArr2[audioProcessorArr.length + 1] = sonicAudioProcessor;
+            this.f2921b = c0Var;
+            this.c = e0Var;
+            audioProcessorArr2[audioProcessorArr.length] = c0Var;
+            audioProcessorArr2[audioProcessorArr.length + 1] = e0Var;
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.b
-        public PlaybackParameters a(PlaybackParameters playbackParameters) {
-            SonicAudioProcessor sonicAudioProcessor = this.c;
-            float f = playbackParameters.k;
-            if (sonicAudioProcessor.c != f) {
-                sonicAudioProcessor.c = f;
-                sonicAudioProcessor.i = true;
+        public x1 a(x1 x1Var) {
+            b.i.a.c.t2.e0 e0Var = this.c;
+            float f = x1Var.k;
+            if (e0Var.c != f) {
+                e0Var.c = f;
+                e0Var.i = true;
             }
-            float f2 = playbackParameters.l;
-            if (sonicAudioProcessor.d != f2) {
-                sonicAudioProcessor.d = f2;
-                sonicAudioProcessor.i = true;
+            float f2 = x1Var.l;
+            if (e0Var.d != f2) {
+                e0Var.d = f2;
+                e0Var.i = true;
             }
-            return playbackParameters;
+            return x1Var;
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.b
         public long b(long j) {
-            SonicAudioProcessor sonicAudioProcessor = this.c;
-            if (sonicAudioProcessor.o < Permission.VIEW_CHANNEL) {
-                return (long) (sonicAudioProcessor.c * j);
+            b.i.a.c.t2.e0 e0Var = this.c;
+            if (e0Var.o < Permission.VIEW_CHANNEL) {
+                return (long) (e0Var.c * j);
             }
-            long j2 = sonicAudioProcessor.n;
-            Objects.requireNonNull(sonicAudioProcessor.j);
+            long j2 = e0Var.n;
+            Objects.requireNonNull(e0Var.j);
             long j3 = j2 - ((r4.k * r4.f1118b) * 2);
-            int i = sonicAudioProcessor.h.f2914b;
-            int i2 = sonicAudioProcessor.g.f2914b;
-            return i == i2 ? Util2.F(j, j3, sonicAudioProcessor.o) : Util2.F(j, j3 * i, sonicAudioProcessor.o * i2);
+            int i = e0Var.h.f2914b;
+            int i2 = e0Var.g.f2914b;
+            return i == i2 ? e0.F(j, j3, e0Var.o) : e0.F(j, j3 * i, e0Var.o * i2);
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.b
@@ -366,15 +361,15 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     public static final class e {
-        public final PlaybackParameters a;
+        public final x1 a;
 
         /* renamed from: b, reason: collision with root package name */
         public final boolean f2922b;
         public final long c;
         public final long d;
 
-        public e(PlaybackParameters playbackParameters, boolean z2, long j, long j2, a aVar) {
-            this.a = playbackParameters;
+        public e(x1 x1Var, boolean z2, long j, long j2, a aVar) {
+            this.a = x1Var;
             this.f2922b = z2;
             this.c = j;
             this.d = j2;
@@ -411,28 +406,28 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    public final class g implements AudioTrackPositionTracker.a {
+    public final class g implements t.a {
         public g(a aVar) {
         }
 
-        @Override // b.i.a.c.t2.AudioTrackPositionTracker.a
+        @Override // b.i.a.c.t2.t.a
         public void a(long j) {
-            AudioRendererEventListener2.a aVar;
+            r.a aVar;
             Handler handler;
             AudioSink.a aVar2 = DefaultAudioSink.this.p;
-            if (aVar2 == null || (handler = (aVar = MediaCodecAudioRenderer.this.O0).a) == null) {
+            if (aVar2 == null || (handler = (aVar = z.this.O0).a) == null) {
                 return;
             }
             handler.post(new b.i.a.c.t2.h(aVar, j));
         }
 
-        @Override // b.i.a.c.t2.AudioTrackPositionTracker.a
+        @Override // b.i.a.c.t2.t.a
         public void b(int i, long j) {
             if (DefaultAudioSink.this.p != null) {
                 long jElapsedRealtime = SystemClock.elapsedRealtime();
                 DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
                 long j2 = jElapsedRealtime - defaultAudioSink.X;
-                AudioRendererEventListener2.a aVar = MediaCodecAudioRenderer.this.O0;
+                r.a aVar = z.this.O0;
                 Handler handler = aVar.a;
                 if (handler != null) {
                     handler.post(new i(aVar, i, j, j2));
@@ -440,7 +435,7 @@ public final class DefaultAudioSink implements AudioSink {
             }
         }
 
-        @Override // b.i.a.c.t2.AudioTrackPositionTracker.a
+        @Override // b.i.a.c.t2.t.a
         public void c(long j) {
             StringBuilder sb = new StringBuilder(61);
             sb.append("Ignoring impossibly large audio latency: ");
@@ -448,12 +443,12 @@ public final class DefaultAudioSink implements AudioSink {
             Log.w("DefaultAudioSink", sb.toString());
         }
 
-        @Override // b.i.a.c.t2.AudioTrackPositionTracker.a
+        @Override // b.i.a.c.t2.t.a
         public void d(long j, long j2, long j3, long j4) {
             DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
             long j5 = defaultAudioSink.r.c == 0 ? defaultAudioSink.f2919z / r1.f2920b : defaultAudioSink.A;
             long jE = defaultAudioSink.E();
-            StringBuilder sbR = outline.R(Opcodes.INVOKEVIRTUAL, "Spurious audio timestamp (frame position mismatch): ", j, ", ");
+            StringBuilder sbR = b.d.b.a.a.R(Opcodes.INVOKEVIRTUAL, "Spurious audio timestamp (frame position mismatch): ", j, ", ");
             sbR.append(j2);
             sbR.append(", ");
             sbR.append(j3);
@@ -466,12 +461,12 @@ public final class DefaultAudioSink implements AudioSink {
             Log.w("DefaultAudioSink", sbR.toString());
         }
 
-        @Override // b.i.a.c.t2.AudioTrackPositionTracker.a
+        @Override // b.i.a.c.t2.t.a
         public void e(long j, long j2, long j3, long j4) {
             DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
             long j5 = defaultAudioSink.r.c == 0 ? defaultAudioSink.f2919z / r1.f2920b : defaultAudioSink.A;
             long jE = defaultAudioSink.E();
-            StringBuilder sbR = outline.R(180, "Spurious audio timestamp (system clock mismatch): ", j, ", ");
+            StringBuilder sbR = b.d.b.a.a.R(180, "Spurious audio timestamp (system clock mismatch): ", j, ", ");
             sbR.append(j2);
             sbR.append(", ");
             sbR.append(j3);
@@ -498,11 +493,11 @@ public final class DefaultAudioSink implements AudioSink {
 
             @Override // android.media.AudioTrack.StreamEventCallback
             public void onDataRequest(AudioTrack audioTrack, int i) {
-                Renderer2.a aVar;
-                AnimatableValueParser.D(audioTrack == DefaultAudioSink.this.f2916s);
+                f2.a aVar;
+                b.c.a.a0.d.D(audioTrack == DefaultAudioSink.this.f2916s);
                 DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
                 AudioSink.a aVar2 = defaultAudioSink.p;
-                if (aVar2 == null || !defaultAudioSink.S || (aVar = MediaCodecAudioRenderer.this.X0) == null) {
+                if (aVar2 == null || !defaultAudioSink.S || (aVar = z.this.X0) == null) {
                     return;
                 }
                 aVar.a();
@@ -510,11 +505,11 @@ public final class DefaultAudioSink implements AudioSink {
 
             @Override // android.media.AudioTrack.StreamEventCallback
             public void onTearDown(AudioTrack audioTrack) {
-                Renderer2.a aVar;
-                AnimatableValueParser.D(audioTrack == DefaultAudioSink.this.f2916s);
+                f2.a aVar;
+                b.c.a.a0.d.D(audioTrack == DefaultAudioSink.this.f2916s);
                 DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
                 AudioSink.a aVar2 = defaultAudioSink.p;
-                if (aVar2 == null || !defaultAudioSink.S || (aVar = MediaCodecAudioRenderer.this.X0) == null) {
+                if (aVar2 == null || !defaultAudioSink.S || (aVar = z.this.X0) == null) {
                     return;
                 }
                 aVar.a();
@@ -526,31 +521,31 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    public DefaultAudioSink(@Nullable AudioCapabilities audioCapabilities, b bVar, boolean z2, boolean z3, int i) {
-        this.a = audioCapabilities;
+    public DefaultAudioSink(@Nullable p pVar, b bVar, boolean z2, boolean z3, int i) {
+        this.a = pVar;
         this.f2915b = bVar;
-        int i2 = Util2.a;
+        int i2 = e0.a;
         this.c = i2 >= 21 && z2;
         this.k = i2 >= 23 && z3;
         this.l = i2 < 29 ? 0 : i;
         this.h = new ConditionVariable(true);
-        this.i = new AudioTrackPositionTracker(new g(null));
-        ChannelMappingAudioProcessor channelMappingAudioProcessor = new ChannelMappingAudioProcessor();
-        this.d = channelMappingAudioProcessor;
-        TrimmingAudioProcessor trimmingAudioProcessor = new TrimmingAudioProcessor();
-        this.e = trimmingAudioProcessor;
+        this.i = new t(new g(null));
+        w wVar = new w();
+        this.d = wVar;
+        f0 f0Var = new f0();
+        this.e = f0Var;
         ArrayList arrayList = new ArrayList();
-        Collections.addAll(arrayList, new ResamplingAudioProcessor(), channelMappingAudioProcessor, trimmingAudioProcessor);
+        Collections.addAll(arrayList, new b0(), wVar, f0Var);
         Collections.addAll(arrayList, ((d) bVar).a);
         this.f = (AudioProcessor[]) arrayList.toArray(new AudioProcessor[0]);
-        this.g = new AudioProcessor[]{new FloatResamplingAudioProcessor()};
+        this.g = new AudioProcessor[]{new y()};
         this.H = 1.0f;
-        this.t = b.i.a.c.t2.AudioAttributes.j;
+        this.t = o.j;
         this.U = 0;
-        this.V = new AuxEffectInfo(0, 0.0f);
-        PlaybackParameters playbackParameters = PlaybackParameters.j;
-        this.v = new e(playbackParameters, false, 0L, 0L, null);
-        this.w = playbackParameters;
+        this.V = new u(0, 0.0f);
+        x1 x1Var = x1.j;
+        this.v = new e(x1Var, false, 0L, 0L, null);
+        this.w = x1Var;
         this.P = -1;
         this.I = new AudioProcessor[0];
         this.J = new ByteBuffer[0];
@@ -564,40 +559,40 @@ public final class DefaultAudioSink implements AudioSink {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static Pair<Integer, Integer> A(Format2 format2, @Nullable AudioCapabilities audioCapabilities) {
-        if (audioCapabilities == null) {
+    public static Pair<Integer, Integer> A(j1 j1Var, @Nullable p pVar) {
+        if (pVar == null) {
             return null;
         }
-        String str = format2.w;
+        String str = j1Var.w;
         Objects.requireNonNull(str);
-        int iB = MimeTypes.b(str, format2.t);
+        int iB = b.i.a.c.f3.t.b(str, j1Var.t);
         int i = 0;
         int i2 = 6;
         if (!(iB == 5 || iB == 6 || iB == 18 || iB == 17 || iB == 7 || iB == 8 || iB == 14)) {
             return null;
         }
-        if (iB == 18 && !audioCapabilities.a(18)) {
+        if (iB == 18 && !pVar.a(18)) {
             iB = 6;
-        } else if (iB == 8 && !audioCapabilities.a(8)) {
+        } else if (iB == 8 && !pVar.a(8)) {
             iB = 7;
         }
-        if (!audioCapabilities.a(iB)) {
+        if (!pVar.a(iB)) {
             return null;
         }
         if (iB != 18) {
-            i = format2.J;
-            if (i > audioCapabilities.e) {
+            i = j1Var.J;
+            if (i > pVar.e) {
                 return null;
             }
-        } else if (Util2.a >= 29) {
-            int i3 = format2.K;
-            android.media.AudioAttributes audioAttributesBuild = new AudioAttributes.Builder().setUsage(1).setContentType(3).build();
+        } else if (e0.a >= 29) {
+            int i3 = j1Var.K;
+            AudioAttributes audioAttributesBuild = new AudioAttributes.Builder().setUsage(1).setContentType(3).build();
             int i4 = 8;
             while (true) {
                 if (i4 <= 0) {
                     break;
                 }
-                if (AudioTrack.isDirectPlaybackSupported(new AudioFormat.Builder().setEncoding(18).setSampleRate(i3).setChannelMask(Util2.n(i4)).build(), audioAttributesBuild)) {
+                if (AudioTrack.isDirectPlaybackSupported(new AudioFormat.Builder().setEncoding(18).setSampleRate(i3).setChannelMask(e0.n(i4)).build(), audioAttributesBuild)) {
                     i = i4;
                     break;
                 }
@@ -610,17 +605,17 @@ public final class DefaultAudioSink implements AudioSink {
         } else {
             i = 6;
         }
-        int i5 = Util2.a;
+        int i5 = e0.a;
         if (i5 > 28) {
             i2 = i;
         } else if (i == 7) {
             i2 = 8;
         } else if (i != 3 && i != 4 && i != 5) {
         }
-        if (i5 <= 26 && "fugu".equals(Util2.f968b) && i2 == 1) {
+        if (i5 <= 26 && "fugu".equals(e0.f968b) && i2 == 1) {
             i2 = 2;
         }
-        int iN = Util2.n(i2);
+        int iN = e0.n(i2);
         if (iN == 0) {
             return null;
         }
@@ -628,7 +623,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     public static boolean H(AudioTrack audioTrack) {
-        return Util2.a >= 29 && audioTrack.isOffloadedPlayback();
+        return e0.a >= 29 && audioTrack.isOffloadedPlayback();
     }
 
     @RequiresApi(21)
@@ -643,13 +638,13 @@ public final class DefaultAudioSink implements AudioSink {
 
     @RequiresApi(29)
     @SuppressLint({"WrongConstant"})
-    public final int C(AudioFormat audioFormat, android.media.AudioAttributes audioAttributes) {
-        int i = Util2.a;
+    public final int C(AudioFormat audioFormat, AudioAttributes audioAttributes) {
+        int i = e0.a;
         if (i >= 31) {
             return AudioManager.getPlaybackOffloadSupport(audioFormat, audioAttributes);
         }
         if (AudioManager.isOffloadedPlaybackSupported(audioFormat, audioAttributes)) {
-            return (i == 30 && Util2.d.startsWith("Pixel")) ? 2 : 1;
+            return (i == 30 && e0.d.startsWith("Pixel")) ? 2 : 1;
         }
         return 0;
     }
@@ -680,15 +675,15 @@ public final class DefaultAudioSink implements AudioSink {
                 audioTrack.registerStreamEventCallback(new k(handler), hVar.f2924b);
                 if (this.l != 3) {
                     AudioTrack audioTrack2 = this.f2916s;
-                    Format2 format2 = this.r.a;
-                    audioTrack2.setOffloadDelayPadding(format2.M, format2.N);
+                    j1 j1Var = this.r.a;
+                    audioTrack2.setOffloadDelayPadding(j1Var.M, j1Var.N);
                 }
             }
             this.U = this.f2916s.getAudioSessionId();
-            AudioTrackPositionTracker audioTrackPositionTracker = this.i;
+            t tVar = this.i;
             AudioTrack audioTrack3 = this.f2916s;
             c cVar2 = this.r;
-            audioTrackPositionTracker.e(audioTrack3, cVar2.c == 2, cVar2.g, cVar2.d, cVar2.h);
+            tVar.e(audioTrack3, cVar2.c == 2, cVar2.g, cVar2.d, cVar2.h);
             N();
             int i = this.V.a;
             if (i != 0) {
@@ -702,7 +697,7 @@ public final class DefaultAudioSink implements AudioSink {
             }
             AudioSink.a aVar = this.p;
             if (aVar != null) {
-                ((MediaCodecAudioRenderer.b) aVar).a(e2);
+                ((z.b) aVar).a(e2);
             }
             throw e2;
         }
@@ -717,11 +712,11 @@ public final class DefaultAudioSink implements AudioSink {
             return;
         }
         this.R = true;
-        AudioTrackPositionTracker audioTrackPositionTracker = this.i;
+        t tVar = this.i;
         long jE = E();
-        audioTrackPositionTracker.f1133z = audioTrackPositionTracker.b();
-        audioTrackPositionTracker.f1131x = SystemClock.elapsedRealtime() * 1000;
-        audioTrackPositionTracker.A = jE;
+        tVar.f1133z = tVar.b();
+        tVar.f1131x = SystemClock.elapsedRealtime() * 1000;
+        tVar.A = jE;
         this.f2916s.stop();
         this.f2918y = 0;
     }
@@ -783,12 +778,12 @@ public final class DefaultAudioSink implements AudioSink {
         h();
     }
 
-    public final void L(PlaybackParameters playbackParameters, boolean z2) {
+    public final void L(x1 x1Var, boolean z2) {
         e eVarB = B();
-        if (playbackParameters.equals(eVarB.a) && z2 == eVarB.f2922b) {
+        if (x1Var.equals(eVarB.a) && z2 == eVarB.f2922b) {
             return;
         }
-        e eVar = new e(playbackParameters, z2, -9223372036854775807L, -9223372036854775807L, null);
+        e eVar = new e(x1Var, z2, -9223372036854775807L, -9223372036854775807L, null);
         if (G()) {
             this.u = eVar;
         } else {
@@ -797,27 +792,27 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @RequiresApi(23)
-    public final void M(PlaybackParameters playbackParameters) {
+    public final void M(x1 x1Var) {
         if (G()) {
             try {
-                this.f2916s.setPlaybackParams(new PlaybackParams().allowDefaults().setSpeed(playbackParameters.k).setPitch(playbackParameters.l).setAudioFallbackMode(2));
+                this.f2916s.setPlaybackParams(new PlaybackParams().allowDefaults().setSpeed(x1Var.k).setPitch(x1Var.l).setAudioFallbackMode(2));
             } catch (IllegalArgumentException e2) {
-                Log2.c("DefaultAudioSink", "Failed to set playback params", e2);
+                q.c("DefaultAudioSink", "Failed to set playback params", e2);
             }
-            playbackParameters = new PlaybackParameters(this.f2916s.getPlaybackParams().getSpeed(), this.f2916s.getPlaybackParams().getPitch());
-            AudioTrackPositionTracker audioTrackPositionTracker = this.i;
-            audioTrackPositionTracker.j = playbackParameters.k;
-            AudioTimestampPoller audioTimestampPoller = audioTrackPositionTracker.f;
-            if (audioTimestampPoller != null) {
-                audioTimestampPoller.a();
+            x1Var = new x1(this.f2916s.getPlaybackParams().getSpeed(), this.f2916s.getPlaybackParams().getPitch());
+            t tVar = this.i;
+            tVar.j = x1Var.k;
+            s sVar = tVar.f;
+            if (sVar != null) {
+                sVar.a();
             }
         }
-        this.w = playbackParameters;
+        this.w = x1Var;
     }
 
     public final void N() {
         if (G()) {
-            if (Util2.a >= 21) {
+            if (e0.a >= 21) {
                 this.f2916s.setVolume(this.H);
                 return;
             }
@@ -831,23 +826,23 @@ public final class DefaultAudioSink implements AudioSink {
         if (this.W || !"audio/raw".equals(this.r.a.w)) {
             return false;
         }
-        return !(this.c && Util2.y(this.r.a.L));
+        return !(this.c && e0.y(this.r.a.L));
     }
 
-    public final boolean P(Format2 format2, b.i.a.c.t2.AudioAttributes audioAttributes) {
+    public final boolean P(j1 j1Var, o oVar) {
         int iN;
         int iC;
-        if (Util2.a < 29 || this.l == 0) {
+        if (e0.a < 29 || this.l == 0) {
             return false;
         }
-        String str = format2.w;
+        String str = j1Var.w;
         Objects.requireNonNull(str);
-        int iB = MimeTypes.b(str, format2.t);
-        if (iB == 0 || (iN = Util2.n(format2.J)) == 0 || (iC = C(y(format2.K, iN, iB), audioAttributes.a())) == 0) {
+        int iB = b.i.a.c.f3.t.b(str, j1Var.t);
+        if (iB == 0 || (iN = e0.n(j1Var.J)) == 0 || (iC = C(y(j1Var.K, iN, iB), oVar.a())) == 0) {
             return false;
         }
         if (iC == 1) {
-            return ((format2.M != 0 || format2.N != 0) && (this.l == 1)) ? false : true;
+            return ((j1Var.M != 0 || j1Var.N != 0) && (this.l == 1)) ? false : true;
         }
         if (iC == 2) {
             return true;
@@ -865,10 +860,10 @@ public final class DefaultAudioSink implements AudioSink {
         if (byteBuffer.hasRemaining()) {
             ByteBuffer byteBuffer2 = this.M;
             if (byteBuffer2 != null) {
-                AnimatableValueParser.j(byteBuffer2 == byteBuffer);
+                b.c.a.a0.d.j(byteBuffer2 == byteBuffer);
             } else {
                 this.M = byteBuffer;
-                if (Util2.a < 21) {
+                if (e0.a < 21) {
                     int iRemaining = byteBuffer.remaining();
                     byte[] bArr = this.N;
                     if (bArr == null || bArr.length < iRemaining) {
@@ -881,10 +876,10 @@ public final class DefaultAudioSink implements AudioSink {
                 }
             }
             int iRemaining2 = byteBuffer.remaining();
-            int i = Util2.a;
+            int i = e0.a;
             if (i < 21) {
-                AudioTrackPositionTracker audioTrackPositionTracker = this.i;
-                int iB = audioTrackPositionTracker.e - ((int) (this.B - (audioTrackPositionTracker.b() * audioTrackPositionTracker.d)));
+                t tVar = this.i;
+                int iB = tVar.e - ((int) (this.B - (tVar.b() * tVar.d)));
                 if (iB > 0) {
                     iWrite = this.f2916s.write(this.N, this.O, Math.min(iRemaining2, iB));
                     if (iWrite > 0) {
@@ -895,7 +890,7 @@ public final class DefaultAudioSink implements AudioSink {
                     iWrite = 0;
                 }
             } else if (this.W) {
-                AnimatableValueParser.D(j != -9223372036854775807L);
+                b.c.a.a0.d.D(j != -9223372036854775807L);
                 AudioTrack audioTrack = this.f2916s;
                 if (i >= 26) {
                     iWrite = audioTrack.write(byteBuffer, iRemaining2, 1, j * 1000);
@@ -941,7 +936,7 @@ public final class DefaultAudioSink implements AudioSink {
                 AudioSink.WriteException writeException = new AudioSink.WriteException(iWrite, this.r.a, z2);
                 AudioSink.a aVar = this.p;
                 if (aVar != null) {
-                    ((MediaCodecAudioRenderer.b) aVar).a(writeException);
+                    ((z.b) aVar).a(writeException);
                 }
                 if (writeException.isRecoverable) {
                     throw writeException;
@@ -956,9 +951,9 @@ public final class DefaultAudioSink implements AudioSink {
                     this.Z = false;
                 }
                 if (this.S && this.p != null && iWrite < iRemaining2 && !this.Z) {
-                    AudioTrackPositionTracker audioTrackPositionTracker2 = this.i;
-                    long jM = Util2.M(audioTrackPositionTracker2.a(j2 - audioTrackPositionTracker2.b()));
-                    Renderer2.a aVar2 = MediaCodecAudioRenderer.this.X0;
+                    t tVar2 = this.i;
+                    long jM = e0.M(tVar2.a(j2 - tVar2.b()));
+                    f2.a aVar2 = z.this.X0;
                     if (aVar2 != null) {
                         aVar2.b(jM);
                     }
@@ -970,7 +965,7 @@ public final class DefaultAudioSink implements AudioSink {
             }
             if (iWrite == iRemaining2) {
                 if (i2 != 0) {
-                    AnimatableValueParser.D(byteBuffer == this.K);
+                    b.c.a.a0.d.D(byteBuffer == this.K);
                     this.C += this.D * this.L;
                 }
                 this.M = null;
@@ -979,8 +974,8 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public boolean a(Format2 format2) {
-        return u(format2) != 0;
+    public boolean a(j1 j1Var) {
+        return u(j1Var) != 0;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
@@ -989,7 +984,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public PlaybackParameters c() {
+    public x1 c() {
         return this.k ? this.w : z();
     }
 
@@ -998,18 +993,18 @@ public final class DefaultAudioSink implements AudioSink {
         boolean z2 = false;
         this.S = false;
         if (G()) {
-            AudioTrackPositionTracker audioTrackPositionTracker = this.i;
-            audioTrackPositionTracker.l = 0L;
-            audioTrackPositionTracker.w = 0;
-            audioTrackPositionTracker.v = 0;
-            audioTrackPositionTracker.m = 0L;
-            audioTrackPositionTracker.C = 0L;
-            audioTrackPositionTracker.F = 0L;
-            audioTrackPositionTracker.k = false;
-            if (audioTrackPositionTracker.f1131x == -9223372036854775807L) {
-                AudioTimestampPoller audioTimestampPoller = audioTrackPositionTracker.f;
-                Objects.requireNonNull(audioTimestampPoller);
-                audioTimestampPoller.a();
+            t tVar = this.i;
+            tVar.l = 0L;
+            tVar.w = 0;
+            tVar.v = 0;
+            tVar.m = 0L;
+            tVar.C = 0L;
+            tVar.F = 0L;
+            tVar.k = false;
+            if (tVar.f1131x == -9223372036854775807L) {
+                s sVar = tVar.f;
+                Objects.requireNonNull(sVar);
+                sVar.a();
                 z2 = true;
             }
             if (z2) {
@@ -1022,19 +1017,19 @@ public final class DefaultAudioSink implements AudioSink {
     public void e() throws IllegalStateException {
         this.S = true;
         if (G()) {
-            AudioTimestampPoller audioTimestampPoller = this.i.f;
-            Objects.requireNonNull(audioTimestampPoller);
-            audioTimestampPoller.a();
+            s sVar = this.i.f;
+            Objects.requireNonNull(sVar);
+            sVar.a();
             this.f2916s.play();
         }
     }
 
     public final void f(long j) {
-        AudioRendererEventListener2.a aVar;
+        r.a aVar;
         Handler handler;
-        PlaybackParameters playbackParametersA = O() ? this.f2915b.a(z()) : PlaybackParameters.j;
+        x1 x1VarA = O() ? this.f2915b.a(z()) : x1.j;
         boolean zD = O() ? this.f2915b.d(D()) : false;
-        this.j.add(new e(playbackParametersA, zD, Math.max(0L, j), this.r.c(E()), null));
+        this.j.add(new e(x1VarA, zD, Math.max(0L, j), this.r.c(E()), null));
         AudioProcessor[] audioProcessorArr = this.r.i;
         ArrayList arrayList = new ArrayList();
         for (AudioProcessor audioProcessor : audioProcessorArr) {
@@ -1049,7 +1044,7 @@ public final class DefaultAudioSink implements AudioSink {
         this.J = new ByteBuffer[size];
         h();
         AudioSink.a aVar2 = this.p;
-        if (aVar2 == null || (handler = (aVar = MediaCodecAudioRenderer.this.O0).a) == null) {
+        if (aVar2 == null || (handler = (aVar = z.this.O0).a) == null) {
             return;
         }
         handler.post(new b.i.a.c.t2.a(aVar, zD));
@@ -1072,7 +1067,7 @@ public final class DefaultAudioSink implements AudioSink {
             }
             AudioTrack audioTrack2 = this.f2916s;
             this.f2916s = null;
-            if (Util2.a < 21 && !this.T) {
+            if (e0.a < 21 && !this.T) {
                 this.U = 0;
             }
             c cVar = this.q;
@@ -1152,12 +1147,12 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public void i(PlaybackParameters playbackParameters) {
-        PlaybackParameters playbackParameters2 = new PlaybackParameters(Util2.g(playbackParameters.k, 0.1f, 8.0f), Util2.g(playbackParameters.l, 0.1f, 8.0f));
-        if (!this.k || Util2.a < 23) {
-            L(playbackParameters2, D());
+    public void i(x1 x1Var) {
+        x1 x1Var2 = new x1(e0.g(x1Var.k, 0.1f, 8.0f), e0.g(x1Var.l, 0.1f, 8.0f));
+        if (!this.k || e0.a < 23) {
+            L(x1Var2, D());
         } else {
-            M(playbackParameters2);
+            M(x1Var2);
         }
     }
 
@@ -1199,75 +1194,75 @@ public final class DefaultAudioSink implements AudioSink {
         if (!G() || this.F) {
             return Long.MIN_VALUE;
         }
-        AudioTrackPositionTracker audioTrackPositionTracker = this.i;
-        AudioTrack audioTrack = audioTrackPositionTracker.c;
+        t tVar = this.i;
+        AudioTrack audioTrack = tVar.c;
         Objects.requireNonNull(audioTrack);
         if (audioTrack.getPlayState() == 3) {
-            long jA2 = audioTrackPositionTracker.a(audioTrackPositionTracker.b());
+            long jA2 = tVar.a(tVar.b());
             if (jA2 != 0) {
                 long jNanoTime = System.nanoTime() / 1000;
-                if (jNanoTime - audioTrackPositionTracker.m >= 30000) {
-                    long[] jArr = audioTrackPositionTracker.f1129b;
-                    int i = audioTrackPositionTracker.v;
+                if (jNanoTime - tVar.m >= 30000) {
+                    long[] jArr = tVar.f1129b;
+                    int i = tVar.v;
                     jArr[i] = jA2 - jNanoTime;
-                    audioTrackPositionTracker.v = (i + 1) % 10;
-                    int i2 = audioTrackPositionTracker.w;
+                    tVar.v = (i + 1) % 10;
+                    int i2 = tVar.w;
                     if (i2 < 10) {
-                        audioTrackPositionTracker.w = i2 + 1;
+                        tVar.w = i2 + 1;
                     }
-                    audioTrackPositionTracker.m = jNanoTime;
-                    audioTrackPositionTracker.l = 0L;
+                    tVar.m = jNanoTime;
+                    tVar.l = 0L;
                     int i3 = 0;
                     while (true) {
-                        int i4 = audioTrackPositionTracker.w;
+                        int i4 = tVar.w;
                         if (i3 >= i4) {
                             break;
                         }
-                        audioTrackPositionTracker.l = (audioTrackPositionTracker.f1129b[i3] / i4) + audioTrackPositionTracker.l;
+                        tVar.l = (tVar.f1129b[i3] / i4) + tVar.l;
                         i3++;
                     }
                 }
-                if (!audioTrackPositionTracker.h) {
-                    AudioTimestampPoller audioTimestampPoller = audioTrackPositionTracker.f;
-                    Objects.requireNonNull(audioTimestampPoller);
-                    AudioTimestampPoller.a aVar = audioTimestampPoller.a;
-                    if (aVar == null || jNanoTime - audioTimestampPoller.e < audioTimestampPoller.d) {
+                if (!tVar.h) {
+                    s sVar = tVar.f;
+                    Objects.requireNonNull(sVar);
+                    s.a aVar = sVar.a;
+                    if (aVar == null || jNanoTime - sVar.e < sVar.d) {
                         timestamp = false;
                         if (timestamp) {
-                            AudioTimestampPoller.a aVar2 = audioTimestampPoller.a;
+                            s.a aVar2 = sVar.a;
                             long j = aVar2 != null ? aVar2.f1128b.nanoTime / 1000 : -9223372036854775807L;
                             long j2 = aVar2 != null ? aVar2.e : -1L;
                             if (Math.abs(j - jNanoTime) > 5000000) {
-                                audioTrackPositionTracker.a.e(j2, j, jNanoTime, jA2);
-                                audioTimestampPoller.b(4);
-                            } else if (Math.abs(audioTrackPositionTracker.a(j2) - jA2) > 5000000) {
-                                audioTrackPositionTracker.a.d(j2, j, jNanoTime, jA2);
-                                audioTimestampPoller.b(4);
-                            } else if (audioTimestampPoller.f1127b == 4) {
-                                audioTimestampPoller.a();
+                                tVar.a.e(j2, j, jNanoTime, jA2);
+                                sVar.b(4);
+                            } else if (Math.abs(tVar.a(j2) - jA2) > 5000000) {
+                                tVar.a.d(j2, j, jNanoTime, jA2);
+                                sVar.b(4);
+                            } else if (sVar.f1127b == 4) {
+                                sVar.a();
                             }
                         }
-                        if (audioTrackPositionTracker.q && (method = audioTrackPositionTracker.n) != null && jNanoTime - audioTrackPositionTracker.r >= 500000) {
+                        if (tVar.q && (method = tVar.n) != null && jNanoTime - tVar.r >= 500000) {
                             try {
-                                AudioTrack audioTrack2 = audioTrackPositionTracker.c;
+                                AudioTrack audioTrack2 = tVar.c;
                                 Objects.requireNonNull(audioTrack2);
                                 Integer num = (Integer) method.invoke(audioTrack2, new Object[0]);
-                                int i5 = Util2.a;
-                                long jIntValue = (num.intValue() * 1000) - audioTrackPositionTracker.i;
-                                audioTrackPositionTracker.o = jIntValue;
+                                int i5 = e0.a;
+                                long jIntValue = (num.intValue() * 1000) - tVar.i;
+                                tVar.o = jIntValue;
                                 jMax = Math.max(jIntValue, 0L);
-                                audioTrackPositionTracker.o = jMax;
+                                tVar.o = jMax;
                                 if (jMax > 5000000) {
-                                    audioTrackPositionTracker.a.c(jMax);
-                                    audioTrackPositionTracker.o = 0L;
+                                    tVar.a.c(jMax);
+                                    tVar.o = 0L;
                                 }
                             } catch (Exception unused) {
-                                audioTrackPositionTracker.n = null;
+                                tVar.n = null;
                             }
-                            audioTrackPositionTracker.r = jNanoTime;
+                            tVar.r = jNanoTime;
                         }
                     } else {
-                        audioTimestampPoller.e = jNanoTime;
+                        sVar.e = jNanoTime;
                         timestamp = aVar.a.getTimestamp(aVar.f1128b);
                         if (timestamp) {
                             long j3 = aVar.f1128b.framePosition;
@@ -1277,7 +1272,7 @@ public final class DefaultAudioSink implements AudioSink {
                             aVar.d = j3;
                             aVar.e = j3 + (aVar.c << 32);
                         }
-                        int i6 = audioTimestampPoller.f1127b;
+                        int i6 = sVar.f1127b;
                         if (i6 != 0) {
                             if (i6 != 1) {
                                 if (i6 != 2) {
@@ -1286,97 +1281,97 @@ public final class DefaultAudioSink implements AudioSink {
                                             throw new IllegalStateException();
                                         }
                                     } else if (timestamp) {
-                                        audioTimestampPoller.a();
+                                        sVar.a();
                                     }
                                 } else if (!timestamp) {
-                                    audioTimestampPoller.a();
+                                    sVar.a();
                                 }
                             } else if (!timestamp) {
-                                audioTimestampPoller.a();
-                            } else if (audioTimestampPoller.a.e > audioTimestampPoller.f) {
-                                audioTimestampPoller.b(2);
+                                sVar.a();
+                            } else if (sVar.a.e > sVar.f) {
+                                sVar.b(2);
                             }
                         } else if (timestamp) {
-                            AudioTimestampPoller.a aVar3 = audioTimestampPoller.a;
-                            if (aVar3.f1128b.nanoTime / 1000 >= audioTimestampPoller.c) {
-                                audioTimestampPoller.f = aVar3.e;
-                                audioTimestampPoller.b(1);
+                            s.a aVar3 = sVar.a;
+                            if (aVar3.f1128b.nanoTime / 1000 >= sVar.c) {
+                                sVar.f = aVar3.e;
+                                sVar.b(1);
                             }
-                        } else if (jNanoTime - audioTimestampPoller.c > 500000) {
-                            audioTimestampPoller.b(3);
+                        } else if (jNanoTime - sVar.c > 500000) {
+                            sVar.b(3);
                         }
                         if (timestamp) {
                         }
-                        if (audioTrackPositionTracker.q) {
-                            AudioTrack audioTrack22 = audioTrackPositionTracker.c;
+                        if (tVar.q) {
+                            AudioTrack audioTrack22 = tVar.c;
                             Objects.requireNonNull(audioTrack22);
                             Integer num2 = (Integer) method.invoke(audioTrack22, new Object[0]);
-                            int i52 = Util2.a;
-                            long jIntValue2 = (num2.intValue() * 1000) - audioTrackPositionTracker.i;
-                            audioTrackPositionTracker.o = jIntValue2;
+                            int i52 = e0.a;
+                            long jIntValue2 = (num2.intValue() * 1000) - tVar.i;
+                            tVar.o = jIntValue2;
                             jMax = Math.max(jIntValue2, 0L);
-                            audioTrackPositionTracker.o = jMax;
+                            tVar.o = jMax;
                             if (jMax > 5000000) {
                             }
-                            audioTrackPositionTracker.r = jNanoTime;
+                            tVar.r = jNanoTime;
                         }
                     }
                 }
             }
         }
         long jNanoTime2 = System.nanoTime() / 1000;
-        AudioTimestampPoller audioTimestampPoller2 = audioTrackPositionTracker.f;
-        Objects.requireNonNull(audioTimestampPoller2);
-        boolean z3 = audioTimestampPoller2.f1127b == 2;
+        s sVar2 = tVar.f;
+        Objects.requireNonNull(sVar2);
+        boolean z3 = sVar2.f1127b == 2;
         if (z3) {
-            AudioTimestampPoller.a aVar4 = audioTimestampPoller2.a;
-            long jA3 = audioTrackPositionTracker.a(aVar4 != null ? aVar4.e : -1L);
-            AudioTimestampPoller.a aVar5 = audioTimestampPoller2.a;
-            jA = Util2.q(jNanoTime2 - (aVar5 != null ? aVar5.f1128b.nanoTime / 1000 : -9223372036854775807L), audioTrackPositionTracker.j) + jA3;
+            s.a aVar4 = sVar2.a;
+            long jA3 = tVar.a(aVar4 != null ? aVar4.e : -1L);
+            s.a aVar5 = sVar2.a;
+            jA = e0.q(jNanoTime2 - (aVar5 != null ? aVar5.f1128b.nanoTime / 1000 : -9223372036854775807L), tVar.j) + jA3;
         } else {
-            jA = audioTrackPositionTracker.w == 0 ? audioTrackPositionTracker.a(audioTrackPositionTracker.b()) : audioTrackPositionTracker.l + jNanoTime2;
+            jA = tVar.w == 0 ? tVar.a(tVar.b()) : tVar.l + jNanoTime2;
             if (!z2) {
-                jA = Math.max(0L, jA - audioTrackPositionTracker.o);
+                jA = Math.max(0L, jA - tVar.o);
             }
         }
-        if (audioTrackPositionTracker.D != z3) {
-            audioTrackPositionTracker.F = audioTrackPositionTracker.C;
-            audioTrackPositionTracker.E = audioTrackPositionTracker.B;
+        if (tVar.D != z3) {
+            tVar.F = tVar.C;
+            tVar.E = tVar.B;
         }
-        long j4 = jNanoTime2 - audioTrackPositionTracker.F;
+        long j4 = jNanoTime2 - tVar.F;
         if (j4 < 1000000) {
-            long jQ2 = Util2.q(j4, audioTrackPositionTracker.j) + audioTrackPositionTracker.E;
+            long jQ2 = e0.q(j4, tVar.j) + tVar.E;
             long j5 = (j4 * 1000) / 1000000;
             jA = (((1000 - j5) * jQ2) + (jA * j5)) / 1000;
         }
-        if (!audioTrackPositionTracker.k) {
-            long j6 = audioTrackPositionTracker.B;
+        if (!tVar.k) {
+            long j6 = tVar.B;
             if (jA > j6) {
-                audioTrackPositionTracker.k = true;
-                long jM = Util2.M(jA - j6);
-                float f2 = audioTrackPositionTracker.j;
+                tVar.k = true;
+                long jM = e0.M(jA - j6);
+                float f2 = tVar.j;
                 if (f2 != 1.0f) {
                     jM = Math.round(jM / f2);
                 }
-                audioTrackPositionTracker.a.a(System.currentTimeMillis() - Util2.M(jM));
+                tVar.a.a(System.currentTimeMillis() - e0.M(jM));
             }
         }
-        audioTrackPositionTracker.C = jNanoTime2;
-        audioTrackPositionTracker.B = jA;
-        audioTrackPositionTracker.D = z3;
+        tVar.C = jNanoTime2;
+        tVar.B = jA;
+        tVar.D = z3;
         long jMin = Math.min(jA, this.r.c(E()));
         while (!this.j.isEmpty() && jMin >= this.j.getFirst().d) {
             this.v = this.j.remove();
         }
         e eVar = this.v;
         long j7 = jMin - eVar.d;
-        if (eVar.a.equals(PlaybackParameters.j)) {
+        if (eVar.a.equals(x1.j)) {
             jQ = this.v.c + j7;
         } else if (this.j.isEmpty()) {
             jQ = this.f2915b.b(j7) + this.v.c;
         } else {
             e first = this.j.getFirst();
-            jQ = first.c - Util2.q(first.d - jMin, this.v.a.k);
+            jQ = first.c - e0.q(first.d - jMin, this.v.a.k);
         }
         return this.r.c(this.f2915b.c()) + jQ;
     }
@@ -1390,11 +1385,11 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public void o(b.i.a.c.t2.AudioAttributes audioAttributes) throws IllegalStateException {
-        if (this.t.equals(audioAttributes)) {
+    public void o(o oVar) throws IllegalStateException {
+        if (this.t.equals(oVar)) {
             return;
         }
-        this.t = audioAttributes;
+        this.t = oVar;
         if (this.W) {
             return;
         }
@@ -1416,8 +1411,8 @@ public final class DefaultAudioSink implements AudioSink {
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
     public void r() throws IllegalStateException {
-        AnimatableValueParser.D(Util2.a >= 21);
-        AnimatableValueParser.D(this.T);
+        b.c.a.a0.d.D(e0.a >= 21);
+        b.c.a.a0.d.D(this.T);
         if (this.W) {
             return;
         }
@@ -1454,7 +1449,7 @@ public final class DefaultAudioSink implements AudioSink {
         byte b3;
         int i5;
         ByteBuffer byteBuffer2 = this.K;
-        AnimatableValueParser.j(byteBuffer2 == null || byteBuffer == byteBuffer2);
+        b.c.a.a0.d.j(byteBuffer2 == null || byteBuffer == byteBuffer2);
         if (this.q != null) {
             if (!g()) {
                 return false;
@@ -1468,8 +1463,8 @@ public final class DefaultAudioSink implements AudioSink {
                 if (H(this.f2916s) && this.l != 3) {
                     this.f2916s.setOffloadEndOfStream();
                     AudioTrack audioTrack = this.f2916s;
-                    Format2 format2 = this.r.a;
-                    audioTrack.setOffloadDelayPadding(format2.M, format2.N);
+                    j1 j1Var = this.r.a;
+                    audioTrack.setOffloadDelayPadding(j1Var.M, j1Var.N);
                     this.Z = true;
                 }
             } else {
@@ -1497,7 +1492,7 @@ public final class DefaultAudioSink implements AudioSink {
             this.G = Math.max(0L, j);
             this.E = false;
             this.F = false;
-            if (this.k && Util2.a >= 23) {
+            if (this.k && e0.a >= 23) {
                 M(this.w);
             }
             f(j);
@@ -1505,23 +1500,23 @@ public final class DefaultAudioSink implements AudioSink {
                 e();
             }
         }
-        AudioTrackPositionTracker audioTrackPositionTracker = this.i;
+        t tVar = this.i;
         long jE = E();
-        AudioTrack audioTrack2 = audioTrackPositionTracker.c;
+        AudioTrack audioTrack2 = tVar.c;
         Objects.requireNonNull(audioTrack2);
         int playState = audioTrack2.getPlayState();
-        if (audioTrackPositionTracker.h) {
+        if (tVar.h) {
             if (playState == 2) {
-                audioTrackPositionTracker.p = false;
-            } else if (playState != 1 || audioTrackPositionTracker.b() != 0) {
+                tVar.p = false;
+            } else if (playState != 1 || tVar.b() != 0) {
             }
             z2 = false;
         } else {
-            boolean z3 = audioTrackPositionTracker.p;
-            boolean zC = audioTrackPositionTracker.c(jE);
-            audioTrackPositionTracker.p = zC;
+            boolean z3 = tVar.p;
+            boolean zC = tVar.c(jE);
+            tVar.p = zC;
             if (z3 && !zC && playState != 1) {
-                audioTrackPositionTracker.a.b(audioTrackPositionTracker.e, Util2.M(audioTrackPositionTracker.i));
+                tVar.a.b(tVar.e, e0.M(tVar.i));
             }
             z2 = true;
         }
@@ -1529,7 +1524,7 @@ public final class DefaultAudioSink implements AudioSink {
             return false;
         }
         if (this.K == null) {
-            AnimatableValueParser.j(byteBuffer.order() == ByteOrder.LITTLE_ENDIAN);
+            b.c.a.a0.d.j(byteBuffer.order() == ByteOrder.LITTLE_ENDIAN);
             if (!byteBuffer.hasRemaining()) {
                 return true;
             }
@@ -1542,7 +1537,7 @@ public final class DefaultAudioSink implements AudioSink {
                     case 6:
                     case 18:
                         if (((byteBuffer.get(byteBuffer.position() + 5) & 248) >> 3) > 10) {
-                            i2 = Ac3Util.a[((byteBuffer.get(byteBuffer.position() + 4) & 192) >> 6) != 3 ? (byteBuffer.get(byteBuffer.position() + 4) & 48) >> 4 : 3] * 256;
+                            i2 = m.a[((byteBuffer.get(byteBuffer.position() + 4) & 192) >> 6) != 3 ? (byteBuffer.get(byteBuffer.position() + 4) & 48) >> 4 : 3] * 256;
                             iD = i2;
                             this.D = iD;
                             if (iD == 0) {
@@ -1587,12 +1582,12 @@ public final class DefaultAudioSink implements AudioSink {
                         break;
                     case 9:
                         int iPosition2 = byteBuffer.position();
-                        int i7 = Util2.a;
+                        int i7 = e0.a;
                         int iReverseBytes = byteBuffer.getInt(iPosition2);
                         if (byteBuffer.order() != ByteOrder.BIG_ENDIAN) {
                             iReverseBytes = Integer.reverseBytes(iReverseBytes);
                         }
-                        iD = MpegAudioUtil.d(iReverseBytes);
+                        iD = a0.d(iReverseBytes);
                         if (iD == -1) {
                             throw new IllegalArgumentException();
                         }
@@ -1615,14 +1610,14 @@ public final class DefaultAudioSink implements AudioSink {
                         break;
                     case 13:
                     default:
-                        throw new IllegalStateException(outline.g(38, "Unexpected audio encoding: ", i6));
+                        throw new IllegalStateException(b.d.b.a.a.g(38, "Unexpected audio encoding: ", i6));
                     case 14:
                         int iPosition3 = byteBuffer.position();
                         int iLimit = byteBuffer.limit() - 10;
                         int i8 = iPosition3;
                         while (true) {
                             if (i8 <= iLimit) {
-                                int i9 = Util2.a;
+                                int i9 = e0.a;
                                 int iReverseBytes2 = byteBuffer.getInt(i8 + 4);
                                 if (byteBuffer.order() != ByteOrder.BIG_ENDIAN) {
                                     iReverseBytes2 = Integer.reverseBytes(iReverseBytes2);
@@ -1660,7 +1655,7 @@ public final class DefaultAudioSink implements AudioSink {
                         int iPosition4 = byteBuffer.position();
                         byteBuffer.get(bArr);
                         byteBuffer.position(iPosition4);
-                        iD = Ac4Util.b(new ParsableBitArray(bArr)).c;
+                        iD = n.b(new b.i.a.c.f3.w(bArr)).c;
                         this.D = iD;
                         if (iD == 0) {
                         }
@@ -1676,7 +1671,7 @@ public final class DefaultAudioSink implements AudioSink {
             }
             long j2 = ((((this.r.c == 0 ? this.f2919z / r5.f2920b : this.A) - this.e.o) * 1000000) / r5.a.K) + this.G;
             if (!this.E && Math.abs(j2 - j) > 200000) {
-                ((MediaCodecAudioRenderer.b) this.p).a(new AudioSink.UnexpectedDiscontinuityException(j, j2));
+                ((z.b) this.p).a(new AudioSink.UnexpectedDiscontinuityException(j, j2));
                 this.E = true;
             }
             if (this.E) {
@@ -1689,7 +1684,7 @@ public final class DefaultAudioSink implements AudioSink {
                 f(j);
                 AudioSink.a aVar = this.p;
                 if (aVar != null && j3 != 0) {
-                    MediaCodecAudioRenderer.this.V0 = true;
+                    z.this.V0 = true;
                 }
             }
             if (this.r.c == 0) {
@@ -1706,8 +1701,8 @@ public final class DefaultAudioSink implements AudioSink {
             this.L = 0;
             return true;
         }
-        AudioTrackPositionTracker audioTrackPositionTracker2 = this.i;
-        if (!(audioTrackPositionTracker2.f1132y != -9223372036854775807L && E() > 0 && SystemClock.elapsedRealtime() - audioTrackPositionTracker2.f1132y >= 200)) {
+        t tVar2 = this.i;
+        if (!(tVar2.f1132y != -9223372036854775807L && E() > 0 && SystemClock.elapsedRealtime() - tVar2.f1132y >= 200)) {
             return false;
         }
         Log.w("DefaultAudioSink", "Resetting stalled audio track");
@@ -1721,23 +1716,23 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public int u(Format2 format2) {
-        if (!"audio/raw".equals(format2.w)) {
-            if (this.Y || !P(format2, this.t)) {
-                return A(format2, this.a) != null ? 2 : 0;
+    public int u(j1 j1Var) {
+        if (!"audio/raw".equals(j1Var.w)) {
+            if (this.Y || !P(j1Var, this.t)) {
+                return A(j1Var, this.a) != null ? 2 : 0;
             }
             return 2;
         }
-        if (Util2.z(format2.L)) {
-            int i = format2.L;
+        if (e0.z(j1Var.L)) {
+            int i = j1Var.L;
             return (i == 2 || (this.c && i == 4)) ? 2 : 1;
         }
-        outline.g0(33, "Invalid PCM encoding: ", format2.L, "DefaultAudioSink");
+        b.d.b.a.a.g0(33, "Invalid PCM encoding: ", j1Var.L, "DefaultAudioSink");
         return 0;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public void v(Format2 format2, int i, @Nullable int[] iArr) throws AudioSink.ConfigurationException {
+    public void v(j1 j1Var, int i, @Nullable int[] iArr) throws AudioSink.ConfigurationException {
         int iIntValue;
         int iIntValue2;
         AudioProcessor[] audioProcessorArr;
@@ -1748,16 +1743,16 @@ public final class DefaultAudioSink implements AudioSink {
         int i3;
         int i4;
         int[] iArr2;
-        if ("audio/raw".equals(format2.w)) {
-            AnimatableValueParser.j(Util2.z(format2.L));
-            iS = Util2.s(format2.L, format2.J);
-            AudioProcessor[] audioProcessorArr2 = ((this.c && Util2.y(format2.L)) ? 1 : 0) != 0 ? this.g : this.f;
-            TrimmingAudioProcessor trimmingAudioProcessor = this.e;
-            int i5 = format2.M;
-            int i6 = format2.N;
-            trimmingAudioProcessor.i = i5;
-            trimmingAudioProcessor.j = i6;
-            if (Util2.a < 21 && format2.J == 8 && iArr == null) {
+        if ("audio/raw".equals(j1Var.w)) {
+            b.c.a.a0.d.j(e0.z(j1Var.L));
+            iS = e0.s(j1Var.L, j1Var.J);
+            AudioProcessor[] audioProcessorArr2 = ((this.c && e0.y(j1Var.L)) ? 1 : 0) != 0 ? this.g : this.f;
+            f0 f0Var = this.e;
+            int i5 = j1Var.M;
+            int i6 = j1Var.N;
+            f0Var.i = i5;
+            f0Var.j = i6;
+            if (e0.a < 21 && j1Var.J == 8 && iArr == null) {
                 iArr2 = new int[6];
                 for (int i7 = 0; i7 < 6; i7++) {
                     iArr2[i7] = i7;
@@ -1766,7 +1761,7 @@ public final class DefaultAudioSink implements AudioSink {
                 iArr2 = iArr;
             }
             this.d.i = iArr2;
-            AudioProcessor.a aVar = new AudioProcessor.a(format2.K, format2.J, format2.L);
+            AudioProcessor.a aVar = new AudioProcessor.a(j1Var.K, j1Var.J, j1Var.L);
             for (AudioProcessor audioProcessor : audioProcessorArr2) {
                 try {
                     AudioProcessor.a aVarD = audioProcessor.d(aVar);
@@ -1774,29 +1769,29 @@ public final class DefaultAudioSink implements AudioSink {
                         aVar = aVarD;
                     }
                 } catch (AudioProcessor.UnhandledAudioFormatException e2) {
-                    throw new AudioSink.ConfigurationException(e2, format2);
+                    throw new AudioSink.ConfigurationException(e2, j1Var);
                 }
             }
             int i8 = aVar.d;
             i3 = aVar.f2914b;
-            iN = Util2.n(aVar.c);
+            iN = e0.n(aVar.c);
             audioProcessorArr = audioProcessorArr2;
             i2 = i8;
-            iS2 = Util2.s(i8, aVar.c);
+            iS2 = e0.s(i8, aVar.c);
             i4 = 0;
         } else {
             AudioProcessor[] audioProcessorArr3 = new AudioProcessor[0];
-            int i9 = format2.K;
-            if (P(format2, this.t)) {
-                String str = format2.w;
+            int i9 = j1Var.K;
+            if (P(j1Var, this.t)) {
+                String str = j1Var.w;
                 Objects.requireNonNull(str);
-                iIntValue = MimeTypes.b(str, format2.t);
-                iIntValue2 = Util2.n(format2.J);
+                iIntValue = b.i.a.c.f3.t.b(str, j1Var.t);
+                iIntValue2 = e0.n(j1Var.J);
             } else {
-                Pair<Integer, Integer> pairA = A(format2, this.a);
+                Pair<Integer, Integer> pairA = A(j1Var, this.a);
                 if (pairA == null) {
-                    String strValueOf = String.valueOf(format2);
-                    throw new AudioSink.ConfigurationException(outline.j(strValueOf.length() + 37, "Unable to configure passthrough for: ", strValueOf), format2);
+                    String strValueOf = String.valueOf(j1Var);
+                    throw new AudioSink.ConfigurationException(b.d.b.a.a.j(strValueOf.length() + 37, "Unable to configure passthrough for: ", strValueOf), j1Var);
                 }
                 iIntValue = ((Integer) pairA.first).intValue();
                 iIntValue2 = ((Integer) pairA.second).intValue();
@@ -1811,17 +1806,17 @@ public final class DefaultAudioSink implements AudioSink {
             i4 = i;
         }
         if (i2 == 0) {
-            String strValueOf2 = String.valueOf(format2);
+            String strValueOf2 = String.valueOf(j1Var);
             StringBuilder sb = new StringBuilder(strValueOf2.length() + 48);
             sb.append("Invalid output encoding (mode=");
             sb.append(i4);
             sb.append(") for: ");
             sb.append(strValueOf2);
-            throw new AudioSink.ConfigurationException(sb.toString(), format2);
+            throw new AudioSink.ConfigurationException(sb.toString(), j1Var);
         }
         if (iN != 0) {
             this.Y = false;
-            c cVar = new c(format2, iS, i4, iS2, i3, iN, i2, i, this.k, audioProcessorArr);
+            c cVar = new c(j1Var, iS, i4, iS2, i3, iN, i2, i, this.k, audioProcessorArr);
             if (G()) {
                 this.q = cVar;
                 return;
@@ -1830,13 +1825,13 @@ public final class DefaultAudioSink implements AudioSink {
                 return;
             }
         }
-        String strValueOf3 = String.valueOf(format2);
+        String strValueOf3 = String.valueOf(j1Var);
         StringBuilder sb2 = new StringBuilder(strValueOf3.length() + 54);
         sb2.append("Invalid output channel config (mode=");
         sb2.append(i4);
         sb2.append(") for: ");
         sb2.append(strValueOf3);
-        throw new AudioSink.ConfigurationException(sb2.toString(), format2);
+        throw new AudioSink.ConfigurationException(sb2.toString(), j1Var);
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
@@ -1845,12 +1840,12 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public void x(AuxEffectInfo auxEffectInfo) {
-        if (this.V.equals(auxEffectInfo)) {
+    public void x(u uVar) {
+        if (this.V.equals(uVar)) {
             return;
         }
-        int i = auxEffectInfo.a;
-        float f2 = auxEffectInfo.f1134b;
+        int i = uVar.a;
+        float f2 = uVar.f1134b;
         AudioTrack audioTrack = this.f2916s;
         if (audioTrack != null) {
             if (this.V.a != i) {
@@ -1860,10 +1855,10 @@ public final class DefaultAudioSink implements AudioSink {
                 this.f2916s.setAuxEffectSendLevel(f2);
             }
         }
-        this.V = auxEffectInfo;
+        this.V = uVar;
     }
 
-    public final PlaybackParameters z() {
+    public final x1 z() {
         return B().a;
     }
 }

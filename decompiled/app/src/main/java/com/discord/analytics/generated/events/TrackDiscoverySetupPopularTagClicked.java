@@ -1,29 +1,29 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackDiscoverySetupPopularTagClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDiscoverySetupPopularTagClicked implements AnalyticsSchema, TrackBase2, TrackGuild2 {
+public final /* data */ class TrackDiscoverySetupPopularTagClicked implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final CharSequence tag = null;
     private final Long primaryCategoryId = null;
     private final transient String analyticsSchemaTypeName = "discovery_setup_popular_tag_clicked";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -42,7 +42,7 @@ public final /* data */ class TrackDiscoverySetupPopularTagClicked implements An
             return false;
         }
         TrackDiscoverySetupPopularTagClicked trackDiscoverySetupPopularTagClicked = (TrackDiscoverySetupPopularTagClicked) other;
-        return Intrinsics3.areEqual(this.tag, trackDiscoverySetupPopularTagClicked.tag) && Intrinsics3.areEqual(this.primaryCategoryId, trackDiscoverySetupPopularTagClicked.primaryCategoryId);
+        return m.areEqual(this.tag, trackDiscoverySetupPopularTagClicked.tag) && m.areEqual(this.primaryCategoryId, trackDiscoverySetupPopularTagClicked.primaryCategoryId);
     }
 
     public int hashCode() {
@@ -53,9 +53,9 @@ public final /* data */ class TrackDiscoverySetupPopularTagClicked implements An
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDiscoverySetupPopularTagClicked(tag=");
+        StringBuilder sbU = a.U("TrackDiscoverySetupPopularTagClicked(tag=");
         sbU.append(this.tag);
         sbU.append(", primaryCategoryId=");
-        return outline.G(sbU, this.primaryCategoryId, ")");
+        return a.G(sbU, this.primaryCategoryId, ")");
     }
 }

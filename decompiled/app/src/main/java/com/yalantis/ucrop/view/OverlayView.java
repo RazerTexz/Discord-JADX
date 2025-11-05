@@ -13,8 +13,8 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import b.i.a.f.e.o.f;
-import b.q.a.h.OverlayViewChangeListener;
-import b.q.a.l.UCropView3;
+import b.q.a.h.d;
+import b.q.a.l.e;
 import com.yalantis.ucrop.R;
 
 /* loaded from: classes3.dex */
@@ -27,7 +27,7 @@ public class OverlayView extends View {
     public int F;
     public int G;
     public int H;
-    public OverlayViewChangeListener I;
+    public d I;
     public boolean J;
     public final RectF j;
     public final RectF k;
@@ -91,7 +91,7 @@ public class OverlayView extends View {
         return this.B;
     }
 
-    public OverlayViewChangeListener getOverlayViewChangeListener() {
+    public d getOverlayViewChangeListener() {
         return this.I;
     }
 
@@ -221,11 +221,11 @@ public class OverlayView extends View {
             this.C = -1.0f;
             this.D = -1.0f;
             this.E = -1;
-            OverlayViewChangeListener overlayViewChangeListener = this.I;
-            if (overlayViewChangeListener == null) {
+            d dVar = this.I;
+            if (dVar == null) {
                 return false;
             }
-            ((UCropView3) overlayViewChangeListener).a.j.setCropRect(this.j);
+            ((e) dVar).a.j.setCropRect(this.j);
             return false;
         }
         float fMin = Math.min(Math.max(x2, getPaddingLeft()), getWidth() - getPaddingRight());
@@ -319,8 +319,8 @@ public class OverlayView extends View {
         postInvalidate();
     }
 
-    public void setOverlayViewChangeListener(OverlayViewChangeListener overlayViewChangeListener) {
-        this.I = overlayViewChangeListener;
+    public void setOverlayViewChangeListener(d dVar) {
+        this.I = dVar;
     }
 
     public void setShowCropFrame(boolean z2) {
@@ -347,9 +347,9 @@ public class OverlayView extends View {
             int i5 = (i3 - i2) / 2;
             this.j.set(getPaddingLeft(), getPaddingTop() + i5, getPaddingLeft() + this.l, getPaddingTop() + i2 + i5);
         }
-        OverlayViewChangeListener overlayViewChangeListener = this.I;
-        if (overlayViewChangeListener != null) {
-            ((UCropView3) overlayViewChangeListener).a.j.setCropRect(this.j);
+        d dVar = this.I;
+        if (dVar != null) {
+            ((e) dVar).a.j.setCropRect(this.j);
         }
         a();
         postInvalidate();

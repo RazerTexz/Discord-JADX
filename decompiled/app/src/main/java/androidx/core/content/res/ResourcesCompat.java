@@ -26,7 +26,7 @@ import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.graphics.TypefaceCompat;
 import androidx.core.util.ObjectsCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -289,7 +289,7 @@ public final class ResourcesCompat {
         if (typedValue.type == 4) {
             return typedValue.getFloat();
         }
-        StringBuilder sbU = outline.U("Resource ID #0x");
+        StringBuilder sbU = a.U("Resource ID #0x");
         sbU.append(Integer.toHexString(i));
         sbU.append(" type #0x");
         sbU.append(Integer.toHexString(typedValue.type));
@@ -344,7 +344,7 @@ public final class ResourcesCompat {
         if (typefaceLoadFont != null || fontCallback != null || z3) {
             return typefaceLoadFont;
         }
-        StringBuilder sbU = outline.U("Font resource ID #0x");
+        StringBuilder sbU = a.U("Font resource ID #0x");
         sbU.append(Integer.toHexString(i));
         sbU.append(" could not be retrieved.");
         throw new Resources.NotFoundException(sbU.toString());
@@ -417,7 +417,7 @@ public final class ResourcesCompat {
                 return null;
             }
         }
-        StringBuilder sbU = outline.U("Resource \"");
+        StringBuilder sbU = a.U("Resource \"");
         sbU.append(resources.getResourceName(i));
         sbU.append("\" (");
         sbU.append(Integer.toHexString(i));

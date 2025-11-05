@@ -2,7 +2,6 @@ package com.discord.stores;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.o;
 import com.discord.models.domain.ModelSearchResponse;
 import com.discord.models.message.Message;
 import com.discord.simpleast.core.parser.Parser;
@@ -18,13 +17,12 @@ import com.discord.utilities.search.query.node.QueryNode;
 import com.discord.utilities.search.query.parsing.QueryParser;
 import com.discord.utilities.search.strings.SearchStringProvider;
 import com.discord.utilities.search.validation.SearchData;
-import d0.g0.StringsJVM;
-import d0.t.Iterables2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.g0.t;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -50,7 +48,7 @@ public final class StoreSearchQuery {
 
     /* compiled from: StoreSearchQuery.kt */
     /* renamed from: com.discord.stores.StoreSearchQuery$makeQuery$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelSearchResponse, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelSearchResponse, Unit> {
         public final /* synthetic */ boolean $isInitialLoad;
         public final /* synthetic */ SearchQuery $query;
 
@@ -69,14 +67,14 @@ public final class StoreSearchQuery {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelSearchResponse modelSearchResponse) {
-            Intrinsics3.checkNotNullParameter(modelSearchResponse, "searchResponse");
+            m.checkNotNullParameter(modelSearchResponse, "searchResponse");
             StoreSearchQuery.access$handleResponse(StoreSearchQuery.this, this.$query, modelSearchResponse, this.$isInitialLoad);
         }
     }
 
     /* compiled from: StoreSearchQuery.kt */
     /* renamed from: com.discord.stores.StoreSearchQuery$makeQuery$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -89,14 +87,14 @@ public final class StoreSearchQuery {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreSearchQuery.access$setQuerySubscription$p(StoreSearchQuery.this, subscription);
         }
     }
 
     /* compiled from: StoreSearchQuery.kt */
     /* renamed from: com.discord.stores.StoreSearchQuery$makeQuery$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -109,21 +107,21 @@ public final class StoreSearchQuery {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             StoreSearchQuery.access$handleError(StoreSearchQuery.this);
         }
     }
 
     /* compiled from: StoreSearchQuery.kt */
     /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<String, List<QueryNode>> {
+    public static final class AnonymousClass1<T, R> implements b<String, List<QueryNode>> {
         public final /* synthetic */ SearchStringProvider $searchStringProvider;
 
         public AnonymousClass1(SearchStringProvider searchStringProvider) {
             this.$searchStringProvider = searchStringProvider;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ List<QueryNode> call(String str) {
             return call2(str);
         }
@@ -131,7 +129,7 @@ public final class StoreSearchQuery {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<QueryNode> call2(String str) {
             QueryParser queryParser = new QueryParser(this.$searchStringProvider);
-            Intrinsics3.checkNotNullExpressionValue(str, "it");
+            m.checkNotNullExpressionValue(str, "it");
             return Parser.parse$default(queryParser, str, null, null, 4, null);
         }
     }
@@ -157,8 +155,8 @@ public final class StoreSearchQuery {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final SearchQuery call2(List<QueryNode> list, SearchData searchData) {
             QueryNode.Companion companion = QueryNode.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(list, "queryNodes");
-            Intrinsics3.checkNotNullExpressionValue(searchData, "searchData");
+            m.checkNotNullExpressionValue(list, "queryNodes");
+            m.checkNotNullExpressionValue(searchData, "searchData");
             companion.preprocess(list, searchData);
             this.$searchStore.persistQuery$app_productionGoogleRelease(this.$searchTarget, list);
             return new SearchQuery.Builder().setIncludeNsfw(this.$includeNsfw).buildFrom(list, searchData);
@@ -167,7 +165,7 @@ public final class StoreSearchQuery {
 
     /* compiled from: StoreSearchQuery.kt */
     /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<SearchQuery, Boolean> {
+    public static final class AnonymousClass3 extends o implements Function1<SearchQuery, Boolean> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
         public AnonymousClass3() {
@@ -187,7 +185,7 @@ public final class StoreSearchQuery {
 
     /* compiled from: StoreSearchQuery.kt */
     /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<SearchQuery, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<SearchQuery, Unit> {
         public final /* synthetic */ StoreSearch.SearchTarget $searchTarget;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -213,7 +211,7 @@ public final class StoreSearchQuery {
     }
 
     public StoreSearchQuery(SearchFetcher searchFetcher) {
-        Intrinsics3.checkNotNullParameter(searchFetcher, "searchFetcher");
+        m.checkNotNullParameter(searchFetcher, "searchFetcher");
         this.searchFetcher = searchFetcher;
         SearchState searchState = SEARCH_STATE_NONE;
         this.searchStateSubject = new SerializedSubject<>(BehaviorSubject.l0(searchState));
@@ -256,14 +254,14 @@ public final class StoreSearchQuery {
             } else {
                 totalResults = this.currentSearchState.getTotalResults();
                 List<Message> hits = this.currentSearchState.getHits();
-                if (hits == null || (arrayList = _Collections.toMutableList((Collection) hits)) == null) {
+                if (hits == null || (arrayList = u.toMutableList((Collection) hits)) == null) {
                     arrayList = new ArrayList();
                 }
             }
             int i = totalResults;
             List list = arrayList;
             List<com.discord.api.message.Message> hits2 = response.getHits();
-            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(hits2, 10));
+            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(hits2, 10));
             Iterator<T> it = hits2.iterator();
             while (it.hasNext()) {
                 arrayList2.add(new Message((com.discord.api.message.Message) it.next()));
@@ -314,12 +312,12 @@ public final class StoreSearchQuery {
 
     public final Observable<SearchState> getState() {
         Observable<SearchState> observableR = this.searchStateSubject.r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "searchStateSubject\n        .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "searchStateSubject\n        .distinctUntilChanged()");
         return observableR;
     }
 
     public final synchronized void loadMore(StoreSearch.SearchTarget searchTarget, long oldestMessageId) {
-        Intrinsics3.checkNotNullParameter(searchTarget, "searchTarget");
+        m.checkNotNullParameter(searchTarget, "searchTarget");
         SearchQuery searchQuery = this.currentSearchState.getSearchQuery();
         if (searchQuery != null) {
             if (this.currentSearchState.getQueryFetchState() != QueryFetchState.COMPLETED) {
@@ -334,18 +332,18 @@ public final class StoreSearchQuery {
     }
 
     public final void parseAndQuery(StoreSearch searchStore, StoreSearch.SearchTarget searchTarget, String queryString, SearchStringProvider searchStringProvider, boolean includeNsfw) {
-        Intrinsics3.checkNotNullParameter(searchStore, "searchStore");
-        Intrinsics3.checkNotNullParameter(searchTarget, "searchTarget");
-        Intrinsics3.checkNotNullParameter(queryString, "queryString");
-        Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+        m.checkNotNullParameter(searchStore, "searchStore");
+        m.checkNotNullParameter(searchTarget, "searchTarget");
+        m.checkNotNullParameter(queryString, "queryString");
+        m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
         unsubscribe();
-        if (!(!StringsJVM.isBlank(queryString))) {
+        if (!(!t.isBlank(queryString))) {
             updateAndPublish(new SearchState(QueryFetchState.NONE, null, null, null, null, false, 0, 126, null));
             return;
         }
         updateAndPublish(new SearchState(QueryFetchState.IN_PROGRESS, null, null, null, null, false, 0, 126, null));
-        Observable observableZ = Observable.j0(new ScalarSynchronousObservable(queryString).G(new AnonymousClass1(searchStringProvider)), searchStore.getStoreSearchData().get(), new AnonymousClass2(searchStore, searchTarget, includeNsfw)).k(o.c(AnonymousClass3.INSTANCE, null, 1L, TimeUnit.SECONDS)).Z(1);
-        Intrinsics3.checkNotNullExpressionValue(observableZ, "Observable\n            .…   )\n            .take(1)");
+        Observable observableZ = Observable.j0(new k(queryString).G(new AnonymousClass1(searchStringProvider)), searchStore.getStoreSearchData().get(), new AnonymousClass2(searchStore, searchTarget, includeNsfw)).k(b.a.d.o.c(AnonymousClass3.INSTANCE, null, 1L, TimeUnit.SECONDS)).Z(1);
+        m.checkNotNullExpressionValue(observableZ, "Observable\n            .…   )\n            .take(1)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationBuffered(observableZ), (Context) null, "parseAndQuery", (Function1) null, new AnonymousClass4(searchTarget), (Function1) null, (Function0) null, (Function0) null, 117, (Object) null);
     }
 }

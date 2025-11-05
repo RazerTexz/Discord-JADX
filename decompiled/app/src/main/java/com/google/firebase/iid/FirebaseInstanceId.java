@@ -8,12 +8,9 @@ import android.util.Pair;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.e.o.f;
-import b.i.a.f.e.o.j.a;
-import b.i.c.FirebaseApp2;
-import b.i.c.r.HeartBeatInfo;
-import b.i.c.s.h;
+import b.i.c.c;
+import b.i.c.r.d;
 import b.i.c.s.i;
 import b.i.c.s.j;
 import b.i.c.s.k;
@@ -26,9 +23,9 @@ import b.i.c.s.t;
 import b.i.c.s.u;
 import b.i.c.s.w;
 import b.i.c.s.x;
-import b.i.c.t.Provider2;
+import b.i.c.t.a;
 import b.i.c.u.g;
-import b.i.c.x.UserAgentPublisher;
+import b.i.c.x.h;
 import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.Objects;
@@ -52,7 +49,7 @@ public class FirebaseInstanceId {
     public static w f3111b;
     public static ScheduledExecutorService d;
     public final Executor e;
-    public final FirebaseApp2 f;
+    public final c f;
     public final q g;
     public final n h;
     public final u i;
@@ -61,31 +58,31 @@ public class FirebaseInstanceId {
     public static final long a = TimeUnit.HOURS.toSeconds(8);
     public static final Pattern c = Pattern.compile("\\AA[\\w-]{38}\\z");
 
-    public FirebaseInstanceId(FirebaseApp2 firebaseApp2, Provider2<UserAgentPublisher> provider2, Provider2<HeartBeatInfo> provider22, g gVar) {
-        firebaseApp2.a();
-        q qVar = new q(firebaseApp2.d);
-        ExecutorService executorServiceA = h.a();
-        ExecutorService executorServiceA2 = h.a();
+    public FirebaseInstanceId(c cVar, a<h> aVar, a<d> aVar2, g gVar) {
+        cVar.a();
+        q qVar = new q(cVar.d);
+        ExecutorService executorServiceA = b.i.c.s.h.a();
+        ExecutorService executorServiceA2 = b.i.c.s.h.a();
         this.k = false;
-        if (q.b(firebaseApp2) == null) {
+        if (q.b(cVar) == null) {
             throw new IllegalStateException("FirebaseInstanceId failed to initialize, FirebaseApp is missing project ID");
         }
         synchronized (FirebaseInstanceId.class) {
             if (f3111b == null) {
-                firebaseApp2.a();
-                f3111b = new w(firebaseApp2.d);
+                cVar.a();
+                f3111b = new w(cVar.d);
             }
         }
-        this.f = firebaseApp2;
+        this.f = cVar;
         this.g = qVar;
-        this.h = new n(firebaseApp2, qVar, provider2, provider22, gVar);
+        this.h = new n(cVar, qVar, aVar, aVar2, gVar);
         this.e = executorServiceA2;
         this.i = new u(executorServiceA);
         this.j = gVar;
     }
 
     public static <T> T a(@NonNull Task<T> task) throws InterruptedException {
-        AnimatableValueParser.z(task, "Task must not be null");
+        b.c.a.a0.d.z(task, "Task must not be null");
         CountDownLatch countDownLatch = new CountDownLatch(1);
         task.c(j.j, new k(countDownLatch));
         countDownLatch.await(30000L, TimeUnit.MILLISECONDS);
@@ -101,26 +98,26 @@ public class FirebaseInstanceId {
         throw new IllegalThreadStateException("Firebase Installations getId Task has timed out.");
     }
 
-    public static void c(@NonNull FirebaseApp2 firebaseApp2) {
-        firebaseApp2.a();
-        AnimatableValueParser.v(firebaseApp2.f.g, "Please set your project ID. A valid Firebase project ID is required to communicate with Firebase server APIs: It identifies your project with Google.");
-        firebaseApp2.a();
-        AnimatableValueParser.v(firebaseApp2.f.f1655b, "Please set your Application ID. A valid Firebase App ID is required to communicate with Firebase server APIs: It identifies your application with Firebase.");
-        firebaseApp2.a();
-        AnimatableValueParser.v(firebaseApp2.f.a, "Please set a valid API key. A Firebase API key is required to communicate with Firebase server APIs: It authenticates your project with Google.");
-        firebaseApp2.a();
-        AnimatableValueParser.o(firebaseApp2.f.f1655b.contains(":"), "Please set your Application ID. A valid Firebase App ID is required to communicate with Firebase server APIs: It identifies your application with Firebase.Please refer to https://firebase.google.com/support/privacy/init-options.");
-        firebaseApp2.a();
-        AnimatableValueParser.o(c.matcher(firebaseApp2.f.a).matches(), "Please set a valid API key. A Firebase API key is required to communicate with Firebase server APIs: It authenticates your project with Google.Please refer to https://firebase.google.com/support/privacy/init-options.");
+    public static void c(@NonNull c cVar) {
+        cVar.a();
+        b.c.a.a0.d.v(cVar.f.g, "Please set your project ID. A valid Firebase project ID is required to communicate with Firebase server APIs: It identifies your project with Google.");
+        cVar.a();
+        b.c.a.a0.d.v(cVar.f.f1655b, "Please set your Application ID. A valid Firebase App ID is required to communicate with Firebase server APIs: It identifies your application with Firebase.");
+        cVar.a();
+        b.c.a.a0.d.v(cVar.f.a, "Please set a valid API key. A Firebase API key is required to communicate with Firebase server APIs: It authenticates your project with Google.");
+        cVar.a();
+        b.c.a.a0.d.o(cVar.f.f1655b.contains(":"), "Please set your Application ID. A valid Firebase App ID is required to communicate with Firebase server APIs: It identifies your application with Firebase.Please refer to https://firebase.google.com/support/privacy/init-options.");
+        cVar.a();
+        b.c.a.a0.d.o(c.matcher(cVar.f.a).matches(), "Please set a valid API key. A Firebase API key is required to communicate with Firebase server APIs: It authenticates your project with Google.Please refer to https://firebase.google.com/support/privacy/init-options.");
     }
 
     @NonNull
     @Keep
-    public static FirebaseInstanceId getInstance(@NonNull FirebaseApp2 firebaseApp2) {
-        c(firebaseApp2);
-        firebaseApp2.a();
-        FirebaseInstanceId firebaseInstanceId = (FirebaseInstanceId) firebaseApp2.g.a(FirebaseInstanceId.class);
-        AnimatableValueParser.z(firebaseInstanceId, "Firebase Instance ID component is not present");
+    public static FirebaseInstanceId getInstance(@NonNull c cVar) {
+        c(cVar);
+        cVar.a();
+        FirebaseInstanceId firebaseInstanceId = (FirebaseInstanceId) cVar.g.a(FirebaseInstanceId.class);
+        b.c.a.a0.d.z(firebaseInstanceId, "Firebase Instance ID component is not present");
         return firebaseInstanceId;
     }
 
@@ -161,7 +158,7 @@ public class FirebaseInstanceId {
     public void d(Runnable runnable, long j) {
         synchronized (FirebaseInstanceId.class) {
             if (d == null) {
-                d = new ScheduledThreadPoolExecutor(1, new a("FirebaseInstanceId"));
+                d = new ScheduledThreadPoolExecutor(1, new b.i.a.f.e.o.j.a("FirebaseInstanceId"));
             }
             d.schedule(runnable, j, TimeUnit.SECONDS);
         }
@@ -195,9 +192,9 @@ public class FirebaseInstanceId {
     }
 
     public final String h() {
-        FirebaseApp2 firebaseApp2 = this.f;
-        firebaseApp2.a();
-        return "[DEFAULT]".equals(firebaseApp2.e) ? "" : this.f.c();
+        c cVar = this.f;
+        cVar.a();
+        return "[DEFAULT]".equals(cVar.e) ? "" : this.f.c();
     }
 
     @Nullable

@@ -1,7 +1,7 @@
 package com.discord.models.gifpicker.dto;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrendingGifsResponseDto.kt */
@@ -11,8 +11,8 @@ public final /* data */ class TrendingGifsResponseDto {
     private final List<TrendingGifPreviewDto> gifs;
 
     public TrendingGifsResponseDto(List<GifCategoryDto> list, List<TrendingGifPreviewDto> list2) {
-        Intrinsics3.checkNotNullParameter(list, "categories");
-        Intrinsics3.checkNotNullParameter(list2, "gifs");
+        m.checkNotNullParameter(list, "categories");
+        m.checkNotNullParameter(list2, "gifs");
         this.categories = list;
         this.gifs = list2;
     }
@@ -37,8 +37,8 @@ public final /* data */ class TrendingGifsResponseDto {
     }
 
     public final TrendingGifsResponseDto copy(List<GifCategoryDto> categories, List<TrendingGifPreviewDto> gifs) {
-        Intrinsics3.checkNotNullParameter(categories, "categories");
-        Intrinsics3.checkNotNullParameter(gifs, "gifs");
+        m.checkNotNullParameter(categories, "categories");
+        m.checkNotNullParameter(gifs, "gifs");
         return new TrendingGifsResponseDto(categories, gifs);
     }
 
@@ -50,7 +50,7 @@ public final /* data */ class TrendingGifsResponseDto {
             return false;
         }
         TrendingGifsResponseDto trendingGifsResponseDto = (TrendingGifsResponseDto) other;
-        return Intrinsics3.areEqual(this.categories, trendingGifsResponseDto.categories) && Intrinsics3.areEqual(this.gifs, trendingGifsResponseDto.gifs);
+        return m.areEqual(this.categories, trendingGifsResponseDto.categories) && m.areEqual(this.gifs, trendingGifsResponseDto.gifs);
     }
 
     public final List<GifCategoryDto> getCategories() {
@@ -69,9 +69,9 @@ public final /* data */ class TrendingGifsResponseDto {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrendingGifsResponseDto(categories=");
+        StringBuilder sbU = a.U("TrendingGifsResponseDto(categories=");
         sbU.append(this.categories);
         sbU.append(", gifs=");
-        return outline.L(sbU, this.gifs, ")");
+        return a.L(sbU, this.gifs, ")");
     }
 }

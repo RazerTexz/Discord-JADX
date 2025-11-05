@@ -1,14 +1,14 @@
 package com.franmontiel.persistentcookiejar.cache;
 
-import b.d.b.a.outline;
-import f0.Cookie;
+import b.d.b.a.a;
+import f0.n;
 
 /* loaded from: classes3.dex */
 public class IdentifiableCookie {
-    public Cookie a;
+    public n a;
 
-    public IdentifiableCookie(Cookie cookie) {
-        this.a = cookie;
+    public IdentifiableCookie(n nVar) {
+        this.a = nVar;
     }
 
     public boolean equals(Object obj) {
@@ -19,15 +19,15 @@ public class IdentifiableCookie {
         if (!identifiableCookie.a.f.equals(this.a.f) || !identifiableCookie.a.i.equals(this.a.i) || !identifiableCookie.a.j.equals(this.a.j)) {
             return false;
         }
-        Cookie cookie = identifiableCookie.a;
-        boolean z2 = cookie.k;
-        Cookie cookie2 = this.a;
-        return z2 == cookie2.k && cookie.n == cookie2.n;
+        n nVar = identifiableCookie.a;
+        boolean z2 = nVar.k;
+        n nVar2 = this.a;
+        return z2 == nVar2.k && nVar.n == nVar2.n;
     }
 
     public int hashCode() {
-        int iM = outline.m(this.a.j, outline.m(this.a.i, outline.m(this.a.f, 527, 31), 31), 31);
-        Cookie cookie = this.a;
-        return ((iM + (!cookie.k ? 1 : 0)) * 31) + (!cookie.n ? 1 : 0);
+        int iM = a.m(this.a.j, a.m(this.a.i, a.m(this.a.f, 527, 31), 31), 31);
+        n nVar = this.a;
+        return ((iM + (!nVar.k ? 1 : 0)) * 31) + (!nVar.n ? 1 : 0);
     }
 }

@@ -1,8 +1,8 @@
 package co.discord.media_engine.internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Arrays;
 import org.webrtc.MediaStreamTrack;
 
@@ -14,7 +14,7 @@ public final /* data */ class Outbound {
     private final OutboundVideo[] videos;
 
     public Outbound(String str, OutboundAudio outboundAudio, OutboundVideo[] outboundVideoArr) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
         this.id = str;
         this.audio = outboundAudio;
         this.videos = outboundVideoArr;
@@ -49,7 +49,7 @@ public final /* data */ class Outbound {
     }
 
     public final Outbound copy(String id2, OutboundAudio audio, OutboundVideo[] videos) {
-        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
         return new Outbound(id2, audio, videos);
     }
 
@@ -61,7 +61,7 @@ public final /* data */ class Outbound {
             return false;
         }
         Outbound outbound = (Outbound) other;
-        return Intrinsics3.areEqual(this.id, outbound.id) && Intrinsics3.areEqual(this.audio, outbound.audio) && Intrinsics3.areEqual(this.videos, outbound.videos);
+        return m.areEqual(this.id, outbound.id) && m.areEqual(this.audio, outbound.audio) && m.areEqual(this.videos, outbound.videos);
     }
 
     public final OutboundAudio getAudio() {
@@ -86,7 +86,7 @@ public final /* data */ class Outbound {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Outbound(id=");
+        StringBuilder sbU = a.U("Outbound(id=");
         sbU.append(this.id);
         sbU.append(", audio=");
         sbU.append(this.audio);

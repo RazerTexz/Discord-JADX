@@ -11,9 +11,9 @@ import com.discord.api.role.GuildRole;
 import com.discord.databinding.WidgetChatListAdapterItemTextBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.color.ColorCompat;
-import d0.LazyJVM;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.g0.t;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -28,18 +28,18 @@ public final class GuildRoleSubscriptionMemberPreview extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionMemberPreview(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         WidgetChatListAdapterItemTextBinding widgetChatListAdapterItemTextBindingB = WidgetChatListAdapterItemTextBinding.b(LayoutInflater.from(getContext()), this, true);
-        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemTextBindingB, "WidgetChatListAdapterIte…rom(context), this, true)");
+        m.checkNotNullExpressionValue(widgetChatListAdapterItemTextBindingB, "WidgetChatListAdapterIte…rom(context), this, true)");
         this.binding = widgetChatListAdapterItemTextBindingB;
-        this.defaultColor = LazyJVM.lazy(new GuildRoleSubscriptionMemberPreview2(this));
+        this.defaultColor = g.lazy(new GuildRoleSubscriptionMemberPreview$defaultColor$2(this));
         if (isInEditMode()) {
             widgetChatListAdapterItemTextBindingB.c.setImageResource(R.drawable.img_guild_role_subscription_default_avatar_40dp);
         } else {
             widgetChatListAdapterItemTextBindingB.c.setActualImageResource(R.drawable.img_guild_role_subscription_default_avatar_40dp);
         }
         TextView textView = widgetChatListAdapterItemTextBindingB.f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextTag");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextTag");
         textView.setVisibility(8);
         widgetChatListAdapterItemTextBindingB.d.setText(R.string.wumpus);
         widgetChatListAdapterItemTextBindingB.g.setText(R.string.sample_time_pm);
@@ -65,7 +65,7 @@ public final class GuildRoleSubscriptionMemberPreview extends FrameLayout {
 
     public final void setMemberDesign(@ColorInt Integer color, String icon, GuildRole guildRole) {
         this.binding.d.setTextColor(color != null ? color.intValue() : getDefaultColor());
-        if (icon == null || StringsJVM.isBlank(icon)) {
+        if (icon == null || t.isBlank(icon)) {
             this.binding.e.setRoleIconPreview(guildRole);
         } else {
             this.binding.e.setRoleIconPreview(icon);
@@ -75,18 +75,18 @@ public final class GuildRoleSubscriptionMemberPreview extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionMemberPreview(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         WidgetChatListAdapterItemTextBinding widgetChatListAdapterItemTextBindingB = WidgetChatListAdapterItemTextBinding.b(LayoutInflater.from(getContext()), this, true);
-        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemTextBindingB, "WidgetChatListAdapterIte…rom(context), this, true)");
+        m.checkNotNullExpressionValue(widgetChatListAdapterItemTextBindingB, "WidgetChatListAdapterIte…rom(context), this, true)");
         this.binding = widgetChatListAdapterItemTextBindingB;
-        this.defaultColor = LazyJVM.lazy(new GuildRoleSubscriptionMemberPreview2(this));
+        this.defaultColor = g.lazy(new GuildRoleSubscriptionMemberPreview$defaultColor$2(this));
         if (isInEditMode()) {
             widgetChatListAdapterItemTextBindingB.c.setImageResource(R.drawable.img_guild_role_subscription_default_avatar_40dp);
         } else {
             widgetChatListAdapterItemTextBindingB.c.setActualImageResource(R.drawable.img_guild_role_subscription_default_avatar_40dp);
         }
         TextView textView = widgetChatListAdapterItemTextBindingB.f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextTag");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextTag");
         textView.setVisibility(8);
         widgetChatListAdapterItemTextBindingB.d.setText(R.string.wumpus);
         widgetChatListAdapterItemTextBindingB.g.setText(R.string.sample_time_pm);
@@ -103,18 +103,18 @@ public final class GuildRoleSubscriptionMemberPreview extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionMemberPreview(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         WidgetChatListAdapterItemTextBinding widgetChatListAdapterItemTextBindingB = WidgetChatListAdapterItemTextBinding.b(LayoutInflater.from(getContext()), this, true);
-        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemTextBindingB, "WidgetChatListAdapterIte…rom(context), this, true)");
+        m.checkNotNullExpressionValue(widgetChatListAdapterItemTextBindingB, "WidgetChatListAdapterIte…rom(context), this, true)");
         this.binding = widgetChatListAdapterItemTextBindingB;
-        this.defaultColor = LazyJVM.lazy(new GuildRoleSubscriptionMemberPreview2(this));
+        this.defaultColor = g.lazy(new GuildRoleSubscriptionMemberPreview$defaultColor$2(this));
         if (isInEditMode()) {
             widgetChatListAdapterItemTextBindingB.c.setImageResource(R.drawable.img_guild_role_subscription_default_avatar_40dp);
         } else {
             widgetChatListAdapterItemTextBindingB.c.setActualImageResource(R.drawable.img_guild_role_subscription_default_avatar_40dp);
         }
         TextView textView = widgetChatListAdapterItemTextBindingB.f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextTag");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextTag");
         textView.setVisibility(8);
         widgetChatListAdapterItemTextBindingB.d.setText(R.string.wumpus);
         widgetChatListAdapterItemTextBindingB.g.setText(R.string.sample_time_pm);

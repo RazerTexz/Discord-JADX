@@ -6,9 +6,9 @@ import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.l.e.k;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -32,20 +32,20 @@ public final class StoreApplication extends StoreV2 {
 
     /* compiled from: StoreApplication.kt */
     /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $appId;
 
         /* compiled from: StoreApplication.kt */
         /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00761 extends Lambda implements Function1<List<? extends Application>, Unit> {
+        public static final class C01961 extends o implements Function1<List<? extends Application>, Unit> {
 
             /* compiled from: StoreApplication.kt */
             /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00771 extends Lambda implements Function0<Unit> {
+            public static final class C01971 extends o implements Function0<Unit> {
                 public final /* synthetic */ List $results;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C00771(List list) {
+                public C01971(List list) {
                     super(0);
                     this.$results = list;
                 }
@@ -80,7 +80,7 @@ public final class StoreApplication extends StoreV2 {
                 }
             }
 
-            public C00761() {
+            public C01961() {
                 super(1);
             }
 
@@ -92,19 +92,19 @@ public final class StoreApplication extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<Application> list) {
-                Intrinsics3.checkNotNullParameter(list, "results");
-                StoreApplication.access$getDispatcher$p(StoreApplication.this).schedule(new C00771(list));
+                m.checkNotNullParameter(list, "results");
+                StoreApplication.access$getDispatcher$p(StoreApplication.this).schedule(new C01971(list));
             }
         }
 
         /* compiled from: StoreApplication.kt */
         /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
             /* compiled from: StoreApplication.kt */
             /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00781 extends Lambda implements Function0<Unit> {
-                public C00781() {
+            public static final class C01981 extends o implements Function0<Unit> {
+                public C01981() {
                     super(0);
                 }
 
@@ -132,8 +132,8 @@ public final class StoreApplication extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
-                StoreApplication.access$getDispatcher$p(StoreApplication.this).schedule(new C00781());
+                m.checkNotNullParameter(error, "it");
+                StoreApplication.access$getDispatcher$p(StoreApplication.this).schedule(new C01981());
             }
         }
 
@@ -155,13 +155,13 @@ public final class StoreApplication extends StoreV2 {
                 return;
             }
             StoreApplication.access$getApplicationsLoading$p(StoreApplication.this).add(Long.valueOf(this.$appId));
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getApplications(this.$appId), false, 1, null), StoreApplication.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C00761(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getApplications(this.$appId), false, 1, null), StoreApplication.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C01961(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreApplication.kt */
     /* renamed from: com.discord.stores.StoreApplication$observeApplication$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Application> {
+    public static final class AnonymousClass1 extends o implements Function0<Application> {
         public final /* synthetic */ Long $appId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -184,7 +184,7 @@ public final class StoreApplication extends StoreV2 {
 
     /* compiled from: StoreApplication.kt */
     /* renamed from: com.discord.stores.StoreApplication$observeApplications$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends Application>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Application>> {
         public final /* synthetic */ Collection $applicationIds;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -213,8 +213,8 @@ public final class StoreApplication extends StoreV2 {
     }
 
     public StoreApplication(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.applications = new HashMap<>();
@@ -251,15 +251,15 @@ public final class StoreApplication extends StoreV2 {
             fetchIfNonexisting(appId.longValue());
             return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(appId), 14, null);
         }
-        ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
-        Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable\n          .just(null)");
-        return scalarSynchronousObservable;
+        k kVar = new k(null);
+        m.checkNotNullExpressionValue(kVar, "Observable\n          .just(null)");
+        return kVar;
     }
 
     public final Observable<Map<Long, Application>> observeApplications(Collection<Long> applicationIds) {
-        Intrinsics3.checkNotNullParameter(applicationIds, "applicationIds");
+        m.checkNotNullParameter(applicationIds, "applicationIds");
         Observable<Map<Long, Application>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(applicationIds), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 

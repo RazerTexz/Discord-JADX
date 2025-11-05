@@ -11,11 +11,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.IntRange;
 import androidx.annotation.Px;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
 import com.discord.R;
 import com.discord.utilities.dimen.DimenUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: CutoutView.kt */
 /* loaded from: classes2.dex */
@@ -41,16 +39,16 @@ public class CutoutView extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CutoutView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         this.style = a.d.a;
         this.isCutoutEnabled = true;
         setWillNotDraw(false);
         int[] iArr = R.a.CutoutView;
-        Intrinsics3.checkNotNullExpressionValue(iArr, "R.styleable.CutoutView");
+        m.checkNotNullExpressionValue(iArr, "R.styleable.CutoutView");
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
-        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
+        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(attrs, styleable)");
         if (typedArrayObtainStyledAttributes.getInt(2, 0) == 1) {
-            setStyle(new a.C0233a(typedArrayObtainStyledAttributes.getDimensionPixelSize(1, j), typedArrayObtainStyledAttributes.getDimensionPixelSize(0, k)));
+            setStyle(new a.C0353a(typedArrayObtainStyledAttributes.getDimensionPixelSize(1, j), typedArrayObtainStyledAttributes.getDimensionPixelSize(0, k)));
         }
         typedArrayObtainStyledAttributes.recycle();
     }
@@ -58,7 +56,7 @@ public class CutoutView extends FrameLayout {
     @Override // android.view.View
     public void draw(Canvas canvas) {
         Path path;
-        Intrinsics3.checkNotNullParameter(canvas, "canvas");
+        m.checkNotNullParameter(canvas, "canvas");
         int iSave = canvas.save();
         try {
             if (this.isCutoutEnabled && (path = this.drawBounds) != null) {
@@ -82,7 +80,7 @@ public class CutoutView extends FrameLayout {
                 View view = new View(getContext());
                 view.setBackgroundColor((int) 4278255360L);
                 addView(view);
-                setStyle(new a.C0233a(0, 0, 3));
+                setStyle(new a.C0353a(0, 0, 3));
             }
         }
     }
@@ -99,7 +97,7 @@ public class CutoutView extends FrameLayout {
         this.lastHeight = measuredHeight;
         a aVar = this.style;
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         this.drawBounds = aVar.a(context, measuredWidth, measuredHeight);
     }
 
@@ -111,13 +109,13 @@ public class CutoutView extends FrameLayout {
     }
 
     public final void setStyle(a aVar) {
-        Intrinsics3.checkNotNullParameter(aVar, "value");
+        m.checkNotNullParameter(aVar, "value");
         this.style = aVar;
         if (this.lastWidth <= 0 || this.lastHeight <= 0) {
             return;
         }
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         this.drawBounds = aVar.a(context, this.lastWidth, this.lastHeight);
         invalidate();
     }
@@ -139,14 +137,14 @@ public class CutoutView extends FrameLayout {
 
             @Override // com.discord.views.CutoutView.a
             public Path a(Context context, int i, int i2) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 float f = i;
                 int i3 = this.a;
                 float f2 = i3 - (f / 2.0f);
                 float f3 = i3 * 2.0f;
                 float f4 = -f2;
                 float f5 = i2 + f2;
-                if (AnimatableValueParser.U0(context)) {
+                if (b.c.a.a0.d.U0(context)) {
                     float f6 = f - this.f2827b;
                     RectF rectF = new RectF(f6, f4, f3 + f6, f5);
                     Path path = new Path();
@@ -183,10 +181,10 @@ public class CutoutView extends FrameLayout {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("End(cutCurveRadiusPx=");
+                StringBuilder sbU = b.d.b.a.a.U("End(cutCurveRadiusPx=");
                 sbU.append(this.a);
                 sbU.append(", cutDistanceInwardFromEdgePx=");
-                return outline.B(sbU, this.f2827b, ")");
+                return b.d.b.a.a.B(sbU, this.f2827b, ")");
             }
         }
 
@@ -200,14 +198,14 @@ public class CutoutView extends FrameLayout {
 
             @Override // com.discord.views.CutoutView.a
             public Path a(Context context, int i, int i2) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 float f = this.a;
                 Resources resources = context.getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
+                m.checkNotNullExpressionValue(resources, "context.resources");
                 float f2 = f * resources.getDisplayMetrics().density;
                 float f3 = i2;
                 float f4 = f3 / 2.0f;
-                if (AnimatableValueParser.U0(context)) {
+                if (b.c.a.a0.d.U0(context)) {
                     Path path = new Path();
                     float f5 = i + f2;
                     path.moveTo(0.0f, 0.0f);
@@ -240,7 +238,7 @@ public class CutoutView extends FrameLayout {
             }
 
             public String toString() {
-                return outline.B(outline.U("EndOverlap(offsetDp="), this.a, ")");
+                return b.d.b.a.a.B(b.d.b.a.a.U("EndOverlap(offsetDp="), this.a, ")");
             }
         }
 
@@ -250,7 +248,7 @@ public class CutoutView extends FrameLayout {
 
             @Override // com.discord.views.CutoutView.a
             public Path a(Context context, int i, int i2) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 return null;
             }
         }
@@ -259,13 +257,13 @@ public class CutoutView extends FrameLayout {
 
         /* compiled from: CutoutView.kt */
         /* renamed from: com.discord.views.CutoutView$a$a, reason: collision with other inner class name */
-        public static final class C0233a implements a {
+        public static final class C0353a implements a {
             public final int a;
 
             /* renamed from: b, reason: collision with root package name */
             public final int f2826b;
 
-            public C0233a() {
+            public C0353a() {
                 int i = CutoutView.j;
                 int i2 = CutoutView.k;
                 this.a = i;
@@ -274,11 +272,11 @@ public class CutoutView extends FrameLayout {
 
             @Override // com.discord.views.CutoutView.a
             public Path a(Context context, int i, int i2) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 Path path = new Path();
                 path.addRect(0.0f, 0.0f, i, i2, Path.Direction.CW);
                 Path path2 = new Path();
-                path2.addCircle(AnimatableValueParser.U0(context) ? i - this.f2826b : this.f2826b, this.f2826b, this.a, Path.Direction.CW);
+                path2.addCircle(b.c.a.a0.d.U0(context) ? i - this.f2826b : this.f2826b, this.f2826b, this.a, Path.Direction.CW);
                 Path path3 = new Path(path);
                 path3.op(path2, Path.Op.DIFFERENCE);
                 return path3;
@@ -288,11 +286,11 @@ public class CutoutView extends FrameLayout {
                 if (this == obj) {
                     return true;
                 }
-                if (!(obj instanceof C0233a)) {
+                if (!(obj instanceof C0353a)) {
                     return false;
                 }
-                C0233a c0233a = (C0233a) obj;
-                return this.a == c0233a.a && this.f2826b == c0233a.f2826b;
+                C0353a c0353a = (C0353a) obj;
+                return this.a == c0353a.a && this.f2826b == c0353a.f2826b;
             }
 
             public int hashCode() {
@@ -300,20 +298,20 @@ public class CutoutView extends FrameLayout {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("CircularBadge(badgeRadius=");
+                StringBuilder sbU = b.d.b.a.a.U("CircularBadge(badgeRadius=");
                 sbU.append(this.a);
                 sbU.append(", inset=");
-                return outline.B(sbU, this.f2826b, ")");
+                return b.d.b.a.a.B(sbU, this.f2826b, ")");
             }
 
-            public C0233a(int i, int i2, int i3) {
+            public C0353a(int i, int i2, int i3) {
                 i = (i3 & 1) != 0 ? CutoutView.j : i;
                 i2 = (i3 & 2) != 0 ? CutoutView.k : i2;
                 this.a = i;
                 this.f2826b = i2;
             }
 
-            public C0233a(@Px int i, @Px int i2) {
+            public C0353a(@Px int i, @Px int i2) {
                 this.a = i;
                 this.f2826b = i2;
             }

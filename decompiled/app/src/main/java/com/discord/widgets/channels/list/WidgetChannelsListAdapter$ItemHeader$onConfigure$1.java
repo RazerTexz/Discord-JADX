@@ -1,7 +1,7 @@
 package com.discord.widgets.channels.list;
 
 import android.view.View;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.channels.WidgetCreateChannel;
 
 /* compiled from: WidgetChannelsListAdapter.kt */
@@ -15,6 +15,6 @@ public final class WidgetChannelsListAdapter$ItemHeader$onConfigure$1 implements
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        WidgetCreateChannel.Companion.show$default(WidgetCreateChannel.INSTANCE, outline.x(view, "v", "v.context"), this.$selectedGuildId, 0, null, 8, null);
+        WidgetCreateChannel.Companion.show$default(WidgetCreateChannel.INSTANCE, a.x(view, "v", "v.context"), this.$selectedGuildId, 0, null, 8, null);
     }
 }

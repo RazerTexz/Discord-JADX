@@ -1,12 +1,12 @@
 package com.discord.stores;
 
-import d0.z.d.FunctionReferenceImpl;
+import d0.z.d.k;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: StoreStream.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class StoreStream$friendSuggestions$2 extends FunctionReferenceImpl implements Function0<Unit> {
+public final /* synthetic */ class StoreStream$friendSuggestions$2 extends k implements Function0<Unit> {
     public StoreStream$friendSuggestions$2(StoreStream storeStream) {
         super(0, storeStream, StoreStream.class, "handleFriendSuggestionsFetchFailure", "handleFriendSuggestionsFetchFailure()V", 0);
     }

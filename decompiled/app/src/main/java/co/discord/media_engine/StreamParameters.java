@@ -1,7 +1,7 @@
 package co.discord.media_engine;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: StreamParameters.kt */
 /* loaded from: classes.dex */
@@ -13,12 +13,12 @@ public final /* data */ class StreamParameters {
     private final String rid;
     private final int rtxSsrc;
     private final int ssrc;
-    private final StreamParameters2 type;
+    private final MediaType type;
 
-    public StreamParameters(StreamParameters2 streamParameters2, String str, int i, int i2, boolean z2, int i3, int i4, int i5) {
-        Intrinsics3.checkNotNullParameter(streamParameters2, "type");
-        Intrinsics3.checkNotNullParameter(str, "rid");
-        this.type = streamParameters2;
+    public StreamParameters(MediaType mediaType, String str, int i, int i2, boolean z2, int i3, int i4, int i5) {
+        m.checkNotNullParameter(mediaType, "type");
+        m.checkNotNullParameter(str, "rid");
+        this.type = mediaType;
         this.rid = str;
         this.ssrc = i;
         this.rtxSsrc = i2;
@@ -28,12 +28,12 @@ public final /* data */ class StreamParameters {
         this.maxPixelCount = i5;
     }
 
-    public static /* synthetic */ StreamParameters copy$default(StreamParameters streamParameters, StreamParameters2 streamParameters2, String str, int i, int i2, boolean z2, int i3, int i4, int i5, int i6, Object obj) {
-        return streamParameters.copy((i6 & 1) != 0 ? streamParameters.type : streamParameters2, (i6 & 2) != 0 ? streamParameters.rid : str, (i6 & 4) != 0 ? streamParameters.ssrc : i, (i6 & 8) != 0 ? streamParameters.rtxSsrc : i2, (i6 & 16) != 0 ? streamParameters.active : z2, (i6 & 32) != 0 ? streamParameters.maxBitrate : i3, (i6 & 64) != 0 ? streamParameters.quality : i4, (i6 & 128) != 0 ? streamParameters.maxPixelCount : i5);
+    public static /* synthetic */ StreamParameters copy$default(StreamParameters streamParameters, MediaType mediaType, String str, int i, int i2, boolean z2, int i3, int i4, int i5, int i6, Object obj) {
+        return streamParameters.copy((i6 & 1) != 0 ? streamParameters.type : mediaType, (i6 & 2) != 0 ? streamParameters.rid : str, (i6 & 4) != 0 ? streamParameters.ssrc : i, (i6 & 8) != 0 ? streamParameters.rtxSsrc : i2, (i6 & 16) != 0 ? streamParameters.active : z2, (i6 & 32) != 0 ? streamParameters.maxBitrate : i3, (i6 & 64) != 0 ? streamParameters.quality : i4, (i6 & 128) != 0 ? streamParameters.maxPixelCount : i5);
     }
 
     /* renamed from: component1, reason: from getter */
-    public final StreamParameters2 getType() {
+    public final MediaType getType() {
         return this.type;
     }
 
@@ -72,9 +72,9 @@ public final /* data */ class StreamParameters {
         return this.maxPixelCount;
     }
 
-    public final StreamParameters copy(StreamParameters2 type, String rid, int ssrc, int rtxSsrc, boolean active, int maxBitrate, int quality, int maxPixelCount) {
-        Intrinsics3.checkNotNullParameter(type, "type");
-        Intrinsics3.checkNotNullParameter(rid, "rid");
+    public final StreamParameters copy(MediaType type, String rid, int ssrc, int rtxSsrc, boolean active, int maxBitrate, int quality, int maxPixelCount) {
+        m.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(rid, "rid");
         return new StreamParameters(type, rid, ssrc, rtxSsrc, active, maxBitrate, quality, maxPixelCount);
     }
 
@@ -86,7 +86,7 @@ public final /* data */ class StreamParameters {
             return false;
         }
         StreamParameters streamParameters = (StreamParameters) other;
-        return Intrinsics3.areEqual(this.type, streamParameters.type) && Intrinsics3.areEqual(this.rid, streamParameters.rid) && this.ssrc == streamParameters.ssrc && this.rtxSsrc == streamParameters.rtxSsrc && this.active == streamParameters.active && this.maxBitrate == streamParameters.maxBitrate && this.quality == streamParameters.quality && this.maxPixelCount == streamParameters.maxPixelCount;
+        return m.areEqual(this.type, streamParameters.type) && m.areEqual(this.rid, streamParameters.rid) && this.ssrc == streamParameters.ssrc && this.rtxSsrc == streamParameters.rtxSsrc && this.active == streamParameters.active && this.maxBitrate == streamParameters.maxBitrate && this.quality == streamParameters.quality && this.maxPixelCount == streamParameters.maxPixelCount;
     }
 
     public final boolean getActive() {
@@ -117,14 +117,14 @@ public final /* data */ class StreamParameters {
         return this.ssrc;
     }
 
-    public final StreamParameters2 getType() {
+    public final MediaType getType() {
         return this.type;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public int hashCode() {
-        StreamParameters2 streamParameters2 = this.type;
-        int iHashCode = (streamParameters2 != null ? streamParameters2.hashCode() : 0) * 31;
+        MediaType mediaType = this.type;
+        int iHashCode = (mediaType != null ? mediaType.hashCode() : 0) * 31;
         String str = this.rid;
         int iHashCode2 = (((((iHashCode + (str != null ? str.hashCode() : 0)) * 31) + this.ssrc) * 31) + this.rtxSsrc) * 31;
         boolean z2 = this.active;
@@ -136,7 +136,7 @@ public final /* data */ class StreamParameters {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StreamParameters(type=");
+        StringBuilder sbU = a.U("StreamParameters(type=");
         sbU.append(this.type);
         sbU.append(", rid=");
         sbU.append(this.rid);
@@ -151,6 +151,6 @@ public final /* data */ class StreamParameters {
         sbU.append(", quality=");
         sbU.append(this.quality);
         sbU.append(", maxPixelCount=");
-        return outline.B(sbU, this.maxPixelCount, ")");
+        return a.B(sbU, this.maxPixelCount, ")");
     }
 }

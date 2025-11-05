@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildSettingsUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final CharSequence iconEditType = null;
@@ -47,7 +47,7 @@ public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSche
             return false;
         }
         TrackGuildSettingsUpdated trackGuildSettingsUpdated = (TrackGuildSettingsUpdated) other;
-        return Intrinsics3.areEqual(this.guildId, trackGuildSettingsUpdated.guildId) && Intrinsics3.areEqual(this.iconEditType, trackGuildSettingsUpdated.iconEditType) && Intrinsics3.areEqual(this.guildName, trackGuildSettingsUpdated.guildName) && Intrinsics3.areEqual(this.oldGuildName, trackGuildSettingsUpdated.oldGuildName) && Intrinsics3.areEqual(this.animatedIcon, trackGuildSettingsUpdated.animatedIcon) && Intrinsics3.areEqual(this.bannerEditType, trackGuildSettingsUpdated.bannerEditType) && Intrinsics3.areEqual(this.splashEditType, trackGuildSettingsUpdated.splashEditType) && Intrinsics3.areEqual(this.vanityUrlCodeEditType, trackGuildSettingsUpdated.vanityUrlCodeEditType) && Intrinsics3.areEqual(this.vanityUrlCode, trackGuildSettingsUpdated.vanityUrlCode) && Intrinsics3.areEqual(this.oldVanityUrlCode, trackGuildSettingsUpdated.oldVanityUrlCode) && Intrinsics3.areEqual(this.discoverySplashEditType, trackGuildSettingsUpdated.discoverySplashEditType) && Intrinsics3.areEqual(this.description, trackGuildSettingsUpdated.description) && Intrinsics3.areEqual(this.preferredLocale, trackGuildSettingsUpdated.preferredLocale) && Intrinsics3.areEqual(this.isPublic, trackGuildSettingsUpdated.isPublic) && Intrinsics3.areEqual(this.isDiscoverable, trackGuildSettingsUpdated.isDiscoverable) && Intrinsics3.areEqual(this.isFeaturable, trackGuildSettingsUpdated.isFeaturable) && Intrinsics3.areEqual(this.rulesChannelId, trackGuildSettingsUpdated.rulesChannelId) && Intrinsics3.areEqual(this.publicUpdatesChannelId, trackGuildSettingsUpdated.publicUpdatesChannelId) && Intrinsics3.areEqual(this.premiumProgressBarEnabled, trackGuildSettingsUpdated.premiumProgressBarEnabled) && Intrinsics3.areEqual(this.animatedBanner, trackGuildSettingsUpdated.animatedBanner);
+        return m.areEqual(this.guildId, trackGuildSettingsUpdated.guildId) && m.areEqual(this.iconEditType, trackGuildSettingsUpdated.iconEditType) && m.areEqual(this.guildName, trackGuildSettingsUpdated.guildName) && m.areEqual(this.oldGuildName, trackGuildSettingsUpdated.oldGuildName) && m.areEqual(this.animatedIcon, trackGuildSettingsUpdated.animatedIcon) && m.areEqual(this.bannerEditType, trackGuildSettingsUpdated.bannerEditType) && m.areEqual(this.splashEditType, trackGuildSettingsUpdated.splashEditType) && m.areEqual(this.vanityUrlCodeEditType, trackGuildSettingsUpdated.vanityUrlCodeEditType) && m.areEqual(this.vanityUrlCode, trackGuildSettingsUpdated.vanityUrlCode) && m.areEqual(this.oldVanityUrlCode, trackGuildSettingsUpdated.oldVanityUrlCode) && m.areEqual(this.discoverySplashEditType, trackGuildSettingsUpdated.discoverySplashEditType) && m.areEqual(this.description, trackGuildSettingsUpdated.description) && m.areEqual(this.preferredLocale, trackGuildSettingsUpdated.preferredLocale) && m.areEqual(this.isPublic, trackGuildSettingsUpdated.isPublic) && m.areEqual(this.isDiscoverable, trackGuildSettingsUpdated.isDiscoverable) && m.areEqual(this.isFeaturable, trackGuildSettingsUpdated.isFeaturable) && m.areEqual(this.rulesChannelId, trackGuildSettingsUpdated.rulesChannelId) && m.areEqual(this.publicUpdatesChannelId, trackGuildSettingsUpdated.publicUpdatesChannelId) && m.areEqual(this.premiumProgressBarEnabled, trackGuildSettingsUpdated.premiumProgressBarEnabled) && m.areEqual(this.animatedBanner, trackGuildSettingsUpdated.animatedBanner);
     }
 
     public int hashCode() {
@@ -94,7 +94,7 @@ public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildSettingsUpdated(guildId=");
+        StringBuilder sbU = a.U("TrackGuildSettingsUpdated(guildId=");
         sbU.append(this.guildId);
         sbU.append(", iconEditType=");
         sbU.append(this.iconEditType);
@@ -133,6 +133,6 @@ public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSche
         sbU.append(", premiumProgressBarEnabled=");
         sbU.append(this.premiumProgressBarEnabled);
         sbU.append(", animatedBanner=");
-        return outline.D(sbU, this.animatedBanner, ")");
+        return a.D(sbU, this.animatedBanner, ")");
     }
 }

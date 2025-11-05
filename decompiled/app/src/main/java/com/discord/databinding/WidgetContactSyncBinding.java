@@ -4,12 +4,12 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.LayoutContactSyncAddPhoneBinding;
-import b.a.i.LayoutContactSyncLandingBinding;
-import b.a.i.LayoutContactSyncNameInputBinding;
-import b.a.i.LayoutContactSyncSuggestionsBinding;
-import b.a.i.LayoutContactSyncSuggestionsEmptyBinding;
-import b.a.i.LayoutContactSyncVerifyPhoneBinding;
+import b.a.i.j0;
+import b.a.i.k0;
+import b.a.i.l0;
+import b.a.i.m0;
+import b.a.i.n0;
+import b.a.i.p0;
 import com.discord.app.AppViewFlipper;
 
 /* loaded from: classes.dex */
@@ -20,34 +20,34 @@ public final class WidgetContactSyncBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final LayoutContactSyncAddPhoneBinding f2355b;
+    public final j0 f2355b;
 
     @NonNull
-    public final LayoutContactSyncSuggestionsBinding c;
+    public final m0 c;
 
     @NonNull
-    public final LayoutContactSyncSuggestionsEmptyBinding d;
+    public final n0 d;
 
     @NonNull
-    public final LayoutContactSyncLandingBinding e;
+    public final k0 e;
 
     @NonNull
-    public final LayoutContactSyncNameInputBinding f;
+    public final l0 f;
 
     @NonNull
-    public final LayoutContactSyncVerifyPhoneBinding g;
+    public final p0 g;
 
     @NonNull
     public final AppViewFlipper h;
 
-    public WidgetContactSyncBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LayoutContactSyncAddPhoneBinding layoutContactSyncAddPhoneBinding, @NonNull LayoutContactSyncSuggestionsBinding layoutContactSyncSuggestionsBinding, @NonNull LayoutContactSyncSuggestionsEmptyBinding layoutContactSyncSuggestionsEmptyBinding, @NonNull LayoutContactSyncLandingBinding layoutContactSyncLandingBinding, @NonNull LayoutContactSyncNameInputBinding layoutContactSyncNameInputBinding, @NonNull LayoutContactSyncVerifyPhoneBinding layoutContactSyncVerifyPhoneBinding, @NonNull AppViewFlipper appViewFlipper) {
+    public WidgetContactSyncBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull j0 j0Var, @NonNull m0 m0Var, @NonNull n0 n0Var, @NonNull k0 k0Var, @NonNull l0 l0Var, @NonNull p0 p0Var, @NonNull AppViewFlipper appViewFlipper) {
         this.a = coordinatorLayout;
-        this.f2355b = layoutContactSyncAddPhoneBinding;
-        this.c = layoutContactSyncSuggestionsBinding;
-        this.d = layoutContactSyncSuggestionsEmptyBinding;
-        this.e = layoutContactSyncLandingBinding;
-        this.f = layoutContactSyncNameInputBinding;
-        this.g = layoutContactSyncVerifyPhoneBinding;
+        this.f2355b = j0Var;
+        this.c = m0Var;
+        this.d = n0Var;
+        this.e = k0Var;
+        this.f = l0Var;
+        this.g = p0Var;
         this.h = appViewFlipper;
     }
 

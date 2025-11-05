@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.constraintlayout.motion.utils.CurveFit;
 import androidx.constraintlayout.motion.utils.Oscillator;
 import androidx.constraintlayout.widget.ConstraintAttribute;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -99,7 +99,7 @@ public abstract class KeyCycleOscillator {
             if (constraintAttribute2.getType() == attributeType) {
                 return constraintAttribute2;
             }
-            StringBuilder sbU = outline.U("ConstraintAttribute is already a ");
+            StringBuilder sbU = a.U("ConstraintAttribute is already a ");
             sbU.append(constraintAttribute2.getType().name());
             throw new IllegalArgumentException(sbU.toString());
         }
@@ -500,7 +500,7 @@ public abstract class KeyCycleOscillator {
         Iterator<WavePoint> it = this.mWavePoints.iterator();
         while (it.hasNext()) {
             WavePoint next = it.next();
-            StringBuilder sbX = outline.X(string, "[");
+            StringBuilder sbX = a.X(string, "[");
             sbX.append(next.mPosition);
             sbX.append(" , ");
             sbX.append(decimalFormat.format(next.mValue));

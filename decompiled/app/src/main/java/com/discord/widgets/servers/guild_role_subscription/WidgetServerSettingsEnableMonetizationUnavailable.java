@@ -3,10 +3,10 @@ package com.discord.widgets.servers.guild_role_subscription;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import b.a.d.AppScreen2;
+import b.a.d.j;
 import com.discord.R;
 import com.discord.app.AppFragment;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: WidgetServerSettingsEnableMonetizationUnavailable.kt */
@@ -22,8 +22,8 @@ public final class WidgetServerSettingsEnableMonetizationUnavailable extends App
         }
 
         public final void launch(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.e(context, WidgetServerSettingsEnableMonetizationUnavailable.class, null, 4);
+            m.checkNotNullParameter(context, "context");
+            j.e(context, WidgetServerSettingsEnableMonetizationUnavailable.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -41,7 +41,7 @@ public final class WidgetServerSettingsEnableMonetizationUnavailable extends App
 
     @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
     }

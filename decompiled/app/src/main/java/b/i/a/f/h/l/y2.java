@@ -1,6 +1,5 @@
 package b.i.a.f.h.l;
 
-import b.d.b.a.outline;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
@@ -35,6 +34,6 @@ public final class y2<T> extends x2<T> {
 
     public final String toString() {
         String strValueOf = String.valueOf(this.zza);
-        return outline.k(strValueOf.length() + 13, "Optional.of(", strValueOf, ")");
+        return b.d.b.a.a.k(strValueOf.length() + 13, "Optional.of(", strValueOf, ")");
     }
 }

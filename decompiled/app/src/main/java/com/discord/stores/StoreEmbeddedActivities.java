@@ -8,12 +8,12 @@ import com.discord.api.guild.Guild;
 import com.discord.models.domain.ModelPayload;
 import com.discord.models.embeddedactivities.EmbeddedActivity;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
-import d0.t.Collections2;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import com.discord.stores.updates.ObservationDeckProvider;
+import d0.t.h0;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class StoreEmbeddedActivities extends StoreV2 {
 
     /* compiled from: StoreEmbeddedActivities.kt */
     /* renamed from: com.discord.stores.StoreEmbeddedActivities$observeEmbeddedActivities$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -50,14 +50,14 @@ public final class StoreEmbeddedActivities extends StoreV2 {
 
     /* compiled from: StoreEmbeddedActivities.kt */
     /* renamed from: com.discord.stores.StoreEmbeddedActivities$observeEmbeddedActivitiesForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>>, Map<Long, ? extends EmbeddedActivity>> {
+    public static final class AnonymousClass1<T, R> implements b<Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>>, Map<Long, ? extends EmbeddedActivity>> {
         public final /* synthetic */ long $channelId;
 
         public AnonymousClass1(long j) {
             this.$channelId = j;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Map<Long, ? extends EmbeddedActivity> call(Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>> map) {
             return call2((Map<Long, ? extends Map<Long, EmbeddedActivity>>) map);
         }
@@ -65,7 +65,7 @@ public final class StoreEmbeddedActivities extends StoreV2 {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, EmbeddedActivity> call2(Map<Long, ? extends Map<Long, EmbeddedActivity>> map) {
             Map<Long, EmbeddedActivity> map2 = map.get(Long.valueOf(this.$channelId));
-            return map2 != null ? map2 : Maps6.emptyMap();
+            return map2 != null ? map2 : h0.emptyMap();
         }
     }
 
@@ -74,7 +74,7 @@ public final class StoreEmbeddedActivities extends StoreV2 {
     }
 
     public /* synthetic */ StoreEmbeddedActivities(ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? ObservationDeck4.get() : observationDeck);
+        this((i & 1) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     private final String getUrlForApplication(long applicationId) {
@@ -84,18 +84,18 @@ public final class StoreEmbeddedActivities extends StoreV2 {
         return "https://" + applicationId + '.' + BuildConfig.EMBEDDED_ACTIVITY_APPLICATION_HOST;
     }
 
-    @Store3
+    @StoreThread
     private final void handleEmbeddedActivitiesForGuild(Guild guild) {
         List<EmbeddedActivityInGuild> listJ = guild.j();
         if (listJ == null) {
-            listJ = Collections2.emptyList();
+            listJ = n.emptyList();
         }
         for (EmbeddedActivityInGuild embeddedActivityInGuild : listJ) {
             handleEmbeddedActivityForChannel(embeddedActivityInGuild.getChannelId(), embeddedActivityInGuild.c(), embeddedActivityInGuild.getEmbeddedActivity(), guild.getId());
         }
     }
 
-    @Store3
+    @StoreThread
     private final void handleEmbeddedActivityForChannel(long channelId, List<Long> userIds, com.discord.api.embeddedactivities.EmbeddedActivity apiEmbeddedActivity, long guildId) {
         String urlForApplication = getUrlForApplication(apiEmbeddedActivity.getApplicationId());
         if (urlForApplication != null) {
@@ -119,28 +119,28 @@ public final class StoreEmbeddedActivities extends StoreV2 {
         return this.embeddedActivitiesByChannelSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        m.checkNotNullParameter(payload, "payload");
         this.embeddedActivitiesByChannel.clear();
         List<Guild> guilds = payload.getGuilds();
-        Intrinsics3.checkNotNullExpressionValue(guilds, "payload.guilds");
+        m.checkNotNullExpressionValue(guilds, "payload.guilds");
         for (Guild guild : guilds) {
-            Intrinsics3.checkNotNullExpressionValue(guild, "guild");
+            m.checkNotNullExpressionValue(guild, "guild");
             handleEmbeddedActivitiesForGuild(guild);
         }
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleEmbeddedActivityInboundUpdate(EmbeddedActivityInboundUpdate embeddedActivityInboundUpdate) {
-        Intrinsics3.checkNotNullParameter(embeddedActivityInboundUpdate, "embeddedActivityInboundUpdate");
+        m.checkNotNullParameter(embeddedActivityInboundUpdate, "embeddedActivityInboundUpdate");
         handleEmbeddedActivityForChannel(embeddedActivityInboundUpdate.getChannelId(), embeddedActivityInboundUpdate.d(), embeddedActivityInboundUpdate.getEmbeddedActivity(), embeddedActivityInboundUpdate.getGuildId());
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildCreate(Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         handleEmbeddedActivitiesForGuild(guild);
     }
 
@@ -150,12 +150,12 @@ public final class StoreEmbeddedActivities extends StoreV2 {
 
     public final Observable<Map<Long, EmbeddedActivity>> observeEmbeddedActivitiesForChannel(long channelId) {
         Observable observableG = observeEmbeddedActivities().G(new AnonymousClass1(channelId));
-        Intrinsics3.checkNotNullExpressionValue(observableG, "observeEmbeddedActivitie…] ?: emptyMap()\n        }");
+        m.checkNotNullExpressionValue(observableG, "observeEmbeddedActivitie…] ?: emptyMap()\n        }");
         return observableG;
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         HashMap map = new HashMap();
@@ -166,9 +166,9 @@ public final class StoreEmbeddedActivities extends StoreV2 {
     }
 
     public StoreEmbeddedActivities(ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.observationDeck = observationDeck;
-        this.embeddedActivitiesByChannelSnapshot = Maps6.emptyMap();
+        this.embeddedActivitiesByChannelSnapshot = h0.emptyMap();
         this.embeddedActivitiesByChannel = new LinkedHashMap();
     }
 }

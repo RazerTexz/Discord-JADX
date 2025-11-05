@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAutoSuggestExpressionSelected.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAutoSuggestExpressionSelected implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
+public final /* data */ class TrackAutoSuggestExpressionSelected implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final Long stickerId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackAutoSuggestExpressionSelected implements Anal
             return false;
         }
         TrackAutoSuggestExpressionSelected trackAutoSuggestExpressionSelected = (TrackAutoSuggestExpressionSelected) other;
-        return Intrinsics3.areEqual(this.stickerId, trackAutoSuggestExpressionSelected.stickerId) && Intrinsics3.areEqual(this.emojiId, trackAutoSuggestExpressionSelected.emojiId) && Intrinsics3.areEqual(this.suggestionTrigger, trackAutoSuggestExpressionSelected.suggestionTrigger);
+        return m.areEqual(this.stickerId, trackAutoSuggestExpressionSelected.stickerId) && m.areEqual(this.emojiId, trackAutoSuggestExpressionSelected.emojiId) && m.areEqual(this.suggestionTrigger, trackAutoSuggestExpressionSelected.suggestionTrigger);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class TrackAutoSuggestExpressionSelected implements Anal
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAutoSuggestExpressionSelected(stickerId=");
+        StringBuilder sbU = a.U("TrackAutoSuggestExpressionSelected(stickerId=");
         sbU.append(this.stickerId);
         sbU.append(", emojiId=");
         sbU.append(this.emojiId);
         sbU.append(", suggestionTrigger=");
-        return outline.E(sbU, this.suggestionTrigger, ")");
+        return a.E(sbU, this.suggestionTrigger, ")");
     }
 }

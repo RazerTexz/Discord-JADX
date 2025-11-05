@@ -11,7 +11,7 @@ public interface a {
 
     /* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
     /* renamed from: b.i.c.k.a$a, reason: collision with other inner class name */
-    public static class C0047a {
+    public static class C0137a {
         public final Bundle a = new Bundle();
 
         /* renamed from: b, reason: collision with root package name */
@@ -20,11 +20,11 @@ public interface a {
         public String d;
         public String e;
 
-        public C0047a(@NonNull String str) {
+        public C0137a(@NonNull String str) {
             this.f1660b = str;
         }
 
-        public C0047a a(@NonNull String str, @NonNull String... strArr) {
+        public C0137a a(@NonNull String str, @NonNull String... strArr) {
             Bundle bundle = this.a;
             String[] strArr2 = (String[]) Arrays.copyOf(strArr, strArr.length);
             if (strArr2.length > 0) {

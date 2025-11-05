@@ -3,28 +3,27 @@ package com.discord.widgets.stage.sheet;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import androidx.core.os.Bundle2;
+import androidx.core.os.BundleKt;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetStageAudienceBlockedBottomSheetBinding;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.recycler.MaxHeightRecyclerView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.stage.StageChannelJoinHelper;
 import com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetViewModel;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.o;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -36,7 +35,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetStageAudienceBlockedBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageAudienceBlockedBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetStageAudienceBlockedBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageAudienceBlockedBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -61,9 +60,9 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
         }
 
         public final void show(FragmentManager fragmentManager, long channelId, boolean launchStageFullScreen) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetStageAudienceBlockedBottomSheet widgetStageAudienceBlockedBottomSheet = new WidgetStageAudienceBlockedBottomSheet();
-            widgetStageAudienceBlockedBottomSheet.setArguments(Bundle2.bundleOf(Tuples.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId)), Tuples.to(WidgetStageAudienceBlockedBottomSheet.EXTRA_LAUNCH_FULL_SCREEN, Boolean.valueOf(launchStageFullScreen))));
+            widgetStageAudienceBlockedBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId)), o.to(WidgetStageAudienceBlockedBottomSheet.EXTRA_LAUNCH_FULL_SCREEN, Boolean.valueOf(launchStageFullScreen))));
             widgetStageAudienceBlockedBottomSheet.show(fragmentManager, WidgetStageAudienceBlockedBottomSheet.class.getSimpleName());
         }
 
@@ -79,8 +78,8 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
 
         /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
         /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03431 extends Lambda implements Function0<Unit> {
-            public C03431() {
+        public static final class C04631 extends d0.z.d.o implements Function0<Unit> {
+            public C04631() {
                 super(0);
             }
 
@@ -104,10 +103,10 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
         public final void onClick(View view) {
             StageChannelJoinHelper stageChannelJoinHelper = StageChannelJoinHelper.INSTANCE;
             Context contextRequireContext = WidgetStageAudienceBlockedBottomSheet.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             FragmentManager parentFragmentManager = WidgetStageAudienceBlockedBottomSheet.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            StageChannelJoinHelper.connectToStage$default(stageChannelJoinHelper, contextRequireContext, parentFragmentManager, ((StageAudienceBlockedBottomSheetViewModel.ViewState.Loaded) this.$viewState).getChannel().getId(), true, WidgetStageAudienceBlockedBottomSheet.access$getLaunchStageFullScreen$p(WidgetStageAudienceBlockedBottomSheet.this), null, null, null, null, new C03431(), 480, null);
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            StageChannelJoinHelper.connectToStage$default(stageChannelJoinHelper, contextRequireContext, parentFragmentManager, ((StageAudienceBlockedBottomSheetViewModel.ViewState.Loaded) this.$viewState).getChannel().getId(), true, WidgetStageAudienceBlockedBottomSheet.access$getLaunchStageFullScreen$p(WidgetStageAudienceBlockedBottomSheet.this), null, null, null, null, new C04631(), 480, null);
         }
     }
 
@@ -125,7 +124,7 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
 
     /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$onResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StageAudienceBlockedBottomSheetViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StageAudienceBlockedBottomSheetViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetStageAudienceBlockedBottomSheet widgetStageAudienceBlockedBottomSheet) {
             super(1, widgetStageAudienceBlockedBottomSheet, WidgetStageAudienceBlockedBottomSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/stage/sheet/StageAudienceBlockedBottomSheetViewModel$ViewState;)V", 0);
         }
@@ -138,19 +137,19 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageAudienceBlockedBottomSheetViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetStageAudienceBlockedBottomSheet.access$configureUI((WidgetStageAudienceBlockedBottomSheet) this.receiver, viewState);
         }
     }
 
     public WidgetStageAudienceBlockedBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetStageAudienceBlockedBottomSheet2.INSTANCE, null, 2, null);
-        this.channelId = LazyJVM.lazy(new WidgetStageAudienceBlockedBottomSheet3(this));
-        this.launchStageFullScreen = LazyJVM.lazy(new WidgetStageAudienceBlockedBottomSheet4(this));
-        WidgetStageAudienceBlockedBottomSheet5 widgetStageAudienceBlockedBottomSheet5 = new WidgetStageAudienceBlockedBottomSheet5(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(StageAudienceBlockedBottomSheetViewModel.class), new WidgetStageAudienceBlockedBottomSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetStageAudienceBlockedBottomSheet5));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetStageAudienceBlockedBottomSheet$binding$2.INSTANCE, null, 2, null);
+        this.channelId = g.lazy(new WidgetStageAudienceBlockedBottomSheet$channelId$2(this));
+        this.launchStageFullScreen = g.lazy(new WidgetStageAudienceBlockedBottomSheet$launchStageFullScreen$2(this));
+        WidgetStageAudienceBlockedBottomSheet$viewModel$2 widgetStageAudienceBlockedBottomSheet$viewModel$2 = new WidgetStageAudienceBlockedBottomSheet$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(StageAudienceBlockedBottomSheetViewModel.class), new WidgetStageAudienceBlockedBottomSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetStageAudienceBlockedBottomSheet$viewModel$2));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetStageAudienceBlockedBottomSheet widgetStageAudienceBlockedBottomSheet, StageAudienceBlockedBottomSheetViewModel.ViewState viewState) {
@@ -181,7 +180,7 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
         getBinding().d.setOnClickListener(new AnonymousClass2());
         StageAudienceBlockedBottomSheetAdapter stageAudienceBlockedBottomSheetAdapter = this.adapter;
         if (stageAudienceBlockedBottomSheetAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         stageAudienceBlockedBottomSheetAdapter.setData(((StageAudienceBlockedBottomSheetViewModel.ViewState.Loaded) viewState).getListItems());
     }
@@ -215,13 +214,13 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         WidgetStageAudienceBlockedBottomSheetBinding binding = getBinding();
-        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        m.checkNotNullExpressionValue(binding, "binding");
         setPeekHeightBottomView(binding.a);
         MaxHeightRecyclerView maxHeightRecyclerView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(maxHeightRecyclerView, "binding.blockedUsers");
+        m.checkNotNullExpressionValue(maxHeightRecyclerView, "binding.blockedUsers");
         this.adapter = new StageAudienceBlockedBottomSheetAdapter(maxHeightRecyclerView);
     }
 }

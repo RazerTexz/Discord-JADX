@@ -17,7 +17,7 @@ import androidx.constraintlayout.solver.widgets.HelperWidget;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.constraintlayout.widget.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -91,7 +91,7 @@ public abstract class ConstraintHelper extends View {
             ViewGroup.LayoutParams layoutParams = childAt.getLayoutParams();
             if ((layoutParams instanceof ConstraintLayout.LayoutParams) && strTrim.equals(((ConstraintLayout.LayoutParams) layoutParams).constraintTag)) {
                 if (childAt.getId() == -1) {
-                    StringBuilder sbU = outline.U("to use ConstraintTag view ");
+                    StringBuilder sbU = a.U("to use ConstraintTag view ");
                     sbU.append(childAt.getClass().getSimpleName());
                     sbU.append(" must have an ID");
                     Log.w("ConstraintHelper", sbU.toString());

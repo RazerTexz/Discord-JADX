@@ -7,7 +7,6 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
-import b.d.b.a.outline;
 import b.i.a.f.h.l.a1;
 import b.i.a.f.h.l.c1;
 import b.i.a.f.h.l.e1;
@@ -686,7 +685,7 @@ public final class q9 extends i9 {
     }
 
     public final String y(b.i.a.f.h.l.o0 o0Var) {
-        StringBuilder sbU = outline.U("\nproperty_filter {\n");
+        StringBuilder sbU = b.d.b.a.a.U("\nproperty_filter {\n");
         if (o0Var.v()) {
             L(sbU, 0, "filter_id", Integer.valueOf(o0Var.w()));
         }
@@ -701,7 +700,7 @@ public final class q9 extends i9 {
     }
 
     public final String z(b.i.a.f.h.l.d1 d1Var) {
-        StringBuilder sbU = outline.U("\nbatch {\n");
+        StringBuilder sbU = b.d.b.a.a.U("\nbatch {\n");
         for (b.i.a.f.h.l.e1 e1Var : d1Var.v()) {
             if (e1Var != null) {
                 H(sbU, 1);

@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ViewSettingsPremiumGuildNoGuildsBinding;
+import b.a.i.t3;
 import com.discord.app.AppViewFlipper;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.guildboost.GuildBoostMarketingView;
@@ -21,7 +21,7 @@ public final class WidgetSettingsBoostBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final ViewSettingsPremiumGuildNoGuildsBinding f2612b;
+    public final t3 f2612b;
 
     @NonNull
     public final AppViewFlipper c;
@@ -47,9 +47,9 @@ public final class WidgetSettingsBoostBinding implements ViewBinding {
     @NonNull
     public final GuildBoostSubscriptionUpsellView j;
 
-    public WidgetSettingsBoostBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull ViewSettingsPremiumGuildNoGuildsBinding viewSettingsPremiumGuildNoGuildsBinding, @NonNull AppViewFlipper appViewFlipper, @NonNull GuildBoostMarketingView guildBoostMarketingView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton, @NonNull RecyclerView recyclerView2, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LinearLayout linearLayout, @NonNull GuildBoostSubscriptionUpsellView guildBoostSubscriptionUpsellView) {
+    public WidgetSettingsBoostBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull t3 t3Var, @NonNull AppViewFlipper appViewFlipper, @NonNull GuildBoostMarketingView guildBoostMarketingView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton, @NonNull RecyclerView recyclerView2, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LinearLayout linearLayout, @NonNull GuildBoostSubscriptionUpsellView guildBoostSubscriptionUpsellView) {
         this.a = coordinatorLayout;
-        this.f2612b = viewSettingsPremiumGuildNoGuildsBinding;
+        this.f2612b = t3Var;
         this.c = appViewFlipper;
         this.d = guildBoostMarketingView;
         this.e = recyclerView;

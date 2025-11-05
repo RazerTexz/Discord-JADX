@@ -1,11 +1,11 @@
 package com.discord.widgets.channels.list.items;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ChannelListItemVoiceUser.kt */
 /* loaded from: classes2.dex */
@@ -20,10 +20,10 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
     private final VoiceState voiceState;
 
     public ChannelListItemVoiceUser(Channel channel, VoiceState voiceState, User user, GuildMember guildMember, boolean z2, boolean z3) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
-        Intrinsics3.checkNotNullParameter(voiceState, "voiceState");
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(guildMember, "computed");
+        m.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(voiceState, "voiceState");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(guildMember, "computed");
         this.channel = channel;
         this.voiceState = voiceState;
         this.user = user;
@@ -95,10 +95,10 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
     }
 
     public final ChannelListItemVoiceUser copy(Channel channel, VoiceState voiceState, User user, GuildMember computed, boolean isApplicationStreaming, boolean hasChannelConnectPermission) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
-        Intrinsics3.checkNotNullParameter(voiceState, "voiceState");
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(computed, "computed");
+        m.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(voiceState, "voiceState");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(computed, "computed");
         return new ChannelListItemVoiceUser(channel, voiceState, user, computed, isApplicationStreaming, hasChannelConnectPermission);
     }
 
@@ -110,7 +110,7 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
             return false;
         }
         ChannelListItemVoiceUser channelListItemVoiceUser = (ChannelListItemVoiceUser) other;
-        return Intrinsics3.areEqual(this.channel, channelListItemVoiceUser.channel) && Intrinsics3.areEqual(this.voiceState, channelListItemVoiceUser.voiceState) && Intrinsics3.areEqual(this.user, channelListItemVoiceUser.user) && Intrinsics3.areEqual(this.computed, channelListItemVoiceUser.computed) && this.isApplicationStreaming == channelListItemVoiceUser.isApplicationStreaming && this.hasChannelConnectPermission == channelListItemVoiceUser.hasChannelConnectPermission;
+        return m.areEqual(this.channel, channelListItemVoiceUser.channel) && m.areEqual(this.voiceState, channelListItemVoiceUser.voiceState) && m.areEqual(this.user, channelListItemVoiceUser.user) && m.areEqual(this.computed, channelListItemVoiceUser.computed) && this.isApplicationStreaming == channelListItemVoiceUser.isApplicationStreaming && this.hasChannelConnectPermission == channelListItemVoiceUser.hasChannelConnectPermission;
     }
 
     public final Channel getChannel() {
@@ -168,7 +168,7 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ChannelListItemVoiceUser(channel=");
+        StringBuilder sbU = a.U("ChannelListItemVoiceUser(channel=");
         sbU.append(this.channel);
         sbU.append(", voiceState=");
         sbU.append(this.voiceState);
@@ -179,6 +179,6 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
         sbU.append(", isApplicationStreaming=");
         sbU.append(this.isApplicationStreaming);
         sbU.append(", hasChannelConnectPermission=");
-        return outline.O(sbU, this.hasChannelConnectPermission, ")");
+        return a.O(sbU, this.hasChannelConnectPermission, ")");
     }
 }

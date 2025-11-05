@@ -6,9 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.AppToast;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetBanUserBinding;
@@ -17,14 +16,14 @@ import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -35,7 +34,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetBanUser.kt */
 /* loaded from: classes.dex */
 public final class WidgetBanUser extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetBanUser.class, "binding", "getBinding()Lcom/discord/databinding/WidgetBanUserBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetBanUser.class, "binding", "getBinding()Lcom/discord/databinding/WidgetBanUserBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -50,7 +49,7 @@ public final class WidgetBanUser extends AppDialog {
         }
 
         public final void launch(String userName, long guildId, long userId, FragmentManager fragmentManager) {
-            Intrinsics3.checkNotNullParameter(userName, "userName");
+            m.checkNotNullParameter(userName, "userName");
             if (fragmentManager == null) {
                 return;
             }
@@ -89,7 +88,7 @@ public final class WidgetBanUser extends AppDialog {
 
         /* compiled from: WidgetBanUser.kt */
         /* renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -104,7 +103,7 @@ public final class WidgetBanUser extends AppDialog {
             public final void invoke2(Void r7) {
                 Context context = WidgetBanUser.this.getContext();
                 Context context2 = WidgetBanUser.this.getContext();
-                AppToast.h(context, context2 != null ? FormatUtils.h(context2, R.string.ban_user_confirmed, new Object[]{AnonymousClass3.this.$userName}, null, 4) : null, 0, null, 12);
+                b.a.d.m.h(context, context2 != null ? b.h(context2, R.string.ban_user_confirmed, new Object[]{AnonymousClass3.this.$userName}, null, 4) : null, 0, null, 12);
                 WidgetBanUser.this.dismiss();
             }
         }
@@ -133,15 +132,15 @@ public final class WidgetBanUser extends AppDialog {
                     break;
             }
             TextInputLayout textInputLayout = WidgetBanUser.access$getBinding$p(WidgetBanUser.this).h;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.banUserReason");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.banUserReason");
             String textOrEmpty = ViewExtensions.getTextOrEmpty(textInputLayout);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().banGuildMember(this.$guildId, this.$userId, new RestAPIParams.BanGuildMember(Integer.valueOf(i)), StringsJVM.isBlank(textOrEmpty) ^ true ? textOrEmpty : null), false, 1, null), WidgetBanUser.this, null, 2, null), WidgetBanUser.this.getClass(), WidgetBanUser.this.getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 60, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().banGuildMember(this.$guildId, this.$userId, new RestAPIParams.BanGuildMember(Integer.valueOf(i)), t.isBlank(textOrEmpty) ^ true ? textOrEmpty : null), false, 1, null), WidgetBanUser.this, null, 2, null), WidgetBanUser.this.getClass(), WidgetBanUser.this.getContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 60, (Object) null);
         }
     }
 
     public WidgetBanUser() {
         super(R.layout.widget_ban_user);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetBanUser2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetBanUser$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ WidgetBanUserBinding access$getBinding$p(WidgetBanUser widgetBanUser) {
@@ -166,12 +165,12 @@ public final class WidgetBanUser extends AppDialog {
 
     private final List<CheckedSetting> getHistoryRadios() {
         CheckedSetting checkedSetting = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.banUserDeleteMessagesNone");
+        m.checkNotNullExpressionValue(checkedSetting, "binding.banUserDeleteMessagesNone");
         CheckedSetting checkedSetting2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.banUserDeleteMessages1Day");
+        m.checkNotNullExpressionValue(checkedSetting2, "binding.banUserDeleteMessages1Day");
         CheckedSetting checkedSetting3 = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.banUserDeleteMessages7Days");
-        return Collections2.listOf((Object[]) new CheckedSetting[]{checkedSetting, checkedSetting2, checkedSetting3});
+        m.checkNotNullExpressionValue(checkedSetting3, "binding.banUserDeleteMessages7Days");
+        return n.listOf((Object[]) new CheckedSetting[]{checkedSetting, checkedSetting2, checkedSetting3});
     }
 
     public static final void launch(String str, long j, long j2, FragmentManager fragmentManager) {
@@ -180,21 +179,21 @@ public final class WidgetBanUser extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         this.deleteHistoryRadioManager = new RadioManager(getHistoryRadios());
         for (CheckedSetting checkedSetting : getHistoryRadios()) {
-            checkedSetting.e(new WidgetBanUser3(checkedSetting, this));
+            checkedSetting.e(new WidgetBanUser$onViewBound$$inlined$forEach$lambda$1(checkedSetting, this));
         }
         String string = getArgumentsOrDefault().getString("com.discord.intent.extra.EXTRA_USER_NAME", "");
         long j = getArgumentsOrDefault().getLong("com.discord.intent.extra.EXTRA_GUILD_ID", -1L);
         long j2 = getArgumentsOrDefault().getLong("com.discord.intent.extra.EXTRA_USER_ID", -1L);
         TextView textView = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.banUserTitle");
-        FormatUtils.n(textView, R.string.ban_user_title, new Object[]{string}, null, 4);
+        m.checkNotNullExpressionValue(textView, "binding.banUserTitle");
+        b.n(textView, R.string.ban_user_title, new Object[]{string}, null, 4);
         TextView textView2 = getBinding().f2240b;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.banUserBody");
-        FormatUtils.n(textView2, R.string.ban_user_body, new Object[]{string}, null, 4);
+        m.checkNotNullExpressionValue(textView2, "binding.banUserBody");
+        b.n(textView2, R.string.ban_user_body, new Object[]{string}, null, 4);
         getBinding().c.setOnClickListener(new AnonymousClass2());
         getBinding().d.setOnClickListener(new AnonymousClass3(j, j2, string));
     }

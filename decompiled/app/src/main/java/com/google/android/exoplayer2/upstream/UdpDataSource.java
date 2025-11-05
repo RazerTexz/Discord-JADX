@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.upstream;
 
 import android.net.Uri;
 import androidx.annotation.Nullable;
-import b.i.a.c.e3.BaseDataSource;
-import b.i.a.c.e3.DataSpec;
+import b.i.a.c.e3.g;
+import b.i.a.c.e3.n;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -14,7 +14,7 @@ import java.net.SocketTimeoutException;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
-public final class UdpDataSource extends BaseDataSource {
+public final class UdpDataSource extends g {
     public final int e;
     public final byte[] f;
     public final DatagramPacket g;
@@ -47,14 +47,14 @@ public final class UdpDataSource extends BaseDataSource {
         this.g = new DatagramPacket(bArr, 0, 2000);
     }
 
-    @Override // b.i.a.c.e3.DataSource3
-    public long a(DataSpec dataSpec) throws UdpDataSourceException {
-        Uri uri = dataSpec.a;
+    @Override // b.i.a.c.e3.l
+    public long a(n nVar) throws UdpDataSourceException {
+        Uri uri = nVar.a;
         this.h = uri;
         String host = uri.getHost();
         Objects.requireNonNull(host);
         int port = this.h.getPort();
-        r(dataSpec);
+        r(nVar);
         try {
             this.k = InetAddress.getByName(host);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(this.k, port);
@@ -68,7 +68,7 @@ public final class UdpDataSource extends BaseDataSource {
             }
             this.i.setSoTimeout(this.e);
             this.l = true;
-            s(dataSpec);
+            s(nVar);
             return -1L;
         } catch (IOException e) {
             throw new UdpDataSourceException(e, 2001);
@@ -77,7 +77,7 @@ public final class UdpDataSource extends BaseDataSource {
         }
     }
 
-    @Override // b.i.a.c.e3.DataSource3
+    @Override // b.i.a.c.e3.l
     public void close() {
         this.h = null;
         MulticastSocket multicastSocket = this.j;
@@ -103,13 +103,13 @@ public final class UdpDataSource extends BaseDataSource {
         }
     }
 
-    @Override // b.i.a.c.e3.DataSource3
+    @Override // b.i.a.c.e3.l
     @Nullable
     public Uri n() {
         return this.h;
     }
 
-    @Override // b.i.a.c.e3.DataReader
+    @Override // b.i.a.c.e3.h
     public int read(byte[] bArr, int i, int i2) throws UdpDataSourceException {
         if (i2 == 0) {
             return 0;

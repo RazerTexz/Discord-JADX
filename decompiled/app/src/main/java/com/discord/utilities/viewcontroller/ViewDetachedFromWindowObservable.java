@@ -1,7 +1,7 @@
 package com.discord.utilities.viewcontroller;
 
 import android.view.View;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import rx.Observable;
 import rx.subjects.BehaviorSubject;
@@ -12,14 +12,14 @@ public final class ViewDetachedFromWindowObservable implements View.OnAttachStat
     private final BehaviorSubject<Unit> onDetachSubject;
 
     public ViewDetachedFromWindowObservable(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         this.onDetachSubject = BehaviorSubject.k0();
         view.addOnAttachStateChangeListener(this);
     }
 
     public final Observable<Unit> observe() {
         BehaviorSubject<Unit> behaviorSubject = this.onDetachSubject;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "onDetachSubject");
+        m.checkNotNullExpressionValue(behaviorSubject, "onDetachSubject");
         return behaviorSubject;
     }
 

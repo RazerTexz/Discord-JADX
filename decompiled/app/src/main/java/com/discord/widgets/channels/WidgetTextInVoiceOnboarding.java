@@ -11,15 +11,15 @@ import android.widget.ImageView;
 import android.widget.VideoView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetTextInVoiceOnboardingBinding;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -29,7 +29,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetTextInVoiceOnboarding.kt */
 /* loaded from: classes2.dex */
 public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetTextInVoiceOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTextInVoiceOnboardingBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetTextInVoiceOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTextInVoiceOnboardingBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -45,8 +45,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, Function0<Unit> onCtaClicked) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(onCtaClicked, "onCtaClicked");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(onCtaClicked, "onCtaClicked");
             WidgetTextInVoiceOnboarding widgetTextInVoiceOnboarding = new WidgetTextInVoiceOnboarding();
             WidgetTextInVoiceOnboarding.access$setOnCtaClicked$p(widgetTextInVoiceOnboarding, onCtaClicked);
             widgetTextInVoiceOnboarding.show(fragmentManager, "javaClass");
@@ -91,7 +91,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             VideoView videoView = WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).d;
-            Intrinsics3.checkNotNullExpressionValue(videoView, "binding.textInVoiceOnboardingVideo");
+            m.checkNotNullExpressionValue(videoView, "binding.textInVoiceOnboardingVideo");
             if (videoView.isPlaying()) {
                 WidgetTextInVoiceOnboarding.access$showVideoOverlay(WidgetTextInVoiceOnboarding.this);
                 WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).d.pause();
@@ -110,11 +110,11 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
         @Override // android.media.MediaPlayer.OnPreparedListener
         public final void onPrepared(MediaPlayer mediaPlayer) throws IllegalStateException {
-            Intrinsics3.checkNotNullParameter(mediaPlayer, "mp");
+            m.checkNotNullParameter(mediaPlayer, "mp");
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
             VideoView videoView = WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).d;
-            Intrinsics3.checkNotNullExpressionValue(videoView, "binding.textInVoiceOnboardingVideo");
+            m.checkNotNullExpressionValue(videoView, "binding.textInVoiceOnboardingVideo");
             videoView.getLayoutParams().height = -2;
             WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).d.requestLayout();
         }
@@ -132,10 +132,10 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
                 return false;
             }
             ImageView imageView = WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).g;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.textInVoiceOnboardingVideoPlaceholder");
+            m.checkNotNullExpressionValue(imageView, "binding.textInVoiceOnboardingVideoPlaceholder");
             imageView.setVisibility(4);
             VideoView videoView = WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).d;
-            Intrinsics3.checkNotNullExpressionValue(videoView, "binding.textInVoiceOnboardingVideo");
+            m.checkNotNullExpressionValue(videoView, "binding.textInVoiceOnboardingVideo");
             videoView.getLayoutParams().height = -2;
             WidgetTextInVoiceOnboarding.access$getBinding$p(WidgetTextInVoiceOnboarding.this).d.requestLayout();
             return false;
@@ -144,7 +144,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
     /* compiled from: WidgetTextInVoiceOnboarding.kt */
     /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$hideVideoOverlay$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ViewPropertyAnimator, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -159,7 +159,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
-            Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
+            m.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(2.0f);
             viewPropertyAnimator.scaleY(2.0f);
         }
@@ -194,7 +194,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
     /* compiled from: WidgetTextInVoiceOnboarding.kt */
     /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$showVideoOverlay$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -209,7 +209,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(view, "view");
             view.setScaleX(2.0f);
             view.setScaleY(2.0f);
         }
@@ -217,7 +217,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
     /* compiled from: WidgetTextInVoiceOnboarding.kt */
     /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$showVideoOverlay$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<ViewPropertyAnimator, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -232,7 +232,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
-            Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
+            m.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(1.0f);
             viewPropertyAnimator.scaleY(1.0f);
         }
@@ -240,7 +240,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
     public WidgetTextInVoiceOnboarding() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetTextInVoiceOnboarding2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetTextInVoiceOnboarding$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ WidgetTextInVoiceOnboardingBinding access$getBinding$p(WidgetTextInVoiceOnboarding widgetTextInVoiceOnboarding) {
@@ -269,7 +269,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
             view.post(new AnonymousClass1());
         }
         FrameLayout frameLayout = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.textInVoiceOnboardingVideoContainer");
+        m.checkNotNullExpressionValue(frameLayout, "binding.textInVoiceOnboardingVideoContainer");
         frameLayout.setClipToOutline(true);
         getBinding().d.setVideoPath(videoUrl);
         hideVideoOverlay();
@@ -297,7 +297,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         setBottomSheetCollapsedStateDisabled();
         new TextInVoiceOnboardingManager().markSeen();

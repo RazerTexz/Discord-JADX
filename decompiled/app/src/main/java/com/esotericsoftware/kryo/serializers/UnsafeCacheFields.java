@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
@@ -199,14 +199,14 @@ public class UnsafeCacheFields {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                outline.m0(this.type, sb, ")", e);
+                a.m0(this.type, sb, ")", e);
                 throw e;
             } catch (RuntimeException e2) {
                 KryoException kryoException = new KryoException(e2);
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(this);
                 sb2.append(" (");
-                outline.m0(this.type, sb2, ")", kryoException);
+                a.m0(this.type, sb2, ")", kryoException);
                 throw kryoException;
             }
         }

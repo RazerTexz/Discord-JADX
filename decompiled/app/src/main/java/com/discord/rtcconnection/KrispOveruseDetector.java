@@ -2,8 +2,8 @@ package com.discord.rtcconnection;
 
 import co.discord.media_engine.OutboundRtpAudio;
 import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
-import d0.z.d.Intrinsics3;
-import kotlin.Tuples2;
+import d0.z.d.m;
+import kotlin.Pair;
 
 /* compiled from: KrispOveruseDetector.kt */
 /* loaded from: classes.dex */
@@ -23,19 +23,19 @@ public final class KrispOveruseDetector {
     }
 
     public KrispOveruseDetector(MediaEngineConnection mediaEngineConnection) {
-        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+        m.checkNotNullParameter(mediaEngineConnection, "connection");
         this.d = mediaEngineConnection;
     }
 
-    public final Tuples2<Boolean, Long> a(OutboundRtpAudio outboundRtpAudio, OutboundRtpAudio outboundRtpAudio2, double d) {
+    public final Pair<Boolean, Long> a(OutboundRtpAudio outboundRtpAudio, OutboundRtpAudio outboundRtpAudio2, double d) {
         if (outboundRtpAudio == null || outboundRtpAudio2 == null) {
-            return new Tuples2<>(Boolean.FALSE, 0L);
+            return new Pair<>(Boolean.FALSE, 0L);
         }
         long noiseCancellerProcessTime = outboundRtpAudio2.getNoiseCancellerProcessTime() - outboundRtpAudio.getNoiseCancellerProcessTime();
         long framesCaptured = outboundRtpAudio2.getFramesCaptured() - outboundRtpAudio.getFramesCaptured();
         if (framesCaptured == 0) {
-            return new Tuples2<>(Boolean.FALSE, Long.valueOf(noiseCancellerProcessTime));
+            return new Pair<>(Boolean.FALSE, Long.valueOf(noiseCancellerProcessTime));
         }
-        return new Tuples2<>(Boolean.valueOf(((double) noiseCancellerProcessTime) / ((double) framesCaptured) > d), Long.valueOf(noiseCancellerProcessTime));
+        return new Pair<>(Boolean.valueOf(((double) noiseCancellerProcessTime) / ((double) framesCaptured) > d), Long.valueOf(noiseCancellerProcessTime));
     }
 }

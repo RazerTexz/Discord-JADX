@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackRegisterTransition.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackRegisterTransition implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackRegisterTransition implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence step = null;
     private final CharSequence actionType = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackRegisterTransition implements AnalyticsSchema
             return false;
         }
         TrackRegisterTransition trackRegisterTransition = (TrackRegisterTransition) other;
-        return Intrinsics3.areEqual(this.step, trackRegisterTransition.step) && Intrinsics3.areEqual(this.actionType, trackRegisterTransition.actionType) && Intrinsics3.areEqual(this.actionTypeDetails, trackRegisterTransition.actionTypeDetails) && Intrinsics3.areEqual(this.actionDetails, trackRegisterTransition.actionDetails) && Intrinsics3.areEqual(this.identityType, trackRegisterTransition.identityType) && Intrinsics3.areEqual(this.registrationSource, trackRegisterTransition.registrationSource) && Intrinsics3.areEqual(this.isUnclaimed, trackRegisterTransition.isUnclaimed) && Intrinsics3.areEqual(this.inviteCode, trackRegisterTransition.inviteCode) && Intrinsics3.areEqual(this.inviteGuildId, trackRegisterTransition.inviteGuildId) && Intrinsics3.areEqual(this.inviteChannelId, trackRegisterTransition.inviteChannelId) && Intrinsics3.areEqual(this.inviteChannelType, trackRegisterTransition.inviteChannelType) && Intrinsics3.areEqual(this.inviteInviterId, trackRegisterTransition.inviteInviterId);
+        return m.areEqual(this.step, trackRegisterTransition.step) && m.areEqual(this.actionType, trackRegisterTransition.actionType) && m.areEqual(this.actionTypeDetails, trackRegisterTransition.actionTypeDetails) && m.areEqual(this.actionDetails, trackRegisterTransition.actionDetails) && m.areEqual(this.identityType, trackRegisterTransition.identityType) && m.areEqual(this.registrationSource, trackRegisterTransition.registrationSource) && m.areEqual(this.isUnclaimed, trackRegisterTransition.isUnclaimed) && m.areEqual(this.inviteCode, trackRegisterTransition.inviteCode) && m.areEqual(this.inviteGuildId, trackRegisterTransition.inviteGuildId) && m.areEqual(this.inviteChannelId, trackRegisterTransition.inviteChannelId) && m.areEqual(this.inviteChannelType, trackRegisterTransition.inviteChannelType) && m.areEqual(this.inviteInviterId, trackRegisterTransition.inviteInviterId);
     }
 
     public int hashCode() {
@@ -70,7 +70,7 @@ public final /* data */ class TrackRegisterTransition implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackRegisterTransition(step=");
+        StringBuilder sbU = a.U("TrackRegisterTransition(step=");
         sbU.append(this.step);
         sbU.append(", actionType=");
         sbU.append(this.actionType);
@@ -93,6 +93,6 @@ public final /* data */ class TrackRegisterTransition implements AnalyticsSchema
         sbU.append(", inviteChannelType=");
         sbU.append(this.inviteChannelType);
         sbU.append(", inviteInviterId=");
-        return outline.G(sbU, this.inviteInviterId, ")");
+        return a.G(sbU, this.inviteInviterId, ")");
     }
 }

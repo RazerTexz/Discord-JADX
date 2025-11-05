@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 
@@ -16,7 +16,7 @@ public abstract class Serializer<T> {
         if (isImmutable()) {
             return t;
         }
-        StringBuilder sbU = outline.U("Serializer does not support copy: ");
+        StringBuilder sbU = a.U("Serializer does not support copy: ");
         sbU.append(getClass().getName());
         throw new KryoException(sbU.toString());
     }

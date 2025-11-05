@@ -2,9 +2,9 @@ package com.discord.rtcconnection.enums;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.c.a.a0.d;
+import b.d.b.a.a;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: BluetoothProfileConnectionState.kt */
@@ -38,13 +38,13 @@ public enum BluetoothProfileConnectionState {
         }
 
         public final b b(Intent intent) {
-            Intrinsics3.checkNotNullParameter(intent, "intent");
-            if (!Intrinsics3.areEqual(intent.getAction(), "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED")) {
+            m.checkNotNullParameter(intent, "intent");
+            if (!m.areEqual(intent.getAction(), "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED")) {
                 throw new IllegalArgumentException("Failed requirement.".toString());
             }
-            Integer numX0 = AnimatableValueParser.x0(intent, "android.bluetooth.profile.extra.PREVIOUS_STATE");
+            Integer numX0 = d.x0(intent, "android.bluetooth.profile.extra.PREVIOUS_STATE");
             BluetoothProfileConnectionState bluetoothProfileConnectionStateA = numX0 != null ? BluetoothProfileConnectionState.INSTANCE.a(numX0.intValue()) : null;
-            Integer numX02 = AnimatableValueParser.x0(intent, "android.bluetooth.profile.extra.STATE");
+            Integer numX02 = d.x0(intent, "android.bluetooth.profile.extra.STATE");
             return new b(bluetoothProfileConnectionStateA, numX02 != null ? BluetoothProfileConnectionState.INSTANCE.a(numX02.intValue()) : null, (BluetoothDevice) intent.getParcelableExtra("android.bluetooth.device.extra.DEVICE"));
         }
     }
@@ -71,7 +71,7 @@ public enum BluetoothProfileConnectionState {
                 return false;
             }
             b bVar = (b) obj;
-            return Intrinsics3.areEqual(this.a, bVar.a) && Intrinsics3.areEqual(this.f2791b, bVar.f2791b) && Intrinsics3.areEqual(this.c, bVar.c);
+            return m.areEqual(this.a, bVar.a) && m.areEqual(this.f2791b, bVar.f2791b) && m.areEqual(this.c, bVar.c);
         }
 
         public int hashCode() {
@@ -84,7 +84,7 @@ public enum BluetoothProfileConnectionState {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Update(previous=");
+            StringBuilder sbU = a.U("Update(previous=");
             sbU.append(this.a);
             sbU.append(", current=");
             sbU.append(this.f2791b);

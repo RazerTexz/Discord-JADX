@@ -18,26 +18,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
-import b.a.k.FormatUtils;
-import b.b.a.FlexInputCoordinator;
-import b.b.a.g.FileUtils;
-import b.o.a.CameraListener;
-import b.o.a.CameraLogger;
-import b.o.a.CameraOptions;
-import b.o.a.CameraUtils;
-import b.o.a.CameraUtils2;
-import b.o.a.FileCallback;
-import b.o.a.PictureResult;
-import b.o.a.m.Facing;
-import b.o.a.m.Flash;
-import b.o.a.r.WorkerHandler;
+import b.b.a.b;
+import b.o.a.k;
+import b.o.a.l;
+import b.o.a.m.e;
+import b.o.a.m.f;
+import b.o.a.r.g;
 import com.lytefast.flexinput.R;
 import com.lytefast.flexinput.managers.FileManager;
 import com.otaliastudios.cameraview.CameraException;
 import com.otaliastudios.cameraview.CameraView;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
 import defpackage.q;
 import java.io.File;
 import java.util.Collection;
@@ -94,16 +87,16 @@ public class CameraFragment extends Fragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             List listEmptyList;
-            Collection<Flash> collectionB;
+            Collection<f> collectionB;
             List listEmptyList2;
-            Collection<Facing> collectionA;
+            Collection<e> collectionA;
             int i = this.j;
             if (i == 0) {
                 CameraView cameraView = ((CameraFragment) this.k).cameraView;
                 if (cameraView == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                    m.throwUninitializedPropertyAccessException("cameraView");
                 }
-                cameraView.f3176z.O0(new PictureResult.a());
+                cameraView.f3176z.O0(new l.a());
                 return;
             }
             Integer num = null;
@@ -113,7 +106,7 @@ public class CameraFragment extends Fragment {
                 cameraFragment.photoFilePending = true;
                 CameraView cameraView2 = cameraFragment.cameraView;
                 if (cameraView2 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                    m.throwUninitializedPropertyAccessException("cameraView");
                 }
                 cameraView2.close();
                 return;
@@ -125,41 +118,41 @@ public class CameraFragment extends Fragment {
                 CameraFragment cameraFragment2 = (CameraFragment) this.k;
                 CameraView cameraView3 = cameraFragment2.cameraView;
                 if (cameraView3 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                    m.throwUninitializedPropertyAccessException("cameraView");
                 }
-                CameraOptions cameraOptions = cameraView3.getCameraOptions();
-                if (cameraOptions == null || (collectionA = cameraOptions.a()) == null || (listEmptyList2 = _Collections.toList(collectionA)) == null) {
-                    listEmptyList2 = Collections2.emptyList();
+                b.o.a.c cameraOptions = cameraView3.getCameraOptions();
+                if (cameraOptions == null || (collectionA = cameraOptions.a()) == null || (listEmptyList2 = u.toList(collectionA)) == null) {
+                    listEmptyList2 = n.emptyList();
                 }
                 if (listEmptyList2.size() <= 1) {
                     return;
                 }
                 CameraView cameraView4 = cameraFragment2.cameraView;
                 if (cameraView4 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                    m.throwUninitializedPropertyAccessException("cameraView");
                 }
-                Facing facing = cameraView4.getFacing();
-                Intrinsics3.checkNotNullExpressionValue(facing, "cameraView.facing");
-                Iterator<Integer> it = Collections2.getIndices(listEmptyList2).iterator();
+                e facing = cameraView4.getFacing();
+                m.checkNotNullExpressionValue(facing, "cameraView.facing");
+                Iterator<Integer> it = n.getIndices(listEmptyList2).iterator();
                 while (true) {
                     if (!it.hasNext()) {
                         break;
                     }
                     Integer next = it.next();
-                    if (facing == ((Facing) listEmptyList2.get(next.intValue()))) {
+                    if (facing == ((e) listEmptyList2.get(next.intValue()))) {
                         num = next;
                         break;
                     }
                 }
                 Integer num2 = num;
-                Facing facing2 = (Facing) _Collections.getOrNull(listEmptyList2, ((num2 != null ? num2.intValue() : 0) + 1) % listEmptyList2.size());
-                if (facing2 != null) {
+                e eVar = (e) u.getOrNull(listEmptyList2, ((num2 != null ? num2.intValue() : 0) + 1) % listEmptyList2.size());
+                if (eVar != null) {
                     cameraFragment2.g();
                     CameraView cameraView5 = cameraFragment2.cameraView;
                     if (cameraView5 == null) {
-                        Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                        m.throwUninitializedPropertyAccessException("cameraView");
                     }
-                    cameraView5.setFacing(facing2);
+                    cameraView5.setFacing(eVar);
                     return;
                 }
                 return;
@@ -167,45 +160,45 @@ public class CameraFragment extends Fragment {
             CameraFragment cameraFragment3 = (CameraFragment) this.k;
             CameraView cameraView6 = cameraFragment3.cameraView;
             if (cameraView6 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                m.throwUninitializedPropertyAccessException("cameraView");
             }
-            CameraOptions cameraOptions2 = cameraView6.getCameraOptions();
-            if (cameraOptions2 == null || (collectionB = cameraOptions2.b()) == null || (listEmptyList = _Collections.toList(collectionB)) == null) {
-                listEmptyList = Collections2.emptyList();
+            b.o.a.c cameraOptions2 = cameraView6.getCameraOptions();
+            if (cameraOptions2 == null || (collectionB = cameraOptions2.b()) == null || (listEmptyList = u.toList(collectionB)) == null) {
+                listEmptyList = n.emptyList();
             }
             if (listEmptyList.size() <= 1) {
                 return;
             }
             CameraView cameraView7 = cameraFragment3.cameraView;
             if (cameraView7 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                m.throwUninitializedPropertyAccessException("cameraView");
             }
-            Flash flash = cameraView7.getFlash();
-            Intrinsics3.checkNotNullExpressionValue(flash, "cameraView.flash");
-            Iterator<Integer> it2 = Collections2.getIndices(listEmptyList).iterator();
+            f flash = cameraView7.getFlash();
+            m.checkNotNullExpressionValue(flash, "cameraView.flash");
+            Iterator<Integer> it2 = n.getIndices(listEmptyList).iterator();
             while (true) {
                 if (!it2.hasNext()) {
                     break;
                 }
                 Integer next2 = it2.next();
-                if (flash == ((Flash) listEmptyList.get(next2.intValue()))) {
+                if (flash == ((f) listEmptyList.get(next2.intValue()))) {
                     num = next2;
                     break;
                 }
             }
             Integer num3 = num;
-            Flash flash2 = (Flash) _Collections.getOrNull(listEmptyList, ((num3 != null ? num3.intValue() : 0) + 1) % listEmptyList.size());
-            if (flash2 != null) {
+            f fVar = (f) u.getOrNull(listEmptyList, ((num3 != null ? num3.intValue() : 0) + 1) % listEmptyList.size());
+            if (fVar != null) {
                 try {
                     CameraView cameraView8 = cameraFragment3.cameraView;
                     if (cameraView8 == null) {
-                        Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+                        m.throwUninitializedPropertyAccessException("cameraView");
                     }
-                    cameraView8.setFlash(flash2);
+                    cameraView8.setFlash(fVar);
                     cameraFragment3.h();
                 } catch (Exception e) {
                     String string = cameraFragment3.getString(R.h.camera_unknown_error);
-                    Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.camera_unknown_error)");
+                    m.checkNotNullExpressionValue(string, "getString(R.string.camera_unknown_error)");
                     CameraFragment.l(cameraFragment3, string, e, true, null, 8, null);
                 }
             }
@@ -228,34 +221,34 @@ public class CameraFragment extends Fragment {
         public final void onClick(View view) {
             CameraFragment cameraFragment = CameraFragment.this;
             Companion companion = CameraFragment.INSTANCE;
-            FlexInputCoordinator<Object> flexInputCoordinatorK = cameraFragment.k();
-            if (flexInputCoordinatorK != null) {
-                flexInputCoordinatorK.requestMediaPermissions(q.k);
+            b<Object> bVarK = cameraFragment.k();
+            if (bVarK != null) {
+                bVarK.requestMediaPermissions(q.k);
             }
         }
     }
 
     /* compiled from: CameraFragment.kt */
-    public static final class d extends CameraListener {
+    public static final class d extends b.o.a.a {
 
         /* renamed from: b, reason: collision with root package name */
         public final /* synthetic */ View f3164b;
 
         /* compiled from: CameraFragment.kt */
-        public static final class a implements FileCallback {
+        public static final class a implements k {
             public a() {
             }
 
-            @Override // b.o.a.FileCallback
+            @Override // b.o.a.k
             public final void a(File file) {
                 if (file != null) {
                     Companion companion = CameraFragment.INSTANCE;
                     Context context = d.this.f3164b.getContext();
-                    Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+                    m.checkNotNullExpressionValue(context, "view.context");
                     context.sendBroadcast(new Intent("android.intent.action.MEDIA_SCANNER_SCAN_FILE", Uri.fromFile(file)));
-                    FlexInputCoordinator<Object> flexInputCoordinatorK = CameraFragment.this.k();
-                    if (flexInputCoordinatorK != null) {
-                        flexInputCoordinatorK.f(FileUtils.a(file));
+                    b<Object> bVarK = CameraFragment.this.k();
+                    if (bVarK != null) {
+                        bVarK.f(b.b.a.g.a.a(file));
                     }
                 }
             }
@@ -265,31 +258,31 @@ public class CameraFragment extends Fragment {
             this.f3164b = view;
         }
 
-        @Override // b.o.a.CameraListener
+        @Override // b.o.a.a
         public void a() {
             CameraFragment cameraFragment = CameraFragment.this;
             if (cameraFragment.photoFilePending) {
-                FlexInputCoordinator<Object> flexInputCoordinatorK = cameraFragment.k();
-                FileManager fileManager = flexInputCoordinatorK != null ? flexInputCoordinatorK.getFileManager() : null;
+                b<Object> bVarK = cameraFragment.k();
+                FileManager fileManager = bVarK != null ? bVarK.getFileManager() : null;
                 File fileB = fileManager != null ? fileManager.b() : null;
                 if (fileB == null) {
                     CameraFragment.j(cameraFragment, 0, 0, 3, null);
                     return;
                 }
                 Context contextRequireContext = cameraFragment.requireContext();
-                Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+                m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
                 Uri uriA = fileManager.a(contextRequireContext, fileB);
                 Intent intentAddFlags = new Intent("android.media.action.IMAGE_CAPTURE").putExtra("output", uriA).addFlags(2);
                 Context contextRequireContext2 = cameraFragment.requireContext();
-                Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
-                Intrinsics3.checkNotNullExpressionValue(intentAddFlags, "intent");
+                m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+                m.checkNotNullExpressionValue(intentAddFlags, "intent");
                 List<ResolveInfo> listQueryIntentActivities = contextRequireContext2.getPackageManager().queryIntentActivities(intentAddFlags, 65536);
-                Intrinsics3.checkNotNullExpressionValue(listQueryIntentActivities, "packageManager.queryInte…nager.MATCH_DEFAULT_ONLY)");
+                m.checkNotNullExpressionValue(listQueryIntentActivities, "packageManager.queryInte…nager.MATCH_DEFAULT_ONLY)");
                 Iterator<ResolveInfo> it = listQueryIntentActivities.iterator();
                 while (it.hasNext()) {
                     contextRequireContext2.grantUriPermission(it.next().activityInfo.packageName, uriA, 3);
                 }
-                Intrinsics3.checkNotNullExpressionValue(intentAddFlags, "Intent(MediaStore.ACTION…nt, photoUri)\n          }");
+                m.checkNotNullExpressionValue(intentAddFlags, "Intent(MediaStore.ACTION…nt, photoUri)\n          }");
                 cameraFragment.photoFile = fileB;
                 try {
                     cameraFragment.startActivityForResult(intentAddFlags, 4567);
@@ -299,49 +292,49 @@ public class CameraFragment extends Fragment {
             }
         }
 
-        @Override // b.o.a.CameraListener
+        @Override // b.o.a.a
         public void b(CameraException cameraException) {
-            Intrinsics3.checkNotNullParameter(cameraException, "exception");
+            m.checkNotNullParameter(cameraException, "exception");
             CameraFragment cameraFragment = CameraFragment.this;
             String string = cameraFragment.getString(R.h.camera_unknown_error);
-            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.camera_unknown_error)");
+            m.checkNotNullExpressionValue(string, "getString(R.string.camera_unknown_error)");
             CameraFragment.l(cameraFragment, string, cameraException, true, null, 8, null);
         }
 
-        @Override // b.o.a.CameraListener
-        public void c(CameraOptions cameraOptions) {
-            Intrinsics3.checkNotNullParameter(cameraOptions, "cameraOptions");
+        @Override // b.o.a.a
+        public void c(b.o.a.c cVar) {
+            m.checkNotNullParameter(cVar, "cameraOptions");
             CameraFragment cameraFragment = CameraFragment.this;
             Companion companion = CameraFragment.INSTANCE;
             cameraFragment.h();
             CameraFragment.this.g();
             ImageView imageView = CameraFragment.this.cameraFacingBtn;
             if (imageView == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("cameraFacingBtn");
+                m.throwUninitializedPropertyAccessException("cameraFacingBtn");
             }
-            imageView.setVisibility(cameraOptions.a().size() > 1 ? 0 : 8);
+            imageView.setVisibility(cVar.a().size() > 1 ? 0 : 8);
             ImageView imageView2 = CameraFragment.this.cameraFlashBtn;
             if (imageView2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("cameraFlashBtn");
+                m.throwUninitializedPropertyAccessException("cameraFlashBtn");
             }
-            imageView2.setVisibility(cameraOptions.b().size() > 1 ? 0 : 8);
+            imageView2.setVisibility(cVar.b().size() > 1 ? 0 : 8);
         }
 
-        @Override // b.o.a.CameraListener
-        public void d(PictureResult pictureResult) {
+        @Override // b.o.a.a
+        public void d(l lVar) {
             FileManager fileManager;
             File fileB;
-            Intrinsics3.checkNotNullParameter(pictureResult, "result");
+            m.checkNotNullParameter(lVar, "result");
             CameraFragment cameraFragment = CameraFragment.this;
             Companion companion = CameraFragment.INSTANCE;
-            FlexInputCoordinator<Object> flexInputCoordinatorK = cameraFragment.k();
-            if (flexInputCoordinatorK == null || (fileManager = flexInputCoordinatorK.getFileManager()) == null || (fileB = fileManager.b()) == null) {
+            b<Object> bVarK = cameraFragment.k();
+            if (bVarK == null || (fileManager = bVarK.getFileManager()) == null || (fileB = fileManager.b()) == null) {
                 return;
             }
             a aVar = new a();
-            byte[] bArr = pictureResult.a;
-            CameraLogger cameraLogger = CameraUtils2.a;
-            WorkerHandler.a(new CameraUtils(bArr, fileB, new Handler(), aVar));
+            byte[] bArr = lVar.a;
+            b.o.a.b bVar = b.o.a.e.a;
+            g.a(new b.o.a.d(bArr, fileB, new Handler(), aVar));
         }
     }
 
@@ -373,11 +366,11 @@ public class CameraFragment extends Fragment {
     public final void g() {
         ImageView imageView = this.cameraFacingBtn;
         if (imageView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFacingBtn");
+            m.throwUninitializedPropertyAccessException("cameraFacingBtn");
         }
         CameraView cameraView = this.cameraView;
         if (cameraView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         int iOrdinal = cameraView.getFacing().ordinal();
         int i = (iOrdinal == 0 || iOrdinal != 1) ? R.e.ic_camera_front_white_24dp : R.e.ic_camera_rear_white_24dp;
@@ -387,21 +380,21 @@ public class CameraFragment extends Fragment {
     public final void h() {
         ImageView imageView = this.cameraFlashBtn;
         if (imageView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFlashBtn");
+            m.throwUninitializedPropertyAccessException("cameraFlashBtn");
         }
         CameraView cameraView = this.cameraView;
         if (cameraView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         int iOrdinal = cameraView.getFlash().ordinal();
         imageView.setImageResource(iOrdinal != 0 ? iOrdinal != 1 ? iOrdinal != 3 ? R.e.ic_flash_auto_24dp : R.e.ic_flash_torch_24dp : R.e.ic_flash_on_24dp : R.e.ic_flash_off_24dp);
         ImageView imageView2 = this.cameraFlashBtn;
         if (imageView2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFlashBtn");
+            m.throwUninitializedPropertyAccessException("cameraFlashBtn");
         }
         CameraView cameraView2 = this.cameraView;
         if (cameraView2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         int iOrdinal2 = cameraView2.getFlash().ordinal();
         String string = iOrdinal2 != 0 ? iOrdinal2 != 1 ? (iOrdinal2 == 2 || iOrdinal2 != 3) ? getString(R.h.flash_auto) : getString(R.h.flash_torch) : getString(R.h.flash_on) : getString(R.h.flash_off);
@@ -417,32 +410,32 @@ public class CameraFragment extends Fragment {
             File file2 = this.photoFile;
             if (file2 != null) {
                 Context contextRequireContext = requireContext();
-                Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+                m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
                 contextRequireContext.sendBroadcast(new Intent("android.intent.action.MEDIA_SCANNER_SCAN_FILE", Uri.fromFile(file2)));
-                FlexInputCoordinator<Object> flexInputCoordinatorK = k();
-                if (flexInputCoordinatorK != null) {
-                    flexInputCoordinatorK.f(FileUtils.a(file2));
+                b<Object> bVarK = k();
+                if (bVarK != null) {
+                    bVarK.f(b.b.a.g.a.a(file2));
                 }
             }
         } else if (resultCode != 0 && (file = this.photoFile) != null) {
             String string = getString(R.h.camera_intent_result_error);
-            Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.camera_intent_result_error)");
+            m.checkNotNullExpressionValue(string, "getString(R.string.camera_intent_result_error)");
             Toast.makeText(getContext(), string, 0).show();
             file.delete();
         }
         CameraView cameraView = this.cameraView;
         if (cameraView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         cameraView.open();
         this.photoFile = null;
         this.photoFilePending = false;
     }
 
-    public final FlexInputCoordinator<Object> k() {
+    public final b<Object> k() {
         Fragment parentFragment = getParentFragment();
         Fragment parentFragment2 = parentFragment != null ? parentFragment.getParentFragment() : null;
-        return (FlexInputCoordinator) (parentFragment2 instanceof FlexInputCoordinator ? parentFragment2 : null);
+        return (b) (parentFragment2 instanceof b ? parentFragment2 : null);
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -459,7 +452,7 @@ public class CameraFragment extends Fragment {
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(inflater, "inflater");
+        m.checkNotNullParameter(inflater, "inflater");
         return inflater.inflate(R.g.fragment_camera, container, false);
     }
 
@@ -470,22 +463,22 @@ public class CameraFragment extends Fragment {
         super.onResume();
         View view = getView();
         boolean z2 = (view == null || (context = view.getContext()) == null || (packageManager = context.getPackageManager()) == null || !packageManager.hasSystemFeature("android.hardware.camera.any")) ? false : true;
-        FlexInputCoordinator<Object> flexInputCoordinatorK = k();
-        boolean z3 = flexInputCoordinatorK != null && flexInputCoordinatorK.hasMediaPermissions();
+        b<Object> bVarK = k();
+        boolean z3 = bVarK != null && bVarK.hasMediaPermissions();
         if (z2 && z3) {
             View view2 = this.cameraContainer;
             if (view2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("cameraContainer");
+                m.throwUninitializedPropertyAccessException("cameraContainer");
             }
             view2.setVisibility(0);
             ViewStub viewStub = this.permissionsViewStub;
             if (viewStub == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("permissionsViewStub");
+                m.throwUninitializedPropertyAccessException("permissionsViewStub");
             }
-            if (Intrinsics3.areEqual(viewStub.getTag(), Boolean.TRUE)) {
+            if (m.areEqual(viewStub.getTag(), Boolean.TRUE)) {
                 ViewStub viewStub2 = this.permissionsViewStub;
                 if (viewStub2 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("permissionsViewStub");
+                    m.throwUninitializedPropertyAccessException("permissionsViewStub");
                 }
                 viewStub2.setVisibility(8);
                 return;
@@ -494,120 +487,120 @@ public class CameraFragment extends Fragment {
         }
         View view3 = this.cameraContainer;
         if (view3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraContainer");
+            m.throwUninitializedPropertyAccessException("cameraContainer");
         }
         view3.setVisibility(8);
         ViewStub viewStub3 = this.permissionsViewStub;
         if (viewStub3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("permissionsViewStub");
+            m.throwUninitializedPropertyAccessException("permissionsViewStub");
         }
         if (viewStub3.getTag() != null) {
             ViewStub viewStub4 = this.permissionsViewStub;
             if (viewStub4 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("permissionsViewStub");
+                m.throwUninitializedPropertyAccessException("permissionsViewStub");
             }
             viewStub4.setVisibility(0);
             return;
         }
         ViewStub viewStub5 = this.permissionsViewStub;
         if (viewStub5 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("permissionsViewStub");
+            m.throwUninitializedPropertyAccessException("permissionsViewStub");
         }
         viewStub5.setTag(Boolean.TRUE);
         ViewStub viewStub6 = this.permissionsViewStub;
         if (viewStub6 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("permissionsViewStub");
+            m.throwUninitializedPropertyAccessException("permissionsViewStub");
         }
         View viewInflate = viewStub6.inflate();
         viewInflate.findViewById(R.f.permissions_required_action_btn).setOnClickListener(new c());
         View viewFindViewById = viewInflate.findViewById(R.f.permissions_required_text);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById, "view.findViewById<TextVi…ermissions_required_text)");
-        FormatUtils.n((TextView) viewFindViewById, R.h.system_permission_request_camera, new Object[0], null, 4);
+        m.checkNotNullExpressionValue(viewFindViewById, "view.findViewById<TextVi…ermissions_required_text)");
+        b.a.k.b.n((TextView) viewFindViewById, R.h.system_permission_request_camera, new Object[0], null, 4);
     }
 
     @Override // androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         View viewFindViewById = view.findViewById(R.f.permissions_view_stub);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById, "view.findViewById(R.id.permissions_view_stub)");
+        m.checkNotNullExpressionValue(viewFindViewById, "view.findViewById(R.id.permissions_view_stub)");
         this.permissionsViewStub = (ViewStub) viewFindViewById;
         View viewFindViewById2 = view.findViewById(R.f.camera_container);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById2, "view.findViewById(R.id.camera_container)");
+        m.checkNotNullExpressionValue(viewFindViewById2, "view.findViewById(R.id.camera_container)");
         this.cameraContainer = viewFindViewById2;
         View viewFindViewById3 = view.findViewById(R.f.camera_view);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById3, "view.findViewById(R.id.camera_view)");
+        m.checkNotNullExpressionValue(viewFindViewById3, "view.findViewById(R.id.camera_view)");
         CameraView cameraView = (CameraView) viewFindViewById3;
         this.cameraView = cameraView;
         if (cameraView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         cameraView.setLifecycleOwner(getViewLifecycleOwner());
         CameraView cameraView2 = this.cameraView;
         if (cameraView2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         cameraView2.setPlaySounds(false);
         CameraView cameraView3 = this.cameraView;
         if (cameraView3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraView");
+            m.throwUninitializedPropertyAccessException("cameraView");
         }
         cameraView3.D.add(new d(view));
         View viewFindViewById4 = view.findViewById(R.f.take_photo_btn);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById4, "view.findViewById(R.id.take_photo_btn)");
+        m.checkNotNullExpressionValue(viewFindViewById4, "view.findViewById(R.id.take_photo_btn)");
         ImageView imageView = (ImageView) viewFindViewById4;
         this.takePhotoBtn = imageView;
         if (imageView == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("takePhotoBtn");
+            m.throwUninitializedPropertyAccessException("takePhotoBtn");
         }
         imageView.setOnClickListener(new a(0, this));
         ImageView imageView2 = this.takePhotoBtn;
         if (imageView2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("takePhotoBtn");
+            m.throwUninitializedPropertyAccessException("takePhotoBtn");
         }
         imageView2.setImageTintList(null);
         View viewFindViewById5 = view.findViewById(R.f.launch_camera_btn);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById5, "view.findViewById(R.id.launch_camera_btn)");
+        m.checkNotNullExpressionValue(viewFindViewById5, "view.findViewById(R.id.launch_camera_btn)");
         ImageView imageView3 = (ImageView) viewFindViewById5;
         this.launchCameraBtn = imageView3;
         if (imageView3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("launchCameraBtn");
+            m.throwUninitializedPropertyAccessException("launchCameraBtn");
         }
         imageView3.setOnClickListener(new a(1, this));
         ImageView imageView4 = this.launchCameraBtn;
         if (imageView4 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("launchCameraBtn");
+            m.throwUninitializedPropertyAccessException("launchCameraBtn");
         }
         imageView4.setImageTintList(ColorStateList.valueOf(-1));
         ImageView imageView5 = this.launchCameraBtn;
         if (imageView5 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("launchCameraBtn");
+            m.throwUninitializedPropertyAccessException("launchCameraBtn");
         }
         imageView5.setImageResource(R.e.ic_launch_24dp);
         View viewFindViewById6 = view.findViewById(R.f.camera_flash_btn);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById6, "view.findViewById(R.id.camera_flash_btn)");
+        m.checkNotNullExpressionValue(viewFindViewById6, "view.findViewById(R.id.camera_flash_btn)");
         ImageView imageView6 = (ImageView) viewFindViewById6;
         this.cameraFlashBtn = imageView6;
         if (imageView6 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFlashBtn");
+            m.throwUninitializedPropertyAccessException("cameraFlashBtn");
         }
         imageView6.setOnClickListener(new a(2, this));
         ImageView imageView7 = this.cameraFlashBtn;
         if (imageView7 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFlashBtn");
+            m.throwUninitializedPropertyAccessException("cameraFlashBtn");
         }
         imageView7.setImageTintList(ColorStateList.valueOf(-1));
         View viewFindViewById7 = view.findViewById(R.f.camera_facing_btn);
-        Intrinsics3.checkNotNullExpressionValue(viewFindViewById7, "view.findViewById(R.id.camera_facing_btn)");
+        m.checkNotNullExpressionValue(viewFindViewById7, "view.findViewById(R.id.camera_facing_btn)");
         ImageView imageView8 = (ImageView) viewFindViewById7;
         this.cameraFacingBtn = imageView8;
         if (imageView8 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFacingBtn");
+            m.throwUninitializedPropertyAccessException("cameraFacingBtn");
         }
         imageView8.setOnClickListener(new a(3, this));
         ImageView imageView9 = this.cameraFacingBtn;
         if (imageView9 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("cameraFacingBtn");
+            m.throwUninitializedPropertyAccessException("cameraFacingBtn");
         }
         imageView9.setImageTintList(ColorStateList.valueOf(-1));
     }

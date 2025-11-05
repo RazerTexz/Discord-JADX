@@ -3,8 +3,8 @@ package com.discord.widgets.chat.input.emoji;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreStream;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -14,7 +14,7 @@ public final class EmojiAutocompletePremiumUpsellFeatureFlag {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(EmojiAutocompletePremiumUpsellFeatureFlag2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(EmojiAutocompletePremiumUpsellFeatureFlag$Companion$INSTANCE$2.INSTANCE);
     private final StoreExperiments storeExperiments;
 
     /* compiled from: EmojiAutocompletePremiumUpsellFeatureFlag.kt */
@@ -38,7 +38,7 @@ public final class EmojiAutocompletePremiumUpsellFeatureFlag {
     }
 
     public EmojiAutocompletePremiumUpsellFeatureFlag(StoreExperiments storeExperiments) {
-        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
+        m.checkNotNullParameter(storeExperiments, "storeExperiments");
         this.storeExperiments = storeExperiments;
     }
 

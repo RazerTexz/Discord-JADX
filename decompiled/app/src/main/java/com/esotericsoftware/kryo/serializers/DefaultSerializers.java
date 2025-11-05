@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.KryoSerializable;
@@ -646,7 +646,7 @@ public class DefaultSerializers {
                     return (Enum) objArr[i];
                 }
             }
-            StringBuilder sbU = outline.U("Invalid ordinal for enum \"");
+            StringBuilder sbU = a.U("Invalid ordinal for enum \"");
             sbU.append(cls.getName());
             sbU.append("\": ");
             sbU.append(i);

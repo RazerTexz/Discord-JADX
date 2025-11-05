@@ -1,14 +1,14 @@
 package com.discord.widgets.guildscheduledevent;
 
 import androidx.annotation.DrawableRes;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.guildscheduledevent.GuildScheduledEventEntityMetadata;
 import com.discord.api.guildscheduledevent.GuildScheduledEventEntityType;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -46,7 +46,7 @@ public abstract class GuildScheduledEventLocationInfo {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof ChannelLocation) && Intrinsics3.areEqual(this.channel, ((ChannelLocation) other).channel);
+                return (other instanceof ChannelLocation) && m.areEqual(this.channel, ((ChannelLocation) other).channel);
             }
             return true;
         }
@@ -64,7 +64,7 @@ public abstract class GuildScheduledEventLocationInfo {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ChannelLocation(channel=");
+            StringBuilder sbU = a.U("ChannelLocation(channel=");
             sbU.append(this.channel);
             sbU.append(")");
             return sbU.toString();
@@ -78,7 +78,7 @@ public abstract class GuildScheduledEventLocationInfo {
 
         public final GuildScheduledEventLocationInfo buildLocationInfo(GuildScheduledEvent guildScheduledEvent, Channel channel) {
             String location;
-            Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+            m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
             if (guildScheduledEvent.getEntityType() != GuildScheduledEventEntityType.EXTERNAL) {
                 return new ChannelLocation(channel);
             }
@@ -95,7 +95,7 @@ public abstract class GuildScheduledEventLocationInfo {
 
         public final GuildScheduledEventLocationInfo buildLocationInfo(GuildScheduledEventModel guildScheduledEventModel, Channel channel) {
             String location;
-            Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "guildScheduledEventModel");
+            m.checkNotNullParameter(guildScheduledEventModel, "guildScheduledEventModel");
             if (guildScheduledEventModel.getEntityType() == GuildScheduledEventEntityType.EXTERNAL) {
                 GuildScheduledEventEntityMetadata entityMetadata = guildScheduledEventModel.getEntityMetadata();
                 if (entityMetadata == null || (location = entityMetadata.getLocation()) == null) {
@@ -114,7 +114,7 @@ public abstract class GuildScheduledEventLocationInfo {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ExternalLocation(String str) {
             super(null);
-            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
             this.location = str;
         }
 
@@ -131,13 +131,13 @@ public abstract class GuildScheduledEventLocationInfo {
         }
 
         public final ExternalLocation copy(String location) {
-            Intrinsics3.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+            m.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
             return new ExternalLocation(location);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof ExternalLocation) && Intrinsics3.areEqual(this.location, ((ExternalLocation) other).location);
+                return (other instanceof ExternalLocation) && m.areEqual(this.location, ((ExternalLocation) other).location);
             }
             return true;
         }
@@ -155,7 +155,7 @@ public abstract class GuildScheduledEventLocationInfo {
         }
 
         public String toString() {
-            return outline.J(outline.U("ExternalLocation(location="), this.location, ")");
+            return a.J(a.U("ExternalLocation(location="), this.location, ")");
         }
     }
 

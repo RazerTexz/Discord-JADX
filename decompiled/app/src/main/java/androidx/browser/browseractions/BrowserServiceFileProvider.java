@@ -19,8 +19,7 @@ import androidx.annotation.UiThread;
 import androidx.concurrent.futures.ResolvableFuture;
 import androidx.core.content.FileProvider;
 import androidx.core.util.AtomicFile;
-import b.d.b.a.outline;
-import b.i.b.d.a.ListenableFuture8;
+import b.d.b.a.a;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -222,7 +221,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
     }
 
     private static Uri generateUri(Context context, String str) {
-        return new Uri.Builder().scheme(CONTENT_SCHEME).authority(context.getPackageName() + AUTHORITY_SUFFIX).path(outline.y(FILE_SUB_DIR_NAME, str, FILE_EXTENSION)).build();
+        return new Uri.Builder().scheme(CONTENT_SCHEME).authority(context.getPackageName() + AUTHORITY_SUFFIX).path(a.y(FILE_SUB_DIR_NAME, str, FILE_EXTENSION)).build();
     }
 
     public static void grantReadPermission(@NonNull Intent intent, @Nullable List<Uri> list, @NonNull Context context) {
@@ -239,7 +238,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
     }
 
     @NonNull
-    public static ListenableFuture8<Bitmap> loadBitmap(@NonNull ContentResolver contentResolver, @NonNull Uri uri) {
+    public static b.i.b.d.a.a<Bitmap> loadBitmap(@NonNull ContentResolver contentResolver, @NonNull Uri uri) {
         ResolvableFuture resolvableFutureCreate = ResolvableFuture.create();
         AsyncTask.THREAD_POOL_EXECUTOR.execute(new AnonymousClass1(contentResolver, uri, resolvableFutureCreate));
         return resolvableFutureCreate;
@@ -248,7 +247,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
     @NonNull
     @UiThread
     public static ResolvableFuture<Uri> saveBitmap(@NonNull Context context, @NonNull Bitmap bitmap, @NonNull String str, int i) {
-        StringBuilder sbX = outline.X(str, "_");
+        StringBuilder sbX = a.X(str, "_");
         sbX.append(Integer.toString(i));
         String string = sbX.toString();
         Uri uriGenerateUri = generateUri(context, string);

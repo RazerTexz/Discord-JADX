@@ -25,7 +25,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 @Deprecated
 /* loaded from: classes.dex */
@@ -532,7 +532,7 @@ public abstract class PreferenceFragment extends Fragment implements PreferenceM
             boolean z2 = objFindPreference instanceof PreferenceScreen;
             obj = objFindPreference;
             if (!z2) {
-                throw new IllegalArgumentException(outline.y("Preference object with key ", str, " is not a PreferenceScreen"));
+                throw new IllegalArgumentException(a.y("Preference object with key ", str, " is not a PreferenceScreen"));
             }
         }
         setPreferenceScreen((PreferenceScreen) obj);

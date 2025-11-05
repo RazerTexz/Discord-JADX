@@ -2,7 +2,7 @@ package com.discord.stores;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -14,13 +14,11 @@ import com.discord.utilities.error.Error;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.chat.input.MentionUtils;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.p.Schedulers2;
+import com.discord.widgets.chat.input.MentionUtilsKt;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -53,7 +51,7 @@ public final class StoreGifting {
         public final String makeComboId(long skuId, Long planId) {
             StringBuilder sb = new StringBuilder();
             sb.append(skuId);
-            sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+            sb.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
             sb.append(planId);
             return sb.toString();
         }
@@ -102,7 +100,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public RedeemedFailed(ModelGift modelGift, boolean z2, Integer num) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelGift, "gift");
+                m.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
                 this.canRetry = z2;
                 this.errorCode = num;
@@ -136,7 +134,7 @@ public final class StoreGifting {
             }
 
             public final RedeemedFailed copy(ModelGift gift, boolean canRetry, Integer errorCode) {
-                Intrinsics3.checkNotNullParameter(gift, "gift");
+                m.checkNotNullParameter(gift, "gift");
                 return new RedeemedFailed(gift, canRetry, errorCode);
             }
 
@@ -148,7 +146,7 @@ public final class StoreGifting {
                     return false;
                 }
                 RedeemedFailed redeemedFailed = (RedeemedFailed) other;
-                return Intrinsics3.areEqual(getGift(), redeemedFailed.getGift()) && this.canRetry == redeemedFailed.canRetry && Intrinsics3.areEqual(this.errorCode, redeemedFailed.errorCode);
+                return m.areEqual(getGift(), redeemedFailed.getGift()) && this.canRetry == redeemedFailed.canRetry && m.areEqual(this.errorCode, redeemedFailed.errorCode);
             }
 
             public final boolean getCanRetry() {
@@ -179,12 +177,12 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("RedeemedFailed(gift=");
+                StringBuilder sbU = a.U("RedeemedFailed(gift=");
                 sbU.append(getGift());
                 sbU.append(", canRetry=");
                 sbU.append(this.canRetry);
                 sbU.append(", errorCode=");
-                return outline.F(sbU, this.errorCode, ")");
+                return a.F(sbU, this.errorCode, ")");
             }
         }
 
@@ -195,7 +193,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Redeeming(ModelGift modelGift) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelGift, "gift");
+                m.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
             }
 
@@ -211,13 +209,13 @@ public final class StoreGifting {
             }
 
             public final Redeeming copy(ModelGift gift) {
-                Intrinsics3.checkNotNullParameter(gift, "gift");
+                m.checkNotNullParameter(gift, "gift");
                 return new Redeeming(gift);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Redeeming) && Intrinsics3.areEqual(getGift(), ((Redeeming) other).getGift());
+                    return (other instanceof Redeeming) && m.areEqual(getGift(), ((Redeeming) other).getGift());
                 }
                 return true;
             }
@@ -236,7 +234,7 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Redeeming(gift=");
+                StringBuilder sbU = a.U("Redeeming(gift=");
                 sbU.append(getGift());
                 sbU.append(")");
                 return sbU.toString();
@@ -250,7 +248,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Resolved(ModelGift modelGift) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelGift, "gift");
+                m.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
             }
 
@@ -266,13 +264,13 @@ public final class StoreGifting {
             }
 
             public final Resolved copy(ModelGift gift) {
-                Intrinsics3.checkNotNullParameter(gift, "gift");
+                m.checkNotNullParameter(gift, "gift");
                 return new Resolved(gift);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Resolved) && Intrinsics3.areEqual(getGift(), ((Resolved) other).getGift());
+                    return (other instanceof Resolved) && m.areEqual(getGift(), ((Resolved) other).getGift());
                 }
                 return true;
             }
@@ -291,7 +289,7 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Resolved(gift=");
+                StringBuilder sbU = a.U("Resolved(gift=");
                 sbU.append(getGift());
                 sbU.append(")");
                 return sbU.toString();
@@ -305,7 +303,7 @@ public final class StoreGifting {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Revoking(ModelGift modelGift) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelGift, "gift");
+                m.checkNotNullParameter(modelGift, "gift");
                 this.gift = modelGift;
             }
 
@@ -321,13 +319,13 @@ public final class StoreGifting {
             }
 
             public final Revoking copy(ModelGift gift) {
-                Intrinsics3.checkNotNullParameter(gift, "gift");
+                m.checkNotNullParameter(gift, "gift");
                 return new Revoking(gift);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Revoking) && Intrinsics3.areEqual(getGift(), ((Revoking) other).getGift());
+                    return (other instanceof Revoking) && m.areEqual(getGift(), ((Revoking) other).getGift());
                 }
                 return true;
             }
@@ -346,7 +344,7 @@ public final class StoreGifting {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Revoking(gift=");
+                StringBuilder sbU = a.U("Revoking(gift=");
                 sbU.append(getGift());
                 sbU.append(")");
                 return sbU.toString();
@@ -394,20 +392,20 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$acceptGift$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01121 extends Lambda implements Function1<Error, Unit> {
+        public static final class C02321 extends o implements Function1<Error, Unit> {
 
             /* compiled from: StoreGifting.kt */
             /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01131 extends Lambda implements Function0<Unit> {
+            public static final class C02331 extends o implements Function0<Unit> {
                 public final /* synthetic */ Error $error;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C01131(Error error) {
+                public C02331(Error error) {
                     super(0);
                     this.$error = error;
                 }
@@ -426,7 +424,7 @@ public final class StoreGifting {
                     }
                     this.$error.setShowErrorToasts(false);
                     Error.Response response = this.$error.getResponse();
-                    Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+                    m.checkNotNullExpressionValue(response, "error.response");
                     switch (response.getCode()) {
                         case RestAPIAbortCodes.GIFTING_ALREADY_USED_ERROR_CODE /* 50050 */:
                             AnonymousClass1 anonymousClass12 = AnonymousClass1.this;
@@ -445,14 +443,14 @@ public final class StoreGifting {
                             String code2 = anonymousClass14.$gift.getCode();
                             ModelGift modelGift2 = AnonymousClass1.this.$gift;
                             Error.Response response2 = this.$error.getResponse();
-                            Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
+                            m.checkNotNullExpressionValue(response2, "error.response");
                             StoreGifting.access$setGifts(storeGifting2, code2, new GiftState.RedeemedFailed(modelGift2, false, Integer.valueOf(response2.getCode())));
                             break;
                     }
                 }
             }
 
-            public C01121() {
+            public C02321() {
                 super(1);
             }
 
@@ -464,19 +462,19 @@ public final class StoreGifting {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "error");
-                StoreGifting.this.getDispatcher().schedule(new C01131(error));
+                m.checkNotNullParameter(error, "error");
+                StoreGifting.this.getDispatcher().schedule(new C02331(error));
             }
         }
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
 
             /* compiled from: StoreGifting.kt */
             /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01141 extends Lambda implements Function0<Unit> {
-                public C01141() {
+            public static final class C02341 extends o implements Function0<Unit> {
+                public C02341() {
                     super(0);
                 }
 
@@ -505,7 +503,7 @@ public final class StoreGifting {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r2) {
-                StoreGifting.this.getDispatcher().schedule(new C01141());
+                StoreGifting.this.getDispatcher().schedule(new C02341());
                 StoreStream.INSTANCE.getLibrary().fetchApplications();
             }
         }
@@ -525,24 +523,24 @@ public final class StoreGifting {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$setGifts(StoreGifting.this, this.$gift.getCode(), new GiftState.Redeeming(this.$gift));
-            Observable<Void> observableX = RestAPI.INSTANCE.getApi().acceptGift(this.$gift.getCode()).X(Schedulers2.c());
-            Intrinsics3.checkNotNullExpressionValue(observableX, "RestAPI\n        .api\n   …scribeOn(Schedulers.io())");
-            ObservableExtensionsKt.appSubscribe$default(observableX, StoreGifting.this.getClass(), (Context) null, (Function1) null, new C01121(), (Function0) null, (Function0) null, new AnonymousClass2(), 54, (Object) null);
+            Observable<Void> observableX = RestAPI.INSTANCE.getApi().acceptGift(this.$gift.getCode()).X(j0.p.a.c());
+            m.checkNotNullExpressionValue(observableX, "RestAPI\n        .api\n   …scribeOn(Schedulers.io())");
+            ObservableExtensionsKt.appSubscribe$default(observableX, StoreGifting.this.getClass(), (Context) null, (Function1) null, new C02321(), (Function0) null, (Function0) null, new AnonymousClass2(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$fetchGift$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelGift, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelGift, Unit> {
         public final /* synthetic */ String $giftCode;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchGift$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01151 extends Lambda implements Function0<Unit> {
+        public static final class C02351 extends o implements Function0<Unit> {
             public final /* synthetic */ ModelGift $gift;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C01151(ModelGift modelGift) {
+            public C02351(ModelGift modelGift) {
                 super(0);
                 this.$gift = modelGift;
             }
@@ -575,19 +573,19 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
-            Intrinsics3.checkNotNullParameter(modelGift, "gift");
-            StoreGifting.this.getDispatcher().schedule(new C01151(modelGift));
+            m.checkNotNullParameter(modelGift, "gift");
+            StoreGifting.this.getDispatcher().schedule(new C02351(modelGift));
         }
     }
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$fetchGift$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ String $giftCode;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchGift$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -634,14 +632,14 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ String $comboId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -664,12 +662,12 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ String $comboId;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -716,21 +714,21 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<List<? extends ModelGift>, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<List<? extends ModelGift>, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Long $planId;
         public final /* synthetic */ long $skuId;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ List $gifts;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -773,14 +771,14 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelGift> list) {
-            Intrinsics3.checkNotNullParameter(list, "gifts");
+            m.checkNotNullParameter(list, "gifts");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ String $comboId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -803,13 +801,13 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Function1 $onError;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -859,7 +857,7 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
             Function1 function1 = this.$onError;
             if (function1 != null) {
@@ -869,13 +867,13 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<ModelGift, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<ModelGift, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Function1 $onSuccess;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ ModelGift $newGift;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -913,7 +911,7 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
-            Intrinsics3.checkNotNullParameter(modelGift, "newGift");
+            m.checkNotNullParameter(modelGift, "newGift");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(modelGift));
             Function1 function1 = this.$onSuccess;
             if (function1 != null) {
@@ -923,14 +921,14 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$getMyResolvedGifts$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<String, ? extends GiftState>, List<? extends ModelGift>> {
+    public static final class AnonymousClass1<T, R> implements b<Map<String, ? extends GiftState>, List<? extends ModelGift>> {
         public final /* synthetic */ long $userId;
 
         public AnonymousClass1(long j) {
             this.$userId = j;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ List<? extends ModelGift> call(Map<String, ? extends GiftState> map) {
             return call2(map);
         }
@@ -946,7 +944,7 @@ public final class StoreGifting {
                     arrayList.add(t);
                 }
             }
-            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
             for (GiftState giftState2 : arrayList) {
                 Objects.requireNonNull(giftState2, "null cannot be cast to non-null type com.discord.stores.StoreGifting.GiftState.Resolved");
                 arrayList2.add(((GiftState.Resolved) giftState2).getGift());
@@ -957,7 +955,7 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$requestGift$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ String $giftCode;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -980,14 +978,14 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$requestGift$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Map<String, ? extends GiftState>, GiftState> {
+    public static final class AnonymousClass2<T, R> implements b<Map<String, ? extends GiftState>, GiftState> {
         public final /* synthetic */ String $giftCode;
 
         public AnonymousClass2(String str) {
             this.$giftCode = str;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ GiftState call(Map<String, ? extends GiftState> map) {
             return call2(map);
         }
@@ -1001,7 +999,7 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1024,12 +1022,12 @@ public final class StoreGifting {
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1066,19 +1064,19 @@ public final class StoreGifting {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreGifting.kt */
     /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ ModelGift $gift;
 
         /* compiled from: StoreGifting.kt */
         /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -1115,10 +1113,10 @@ public final class StoreGifting {
     }
 
     public StoreGifting(Dispatcher dispatcher) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
         this.dispatcher = dispatcher;
         this.knownGifts = new HashMap<>();
-        this.knownGiftsSubject = BehaviorSubject.l0(Maps6.emptyMap());
+        this.knownGiftsSubject = BehaviorSubject.l0(h0.emptyMap());
     }
 
     public static final /* synthetic */ void access$clearGiftsForSku(StoreGifting storeGifting, long j, Long l) {
@@ -1137,7 +1135,7 @@ public final class StoreGifting {
         storeGifting.setGifts(str, giftState);
     }
 
-    @Store3
+    @StoreThread
     private final void clearGiftsForSku(long skuId, Long subscriptionPlanId) {
         HashMap<String, GiftState> map = this.knownGifts;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -1145,7 +1143,7 @@ public final class StoreGifting {
             GiftState value = entry.getValue();
             boolean z2 = true;
             if (value instanceof GiftState.Resolved) {
-                if (((GiftState.Resolved) value).getGift().getSkuId() == skuId && subscriptionPlanId != null && !(!Intrinsics3.areEqual(r3.getGift().getSubscriptionPlanId(), subscriptionPlanId))) {
+                if (((GiftState.Resolved) value).getGift().getSkuId() == skuId && subscriptionPlanId != null && !(!m.areEqual(r3.getGift().getSubscriptionPlanId(), subscriptionPlanId))) {
                     z2 = false;
                 }
             }
@@ -1157,7 +1155,7 @@ public final class StoreGifting {
         this.knownGiftsSubject.onNext(new HashMap(this.knownGifts));
     }
 
-    @Store3
+    @StoreThread
     private final void fetchGift(String giftCode) {
         if (this.knownGifts.containsKey(giftCode) && !(this.knownGifts.get(giftCode) instanceof GiftState.LoadFailed)) {
             if (!(this.knownGifts.get(giftCode) instanceof GiftState.Resolved)) {
@@ -1177,20 +1175,20 @@ public final class StoreGifting {
         storeGifting.generateGiftCode(j, (i & 2) != 0 ? null : l, (i & 4) != 0 ? null : function1, (i & 8) != 0 ? null : function12);
     }
 
-    @Store3
+    @StoreThread
     private final void removeGiftCode(String code) {
         this.knownGifts.remove(code);
         this.knownGiftsSubject.onNext(new HashMap(this.knownGifts));
     }
 
-    @Store3
+    @StoreThread
     private final void setGifts(String code, GiftState giftState) {
         this.knownGifts.put(code, giftState);
         this.knownGiftsSubject.onNext(new HashMap(this.knownGifts));
     }
 
     public final void acceptGift(ModelGift gift) {
-        Intrinsics3.checkNotNullParameter(gift, "gift");
+        m.checkNotNullParameter(gift, "gift");
         this.dispatcher.schedule(new AnonymousClass1(gift));
     }
 
@@ -1221,25 +1219,25 @@ public final class StoreGifting {
 
     public final Observable<List<ModelGift>> getMyResolvedGifts(long userId) {
         Observable observableG = this.knownGiftsSubject.G(new AnonymousClass1(userId));
-        Intrinsics3.checkNotNullExpressionValue(observableG, "knownGiftsSubject\n      …              }\n        }");
+        m.checkNotNullExpressionValue(observableG, "knownGiftsSubject\n      …              }\n        }");
         return observableG;
     }
 
-    @Store3
+    @StoreThread
     public final void handlePreLogout() {
         this.knownGifts.clear();
     }
 
     public final Observable<GiftState> requestGift(String giftCode) {
-        Intrinsics3.checkNotNullParameter(giftCode, "giftCode");
+        m.checkNotNullParameter(giftCode, "giftCode");
         this.dispatcher.schedule(new AnonymousClass1(giftCode));
         Observable<GiftState> observableR = this.knownGiftsSubject.G(new AnonymousClass2(giftCode)).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "knownGiftsSubject\n      …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "knownGiftsSubject\n      …  .distinctUntilChanged()");
         return observableR;
     }
 
     public final void revokeGiftCode(ModelGift gift) {
-        Intrinsics3.checkNotNullParameter(gift, "gift");
+        m.checkNotNullParameter(gift, "gift");
         if (this.knownGifts.containsKey(gift.getCode()) && (this.knownGifts.get(gift.getCode()) instanceof GiftState.Revoking)) {
             return;
         }
@@ -1248,7 +1246,7 @@ public final class StoreGifting {
     }
 
     public final void setKnownGifts(HashMap<String, GiftState> map) {
-        Intrinsics3.checkNotNullParameter(map, "<set-?>");
+        m.checkNotNullParameter(map, "<set-?>");
         this.knownGifts = map;
     }
 }

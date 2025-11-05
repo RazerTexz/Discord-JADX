@@ -1,8 +1,8 @@
 package co.discord.media_engine.internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import org.webrtc.MediaStreamTrack;
 
 /* compiled from: NativeStatistics.kt */
@@ -14,8 +14,8 @@ public final /* data */ class Inbound {
     private final InboundVideo video;
 
     public Inbound(String str, InboundAudio inboundAudio, InboundVideo inboundVideo, InboundPlayout inboundPlayout) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
-        Intrinsics3.checkNotNullParameter(inboundAudio, MediaStreamTrack.AUDIO_TRACK_KIND);
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(inboundAudio, MediaStreamTrack.AUDIO_TRACK_KIND);
         this.id = str;
         this.audio = inboundAudio;
         this.video = inboundVideo;
@@ -59,8 +59,8 @@ public final /* data */ class Inbound {
     }
 
     public final Inbound copy(String id2, InboundAudio audio, InboundVideo video, InboundPlayout playout) {
-        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-        Intrinsics3.checkNotNullParameter(audio, MediaStreamTrack.AUDIO_TRACK_KIND);
+        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(audio, MediaStreamTrack.AUDIO_TRACK_KIND);
         return new Inbound(id2, audio, video, playout);
     }
 
@@ -72,7 +72,7 @@ public final /* data */ class Inbound {
             return false;
         }
         Inbound inbound = (Inbound) other;
-        return Intrinsics3.areEqual(this.id, inbound.id) && Intrinsics3.areEqual(this.audio, inbound.audio) && Intrinsics3.areEqual(this.video, inbound.video) && Intrinsics3.areEqual(this.playout, inbound.playout);
+        return m.areEqual(this.id, inbound.id) && m.areEqual(this.audio, inbound.audio) && m.areEqual(this.video, inbound.video) && m.areEqual(this.playout, inbound.playout);
     }
 
     public final InboundAudio getAudio() {
@@ -103,7 +103,7 @@ public final /* data */ class Inbound {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Inbound(id=");
+        StringBuilder sbU = a.U("Inbound(id=");
         sbU.append(this.id);
         sbU.append(", audio=");
         sbU.append(this.audio);

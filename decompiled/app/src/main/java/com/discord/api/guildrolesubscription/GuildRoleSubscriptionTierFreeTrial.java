@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildRoleSubscriptionTierFreeTrial.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class GuildRoleSubscriptionTierFreeTrial {
             return false;
         }
         GuildRoleSubscriptionTierFreeTrial guildRoleSubscriptionTierFreeTrial = (GuildRoleSubscriptionTierFreeTrial) other;
-        return this.id == guildRoleSubscriptionTierFreeTrial.id && Intrinsics3.areEqual(this.numActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.numActiveTrialUsers) && Intrinsics3.areEqual(this.activeTrial, guildRoleSubscriptionTierFreeTrial.activeTrial) && Intrinsics3.areEqual(this.maxNumActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.maxNumActiveTrialUsers);
+        return this.id == guildRoleSubscriptionTierFreeTrial.id && m.areEqual(this.numActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.numActiveTrialUsers) && m.areEqual(this.activeTrial, guildRoleSubscriptionTierFreeTrial.activeTrial) && m.areEqual(this.maxNumActiveTrialUsers, guildRoleSubscriptionTierFreeTrial.maxNumActiveTrialUsers);
     }
 
     public int hashCode() {
@@ -50,13 +50,13 @@ public final /* data */ class GuildRoleSubscriptionTierFreeTrial {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleSubscriptionTierFreeTrial(id=");
+        StringBuilder sbU = a.U("GuildRoleSubscriptionTierFreeTrial(id=");
         sbU.append(this.id);
         sbU.append(", numActiveTrialUsers=");
         sbU.append(this.numActiveTrialUsers);
         sbU.append(", activeTrial=");
         sbU.append(this.activeTrial);
         sbU.append(", maxNumActiveTrialUsers=");
-        return outline.F(sbU, this.maxNumActiveTrialUsers, ")");
+        return a.F(sbU, this.maxNumActiveTrialUsers, ")");
     }
 }

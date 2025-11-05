@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import androidx.annotation.WorkerThread;
 import androidx.core.content.ContextCompat;
-import b.d.b.a.outline;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Locale;
@@ -38,7 +37,7 @@ public final class j extends r5 {
         Locale locale2 = Locale.ENGLISH;
         String lowerCase = language.toLowerCase(locale2);
         String lowerCase2 = locale.getCountry().toLowerCase(locale2);
-        this.d = outline.k(outline.b(lowerCase2, outline.b(lowerCase, 1)), lowerCase, "-", lowerCase2);
+        this.d = b.d.b.a.a.k(b.d.b.a.a.b(lowerCase2, b.d.b.a.a.b(lowerCase, 1)), lowerCase, "-", lowerCase2);
         return false;
     }
 

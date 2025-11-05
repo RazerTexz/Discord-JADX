@@ -3,7 +3,7 @@ package com.discord.stores;
 import a0.a.a.b;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.NsfwAllowance;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.updates.ObservationDeck;
@@ -17,13 +17,11 @@ import com.discord.utilities.search.network.state.SearchState;
 import com.discord.utilities.search.query.node.QueryNode;
 import com.discord.utilities.search.strings.SearchStringProvider;
 import com.discord.utilities.search.suggestion.SearchSuggestionEngine;
-import com.discord.widgets.chat.AutocompleteUtils;
-import d0.t.Collections2;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import com.discord.widgets.chat.AutocompleteSelectionTypes;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.l.e.k;
 import java.util.Collection;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
@@ -69,7 +67,7 @@ public final class StoreSearch {
         }
 
         public SearchTarget(Type type, long j) {
-            Intrinsics3.checkNotNullParameter(type, "type");
+            m.checkNotNullParameter(type, "type");
             this.type = type;
             this.id = j;
         }
@@ -95,7 +93,7 @@ public final class StoreSearch {
         }
 
         public final SearchTarget copy(Type type, long id2) {
-            Intrinsics3.checkNotNullParameter(type, "type");
+            m.checkNotNullParameter(type, "type");
             return new SearchTarget(type, id2);
         }
 
@@ -107,7 +105,7 @@ public final class StoreSearch {
                 return false;
             }
             SearchTarget searchTarget = (SearchTarget) other;
-            return Intrinsics3.areEqual(this.type, searchTarget.type) && this.id == searchTarget.id;
+            return m.areEqual(this.type, searchTarget.type) && this.id == searchTarget.id;
         }
 
         public final long getId() {
@@ -124,10 +122,10 @@ public final class StoreSearch {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("SearchTarget(type=");
+            StringBuilder sbU = a.U("SearchTarget(type=");
             sbU.append(this.type);
             sbU.append(", id=");
-            return outline.C(sbU, this.id, ")");
+            return a.C(sbU, this.id, ")");
         }
     }
 
@@ -145,27 +143,27 @@ public final class StoreSearch {
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$getHistory$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<SearchTarget, Observable<? extends Collection<? extends List<? extends QueryNode>>>> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<SearchTarget, Observable<? extends Collection<? extends List<? extends QueryNode>>>> {
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Collection<? extends List<? extends QueryNode>>> call(SearchTarget searchTarget) {
             return call2(searchTarget);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Collection<List<QueryNode>>> call2(SearchTarget searchTarget) {
-            return searchTarget != null ? StoreSearch.access$getHistoryCache$p(StoreSearch.this).getHistory(searchTarget) : new ScalarSynchronousObservable(Collections2.emptyList());
+            return searchTarget != null ? StoreSearch.access$getHistoryCache$p(StoreSearch.this).getHistory(searchTarget) : new k(n.emptyList());
         }
     }
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$init$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<SearchState, Boolean> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<SearchState, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(SearchState searchState) {
             return call2(searchState);
         }
@@ -178,10 +176,10 @@ public final class StoreSearch {
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$init$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<SearchState, DisplayState> {
+    public static final class AnonymousClass2<T, R> implements j0.k.b<SearchState, DisplayState> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ DisplayState call(SearchState searchState) {
             return call2(searchState);
         }
@@ -194,10 +192,10 @@ public final class StoreSearch {
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$init$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements Func1<List<? extends QueryNode>, DisplayState> {
+    public static final class AnonymousClass3<T, R> implements j0.k.b<List<? extends QueryNode>, DisplayState> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ DisplayState call(List<? extends QueryNode> list) {
             return call2(list);
         }
@@ -210,7 +208,7 @@ public final class StoreSearch {
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$init$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
+    public static final /* synthetic */ class AnonymousClass4 extends d0.z.d.k implements Function1<Subscription, Unit> {
         public AnonymousClass4(StoreSearch storeSearch) {
             super(1, storeSearch, StoreSearch.class, "handleSubscription", "handleSubscription(Lrx/Subscription;)V", 0);
         }
@@ -229,7 +227,7 @@ public final class StoreSearch {
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$init$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<DisplayState, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<DisplayState, Unit> {
         public AnonymousClass5() {
             super(1);
         }
@@ -246,18 +244,18 @@ public final class StoreSearch {
                 StoreSearch.this.getStoreSearchQuery().clear();
             }
             StoreSearch storeSearch = StoreSearch.this;
-            Intrinsics3.checkNotNullExpressionValue(displayState, "it");
+            m.checkNotNullExpressionValue(displayState, "it");
             StoreSearch.access$onStateChanged(storeSearch, displayState);
         }
     }
 
     /* compiled from: StoreSearch.kt */
     /* renamed from: com.discord.stores.StoreSearch$init$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends Lambda implements Function1<SearchState, Unit> {
+    public static final class AnonymousClass6 extends o implements Function1<SearchState, Unit> {
 
         /* compiled from: StoreSearch.kt */
         /* renamed from: com.discord.stores.StoreSearch$init$6$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ SearchState $searchState;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -290,20 +288,20 @@ public final class StoreSearch {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SearchState searchState) {
-            Intrinsics3.checkNotNullParameter(searchState, "searchState");
+            m.checkNotNullParameter(searchState, "searchState");
             StoreSearch.access$getDispatcher$p(StoreSearch.this).schedule(new AnonymousClass1(searchState));
         }
     }
 
     public StoreSearch(StoreSearchData storeSearchData, StoreSearchInput storeSearchInput, StoreSearchQuery storeSearchQuery, StoreStream storeStream, Dispatcher dispatcher, StoreGuildsNsfw storeGuildsNsfw, StoreUser storeUser, SearchHistoryCache searchHistoryCache) {
-        Intrinsics3.checkNotNullParameter(storeSearchData, "storeSearchData");
-        Intrinsics3.checkNotNullParameter(storeSearchInput, "storeSearchInput");
-        Intrinsics3.checkNotNullParameter(storeSearchQuery, "storeSearchQuery");
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeGuildsNsfw, "storeGuildsNsfw");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(searchHistoryCache, "historyCache");
+        m.checkNotNullParameter(storeSearchData, "storeSearchData");
+        m.checkNotNullParameter(storeSearchInput, "storeSearchInput");
+        m.checkNotNullParameter(storeSearchQuery, "storeSearchQuery");
+        m.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeGuildsNsfw, "storeGuildsNsfw");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(searchHistoryCache, "historyCache");
         this.storeSearchData = storeSearchData;
         this.storeSearchInput = storeSearchInput;
         this.storeSearchQuery = storeSearchQuery;
@@ -359,14 +357,14 @@ public final class StoreSearch {
     }
 
     private final synchronized void init(SearchTarget searchTarget, SearchStringProvider searchStringProvider) {
-        if (Intrinsics3.areEqual(this.searchTarget, searchTarget)) {
+        if (m.areEqual(this.searchTarget, searchTarget)) {
             return;
         }
         updateTarget(searchTarget);
         this.storeSearchData.init(searchTarget);
         this.storeSearchInput.init(searchStringProvider);
         Observable observableI = Observable.I(this.storeSearchQuery.getState().y(AnonymousClass1.INSTANCE).G(AnonymousClass2.INSTANCE), this.storeSearchInput.getCurrentParsedInput().G(AnonymousClass3.INSTANCE));
-        Intrinsics3.checkNotNullExpressionValue(observableI, "Observable\n        .merg…splayState.SUGGESTIONS })");
+        m.checkNotNullExpressionValue(observableI, "Observable\n        .merg…splayState.SUGGESTIONS })");
         ObservableExtensionsKt.appSubscribe$default(observableI, getClass(), (Context) null, new AnonymousClass4(this), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass5(), 58, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(this.storeSearchQuery.getState(), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass6(), 62, (Object) null);
     }
@@ -399,13 +397,13 @@ public final class StoreSearch {
 
     public final Observable<DisplayState> getDisplayState() {
         Observable<DisplayState> observableR = ObservableExtensionsKt.computationLatest(this.displayStateSubject).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "displayStateSubject\n    …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "displayStateSubject\n    …  .distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<Collection<List<QueryNode>>> getHistory() {
         Observable observableY = this.searchTargetSubject.Y(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableY, "searchTargetSubject\n    …())\n          }\n        }");
+        m.checkNotNullExpressionValue(observableY, "searchTargetSubject\n    …())\n          }\n        }");
         return observableY;
     }
 
@@ -422,20 +420,20 @@ public final class StoreSearch {
     }
 
     public final void initForChannel(long channelId, SearchStringProvider searchStringProvider) {
-        Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+        m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
         init(new SearchTarget(SearchTarget.Type.CHANNEL, channelId), searchStringProvider);
         SearchSuggestionEngine.INSTANCE.setTargetGuildId(null);
     }
 
     public final void initForGuild(long guildId, SearchStringProvider searchStringProvider) {
-        Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+        m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
         init(new SearchTarget(SearchTarget.Type.GUILD, guildId), searchStringProvider);
         SearchSuggestionEngine.INSTANCE.setTargetGuildId(Long.valueOf(guildId));
     }
 
     public final void loadInitial(String queryString, SearchStringProvider searchStringProvider) {
-        Intrinsics3.checkNotNullParameter(queryString, "queryString");
-        Intrinsics3.checkNotNullParameter(searchStringProvider, "searchStringProvider");
+        m.checkNotNullParameter(queryString, "queryString");
+        m.checkNotNullParameter(searchStringProvider, "searchStringProvider");
         SearchTarget searchTarget = this.searchTarget;
         if (searchTarget != null) {
             this.storeSearchQuery.parseAndQuery(this, searchTarget, queryString, searchStringProvider, includeNsfw(searchTarget));
@@ -450,20 +448,20 @@ public final class StoreSearch {
     }
 
     public final void persistQuery$app_productionGoogleRelease(SearchTarget searchTarget, List<? extends QueryNode> query) {
-        Intrinsics3.checkNotNullParameter(searchTarget, "searchTarget");
-        Intrinsics3.checkNotNullParameter(query, "query");
+        m.checkNotNullParameter(searchTarget, "searchTarget");
+        m.checkNotNullParameter(query, "query");
         this.historyCache.persistQuery(searchTarget, query);
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public StoreSearch(StoreStream storeStream, Dispatcher dispatcher, StoreGuildsNsfw storeGuildsNsfw, StoreUser storeUser, ObservationDeck observationDeck, StoreChannels storeChannels, StoreGuilds storeGuilds) {
         this(new StoreSearchData(observationDeck, storeChannels, storeUser, storeGuilds), new StoreSearchInput(), new StoreSearchQuery(new SearchFetcher()), storeStream, dispatcher, storeGuildsNsfw, storeUser, new MGPreferenceSearchHistoryCache());
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeGuildsNsfw, "storeGuildsNsfw");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeGuildsNsfw, "storeGuildsNsfw");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
     }
 }

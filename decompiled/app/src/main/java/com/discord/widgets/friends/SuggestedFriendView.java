@@ -12,7 +12,7 @@ import com.discord.databinding.SuggestedFriendViewBinding;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -68,40 +68,40 @@ public final class SuggestedFriendView extends ConstraintLayout {
     public final void setAvatarUrl(long userId, Integer discriminator, String avatarUrl) {
         Long lValueOf = Long.valueOf(userId);
         SimpleDraweeView simpleDraweeView = this.binding.f2156b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.suggestedFriendAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.suggestedFriendAvatar");
         String forUser = IconUtils.getForUser(lValueOf, avatarUrl, discriminator, false, Integer.valueOf(simpleDraweeView.getHeight()));
         SimpleDraweeView simpleDraweeView2 = this.binding.f2156b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.suggestedFriendAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView2, "binding.suggestedFriendAvatar");
         IconUtils.setIcon$default(simpleDraweeView2, forUser, 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
     }
 
     public final void setOnDeclineClicked(Function0<Unit> onDeclineClicked) {
-        Intrinsics3.checkNotNullParameter(onDeclineClicked, "onDeclineClicked");
+        m.checkNotNullParameter(onDeclineClicked, "onDeclineClicked");
         this.binding.c.setOnClickListener(new AnonymousClass1(onDeclineClicked));
     }
 
     public final void setOnSendClicked(Function0<Unit> onSendClicked) {
-        Intrinsics3.checkNotNullParameter(onSendClicked, "onSendClicked");
+        m.checkNotNullParameter(onSendClicked, "onSendClicked");
         this.binding.e.setOnClickListener(new AnonymousClass1(onSendClicked));
     }
 
     public final void setPublicName(String publicName) {
         TextView textView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.suggestedFriendPublicName");
+        m.checkNotNullExpressionValue(textView, "binding.suggestedFriendPublicName");
         textView.setText(publicName);
     }
 
     public final void setUsername(String username) {
-        Intrinsics3.checkNotNullParameter(username, "username");
+        m.checkNotNullParameter(username, "username");
         TextView textView = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.suggestedFriendUsername");
+        m.checkNotNullExpressionValue(textView, "binding.suggestedFriendUsername");
         textView.setText(username);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SuggestedFriendView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(R.layout.suggested_friend_view, this);
         int i2 = R.id.suggested_friend_avatar;
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(R.id.suggested_friend_avatar);
@@ -119,7 +119,7 @@ public final class SuggestedFriendView extends ConstraintLayout {
                         TextView textView2 = (TextView) findViewById(R.id.suggested_friend_username);
                         if (textView2 != null) {
                             SuggestedFriendViewBinding suggestedFriendViewBinding = new SuggestedFriendViewBinding(this, simpleDraweeView, appCompatImageView, textView, appCompatImageView2, textView2);
-                            Intrinsics3.checkNotNullExpressionValue(suggestedFriendViewBinding, "SuggestedFriendViewBindi…ater.from(context), this)");
+                            m.checkNotNullExpressionValue(suggestedFriendViewBinding, "SuggestedFriendViewBindi…ater.from(context), this)");
                             this.binding = suggestedFriendViewBinding;
                             return;
                         }

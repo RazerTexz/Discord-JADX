@@ -1,15 +1,13 @@
 package com.discord.stores;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.Message;
 import com.discord.models.domain.ModelMessageDelete;
-import d0.Tuples;
-import d0.t.CollectionsJVM;
-import d0.t.Maps6;
-import d0.t.Sets5;
-import d0.t._Sets;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.t.n0;
+import d0.t.o0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,8 +36,8 @@ public final class StoreMessageState {
 
         /* JADX WARN: Multi-variable type inference failed */
         public State(Set<Integer> set, Map<Integer, ? extends Set<String>> map) {
-            Intrinsics3.checkNotNullParameter(set, "visibleSpoilerNodeIndices");
-            Intrinsics3.checkNotNullParameter(map, "visibleSpoilerEmbedMap");
+            m.checkNotNullParameter(set, "visibleSpoilerNodeIndices");
+            m.checkNotNullParameter(map, "visibleSpoilerEmbedMap");
             this.visibleSpoilerNodeIndices = set;
             this.visibleSpoilerEmbedMap = map;
         }
@@ -64,8 +62,8 @@ public final class StoreMessageState {
         }
 
         public final State copy(Set<Integer> visibleSpoilerNodeIndices, Map<Integer, ? extends Set<String>> visibleSpoilerEmbedMap) {
-            Intrinsics3.checkNotNullParameter(visibleSpoilerNodeIndices, "visibleSpoilerNodeIndices");
-            Intrinsics3.checkNotNullParameter(visibleSpoilerEmbedMap, "visibleSpoilerEmbedMap");
+            m.checkNotNullParameter(visibleSpoilerNodeIndices, "visibleSpoilerNodeIndices");
+            m.checkNotNullParameter(visibleSpoilerEmbedMap, "visibleSpoilerEmbedMap");
             return new State(visibleSpoilerNodeIndices, visibleSpoilerEmbedMap);
         }
 
@@ -77,7 +75,7 @@ public final class StoreMessageState {
                 return false;
             }
             State state = (State) other;
-            return Intrinsics3.areEqual(this.visibleSpoilerNodeIndices, state.visibleSpoilerNodeIndices) && Intrinsics3.areEqual(this.visibleSpoilerEmbedMap, state.visibleSpoilerEmbedMap);
+            return m.areEqual(this.visibleSpoilerNodeIndices, state.visibleSpoilerNodeIndices) && m.areEqual(this.visibleSpoilerEmbedMap, state.visibleSpoilerEmbedMap);
         }
 
         public final Map<Integer, Set<String>> getVisibleSpoilerEmbedMap() {
@@ -96,27 +94,27 @@ public final class StoreMessageState {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("State(visibleSpoilerNodeIndices=");
+            StringBuilder sbU = a.U("State(visibleSpoilerNodeIndices=");
             sbU.append(this.visibleSpoilerNodeIndices);
             sbU.append(", visibleSpoilerEmbedMap=");
-            return outline.M(sbU, this.visibleSpoilerEmbedMap, ")");
+            return a.M(sbU, this.visibleSpoilerEmbedMap, ")");
         }
 
         public /* synthetic */ State(Set set, Map map, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i & 1) != 0 ? Sets5.emptySet() : set, (i & 2) != 0 ? Maps6.emptyMap() : map);
+            this((i & 1) != 0 ? n0.emptySet() : set, (i & 2) != 0 ? h0.emptyMap() : map);
         }
     }
 
     /* compiled from: StoreMessageState.kt */
     /* renamed from: com.discord.stores.StoreMessageState$revealSpoiler$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ int $spoilerIndex;
 
         /* compiled from: StoreMessageState.kt */
         /* renamed from: com.discord.stores.StoreMessageState$revealSpoiler$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01541 extends Lambda implements Function1<State, State> {
-            public C01541() {
+        public static final class C02741 extends o implements Function1<State, State> {
+            public C02741() {
                 super(1);
             }
 
@@ -127,8 +125,8 @@ public final class StoreMessageState {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final State invoke2(State state) {
-                Intrinsics3.checkNotNullParameter(state, "currentState");
-                return State.copy$default(state, _Sets.plus(state.getVisibleSpoilerNodeIndices(), Integer.valueOf(AnonymousClass1.this.$spoilerIndex)), null, 2, null);
+                m.checkNotNullParameter(state, "currentState");
+                return State.copy$default(state, o0.plus(state.getVisibleSpoilerNodeIndices(), Integer.valueOf(AnonymousClass1.this.$spoilerIndex)), null, 2, null);
             }
         }
 
@@ -147,20 +145,20 @@ public final class StoreMessageState {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new C01541());
+            StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new C02741());
         }
     }
 
     /* compiled from: StoreMessageState.kt */
     /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbed$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ int $spoilerEmbedIndex;
 
         /* compiled from: StoreMessageState.kt */
         /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbed$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01551 extends Lambda implements Function1<State, State> {
-            public C01551() {
+        public static final class C02751 extends o implements Function1<State, State> {
+            public C02751() {
                 super(1);
             }
 
@@ -171,8 +169,8 @@ public final class StoreMessageState {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final State invoke2(State state) {
-                Intrinsics3.checkNotNullParameter(state, "currentState");
-                return State.copy$default(state, null, Maps6.plus(state.getVisibleSpoilerEmbedMap(), Tuples.to(Integer.valueOf(AnonymousClass1.this.$spoilerEmbedIndex), Sets5.emptySet())), 1, null);
+                m.checkNotNullParameter(state, "currentState");
+                return State.copy$default(state, null, h0.plus(state.getVisibleSpoilerEmbedMap(), d0.o.to(Integer.valueOf(AnonymousClass1.this.$spoilerEmbedIndex), n0.emptySet())), 1, null);
             }
         }
 
@@ -191,21 +189,21 @@ public final class StoreMessageState {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new C01551());
+            StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new C02751());
         }
     }
 
     /* compiled from: StoreMessageState.kt */
     /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbedData$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ String $key;
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ int $spoilerEmbedIndex;
 
         /* compiled from: StoreMessageState.kt */
         /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbedData$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01561 extends Lambda implements Function1<State, State> {
-            public C01561() {
+        public static final class C02761 extends o implements Function1<State, State> {
+            public C02761() {
                 super(1);
             }
 
@@ -216,12 +214,12 @@ public final class StoreMessageState {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final State invoke2(State state) {
-                Intrinsics3.checkNotNullParameter(state, "currentState");
+                m.checkNotNullParameter(state, "currentState");
                 Set<String> setEmptySet = state.getVisibleSpoilerEmbedMap().get(Integer.valueOf(AnonymousClass1.this.$spoilerEmbedIndex));
                 if (setEmptySet == null) {
-                    setEmptySet = Sets5.emptySet();
+                    setEmptySet = n0.emptySet();
                 }
-                return State.copy$default(state, null, Maps6.plus(state.getVisibleSpoilerEmbedMap(), Tuples.to(Integer.valueOf(AnonymousClass1.this.$spoilerEmbedIndex), _Sets.plus(setEmptySet, AnonymousClass1.this.$key))), 1, null);
+                return State.copy$default(state, null, h0.plus(state.getVisibleSpoilerEmbedMap(), d0.o.to(Integer.valueOf(AnonymousClass1.this.$spoilerEmbedIndex), o0.plus(setEmptySet, AnonymousClass1.this.$key))), 1, null);
             }
         }
 
@@ -241,15 +239,15 @@ public final class StoreMessageState {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new C01561());
+            StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new C02761());
         }
     }
 
     public StoreMessageState(Dispatcher dispatcher) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
         this.dispatcher = dispatcher;
-        BehaviorSubject<Map<Long, State>> behaviorSubjectL0 = BehaviorSubject.l0(Maps6.emptyMap());
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(emptyMap())");
+        BehaviorSubject<Map<Long, State>> behaviorSubjectL0 = BehaviorSubject.l0(h0.emptyMap());
+        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(emptyMap())");
         this.messageStateSubject = behaviorSubjectL0;
     }
 
@@ -257,13 +255,13 @@ public final class StoreMessageState {
         storeMessageState.updateState(j, function1);
     }
 
-    @Store3
+    @StoreThread
     private final void resetState(List<Long> messagesList) {
         Map<Long, State> mapN0 = this.messageStateSubject.n0();
         ArrayList arrayList = new ArrayList();
         for (Object obj : messagesList) {
             long jLongValue = ((Number) obj).longValue();
-            Intrinsics3.checkNotNullExpressionValue(mapN0, "messageStateMap");
+            m.checkNotNullExpressionValue(mapN0, "messageStateMap");
             if (mapN0.containsKey(Long.valueOf(jLongValue))) {
                 arrayList.add(obj);
             }
@@ -272,11 +270,11 @@ public final class StoreMessageState {
             return;
         }
         BehaviorSubject<Map<Long, State>> behaviorSubject = this.messageStateSubject;
-        Intrinsics3.checkNotNullExpressionValue(mapN0, "messageStateMap");
-        behaviorSubject.onNext(Maps6.minus((Map) mapN0, (Iterable) arrayList));
+        m.checkNotNullExpressionValue(mapN0, "messageStateMap");
+        behaviorSubject.onNext(h0.minus((Map) mapN0, (Iterable) arrayList));
     }
 
-    @Store3
+    @StoreThread
     private final void updateState(long messageId, Function1<? super State, State> updateFunction) {
         Map<Long, State> mapN0 = this.messageStateSubject.n0();
         State state = mapN0.get(Long.valueOf(messageId));
@@ -285,33 +283,33 @@ public final class StoreMessageState {
         }
         State stateInvoke = updateFunction.invoke(state);
         BehaviorSubject<Map<Long, State>> behaviorSubject = this.messageStateSubject;
-        Intrinsics3.checkNotNullExpressionValue(mapN0, "messageStateMap");
-        behaviorSubject.onNext(Maps6.plus(mapN0, Tuples.to(Long.valueOf(messageId), stateInvoke)));
+        m.checkNotNullExpressionValue(mapN0, "messageStateMap");
+        behaviorSubject.onNext(h0.plus(mapN0, d0.o.to(Long.valueOf(messageId), stateInvoke)));
     }
 
     public final Observable<Map<Long, State>> getMessageState() {
         Observable<Map<Long, State>> observableR = this.messageStateSubject.r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "messageStateSubject.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "messageStateSubject.distinctUntilChanged()");
         return observableR;
     }
 
-    @Store3
+    @StoreThread
     public final void handleChannelSelected() {
-        this.messageStateSubject.onNext(Maps6.emptyMap());
+        this.messageStateSubject.onNext(h0.emptyMap());
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageDelete(ModelMessageDelete messageDelete) {
-        Intrinsics3.checkNotNullParameter(messageDelete, "messageDelete");
+        m.checkNotNullParameter(messageDelete, "messageDelete");
         List<Long> messageIds = messageDelete.getMessageIds();
-        Intrinsics3.checkNotNullExpressionValue(messageIds, "messageDelete.messageIds");
+        m.checkNotNullExpressionValue(messageIds, "messageDelete.messageIds");
         resetState(messageIds);
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageUpdate(Message message) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        resetState(CollectionsJVM.listOf(Long.valueOf(message.getId())));
+        m.checkNotNullParameter(message, "message");
+        resetState(d0.t.m.listOf(Long.valueOf(message.getId())));
     }
 
     public final void revealSpoiler(long messageId, int spoilerIndex) {
@@ -329,7 +327,7 @@ public final class StoreMessageState {
     }
 
     public final void revealSpoilerEmbedData(long messageId, int spoilerEmbedIndex, String key) {
-        Intrinsics3.checkNotNullParameter(key, "key");
+        m.checkNotNullParameter(key, "key");
         if (spoilerEmbedIndex < 0) {
             return;
         }

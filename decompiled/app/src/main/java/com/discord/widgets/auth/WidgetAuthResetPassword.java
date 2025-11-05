@@ -4,22 +4,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetAuthResetPasswordBinding;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 
 /* compiled from: WidgetAuthResetPassword.kt */
 /* loaded from: classes2.dex */
 public final class WidgetAuthResetPassword extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetAuthResetPassword.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthResetPasswordBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetAuthResetPassword.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthResetPasswordBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -35,11 +35,11 @@ public final class WidgetAuthResetPassword extends AppFragment {
         }
 
         public final void start(Context context, String token) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(token, "token");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(token, "token");
             Intent intent = new Intent();
             intent.putExtra(WidgetAuthResetPassword.INTENT_EXTRA_TOKEN, token);
-            AppScreen2.d(context, WidgetAuthResetPassword.class, intent);
+            j.d(context, WidgetAuthResetPassword.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -57,7 +57,7 @@ public final class WidgetAuthResetPassword extends AppFragment {
         public final void onClick(View view) {
             UriHandler uriHandler = UriHandler.INSTANCE;
             Context contextRequireContext = WidgetAuthResetPassword.this.requireContext();
-            StringBuilder sbU = outline.U("https://discord.com/reset#token=");
+            StringBuilder sbU = a.U("https://discord.com/reset#token=");
             sbU.append(WidgetAuthResetPassword.access$getToken$p(WidgetAuthResetPassword.this));
             UriHandler.handle$default(uriHandler, contextRequireContext, sbU.toString(), false, false, null, 28, null);
             WidgetAuthResetPassword.this.requireActivity().finish();
@@ -78,13 +78,13 @@ public final class WidgetAuthResetPassword extends AppFragment {
 
     public WidgetAuthResetPassword() {
         super(R.layout.widget_auth_reset_password);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetAuthResetPassword2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetAuthResetPassword$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ String access$getToken$p(WidgetAuthResetPassword widgetAuthResetPassword) {
         String str = widgetAuthResetPassword.token;
         if (str == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("token");
+            m.throwUninitializedPropertyAccessException("token");
         }
         return str;
     }
@@ -99,7 +99,7 @@ public final class WidgetAuthResetPassword extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         String stringExtra = getMostRecentIntent().getStringExtra(INTENT_EXTRA_TOKEN);
         if (stringExtra == null) {

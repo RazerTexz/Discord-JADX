@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 import com.discord.utilities.networking.Backoff;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import rx.Observable;
@@ -35,25 +35,25 @@ public final class GatewayDiscovery {
         public final String getGatewayUrl() {
             SharedPreferences sharedPreferences2 = sharedPreferences;
             if (sharedPreferences2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("sharedPreferences");
+                m.throwUninitializedPropertyAccessException("sharedPreferences");
             }
             return sharedPreferences2.getString(GATEWAY_URL_CACHE_KEY, null);
         }
 
         public final void init(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-            Intrinsics3.checkNotNullExpressionValue(defaultSharedPreferences, "PreferenceManager.getDef…haredPreferences(context)");
+            m.checkNotNullExpressionValue(defaultSharedPreferences, "PreferenceManager.getDef…haredPreferences(context)");
             sharedPreferences = defaultSharedPreferences;
         }
 
         public final void setGatewayUrl(String gatewayUrl) {
             SharedPreferences sharedPreferences2 = sharedPreferences;
             if (sharedPreferences2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("sharedPreferences");
+                m.throwUninitializedPropertyAccessException("sharedPreferences");
             }
             SharedPreferences.Editor editorEdit = sharedPreferences2.edit();
-            Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
+            m.checkNotNullExpressionValue(editorEdit, "editor");
             editorEdit.putString(GATEWAY_URL_CACHE_KEY, gatewayUrl);
             editorEdit.apply();
         }
@@ -61,7 +61,7 @@ public final class GatewayDiscovery {
 
     /* compiled from: GatewayDiscovery.kt */
     /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Throwable, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Throwable, Unit> {
         public final /* synthetic */ Function1 $onFailure;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -78,7 +78,7 @@ public final class GatewayDiscovery {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Throwable th) {
-            Intrinsics3.checkNotNullParameter(th, "throwable");
+            m.checkNotNullParameter(th, "throwable");
             GatewayDiscovery.access$setGatewayUrl$p(GatewayDiscovery.this, null);
             Cache.INSTANCE.setGatewayUrl(null);
             this.$onFailure.invoke(th);
@@ -87,7 +87,7 @@ public final class GatewayDiscovery {
 
     /* compiled from: GatewayDiscovery.kt */
     /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
         public final /* synthetic */ AnonymousClass1 $handleFailure$1;
         public final /* synthetic */ Function1 $onSuccess;
 
@@ -119,7 +119,7 @@ public final class GatewayDiscovery {
 
     /* compiled from: GatewayDiscovery.kt */
     /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$3, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass3 extends FunctionReferenceImpl implements Function1<String, Unit> {
+    public static final /* synthetic */ class AnonymousClass3 extends k implements Function1<String, Unit> {
         public final /* synthetic */ AnonymousClass2 $handleSuccess$2;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -142,7 +142,7 @@ public final class GatewayDiscovery {
 
     /* compiled from: GatewayDiscovery.kt */
     /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends FunctionReferenceImpl implements Function1<Throwable, Unit> {
+    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<Throwable, Unit> {
         public final /* synthetic */ AnonymousClass1 $handleFailure$1;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -159,18 +159,18 @@ public final class GatewayDiscovery {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Throwable th) {
-            Intrinsics3.checkNotNullParameter(th, "p1");
+            m.checkNotNullParameter(th, "p1");
             this.$handleFailure$1.invoke2(th);
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public GatewayDiscovery(Context context, Scheduler scheduler, Backoff backoff, Function1<? super String, Unit> function1, Observable<String> observable) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(scheduler, "scheduler");
-        Intrinsics3.checkNotNullParameter(backoff, "backoff");
-        Intrinsics3.checkNotNullParameter(function1, "log");
-        Intrinsics3.checkNotNullParameter(observable, "gatewayUrlProvider");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(scheduler, "scheduler");
+        m.checkNotNullParameter(backoff, "backoff");
+        m.checkNotNullParameter(function1, "log");
+        m.checkNotNullParameter(observable, "gatewayUrlProvider");
         this.scheduler = scheduler;
         this.backoff = backoff;
         this.log = function1;
@@ -194,8 +194,8 @@ public final class GatewayDiscovery {
 
     public final void discoverGatewayUrl(Function1<? super String, Unit> onSuccess, Function1<? super Throwable, Unit> onFailure) {
         String str;
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
-        Intrinsics3.checkNotNullParameter(onFailure, "onFailure");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onFailure, "onFailure");
         if (!this.backoff.hasReachedFailureThreshold() && (str = this.gatewayUrl) != null) {
             this.log.invoke("Using sticky gateway url: " + str);
             onSuccess.invoke(str);
@@ -208,6 +208,6 @@ public final class GatewayDiscovery {
         if (subscription != null) {
             subscription.unsubscribe();
         }
-        this.gatewayUrlDiscoverySubscription = this.gatewayUrlProvider.J(this.scheduler).W(new GatewayDiscovery2(new AnonymousClass3(anonymousClass2)), new GatewayDiscovery2(new AnonymousClass4(anonymousClass1)));
+        this.gatewayUrlDiscoverySubscription = this.gatewayUrlProvider.J(this.scheduler).W(new GatewayDiscovery$sam$rx_functions_Action1$0(new AnonymousClass3(anonymousClass2)), new GatewayDiscovery$sam$rx_functions_Action1$0(new AnonymousClass4(anonymousClass1)));
     }
 }

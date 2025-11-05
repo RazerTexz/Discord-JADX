@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNotifyStreamSettingUpdate.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNotifyStreamSettingUpdate implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackNotifyStreamSettingUpdate implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean value = null;
     private final Boolean prechecked = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackNotifyStreamSettingUpdate implements Analytic
             return false;
         }
         TrackNotifyStreamSettingUpdate trackNotifyStreamSettingUpdate = (TrackNotifyStreamSettingUpdate) other;
-        return Intrinsics3.areEqual(this.value, trackNotifyStreamSettingUpdate.value) && Intrinsics3.areEqual(this.prechecked, trackNotifyStreamSettingUpdate.prechecked);
+        return m.areEqual(this.value, trackNotifyStreamSettingUpdate.value) && m.areEqual(this.prechecked, trackNotifyStreamSettingUpdate.prechecked);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackNotifyStreamSettingUpdate implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNotifyStreamSettingUpdate(value=");
+        StringBuilder sbU = a.U("TrackNotifyStreamSettingUpdate(value=");
         sbU.append(this.value);
         sbU.append(", prechecked=");
-        return outline.D(sbU, this.prechecked, ")");
+        return a.D(sbU, this.prechecked, ")");
     }
 }

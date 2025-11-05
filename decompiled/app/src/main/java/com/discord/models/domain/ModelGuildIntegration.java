@@ -1,6 +1,6 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
 import com.discord.models.deserialization.gson.InboundGatewayGsonParser;
 import com.discord.models.domain.Model;
@@ -88,7 +88,7 @@ public class ModelGuildIntegration implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelGuildIntegration.IntegrationAccount(id=");
+            StringBuilder sbU = a.U("ModelGuildIntegration.IntegrationAccount(id=");
             sbU.append(getId());
             sbU.append(", name=");
             sbU.append(getName());
@@ -136,7 +136,7 @@ public class ModelGuildIntegration implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelGuildIntegration.Update(guildId=");
+            StringBuilder sbU = a.U("ModelGuildIntegration.Update(guildId=");
             sbU.append(getGuildId());
             sbU.append(")");
             return sbU.toString();
@@ -241,7 +241,7 @@ public class ModelGuildIntegration implements Model {
         if (!"twitch".equals(this.type)) {
             return this.name;
         }
-        StringBuilder sbU = outline.U("twitch.tv/");
+        StringBuilder sbU = a.U("twitch.tv/");
         sbU.append(this.name);
         return sbU.toString();
     }
@@ -314,7 +314,7 @@ public class ModelGuildIntegration implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelGuildIntegration(enableEmoticons=");
+        StringBuilder sbU = a.U("ModelGuildIntegration(enableEmoticons=");
         sbU.append(isEnableEmoticons());
         sbU.append(", enabled=");
         sbU.append(isEnabled());

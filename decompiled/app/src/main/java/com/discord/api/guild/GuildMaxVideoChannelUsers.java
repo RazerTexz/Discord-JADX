@@ -1,6 +1,6 @@
 package com.discord.api.guild;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: GuildMaxVideoChannelUsers.kt */
@@ -33,7 +33,7 @@ public abstract class GuildMaxVideoChannelUsers {
         }
 
         public String toString() {
-            return outline.B(outline.U("Limited(limit="), this.limit, ")");
+            return a.B(a.U("Limited(limit="), this.limit, ")");
         }
     }
 

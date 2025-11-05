@@ -7,10 +7,9 @@ import androidx.annotation.MainThread;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetThreadStatusBinding;
@@ -20,13 +19,13 @@ import com.discord.utilities.rest.RestAPIAbortMessages;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.LoadingButton;
 import com.discord.widgets.status.WidgetThreadStatusViewModel;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -37,7 +36,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetThreadStatus.kt */
 /* loaded from: classes2.dex */
 public final class WidgetThreadStatus extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetThreadStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadStatusBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetThreadStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadStatusBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -89,7 +88,7 @@ public final class WidgetThreadStatus extends AppFragment {
             }
 
             public String toString() {
-                return outline.B(outline.U("Error(code="), this.code, ")");
+                return a.B(a.U("Error(code="), this.code, ")");
             }
         }
 
@@ -103,7 +102,7 @@ public final class WidgetThreadStatus extends AppFragment {
 
     /* compiled from: WidgetThreadStatus.kt */
     /* renamed from: com.discord.widgets.status.WidgetThreadStatus$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetThreadStatusViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<WidgetThreadStatusViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -116,14 +115,14 @@ public final class WidgetThreadStatus extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadStatusViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "viewState");
+            m.checkNotNullParameter(viewState, "viewState");
             WidgetThreadStatus.access$updateView(WidgetThreadStatus.this, viewState);
         }
     }
 
     /* compiled from: WidgetThreadStatus.kt */
     /* renamed from: com.discord.widgets.status.WidgetThreadStatus$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<Event, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Event, Unit> {
         public AnonymousClass2(WidgetThreadStatus widgetThreadStatus) {
             super(1, widgetThreadStatus, WidgetThreadStatus.class, "handleEvent", "handleEvent(Lcom/discord/widgets/status/WidgetThreadStatus$Event;)V", 0);
         }
@@ -136,7 +135,7 @@ public final class WidgetThreadStatus extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Event event) {
-            Intrinsics3.checkNotNullParameter(event, "p1");
+            m.checkNotNullParameter(event, "p1");
             WidgetThreadStatus.access$handleEvent((WidgetThreadStatus) this.receiver, event);
         }
     }
@@ -167,10 +166,10 @@ public final class WidgetThreadStatus extends AppFragment {
 
     public WidgetThreadStatus() {
         super(R.layout.widget_thread_status);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetThreadStatus2.INSTANCE, null, 2, null);
-        WidgetThreadStatus3 widgetThreadStatus3 = WidgetThreadStatus3.INSTANCE;
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetThreadStatusViewModel.class), new WidgetThreadStatus$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetThreadStatus3));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetThreadStatus$binding$2.INSTANCE, null, 2, null);
+        WidgetThreadStatus$viewModel$2 widgetThreadStatus$viewModel$2 = WidgetThreadStatus$viewModel$2.INSTANCE;
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetThreadStatusViewModel.class), new WidgetThreadStatus$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetThreadStatus$viewModel$2));
     }
 
     public static final /* synthetic */ WidgetThreadStatusViewModel access$getViewModel$p(WidgetThreadStatus widgetThreadStatus) {
@@ -196,7 +195,7 @@ public final class WidgetThreadStatus extends AppFragment {
     private final void handleEvent(Event event) {
         if (event instanceof Event.Error) {
             Integer abortCodeMessageResId = RestAPIAbortMessages.getAbortCodeMessageResId(((Event.Error) event).getCode());
-            AppToast.i(this, abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.network_error_bad_request, 0, 4);
+            b.a.d.m.i(this, abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.network_error_bad_request, 0, 4);
         }
     }
 
@@ -206,41 +205,41 @@ public final class WidgetThreadStatus extends AppFragment {
         WidgetThreadStatusViewModel.Status threadStatus = viewState.getThreadStatus();
         if (threadStatus instanceof WidgetThreadStatusViewModel.Status.Hide) {
             ConstraintLayout constraintLayout = getBinding().f2673b;
-            Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.threadStatus");
+            m.checkNotNullExpressionValue(constraintLayout, "binding.threadStatus");
             constraintLayout.setVisibility(8);
             return;
         }
         if (threadStatus instanceof WidgetThreadStatusViewModel.Status.Archived) {
             ConstraintLayout constraintLayout2 = getBinding().f2673b;
-            Intrinsics3.checkNotNullExpressionValue(constraintLayout2, "binding.threadStatus");
+            m.checkNotNullExpressionValue(constraintLayout2, "binding.threadStatus");
             constraintLayout2.setVisibility(0);
             LoadingButton loadingButton = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(loadingButton, "binding.threadStatusButton");
+            m.checkNotNullExpressionValue(loadingButton, "binding.threadStatusButton");
             WidgetThreadStatusViewModel.Status.Archived archived = (WidgetThreadStatusViewModel.Status.Archived) threadStatus;
             loadingButton.setVisibility(archived.getCanArchive() ? 0 : 8);
             LinkifiedTextView linkifiedTextView = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.threadStatusText");
+            m.checkNotNullExpressionValue(linkifiedTextView, "binding.threadStatusText");
             linkifiedTextView.setText(archived.isLocked() ? getResources().getString(R.string.thread_header_notice_locked) : getResources().getString(R.string.thread_header_notice_archived));
             getBinding().c.setText(getResources().getString(R.string.unarchive));
             LoadingButton loadingButton2 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(loadingButton2, "binding.threadStatusButton");
+            m.checkNotNullExpressionValue(loadingButton2, "binding.threadStatusButton");
             loadingButton2.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorBackgroundAccent)));
             getBinding().c.setOnClickListener(new AnonymousClass1());
             return;
         }
         if (threadStatus instanceof WidgetThreadStatusViewModel.Status.Unjoined) {
             ConstraintLayout constraintLayout3 = getBinding().f2673b;
-            Intrinsics3.checkNotNullExpressionValue(constraintLayout3, "binding.threadStatus");
+            m.checkNotNullExpressionValue(constraintLayout3, "binding.threadStatus");
             constraintLayout3.setVisibility(0);
             LoadingButton loadingButton3 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(loadingButton3, "binding.threadStatusButton");
+            m.checkNotNullExpressionValue(loadingButton3, "binding.threadStatusButton");
             loadingButton3.setVisibility(0);
             LinkifiedTextView linkifiedTextView2 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView2, "binding.threadStatusText");
+            m.checkNotNullExpressionValue(linkifiedTextView2, "binding.threadStatusText");
             linkifiedTextView2.setText(getResources().getString(R.string.thread_header_notice_join));
             getBinding().c.setText(getResources().getString(R.string.join));
             LoadingButton loadingButton4 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(loadingButton4, "binding.threadStatusButton");
+            m.checkNotNullExpressionValue(loadingButton4, "binding.threadStatusButton");
             loadingButton4.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.color_brand_500)));
             getBinding().c.setOnClickListener(new AnonymousClass2());
         }

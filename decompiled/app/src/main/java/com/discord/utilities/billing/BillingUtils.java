@@ -8,8 +8,8 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Unit;
@@ -23,7 +23,7 @@ public final class BillingUtils {
 
     /* compiled from: BillingUtils.kt */
     /* renamed from: com.discord.utilities.billing.BillingUtils$createPendingPurchaseMetadata$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Unit, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Unit, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -46,7 +46,7 @@ public final class BillingUtils {
 
     /* compiled from: BillingUtils.kt */
     /* renamed from: com.discord.utilities.billing.BillingUtils$createPendingPurchaseMetadata$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -63,14 +63,14 @@ public final class BillingUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             this.$onFailure.invoke();
         }
     }
 
     /* compiled from: BillingUtils.kt */
     /* renamed from: com.discord.utilities.billing.BillingUtils$verifyPurchase$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RestAPIParams.VerifyPurchaseResponse, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RestAPIParams.VerifyPurchaseResponse, Unit> {
         public final /* synthetic */ Purchase $purchase;
         public final /* synthetic */ String $sku;
 
@@ -90,7 +90,7 @@ public final class BillingUtils {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestAPIParams.VerifyPurchaseResponse verifyPurchaseResponse) {
             StoreStream.INSTANCE.getGooglePlayPurchases().onVerificationSuccess(new StoreGooglePlayPurchases.VerificationResult(this.$purchase, verifyPurchaseResponse));
-            GooglePlayInAppSku inAppSku = GooglePlayInAppSku3.INSTANCE.getInAppSku(this.$sku);
+            GooglePlayInAppSku inAppSku = GooglePlayInAppSkus.INSTANCE.getInAppSku(this.$sku);
             if (inAppSku != null) {
                 GooglePlayBillingManager.INSTANCE.consumePurchase(this.$purchase, inAppSku.getType(), verifyPurchaseResponse != null ? Long.valueOf(verifyPurchaseResponse.getVerifiedSkuId()) : null);
             }
@@ -99,7 +99,7 @@ public final class BillingUtils {
 
     /* compiled from: BillingUtils.kt */
     /* renamed from: com.discord.utilities.billing.BillingUtils$verifyPurchase$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ Purchase $purchase;
         public final /* synthetic */ String $sku;
 
@@ -118,7 +118,7 @@ public final class BillingUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             StoreStream.Companion companion = StoreStream.INSTANCE;
             companion.getGooglePlayPurchases().onVerificationFailure(new StoreGooglePlayPurchases.VerificationResult(this.$purchase, null));
             companion.getGooglePlayPurchases().trackPaymentFlowFailed(this.$sku);
@@ -133,7 +133,7 @@ public final class BillingUtils {
         String str2;
         StoreStream.Companion companion = StoreStream.INSTANCE;
         long id2 = companion.getUsers().getMeSnapshot().getId();
-        if (GooglePlayInAppSku3.INSTANCE.isInAppSku(sku)) {
+        if (GooglePlayInAppSkus.INSTANCE.isInAppSku(sku)) {
             str2 = sku;
             str = null;
         } else {
@@ -141,18 +141,18 @@ public final class BillingUtils {
             str2 = null;
         }
         String strA = purchase.a();
-        Intrinsics3.checkNotNullExpressionValue(strA, "purchase.purchaseToken");
+        m.checkNotNullExpressionValue(strA, "purchase.purchaseToken");
         String strOptString = purchase.c.optString("packageName");
-        Intrinsics3.checkNotNullExpressionValue(strOptString, "purchase.packageName");
+        m.checkNotNullExpressionValue(strOptString, "purchase.packageName");
         RestAPIParams.VerifyPurchaseTokenBody verifyPurchaseTokenBody = new RestAPIParams.VerifyPurchaseTokenBody(strA, id2, strOptString, str, str2);
         companion.getGooglePlayPurchases().onVerificationStart();
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().verifyPurchaseToken(verifyPurchaseTokenBody), false, 1, null), BillingUtils.class, (Context) null, (Function1) null, new AnonymousClass2(purchase, sku), (Function0) null, (Function0) null, new AnonymousClass1(purchase, sku), 54, (Object) null);
     }
 
     public final void createPendingPurchaseMetadata(String paymentGatewaySkuId, long skuId, Function0<Unit> onSuccess, Function0<Unit> onFailure) {
-        Intrinsics3.checkNotNullParameter(paymentGatewaySkuId, "paymentGatewaySkuId");
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
-        Intrinsics3.checkNotNullParameter(onFailure, "onFailure");
+        m.checkNotNullParameter(paymentGatewaySkuId, "paymentGatewaySkuId");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onFailure, "onFailure");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().createPurchaseMetadata(new RestAPIParams.PurchaseMetadataBody(skuId, paymentGatewaySkuId)), false, 1, null), BillingUtils.class, (Context) null, (Function1) null, new AnonymousClass2(onFailure), (Function0) null, (Function0) null, new AnonymousClass1(onSuccess), 54, (Object) null);
     }
 
@@ -165,10 +165,10 @@ public final class BillingUtils {
             for (Purchase purchase : purchases) {
                 if ((purchase.c.optInt("purchaseState", 1) != 4 ? (char) 1 : (char) 2) == 1 && !purchase.c()) {
                     ArrayList<String> arrayListB = purchase.b();
-                    Intrinsics3.checkNotNullExpressionValue(arrayListB, "purchase.skus");
+                    m.checkNotNullExpressionValue(arrayListB, "purchase.skus");
                     for (String str : arrayListB) {
                         BillingUtils billingUtils = INSTANCE;
-                        Intrinsics3.checkNotNullExpressionValue(str, "sku");
+                        m.checkNotNullExpressionValue(str, "sku");
                         billingUtils.verifyPurchase(purchase, str);
                     }
                 }

@@ -8,15 +8,14 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.a.z.a.a.a;
+import b.a.d.j;
 import b.a.z.a.a.b;
 import b.a.z.a.a.c;
 import b.a.z.a.a.e;
 import b.a.z.a.a.i;
 import b.a.z.a.a.n;
 import b.a.z.a.a.o;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -32,7 +31,7 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.channels.SimpleMembersAdapter;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -135,12 +134,12 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("WidgetChannelSettingsPermissionsAddMember.Model(channel=");
+            StringBuilder sbU = a.U("WidgetChannelSettingsPermissionsAddMember.Model(channel=");
             sbU.append(this.channel);
             sbU.append(", memberItems=");
             sbU.append(this.memberItems);
             sbU.append(", canManage=");
-            return outline.O(sbU, this.canManage, ")");
+            return a.O(sbU, this.canManage, ")");
         }
     }
 
@@ -173,7 +172,7 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         Intent intent = new Intent();
         intent.putExtra("INTENT_EXTRA_GUILD_ID", j2);
         intent.putExtra(INTENT_EXTRA_CHANNEL_ID, j3);
-        AppScreen2.d(context, WidgetChannelSettingsPermissionsAddMember.class, intent);
+        j.d(context, WidgetChannelSettingsPermissionsAddMember.class, intent);
     }
 
     public static /* synthetic */ void g(WidgetChannelSettingsPermissionsAddMember widgetChannelSettingsPermissionsAddMember, Model model) {
@@ -204,8 +203,8 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         this.nameFilterPublisher.onNext(ViewExtensions.getTextOrEmpty(this.searchBox));
         this.nameFilterPublisher.p(750L, TimeUnit.MILLISECONDS).y(o.j).k(b.a.d.o.e(new b(longExtra), getClass()));
         Observable<Model> observable = Model.get(longExtra, longExtra2, this.nameFilterPublisher);
-        Intrinsics3.checkNotNullParameter(this, "appComponent");
-        Intrinsics3.checkNotNullExpressionValue(observable, "it");
-        ObservableExtensionsKt.ui(observable, this, null).k(b.a.d.o.e(new a(this), getClass()));
+        m.checkNotNullParameter(this, "appComponent");
+        m.checkNotNullExpressionValue(observable, "it");
+        ObservableExtensionsKt.ui(observable, this, null).k(b.a.d.o.e(new b.a.z.a.a.a(this), getClass()));
     }
 }

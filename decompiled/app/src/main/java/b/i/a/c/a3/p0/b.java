@@ -1,29 +1,29 @@
 package b.i.a.c.a3.p0;
 
 import android.os.Bundle;
-import b.i.a.c.Bundleable;
-import b.i.a.c.a3.p0.AdPlaybackState;
+import b.i.a.c.a3.p0.c;
+import b.i.a.c.w0;
 import java.util.ArrayList;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class b implements Bundleable.a {
+public final /* synthetic */ class b implements w0.a {
     public static final /* synthetic */ b a = new b();
 
-    @Override // b.i.a.c.Bundleable.a
-    public final Bundleable a(Bundle bundle) {
-        AdPlaybackState.a[] aVarArr;
-        ArrayList parcelableArrayList = bundle.getParcelableArrayList(AdPlaybackState.b(1));
+    @Override // b.i.a.c.w0.a
+    public final w0 a(Bundle bundle) {
+        c.a[] aVarArr;
+        ArrayList parcelableArrayList = bundle.getParcelableArrayList(c.b(1));
         if (parcelableArrayList == null) {
-            aVarArr = new AdPlaybackState.a[0];
+            aVarArr = new c.a[0];
         } else {
-            AdPlaybackState.a[] aVarArr2 = new AdPlaybackState.a[parcelableArrayList.size()];
+            c.a[] aVarArr2 = new c.a[parcelableArrayList.size()];
             for (int i = 0; i < parcelableArrayList.size(); i++) {
-                int i2 = AdPlaybackState.a.j;
-                aVarArr2[i] = (AdPlaybackState.a) a.a.a((Bundle) parcelableArrayList.get(i));
+                int i2 = c.a.j;
+                aVarArr2[i] = (c.a) a.a.a((Bundle) parcelableArrayList.get(i));
             }
             aVarArr = aVarArr2;
         }
-        return new AdPlaybackState(null, aVarArr, bundle.getLong(AdPlaybackState.b(2), 0L), bundle.getLong(AdPlaybackState.b(3), -9223372036854775807L), bundle.getInt(AdPlaybackState.b(4)));
+        return new c(null, aVarArr, bundle.getLong(c.b(2), 0L), bundle.getLong(c.b(3), -9223372036854775807L), bundle.getInt(c.b(4)));
     }
 }

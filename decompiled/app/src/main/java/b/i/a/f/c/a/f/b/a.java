@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -56,7 +55,7 @@ public class a {
     }
 
     public static String f(String str, String str2) {
-        return outline.k(outline.b(str2, str.length() + 1), str, ":", str2);
+        return b.d.b.a.a.k(b.d.b.a.a.b(str2, str.length() + 1), str, ":", str2);
     }
 
     @Nullable

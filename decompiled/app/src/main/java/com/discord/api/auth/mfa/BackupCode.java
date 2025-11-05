@@ -1,8 +1,8 @@
 package com.discord.api.auth.mfa;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: BackupCode.kt */
 /* loaded from: classes.dex */
@@ -28,7 +28,7 @@ public final /* data */ class BackupCode {
             return false;
         }
         BackupCode backupCode = (BackupCode) other;
-        return Intrinsics3.areEqual(this.code, backupCode.code) && this.consumed == backupCode.consumed;
+        return m.areEqual(this.code, backupCode.code) && this.consumed == backupCode.consumed;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -44,9 +44,9 @@ public final /* data */ class BackupCode {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("BackupCode(code=");
+        StringBuilder sbU = a.U("BackupCode(code=");
         sbU.append(this.code);
         sbU.append(", consumed=");
-        return outline.O(sbU, this.consumed, ")");
+        return a.O(sbU, this.consumed, ")");
     }
 }

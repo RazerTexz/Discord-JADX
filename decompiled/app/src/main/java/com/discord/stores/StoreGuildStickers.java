@@ -7,15 +7,14 @@ import com.discord.api.sticker.Sticker;
 import com.discord.api.sticker.StickerType;
 import com.discord.models.domain.ModelPayload;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
-import d0.d0._Ranges;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.stores.updates.ObservationDeckProvider;
+import d0.d0.f;
+import d0.t.g0;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -42,7 +41,7 @@ public final class StoreGuildStickers extends StoreV2 {
 
     /* compiled from: StoreGuildStickers.kt */
     /* renamed from: com.discord.stores.StoreGuildStickers$handleFetchedSticker$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Sticker $sticker;
 
@@ -64,7 +63,7 @@ public final class StoreGuildStickers extends StoreV2 {
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             Map mapEmptyMap = (Map) StoreGuildStickers.access$getAllGuildStickers$p(StoreGuildStickers.this).get(Long.valueOf(this.$guildId));
             if (mapEmptyMap == null) {
-                mapEmptyMap = Maps6.emptyMap();
+                mapEmptyMap = h0.emptyMap();
             }
             linkedHashMap.putAll(mapEmptyMap);
             linkedHashMap.put(Long.valueOf(this.$sticker.getId()), this.$sticker);
@@ -75,7 +74,7 @@ public final class StoreGuildStickers extends StoreV2 {
 
     /* compiled from: StoreGuildStickers.kt */
     /* renamed from: com.discord.stores.StoreGuildStickers$observeGuildStickers$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends Sticker>>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Map<Long, ? extends Sticker>>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -93,7 +92,7 @@ public final class StoreGuildStickers extends StoreV2 {
     }
 
     public /* synthetic */ StoreGuildStickers(Dispatcher dispatcher, ObservationDeck observationDeck, Function1 function1, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck, function1);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck, function1);
     }
 
     public static final /* synthetic */ Map access$getAllGuildStickers$p(StoreGuildStickers storeGuildStickers) {
@@ -114,7 +113,7 @@ public final class StoreGuildStickers extends StoreV2 {
         } else {
             Map<Long, Map<Long, Sticker>> map = this.allGuildStickers;
             Long lValueOf = Long.valueOf(guildId);
-            LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(stickers, 10)), 16));
+            LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(stickers, 10)), 16));
             for (Object obj : stickers) {
                 linkedHashMap.put(Long.valueOf(((Sticker) obj).getId()), obj);
             }
@@ -131,7 +130,7 @@ public final class StoreGuildStickers extends StoreV2 {
         return this.allGuildStickersFlattenedSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final Map<Long, Map<Long, Sticker>> getAllGuildStickersInternal() {
         return this.allGuildStickers;
     }
@@ -158,20 +157,20 @@ public final class StoreGuildStickers extends StoreV2 {
 
     public final Map<Long, Sticker> getStickersForGuild(long guildId) {
         Map<Long, Sticker> map = getAllGuildStickers().get(Long.valueOf(guildId));
-        return map != null ? map : Maps6.emptyMap();
+        return map != null ? map : h0.emptyMap();
     }
 
-    @Store3
+    @StoreThread
     public final Map<Long, Sticker> getStickersForGuildInternal(long guildId) {
         return this.allGuildStickers.get(Long.valueOf(guildId));
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        m.checkNotNullParameter(payload, "payload");
         this.me = payload.getMe().getId();
         for (Guild guild : payload.getGuilds()) {
-            Intrinsics3.checkNotNullExpressionValue(guild, "guild");
+            m.checkNotNullExpressionValue(guild, "guild");
             handleGuildCreateOrUpdate(guild);
         }
     }
@@ -184,10 +183,10 @@ public final class StoreGuildStickers extends StoreV2 {
         this.dispatcher.schedule(new AnonymousClass1(guildId.longValue(), sticker));
     }
 
-    @Store3
+    @StoreThread
     public final Unit handleGuildCreateOrUpdate(Guild guild) {
         Object next;
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         List<GuildMember> listV = guild.v();
         if (listV == null) {
             return null;
@@ -209,13 +208,13 @@ public final class StoreGuildStickers extends StoreV2 {
         long id2 = guild.getId();
         List<Sticker> listK = guild.K();
         if (listK == null) {
-            listK = Collections2.emptyList();
+            listK = n.emptyList();
         }
         updateStickers(id2, listK);
         return Unit.a;
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildRemove(long guildId) {
         if (this.allGuildStickers.containsKey(Long.valueOf(guildId))) {
             this.allGuildStickers.remove(Long.valueOf(guildId));
@@ -223,18 +222,18 @@ public final class StoreGuildStickers extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleStickerUpdate(GuildStickersUpdate stickersUpdate) {
         Collection collectionEmptyList;
-        Intrinsics3.checkNotNullParameter(stickersUpdate, "stickersUpdate");
+        m.checkNotNullParameter(stickersUpdate, "stickersUpdate");
         long guildId = stickersUpdate.getGuildId();
         List<Sticker> listC = stickersUpdate.c();
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listC, 10));
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listC, 10));
         Iterator<T> it = listC.iterator();
         while (it.hasNext()) {
             arrayList.add(Long.valueOf(((Sticker) it.next()).getId()));
         }
-        Set set = _Collections.toSet(arrayList);
+        Set set = u.toSet(arrayList);
         Map<Long, Sticker> map = this.allGuildStickersSnapshot.get(Long.valueOf(guildId));
         if (map != null) {
             collectionEmptyList = new ArrayList(map.size());
@@ -243,7 +242,7 @@ public final class StoreGuildStickers extends StoreV2 {
                 collectionEmptyList.add(Long.valueOf(it2.next().getKey().longValue()));
             }
         } else {
-            collectionEmptyList = Collections2.emptyList();
+            collectionEmptyList = n.emptyList();
         }
         ArrayList arrayList2 = new ArrayList();
         for (Object obj : collectionEmptyList) {
@@ -257,7 +256,7 @@ public final class StoreGuildStickers extends StoreV2 {
 
     public final Observable<Map<Long, Map<Long, Sticker>>> observeGuildStickers() {
         Observable<Map<Long, Map<Long, Sticker>>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
@@ -269,23 +268,23 @@ public final class StoreGuildStickers extends StoreV2 {
         for (Map.Entry<Long, Map<Long, Sticker>> entry : this.allGuildStickers.entrySet()) {
             long jLongValue = entry.getKey().longValue();
             Map<Long, Sticker> value = entry.getValue();
-            linkedHashMap.put(Long.valueOf(jLongValue), Maps6.toMap(value));
+            linkedHashMap.put(Long.valueOf(jLongValue), h0.toMap(value));
             arrayList.addAll(value.values());
         }
         this.allGuildStickersSnapshot = linkedHashMap;
-        this.allGuildStickersFlattenedSnapshot = _Collections.toList(arrayList);
+        this.allGuildStickersFlattenedSnapshot = u.toList(arrayList);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public StoreGuildStickers(Dispatcher dispatcher, ObservationDeck observationDeck, Function1<? super List<Long>, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(function1, "onStickersDeleted");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(function1, "onStickersDeleted");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.onStickersDeleted = function1;
         this.allGuildStickers = new LinkedHashMap();
-        this.allGuildStickersSnapshot = Maps6.emptyMap();
-        this.allGuildStickersFlattenedSnapshot = Collections2.emptyList();
+        this.allGuildStickersSnapshot = h0.emptyMap();
+        this.allGuildStickersFlattenedSnapshot = n.emptyList();
     }
 }

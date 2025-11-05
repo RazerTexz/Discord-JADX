@@ -1,9 +1,9 @@
 package com.discord.widgets.channels.list.items;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildjoinrequest.GuildJoinRequest;
 import com.discord.models.member.GuildMember;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ChannelListItemGuildJoinRequest.kt */
 /* loaded from: classes2.dex */
@@ -14,8 +14,8 @@ public final /* data */ class ChannelListItemGuildJoinRequest implements Channel
     private final int type;
 
     public ChannelListItemGuildJoinRequest(GuildJoinRequest guildJoinRequest, GuildMember guildMember) {
-        Intrinsics3.checkNotNullParameter(guildJoinRequest, "guildJoinRequest");
-        Intrinsics3.checkNotNullParameter(guildMember, "member");
+        m.checkNotNullParameter(guildJoinRequest, "guildJoinRequest");
+        m.checkNotNullParameter(guildMember, "member");
         this.guildJoinRequest = guildJoinRequest;
         this.member = guildMember;
         this.type = 22;
@@ -43,8 +43,8 @@ public final /* data */ class ChannelListItemGuildJoinRequest implements Channel
     }
 
     public final ChannelListItemGuildJoinRequest copy(GuildJoinRequest guildJoinRequest, GuildMember member) {
-        Intrinsics3.checkNotNullParameter(guildJoinRequest, "guildJoinRequest");
-        Intrinsics3.checkNotNullParameter(member, "member");
+        m.checkNotNullParameter(guildJoinRequest, "guildJoinRequest");
+        m.checkNotNullParameter(member, "member");
         return new ChannelListItemGuildJoinRequest(guildJoinRequest, member);
     }
 
@@ -56,7 +56,7 @@ public final /* data */ class ChannelListItemGuildJoinRequest implements Channel
             return false;
         }
         ChannelListItemGuildJoinRequest channelListItemGuildJoinRequest = (ChannelListItemGuildJoinRequest) other;
-        return Intrinsics3.areEqual(this.guildJoinRequest, channelListItemGuildJoinRequest.guildJoinRequest) && Intrinsics3.areEqual(this.member, channelListItemGuildJoinRequest.member);
+        return m.areEqual(this.guildJoinRequest, channelListItemGuildJoinRequest.guildJoinRequest) && m.areEqual(this.member, channelListItemGuildJoinRequest.member);
     }
 
     public final GuildJoinRequest getGuildJoinRequest() {
@@ -85,7 +85,7 @@ public final /* data */ class ChannelListItemGuildJoinRequest implements Channel
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ChannelListItemGuildJoinRequest(guildJoinRequest=");
+        StringBuilder sbU = a.U("ChannelListItemGuildJoinRequest(guildJoinRequest=");
         sbU.append(this.guildJoinRequest);
         sbU.append(", member=");
         sbU.append(this.member);

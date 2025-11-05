@@ -15,7 +15,7 @@ public final class x0 extends b.i.a.f.h.g.a implements z0 {
     @Override // b.i.a.f.e.k.z0
     public final b.i.a.f.f.a d() throws RemoteException {
         Parcel parcelC = c(1, g());
-        b.i.a.f.f.a aVarG = a.AbstractBinderC0040a.g(parcelC.readStrongBinder());
+        b.i.a.f.f.a aVarG = a.AbstractBinderC0117a.g(parcelC.readStrongBinder());
         parcelC.recycle();
         return aVarG;
     }

@@ -1,7 +1,7 @@
 package com.google.gson;
 
-import b.i.d.JsonNull;
-import b.i.d.JsonPrimitive;
+import b.i.d.j;
+import b.i.d.k;
 import com.google.gson.internal.LinkedTreeMap;
 import java.util.Map;
 import java.util.Set;
@@ -17,7 +17,7 @@ public final class JsonObject extends JsonElement {
     public void h(String str, JsonElement jsonElement) {
         LinkedTreeMap<String, JsonElement> linkedTreeMap = this.a;
         if (jsonElement == null) {
-            jsonElement = JsonNull.a;
+            jsonElement = j.a;
         }
         linkedTreeMap.put(str, jsonElement);
     }
@@ -27,7 +27,7 @@ public final class JsonObject extends JsonElement {
     }
 
     public void i(String str, Number number) {
-        this.a.put(str, number == null ? JsonNull.a : new JsonPrimitive(number));
+        this.a.put(str, number == null ? j.a : new k(number));
     }
 
     public Set<Map.Entry<String, JsonElement>> j() {

@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet;
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetCallFullscreen.kt */
 /* loaded from: classes.dex */
@@ -24,7 +24,7 @@ public final class WidgetCallFullscreen$configureActionBar$$inlined$let$lambda$1
     public final void onClick(View view) {
         WidgetGuildScheduledEventDetailsBottomSheet.Companion companion = WidgetGuildScheduledEventDetailsBottomSheet.INSTANCE;
         FragmentManager parentFragmentManager = this.this$0.getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         companion.showForGuild(parentFragmentManager, this.$activeEvent$inlined.getId());
     }
 }

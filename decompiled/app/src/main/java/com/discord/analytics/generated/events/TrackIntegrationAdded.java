@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackIntegrationAdded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long id = null;
     private final Long guildId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, 
             return false;
         }
         TrackIntegrationAdded trackIntegrationAdded = (TrackIntegrationAdded) other;
-        return Intrinsics3.areEqual(this.id, trackIntegrationAdded.id) && Intrinsics3.areEqual(this.guildId, trackIntegrationAdded.guildId) && Intrinsics3.areEqual(this.applicationId, trackIntegrationAdded.applicationId) && Intrinsics3.areEqual(this.scopes, trackIntegrationAdded.scopes);
+        return m.areEqual(this.id, trackIntegrationAdded.id) && m.areEqual(this.guildId, trackIntegrationAdded.guildId) && m.areEqual(this.applicationId, trackIntegrationAdded.applicationId) && m.areEqual(this.scopes, trackIntegrationAdded.scopes);
     }
 
     public int hashCode() {
@@ -47,13 +47,13 @@ public final /* data */ class TrackIntegrationAdded implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackIntegrationAdded(id=");
+        StringBuilder sbU = a.U("TrackIntegrationAdded(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", scopes=");
-        return outline.L(sbU, this.scopes, ")");
+        return a.L(sbU, this.scopes, ")");
     }
 }

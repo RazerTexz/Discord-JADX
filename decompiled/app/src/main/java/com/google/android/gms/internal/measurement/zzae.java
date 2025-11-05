@@ -3,7 +3,7 @@ package com.google.android.gms.internal.measurement;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.h.l.h;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 
@@ -31,7 +31,7 @@ public final class zzae extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         long j = this.j;
         parcel.writeInt(524289);
         parcel.writeLong(j);
@@ -41,10 +41,10 @@ public final class zzae extends AbstractSafeParcelable {
         boolean z2 = this.l;
         parcel.writeInt(262147);
         parcel.writeInt(z2 ? 1 : 0);
-        AnimatableValueParser.t2(parcel, 4, this.m, false);
-        AnimatableValueParser.t2(parcel, 5, this.n, false);
-        AnimatableValueParser.t2(parcel, 6, this.o, false);
-        AnimatableValueParser.p2(parcel, 7, this.p, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.t2(parcel, 4, this.m, false);
+        d.t2(parcel, 5, this.n, false);
+        d.t2(parcel, 6, this.o, false);
+        d.p2(parcel, 7, this.p, false);
+        d.A2(parcel, iY2);
     }
 }

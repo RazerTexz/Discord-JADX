@@ -1,7 +1,7 @@
 package com.discord.api.requiredaction;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: UserRequiredActionUpdate.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final /* data */ class UserRequiredActionUpdate {
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof UserRequiredActionUpdate) && Intrinsics3.areEqual(this.requiredAction, ((UserRequiredActionUpdate) other).requiredAction);
+            return (other instanceof UserRequiredActionUpdate) && m.areEqual(this.requiredAction, ((UserRequiredActionUpdate) other).requiredAction);
         }
         return true;
     }
@@ -29,6 +29,6 @@ public final /* data */ class UserRequiredActionUpdate {
     }
 
     public String toString() {
-        return outline.J(outline.U("UserRequiredActionUpdate(requiredAction="), this.requiredAction, ")");
+        return a.J(a.U("UserRequiredActionUpdate(requiredAction="), this.requiredAction, ")");
     }
 }

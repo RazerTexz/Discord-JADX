@@ -26,7 +26,7 @@ import androidx.appcompat.widget.TintTypedArray;
 import androidx.core.internal.view.SupportMenu;
 import androidx.core.view.ActionProvider;
 import androidx.core.view.MenuItemCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -59,7 +59,7 @@ public class SupportMenuInflater extends MenuInflater {
             try {
                 this.mMethod = cls.getMethod(str, PARAM_TYPES);
             } catch (Exception e) {
-                StringBuilder sbY = outline.Y("Couldn't resolve menu item onClick handler ", str, " in class ");
+                StringBuilder sbY = a.Y("Couldn't resolve menu item onClick handler ", str, " in class ");
                 sbY.append(cls.getName());
                 InflateException inflateException = new InflateException(sbY.toString());
                 inflateException.initCause(e);
@@ -311,7 +311,7 @@ public class SupportMenuInflater extends MenuInflater {
             if (eventType == 2) {
                 String name = xmlPullParser.getName();
                 if (!name.equals(XML_MENU)) {
-                    throw new RuntimeException(outline.w("Expecting menu, got ", name));
+                    throw new RuntimeException(a.w("Expecting menu, got ", name));
                 }
                 eventType = xmlPullParser.next();
             } else {

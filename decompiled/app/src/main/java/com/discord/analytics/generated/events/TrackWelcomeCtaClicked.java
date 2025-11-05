@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackWelcomeCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackWelcomeCtaClicked implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackWelcomeCtaClicked implements AnalyticsSchema, TrackBaseReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Boolean isReply;
     private final Long sender;
@@ -39,7 +39,7 @@ public final /* data */ class TrackWelcomeCtaClicked implements AnalyticsSchema,
             return false;
         }
         TrackWelcomeCtaClicked trackWelcomeCtaClicked = (TrackWelcomeCtaClicked) other;
-        return Intrinsics3.areEqual(this.isReply, trackWelcomeCtaClicked.isReply) && Intrinsics3.areEqual(this.stickerId, trackWelcomeCtaClicked.stickerId) && Intrinsics3.areEqual(this.targetUser, trackWelcomeCtaClicked.targetUser) && Intrinsics3.areEqual(this.sender, trackWelcomeCtaClicked.sender);
+        return m.areEqual(this.isReply, trackWelcomeCtaClicked.isReply) && m.areEqual(this.stickerId, trackWelcomeCtaClicked.stickerId) && m.areEqual(this.targetUser, trackWelcomeCtaClicked.targetUser) && m.areEqual(this.sender, trackWelcomeCtaClicked.sender);
     }
 
     public int hashCode() {
@@ -54,14 +54,14 @@ public final /* data */ class TrackWelcomeCtaClicked implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackWelcomeCtaClicked(isReply=");
+        StringBuilder sbU = a.U("TrackWelcomeCtaClicked(isReply=");
         sbU.append(this.isReply);
         sbU.append(", stickerId=");
         sbU.append(this.stickerId);
         sbU.append(", targetUser=");
         sbU.append(this.targetUser);
         sbU.append(", sender=");
-        return outline.G(sbU, this.sender, ")");
+        return a.G(sbU, this.sender, ")");
     }
 
     public TrackWelcomeCtaClicked(Boolean bool, CharSequence charSequence, Long l, Long l2) {

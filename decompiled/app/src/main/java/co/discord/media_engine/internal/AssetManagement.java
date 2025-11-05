@@ -2,12 +2,11 @@ package co.discord.media_engine.internal;
 
 import android.content.Context;
 import android.util.Log;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.hammerandchisel.libdiscord.R;
-import d0.y.IOStreams;
-import d0.y.Utils7;
-import d0.z.d.Intrinsics3;
+import d0.y.h;
+import d0.z.d.m;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,7 +18,7 @@ public final class AssetManagement {
     private final Context ctx;
 
     public AssetManagement(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "ctx");
+        m.checkNotNullParameter(context, "ctx");
         this.ctx = context;
     }
 
@@ -27,10 +26,10 @@ public final class AssetManagement {
         try {
             File file = new File(this.ctx.getFilesDir(), "thz");
             if (file.exists()) {
-                Utils7.deleteRecursively(file);
+                h.deleteRecursively(file);
             }
         } catch (Exception e) {
-            StringBuilder sbU = outline.U("Failed removing krisp model files: ");
+            StringBuilder sbU = a.U("Failed removing krisp model files: ");
             sbU.append(e.getMessage());
             sbU.append(": ");
             sbU.append(e.toString());
@@ -40,9 +39,9 @@ public final class AssetManagement {
 
     private final void copy(File dir, String name) throws IOException {
         InputStream inputStreamOpen = this.ctx.getAssets().open("thz/" + name);
-        Intrinsics3.checkNotNullExpressionValue(inputStreamOpen, "ctx.assets.open(\"thz/\" + name)");
+        m.checkNotNullExpressionValue(inputStreamOpen, "ctx.assets.open(\"thz/\" + name)");
         FileOutputStream fileOutputStream = new FileOutputStream(new File(dir, name));
-        IOStreams.copyTo(inputStreamOpen, fileOutputStream, 1024);
+        d0.y.a.copyTo(inputStreamOpen, fileOutputStream, 1024);
         inputStreamOpen.close();
         fileOutputStream.close();
     }
@@ -55,7 +54,7 @@ public final class AssetManagement {
         try {
             File file = new File(this.ctx.getFilesDir(), "thz");
             String string = this.ctx.getString(R.string.krisp_model_version);
-            Intrinsics3.checkNotNullExpressionValue(string, "ctx.getString(R.string.krisp_model_version)");
+            m.checkNotNullExpressionValue(string, "ctx.getString(R.string.krisp_model_version)");
             if (new File(file, string).exists()) {
                 return;
             }
@@ -69,11 +68,11 @@ public final class AssetManagement {
                 list = new String[0];
             }
             for (String str : list) {
-                Intrinsics3.checkNotNullExpressionValue(str, "file");
+                m.checkNotNullExpressionValue(str, "file");
                 copy(file3, str);
             }
         } catch (Exception e) {
-            StringBuilder sbU = outline.U("Failed copying krisp model files: ");
+            StringBuilder sbU = a.U("Failed copying krisp model files: ");
             sbU.append(e.getMessage());
             sbU.append(": ");
             sbU.append(e.toString());

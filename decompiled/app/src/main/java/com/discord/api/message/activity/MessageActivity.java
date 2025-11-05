@@ -1,7 +1,7 @@
 package com.discord.api.message.activity;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: MessageActivity.kt */
 /* loaded from: classes.dex */
@@ -10,8 +10,8 @@ public final /* data */ class MessageActivity {
     private final MessageActivityType type;
 
     public MessageActivity(MessageActivityType messageActivityType, String str) {
-        Intrinsics3.checkNotNullParameter(messageActivityType, "type");
-        Intrinsics3.checkNotNullParameter(str, "partyId");
+        m.checkNotNullParameter(messageActivityType, "type");
+        m.checkNotNullParameter(str, "partyId");
         this.type = messageActivityType;
         this.partyId = str;
     }
@@ -34,7 +34,7 @@ public final /* data */ class MessageActivity {
             return false;
         }
         MessageActivity messageActivity = (MessageActivity) other;
-        return Intrinsics3.areEqual(this.type, messageActivity.type) && Intrinsics3.areEqual(this.partyId, messageActivity.partyId);
+        return m.areEqual(this.type, messageActivity.type) && m.areEqual(this.partyId, messageActivity.partyId);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class MessageActivity {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MessageActivity(type=");
+        StringBuilder sbU = a.U("MessageActivity(type=");
         sbU.append(this.type);
         sbU.append(", partyId=");
-        return outline.J(sbU, this.partyId, ")");
+        return a.J(sbU, this.partyId, ")");
     }
 }

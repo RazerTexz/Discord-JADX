@@ -1,7 +1,7 @@
 package com.discord.stores;
 
 import androidx.exifinterface.media.ExifInterface;
-import com.discord.models.domain.ModelPaymentSource3;
+import com.discord.models.domain.PaymentSourceRaw;
 import d0.u.a;
 import java.util.Comparator;
 
@@ -11,6 +11,6 @@ public final class StorePaymentSources$ensureDefaultPaymentSource$$inlined$sorte
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator
     public final int compare(T t, T t2) {
-        return a.compareValues(Integer.valueOf(!((ModelPaymentSource3) t).getDefault() ? 1 : 0), Integer.valueOf(!((ModelPaymentSource3) t2).getDefault() ? 1 : 0));
+        return a.compareValues(Integer.valueOf(!((PaymentSourceRaw) t).getDefault() ? 1 : 0), Integer.valueOf(!((PaymentSourceRaw) t2).getDefault() ? 1 : 0));
     }
 }

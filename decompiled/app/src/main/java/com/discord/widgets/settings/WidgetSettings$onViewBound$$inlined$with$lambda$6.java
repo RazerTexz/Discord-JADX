@@ -3,14 +3,13 @@ package com.discord.widgets.settings;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
-import b.a.d.AppToast;
 import com.discord.R;
 import com.discord.databinding.WidgetSettingsBinding;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -24,7 +23,7 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
 
     /* compiled from: WidgetSettings.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -46,10 +45,10 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
             WidgetSettings widgetSettings;
             int i;
             TextView textView = WidgetSettings$onViewBound$$inlined$with$lambda$6.this.$this_with.J;
-            Intrinsics3.checkNotNullExpressionValue(textView, "uploadDebugLogs");
+            m.checkNotNullExpressionValue(textView, "uploadDebugLogs");
             textView.setEnabled(z2);
             TextView textView2 = WidgetSettings$onViewBound$$inlined$with$lambda$6.this.$this_with.J;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "uploadDebugLogs");
+            m.checkNotNullExpressionValue(textView2, "uploadDebugLogs");
             if (z2) {
                 widgetSettings = WidgetSettings$onViewBound$$inlined$with$lambda$6.this.this$0;
                 i = R.string.upload_debug_logs;
@@ -63,7 +62,7 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
 
     /* compiled from: WidgetSettings.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ AnonymousClass1 $updateUploadDebugLogsUI$1;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -80,14 +79,14 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
-            AppToast.i(WidgetSettings$onViewBound$$inlined$with$lambda$6.this.this$0, R.string.upload_debug_log_success, 0, 4);
+            b.a.d.m.i(WidgetSettings$onViewBound$$inlined$with$lambda$6.this.this$0, R.string.upload_debug_log_success, 0, 4);
             AnonymousClass1.invoke$default(this.$updateUploadDebugLogsUI$1, false, 1, null);
         }
     }
 
     /* compiled from: WidgetSettings.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ AnonymousClass1 $updateUploadDebugLogsUI$1;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -104,14 +103,14 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             AnonymousClass1.invoke$default(this.$updateUploadDebugLogsUI$1, false, 1, null);
         }
     }
 
     /* compiled from: WidgetSettings.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass4 extends o implements Function0<Unit> {
         public final /* synthetic */ AnonymousClass1 $updateUploadDebugLogsUI$1;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -144,7 +143,7 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
         Observable observableUi$default = ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.uploadSystemLog(), this.this$0, null, 2, null);
         Context context = this.this$0.getContext();
         String name = this.$this_with.getClass().getName();
-        Intrinsics3.checkNotNullExpressionValue(name, "javaClass.name");
+        m.checkNotNullExpressionValue(name, "javaClass.name");
         ObservableExtensionsKt.appSubscribe$default(observableUi$default, context, name, (Function1) null, new AnonymousClass2(anonymousClass1), new AnonymousClass3(anonymousClass1), new AnonymousClass4(anonymousClass1), (Function0) null, 68, (Object) null);
     }
 }

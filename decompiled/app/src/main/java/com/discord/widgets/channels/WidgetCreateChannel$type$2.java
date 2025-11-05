@@ -1,11 +1,11 @@
 package com.discord.widgets.channels;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetCreateChannel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetCreateChannel$type$2 extends Lambda implements Function0<Integer> {
+public final class WidgetCreateChannel$type$2 extends o implements Function0<Integer> {
     public final /* synthetic */ WidgetCreateChannel this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

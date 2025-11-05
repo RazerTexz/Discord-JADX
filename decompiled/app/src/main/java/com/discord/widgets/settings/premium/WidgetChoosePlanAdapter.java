@@ -8,8 +8,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.android.billingclient.api.SkuDetails;
 import com.discord.R;
 import com.discord.databinding.WidgetChoosePlanAdapterHeaderItemBinding;
@@ -23,7 +23,7 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.premium.PremiumUtils;
 import com.google.android.material.card.MaterialCardView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -38,7 +38,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public DividerViewHolder(WidgetChoosePlanAdapter widgetChoosePlanAdapter) {
             super(R.layout.widget_choose_plan_adapter_divider_item, widgetChoosePlanAdapter);
-            Intrinsics3.checkNotNullParameter(widgetChoosePlanAdapter, "adapter");
+            m.checkNotNullParameter(widgetChoosePlanAdapter, "adapter");
         }
     }
 
@@ -49,14 +49,14 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HeaderViewHolder(WidgetChoosePlanAdapter widgetChoosePlanAdapter) {
             super(R.layout.widget_choose_plan_adapter_header_item, widgetChoosePlanAdapter);
-            Intrinsics3.checkNotNullParameter(widgetChoosePlanAdapter, "adapter");
+            m.checkNotNullParameter(widgetChoosePlanAdapter, "adapter");
             View view = this.itemView;
             TextView textView = (TextView) view.findViewById(R.id.select_subscription_header_text);
             if (textView == null) {
                 throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.select_subscription_header_text)));
             }
             WidgetChoosePlanAdapterHeaderItemBinding widgetChoosePlanAdapterHeaderItemBinding = new WidgetChoosePlanAdapterHeaderItemBinding((FrameLayout) view, textView);
-            Intrinsics3.checkNotNullExpressionValue(widgetChoosePlanAdapterHeaderItemBinding, "WidgetChoosePlanAdapterH…temBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(widgetChoosePlanAdapterHeaderItemBinding, "WidgetChoosePlanAdapterH…temBinding.bind(itemView)");
             this.binding = widgetChoosePlanAdapterHeaderItemBinding;
         }
 
@@ -67,11 +67,11 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             TextView textView = this.binding.f2347b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.selectSubscriptionHeaderText");
-            FormatUtils.n(textView, ((Item.Header) data).getTitleStringResId(), new Object[0], null, 4);
+            m.checkNotNullExpressionValue(textView, "binding.selectSubscriptionHeaderText");
+            b.n(textView, ((Item.Header) data).getTitleStringResId(), new Object[0], null, 4);
         }
     }
 
@@ -145,7 +145,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             }
 
             public String toString() {
-                return outline.B(outline.U("Header(titleStringResId="), this.titleStringResId, ")");
+                return a.B(a.U("Header(titleStringResId="), this.titleStringResId, ")");
             }
         }
 
@@ -220,8 +220,8 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             }
 
             public final Plan copy(GooglePlaySku displaySku, SkuDetails skuDetails, GooglePlaySku purchaseSku, String oldSkuName, SkuDetails upgradeSkuDetails, boolean isCurrentPlan) {
-                Intrinsics3.checkNotNullParameter(displaySku, "displaySku");
-                Intrinsics3.checkNotNullParameter(skuDetails, "skuDetails");
+                m.checkNotNullParameter(displaySku, "displaySku");
+                m.checkNotNullParameter(skuDetails, "skuDetails");
                 return new Plan(displaySku, skuDetails, purchaseSku, oldSkuName, upgradeSkuDetails, isCurrentPlan);
             }
 
@@ -233,7 +233,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
                     return false;
                 }
                 Plan plan = (Plan) other;
-                return Intrinsics3.areEqual(this.displaySku, plan.displaySku) && Intrinsics3.areEqual(this.skuDetails, plan.skuDetails) && Intrinsics3.areEqual(this.purchaseSku, plan.purchaseSku) && Intrinsics3.areEqual(this.oldSkuName, plan.oldSkuName) && Intrinsics3.areEqual(this.upgradeSkuDetails, plan.upgradeSkuDetails) && this.isCurrentPlan == plan.isCurrentPlan;
+                return m.areEqual(this.displaySku, plan.displaySku) && m.areEqual(this.skuDetails, plan.skuDetails) && m.areEqual(this.purchaseSku, plan.purchaseSku) && m.areEqual(this.oldSkuName, plan.oldSkuName) && m.areEqual(this.upgradeSkuDetails, plan.upgradeSkuDetails) && this.isCurrentPlan == plan.isCurrentPlan;
             }
 
             public final GooglePlaySku getDisplaySku() {
@@ -286,7 +286,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Plan(displaySku=");
+                StringBuilder sbU = a.U("Plan(displaySku=");
                 sbU.append(this.displaySku);
                 sbU.append(", skuDetails=");
                 sbU.append(this.skuDetails);
@@ -297,14 +297,14 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
                 sbU.append(", upgradeSkuDetails=");
                 sbU.append(this.upgradeSkuDetails);
                 sbU.append(", isCurrentPlan=");
-                return outline.O(sbU, this.isCurrentPlan, ")");
+                return a.O(sbU, this.isCurrentPlan, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Plan(GooglePlaySku googlePlaySku, SkuDetails skuDetails, GooglePlaySku googlePlaySku2, String str, SkuDetails skuDetails2, boolean z2) {
                 super(1, null);
-                Intrinsics3.checkNotNullParameter(googlePlaySku, "displaySku");
-                Intrinsics3.checkNotNullParameter(skuDetails, "skuDetails");
+                m.checkNotNullParameter(googlePlaySku, "displaySku");
+                m.checkNotNullParameter(skuDetails, "skuDetails");
                 this.displaySku = googlePlaySku;
                 this.skuDetails = skuDetails;
                 this.purchaseSku = googlePlaySku2;
@@ -336,9 +336,9 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public PlanViewHeader(WidgetChoosePlanAdapter widgetChoosePlanAdapter) {
             super(R.layout.widget_choose_plan_adapter_plan_item, widgetChoosePlanAdapter);
-            Intrinsics3.checkNotNullParameter(widgetChoosePlanAdapter, "adapter");
+            m.checkNotNullParameter(widgetChoosePlanAdapter, "adapter");
             WidgetChoosePlanAdapterPlanItemBinding widgetChoosePlanAdapterPlanItemBindingA = WidgetChoosePlanAdapterPlanItemBinding.a(this.itemView);
-            Intrinsics3.checkNotNullExpressionValue(widgetChoosePlanAdapterPlanItemBindingA, "WidgetChoosePlanAdapterP…temBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(widgetChoosePlanAdapterPlanItemBindingA, "WidgetChoosePlanAdapterP…temBinding.bind(itemView)");
             this.binding = widgetChoosePlanAdapterPlanItemBindingA;
         }
 
@@ -353,46 +353,46 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             Item.Plan plan = (Item.Plan) data;
             TextView textView = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.planItemName");
+            m.checkNotNullExpressionValue(textView, "binding.planItemName");
             textView.setText(plan.getSkuDetails().a());
             TextView textView2 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.planItemPrice");
+            m.checkNotNullExpressionValue(textView2, "binding.planItemPrice");
             PremiumUtils premiumUtils = PremiumUtils.INSTANCE;
             MaterialCardView materialCardView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.planItemContainer");
+            m.checkNotNullExpressionValue(materialCardView, "binding.planItemContainer");
             Context context = materialCardView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.planItemContainer.context");
+            m.checkNotNullExpressionValue(context, "binding.planItemContainer.context");
             textView2.setText(premiumUtils.getPlanPriceText(context, plan.getSkuDetails()));
             this.binding.e.setImageResource(plan.getDisplaySku().getIconDrawableResId());
             TextView textView3 = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.planItemCurrentPlan");
+            m.checkNotNullExpressionValue(textView3, "binding.planItemCurrentPlan");
             textView3.setVisibility(plan.isCurrentPlan() ? 0 : 8);
             this.binding.f2348b.setImageResource(plan.isCurrentPlan() ? GooglePlaySku.INSTANCE.getBorderResource(plan.getDisplaySku().getType()) : 0);
             if (plan.getPurchaseSku() == null) {
                 TextView textView4 = this.binding.g;
-                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.planItemPrice");
+                m.checkNotNullExpressionValue(textView4, "binding.planItemPrice");
                 DrawableCompat.setCompoundDrawablesCompat$default(textView4, (Drawable) null, (Drawable) null, (Drawable) null, (Drawable) null, 11, (Object) null);
                 return;
             }
             View view = this.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             int themedDrawableRes$default = DrawableCompat.getThemedDrawableRes$default(view, R.attr.ic_navigate_next, 0, 2, (Object) null);
             TextView textView5 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(textView5, "binding.planItemPrice");
+            m.checkNotNullExpressionValue(textView5, "binding.planItemPrice");
             DrawableCompat.setCompoundDrawablesCompat$default(textView5, 0, 0, themedDrawableRes$default, 0, 11, (Object) null);
-            this.binding.c.setOnClickListener(new WidgetChoosePlanAdapter2(this, data));
+            this.binding.c.setOnClickListener(new WidgetChoosePlanAdapter$PlanViewHeader$onConfigure$1(this, data));
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChoosePlanAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        this.onClickPlan = WidgetChoosePlanAdapter3.INSTANCE;
+        m.checkNotNullParameter(recyclerView, "recycler");
+        this.onClickPlan = WidgetChoosePlanAdapter$onClickPlan$1.INSTANCE;
     }
 
     public static final /* synthetic */ Function3 access$getOnClickPlan$p(WidgetChoosePlanAdapter widgetChoosePlanAdapter) {
@@ -409,13 +409,13 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
     }
 
     public final void setOnClickPlan(Function3<? super GooglePlaySku, ? super String, ? super SkuDetails, Unit> onClickPlan) {
-        Intrinsics3.checkNotNullParameter(onClickPlan, "onClickPlan");
+        m.checkNotNullParameter(onClickPlan, "onClickPlan");
         this.onClickPlan = onClickPlan;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<WidgetChoosePlanAdapter, Item> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new HeaderViewHolder(this);
         }

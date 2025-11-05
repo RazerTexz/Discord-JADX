@@ -4,10 +4,10 @@ import android.content.Context;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import b.a.d.AppHelpDesk;
-import b.a.d.AppScreen2;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetDonutBetaPopupBinding;
@@ -15,15 +15,15 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 
 /* compiled from: WidgetDonutBetaPopup.kt */
 /* loaded from: classes2.dex */
 public final class WidgetDonutBetaPopup extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetDonutBetaPopup.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDonutBetaPopupBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetDonutBetaPopup.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDonutBetaPopupBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -37,10 +37,10 @@ public final class WidgetDonutBetaPopup extends AppFragment {
         }
 
         public final void show(Context context, String source) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(source, "source");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(source, "source");
             AnalyticsTracker.openModal$default("Project Donut Android Beta Required", source, null, 4, null);
-            AppScreen2.e(context, WidgetDonutBetaPopup.class, null, 4);
+            j.e(context, WidgetDonutBetaPopup.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -55,7 +55,7 @@ public final class WidgetDonutBetaPopup extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, outline.x(view, "it", "it.context"), "https://play.google.com/apps/testing/com.discord", false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, a.x(view, "it", "it.context"), "https://play.google.com/apps/testing/com.discord", false, false, null, 28, null);
         }
     }
 
@@ -91,7 +91,7 @@ public final class WidgetDonutBetaPopup extends AppFragment {
 
     public WidgetDonutBetaPopup() {
         super(R.layout.widget_donut_beta_popup);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetDonutBetaPopup2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetDonutBetaPopup$binding$2.INSTANCE, null, 2, null);
     }
 
     private final WidgetDonutBetaPopupBinding getBinding() {
@@ -104,11 +104,11 @@ public final class WidgetDonutBetaPopup extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         LinkifiedTextView linkifiedTextView = getBinding().f2368b;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.donutBetaBody");
-        FormatUtils.n(linkifiedTextView, R.string.donut_get_android_beta_body, new Object[]{AppHelpDesk.a.a(360003953831L, null)}, null, 4);
+        m.checkNotNullExpressionValue(linkifiedTextView, "binding.donutBetaBody");
+        b.n(linkifiedTextView, R.string.donut_get_android_beta_body, new Object[]{f.a.a(360003953831L, null)}, null, 4);
         getBinding().e.setOnClickListener(AnonymousClass1.INSTANCE);
         getBinding().d.setOnClickListener(new AnonymousClass2());
         getBinding().c.setOnClickListener(new AnonymousClass3());

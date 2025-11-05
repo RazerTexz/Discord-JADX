@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackVideoEventTimes.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoEventTimes implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackVideoEventTimes implements AnalyticsSchema, TrackBaseReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Long connectionStreamFirstFrame;
     private final Long connectionVideoFirstFrame;
@@ -37,7 +37,7 @@ public final /* data */ class TrackVideoEventTimes implements AnalyticsSchema, T
             return false;
         }
         TrackVideoEventTimes trackVideoEventTimes = (TrackVideoEventTimes) other;
-        return Intrinsics3.areEqual(this.gatewayConnection, trackVideoEventTimes.gatewayConnection) && Intrinsics3.areEqual(this.gatewayHello, trackVideoEventTimes.gatewayHello) && Intrinsics3.areEqual(this.voiceConnection, trackVideoEventTimes.voiceConnection) && Intrinsics3.areEqual(this.streamRequested, trackVideoEventTimes.streamRequested) && Intrinsics3.areEqual(this.streamConnection, trackVideoEventTimes.streamConnection) && Intrinsics3.areEqual(this.streamFirstFrame, trackVideoEventTimes.streamFirstFrame) && Intrinsics3.areEqual(this.videoFirstFrame, trackVideoEventTimes.videoFirstFrame) && Intrinsics3.areEqual(this.mediaEngineConnection, trackVideoEventTimes.mediaEngineConnection) && Intrinsics3.areEqual(this.connectionVideoFirstFrame, trackVideoEventTimes.connectionVideoFirstFrame) && Intrinsics3.areEqual(this.connectionStreamFirstFrame, trackVideoEventTimes.connectionStreamFirstFrame) && Intrinsics3.areEqual(this.eventTimeName, trackVideoEventTimes.eventTimeName);
+        return m.areEqual(this.gatewayConnection, trackVideoEventTimes.gatewayConnection) && m.areEqual(this.gatewayHello, trackVideoEventTimes.gatewayHello) && m.areEqual(this.voiceConnection, trackVideoEventTimes.voiceConnection) && m.areEqual(this.streamRequested, trackVideoEventTimes.streamRequested) && m.areEqual(this.streamConnection, trackVideoEventTimes.streamConnection) && m.areEqual(this.streamFirstFrame, trackVideoEventTimes.streamFirstFrame) && m.areEqual(this.videoFirstFrame, trackVideoEventTimes.videoFirstFrame) && m.areEqual(this.mediaEngineConnection, trackVideoEventTimes.mediaEngineConnection) && m.areEqual(this.connectionVideoFirstFrame, trackVideoEventTimes.connectionVideoFirstFrame) && m.areEqual(this.connectionStreamFirstFrame, trackVideoEventTimes.connectionStreamFirstFrame) && m.areEqual(this.eventTimeName, trackVideoEventTimes.eventTimeName);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackVideoEventTimes implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVideoEventTimes(gatewayConnection=");
+        StringBuilder sbU = a.U("TrackVideoEventTimes(gatewayConnection=");
         sbU.append(this.gatewayConnection);
         sbU.append(", gatewayHello=");
         sbU.append(this.gatewayHello);
@@ -87,6 +87,6 @@ public final /* data */ class TrackVideoEventTimes implements AnalyticsSchema, T
         sbU.append(", connectionStreamFirstFrame=");
         sbU.append(this.connectionStreamFirstFrame);
         sbU.append(", eventTimeName=");
-        return outline.E(sbU, this.eventTimeName, ")");
+        return a.E(sbU, this.eventTimeName, ")");
     }
 }

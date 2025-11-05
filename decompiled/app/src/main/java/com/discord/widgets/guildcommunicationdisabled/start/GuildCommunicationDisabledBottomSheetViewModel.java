@@ -3,20 +3,19 @@ package com.discord.widgets.guildcommunicationdisabled.start;
 import a0.a.a.b;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.guild.Guild;
 import com.discord.models.member.GuildMember;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import j0.p.Schedulers2;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -27,7 +26,7 @@ import rx.functions.Func2;
 
 /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildCommunicationDisabledBottomSheetViewModel extends AppViewModel<ViewState> {
+public final class GuildCommunicationDisabledBottomSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -50,7 +49,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
 
     /* compiled from: GuildCommunicationDisabledBottomSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledBottomSheetViewModel$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass2(GuildCommunicationDisabledBottomSheetViewModel guildCommunicationDisabledBottomSheetViewModel) {
             super(1, guildCommunicationDisabledBottomSheetViewModel, GuildCommunicationDisabledBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guildcommunicationdisabled/start/GuildCommunicationDisabledBottomSheetViewModel$StoreState;)V", 0);
         }
@@ -63,7 +62,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             GuildCommunicationDisabledBottomSheetViewModel.access$handleStoreState((GuildCommunicationDisabledBottomSheetViewModel) this.receiver, storeState);
         }
     }
@@ -78,7 +77,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
         }
 
         private final Observable<StoreState> observeStores(long userId, long guildId, ObservationDeck observationDeck, StoreGuilds guildStore) {
-            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{guildStore}, false, null, null, new GuildCommunicationDisabledBottomSheetViewModel2(guildStore, guildId, userId), 14, null);
+            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{guildStore}, false, null, null, new GuildCommunicationDisabledBottomSheetViewModel$Companion$observeStores$1(guildStore, guildId, userId), 14, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -128,7 +127,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.guildMember, storeState.guildMember);
+            return m.areEqual(this.guild, storeState.guild) && m.areEqual(this.guildMember, storeState.guildMember);
         }
 
         public final Guild getGuild() {
@@ -147,7 +146,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(guild=");
+            StringBuilder sbU = a.U("StoreState(guild=");
             sbU.append(this.guild);
             sbU.append(", guildMember=");
             sbU.append(this.guildMember);
@@ -176,7 +175,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(long j, String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "guildName");
+                m.checkNotNullParameter(str, "guildName");
                 this.timeoutTimeLeftMs = j;
                 this.guildName = str;
             }
@@ -202,7 +201,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
             }
 
             public final Valid copy(long timeoutTimeLeftMs, String guildName) {
-                Intrinsics3.checkNotNullParameter(guildName, "guildName");
+                m.checkNotNullParameter(guildName, "guildName");
                 return new Valid(timeoutTimeLeftMs, guildName);
             }
 
@@ -214,7 +213,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return this.timeoutTimeLeftMs == valid.timeoutTimeLeftMs && Intrinsics3.areEqual(this.guildName, valid.guildName);
+                return this.timeoutTimeLeftMs == valid.timeoutTimeLeftMs && m.areEqual(this.guildName, valid.guildName);
             }
 
             public final String getGuildName() {
@@ -232,10 +231,10 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(timeoutTimeLeftMs=");
+                StringBuilder sbU = a.U("Valid(timeoutTimeLeftMs=");
                 sbU.append(this.timeoutTimeLeftMs);
                 sbU.append(", guildName=");
-                return outline.J(sbU, this.guildName, ")");
+                return a.J(sbU, this.guildName, ")");
             }
         }
 
@@ -249,7 +248,7 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
 
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ GuildCommunicationDisabledBottomSheetViewModel(long j, long j2, ObservationDeck observationDeck, StoreGuilds storeGuilds, Observable observable, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        ObservationDeck observationDeck2 = (i & 4) != 0 ? ObservationDeck4.get() : observationDeck;
+        ObservationDeck observationDeck2 = (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck;
         StoreGuilds guilds = (i & 8) != 0 ? StoreStream.INSTANCE.getGuilds() : storeGuilds;
         this(j, j2, observationDeck2, guilds, (i & 16) != 0 ? Companion.access$observeStores(INSTANCE, j, j2, observationDeck2, guilds) : observable);
     }
@@ -272,11 +271,11 @@ public final class GuildCommunicationDisabledBottomSheetViewModel extends AppVie
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildCommunicationDisabledBottomSheetViewModel(long j, long j2, ObservationDeck observationDeck, StoreGuilds storeGuilds, Observable<StoreState> observable) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "guildStore");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
-        Observable observableJ = Observable.j(Observable.F(0L, 1L, TimeUnit.SECONDS, Schedulers2.a()), observable, AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…->\n      storeState\n    }");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeGuilds, "guildStore");
+        m.checkNotNullParameter(observable, "storeStateObservable");
+        Observable observableJ = Observable.j(Observable.F(0L, 1L, TimeUnit.SECONDS, j0.p.a.a()), observable, AnonymousClass1.INSTANCE);
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…->\n      storeState\n    }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableJ), this, null, 2, null), GuildCommunicationDisabledBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
     }
 }

@@ -3,7 +3,6 @@ package b.i.a.f.h.m;
 import android.os.ParcelUuid;
 import android.util.SparseArray;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.Arrays;
@@ -62,7 +61,7 @@ public final class e {
         long j;
         int length = bArr.length;
         if (length != 2 && length != 4 && length != 16) {
-            throw new IllegalArgumentException(outline.g(38, "uuidBytes length invalid - ", length));
+            throw new IllegalArgumentException(b.d.b.a.a.g(38, "uuidBytes length invalid - ", length));
         }
         if (length == 16) {
             ByteBuffer byteBufferOrder = ByteBuffer.wrap(bArr).order(ByteOrder.LITTLE_ENDIAN);
@@ -135,12 +134,12 @@ public final class e {
         }
         int i4 = this.f;
         String str = this.g;
-        StringBuilder sb3 = new StringBuilder(outline.b(str, outline.b(string2, outline.b(string, strValueOf.length() + Opcodes.F2I))));
+        StringBuilder sb3 = new StringBuilder(b.d.b.a.a.b(str, b.d.b.a.a.b(string2, b.d.b.a.a.b(string, strValueOf.length() + Opcodes.F2I))));
         sb3.append("BleRecord [mAdvertiseFlags=");
         sb3.append(i);
         sb3.append(", mServiceUuids=");
         sb3.append(strValueOf);
-        outline.s0(sb3, ", mManufacturerSpecificData=", string, ", mServiceData=", string2);
+        b.d.b.a.a.s0(sb3, ", mManufacturerSpecificData=", string, ", mServiceData=", string2);
         sb3.append(", mTxPowerLevel=");
         sb3.append(i4);
         sb3.append(", mDeviceName=");

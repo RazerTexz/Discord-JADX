@@ -1,14 +1,14 @@
 package com.discord.widgets.friends;
 
 import com.discord.models.user.User;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetFriendsListAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetFriendsListAdapter$onClickChat$1 extends Lambda implements Function1<User, Unit> {
+public final class WidgetFriendsListAdapter$onClickChat$1 extends o implements Function1<User, Unit> {
     public static final WidgetFriendsListAdapter$onClickChat$1 INSTANCE = new WidgetFriendsListAdapter$onClickChat$1();
 
     public WidgetFriendsListAdapter$onClickChat$1() {
@@ -23,6 +23,6 @@ public final class WidgetFriendsListAdapter$onClickChat$1 extends Lambda impleme
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(User user) {
-        Intrinsics3.checkNotNullParameter(user, "it");
+        m.checkNotNullParameter(user, "it");
     }
 }

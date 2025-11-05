@@ -1,12 +1,11 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.member.GuildMember;
 import com.discord.models.presence.Presence;
 import com.discord.models.user.User;
 import com.discord.utilities.user.UserUtils;
-import d0.t.CollectionsJVM;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -73,7 +72,7 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
     }
 
     public final UserAutocompletable copy(User user, GuildMember guildMember, String nickname, Presence presence, boolean canUserReadChannel) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         return new UserAutocompletable(user, guildMember, nickname, presence, canUserReadChannel);
     }
 
@@ -85,7 +84,7 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
             return false;
         }
         UserAutocompletable userAutocompletable = (UserAutocompletable) other;
-        return Intrinsics3.areEqual(this.user, userAutocompletable.user) && Intrinsics3.areEqual(this.guildMember, userAutocompletable.guildMember) && Intrinsics3.areEqual(this.nickname, userAutocompletable.nickname) && Intrinsics3.areEqual(this.presence, userAutocompletable.presence) && this.canUserReadChannel == userAutocompletable.canUserReadChannel;
+        return m.areEqual(this.user, userAutocompletable.user) && m.areEqual(this.guildMember, userAutocompletable.guildMember) && m.areEqual(this.nickname, userAutocompletable.nickname) && m.areEqual(this.presence, userAutocompletable.presence) && this.canUserReadChannel == userAutocompletable.canUserReadChannel;
     }
 
     public final List<String> getAutoTextMatchers() {
@@ -107,7 +106,7 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
     public String getInputReplacement() {
-        StringBuilder sbQ = outline.Q('<');
+        StringBuilder sbQ = a.Q('<');
         sbQ.append(leadingIdentifier().getIdentifier());
         sbQ.append(this.user.getId());
         sbQ.append('>');
@@ -159,7 +158,7 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("UserAutocompletable(user=");
+        StringBuilder sbU = a.U("UserAutocompletable(user=");
         sbU.append(this.user);
         sbU.append(", guildMember=");
         sbU.append(this.guildMember);
@@ -168,22 +167,22 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
         sbU.append(", presence=");
         sbU.append(this.presence);
         sbU.append(", canUserReadChannel=");
-        return outline.O(sbU, this.canUserReadChannel, ")");
+        return a.O(sbU, this.canUserReadChannel, ")");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserAutocompletable(User user, GuildMember guildMember, String str, Presence presence, boolean z2) {
         super(null);
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         List<String> listListOf = null;
         this.user = user;
         this.guildMember = guildMember;
         this.nickname = str;
         this.presence = presence;
         this.canUserReadChannel = z2;
-        this.textMatchers = CollectionsJVM.listOf(leadingIdentifier().getIdentifier() + user.getUsername() + UserUtils.INSTANCE.getDiscriminatorWithPadding(user));
+        this.textMatchers = d0.t.m.listOf(leadingIdentifier().getIdentifier() + user.getUsername() + UserUtils.INSTANCE.getDiscriminatorWithPadding(user));
         if (str != null) {
-            listListOf = CollectionsJVM.listOf(leadingIdentifier().getIdentifier() + str);
+            listListOf = d0.t.m.listOf(leadingIdentifier().getIdentifier() + str);
         }
         this.autoTextMatchers = listListOf;
     }

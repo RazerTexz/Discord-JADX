@@ -4,12 +4,12 @@ import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.models.user.User;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$recentDmUserIds$1 extends Lambda implements Function1<Long, Long> {
+public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$recentDmUserIds$1 extends o implements Function1<Long, Long> {
     public final /* synthetic */ WidgetGlobalSearchModel.ChannelContext $channelContext;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

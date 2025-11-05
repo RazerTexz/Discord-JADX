@@ -1,13 +1,13 @@
 package com.discord.stores;
 
 import com.discord.stores.StoreStreamRtcConnection;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: StoreStreamRtcConnection.kt */
 /* loaded from: classes2.dex */
-public final class StoreStreamRtcConnection$RtcConnectionListener$onVideoStream$1 extends Lambda implements Function0<Unit> {
+public final class StoreStreamRtcConnection$RtcConnectionListener$onVideoStream$1 extends o implements Function0<Unit> {
     public final /* synthetic */ Integer $streamId;
     public final /* synthetic */ long $userId;
     public final /* synthetic */ StoreStreamRtcConnection.RtcConnectionListener this$0;

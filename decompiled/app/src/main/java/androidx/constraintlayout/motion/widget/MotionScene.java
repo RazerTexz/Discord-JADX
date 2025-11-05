@@ -24,7 +24,7 @@ import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.constraintlayout.widget.R;
 import androidx.constraintlayout.widget.StateSet;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.IOException;
@@ -349,7 +349,7 @@ public class MotionScene {
                 constraintSet.readFallback(constraintSet2);
                 this.mDeriveMap.put(i, -1);
             } else {
-                StringBuilder sbU = outline.U("ERROR! invalid deriveConstraintsFrom: @id/");
+                StringBuilder sbU = a.U("ERROR! invalid deriveConstraintsFrom: @id/");
                 sbU.append(Debug.getName(this.mMotionLayout.getContext(), i2));
                 Log.e(TAG, sbU.toString());
             }
@@ -508,7 +508,7 @@ public class MotionScene {
         if (this.DEBUG_DESKTOP) {
             System.out.println("id " + str);
             PrintStream printStream = System.out;
-            StringBuilder sbU = outline.U("size ");
+            StringBuilder sbU = a.U("size ");
             sbU.append(this.mConstraintSetMap.size());
             printStream.println(sbU.toString());
         }
@@ -982,7 +982,7 @@ public class MotionScene {
         if (this.DEBUG_DESKTOP) {
             System.out.println("id " + i);
             PrintStream printStream = System.out;
-            StringBuilder sbU = outline.U("size ");
+            StringBuilder sbU = a.U("size ");
             sbU.append(this.mConstraintSetMap.size());
             printStream.println(sbU.toString());
         }
@@ -991,7 +991,7 @@ public class MotionScene {
             i = iStateGetConstraintID;
         }
         if (this.mConstraintSetMap.get(i) == null) {
-            StringBuilder sbU2 = outline.U("Warning could not find ConstraintSet id/");
+            StringBuilder sbU2 = a.U("Warning could not find ConstraintSet id/");
             sbU2.append(Debug.getName(this.mMotionLayout.getContext(), i));
             sbU2.append(" In MotionScene");
             Log.e(TAG, sbU2.toString());
@@ -1080,7 +1080,7 @@ public class MotionScene {
                     motionLayoutFindViewById = motionLayout.findViewById(i2);
                 }
                 if (motionLayoutFindViewById == null) {
-                    StringBuilder sbU = outline.U("OnClick could not find id ");
+                    StringBuilder sbU = a.U("OnClick could not find id ");
                     sbU.append(this.mTargetId);
                     Log.e(MotionScene.TAG, sbU.toString());
                     return;
@@ -1184,7 +1184,7 @@ public class MotionScene {
                     viewFindViewById.setOnClickListener(null);
                     return;
                 }
-                StringBuilder sbU = outline.U(" (*)  could not find id ");
+                StringBuilder sbU = a.U(" (*)  could not find id ");
                 sbU.append(this.mTargetId);
                 Log.e(MotionScene.TAG, sbU.toString());
             }
@@ -1374,9 +1374,9 @@ public class MotionScene {
         public String debugString(Context context) {
             String resourceEntryName = this.mConstraintSetStart == -1 ? "null" : context.getResources().getResourceEntryName(this.mConstraintSetStart);
             if (this.mConstraintSetEnd == -1) {
-                return outline.w(resourceEntryName, " -> null");
+                return a.w(resourceEntryName, " -> null");
             }
-            StringBuilder sbX = outline.X(resourceEntryName, " -> ");
+            StringBuilder sbX = a.X(resourceEntryName, " -> ");
             sbX.append(context.getResources().getResourceEntryName(this.mConstraintSetEnd));
             return sbX.toString();
         }

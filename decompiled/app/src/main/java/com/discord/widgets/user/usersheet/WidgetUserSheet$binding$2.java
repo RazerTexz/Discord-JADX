@@ -22,13 +22,13 @@ import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetUserSheet.kt */
 /* loaded from: classes.dex */
-public final /* synthetic */ class WidgetUserSheet$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetUserSheetBinding> {
+public final /* synthetic */ class WidgetUserSheet$binding$2 extends k implements Function1<View, WidgetUserSheetBinding> {
     public static final WidgetUserSheet$binding$2 INSTANCE = new WidgetUserSheet$binding$2();
 
     public WidgetUserSheet$binding$2() {
@@ -42,7 +42,7 @@ public final /* synthetic */ class WidgetUserSheet$binding$2 extends FunctionRef
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetUserSheetBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.about_me_card;
         CardView cardView = (CardView) view.findViewById(R.id.about_me_card);
         if (cardView != null) {

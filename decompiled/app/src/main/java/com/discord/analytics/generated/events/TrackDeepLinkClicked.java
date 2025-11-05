@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackDeepLinkClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDeepLinkClicked implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackDeepLinkClicked implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long fingerprint = null;
     private final CharSequence attemptId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackDeepLinkClicked implements AnalyticsSchema, T
             return false;
         }
         TrackDeepLinkClicked trackDeepLinkClicked = (TrackDeepLinkClicked) other;
-        return Intrinsics3.areEqual(this.fingerprint, trackDeepLinkClicked.fingerprint) && Intrinsics3.areEqual(this.attemptId, trackDeepLinkClicked.attemptId) && Intrinsics3.areEqual(this.source, trackDeepLinkClicked.source) && Intrinsics3.areEqual(this.inviteCode, trackDeepLinkClicked.inviteCode) && Intrinsics3.areEqual(this.guildTemplateCode, trackDeepLinkClicked.guildTemplateCode) && Intrinsics3.areEqual(this.destination, trackDeepLinkClicked.destination);
+        return m.areEqual(this.fingerprint, trackDeepLinkClicked.fingerprint) && m.areEqual(this.attemptId, trackDeepLinkClicked.attemptId) && m.areEqual(this.source, trackDeepLinkClicked.source) && m.areEqual(this.inviteCode, trackDeepLinkClicked.inviteCode) && m.areEqual(this.guildTemplateCode, trackDeepLinkClicked.guildTemplateCode) && m.areEqual(this.destination, trackDeepLinkClicked.destination);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackDeepLinkClicked implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDeepLinkClicked(fingerprint=");
+        StringBuilder sbU = a.U("TrackDeepLinkClicked(fingerprint=");
         sbU.append(this.fingerprint);
         sbU.append(", attemptId=");
         sbU.append(this.attemptId);
@@ -62,6 +62,6 @@ public final /* data */ class TrackDeepLinkClicked implements AnalyticsSchema, T
         sbU.append(", guildTemplateCode=");
         sbU.append(this.guildTemplateCode);
         sbU.append(", destination=");
-        return outline.E(sbU, this.destination, ")");
+        return a.E(sbU, this.destination, ")");
     }
 }

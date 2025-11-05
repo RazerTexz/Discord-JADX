@@ -1,12 +1,12 @@
 package com.discord.widgets.guild_role_subscriptions.tier.model;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.SubscriptionTrialInterval;
 import com.discord.api.role.GuildRole;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.widgets.guild_role_subscriptions.tier.model.Benefit;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -34,8 +34,8 @@ public final /* data */ class GuildRoleSubscriptionTier {
     }
 
     public GuildRoleSubscriptionTier(String str, Long l, Integer num, Integer num2, String str2, GuildRole guildRole, String str3, Long l2, String str4, Boolean bool, Boolean bool2, List<Benefit.ChannelBenefit> list, List<Benefit.IntangibleBenefit> list2, SubscriptionTrialInterval subscriptionTrialInterval, Integer num3) {
-        Intrinsics3.checkNotNullParameter(list, "channelBenefits");
-        Intrinsics3.checkNotNullParameter(list2, "intangibleBenefits");
+        m.checkNotNullParameter(list, "channelBenefits");
+        m.checkNotNullParameter(list2, "intangibleBenefits");
         this.name = str;
         this.applicationId = l;
         this.priceTier = num;
@@ -64,7 +64,7 @@ public final /* data */ class GuildRoleSubscriptionTier {
 
     public final boolean canAccessAllChannelsOrDefault(Boolean isFullServerGating) {
         Boolean bool = Boolean.TRUE;
-        return Intrinsics3.areEqual(isFullServerGating, bool) && (Intrinsics3.areEqual(this.canAccessAllChannels, bool) || this.canAccessAllChannels == null);
+        return m.areEqual(isFullServerGating, bool) && (m.areEqual(this.canAccessAllChannels, bool) || this.canAccessAllChannels == null);
     }
 
     /* renamed from: component1, reason: from getter */
@@ -136,8 +136,8 @@ public final /* data */ class GuildRoleSubscriptionTier {
     }
 
     public final GuildRoleSubscriptionTier copy(String name, Long applicationId, Integer priceTier, Integer memberColor, String memberIcon, GuildRole guildRole, String image, Long imageAssetId, String description, Boolean isPublished, Boolean canAccessAllChannels, List<Benefit.ChannelBenefit> channelBenefits, List<Benefit.IntangibleBenefit> intangibleBenefits, SubscriptionTrialInterval trialInterval, Integer activeTrialUserLimit) {
-        Intrinsics3.checkNotNullParameter(channelBenefits, "channelBenefits");
-        Intrinsics3.checkNotNullParameter(intangibleBenefits, "intangibleBenefits");
+        m.checkNotNullParameter(channelBenefits, "channelBenefits");
+        m.checkNotNullParameter(intangibleBenefits, "intangibleBenefits");
         return new GuildRoleSubscriptionTier(name, applicationId, priceTier, memberColor, memberIcon, guildRole, image, imageAssetId, description, isPublished, canAccessAllChannels, channelBenefits, intangibleBenefits, trialInterval, activeTrialUserLimit);
     }
 
@@ -149,7 +149,7 @@ public final /* data */ class GuildRoleSubscriptionTier {
             return false;
         }
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = (GuildRoleSubscriptionTier) other;
-        return Intrinsics3.areEqual(this.name, guildRoleSubscriptionTier.name) && Intrinsics3.areEqual(this.applicationId, guildRoleSubscriptionTier.applicationId) && Intrinsics3.areEqual(this.priceTier, guildRoleSubscriptionTier.priceTier) && Intrinsics3.areEqual(this.memberColor, guildRoleSubscriptionTier.memberColor) && Intrinsics3.areEqual(this.memberIcon, guildRoleSubscriptionTier.memberIcon) && Intrinsics3.areEqual(this.guildRole, guildRoleSubscriptionTier.guildRole) && Intrinsics3.areEqual(this.image, guildRoleSubscriptionTier.image) && Intrinsics3.areEqual(this.imageAssetId, guildRoleSubscriptionTier.imageAssetId) && Intrinsics3.areEqual(this.description, guildRoleSubscriptionTier.description) && Intrinsics3.areEqual(this.isPublished, guildRoleSubscriptionTier.isPublished) && Intrinsics3.areEqual(this.canAccessAllChannels, guildRoleSubscriptionTier.canAccessAllChannels) && Intrinsics3.areEqual(this.channelBenefits, guildRoleSubscriptionTier.channelBenefits) && Intrinsics3.areEqual(this.intangibleBenefits, guildRoleSubscriptionTier.intangibleBenefits) && Intrinsics3.areEqual(this.trialInterval, guildRoleSubscriptionTier.trialInterval) && Intrinsics3.areEqual(this.activeTrialUserLimit, guildRoleSubscriptionTier.activeTrialUserLimit);
+        return m.areEqual(this.name, guildRoleSubscriptionTier.name) && m.areEqual(this.applicationId, guildRoleSubscriptionTier.applicationId) && m.areEqual(this.priceTier, guildRoleSubscriptionTier.priceTier) && m.areEqual(this.memberColor, guildRoleSubscriptionTier.memberColor) && m.areEqual(this.memberIcon, guildRoleSubscriptionTier.memberIcon) && m.areEqual(this.guildRole, guildRoleSubscriptionTier.guildRole) && m.areEqual(this.image, guildRoleSubscriptionTier.image) && m.areEqual(this.imageAssetId, guildRoleSubscriptionTier.imageAssetId) && m.areEqual(this.description, guildRoleSubscriptionTier.description) && m.areEqual(this.isPublished, guildRoleSubscriptionTier.isPublished) && m.areEqual(this.canAccessAllChannels, guildRoleSubscriptionTier.canAccessAllChannels) && m.areEqual(this.channelBenefits, guildRoleSubscriptionTier.channelBenefits) && m.areEqual(this.intangibleBenefits, guildRoleSubscriptionTier.intangibleBenefits) && m.areEqual(this.trialInterval, guildRoleSubscriptionTier.trialInterval) && m.areEqual(this.activeTrialUserLimit, guildRoleSubscriptionTier.activeTrialUserLimit);
     }
 
     public final Integer getActiveTrialUserLimit() {
@@ -242,7 +242,7 @@ public final /* data */ class GuildRoleSubscriptionTier {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleSubscriptionTier(name=");
+        StringBuilder sbU = a.U("GuildRoleSubscriptionTier(name=");
         sbU.append(this.name);
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
@@ -271,10 +271,10 @@ public final /* data */ class GuildRoleSubscriptionTier {
         sbU.append(", trialInterval=");
         sbU.append(this.trialInterval);
         sbU.append(", activeTrialUserLimit=");
-        return outline.F(sbU, this.activeTrialUserLimit, ")");
+        return a.F(sbU, this.activeTrialUserLimit, ")");
     }
 
     public /* synthetic */ GuildRoleSubscriptionTier(String str, Long l, Integer num, Integer num2, String str2, GuildRole guildRole, String str3, Long l2, String str4, Boolean bool, Boolean bool2, List list, List list2, SubscriptionTrialInterval subscriptionTrialInterval, Integer num3, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? null : str, (i & 2) != 0 ? null : l, (i & 4) != 0 ? null : num, (i & 8) != 0 ? null : num2, (i & 16) != 0 ? null : str2, (i & 32) != 0 ? null : guildRole, (i & 64) != 0 ? null : str3, (i & 128) != 0 ? null : l2, (i & 256) != 0 ? null : str4, (i & 512) != 0 ? null : bool, (i & 1024) != 0 ? null : bool2, (i & 2048) != 0 ? Collections2.emptyList() : list, (i & 4096) != 0 ? Collections2.emptyList() : list2, (i & 8192) != 0 ? null : subscriptionTrialInterval, (i & 16384) == 0 ? num3 : null);
+        this((i & 1) != 0 ? null : str, (i & 2) != 0 ? null : l, (i & 4) != 0 ? null : num, (i & 8) != 0 ? null : num2, (i & 16) != 0 ? null : str2, (i & 32) != 0 ? null : guildRole, (i & 64) != 0 ? null : str3, (i & 128) != 0 ? null : l2, (i & 256) != 0 ? null : str4, (i & 512) != 0 ? null : bool, (i & 1024) != 0 ? null : bool2, (i & 2048) != 0 ? n.emptyList() : list, (i & 4096) != 0 ? n.emptyList() : list2, (i & 8192) != 0 ? null : subscriptionTrialInterval, (i & 16384) == 0 ? num3 : null);
     }
 }

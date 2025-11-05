@@ -1,7 +1,7 @@
 package org.webrtc;
 
 import android.opengl.GLES20;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.nio.Buffer;
 import java.nio.FloatBuffer;
 
@@ -16,7 +16,7 @@ public class GlShader {
         int iGlCreateProgram = GLES20.glCreateProgram();
         this.program = iGlCreateProgram;
         if (iGlCreateProgram == 0) {
-            StringBuilder sbU = outline.U("glCreateProgram() failed. GLES20 error: ");
+            StringBuilder sbU = a.U("glCreateProgram() failed. GLES20 error: ");
             sbU.append(GLES20.glGetError());
             throw new RuntimeException(sbU.toString());
         }
@@ -30,7 +30,7 @@ public class GlShader {
             GLES20.glDeleteShader(iCompileShader2);
             GlUtil.checkNoGLES2Error("Creating GlShader");
         } else {
-            StringBuilder sbU2 = outline.U("Could not link program: ");
+            StringBuilder sbU2 = a.U("Could not link program: ");
             sbU2.append(GLES20.glGetProgramInfoLog(this.program));
             Logging.e(TAG, sbU2.toString());
             throw new RuntimeException(GLES20.glGetProgramInfoLog(this.program));
@@ -40,7 +40,7 @@ public class GlShader {
     private static int compileShader(int i, String str) {
         int iGlCreateShader = GLES20.glCreateShader(i);
         if (iGlCreateShader == 0) {
-            StringBuilder sbU = outline.U("glCreateShader() failed. GLES20 error: ");
+            StringBuilder sbU = a.U("glCreateShader() failed. GLES20 error: ");
             sbU.append(GLES20.glGetError());
             throw new RuntimeException(sbU.toString());
         }
@@ -52,7 +52,7 @@ public class GlShader {
             GlUtil.checkNoGLES2Error("compileShader");
             return iGlCreateShader;
         }
-        StringBuilder sbU2 = outline.U("Compile error ");
+        StringBuilder sbU2 = a.U("Compile error ");
         sbU2.append(GLES20.glGetShaderInfoLog(iGlCreateShader));
         sbU2.append(" in shader:\n");
         sbU2.append(str);
@@ -69,7 +69,7 @@ public class GlShader {
         if (iGlGetAttribLocation >= 0) {
             return iGlGetAttribLocation;
         }
-        throw new RuntimeException(outline.y("Could not locate '", str, "' in program"));
+        throw new RuntimeException(a.y("Could not locate '", str, "' in program"));
     }
 
     public int getUniformLocation(String str) {
@@ -81,7 +81,7 @@ public class GlShader {
         if (iGlGetUniformLocation >= 0) {
             return iGlGetUniformLocation;
         }
-        throw new RuntimeException(outline.y("Could not locate uniform '", str, "' in program"));
+        throw new RuntimeException(a.y("Could not locate uniform '", str, "' in program"));
     }
 
     public void release() {

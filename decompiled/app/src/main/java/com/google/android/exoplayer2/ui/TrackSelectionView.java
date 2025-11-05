@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
-import b.i.a.c.a3.TrackGroupArray;
-import b.i.a.c.c3.DefaultTrackSelector;
-import b.i.a.c.d3.DefaultTrackNameProvider;
-import b.i.a.c.d3.TrackNameProvider;
+import b.i.a.c.a3.o0;
+import b.i.a.c.c3.h;
+import b.i.a.c.d3.l;
+import b.i.a.c.d3.p;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -25,13 +25,13 @@ public class TrackSelectionView extends LinearLayout {
     public final CheckedTextView l;
     public final CheckedTextView m;
     public final b n;
-    public final SparseArray<DefaultTrackSelector.f> o;
+    public final SparseArray<h.f> o;
     public boolean p;
     public boolean q;
-    public TrackNameProvider r;
+    public p r;
 
     /* renamed from: s, reason: collision with root package name */
-    public TrackGroupArray f2977s;
+    public o0 f2977s;
     public boolean t;
 
     public class b implements View.OnClickListener {
@@ -77,8 +77,8 @@ public class TrackSelectionView extends LinearLayout {
         this.k = layoutInflaterFrom;
         b bVar = new b(null);
         this.n = bVar;
-        this.r = new DefaultTrackNameProvider(getResources());
-        this.f2977s = TrackGroupArray.j;
+        this.r = new l(getResources());
+        this.f2977s = o0.j;
         CheckedTextView checkedTextView = (CheckedTextView) layoutInflaterFrom.inflate(android.R.layout.simple_list_item_single_choice, (ViewGroup) this, false);
         this.l = checkedTextView;
         checkedTextView.setBackgroundResource(resourceId);
@@ -122,7 +122,7 @@ public class TrackSelectionView extends LinearLayout {
         return this.t;
     }
 
-    public List<DefaultTrackSelector.f> getOverrides() {
+    public List<h.f> getOverrides() {
         ArrayList arrayList = new ArrayList(this.o.size());
         for (int i = 0; i < this.o.size(); i++) {
             arrayList.add(this.o.valueAt(i));
@@ -153,9 +153,9 @@ public class TrackSelectionView extends LinearLayout {
         this.l.setVisibility(z2 ? 0 : 8);
     }
 
-    public void setTrackNameProvider(TrackNameProvider trackNameProvider) {
-        Objects.requireNonNull(trackNameProvider);
-        this.r = trackNameProvider;
+    public void setTrackNameProvider(p pVar) {
+        Objects.requireNonNull(pVar);
+        this.r = pVar;
         b();
     }
 }

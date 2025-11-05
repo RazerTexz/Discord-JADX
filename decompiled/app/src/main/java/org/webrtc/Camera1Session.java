@@ -4,10 +4,10 @@ import android.content.Context;
 import android.hardware.Camera;
 import android.os.Handler;
 import android.os.SystemClock;
-import b.d.b.a.outline;
-import h0.c.CameraSession2;
+import b.d.b.a.a;
 import h0.c.b;
 import h0.c.c;
+import h0.c.l0;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.List;
@@ -42,7 +42,7 @@ public class Camera1Session implements CameraSession {
 
         @Override // android.hardware.Camera.ErrorCallback
         public void onError(int i, Camera camera) {
-            String strQ = i == 100 ? "Camera server died!" : outline.q("Camera error: ", i);
+            String strQ = i == 100 ? "Camera server died!" : a.q("Camera error: ", i);
             Logging.e(Camera1Session.TAG, strQ);
             Camera1Session.access$000(Camera1Session.this);
             if (i == 2) {
@@ -216,7 +216,7 @@ public class Camera1Session implements CameraSession {
     }
 
     private int getFrameOrientation() {
-        int iB = CameraSession2.b(this.applicationContext);
+        int iB = l0.b(this.applicationContext);
         Camera.CameraInfo cameraInfo = this.info;
         if (cameraInfo.facing == 0) {
             iB = 360 - iB;
@@ -234,7 +234,7 @@ public class Camera1Session implements CameraSession {
             camera1StartTimeMsHistogram.addSample((int) TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - this.constructionTimeNs));
             this.firstFrameReported = true;
         }
-        VideoFrame videoFrame2 = new VideoFrame(CameraSession2.a((TextureBufferImpl) videoFrame.getBuffer(), this.info.facing == 1, 0), getFrameOrientation(), videoFrame.getTimestampNs());
+        VideoFrame videoFrame2 = new VideoFrame(l0.a((TextureBufferImpl) videoFrame.getBuffer(), this.info.facing == 1, 0), getFrameOrientation(), videoFrame.getTimestampNs());
         this.events.onFrameCaptured(this, videoFrame2);
         videoFrame2.release();
     }
@@ -306,7 +306,7 @@ public class Camera1Session implements CameraSession {
 
     @Override // org.webrtc.CameraSession
     public void stop() {
-        StringBuilder sbU = outline.U("Stop camera1 session on camera ");
+        StringBuilder sbU = a.U("Stop camera1 session on camera ");
         sbU.append(this.cameraId);
         Logging.d(TAG, sbU.toString());
         checkIsOnCameraThread();

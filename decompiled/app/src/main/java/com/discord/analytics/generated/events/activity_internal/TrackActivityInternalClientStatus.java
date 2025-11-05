@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalClientStatus.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalClientStatus implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalClientStatus implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final Long activityWidth = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackActivityInternalClientStatus implements Analy
             return false;
         }
         TrackActivityInternalClientStatus trackActivityInternalClientStatus = (TrackActivityInternalClientStatus) other;
-        return Intrinsics3.areEqual(this.activityWidth, trackActivityInternalClientStatus.activityWidth) && Intrinsics3.areEqual(this.activityHeight, trackActivityInternalClientStatus.activityHeight) && Intrinsics3.areEqual(this.networkLatencyMs, trackActivityInternalClientStatus.networkLatencyMs) && Intrinsics3.areEqual(this.networkAttempts, trackActivityInternalClientStatus.networkAttempts) && Intrinsics3.areEqual(this.intervalRateMs, trackActivityInternalClientStatus.intervalRateMs) && Intrinsics3.areEqual(this.fpsAvg, trackActivityInternalClientStatus.fpsAvg);
+        return m.areEqual(this.activityWidth, trackActivityInternalClientStatus.activityWidth) && m.areEqual(this.activityHeight, trackActivityInternalClientStatus.activityHeight) && m.areEqual(this.networkLatencyMs, trackActivityInternalClientStatus.networkLatencyMs) && m.areEqual(this.networkAttempts, trackActivityInternalClientStatus.networkAttempts) && m.areEqual(this.intervalRateMs, trackActivityInternalClientStatus.intervalRateMs) && m.areEqual(this.fpsAvg, trackActivityInternalClientStatus.fpsAvg);
     }
 
     public int hashCode() {
@@ -54,7 +54,7 @@ public final /* data */ class TrackActivityInternalClientStatus implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalClientStatus(activityWidth=");
+        StringBuilder sbU = a.U("TrackActivityInternalClientStatus(activityWidth=");
         sbU.append(this.activityWidth);
         sbU.append(", activityHeight=");
         sbU.append(this.activityHeight);

@@ -1,10 +1,10 @@
 package com.discord.utilities.collections;
 
 import androidx.exifinterface.media.ExifInterface;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.g0.KMarkers;
-import d0.z.d.g0.KMarkers5;
+import d0.z.d.g0.a;
+import d0.z.d.g0.e;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -13,12 +13,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: ShallowPartitionImmutableCollection.kt */
 /* loaded from: classes2.dex */
-public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> extends ShallowPartitionCollection<E, T> implements Collection<E>, KMarkers {
+public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> extends ShallowPartitionCollection<E, T> implements Collection<E>, a {
     private final Function1<E, Integer> readOnlyPartitionStrategy;
 
     /* compiled from: ShallowPartitionImmutableCollection.kt */
     /* renamed from: com.discord.utilities.collections.ShallowPartitionImmutableCollection$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<E, Integer> {
+    public static final class AnonymousClass1 extends o implements Function1<E, Integer> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -37,12 +37,12 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
     }
 
     /* compiled from: ShallowPartitionImmutableCollection.kt */
-    public static final class Set<E, T extends java.util.Set<E>> extends ShallowPartitionImmutableCollection<E, T> implements java.util.Set<E>, KMarkers5 {
+    public static final class Set<E, T extends java.util.Set<E>> extends ShallowPartitionImmutableCollection<E, T> implements java.util.Set<E>, e {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Set(List<? extends T> list, Function1<? super E, Integer> function1) {
             super(list, function1);
-            Intrinsics3.checkNotNullParameter(list, "partitions");
-            Intrinsics3.checkNotNullParameter(function1, "partitionStrategy");
+            m.checkNotNullParameter(list, "partitions");
+            m.checkNotNullParameter(function1, "partitionStrategy");
         }
     }
 
@@ -57,7 +57,7 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
 
     @Override // com.discord.utilities.collections.ShallowPartitionCollection, java.util.Collection
     public boolean addAll(Collection<? extends E> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         throw new UnsupportedOperationException();
     }
 
@@ -93,13 +93,13 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
 
     @Override // com.discord.utilities.collections.ShallowPartitionCollection, java.util.Collection
     public boolean removeAll(Collection<? extends Object> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         throw new UnsupportedOperationException();
     }
 
     @Override // com.discord.utilities.collections.ShallowPartitionCollection, java.util.Collection
     public boolean retainAll(Collection<? extends Object> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         throw new UnsupportedOperationException();
     }
 
@@ -107,7 +107,7 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
     /* JADX WARN: Multi-variable type inference failed */
     public ShallowPartitionImmutableCollection(List<? extends T> list, Function1<? super E, Integer> function1) {
         super(list, AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullParameter(list, "partitions");
+        m.checkNotNullParameter(list, "partitions");
         this.readOnlyPartitionStrategy = function1;
     }
 

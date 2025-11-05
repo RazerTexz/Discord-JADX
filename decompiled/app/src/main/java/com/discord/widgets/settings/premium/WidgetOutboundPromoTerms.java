@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.t.b.b.SimpleMarkdownRules5;
-import b.d.b.a.outline;
+import b.a.t.b.b.e;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetOutboundPromoTermsBinding;
@@ -16,8 +16,8 @@ import com.discord.utilities.textprocessing.MessageParseState;
 import com.discord.utilities.textprocessing.Rules;
 import com.discord.utilities.textprocessing.node.UrlNode;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 
@@ -29,7 +29,7 @@ public final class WidgetOutboundPromoTerms extends AppBottomSheet {
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final Parser<UrlNode.RenderContext, Node<UrlNode.RenderContext>, MessageParseState> parser;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetOutboundPromoTerms.class, "binding", "getBinding()Lcom/discord/databinding/WidgetOutboundPromoTermsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetOutboundPromoTerms.class, "binding", "getBinding()Lcom/discord/databinding/WidgetOutboundPromoTermsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -40,8 +40,8 @@ public final class WidgetOutboundPromoTerms extends AppBottomSheet {
         }
 
         public final void show(String content, FragmentManager fragmentManager) {
-            Intrinsics3.checkNotNullParameter(content, "content");
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(content, "content");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetOutboundPromoTerms widgetOutboundPromoTerms = new WidgetOutboundPromoTerms();
             Bundle bundle = new Bundle();
             bundle.putString(WidgetOutboundPromoTerms.ARG_CONTENT, content);
@@ -68,10 +68,10 @@ public final class WidgetOutboundPromoTerms extends AppBottomSheet {
 
     public WidgetOutboundPromoTerms() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetOutboundPromoTerms2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetOutboundPromoTerms$binding$2.INSTANCE, null, 2, null);
         Parser parser = new Parser(false, 1, null);
         Rules rules = Rules.INSTANCE;
-        this.parser = parser.addRule(rules.createMaskedLinkRule()).addRule(rules.createUrlRule()).addRules(SimpleMarkdownRules5.b(false, false, 3));
+        this.parser = parser.addRule(rules.createMaskedLinkRule()).addRule(rules.createUrlRule()).addRules(e.b(false, false, 3));
     }
 
     private final WidgetOutboundPromoTermsBinding getBinding() {
@@ -79,7 +79,7 @@ public final class WidgetOutboundPromoTerms extends AppBottomSheet {
     }
 
     private final UrlNode.RenderContext getRenderContext() {
-        return new WidgetOutboundPromoTerms3(this);
+        return new WidgetOutboundPromoTerms$renderContext$1(this);
     }
 
     @Override // com.discord.app.AppBottomSheet
@@ -89,12 +89,12 @@ public final class WidgetOutboundPromoTerms extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         getBinding().f2507b.setOnClickListener(new AnonymousClass1());
         String string = getArgumentsOrDefault().getString(ARG_CONTENT, "");
         Parser<UrlNode.RenderContext, Node<UrlNode.RenderContext>, MessageParseState> parser = this.parser;
-        Intrinsics3.checkNotNullExpressionValue(string, "content");
+        m.checkNotNullExpressionValue(string, "content");
         getBinding().c.setDraweeSpanStringBuilder(AstRenderer.render(Parser.parse$default(parser, string, MessageParseState.INSTANCE.getInitialState(), null, 4, null), getRenderContext()));
     }
 }

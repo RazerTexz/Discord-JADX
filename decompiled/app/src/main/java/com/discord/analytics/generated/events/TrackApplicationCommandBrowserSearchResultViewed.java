@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackApplicationCommandBrowserSearchResultViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationCommandBrowserSearchResultViewed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackApplicationCommandBrowserSearchResultViewed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence query = null;
     private final List<Long> commandIds = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackApplicationCommandBrowserSearchResultViewed i
             return false;
         }
         TrackApplicationCommandBrowserSearchResultViewed trackApplicationCommandBrowserSearchResultViewed = (TrackApplicationCommandBrowserSearchResultViewed) other;
-        return Intrinsics3.areEqual(this.query, trackApplicationCommandBrowserSearchResultViewed.query) && Intrinsics3.areEqual(this.commandIds, trackApplicationCommandBrowserSearchResultViewed.commandIds);
+        return m.areEqual(this.query, trackApplicationCommandBrowserSearchResultViewed.query) && m.areEqual(this.commandIds, trackApplicationCommandBrowserSearchResultViewed.commandIds);
     }
 
     public int hashCode() {
@@ -40,9 +40,9 @@ public final /* data */ class TrackApplicationCommandBrowserSearchResultViewed i
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackApplicationCommandBrowserSearchResultViewed(query=");
+        StringBuilder sbU = a.U("TrackApplicationCommandBrowserSearchResultViewed(query=");
         sbU.append(this.query);
         sbU.append(", commandIds=");
-        return outline.L(sbU, this.commandIds, ")");
+        return a.L(sbU, this.commandIds, ")");
     }
 }

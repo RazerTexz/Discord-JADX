@@ -1,14 +1,13 @@
 package com.discord.utilities.rest;
 
 import android.content.Context;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.restapi.RestAPIAbortCodes;
 import com.discord.utilities.error.Error;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -27,17 +26,17 @@ public final class RestAPIAbortMessages {
         }
 
         public final CharSequence getRelationshipResponse(Context context, int abortCode, String username) {
-            Intrinsics3.checkNotNullParameter(username, "username");
+            m.checkNotNullParameter(username, "username");
             Integer abortCodeMessageResId = RestAPIAbortMessages.getAbortCodeMessageResId(abortCode);
             int iIntValue = abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.add_friend_error_other;
             if (abortCode != 80000) {
                 if (context != null) {
-                    return FormatUtils.h(context, iIntValue, new Object[0], null, 4);
+                    return b.h(context, iIntValue, new Object[0], null, 4);
                 }
                 return null;
             }
             if (context != null) {
-                return FormatUtils.h(context, iIntValue, new Object[]{username}, null, 4);
+                return b.h(context, iIntValue, new Object[]{username}, null, 4);
             }
             return null;
         }
@@ -45,7 +44,7 @@ public final class RestAPIAbortMessages {
 
     /* compiled from: RestAPIAbortMessages.kt */
     /* renamed from: com.discord.utilities.rest.RestAPIAbortMessages$handleAbortCodeOrDefault$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -67,7 +66,7 @@ public final class RestAPIAbortMessages {
         Integer numValueOf = Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INCOMING_DISABLED);
         Integer numValueOf2 = Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INCOMING_BLOCKED);
         Integer numValueOf3 = Integer.valueOf(R.string.add_friend_error_other);
-        MESSAGES = Maps6.mapOf(Tuples.to(numValueOf, Integer.valueOf(R.string.bot_requires_email_verification)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.INVALID_MESSAGE_SEND_USER), Integer.valueOf(R.string.bot_dm_send_failed)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.RATE_LIMIT_DM_OPEN), Integer.valueOf(R.string.bot_dm_rate_limited)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.SEND_MESSAGE_TEMPORARILY_DISABLED), Integer.valueOf(R.string.bot_dm_send_message_temporarily_disabled)), Tuples.to(numValueOf, Integer.valueOf(R.string.add_friend_error_invalid_discord_tag)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_FRIENDS), Integer.valueOf(R.string.add_friend_error_too_many_friends)), Tuples.to(numValueOf2, numValueOf3), Tuples.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_SELF), numValueOf3), Tuples.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_USER_BOT), numValueOf3), Tuples.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_DISCORD_TAG), numValueOf3), Tuples.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_ALREADY_FRIENDS), Integer.valueOf(R.string.add_friend_error_already_friends)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_THREADS), Integer.valueOf(R.string.too_many_threads_message)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS), Integer.valueOf(R.string.too_many_announcement_threads_message)), Tuples.to(Integer.valueOf(RestAPIAbortCodes.SLOWMODE_RATE_LIMITED), Integer.valueOf(R.string.channel_slowmode_desc_short)));
+        MESSAGES = h0.mapOf(d0.o.to(numValueOf, Integer.valueOf(R.string.bot_requires_email_verification)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.INVALID_MESSAGE_SEND_USER), Integer.valueOf(R.string.bot_dm_send_failed)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RATE_LIMIT_DM_OPEN), Integer.valueOf(R.string.bot_dm_rate_limited)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.SEND_MESSAGE_TEMPORARILY_DISABLED), Integer.valueOf(R.string.bot_dm_send_message_temporarily_disabled)), d0.o.to(numValueOf, Integer.valueOf(R.string.add_friend_error_invalid_discord_tag)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_FRIENDS), Integer.valueOf(R.string.add_friend_error_too_many_friends)), d0.o.to(numValueOf2, numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_SELF), numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_USER_BOT), numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_INVALID_DISCORD_TAG), numValueOf3), d0.o.to(Integer.valueOf(RestAPIAbortCodes.RELATIONSHIP_ALREADY_FRIENDS), Integer.valueOf(R.string.add_friend_error_already_friends)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_THREADS), Integer.valueOf(R.string.too_many_threads_message)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS), Integer.valueOf(R.string.too_many_announcement_threads_message)), d0.o.to(Integer.valueOf(RestAPIAbortCodes.SLOWMODE_RATE_LIMITED), Integer.valueOf(R.string.channel_slowmode_desc_short)));
     }
 
     private RestAPIAbortMessages() {
@@ -86,9 +85,9 @@ public final class RestAPIAbortMessages {
     }
 
     public final void handleAbortCodeOrDefault(Error errorResponse, Function0<Unit> onHandle, Function0<Boolean> onDefault) {
-        Intrinsics3.checkNotNullParameter(errorResponse, "errorResponse");
-        Intrinsics3.checkNotNullParameter(onHandle, "onHandle");
-        Intrinsics3.checkNotNullParameter(onDefault, "onDefault");
+        m.checkNotNullParameter(errorResponse, "errorResponse");
+        m.checkNotNullParameter(onHandle, "onHandle");
+        m.checkNotNullParameter(onDefault, "onDefault");
         if (errorResponse.getType() != Error.Type.DISCORD_BAD_REQUEST) {
             errorResponse.setShowErrorToasts(onDefault.invoke().booleanValue());
         } else {

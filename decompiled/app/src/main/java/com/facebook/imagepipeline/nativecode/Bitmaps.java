@@ -1,29 +1,28 @@
 package com.facebook.imagepipeline.nativecode;
 
 import android.graphics.Bitmap;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.d.DoNotStrip;
-import b.f.j.m.ImagePipelineNativeLoader;
-import b.f.m.n.NativeLoader;
+import b.c.a.a0.d;
+import b.f.d.d.c;
+import b.f.j.m.a;
 import java.util.List;
 
-@DoNotStrip
+@c
 /* loaded from: classes3.dex */
 public class Bitmaps {
     static {
-        List<String> list = ImagePipelineNativeLoader.a;
-        NativeLoader.c("imagepipeline");
+        List<String> list = a.a;
+        b.f.m.n.a.c("imagepipeline");
     }
 
-    @DoNotStrip
+    @c
     public static void copyBitmap(Bitmap bitmap, Bitmap bitmap2) {
-        AnimatableValueParser.i(Boolean.valueOf(bitmap2.getConfig() == bitmap.getConfig()));
-        AnimatableValueParser.i(Boolean.valueOf(bitmap.isMutable()));
-        AnimatableValueParser.i(Boolean.valueOf(bitmap.getWidth() == bitmap2.getWidth()));
-        AnimatableValueParser.i(Boolean.valueOf(bitmap.getHeight() == bitmap2.getHeight()));
+        d.i(Boolean.valueOf(bitmap2.getConfig() == bitmap.getConfig()));
+        d.i(Boolean.valueOf(bitmap.isMutable()));
+        d.i(Boolean.valueOf(bitmap.getWidth() == bitmap2.getWidth()));
+        d.i(Boolean.valueOf(bitmap.getHeight() == bitmap2.getHeight()));
         nativeCopyBitmap(bitmap, bitmap.getRowBytes(), bitmap2, bitmap2.getRowBytes(), bitmap.getHeight());
     }
 
-    @DoNotStrip
+    @c
     private static native void nativeCopyBitmap(Bitmap bitmap, int i, Bitmap bitmap2, int i2, int i3);
 }

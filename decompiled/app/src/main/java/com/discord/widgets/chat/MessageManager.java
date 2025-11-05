@@ -6,10 +6,10 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.MessageReference;
 import com.discord.api.message.allowedmentions.MessageAllowedMentions;
-import com.discord.api.message.allowedmentions.MessageAllowedMentions2;
+import com.discord.api.message.allowedmentions.MessageAllowedMentionsTypes;
 import com.discord.api.sticker.BaseSticker;
 import com.discord.api.user.User;
 import com.discord.models.guild.Guild;
@@ -25,18 +25,17 @@ import com.discord.stores.StoreSlowMode;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.messagesend.MessageQueue4;
+import com.discord.utilities.messagesend.MessageResult;
 import com.discord.utilities.rest.SendUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.chat.input.models.ApplicationCommandData;
 import com.lytefast.flexinput.model.Attachment;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t._Arrays;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.k;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -81,7 +80,7 @@ public final class MessageManager {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public FilesTooLarge(AttachmentsRequest attachmentsRequest) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(attachmentsRequest, "attachmentsRequest");
+                m.checkNotNullParameter(attachmentsRequest, "attachmentsRequest");
                 this.attachmentsRequest = attachmentsRequest;
             }
 
@@ -98,13 +97,13 @@ public final class MessageManager {
             }
 
             public final FilesTooLarge copy(AttachmentsRequest attachmentsRequest) {
-                Intrinsics3.checkNotNullParameter(attachmentsRequest, "attachmentsRequest");
+                m.checkNotNullParameter(attachmentsRequest, "attachmentsRequest");
                 return new FilesTooLarge(attachmentsRequest);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof FilesTooLarge) && Intrinsics3.areEqual(this.attachmentsRequest, ((FilesTooLarge) other).attachmentsRequest);
+                    return (other instanceof FilesTooLarge) && m.areEqual(this.attachmentsRequest, ((FilesTooLarge) other).attachmentsRequest);
                 }
                 return true;
             }
@@ -122,7 +121,7 @@ public final class MessageManager {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("FilesTooLarge(attachmentsRequest=");
+                StringBuilder sbU = a.U("FilesTooLarge(attachmentsRequest=");
                 sbU.append(this.attachmentsRequest);
                 sbU.append(")");
                 return sbU.toString();
@@ -229,7 +228,7 @@ public final class MessageManager {
             }
 
             public String toString() {
-                return outline.B(outline.U("MessageTooLong(maxMessageLength="), this.maxMessageLength, ")");
+                return a.B(a.U("MessageTooLong(maxMessageLength="), this.maxMessageLength, ")");
             }
         }
 
@@ -253,26 +252,26 @@ public final class MessageManager {
     /* compiled from: MessageManager.kt */
     public static final /* data */ class MessageSendResult {
         private final Guild guild;
-        private final MessageQueue4 messageResult;
+        private final MessageResult messageResult;
 
-        public MessageSendResult(MessageQueue4 messageQueue4, Guild guild) {
-            Intrinsics3.checkNotNullParameter(messageQueue4, "messageResult");
-            this.messageResult = messageQueue4;
+        public MessageSendResult(MessageResult messageResult, Guild guild) {
+            m.checkNotNullParameter(messageResult, "messageResult");
+            this.messageResult = messageResult;
             this.guild = guild;
         }
 
-        public static /* synthetic */ MessageSendResult copy$default(MessageSendResult messageSendResult, MessageQueue4 messageQueue4, Guild guild, int i, Object obj) {
+        public static /* synthetic */ MessageSendResult copy$default(MessageSendResult messageSendResult, MessageResult messageResult, Guild guild, int i, Object obj) {
             if ((i & 1) != 0) {
-                messageQueue4 = messageSendResult.messageResult;
+                messageResult = messageSendResult.messageResult;
             }
             if ((i & 2) != 0) {
                 guild = messageSendResult.guild;
             }
-            return messageSendResult.copy(messageQueue4, guild);
+            return messageSendResult.copy(messageResult, guild);
         }
 
         /* renamed from: component1, reason: from getter */
-        public final MessageQueue4 getMessageResult() {
+        public final MessageResult getMessageResult() {
             return this.messageResult;
         }
 
@@ -281,8 +280,8 @@ public final class MessageManager {
             return this.guild;
         }
 
-        public final MessageSendResult copy(MessageQueue4 messageResult, Guild guild) {
-            Intrinsics3.checkNotNullParameter(messageResult, "messageResult");
+        public final MessageSendResult copy(MessageResult messageResult, Guild guild) {
+            m.checkNotNullParameter(messageResult, "messageResult");
             return new MessageSendResult(messageResult, guild);
         }
 
@@ -294,26 +293,26 @@ public final class MessageManager {
                 return false;
             }
             MessageSendResult messageSendResult = (MessageSendResult) other;
-            return Intrinsics3.areEqual(this.messageResult, messageSendResult.messageResult) && Intrinsics3.areEqual(this.guild, messageSendResult.guild);
+            return m.areEqual(this.messageResult, messageSendResult.messageResult) && m.areEqual(this.guild, messageSendResult.guild);
         }
 
         public final Guild getGuild() {
             return this.guild;
         }
 
-        public final MessageQueue4 getMessageResult() {
+        public final MessageResult getMessageResult() {
             return this.messageResult;
         }
 
         public int hashCode() {
-            MessageQueue4 messageQueue4 = this.messageResult;
-            int iHashCode = (messageQueue4 != null ? messageQueue4.hashCode() : 0) * 31;
+            MessageResult messageResult = this.messageResult;
+            int iHashCode = (messageResult != null ? messageResult.hashCode() : 0) * 31;
             Guild guild = this.guild;
             return iHashCode + (guild != null ? guild.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("MessageSendResult(messageResult=");
+            StringBuilder sbU = a.U("MessageSendResult(messageResult=");
             sbU.append(this.messageResult);
             sbU.append(", guild=");
             sbU.append(this.guild);
@@ -324,7 +323,7 @@ public final class MessageManager {
 
     /* compiled from: MessageManager.kt */
     /* renamed from: com.discord.widgets.chat.MessageManager$sendCommand$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -344,7 +343,7 @@ public final class MessageManager {
 
     /* compiled from: MessageManager.kt */
     /* renamed from: com.discord.widgets.chat.MessageManager$sendCommand$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -359,30 +358,30 @@ public final class MessageManager {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
         }
     }
 
     /* compiled from: MessageManager.kt */
     /* renamed from: com.discord.widgets.chat.MessageManager$sendMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2, R> implements Func2<MessageQueue4, Guild, MessageSendResult> {
+    public static final class AnonymousClass1<T1, T2, R> implements Func2<MessageResult, Guild, MessageSendResult> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         @Override // rx.functions.Func2
-        public /* bridge */ /* synthetic */ MessageSendResult call(MessageQueue4 messageQueue4, Guild guild) {
-            return call2(messageQueue4, guild);
+        public /* bridge */ /* synthetic */ MessageSendResult call(MessageResult messageResult, Guild guild) {
+            return call2(messageResult, guild);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final MessageSendResult call2(MessageQueue4 messageQueue4, Guild guild) {
-            Intrinsics3.checkNotNullExpressionValue(messageQueue4, "messageResult");
-            return new MessageSendResult(messageQueue4, guild);
+        public final MessageSendResult call2(MessageResult messageResult, Guild guild) {
+            m.checkNotNullExpressionValue(messageResult, "messageResult");
+            return new MessageSendResult(messageResult, guild);
         }
     }
 
     /* compiled from: MessageManager.kt */
     /* renamed from: com.discord.widgets.chat.MessageManager$sendMessage$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<MessageSendResult, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<MessageSendResult, Unit> {
         public final /* synthetic */ Function1 $messageSendResultHandler;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -400,21 +399,21 @@ public final class MessageManager {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageSendResult messageSendResult) {
             Function1 function1 = this.$messageSendResultHandler;
-            Intrinsics3.checkNotNullExpressionValue(messageSendResult, "messageSendResult");
+            m.checkNotNullExpressionValue(messageSendResult, "messageSendResult");
             function1.invoke(messageSendResult);
         }
     }
 
     public MessageManager(Context context, StoreMessages storeMessages, StoreApplicationInteractions storeApplicationInteractions, StoreUser storeUser, StoreChannelsSelected storeChannelsSelected, StoreSlowMode storeSlowMode, StoreGuilds storeGuilds, StorePendingReplies storePendingReplies, StoreMessageReplies storeMessageReplies) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(storeMessages, "storeMessages");
-        Intrinsics3.checkNotNullParameter(storeApplicationInteractions, "storeApplicationInteractions");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        Intrinsics3.checkNotNullParameter(storeSlowMode, "storeSlowMode");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(storePendingReplies, "storePendingReplies");
-        Intrinsics3.checkNotNullParameter(storeMessageReplies, "storeMessageReplies");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(storeMessages, "storeMessages");
+        m.checkNotNullParameter(storeApplicationInteractions, "storeApplicationInteractions");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        m.checkNotNullParameter(storeSlowMode, "storeSlowMode");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storePendingReplies, "storePendingReplies");
+        m.checkNotNullParameter(storeMessageReplies, "storeMessageReplies");
         this.context = context;
         this.storeMessages = storeMessages;
         this.storeApplicationInteractions = storeApplicationInteractions;
@@ -424,7 +423,7 @@ public final class MessageManager {
         this.storeGuilds = storeGuilds;
         this.storePendingReplies = storePendingReplies;
         this.storeMessageReplies = storeMessageReplies;
-        this.defaultMessageResultHandler = new MessageManager2(this);
+        this.defaultMessageResultHandler = new MessageManager$defaultMessageResultHandler$1(this);
     }
 
     public static final /* synthetic */ Context access$getContext$p(MessageManager messageManager) {
@@ -474,7 +473,7 @@ public final class MessageManager {
                     return null;
                 }
             }
-            return new MessageAllowedMentions(_Arrays.toList(MessageAllowedMentions2.values()), null, null, Boolean.FALSE, 6);
+            return new MessageAllowedMentions(k.toList(MessageAllowedMentionsTypes.values()), null, null, Boolean.FALSE, 6);
         }
         return null;
     }
@@ -491,7 +490,7 @@ public final class MessageManager {
     }
 
     public static /* synthetic */ boolean sendMessage$default(MessageManager messageManager, String str, List list, AttachmentsRequest attachmentsRequest, Long l, List list2, boolean z2, Function2 function2, Function2 function22, Function1 function1, int i, Object obj) {
-        return messageManager.sendMessage((i & 1) != 0 ? "" : str, (i & 2) != 0 ? null : list, (i & 4) != 0 ? null : attachmentsRequest, (i & 8) != 0 ? null : l, (i & 16) != 0 ? Collections2.emptyList() : list2, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? null : function2, (i & 128) == 0 ? function22 : null, (i & 256) != 0 ? messageManager.defaultMessageResultHandler : function1);
+        return messageManager.sendMessage((i & 1) != 0 ? "" : str, (i & 2) != 0 ? null : list, (i & 4) != 0 ? null : attachmentsRequest, (i & 8) != 0 ? null : l, (i & 16) != 0 ? n.emptyList() : list2, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? null : function2, (i & 128) == 0 ? function22 : null, (i & 256) != 0 ? messageManager.defaultMessageResultHandler : function1);
     }
 
     private final AttachmentValidationResult validateAttachments(AttachmentsRequest attachmentsRequest) {
@@ -524,26 +523,26 @@ public final class MessageManager {
     }
 
     public final boolean editMessage(long messageId, long channelId, String content, Function2<? super Integer, ? super Integer, Unit> onMessageTooLong, Integer previousMessageLength) {
-        Intrinsics3.checkNotNullParameter(content, "content");
-        ContentValidationResult contentValidationResultValidateMessageContent = validateMessageContent(content, Collections2.emptyList(), this.storeUser.getMeSnapshot(), true, previousMessageLength);
+        m.checkNotNullParameter(content, "content");
+        ContentValidationResult contentValidationResultValidateMessageContent = validateMessageContent(content, n.emptyList(), this.storeUser.getMeSnapshot(), true, previousMessageLength);
         if (contentValidationResultValidateMessageContent instanceof ContentValidationResult.MessageTooLong) {
             if (onMessageTooLong != null) {
                 onMessageTooLong.invoke(Integer.valueOf(content.length()), Integer.valueOf(((ContentValidationResult.MessageTooLong) contentValidationResultValidateMessageContent).getMaxMessageLength()));
             }
             return false;
         }
-        if (Intrinsics3.areEqual(contentValidationResultValidateMessageContent, ContentValidationResult.EmptyContent.INSTANCE)) {
+        if (m.areEqual(contentValidationResultValidateMessageContent, ContentValidationResult.EmptyContent.INSTANCE)) {
             return false;
         }
-        Intrinsics3.areEqual(contentValidationResultValidateMessageContent, ContentValidationResult.Success.INSTANCE);
+        m.areEqual(contentValidationResultValidateMessageContent, ContentValidationResult.Success.INSTANCE);
         this.storeMessages.editMessage(messageId, channelId, content, getAllowedMentionsForMessageEdit(channelId, messageId));
         return true;
     }
 
     public final boolean isValidForumPostFirstMessage(String content, AttachmentsRequest attachmentsRequest, Function2<? super Integer, ? super Integer, Unit> onMessageTooLong, Function2<? super Integer, ? super Boolean, Unit> onFilesTooLarge) {
-        Intrinsics3.checkNotNullParameter(content, "content");
+        m.checkNotNullParameter(content, "content");
         MeUser meSnapshot = this.storeUser.getMeSnapshot();
-        ContentValidationResult contentValidationResultValidateMessageContent$default = validateMessageContent$default(this, content, Collections2.emptyList(), meSnapshot, false, null, 16, null);
+        ContentValidationResult contentValidationResultValidateMessageContent$default = validateMessageContent$default(this, content, n.emptyList(), meSnapshot, false, null, 16, null);
         if (contentValidationResultValidateMessageContent$default instanceof ContentValidationResult.MessageTooLong) {
             if (onMessageTooLong != null) {
                 onMessageTooLong.invoke(Integer.valueOf(content.length()), Integer.valueOf(((ContentValidationResult.MessageTooLong) contentValidationResultValidateMessageContent$default).getMaxMessageLength()));
@@ -561,9 +560,9 @@ public final class MessageManager {
     }
 
     public final boolean sendCommand(long channelId, Long guildId, String version, ApplicationCommandData data, AttachmentsRequest attachmentRequest, Function0<Unit> onSuccess, Function1<? super Error, Unit> onFail, Function2<? super Integer, ? super Boolean, Unit> onFilesTooLarge) {
-        Intrinsics3.checkNotNullParameter(data, "data");
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
-        Intrinsics3.checkNotNullParameter(onFail, "onFail");
+        m.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onFail, "onFail");
         MeUser meSnapshot = this.storeUser.getMeSnapshot();
         AttachmentValidationResult attachmentValidationResultValidateAttachments = validateAttachments(attachmentRequest);
         if (!(attachmentValidationResultValidateAttachments instanceof AttachmentValidationResult.FilesTooLarge)) {
@@ -580,9 +579,9 @@ public final class MessageManager {
 
     public final boolean sendMessage(String content, List<? extends com.discord.models.user.User> mentions, AttachmentsRequest attachmentsRequest, Long channelId, List<? extends BaseSticker> stickers, boolean consumePendingReply, Function2<? super Integer, ? super Integer, Unit> onMessageTooLong, Function2<? super Integer, ? super Boolean, Unit> onFilesTooLarge, Function1<? super MessageSendResult, Unit> messageSendResultHandler) {
         ShortcutManager shortcutManager;
-        Intrinsics3.checkNotNullParameter(content, "content");
-        Intrinsics3.checkNotNullParameter(stickers, "stickers");
-        Intrinsics3.checkNotNullParameter(messageSendResultHandler, "messageSendResultHandler");
+        m.checkNotNullParameter(content, "content");
+        m.checkNotNullParameter(stickers, "stickers");
+        m.checkNotNullParameter(messageSendResultHandler, "messageSendResultHandler");
         MeUser meSnapshot = this.storeUser.getMeSnapshot();
         ContentValidationResult contentValidationResultValidateMessageContent$default = validateMessageContent$default(this, content, stickers, meSnapshot, false, null, 16, null);
         if (contentValidationResultValidateMessageContent$default instanceof ContentValidationResult.MessageTooLong) {
@@ -603,19 +602,19 @@ public final class MessageManager {
         long jLongValue = channelId != null ? channelId.longValue() : this.storeChannelsSelected.getId();
         if (Build.VERSION.SDK_INT >= 25) {
             List<ShortcutInfoCompat> dynamicShortcuts = ShortcutManagerCompat.getDynamicShortcuts(this.context);
-            Intrinsics3.checkNotNullExpressionValue(dynamicShortcuts, "ShortcutManagerCompat.getDynamicShortcuts(context)");
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(dynamicShortcuts, 10));
+            m.checkNotNullExpressionValue(dynamicShortcuts, "ShortcutManagerCompat.getDynamicShortcuts(context)");
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(dynamicShortcuts, 10));
             for (ShortcutInfoCompat shortcutInfoCompat : dynamicShortcuts) {
-                Intrinsics3.checkNotNullExpressionValue(shortcutInfoCompat, "it");
+                m.checkNotNullExpressionValue(shortcutInfoCompat, "it");
                 arrayList.add(shortcutInfoCompat.getId());
             }
-            if (_Collections.toSet(arrayList).contains(String.valueOf(jLongValue)) && (shortcutManager = (ShortcutManager) this.context.getSystemService(ShortcutManager.class)) != null) {
+            if (u.toSet(arrayList).contains(String.valueOf(jLongValue)) && (shortcutManager = (ShortcutManager) this.context.getSystemService(ShortcutManager.class)) != null) {
                 shortcutManager.reportShortcutUsed(String.valueOf(jLongValue));
             }
         }
         StorePendingReplies.PendingReply pendingReply = consumePendingReply ? this.storePendingReplies.getPendingReply(jLongValue) : null;
-        Observable observableZ = Observable.j(this.storeSlowMode.observeCooldownSecs(channelId, StoreSlowMode.Type.MessageSend.INSTANCE).Z(1).Y(new MessageManager3(this, pendingReply, jLongValue, meSnapshot, content, mentions, attachments, stickers, (pendingReply == null || pendingReply.getShouldMention()) ? null : new MessageAllowedMentions(_Arrays.toList(MessageAllowedMentions2.values()), null, null, Boolean.FALSE, 6))), this.storeGuilds.observeFromChannelId(jLongValue), AnonymousClass1.INSTANCE).Z(1);
-        Intrinsics3.checkNotNullExpressionValue(observableZ, "Observable.combineLatest…d)\n    }\n        .take(1)");
+        Observable observableZ = Observable.j(this.storeSlowMode.observeCooldownSecs(channelId, StoreSlowMode.Type.MessageSend.INSTANCE).Z(1).Y(new MessageManager$sendMessage$messageResultObservable$1(this, pendingReply, jLongValue, meSnapshot, content, mentions, attachments, stickers, (pendingReply == null || pendingReply.getShouldMention()) ? null : new MessageAllowedMentions(k.toList(MessageAllowedMentionsTypes.values()), null, null, Boolean.FALSE, 6))), this.storeGuilds.observeFromChannelId(jLongValue), AnonymousClass1.INSTANCE).Z(1);
+        m.checkNotNullExpressionValue(observableZ, "Observable.combineLatest…d)\n    }\n        .take(1)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(observableZ, false, 1, null)), MessageManager.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(messageSendResultHandler), 62, (Object) null);
         return true;
     }

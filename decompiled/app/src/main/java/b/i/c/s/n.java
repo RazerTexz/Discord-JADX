@@ -7,10 +7,7 @@ import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
-import b.i.c.FirebaseApp2;
-import b.i.c.r.HeartBeatInfo;
-import b.i.c.t.Provider2;
-import b.i.c.x.UserAgentPublisher;
+import b.i.c.r.d;
 import com.adjust.sdk.Constants;
 import com.google.android.gms.tasks.Task;
 import java.io.IOException;
@@ -22,23 +19,23 @@ import java.util.concurrent.Executor;
 /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
 /* loaded from: classes3.dex */
 public class n {
-    public final FirebaseApp2 a;
+    public final b.i.c.c a;
 
     /* renamed from: b, reason: collision with root package name */
     public final q f1769b;
     public final b.i.a.f.d.b c;
-    public final Provider2<UserAgentPublisher> d;
-    public final Provider2<HeartBeatInfo> e;
+    public final b.i.c.t.a<b.i.c.x.h> d;
+    public final b.i.c.t.a<b.i.c.r.d> e;
     public final b.i.c.u.g f;
 
-    public n(FirebaseApp2 firebaseApp2, q qVar, Provider2<UserAgentPublisher> provider2, Provider2<HeartBeatInfo> provider22, b.i.c.u.g gVar) {
-        firebaseApp2.a();
-        b.i.a.f.d.b bVar = new b.i.a.f.d.b(firebaseApp2.d);
-        this.a = firebaseApp2;
+    public n(b.i.c.c cVar, q qVar, b.i.c.t.a<b.i.c.x.h> aVar, b.i.c.t.a<b.i.c.r.d> aVar2, b.i.c.u.g gVar) {
+        cVar.a();
+        b.i.a.f.d.b bVar = new b.i.a.f.d.b(cVar.d);
+        this.a = cVar;
         this.f1769b = qVar;
         this.c = bVar;
-        this.d = provider2;
-        this.e = provider22;
+        this.d = aVar;
+        this.e = aVar2;
         this.f = gVar;
     }
 
@@ -54,15 +51,15 @@ public class n {
         int i2;
         int i3;
         PackageInfo packageInfoB;
-        HeartBeatInfo.a aVarA;
+        d.a aVarA;
         PackageInfo packageInfoC;
         bundle.putString("scope", str3);
         bundle.putString(NotificationCompat.MessagingStyle.Message.KEY_SENDER, str2);
         bundle.putString("subtype", str2);
         bundle.putString("appid", str);
-        FirebaseApp2 firebaseApp2 = this.a;
-        firebaseApp2.a();
-        bundle.putString("gmp_app_id", firebaseApp2.f.f1655b);
+        b.i.c.c cVar = this.a;
+        cVar.a();
+        bundle.putString("gmp_app_id", cVar.f.f1655b);
         q qVar = this.f1769b;
         synchronized (qVar) {
             if (qVar.d == 0 && (packageInfoC = qVar.c("com.google.android.gms")) != null) {
@@ -81,10 +78,10 @@ public class n {
             str4 = qVar2.c;
         }
         bundle.putString("app_ver_name", str4);
-        FirebaseApp2 firebaseApp22 = this.a;
-        firebaseApp22.a();
+        b.i.c.c cVar2 = this.a;
+        cVar2.a();
         try {
-            strEncodeToString = Base64.encodeToString(MessageDigest.getInstance(Constants.SHA1).digest(firebaseApp22.e.getBytes()), 11);
+            strEncodeToString = Base64.encodeToString(MessageDigest.getInstance(Constants.SHA1).digest(cVar2.e.getBytes()), 11);
         } catch (NoSuchAlgorithmException unused) {
             strEncodeToString = "[HASH-ERROR]";
         }
@@ -100,11 +97,11 @@ public class n {
             Log.e("FirebaseInstanceId", "Failed to get FIS auth token", e);
         }
         bundle.putString("cliv", "fiid-".concat("21.0.0"));
-        HeartBeatInfo heartBeatInfo = this.e.get();
-        UserAgentPublisher userAgentPublisher = this.d.get();
-        if (heartBeatInfo != null && userAgentPublisher != null && (aVarA = heartBeatInfo.a("fire-iid")) != HeartBeatInfo.a.NONE) {
+        b.i.c.r.d dVar = this.e.get();
+        b.i.c.x.h hVar = this.d.get();
+        if (dVar != null && hVar != null && (aVarA = dVar.a("fire-iid")) != d.a.NONE) {
             bundle.putString("Firebase-Client-Log-Type", Integer.toString(aVarA.f()));
-            bundle.putString("Firebase-Client", userAgentPublisher.getUserAgent());
+            bundle.putString("Firebase-Client", hVar.getUserAgent());
         }
         b.i.a.f.d.b bVar = this.c;
         b.i.a.f.d.r rVar = bVar.f;

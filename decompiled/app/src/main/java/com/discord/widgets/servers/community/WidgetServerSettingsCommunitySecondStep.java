@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppScreen2;
-import b.a.d.AppViewModelDelegates2;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -16,13 +16,13 @@ import com.discord.databinding.WidgetServerSettingsCommunitySetupSecondStepBindi
 import com.discord.stores.StoreStream;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.channels.WidgetChannelSelector;
 import com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunityViewModel;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -35,7 +35,7 @@ import rx.Observable;
 /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerSettingsCommunitySecondStep.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunitySetupSecondStepBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsCommunitySecondStep.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunitySetupSecondStepBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -54,8 +54,8 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
 
         public final void create(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.d(context, WidgetServerSettingsCommunitySecondStep.class, new Intent());
+            m.checkNotNullParameter(context, "context");
+            j.d(context, WidgetServerSettingsCommunitySecondStep.class, new Intent());
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -93,16 +93,16 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
 
     /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<Long, String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function2<Long, String, Unit> {
 
         /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
         /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03191 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
+        public static final class C04391 extends o implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ long $channelId;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C03191(long j, Channel channel) {
+            public C04391(long j, Channel channel) {
                 super(1);
                 this.$channelId = j;
                 this.$channel = channel;
@@ -115,7 +115,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig invoke2(WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig communityGuildConfig) {
-                Intrinsics3.checkNotNullParameter(communityGuildConfig, "guildConfig");
+                m.checkNotNullParameter(communityGuildConfig, "guildConfig");
                 return WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig.copy$default(communityGuildConfig, this.$channel, null, Long.valueOf(this.$channelId), null, false, false, false, false, null, false, null, null, 4090, null);
             }
         }
@@ -131,18 +131,18 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
 
         public final void invoke(long j, String str) {
-            Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 1>");
-            WidgetServerSettingsCommunitySecondStep.access$getViewModel$p(WidgetServerSettingsCommunitySecondStep.this).modifyGuildConfig(new C03191(j, StoreStream.INSTANCE.getChannels().getChannel(j)));
+            m.checkNotNullParameter(str, "<anonymous parameter 1>");
+            WidgetServerSettingsCommunitySecondStep.access$getViewModel$p(WidgetServerSettingsCommunitySecondStep.this).modifyGuildConfig(new C04391(j, StoreStream.INSTANCE.getChannels().getChannel(j)));
         }
     }
 
     /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function2<Long, String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function2<Long, String, Unit> {
 
         /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
         /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
+        public static final class AnonymousClass1 extends o implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ long $channelId;
 
@@ -160,7 +160,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig invoke2(WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig communityGuildConfig) {
-                Intrinsics3.checkNotNullParameter(communityGuildConfig, "guildConfig");
+                m.checkNotNullParameter(communityGuildConfig, "guildConfig");
                 return WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig.copy$default(communityGuildConfig, null, this.$channel, null, Long.valueOf(this.$channelId), false, false, false, false, null, false, null, null, 4085, null);
             }
         }
@@ -176,14 +176,14 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
 
         public final void invoke(long j, String str) {
-            Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 1>");
+            m.checkNotNullParameter(str, "<anonymous parameter 1>");
             WidgetServerSettingsCommunitySecondStep.access$getViewModel$p(WidgetServerSettingsCommunitySecondStep.this).modifyGuildConfig(new AnonymousClass1(j, StoreStream.INSTANCE.getChannels().getChannel(j)));
         }
     }
 
     /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded, Unit> {
         public AnonymousClass1(WidgetServerSettingsCommunitySecondStep widgetServerSettingsCommunitySecondStep) {
             super(1, widgetServerSettingsCommunitySecondStep, WidgetServerSettingsCommunitySecondStep.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/community/WidgetServerSettingsEnableCommunityViewModel$ViewState$Loaded;)V", 0);
         }
@@ -196,15 +196,15 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded loaded) {
-            Intrinsics3.checkNotNullParameter(loaded, "p1");
+            m.checkNotNullParameter(loaded, "p1");
             WidgetServerSettingsCommunitySecondStep.access$configureUI((WidgetServerSettingsCommunitySecondStep) this.receiver, loaded);
         }
     }
 
     public WidgetServerSettingsCommunitySecondStep() {
         super(R.layout.widget_server_settings_community_setup_second_step);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsCommunitySecondStep2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetServerSettingsEnableCommunityViewModel.class), new WidgetServerSettingsCommunitySecondStep$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(WidgetServerSettingsCommunitySecondStep3.INSTANCE));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsCommunitySecondStep$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetServerSettingsEnableCommunityViewModel.class), new WidgetServerSettingsCommunitySecondStep$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetServerSettingsCommunitySecondStep$viewModel$2.INSTANCE));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsCommunitySecondStep widgetServerSettingsCommunitySecondStep, WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded loaded) {
@@ -217,9 +217,9 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
 
     private final void configureUI(WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded viewState) {
         String string = viewState.getCommunityGuildConfig().getRulesChannel() == null ? requireContext().getString(R.string.enable_public_modal_create_channel) : ChannelUtils.e(viewState.getCommunityGuildConfig().getRulesChannel(), requireContext(), false, 2);
-        Intrinsics3.checkNotNullExpressionValue(string, "when (viewState.communit…t(requireContext())\n    }");
+        m.checkNotNullExpressionValue(string, "when (viewState.communit…t(requireContext())\n    }");
         String string2 = viewState.getCommunityGuildConfig().getUpdatesChannel() == null ? requireContext().getString(R.string.enable_public_modal_create_channel) : ChannelUtils.e(viewState.getCommunityGuildConfig().getUpdatesChannel(), requireContext(), false, 2);
-        Intrinsics3.checkNotNullExpressionValue(string2, "when (viewState.communit…t(requireContext())\n    }");
+        m.checkNotNullExpressionValue(string2, "when (viewState.communit…t(requireContext())\n    }");
         getBinding().f2555b.setSubtitle(string);
         getBinding().c.setSubtitle(string2);
         getBinding().f2555b.setOnClickListener(new AnonymousClass1());
@@ -240,7 +240,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         WidgetChannelSelector.Companion companion = WidgetChannelSelector.INSTANCE;
         WidgetChannelSelector.Companion.registerForResult$default(companion, this, REQUEST_KEY_RULES_CHANNEL, false, new AnonymousClass1(), 4, null);
@@ -251,7 +251,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable observableG = ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null).y(WidgetServerSettingsCommunitySecondStep$onViewBoundOrOnResume$$inlined$filterIs$1.INSTANCE).G(WidgetServerSettingsCommunitySecondStep$onViewBoundOrOnResume$$inlined$filterIs$2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
+        m.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
         ObservableExtensionsKt.appSubscribe$default(observableG, WidgetServerSettingsCommunitySecondStep.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
     }
 }

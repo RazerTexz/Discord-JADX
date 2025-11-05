@@ -24,7 +24,7 @@ import androidx.annotation.AnimatorRes;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.graphics.PathParser;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import java.util.ArrayList;
 import org.xmlpull.v1.XmlPullParser;
@@ -100,7 +100,7 @@ public class AnimatorInflaterCompat {
         int length = objArr.length;
         for (int i = 0; i < length; i++) {
             Keyframe keyframe = (Keyframe) objArr[i];
-            StringBuilder sbV = outline.V("Keyframe ", i, ": fraction ");
+            StringBuilder sbV = a.V("Keyframe ", i, ": fraction ");
             Object value = "null";
             sbV.append(keyframe.getFraction() < 0.0f ? "null" : Float.valueOf(keyframe.getFraction()));
             sbV.append(", , value : ");
@@ -497,7 +497,7 @@ public class AnimatorInflaterCompat {
                         valueAnimatorLoadAnimator = animatorSet2;
                     } else {
                         if (!name.equals("propertyValuesHolder")) {
-                            StringBuilder sbU = outline.U("Unknown animator name: ");
+                            StringBuilder sbU = a.U("Unknown animator name: ");
                             sbU.append(xmlPullParser.getName());
                             throw new RuntimeException(sbU.toString());
                         }

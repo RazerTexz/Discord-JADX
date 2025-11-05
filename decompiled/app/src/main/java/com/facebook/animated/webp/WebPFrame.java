@@ -1,16 +1,16 @@
 package com.facebook.animated.webp;
 
 import android.graphics.Bitmap;
-import b.f.d.d.DoNotStrip;
-import b.f.j.a.a.AnimatedImageFrame;
+import b.f.d.d.c;
+import b.f.j.a.a.d;
 
 /* loaded from: classes.dex */
-public class WebPFrame implements AnimatedImageFrame {
+public class WebPFrame implements d {
 
-    @DoNotStrip
+    @c
     private long mNativeContext;
 
-    @DoNotStrip
+    @c
     public WebPFrame(long j) {
         this.mNativeContext = j;
     }
@@ -35,17 +35,17 @@ public class WebPFrame implements AnimatedImageFrame {
 
     private native boolean nativeShouldDisposeToBackgroundColor();
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public void a(int i, int i2, Bitmap bitmap) {
         nativeRenderFrame(i, i2, bitmap);
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int b() {
         return nativeGetXOffset();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int c() {
         return nativeGetYOffset();
     }
@@ -54,7 +54,7 @@ public class WebPFrame implements AnimatedImageFrame {
         return nativeIsBlendWithPreviousFrame();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public void dispose() {
         nativeDispose();
     }
@@ -67,12 +67,12 @@ public class WebPFrame implements AnimatedImageFrame {
         nativeFinalize();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int getHeight() {
         return nativeGetHeight();
     }
 
-    @Override // b.f.j.a.a.AnimatedImageFrame
+    @Override // b.f.j.a.a.d
     public int getWidth() {
         return nativeGetWidth();
     }

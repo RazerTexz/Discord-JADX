@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSearchClosed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSearchClosed implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
+public final /* data */ class TrackSearchClosed implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -20,13 +20,13 @@ public final /* data */ class TrackSearchClosed implements AnalyticsSchema, Trac
     private final CharSequence loadId = null;
     private final transient String analyticsSchemaTypeName = "search_closed";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -45,7 +45,7 @@ public final /* data */ class TrackSearchClosed implements AnalyticsSchema, Trac
             return false;
         }
         TrackSearchClosed trackSearchClosed = (TrackSearchClosed) other;
-        return Intrinsics3.areEqual(this.searchId, trackSearchClosed.searchId) && Intrinsics3.areEqual(this.loadId, trackSearchClosed.loadId);
+        return m.areEqual(this.searchId, trackSearchClosed.searchId) && m.areEqual(this.loadId, trackSearchClosed.loadId);
     }
 
     public int hashCode() {
@@ -56,9 +56,9 @@ public final /* data */ class TrackSearchClosed implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSearchClosed(searchId=");
+        StringBuilder sbU = a.U("TrackSearchClosed(searchId=");
         sbU.append(this.searchId);
         sbU.append(", loadId=");
-        return outline.E(sbU, this.loadId, ")");
+        return a.E(sbU, this.loadId, ")");
     }
 }

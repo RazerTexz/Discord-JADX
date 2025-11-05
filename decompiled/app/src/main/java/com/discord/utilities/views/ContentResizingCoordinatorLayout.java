@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.google.android.material.appbar.AppBarLayout;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.MutablePropertyReference0Impl;
+import d0.z.d.m;
+import d0.z.d.o;
+import d0.z.d.q;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
@@ -24,17 +24,17 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
 
     /* compiled from: ContentResizingCoordinatorLayout.kt */
     /* renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$1, reason: invalid class name */
-    public final /* synthetic */ class AnonymousClass1 extends MutablePropertyReference0Impl {
+    public final /* synthetic */ class AnonymousClass1 extends q {
         public AnonymousClass1(ContentResizingCoordinatorLayout contentResizingCoordinatorLayout) {
             super(contentResizingCoordinatorLayout, ContentResizingCoordinatorLayout.class, "appBarLayout", "getAppBarLayout()Lcom/google/android/material/appbar/AppBarLayout;", 0);
         }
 
-        @Override // d0.z.d.MutablePropertyReference0Impl, kotlin.reflect.KProperty6
+        @Override // d0.z.d.q, kotlin.reflect.KProperty0
         public Object get() {
             return ContentResizingCoordinatorLayout.access$getAppBarLayout$p((ContentResizingCoordinatorLayout) this.receiver);
         }
 
-        @Override // d0.z.d.MutablePropertyReference0Impl
+        @Override // d0.z.d.q
         public void set(Object obj) {
             ContentResizingCoordinatorLayout.access$setAppBarLayout$p((ContentResizingCoordinatorLayout) this.receiver, (AppBarLayout) obj);
         }
@@ -61,7 +61,7 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
 
     /* compiled from: ContentResizingCoordinatorLayout.kt */
     /* renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function2<Integer, Integer, Unit> {
+    public static final class AnonymousClass3 extends o implements Function2<Integer, Integer, Unit> {
         public final /* synthetic */ int $heightMeasureSpec;
         public final /* synthetic */ int $widthMeasureSpec;
 
@@ -87,13 +87,13 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ContentResizingCoordinatorLayout(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
     }
 
     public static final /* synthetic */ AppBarLayout access$getAppBarLayout$p(ContentResizingCoordinatorLayout contentResizingCoordinatorLayout) {
         AppBarLayout appBarLayout = contentResizingCoordinatorLayout.appBarLayout;
         if (appBarLayout == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("appBarLayout");
+            m.throwUninitializedPropertyAccessException("appBarLayout");
         }
         return appBarLayout;
     }
@@ -118,18 +118,18 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
         int i = measuredAppBarHeight + appBarVerticalOffset;
         View view = this.content;
         if (view == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("content");
+            m.throwUninitializedPropertyAccessException("content");
         }
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         layoutParams.height = measuredContainerHeight - i;
         View view2 = this.content;
         if (view2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("content");
+            m.throwUninitializedPropertyAccessException("content");
         }
         view2.setLayoutParams(layoutParams);
         View view3 = this.content;
         if (view3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("content");
+            m.throwUninitializedPropertyAccessException("content");
         }
         measureChild(view3, widthMeasureSpec, heightMeasureSpec);
     }
@@ -146,27 +146,27 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
             this.content = childAt2;
             AppBarLayout appBarLayout = this.appBarLayout;
             if (appBarLayout == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("appBarLayout");
+                m.throwUninitializedPropertyAccessException("appBarLayout");
             }
             measureChild(appBarLayout, widthMeasureSpec, heightMeasureSpec);
             AppBarLayout appBarLayout2 = this.appBarLayout;
             if (appBarLayout2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("appBarLayout");
+                m.throwUninitializedPropertyAccessException("appBarLayout");
             }
             appBarLayout2.offsetTopAndBottom(0);
             AppBarLayout appBarLayout3 = this.appBarLayout;
             if (appBarLayout3 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("appBarLayout");
+                m.throwUninitializedPropertyAccessException("appBarLayout");
             }
             updateContentLayoutParams(0, appBarLayout3.getMeasuredHeight(), size, widthMeasureSpec, heightMeasureSpec);
             AppBarLayout appBarLayout4 = this.appBarLayout;
             if (appBarLayout4 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("appBarLayout");
+                m.throwUninitializedPropertyAccessException("appBarLayout");
             }
             appBarLayout4.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new AnonymousClass2(widthMeasureSpec, heightMeasureSpec));
             AppBarLayout appBarLayout5 = this.appBarLayout;
             if (appBarLayout5 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("appBarLayout");
+                m.throwUninitializedPropertyAccessException("appBarLayout");
             }
             ViewExtensions.addOnHeightChangedListener(appBarLayout5, new AnonymousClass3(widthMeasureSpec, heightMeasureSpec));
         }
@@ -176,7 +176,7 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ContentResizingCoordinatorLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
     }
 
     public /* synthetic */ ContentResizingCoordinatorLayout(Context context, AttributeSet attributeSet, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -186,7 +186,7 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ContentResizingCoordinatorLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
     }
 
     public /* synthetic */ ContentResizingCoordinatorLayout(Context context, AttributeSet attributeSet, int i, int i2, DefaultConstructorMarker defaultConstructorMarker) {

@@ -13,34 +13,32 @@ import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.analytics.generated.events.network_action.TrackNetworkActionUserVerifyPhone;
-import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
+import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
-import com.discord.app.AppLogger2;
 import com.discord.app.AppTransitionActivity;
+import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetAuthPhoneVerifyBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelPhoneVerificationToken;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreStream;
-import com.discord.stores.utilities.RestCallState5;
+import com.discord.stores.utilities.RestCallStateKt;
 import com.discord.utilities.auth.RegistrationFlowRepo;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.sms.SmsListener;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.t.CollectionsJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -53,7 +51,7 @@ import rx.Observable;
 /* compiled from: WidgetAuthPhoneVerify.kt */
 /* loaded from: classes2.dex */
 public final class WidgetAuthPhoneVerify extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetAuthPhoneVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthPhoneVerifyBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetAuthPhoneVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthPhoneVerifyBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -66,7 +64,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean ignoreAutopaste;
-    private final AppLogger2 loggingConfig;
+    private final LoggingConfig loggingConfig;
     private String phone;
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
@@ -75,23 +73,23 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
 
         public final void launch(Context context, ActivityResultLauncher<Intent> launcher, String phone, CharSequence title, CharSequence subtitle) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(launcher, "launcher");
-            Intrinsics3.checkNotNullParameter(phone, "phone");
-            Intrinsics3.checkNotNullParameter(title, "title");
-            Intrinsics3.checkNotNullParameter(subtitle, "subtitle");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(launcher, "launcher");
+            m.checkNotNullParameter(phone, "phone");
+            m.checkNotNullParameter(title, "title");
+            m.checkNotNullParameter(subtitle, "subtitle");
             Intent intent = new Intent();
             intent.putExtra(WidgetAuthPhoneVerify.INTENT_EXTRA_PHONE, phone);
             intent.putExtra(WidgetAuthPhoneVerify.INTENT_EXTRA_TITLE, title);
             intent.putExtra(WidgetAuthPhoneVerify.INTENT_EXTRA_SUBTITLE, subtitle);
-            AppScreen2.g.f(context, launcher, WidgetAuthPhoneVerify.class, intent);
+            j.g.f(context, launcher, WidgetAuthPhoneVerify.class, intent);
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(AppFragment fragment, Function1<? super Result, Unit> callback) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(callback, "callback");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetAuthPhoneVerify2(callback));
-            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…ed)\n          }\n        }");
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(callback, "callback");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetAuthPhoneVerify$Companion$registerForResult$1(callback));
+            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…ed)\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -119,7 +117,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Token(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "token");
+                m.checkNotNullParameter(str, "token");
                 this.token = str;
             }
 
@@ -136,13 +134,13 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             }
 
             public final Token copy(String token) {
-                Intrinsics3.checkNotNullParameter(token, "token");
+                m.checkNotNullParameter(token, "token");
                 return new Token(token);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Token) && Intrinsics3.areEqual(this.token, ((Token) other).token);
+                    return (other instanceof Token) && m.areEqual(this.token, ((Token) other).token);
                 }
                 return true;
             }
@@ -160,7 +158,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             }
 
             public String toString() {
-                return outline.J(outline.U("Token(token="), this.token, ")");
+                return a.J(a.U("Token(token="), this.token, ")");
             }
         }
 
@@ -174,7 +172,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelPhoneVerificationToken, TrackNetworkMetadata2> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelPhoneVerificationToken, TrackNetworkMetadataReceiver> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -182,19 +180,19 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ TrackNetworkMetadata2 invoke(ModelPhoneVerificationToken modelPhoneVerificationToken) {
+        public /* bridge */ /* synthetic */ TrackNetworkMetadataReceiver invoke(ModelPhoneVerificationToken modelPhoneVerificationToken) {
             return invoke2(modelPhoneVerificationToken);
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final TrackNetworkMetadata2 invoke2(ModelPhoneVerificationToken modelPhoneVerificationToken) {
+        public final TrackNetworkMetadataReceiver invoke2(ModelPhoneVerificationToken modelPhoneVerificationToken) {
             return new TrackNetworkActionUserVerifyPhone();
         }
     }
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<ModelPhoneVerificationToken, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<ModelPhoneVerificationToken, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -207,7 +205,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelPhoneVerificationToken modelPhoneVerificationToken) {
-            Intrinsics3.checkNotNullParameter(modelPhoneVerificationToken, "it");
+            m.checkNotNullParameter(modelPhoneVerificationToken, "it");
             Intent intent = new Intent();
             intent.putExtra(WidgetAuthPhoneVerify.RESULT_EXTRA_TOKEN, modelPhoneVerificationToken.getToken());
             AppActivity appActivity = WidgetAuthPhoneVerify.this.getAppActivity();
@@ -223,7 +221,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -236,15 +234,15 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
-            RegistrationFlowRepo.INSTANCE.getINSTANCE().trackTransition("Phone Verification", "response_error", CollectionsJVM.listOf(ModelAuditLogEntry.CHANGE_KEY_CODE));
+            m.checkNotNullParameter(error, "it");
+            RegistrationFlowRepo.INSTANCE.getINSTANCE().trackTransition("Phone Verification", "response_error", d0.t.m.listOf(ModelAuditLogEntry.CHANGE_KEY_CODE));
             WidgetAuthPhoneVerify.access$getBinding$p(WidgetAuthPhoneVerify.this).c.b();
         }
     }
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -259,13 +257,13 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "it");
+            m.checkNotNullParameter(str, "it");
         }
     }
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<String, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<String, Unit> {
         public AnonymousClass2(WidgetAuthPhoneVerify widgetAuthPhoneVerify) {
             super(1, widgetAuthPhoneVerify, WidgetAuthPhoneVerify.class, "evaluateCode", "evaluateCode(Ljava/lang/String;)V", 0);
         }
@@ -278,14 +276,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "p1");
+            m.checkNotNullParameter(str, "p1");
             WidgetAuthPhoneVerify.access$evaluateCode((WidgetAuthPhoneVerify) this.receiver, str);
         }
     }
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Long, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -305,7 +303,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Unit, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Unit, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -348,7 +346,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<String, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -361,14 +359,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
+            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
             WidgetAuthPhoneVerify.access$evaluateCode(WidgetAuthPhoneVerify.this, str);
         }
     }
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends FunctionReferenceImpl implements Function1<String, Unit> {
+    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<String, Unit> {
         public AnonymousClass4(WidgetAuthPhoneVerify widgetAuthPhoneVerify) {
             super(1, widgetAuthPhoneVerify, WidgetAuthPhoneVerify.class, "inputCode", "inputCode(Ljava/lang/String;)V", 0);
         }
@@ -381,14 +379,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "p1");
+            m.checkNotNullParameter(str, "p1");
             WidgetAuthPhoneVerify.access$inputCode((WidgetAuthPhoneVerify) this.receiver, str);
         }
     }
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$resendCode$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -407,7 +405,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
     /* compiled from: WidgetAuthPhoneVerify.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$resendCode$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -420,15 +418,15 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetAuthPhoneVerify.access$getBinding$p(WidgetAuthPhoneVerify.this).c.b();
         }
     }
 
     public WidgetAuthPhoneVerify() {
         super(R.layout.widget_auth_phone_verify);
-        this.loggingConfig = new AppLogger2(false, null, WidgetAuthPhoneVerify4.INSTANCE, 3);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetAuthPhoneVerify3.INSTANCE, null, 2, null);
+        this.loggingConfig = new LoggingConfig(false, null, WidgetAuthPhoneVerify$loggingConfig$1.INSTANCE, 3);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetAuthPhoneVerify$binding$2.INSTANCE, null, 2, null);
         this.ignoreAutopaste = true;
     }
 
@@ -477,9 +475,9 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         RestAPI api = RestAPI.INSTANCE.getApi();
         String str = this.phone;
         if (str == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("phone");
+            m.throwUninitializedPropertyAccessException("phone");
         }
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestCallState5.logNetworkAction(api.phoneVerificationsVerify(new RestAPIParams.VerificationCode(str, code)), AnonymousClass1.INSTANCE), false, 1, null), this, null, 2, null), getBinding().g, 0L, 2, null), WidgetAuthPhoneVerify.class, getContext(), (Function1) null, new AnonymousClass3(), (Function0) null, (Function0) null, new AnonymousClass2(), 52, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestCallStateKt.logNetworkAction(api.phoneVerificationsVerify(new RestAPIParams.VerificationCode(str, code)), AnonymousClass1.INSTANCE), false, 1, null), this, null, 2, null), getBinding().g, 0L, 2, null), WidgetAuthPhoneVerify.class, getContext(), (Function1) null, new AnonymousClass3(), (Function0) null, (Function0) null, new AnonymousClass2(), 52, (Object) null);
     }
 
     private final WidgetAuthPhoneVerifyBinding getBinding() {
@@ -492,7 +490,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             getBinding().c.setCode(code);
             getBinding().c.setOnCodeEntered(new AnonymousClass2(this));
             Observable<Long> observableD0 = Observable.d0(500L, TimeUnit.MILLISECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable\n        .time…L, TimeUnit.MILLISECONDS)");
+            m.checkNotNullExpressionValue(observableD0, "Observable\n        .time…L, TimeUnit.MILLISECONDS)");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), WidgetAuthPhoneVerify.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
         }
     }
@@ -501,7 +499,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         RestAPI api = RestAPI.INSTANCE.getApi();
         String str = this.phone;
         if (str == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("phone");
+            m.throwUninitializedPropertyAccessException("phone");
         }
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(api.phoneVerificationsResend(new RestAPIParams.VerificationCodeResend(str)), false, 1, null), this, null, 2, null), getBinding().g, 0L, 2, null), WidgetAuthPhoneVerify.class, getContext(), (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 52, (Object) null);
     }
@@ -510,7 +508,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         ClipData primaryClip;
         Context context = getContext();
         if (context != null) {
-            Intrinsics3.checkNotNullExpressionValue(context, "context ?: return");
+            m.checkNotNullExpressionValue(context, "context ?: return");
             Object systemService = context.getSystemService("clipboard");
             if (!(systemService instanceof ClipboardManager)) {
                 systemService = null;
@@ -519,10 +517,10 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             if (clipboardManager == null || (primaryClip = clipboardManager.getPrimaryClip()) == null) {
                 return;
             }
-            Intrinsics3.checkNotNullExpressionValue(primaryClip, "clipboard.primaryClip ?: return");
+            m.checkNotNullExpressionValue(primaryClip, "clipboard.primaryClip ?: return");
             if (primaryClip.getItemCount() >= 1) {
                 CharSequence charSequenceCoerceToText = primaryClip.getItemAt(0).coerceToText(context);
-                Intrinsics3.checkNotNullExpressionValue(charSequenceCoerceToText, "clipData.getItemAt(0).coerceToText(context)");
+                m.checkNotNullExpressionValue(charSequenceCoerceToText, "clipData.getItemAt(0).coerceToText(context)");
                 String strReplace = new Regex(" ").replace(charSequenceCoerceToText, "");
                 if (strReplace.length() == 6 && TextUtils.isDigitsOnly(strReplace)) {
                     inputCode(strReplace);
@@ -532,13 +530,13 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
+    public LoggingConfig getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onContextItemSelected(MenuItem item) {
-        Intrinsics3.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(item, "item");
         if (item.getItemId() != R.id.menu_code_verification_paste) {
             return super.onContextItemSelected(item);
         }
@@ -548,8 +546,8 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
 
     @Override // androidx.fragment.app.Fragment, android.view.View.OnCreateContextMenuListener
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        Intrinsics3.checkNotNullParameter(menu, "menu");
-        Intrinsics3.checkNotNullParameter(v, "v");
+        m.checkNotNullParameter(menu, "menu");
+        m.checkNotNullParameter(v, "v");
         super.onCreateContextMenu(menu, v, menuInfo);
         new MenuInflater(requireContext()).inflate(R.menu.menu_code_verification, menu);
     }
@@ -567,14 +565,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             this.ignoreAutopaste = false;
             return;
         }
-        ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(Unit.a);
-        Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable\n          .just(Unit)");
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(scalarSynchronousObservable, this, null, 2, null), WidgetAuthPhoneVerify.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
+        j0.l.e.k kVar = new j0.l.e.k(Unit.a);
+        m.checkNotNullExpressionValue(kVar, "Observable\n          .just(Unit)");
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(kVar, this, null, 2, null), WidgetAuthPhoneVerify.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         String stringExtra = getMostRecentIntent().getStringExtra(INTENT_EXTRA_PHONE);
         if (stringExtra == null) {
@@ -586,27 +584,27 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         if (charSequenceExtra == null) {
             charSequenceExtra = "";
         }
-        Intrinsics3.checkNotNullExpressionValue(charSequenceExtra, "mostRecentIntent.getChar…INTENT_EXTRA_TITLE) ?: \"\"");
+        m.checkNotNullExpressionValue(charSequenceExtra, "mostRecentIntent.getChar…INTENT_EXTRA_TITLE) ?: \"\"");
         CharSequence charSequenceExtra2 = getMostRecentIntent().getCharSequenceExtra(INTENT_EXTRA_SUBTITLE);
         if (charSequenceExtra2 == null) {
             charSequenceExtra2 = "";
         }
-        Intrinsics3.checkNotNullExpressionValue(charSequenceExtra2, "mostRecentIntent.getChar…ENT_EXTRA_SUBTITLE) ?: \"\"");
-        if (!Intrinsics3.areEqual(charSequenceExtra, "")) {
+        m.checkNotNullExpressionValue(charSequenceExtra2, "mostRecentIntent.getChar…ENT_EXTRA_SUBTITLE) ?: \"\"");
+        if (!m.areEqual(charSequenceExtra, "")) {
             TextView textView = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.authPhoneVerifyTitle");
+            m.checkNotNullExpressionValue(textView, "binding.authPhoneVerifyTitle");
             textView.setText(charSequenceExtra);
         }
-        if (!Intrinsics3.areEqual(charSequenceExtra2, "")) {
+        if (!m.areEqual(charSequenceExtra2, "")) {
             TextView textView2 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.authPhoneVerifySubtitle");
+            m.checkNotNullExpressionValue(textView2, "binding.authPhoneVerifySubtitle");
             textView2.setText(charSequenceExtra2);
         }
         getBinding().d.setOnClickListener(new AnonymousClass1());
         Experiment userExperiment = StoreStream.INSTANCE.getExperiments().getUserExperiment("2021-06_reg_bailout_to_email_android", true);
         if (userExperiment != null && userExperiment.getBucket() == 1) {
             TextView textView3 = getBinding().f2235b;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.authPhoneBailout");
+            m.checkNotNullExpressionValue(textView3, "binding.authPhoneBailout");
             textView3.setVisibility(0);
             getBinding().f2235b.setOnClickListener(new AnonymousClass2());
         }

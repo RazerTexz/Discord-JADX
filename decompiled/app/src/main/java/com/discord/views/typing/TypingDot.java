@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import com.discord.R;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
@@ -26,7 +26,7 @@ public final class TypingDot extends View {
     public Function0<Unit> onScaleDownCompleteListener;
 
     /* compiled from: kotlin-style lambda group */
-    public static final class a extends Lambda implements Function0<Unit> {
+    public static final class a extends o implements Function0<Unit> {
         public final /* synthetic */ int j;
         public final /* synthetic */ Object k;
 
@@ -61,7 +61,7 @@ public final class TypingDot extends View {
         public final Function0<Unit> j;
 
         public b(Function0<Unit> function0) {
-            Intrinsics3.checkNotNullParameter(function0, "onComplete");
+            m.checkNotNullParameter(function0, "onComplete");
             this.j = function0;
         }
 
@@ -82,12 +82,12 @@ public final class TypingDot extends View {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public TypingDot(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
         super(context, attributeSet, 0);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         Animation animationLoadAnimation = AnimationUtils.loadAnimation(context, R.anim.anim_typing_dots_scale_up);
-        Intrinsics3.checkNotNullExpressionValue(animationLoadAnimation, "AnimationUtils.loadAnima…nim_typing_dots_scale_up)");
+        m.checkNotNullExpressionValue(animationLoadAnimation, "AnimationUtils.loadAnima…nim_typing_dots_scale_up)");
         this.scaleAndFadeUpAnimation = animationLoadAnimation;
         Animation animationLoadAnimation2 = AnimationUtils.loadAnimation(context, R.anim.anim_typing_dots_scale_down);
-        Intrinsics3.checkNotNullExpressionValue(animationLoadAnimation2, "AnimationUtils.loadAnima…m_typing_dots_scale_down)");
+        m.checkNotNullExpressionValue(animationLoadAnimation2, "AnimationUtils.loadAnima…m_typing_dots_scale_down)");
         this.scaleAndFadeDownAnimation = animationLoadAnimation2;
     }
 

@@ -5,7 +5,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.c.a.d.e;
 import com.adjust.sdk.Constants;
 import com.google.android.gms.common.internal.ReflectedParcelable;
@@ -63,9 +63,9 @@ public class Credential extends AbstractSafeParcelable implements ReflectedParce
     }
 
     public Credential(String str, @Nullable String str2, @Nullable Uri uri, List<IdToken> list, @Nullable String str3, @Nullable String str4, @Nullable String str5, @Nullable String str6) {
-        AnimatableValueParser.z(str, "credential identifier cannot be null");
+        d.z(str, "credential identifier cannot be null");
         String strTrim = str.trim();
-        AnimatableValueParser.v(strTrim, "credential identifier cannot be empty");
+        d.v(strTrim, "credential identifier cannot be empty");
         if (str3 != null && TextUtils.isEmpty(str3)) {
             throw new IllegalArgumentException("Password must not be empty if set");
         }
@@ -105,7 +105,7 @@ public class Credential extends AbstractSafeParcelable implements ReflectedParce
             return false;
         }
         Credential credential = (Credential) obj;
-        return TextUtils.equals(this.j, credential.j) && TextUtils.equals(this.k, credential.k) && AnimatableValueParser.h0(this.l, credential.l) && TextUtils.equals(this.n, credential.n) && TextUtils.equals(this.o, credential.o);
+        return TextUtils.equals(this.j, credential.j) && TextUtils.equals(this.k, credential.k) && d.h0(this.l, credential.l) && TextUtils.equals(this.n, credential.n) && TextUtils.equals(this.o, credential.o);
     }
 
     public int hashCode() {
@@ -114,15 +114,15 @@ public class Credential extends AbstractSafeParcelable implements ReflectedParce
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 1, this.j, false);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
-        AnimatableValueParser.s2(parcel, 3, this.l, i, false);
-        AnimatableValueParser.w2(parcel, 4, this.m, false);
-        AnimatableValueParser.t2(parcel, 5, this.n, false);
-        AnimatableValueParser.t2(parcel, 6, this.o, false);
-        AnimatableValueParser.t2(parcel, 9, this.p, false);
-        AnimatableValueParser.t2(parcel, 10, this.q, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        int iY2 = d.y2(parcel, 20293);
+        d.t2(parcel, 1, this.j, false);
+        d.t2(parcel, 2, this.k, false);
+        d.s2(parcel, 3, this.l, i, false);
+        d.w2(parcel, 4, this.m, false);
+        d.t2(parcel, 5, this.n, false);
+        d.t2(parcel, 6, this.o, false);
+        d.t2(parcel, 9, this.p, false);
+        d.t2(parcel, 10, this.q, false);
+        d.A2(parcel, iY2);
     }
 }

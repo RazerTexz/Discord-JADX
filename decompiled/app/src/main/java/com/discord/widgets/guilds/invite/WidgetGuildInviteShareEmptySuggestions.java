@@ -7,28 +7,28 @@ import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppScreen2;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.BuildConfig;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetGuildInviteShareEmptySuggestionsBinding;
 import com.discord.models.domain.ModelInvite;
 import com.discord.utilities.drawable.DrawableCompat;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -40,7 +40,7 @@ import rx.functions.Func0;
 /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildInviteShareEmptySuggestions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteShareEmptySuggestionsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildInviteShareEmptySuggestions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteShareEmptySuggestionsBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -54,7 +54,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
     /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$initBottomSheet$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -79,12 +79,12 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
         @Override // com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
         public void onSlide(View bottomSheet, float slideOffset) {
-            Intrinsics3.checkNotNullParameter(bottomSheet, "bottomSheet");
+            m.checkNotNullParameter(bottomSheet, "bottomSheet");
         }
 
         @Override // com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
         public void onStateChanged(View bottomSheet, int newState) {
-            Intrinsics3.checkNotNullParameter(bottomSheet, "bottomSheet");
+            m.checkNotNullParameter(bottomSheet, "bottomSheet");
             if (newState == 5) {
                 WidgetGuildInviteShareEmptySuggestions.access$getViewModel$p(WidgetGuildInviteShareEmptySuggestions.this).refreshUi();
             }
@@ -115,7 +115,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
             if (!this.$isNuxFlow) {
                 return Boolean.FALSE;
             }
-            AppScreen2.c(WidgetGuildInviteShareEmptySuggestions.this.requireContext(), false, null, 6);
+            j.c(WidgetGuildInviteShareEmptySuggestions.this.requireContext(), false, null, 6);
             return Boolean.TRUE;
         }
     }
@@ -134,7 +134,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
     /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetGuildInviteShareViewModel.ViewState.Loaded, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<WidgetGuildInviteShareViewModel.ViewState.Loaded, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -147,7 +147,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) throws Resources.NotFoundException {
-            Intrinsics3.checkNotNullParameter(loaded, "viewState");
+            m.checkNotNullParameter(loaded, "viewState");
             WidgetGuildInviteShareEmptySuggestions.access$updateUi(WidgetGuildInviteShareEmptySuggestions.this, loaded);
         }
     }
@@ -163,7 +163,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            GuildInviteUiHelper.copyLinkClick(outline.x(view, "it", "it.context"), this.$invite, WidgetGuildInviteShareEmptySuggestions.this.getMostRecentIntent());
+            GuildInviteUiHelperKt.copyLinkClick(a.x(view, "it", "it.context"), this.$invite, WidgetGuildInviteShareEmptySuggestions.this.getMostRecentIntent());
         }
     }
 
@@ -180,7 +180,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         public final void onClick(View view) {
             ModelInvite modelInvite = this.$invite;
             if (modelInvite != null) {
-                GuildInviteUiHelper.shareLinkClick(WidgetGuildInviteShareEmptySuggestions.this.getContext(), modelInvite);
+                GuildInviteUiHelperKt.shareLinkClick(WidgetGuildInviteShareEmptySuggestions.this.getContext(), modelInvite);
             }
         }
     }
@@ -199,11 +199,11 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
     public WidgetGuildInviteShareEmptySuggestions() {
         super(R.layout.widget_guild_invite_share_empty_suggestions);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildInviteShareEmptySuggestions2.INSTANCE, null, 2, null);
-        WidgetGuildInviteShareEmptySuggestions4 widgetGuildInviteShareEmptySuggestions4 = new WidgetGuildInviteShareEmptySuggestions4(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetGuildInviteShareViewModel.class), new WidgetGuildInviteShareEmptySuggestions$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildInviteShareEmptySuggestions4));
-        this.guildId = LazyJVM.lazy(new WidgetGuildInviteShareEmptySuggestions3(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildInviteShareEmptySuggestions$binding$2.INSTANCE, null, 2, null);
+        WidgetGuildInviteShareEmptySuggestions$viewModel$2 widgetGuildInviteShareEmptySuggestions$viewModel$2 = new WidgetGuildInviteShareEmptySuggestions$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetGuildInviteShareViewModel.class), new WidgetGuildInviteShareEmptySuggestions$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildInviteShareEmptySuggestions$viewModel$2));
+        this.guildId = g.lazy(new WidgetGuildInviteShareEmptySuggestions$guildId$2(this));
     }
 
     public static final /* synthetic */ WidgetGuildInviteShareEmptySuggestionsBinding access$getBinding$p(WidgetGuildInviteShareEmptySuggestions widgetGuildInviteShareEmptySuggestions) {
@@ -213,7 +213,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
     public static final /* synthetic */ BottomSheetBehavior access$getBottomSheetBehavior$p(WidgetGuildInviteShareEmptySuggestions widgetGuildInviteShareEmptySuggestions) {
         BottomSheetBehavior<ViewInviteSettingsSheet> bottomSheetBehavior = widgetGuildInviteShareEmptySuggestions.bottomSheetBehavior;
         if (bottomSheetBehavior == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("bottomSheetBehavior");
+            m.throwUninitializedPropertyAccessException("bottomSheetBehavior");
         }
         return bottomSheetBehavior;
     }
@@ -236,11 +236,11 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
     private final CharSequence getHoursExpirationString(int hours, CharSequence maxUses) throws Resources.NotFoundException {
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-        CharSequence quantityString = StringResourceUtils.getQuantityString(resources, requireContext(), R.plurals.duration_hours_hours, hours, Integer.valueOf(hours));
+        m.checkNotNullExpressionValue(resources, "resources");
+        CharSequence quantityString = StringResourceUtilsKt.getQuantityString(resources, requireContext(), R.plurals.duration_hours_hours, hours, Integer.valueOf(hours));
         Resources resources2 = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-        return FormatUtils.i(resources2, R.string.invite_settings_expired_description, new Object[]{quantityString, maxUses}, null, 4);
+        m.checkNotNullExpressionValue(resources2, "resources");
+        return b.i(resources2, R.string.invite_settings_expired_description, new Object[]{quantityString, maxUses}, null, 4);
     }
 
     private final String getInviteLink(ModelInvite modelInvite) {
@@ -267,7 +267,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         getBinding().g.configureUi(widgetInviteModel);
         ModelInvite invite = widgetInviteModel.getInvite();
         TextView textView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildInviteEmptySuggestionsInviteLink");
+        m.checkNotNullExpressionValue(textView, "binding.guildInviteEmptySuggestionsInviteLink");
         textView.setText(getInviteLink(invite));
         getBinding().c.setOnClickListener(new AnonymousClass1(invite));
         getBinding().d.setOnClickListener(new AnonymousClass2(invite));
@@ -276,72 +276,72 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         if (settings != null) {
             if (settings.getMaxUses() == 0) {
                 quantityString = getResources().getString(R.string.max_uses_description_unlimited_uses);
-                Intrinsics3.checkNotNullExpressionValue(quantityString, "resources.getString(R.st…scription_unlimited_uses)");
+                m.checkNotNullExpressionValue(quantityString, "resources.getString(R.st…scription_unlimited_uses)");
             } else {
                 Resources resources = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-                quantityString = StringResourceUtils.getQuantityString(resources, requireContext(), R.plurals.max_uses_description_mobile_maxUses, settings.getMaxUses(), Integer.valueOf(settings.getMaxUses()));
+                m.checkNotNullExpressionValue(resources, "resources");
+                quantityString = StringResourceUtilsKt.getQuantityString(resources, requireContext(), R.plurals.max_uses_description_mobile_maxUses, settings.getMaxUses(), Integer.valueOf(settings.getMaxUses()));
             }
             int maxAge = widgetInviteModel.getSettings().getMaxAge();
             if (maxAge == 0) {
                 String str = getResources().getString(R.string.max_age_never_description_mobile) + ", " + quantityString;
-                Intrinsics3.checkNotNullExpressionValue(str, "StringBuilder()\n        …              .toString()");
+                m.checkNotNullExpressionValue(str, "StringBuilder()\n        …              .toString()");
                 TextView textView2 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+                m.checkNotNullExpressionValue(textView2, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
                 textView2.setText(str);
                 return;
             }
             if (maxAge == 1800) {
                 Resources resources2 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-                CharSequence quantityString2 = StringResourceUtils.getQuantityString(resources2, requireContext(), R.plurals.duration_minutes_minutes, 30, 30);
+                m.checkNotNullExpressionValue(resources2, "resources");
+                CharSequence quantityString2 = StringResourceUtilsKt.getQuantityString(resources2, requireContext(), R.plurals.duration_minutes_minutes, 30, 30);
                 TextView textView3 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+                m.checkNotNullExpressionValue(textView3, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
                 Resources resources3 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources3, "resources");
-                textView3.setText(FormatUtils.i(resources3, R.string.invite_settings_expired_description, new Object[]{quantityString2, quantityString}, null, 4));
+                m.checkNotNullExpressionValue(resources3, "resources");
+                textView3.setText(b.i(resources3, R.string.invite_settings_expired_description, new Object[]{quantityString2, quantityString}, null, 4));
                 return;
             }
             if (maxAge == 3600) {
                 TextView textView4 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+                m.checkNotNullExpressionValue(textView4, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
                 textView4.setText(getHoursExpirationString(1, quantityString));
                 return;
             }
             if (maxAge == 21600) {
                 TextView textView5 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView5, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+                m.checkNotNullExpressionValue(textView5, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
                 textView5.setText(getHoursExpirationString(6, quantityString));
                 return;
             }
             if (maxAge == 43200) {
                 TextView textView6 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView6, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+                m.checkNotNullExpressionValue(textView6, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
                 textView6.setText(getHoursExpirationString(12, quantityString));
                 return;
             }
             if (maxAge == 86400) {
                 Resources resources4 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources4, "resources");
-                CharSequence quantityString3 = StringResourceUtils.getQuantityString(resources4, requireContext(), R.plurals.duration_days_days, 1, 1);
+                m.checkNotNullExpressionValue(resources4, "resources");
+                CharSequence quantityString3 = StringResourceUtilsKt.getQuantityString(resources4, requireContext(), R.plurals.duration_days_days, 1, 1);
                 TextView textView7 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView7, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+                m.checkNotNullExpressionValue(textView7, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
                 Resources resources5 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources5, "resources");
-                textView7.setText(FormatUtils.i(resources5, R.string.invite_settings_expired_description, new Object[]{quantityString3, quantityString}, null, 4));
+                m.checkNotNullExpressionValue(resources5, "resources");
+                textView7.setText(b.i(resources5, R.string.invite_settings_expired_description, new Object[]{quantityString3, quantityString}, null, 4));
                 return;
             }
             if (maxAge != 604800) {
                 return;
             }
             Resources resources6 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources6, "resources");
-            CharSequence quantityString4 = StringResourceUtils.getQuantityString(resources6, requireContext(), R.plurals.duration_days_days, 7, 7);
+            m.checkNotNullExpressionValue(resources6, "resources");
+            CharSequence quantityString4 = StringResourceUtilsKt.getQuantityString(resources6, requireContext(), R.plurals.duration_days_days, 7, 7);
             TextView textView8 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView8, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
+            m.checkNotNullExpressionValue(textView8, "binding.guildInviteEmpty…SettingsInviteLinkSubtext");
             Resources resources7 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources7, "resources");
-            textView8.setText(FormatUtils.i(resources7, R.string.invite_settings_expired_description, new Object[]{quantityString4, quantityString}, null, 4));
+            m.checkNotNullExpressionValue(resources7, "resources");
+            textView8.setText(b.i(resources7, R.string.invite_settings_expired_description, new Object[]{quantityString4, quantityString}, null, 4));
         }
     }
 
@@ -351,7 +351,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         if (getMostRecentIntent().getLongExtra("com.discord.intent.extra.EXTRA_GUILD_ID", 0L) <= 0) {
             requireActivity().finish();
@@ -365,10 +365,10 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         setActionBarDisplayHomeAsUpEnabled(true, booleanExtra ? Integer.valueOf(DrawableCompat.getThemedDrawableRes$default(requireContext(), R.attr.ic_close_24dp, 0, 2, (Object) null)) : null, booleanExtra ? Integer.valueOf(R.string.close) : null);
         AppFragment.setOnBackPressed$default(this, new AnonymousClass1(booleanExtra), 0, 2, null);
         BottomSheetBehavior<ViewInviteSettingsSheet> bottomSheetBehaviorFrom = BottomSheetBehavior.from(getBinding().g);
-        Intrinsics3.checkNotNullExpressionValue(bottomSheetBehaviorFrom, "BottomSheetBehavior.from…nviteSettingsBottomSheet)");
+        m.checkNotNullExpressionValue(bottomSheetBehaviorFrom, "BottomSheetBehavior.from…nviteSettingsBottomSheet)");
         this.bottomSheetBehavior = bottomSheetBehaviorFrom;
         if (bottomSheetBehaviorFrom == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("bottomSheetBehavior");
+            m.throwUninitializedPropertyAccessException("bottomSheetBehavior");
         }
         initBottomSheetBehavior(bottomSheetBehaviorFrom);
         initBottomSheet();
@@ -379,9 +379,9 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<WidgetGuildInviteShareViewModel.ViewState> observableK = getViewModel().observeViewState().K();
-        Intrinsics3.checkNotNullExpressionValue(observableK, "viewModel.observeViewSta…  .onBackpressureBuffer()");
+        m.checkNotNullExpressionValue(observableK, "viewModel.observeViewSta…  .onBackpressureBuffer()");
         Observable<R> observableG = observableK.y(WidgetGuildInviteShareEmptySuggestions$onViewBoundOrOnResume$$inlined$filterIs$1.INSTANCE).G(WidgetGuildInviteShareEmptySuggestions$onViewBoundOrOnResume$$inlined$filterIs$2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
+        m.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableG, this, null, 2, null), WidgetGuildInviteShareEmptySuggestions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 }

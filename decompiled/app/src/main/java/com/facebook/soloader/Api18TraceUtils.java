@@ -2,19 +2,19 @@ package com.facebook.soloader;
 
 import android.annotation.TargetApi;
 import android.os.Trace;
-import b.d.b.a.outline;
-import b.f.m.DoNotOptimize;
+import b.d.b.a.a;
+import b.f.m.d;
 import org.objectweb.asm.Opcodes;
 
-@DoNotOptimize
+@d
 @TargetApi(18)
 /* loaded from: classes3.dex */
 public class Api18TraceUtils {
     public static void a(String str, String str2, String str3) {
-        String strY = outline.y(str, str2, str3);
+        String strY = a.y(str, str2, str3);
         if (strY.length() > 127 && str2 != null) {
             int length = (Opcodes.LAND - str.length()) - str3.length();
-            StringBuilder sbU = outline.U(str);
+            StringBuilder sbU = a.U(str);
             sbU.append(str2.substring(0, length));
             sbU.append(str3);
             strY = sbU.toString();

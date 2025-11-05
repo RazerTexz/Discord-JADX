@@ -11,8 +11,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -21,9 +21,9 @@ import com.discord.databinding.ViewChannelOverrideItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.utilities.view.extensions.ViewExtensions;
-import d0.Standard2;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.j;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
@@ -41,15 +41,15 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
         private final List<Item> oldItems;
 
         public DiffCallback(List<Item> list, List<Item> list2) {
-            Intrinsics3.checkNotNullParameter(list, "newItems");
-            Intrinsics3.checkNotNullParameter(list2, "oldItems");
+            m.checkNotNullParameter(list, "newItems");
+            m.checkNotNullParameter(list2, "oldItems");
             this.newItems = list;
             this.oldItems = list2;
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
         public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-            return Intrinsics3.areEqual(this.newItems.get(newItemPosition), this.oldItems.get(oldItemPosition));
+            return m.areEqual(this.newItems.get(newItemPosition), this.oldItems.get(oldItemPosition));
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
@@ -75,8 +75,8 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
         private final Channel parent;
 
         public Item(Channel channel, Channel channel2, ModelNotificationSettings.ChannelOverride channelOverride) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            Intrinsics3.checkNotNullParameter(channelOverride, "overrideSettings");
+            m.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channelOverride, "overrideSettings");
             this.channel = channel;
             this.parent = channel2;
             this.overrideSettings = channelOverride;
@@ -105,25 +105,25 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
 
             /* JADX WARN: Illegal instructions before constructor call */
             public CategoryOverridesViewHolder(ViewCategoryOverrideItemBinding viewCategoryOverrideItemBinding, Function2<? super View, ? super Item, Unit> function2) {
-                Intrinsics3.checkNotNullParameter(viewCategoryOverrideItemBinding, "binding");
-                Intrinsics3.checkNotNullParameter(function2, "onClick");
+                m.checkNotNullParameter(viewCategoryOverrideItemBinding, "binding");
+                m.checkNotNullParameter(function2, "onClick");
                 ConstraintLayout constraintLayout = viewCategoryOverrideItemBinding.a;
-                Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.root");
+                m.checkNotNullExpressionValue(constraintLayout, "binding.root");
                 super(constraintLayout, function2, null);
                 this.binding = viewCategoryOverrideItemBinding;
             }
 
             @Override // com.discord.widgets.servers.NotificationsOverridesAdapter.ViewHolder
             public void onBind(Item data) {
-                Intrinsics3.checkNotNullParameter(data, "data");
+                m.checkNotNullParameter(data, "data");
                 super.onBind(data);
                 TextView textView = this.binding.f2175b;
-                Intrinsics3.checkNotNullExpressionValue(textView, "binding.categoryOverrideName");
+                m.checkNotNullExpressionValue(textView, "binding.categoryOverrideName");
                 textView.setText(ChannelUtils.c(data.getChannel()));
                 int iMessageNotificationToString = data.getOverrideSettings().isMuted() ? R.string.form_label_muted : messageNotificationToString(data.getOverrideSettings().getMessageNotifications());
                 TextView textView2 = this.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.categoryOverrideStatus");
-                FormatUtils.n(textView2, iMessageNotificationToString, new Object[0], null, 4);
+                m.checkNotNullExpressionValue(textView2, "binding.categoryOverrideStatus");
+                b.n(textView2, iMessageNotificationToString, new Object[0], null, 4);
             }
         }
 
@@ -133,29 +133,29 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
 
             /* JADX WARN: Illegal instructions before constructor call */
             public ChannelOverridesViewHolder(ViewChannelOverrideItemBinding viewChannelOverrideItemBinding, Function2<? super View, ? super Item, Unit> function2) {
-                Intrinsics3.checkNotNullParameter(viewChannelOverrideItemBinding, "binding");
-                Intrinsics3.checkNotNullParameter(function2, "onClick");
+                m.checkNotNullParameter(viewChannelOverrideItemBinding, "binding");
+                m.checkNotNullParameter(function2, "onClick");
                 ConstraintLayout constraintLayout = viewChannelOverrideItemBinding.a;
-                Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.root");
+                m.checkNotNullExpressionValue(constraintLayout, "binding.root");
                 super(constraintLayout, function2, null);
                 this.binding = viewChannelOverrideItemBinding;
             }
 
             @Override // com.discord.widgets.servers.NotificationsOverridesAdapter.ViewHolder
             public void onBind(Item data) {
-                Intrinsics3.checkNotNullParameter(data, "data");
+                m.checkNotNullParameter(data, "data");
                 super.onBind(data);
                 TextView textView = this.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(textView, "binding.channelOverrideName");
+                m.checkNotNullExpressionValue(textView, "binding.channelOverrideName");
                 textView.setText(ChannelUtils.c(data.getChannel()));
                 TextView textView2 = this.binding.f2176b;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.channelOverrideCategoryName");
+                m.checkNotNullExpressionValue(textView2, "binding.channelOverrideCategoryName");
                 Channel parent = data.getParent();
                 ViewExtensions.setTextAndVisibilityBy(textView2, parent != null ? ChannelUtils.c(parent) : null);
                 int iMessageNotificationToString = data.getOverrideSettings().isMuted() ? R.string.form_label_muted : messageNotificationToString(data.getOverrideSettings().getMessageNotifications());
                 TextView textView3 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.channelOverrideStatus");
-                FormatUtils.n(textView3, iMessageNotificationToString, new Object[0], null, 4);
+                m.checkNotNullExpressionValue(textView3, "binding.channelOverrideStatus");
+                b.n(textView3, iMessageNotificationToString, new Object[0], null, 4);
             }
         }
 
@@ -182,8 +182,8 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
         }
 
         public void onBind(Item data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
-            this.itemView.setOnClickListener(new NotificationsOverridesAdapter2(this, data));
+            m.checkNotNullParameter(data, "data");
+            this.itemView.setOnClickListener(new NotificationsOverridesAdapter$ViewHolder$onBind$1(this, data));
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -195,9 +195,9 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
 
     /* JADX WARN: Multi-variable type inference failed */
     public NotificationsOverridesAdapter(Function2<? super View, ? super Item, Unit> function2) {
-        Intrinsics3.checkNotNullParameter(function2, "onClick");
+        m.checkNotNullParameter(function2, "onClick");
         this.onClick = function2;
-        this.data = Collections2.emptyList();
+        this.data = n.emptyList();
     }
 
     public final List<Item> getData() {
@@ -230,21 +230,21 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
 
     @MainThread
     public final void setData(List<Item> list) {
-        Intrinsics3.checkNotNullParameter(list, "value");
+        m.checkNotNullParameter(list, "value");
         DiffUtil.DiffResult diffResultCalculateDiff = DiffUtil.calculateDiff(new DiffCallback(list, this.data), true);
-        Intrinsics3.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(D…back(value, field), true)");
+        m.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(D…back(value, field), true)");
         this.data = list;
         diffResultCalculateDiff.dispatchUpdatesTo(this);
     }
 
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         holder.onBind(this.data.get(position));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         int i = R.id.navigation_indicator;
         if (viewType != 0 && viewType != 15) {
             if (viewType == 4) {
@@ -258,7 +258,7 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
                             ImageView imageView = (ImageView) viewInflate.findViewById(R.id.navigation_indicator);
                             if (imageView != null) {
                                 ViewCategoryOverrideItemBinding viewCategoryOverrideItemBinding = new ViewCategoryOverrideItemBinding((ConstraintLayout) viewInflate, textView, textView2, guideline, imageView);
-                                Intrinsics3.checkNotNullExpressionValue(viewCategoryOverrideItemBinding, "ViewCategoryOverrideItem….context), parent, false)");
+                                m.checkNotNullExpressionValue(viewCategoryOverrideItemBinding, "ViewCategoryOverrideItem….context), parent, false)");
                                 return new ViewHolder.CategoryOverridesViewHolder(viewCategoryOverrideItemBinding, this.onClick);
                             }
                         } else {
@@ -273,7 +273,7 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
                 throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
             }
             if (viewType != 5) {
-                throw new Standard2(outline.w("An operation is not implemented: ", outline.r("Type[", viewType, "] not implemented")));
+                throw new j(a.w("An operation is not implemented: ", a.r("Type[", viewType, "] not implemented")));
             }
         }
         View viewInflate2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_channel_override_item, parent, false);
@@ -288,7 +288,7 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
                         ImageView imageView2 = (ImageView) viewInflate2.findViewById(R.id.navigation_indicator);
                         if (imageView2 != null) {
                             ViewChannelOverrideItemBinding viewChannelOverrideItemBinding = new ViewChannelOverrideItemBinding((ConstraintLayout) viewInflate2, textView3, textView4, textView5, guideline2, imageView2);
-                            Intrinsics3.checkNotNullExpressionValue(viewChannelOverrideItemBinding, "ViewChannelOverrideItemB….context), parent, false)");
+                            m.checkNotNullExpressionValue(viewChannelOverrideItemBinding, "ViewChannelOverrideItemB….context), parent, false)");
                             return new ViewHolder.ChannelOverridesViewHolder(viewChannelOverrideItemBinding, this.onClick);
                         }
                     } else {

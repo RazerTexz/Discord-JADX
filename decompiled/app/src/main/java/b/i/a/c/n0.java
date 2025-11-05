@@ -1,18 +1,18 @@
 package b.i.a.c;
 
-import b.i.a.c.a3.MediaSource2;
+import b.i.a.c.a3.a0;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class n0 implements MediaSource2.b {
-    public final /* synthetic */ MediaSourceList a;
+public final /* synthetic */ class n0 implements a0.b {
+    public final /* synthetic */ u1 a;
 
-    public /* synthetic */ n0(MediaSourceList mediaSourceList) {
-        this.a = mediaSourceList;
+    public /* synthetic */ n0(u1 u1Var) {
+        this.a = u1Var;
     }
 
-    @Override // b.i.a.c.a3.MediaSource2.b
-    public final void a(MediaSource2 mediaSource2, Timeline timeline) {
-        ((ExoPlayerImplInternal2) this.a.d).q.f(22);
+    @Override // b.i.a.c.a3.a0.b
+    public final void a(b.i.a.c.a3.a0 a0Var, o2 o2Var) {
+        ((h1) this.a.d).q.f(22);
     }
 }

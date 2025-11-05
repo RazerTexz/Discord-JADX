@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
 import java.util.Arrays;
 import java.util.MissingFormatArgumentException;
 import org.json.JSONArray;
@@ -45,7 +44,7 @@ public class r {
             return Integer.valueOf(Integer.parseInt(strE));
         } catch (NumberFormatException unused) {
             String strH = h(str);
-            outline.r0(outline.S(outline.b(strE, outline.b(strH, 38)), "Couldn't parse value of ", strH, "(", strE), ") into an int", "NotificationParams");
+            b.d.b.a.a.r0(b.d.b.a.a.S(b.d.b.a.a.b(strE, b.d.b.a.a.b(strH, 38)), "Couldn't parse value of ", strH, "(", strE), ") into an int", "NotificationParams");
             return null;
         }
     }
@@ -60,7 +59,7 @@ public class r {
             return new JSONArray(strE);
         } catch (JSONException unused) {
             String strH = h(str);
-            outline.r0(outline.S(outline.b(strE, outline.b(strH, 50)), "Malformed JSON for key ", strH, ": ", strE), ", falling back to default", "NotificationParams");
+            b.d.b.a.a.r0(b.d.b.a.a.S(b.d.b.a.a.b(strE, b.d.b.a.a.b(strH, 50)), "Malformed JSON for key ", strH, ": ", strE), ", falling back to default", "NotificationParams");
             return null;
         }
     }
@@ -78,7 +77,7 @@ public class r {
         int identifier = resources.getIdentifier(strE2, "string", str);
         if (identifier == 0) {
             String strH = h(str2.concat("_loc_key"));
-            Log.w("NotificationParams", outline.l(str2.length() + outline.b(strH, 49), strH, " resource not found: ", str2, " Default value will be used."));
+            Log.w("NotificationParams", b.d.b.a.a.l(str2.length() + b.d.b.a.a.b(strH, 49), strH, " resource not found: ", str2, " Default value will be used."));
             return null;
         }
         JSONArray jSONArrayC = c(str2.concat("_loc_args"));
@@ -99,7 +98,7 @@ public class r {
         } catch (MissingFormatArgumentException e) {
             String strH2 = h(str2);
             String string = Arrays.toString(strArr);
-            StringBuilder sbS = outline.S(outline.b(string, outline.b(strH2, 58)), "Missing format argument for ", strH2, ": ", string);
+            StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(string, b.d.b.a.a.b(strH2, 58)), "Missing format argument for ", strH2, ": ", string);
             sbS.append(" Default value will be used.");
             Log.w("NotificationParams", sbS.toString(), e);
             return null;

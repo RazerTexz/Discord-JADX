@@ -6,22 +6,22 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.ViewGuildRoleSubscriptionPlanDetailsReviewBinding;
 import com.discord.databinding.ViewGuildRoleSubscriptionSectionHeaderItemBinding;
 import com.discord.databinding.ViewGuildRoleSubscriptionTierHeaderBinding;
-import com.discord.utilities.billing.PremiumUtils2;
+import com.discord.utilities.billing.PremiumUtilsKt;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionBenefitItemView;
 import com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierAdapterItem;
 import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionMemberPreview;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -36,7 +36,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public BenefitViewHolder(GuildRoleSubscriptionBenefitItemView guildRoleSubscriptionBenefitItemView) {
             super(guildRoleSubscriptionBenefitItemView, null);
-            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionBenefitItemView, "view");
+            m.checkNotNullParameter(guildRoleSubscriptionBenefitItemView, "view");
             this.view = guildRoleSubscriptionBenefitItemView;
             guildRoleSubscriptionBenefitItemView.setPadding(0, 0, 0, 0);
             guildRoleSubscriptionBenefitItemView.setBackground(null);
@@ -56,25 +56,25 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierViewHolder
         public void bind(GuildRoleSubscriptionTierAdapterItem item) {
-            Intrinsics3.checkNotNullParameter(item, "item");
+            m.checkNotNullParameter(item, "item");
             if (item instanceof GuildRoleSubscriptionTierAdapterItem.BenefitItem) {
                 this.view.configureUI(((GuildRoleSubscriptionTierAdapterItem.BenefitItem) item).getBenefit());
             } else if (item instanceof GuildRoleSubscriptionTierAdapterItem.AllChannelsAccessBenefitItem) {
                 GuildRoleSubscriptionBenefitItemView guildRoleSubscriptionBenefitItemView = this.view;
                 String string = guildRoleSubscriptionBenefitItemView.getContext().getString(R.string.guild_role_subscription_tier_review_entire_server_access_benefit);
-                Intrinsics3.checkNotNullExpressionValue(string, "view.context.getString(R…re_server_access_benefit)");
+                m.checkNotNullExpressionValue(string, "view.context.getString(R…re_server_access_benefit)");
                 guildRoleSubscriptionBenefitItemView.configureUI(string, R.drawable.ic_key_24dp, (String) null);
             }
         }
 
         public final BenefitViewHolder copy(GuildRoleSubscriptionBenefitItemView view) {
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(view, "view");
             return new BenefitViewHolder(view);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof BenefitViewHolder) && Intrinsics3.areEqual(this.view, ((BenefitViewHolder) other).view);
+                return (other instanceof BenefitViewHolder) && m.areEqual(this.view, ((BenefitViewHolder) other).view);
             }
             return true;
         }
@@ -89,7 +89,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // androidx.recyclerview.widget.RecyclerView.ViewHolder
         public String toString() {
-            StringBuilder sbU = outline.U("BenefitViewHolder(view=");
+            StringBuilder sbU = a.U("BenefitViewHolder(view=");
             sbU.append(this.view);
             sbU.append(")");
             return sbU.toString();
@@ -103,7 +103,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public MemberPreviewViewHolder(GuildRoleSubscriptionMemberPreview guildRoleSubscriptionMemberPreview) {
             super(guildRoleSubscriptionMemberPreview, null);
-            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionMemberPreview, "memberPreview");
+            m.checkNotNullParameter(guildRoleSubscriptionMemberPreview, "memberPreview");
             this.memberPreview = guildRoleSubscriptionMemberPreview;
             guildRoleSubscriptionMemberPreview.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
             guildRoleSubscriptionMemberPreview.setBackgroundColor(ColorCompat.getThemedColor(guildRoleSubscriptionMemberPreview, R.attr.colorBackgroundSecondary));
@@ -123,19 +123,19 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierViewHolder
         public void bind(GuildRoleSubscriptionTierAdapterItem item) {
-            Intrinsics3.checkNotNullParameter(item, "item");
+            m.checkNotNullParameter(item, "item");
             GuildRoleSubscriptionTierAdapterItem.MemberPreview memberPreview = (GuildRoleSubscriptionTierAdapterItem.MemberPreview) item;
             GuildRoleSubscriptionMemberPreview.setMemberDesign$default(this.memberPreview, memberPreview.getMemberColor(), memberPreview.getMemberIcon(), null, 4, null);
         }
 
         public final MemberPreviewViewHolder copy(GuildRoleSubscriptionMemberPreview memberPreview) {
-            Intrinsics3.checkNotNullParameter(memberPreview, "memberPreview");
+            m.checkNotNullParameter(memberPreview, "memberPreview");
             return new MemberPreviewViewHolder(memberPreview);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof MemberPreviewViewHolder) && Intrinsics3.areEqual(this.memberPreview, ((MemberPreviewViewHolder) other).memberPreview);
+                return (other instanceof MemberPreviewViewHolder) && m.areEqual(this.memberPreview, ((MemberPreviewViewHolder) other).memberPreview);
             }
             return true;
         }
@@ -150,7 +150,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // androidx.recyclerview.widget.RecyclerView.ViewHolder
         public String toString() {
-            StringBuilder sbU = outline.U("MemberPreviewViewHolder(memberPreview=");
+            StringBuilder sbU = a.U("MemberPreviewViewHolder(memberPreview=");
             sbU.append(this.memberPreview);
             sbU.append(")");
             return sbU.toString();
@@ -163,9 +163,9 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         /* JADX WARN: Illegal instructions before constructor call */
         public PlanDetailsViewHolder(ViewGuildRoleSubscriptionPlanDetailsReviewBinding viewGuildRoleSubscriptionPlanDetailsReviewBinding) {
-            Intrinsics3.checkNotNullParameter(viewGuildRoleSubscriptionPlanDetailsReviewBinding, "binding");
+            m.checkNotNullParameter(viewGuildRoleSubscriptionPlanDetailsReviewBinding, "binding");
             LinearLayout linearLayout = viewGuildRoleSubscriptionPlanDetailsReviewBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+            m.checkNotNullExpressionValue(linearLayout, "binding.root");
             super(linearLayout, null);
             this.binding = viewGuildRoleSubscriptionPlanDetailsReviewBinding;
         }
@@ -184,24 +184,24 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierViewHolder
         public void bind(GuildRoleSubscriptionTierAdapterItem item) {
-            Intrinsics3.checkNotNullParameter(item, "item");
+            m.checkNotNullParameter(item, "item");
             GuildRoleSubscriptionTierAdapterItem.PlanDetails planDetails = (GuildRoleSubscriptionTierAdapterItem.PlanDetails) item;
             TextView textView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionPlanReviewDescription");
+            m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionPlanReviewDescription");
             textView.setText(planDetails.getDescription());
             SimpleDraweeView simpleDraweeView = this.binding.f2196b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.guildRoleSubscriptionPlanReviewCoverImage");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.guildRoleSubscriptionPlanReviewCoverImage");
             MGImages.setImage$default(simpleDraweeView, planDetails.getCoverImage(), 0, 0, false, null, null, 124, null);
         }
 
         public final PlanDetailsViewHolder copy(ViewGuildRoleSubscriptionPlanDetailsReviewBinding binding) {
-            Intrinsics3.checkNotNullParameter(binding, "binding");
+            m.checkNotNullParameter(binding, "binding");
             return new PlanDetailsViewHolder(binding);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof PlanDetailsViewHolder) && Intrinsics3.areEqual(this.binding, ((PlanDetailsViewHolder) other).binding);
+                return (other instanceof PlanDetailsViewHolder) && m.areEqual(this.binding, ((PlanDetailsViewHolder) other).binding);
             }
             return true;
         }
@@ -216,7 +216,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // androidx.recyclerview.widget.RecyclerView.ViewHolder
         public String toString() {
-            StringBuilder sbU = outline.U("PlanDetailsViewHolder(binding=");
+            StringBuilder sbU = a.U("PlanDetailsViewHolder(binding=");
             sbU.append(this.binding);
             sbU.append(")");
             return sbU.toString();
@@ -229,9 +229,9 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         /* JADX WARN: Illegal instructions before constructor call */
         public SectionHeaderViewHolder(ViewGuildRoleSubscriptionSectionHeaderItemBinding viewGuildRoleSubscriptionSectionHeaderItemBinding) {
-            Intrinsics3.checkNotNullParameter(viewGuildRoleSubscriptionSectionHeaderItemBinding, "binding");
+            m.checkNotNullParameter(viewGuildRoleSubscriptionSectionHeaderItemBinding, "binding");
             LinearLayout linearLayout = viewGuildRoleSubscriptionSectionHeaderItemBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+            m.checkNotNullExpressionValue(linearLayout, "binding.root");
             super(linearLayout, null);
             this.binding = viewGuildRoleSubscriptionSectionHeaderItemBinding;
             View view = this.itemView;
@@ -254,28 +254,28 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         @Override // com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierViewHolder
         public void bind(GuildRoleSubscriptionTierAdapterItem item) {
             CharSequence i18nPluralString;
-            Intrinsics3.checkNotNullParameter(item, "item");
+            m.checkNotNullParameter(item, "item");
             GuildRoleSubscriptionTierAdapterItem.SectionHeader sectionHeader = (GuildRoleSubscriptionTierAdapterItem.SectionHeader) item;
             if (sectionHeader.getTitleResId() != null) {
                 View view = this.itemView;
-                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                m.checkNotNullExpressionValue(view, "itemView");
                 i18nPluralString = view.getContext().getString(sectionHeader.getTitleResId().intValue());
             } else {
-                i18nPluralString = (sectionHeader.getTitlePluralResId() == null || sectionHeader.getFormatArgument() == null) ? null : StringResourceUtils.getI18nPluralString(outline.x(this.itemView, "itemView", "itemView.context"), sectionHeader.getTitlePluralResId().intValue(), sectionHeader.getFormatArgument().intValue(), sectionHeader.getFormatArgument());
+                i18nPluralString = (sectionHeader.getTitlePluralResId() == null || sectionHeader.getFormatArgument() == null) ? null : StringResourceUtilsKt.getI18nPluralString(a.x(this.itemView, "itemView", "itemView.context"), sectionHeader.getTitlePluralResId().intValue(), sectionHeader.getFormatArgument().intValue(), sectionHeader.getFormatArgument());
             }
             TextView textView = this.binding.f2198b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionSectionHeader");
+            m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionSectionHeader");
             textView.setText(i18nPluralString);
         }
 
         public final SectionHeaderViewHolder copy(ViewGuildRoleSubscriptionSectionHeaderItemBinding binding) {
-            Intrinsics3.checkNotNullParameter(binding, "binding");
+            m.checkNotNullParameter(binding, "binding");
             return new SectionHeaderViewHolder(binding);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof SectionHeaderViewHolder) && Intrinsics3.areEqual(this.binding, ((SectionHeaderViewHolder) other).binding);
+                return (other instanceof SectionHeaderViewHolder) && m.areEqual(this.binding, ((SectionHeaderViewHolder) other).binding);
             }
             return true;
         }
@@ -290,7 +290,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // androidx.recyclerview.widget.RecyclerView.ViewHolder
         public String toString() {
-            StringBuilder sbU = outline.U("SectionHeaderViewHolder(binding=");
+            StringBuilder sbU = a.U("SectionHeaderViewHolder(binding=");
             sbU.append(this.binding);
             sbU.append(")");
             return sbU.toString();
@@ -303,9 +303,9 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         /* JADX WARN: Illegal instructions before constructor call */
         public TierHeaderViewHolder(ViewGuildRoleSubscriptionTierHeaderBinding viewGuildRoleSubscriptionTierHeaderBinding) {
-            Intrinsics3.checkNotNullParameter(viewGuildRoleSubscriptionTierHeaderBinding, "binding");
+            m.checkNotNullParameter(viewGuildRoleSubscriptionTierHeaderBinding, "binding");
             LinearLayout linearLayout = viewGuildRoleSubscriptionTierHeaderBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+            m.checkNotNullExpressionValue(linearLayout, "binding.root");
             super(linearLayout, null);
             this.binding = viewGuildRoleSubscriptionTierHeaderBinding;
         }
@@ -325,40 +325,40 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         @Override // com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierViewHolder
         public void bind(GuildRoleSubscriptionTierAdapterItem item) {
             CharSequence formattedPriceUsd;
-            Intrinsics3.checkNotNullParameter(item, "item");
+            m.checkNotNullParameter(item, "item");
             GuildRoleSubscriptionTierAdapterItem.Header header = (GuildRoleSubscriptionTierAdapterItem.Header) item;
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierHeaderName");
+            m.checkNotNullExpressionValue(textView, "binding.guildRoleSubscriptionTierHeaderName");
             textView.setText(header.getName());
             TextView textView2 = this.binding.f2199b;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierHeaderDescription");
+            m.checkNotNullExpressionValue(textView2, "binding.guildRoleSubscriptionTierHeaderDescription");
             textView2.setText(header.getDescription());
             if (header.getPrice() != null) {
                 int iIntValue = header.getPrice().intValue();
                 View view = this.itemView;
-                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                m.checkNotNullExpressionValue(view, "itemView");
                 Context context = view.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context, "itemView.context");
-                formattedPriceUsd = PremiumUtils2.getFormattedPriceUsd(iIntValue, context);
+                m.checkNotNullExpressionValue(context, "itemView.context");
+                formattedPriceUsd = PremiumUtilsKt.getFormattedPriceUsd(iIntValue, context);
             } else {
                 formattedPriceUsd = null;
             }
             TextView textView3 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.guildRoleSubscriptionTierHeaderPrice");
+            m.checkNotNullExpressionValue(textView3, "binding.guildRoleSubscriptionTierHeaderPrice");
             ViewExtensions.setTextAndVisibilityBy(textView3, formattedPriceUsd);
             SimpleDraweeView simpleDraweeView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.guildRoleSubscriptionTierHeaderImage");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.guildRoleSubscriptionTierHeaderImage");
             IconUtils.setIcon$default(simpleDraweeView, header.getImage(), R.dimen.avatar_size_xxlarge, (Function1) null, (MGImages.ChangeDetector) null, 24, (Object) null);
         }
 
         public final TierHeaderViewHolder copy(ViewGuildRoleSubscriptionTierHeaderBinding binding) {
-            Intrinsics3.checkNotNullParameter(binding, "binding");
+            m.checkNotNullParameter(binding, "binding");
             return new TierHeaderViewHolder(binding);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof TierHeaderViewHolder) && Intrinsics3.areEqual(this.binding, ((TierHeaderViewHolder) other).binding);
+                return (other instanceof TierHeaderViewHolder) && m.areEqual(this.binding, ((TierHeaderViewHolder) other).binding);
             }
             return true;
         }
@@ -373,7 +373,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
 
         @Override // androidx.recyclerview.widget.RecyclerView.ViewHolder
         public String toString() {
-            StringBuilder sbU = outline.U("TierHeaderViewHolder(binding=");
+            StringBuilder sbU = a.U("TierHeaderViewHolder(binding=");
             sbU.append(this.binding);
             sbU.append(")");
             return sbU.toString();

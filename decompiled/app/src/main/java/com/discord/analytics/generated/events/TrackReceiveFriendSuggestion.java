@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackReceiveFriendSuggestion.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackReceiveFriendSuggestion implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackReceiveFriendSuggestion implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long suggestedUserId = null;
     private final CharSequence platformType = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackReceiveFriendSuggestion implements AnalyticsS
             return false;
         }
         TrackReceiveFriendSuggestion trackReceiveFriendSuggestion = (TrackReceiveFriendSuggestion) other;
-        return Intrinsics3.areEqual(this.suggestedUserId, trackReceiveFriendSuggestion.suggestedUserId) && Intrinsics3.areEqual(this.platformType, trackReceiveFriendSuggestion.platformType) && Intrinsics3.areEqual(this.isNonMutual, trackReceiveFriendSuggestion.isNonMutual) && Intrinsics3.areEqual(this.isReverseSuggestion, trackReceiveFriendSuggestion.isReverseSuggestion) && Intrinsics3.areEqual(this.dispatched, trackReceiveFriendSuggestion.dispatched) && Intrinsics3.areEqual(this.pushNotificationSent, trackReceiveFriendSuggestion.pushNotificationSent) && Intrinsics3.areEqual(this.namePresent, trackReceiveFriendSuggestion.namePresent);
+        return m.areEqual(this.suggestedUserId, trackReceiveFriendSuggestion.suggestedUserId) && m.areEqual(this.platformType, trackReceiveFriendSuggestion.platformType) && m.areEqual(this.isNonMutual, trackReceiveFriendSuggestion.isNonMutual) && m.areEqual(this.isReverseSuggestion, trackReceiveFriendSuggestion.isReverseSuggestion) && m.areEqual(this.dispatched, trackReceiveFriendSuggestion.dispatched) && m.areEqual(this.pushNotificationSent, trackReceiveFriendSuggestion.pushNotificationSent) && m.areEqual(this.namePresent, trackReceiveFriendSuggestion.namePresent);
     }
 
     public int hashCode() {
@@ -54,7 +54,7 @@ public final /* data */ class TrackReceiveFriendSuggestion implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackReceiveFriendSuggestion(suggestedUserId=");
+        StringBuilder sbU = a.U("TrackReceiveFriendSuggestion(suggestedUserId=");
         sbU.append(this.suggestedUserId);
         sbU.append(", platformType=");
         sbU.append(this.platformType);
@@ -67,6 +67,6 @@ public final /* data */ class TrackReceiveFriendSuggestion implements AnalyticsS
         sbU.append(", pushNotificationSent=");
         sbU.append(this.pushNotificationSent);
         sbU.append(", namePresent=");
-        return outline.D(sbU, this.namePresent, ")");
+        return a.D(sbU, this.namePresent, ")");
     }
 }

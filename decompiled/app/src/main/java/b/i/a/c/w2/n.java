@@ -2,21 +2,21 @@ package b.i.a.c.w2;
 
 import android.media.UnsupportedSchemeException;
 import android.util.Log;
-import b.i.a.c.w2.ExoMediaDrm;
+import b.i.a.c.w2.a0;
 import com.google.android.exoplayer2.drm.UnsupportedDrmException;
 import java.util.UUID;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class n implements ExoMediaDrm.c {
+public final /* synthetic */ class n implements a0.c {
     public static final /* synthetic */ n a = new n();
 
-    @Override // b.i.a.c.w2.ExoMediaDrm.c
-    public final ExoMediaDrm a(UUID uuid) {
-        int i = FrameworkMediaDrm.a;
+    @Override // b.i.a.c.w2.a0.c
+    public final a0 a(UUID uuid) {
+        int i = c0.a;
         try {
             try {
-                return new FrameworkMediaDrm(uuid);
+                return new c0(uuid);
             } catch (UnsupportedDrmException unused) {
                 String strValueOf = String.valueOf(uuid);
                 StringBuilder sb = new StringBuilder(strValueOf.length() + 53);
@@ -24,7 +24,7 @@ public final /* synthetic */ class n implements ExoMediaDrm.c {
                 sb.append(strValueOf);
                 sb.append(".");
                 Log.e("FrameworkMediaDrm", sb.toString());
-                return new DummyExoMediaDrm();
+                return new y();
             }
         } catch (UnsupportedSchemeException e) {
             throw new UnsupportedDrmException(1, e);

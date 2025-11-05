@@ -1,6 +1,6 @@
 package com.discord.widgets.home;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.user.NsfwAllowance;
@@ -8,8 +8,8 @@ import com.discord.models.presence.Presence;
 import com.discord.stores.StoreChannelsSelected;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import j0.l.e.k;
 import java.util.concurrent.TimeUnit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
@@ -40,16 +40,16 @@ public final /* data */ class WidgetHomeModel {
 
         public final Observable<WidgetHomeModel> get() {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable observableY = Observable.j(companion.getGuildSelected().observeSelectedGuildId(), companion.getChannelsSelected().observeResolvedSelectedChannel(), WidgetHomeModel2.INSTANCE).Y(WidgetHomeModel3.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableY, "Observable.combineLatest…            )\n          }");
+            Observable observableY = Observable.j(companion.getGuildSelected().observeSelectedGuildId(), companion.getChannelsSelected().observeResolvedSelectedChannel(), WidgetHomeModel$Companion$get$1.INSTANCE).Y(WidgetHomeModel$Companion$get$2.INSTANCE);
+            m.checkNotNullExpressionValue(observableY, "Observable.combineLatest…            )\n          }");
             Observable<WidgetHomeModel> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-            Intrinsics3.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
+            m.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
             return observableR;
         }
 
         public final Observable<Boolean> getInitialized() {
             Observable<Boolean> observableQ = StoreStream.INSTANCE.isInitializedObservable().q(150L, TimeUnit.MILLISECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableQ, "StoreStream\n          .i…0, TimeUnit.MILLISECONDS)");
+            m.checkNotNullExpressionValue(observableQ, "StoreStream\n          .i…0, TimeUnit.MILLISECONDS)");
             return observableQ;
         }
 
@@ -59,9 +59,9 @@ public final /* data */ class WidgetHomeModel {
                     return StoreStream.INSTANCE.getChannels().observeChannel(channel.getParentId());
                 }
             }
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(null)");
-            return scalarSynchronousObservable;
+            k kVar = new k(null);
+            m.checkNotNullExpressionValue(kVar, "Observable.just(null)");
+            return kVar;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -70,7 +70,7 @@ public final /* data */ class WidgetHomeModel {
     }
 
     public WidgetHomeModel(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Channel channel, Channel channel2, Presence presence, int i, boolean z2, boolean z3, NsfwAllowance nsfwAllowance, int i2, boolean z4) {
-        Intrinsics3.checkNotNullParameter(resolvedSelectedChannel, "selectedChannel");
+        m.checkNotNullParameter(resolvedSelectedChannel, "selectedChannel");
         this.selectedChannel = resolvedSelectedChannel;
         this.selectedVoiceChannel = channel;
         this.parentChannel = channel2;
@@ -141,7 +141,7 @@ public final /* data */ class WidgetHomeModel {
     }
 
     public final WidgetHomeModel copy(StoreChannelsSelected.ResolvedSelectedChannel selectedChannel, Channel selectedVoiceChannel, Channel parentChannel, Presence dmPresence, int unreadCount, boolean isFriend, boolean isCallConnected, NsfwAllowance nsfwAllowed, int threadCount, boolean threadExperimentEnabled) {
-        Intrinsics3.checkNotNullParameter(selectedChannel, "selectedChannel");
+        m.checkNotNullParameter(selectedChannel, "selectedChannel");
         return new WidgetHomeModel(selectedChannel, selectedVoiceChannel, parentChannel, dmPresence, unreadCount, isFriend, isCallConnected, nsfwAllowed, threadCount, threadExperimentEnabled);
     }
 
@@ -153,7 +153,7 @@ public final /* data */ class WidgetHomeModel {
             return false;
         }
         WidgetHomeModel widgetHomeModel = (WidgetHomeModel) other;
-        return Intrinsics3.areEqual(this.selectedChannel, widgetHomeModel.selectedChannel) && Intrinsics3.areEqual(this.selectedVoiceChannel, widgetHomeModel.selectedVoiceChannel) && Intrinsics3.areEqual(this.parentChannel, widgetHomeModel.parentChannel) && Intrinsics3.areEqual(this.dmPresence, widgetHomeModel.dmPresence) && this.unreadCount == widgetHomeModel.unreadCount && this.isFriend == widgetHomeModel.isFriend && this.isCallConnected == widgetHomeModel.isCallConnected && Intrinsics3.areEqual(this.nsfwAllowed, widgetHomeModel.nsfwAllowed) && this.threadCount == widgetHomeModel.threadCount && this.threadExperimentEnabled == widgetHomeModel.threadExperimentEnabled;
+        return m.areEqual(this.selectedChannel, widgetHomeModel.selectedChannel) && m.areEqual(this.selectedVoiceChannel, widgetHomeModel.selectedVoiceChannel) && m.areEqual(this.parentChannel, widgetHomeModel.parentChannel) && m.areEqual(this.dmPresence, widgetHomeModel.dmPresence) && this.unreadCount == widgetHomeModel.unreadCount && this.isFriend == widgetHomeModel.isFriend && this.isCallConnected == widgetHomeModel.isCallConnected && m.areEqual(this.nsfwAllowed, widgetHomeModel.nsfwAllowed) && this.threadCount == widgetHomeModel.threadCount && this.threadExperimentEnabled == widgetHomeModel.threadExperimentEnabled;
     }
 
     public final Channel getChannel() {
@@ -242,7 +242,7 @@ public final /* data */ class WidgetHomeModel {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("WidgetHomeModel(selectedChannel=");
+        StringBuilder sbU = a.U("WidgetHomeModel(selectedChannel=");
         sbU.append(this.selectedChannel);
         sbU.append(", selectedVoiceChannel=");
         sbU.append(this.selectedVoiceChannel);
@@ -261,6 +261,6 @@ public final /* data */ class WidgetHomeModel {
         sbU.append(", threadCount=");
         sbU.append(this.threadCount);
         sbU.append(", threadExperimentEnabled=");
-        return outline.O(sbU, this.threadExperimentEnabled, ")");
+        return a.O(sbU, this.threadExperimentEnabled, ")");
     }
 }

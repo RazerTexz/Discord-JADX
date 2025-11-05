@@ -1,8 +1,8 @@
 package com.discord.widgets.guild_role_subscriptions.entrypoint;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.GuildRoleSubscriptionGroupListing;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelSubscription;
@@ -14,14 +14,14 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreSubscriptions;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils2;
+import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtilsKt;
 import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -32,7 +32,7 @@ import rx.Subscription;
 
 /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppViewModel<ViewState> {
+public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends d0<ViewState> {
     private final StoreConnectivity connectivityStore;
     private final StoreExperiments experimentsStore;
     private final StoreGuildRoleSubscriptions guildRoleSubscriptionsStore;
@@ -118,7 +118,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return this.isConnected == storeState.isConnected && this.isAccessible == storeState.isAccessible && Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.hasUserActiveSubscription, storeState.hasUserActiveSubscription) && Intrinsics3.areEqual(this.guildRoleSubscriptionGroupListingId, storeState.guildRoleSubscriptionGroupListingId);
+            return this.isConnected == storeState.isConnected && this.isAccessible == storeState.isAccessible && m.areEqual(this.guild, storeState.guild) && m.areEqual(this.hasUserActiveSubscription, storeState.hasUserActiveSubscription) && m.areEqual(this.guildRoleSubscriptionGroupListingId, storeState.guildRoleSubscriptionGroupListingId);
         }
 
         public final Guild getGuild() {
@@ -163,7 +163,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(isConnected=");
+            StringBuilder sbU = a.U("StoreState(isConnected=");
             sbU.append(this.isConnected);
             sbU.append(", isAccessible=");
             sbU.append(this.isAccessible);
@@ -172,7 +172,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             sbU.append(", hasUserActiveSubscription=");
             sbU.append(this.hasUserActiveSubscription);
             sbU.append(", guildRoleSubscriptionGroupListingId=");
-            return outline.G(sbU, this.guildRoleSubscriptionGroupListingId, ")");
+            return a.G(sbU, this.guildRoleSubscriptionGroupListingId, ")");
         }
     }
 
@@ -204,7 +204,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(Guild guild) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(guild, "guild");
                 this.guild = guild;
             }
 
@@ -221,13 +221,13 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             }
 
             public final Valid copy(Guild guild) {
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(guild, "guild");
                 return new Valid(guild);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Valid) && Intrinsics3.areEqual(this.guild, ((Valid) other).guild);
+                    return (other instanceof Valid) && m.areEqual(this.guild, ((Valid) other).guild);
                 }
                 return true;
             }
@@ -245,7 +245,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(guild=");
+                StringBuilder sbU = a.U("Valid(guild=");
                 sbU.append(this.guild);
                 sbU.append(")");
                 return sbU.toString();
@@ -262,7 +262,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
 
     /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$observeStoreState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<StoreState> {
+    public static final class AnonymousClass1 extends o implements Function0<StoreState> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -294,7 +294,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             List<ModelSubscription> subscriptions = loaded2 != null ? loaded2.getSubscriptions() : null;
             Long lValueOf = guildRoleSubscriptionGroupListing != null ? Long.valueOf(guildRoleSubscriptionGroupListing.getId()) : null;
             if (subscriptions != null && guildRoleSubscriptionGroupListing != null) {
-                boolValueOf = Boolean.valueOf(GuildRoleSubscriptionUtils2.hasUserActiveSubscriptionFor(guildRoleSubscriptionGroupListing, subscriptions));
+                boolValueOf = Boolean.valueOf(GuildRoleSubscriptionUtilsKt.hasUserActiveSubscriptionFor(guildRoleSubscriptionGroupListing, subscriptions));
             }
             return new StoreState(WidgetGuildRoleSubscriptionEntryPointViewModel.access$getConnectivityStore$p(WidgetGuildRoleSubscriptionEntryPointViewModel.this).isConnected(), GuildRoleSubscriptionsFeatureFlag.INSTANCE.getINSTANCE().canGuildSeePremiumMemberships(this.$guildId), WidgetGuildRoleSubscriptionEntryPointViewModel.access$getGuildsStore$p(WidgetGuildRoleSubscriptionEntryPointViewModel.this).getGuild(this.$guildId), boolValueOf, lValueOf);
         }
@@ -302,7 +302,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
 
     /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$setGuildId$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -315,14 +315,14 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             WidgetGuildRoleSubscriptionEntryPointViewModel.access$setStoreObservableSubscription$p(WidgetGuildRoleSubscriptionEntryPointViewModel.this, subscription);
         }
     }
 
     /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$setGuildId$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -336,7 +336,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetGuildRoleSubscriptionEntryPointViewModel widgetGuildRoleSubscriptionEntryPointViewModel = WidgetGuildRoleSubscriptionEntryPointViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            m.checkNotNullExpressionValue(storeState, "storeState");
             WidgetGuildRoleSubscriptionEntryPointViewModel.access$handleStoreState(widgetGuildRoleSubscriptionEntryPointViewModel, storeState);
         }
     }
@@ -346,7 +346,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
     }
 
     public /* synthetic */ WidgetGuildRoleSubscriptionEntryPointViewModel(StoreConnectivity storeConnectivity, StoreExperiments storeExperiments, StoreGuilds storeGuilds, StoreSubscriptions storeSubscriptions, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? StoreStream.INSTANCE.getConnectivity() : storeConnectivity, (i & 2) != 0 ? StoreStream.INSTANCE.getExperiments() : storeExperiments, (i & 4) != 0 ? StoreStream.INSTANCE.getGuilds() : storeGuilds, (i & 8) != 0 ? StoreStream.INSTANCE.getSubscriptions() : storeSubscriptions, (i & 16) != 0 ? StoreStream.INSTANCE.getGuildRoleSubscriptions() : storeGuildRoleSubscriptions, (i & 32) != 0 ? ObservationDeck4.get() : observationDeck);
+        this((i & 1) != 0 ? StoreStream.INSTANCE.getConnectivity() : storeConnectivity, (i & 2) != 0 ? StoreStream.INSTANCE.getExperiments() : storeExperiments, (i & 4) != 0 ? StoreStream.INSTANCE.getGuilds() : storeGuilds, (i & 8) != 0 ? StoreStream.INSTANCE.getSubscriptions() : storeSubscriptions, (i & 16) != 0 ? StoreStream.INSTANCE.getGuildRoleSubscriptions() : storeGuildRoleSubscriptions, (i & 32) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ StoreConnectivity access$getConnectivityStore$p(WidgetGuildRoleSubscriptionEntryPointViewModel widgetGuildRoleSubscriptionEntryPointViewModel) {
@@ -387,7 +387,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         if (state.getHasUserActiveSubscription() == null || state.getGuildRoleSubscriptionGroupListingId() == null) {
             return;
         }
-        if ((str == null || StringsJVM.isBlank(str)) || this.hasSubmittedAnalytics) {
+        if ((str == null || t.isBlank(str)) || this.hasSubmittedAnalytics) {
             return;
         }
         AnalyticsTracker.guildRoleSubscriptionUpsellOpened$default(AnalyticsTracker.INSTANCE, state.getGuildRoleSubscriptionGroupListingId().longValue(), null, state.getHasUserActiveSubscription().booleanValue(), str, 2, null);
@@ -412,12 +412,12 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         }
         this.guildRoleSubscriptionsStore.fetchGuildRoleSubscriptionGroupsForGuild(id2);
         Observable<StoreState> observableR = observeStoreState(id2).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observeStoreState(id)\n  …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observeStoreState(id)\n  …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetGuildRoleSubscriptionEntryPointViewModel.class, (Context) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 58, (Object) null);
     }
 
     public final void setTrackingSourceLocation(String trackingSourceLocation) {
-        if (!Intrinsics3.areEqual(this.trackingSourceLocation, trackingSourceLocation)) {
+        if (!m.areEqual(this.trackingSourceLocation, trackingSourceLocation)) {
             this.hasSubmittedAnalytics = false;
         }
         this.trackingSourceLocation = trackingSourceLocation;
@@ -426,12 +426,12 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildRoleSubscriptionEntryPointViewModel(StoreConnectivity storeConnectivity, StoreExperiments storeExperiments, StoreGuilds storeGuilds, StoreSubscriptions storeSubscriptions, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions, ObservationDeck observationDeck) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeConnectivity, "connectivityStore");
-        Intrinsics3.checkNotNullParameter(storeExperiments, "experimentsStore");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "guildsStore");
-        Intrinsics3.checkNotNullParameter(storeSubscriptions, "subscriptionsStore");
-        Intrinsics3.checkNotNullParameter(storeGuildRoleSubscriptions, "guildRoleSubscriptionsStore");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeConnectivity, "connectivityStore");
+        m.checkNotNullParameter(storeExperiments, "experimentsStore");
+        m.checkNotNullParameter(storeGuilds, "guildsStore");
+        m.checkNotNullParameter(storeSubscriptions, "subscriptionsStore");
+        m.checkNotNullParameter(storeGuildRoleSubscriptions, "guildRoleSubscriptionsStore");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.connectivityStore = storeConnectivity;
         this.experimentsStore = storeExperiments;
         this.guildsStore = storeGuilds;

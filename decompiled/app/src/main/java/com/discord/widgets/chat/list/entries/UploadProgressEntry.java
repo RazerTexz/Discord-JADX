@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: UploadProgressEntry.kt */
 /* loaded from: classes2.dex */
@@ -13,7 +13,7 @@ public final /* data */ class UploadProgressEntry extends ChatListEntry {
     private final int type;
 
     public UploadProgressEntry(String str, long j) {
-        Intrinsics3.checkNotNullParameter(str, "messageNonce");
+        m.checkNotNullParameter(str, "messageNonce");
         this.messageNonce = str;
         this.channelId = j;
         this.type = 6;
@@ -41,7 +41,7 @@ public final /* data */ class UploadProgressEntry extends ChatListEntry {
     }
 
     public final UploadProgressEntry copy(String messageNonce, long channelId) {
-        Intrinsics3.checkNotNullParameter(messageNonce, "messageNonce");
+        m.checkNotNullParameter(messageNonce, "messageNonce");
         return new UploadProgressEntry(messageNonce, channelId);
     }
 
@@ -53,7 +53,7 @@ public final /* data */ class UploadProgressEntry extends ChatListEntry {
             return false;
         }
         UploadProgressEntry uploadProgressEntry = (UploadProgressEntry) other;
-        return Intrinsics3.areEqual(this.messageNonce, uploadProgressEntry.messageNonce) && this.channelId == uploadProgressEntry.channelId;
+        return m.areEqual(this.messageNonce, uploadProgressEntry.messageNonce) && this.channelId == uploadProgressEntry.channelId;
     }
 
     public final long getChannelId() {
@@ -80,9 +80,9 @@ public final /* data */ class UploadProgressEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("UploadProgressEntry(messageNonce=");
+        StringBuilder sbU = a.U("UploadProgressEntry(messageNonce=");
         sbU.append(this.messageNonce);
         sbU.append(", channelId=");
-        return outline.C(sbU, this.channelId, ")");
+        return a.C(sbU, this.channelId, ")");
     }
 }

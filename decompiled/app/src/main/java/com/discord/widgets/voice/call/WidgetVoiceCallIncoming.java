@@ -17,7 +17,7 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.app.AppActivity;
@@ -35,12 +35,12 @@ import com.discord.utilities.media.AppSound;
 import com.discord.utilities.media.AppSoundManager;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.user.calls.PrivateCallLauncher;
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreen;
 import com.discord.widgets.voice.model.CallModel;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
@@ -55,7 +55,7 @@ import rx.functions.Func0;
 /* compiled from: WidgetVoiceCallIncoming.kt */
 /* loaded from: classes.dex */
 public class WidgetVoiceCallIncoming extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetVoiceCallIncoming.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceCallIncomingBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetVoiceCallIncoming.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceCallIncomingBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -75,10 +75,10 @@ public class WidgetVoiceCallIncoming extends AppFragment {
             }
 
             public final Observable<Model> get() {
-                Observable<R> observableY = StoreStream.INSTANCE.getCallsIncoming().observeIncoming().Y(WidgetVoiceCallIncoming2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
+                Observable<R> observableY = StoreStream.INSTANCE.getCallsIncoming().observeIncoming().Y(WidgetVoiceCallIncoming$Model$Companion$get$1.INSTANCE);
+                m.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
                 Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -88,8 +88,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
 
         public Model(CallModel callModel, List<StoreVoiceParticipants.VoiceUser> list, int i) {
-            Intrinsics3.checkNotNullParameter(callModel, "callModel");
-            Intrinsics3.checkNotNullParameter(list, "privateCallUserListItems");
+            m.checkNotNullParameter(callModel, "callModel");
+            m.checkNotNullParameter(list, "privateCallUserListItems");
             this.callModel = callModel;
             this.privateCallUserListItems = list;
             this.numIncomingCalls = i;
@@ -124,8 +124,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
 
         public final Model copy(CallModel callModel, List<StoreVoiceParticipants.VoiceUser> privateCallUserListItems, int numIncomingCalls) {
-            Intrinsics3.checkNotNullParameter(callModel, "callModel");
-            Intrinsics3.checkNotNullParameter(privateCallUserListItems, "privateCallUserListItems");
+            m.checkNotNullParameter(callModel, "callModel");
+            m.checkNotNullParameter(privateCallUserListItems, "privateCallUserListItems");
             return new Model(callModel, privateCallUserListItems, numIncomingCalls);
         }
 
@@ -137,7 +137,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.callModel, model.callModel) && Intrinsics3.areEqual(this.privateCallUserListItems, model.privateCallUserListItems) && this.numIncomingCalls == model.numIncomingCalls;
+            return m.areEqual(this.callModel, model.callModel) && m.areEqual(this.privateCallUserListItems, model.privateCallUserListItems) && this.numIncomingCalls == model.numIncomingCalls;
         }
 
         public final CallModel getCallModel() {
@@ -164,12 +164,12 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(callModel=");
+            StringBuilder sbU = a.U("Model(callModel=");
             sbU.append(this.callModel);
             sbU.append(", privateCallUserListItems=");
             sbU.append(this.privateCallUserListItems);
             sbU.append(", numIncomingCalls=");
-            return outline.B(sbU, this.numIncomingCalls, ")");
+            return a.B(sbU, this.numIncomingCalls, ")");
         }
     }
 
@@ -187,7 +187,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
 
         @Override // com.discord.widgets.voice.call.WidgetVoiceCallIncoming
         public void onConnect(Model model, boolean useVideo) {
-            Intrinsics3.checkNotNullParameter(model, "model");
+            m.checkNotNullParameter(model, "model");
             NotificationClient.clear$default(NotificationClient.INSTANCE, model.getChannelId(), requireContext(), false, 4, null);
             DiscordConnectService.INSTANCE.b(requireContext(), model.getChannelId());
             WidgetCallFullscreen.Companion.launch$default(WidgetCallFullscreen.INSTANCE, requireContext(), model.getChannelId(), false, null, null, 28, null);
@@ -221,11 +221,11 @@ public class WidgetVoiceCallIncoming extends AppFragment {
 
         @Override // com.discord.app.AppFragment, androidx.fragment.app.Fragment
         public void onViewCreated(View view, Bundle savedInstanceState) {
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(view, "view");
             super.onViewCreated(view, savedInstanceState);
             Observable<Long> observableD0 = Observable.d0(15L, TimeUnit.SECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable.timer(15, TimeUnit.SECONDS)");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), SystemCallIncoming.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new WidgetVoiceCallIncoming3(this), 62, (Object) null);
+            m.checkNotNullExpressionValue(observableD0, "Observable.timer(15, TimeUnit.SECONDS)");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), SystemCallIncoming.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new WidgetVoiceCallIncoming$SystemCallIncoming$onViewCreated$1(this), 62, (Object) null);
         }
     }
 
@@ -308,7 +308,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
 
     /* compiled from: WidgetVoiceCallIncoming.kt */
     /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
         public AnonymousClass1(WidgetVoiceCallIncoming widgetVoiceCallIncoming) {
             super(1, widgetVoiceCallIncoming, WidgetVoiceCallIncoming.class, "configureUI", "configureUI(Lcom/discord/widgets/voice/call/WidgetVoiceCallIncoming$Model;)V", 0);
         }
@@ -327,7 +327,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
 
     public WidgetVoiceCallIncoming() {
         super(R.layout.widget_voice_call_incoming);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetVoiceCallIncoming4.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetVoiceCallIncoming$binding$2.INSTANCE, null, 2, null);
     }
 
     private final WidgetVoiceCallIncomingBinding getBinding() {
@@ -346,7 +346,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         AppFragment.setOnBackPressed$default(this, new AnonymousClass1(model), 0, 2, null);
         AppSoundManager.Provider.INSTANCE.get().play(AppSound.INSTANCE.getSOUND_CALL_RINGING());
         TextView textView = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.incomingCallStatusPrimary");
+        m.checkNotNullExpressionValue(textView, "binding.incomingCallStatusPrimary");
         if (ChannelUtils.z(callModel.getChannel())) {
             username = ChannelUtils.c(callModel.getChannel());
         } else {
@@ -360,7 +360,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         getBinding().i.configure(listComponent2);
         getBinding().e.configure(listComponent2);
         LinearLayout linearLayout = getBinding().f2700b;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.incomingCallAcceptAltContainer");
+        m.checkNotNullExpressionValue(linearLayout, "binding.incomingCallAcceptAltContainer");
         linearLayout.setVisibility(callModel.getIsVideoCall() ? 0 : 8);
         getBinding().d.setOnClickListener(new AnonymousClass2(model));
         getBinding().c.setOnClickListener(new AnonymousClass3(model));
@@ -368,12 +368,12 @@ public class WidgetVoiceCallIncoming extends AppFragment {
     }
 
     public void onConnect(Model model, boolean useVideo) {
-        Intrinsics3.checkNotNullParameter(model, "model");
+        m.checkNotNullParameter(model, "model");
         long channelId = model.getChannelId();
         if (model.getNumIncomingCalls() == 1) {
             Context contextRequireContext = requireContext();
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             PrivateCallLauncher privateCallLauncher = new PrivateCallLauncher(this, this, contextRequireContext, parentFragmentManager);
             if (useVideo) {
                 privateCallLauncher.launchVideoCall(channelId);
@@ -410,13 +410,13 @@ public class WidgetVoiceCallIncoming extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         FragmentActivity fragmentActivityRequireActivity = requireActivity();
-        Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+        m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
         Window window = fragmentActivityRequireActivity.getWindow();
-        Intrinsics3.checkNotNullExpressionValue(window, "requireActivity().window");
-        Intrinsics3.checkNotNullParameter(window, "window");
+        m.checkNotNullExpressionValue(window, "requireActivity().window");
+        m.checkNotNullParameter(window, "window");
         if (Build.VERSION.SDK_INT >= 28) {
             window.getAttributes().layoutInDisplayCutoutMode = 1;
         }

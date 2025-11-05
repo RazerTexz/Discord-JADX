@@ -9,9 +9,9 @@ import b.i.a.f.h.c.o;
 
 /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
 /* loaded from: classes3.dex */
-public final class h extends a.AbstractC0035a<o, a.C0033a> {
-    @Override // b.i.a.f.e.h.a.AbstractC0035a
-    public final /* synthetic */ a.f a(Context context, Looper looper, b.i.a.f.e.k.c cVar, a.C0033a c0033a, c.a aVar, c.b bVar) {
-        return new o(context, looper, cVar, c0033a, aVar, bVar);
+public final class h extends a.AbstractC0112a<o, a.C0110a> {
+    @Override // b.i.a.f.e.h.a.AbstractC0112a
+    public final /* synthetic */ a.f a(Context context, Looper looper, b.i.a.f.e.k.c cVar, a.C0110a c0110a, c.a aVar, c.b bVar) {
+        return new o(context, looper, cVar, c0110a, aVar, bVar);
     }
 }

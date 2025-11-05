@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
-import b.d.b.a.outline;
 import com.google.android.gms.cloudmessaging.CloudMessage;
 import com.google.android.gms.tasks.Task;
 import java.util.concurrent.ExecutionException;
@@ -99,7 +98,7 @@ public abstract class a extends BroadcastReceiver {
             b.i.a.f.e.o.f.k(taskB, TimeUnit.SECONDS.toMillis(1L), TimeUnit.MILLISECONDS);
         } catch (InterruptedException | ExecutionException | TimeoutException e2) {
             String strValueOf = String.valueOf(e2);
-            outline.h0(strValueOf.length() + 20, "Message ack failed: ", strValueOf, "CloudMessagingReceiver");
+            b.d.b.a.a.h0(strValueOf.length() + 20, "Message ack failed: ", strValueOf, "CloudMessagingReceiver");
         }
         return iIntValue;
     }

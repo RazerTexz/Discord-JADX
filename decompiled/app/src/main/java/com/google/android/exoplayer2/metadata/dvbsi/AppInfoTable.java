@@ -2,9 +2,8 @@ package com.google.android.exoplayer2.metadata.dvbsi;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.z2.Metadata2;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.Objects;
 
@@ -39,13 +38,13 @@ public final class AppInfoTable implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(MediaMetadata.b bVar) {
-        Metadata2.c(this, bVar);
+    public /* synthetic */ void n(p1.b bVar) {
+        b.i.a.c.z2.a.c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     public /* synthetic */ byte[] o0() {
-        return Metadata2.a(this);
+        return b.i.a.c.z2.a.a(this);
     }
 
     public String toString() {
@@ -67,7 +66,7 @@ public final class AppInfoTable implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ Format2 y() {
-        return Metadata2.b(this);
+    public /* synthetic */ j1 y() {
+        return b.i.a.c.z2.a.b(this);
     }
 }

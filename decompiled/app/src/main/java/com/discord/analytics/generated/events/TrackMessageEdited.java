@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackMessageEdited.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMessageEdited implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackMessageEdited implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long messageId = null;
     private final Long messageType = null;
@@ -62,7 +62,7 @@ public final /* data */ class TrackMessageEdited implements AnalyticsSchema, Tra
             return false;
         }
         TrackMessageEdited trackMessageEdited = (TrackMessageEdited) other;
-        return Intrinsics3.areEqual(this.messageId, trackMessageEdited.messageId) && Intrinsics3.areEqual(this.messageType, trackMessageEdited.messageType) && Intrinsics3.areEqual(this.channel, trackMessageEdited.channel) && Intrinsics3.areEqual(this.channelType, trackMessageEdited.channelType) && Intrinsics3.areEqual(this.private, trackMessageEdited.private) && Intrinsics3.areEqual(this.server, trackMessageEdited.server) && Intrinsics3.areEqual(this.numAttachments, trackMessageEdited.numAttachments) && Intrinsics3.areEqual(this.maxAttachmentSize, trackMessageEdited.maxAttachmentSize) && Intrinsics3.areEqual(this.recipientIds, trackMessageEdited.recipientIds) && Intrinsics3.areEqual(this.mentionIds, trackMessageEdited.mentionIds) && Intrinsics3.areEqual(this.length, trackMessageEdited.length) && Intrinsics3.areEqual(this.wordCount, trackMessageEdited.wordCount) && Intrinsics3.areEqual(this.emojiUnicode, trackMessageEdited.emojiUnicode) && Intrinsics3.areEqual(this.emojiCustom, trackMessageEdited.emojiCustom) && Intrinsics3.areEqual(this.emojiCustomExternal, trackMessageEdited.emojiCustomExternal) && Intrinsics3.areEqual(this.emojiManaged, trackMessageEdited.emojiManaged) && Intrinsics3.areEqual(this.emojiManagedExternal, trackMessageEdited.emojiManagedExternal) && Intrinsics3.areEqual(this.emojiAnimated, trackMessageEdited.emojiAnimated) && Intrinsics3.areEqual(this.emojiOnly, trackMessageEdited.emojiOnly) && Intrinsics3.areEqual(this.numEmbeds, trackMessageEdited.numEmbeds) && Intrinsics3.areEqual(this.clientApplicationId, trackMessageEdited.clientApplicationId) && Intrinsics3.areEqual(this.applicationId, trackMessageEdited.applicationId) && Intrinsics3.areEqual(this.attachmentIds, trackMessageEdited.attachmentIds) && Intrinsics3.areEqual(this.activityAction, trackMessageEdited.activityAction) && Intrinsics3.areEqual(this.activityPartyPlatform, trackMessageEdited.activityPartyPlatform) && Intrinsics3.areEqual(this.hasSpoiler, trackMessageEdited.hasSpoiler) && Intrinsics3.areEqual(this.probablyHasMarkdown, trackMessageEdited.probablyHasMarkdown) && Intrinsics3.areEqual(this.referenceMessageId, trackMessageEdited.referenceMessageId) && Intrinsics3.areEqual(this.referenceMessageChannel, trackMessageEdited.referenceMessageChannel) && Intrinsics3.areEqual(this.referenceMessageGuild, trackMessageEdited.referenceMessageGuild) && Intrinsics3.areEqual(this.replyAgeSeconds, trackMessageEdited.replyAgeSeconds) && Intrinsics3.areEqual(this.stickerIds, trackMessageEdited.stickerIds) && Intrinsics3.areEqual(this.numUrls, trackMessageEdited.numUrls) && Intrinsics3.areEqual(this.numMentions, trackMessageEdited.numMentions) && Intrinsics3.areEqual(this.mentionRoleIds, trackMessageEdited.mentionRoleIds);
+        return m.areEqual(this.messageId, trackMessageEdited.messageId) && m.areEqual(this.messageType, trackMessageEdited.messageType) && m.areEqual(this.channel, trackMessageEdited.channel) && m.areEqual(this.channelType, trackMessageEdited.channelType) && m.areEqual(this.private, trackMessageEdited.private) && m.areEqual(this.server, trackMessageEdited.server) && m.areEqual(this.numAttachments, trackMessageEdited.numAttachments) && m.areEqual(this.maxAttachmentSize, trackMessageEdited.maxAttachmentSize) && m.areEqual(this.recipientIds, trackMessageEdited.recipientIds) && m.areEqual(this.mentionIds, trackMessageEdited.mentionIds) && m.areEqual(this.length, trackMessageEdited.length) && m.areEqual(this.wordCount, trackMessageEdited.wordCount) && m.areEqual(this.emojiUnicode, trackMessageEdited.emojiUnicode) && m.areEqual(this.emojiCustom, trackMessageEdited.emojiCustom) && m.areEqual(this.emojiCustomExternal, trackMessageEdited.emojiCustomExternal) && m.areEqual(this.emojiManaged, trackMessageEdited.emojiManaged) && m.areEqual(this.emojiManagedExternal, trackMessageEdited.emojiManagedExternal) && m.areEqual(this.emojiAnimated, trackMessageEdited.emojiAnimated) && m.areEqual(this.emojiOnly, trackMessageEdited.emojiOnly) && m.areEqual(this.numEmbeds, trackMessageEdited.numEmbeds) && m.areEqual(this.clientApplicationId, trackMessageEdited.clientApplicationId) && m.areEqual(this.applicationId, trackMessageEdited.applicationId) && m.areEqual(this.attachmentIds, trackMessageEdited.attachmentIds) && m.areEqual(this.activityAction, trackMessageEdited.activityAction) && m.areEqual(this.activityPartyPlatform, trackMessageEdited.activityPartyPlatform) && m.areEqual(this.hasSpoiler, trackMessageEdited.hasSpoiler) && m.areEqual(this.probablyHasMarkdown, trackMessageEdited.probablyHasMarkdown) && m.areEqual(this.referenceMessageId, trackMessageEdited.referenceMessageId) && m.areEqual(this.referenceMessageChannel, trackMessageEdited.referenceMessageChannel) && m.areEqual(this.referenceMessageGuild, trackMessageEdited.referenceMessageGuild) && m.areEqual(this.replyAgeSeconds, trackMessageEdited.replyAgeSeconds) && m.areEqual(this.stickerIds, trackMessageEdited.stickerIds) && m.areEqual(this.numUrls, trackMessageEdited.numUrls) && m.areEqual(this.numMentions, trackMessageEdited.numMentions) && m.areEqual(this.mentionRoleIds, trackMessageEdited.mentionRoleIds);
     }
 
     public int hashCode() {
@@ -139,7 +139,7 @@ public final /* data */ class TrackMessageEdited implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackMessageEdited(messageId=");
+        StringBuilder sbU = a.U("TrackMessageEdited(messageId=");
         sbU.append(this.messageId);
         sbU.append(", messageType=");
         sbU.append(this.messageType);
@@ -208,6 +208,6 @@ public final /* data */ class TrackMessageEdited implements AnalyticsSchema, Tra
         sbU.append(", numMentions=");
         sbU.append(this.numMentions);
         sbU.append(", mentionRoleIds=");
-        return outline.L(sbU, this.mentionRoleIds, ")");
+        return a.L(sbU, this.mentionRoleIds, ")");
     }
 }

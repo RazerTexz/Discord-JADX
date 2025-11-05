@@ -12,10 +12,8 @@ import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppToast;
-import b.a.d.o;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppLog;
@@ -35,15 +33,15 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.captcha.WidgetCaptcha;
-import com.discord.widgets.captcha.WidgetCaptcha4;
+import com.discord.widgets.captcha.WidgetCaptchaKt;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g0.StringNumberConversions;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.s;
+import d0.g0.t;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -57,7 +55,7 @@ import rx.functions.Action1;
 /* compiled from: WidgetFriendsAddById.kt */
 /* loaded from: classes2.dex */
 public final class WidgetFriendsAddById extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetFriendsAddById.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsAddByIdBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetFriendsAddById.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsAddByIdBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -76,7 +74,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             private final String username;
 
             public UserNameDiscriminator(String str, Integer num) {
-                Intrinsics3.checkNotNullParameter(str, "username");
+                m.checkNotNullParameter(str, "username");
                 this.username = str;
                 this.discriminator = num;
             }
@@ -102,7 +100,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             }
 
             public final UserNameDiscriminator copy(String username, Integer discriminator) {
-                Intrinsics3.checkNotNullParameter(username, "username");
+                m.checkNotNullParameter(username, "username");
                 return new UserNameDiscriminator(username, discriminator);
             }
 
@@ -114,7 +112,7 @@ public final class WidgetFriendsAddById extends AppFragment {
                     return false;
                 }
                 UserNameDiscriminator userNameDiscriminator = (UserNameDiscriminator) other;
-                return Intrinsics3.areEqual(this.username, userNameDiscriminator.username) && Intrinsics3.areEqual(this.discriminator, userNameDiscriminator.discriminator);
+                return m.areEqual(this.username, userNameDiscriminator.username) && m.areEqual(this.discriminator, userNameDiscriminator.discriminator);
             }
 
             public final Integer getDiscriminator() {
@@ -133,10 +131,10 @@ public final class WidgetFriendsAddById extends AppFragment {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("UserNameDiscriminator(username=");
+                StringBuilder sbU = a.U("UserNameDiscriminator(username=");
                 sbU.append(this.username);
                 sbU.append(", discriminator=");
-                return outline.F(sbU, this.discriminator, ")");
+                return a.F(sbU, this.discriminator, ")");
             }
         }
 
@@ -150,7 +148,7 @@ public final class WidgetFriendsAddById extends AppFragment {
         private final UserNameDiscriminator extractUsernameAndDiscriminator(CharSequence source) {
             List<String> groupValues;
             MatchResult matchResultMatchEntire = WidgetFriendsAddById.access$getPATTERN_USERNAME$cp().matchEntire(source);
-            return (matchResultMatchEntire == null || (groupValues = matchResultMatchEntire.getGroupValues()) == null || !(groupValues.isEmpty() ^ true)) ? new UserNameDiscriminator(source.toString(), null) : new UserNameDiscriminator(matchResultMatchEntire.getGroupValues().get(1), StringNumberConversions.toIntOrNull(matchResultMatchEntire.getGroupValues().get(2)));
+            return (matchResultMatchEntire == null || (groupValues = matchResultMatchEntire.getGroupValues()) == null || !(groupValues.isEmpty() ^ true)) ? new UserNameDiscriminator(source.toString(), null) : new UserNameDiscriminator(matchResultMatchEntire.getGroupValues().get(1), s.toIntOrNull(matchResultMatchEntire.getGroupValues().get(2)));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -172,7 +170,7 @@ public final class WidgetFriendsAddById extends AppFragment {
 
     /* compiled from: WidgetFriendsAddById.kt */
     /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Editable, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Editable, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -185,21 +183,21 @@ public final class WidgetFriendsAddById extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
-            Intrinsics3.checkNotNullParameter(editable, "editable");
+            m.checkNotNullParameter(editable, "editable");
             try {
                 boolean z2 = true;
                 if (editable.length() == 0) {
                     WidgetFriendsAddById.access$setInputEditError(WidgetFriendsAddById.this, null);
                 }
                 MaterialButton materialButton = WidgetFriendsAddById.access$getBinding$p(WidgetFriendsAddById.this).d;
-                Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.friendsAddSend");
+                m.checkNotNullExpressionValue(materialButton, "binding.friendsAddSend");
                 if (editable.length() <= 0) {
                     z2 = false;
                 }
                 materialButton.setEnabled(z2);
             } catch (Exception unused) {
                 AppLog appLog = AppLog.g;
-                StringBuilder sbU = outline.U("Detached: ");
+                StringBuilder sbU = a.U("Detached: ");
                 sbU.append(WidgetFriendsAddById.this.isDetached());
                 sbU.append(" Visible: ");
                 sbU.append(WidgetFriendsAddById.this.isVisible());
@@ -210,7 +208,7 @@ public final class WidgetFriendsAddById extends AppFragment {
 
     /* compiled from: WidgetFriendsAddById.kt */
     /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<TextView, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<TextView, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -223,7 +221,7 @@ public final class WidgetFriendsAddById extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            Intrinsics3.checkNotNullParameter(textView, "it");
+            m.checkNotNullParameter(textView, "it");
             WidgetFriendsAddById.extractTargetAndSendFriendRequest$default(WidgetFriendsAddById.this, null, 1, null);
             AppFragment.hideKeyboard$default(WidgetFriendsAddById.this, null, 1, null);
         }
@@ -259,9 +257,9 @@ public final class WidgetFriendsAddById extends AppFragment {
         public final void call2(Void r8) {
             Context context = WidgetFriendsAddById.this.getContext();
             Context context2 = WidgetFriendsAddById.this.getContext();
-            AppToast.h(context, context2 != null ? FormatUtils.h(context2, R.string.add_friend_confirmation, new Object[]{this.$username}, null, 4) : null, 0, null, 12);
+            b.a.d.m.h(context, context2 != null ? b.h(context2, R.string.add_friend_confirmation, new Object[]{this.$username}, null, 4) : null, 0, null, 12);
             TextInputLayout textInputLayout = WidgetFriendsAddById.access$getBinding$p(WidgetFriendsAddById.this).e;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
             ViewExtensions.clear(textInputLayout);
             AppFragment.hideKeyboard$default(WidgetFriendsAddById.this, null, 1, null);
         }
@@ -275,7 +273,7 @@ public final class WidgetFriendsAddById extends AppFragment {
 
         /* compiled from: WidgetFriendsAddById.kt */
         /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -293,11 +291,11 @@ public final class WidgetFriendsAddById extends AppFragment {
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Error error = this.$error;
-                Intrinsics3.checkNotNullExpressionValue(error, "error");
-                if (WidgetCaptcha4.isCaptchaError(error)) {
+                m.checkNotNullExpressionValue(error, "error");
+                if (WidgetCaptchaKt.isCaptchaError(error)) {
                     WidgetFriendsAddById widgetFriendsAddById = WidgetFriendsAddById.this;
                     Error error2 = this.$error;
-                    Intrinsics3.checkNotNullExpressionValue(error2, "error");
+                    m.checkNotNullExpressionValue(error2, "error");
                     WidgetFriendsAddById.access$launchCaptchaFlow(widgetFriendsAddById, error2);
                     return;
                 }
@@ -305,9 +303,9 @@ public final class WidgetFriendsAddById extends AppFragment {
                 RestAPIAbortMessages.ResponseResolver responseResolver = RestAPIAbortMessages.ResponseResolver.INSTANCE;
                 Context context = WidgetFriendsAddById.this.getContext();
                 Error error3 = this.$error;
-                Intrinsics3.checkNotNullExpressionValue(error3, "error");
+                m.checkNotNullExpressionValue(error3, "error");
                 Error.Response response = error3.getResponse();
-                Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+                m.checkNotNullExpressionValue(response, "error.response");
                 WidgetFriendsAddById.access$setInputEditError(WidgetFriendsAddById.this, String.valueOf(responseResolver.getRelationshipResponse(context, response.getCode(), AnonymousClass2.this.$username + UserUtils.INSTANCE.padDiscriminator(AnonymousClass2.this.$discriminator))));
             }
         }
@@ -325,15 +323,15 @@ public final class WidgetFriendsAddById extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             RestAPIAbortMessages restAPIAbortMessages = RestAPIAbortMessages.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(error, "error");
+            m.checkNotNullExpressionValue(error, "error");
             RestAPIAbortMessages.handleAbortCodeOrDefault$default(restAPIAbortMessages, error, new AnonymousClass1(error), null, 4, null);
         }
     }
 
     public WidgetFriendsAddById() {
         super(R.layout.widget_friends_add_by_id);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetFriendsAddById2.INSTANCE, null, 2, null);
-        this.captchaLauncher = WidgetCaptcha.INSTANCE.registerForResult(this, new WidgetFriendsAddById3(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetFriendsAddById$binding$2.INSTANCE, null, 2, null);
+        this.captchaLauncher = WidgetCaptcha.INSTANCE.registerForResult(this, new WidgetFriendsAddById$captchaLauncher$1(this));
     }
 
     public static final /* synthetic */ void access$extractTargetAndSendFriendRequest(WidgetFriendsAddById widgetFriendsAddById, CaptchaHelper.CaptchaPayload captchaPayload) {
@@ -358,7 +356,7 @@ public final class WidgetFriendsAddById extends AppFragment {
 
     private final void extractTargetAndSendFriendRequest(CaptchaHelper.CaptchaPayload captchaPayload) {
         TextInputLayout textInputLayout = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
         String textOrEmpty = ViewExtensions.getTextOrEmpty(textInputLayout);
         Companion.UserNameDiscriminator userNameDiscriminatorAccess$extractUsernameAndDiscriminator = Companion.access$extractUsernameAndDiscriminator(INSTANCE, textOrEmpty);
         if (userNameDiscriminatorAccess$extractUsernameAndDiscriminator.getDiscriminator() != null) {
@@ -366,7 +364,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             return;
         }
         Context context = getContext();
-        setInputEditError(context != null ? FormatUtils.h(context, R.string.add_friend_error_username_only, new Object[]{userNameDiscriminatorAccess$extractUsernameAndDiscriminator.getUsername()}, null, 4) : null);
+        setInputEditError(context != null ? b.h(context, R.string.add_friend_error_username_only, new Object[]{userNameDiscriminatorAccess$extractUsernameAndDiscriminator.getUsername()}, null, 4) : null);
         AnalyticsTracker.INSTANCE.friendRequestFailed(textOrEmpty, userNameDiscriminatorAccess$extractUsernameAndDiscriminator.getUsername(), userNameDiscriminatorAccess$extractUsernameAndDiscriminator.getDiscriminator(), "Invalid Username");
     }
 
@@ -383,9 +381,9 @@ public final class WidgetFriendsAddById extends AppFragment {
 
     private final SpannableStringBuilder getUsernameIndicatorText(User user) {
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         UserUtils userUtils = UserUtils.INSTANCE;
-        CharSequence charSequenceI = FormatUtils.i(resources, R.string.self_username_indicator, new Object[]{UserUtils.getUserNameWithDiscriminator$default(userUtils, user, null, null, 3, null)}, null, 4);
+        CharSequence charSequenceI = b.i(resources, R.string.self_username_indicator, new Object[]{UserUtils.getUserNameWithDiscriminator$default(userUtils, user, null, null, 3, null)}, null, 4);
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(charSequenceI);
         SpannableStringBuilder spannableStringBuilder2 = (SpannableStringBuilder) charSequenceI;
         spannableStringBuilder.setSpan(new ForegroundColorSpan(ColorCompat.getThemedColor(requireContext(), R.attr.colorHeaderPrimary)), spannableStringBuilder2.length() - UserUtils.getUserNameWithDiscriminator$default(userUtils, user, null, null, 3, null).length(), spannableStringBuilder2.length(), 33);
@@ -397,7 +395,7 @@ public final class WidgetFriendsAddById extends AppFragment {
     }
 
     private final void sendFriendRequest(String username, int discriminator, CaptchaHelper.CaptchaPayload captchaPayload) {
-        ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.getApi().sendRelationshipRequest("Search - Add Friend Search", username, discriminator, captchaPayload), this, null, 2, null).k(o.h(new AnonymousClass1(username), getAppActivity(), new AnonymousClass2(username, discriminator)));
+        ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.getApi().sendRelationshipRequest("Search - Add Friend Search", username, discriminator, captchaPayload), this, null, 2, null).k(b.a.d.o.h(new AnonymousClass1(username), getAppActivity(), new AnonymousClass2(username, discriminator)));
     }
 
     public static /* synthetic */ void sendFriendRequest$default(WidgetFriendsAddById widgetFriendsAddById, String str, int i, CaptchaHelper.CaptchaPayload captchaPayload, int i2, Object obj) {
@@ -409,22 +407,22 @@ public final class WidgetFriendsAddById extends AppFragment {
 
     private final void setInputEditError(CharSequence error) {
         TextInputLayout textInputLayout = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
         textInputLayout.setError(error);
         TextInputLayout textInputLayout2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.friendsAddTextEditWrap");
-        textInputLayout2.setErrorEnabled(!(error == null || StringsJVM.isBlank(error)));
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.friendsAddTextEditWrap");
+        textInputLayout2.setErrorEnabled(!(error == null || t.isBlank(error)));
     }
 
     private final void setInputText(String text) {
-        if (text == null || StringsJVM.isBlank(text)) {
+        if (text == null || t.isBlank(text)) {
             return;
         }
         TextInputLayout textInputLayout = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
         ViewExtensions.setText(textInputLayout, text);
         TextInputLayout textInputLayout2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.friendsAddTextEditWrap");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.friendsAddTextEditWrap");
         ViewExtensions.setSelectionEnd(textInputLayout2);
     }
 
@@ -448,24 +446,24 @@ public final class WidgetFriendsAddById extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         getBinding().d.setOnClickListener(new AnonymousClass1());
         TextInputLayout textInputLayout = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.friendsAddTextEditWrap");
         ViewExtensions.addBindedTextWatcher(textInputLayout, this, new AnonymousClass2());
         TextInputLayout textInputLayout2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.friendsAddTextEditWrap");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.friendsAddTextEditWrap");
         ViewExtensions.setOnImeActionDone$default(textInputLayout2, false, new AnonymousClass3(), 1, null);
         getBinding().c.setOnClickListener(new AnonymousClass4());
         Bundle extras = getMostRecentIntent().getExtras();
         setInputText(extras != null ? extras.getString("android.intent.extra.TEXT") : null);
         MeUser meSnapshot = StoreStream.INSTANCE.getUsers().getMeSnapshot();
         TextView textView = getBinding().f2391b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.friendAddUsernameIndicator");
+        m.checkNotNullExpressionValue(textView, "binding.friendAddUsernameIndicator");
         textView.setVisibility(0);
         TextView textView2 = getBinding().f2391b;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.friendAddUsernameIndicator");
+        m.checkNotNullExpressionValue(textView2, "binding.friendAddUsernameIndicator");
         textView2.setText(getUsernameIndicatorText(meSnapshot));
     }
 }

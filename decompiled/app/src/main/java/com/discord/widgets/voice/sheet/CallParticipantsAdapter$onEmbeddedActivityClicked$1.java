@@ -1,12 +1,12 @@
 package com.discord.widgets.voice.sheet;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: CallParticipantsAdapter.kt */
 /* loaded from: classes.dex */
-public final class CallParticipantsAdapter$onEmbeddedActivityClicked$1 extends Lambda implements Function0<Unit> {
+public final class CallParticipantsAdapter$onEmbeddedActivityClicked$1 extends o implements Function0<Unit> {
     public static final CallParticipantsAdapter$onEmbeddedActivityClicked$1 INSTANCE = new CallParticipantsAdapter$onEmbeddedActivityClicked$1();
 
     public CallParticipantsAdapter$onEmbeddedActivityClicked$1() {

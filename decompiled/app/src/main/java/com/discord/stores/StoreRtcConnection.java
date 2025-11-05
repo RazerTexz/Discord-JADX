@@ -5,8 +5,8 @@ import android.content.Context;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
 import b.a.q.w;
-import b.d.b.a.outline;
-import co.discord.media_engine.DeviceDescription4;
+import b.d.b.a.a;
+import co.discord.media_engine.VideoInputDeviceDescription;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.stageinstance.StageInstance;
@@ -14,7 +14,7 @@ import com.discord.api.voice.server.VoiceServer;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.app.App;
 import com.discord.app.AppLog;
-import com.discord.gateway.io.Outgoing2;
+import com.discord.gateway.io.OutgoingPayload;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelPayload;
 import com.discord.models.experiments.domain.Experiment;
@@ -26,10 +26,10 @@ import com.discord.stores.StoreMediaSettings;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.collections.ListenerCollection;
-import com.discord.utilities.collections.ListenerCollection2;
+import com.discord.utilities.collections.ListenerCollectionSubject;
+import com.discord.utilities.debug.DebugPrintBuilder;
 import com.discord.utilities.debug.DebugPrintable;
-import com.discord.utilities.debug.DebugPrintable2;
-import com.discord.utilities.debug.DebugPrintable3;
+import com.discord.utilities.debug.DebugPrintableCollection;
 import com.discord.utilities.io.NetworkUtils;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.networking.NetworkMonitor;
@@ -39,10 +39,9 @@ import com.discord.utilities.systemlog.SystemLogUtils;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,13 +66,13 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
     private final Observable<RtcConnection.StateChange> connectionState;
     private final SerializedSubject<RtcConnection.StateChange, RtcConnection.StateChange> connectionStateSubject;
     private Context context;
-    private Outgoing2.VoiceStateUpdate currentVoiceState;
+    private OutgoingPayload.VoiceStateUpdate currentVoiceState;
     private final long debugDisplayId;
     private final Dispatcher dispatcher;
-    private final DebugPrintable3 dpc;
+    private final DebugPrintableCollection dpc;
     private boolean hasSelectedVoiceChannel;
     private Long joinedChannelTimestamp;
-    private final ListenerCollection2<Listener> listenerSubject;
+    private final ListenerCollectionSubject<Listener> listenerSubject;
     private final ListenerCollection<Listener> listeners;
     private final Logger logger;
     private final String loggingTag;
@@ -91,7 +90,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
     private final StoreRtcRegion storeRtcRegion;
     private final StoreVoiceStates storeVoiceStates;
     private final StoreStream stream;
-    private StoreRtcConnection2 voicePropsTracker;
+    private VoicePropsTracker voicePropsTracker;
     private VoiceServer voiceServer;
 
     /* compiled from: StoreRtcConnection.kt */
@@ -189,10 +188,10 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("SpeakingUserUpdate(userId=");
+            StringBuilder sbU = a.U("SpeakingUserUpdate(userId=");
             sbU.append(this.userId);
             sbU.append(", isSpeaking=");
-            return outline.O(sbU, this.isSpeaking, ")");
+            return a.O(sbU, this.isSpeaking, ")");
         }
     }
 
@@ -213,7 +212,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$createRtcConnection$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Listener, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Listener, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -228,22 +227,22 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
-            Intrinsics3.checkNotNullParameter(listener, "it");
+            m.checkNotNullParameter(listener, "it");
             listener.onConnecting();
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
 
         /* compiled from: StoreRtcConnection.kt */
         /* renamed from: com.discord.stores.StoreRtcConnection$init$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01691 extends Lambda implements Function0<Unit> {
+        public static final class C02891 extends o implements Function0<Unit> {
             public final /* synthetic */ boolean $isMuted;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C01691(boolean z2) {
+            public C02891(boolean z2) {
                 super(0);
                 this.$isMuted = z2;
             }
@@ -271,17 +270,17 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
 
         public final void invoke(boolean z2) {
-            StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new C01691(z2));
+            StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new C02891(z2));
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Boolean, Unit> {
 
         /* compiled from: StoreRtcConnection.kt */
         /* renamed from: com.discord.stores.StoreRtcConnection$init$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ boolean $isDeafened;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -319,27 +318,27 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements Func1<DeviceDescription4, Boolean> {
+    public static final class AnonymousClass3<T, R> implements j0.k.b<VideoInputDeviceDescription, Boolean> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
-        @Override // j0.k.Func1
-        public /* bridge */ /* synthetic */ Boolean call(DeviceDescription4 deviceDescription4) {
-            return call2(deviceDescription4);
+        @Override // j0.k.b
+        public /* bridge */ /* synthetic */ Boolean call(VideoInputDeviceDescription videoInputDeviceDescription) {
+            return call2(videoInputDeviceDescription);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Boolean call2(DeviceDescription4 deviceDescription4) {
-            return Boolean.valueOf(deviceDescription4 != null);
+        public final Boolean call2(VideoInputDeviceDescription videoInputDeviceDescription) {
+            return Boolean.valueOf(videoInputDeviceDescription != null);
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Boolean, Unit> {
 
         /* compiled from: StoreRtcConnection.kt */
         /* renamed from: com.discord.stores.StoreRtcConnection$init$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Boolean $isVideoSelected;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -358,7 +357,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
             public final void invoke2() {
                 StoreRtcConnection storeRtcConnection = StoreRtcConnection.this;
                 Boolean bool = this.$isVideoSelected;
-                Intrinsics3.checkNotNullExpressionValue(bool, "isVideoSelected");
+                m.checkNotNullExpressionValue(bool, "isVideoSelected");
                 StoreRtcConnection.access$handleSelfVideo(storeRtcConnection, bool.booleanValue());
             }
         }
@@ -381,11 +380,11 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Map<Long, ? extends Float>, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Map<Long, ? extends Float>, Unit> {
 
         /* compiled from: StoreRtcConnection.kt */
         /* renamed from: com.discord.stores.StoreRtcConnection$init$5$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Map $usersVolume;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -418,18 +417,18 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Float> map) {
-            Intrinsics3.checkNotNullParameter(map, "usersVolume");
+            m.checkNotNullParameter(map, "usersVolume");
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(map));
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends Lambda implements Function1<Map<Long, ? extends Boolean>, Unit> {
+    public static final class AnonymousClass6 extends o implements Function1<Map<Long, ? extends Boolean>, Unit> {
 
         /* compiled from: StoreRtcConnection.kt */
         /* renamed from: com.discord.stores.StoreRtcConnection$init$6$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Map $usersMuted;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -462,18 +461,18 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Boolean> map) {
-            Intrinsics3.checkNotNullParameter(map, "usersMuted");
+            m.checkNotNullParameter(map, "usersMuted");
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(map));
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$init$7, reason: invalid class name */
-    public static final class AnonymousClass7 extends Lambda implements Function1<Map<Long, ? extends Boolean>, Unit> {
+    public static final class AnonymousClass7 extends o implements Function1<Map<Long, ? extends Boolean>, Unit> {
 
         /* compiled from: StoreRtcConnection.kt */
         /* renamed from: com.discord.stores.StoreRtcConnection$init$7$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Map $usersOffScreen;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -506,14 +505,14 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Boolean> map) {
-            Intrinsics3.checkNotNullParameter(map, "usersOffScreen");
+            m.checkNotNullParameter(map, "usersOffScreen");
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(map));
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onAnalyticsEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Map $properties;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -536,7 +535,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onFirstFrameReceived$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Listener, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Listener, Unit> {
         public final /* synthetic */ long $ssrc;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -553,14 +552,14 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
-            Intrinsics3.checkNotNullParameter(listener, "it");
+            m.checkNotNullParameter(listener, "it");
             listener.onFirstFrameReceived(this.$ssrc);
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onFirstFrameSent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Listener, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Listener, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -575,14 +574,14 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
-            Intrinsics3.checkNotNullParameter(listener, "it");
+            m.checkNotNullParameter(listener, "it");
             listener.onFirstFrameSent();
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onMediaEngineConnectionConnected$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ RtcConnection $connection;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -605,7 +604,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onMediaSessionIdReceived$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -624,7 +623,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onSpeaking$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ boolean $isSpeaking;
         public final /* synthetic */ long $userId;
 
@@ -643,16 +642,16 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            StoreRtcConnection2 storeRtcConnection2Access$getVoicePropsTracker$p = StoreRtcConnection.access$getVoicePropsTracker$p(StoreRtcConnection.this);
-            if (storeRtcConnection2Access$getVoicePropsTracker$p != null) {
-                storeRtcConnection2Access$getVoicePropsTracker$p.handleOnSpeaking(this.$userId, this.$isSpeaking);
+            VoicePropsTracker voicePropsTrackerAccess$getVoicePropsTracker$p = StoreRtcConnection.access$getVoicePropsTracker$p(StoreRtcConnection.this);
+            if (voicePropsTrackerAccess$getVoicePropsTracker$p != null) {
+                voicePropsTrackerAccess$getVoicePropsTracker$p.handleOnSpeaking(this.$userId, this.$isSpeaking);
             }
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onStateChange$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Listener, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Listener, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -667,14 +666,14 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
-            Intrinsics3.checkNotNullParameter(listener, "it");
+            m.checkNotNullParameter(listener, "it");
             listener.onConnected();
         }
     }
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onVideoMetadata$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ VideoMetadata $metadata;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -697,7 +696,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     /* compiled from: StoreRtcConnection.kt */
     /* renamed from: com.discord.stores.StoreRtcConnection$onVideoStream$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ int $audioSsrc;
         public final /* synthetic */ int $rtxSsrc;
         public final /* synthetic */ Integer $streamId;
@@ -726,8 +725,8 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
     }
 
-    public /* synthetic */ StoreRtcConnection(StoreStream storeStream, Dispatcher dispatcher, Clock clock, StoreRtcRegion storeRtcRegion, StoreAnalytics storeAnalytics, StoreVoiceStates storeVoiceStates, Logger logger, DebugPrintable3 debugPrintable3, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(storeStream, dispatcher, clock, storeRtcRegion, storeAnalytics, storeVoiceStates, (i & 64) != 0 ? AppLog.g : logger, (i & 128) != 0 ? SystemLogUtils.INSTANCE.getDebugPrintables$app_productionGoogleRelease() : debugPrintable3);
+    public /* synthetic */ StoreRtcConnection(StoreStream storeStream, Dispatcher dispatcher, Clock clock, StoreRtcRegion storeRtcRegion, StoreAnalytics storeAnalytics, StoreVoiceStates storeVoiceStates, Logger logger, DebugPrintableCollection debugPrintableCollection, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this(storeStream, dispatcher, clock, storeRtcRegion, storeAnalytics, storeVoiceStates, (i & 64) != 0 ? AppLog.g : logger, (i & 128) != 0 ? SystemLogUtils.INSTANCE.getDebugPrintables$app_productionGoogleRelease() : debugPrintableCollection);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreRtcConnection storeRtcConnection) {
@@ -742,7 +741,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         return storeRtcConnection.stream;
     }
 
-    public static final /* synthetic */ StoreRtcConnection2 access$getVoicePropsTracker$p(StoreRtcConnection storeRtcConnection) {
+    public static final /* synthetic */ VoicePropsTracker access$getVoicePropsTracker$p(StoreRtcConnection storeRtcConnection) {
         return storeRtcConnection.voicePropsTracker;
     }
 
@@ -774,8 +773,8 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         storeRtcConnection.handleUsersVolume(map);
     }
 
-    public static final /* synthetic */ void access$setVoicePropsTracker$p(StoreRtcConnection storeRtcConnection, StoreRtcConnection2 storeRtcConnection2) {
-        storeRtcConnection.voicePropsTracker = storeRtcConnection2;
+    public static final /* synthetic */ void access$setVoicePropsTracker$p(StoreRtcConnection storeRtcConnection, VoicePropsTracker voicePropsTracker) {
+        storeRtcConnection.voicePropsTracker = voicePropsTracker;
     }
 
     private final void applyVoiceConfiguration(RtcConnection rtcConnection, Long targetUserId) {
@@ -819,7 +818,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         storeRtcConnection.applyVoiceConfiguration(rtcConnection, l);
     }
 
-    @Store3
+    @StoreThread
     private final void checkForVoiceServerUpdate() {
         String endpoint;
         RtcConnection rtcConnection = this.rtcConnection;
@@ -827,7 +826,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         if (rtcConnection == null || voiceServer == null) {
             return;
         }
-        if (voiceServer.getGuildId() == null || !(!Intrinsics3.areEqual(voiceServer.getGuildId(), rtcConnection.guildId))) {
+        if (voiceServer.getGuildId() == null || !(!m.areEqual(voiceServer.getGuildId(), rtcConnection.guildId))) {
             if (voiceServer.getChannelId() != null) {
                 Long channelId = voiceServer.getChannelId();
                 long j = rtcConnection.channelId;
@@ -843,13 +842,13 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
                 endpoint = voiceServer.getEndpoint();
                 sSLSocketFactoryCreateSocketFactory$default = SecureSocketsLayerUtils.createSocketFactory$default(null, 1, null);
             }
-            recordBreadcrumb(outline.w("Voice server update, connect to server w/ endpoint: ", endpoint));
+            recordBreadcrumb(a.w("Voice server update, connect to server w/ endpoint: ", endpoint));
             rtcConnection.s(new w(rtcConnection, endpoint, voiceServer.getToken(), sSLSocketFactoryCreateSocketFactory$default));
         }
     }
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0031  */
-    @Store3
+    @StoreThread
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -869,14 +868,14 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
             return;
         }
         RtcConnection rtcConnection = this.rtcConnection;
-        if (Intrinsics3.areEqual(rtcConnection != null ? Long.valueOf(rtcConnection.channelId) : null, lValueOf2)) {
+        if (m.areEqual(rtcConnection != null ? Long.valueOf(rtcConnection.channelId) : null, lValueOf2)) {
             RtcConnection rtcConnection2 = this.rtcConnection;
-            if (Intrinsics3.areEqual(rtcConnection2 != null ? rtcConnection2.sessionId : null, str)) {
+            if (m.areEqual(rtcConnection2 != null ? rtcConnection2.sessionId : null, str)) {
                 return;
             }
         }
         long jLongValue = l != null ? l.longValue() : 0L;
-        this.voicePropsTracker = new StoreRtcConnection2(jLongValue, lValueOf2.longValue(), id2, this.storeVoiceStates.get().get(Long.valueOf(jLongValue)));
+        this.voicePropsTracker = new VoicePropsTracker(jLongValue, lValueOf2.longValue(), id2, this.storeVoiceStates.get().get(Long.valueOf(jLongValue)));
         Experiment userExperiment = this.stream.getExperiments().getUserExperiment("2021-03_android_media_sink_wants", false);
         boolean z2 = userExperiment != null && userExperiment.getBucket() == 1;
         RtcConnection rtcConnection3 = this.rtcConnection;
@@ -889,27 +888,27 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         String str2 = this.loggingTag;
         NetworkMonitor networkMonitor = this.networkMonitor;
         if (networkMonitor == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("networkMonitor");
+            m.throwUninitializedPropertyAccessException("networkMonitor");
         }
-        RtcConnection rtcConnection4 = new RtcConnection(l, jLongValue2, str, true, strValueOf, id2, mediaEngine, logger, ClockFactory.get(), null, networkMonitor, Maps6.toMutableMap(this.stream.getMediaSettings().getMutedUsers()), null, null, z2, str2, null, 78336);
+        RtcConnection rtcConnection4 = new RtcConnection(l, jLongValue2, str, true, strValueOf, id2, mediaEngine, logger, ClockFactory.get(), null, networkMonitor, h0.toMutableMap(this.stream.getMediaSettings().getMutedUsers()), null, null, z2, str2, null, 78336);
         rtcConnection4.c(this);
         this.rtcConnection = rtcConnection4;
         this.listenerSubject.notify(AnonymousClass1.INSTANCE);
         updateMetadata();
     }
 
-    @Store3
+    @StoreThread
     private final void destroyRtcConnection(String reason) {
         RtcConnection rtcConnection = this.rtcConnection;
         if (rtcConnection != null) {
-            recordBreadcrumb(outline.w("destroying rtc connection: ", reason));
+            recordBreadcrumb(a.w("destroying rtc connection: ", reason));
             rtcConnection.e();
             this.rtcConnection = null;
             updateMetadata();
         }
     }
 
-    @Store3
+    @StoreThread
     private final void handleMediaSessionIdReceived() {
         AppLog appLog = AppLog.g;
         RtcConnection rtcConnection = this.rtcConnection;
@@ -923,25 +922,25 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         updateMetadata();
     }
 
-    @Store3
+    @StoreThread
     private final void handleSelfDeafened(boolean selfDeafened) {
-        this.currentVoiceState = Outgoing2.VoiceStateUpdate.copy$default(this.currentVoiceState, null, null, false, selfDeafened, false, null, 55, null);
+        this.currentVoiceState = OutgoingPayload.VoiceStateUpdate.copy$default(this.currentVoiceState, null, null, false, selfDeafened, false, null, 55, null);
         onVoiceStateUpdated();
     }
 
-    @Store3
+    @StoreThread
     private final void handleSelfMuted(boolean selfMuted) {
-        this.currentVoiceState = Outgoing2.VoiceStateUpdate.copy$default(this.currentVoiceState, null, null, selfMuted, false, false, null, 59, null);
+        this.currentVoiceState = OutgoingPayload.VoiceStateUpdate.copy$default(this.currentVoiceState, null, null, selfMuted, false, false, null, 59, null);
         onVoiceStateUpdated();
     }
 
-    @Store3
+    @StoreThread
     private final void handleSelfVideo(boolean selfVideo) {
-        this.currentVoiceState = Outgoing2.VoiceStateUpdate.copy$default(this.currentVoiceState, null, null, false, false, selfVideo, null, 47, null);
+        this.currentVoiceState = OutgoingPayload.VoiceStateUpdate.copy$default(this.currentVoiceState, null, null, false, false, selfVideo, null, 47, null);
         onVoiceStateUpdated();
     }
 
-    @Store3
+    @StoreThread
     private final void handleUsersMuted(Map<Long, Boolean> usersMuted) {
         for (Map.Entry<Long, Boolean> entry : usersMuted.entrySet()) {
             long jLongValue = entry.getKey().longValue();
@@ -957,7 +956,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
     }
 
-    @Store3
+    @StoreThread
     private final void handleUsersOffScreen(Map<Long, Boolean> usersOffScreen) {
         for (Map.Entry<Long, Boolean> entry : usersOffScreen.entrySet()) {
             long jLongValue = entry.getKey().longValue();
@@ -974,7 +973,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
     }
 
-    @Store3
+    @StoreThread
     private final void handleUsersVolume(Map<Long, Float> usersVolume) {
         for (Map.Entry<Long, Float> entry : usersVolume.entrySet()) {
             long jLongValue = entry.getKey().longValue();
@@ -986,7 +985,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
     }
 
-    @Store3
+    @StoreThread
     private final void logChannelJoin(Channel channel) {
         String str;
         long id2 = this.stream.getUsers().getMe().getId();
@@ -999,21 +998,21 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         GuildScheduledEvent activeEventForChannel = this.stream.getGuildScheduledEvents().getActiveEventForChannel(Long.valueOf(channel.getGuildId()), Long.valueOf(channel.getId()));
         Long lValueOf2 = activeEventForChannel != null ? Long.valueOf(activeEventForChannel.getId()) : null;
         AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
-        Map<Long, VoiceState> mapEmptyMap = (Map) outline.c(channel, this.stream.getVoiceStates().get());
+        Map<Long, VoiceState> mapEmptyMap = (Map) a.c(channel, this.stream.getVoiceStates().get());
         if (mapEmptyMap == null) {
-            mapEmptyMap = Maps6.emptyMap();
+            mapEmptyMap = h0.emptyMap();
         }
         Map<Long, VoiceState> map = mapEmptyMap;
-        DeviceDescription4 selectedVideoInputDevice = this.stream.getMediaEngine().getSelectedVideoInputDevice();
+        VideoInputDeviceDescription selectedVideoInputDevice = this.stream.getMediaEngine().getSelectedVideoInputDevice();
         NetworkUtils networkUtils = NetworkUtils.INSTANCE;
         Context context = this.context;
         if (context == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("context");
+            m.throwUninitializedPropertyAccessException("context");
         }
         analyticsTracker.voiceChannelJoin(id2, str, channel, map, selectedVideoInputDevice, networkUtils.getNetworkType(context), lValueOf, lValueOf2);
     }
 
-    @Store3
+    @StoreThread
     private final void logChannelLeave(Channel channel) {
         String str;
         long id2 = this.stream.getUsers().getMe().getId();
@@ -1027,15 +1026,15 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         GuildScheduledEvent activeEventForChannel = this.stream.getGuildScheduledEvents().getActiveEventForChannel(Long.valueOf(channel.getGuildId()), Long.valueOf(channel.getId()));
         Long lValueOf2 = activeEventForChannel != null ? Long.valueOf(activeEventForChannel.getId()) : null;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        StoreRtcConnection2 storeRtcConnection2 = this.voicePropsTracker;
-        if (storeRtcConnection2 != null) {
-            storeRtcConnection2.getProps(linkedHashMap);
+        VoicePropsTracker voicePropsTracker = this.voicePropsTracker;
+        if (voicePropsTracker != null) {
+            voicePropsTracker.getProps(linkedHashMap);
         }
         this.voicePropsTracker = null;
         AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
-        Map<Long, VoiceState> mapEmptyMap = (Map) outline.c(channel, this.stream.getVoiceStates().get());
+        Map<Long, VoiceState> mapEmptyMap = (Map) a.c(channel, this.stream.getVoiceStates().get());
         if (mapEmptyMap == null) {
-            mapEmptyMap = Maps6.emptyMap();
+            mapEmptyMap = h0.emptyMap();
         }
         Map<Long, VoiceState> map = mapEmptyMap;
         Long l = this.joinedChannelTimestamp;
@@ -1072,11 +1071,11 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         Logger.w$default(this.logger, this.loggingTag, msg, null, 4, null);
     }
 
-    @Store3
+    @StoreThread
     private final void onVoiceStateUpdated() {
         String preferredRegion;
         if (this.hasSelectedVoiceChannel) {
-            StringBuilder sbU = outline.U("Voice state update: ");
+            StringBuilder sbU = a.U("Voice state update: ");
             sbU.append(this.currentVoiceState);
             recordBreadcrumb(sbU.toString());
         }
@@ -1100,7 +1099,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         this.logger.recordBreadcrumb(message, this.loggingTag);
     }
 
-    @Store3
+    @StoreThread
     private final void updateMetadata() {
         RtcConnection rtcConnection = this.rtcConnection;
         RtcConnection.Metadata metadataI = rtcConnection != null ? rtcConnection.i() : null;
@@ -1109,8 +1108,8 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
     }
 
     @Override // com.discord.utilities.debug.DebugPrintable
-    public void debugPrint(DebugPrintable2 dp) {
-        Intrinsics3.checkNotNullParameter(dp, "dp");
+    public void debugPrint(DebugPrintBuilder dp) {
+        m.checkNotNullParameter(dp, "dp");
         dp.appendKeyValue("sessionId", this.sessionId);
         dp.appendKeyValue("rtcConnection", (DebugPrintable) this.rtcConnection);
     }
@@ -1145,7 +1144,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         return this.rtcConnection;
     }
 
-    @Store3
+    @StoreThread
     public final RtcConnection.Metadata getRtcConnectionMetadata() {
         return this.rtcConnectionMetadata;
     }
@@ -1154,20 +1153,20 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         return this.speakingUpdates;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        m.checkNotNullParameter(payload, "payload");
         this.sessionId = payload.getSessionId();
         RtcConnection rtcConnection = this.rtcConnection;
         if (rtcConnection != null) {
             String sessionId = payload.getSessionId();
-            Intrinsics3.checkNotNullExpressionValue(sessionId, "payload.sessionId");
-            Intrinsics3.checkNotNullParameter(sessionId, "<set-?>");
+            m.checkNotNullExpressionValue(sessionId, "payload.sessionId");
+            m.checkNotNullParameter(sessionId, "<set-?>");
             rtcConnection.sessionId = sessionId;
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionReady(boolean connected) {
         if (connected) {
             Channel channel = this.selectedVoiceChannel;
@@ -1176,13 +1175,13 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
     }
 
     /* JADX WARN: Removed duplicated region for block: B:27:0x007b  */
-    @Store3
+    @StoreThread
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final void handleVoiceChannelSelected(Long channelId) {
         Long l;
-        if (!Intrinsics3.areEqual(channelId, this.selectedVoiceChannel != null ? Long.valueOf(r0.getId()) : null)) {
+        if (!m.areEqual(channelId, this.selectedVoiceChannel != null ? Long.valueOf(r0.getId()) : null)) {
             Channel channel = this.selectedVoiceChannel;
             if (channel != null) {
                 logChannelLeave(channel);
@@ -1198,12 +1197,12 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         }
         Channel channelFindChannelByIdInternal$app_productionGoogleRelease = channelId != null ? this.stream.getChannels().findChannelByIdInternal$app_productionGoogleRelease(channelId.longValue()) : null;
         this.selectedVoiceChannel = channelFindChannelByIdInternal$app_productionGoogleRelease;
-        Outgoing2.VoiceStateUpdate voiceStateUpdate = this.currentVoiceState;
+        OutgoingPayload.VoiceStateUpdate voiceStateUpdate = this.currentVoiceState;
         if (channelFindChannelByIdInternal$app_productionGoogleRelease != null) {
             Long lValueOf = Long.valueOf(channelFindChannelByIdInternal$app_productionGoogleRelease.getGuildId());
             l = (lValueOf.longValue() > 0L ? 1 : (lValueOf.longValue() == 0L ? 0 : -1)) > 0 ? lValueOf : null;
         }
-        this.currentVoiceState = Outgoing2.VoiceStateUpdate.copy$default(voiceStateUpdate, l, channelFindChannelByIdInternal$app_productionGoogleRelease != null ? Long.valueOf(channelFindChannelByIdInternal$app_productionGoogleRelease.getId()) : null, false, false, false, null, 60, null);
+        this.currentVoiceState = OutgoingPayload.VoiceStateUpdate.copy$default(voiceStateUpdate, l, channelFindChannelByIdInternal$app_productionGoogleRelease != null ? Long.valueOf(channelFindChannelByIdInternal$app_productionGoogleRelease.getId()) : null, false, false, false, null, 60, null);
         if (channelFindChannelByIdInternal$app_productionGoogleRelease != null) {
             this.hasSelectedVoiceChannel = true;
             createRtcConnection();
@@ -1215,34 +1214,34 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         onVoiceStateUpdated();
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceServerUpdate(VoiceServer voiceServer) {
-        Intrinsics3.checkNotNullParameter(voiceServer, "voiceServer");
+        m.checkNotNullParameter(voiceServer, "voiceServer");
         recordBreadcrumb("handling voice server update: " + voiceServer);
         this.voiceServer = voiceServer;
         checkForVoiceServerUpdate();
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceStateUpdate(VoiceState voiceState) {
-        Intrinsics3.checkNotNullParameter(voiceState, "voiceState");
-        StoreRtcConnection2 storeRtcConnection2 = this.voicePropsTracker;
-        if (storeRtcConnection2 != null) {
-            storeRtcConnection2.handleVoiceStateUpdate(voiceState);
+        m.checkNotNullParameter(voiceState, "voiceState");
+        VoicePropsTracker voicePropsTracker = this.voicePropsTracker;
+        if (voicePropsTracker != null) {
+            voicePropsTracker.handleVoiceStateUpdate(voiceState);
         }
     }
 
-    @Store3
+    @StoreThread
     public final void init(Context context, NetworkMonitor networkMonitor) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(networkMonitor, "networkMonitor");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(networkMonitor, "networkMonitor");
         this.context = context;
         this.networkMonitor = networkMonitor;
         StoreStream.Companion companion = StoreStream.INSTANCE;
         ObservableExtensionsKt.appSubscribe$default(companion.getMediaSettings().isSelfMuted(), StoreRtcConnection.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(companion.getMediaSettings().isSelfDeafened(), StoreRtcConnection.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
         Observable<R> observableG = companion.getMediaEngine().getSelectedVideoInputDevice().G(AnonymousClass3.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "StoreStream\n        .get…viceDescription != null }");
+        m.checkNotNullExpressionValue(observableG, "StoreStream\n        .get…viceDescription != null }");
         ObservableExtensionsKt.appSubscribe$default(observableG, StoreRtcConnection.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass4(), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(this.stream.getMediaSettings().getUsersVolume(), StoreRtcConnection.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass5(), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(this.stream.getMediaSettings().getUsersMuted(), StoreRtcConnection.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass6(), 62, (Object) null);
@@ -1251,14 +1250,14 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     public final Observable<RtcConnection.Metadata> observeRtcConnectionMetadata() {
         BehaviorSubject<RtcConnection.Metadata> behaviorSubject = this.rtcConnectionMetadataSubject;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "rtcConnectionMetadataSubject");
+        m.checkNotNullExpressionValue(behaviorSubject, "rtcConnectionMetadataSubject");
         return behaviorSubject;
     }
 
     @Override // com.discord.rtcconnection.RtcConnection.b, com.discord.rtcconnection.RtcConnection.c
     public void onAnalyticsEvent(RtcConnection.AnalyticsEvent event, Map<String, Object> properties) {
-        Intrinsics3.checkNotNullParameter(event, "event");
-        Intrinsics3.checkNotNullParameter(properties, "properties");
+        m.checkNotNullParameter(event, "event");
+        m.checkNotNullParameter(properties, "properties");
         int iOrdinal = event.ordinal();
         if (iOrdinal == 0) {
             this.storeAnalytics.trackVoiceConnectionSuccess(properties);
@@ -1297,7 +1296,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     @Override // com.discord.rtcconnection.RtcConnection.b, com.discord.rtcconnection.RtcConnection.c
     public void onMediaEngineConnectionConnected(RtcConnection connection) {
-        Intrinsics3.checkNotNullParameter(connection, "connection");
+        m.checkNotNullParameter(connection, "connection");
         this.dispatcher.schedule(new AnonymousClass1(connection));
     }
 
@@ -1308,7 +1307,7 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     @Override // com.discord.rtcconnection.RtcConnection.b, com.discord.rtcconnection.RtcConnection.c
     public void onQualityUpdate(RtcConnection.Quality quality) {
-        Intrinsics3.checkNotNullParameter(quality, "quality");
+        m.checkNotNullParameter(quality, "quality");
         this.qualitySubject.onNext(quality);
     }
 
@@ -1321,23 +1320,23 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
 
     @Override // com.discord.rtcconnection.RtcConnection.b, com.discord.rtcconnection.RtcConnection.c
     public void onStateChange(RtcConnection.StateChange stateChange) {
-        Intrinsics3.checkNotNullParameter(stateChange, "stateChange");
+        m.checkNotNullParameter(stateChange, "stateChange");
         recordBreadcrumb("connection state change: " + stateChange);
         this.connectionStateSubject.k.onNext(stateChange);
-        if (Intrinsics3.areEqual(stateChange.state, RtcConnection.State.f.a)) {
+        if (m.areEqual(stateChange.state, RtcConnection.State.f.a)) {
             this.listenerSubject.notify(AnonymousClass1.INSTANCE);
         }
     }
 
     @Override // com.discord.rtcconnection.RtcConnection.b, com.discord.rtcconnection.RtcConnection.c
     public void onUserCreated(RtcConnection connection, long userId) {
-        Intrinsics3.checkNotNullParameter(connection, "connection");
+        m.checkNotNullParameter(connection, "connection");
         applyVoiceConfiguration(connection, Long.valueOf(userId));
     }
 
     @Override // com.discord.rtcconnection.RtcConnection.b, com.discord.rtcconnection.RtcConnection.c
     public void onVideoMetadata(VideoMetadata metadata) {
-        Intrinsics3.checkNotNullParameter(metadata, "metadata");
+        m.checkNotNullParameter(metadata, "metadata");
         this.dispatcher.schedule(new AnonymousClass1(metadata));
     }
 
@@ -1346,15 +1345,15 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         this.dispatcher.schedule(new AnonymousClass1(userId, streamId, audioSsrc, videoSsrc, rtxSsrc));
     }
 
-    public StoreRtcConnection(StoreStream storeStream, Dispatcher dispatcher, Clock clock, StoreRtcRegion storeRtcRegion, StoreAnalytics storeAnalytics, StoreVoiceStates storeVoiceStates, Logger logger, DebugPrintable3 debugPrintable3) {
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(storeRtcRegion, "storeRtcRegion");
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(storeVoiceStates, "storeVoiceStates");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        Intrinsics3.checkNotNullParameter(debugPrintable3, "dpc");
+    public StoreRtcConnection(StoreStream storeStream, Dispatcher dispatcher, Clock clock, StoreRtcRegion storeRtcRegion, StoreAnalytics storeAnalytics, StoreVoiceStates storeVoiceStates, Logger logger, DebugPrintableCollection debugPrintableCollection) {
+        m.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(storeRtcRegion, "storeRtcRegion");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(storeVoiceStates, "storeVoiceStates");
+        m.checkNotNullParameter(logger, "logger");
+        m.checkNotNullParameter(debugPrintableCollection, "dpc");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
         this.clock = clock;
@@ -1362,36 +1361,36 @@ public final class StoreRtcConnection extends RtcConnection.b implements DebugPr
         this.storeAnalytics = storeAnalytics;
         this.storeVoiceStates = storeVoiceStates;
         this.logger = logger;
-        this.dpc = debugPrintable3;
-        ListenerCollection2<Listener> listenerCollection2 = new ListenerCollection2<>();
-        this.listenerSubject = listenerCollection2;
-        this.listeners = listenerCollection2;
+        this.dpc = debugPrintableCollection;
+        ListenerCollectionSubject<Listener> listenerCollectionSubject = new ListenerCollectionSubject<>();
+        this.listenerSubject = listenerCollectionSubject;
+        this.listeners = listenerCollectionSubject;
         PublishSubject<SpeakingUserUpdate> publishSubjectK0 = PublishSubject.k0();
         this.speakingUsersSubject = publishSubjectK0;
         BehaviorSubject<RtcConnection.Quality> behaviorSubjectL0 = BehaviorSubject.l0(RtcConnection.Quality.UNKNOWN);
         this.qualitySubject = behaviorSubjectL0;
-        this.currentVoiceState = new Outgoing2.VoiceStateUpdate(null, null, false, false, false, null, 32, null);
+        this.currentVoiceState = new OutgoingPayload.VoiceStateUpdate(null, null, false, false, false, null, 32, null);
         SerializedSubject<RtcConnection.StateChange, RtcConnection.StateChange> serializedSubject = new SerializedSubject<>(BehaviorSubject.l0(new RtcConnection.StateChange(new RtcConnection.State.d(false), null)));
         this.connectionStateSubject = serializedSubject;
         this.rtcConnectionMetadataSubject = BehaviorSubject.l0(null);
         Observable<RtcConnection.StateChange> observableR = ObservableExtensionsKt.computationLatest(serializedSubject).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "connectionStateSubject\n …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "connectionStateSubject\n …  .distinctUntilChanged()");
         this.connectionState = observableR;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectL0, "qualitySubject");
+        m.checkNotNullExpressionValue(behaviorSubjectL0, "qualitySubject");
         Observable<RtcConnection.Quality> observableR2 = ObservableExtensionsKt.computationLatest(behaviorSubjectL0).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR2, "qualitySubject\n         …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR2, "qualitySubject\n         …  .distinctUntilChanged()");
         this.quality = observableR2;
         Observable<List<SpeakingUserUpdate>> observableA = publishSubjectK0.a(300L, TimeUnit.MILLISECONDS);
-        Intrinsics3.checkNotNullExpressionValue(observableA, "speakingUsersSubject\n   …S, TimeUnit.MILLISECONDS)");
+        m.checkNotNullExpressionValue(observableA, "speakingUsersSubject\n   …S, TimeUnit.MILLISECONDS)");
         Observable<List<SpeakingUserUpdate>> observableR3 = ObservableExtensionsKt.computationLatest(observableA).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR3, "speakingUsersSubject\n   …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR3, "speakingUsersSubject\n   …  .distinctUntilChanged()");
         this.speakingUpdates = observableR3;
-        StringBuilder sbU = outline.U("StoreRtcConnection ");
+        StringBuilder sbU = a.U("StoreRtcConnection ");
         int i = instanceCounter + 1;
         instanceCounter = i;
         sbU.append(i);
         String string = sbU.toString();
         this.loggingTag = string;
-        this.debugDisplayId = debugPrintable3.add(this, string);
+        this.debugDisplayId = debugPrintableCollection.add(this, string);
     }
 }

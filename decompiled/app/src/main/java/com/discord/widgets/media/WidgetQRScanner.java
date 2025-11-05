@@ -8,10 +8,8 @@ import android.view.View;
 import android.webkit.URLUtil;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.m0.RoutingPatterns;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
@@ -20,15 +18,15 @@ import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.intent.IntentUtils;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.auth.WidgetRemoteAuth;
 import com.google.android.material.chip.Chip;
 import com.google.zxing.Result;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import e0.a.a.a.CameraHandlerThread;
-import e0.a.a.a.CameraHandlerThread2;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
+import e0.a.a.a.b;
+import e0.a.a.a.c;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Unit;
@@ -42,7 +40,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 /* compiled from: WidgetQRScanner.kt */
 /* loaded from: classes2.dex */
 public final class WidgetQRScanner extends AppFragment implements ZXingScannerView.b {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetQRScanner.class, "binding", "getBinding()Lcom/discord/databinding/WidgetQrScannerBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetQRScanner.class, "binding", "getBinding()Lcom/discord/databinding/WidgetQrScannerBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -65,10 +63,10 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
         }
 
         public final void launch(Context context, boolean showHelpChip) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intentPutExtra = new Intent("android.intent.action.VIEW").putExtra(WidgetQRScanner.EXTRA_SHOW_HELP_CHIP, showHelpChip);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent(Intent.ACTION_VIE…_HELP_CHIP, showHelpChip)");
-            AppScreen2.d(context, WidgetQRScanner.class, intentPutExtra);
+            m.checkNotNullExpressionValue(intentPutExtra, "Intent(Intent.ACTION_VIE…_HELP_CHIP, showHelpChip)");
+            j.d(context, WidgetQRScanner.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -78,7 +76,7 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
 
     /* compiled from: WidgetQRScanner.kt */
     /* renamed from: com.discord.widgets.media.WidgetQRScanner$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -93,17 +91,17 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
         public final void invoke2() {
             ZXingScannerView zXingScannerView = WidgetQRScanner.access$getBinding$p(WidgetQRScanner.this).f2515b;
             if (zXingScannerView.n == null) {
-                zXingScannerView.n = new CameraHandlerThread2(zXingScannerView);
+                zXingScannerView.n = new c(zXingScannerView);
             }
-            CameraHandlerThread2 cameraHandlerThread2 = zXingScannerView.n;
-            Objects.requireNonNull(cameraHandlerThread2);
-            new Handler(cameraHandlerThread2.getLooper()).post(new CameraHandlerThread(cameraHandlerThread2, 0));
+            c cVar = zXingScannerView.n;
+            Objects.requireNonNull(cVar);
+            new Handler(cVar.getLooper()).post(new b(cVar, 0));
         }
     }
 
     /* compiled from: WidgetQRScanner.kt */
     /* renamed from: com.discord.widgets.media.WidgetQRScanner$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -125,7 +123,7 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
 
     public WidgetQRScanner() {
         super(R.layout.widget_qr_scanner);
-        this.binding = FragmentViewBindingDelegate3.viewBinding(this, WidgetQRScanner2.INSTANCE, new WidgetQRScanner3(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding(this, WidgetQRScanner$binding$2.INSTANCE, new WidgetQRScanner$binding$3(this));
     }
 
     public static final /* synthetic */ WidgetQrScannerBinding access$getBinding$p(WidgetQRScanner widgetQRScanner) {
@@ -158,28 +156,28 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
         }
         Uri uri = Uri.parse(str);
         if (URLUtil.isValidUrl(str)) {
-            RoutingPatterns routingPatterns = RoutingPatterns.G;
-            Intrinsics3.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-            if (!routingPatterns.a(uri.getHost())) {
+            b.a.d.m0.a aVar = b.a.d.m0.a.G;
+            m.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            if (!aVar.a(uri.getHost())) {
                 IntentUtils intentUtils = IntentUtils.INSTANCE;
-                Intrinsics3.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+                m.checkNotNullExpressionValue(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
                 if (intentUtils.isDiscordAppUri(uri)) {
                     String path = uri.getPath();
                     if (path != null) {
-                        RoutingPatterns routingPatterns2 = RoutingPatterns.G;
-                        Regex regex = RoutingPatterns.D;
-                        Intrinsics3.checkNotNullExpressionValue(path, "it");
+                        b.a.d.m0.a aVar2 = b.a.d.m0.a.G;
+                        Regex regex = b.a.d.m0.a.D;
+                        m.checkNotNullExpressionValue(path, "it");
                         matchResultMatchEntire = regex.matchEntire(path);
                     } else {
                         matchResultMatchEntire = null;
                     }
                     if (matchResultMatchEntire != null) {
-                        WidgetRemoteAuth.INSTANCE.launch(requireContext(), (String) _Collections.last((List) matchResultMatchEntire.getGroupValues()));
+                        WidgetRemoteAuth.INSTANCE.launch(requireContext(), (String) u.last((List) matchResultMatchEntire.getGroupValues()));
                     } else {
                         UriHandler.handle$default(UriHandler.INSTANCE, requireContext(), str, false, false, null, 28, null);
                     }
                 } else {
-                    AppToast.i(this, R.string.qr_code_invalid, 0, 4);
+                    b.a.d.m.i(this, R.string.qr_code_invalid, 0, 4);
                 }
             }
         }
@@ -194,12 +192,12 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         getBinding().f2515b.setFormats(ZXingScannerView.D);
         getBinding().f2515b.setResultHandler(this);
         ZXingScannerView zXingScannerView = getBinding().f2515b;
-        Intrinsics3.checkNotNullExpressionValue(zXingScannerView, "binding.qrScanner");
+        m.checkNotNullExpressionValue(zXingScannerView, "binding.qrScanner");
         zXingScannerView.setVisibility(0);
     }
 
@@ -211,7 +209,7 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
         setActionBarTitle(R.string.login_with_qr);
         boolean booleanExtra = getMostRecentIntent().getBooleanExtra(EXTRA_SHOW_HELP_CHIP, false);
         Chip chip = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(chip, "binding.qrScannerChip");
+        m.checkNotNullExpressionValue(chip, "binding.qrScannerChip");
         chip.setVisibility(booleanExtra ? 0 : 8);
         requestCameraQRScanner(new AnonymousClass1(), new AnonymousClass2());
     }

@@ -6,8 +6,8 @@ import com.discord.widgets.chat.MessageContent;
 import com.discord.widgets.chat.MessageManager;
 import com.discord.widgets.chat.input.ChatInputViewModel;
 import com.lytefast.flexinput.model.Attachment;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -15,7 +15,7 @@ import kotlin.jvm.functions.Function1;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendMessage$messageResendCompressedHandler$1 extends Lambda implements Function0<Unit> {
+public final class ChatInputViewModel$sendMessage$messageResendCompressedHandler$1 extends o implements Function0<Unit> {
     public final /* synthetic */ ChatInputViewModel.AttachmentContext $attachmentsContext;
     public final /* synthetic */ Context $context;
     public final /* synthetic */ MessageContent $messageContent;
@@ -25,7 +25,7 @@ public final class ChatInputViewModel$sendMessage$messageResendCompressedHandler
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageResendCompressedHandler$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends Attachment<?>>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<List<? extends Attachment<?>>, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -38,7 +38,7 @@ public final class ChatInputViewModel$sendMessage$messageResendCompressedHandler
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends Attachment<?>> list) {
-            Intrinsics3.checkNotNullParameter(list, "compressedAttachments");
+            m.checkNotNullParameter(list, "compressedAttachments");
             ChatInputViewModel$sendMessage$messageResendCompressedHandler$1 chatInputViewModel$sendMessage$messageResendCompressedHandler$1 = ChatInputViewModel$sendMessage$messageResendCompressedHandler$1.this;
             chatInputViewModel$sendMessage$messageResendCompressedHandler$1.this$0.sendMessage(chatInputViewModel$sendMessage$messageResendCompressedHandler$1.$context, chatInputViewModel$sendMessage$messageResendCompressedHandler$1.$messageManager, chatInputViewModel$sendMessage$messageResendCompressedHandler$1.$messageContent, list, true, chatInputViewModel$sendMessage$messageResendCompressedHandler$1.$onValidationResult);
         }

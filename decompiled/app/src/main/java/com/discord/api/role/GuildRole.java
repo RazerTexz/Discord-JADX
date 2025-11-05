@@ -1,8 +1,8 @@
 package com.discord.api.role;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 
 /* compiled from: GuildRole.kt */
@@ -53,7 +53,7 @@ public final /* data */ class GuildRole implements Serializable {
             return false;
         }
         GuildRole guildRole = (GuildRole) other;
-        return this.position == guildRole.position && Intrinsics3.areEqual(this.name, guildRole.name) && this.id == guildRole.id && this.color == guildRole.color && this.hoist == guildRole.hoist && this.permissions == guildRole.permissions && this.mentionable == guildRole.mentionable && this.managed == guildRole.managed && Intrinsics3.areEqual(this.icon, guildRole.icon) && Intrinsics3.areEqual(this.tags, guildRole.tags) && Intrinsics3.areEqual(this.unicodeEmoji, guildRole.unicodeEmoji);
+        return this.position == guildRole.position && m.areEqual(this.name, guildRole.name) && this.id == guildRole.id && this.color == guildRole.color && this.hoist == guildRole.hoist && this.permissions == guildRole.permissions && this.mentionable == guildRole.mentionable && this.managed == guildRole.managed && m.areEqual(this.icon, guildRole.icon) && m.areEqual(this.tags, guildRole.tags) && m.areEqual(this.unicodeEmoji, guildRole.unicodeEmoji);
     }
 
     /* renamed from: f, reason: from getter */
@@ -121,7 +121,7 @@ public final /* data */ class GuildRole implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRole(position=");
+        StringBuilder sbU = a.U("GuildRole(position=");
         sbU.append(this.position);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -142,6 +142,6 @@ public final /* data */ class GuildRole implements Serializable {
         sbU.append(", tags=");
         sbU.append(this.tags);
         sbU.append(", unicodeEmoji=");
-        return outline.J(sbU, this.unicodeEmoji, ")");
+        return a.J(sbU, this.unicodeEmoji, ")");
     }
 }

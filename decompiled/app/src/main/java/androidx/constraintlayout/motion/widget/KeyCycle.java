@@ -7,7 +7,7 @@ import android.util.Log;
 import android.util.SparseIntArray;
 import androidx.constraintlayout.widget.ConstraintAttribute;
 import androidx.constraintlayout.widget.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -176,7 +176,7 @@ public class KeyCycle extends Key {
                         KeyCycle.access$1802(keyCycle, typedArray.getFloat(index, KeyCycle.access$1800(keyCycle)));
                         break;
                     default:
-                        StringBuilder sbU = outline.U("unused attribute 0x");
+                        StringBuilder sbU = a.U("unused attribute 0x");
                         sbU.append(Integer.toHexString(index));
                         sbU.append("   ");
                         sbU.append(mAttrMap.get(index));
@@ -369,7 +369,7 @@ public class KeyCycle extends Key {
     @Override // androidx.constraintlayout.motion.widget.Key
     public void addValues(HashMap<String, SplineSet> map) {
         SplineSet splineSet;
-        StringBuilder sbU = outline.U("add ");
+        StringBuilder sbU = a.U("add ");
         sbU.append(map.size());
         sbU.append(" values");
         Debug.logStack("KeyCycle", sbU.toString(), 2);

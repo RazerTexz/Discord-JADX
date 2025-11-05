@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuildLfgGroup;
-import com.discord.analytics.generated.traits.TrackGuildLfgGroup2;
+import com.discord.analytics.generated.traits.TrackGuildLfgGroupReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackAddChannelRecipient.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAddChannelRecipient implements AnalyticsSchema, TrackBase2, TrackGuildLfgGroup2 {
+public final /* data */ class TrackAddChannelRecipient implements AnalyticsSchema, TrackBaseReceiver, TrackGuildLfgGroupReceiver {
     private TrackBase trackBase;
     private TrackGuildLfgGroup trackGuildLfgGroup;
     private final Long channelType = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackAddChannelRecipient implements AnalyticsSchem
             return false;
         }
         TrackAddChannelRecipient trackAddChannelRecipient = (TrackAddChannelRecipient) other;
-        return Intrinsics3.areEqual(this.channelType, trackAddChannelRecipient.channelType) && Intrinsics3.areEqual(this.channelId, trackAddChannelRecipient.channelId) && Intrinsics3.areEqual(this.recipientId, trackAddChannelRecipient.recipientId) && Intrinsics3.areEqual(this.recipientIds, trackAddChannelRecipient.recipientIds);
+        return m.areEqual(this.channelType, trackAddChannelRecipient.channelType) && m.areEqual(this.channelId, trackAddChannelRecipient.channelId) && m.areEqual(this.recipientId, trackAddChannelRecipient.recipientId) && m.areEqual(this.recipientIds, trackAddChannelRecipient.recipientIds);
     }
 
     public int hashCode() {
@@ -49,13 +49,13 @@ public final /* data */ class TrackAddChannelRecipient implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAddChannelRecipient(channelType=");
+        StringBuilder sbU = a.U("TrackAddChannelRecipient(channelType=");
         sbU.append(this.channelType);
         sbU.append(", channelId=");
         sbU.append(this.channelId);
         sbU.append(", recipientId=");
         sbU.append(this.recipientId);
         sbU.append(", recipientIds=");
-        return outline.L(sbU, this.recipientIds, ")");
+        return a.L(sbU, this.recipientIds, ")");
     }
 }

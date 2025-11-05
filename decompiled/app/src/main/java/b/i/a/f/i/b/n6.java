@@ -1,7 +1,6 @@
 package b.i.a.f.i.b;
 
 import android.os.Bundle;
-import b.c.a.a0.AnimatableValueParser;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.gms.measurement.internal.zzku;
 import com.google.android.gms.measurement.internal.zzz;
@@ -25,8 +24,8 @@ public final class n6 implements Runnable {
         c6Var.b();
         c6Var.t();
         Objects.requireNonNull(bundle, "null reference");
-        AnimatableValueParser.w(bundle.getString(ModelAuditLogEntry.CHANGE_KEY_NAME));
-        AnimatableValueParser.w(bundle.getString("origin"));
+        b.c.a.a0.d.w(bundle.getString(ModelAuditLogEntry.CHANGE_KEY_NAME));
+        b.c.a.a0.d.w(bundle.getString("origin"));
         Objects.requireNonNull(bundle.get("value"), "null reference");
         if (!c6Var.a.d()) {
             c6Var.g().n.a("Conditional property not set since app measurement is disabled");

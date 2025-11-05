@@ -2,8 +2,8 @@ package com.discord.widgets.stage.sheet;
 
 import a0.a.a.b;
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.stores.StoreStageChannels;
 import com.discord.stores.StoreStream;
@@ -14,8 +14,8 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.stage.StageRoles;
 import com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetAdapter;
 import com.discord.widgets.voice.model.CallModel;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -30,7 +30,7 @@ import rx.Observable;
 
 /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel<ViewState> {
+public final class StageAudienceBlockedBottomSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -38,7 +38,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
 
     /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
     /* renamed from: com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass1(StageAudienceBlockedBottomSheetViewModel stageAudienceBlockedBottomSheetViewModel) {
             super(1, stageAudienceBlockedBottomSheetViewModel, StageAudienceBlockedBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/stage/sheet/StageAudienceBlockedBottomSheetViewModel$StoreState;)V", 0);
         }
@@ -51,7 +51,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             StageAudienceBlockedBottomSheetViewModel.access$handleStoreState((StageAudienceBlockedBottomSheetViewModel) this.receiver, storeState);
         }
     }
@@ -66,8 +66,8 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
         }
 
         private final Observable<StoreState> observeStores(long channelId, StoreUserRelationships userRelationshipsStore, StoreStageChannels stageStore) {
-            Observable<StoreState> observableI = Observable.i(CallModel.INSTANCE.get(channelId), userRelationshipsStore.observeForType(2), stageStore.observeStageRolesByChannel(channelId), new StageAudienceBlockedBottomSheetViewModel2(channelId));
-            Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest… emptyMap()\n      )\n    }");
+            Observable<StoreState> observableI = Observable.i(CallModel.INSTANCE.get(channelId), userRelationshipsStore.observeForType(2), stageStore.observeStageRolesByChannel(channelId), new StageAudienceBlockedBottomSheetViewModel$Companion$observeStores$1(channelId));
+            m.checkNotNullExpressionValue(observableI, "Observable.combineLatest… emptyMap()\n      )\n    }");
             return observableI;
         }
 
@@ -84,8 +84,8 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
         private final Map<Long, StageRoles> stageRoles;
 
         public StoreState(long j, CallModel callModel, Set<Long> set, Map<Long, StageRoles> map) {
-            Intrinsics3.checkNotNullParameter(set, "blockedUsers");
-            Intrinsics3.checkNotNullParameter(map, "stageRoles");
+            m.checkNotNullParameter(set, "blockedUsers");
+            m.checkNotNullParameter(map, "stageRoles");
             this.channelId = j;
             this.callModel = callModel;
             this.blockedUsers = set;
@@ -130,8 +130,8 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
         }
 
         public final StoreState copy(long channelId, CallModel callModel, Set<Long> blockedUsers, Map<Long, StageRoles> stageRoles) {
-            Intrinsics3.checkNotNullParameter(blockedUsers, "blockedUsers");
-            Intrinsics3.checkNotNullParameter(stageRoles, "stageRoles");
+            m.checkNotNullParameter(blockedUsers, "blockedUsers");
+            m.checkNotNullParameter(stageRoles, "stageRoles");
             return new StoreState(channelId, callModel, blockedUsers, stageRoles);
         }
 
@@ -143,7 +143,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return this.channelId == storeState.channelId && Intrinsics3.areEqual(this.callModel, storeState.callModel) && Intrinsics3.areEqual(this.blockedUsers, storeState.blockedUsers) && Intrinsics3.areEqual(this.stageRoles, storeState.stageRoles);
+            return this.channelId == storeState.channelId && m.areEqual(this.callModel, storeState.callModel) && m.areEqual(this.blockedUsers, storeState.blockedUsers) && m.areEqual(this.stageRoles, storeState.stageRoles);
         }
 
         public final Set<Long> getBlockedUsers() {
@@ -173,14 +173,14 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(channelId=");
+            StringBuilder sbU = a.U("StoreState(channelId=");
             sbU.append(this.channelId);
             sbU.append(", callModel=");
             sbU.append(this.callModel);
             sbU.append(", blockedUsers=");
             sbU.append(this.blockedUsers);
             sbU.append(", stageRoles=");
-            return outline.M(sbU, this.stageRoles, ")");
+            return a.M(sbU, this.stageRoles, ")");
         }
     }
 
@@ -205,8 +205,8 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(Channel channel, List<? extends MGRecyclerDataPayload> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(list, "listItems");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(list, "listItems");
                 this.channel = channel;
                 this.listItems = list;
             }
@@ -232,8 +232,8 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             }
 
             public final Loaded copy(Channel channel, List<? extends MGRecyclerDataPayload> listItems) {
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(listItems, "listItems");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(listItems, "listItems");
                 return new Loaded(channel, listItems);
             }
 
@@ -245,7 +245,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.channel, loaded.channel) && Intrinsics3.areEqual(this.listItems, loaded.listItems);
+                return m.areEqual(this.channel, loaded.channel) && m.areEqual(this.listItems, loaded.listItems);
             }
 
             public final Channel getChannel() {
@@ -264,10 +264,10 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(channel=");
+                StringBuilder sbU = a.U("Loaded(channel=");
                 sbU.append(this.channel);
                 sbU.append(", listItems=");
-                return outline.L(sbU, this.listItems, ")");
+                return a.L(sbU, this.listItems, ")");
             }
         }
 
@@ -335,7 +335,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StageAudienceBlockedBottomSheetViewModel(long j, Observable<StoreState> observable) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.channelId = j;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), StageAudienceBlockedBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
     }

@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStageInstanceUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageInstanceUpdated implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
+public final /* data */ class TrackStageInstanceUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -24,13 +24,13 @@ public final /* data */ class TrackStageInstanceUpdated implements AnalyticsSche
     private final Long guildScheduledEventId = null;
     private final transient String analyticsSchemaTypeName = "stage_instance_updated";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -49,7 +49,7 @@ public final /* data */ class TrackStageInstanceUpdated implements AnalyticsSche
             return false;
         }
         TrackStageInstanceUpdated trackStageInstanceUpdated = (TrackStageInstanceUpdated) other;
-        return Intrinsics3.areEqual(this.stageInstanceId, trackStageInstanceUpdated.stageInstanceId) && Intrinsics3.areEqual(this.topic, trackStageInstanceUpdated.topic) && Intrinsics3.areEqual(this.privacyLevel, trackStageInstanceUpdated.privacyLevel) && Intrinsics3.areEqual(this.updaterId, trackStageInstanceUpdated.updaterId) && Intrinsics3.areEqual(this.guildScheduledEventId, trackStageInstanceUpdated.guildScheduledEventId);
+        return m.areEqual(this.stageInstanceId, trackStageInstanceUpdated.stageInstanceId) && m.areEqual(this.topic, trackStageInstanceUpdated.topic) && m.areEqual(this.privacyLevel, trackStageInstanceUpdated.privacyLevel) && m.areEqual(this.updaterId, trackStageInstanceUpdated.updaterId) && m.areEqual(this.guildScheduledEventId, trackStageInstanceUpdated.guildScheduledEventId);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackStageInstanceUpdated implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStageInstanceUpdated(stageInstanceId=");
+        StringBuilder sbU = a.U("TrackStageInstanceUpdated(stageInstanceId=");
         sbU.append(this.stageInstanceId);
         sbU.append(", topic=");
         sbU.append(this.topic);
@@ -75,6 +75,6 @@ public final /* data */ class TrackStageInstanceUpdated implements AnalyticsSche
         sbU.append(", updaterId=");
         sbU.append(this.updaterId);
         sbU.append(", guildScheduledEventId=");
-        return outline.G(sbU, this.guildScheduledEventId, ")");
+        return a.G(sbU, this.guildScheduledEventId, ")");
     }
 }

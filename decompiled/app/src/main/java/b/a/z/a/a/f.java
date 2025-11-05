@@ -1,6 +1,5 @@
 package b.a.z.a.a;
 
-import b.d.b.a.outline;
 import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
 import java.util.Map;
@@ -20,6 +19,6 @@ public final /* synthetic */ class f implements Func2 {
         Map map = this.j;
         User user = (User) obj;
         User user2 = (User) obj2;
-        return Integer.valueOf(GuildMember.compareUserNames(user, user2, (GuildMember) outline.f(user, map), (GuildMember) outline.f(user2, map)));
+        return Integer.valueOf(GuildMember.compareUserNames(user, user2, (GuildMember) b.d.b.a.a.f(user, map), (GuildMember) b.d.b.a.a.f(user2, map)));
     }
 }

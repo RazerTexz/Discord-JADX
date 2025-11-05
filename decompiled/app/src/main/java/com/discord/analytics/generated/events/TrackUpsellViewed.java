@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackUpsellViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUpsellViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSourceMetadata2 {
+public final /* data */ class TrackUpsellViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackSourceMetadata trackSourceMetadata;
@@ -34,7 +34,7 @@ public final /* data */ class TrackUpsellViewed implements AnalyticsSchema, Trac
             return false;
         }
         TrackUpsellViewed trackUpsellViewed = (TrackUpsellViewed) other;
-        return Intrinsics3.areEqual(this.type, trackUpsellViewed.type) && Intrinsics3.areEqual(this.subtype, trackUpsellViewed.subtype);
+        return m.areEqual(this.type, trackUpsellViewed.type) && m.areEqual(this.subtype, trackUpsellViewed.subtype);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class TrackUpsellViewed implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUpsellViewed(type=");
+        StringBuilder sbU = a.U("TrackUpsellViewed(type=");
         sbU.append(this.type);
         sbU.append(", subtype=");
-        return outline.E(sbU, this.subtype, ")");
+        return a.E(sbU, this.subtype, ")");
     }
 }

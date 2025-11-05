@@ -1,9 +1,9 @@
 package com.discord.widgets.stage;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: StageCardSpeaker.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final /* data */ class StageCardSpeaker {
 
     public StageCardSpeaker(User user, GuildMember guildMember) {
         String nick;
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         this.user = user;
         this.guildMember = guildMember;
         this.displayName = (guildMember == null || (nick = guildMember.getNick()) == null) ? user.getUsername() : nick;
@@ -41,7 +41,7 @@ public final /* data */ class StageCardSpeaker {
     }
 
     public final StageCardSpeaker copy(User user, GuildMember guildMember) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         return new StageCardSpeaker(user, guildMember);
     }
 
@@ -53,7 +53,7 @@ public final /* data */ class StageCardSpeaker {
             return false;
         }
         StageCardSpeaker stageCardSpeaker = (StageCardSpeaker) other;
-        return Intrinsics3.areEqual(this.user, stageCardSpeaker.user) && Intrinsics3.areEqual(this.guildMember, stageCardSpeaker.guildMember);
+        return m.areEqual(this.user, stageCardSpeaker.user) && m.areEqual(this.guildMember, stageCardSpeaker.guildMember);
     }
 
     public final String getDisplayName() {
@@ -76,7 +76,7 @@ public final /* data */ class StageCardSpeaker {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StageCardSpeaker(user=");
+        StringBuilder sbU = a.U("StageCardSpeaker(user=");
         sbU.append(this.user);
         sbU.append(", guildMember=");
         sbU.append(this.guildMember);

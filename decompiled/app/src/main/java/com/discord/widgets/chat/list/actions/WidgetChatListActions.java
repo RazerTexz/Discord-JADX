@@ -12,8 +12,7 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppToast;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -35,10 +34,10 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.channel.ChannelSelector;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.intent.IntentUtils;
-import com.discord.utilities.messagesend.MessageQueue4;
+import com.discord.utilities.messagesend.MessageResult;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
+import com.discord.utilities.permissions.ManageMessageContext;
 import com.discord.utilities.permissions.PermissionUtils;
-import com.discord.utilities.permissions.PermissionsContexts2;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rest.SendUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
@@ -47,7 +46,7 @@ import com.discord.utilities.textprocessing.node.EditedMessageNode;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.utilities.view.recycler.PaddedItemDecorator;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.chat.input.emoji.EmojiPickerContextType;
 import com.discord.widgets.chat.input.emoji.EmojiPickerListener;
 import com.discord.widgets.chat.input.emoji.EmojiPickerNavigator;
@@ -57,14 +56,12 @@ import com.discord.widgets.mobile_reports.WidgetMobileReports;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.tos.WidgetTosReportViolation;
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
-import d0.Tuples;
-import d0.g0.StringsJVM;
-import d0.t.MapsJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.g0.t;
+import d0.t.g0;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.e.k;
 import java.util.List;
 import java.util.Map;
 import kotlin.Unit;
@@ -78,7 +75,7 @@ import rx.functions.Func3;
 /* compiled from: WidgetChatListActions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChatListActions extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetChatListActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatListActionsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChatListActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatListActionsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -102,10 +99,10 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
 
         public final void showForChat(FragmentManager fragmentManager, long channelId, long messageId, CharSequence messageContent) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(messageContent, "messageContent");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(messageContent, "messageContent");
             WidgetChatListActions widgetChatListActions = new WidgetChatListActions();
-            Bundle bundleT = outline.T(WidgetChatListActions.INTENT_EXTRA_MESSAGE_CHANNEL_ID, channelId);
+            Bundle bundleT = a.T(WidgetChatListActions.INTENT_EXTRA_MESSAGE_CHANNEL_ID, channelId);
             bundleT.putLong(WidgetChatListActions.INTENT_EXTRA_MESSAGE_ID, messageId);
             bundleT.putCharSequence(WidgetChatListActions.INTENT_EXTRA_MESSAGE_CONTENT, messageContent);
             bundleT.putInt(WidgetChatListActions.INTENT_EXTRA_TYPE, 0);
@@ -114,8 +111,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
 
         public final void showForPin(FragmentManager fragmentManager, long channelId, long messageId, CharSequence messageContent) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(messageContent, "messageContent");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(messageContent, "messageContent");
             Bundle bundle = new Bundle();
             bundle.putLong(WidgetChatListActions.INTENT_EXTRA_MESSAGE_CHANNEL_ID, channelId);
             bundle.putLong(WidgetChatListActions.INTENT_EXTRA_MESSAGE_ID, messageId);
@@ -139,7 +136,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         private final Channel channel;
         private final Guild guild;
         private final boolean isDeveloper;
-        private final PermissionsContexts2 manageMessageContext;
+        private final ManageMessageContext manageMessageContext;
         private final MeUser me;
         private final Message message;
         private final String messageAuthorName;
@@ -164,7 +161,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 if (message == null) {
                     return null;
                 }
-                PermissionsContexts2 permissionsContexts2From = PermissionsContexts2.INSTANCE.from(message, permissions, meUser, guild != null ? Integer.valueOf(guild.getMfaLevel()) : null, channel != null && ChannelUtils.B(channel), channel != null && ChannelUtils.E(channel), (channel == null || (threadMetadata = channel.getThreadMetadata()) == null || !threadMetadata.getArchived()) ? false : true);
+                ManageMessageContext manageMessageContextFrom = ManageMessageContext.INSTANCE.from(message, permissions, meUser, guild != null ? Integer.valueOf(guild.getMfaLevel()) : null, channel != null && ChannelUtils.B(channel), channel != null && ChannelUtils.E(channel), (channel == null || (threadMetadata = channel.getThreadMetadata()) == null || !threadMetadata.getArchived()) ? false : true);
                 if (member == null || (nick = member.getNick()) == null) {
                     User author = message.getAuthor();
                     if (author != null) {
@@ -179,13 +176,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 String str = username;
                 boolean isDeveloperMode = StoreStream.INSTANCE.getUserSettings().getIsDeveloperMode();
                 List<Emoji> list = emojis.recentEmojis;
-                Intrinsics3.checkNotNullExpressionValue(list, "emojis.recentEmojis");
-                return new Model(message, guild, str, messageContent, permissionsContexts2From, type, isDeveloperMode, list, channel, permissions, meUser);
+                m.checkNotNullExpressionValue(list, "emojis.recentEmojis");
+                return new Model(message, guild, str, messageContent, manageMessageContextFrom, type, isDeveloperMode, list, channel, permissions, meUser);
             }
 
             public final Observable<Model> get(long channelId, long messageId, CharSequence messageContent, int type) {
-                Observable<Model> observableY = Observable.j(type != 0 ? type != 1 ? new ScalarSynchronousObservable<>(null) : StoreStream.INSTANCE.getPinnedMessages().observePinnedMessage(channelId, messageId) : StoreStream.INSTANCE.getMessages().observeMessagesForChannel(channelId, messageId), StoreStream.INSTANCE.getChannels().observeChannel(channelId), WidgetChatListActions2.INSTANCE).Y(new WidgetChatListActions3(channelId, messageContent, type));
-                Intrinsics3.checkNotNullExpressionValue(observableY, "Observable\n            .…          }\n            }");
+                Observable<Model> observableY = Observable.j(type != 0 ? type != 1 ? new k<>(null) : StoreStream.INSTANCE.getPinnedMessages().observePinnedMessage(channelId, messageId) : StoreStream.INSTANCE.getMessages().observeMessagesForChannel(channelId, messageId), StoreStream.INSTANCE.getChannels().observeChannel(channelId), WidgetChatListActions$Model$Companion$get$1.INSTANCE).Y(new WidgetChatListActions$Model$Companion$get$2(channelId, messageContent, type));
+                m.checkNotNullExpressionValue(observableY, "Observable\n            .…          }\n            }");
                 return observableY;
             }
 
@@ -195,17 +192,17 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public Model(Message message, Guild guild, String str, CharSequence charSequence, PermissionsContexts2 permissionsContexts2, int i, boolean z2, List<? extends Emoji> list, Channel channel, Long l, MeUser meUser) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(str, "messageAuthorName");
-            Intrinsics3.checkNotNullParameter(permissionsContexts2, "manageMessageContext");
-            Intrinsics3.checkNotNullParameter(list, "recentEmojis");
-            Intrinsics3.checkNotNullParameter(meUser, "me");
+        public Model(Message message, Guild guild, String str, CharSequence charSequence, ManageMessageContext manageMessageContext, int i, boolean z2, List<? extends Emoji> list, Channel channel, Long l, MeUser meUser) {
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(str, "messageAuthorName");
+            m.checkNotNullParameter(manageMessageContext, "manageMessageContext");
+            m.checkNotNullParameter(list, "recentEmojis");
+            m.checkNotNullParameter(meUser, "me");
             this.message = message;
             this.guild = guild;
             this.messageAuthorName = str;
             this.messageContent = charSequence;
-            this.manageMessageContext = permissionsContexts2;
+            this.manageMessageContext = manageMessageContext;
             this.type = i;
             this.isDeveloper = z2;
             this.recentEmojis = list;
@@ -214,8 +211,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
             this.me = meUser;
         }
 
-        public static /* synthetic */ Model copy$default(Model model, Message message, Guild guild, String str, CharSequence charSequence, PermissionsContexts2 permissionsContexts2, int i, boolean z2, List list, Channel channel, Long l, MeUser meUser, int i2, Object obj) {
-            return model.copy((i2 & 1) != 0 ? model.message : message, (i2 & 2) != 0 ? model.guild : guild, (i2 & 4) != 0 ? model.messageAuthorName : str, (i2 & 8) != 0 ? model.messageContent : charSequence, (i2 & 16) != 0 ? model.manageMessageContext : permissionsContexts2, (i2 & 32) != 0 ? model.type : i, (i2 & 64) != 0 ? model.isDeveloper : z2, (i2 & 128) != 0 ? model.recentEmojis : list, (i2 & 256) != 0 ? model.channel : channel, (i2 & 512) != 0 ? model.permissions : l, (i2 & 1024) != 0 ? model.me : meUser);
+        public static /* synthetic */ Model copy$default(Model model, Message message, Guild guild, String str, CharSequence charSequence, ManageMessageContext manageMessageContext, int i, boolean z2, List list, Channel channel, Long l, MeUser meUser, int i2, Object obj) {
+            return model.copy((i2 & 1) != 0 ? model.message : message, (i2 & 2) != 0 ? model.guild : guild, (i2 & 4) != 0 ? model.messageAuthorName : str, (i2 & 8) != 0 ? model.messageContent : charSequence, (i2 & 16) != 0 ? model.manageMessageContext : manageMessageContext, (i2 & 32) != 0 ? model.type : i, (i2 & 64) != 0 ? model.isDeveloper : z2, (i2 & 128) != 0 ? model.recentEmojis : list, (i2 & 256) != 0 ? model.channel : channel, (i2 & 512) != 0 ? model.permissions : l, (i2 & 1024) != 0 ? model.me : meUser);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -249,7 +246,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
 
         /* renamed from: component5, reason: from getter */
-        public final PermissionsContexts2 getManageMessageContext() {
+        public final ManageMessageContext getManageMessageContext() {
             return this.manageMessageContext;
         }
 
@@ -272,12 +269,12 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return this.channel;
         }
 
-        public final Model copy(Message message, Guild guild, String messageAuthorName, CharSequence messageContent, PermissionsContexts2 manageMessageContext, int type, boolean isDeveloper, List<? extends Emoji> recentEmojis, Channel channel, Long permissions, MeUser me2) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(messageAuthorName, "messageAuthorName");
-            Intrinsics3.checkNotNullParameter(manageMessageContext, "manageMessageContext");
-            Intrinsics3.checkNotNullParameter(recentEmojis, "recentEmojis");
-            Intrinsics3.checkNotNullParameter(me2, "me");
+        public final Model copy(Message message, Guild guild, String messageAuthorName, CharSequence messageContent, ManageMessageContext manageMessageContext, int type, boolean isDeveloper, List<? extends Emoji> recentEmojis, Channel channel, Long permissions, MeUser me2) {
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(messageAuthorName, "messageAuthorName");
+            m.checkNotNullParameter(manageMessageContext, "manageMessageContext");
+            m.checkNotNullParameter(recentEmojis, "recentEmojis");
+            m.checkNotNullParameter(me2, "me");
             return new Model(message, guild, messageAuthorName, messageContent, manageMessageContext, type, isDeveloper, recentEmojis, channel, permissions, me2);
         }
 
@@ -289,7 +286,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.message, model.message) && Intrinsics3.areEqual(this.guild, model.guild) && Intrinsics3.areEqual(this.messageAuthorName, model.messageAuthorName) && Intrinsics3.areEqual(this.messageContent, model.messageContent) && Intrinsics3.areEqual(this.manageMessageContext, model.manageMessageContext) && this.type == model.type && this.isDeveloper == model.isDeveloper && Intrinsics3.areEqual(this.recentEmojis, model.recentEmojis) && Intrinsics3.areEqual(this.channel, model.channel) && Intrinsics3.areEqual(this.permissions, model.permissions) && Intrinsics3.areEqual(this.me, model.me);
+            return m.areEqual(this.message, model.message) && m.areEqual(this.guild, model.guild) && m.areEqual(this.messageAuthorName, model.messageAuthorName) && m.areEqual(this.messageContent, model.messageContent) && m.areEqual(this.manageMessageContext, model.manageMessageContext) && this.type == model.type && this.isDeveloper == model.isDeveloper && m.areEqual(this.recentEmojis, model.recentEmojis) && m.areEqual(this.channel, model.channel) && m.areEqual(this.permissions, model.permissions) && m.areEqual(this.me, model.me);
         }
 
         public final Channel getChannel() {
@@ -300,7 +297,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return this.guild;
         }
 
-        public final PermissionsContexts2 getManageMessageContext() {
+        public final ManageMessageContext getManageMessageContext() {
             return this.manageMessageContext;
         }
 
@@ -342,8 +339,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
             int iHashCode3 = (iHashCode2 + (str != null ? str.hashCode() : 0)) * 31;
             CharSequence charSequence = this.messageContent;
             int iHashCode4 = (iHashCode3 + (charSequence != null ? charSequence.hashCode() : 0)) * 31;
-            PermissionsContexts2 permissionsContexts2 = this.manageMessageContext;
-            int iHashCode5 = (((iHashCode4 + (permissionsContexts2 != null ? permissionsContexts2.hashCode() : 0)) * 31) + this.type) * 31;
+            ManageMessageContext manageMessageContext = this.manageMessageContext;
+            int iHashCode5 = (((iHashCode4 + (manageMessageContext != null ? manageMessageContext.hashCode() : 0)) * 31) + this.type) * 31;
             boolean z2 = this.isDeveloper;
             int i = z2;
             if (z2 != 0) {
@@ -365,7 +362,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(message=");
+            StringBuilder sbU = a.U("Model(message=");
             sbU.append(this.message);
             sbU.append(", guild=");
             sbU.append(this.guild);
@@ -394,7 +391,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$addReaction$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ Emoji $emoji;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -497,7 +494,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 long id2 = author.getId();
                 WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;
                 FragmentManager parentFragmentManager = WidgetChatListActions.this.getParentFragmentManager();
-                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 WidgetUserSheet.Companion.show$default(companion, id2, null, parentFragmentManager, null, null, null, null, 122, null);
             }
         }
@@ -566,7 +563,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             long jAccess$getChannelId$p = WidgetChatListActions.access$getChannelId$p(WidgetChatListActions.this);
             long jAccess$getMessageId$p = WidgetChatListActions.access$getMessageId$p(WidgetChatListActions.this);
             Context contextRequireContext = WidgetChatListActions.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetManageReactions.Companion.create$default(companion, jAccess$getChannelId$p, jAccess$getMessageId$p, contextRequireContext, null, 8, null);
         }
     }
@@ -593,7 +590,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
         /* compiled from: WidgetChatListActions.kt */
         /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$5$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<MessageQueue4, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<MessageResult, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -601,16 +598,16 @@ public final class WidgetChatListActions extends AppBottomSheet {
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ Unit invoke(MessageQueue4 messageQueue4) {
-                invoke2(messageQueue4);
+            public /* bridge */ /* synthetic */ Unit invoke(MessageResult messageResult) {
+                invoke2(messageResult);
                 return Unit.a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final void invoke2(MessageQueue4 messageQueue4) {
-                Intrinsics3.checkNotNullParameter(messageQueue4, "messageResult");
-                if (messageQueue4 instanceof MessageQueue4.CaptchaRequired) {
-                    SendUtils.INSTANCE.handleCaptchaRequired((MessageQueue4.CaptchaRequired) messageQueue4);
+            public final void invoke2(MessageResult messageResult) {
+                m.checkNotNullParameter(messageResult, "messageResult");
+                if (messageResult instanceof MessageResult.CaptchaRequired) {
+                    SendUtils.INSTANCE.handleCaptchaRequired((MessageResult.CaptchaRequired) messageResult);
                 }
             }
         }
@@ -659,13 +656,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             Context contextRequireContext = WidgetChatListActions.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             String string = this.$data.getMessageContent().toString();
             EditedMessageNode.Companion companion = EditedMessageNode.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(view, "it");
+            m.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
-            AppToast.c(contextRequireContext, StringsJVM.replace$default(string, companion.getEditedString(context), "", false, 4, (Object) null), 0, 4);
+            m.checkNotNullExpressionValue(context, "it.context");
+            b.a.d.m.c(contextRequireContext, t.replace$default(string, companion.getEditedString(context), "", false, 4, (Object) null), 0, 4);
             WidgetChatListActions.this.dismiss();
         }
     }
@@ -682,8 +679,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             Context contextRequireContext = WidgetChatListActions.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-            AppToast.c(contextRequireContext, String.valueOf(this.$data.getMessage().getId()), 0, 4);
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            b.a.d.m.c(contextRequireContext, String.valueOf(this.$data.getMessage().getId()), 0, 4);
             WidgetChatListActions.this.dismiss();
         }
     }
@@ -700,9 +697,9 @@ public final class WidgetChatListActions extends AppBottomSheet {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             if (ReportsFeatureFlag.INSTANCE.isEnabled()) {
-                WidgetMobileReports.INSTANCE.launchMessageReport(outline.x(view, "view", "view.context"), this.$data.getMessage().getId(), WidgetChatListActions.access$getChannelId$p(WidgetChatListActions.this));
+                WidgetMobileReports.INSTANCE.launchMessageReport(a.x(view, "view", "view.context"), this.$data.getMessage().getId(), WidgetChatListActions.access$getChannelId$p(WidgetChatListActions.this));
             } else {
-                WidgetTosReportViolation.INSTANCE.show(outline.x(view, "view", "view.context"), this.$data.getMessageAuthorName(), Long.valueOf(this.$data.getMessage().getChannelId()), Long.valueOf(this.$data.getMessage().getId()));
+                WidgetTosReportViolation.INSTANCE.show(a.x(view, "view", "view.context"), this.$data.getMessageAuthorName(), Long.valueOf(this.$data.getMessage().getChannelId()), Long.valueOf(this.$data.getMessage().getId()));
             }
             WidgetChatListActions.this.dismiss();
         }
@@ -710,7 +707,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$confirmPublishMessage$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function0<Unit> {
         public AnonymousClass1(WidgetChatListActions widgetChatListActions) {
             super(0, widgetChatListActions, WidgetChatListActions.class, "dismiss", "dismiss()V", 0);
         }
@@ -729,7 +726,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$deleteMessage$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function0<Unit> {
         public AnonymousClass1(WidgetChatListActions widgetChatListActions) {
             super(0, widgetChatListActions, WidgetChatListActions.class, "dismiss", "dismiss()V", 0);
         }
@@ -748,16 +745,16 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Channel>, Observable<? extends CharSequence>> {
+    public static final class AnonymousClass1<T, R> implements b<Map<Long, ? extends Channel>, Observable<? extends CharSequence>> {
         public final /* synthetic */ Message $message;
 
         /* compiled from: WidgetChatListActions.kt */
         /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02621<T1, T2, T3, R> implements Func3<Map<Long, ? extends com.discord.models.user.User>, Map<Long, ? extends Guild>, EmojiSet, CharSequence> {
+        public static final class C03821<T1, T2, T3, R> implements Func3<Map<Long, ? extends com.discord.models.user.User>, Map<Long, ? extends Guild>, EmojiSet, CharSequence> {
             public final /* synthetic */ Map $channels;
             public final /* synthetic */ long $guildId;
 
-            public C02621(long j, Map map) {
+            public C03821(long j, Map map) {
                 this.$guildId = j;
                 this.$channels = map;
             }
@@ -775,9 +772,9 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 }
                 Guild guild = map2.get(Long.valueOf(this.$guildId));
                 Map map3 = this.$channels;
-                Intrinsics3.checkNotNullExpressionValue(map3, "channels");
-                Intrinsics3.checkNotNullExpressionValue(map, "users");
-                Intrinsics3.checkNotNullExpressionValue(emojiSet, "emojiSet");
+                m.checkNotNullExpressionValue(map3, "channels");
+                m.checkNotNullExpressionValue(map, "users");
+                m.checkNotNullExpressionValue(emojiSet, "emojiSet");
                 return MessageUnparser.unparse(content, guild, map3, map, emojiSet);
             }
         }
@@ -786,7 +783,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             this.$message = message;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends CharSequence> call(Map<Long, ? extends Channel> map) {
             return call2((Map<Long, Channel>) map);
         }
@@ -796,13 +793,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
             Channel channel = map.get(Long.valueOf(this.$message.getChannelId()));
             long guildId = channel != null ? channel.getGuildId() : 0L;
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            return Observable.i(companion.getUsers().observeAllUsers(), companion.getGuilds().observeGuilds(), StoreEmoji.getEmojiSet$default(companion.getEmojis(), guildId, this.$message.getChannelId(), false, false, 12, null), new C02621(guildId, map));
+            return Observable.i(companion.getUsers().observeAllUsers(), companion.getGuilds().observeGuilds(), StoreEmoji.getEmojiSet$default(companion.getEmojis(), guildId, this.$message.getChannelId(), false, false, 12, null), new C03821(guildId, map));
         }
     }
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<CharSequence, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<CharSequence, Unit> {
         public final /* synthetic */ Message $message;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -821,14 +818,14 @@ public final class WidgetChatListActions extends AppBottomSheet {
         public final void invoke2(CharSequence charSequence) {
             StoreChat chat = StoreStream.INSTANCE.getChat();
             Message message = this.$message;
-            Intrinsics3.checkNotNullExpressionValue(charSequence, "unparsedMessageContent");
+            m.checkNotNullExpressionValue(charSequence, "unparsedMessageContent");
             chat.setEditingMessage(new StoreChat.EditingMessage(message, charSequence));
         }
     }
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -847,7 +844,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Emoji, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Emoji, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -860,14 +857,14 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Emoji emoji) {
-            Intrinsics3.checkNotNullParameter(emoji, "emoji");
+            m.checkNotNullParameter(emoji, "emoji");
             WidgetChatListActions.access$addReaction(WidgetChatListActions.this, emoji);
         }
     }
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
 
         /* compiled from: WidgetChatListActions.kt */
         /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2$1, reason: invalid class name */
@@ -877,15 +874,15 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
             @Override // com.discord.widgets.chat.input.emoji.EmojiPickerListener
             public void onEmojiPicked(Emoji emoji) {
-                Intrinsics3.checkNotNullParameter(emoji, "emoji");
+                m.checkNotNullParameter(emoji, "emoji");
                 WidgetChatListActions.access$addReaction(WidgetChatListActions.this, emoji);
             }
         }
 
         /* compiled from: WidgetChatListActions.kt */
         /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C02632 extends Lambda implements Function0<Unit> {
-            public C02632() {
+        public static final class C03832 extends o implements Function0<Unit> {
+            public C03832() {
                 super(0);
             }
 
@@ -914,20 +911,20 @@ public final class WidgetChatListActions extends AppBottomSheet {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentManager parentFragmentManager = WidgetChatListActions.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            EmojiPickerNavigator.launchBottomSheet(parentFragmentManager, new AnonymousClass1(), EmojiPickerContextType.Chat.INSTANCE, new C02632());
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            EmojiPickerNavigator.launchBottomSheet(parentFragmentManager, new AnonymousClass1(), EmojiPickerContextType.Chat.INSTANCE, new C03832());
         }
     }
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$removeAllReactions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Model $model;
 
         /* compiled from: WidgetChatListActions.kt */
         /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$removeAllReactions$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02641 extends Lambda implements Function1<Void, Unit> {
-            public C02641() {
+        public static final class C03841 extends o implements Function1<Void, Unit> {
+            public C03841() {
                 super(1);
             }
 
@@ -957,14 +954,14 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "view");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().removeAllReactions(this.$model.getMessage().getChannelId(), this.$model.getMessage().getId()), false, 1, null), WidgetChatListActions.this, null, 2, null), view.getContext(), "REST: removeAllReactions", (Function1) null, new C02641(), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
+            m.checkNotNullParameter(view, "view");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().removeAllReactions(this.$model.getMessage().getChannelId(), this.$model.getMessage().getId()), false, 1, null), WidgetChatListActions.this, null, 2, null), view.getContext(), "REST: removeAllReactions", (Function1) null, new C03841(), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
         }
     }
 
     /* compiled from: WidgetChatListActions.kt */
     /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$toggleMessagePin$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function0<Unit> {
         public AnonymousClass1(WidgetChatListActions widgetChatListActions) {
             super(0, widgetChatListActions, WidgetChatListActions.class, "dismiss", "dismiss()V", 0);
         }
@@ -983,7 +980,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
 
     public WidgetChatListActions() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChatListActions4.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChatListActions$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$addReaction(WidgetChatListActions widgetChatListActions, Emoji emoji) {
@@ -1039,28 +1036,28 @@ public final class WidgetChatListActions extends AppBottomSheet {
         long j = this.channelId;
         long j2 = this.messageId;
         String reactionKey = emoji.getReactionKey();
-        Intrinsics3.checkNotNullExpressionValue(reactionKey, "emoji.reactionKey");
+        m.checkNotNullExpressionValue(reactionKey, "emoji.reactionKey");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(api.addReaction(j, j2, reactionKey), false, 1, null), this, null, 2, null), getContext(), "REST: addReaction", (Function1) null, new AnonymousClass1(emoji), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
     }
 
     private final void configureAddReactionEmojisList(List<? extends Emoji> recentEmojis, boolean isLocalMessage, boolean canAddReactions) throws Resources.NotFoundException {
         if (recentEmojis.isEmpty() || isLocalMessage || !canAddReactions) {
             RecyclerView recyclerView = getBinding().f2307b;
-            Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.dialogChatActionsAddReactionEmojisList");
+            m.checkNotNullExpressionValue(recyclerView, "binding.dialogChatActionsAddReactionEmojisList");
             recyclerView.setVisibility(8);
             return;
         }
         RecyclerView recyclerView2 = getBinding().f2307b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.dialogChatActionsAddReactionEmojisList");
+        m.checkNotNullExpressionValue(recyclerView2, "binding.dialogChatActionsAddReactionEmojisList");
         recyclerView2.setVisibility(0);
         RecyclerView recyclerView3 = getBinding().f2307b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.dialogChatActionsAddReactionEmojisList");
+        m.checkNotNullExpressionValue(recyclerView3, "binding.dialogChatActionsAddReactionEmojisList");
         int width = recyclerView3.getWidth();
         RecyclerView recyclerView4 = getBinding().f2307b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView4, "binding.dialogChatActionsAddReactionEmojisList");
+        m.checkNotNullExpressionValue(recyclerView4, "binding.dialogChatActionsAddReactionEmojisList");
         int paddingStart = recyclerView4.getPaddingStart();
         RecyclerView recyclerView5 = getBinding().f2307b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView5, "binding.dialogChatActionsAddReactionEmojisList");
+        m.checkNotNullExpressionValue(recyclerView5, "binding.dialogChatActionsAddReactionEmojisList");
         int paddingEnd = recyclerView5.getPaddingEnd() + paddingStart;
         int dimensionPixelSize = getResources().getDimensionPixelSize(R.dimen.chat_input_emoji_size);
         int iDpToPixels = DimenUtils.dpToPixels(8);
@@ -1077,7 +1074,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         this.itemDecorator = paddedItemDecorator2;
         WidgetChatListActionsEmojisAdapter widgetChatListActionsEmojisAdapter = this.adapter;
         if (widgetChatListActionsEmojisAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         widgetChatListActionsEmojisAdapter.setData(recentEmojis, iMin);
     }
@@ -1103,66 +1100,66 @@ public final class WidgetChatListActions extends AppBottomSheet {
         int type2 = data.getType();
         if (type2 == 0) {
             TextView textView = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.dialogChatActionsEdit");
+            m.checkNotNullExpressionValue(textView, "binding.dialogChatActionsEdit");
             textView.setVisibility(data.getManageMessageContext().getCanEdit() ? 0 : 8);
             getBinding().f.setOnClickListener(new AnonymousClass1(data));
         } else if (type2 == 1) {
             TextView textView2 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.dialogChatActionsEdit");
+            m.checkNotNullExpressionValue(textView2, "binding.dialogChatActionsEdit");
             textView2.setVisibility(8);
         }
         TextView textView3 = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.dialogChatActionsPublish");
+        m.checkNotNullExpressionValue(textView3, "binding.dialogChatActionsPublish");
         textView3.setVisibility(z3 && (channel = data.getChannel()) != null && channel.getType() == 5 && (type = data.getMessage().getType()) != null && type.intValue() == 0 && !zIsCrossposted ? 0 : 8);
         getBinding().k.setOnClickListener(new AnonymousClass2(data));
         TextView textView4 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.dialogChatActionsManageReactions");
+        m.checkNotNullExpressionValue(textView4, "binding.dialogChatActionsManageReactions");
         textView4.setVisibility(data.getMessage().getReactionsMap().isEmpty() ^ true ? 0 : 8);
         getBinding().g.setOnClickListener(new AnonymousClass3());
         TextView textView5 = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.dialogChatActionsRemoveAllReactions");
+        m.checkNotNullExpressionValue(textView5, "binding.dialogChatActionsRemoveAllReactions");
         textView5.setVisibility((data.getMessage().getReactionsMap().isEmpty() ^ true) && data.getManageMessageContext().getCanManageMessages() ? 0 : 8);
         getBinding().l.setOnClickListener(new AnonymousClass4(data));
         TextView textView6 = getBinding().o;
-        Intrinsics3.checkNotNullExpressionValue(textView6, "binding.dialogChatActionsResend");
+        m.checkNotNullExpressionValue(textView6, "binding.dialogChatActionsResend");
         textView6.setVisibility(data.getMessage().canResend() ? 0 : 8);
         getBinding().o.setOnClickListener(new AnonymousClass5(data));
         TextView textView7 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView7, "binding.dialogChatActionsMarkUnread");
+        m.checkNotNullExpressionValue(textView7, "binding.dialogChatActionsMarkUnread");
         textView7.setVisibility(!data.getMessage().isFailed() && data.getManageMessageContext().getCanMarkUnread() ? 0 : 8);
         getBinding().h.setOnClickListener(new AnonymousClass6(data));
         if (data.getMessageContent() == null) {
             TextView textView8 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView8, "binding.dialogChatActionsCopy");
+            m.checkNotNullExpressionValue(textView8, "binding.dialogChatActionsCopy");
             textView8.setVisibility(8);
         } else {
             if ((data.getMessageContent().length() > 0) && !data.getMessage().isLocalApplicationCommand()) {
                 TextView textView9 = getBinding().c;
-                Intrinsics3.checkNotNullExpressionValue(textView9, "binding.dialogChatActionsCopy");
+                m.checkNotNullExpressionValue(textView9, "binding.dialogChatActionsCopy");
                 textView9.setVisibility(0);
                 getBinding().c.setOnClickListener(new AnonymousClass7(data));
             }
         }
         TextView textView10 = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView10, "binding.dialogChatActionsCopyId");
+        m.checkNotNullExpressionValue(textView10, "binding.dialogChatActionsCopyId");
         textView10.setVisibility(data.isDeveloper() && !zIsLocal ? 0 : 8);
         getBinding().d.setOnClickListener(new AnonymousClass8(data));
         TextView textView11 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textView11, "binding.dialogChatActionsReport");
+        m.checkNotNullExpressionValue(textView11, "binding.dialogChatActionsReport");
         User author = data.getMessage().getAuthor();
         textView11.setVisibility(author == null || (author.getId() > data.getMe().getId() ? 1 : (author.getId() == data.getMe().getId() ? 0 : -1)) != 0 ? 0 : 8);
         getBinding().n.setOnClickListener(new AnonymousClass9(data));
         TextView textView12 = getBinding().p;
-        Intrinsics3.checkNotNullExpressionValue(textView12, "binding.dialogChatActionsShare");
+        m.checkNotNullExpressionValue(textView12, "binding.dialogChatActionsShare");
         textView12.setVisibility(data.isDeveloper() && !zIsLocal ? 0 : 8);
         getBinding().p.setOnClickListener(new AnonymousClass10(data, id2));
         TextView textView13 = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(textView13, "binding.dialogChatActionsPin");
+        m.checkNotNullExpressionValue(textView13, "binding.dialogChatActionsPin");
         textView13.setVisibility(data.getManageMessageContext().getCanTogglePinned() ? 0 : 8);
-        getBinding().i.setText(Intrinsics3.areEqual(data.getMessage().getPinned(), Boolean.TRUE) ? R.string.unpin : R.string.pin);
+        getBinding().i.setText(m.areEqual(data.getMessage().getPinned(), Boolean.TRUE) ? R.string.unpin : R.string.pin);
         getBinding().i.setOnClickListener(new AnonymousClass11(data));
         TextView textView14 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView14, "binding.dialogChatActionsDelete");
+        m.checkNotNullExpressionValue(textView14, "binding.dialogChatActionsDelete");
         textView14.setVisibility(data.getManageMessageContext().getCanDelete() ? 0 : 8);
         getBinding().e.setOnClickListener(new AnonymousClass12(data));
         getBinding().j.setOnClickListener(new AnonymousClass13(data));
@@ -1172,11 +1169,11 @@ public final class WidgetChatListActions extends AppBottomSheet {
             z2 = false;
         }
         TextView textView15 = getBinding().m;
-        Intrinsics3.checkNotNullExpressionValue(textView15, "binding.dialogChatActionsReply");
+        m.checkNotNullExpressionValue(textView15, "binding.dialogChatActionsReply");
         textView15.setVisibility(z2 ? 0 : 8);
         getBinding().m.setOnClickListener(new AnonymousClass14(data));
         TextView textView16 = getBinding().q;
-        Intrinsics3.checkNotNullExpressionValue(textView16, "binding.dialogChatActionsStartThread");
+        m.checkNotNullExpressionValue(textView16, "binding.dialogChatActionsStartThread");
         textView16.setVisibility(ThreadUtils.INSTANCE.canCreatePublicThread(data.getPermissions(), data.getChannel(), data.getMessage(), data.getGuild()) ? 0 : 8);
         getBinding().q.setOnClickListener(new AnonymousClass15(id2, data));
     }
@@ -1185,7 +1182,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
     private final void confirmPublishMessage(Message message) {
         MessageActionDialogs messageActionDialogs = MessageActionDialogs.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         messageActionDialogs.showPublishMessageConfirmation(parentFragmentManager, message, new AnonymousClass1(this));
     }
 
@@ -1193,15 +1190,15 @@ public final class WidgetChatListActions extends AppBottomSheet {
     private final void deleteMessage(Message message) {
         MessageActionDialogs messageActionDialogs = MessageActionDialogs.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         messageActionDialogs.showDeleteMessageConfirmation(parentFragmentManager, contextRequireContext, message, new AnonymousClass1(this));
     }
 
     private final void editMessage(Message message) {
         Observable<R> observableY = StoreStream.INSTANCE.getChannels().observeGuildAndPrivateChannels().Y(new AnonymousClass1(message));
-        Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n        .get…              }\n        }");
+        m.checkNotNullExpressionValue(observableY, "StoreStream\n        .get…              }\n        }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(ObservableExtensionsKt.computationBuffered(observableY), 0L, false, 3, null), (Context) null, "editMessage", (Function1) null, new AnonymousClass2(message), (Function1) null, (Function0) null, (Function0) null, 117, (Object) null);
     }
 
@@ -1213,11 +1210,11 @@ public final class WidgetChatListActions extends AppBottomSheet {
     private final void removeAllReactions(Model model) {
         WidgetNoticeDialog.Companion companion = WidgetNoticeDialog.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         String string = getString(R.string.remove_all_reactions_confirm_title);
         String string2 = getString(R.string.remove_all_reactions_confirm_body);
-        Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.remov…l_reactions_confirm_body)");
-        WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, string, string2, getString(R.string.yes_text), getString(R.string.no_text), MapsJVM.mapOf(Tuples.to(Integer.valueOf(R.id.notice_ok), new AnonymousClass1(model))), null, null, null, null, null, null, 0, null, 16320, null);
+        m.checkNotNullExpressionValue(string2, "getString(R.string.remov…l_reactions_confirm_body)");
+        WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, string, string2, getString(R.string.yes_text), getString(R.string.no_text), g0.mapOf(d0.o.to(Integer.valueOf(R.id.notice_ok), new AnonymousClass1(model))), null, null, null, null, null, null, 0, null, 16320, null);
     }
 
     private final void replyMessage(Message message, Channel channel) {
@@ -1242,9 +1239,9 @@ public final class WidgetChatListActions extends AppBottomSheet {
     private final void toggleMessagePin(Message message) {
         MessageActionDialogs messageActionDialogs = MessageActionDialogs.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         messageActionDialogs.showPinMessageConfirmation(parentFragmentManager, contextRequireContext, message, this, new AnonymousClass1(this));
     }
 
@@ -1258,35 +1255,35 @@ public final class WidgetChatListActions extends AppBottomSheet {
         super.onResume();
         AppBottomSheet.hideKeyboard$default(this, null, 1, null);
         Observable observableR = ObservableExtensionsKt.computationLatest(Model.INSTANCE.get(this.channelId, this.messageId, getArgumentsOrDefault().getCharSequence(INTENT_EXTRA_MESSAGE_CONTENT), getArgumentsOrDefault().getInt(INTENT_EXTRA_TYPE))).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Model.get(channelId, mes…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "Model.get(channelId, mes…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableR, this, null, 2, null), WidgetChatListActions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         this.channelId = getArgumentsOrDefault().getLong(INTENT_EXTRA_MESSAGE_CHANNEL_ID);
         this.messageId = getArgumentsOrDefault().getLong(INTENT_EXTRA_MESSAGE_ID);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
         RecyclerView recyclerView = getBinding().f2307b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.dialogChatActionsAddReactionEmojisList");
+        m.checkNotNullExpressionValue(recyclerView, "binding.dialogChatActionsAddReactionEmojisList");
         WidgetChatListActionsEmojisAdapter widgetChatListActionsEmojisAdapter = (WidgetChatListActionsEmojisAdapter) companion.configure(new WidgetChatListActionsEmojisAdapter(recyclerView));
         this.adapter = widgetChatListActionsEmojisAdapter;
         if (widgetChatListActionsEmojisAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         widgetChatListActionsEmojisAdapter.setOnClickEmoji(new AnonymousClass1());
         WidgetChatListActionsEmojisAdapter widgetChatListActionsEmojisAdapter2 = this.adapter;
         if (widgetChatListActionsEmojisAdapter2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         widgetChatListActionsEmojisAdapter2.setOnClickMoreEmojis(new AnonymousClass2());
         RecyclerView recyclerView2 = getBinding().f2307b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.dialogChatActionsAddReactionEmojisList");
+        m.checkNotNullExpressionValue(recyclerView2, "binding.dialogChatActionsAddReactionEmojisList");
         WidgetChatListActionsEmojisAdapter widgetChatListActionsEmojisAdapter3 = this.adapter;
         if (widgetChatListActionsEmojisAdapter3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         recyclerView2.setAdapter(widgetChatListActionsEmojisAdapter3);
         getBinding().f2307b.setHasFixedSize(true);

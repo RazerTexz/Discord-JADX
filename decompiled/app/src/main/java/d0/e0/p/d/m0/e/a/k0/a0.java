@@ -1,13 +1,11 @@
 package d0.e0.p.d.m0.e.a.k0;
 
-import d0.e0.p.d.m0.g.Name;
-
 /* compiled from: javaElements.kt */
 /* loaded from: classes3.dex */
 public interface a0 extends d {
-    Name getName();
+    d0.e0.p.d.m0.g.e getName();
 
-    javaTypes5 getType();
+    x getType();
 
     boolean isVararg();
 }

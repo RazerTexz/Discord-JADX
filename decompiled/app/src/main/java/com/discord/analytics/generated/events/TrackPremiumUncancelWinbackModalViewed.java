@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackSubscriptionMetadata;
-import com.discord.analytics.generated.traits.TrackSubscriptionMetadata2;
+import com.discord.analytics.generated.traits.TrackSubscriptionMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPremiumUncancelWinbackModalViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumUncancelWinbackModalViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSubscriptionMetadata2 {
+public final /* data */ class TrackPremiumUncancelWinbackModalViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSubscriptionMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackSubscriptionMetadata trackSubscriptionMetadata;
@@ -41,7 +41,7 @@ public final /* data */ class TrackPremiumUncancelWinbackModalViewed implements 
             return false;
         }
         TrackPremiumUncancelWinbackModalViewed trackPremiumUncancelWinbackModalViewed = (TrackPremiumUncancelWinbackModalViewed) other;
-        return Intrinsics3.areEqual(this.globalEmojiPosition, trackPremiumUncancelWinbackModalViewed.globalEmojiPosition) && Intrinsics3.areEqual(this.globalEmojiStats, trackPremiumUncancelWinbackModalViewed.globalEmojiStats) && Intrinsics3.areEqual(this.globalEmojiPersonalized, trackPremiumUncancelWinbackModalViewed.globalEmojiPersonalized) && Intrinsics3.areEqual(this.hdStreamingPosition, trackPremiumUncancelWinbackModalViewed.hdStreamingPosition) && Intrinsics3.areEqual(this.hdStreamingStats, trackPremiumUncancelWinbackModalViewed.hdStreamingStats) && Intrinsics3.areEqual(this.hdStreamingPersonalized, trackPremiumUncancelWinbackModalViewed.hdStreamingPersonalized) && Intrinsics3.areEqual(this.largeFileUploadPosition, trackPremiumUncancelWinbackModalViewed.largeFileUploadPosition) && Intrinsics3.areEqual(this.largeFileUploadStats, trackPremiumUncancelWinbackModalViewed.largeFileUploadStats) && Intrinsics3.areEqual(this.largeFileUploadPersonalized, trackPremiumUncancelWinbackModalViewed.largeFileUploadPersonalized);
+        return m.areEqual(this.globalEmojiPosition, trackPremiumUncancelWinbackModalViewed.globalEmojiPosition) && m.areEqual(this.globalEmojiStats, trackPremiumUncancelWinbackModalViewed.globalEmojiStats) && m.areEqual(this.globalEmojiPersonalized, trackPremiumUncancelWinbackModalViewed.globalEmojiPersonalized) && m.areEqual(this.hdStreamingPosition, trackPremiumUncancelWinbackModalViewed.hdStreamingPosition) && m.areEqual(this.hdStreamingStats, trackPremiumUncancelWinbackModalViewed.hdStreamingStats) && m.areEqual(this.hdStreamingPersonalized, trackPremiumUncancelWinbackModalViewed.hdStreamingPersonalized) && m.areEqual(this.largeFileUploadPosition, trackPremiumUncancelWinbackModalViewed.largeFileUploadPosition) && m.areEqual(this.largeFileUploadStats, trackPremiumUncancelWinbackModalViewed.largeFileUploadStats) && m.areEqual(this.largeFileUploadPersonalized, trackPremiumUncancelWinbackModalViewed.largeFileUploadPersonalized);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackPremiumUncancelWinbackModalViewed implements 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPremiumUncancelWinbackModalViewed(globalEmojiPosition=");
+        StringBuilder sbU = a.U("TrackPremiumUncancelWinbackModalViewed(globalEmojiPosition=");
         sbU.append(this.globalEmojiPosition);
         sbU.append(", globalEmojiStats=");
         sbU.append(this.globalEmojiStats);
@@ -83,6 +83,6 @@ public final /* data */ class TrackPremiumUncancelWinbackModalViewed implements 
         sbU.append(", largeFileUploadStats=");
         sbU.append(this.largeFileUploadStats);
         sbU.append(", largeFileUploadPersonalized=");
-        return outline.D(sbU, this.largeFileUploadPersonalized, ")");
+        return a.D(sbU, this.largeFileUploadPersonalized, ")");
     }
 }

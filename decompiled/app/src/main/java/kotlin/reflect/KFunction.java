@@ -1,10 +1,10 @@
 package kotlin.reflect;
 
-import d0.Function3;
+import d0.c;
 
 /* compiled from: KFunction.kt */
 /* loaded from: classes3.dex */
-public interface KFunction<R> extends KCallable<R>, Function3<R> {
+public interface KFunction<R> extends KCallable<R>, c<R> {
     boolean isExternal();
 
     boolean isInfix();

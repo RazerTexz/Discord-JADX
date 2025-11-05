@@ -1,10 +1,10 @@
 package com.discord.widgets.servers.role_members;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.member.GuildMember;
 import com.discord.utilities.recycler.DiffKeyProvider;
 import com.discord.widgets.channels.permissions.PermissionOwner;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ServerSettingsRoleMemberAdapterItem.kt */
 /* loaded from: classes2.dex */
@@ -14,8 +14,8 @@ public final /* data */ class ServerSettingsRoleMemberAdapterItem implements Dif
     private final PermissionOwner.Member permissionOwner;
 
     public ServerSettingsRoleMemberAdapterItem(GuildMember guildMember, PermissionOwner.Member member) {
-        Intrinsics3.checkNotNullParameter(guildMember, "guildMember");
-        Intrinsics3.checkNotNullParameter(member, "permissionOwner");
+        m.checkNotNullParameter(guildMember, "guildMember");
+        m.checkNotNullParameter(member, "permissionOwner");
         this.guildMember = guildMember;
         this.permissionOwner = member;
         this.key = String.valueOf(member.getUser().getId());
@@ -42,8 +42,8 @@ public final /* data */ class ServerSettingsRoleMemberAdapterItem implements Dif
     }
 
     public final ServerSettingsRoleMemberAdapterItem copy(GuildMember guildMember, PermissionOwner.Member permissionOwner) {
-        Intrinsics3.checkNotNullParameter(guildMember, "guildMember");
-        Intrinsics3.checkNotNullParameter(permissionOwner, "permissionOwner");
+        m.checkNotNullParameter(guildMember, "guildMember");
+        m.checkNotNullParameter(permissionOwner, "permissionOwner");
         return new ServerSettingsRoleMemberAdapterItem(guildMember, permissionOwner);
     }
 
@@ -55,7 +55,7 @@ public final /* data */ class ServerSettingsRoleMemberAdapterItem implements Dif
             return false;
         }
         ServerSettingsRoleMemberAdapterItem serverSettingsRoleMemberAdapterItem = (ServerSettingsRoleMemberAdapterItem) other;
-        return Intrinsics3.areEqual(this.guildMember, serverSettingsRoleMemberAdapterItem.guildMember) && Intrinsics3.areEqual(this.permissionOwner, serverSettingsRoleMemberAdapterItem.permissionOwner);
+        return m.areEqual(this.guildMember, serverSettingsRoleMemberAdapterItem.guildMember) && m.areEqual(this.permissionOwner, serverSettingsRoleMemberAdapterItem.permissionOwner);
     }
 
     public final GuildMember getGuildMember() {
@@ -79,7 +79,7 @@ public final /* data */ class ServerSettingsRoleMemberAdapterItem implements Dif
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ServerSettingsRoleMemberAdapterItem(guildMember=");
+        StringBuilder sbU = a.U("ServerSettingsRoleMemberAdapterItem(guildMember=");
         sbU.append(this.guildMember);
         sbU.append(", permissionOwner=");
         sbU.append(this.permissionOwner);

@@ -1,14 +1,14 @@
 package com.discord.utilities.search.suggestion.entries;
 
 import android.annotation.SuppressLint;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.member.GuildMember;
 import com.discord.models.user.User;
 import com.discord.utilities.search.suggestion.entries.SearchSuggestion;
 import com.discord.utilities.user.UserUtils;
-import com.discord.widgets.chat.AutocompleteUtils2;
-import d0.g0.Strings4;
-import d0.z.d.Intrinsics3;
+import com.discord.widgets.chat.AutocompleteTypes;
+import d0.g0.w;
+import d0.z.d.m;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -39,24 +39,24 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
         }
 
         private final String getUsernameWithDiscriminator(String userName, int discriminator) {
-            StringBuilder sbU = outline.U(userName);
+            StringBuilder sbU = a.U(userName);
             sbU.append(UserUtils.INSTANCE.padDiscriminator(discriminator));
             return sbU.toString();
         }
 
         @SuppressLint({"DefaultLocale"})
         public final boolean canComplete(String username, int discriminator, String nickname, CharSequence currentInput) {
-            Intrinsics3.checkNotNullParameter(username, "username");
-            Intrinsics3.checkNotNullParameter(currentInput, "currentInput");
+            m.checkNotNullParameter(username, "username");
+            m.checkNotNullParameter(currentInput, "currentInput");
             String usernameWithDiscriminator = getUsernameWithDiscriminator(username, discriminator);
             String string = currentInput.toString();
             Objects.requireNonNull(string, "null cannot be cast to non-null type java.lang.String");
             String lowerCase = string.toLowerCase();
-            Intrinsics3.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase()");
-            if (Strings4.contains((CharSequence) usernameWithDiscriminator, (CharSequence) lowerCase, true)) {
+            m.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase()");
+            if (w.contains((CharSequence) usernameWithDiscriminator, (CharSequence) lowerCase, true)) {
                 return true;
             }
-            return nickname != null ? Strings4.contains((CharSequence) nickname, (CharSequence) lowerCase, true) : false;
+            return nickname != null ? w.contains((CharSequence) nickname, (CharSequence) lowerCase, true) : false;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -84,8 +84,8 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
 
     public UserSuggestion(User user, TargetType targetType, GuildMember guildMember) {
         SearchSuggestion.Category category;
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(targetType, "targetType");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(targetType, "targetType");
         this.user = user;
         this.targetType = targetType;
         this.guildMember = guildMember;
@@ -142,8 +142,8 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
     }
 
     public final UserSuggestion copy(User user, TargetType targetType, GuildMember guildMember) {
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(targetType, "targetType");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(targetType, "targetType");
         return new UserSuggestion(user, targetType, guildMember);
     }
 
@@ -155,7 +155,7 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
             return false;
         }
         UserSuggestion userSuggestion = (UserSuggestion) other;
-        return Intrinsics3.areEqual(this.user, userSuggestion.user) && Intrinsics3.areEqual(this.targetType, userSuggestion.targetType) && Intrinsics3.areEqual(this.guildMember, userSuggestion.guildMember);
+        return m.areEqual(this.user, userSuggestion.user) && m.areEqual(this.targetType, userSuggestion.targetType) && m.areEqual(this.guildMember, userSuggestion.guildMember);
     }
 
     @Override // com.discord.utilities.search.suggestion.entries.SearchSuggestion
@@ -205,7 +205,7 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("UserSuggestion(user=");
+        StringBuilder sbU = a.U("UserSuggestion(user=");
         sbU.append(this.user);
         sbU.append(", targetType=");
         sbU.append(this.targetType);
@@ -217,7 +217,7 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
 
     /* renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(UserSuggestion other) {
-        Intrinsics3.checkNotNullParameter(other, "other");
+        m.checkNotNullParameter(other, "other");
         String str = this.nickname;
         if (str == null) {
             str = this.usernameWithDiscriminator;

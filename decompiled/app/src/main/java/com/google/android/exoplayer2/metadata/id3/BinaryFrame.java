@@ -3,8 +3,7 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
 import java.util.Arrays;
 
 /* loaded from: classes3.dex */
@@ -41,7 +40,7 @@ public final class BinaryFrame extends Id3Frame {
     }
 
     public int hashCode() {
-        return Arrays.hashCode(this.k) + outline.m(this.j, 527, 31);
+        return Arrays.hashCode(this.k) + b.d.b.a.a.m(this.j, 527, 31);
     }
 
     @Override // android.os.Parcelable
@@ -53,7 +52,7 @@ public final class BinaryFrame extends Id3Frame {
     /* JADX WARN: Illegal instructions before constructor call */
     public BinaryFrame(Parcel parcel) {
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         super(string);
         this.k = parcel.createByteArray();
     }

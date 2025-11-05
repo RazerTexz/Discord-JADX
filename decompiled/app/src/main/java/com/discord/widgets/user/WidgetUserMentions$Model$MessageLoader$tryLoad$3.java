@@ -2,14 +2,14 @@ package com.discord.widgets.user;
 
 import com.discord.utilities.error.Error;
 import com.discord.widgets.user.WidgetUserMentions;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserMentions$Model$MessageLoader$tryLoad$3 extends Lambda implements Function1<Error, Unit> {
+public final class WidgetUserMentions$Model$MessageLoader$tryLoad$3 extends o implements Function1<Error, Unit> {
     public final /* synthetic */ WidgetUserMentions.Model.MessageLoader this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -26,7 +26,7 @@ public final class WidgetUserMentions$Model$MessageLoader$tryLoad$3 extends Lamb
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
-        Intrinsics3.checkNotNullParameter(error, "it");
+        m.checkNotNullParameter(error, "it");
         WidgetUserMentions.Model.MessageLoader.access$handleLoadError(this.this$0);
     }
 }

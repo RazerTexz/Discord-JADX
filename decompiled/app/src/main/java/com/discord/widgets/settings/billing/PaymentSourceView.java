@@ -8,13 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.StyleRes;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.databinding.PaymentSourceViewBinding;
 import com.discord.models.domain.ModelPaymentSource;
-import com.discord.utilities.billing.PremiumUtils2;
+import com.discord.utilities.billing.PremiumUtilsKt;
 import com.discord.utilities.time.TimeUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: PaymentSourceView.kt */
@@ -36,35 +36,35 @@ public final class PaymentSourceView extends ConstraintLayout {
 
     private final void bindCard(ModelPaymentSource.ModelPaymentSourceCard paymentSource) {
         TextView textView = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.paymentSourceViewTitle");
-        FormatUtils.n(textView, R.string.payment_source_card_ending, new Object[]{paymentSource.getBrand(), paymentSource.getLast4()}, null, 4);
+        m.checkNotNullExpressionValue(textView, "binding.paymentSourceViewTitle");
+        b.n(textView, R.string.payment_source_card_ending, new Object[]{paymentSource.getBrand(), paymentSource.getLast4()}, null, 4);
         TimeUtils timeUtils = TimeUtils.INSTANCE;
         int expiresMonth = paymentSource.getExpiresMonth();
         TextView textView2 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.paymentSourceViewSubtext");
+        m.checkNotNullExpressionValue(textView2, "binding.paymentSourceViewSubtext");
         Context context = textView2.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "binding.paymentSourceViewSubtext.context");
+        m.checkNotNullExpressionValue(context, "binding.paymentSourceViewSubtext.context");
         String localizedMonthName = timeUtils.getLocalizedMonthName(expiresMonth, context);
         TextView textView3 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.paymentSourceViewSubtext");
-        FormatUtils.n(textView3, R.string.payment_source_card_expires, new Object[]{localizedMonthName, Integer.valueOf(paymentSource.getExpiresYear())}, null, 4);
+        m.checkNotNullExpressionValue(textView3, "binding.paymentSourceViewSubtext");
+        b.n(textView3, R.string.payment_source_card_expires, new Object[]{localizedMonthName, Integer.valueOf(paymentSource.getExpiresYear())}, null, 4);
     }
 
     private final void bindPaypal(ModelPaymentSource.ModelPaymentSourcePaypal paymentSource) {
         this.binding.f.setText(R.string.payment_source_paypal);
         TextView textView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.paymentSourceViewSubtext");
+        m.checkNotNullExpressionValue(textView, "binding.paymentSourceViewSubtext");
         textView.setText(paymentSource.getEmail());
     }
 
     public final void bind(ModelPaymentSource paymentSource, boolean isPremium) {
-        Intrinsics3.checkNotNullParameter(paymentSource, "paymentSource");
-        this.binding.f2135b.setImageResource(PremiumUtils2.getPaymentSourceIcon(paymentSource));
+        m.checkNotNullParameter(paymentSource, "paymentSource");
+        this.binding.f2135b.setImageResource(PremiumUtilsKt.getPaymentSourceIcon(paymentSource));
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.paymentSourceViewInvalid");
+        m.checkNotNullExpressionValue(textView, "binding.paymentSourceViewInvalid");
         textView.setVisibility(paymentSource.getInvalid() ? 0 : 8);
         ImageView imageView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.paymentSourceViewPremium");
+        m.checkNotNullExpressionValue(imageView, "binding.paymentSourceViewPremium");
         imageView.setVisibility(isPremium ? 0 : 8);
         if (paymentSource instanceof ModelPaymentSource.ModelPaymentSourcePaypal) {
             bindPaypal((ModelPaymentSource.ModelPaymentSourcePaypal) paymentSource);
@@ -76,7 +76,7 @@ public final class PaymentSourceView extends ConstraintLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PaymentSourceView(Context context, AttributeSet attributeSet, @StyleRes int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(R.layout.payment_source_view, this);
         int i2 = R.id.payment_source_view_icon;
         ImageView imageView = (ImageView) findViewById(R.id.payment_source_view_icon);
@@ -97,7 +97,7 @@ public final class PaymentSourceView extends ConstraintLayout {
                             TextView textView3 = (TextView) findViewById(R.id.payment_source_view_title);
                             if (textView3 != null) {
                                 PaymentSourceViewBinding paymentSourceViewBinding = new PaymentSourceViewBinding(this, imageView, cardView, textView, imageView2, textView2, textView3);
-                                Intrinsics3.checkNotNullExpressionValue(paymentSourceViewBinding, "PaymentSourceViewBinding…ater.from(context), this)");
+                                m.checkNotNullExpressionValue(paymentSourceViewBinding, "PaymentSourceViewBinding…ater.from(context), this)");
                                 this.binding = paymentSourceViewBinding;
                                 return;
                             }

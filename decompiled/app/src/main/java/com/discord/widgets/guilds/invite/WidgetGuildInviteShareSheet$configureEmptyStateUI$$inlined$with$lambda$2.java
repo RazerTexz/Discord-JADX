@@ -20,7 +20,7 @@ public final class WidgetGuildInviteShareSheet$configureEmptyStateUI$$inlined$wi
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) throws Resources.NotFoundException {
         if (this.$invite != null) {
-            GuildInviteUiHelper.shareLinkClick(this.this$0.getContext(), this.$invite, this.$viewState$inlined.getChannel());
+            GuildInviteUiHelperKt.shareLinkClick(this.this$0.getContext(), this.$invite, this.$viewState$inlined.getChannel());
         }
     }
 }

@@ -2,8 +2,7 @@ package com.discord.utilities.textprocessing;
 
 import a0.a.a.b;
 import android.content.Context;
-import b.a.d.AppToast;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.role.GuildRole;
 import com.discord.utilities.color.ColorCompat;
@@ -17,8 +16,8 @@ import com.discord.utilities.textprocessing.node.UrlNode;
 import com.discord.utilities.textprocessing.node.UserMentionNode;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.emoji.WidgetEmojiSheet;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -45,7 +44,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
 
     /* compiled from: MessageRenderContext.kt */
     /* renamed from: com.discord.utilities.textprocessing.MessageRenderContext$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function3<Context, String, String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function3<Context, String, String, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -60,15 +59,15 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
-            Intrinsics3.checkNotNullParameter(context, "clickContext");
-            Intrinsics3.checkNotNullParameter(str, "url");
+            m.checkNotNullParameter(context, "clickContext");
+            m.checkNotNullParameter(str, "url");
             UriHandler.handleOrUntrusted(context, str, str2);
         }
     }
 
     /* compiled from: MessageRenderContext.kt */
     /* renamed from: com.discord.utilities.textprocessing.MessageRenderContext$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -83,7 +82,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "it");
+            m.checkNotNullParameter(str, "it");
         }
     }
 
@@ -133,9 +132,9 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
 
     /* JADX WARN: Multi-variable type inference failed */
     public MessageRenderContext(Context context, long j, boolean z2, Map<Long, String> map, Map<Long, String> map2, Map<Long, GuildRole> map3, int i, Function3<? super Context, ? super String, ? super String, Unit> function3, Function1<? super String, Unit> function1, int i2, int i3, Function1<? super SpoilerNode<?>, Unit> function12, Function1<? super Long, Unit> function13, Function1<? super Long, Unit> function14) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(function3, "onClickUrl");
-        Intrinsics3.checkNotNullParameter(function1, "onLongPressUrl");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(function3, "onClickUrl");
+        m.checkNotNullParameter(function1, "onLongPressUrl");
         this.context = context;
         this.myId = j;
         this.isAnimationEnabled = z2;
@@ -213,9 +212,9 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
     }
 
     public final MessageRenderContext copy(Context context, long myId, boolean isAnimationEnabled, Map<Long, String> userNames, Map<Long, String> channelNames, Map<Long, GuildRole> roles, int linkColorAttrResId, Function3<? super Context, ? super String, ? super String, Unit> onClickUrl, Function1<? super String, Unit> onLongPressUrl, int spoilerColorRes, int spoilerRevealedColorRes, Function1<? super SpoilerNode<?>, Unit> spoilerOnClick, Function1<? super Long, Unit> userMentionOnClick, Function1<? super Long, Unit> channelMentionOnClick) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(onClickUrl, "onClickUrl");
-        Intrinsics3.checkNotNullParameter(onLongPressUrl, "onLongPressUrl");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(onClickUrl, "onClickUrl");
+        m.checkNotNullParameter(onLongPressUrl, "onLongPressUrl");
         return new MessageRenderContext(context, myId, isAnimationEnabled, userNames, channelNames, roles, linkColorAttrResId, onClickUrl, onLongPressUrl, spoilerColorRes, spoilerRevealedColorRes, spoilerOnClick, userMentionOnClick, channelMentionOnClick);
     }
 
@@ -227,7 +226,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
             return false;
         }
         MessageRenderContext messageRenderContext = (MessageRenderContext) other;
-        return Intrinsics3.areEqual(getContext(), messageRenderContext.getContext()) && getMyId() == messageRenderContext.getMyId() && getIsAnimationEnabled() == messageRenderContext.getIsAnimationEnabled() && Intrinsics3.areEqual(getUserNames(), messageRenderContext.getUserNames()) && Intrinsics3.areEqual(getChannelNames(), messageRenderContext.getChannelNames()) && Intrinsics3.areEqual(getRoles(), messageRenderContext.getRoles()) && getLinkColorAttrResId() == messageRenderContext.getLinkColorAttrResId() && Intrinsics3.areEqual(getOnClickUrl(), messageRenderContext.getOnClickUrl()) && Intrinsics3.areEqual(getOnLongPressUrl(), messageRenderContext.getOnLongPressUrl()) && getSpoilerColorRes() == messageRenderContext.getSpoilerColorRes() && getSpoilerRevealedColorRes() == messageRenderContext.getSpoilerRevealedColorRes() && Intrinsics3.areEqual(getSpoilerOnClick(), messageRenderContext.getSpoilerOnClick()) && Intrinsics3.areEqual(getUserMentionOnClick(), messageRenderContext.getUserMentionOnClick()) && Intrinsics3.areEqual(getChannelMentionOnClick(), messageRenderContext.getChannelMentionOnClick());
+        return m.areEqual(getContext(), messageRenderContext.getContext()) && getMyId() == messageRenderContext.getMyId() && getIsAnimationEnabled() == messageRenderContext.getIsAnimationEnabled() && m.areEqual(getUserNames(), messageRenderContext.getUserNames()) && m.areEqual(getChannelNames(), messageRenderContext.getChannelNames()) && m.areEqual(getRoles(), messageRenderContext.getRoles()) && getLinkColorAttrResId() == messageRenderContext.getLinkColorAttrResId() && m.areEqual(getOnClickUrl(), messageRenderContext.getOnClickUrl()) && m.areEqual(getOnLongPressUrl(), messageRenderContext.getOnLongPressUrl()) && getSpoilerColorRes() == messageRenderContext.getSpoilerColorRes() && getSpoilerRevealedColorRes() == messageRenderContext.getSpoilerRevealedColorRes() && m.areEqual(getSpoilerOnClick(), messageRenderContext.getSpoilerOnClick()) && m.areEqual(getUserMentionOnClick(), messageRenderContext.getUserMentionOnClick()) && m.areEqual(getChannelMentionOnClick(), messageRenderContext.getChannelMentionOnClick());
     }
 
     @Override // com.discord.utilities.textprocessing.node.ChannelMentionNode.RenderContext
@@ -330,18 +329,18 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
 
     @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
     public void onEmojiClicked(EmojiNode.EmojiIdAndType emojiIdAndType) {
-        Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
+        m.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
         WidgetEmojiSheet.INSTANCE.enqueueNotice(emojiIdAndType);
     }
 
     @Override // com.discord.utilities.textprocessing.node.TimestampNode.RenderContext
     public void onTimestampClicked(CharSequence full) {
-        Intrinsics3.checkNotNullParameter(full, "full");
-        AppToast.h(getContext(), full, 0, null, 12);
+        m.checkNotNullParameter(full, "full");
+        b.a.d.m.h(getContext(), full, 0, null, 12);
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MessageRenderContext(context=");
+        StringBuilder sbU = a.U("MessageRenderContext(context=");
         sbU.append(getContext());
         sbU.append(", myId=");
         sbU.append(getMyId());

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAppCrashed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppCrashed implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
+public final /* data */ class TrackAppCrashed implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final CharSequence path = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackAppCrashed implements AnalyticsSchema, TrackB
             return false;
         }
         TrackAppCrashed trackAppCrashed = (TrackAppCrashed) other;
-        return Intrinsics3.areEqual(this.path, trackAppCrashed.path) && Intrinsics3.areEqual(this.extra, trackAppCrashed.extra);
+        return m.areEqual(this.path, trackAppCrashed.path) && m.areEqual(this.extra, trackAppCrashed.extra);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackAppCrashed implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAppCrashed(path=");
+        StringBuilder sbU = a.U("TrackAppCrashed(path=");
         sbU.append(this.path);
         sbU.append(", extra=");
-        return outline.E(sbU, this.extra, ")");
+        return a.E(sbU, this.extra, ")");
     }
 }

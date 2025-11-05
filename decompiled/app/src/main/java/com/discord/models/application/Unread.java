@@ -1,10 +1,10 @@
 package com.discord.models.application;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.message.Message;
-import d0.t.ReversedViews3;
-import d0.z.d.Intrinsics3;
+import d0.t.s;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -30,7 +30,7 @@ public final /* data */ class Unread {
         private final int getTotalMessages(Marker marker, List<Message> messages) {
             int i = 0;
             if (!messages.isEmpty() && marker.getMessageId() != null) {
-                Iterator it = ReversedViews3.asReversed(messages).iterator();
+                Iterator it = s.asReversed(messages).iterator();
                 while (it.hasNext()) {
                     long id2 = ((Message) it.next()).getId();
                     Long messageId = marker.getMessageId();
@@ -90,7 +90,7 @@ public final /* data */ class Unread {
                 return false;
             }
             Marker marker = (Marker) other;
-            return this.channelId == marker.channelId && Intrinsics3.areEqual(this.messageId, marker.messageId);
+            return this.channelId == marker.channelId && m.areEqual(this.messageId, marker.messageId);
         }
 
         public final long getChannelId() {
@@ -108,10 +108,10 @@ public final /* data */ class Unread {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Marker(channelId=");
+            StringBuilder sbU = a.U("Marker(channelId=");
             sbU.append(this.channelId);
             sbU.append(", messageId=");
-            return outline.G(sbU, this.messageId, ")");
+            return a.G(sbU, this.messageId, ")");
         }
 
         public Marker() {
@@ -132,7 +132,7 @@ public final /* data */ class Unread {
     }
 
     public Unread(Marker marker, int i) {
-        Intrinsics3.checkNotNullParameter(marker, "marker");
+        m.checkNotNullParameter(marker, "marker");
         this.marker = marker;
         this.count = i;
     }
@@ -158,7 +158,7 @@ public final /* data */ class Unread {
     }
 
     public final Unread copy(Marker marker, int count) {
-        Intrinsics3.checkNotNullParameter(marker, "marker");
+        m.checkNotNullParameter(marker, "marker");
         return new Unread(marker, count);
     }
 
@@ -174,7 +174,7 @@ public final /* data */ class Unread {
             return false;
         }
         Unread unread = (Unread) other;
-        return Intrinsics3.areEqual(this.marker, unread.marker) && this.count == unread.count;
+        return m.areEqual(this.marker, unread.marker) && this.count == unread.count;
     }
 
     public final int getCount() {
@@ -191,10 +191,10 @@ public final /* data */ class Unread {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Unread(marker=");
+        StringBuilder sbU = a.U("Unread(marker=");
         sbU.append(this.marker);
         sbU.append(", count=");
-        return outline.B(sbU, this.count, ")");
+        return a.B(sbU, this.count, ")");
     }
 
     public /* synthetic */ Unread(Marker marker, int i, int i2, DefaultConstructorMarker defaultConstructorMarker) {
@@ -204,7 +204,7 @@ public final /* data */ class Unread {
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public Unread(Marker marker, List<Message> list) {
         this(marker, Companion.access$getTotalMessages(INSTANCE, marker, list));
-        Intrinsics3.checkNotNullParameter(marker, "marker");
-        Intrinsics3.checkNotNullParameter(list, "messages");
+        m.checkNotNullParameter(marker, "marker");
+        m.checkNotNullParameter(list, "messages");
     }
 }

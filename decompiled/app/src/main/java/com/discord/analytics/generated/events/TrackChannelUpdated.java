@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackChannelUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackChannelUpdated implements AnalyticsSchema, TrackBase2, TrackChannel2 {
+public final /* data */ class TrackChannelUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private final Long guildId = null;
@@ -56,7 +56,7 @@ public final /* data */ class TrackChannelUpdated implements AnalyticsSchema, Tr
             return false;
         }
         TrackChannelUpdated trackChannelUpdated = (TrackChannelUpdated) other;
-        return Intrinsics3.areEqual(this.guildId, trackChannelUpdated.guildId) && Intrinsics3.areEqual(this.guildName, trackChannelUpdated.guildName) && Intrinsics3.areEqual(this.oldName, trackChannelUpdated.oldName) && Intrinsics3.areEqual(this.newName, trackChannelUpdated.newName) && Intrinsics3.areEqual(this.oldNsfw, trackChannelUpdated.oldNsfw) && Intrinsics3.areEqual(this.newNsfw, trackChannelUpdated.newNsfw) && Intrinsics3.areEqual(this.bitrate, trackChannelUpdated.bitrate) && Intrinsics3.areEqual(this.oldBitrate, trackChannelUpdated.oldBitrate) && Intrinsics3.areEqual(this.rtcRegion, trackChannelUpdated.rtcRegion) && Intrinsics3.areEqual(this.oldRtcRegion, trackChannelUpdated.oldRtcRegion) && Intrinsics3.areEqual(this.videoQualityMode, trackChannelUpdated.videoQualityMode) && Intrinsics3.areEqual(this.oldVideoQualityMode, trackChannelUpdated.oldVideoQualityMode) && Intrinsics3.areEqual(this.defaultAutoArchiveDurationMinutes, trackChannelUpdated.defaultAutoArchiveDurationMinutes) && Intrinsics3.areEqual(this.oldDefaultAutoArchiveDurationMinutes, trackChannelUpdated.oldDefaultAutoArchiveDurationMinutes) && Intrinsics3.areEqual(this.oldArchived, trackChannelUpdated.oldArchived) && Intrinsics3.areEqual(this.newArchived, trackChannelUpdated.newArchived) && Intrinsics3.areEqual(this.oldLocked, trackChannelUpdated.oldLocked) && Intrinsics3.areEqual(this.newLocked, trackChannelUpdated.newLocked) && Intrinsics3.areEqual(this.oldInvitable, trackChannelUpdated.oldInvitable) && Intrinsics3.areEqual(this.newInvitable, trackChannelUpdated.newInvitable) && Intrinsics3.areEqual(this.oldAutoArchiveDurationMinutes, trackChannelUpdated.oldAutoArchiveDurationMinutes) && Intrinsics3.areEqual(this.newAutoArchiveDurationMinutes, trackChannelUpdated.newAutoArchiveDurationMinutes) && Intrinsics3.areEqual(this.oldBannerHash, trackChannelUpdated.oldBannerHash) && Intrinsics3.areEqual(this.newBannerHash, trackChannelUpdated.newBannerHash) && Intrinsics3.areEqual(this.oldFlags, trackChannelUpdated.oldFlags) && Intrinsics3.areEqual(this.newFlags, trackChannelUpdated.newFlags);
+        return m.areEqual(this.guildId, trackChannelUpdated.guildId) && m.areEqual(this.guildName, trackChannelUpdated.guildName) && m.areEqual(this.oldName, trackChannelUpdated.oldName) && m.areEqual(this.newName, trackChannelUpdated.newName) && m.areEqual(this.oldNsfw, trackChannelUpdated.oldNsfw) && m.areEqual(this.newNsfw, trackChannelUpdated.newNsfw) && m.areEqual(this.bitrate, trackChannelUpdated.bitrate) && m.areEqual(this.oldBitrate, trackChannelUpdated.oldBitrate) && m.areEqual(this.rtcRegion, trackChannelUpdated.rtcRegion) && m.areEqual(this.oldRtcRegion, trackChannelUpdated.oldRtcRegion) && m.areEqual(this.videoQualityMode, trackChannelUpdated.videoQualityMode) && m.areEqual(this.oldVideoQualityMode, trackChannelUpdated.oldVideoQualityMode) && m.areEqual(this.defaultAutoArchiveDurationMinutes, trackChannelUpdated.defaultAutoArchiveDurationMinutes) && m.areEqual(this.oldDefaultAutoArchiveDurationMinutes, trackChannelUpdated.oldDefaultAutoArchiveDurationMinutes) && m.areEqual(this.oldArchived, trackChannelUpdated.oldArchived) && m.areEqual(this.newArchived, trackChannelUpdated.newArchived) && m.areEqual(this.oldLocked, trackChannelUpdated.oldLocked) && m.areEqual(this.newLocked, trackChannelUpdated.newLocked) && m.areEqual(this.oldInvitable, trackChannelUpdated.oldInvitable) && m.areEqual(this.newInvitable, trackChannelUpdated.newInvitable) && m.areEqual(this.oldAutoArchiveDurationMinutes, trackChannelUpdated.oldAutoArchiveDurationMinutes) && m.areEqual(this.newAutoArchiveDurationMinutes, trackChannelUpdated.newAutoArchiveDurationMinutes) && m.areEqual(this.oldBannerHash, trackChannelUpdated.oldBannerHash) && m.areEqual(this.newBannerHash, trackChannelUpdated.newBannerHash) && m.areEqual(this.oldFlags, trackChannelUpdated.oldFlags) && m.areEqual(this.newFlags, trackChannelUpdated.newFlags);
     }
 
     public int hashCode() {
@@ -115,7 +115,7 @@ public final /* data */ class TrackChannelUpdated implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackChannelUpdated(guildId=");
+        StringBuilder sbU = a.U("TrackChannelUpdated(guildId=");
         sbU.append(this.guildId);
         sbU.append(", guildName=");
         sbU.append(this.guildName);
@@ -166,6 +166,6 @@ public final /* data */ class TrackChannelUpdated implements AnalyticsSchema, Tr
         sbU.append(", oldFlags=");
         sbU.append(this.oldFlags);
         sbU.append(", newFlags=");
-        return outline.G(sbU, this.newFlags, ")");
+        return a.G(sbU, this.newFlags, ")");
     }
 }

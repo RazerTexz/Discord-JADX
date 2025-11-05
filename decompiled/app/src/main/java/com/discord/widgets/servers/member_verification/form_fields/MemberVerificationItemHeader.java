@@ -1,7 +1,7 @@
 package com.discord.widgets.servers.member_verification.form_fields;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: MemberVerificationItemHeader.kt */
 /* loaded from: classes2.dex */
@@ -11,7 +11,7 @@ public final /* data */ class MemberVerificationItemHeader implements MemberVeri
     private final int type;
 
     public MemberVerificationItemHeader(String str) {
-        Intrinsics3.checkNotNullParameter(str, "title");
+        m.checkNotNullParameter(str, "title");
         this.title = str;
         this.key = str;
     }
@@ -29,13 +29,13 @@ public final /* data */ class MemberVerificationItemHeader implements MemberVeri
     }
 
     public final MemberVerificationItemHeader copy(String title) {
-        Intrinsics3.checkNotNullParameter(title, "title");
+        m.checkNotNullParameter(title, "title");
         return new MemberVerificationItemHeader(title);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof MemberVerificationItemHeader) && Intrinsics3.areEqual(this.title, ((MemberVerificationItemHeader) other).title);
+            return (other instanceof MemberVerificationItemHeader) && m.areEqual(this.title, ((MemberVerificationItemHeader) other).title);
         }
         return true;
     }
@@ -63,6 +63,6 @@ public final /* data */ class MemberVerificationItemHeader implements MemberVeri
     }
 
     public String toString() {
-        return outline.J(outline.U("MemberVerificationItemHeader(title="), this.title, ")");
+        return a.J(a.U("MemberVerificationItemHeader(title="), this.title, ")");
     }
 }

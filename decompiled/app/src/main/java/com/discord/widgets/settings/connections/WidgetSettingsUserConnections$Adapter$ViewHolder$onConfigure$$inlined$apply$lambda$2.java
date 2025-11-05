@@ -1,14 +1,14 @@
 package com.discord.widgets.settings.connections;
 
 import android.view.View;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.stores.StoreNotices;
 import com.discord.utilities.notices.NoticeBuilders;
 import com.discord.utilities.platform.Platform;
 import com.discord.widgets.settings.connections.WidgetSettingsUserConnections;
-import d0.Tuples;
-import d0.t.Maps6;
+import d0.o;
+import d0.t.h0;
 
 /* compiled from: WidgetSettingsUserConnections.kt */
 /* loaded from: classes2.dex */
@@ -29,6 +29,6 @@ public final class WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        NoticeBuilders.INSTANCE.showNotice(outline.x(view, "v", "v.context"), this.this$0.this$0.getFragmentManager(), new StoreNotices.Dialog(StoreNotices.Dialog.Type.DELETE_CONNECTION_MODAL, Maps6.mapOf(Tuples.to(WidgetSettingsUserConnections.PLATFORM_NAME, this.$connectedAccount.getType()), Tuples.to(WidgetSettingsUserConnections.PLATFORM_TITLE, this.$platform.getProperName()), Tuples.to(WidgetSettingsUserConnections.CONNECTION_ID, this.$connectionId))));
+        NoticeBuilders.INSTANCE.showNotice(a.x(view, "v", "v.context"), this.this$0.this$0.getFragmentManager(), new StoreNotices.Dialog(StoreNotices.Dialog.Type.DELETE_CONNECTION_MODAL, h0.mapOf(o.to(WidgetSettingsUserConnections.PLATFORM_NAME, this.$connectedAccount.getType()), o.to(WidgetSettingsUserConnections.PLATFORM_TITLE, this.$platform.getProperName()), o.to(WidgetSettingsUserConnections.CONNECTION_ID, this.$connectionId))));
     }
 }

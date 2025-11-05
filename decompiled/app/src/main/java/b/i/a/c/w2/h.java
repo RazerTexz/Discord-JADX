@@ -1,21 +1,21 @@
 package b.i.a.c.w2;
 
-import b.i.a.c.w2.DrmSessionEventListener;
+import b.i.a.c.w2.s;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class h implements Runnable {
-    public final /* synthetic */ DrmSessionEventListener.a j;
-    public final /* synthetic */ DrmSessionEventListener k;
+    public final /* synthetic */ s.a j;
+    public final /* synthetic */ s k;
 
-    public /* synthetic */ h(DrmSessionEventListener.a aVar, DrmSessionEventListener drmSessionEventListener) {
+    public /* synthetic */ h(s.a aVar, s sVar) {
         this.j = aVar;
-        this.k = drmSessionEventListener;
+        this.k = sVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        DrmSessionEventListener.a aVar = this.j;
+        s.a aVar = this.j;
         this.k.J(aVar.a, aVar.f1156b);
     }
 }

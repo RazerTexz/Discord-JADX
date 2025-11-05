@@ -1,6 +1,6 @@
 package d0.e0.p.d.m0.o;
 
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: modifierChecks.kt */
@@ -24,18 +24,18 @@ public abstract class c {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public b(String str) {
             super(false, null);
-            Intrinsics3.checkNotNullParameter(str, "error");
+            m.checkNotNullParameter(str, "error");
         }
     }
 
     /* compiled from: modifierChecks.kt */
     /* renamed from: d0.e0.p.d.m0.o.c$c, reason: collision with other inner class name */
-    public static final class C0416c extends c {
+    public static final class C0587c extends c {
 
         /* renamed from: b, reason: collision with root package name */
-        public static final C0416c f3546b = new C0416c();
+        public static final C0587c f3546b = new C0587c();
 
-        public C0416c() {
+        public C0587c() {
             super(true, null);
         }
     }

@@ -1,7 +1,7 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import h0.c.m;
 import h0.c.o;
 import java.nio.ByteBuffer;
@@ -55,7 +55,7 @@ public class JavaI420Buffer implements VideoFrame.I420Buffer {
         if (byteBuffer.capacity() >= i4) {
             return;
         }
-        StringBuilder sbV = outline.V("Buffer must be at least ", i4, " bytes, but was ");
+        StringBuilder sbV = a.V("Buffer must be at least ", i4, " bytes, but was ");
         sbV.append(byteBuffer.capacity());
         throw new IllegalArgumentException(sbV.toString());
     }

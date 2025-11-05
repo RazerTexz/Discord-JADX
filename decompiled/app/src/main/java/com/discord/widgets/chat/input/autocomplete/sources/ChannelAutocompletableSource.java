@@ -13,10 +13,10 @@ import com.discord.widgets.chat.input.autocomplete.Autocompletable;
 import com.discord.widgets.chat.input.autocomplete.AutocompletableComparator;
 import com.discord.widgets.chat.input.autocomplete.ChannelAutocompletable;
 import com.discord.widgets.chat.input.autocomplete.LeadingIdentifier;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.z.d.Intrinsics3;
+import d0.o;
+import d0.t.g0;
+import d0.t.h0;
+import d0.z.d.m;
 import java.util.Map;
 import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
@@ -43,24 +43,24 @@ public final class ChannelAutocompletableSource {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<LeadingIdentifier, TreeSet<Autocompletable>> call2(Map<Long, Channel> map, Map<Long, Channel> map2, Map<Long, Long> map3) {
             TreeSet treeSet = new TreeSet(new AutocompletableComparator());
-            Intrinsics3.checkNotNullExpressionValue(map2, "activeJoinedThreads");
-            Intrinsics3.checkNotNullExpressionValue(map, "guildChannels");
-            for (Channel channel : Maps6.plus(map2, map).values()) {
+            m.checkNotNullExpressionValue(map2, "activeJoinedThreads");
+            m.checkNotNullExpressionValue(map, "guildChannels");
+            for (Channel channel : h0.plus(map2, map).values()) {
                 if (ChannelUtils.v(channel) || ChannelUtils.J(channel) || ChannelUtils.k(channel)) {
-                    Intrinsics3.checkNotNullExpressionValue(map3, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS);
+                    m.checkNotNullExpressionValue(map3, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS);
                     if (PermissionUtils.hasAccess(channel, map3)) {
                         treeSet.add(new ChannelAutocompletable(channel));
                     }
                 }
             }
-            return MapsJVM.mapOf(Tuples.to(LeadingIdentifier.CHANNELS, treeSet));
+            return g0.mapOf(o.to(LeadingIdentifier.CHANNELS, treeSet));
         }
     }
 
     public ChannelAutocompletableSource(StoreChannels storeChannels, StoreThreadsActiveJoined storeThreadsActiveJoined, StorePermissions storePermissions) {
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(storeThreadsActiveJoined, "storeThreadsActiveJoined");
-        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(storeThreadsActiveJoined, "storeThreadsActiveJoined");
+        m.checkNotNullParameter(storePermissions, "storePermissions");
         this.storeChannels = storeChannels;
         this.storeThreadsActiveJoined = storeThreadsActiveJoined;
         this.storePermissions = storePermissions;
@@ -80,9 +80,9 @@ public final class ChannelAutocompletableSource {
 
     public final Observable<Map<LeadingIdentifier, TreeSet<Autocompletable>>> observeChannelAutocompletables(long guildId) {
         Observable observableI = Observable.i(ObservableExtensionsKt.computationLatest(StoreChannels.observeChannelsForGuild$default(this.storeChannels, guildId, null, 2, null)), this.storeThreadsActiveJoined.observeActiveJoinedThreadsChannelsForGuild(guildId), ObservableExtensionsKt.computationLatest(this.storePermissions.observePermissionsForAllChannels()), AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…ANNELS to channels)\n    }");
+        m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…ANNELS to channels)\n    }");
         Observable observableR = ObservableExtensionsKt.computationLatest(observableI).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
         return ObservableExtensionsKt.leadingEdgeThrottle(observableR, 500L, TimeUnit.MILLISECONDS);
     }
 }

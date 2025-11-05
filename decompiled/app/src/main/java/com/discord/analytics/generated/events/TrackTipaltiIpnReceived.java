@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackTipaltiIpnReceived.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence key = null;
     private final CharSequence cDate = null;
@@ -38,7 +38,7 @@ public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema
             return false;
         }
         TrackTipaltiIpnReceived trackTipaltiIpnReceived = (TrackTipaltiIpnReceived) other;
-        return Intrinsics3.areEqual(this.key, trackTipaltiIpnReceived.key) && Intrinsics3.areEqual(this.cDate, trackTipaltiIpnReceived.cDate) && Intrinsics3.areEqual(this.type, trackTipaltiIpnReceived.type) && Intrinsics3.areEqual(this.payeeId, trackTipaltiIpnReceived.payeeId) && Intrinsics3.areEqual(this.refCode, trackTipaltiIpnReceived.refCode) && Intrinsics3.areEqual(this.isPayable, trackTipaltiIpnReceived.isPayable) && Intrinsics3.areEqual(this.complianceReviewStatus, trackTipaltiIpnReceived.complianceReviewStatus) && Intrinsics3.areEqual(this.payeeStatus, trackTipaltiIpnReceived.payeeStatus) && Intrinsics3.areEqual(this.groupPayments, trackTipaltiIpnReceived.groupPayments) && Intrinsics3.areEqual(this.submittedDate, trackTipaltiIpnReceived.submittedDate) && Intrinsics3.areEqual(this.approvalDate, trackTipaltiIpnReceived.approvalDate) && Intrinsics3.areEqual(this.declinedDate, trackTipaltiIpnReceived.declinedDate);
+        return m.areEqual(this.key, trackTipaltiIpnReceived.key) && m.areEqual(this.cDate, trackTipaltiIpnReceived.cDate) && m.areEqual(this.type, trackTipaltiIpnReceived.type) && m.areEqual(this.payeeId, trackTipaltiIpnReceived.payeeId) && m.areEqual(this.refCode, trackTipaltiIpnReceived.refCode) && m.areEqual(this.isPayable, trackTipaltiIpnReceived.isPayable) && m.areEqual(this.complianceReviewStatus, trackTipaltiIpnReceived.complianceReviewStatus) && m.areEqual(this.payeeStatus, trackTipaltiIpnReceived.payeeStatus) && m.areEqual(this.groupPayments, trackTipaltiIpnReceived.groupPayments) && m.areEqual(this.submittedDate, trackTipaltiIpnReceived.submittedDate) && m.areEqual(this.approvalDate, trackTipaltiIpnReceived.approvalDate) && m.areEqual(this.declinedDate, trackTipaltiIpnReceived.declinedDate);
     }
 
     public int hashCode() {
@@ -69,7 +69,7 @@ public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackTipaltiIpnReceived(key=");
+        StringBuilder sbU = a.U("TrackTipaltiIpnReceived(key=");
         sbU.append(this.key);
         sbU.append(", cDate=");
         sbU.append(this.cDate);
@@ -92,6 +92,6 @@ public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema
         sbU.append(", approvalDate=");
         sbU.append(this.approvalDate);
         sbU.append(", declinedDate=");
-        return outline.E(sbU, this.declinedDate, ")");
+        return a.E(sbU, this.declinedDate, ")");
     }
 }

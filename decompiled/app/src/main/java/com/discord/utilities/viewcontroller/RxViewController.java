@@ -7,9 +7,9 @@ import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -25,7 +25,7 @@ public abstract class RxViewController<V extends View, T> {
 
     /* compiled from: RxViewController.kt */
     /* renamed from: com.discord.utilities.viewcontroller.RxViewController$bind$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<T, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<T, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -44,7 +44,7 @@ public abstract class RxViewController<V extends View, T> {
 
     /* compiled from: RxViewController.kt */
     /* renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<T, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<T, Boolean> {
         public final /* synthetic */ View $view;
 
         public AnonymousClass1(View view) {
@@ -52,13 +52,13 @@ public abstract class RxViewController<V extends View, T> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(Object obj) {
             return call((AnonymousClass1<T, R>) obj);
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public final Boolean call(T t) {
             return Boolean.valueOf(this.$view.isAttachedToWindow());
         }
@@ -66,7 +66,7 @@ public abstract class RxViewController<V extends View, T> {
 
     /* compiled from: RxViewController.kt */
     /* renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ Ref$ObjectRef $subscriptionResult;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -84,14 +84,14 @@ public abstract class RxViewController<V extends View, T> {
         /* JADX WARN: Multi-variable type inference failed */
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             this.$subscriptionResult.element = subscription;
         }
     }
 
     /* compiled from: RxViewController.kt */
     /* renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<T, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<T, Unit> {
         public final /* synthetic */ Function1 $onNext;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -113,7 +113,7 @@ public abstract class RxViewController<V extends View, T> {
     }
 
     public RxViewController(V v) {
-        Intrinsics3.checkNotNullParameter(v, "view");
+        m.checkNotNullParameter(v, "view");
         this.view = v;
     }
 
@@ -121,13 +121,13 @@ public abstract class RxViewController<V extends View, T> {
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = null;
         Observable<T> observableA0 = observable.a0(new ViewDetachedFromWindowObservable(view).observe());
-        Intrinsics3.checkNotNullExpressionValue(observableA0, "observable\n        .take…servable(view).observe())");
+        m.checkNotNullExpressionValue(observableA0, "observable\n        .take…servable(view).observe())");
         Observable<T> observableY = ObservableExtensionsKt.ui(ObservableExtensionsKt.computationLatest(observableA0)).y(new AnonymousClass1(view));
-        Intrinsics3.checkNotNullExpressionValue(observableY, "observable\n        .take…view.isAttachedToWindow }");
+        m.checkNotNullExpressionValue(observableY, "observable\n        .take…view.isAttachedToWindow }");
         ObservableExtensionsKt.appSubscribe$default(observableY, getClass(), (Context) null, new AnonymousClass2(ref$ObjectRef), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(onNext), 58, (Object) null);
         T t = ref$ObjectRef.element;
         if (t == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("subscriptionResult");
+            m.throwUninitializedPropertyAccessException("subscriptionResult");
         }
         return (Subscription) t;
     }

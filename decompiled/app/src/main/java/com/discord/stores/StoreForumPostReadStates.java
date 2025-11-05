@@ -11,12 +11,10 @@ import com.discord.models.domain.ModelReadState;
 import com.discord.stores.StoreMessageAck;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.widgets.forums.ForumUtils;
-import d0.Tuples;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.Sets5;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.t.n0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -26,7 +24,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import rx.Observable;
@@ -49,7 +47,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
 
     /* compiled from: StoreForumPostReadStates.kt */
     /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadIdsWithPersistedReadStates$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Set<? extends Long>> {
+    public static final class AnonymousClass1 extends o implements Function0<Set<? extends Long>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -68,7 +66,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
 
     /* compiled from: StoreForumPostReadStates.kt */
     /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadUnreadCounts$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends Integer>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends Integer>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -87,7 +85,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
 
     /* compiled from: StoreForumPostReadStates.kt */
     /* renamed from: com.discord.stores.StoreForumPostReadStates$requestForumUnreads$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
 
@@ -112,7 +110,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
             StoreForumPostReadStates.access$getProcessedForumUnreadRequests$p(StoreForumPostReadStates.this).add(Long.valueOf(this.$channelId));
             Map<Long, Channel> mapEmptyMap = StoreForumPostReadStates.access$getStoreThreadsActive$p(StoreForumPostReadStates.this).getAllActiveThreadsInternal$app_productionGoogleRelease().get(Long.valueOf(this.$guildId));
             if (mapEmptyMap == null) {
-                mapEmptyMap = Maps6.emptyMap();
+                mapEmptyMap = h0.emptyMap();
             }
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Map.Entry<Long, Channel> entry : mapEmptyMap.entrySet()) {
@@ -127,9 +125,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
             while (it.hasNext()) {
                 long jLongValue = ((Number) it.next()).longValue();
                 StoreMessageAck.Ack ack = all.get(Long.valueOf(jLongValue));
-                Tuples2 tuples2 = ack != null ? Tuples.to(Long.valueOf(jLongValue), Long.valueOf(ack.getMessageId())) : null;
-                if (tuples2 != null) {
-                    arrayList.add(tuples2);
+                Pair pair = ack != null ? d0.o.to(Long.valueOf(jLongValue), Long.valueOf(ack.getMessageId())) : null;
+                if (pair != null) {
+                    arrayList.add(pair);
                 }
             }
             StoreForumPostReadStates.access$getStoreGatewayConnection$p(StoreForumPostReadStates.this).requestForumUnreads(this.$guildId, this.$channelId, arrayList);
@@ -137,13 +135,13 @@ public final class StoreForumPostReadStates extends StoreV2 {
     }
 
     public StoreForumPostReadStates(Dispatcher dispatcher, StoreGatewayConnection storeGatewayConnection, StoreThreadsActive storeThreadsActive, StoreMessageAck storeMessageAck, StoreChannels storeChannels, StoreUser storeUser, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeGatewayConnection, "storeGatewayConnection");
-        Intrinsics3.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
-        Intrinsics3.checkNotNullParameter(storeMessageAck, "storeMessageAck");
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeGatewayConnection, "storeGatewayConnection");
+        m.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
+        m.checkNotNullParameter(storeMessageAck, "storeMessageAck");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.storeGatewayConnection = storeGatewayConnection;
         this.storeThreadsActive = storeThreadsActive;
@@ -152,9 +150,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
         this.storeUser = storeUser;
         this.observationDeck = observationDeck;
         this.threadIdsWithPersistedAcks = new LinkedHashSet();
-        this.threadIdsWithPersistedAcksSnapshot = Sets5.emptySet();
+        this.threadIdsWithPersistedAcksSnapshot = n0.emptySet();
         this.threadUnreadCounts = new LinkedHashMap();
-        this.threadUnreadCountsSnapshot = Maps6.emptyMap();
+        this.threadUnreadCountsSnapshot = h0.emptyMap();
         this.processedForumUnreadRequests = new LinkedHashSet();
     }
 
@@ -190,21 +188,21 @@ public final class StoreForumPostReadStates extends StoreV2 {
         storeForumPostReadStates.threadUnreadCountsSnapshot = map;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        m.checkNotNullParameter(payload, "payload");
         ModelPayload.VersionedReadStates readState = payload.getReadState();
-        Intrinsics3.checkNotNullExpressionValue(readState, "payload.readState");
+        m.checkNotNullExpressionValue(readState, "payload.readState");
         if (!readState.isPartial()) {
             this.threadIdsWithPersistedAcks.clear();
         }
         this.processedForumUnreadRequests.clear();
         this.threadUnreadCounts.clear();
         ModelPayload.VersionedReadStates readState2 = payload.getReadState();
-        Intrinsics3.checkNotNullExpressionValue(readState2, "payload.readState");
+        m.checkNotNullExpressionValue(readState2, "payload.readState");
         List<ModelReadState> entries = readState2.getEntries();
-        Intrinsics3.checkNotNullExpressionValue(entries, "payload.readState.entries");
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(entries, 10));
+        m.checkNotNullExpressionValue(entries, "payload.readState.entries");
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(entries, 10));
         Iterator<T> it = entries.iterator();
         while (it.hasNext()) {
             arrayList.add(Long.valueOf(((ModelReadState) it.next()).getChannelId()));
@@ -213,9 +211,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleForumUnreads(ForumUnreads forumUnreads) {
-        Intrinsics3.checkNotNullParameter(forumUnreads, "forumUnreads");
+        m.checkNotNullParameter(forumUnreads, "forumUnreads");
         if (forumUnreads.getPermissionDenied()) {
             return;
         }
@@ -228,9 +226,9 @@ public final class StoreForumPostReadStates extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageAck(ModelReadState readState) {
-        Intrinsics3.checkNotNullParameter(readState, "readState");
+        m.checkNotNullParameter(readState, "readState");
         long channelId = readState.getChannelId();
         if (this.threadUnreadCounts.containsKey(Long.valueOf(channelId))) {
             this.threadUnreadCounts.put(Long.valueOf(channelId), 0);
@@ -238,10 +236,10 @@ public final class StoreForumPostReadStates extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageCreate(Message message) {
         Channel channel;
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         long channelId = message.getChannelId();
         Channel channel2 = this.storeChannels.getChannel(channelId);
         if (channel2 == null || (channel = this.storeChannels.getChannel(channel2.getParentId())) == null || !ChannelUtils.r(channel2, channel)) {
@@ -257,18 +255,18 @@ public final class StoreForumPostReadStates extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleThreadCreateOrUpdate(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         if (!ChannelUtils.j(channel) || this.threadUnreadCounts.remove(Long.valueOf(channel.getId())) == null) {
             return;
         }
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleThreadDelete(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         if (this.threadUnreadCounts.remove(Long.valueOf(channel.getId())) != null) {
             markChanged();
         }

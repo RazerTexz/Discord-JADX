@@ -1,12 +1,12 @@
 package com.discord.api.user;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.application.ProfileApplication;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.api.guildmember.GuildMember;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import org.objectweb.asm.Opcodes;
 
@@ -44,7 +44,7 @@ public final /* data */ class UserProfile {
                 return false;
             }
             GuildReference guildReference = (GuildReference) other;
-            return this.id == guildReference.id && Intrinsics3.areEqual(this.nick, guildReference.nick);
+            return this.id == guildReference.id && m.areEqual(this.nick, guildReference.nick);
         }
 
         public int hashCode() {
@@ -55,10 +55,10 @@ public final /* data */ class UserProfile {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("GuildReference(id=");
+            StringBuilder sbU = a.U("GuildReference(id=");
             sbU.append(this.id);
             sbU.append(", nick=");
-            return outline.J(sbU, this.nick, ")");
+            return a.J(sbU, this.nick, ")");
         }
     }
 
@@ -67,9 +67,9 @@ public final /* data */ class UserProfile {
     }
 
     public UserProfile(List<ConnectedAccount> list, List<GuildReference> list2, User user, String str, String str2, GuildMember guildMember, ProfileApplication profileApplication) {
-        Intrinsics3.checkNotNullParameter(list, "connectedAccounts");
-        Intrinsics3.checkNotNullParameter(list2, "mutualGuilds");
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(list, "connectedAccounts");
+        m.checkNotNullParameter(list2, "mutualGuilds");
+        m.checkNotNullParameter(user, "user");
         this.connectedAccounts = list;
         this.mutualGuilds = list2;
         this.user = user;
@@ -110,7 +110,7 @@ public final /* data */ class UserProfile {
             return false;
         }
         UserProfile userProfile = (UserProfile) other;
-        return Intrinsics3.areEqual(this.connectedAccounts, userProfile.connectedAccounts) && Intrinsics3.areEqual(this.mutualGuilds, userProfile.mutualGuilds) && Intrinsics3.areEqual(this.user, userProfile.user) && Intrinsics3.areEqual(this.premiumSince, userProfile.premiumSince) && Intrinsics3.areEqual(this.premiumGuildSince, userProfile.premiumGuildSince) && Intrinsics3.areEqual(this.guildMember, userProfile.guildMember) && Intrinsics3.areEqual(this.application, userProfile.application);
+        return m.areEqual(this.connectedAccounts, userProfile.connectedAccounts) && m.areEqual(this.mutualGuilds, userProfile.mutualGuilds) && m.areEqual(this.user, userProfile.user) && m.areEqual(this.premiumSince, userProfile.premiumSince) && m.areEqual(this.premiumGuildSince, userProfile.premiumGuildSince) && m.areEqual(this.guildMember, userProfile.guildMember) && m.areEqual(this.application, userProfile.application);
     }
 
     /* renamed from: f, reason: from getter */
@@ -141,7 +141,7 @@ public final /* data */ class UserProfile {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("UserProfile(connectedAccounts=");
+        StringBuilder sbU = a.U("UserProfile(connectedAccounts=");
         sbU.append(this.connectedAccounts);
         sbU.append(", mutualGuilds=");
         sbU.append(this.mutualGuilds);
@@ -161,7 +161,7 @@ public final /* data */ class UserProfile {
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public /* synthetic */ UserProfile(List list, List list2, User user, String str, String str2, GuildMember guildMember, ProfileApplication profileApplication, int i) {
-        this((i & 1) != 0 ? Collections2.emptyList() : null, (i & 2) != 0 ? Collections2.emptyList() : null, (i & 4) != 0 ? new User(0L, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4194300) : null, null, null, null, null);
+        this((i & 1) != 0 ? n.emptyList() : null, (i & 2) != 0 ? n.emptyList() : null, (i & 4) != 0 ? new User(0L, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4194300) : null, null, null, null, null);
         int i2 = i & 8;
         int i3 = i & 16;
         int i4 = i & 32;

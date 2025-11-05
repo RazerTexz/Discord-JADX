@@ -3,7 +3,6 @@ package com.discord.stores;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.o;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.voice.state.VoiceState;
@@ -15,15 +14,15 @@ import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.voice.call.WidgetCallFailed;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.e.k;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -44,7 +43,7 @@ public final class StoreCalls {
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$call$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -69,7 +68,7 @@ public final class StoreCalls {
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$call$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
         public final /* synthetic */ AppComponent $appComponent;
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -79,21 +78,21 @@ public final class StoreCalls {
 
         /* compiled from: StoreCalls.kt */
         /* renamed from: com.discord.stores.StoreCalls$call$2$1, reason: invalid class name */
-        public static final class AnonymousClass1<T, R> implements Func1<Integer, Observable<? extends Boolean>> {
+        public static final class AnonymousClass1<T, R> implements b<Integer, Observable<? extends Boolean>> {
 
             /* compiled from: StoreCalls.kt */
             /* renamed from: com.discord.stores.StoreCalls$call$2$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00951<T, R> implements Func1<ModelCall.Ringable, Boolean> {
-                public static final C00951 INSTANCE = new C00951();
+            public static final class C02151<T, R> implements b<ModelCall.Ringable, Boolean> {
+                public static final C02151 INSTANCE = new C02151();
 
-                @Override // j0.k.Func1
+                @Override // j0.k.b
                 public /* bridge */ /* synthetic */ Boolean call(ModelCall.Ringable ringable) {
                     return call2(ringable);
                 }
 
                 /* renamed from: call, reason: avoid collision after fix types in other method */
                 public final Boolean call2(ModelCall.Ringable ringable) {
-                    Intrinsics3.checkNotNullExpressionValue(ringable, "it");
+                    m.checkNotNullExpressionValue(ringable, "it");
                     return Boolean.valueOf(ringable.isRingable());
                 }
             }
@@ -101,21 +100,21 @@ public final class StoreCalls {
             public AnonymousClass1() {
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends Boolean> call(Integer num) {
                 return call2(num);
             }
 
             /* renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Boolean> call2(Integer num) {
-                return (num != null && num.intValue() == 1) ? new ScalarSynchronousObservable(Boolean.TRUE) : ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().call(AnonymousClass2.this.$channelId), false, 1, null).G(C00951.INSTANCE);
+                return (num != null && num.intValue() == 1) ? new k(Boolean.TRUE) : ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().call(AnonymousClass2.this.$channelId), false, 1, null).G(C02151.INSTANCE);
             }
         }
 
         /* compiled from: StoreCalls.kt */
         /* renamed from: com.discord.stores.StoreCalls$call$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C00962 extends Lambda implements Function1<Boolean, Unit> {
-            public C00962() {
+        public static final class C02162 extends o implements Function1<Boolean, Unit> {
+            public C02162() {
                 super(1);
             }
 
@@ -128,14 +127,14 @@ public final class StoreCalls {
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Boolean bool) {
                 AnonymousClass1 anonymousClass1 = AnonymousClass2.this.$doCall$1;
-                Intrinsics3.checkNotNullExpressionValue(bool, "isRingable");
+                m.checkNotNullExpressionValue(bool, "isRingable");
                 anonymousClass1.invoke(bool.booleanValue());
             }
         }
 
         /* compiled from: StoreCalls.kt */
         /* renamed from: com.discord.stores.StoreCalls$call$2$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
             public final /* synthetic */ long $userId;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -152,12 +151,12 @@ public final class StoreCalls {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "error");
+                m.checkNotNullParameter(error, "error");
                 Function0 function0 = AnonymousClass2.this.$onError;
                 if (function0 != null) {
                 }
                 Error.Response response = error.getResponse();
-                Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+                m.checkNotNullExpressionValue(response, "error.response");
                 if (response.getCode() == 50013) {
                     error.setShowErrorToasts(false);
                     WidgetCallFailed.INSTANCE.show(AnonymousClass2.this.$fragmentManager, this.$userId);
@@ -184,16 +183,16 @@ public final class StoreCalls {
 
         public final void invoke(long j) {
             Observable<R> observableA = StoreStream.INSTANCE.getUserRelationships().observe(j).A(new AnonymousClass1());
-            Intrinsics3.checkNotNullExpressionValue(observableA, "StoreStream\n          .g…            }\n          }");
+            m.checkNotNullExpressionValue(observableA, "StoreStream\n          .g…            }\n          }");
             Observable observableUi$default = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableA, 0L, false, 3, null), this.$appComponent, null, 2, null);
             Context context = this.$context;
-            ObservableExtensionsKt.appSubscribe$default(observableUi$default, StoreCalls.this.getClass(), context, (Function1) null, new AnonymousClass3(j), (Function0) null, (Function0) null, new C00962(), 52, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(observableUi$default, StoreCalls.this.getClass(), context, (Function1) null, new AnonymousClass3(j), (Function0) null, (Function0) null, new C02162(), 52, (Object) null);
         }
     }
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$call$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Channel, Boolean> {
+    public static final class AnonymousClass3 extends o implements Function1<Channel, Boolean> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
         public AnonymousClass3() {
@@ -213,23 +212,23 @@ public final class StoreCalls {
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$call$4, reason: invalid class name */
-    public static final class AnonymousClass4<T1, T2, R> implements Func2<Channel, Map<Long, ? extends VoiceState>, Tuples2<? extends Channel, ? extends Map<Long, ? extends VoiceState>>> {
+    public static final class AnonymousClass4<T1, T2, R> implements Func2<Channel, Map<Long, ? extends VoiceState>, Pair<? extends Channel, ? extends Map<Long, ? extends VoiceState>>> {
         public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
 
         @Override // rx.functions.Func2
-        public /* bridge */ /* synthetic */ Tuples2<? extends Channel, ? extends Map<Long, ? extends VoiceState>> call(Channel channel, Map<Long, ? extends VoiceState> map) {
+        public /* bridge */ /* synthetic */ Pair<? extends Channel, ? extends Map<Long, ? extends VoiceState>> call(Channel channel, Map<Long, ? extends VoiceState> map) {
             return call2(channel, (Map<Long, VoiceState>) map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Tuples2<Channel, Map<Long, VoiceState>> call2(Channel channel, Map<Long, VoiceState> map) {
-            return new Tuples2<>(channel, map);
+        public final Pair<Channel, Map<Long, VoiceState>> call2(Channel channel, Map<Long, VoiceState> map) {
+            return new Pair<>(channel, map);
         }
     }
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$call$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Tuples2<? extends Channel, ? extends Map<Long, ? extends VoiceState>>, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Pair<? extends Channel, ? extends Map<Long, ? extends VoiceState>>, Unit> {
         public final /* synthetic */ AnonymousClass1 $doCall$1;
         public final /* synthetic */ AnonymousClass2 $doCallIfCallable$2;
 
@@ -241,15 +240,15 @@ public final class StoreCalls {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Tuples2<? extends Channel, ? extends Map<Long, ? extends VoiceState>> tuples2) {
-            invoke2((Tuples2<Channel, ? extends Map<Long, VoiceState>>) tuples2);
+        public /* bridge */ /* synthetic */ Unit invoke(Pair<? extends Channel, ? extends Map<Long, ? extends VoiceState>> pair) {
+            invoke2((Pair<Channel, ? extends Map<Long, VoiceState>>) pair);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Tuples2<Channel, ? extends Map<Long, VoiceState>> tuples2) {
-            Channel channelComponent1 = tuples2.component1();
-            Map<Long, VoiceState> mapComponent2 = tuples2.component2();
+        public final void invoke2(Pair<Channel, ? extends Map<Long, VoiceState>> pair) {
+            Channel channelComponent1 = pair.component1();
+            Map<Long, VoiceState> mapComponent2 = pair.component2();
             User userA = channelComponent1 != null ? ChannelUtils.a(channelComponent1) : null;
             if (userA != null) {
                 this.$doCallIfCallable$2.invoke(userA.getId());
@@ -261,7 +260,7 @@ public final class StoreCalls {
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$findCall$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelCall, Boolean> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelCall, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -281,14 +280,14 @@ public final class StoreCalls {
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$get$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<HashMap<Long, ModelCall>, ModelCall> {
+    public static final class AnonymousClass1<T, R> implements b<HashMap<Long, ModelCall>, ModelCall> {
         public final /* synthetic */ long $channelId;
 
         public AnonymousClass1(long j) {
             this.$channelId = j;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ ModelCall call(HashMap<Long, ModelCall> map) {
             return call2(map);
         }
@@ -301,15 +300,15 @@ public final class StoreCalls {
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$ring$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelCall, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelCall, Unit> {
         public final /* synthetic */ List $recipients;
 
         /* compiled from: StoreCalls.kt */
         /* renamed from: com.discord.stores.StoreCalls$ring$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00971 extends Lambda implements Function1<Void, Unit> {
-            public static final C00971 INSTANCE = new C00971();
+        public static final class C02171 extends o implements Function1<Void, Unit> {
+            public static final C02171 INSTANCE = new C02171();
 
-            public C00971() {
+            public C02171() {
                 super(1);
             }
 
@@ -339,23 +338,23 @@ public final class StoreCalls {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelCall modelCall) {
             if (modelCall != null) {
-                ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApi().ring(modelCall.getChannelId(), modelCall.getMessageId(), this.$recipients), StoreCalls.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C00971.INSTANCE, 62, (Object) null);
+                ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApi().ring(modelCall.getChannelId(), modelCall.getMessageId(), this.$recipients), StoreCalls.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C02171.INSTANCE, 62, (Object) null);
             }
         }
     }
 
     /* compiled from: StoreCalls.kt */
     /* renamed from: com.discord.stores.StoreCalls$stopRinging$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelCall, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelCall, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ List $recipients;
 
         /* compiled from: StoreCalls.kt */
         /* renamed from: com.discord.stores.StoreCalls$stopRinging$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00981 extends Lambda implements Function1<Void, Unit> {
-            public static final C00981 INSTANCE = new C00981();
+        public static final class C02181 extends o implements Function1<Void, Unit> {
+            public static final C02181 INSTANCE = new C02181();
 
-            public C00981() {
+            public C02181() {
                 super(1);
             }
 
@@ -388,13 +387,13 @@ public final class StoreCalls {
             if (modelCall == null) {
                 StoreCalls.access$getStream$p(StoreCalls.this).getCallsIncoming().removeIncomingCall(this.$channelId);
             } else {
-                ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApi().stopRinging(modelCall.getChannelId(), modelCall.getMessageId(), this.$recipients), StoreCalls.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C00981.INSTANCE, 62, (Object) null);
+                ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApi().stopRinging(modelCall.getChannelId(), modelCall.getMessageId(), this.$recipients), StoreCalls.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C02181.INSTANCE, 62, (Object) null);
             }
         }
     }
 
     public StoreCalls(StoreStream storeStream) {
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(storeStream, "stream");
         this.stream = storeStream;
         this.calls = new HashMap<>();
         this.callsSubject = new SerializedSubject<>(BehaviorSubject.k0());
@@ -437,8 +436,8 @@ public final class StoreCalls {
     }
 
     private final void findCall(long channelId, Function1<? super ModelCall, Unit> onFoundCall) {
-        Observable<R> observableK = get(channelId).k(o.c(AnonymousClass1.INSTANCE, null, 3L, TimeUnit.SECONDS));
-        Intrinsics3.checkNotNullExpressionValue(observableK, "get(channelId)\n        .…l?, 3, TimeUnit.SECONDS))");
+        Observable<R> observableK = get(channelId).k(b.a.d.o.c(AnonymousClass1.INSTANCE, null, 3L, TimeUnit.SECONDS));
+        m.checkNotNullExpressionValue(observableK, "get(channelId)\n        .…l?, 3, TimeUnit.SECONDS))");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableK, 0L, false, 3, null), StoreCalls.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, onFoundCall, 62, (Object) null);
     }
 
@@ -459,30 +458,30 @@ public final class StoreCalls {
     }
 
     public final void call(AppComponent appComponent, Context context, FragmentManager fragmentManager, long channelId, Function0<Unit> onError) {
-        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(appComponent, "appComponent");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
         AnonymousClass1 anonymousClass1 = new AnonymousClass1(channelId);
         AnonymousClass2 anonymousClass2 = new AnonymousClass2(channelId, appComponent, context, anonymousClass1, onError, fragmentManager);
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        Observable observableZ = Observable.j0(companion.getChannels().observeChannel(channelId).k(o.c(AnonymousClass3.INSTANCE, null, 5000L, TimeUnit.MILLISECONDS)), companion.getVoiceStates().observeForPrivateChannels(channelId), AnonymousClass4.INSTANCE).Z(1);
-        Intrinsics3.checkNotNullExpressionValue(observableZ, "Observable\n        .zip(…tates) }\n        .take(1)");
+        Observable observableZ = Observable.j0(companion.getChannels().observeChannel(channelId).k(b.a.d.o.c(AnonymousClass3.INSTANCE, null, 5000L, TimeUnit.MILLISECONDS)), companion.getVoiceStates().observeForPrivateChannels(channelId), AnonymousClass4.INSTANCE).Z(1);
+        m.checkNotNullExpressionValue(observableZ, "Observable\n        .zip(…tates) }\n        .take(1)");
         ObservableExtensionsKt.appSubscribe$default(observableZ, StoreCalls.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass5(anonymousClass2, anonymousClass1), 62, (Object) null);
     }
 
     public final Observable<ModelCall> get(long channelId) {
         Observable<R> observableG = this.callsSubject.G(new AnonymousClass1(channelId));
-        Intrinsics3.checkNotNullExpressionValue(observableG, "callsSubject\n          .…lls -> calls[channelId] }");
+        m.checkNotNullExpressionValue(observableG, "callsSubject\n          .…lls -> calls[channelId] }");
         Observable<ModelCall> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "callsSubject\n          .…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "callsSubject\n          .…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final void handleCallCreateOrUpdate(ModelCall call) {
-        Intrinsics3.checkNotNullParameter(call, NotificationCompat.CATEGORY_CALL);
+        m.checkNotNullParameter(call, NotificationCompat.CATEGORY_CALL);
         long channelId = call.getChannelId();
         boolean z2 = true;
-        if (!Intrinsics3.areEqual(call, this.calls.get(Long.valueOf(channelId)))) {
+        if (!m.areEqual(call, this.calls.get(Long.valueOf(channelId)))) {
             this.calls.put(Long.valueOf(channelId), call);
         } else {
             z2 = false;
@@ -491,7 +490,7 @@ public final class StoreCalls {
     }
 
     public final void handleCallDelete(ModelCall callDelete) {
-        Intrinsics3.checkNotNullParameter(callDelete, "callDelete");
+        m.checkNotNullParameter(callDelete, "callDelete");
         long channelId = callDelete.getChannelId();
         if (this.calls.containsKey(Long.valueOf(channelId))) {
             this.calls.put(Long.valueOf(channelId), null);

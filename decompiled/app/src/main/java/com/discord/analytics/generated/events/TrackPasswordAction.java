@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPasswordAction.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPasswordAction implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPasswordAction implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence action = null;
     private final Boolean isSuccess = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackPasswordAction implements AnalyticsSchema, Tr
             return false;
         }
         TrackPasswordAction trackPasswordAction = (TrackPasswordAction) other;
-        return Intrinsics3.areEqual(this.action, trackPasswordAction.action) && Intrinsics3.areEqual(this.isSuccess, trackPasswordAction.isSuccess) && Intrinsics3.areEqual(this.compliance, trackPasswordAction.compliance) && Intrinsics3.areEqual(this.isCompliant, trackPasswordAction.isCompliant);
+        return m.areEqual(this.action, trackPasswordAction.action) && m.areEqual(this.isSuccess, trackPasswordAction.isSuccess) && m.areEqual(this.compliance, trackPasswordAction.compliance) && m.areEqual(this.isCompliant, trackPasswordAction.isCompliant);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackPasswordAction implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPasswordAction(action=");
+        StringBuilder sbU = a.U("TrackPasswordAction(action=");
         sbU.append(this.action);
         sbU.append(", isSuccess=");
         sbU.append(this.isSuccess);
         sbU.append(", compliance=");
         sbU.append(this.compliance);
         sbU.append(", isCompliant=");
-        return outline.D(sbU, this.isCompliant, ")");
+        return a.D(sbU, this.isCompliant, ")");
     }
 }

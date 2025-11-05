@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackCreatorMonetizationEnableRequest.kt */
 /* loaded from: classes.dex */
@@ -21,7 +21,7 @@ public final /* data */ class TrackCreatorMonetizationEnableRequest {
             return false;
         }
         TrackCreatorMonetizationEnableRequest trackCreatorMonetizationEnableRequest = (TrackCreatorMonetizationEnableRequest) other;
-        return Intrinsics3.areEqual(this.creatorMonetizationEnableRequestId, trackCreatorMonetizationEnableRequest.creatorMonetizationEnableRequestId) && Intrinsics3.areEqual(this.state, trackCreatorMonetizationEnableRequest.state) && Intrinsics3.areEqual(this.actionedReason, trackCreatorMonetizationEnableRequest.actionedReason) && Intrinsics3.areEqual(this.actionedNote, trackCreatorMonetizationEnableRequest.actionedNote) && Intrinsics3.areEqual(this.actionedAt, trackCreatorMonetizationEnableRequest.actionedAt) && Intrinsics3.areEqual(this.termsAckedAt, trackCreatorMonetizationEnableRequest.termsAckedAt);
+        return m.areEqual(this.creatorMonetizationEnableRequestId, trackCreatorMonetizationEnableRequest.creatorMonetizationEnableRequestId) && m.areEqual(this.state, trackCreatorMonetizationEnableRequest.state) && m.areEqual(this.actionedReason, trackCreatorMonetizationEnableRequest.actionedReason) && m.areEqual(this.actionedNote, trackCreatorMonetizationEnableRequest.actionedNote) && m.areEqual(this.actionedAt, trackCreatorMonetizationEnableRequest.actionedAt) && m.areEqual(this.termsAckedAt, trackCreatorMonetizationEnableRequest.termsAckedAt);
     }
 
     public int hashCode() {
@@ -40,7 +40,7 @@ public final /* data */ class TrackCreatorMonetizationEnableRequest {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackCreatorMonetizationEnableRequest(creatorMonetizationEnableRequestId=");
+        StringBuilder sbU = a.U("TrackCreatorMonetizationEnableRequest(creatorMonetizationEnableRequestId=");
         sbU.append(this.creatorMonetizationEnableRequestId);
         sbU.append(", state=");
         sbU.append(this.state);
@@ -51,6 +51,6 @@ public final /* data */ class TrackCreatorMonetizationEnableRequest {
         sbU.append(", actionedAt=");
         sbU.append(this.actionedAt);
         sbU.append(", termsAckedAt=");
-        return outline.G(sbU, this.termsAckedAt, ")");
+        return a.G(sbU, this.termsAckedAt, ")");
     }
 }

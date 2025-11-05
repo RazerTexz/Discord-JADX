@@ -13,10 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.DimenRes;
 import androidx.annotation.MainThread;
 import androidx.annotation.Px;
-import b.a.i.ViewVoiceUserBinding;
-import b.a.y.VoiceUserView2;
-import b.a.y.VoiceUserView3;
-import b.a.y.VoiceUserView4;
+import b.a.i.j4;
+import b.a.y.g0;
+import b.a.y.h0;
+import b.a.y.i0;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.models.member.GuildMember;
 import com.discord.stores.StoreVoiceParticipants;
@@ -26,8 +26,8 @@ import com.discord.utilities.images.MGImages;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -42,7 +42,7 @@ public final class VoiceUserView extends FrameLayout {
     public int defaultVoiceStateBackground;
 
     /* renamed from: l, reason: from kotlin metadata */
-    public final ViewVoiceUserBinding binding;
+    public final j4 binding;
 
     /* renamed from: m, reason: from kotlin metadata */
     public a displayVoiceState;
@@ -75,7 +75,7 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     /* compiled from: VoiceUserView.kt */
-    public static final class b extends Lambda implements Function1<View, Unit> {
+    public static final class b extends o implements Function1<View, Unit> {
         public final /* synthetic */ int $avatarSize;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -92,7 +92,7 @@ public final class VoiceUserView extends FrameLayout {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "$this$resizeLayoutParams");
+            m.checkNotNullParameter(view, "$this$resizeLayoutParams");
             if (view.getLayoutParams().width == this.$avatarSize && view.getLayoutParams().height == this.$avatarSize) {
                 return;
             }
@@ -105,7 +105,7 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     /* compiled from: VoiceUserView.kt */
-    public static final class c extends Lambda implements Function1<ImageRequestBuilder, Unit> {
+    public static final class c extends o implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $newAvatarUrl;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -117,8 +117,8 @@ public final class VoiceUserView extends FrameLayout {
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(ImageRequestBuilder imageRequestBuilder) {
             ImageRequestBuilder imageRequestBuilder2 = imageRequestBuilder;
-            Intrinsics3.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
-            imageRequestBuilder2.l = new VoiceUserView4(this);
+            m.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
+            imageRequestBuilder2.l = new i0(this);
             return Unit.a;
         }
     }
@@ -131,7 +131,7 @@ public final class VoiceUserView extends FrameLayout {
     public VoiceUserView(Context context, AttributeSet attributeSet, int i, int i2) {
         attributeSet = (i2 & 2) != 0 ? null : attributeSet;
         i = (i2 & 4) != 0 ? 0 : i;
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         super(context, attributeSet, i);
         this.defaultVoiceStateBackground = R.color.transparent;
         LayoutInflater.from(context).inflate(com.discord.R.layout.view_voice_user, this);
@@ -141,14 +141,14 @@ public final class VoiceUserView extends FrameLayout {
             i3 = com.discord.R.id.voice_user_name_display;
             TextView textView = (TextView) findViewById(com.discord.R.id.voice_user_name_display);
             if (textView != null) {
-                ViewVoiceUserBinding viewVoiceUserBinding = new ViewVoiceUserBinding(this, simpleDraweeView, textView);
-                Intrinsics3.checkNotNullExpressionValue(viewVoiceUserBinding, "ViewVoiceUserBinding.inf…ater.from(context), this)");
-                this.binding = viewVoiceUserBinding;
-                this.ringAnimator = new RingAnimator(this, new VoiceUserView3(this));
-                this.onBitmapLoadedListener = VoiceUserView2.j;
+                j4 j4Var = new j4(this, simpleDraweeView, textView);
+                m.checkNotNullExpressionValue(j4Var, "ViewVoiceUserBinding.inf…ater.from(context), this)");
+                this.binding = j4Var;
+                this.ringAnimator = new RingAnimator(this, new h0(this));
+                this.onBitmapLoadedListener = g0.j;
                 if (attributeSet != null) {
                     TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, com.discord.R.a.VoiceUserView, 0, 0);
-                    Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…able.VoiceUserView, 0, 0)");
+                    m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…able.VoiceUserView, 0, 0)");
                     int dimension = (int) typedArrayObtainStyledAttributes.getDimension(1, 0.0f);
                     boolean z2 = typedArrayObtainStyledAttributes.getBoolean(2, false);
                     boolean z3 = typedArrayObtainStyledAttributes.getBoolean(0, false);
@@ -173,8 +173,8 @@ public final class VoiceUserView extends FrameLayout {
 
     @MainThread
     public final void a(StoreVoiceParticipants.VoiceUser voiceUser, @DimenRes int sizeDimenRes) {
-        Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
-        if (Intrinsics3.areEqual(this.voiceUser, voiceUser)) {
+        m.checkNotNullParameter(voiceUser, "voiceUser");
+        if (m.areEqual(this.voiceUser, voiceUser)) {
             return;
         }
         this.voiceUser = voiceUser;
@@ -184,14 +184,14 @@ public final class VoiceUserView extends FrameLayout {
         IconUtils iconUtils = IconUtils.INSTANCE;
         StoreVoiceParticipants.VoiceUser voiceUser2 = this.voiceUser;
         String forGuildMemberOrUser$default = IconUtils.getForGuildMemberOrUser$default(iconUtils, voiceUser2 != null ? voiceUser2.getUser() : null, guildMember, numValueOf, false, 8, null);
-        if (!Intrinsics3.areEqual(this.prevAvatarUrl, forGuildMemberOrUser$default)) {
+        if (!m.areEqual(this.prevAvatarUrl, forGuildMemberOrUser$default)) {
             this.prevAvatarUrl = forGuildMemberOrUser$default;
             SimpleDraweeView simpleDraweeView = this.binding.f141b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
             IconUtils.setIcon$default(simpleDraweeView, forGuildMemberOrUser$default, sizeDimenRes, new c(forGuildMemberOrUser$default), (MGImages.ChangeDetector) null, 16, (Object) null);
         }
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
+        m.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
         textView.setText(voiceUser.getDisplayName());
         setVoiceState(voiceUser);
     }
@@ -205,10 +205,10 @@ public final class VoiceUserView extends FrameLayout {
     public final void setAvatarSize(int avatarSize) {
         b bVar = new b(avatarSize);
         SimpleDraweeView simpleDraweeView = this.binding.f141b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
         bVar.invoke2((View) simpleDraweeView);
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
+        m.checkNotNullExpressionValue(textView, "binding.voiceUserNameDisplay");
         bVar.invoke2((View) textView);
         requestLayout();
     }
@@ -223,16 +223,16 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     public final void setOnBitmapLoadedListener(Function2<? super Bitmap, ? super String, Unit> onBitmapLoadedListener) {
-        Intrinsics3.checkNotNullParameter(onBitmapLoadedListener, "onBitmapLoadedListener");
+        m.checkNotNullParameter(onBitmapLoadedListener, "onBitmapLoadedListener");
         this.onBitmapLoadedListener = onBitmapLoadedListener;
     }
 
     @MainThread
     public final void setRingMargin(@Px int size) {
         SimpleDraweeView simpleDraweeView = this.binding.f141b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
         SimpleDraweeView simpleDraweeView2 = this.binding.f141b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.voiceUserAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView2, "binding.voiceUserAvatar");
         ViewGroup.LayoutParams layoutParams = simpleDraweeView2.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
         FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) layoutParams;
@@ -263,7 +263,7 @@ public final class VoiceUserView extends FrameLayout {
         setBackgroundResource(displayVoiceState.ordinal() != 1 ? this.defaultVoiceStateBackground : com.discord.R.drawable.drawable_voice_user_background_speaking);
         float f = (displayVoiceState == a.DISCONNECTED && this.fadeWhenDisconnected) ? 0.3f : 1.0f;
         SimpleDraweeView simpleDraweeView = this.binding.f141b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.voiceUserAvatar");
         simpleDraweeView.setAlpha(f);
         setAlpha(f);
         this.ringAnimator.onUpdate();

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackChangeLogCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackChangeLogCtaClicked implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackChangeLogCtaClicked implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence changeLogId = null;
     private final Float secondsOpen = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackChangeLogCtaClicked implements AnalyticsSchem
             return false;
         }
         TrackChangeLogCtaClicked trackChangeLogCtaClicked = (TrackChangeLogCtaClicked) other;
-        return Intrinsics3.areEqual(this.changeLogId, trackChangeLogCtaClicked.changeLogId) && Intrinsics3.areEqual(this.secondsOpen, trackChangeLogCtaClicked.secondsOpen) && Intrinsics3.areEqual(this.maxScrolledPercentage, trackChangeLogCtaClicked.maxScrolledPercentage) && Intrinsics3.areEqual(this.ctaType, trackChangeLogCtaClicked.ctaType) && Intrinsics3.areEqual(this.target, trackChangeLogCtaClicked.target);
+        return m.areEqual(this.changeLogId, trackChangeLogCtaClicked.changeLogId) && m.areEqual(this.secondsOpen, trackChangeLogCtaClicked.secondsOpen) && m.areEqual(this.maxScrolledPercentage, trackChangeLogCtaClicked.maxScrolledPercentage) && m.areEqual(this.ctaType, trackChangeLogCtaClicked.ctaType) && m.areEqual(this.target, trackChangeLogCtaClicked.target);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class TrackChangeLogCtaClicked implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackChangeLogCtaClicked(changeLogId=");
+        StringBuilder sbU = a.U("TrackChangeLogCtaClicked(changeLogId=");
         sbU.append(this.changeLogId);
         sbU.append(", secondsOpen=");
         sbU.append(this.secondsOpen);
@@ -57,6 +57,6 @@ public final /* data */ class TrackChangeLogCtaClicked implements AnalyticsSchem
         sbU.append(", ctaType=");
         sbU.append(this.ctaType);
         sbU.append(", target=");
-        return outline.E(sbU, this.target, ")");
+        return a.E(sbU, this.target, ")");
     }
 }

@@ -3,38 +3,38 @@ package com.discord.widgets.channels;
 import androidx.core.app.NotificationCompat;
 import com.discord.models.user.User;
 import com.discord.stores.StoreStream;
-import d0.g0.Strings4;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
+import d0.g0.w;
+import d0.z.d.m;
+import j0.k.b;
 import java.util.List;
 import java.util.Map;
 import rx.Observable;
 
 /* compiled from: WidgetGroupInviteFriends.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2<T, R> implements Func1<List<Long>, Observable<? extends Map<Long, Integer>>> {
+public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2<T, R> implements b<List<Long>, Observable<? extends Map<Long, Integer>>> {
     public final /* synthetic */ String $nameFilter;
 
     /* compiled from: WidgetGroupInviteFriends.kt */
     /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Integer>, Observable<? extends Map<Long, Integer>>> {
+    public static final class AnonymousClass1<T, R> implements b<Map<Long, ? extends Integer>, Observable<? extends Map<Long, Integer>>> {
         public final /* synthetic */ List $excludeUserIds;
 
         /* compiled from: WidgetGroupInviteFriends.kt */
         /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02411<T, R> implements Func1<Map<Long, ? extends User>, Observable<? extends Map<Long, Integer>>> {
+        public static final class C03611<T, R> implements b<Map<Long, ? extends User>, Observable<? extends Map<Long, Integer>>> {
             public final /* synthetic */ Map $relationships;
 
             /* compiled from: WidgetGroupInviteFriends.kt */
             /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02421<T, R> implements Func1<Map.Entry<? extends Long, ? extends Integer>, Boolean> {
+            public static final class C03621<T, R> implements b<Map.Entry<? extends Long, ? extends Integer>, Boolean> {
                 public final /* synthetic */ Map $users;
 
-                public C02421(Map map) {
+                public C03621(Map map) {
                     this.$users = map;
                 }
 
-                @Override // j0.k.Func1
+                @Override // j0.k.b
                 public /* bridge */ /* synthetic */ Boolean call(Map.Entry<? extends Long, ? extends Integer> entry) {
                     return call2((Map.Entry<Long, Integer>) entry);
                 }
@@ -60,11 +60,11 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
                             String str = WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2.this.$nameFilter;
                             if (str != null) {
                                 String lowerCase = str.toLowerCase();
-                                Intrinsics3.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase()");
+                                m.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase()");
                                 if (lowerCase == null) {
                                     lowerCase = "";
                                 }
-                                zContains = Strings4.contains((CharSequence) username, (CharSequence) lowerCase, true);
+                                zContains = w.contains((CharSequence) username, (CharSequence) lowerCase, true);
                             }
                         }
                         if (!zContains) {
@@ -76,10 +76,10 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
 
             /* compiled from: WidgetGroupInviteFriends.kt */
             /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$2, reason: invalid class name */
-            public static final class AnonymousClass2<T, R> implements Func1<Map.Entry<? extends Long, ? extends Integer>, Long> {
+            public static final class AnonymousClass2<T, R> implements b<Map.Entry<? extends Long, ? extends Integer>, Long> {
                 public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-                @Override // j0.k.Func1
+                @Override // j0.k.b
                 public /* bridge */ /* synthetic */ Long call(Map.Entry<? extends Long, ? extends Integer> entry) {
                     return call2((Map.Entry<Long, Integer>) entry);
                 }
@@ -92,10 +92,10 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
 
             /* compiled from: WidgetGroupInviteFriends.kt */
             /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$3, reason: invalid class name */
-            public static final class AnonymousClass3<T, R> implements Func1<Map.Entry<? extends Long, ? extends Integer>, Integer> {
+            public static final class AnonymousClass3<T, R> implements b<Map.Entry<? extends Long, ? extends Integer>, Integer> {
                 public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
-                @Override // j0.k.Func1
+                @Override // j0.k.b
                 public /* bridge */ /* synthetic */ Integer call(Map.Entry<? extends Long, ? extends Integer> entry) {
                     return call2((Map.Entry<Long, Integer>) entry);
                 }
@@ -106,18 +106,18 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
                 }
             }
 
-            public C02411(Map map) {
+            public C03611(Map map) {
                 this.$relationships = map;
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends Map<Long, Integer>> call(Map<Long, ? extends User> map) {
                 return call2(map);
             }
 
             /* renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Map<Long, Integer>> call2(Map<Long, ? extends User> map) {
-                return Observable.B(this.$relationships.entrySet()).y(new C02421(map)).g0(AnonymousClass2.INSTANCE, AnonymousClass3.INSTANCE);
+                return Observable.B(this.$relationships.entrySet()).y(new C03621(map)).g0(AnonymousClass2.INSTANCE, AnonymousClass3.INSTANCE);
             }
         }
 
@@ -125,14 +125,14 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
             this.$excludeUserIds = list;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Map<Long, Integer>> call(Map<Long, ? extends Integer> map) {
             return call2((Map<Long, Integer>) map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, Integer>> call2(Map<Long, Integer> map) {
-            return StoreStream.INSTANCE.getUsers().observeUsers(map.keySet()).Y(new C02411(map));
+            return StoreStream.INSTANCE.getUsers().observeUsers(map.keySet()).Y(new C03611(map));
         }
     }
 
@@ -140,7 +140,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
         this.$nameFilter = str;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public /* bridge */ /* synthetic */ Observable<? extends Map<Long, Integer>> call(List<Long> list) {
         return call2(list);
     }

@@ -3,7 +3,7 @@ package androidx.constraintlayout.solver;
 import androidx.constraintlayout.solver.SolverVariable;
 import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -208,21 +208,21 @@ public class LinearSystem {
         displaySolverVariables();
         String strW = "";
         for (int i = 0; i < this.mNumRows; i++) {
-            StringBuilder sbU = outline.U(strW);
+            StringBuilder sbU = a.U(strW);
             sbU.append(this.mRows[i]);
-            strW = outline.w(sbU.toString(), "\n");
+            strW = a.w(sbU.toString(), "\n");
         }
-        StringBuilder sbU2 = outline.U(strW);
+        StringBuilder sbU2 = a.U(strW);
         sbU2.append(this.mGoal);
         sbU2.append("\n");
         System.out.println(sbU2.toString());
     }
 
     private void displaySolverVariables() {
-        StringBuilder sbU = outline.U("Display Rows (");
+        StringBuilder sbU = a.U("Display Rows (");
         sbU.append(this.mNumRows);
         sbU.append("x");
-        System.out.println(outline.B(sbU, this.mNumColumns, ")\n"));
+        System.out.println(a.B(sbU, this.mNumColumns, ")\n"));
     }
 
     private int enforceBFS(Row row) throws Exception {
@@ -326,7 +326,7 @@ public class LinearSystem {
         int i2 = i * 4;
         int i3 = i2 / 1024;
         int i4 = i3 / 1024;
-        return i4 > 0 ? outline.r("", i4, " Mb") : i3 > 0 ? outline.r("", i3, " Kb") : outline.r("", i2, " bytes");
+        return i4 > 0 ? a.r("", i4, " Mb") : i3 > 0 ? a.r("", i3, " Kb") : a.r("", i2, " bytes");
     }
 
     private String getDisplayStrength(int i) {
@@ -767,14 +767,14 @@ public class LinearSystem {
 
     public void displayReadableRows() {
         displaySolverVariables();
-        String strB = outline.B(outline.U(" num vars "), this.mVariablesID, "\n");
+        String strB = a.B(a.U(" num vars "), this.mVariablesID, "\n");
         for (int i = 0; i < this.mVariablesID + 1; i++) {
             SolverVariable solverVariable = this.mCache.mIndexedVariables[i];
             if (solverVariable != null && solverVariable.isFinalValue) {
                 strB = strB + " $[" + i + "] => " + solverVariable + " = " + solverVariable.computedValue + "\n";
             }
         }
-        String strW = outline.w(strB, "\n");
+        String strW = a.w(strB, "\n");
         for (int i2 = 0; i2 < this.mVariablesID + 1; i2++) {
             SolverVariable[] solverVariableArr = this.mCache.mIndexedVariables;
             SolverVariable solverVariable2 = solverVariableArr[i2];
@@ -782,14 +782,14 @@ public class LinearSystem {
                 strW = strW + " ~[" + i2 + "] => " + solverVariable2 + " = " + solverVariableArr[solverVariable2.synonym] + " + " + solverVariable2.synonymDelta + "\n";
             }
         }
-        String strW2 = outline.w(strW, "\n\n #  ");
+        String strW2 = a.w(strW, "\n\n #  ");
         for (int i3 = 0; i3 < this.mNumRows; i3++) {
-            StringBuilder sbU = outline.U(strW2);
+            StringBuilder sbU = a.U(strW2);
             sbU.append(this.mRows[i3].toReadableString());
-            strW2 = outline.w(sbU.toString(), "\n #  ");
+            strW2 = a.w(sbU.toString(), "\n #  ");
         }
         if (this.mGoal != null) {
-            StringBuilder sbX = outline.X(strW2, "Goal: ");
+            StringBuilder sbX = a.X(strW2, "Goal: ");
             sbX.append(this.mGoal);
             sbX.append("\n");
             strW2 = sbX.toString();
@@ -813,7 +813,7 @@ public class LinearSystem {
             }
         }
         PrintStream printStream = System.out;
-        StringBuilder sbU = outline.U("Linear System -> Table size: ");
+        StringBuilder sbU = a.U("Linear System -> Table size: ");
         sbU.append(this.TABLE_SIZE);
         sbU.append(" (");
         int i3 = this.TABLE_SIZE;
@@ -842,12 +842,12 @@ public class LinearSystem {
         String strW = "";
         for (int i = 0; i < this.mNumRows; i++) {
             if (this.mRows[i].variable.mType == SolverVariable.Type.UNRESTRICTED) {
-                StringBuilder sbU = outline.U(strW);
+                StringBuilder sbU = a.U(strW);
                 sbU.append(this.mRows[i].toReadableString());
-                strW = outline.w(sbU.toString(), "\n");
+                strW = a.w(sbU.toString(), "\n");
             }
         }
-        StringBuilder sbU2 = outline.U(strW);
+        StringBuilder sbU2 = a.U(strW);
         sbU2.append(this.mGoal);
         sbU2.append("\n");
         System.out.println(sbU2.toString());

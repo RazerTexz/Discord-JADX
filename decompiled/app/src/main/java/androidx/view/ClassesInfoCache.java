@@ -2,7 +2,7 @@ package androidx.view;
 
 import androidx.annotation.Nullable;
 import androidx.view.Lifecycle;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -166,7 +166,7 @@ public final class ClassesInfoCache {
             return;
         }
         Method method = methodReference.mMethod;
-        StringBuilder sbU = outline.U("Method ");
+        StringBuilder sbU = a.U("Method ");
         sbU.append(method.getName());
         sbU.append(" in ");
         sbU.append(cls.getName());

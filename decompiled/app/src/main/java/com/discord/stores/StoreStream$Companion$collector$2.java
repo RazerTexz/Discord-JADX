@@ -1,11 +1,11 @@
 package com.discord.stores;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: StoreStream.kt */
 /* loaded from: classes2.dex */
-public final class StoreStream$Companion$collector$2 extends Lambda implements Function0<StoreStream> {
+public final class StoreStream$Companion$collector$2 extends o implements Function0<StoreStream> {
     public static final StoreStream$Companion$collector$2 INSTANCE = new StoreStream$Companion$collector$2();
 
     public StoreStream$Companion$collector$2() {

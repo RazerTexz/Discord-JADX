@@ -1,6 +1,6 @@
 package com.discord.api.guildscheduledevent;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: GuildScheduledEventUserUpdate.kt */
 /* loaded from: classes.dex */
@@ -39,11 +39,11 @@ public final /* data */ class GuildScheduledEventUserUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildScheduledEventUserUpdate(guildScheduledEventId=");
+        StringBuilder sbU = a.U("GuildScheduledEventUserUpdate(guildScheduledEventId=");
         sbU.append(this.guildScheduledEventId);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", userId=");
-        return outline.C(sbU, this.userId, ")");
+        return a.C(sbU, this.userId, ")");
     }
 }

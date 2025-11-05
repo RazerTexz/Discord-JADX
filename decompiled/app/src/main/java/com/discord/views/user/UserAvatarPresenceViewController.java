@@ -10,7 +10,7 @@ import com.discord.utilities.streams.StreamContextService;
 import com.discord.utilities.viewcontroller.RxViewController;
 import com.discord.views.user.UserAvatarPresenceView;
 import com.discord.widgets.user.presence.ModelRichPresence;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import rx.Observable;
 import rx.functions.Func3;
 
@@ -39,7 +39,7 @@ public final class UserAvatarPresenceViewController extends RxViewController<Use
             User user2 = user;
             ModelRichPresence modelRichPresence2 = modelRichPresence;
             StreamContext streamContext2 = streamContext;
-            Intrinsics3.checkNotNullExpressionValue(user2, "user");
+            m.checkNotNullExpressionValue(user2, "user");
             return new UserAvatarPresenceView.a(user2, modelRichPresence2 != null ? modelRichPresence2.getPresence() : null, streamContext2, true, null, 16);
         }
     }
@@ -50,10 +50,10 @@ public final class UserAvatarPresenceViewController extends RxViewController<Use
         StoreUser users = (i & 2) != 0 ? StoreStream.INSTANCE.getUsers() : null;
         StoreUserPresence presences = (i & 4) != 0 ? StoreStream.INSTANCE.getPresences() : null;
         StreamContextService streamContextService2 = (i & 8) != 0 ? new StreamContextService(null, null, null, null, null, null, null, null, 255, null) : null;
-        Intrinsics3.checkNotNullParameter(userAvatarPresenceView, "view");
-        Intrinsics3.checkNotNullParameter(users, "storeUser");
-        Intrinsics3.checkNotNullParameter(presences, "storeUserPresence");
-        Intrinsics3.checkNotNullParameter(streamContextService2, "streamContextService");
+        m.checkNotNullParameter(userAvatarPresenceView, "view");
+        m.checkNotNullParameter(users, "storeUser");
+        m.checkNotNullParameter(presences, "storeUserPresence");
+        m.checkNotNullParameter(streamContextService2, "streamContextService");
         this.storeUser = users;
         this.storeUserPresence = presences;
         this.streamContextService = streamContextService2;
@@ -62,16 +62,16 @@ public final class UserAvatarPresenceViewController extends RxViewController<Use
     @Override // com.discord.utilities.viewcontroller.RxViewController
     public void configureView(UserAvatarPresenceView.a aVar) {
         UserAvatarPresenceView.a aVar2 = aVar;
-        Intrinsics3.checkNotNullParameter(aVar2, "viewState");
+        m.checkNotNullParameter(aVar2, "viewState");
         getView().a(aVar2);
     }
 
     @Override // com.discord.utilities.viewcontroller.RxViewController
     public Observable<UserAvatarPresenceView.a> observeState() {
         Observable<R> observableG = this.storeUser.observeUser(this.userId).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
         Observable<UserAvatarPresenceView.a> observableI = Observable.i(observableG, ModelRichPresence.INSTANCE.get(this.userId, this.storeUserPresence), this.streamContextService.getForUser(this.userId, false), a.a);
-        Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…nce = true,\n      )\n    }");
+        m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…nce = true,\n      )\n    }");
         return observableI;
     }
 }

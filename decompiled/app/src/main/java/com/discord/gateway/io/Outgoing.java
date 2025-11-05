@@ -1,7 +1,7 @@
 package com.discord.gateway.io;
 
 import com.discord.gateway.opcodes.Opcode;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: Outgoing.kt */
@@ -26,7 +26,7 @@ public final class Outgoing {
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public Outgoing(Opcode opcode, Object obj) {
         this(opcode.getApiInt(), obj);
-        Intrinsics3.checkNotNullParameter(opcode, "opcode");
+        m.checkNotNullParameter(opcode, "opcode");
     }
 
     public /* synthetic */ Outgoing(Opcode opcode, Object obj, int i, DefaultConstructorMarker defaultConstructorMarker) {

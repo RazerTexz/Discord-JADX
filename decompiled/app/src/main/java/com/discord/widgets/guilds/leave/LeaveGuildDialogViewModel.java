@@ -2,8 +2,8 @@ package com.discord.widgets.guilds.leave;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.models.guild.Guild;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreLurking;
@@ -11,9 +11,9 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -23,7 +23,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: LeaveGuildDialogViewModel.kt */
 /* loaded from: classes2.dex */
-public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
+public final class LeaveGuildDialogViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -34,7 +34,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: LeaveGuildDialogViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass1(LeaveGuildDialogViewModel leaveGuildDialogViewModel) {
             super(1, leaveGuildDialogViewModel, LeaveGuildDialogViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guilds/leave/LeaveGuildDialogViewModel$StoreState;)V", 0);
         }
@@ -47,7 +47,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             LeaveGuildDialogViewModel.access$handleStoreState((LeaveGuildDialogViewModel) this.receiver, storeState);
         }
     }
@@ -62,8 +62,8 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(long guildId, StoreGuilds guildStore, StoreLurking lurkingStore) {
-            Observable<StoreState> observableJ = Observable.j(guildStore.observeGuild(guildId), lurkingStore.isLurkingObs(guildId), LeaveGuildDialogViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…urking)\n        }\n      }");
+            Observable<StoreState> observableJ = Observable.j(guildStore.observeGuild(guildId), lurkingStore.isLurkingObs(guildId), LeaveGuildDialogViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…urking)\n        }\n      }");
             return observableJ;
         }
 
@@ -112,7 +112,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(Guild guild, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(guild, "guild");
                 this.guild = guild;
                 this.isLurking = z2;
             }
@@ -138,7 +138,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
 
             public final Valid copy(Guild guild, boolean isLurking) {
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(guild, "guild");
                 return new Valid(guild, isLurking);
             }
 
@@ -150,7 +150,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.guild, valid.guild) && this.isLurking == valid.isLurking;
+                return m.areEqual(this.guild, valid.guild) && this.isLurking == valid.isLurking;
             }
 
             public final Guild getGuild() {
@@ -174,10 +174,10 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(guild=");
+                StringBuilder sbU = a.U("Valid(guild=");
                 sbU.append(this.guild);
                 sbU.append(", isLurking=");
-                return outline.O(sbU, this.isLurking, ")");
+                return a.O(sbU, this.isLurking, ")");
             }
         }
 
@@ -210,7 +210,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(Guild guild, boolean z2, boolean z3) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(guild, "guild");
                 this.guild = guild;
                 this.isLoading = z2;
                 this.isLurking = z3;
@@ -245,7 +245,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
 
             public final Valid copy(Guild guild, boolean isLoading, boolean isLurking) {
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(guild, "guild");
                 return new Valid(guild, isLoading, isLurking);
             }
 
@@ -257,7 +257,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.guild, valid.guild) && this.isLoading == valid.isLoading && this.isLurking == valid.isLurking;
+                return m.areEqual(this.guild, valid.guild) && this.isLoading == valid.isLoading && this.isLurking == valid.isLurking;
             }
 
             public final Guild getGuild() {
@@ -287,12 +287,12 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(guild=");
+                StringBuilder sbU = a.U("Valid(guild=");
                 sbU.append(this.guild);
                 sbU.append(", isLoading=");
                 sbU.append(this.isLoading);
                 sbU.append(", isLurking=");
-                return outline.O(sbU, this.isLurking, ")");
+                return a.O(sbU, this.isLurking, ")");
             }
         }
 
@@ -306,7 +306,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: LeaveGuildDialogViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -325,7 +325,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: LeaveGuildDialogViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -344,7 +344,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: LeaveGuildDialogViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Void, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -363,7 +363,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: LeaveGuildDialogViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Error, Unit> {
         public AnonymousClass4() {
             super(1);
         }
@@ -376,7 +376,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             LeaveGuildDialogViewModel.access$onLeaveFailed(LeaveGuildDialogViewModel.this);
         }
     }
@@ -411,7 +411,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
         if (storeState instanceof StoreState.Valid) {
             StoreState.Valid valid2 = (StoreState.Valid) storeState;
             updateViewState(new ViewState.Valid(valid2.getGuild(), zIsLoading, valid2.isLurking()));
-        } else if (Intrinsics3.areEqual(storeState, StoreState.Invalid.INSTANCE)) {
+        } else if (m.areEqual(storeState, StoreState.Invalid.INSTANCE)) {
             updateViewState(ViewState.Invalid.INSTANCE);
         }
     }
@@ -453,16 +453,16 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public LeaveGuildDialogViewModel(long j, RestAPI restAPI, StoreLurking storeLurking, Observable<StoreState> observable) {
         super(null);
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(storeLurking, "lurkingStore");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(storeLurking, "lurkingStore");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.guildId = j;
         this.restAPI = restAPI;
         this.lurkingStore = storeLurking;

@@ -1,9 +1,9 @@
 package okhttp3;
 
-import d0.g0.Charsets2;
-import d0.z.d.Intrinsics3;
-import f0.e0.Util7;
-import g0.BufferedSource;
+import d0.y.b;
+import d0.z.d.m;
+import f0.e0.c;
+import g0.g;
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,13 +21,13 @@ public abstract class ResponseBody implements Closeable {
     public static final class a extends Reader {
         public boolean j;
         public Reader k;
-        public final BufferedSource l;
+        public final g l;
         public final Charset m;
 
-        public a(BufferedSource bufferedSource, Charset charset) {
-            Intrinsics3.checkParameterIsNotNull(bufferedSource, "source");
-            Intrinsics3.checkParameterIsNotNull(charset, "charset");
-            this.l = bufferedSource;
+        public a(g gVar, Charset charset) {
+            m.checkParameterIsNotNull(gVar, "source");
+            m.checkParameterIsNotNull(charset, "charset");
+            this.l = gVar;
             this.m = charset;
         }
 
@@ -44,13 +44,13 @@ public abstract class ResponseBody implements Closeable {
 
         @Override // java.io.Reader
         public int read(char[] cArr, int i, int i2) throws IOException {
-            Intrinsics3.checkParameterIsNotNull(cArr, "cbuf");
+            m.checkParameterIsNotNull(cArr, "cbuf");
             if (this.j) {
                 throw new IOException("Stream closed");
             }
             Reader inputStreamReader = this.k;
             if (inputStreamReader == null) {
-                inputStreamReader = new InputStreamReader(this.l.u0(), Util7.s(this.l, this.m));
+                inputStreamReader = new InputStreamReader(this.l.u0(), c.s(this.l, this.m));
                 this.k = inputStreamReader;
             }
             return inputStreamReader.read(cArr, i, i2);
@@ -61,23 +61,23 @@ public abstract class ResponseBody implements Closeable {
 
     public abstract MediaType b();
 
-    public abstract BufferedSource c();
+    public abstract g c();
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public void close() {
-        Util7.d(c());
+        c.d(c());
     }
 
     public final String d() throws IOException {
         Charset charsetA;
-        BufferedSource bufferedSourceC = c();
+        g gVarC = c();
         try {
             MediaType mediaTypeB = b();
-            if (mediaTypeB == null || (charsetA = mediaTypeB.a(Charsets2.a)) == null) {
-                charsetA = Charsets2.a;
+            if (mediaTypeB == null || (charsetA = mediaTypeB.a(d0.g0.c.a)) == null) {
+                charsetA = d0.g0.c.a;
             }
-            String strM = bufferedSourceC.M(Util7.s(bufferedSourceC, charsetA));
-            d0.y.Closeable.closeFinally(bufferedSourceC, null);
+            String strM = gVarC.M(c.s(gVarC, charsetA));
+            b.closeFinally(gVarC, null);
             return strM;
         } finally {
         }

@@ -1,6 +1,6 @@
 package b.i.a.c.b3.v;
 
-import b.i.a.c.b3.v.WebvttCueParser;
+import b.i.a.c.b3.v.h;
 import java.util.Comparator;
 
 /* compiled from: lambda */
@@ -10,6 +10,6 @@ public final /* synthetic */ class a implements Comparator {
 
     @Override // java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        return Integer.compare(((WebvttCueParser.b) obj).f892b.f893b, ((WebvttCueParser.b) obj2).f892b.f893b);
+        return Integer.compare(((h.b) obj).f892b.f893b, ((h.b) obj2).f892b.f893b);
     }
 }

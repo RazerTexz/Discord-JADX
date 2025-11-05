@@ -1,6 +1,6 @@
 package androidx.sqlite.db;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.regex.Pattern;
 
 /* loaded from: classes.dex */
@@ -95,7 +95,7 @@ public final class SupportSQLiteQueryBuilder {
 
     public SupportSQLiteQueryBuilder limit(String str) {
         if (!isEmpty(str) && !sLimitPattern.matcher(str).matches()) {
-            throw new IllegalArgumentException(outline.w("invalid LIMIT clauses:", str));
+            throw new IllegalArgumentException(a.w("invalid LIMIT clauses:", str));
         }
         this.mLimit = str;
         return this;

@@ -1,8 +1,5 @@
 package d0.f0;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
-import d0.z.d.g0.KMarkers;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import kotlin.sequences.Sequence;
@@ -17,7 +14,7 @@ public final class r<T> implements Sequence<T>, e<T> {
     public final int c;
 
     /* compiled from: Sequences.kt */
-    public static final class a implements Iterator<T>, KMarkers {
+    public static final class a implements Iterator<T>, d0.z.d.g0.a {
         public final Iterator<T> j;
         public int k;
 
@@ -56,18 +53,18 @@ public final class r<T> implements Sequence<T>, e<T> {
 
     /* JADX WARN: Multi-variable type inference failed */
     public r(Sequence<? extends T> sequence, int i, int i2) {
-        Intrinsics3.checkNotNullParameter(sequence, "sequence");
+        d0.z.d.m.checkNotNullParameter(sequence, "sequence");
         this.a = sequence;
         this.f3575b = i;
         this.c = i2;
         if (!(i >= 0)) {
-            throw new IllegalArgumentException(outline.q("startIndex should be non-negative, but is ", i).toString());
+            throw new IllegalArgumentException(b.d.b.a.a.q("startIndex should be non-negative, but is ", i).toString());
         }
         if (!(i2 >= 0)) {
-            throw new IllegalArgumentException(outline.q("endIndex should be non-negative, but is ", i2).toString());
+            throw new IllegalArgumentException(b.d.b.a.a.q("endIndex should be non-negative, but is ", i2).toString());
         }
         if (!(i2 >= i)) {
-            throw new IllegalArgumentException(outline.s("endIndex should be not less than startIndex, but was ", i2, " < ", i).toString());
+            throw new IllegalArgumentException(b.d.b.a.a.s("endIndex should be not less than startIndex, but was ", i2, " < ", i).toString());
         }
     }
 

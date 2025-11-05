@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public final class NavUtils {
@@ -55,7 +55,7 @@ public final class NavUtils {
             navigateUpTo(activity, parentActivityIntent);
             return;
         }
-        StringBuilder sbU = outline.U("Activity ");
+        StringBuilder sbU = a.U("Activity ");
         sbU.append(activity.getClass().getSimpleName());
         sbU.append(" does not have a parent activity name specified. (Did you forget to add the android.support.PARENT_ACTIVITY <meta-data>  element in your manifest?)");
         throw new IllegalArgumentException(sbU.toString());

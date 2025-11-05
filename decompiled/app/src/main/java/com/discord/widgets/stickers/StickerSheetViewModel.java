@@ -2,8 +2,8 @@ package com.discord.widgets.stickers;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.premium.PremiumTier;
 import com.discord.api.sticker.Sticker;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -14,10 +14,10 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.analytics.Traits;
-import com.discord.utilities.premium.PremiumUtils3;
+import com.discord.utilities.premium.PremiumUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -30,7 +30,7 @@ import rx.Observable;
 
 /* compiled from: StickerSheetViewModel.kt */
 /* loaded from: classes.dex */
-public final class StickerSheetViewModel extends AppViewModel<ViewState> {
+public final class StickerSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -42,7 +42,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: StickerSheetViewModel.kt */
     /* renamed from: com.discord.widgets.stickers.StickerSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -55,7 +55,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             StickerSheetViewModel.access$handleStoreState(StickerSheetViewModel.this, storeState);
         }
     }
@@ -71,9 +71,9 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
 
         private final Observable<StoreState> observeStoreState(StoreStickers storeStickers, StoreUser storeUser, Sticker sticker) {
             Long packId = sticker.getPackId();
-            Intrinsics3.checkNotNull(packId);
-            Observable<StoreState> observableJ = Observable.j(storeStickers.observeStickerPack(packId.longValue()), StoreUser.observeMe$default(storeUser, false, 1, null), StickerSheetViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…ser\n          )\n        }");
+            m.checkNotNull(packId);
+            Observable<StoreState> observableJ = Observable.j(storeStickers.observeStickerPack(packId.longValue()), StoreUser.observeMe$default(storeUser, false, 1, null), StickerSheetViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…ser\n          )\n        }");
             return observableJ;
         }
 
@@ -88,8 +88,8 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
         private final StoreStickers.StickerPackState stickerPack;
 
         public StoreState(StoreStickers.StickerPackState stickerPackState, MeUser meUser) {
-            Intrinsics3.checkNotNullParameter(stickerPackState, "stickerPack");
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(stickerPackState, "stickerPack");
+            m.checkNotNullParameter(meUser, "meUser");
             this.stickerPack = stickerPackState;
             this.meUser = meUser;
         }
@@ -115,8 +115,8 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(StoreStickers.StickerPackState stickerPack, MeUser meUser) {
-            Intrinsics3.checkNotNullParameter(stickerPack, "stickerPack");
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(stickerPack, "stickerPack");
+            m.checkNotNullParameter(meUser, "meUser");
             return new StoreState(stickerPack, meUser);
         }
 
@@ -128,7 +128,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.stickerPack, storeState.stickerPack) && Intrinsics3.areEqual(this.meUser, storeState.meUser);
+            return m.areEqual(this.stickerPack, storeState.stickerPack) && m.areEqual(this.meUser, storeState.meUser);
         }
 
         public final MeUser getMeUser() {
@@ -147,7 +147,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(stickerPack=");
+            StringBuilder sbU = a.U("StoreState(stickerPack=");
             sbU.append(this.stickerPack);
             sbU.append(", meUser=");
             sbU.append(this.meUser);
@@ -165,14 +165,14 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
         private final ModelStickerPack stickerPack;
 
         public ViewState(ModelStickerPack modelStickerPack, Sticker sticker, PremiumTier premiumTier, boolean z2) {
-            Intrinsics3.checkNotNullParameter(modelStickerPack, "stickerPack");
-            Intrinsics3.checkNotNullParameter(sticker, "sticker");
-            Intrinsics3.checkNotNullParameter(premiumTier, "meUserPremiumTier");
+            m.checkNotNullParameter(modelStickerPack, "stickerPack");
+            m.checkNotNullParameter(sticker, "sticker");
+            m.checkNotNullParameter(premiumTier, "meUserPremiumTier");
             this.stickerPack = modelStickerPack;
             this.sticker = sticker;
             this.meUserPremiumTier = premiumTier;
             this.isStickerPackEnabled = z2;
-            this.canUsePremiumStickers = PremiumUtils3.grantsAccessToPremiumStickers(premiumTier);
+            this.canUsePremiumStickers = PremiumUtilsKt.grantsAccessToPremiumStickers(premiumTier);
         }
 
         public static /* synthetic */ ViewState copy$default(ViewState viewState, ModelStickerPack modelStickerPack, Sticker sticker, PremiumTier premiumTier, boolean z2, int i, Object obj) {
@@ -212,9 +212,9 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
         }
 
         public final ViewState copy(ModelStickerPack stickerPack, Sticker sticker, PremiumTier meUserPremiumTier, boolean isStickerPackEnabled) {
-            Intrinsics3.checkNotNullParameter(stickerPack, "stickerPack");
-            Intrinsics3.checkNotNullParameter(sticker, "sticker");
-            Intrinsics3.checkNotNullParameter(meUserPremiumTier, "meUserPremiumTier");
+            m.checkNotNullParameter(stickerPack, "stickerPack");
+            m.checkNotNullParameter(sticker, "sticker");
+            m.checkNotNullParameter(meUserPremiumTier, "meUserPremiumTier");
             return new ViewState(stickerPack, sticker, meUserPremiumTier, isStickerPackEnabled);
         }
 
@@ -226,7 +226,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.stickerPack, viewState.stickerPack) && Intrinsics3.areEqual(this.sticker, viewState.sticker) && Intrinsics3.areEqual(this.meUserPremiumTier, viewState.meUserPremiumTier) && this.isStickerPackEnabled == viewState.isStickerPackEnabled;
+            return m.areEqual(this.stickerPack, viewState.stickerPack) && m.areEqual(this.sticker, viewState.sticker) && m.areEqual(this.meUserPremiumTier, viewState.meUserPremiumTier) && this.isStickerPackEnabled == viewState.isStickerPackEnabled;
         }
 
         public final boolean getCanUsePremiumStickers() {
@@ -266,14 +266,14 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(stickerPack=");
+            StringBuilder sbU = a.U("ViewState(stickerPack=");
             sbU.append(this.stickerPack);
             sbU.append(", sticker=");
             sbU.append(this.sticker);
             sbU.append(", meUserPremiumTier=");
             sbU.append(this.meUserPremiumTier);
             sbU.append(", isStickerPackEnabled=");
-            return outline.O(sbU, this.isStickerPackEnabled, ")");
+            return a.O(sbU, this.isStickerPackEnabled, ")");
         }
     }
 
@@ -291,7 +291,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
     private final void fetchStickersData() {
         StoreStickers storeStickers = this.storeStickers;
         Long packId = this.sticker.getPackId();
-        Intrinsics3.checkNotNull(packId);
+        m.checkNotNull(packId);
         storeStickers.fetchStickerPack(packId.longValue());
         this.storeStickers.fetchEnabledStickerDirectory();
     }
@@ -311,7 +311,7 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
             StickerPurchaseLocation popoutPurchaseLocation = StickerPurchaseLocation.INSTANCE.getPopoutPurchaseLocation(stickerPack2.canBePurchased());
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             Long packId = this.sticker.getPackId();
-            Intrinsics3.checkNotNull(packId);
+            m.checkNotNull(packId);
             analyticsTracker.stickerPopoutOpened(packId.longValue(), this.location, new Traits.Location(null, popoutPurchaseLocation.getAnalyticsValue(), null, null, null, 29, null));
             this.hasFiredAnalytics = true;
         }
@@ -359,10 +359,10 @@ public final class StickerSheetViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StickerSheetViewModel(Sticker sticker, StoreStickers storeStickers, StoreUser storeUser, String str, Observable<StoreState> observable) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
-        Intrinsics3.checkNotNullParameter(storeStickers, "storeStickers");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(storeStickers, "storeStickers");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.sticker = sticker;
         this.storeStickers = storeStickers;
         this.storeUser = storeUser;

@@ -8,11 +8,9 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.o;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsAccountEmailEditConfirmBinding;
@@ -27,11 +25,11 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.user.WidgetUserPasswordVerify;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -42,7 +40,7 @@ import rx.functions.Action1;
 /* compiled from: WidgetSettingsAccountEmailEditConfirm.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetSettingsAccountEmailEditConfirm.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountEmailEditConfirmBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsAccountEmailEditConfirm.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountEmailEditConfirmBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -65,18 +63,18 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
         }
 
         public final void launch(Context context, ActivityResultLauncher<Intent> launcher, String email) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(launcher, "launcher");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(launcher, "launcher");
             Intent intent = new Intent();
             intent.putExtra(WidgetSettingsAccountEmailEditConfirm.EXTRA_EMAIL, email);
-            AppScreen2.g.f(context, launcher, WidgetSettingsAccountEmailEditConfirm.class, intent);
+            j.g.f(context, launcher, WidgetSettingsAccountEmailEditConfirm.class, intent);
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(AppFragment fragment, Function0<Unit> callback) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(callback, "callback");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetSettingsAccountEmailEditConfirm2(callback));
-            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(callback, "callback");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetSettingsAccountEmailEditConfirm$Companion$registerForResult$1(callback));
+            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…k()\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -87,12 +85,12 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
     /* compiled from: WidgetSettingsAccountEmailEditConfirm.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEditConfirm$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
 
         /* compiled from: WidgetSettingsAccountEmailEditConfirm.kt */
         /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEditConfirm$configureUI$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03351 extends Lambda implements Function1<View, Unit> {
-            public C03351() {
+        public static final class C04551 extends o implements Function1<View, Unit> {
+            public C04551() {
                 super(1);
             }
 
@@ -104,7 +102,7 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                Intrinsics3.checkNotNullParameter(view, "it");
+                m.checkNotNullParameter(view, "it");
                 WidgetSettingsAccountEmailEditConfirm.access$resendVerificationCode(WidgetSettingsAccountEmailEditConfirm.this);
             }
         }
@@ -121,14 +119,14 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.b("onResend", new C03351());
+            m.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.b("onResend", new C04551());
         }
     }
 
     /* compiled from: WidgetSettingsAccountEmailEditConfirm.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEditConfirm$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<TextView, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<TextView, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -141,7 +139,7 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
-            Intrinsics3.checkNotNullParameter(textView, "it");
+            m.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountEmailEditConfirm.access$submitVerificationCode(WidgetSettingsAccountEmailEditConfirm.this);
         }
     }
@@ -160,7 +158,7 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
     /* compiled from: WidgetSettingsAccountEmailEditConfirm.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEditConfirm$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<MeUser, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<MeUser, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -173,7 +171,7 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
-            Intrinsics3.checkNotNullParameter(meUser, "it");
+            m.checkNotNullParameter(meUser, "it");
             WidgetSettingsAccountEmailEditConfirm.access$configureUI(WidgetSettingsAccountEmailEditConfirm.this, meUser);
         }
     }
@@ -191,7 +189,7 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r5) {
-            AppToast.g(WidgetSettingsAccountEmailEditConfirm.this.requireContext(), R.string.user_settings_account_change_email_confirm_code_sent, 0, null, 12);
+            b.a.d.m.g(WidgetSettingsAccountEmailEditConfirm.this.requireContext(), R.string.user_settings_account_change_email_confirm_code_sent, 0, null, 12);
         }
     }
 
@@ -214,8 +212,8 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
     public WidgetSettingsAccountEmailEditConfirm() {
         super(R.layout.widget_settings_account_email_edit_confirm);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsAccountEmailEditConfirm3.INSTANCE, null, 2, null);
-        this.passwordVerifyLauncher = WidgetUserPasswordVerify.INSTANCE.registerForResult(this, new WidgetSettingsAccountEmailEditConfirm4(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsAccountEmailEditConfirm$binding$2.INSTANCE, null, 2, null);
+        this.passwordVerifyLauncher = WidgetUserPasswordVerify.INSTANCE.registerForResult(this, new WidgetSettingsAccountEmailEditConfirm$passwordVerifyLauncher$1(this));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetSettingsAccountEmailEditConfirm widgetSettingsAccountEmailEditConfirm, MeUser meUser) {
@@ -236,11 +234,11 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
 
     private final void configureUI(MeUser meUser) {
         TextView textView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.editAccountEmailConfirmDescription");
-        FormatUtils.n(textView, R.string.user_settings_account_change_email_confirm_description, new Object[]{meUser.getEmail()}, null, 4);
+        m.checkNotNullExpressionValue(textView, "binding.editAccountEmailConfirmDescription");
+        b.n(textView, R.string.user_settings_account_change_email_confirm_description, new Object[]{meUser.getEmail()}, null, 4);
         LinkifiedTextView linkifiedTextView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.settingsAccountConfirmResend");
-        FormatUtils.m(linkifiedTextView, R.string.user_settings_account_change_email_confirm_resend, new Object[0], new AnonymousClass1());
+        m.checkNotNullExpressionValue(linkifiedTextView, "binding.settingsAccountConfirmResend");
+        b.m(linkifiedTextView, R.string.user_settings_account_change_email_confirm_resend, new Object[0], new AnonymousClass1());
     }
 
     private final WidgetSettingsAccountEmailEditConfirmBinding getBinding() {
@@ -248,24 +246,24 @@ public final class WidgetSettingsAccountEmailEditConfirm extends AppFragment {
     }
 
     private final void resendVerificationCode() {
-        ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userEmail(), false, 1, null), this, null, 2, null).k(o.j(new AnonymousClass1(), requireContext(), null, 4));
+        ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userEmail(), false, 1, null), this, null, 2, null).k(b.a.d.o.j(new AnonymousClass1(), requireContext(), null, 4));
     }
 
     private final void submitVerificationCode() {
         TextInputLayout textInputLayout = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountCodeWrap");
-        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userEmailVerifyCode(new RestAPIParams.UserEmailConfirmCode(ViewExtensions.getTextOrEmpty(textInputLayout))), false, 1, null), this, null, 2, null), getBinding().f2600b, 0L, 2, null).k(o.j(new AnonymousClass1(), requireContext(), null, 4));
+        m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountCodeWrap");
+        ObservableExtensionsKt.withDimmer$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userEmailVerifyCode(new RestAPIParams.UserEmailConfirmCode(ViewExtensions.getTextOrEmpty(textInputLayout))), false, 1, null), this, null, 2, null), getBinding().f2600b, 0L, 2, null).k(b.a.d.o.j(new AnonymousClass1(), requireContext(), null, 4));
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setActionBarSubtitle(R.string.user_settings);
         setActionBarTitle(R.string.user_settings_account_change_email_confirm_title);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         TextInputLayout textInputLayout = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.editAccountCodeWrap");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.editAccountCodeWrap");
         ViewExtensions.setOnImeActionDone$default(textInputLayout, false, new AnonymousClass1(), 1, null);
         getBinding().f.setOnClickListener(new AnonymousClass2());
     }

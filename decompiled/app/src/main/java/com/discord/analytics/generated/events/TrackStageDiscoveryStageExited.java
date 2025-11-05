@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackStageDiscoveryStageExited.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageDiscoveryStageExited implements AnalyticsSchema, TrackBase2, TrackGuild2 {
+public final /* data */ class TrackStageDiscoveryStageExited implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final CharSequence loadId = null;
@@ -24,13 +24,13 @@ public final /* data */ class TrackStageDiscoveryStageExited implements Analytic
     private final Long joinTimestamp = null;
     private final transient String analyticsSchemaTypeName = "stage_discovery_stage_exited";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -49,7 +49,7 @@ public final /* data */ class TrackStageDiscoveryStageExited implements Analytic
             return false;
         }
         TrackStageDiscoveryStageExited trackStageDiscoveryStageExited = (TrackStageDiscoveryStageExited) other;
-        return Intrinsics3.areEqual(this.loadId, trackStageDiscoveryStageExited.loadId) && Intrinsics3.areEqual(this.stageInstanceRecommendations, trackStageDiscoveryStageExited.stageInstanceRecommendations) && Intrinsics3.areEqual(this.lastVisibleIndexAtLoad, trackStageDiscoveryStageExited.lastVisibleIndexAtLoad) && Intrinsics3.areEqual(this.index, trackStageDiscoveryStageExited.index) && Intrinsics3.areEqual(this.stageInstanceId, trackStageDiscoveryStageExited.stageInstanceId) && Intrinsics3.areEqual(this.recommendationSource, trackStageDiscoveryStageExited.recommendationSource) && Intrinsics3.areEqual(this.recommendationScore, trackStageDiscoveryStageExited.recommendationScore) && Intrinsics3.areEqual(this.joinTimestamp, trackStageDiscoveryStageExited.joinTimestamp);
+        return m.areEqual(this.loadId, trackStageDiscoveryStageExited.loadId) && m.areEqual(this.stageInstanceRecommendations, trackStageDiscoveryStageExited.stageInstanceRecommendations) && m.areEqual(this.lastVisibleIndexAtLoad, trackStageDiscoveryStageExited.lastVisibleIndexAtLoad) && m.areEqual(this.index, trackStageDiscoveryStageExited.index) && m.areEqual(this.stageInstanceId, trackStageDiscoveryStageExited.stageInstanceId) && m.areEqual(this.recommendationSource, trackStageDiscoveryStageExited.recommendationSource) && m.areEqual(this.recommendationScore, trackStageDiscoveryStageExited.recommendationScore) && m.areEqual(this.joinTimestamp, trackStageDiscoveryStageExited.joinTimestamp);
     }
 
     public int hashCode() {
@@ -72,7 +72,7 @@ public final /* data */ class TrackStageDiscoveryStageExited implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStageDiscoveryStageExited(loadId=");
+        StringBuilder sbU = a.U("TrackStageDiscoveryStageExited(loadId=");
         sbU.append(this.loadId);
         sbU.append(", stageInstanceRecommendations=");
         sbU.append(this.stageInstanceRecommendations);
@@ -87,6 +87,6 @@ public final /* data */ class TrackStageDiscoveryStageExited implements Analytic
         sbU.append(", recommendationScore=");
         sbU.append(this.recommendationScore);
         sbU.append(", joinTimestamp=");
-        return outline.G(sbU, this.joinTimestamp, ")");
+        return a.G(sbU, this.joinTimestamp, ")");
     }
 }

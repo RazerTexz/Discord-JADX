@@ -2,14 +2,14 @@ package com.discord.widgets.chat.input;
 
 import com.discord.widgets.chat.MessageContent;
 import com.discord.widgets.chat.MessageManager;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendMessage$sendMessage$1 extends Lambda implements Function1<Long, Unit> {
+public final class ChatInputViewModel$sendMessage$sendMessage$1 extends o implements Function1<Long, Unit> {
     public final /* synthetic */ MessageManager.AttachmentsRequest $attachmentsRequest;
     public final /* synthetic */ MessageContent $messageContent;
     public final /* synthetic */ MessageManager $messageManager;

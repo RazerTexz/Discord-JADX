@@ -1,7 +1,7 @@
 package com.discord.api.auth.mfa;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: GetBackupCodesSendVerificationKeyResponse.kt */
 /* loaded from: classes.dex */
@@ -27,7 +27,7 @@ public final /* data */ class GetBackupCodesSendVerificationKeyResponse {
             return false;
         }
         GetBackupCodesSendVerificationKeyResponse getBackupCodesSendVerificationKeyResponse = (GetBackupCodesSendVerificationKeyResponse) other;
-        return Intrinsics3.areEqual(this.nonce, getBackupCodesSendVerificationKeyResponse.nonce) && Intrinsics3.areEqual(this.regenerateNonce, getBackupCodesSendVerificationKeyResponse.regenerateNonce);
+        return m.areEqual(this.nonce, getBackupCodesSendVerificationKeyResponse.nonce) && m.areEqual(this.regenerateNonce, getBackupCodesSendVerificationKeyResponse.regenerateNonce);
     }
 
     public int hashCode() {
@@ -38,9 +38,9 @@ public final /* data */ class GetBackupCodesSendVerificationKeyResponse {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GetBackupCodesSendVerificationKeyResponse(nonce=");
+        StringBuilder sbU = a.U("GetBackupCodesSendVerificationKeyResponse(nonce=");
         sbU.append(this.nonce);
         sbU.append(", regenerateNonce=");
-        return outline.J(sbU, this.regenerateNonce, ")");
+        return a.J(sbU, this.regenerateNonce, ")");
     }
 }

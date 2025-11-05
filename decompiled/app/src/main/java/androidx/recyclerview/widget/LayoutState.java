@@ -2,7 +2,7 @@ package androidx.recyclerview.widget;
 
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class LayoutState {
@@ -33,7 +33,7 @@ public class LayoutState {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("LayoutState{mAvailable=");
+        StringBuilder sbU = a.U("LayoutState{mAvailable=");
         sbU.append(this.mAvailable);
         sbU.append(", mCurrentPosition=");
         sbU.append(this.mCurrentPosition);
@@ -44,6 +44,6 @@ public class LayoutState {
         sbU.append(", mStartLine=");
         sbU.append(this.mStartLine);
         sbU.append(", mEndLine=");
-        return outline.A(sbU, this.mEndLine, '}');
+        return a.A(sbU, this.mEndLine, '}');
     }
 }

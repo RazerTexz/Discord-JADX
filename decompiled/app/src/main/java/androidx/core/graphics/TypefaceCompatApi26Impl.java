@@ -15,7 +15,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.provider.FontsContractCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
@@ -62,7 +62,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
             methodObtainCreateFromFamiliesWithDefaultMethod = obtainCreateFromFamiliesWithDefaultMethod(clsObtainFontFamily);
             cls = clsObtainFontFamily;
         } catch (ClassNotFoundException | NoSuchMethodException e) {
-            StringBuilder sbU = outline.U("Unable to collect necessary methods for class ");
+            StringBuilder sbU = a.U("Unable to collect necessary methods for class ");
             sbU.append(e.getClass().getName());
             Log.e(TAG, sbU.toString(), e);
             methodObtainCreateFromFamiliesWithDefaultMethod = null;

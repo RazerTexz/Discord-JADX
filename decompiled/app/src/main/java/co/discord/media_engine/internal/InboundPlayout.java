@@ -1,8 +1,8 @@
 package co.discord.media_engine.internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import co.discord.media_engine.PlayoutMetric;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -19,16 +19,16 @@ public final /* data */ class InboundPlayout {
     private final PlayoutMetric videoJitterTarget;
 
     public InboundPlayout(PlayoutMetric playoutMetric, PlayoutMetric playoutMetric2, PlayoutMetric playoutMetric3, PlayoutMetric playoutMetric4, PlayoutMetric playoutMetric5, PlayoutMetric playoutMetric6, PlayoutMetric playoutMetric7, PlayoutMetric playoutMetric8, PlayoutMetric playoutMetric9, PlayoutMetric playoutMetric10) {
-        Intrinsics3.checkNotNullParameter(playoutMetric, "audioJitterBuffer");
-        Intrinsics3.checkNotNullParameter(playoutMetric2, "audioJitterDelay");
-        Intrinsics3.checkNotNullParameter(playoutMetric3, "audioJitterTarget");
-        Intrinsics3.checkNotNullParameter(playoutMetric4, "audioPlayoutUnderruns");
-        Intrinsics3.checkNotNullParameter(playoutMetric5, "audioCaptureOverruns");
-        Intrinsics3.checkNotNullParameter(playoutMetric6, "videoJitterBuffer");
-        Intrinsics3.checkNotNullParameter(playoutMetric7, "videoJitterDelay");
-        Intrinsics3.checkNotNullParameter(playoutMetric8, "videoJitterTarget");
-        Intrinsics3.checkNotNullParameter(playoutMetric9, "relativeReceptionDelay");
-        Intrinsics3.checkNotNullParameter(playoutMetric10, "relativePlayoutDelay");
+        m.checkNotNullParameter(playoutMetric, "audioJitterBuffer");
+        m.checkNotNullParameter(playoutMetric2, "audioJitterDelay");
+        m.checkNotNullParameter(playoutMetric3, "audioJitterTarget");
+        m.checkNotNullParameter(playoutMetric4, "audioPlayoutUnderruns");
+        m.checkNotNullParameter(playoutMetric5, "audioCaptureOverruns");
+        m.checkNotNullParameter(playoutMetric6, "videoJitterBuffer");
+        m.checkNotNullParameter(playoutMetric7, "videoJitterDelay");
+        m.checkNotNullParameter(playoutMetric8, "videoJitterTarget");
+        m.checkNotNullParameter(playoutMetric9, "relativeReceptionDelay");
+        m.checkNotNullParameter(playoutMetric10, "relativePlayoutDelay");
         this.audioJitterBuffer = playoutMetric;
         this.audioJitterDelay = playoutMetric2;
         this.audioJitterTarget = playoutMetric3;
@@ -96,16 +96,16 @@ public final /* data */ class InboundPlayout {
     }
 
     public final InboundPlayout copy(PlayoutMetric audioJitterBuffer, PlayoutMetric audioJitterDelay, PlayoutMetric audioJitterTarget, PlayoutMetric audioPlayoutUnderruns, PlayoutMetric audioCaptureOverruns, PlayoutMetric videoJitterBuffer, PlayoutMetric videoJitterDelay, PlayoutMetric videoJitterTarget, PlayoutMetric relativeReceptionDelay, PlayoutMetric relativePlayoutDelay) {
-        Intrinsics3.checkNotNullParameter(audioJitterBuffer, "audioJitterBuffer");
-        Intrinsics3.checkNotNullParameter(audioJitterDelay, "audioJitterDelay");
-        Intrinsics3.checkNotNullParameter(audioJitterTarget, "audioJitterTarget");
-        Intrinsics3.checkNotNullParameter(audioPlayoutUnderruns, "audioPlayoutUnderruns");
-        Intrinsics3.checkNotNullParameter(audioCaptureOverruns, "audioCaptureOverruns");
-        Intrinsics3.checkNotNullParameter(videoJitterBuffer, "videoJitterBuffer");
-        Intrinsics3.checkNotNullParameter(videoJitterDelay, "videoJitterDelay");
-        Intrinsics3.checkNotNullParameter(videoJitterTarget, "videoJitterTarget");
-        Intrinsics3.checkNotNullParameter(relativeReceptionDelay, "relativeReceptionDelay");
-        Intrinsics3.checkNotNullParameter(relativePlayoutDelay, "relativePlayoutDelay");
+        m.checkNotNullParameter(audioJitterBuffer, "audioJitterBuffer");
+        m.checkNotNullParameter(audioJitterDelay, "audioJitterDelay");
+        m.checkNotNullParameter(audioJitterTarget, "audioJitterTarget");
+        m.checkNotNullParameter(audioPlayoutUnderruns, "audioPlayoutUnderruns");
+        m.checkNotNullParameter(audioCaptureOverruns, "audioCaptureOverruns");
+        m.checkNotNullParameter(videoJitterBuffer, "videoJitterBuffer");
+        m.checkNotNullParameter(videoJitterDelay, "videoJitterDelay");
+        m.checkNotNullParameter(videoJitterTarget, "videoJitterTarget");
+        m.checkNotNullParameter(relativeReceptionDelay, "relativeReceptionDelay");
+        m.checkNotNullParameter(relativePlayoutDelay, "relativePlayoutDelay");
         return new InboundPlayout(audioJitterBuffer, audioJitterDelay, audioJitterTarget, audioPlayoutUnderruns, audioCaptureOverruns, videoJitterBuffer, videoJitterDelay, videoJitterTarget, relativeReceptionDelay, relativePlayoutDelay);
     }
 
@@ -117,7 +117,7 @@ public final /* data */ class InboundPlayout {
             return false;
         }
         InboundPlayout inboundPlayout = (InboundPlayout) other;
-        return Intrinsics3.areEqual(this.audioJitterBuffer, inboundPlayout.audioJitterBuffer) && Intrinsics3.areEqual(this.audioJitterDelay, inboundPlayout.audioJitterDelay) && Intrinsics3.areEqual(this.audioJitterTarget, inboundPlayout.audioJitterTarget) && Intrinsics3.areEqual(this.audioPlayoutUnderruns, inboundPlayout.audioPlayoutUnderruns) && Intrinsics3.areEqual(this.audioCaptureOverruns, inboundPlayout.audioCaptureOverruns) && Intrinsics3.areEqual(this.videoJitterBuffer, inboundPlayout.videoJitterBuffer) && Intrinsics3.areEqual(this.videoJitterDelay, inboundPlayout.videoJitterDelay) && Intrinsics3.areEqual(this.videoJitterTarget, inboundPlayout.videoJitterTarget) && Intrinsics3.areEqual(this.relativeReceptionDelay, inboundPlayout.relativeReceptionDelay) && Intrinsics3.areEqual(this.relativePlayoutDelay, inboundPlayout.relativePlayoutDelay);
+        return m.areEqual(this.audioJitterBuffer, inboundPlayout.audioJitterBuffer) && m.areEqual(this.audioJitterDelay, inboundPlayout.audioJitterDelay) && m.areEqual(this.audioJitterTarget, inboundPlayout.audioJitterTarget) && m.areEqual(this.audioPlayoutUnderruns, inboundPlayout.audioPlayoutUnderruns) && m.areEqual(this.audioCaptureOverruns, inboundPlayout.audioCaptureOverruns) && m.areEqual(this.videoJitterBuffer, inboundPlayout.videoJitterBuffer) && m.areEqual(this.videoJitterDelay, inboundPlayout.videoJitterDelay) && m.areEqual(this.videoJitterTarget, inboundPlayout.videoJitterTarget) && m.areEqual(this.relativeReceptionDelay, inboundPlayout.relativeReceptionDelay) && m.areEqual(this.relativePlayoutDelay, inboundPlayout.relativePlayoutDelay);
     }
 
     public final PlayoutMetric getAudioCaptureOverruns() {
@@ -184,7 +184,7 @@ public final /* data */ class InboundPlayout {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InboundPlayout(audioJitterBuffer=");
+        StringBuilder sbU = a.U("InboundPlayout(audioJitterBuffer=");
         sbU.append(this.audioJitterBuffer);
         sbU.append(", audioJitterDelay=");
         sbU.append(this.audioJitterDelay);

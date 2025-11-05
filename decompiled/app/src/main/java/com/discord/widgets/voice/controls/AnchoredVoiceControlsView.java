@@ -11,8 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentManager;
-import b.a.j.FloatingViewManager;
-import b.a.v.AcknowledgedTooltipsCache;
+import b.a.j.a;
 import com.discord.R;
 import com.discord.app.AppComponent;
 import com.discord.app.AppLog;
@@ -29,9 +28,9 @@ import com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet;
 import com.discord.widgets.voice.model.CameraState;
 import com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
 import java.util.Set;
@@ -94,10 +93,10 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
 
     /* compiled from: AnchoredVoiceControlsView.kt */
     /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Void, Unit> {
+    public static final class AnonymousClass2<T, R> implements b<Void, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Unit call(Void r1) {
             call2(r1);
             return Unit.a;
@@ -185,7 +184,7 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
 
     /* compiled from: AnchoredVoiceControlsView.kt */
     /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$setOnPttPressedListener$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Boolean, Unit> {
         public final /* synthetic */ Function1 $onPttPressed;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -226,20 +225,20 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
             TooltipManager tooltipManager = this.tooltipManager;
             TooltipManager.b bVar = ScreenShareButtonSparkleTooltip.INSTANCE;
             Objects.requireNonNull(tooltipManager);
-            Intrinsics3.checkNotNullParameter(bVar, "tooltip");
+            m.checkNotNullParameter(bVar, "tooltip");
             if (!(tooltipManager.tooltipNameToTooltipViewIdMap.get(bVar.getTooltipName()) != null)) {
                 ImageView imageView = this.binding.f;
-                Intrinsics3.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsScreenshare");
+                m.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsScreenshare");
                 Context context = imageView.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context, "binding.voiceFullscreenControlsScreenshare.context");
+                m.checkNotNullExpressionValue(context, "binding.voiceFullscreenControlsScreenshare.context");
                 SparkleView sparkleView = new SparkleView(context, null);
                 sparkleView.setOnClickListener(new AnonymousClass1(fragmentManager, channelId, guildId, forwardToFullscreenIfVideoActivated, featureContext, onNavigateToScreenShareNfxSheet, onScreenSharePressed));
                 TooltipManager tooltipManager2 = this.tooltipManager;
                 View view = this.binding.f;
-                Intrinsics3.checkNotNullExpressionValue(view, "binding.voiceFullscreenControlsScreenshare");
+                m.checkNotNullExpressionValue(view, "binding.voiceFullscreenControlsScreenshare");
                 FloatingViewGravity floatingViewGravity = FloatingViewGravity.CENTER;
                 Observable<R> observableG = appComponent.getUnsubscribeSignal().G(AnonymousClass2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableG, "appComponent.unsubscribeSignal.map { Unit }");
+                m.checkNotNullExpressionValue(observableG, "appComponent.unsubscribeSignal.map { Unit }");
                 tooltipManager2.d(view, sparkleView, bVar, floatingViewGravity, 0, 0, false, observableG);
                 return;
             }
@@ -252,38 +251,38 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
 
     public final void configureUI(MediaEngineConnection.InputMode inputMode, StoreAudioManagerV2.State audioManagerState, boolean isMuted, boolean isScreensharing, boolean showScreenShareSparkle, CameraState cameraState, Function0<Unit> onMutePressed, Function0<Unit> onScreenSharePressed, Function0<Unit> onSpeakerButtonPressed, Function0<Unit> onCameraButtonPressed, Function0<Unit> onDisconnectPressed, AppComponent appComponent, FragmentManager fragmentManager, Function0<Unit> onNavigateToScreenShareNfxSheet, long channelId, long guildId, boolean forwardToFullscreenIfVideoActivated, WidgetVoiceBottomSheet.FeatureContext featureContext) {
         String string;
-        Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
-        Intrinsics3.checkNotNullParameter(audioManagerState, "audioManagerState");
-        Intrinsics3.checkNotNullParameter(cameraState, "cameraState");
-        Intrinsics3.checkNotNullParameter(onMutePressed, "onMutePressed");
-        Intrinsics3.checkNotNullParameter(onScreenSharePressed, "onScreenSharePressed");
-        Intrinsics3.checkNotNullParameter(onSpeakerButtonPressed, "onSpeakerButtonPressed");
-        Intrinsics3.checkNotNullParameter(onCameraButtonPressed, "onCameraButtonPressed");
-        Intrinsics3.checkNotNullParameter(onDisconnectPressed, "onDisconnectPressed");
-        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-        Intrinsics3.checkNotNullParameter(onNavigateToScreenShareNfxSheet, "onNavigateToScreenShareNfxSheet");
-        Intrinsics3.checkNotNullParameter(featureContext, "featureContext");
+        m.checkNotNullParameter(inputMode, "inputMode");
+        m.checkNotNullParameter(audioManagerState, "audioManagerState");
+        m.checkNotNullParameter(cameraState, "cameraState");
+        m.checkNotNullParameter(onMutePressed, "onMutePressed");
+        m.checkNotNullParameter(onScreenSharePressed, "onScreenSharePressed");
+        m.checkNotNullParameter(onSpeakerButtonPressed, "onSpeakerButtonPressed");
+        m.checkNotNullParameter(onCameraButtonPressed, "onCameraButtonPressed");
+        m.checkNotNullParameter(onDisconnectPressed, "onDisconnectPressed");
+        m.checkNotNullParameter(appComponent, "appComponent");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(onNavigateToScreenShareNfxSheet, "onNavigateToScreenShareNfxSheet");
+        m.checkNotNullParameter(featureContext, "featureContext");
         MaterialButton materialButton = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
+        m.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
         materialButton.setVisibility(inputMode.ordinal() != 1 ? 8 : 0);
         this.binding.f2088b.setOnClickListener(new AnonymousClass1(onCameraButtonPressed));
         ImageView imageView = this.binding.f2088b;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsCamera");
+        m.checkNotNullExpressionValue(imageView, "binding.voiceFullscreenControlsCamera");
         imageView.setVisibility(cameraState != CameraState.CAMERA_DISABLED ? 0 : 8);
         if (cameraState == CameraState.CAMERA_ON) {
             ImageView imageView2 = this.binding.f2088b;
-            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.voiceFullscreenControlsCamera");
+            m.checkNotNullExpressionValue(imageView2, "binding.voiceFullscreenControlsCamera");
             imageView2.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorInteractiveActive)));
             ImageView imageView3 = this.binding.f2088b;
-            Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.voiceFullscreenControlsCamera");
+            m.checkNotNullExpressionValue(imageView3, "binding.voiceFullscreenControlsCamera");
             imageView3.setContentDescription(getContext().getString(R.string.camera_on));
         } else {
             ImageView imageView4 = this.binding.f2088b;
-            Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.voiceFullscreenControlsCamera");
+            m.checkNotNullExpressionValue(imageView4, "binding.voiceFullscreenControlsCamera");
             imageView4.setImageTintList(ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorInteractiveNormal)));
             ImageView imageView5 = this.binding.f2088b;
-            Intrinsics3.checkNotNullExpressionValue(imageView5, "binding.voiceFullscreenControlsCamera");
+            m.checkNotNullExpressionValue(imageView5, "binding.voiceFullscreenControlsCamera");
             imageView5.setContentDescription(getContext().getString(R.string.camera_off));
         }
         if (audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.BLUETOOTH_HEADSET) {
@@ -293,36 +292,36 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
         if (audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.EARPIECE || audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.WIRED_HEADSET) {
             ImageView imageView6 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView6, "binding.voiceFullscreenControlsSpeaker");
+            m.checkNotNullExpressionValue(imageView6, "binding.voiceFullscreenControlsSpeaker");
             int themedColor = ColorCompat.getThemedColor(imageView6.getContext(), R.attr.colorInteractiveNormal);
             ImageView imageView7 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView7, "binding.voiceFullscreenControlsSpeaker");
+            m.checkNotNullExpressionValue(imageView7, "binding.voiceFullscreenControlsSpeaker");
             imageView7.setImageTintList(ColorStateList.valueOf(themedColor));
         } else {
             ImageView imageView8 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView8, "binding.voiceFullscreenControlsSpeaker");
+            m.checkNotNullExpressionValue(imageView8, "binding.voiceFullscreenControlsSpeaker");
             int themedColor2 = ColorCompat.getThemedColor(imageView8.getContext(), R.attr.colorInteractiveActive);
             ImageView imageView9 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView9, "binding.voiceFullscreenControlsSpeaker");
+            m.checkNotNullExpressionValue(imageView9, "binding.voiceFullscreenControlsSpeaker");
             imageView9.setImageTintList(ColorStateList.valueOf(themedColor2));
         }
         ImageView imageView10 = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(imageView10, "binding.voiceFullscreenControlsSpeaker");
+        m.checkNotNullExpressionValue(imageView10, "binding.voiceFullscreenControlsSpeaker");
         imageView10.setActivated(audioManagerState.getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.SPEAKERPHONE);
         this.binding.g.setOnClickListener(new AnonymousClass2(onSpeakerButtonPressed));
         ImageView imageView11 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView11, "binding.voiceFullscreenControlsMuteState");
+        m.checkNotNullExpressionValue(imageView11, "binding.voiceFullscreenControlsMuteState");
         imageView11.setActivated(isMuted);
         ImageView imageView12 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView12, "binding.voiceFullscreenControlsMuteState");
+        m.checkNotNullExpressionValue(imageView12, "binding.voiceFullscreenControlsMuteState");
         imageView12.setContentDescription(getContext().getString(isMuted ? R.string.unmute : R.string.mute));
         this.binding.d.setOnClickListener(new AnonymousClass3(onMutePressed));
         ImageView imageView13 = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(imageView13, "binding.voiceFullscreenControlsScreenshare");
+        m.checkNotNullExpressionValue(imageView13, "binding.voiceFullscreenControlsScreenshare");
         imageView13.setActivated(isScreensharing);
         this.binding.f.setImageResource(isScreensharing ? R.drawable.ic_mobile_screenshare_end_24dp : R.drawable.ic_mobile_screenshare_24dp);
         ImageView imageView14 = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(imageView14, "binding.voiceFullscreenControlsScreenshare");
+        m.checkNotNullExpressionValue(imageView14, "binding.voiceFullscreenControlsScreenshare");
         Context context = getContext();
         if (context != null) {
             string = context.getString(isScreensharing ? R.string.stop_streaming : R.string.screenshare_screen);
@@ -337,19 +336,19 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
 
     public final void hidePtt() {
         MaterialButton materialButton = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
+        m.checkNotNullExpressionValue(materialButton, "binding.voiceFullscreenControlsPtt");
         materialButton.setVisibility(8);
     }
 
     public final void setOnPttPressedListener(Function1<? super Boolean, Unit> onPttPressed) {
-        Intrinsics3.checkNotNullParameter(onPttPressed, "onPttPressed");
+        m.checkNotNullParameter(onPttPressed, "onPttPressed");
         this.binding.e.setOnTouchListener(new OnPressListener(new AnonymousClass1(onPttPressed)));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AnchoredVoiceControlsView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.anchored_voice_controls_view, (ViewGroup) this, false);
         addView(viewInflate);
         int i2 = R.id.voice_fullscreen_controls_camera;
@@ -374,23 +373,23 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
                                 ImageView imageView5 = (ImageView) viewInflate.findViewById(R.id.voice_fullscreen_controls_speaker);
                                 if (imageView5 != null) {
                                     AnchoredVoiceControlsViewBinding anchoredVoiceControlsViewBinding = new AnchoredVoiceControlsViewBinding((LinearLayout) viewInflate, imageView, linearLayout, imageView2, imageView3, materialButton, imageView4, imageView5);
-                                    Intrinsics3.checkNotNullExpressionValue(anchoredVoiceControlsViewBinding, "AnchoredVoiceControlsVie…rom(context), this, true)");
+                                    m.checkNotNullExpressionValue(anchoredVoiceControlsViewBinding, "AnchoredVoiceControlsVie…rom(context), this, true)");
                                     this.binding = anchoredVoiceControlsViewBinding;
                                     AppLog appLog = AppLog.g;
-                                    Intrinsics3.checkNotNullParameter(appLog, "logger");
-                                    WeakReference<FloatingViewManager> weakReference = FloatingViewManager.b.a;
-                                    FloatingViewManager floatingViewManager = weakReference != null ? weakReference.get() : null;
-                                    if (floatingViewManager == null) {
-                                        floatingViewManager = new FloatingViewManager(appLog);
-                                        FloatingViewManager.b.a = new WeakReference<>(floatingViewManager);
+                                    m.checkNotNullParameter(appLog, "logger");
+                                    WeakReference<a> weakReference = a.b.a;
+                                    a aVar = weakReference != null ? weakReference.get() : null;
+                                    if (aVar == null) {
+                                        aVar = new a(appLog);
+                                        a.b.a = new WeakReference<>(aVar);
                                     }
-                                    FloatingViewManager floatingViewManager2 = floatingViewManager;
-                                    TooltipManager.a aVar = TooltipManager.a.d;
-                                    Intrinsics3.checkNotNullParameter(floatingViewManager2, "floatingViewManager");
+                                    a aVar2 = aVar;
+                                    TooltipManager.a aVar3 = TooltipManager.a.d;
+                                    m.checkNotNullParameter(aVar2, "floatingViewManager");
                                     WeakReference<TooltipManager> weakReference2 = TooltipManager.a.a;
                                     TooltipManager tooltipManager = weakReference2 != null ? weakReference2.get() : null;
                                     if (tooltipManager == null) {
-                                        tooltipManager = new TooltipManager((AcknowledgedTooltipsCache) TooltipManager.a.f2815b.getValue(), (Set) TooltipManager.a.c.getValue(), 0, floatingViewManager2, 4);
+                                        tooltipManager = new TooltipManager((b.a.v.a) TooltipManager.a.f2815b.getValue(), (Set) TooltipManager.a.c.getValue(), 0, aVar2, 4);
                                         TooltipManager.a.a = new WeakReference<>(tooltipManager);
                                     }
                                     this.tooltipManager = tooltipManager;

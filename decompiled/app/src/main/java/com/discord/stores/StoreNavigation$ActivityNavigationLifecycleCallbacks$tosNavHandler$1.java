@@ -1,19 +1,19 @@
 package com.discord.stores;
 
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.a.d.AppScreen2;
+import b.a.d.j;
 import com.discord.app.AppActivity;
 import com.discord.models.requiredaction.RequiredAction;
 import com.discord.stores.StoreNavigation;
 import com.discord.widgets.tos.WidgetTos;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function2;
 
 /* compiled from: StoreNavigation.kt */
 /* loaded from: classes2.dex */
-public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHandler$1 extends Lambda implements Function2<AppActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Boolean> {
+public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHandler$1 extends o implements Function2<AppActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Boolean> {
     public static final StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHandler$1 INSTANCE = new StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHandler$1();
 
     public StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHandler$1() {
@@ -27,9 +27,9 @@ public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHa
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(AppActivity appActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation modelGlobalNavigation) {
-        Intrinsics3.checkNotNullParameter(appActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-        Intrinsics3.checkNotNullParameter(modelGlobalNavigation, "model");
-        boolean zH = appActivity.h(Reflection2.getOrCreateKotlinClass(WidgetTos.class));
+        m.checkNotNullParameter(appActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        m.checkNotNullParameter(modelGlobalNavigation, "model");
+        boolean zH = appActivity.h(a0.getOrCreateKotlinClass(WidgetTos.class));
         boolean z2 = modelGlobalNavigation.getUserRequiredAction() == RequiredAction.TOS_UPDATE_ACKNOWLEDGMENT;
         boolean z3 = modelGlobalNavigation.getUserRequiredAction() == RequiredAction.AGREEMENTS;
         boolean z4 = (z2 || z3) && !zH;
@@ -37,7 +37,7 @@ public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$tosNavHa
         if (z4) {
             WidgetTos.INSTANCE.show(appActivity, z2);
         } else if (z5) {
-            AppScreen2.c(appActivity, false, null, 6);
+            j.c(appActivity, false, null, 6);
         } else if (!z2 && !z3) {
             return false;
         }

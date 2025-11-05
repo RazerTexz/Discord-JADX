@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStickerAttached.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStickerAttached implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
+public final /* data */ class TrackStickerAttached implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence source = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackStickerAttached implements AnalyticsSchema, T
             return false;
         }
         TrackStickerAttached trackStickerAttached = (TrackStickerAttached) other;
-        return Intrinsics3.areEqual(this.source, trackStickerAttached.source) && Intrinsics3.areEqual(this.stickerId, trackStickerAttached.stickerId) && Intrinsics3.areEqual(this.replaced, trackStickerAttached.replaced);
+        return m.areEqual(this.source, trackStickerAttached.source) && m.areEqual(this.stickerId, trackStickerAttached.stickerId) && m.areEqual(this.replaced, trackStickerAttached.replaced);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class TrackStickerAttached implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStickerAttached(source=");
+        StringBuilder sbU = a.U("TrackStickerAttached(source=");
         sbU.append(this.source);
         sbU.append(", stickerId=");
         sbU.append(this.stickerId);
         sbU.append(", replaced=");
-        return outline.D(sbU, this.replaced, ")");
+        return a.D(sbU, this.replaced, ")");
     }
 }

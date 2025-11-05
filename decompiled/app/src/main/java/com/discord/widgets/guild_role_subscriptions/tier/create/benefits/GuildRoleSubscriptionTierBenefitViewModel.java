@@ -1,14 +1,14 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create.benefits;
 
 import androidx.annotation.DrawableRes;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.GuildRoleSubscriptionBenefitType;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.emoji.Emoji;
 import com.discord.widgets.guild_role_subscriptions.tier.model.Benefit;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
+import d0.g0.t;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import org.objectweb.asm.Opcodes;
 import rx.Observable;
@@ -16,7 +16,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewModel<ViewState> {
+public final class GuildRoleSubscriptionTierBenefitViewModel extends d0<ViewState> {
     private final GuildRoleSubscriptionBenefitType benefitType;
     private final PublishSubject<Event> eventSubject;
     private final String tierName;
@@ -31,7 +31,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SendResult(Benefit benefit) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(benefit, "benefit");
+                m.checkNotNullParameter(benefit, "benefit");
                 this.benefit = benefit;
             }
 
@@ -48,13 +48,13 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
             }
 
             public final SendResult copy(Benefit benefit) {
-                Intrinsics3.checkNotNullParameter(benefit, "benefit");
+                m.checkNotNullParameter(benefit, "benefit");
                 return new SendResult(benefit);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof SendResult) && Intrinsics3.areEqual(this.benefit, ((SendResult) other).benefit);
+                    return (other instanceof SendResult) && m.areEqual(this.benefit, ((SendResult) other).benefit);
                 }
                 return true;
             }
@@ -72,7 +72,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SendResult(benefit=");
+                StringBuilder sbU = a.U("SendResult(benefit=");
                 sbU.append(this.benefit);
                 sbU.append(")");
                 return sbU.toString();
@@ -188,7 +188,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.canSubmitResult == viewState.canSubmitResult && Intrinsics3.areEqual(this.name, viewState.name) && Intrinsics3.areEqual(this.tierName, viewState.tierName) && Intrinsics3.areEqual(this.leadingNameIconResId, viewState.leadingNameIconResId) && Intrinsics3.areEqual(this.emoji, viewState.emoji) && Intrinsics3.areEqual(this.description, viewState.description) && Intrinsics3.areEqual(this.channelId, viewState.channelId);
+            return this.canSubmitResult == viewState.canSubmitResult && m.areEqual(this.name, viewState.name) && m.areEqual(this.tierName, viewState.tierName) && m.areEqual(this.leadingNameIconResId, viewState.leadingNameIconResId) && m.areEqual(this.emoji, viewState.emoji) && m.areEqual(this.description, viewState.description) && m.areEqual(this.channelId, viewState.channelId);
         }
 
         public final boolean getCanSubmitResult() {
@@ -245,7 +245,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(canSubmitResult=");
+            StringBuilder sbU = a.U("ViewState(canSubmitResult=");
             sbU.append(this.canSubmitResult);
             sbU.append(", name=");
             sbU.append(this.name);
@@ -258,7 +258,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
             sbU.append(", description=");
             sbU.append(this.description);
             sbU.append(", channelId=");
-            return outline.G(sbU, this.channelId, ")");
+            return a.G(sbU, this.channelId, ")");
         }
 
         public /* synthetic */ ViewState(boolean z2, String str, String str2, Integer num, Emoji emoji, String str3, Long l, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -296,7 +296,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -352,12 +352,12 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
     }
 
     public final void updateChannel(long channelId, String channelName, Integer channelIconResId) {
-        Intrinsics3.checkNotNullParameter(channelName, "channelName");
+        m.checkNotNullParameter(channelName, "channelName");
         updateViewState2(ViewState.copy$default(requireViewState(), false, channelName, null, channelIconResId, null, null, Long.valueOf(channelId), 53, null));
     }
 
     public final void updateDescription(String description) {
-        Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         updateViewState2(ViewState.copy$default(requireViewState(), false, null, null, null, null, description, null, 95, null));
     }
 
@@ -366,18 +366,18 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
     }
 
     public final void updateName(String name) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         updateViewState2(ViewState.copy$default(requireViewState(), false, name, null, null, null, null, null, Opcodes.LUSHR, null));
     }
 
-    @Override // b.a.d.AppViewModel
+    @Override // b.a.d.d0
     public /* bridge */ /* synthetic */ void updateViewState(ViewState viewState) {
         updateViewState2(viewState);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     public GuildRoleSubscriptionTierBenefitViewModel(GuildRoleSubscriptionBenefitType guildRoleSubscriptionBenefitType, String str, Benefit benefit) {
-        Intrinsics3.checkNotNullParameter(guildRoleSubscriptionBenefitType, "benefitType");
+        m.checkNotNullParameter(guildRoleSubscriptionBenefitType, "benefitType");
         boolean z2 = benefit != null;
         String name = benefit != null ? benefit.getName() : null;
         boolean z3 = benefit instanceof Benefit.ChannelBenefit;
@@ -397,19 +397,19 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
     */
     public void updateViewState2(ViewState viewState) {
         boolean z2;
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(viewState, "viewState");
         int iOrdinal = this.benefitType.ordinal();
         if (iOrdinal != 1) {
             if (iOrdinal == 2) {
                 String name = viewState.getName();
-                if (!(name == null || StringsJVM.isBlank(name)) && viewState.getEmoji() != null) {
+                if (!(name == null || t.isBlank(name)) && viewState.getEmoji() != null) {
                     z2 = true;
                 }
             }
             z2 = false;
         } else {
             String name2 = viewState.getName();
-            if ((name2 == null || StringsJVM.isBlank(name2)) || viewState.getEmoji() == null || viewState.getChannelId() == null) {
+            if ((name2 == null || t.isBlank(name2)) || viewState.getEmoji() == null || viewState.getChannelId() == null) {
                 z2 = false;
             }
         }

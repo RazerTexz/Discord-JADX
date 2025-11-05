@@ -3,7 +3,6 @@ package b.i.a.f.e.h;
 import android.app.PendingIntent;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Status;
 
@@ -12,7 +11,7 @@ import com.google.android.gms.common.api.Status;
 public final class m implements Parcelable.Creator<Status> {
     @Override // android.os.Parcelable.Creator
     public final Status createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         String strR = null;
         PendingIntent pendingIntent = null;
         ConnectionResult connectionResult = null;
@@ -22,20 +21,20 @@ public final class m implements Parcelable.Creator<Status> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG12 = AnimatableValueParser.G1(parcel, i);
+                iG12 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                strR = AnimatableValueParser.R(parcel, i);
+                strR = b.c.a.a0.d.R(parcel, i);
             } else if (c == 3) {
-                pendingIntent = (PendingIntent) AnimatableValueParser.Q(parcel, i, PendingIntent.CREATOR);
+                pendingIntent = (PendingIntent) b.c.a.a0.d.Q(parcel, i, PendingIntent.CREATOR);
             } else if (c == 4) {
-                connectionResult = (ConnectionResult) AnimatableValueParser.Q(parcel, i, ConnectionResult.CREATOR);
+                connectionResult = (ConnectionResult) b.c.a.a0.d.Q(parcel, i, ConnectionResult.CREATOR);
             } else if (c != 1000) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new Status(iG1, iG12, strR, pendingIntent, connectionResult);
     }
 

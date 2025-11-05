@@ -10,12 +10,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.NotificationCompat;
-import b.a.i.ViewExperimentOverrideBinding;
-import b.a.i.ViewSimpleSpinnerDropdownItemBinding;
-import b.d.b.a.outline;
+import b.a.i.i2;
+import b.a.i.u3;
 import com.discord.R;
 import com.google.android.material.card.MaterialCardView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ import java.util.Objects;
 public final class ExperimentOverrideView extends ConstraintLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final ViewExperimentOverrideBinding binding;
+    public final i2 binding;
 
     /* compiled from: ExperimentOverrideView.kt */
     public static final class a extends ArrayAdapter<b> {
@@ -33,8 +32,8 @@ public final class ExperimentOverrideView extends ConstraintLayout {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(Context context, List<b> list) {
             super(context, R.layout.view_simple_spinner_dropdown_item, list);
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(list, "items");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(list, "items");
             this.j = list;
         }
 
@@ -44,8 +43,8 @@ public final class ExperimentOverrideView extends ConstraintLayout {
                 View viewInflate = LayoutInflater.from(getContext()).inflate(R.layout.view_simple_spinner_dropdown_item, (ViewGroup) null, false);
                 Objects.requireNonNull(viewInflate, "rootView");
                 TextView textView = (TextView) viewInflate;
-                Intrinsics3.checkNotNullExpressionValue(new ViewSimpleSpinnerDropdownItemBinding(textView), "ViewSimpleSpinnerDropdow…om(context), null, false)");
-                Intrinsics3.checkNotNullExpressionValue(textView, "ViewSimpleSpinnerDropdow…ntext), null, false).root");
+                m.checkNotNullExpressionValue(new u3(textView), "ViewSimpleSpinnerDropdow…om(context), null, false)");
+                m.checkNotNullExpressionValue(textView, "ViewSimpleSpinnerDropdow…ntext), null, false).root");
                 view2 = textView;
             }
             ((TextView) view2).setText(this.j.get(i).f2842b);
@@ -59,7 +58,7 @@ public final class ExperimentOverrideView extends ConstraintLayout {
 
         @Override // android.widget.ArrayAdapter, android.widget.BaseAdapter, android.widget.SpinnerAdapter
         public View getDropDownView(int i, View view, ViewGroup viewGroup) {
-            Intrinsics3.checkNotNullParameter(viewGroup, "parent");
+            m.checkNotNullParameter(viewGroup, "parent");
             return a(i, view);
         }
 
@@ -78,7 +77,7 @@ public final class ExperimentOverrideView extends ConstraintLayout {
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
         public View getView(int i, View view, ViewGroup viewGroup) {
-            Intrinsics3.checkNotNullParameter(viewGroup, "parent");
+            m.checkNotNullParameter(viewGroup, "parent");
             return a(i, view);
         }
     }
@@ -91,7 +90,7 @@ public final class ExperimentOverrideView extends ConstraintLayout {
         public final String f2842b;
 
         public b(Integer num, String str) {
-            Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+            m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
             this.a = num;
             this.f2842b = str;
         }
@@ -104,7 +103,7 @@ public final class ExperimentOverrideView extends ConstraintLayout {
                 return false;
             }
             b bVar = (b) obj;
-            return Intrinsics3.areEqual(this.a, bVar.a) && Intrinsics3.areEqual(this.f2842b, bVar.f2842b);
+            return m.areEqual(this.a, bVar.a) && m.areEqual(this.f2842b, bVar.f2842b);
         }
 
         public int hashCode() {
@@ -115,17 +114,17 @@ public final class ExperimentOverrideView extends ConstraintLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("SpinnerItem(bucket=");
+            StringBuilder sbU = b.d.b.a.a.U("SpinnerItem(bucket=");
             sbU.append(this.a);
             sbU.append(", text=");
-            return outline.J(sbU, this.f2842b, ")");
+            return b.d.b.a.a.J(sbU, this.f2842b, ")");
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ExperimentOverrideView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(R.layout.view_experiment_override, this);
         int i = R.id.experiment_override_bucket_descriptions;
         TextView textView = (TextView) findViewById(R.id.experiment_override_bucket_descriptions);
@@ -145,9 +144,9 @@ public final class ExperimentOverrideView extends ConstraintLayout {
                             i = R.id.experiment_override_experiment_name;
                             TextView textView4 = (TextView) findViewById(R.id.experiment_override_experiment_name);
                             if (textView4 != null) {
-                                ViewExperimentOverrideBinding viewExperimentOverrideBinding = new ViewExperimentOverrideBinding(this, textView, spinner, materialCardView, textView2, textView3, textView4);
-                                Intrinsics3.checkNotNullExpressionValue(viewExperimentOverrideBinding, "ViewExperimentOverrideBi…ater.from(context), this)");
-                                this.binding = viewExperimentOverrideBinding;
+                                i2 i2Var = new i2(this, textView, spinner, materialCardView, textView2, textView3, textView4);
+                                m.checkNotNullExpressionValue(i2Var, "ViewExperimentOverrideBi…ater.from(context), this)");
+                                this.binding = i2Var;
                                 return;
                             }
                         }

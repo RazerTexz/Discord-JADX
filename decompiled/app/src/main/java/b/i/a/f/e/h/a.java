@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Looper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.e.h.a.d;
 import b.i.a.f.e.h.c;
 import b.i.a.f.e.k.b;
@@ -19,7 +18,7 @@ import java.util.Set;
 public final class a<O extends d> {
 
     @Nullable
-    public final AbstractC0035a<?, O> a;
+    public final AbstractC0112a<?, O> a;
 
     /* renamed from: b, reason: collision with root package name */
     @Nullable
@@ -28,7 +27,7 @@ public final class a<O extends d> {
 
     /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     /* renamed from: b.i.a.f.e.h.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractC0035a<T extends f, O> extends e<T, O> {
+    public static abstract class AbstractC0112a<T extends f, O> extends e<T, O> {
         @Deprecated
         public T a(Context context, Looper looper, b.i.a.f.e.k.c cVar, O o, c.a aVar, c.b bVar) {
             return (T) b(context, looper, cVar, o, aVar, bVar);
@@ -52,7 +51,7 @@ public final class a<O extends d> {
 
         /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
         /* renamed from: b.i.a.f.e.h.a$d$a, reason: collision with other inner class name */
-        public interface InterfaceC0036a extends d {
+        public interface InterfaceC0113a extends d {
             Account T();
         }
 
@@ -108,11 +107,11 @@ public final class a<O extends d> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public <C extends f> a(String str, AbstractC0035a<C, O> abstractC0035a, g<C> gVar) {
-        AnimatableValueParser.z(abstractC0035a, "Cannot construct an Api with a null ClientBuilder");
-        AnimatableValueParser.z(gVar, "Cannot construct an Api with a null ClientKey");
+    public <C extends f> a(String str, AbstractC0112a<C, O> abstractC0112a, g<C> gVar) {
+        b.c.a.a0.d.z(abstractC0112a, "Cannot construct an Api with a null ClientBuilder");
+        b.c.a.a0.d.z(gVar, "Cannot construct an Api with a null ClientKey");
         this.c = str;
-        this.a = abstractC0035a;
+        this.a = abstractC0112a;
         this.f1350b = gVar;
     }
 }

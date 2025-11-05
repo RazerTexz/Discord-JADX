@@ -2,14 +2,14 @@ package com.discord.stores;
 
 import com.discord.app.AppActivity;
 import com.discord.stores.StoreNavigation;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: StoreNavigation.kt */
 /* loaded from: classes2.dex */
-public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$onActivityCreatedOrResumed$1 extends Lambda implements Function1<StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Unit> {
+public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$onActivityCreatedOrResumed$1 extends o implements Function1<StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Unit> {
     public final /* synthetic */ AppActivity $activity;
     public final /* synthetic */ StoreNavigation.ActivityNavigationLifecycleCallbacks this$0;
 
@@ -28,7 +28,7 @@ public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$onActivi
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation modelGlobalNavigation) {
-        Intrinsics3.checkNotNullParameter(modelGlobalNavigation, "it");
+        m.checkNotNullParameter(modelGlobalNavigation, "it");
         StoreNavigation.ActivityNavigationLifecycleCallbacks.access$handleGlobalNavigationData(this.this$0, this.$activity, modelGlobalNavigation);
     }
 }

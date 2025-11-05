@@ -5,9 +5,9 @@ import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Unit;
@@ -28,7 +28,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
 
     /* compiled from: StoreGuildRoleMemberCounts.kt */
     /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCounts$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -51,7 +51,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
 
     /* compiled from: StoreGuildRoleMemberCounts.kt */
     /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Map<Long, ? extends Integer>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Map<Long, ? extends Integer>, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -69,19 +69,19 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Integer> map) {
             if (map != null) {
-                StoreGuildRoleMemberCounts.access$getDispatcher$p(StoreGuildRoleMemberCounts.this).schedule(new StoreGuildRoleMemberCounts2(map, this));
+                StoreGuildRoleMemberCounts.access$getDispatcher$p(StoreGuildRoleMemberCounts.this).schedule(new StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$1$$special$$inlined$let$lambda$1(map, this));
             }
         }
     }
 
     /* compiled from: StoreGuildRoleMemberCounts.kt */
     /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreGuildRoleMemberCounts.kt */
         /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -112,7 +112,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             StoreGuildRoleMemberCounts.access$getDispatcher$p(StoreGuildRoleMemberCounts.this).schedule(new AnonymousClass1());
         }
     }
@@ -137,7 +137,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
         return storeGuildRoleMemberCounts.guildRoleMemberCounts;
     }
 
-    @Store3
+    @StoreThread
     private final void fetchGuildRoleMemberCountsIfNecessary(long guildId) {
         Long l = this.guildRoleMemberCountFetchTimes.get(Long.valueOf(guildId));
         if (this.guildRoleMemberCounts.get(Long.valueOf(guildId)) == null || l == null || this.clock.currentTimeMillis() - l.longValue() >= CACHE_TIME_MS) {
@@ -154,7 +154,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
         return this.guildMemberCountsSnapshot.get(Long.valueOf(guildId));
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildRemove(long guildId) {
         this.guildRoleMemberCounts.remove(Long.valueOf(guildId));
         this.guildRoleMemberCountFetchTimes.remove(Long.valueOf(guildId));
@@ -162,21 +162,21 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         this.guildMemberCountsSnapshot = new HashMap(this.guildRoleMemberCounts);
     }
 
     public StoreGuildRoleMemberCounts(Dispatcher dispatcher, Clock clock, RestAPI restAPI) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(restAPI, "restApi");
         this.dispatcher = dispatcher;
         this.clock = clock;
         this.restApi = restAPI;
         this.guildRoleMemberCounts = new HashMap<>();
-        this.guildMemberCountsSnapshot = Maps6.emptyMap();
+        this.guildMemberCountsSnapshot = h0.emptyMap();
         this.guildRoleMemberCountFetchTimes = new HashMap<>();
     }
 }

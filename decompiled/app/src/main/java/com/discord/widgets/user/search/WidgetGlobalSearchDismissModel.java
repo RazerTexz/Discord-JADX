@@ -1,14 +1,14 @@
 package com.discord.widgets.user.search;
 
-import b.a.d.AppViewModel;
-import d0.z.d.Intrinsics3;
+import b.a.d.d0;
+import d0.z.d.m;
 import kotlin.Unit;
 import rx.Observable;
 import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetGlobalSearchDismissModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchDismissModel extends AppViewModel<Unit> {
+public final class WidgetGlobalSearchDismissModel extends d0<Unit> {
     private final PublishSubject<Unit> dismissEventsSubject;
 
     public WidgetGlobalSearchDismissModel() {
@@ -23,7 +23,7 @@ public final class WidgetGlobalSearchDismissModel extends AppViewModel<Unit> {
 
     public final Observable<Unit> getDismissEvents() {
         PublishSubject<Unit> publishSubject = this.dismissEventsSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "dismissEventsSubject");
+        m.checkNotNullExpressionValue(publishSubject, "dismissEventsSubject");
         return publishSubject;
     }
 }

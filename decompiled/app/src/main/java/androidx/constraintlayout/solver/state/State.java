@@ -9,7 +9,7 @@ import androidx.constraintlayout.solver.state.helpers.VerticalChainReference;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer;
 import androidx.constraintlayout.solver.widgets.HelperWidget;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -107,10 +107,10 @@ public class State {
     }
 
     private String createHelperKey() {
-        StringBuilder sbU = outline.U("__HELPER_KEY_");
+        StringBuilder sbU = a.U("__HELPER_KEY_");
         int i = this.numHelpers;
         this.numHelpers = i + 1;
-        return outline.B(sbU, i, "__");
+        return a.B(sbU, i, "__");
     }
 
     public void apply(ConstraintWidgetContainer constraintWidgetContainer) {

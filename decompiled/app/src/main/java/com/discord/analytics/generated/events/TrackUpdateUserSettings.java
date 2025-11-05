@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackUpdateUserSettings.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUpdateUserSettings implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackUpdateUserSettings implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean convertEmoticons = null;
     private final Boolean developerMode = null;
@@ -59,7 +59,7 @@ public final /* data */ class TrackUpdateUserSettings implements AnalyticsSchema
             return false;
         }
         TrackUpdateUserSettings trackUpdateUserSettings = (TrackUpdateUserSettings) other;
-        return Intrinsics3.areEqual(this.convertEmoticons, trackUpdateUserSettings.convertEmoticons) && Intrinsics3.areEqual(this.developerMode, trackUpdateUserSettings.developerMode) && Intrinsics3.areEqual(this.enableTtsCommand, trackUpdateUserSettings.enableTtsCommand) && Intrinsics3.areEqual(this.friendSourceFlags, trackUpdateUserSettings.friendSourceFlags) && Intrinsics3.areEqual(this.guildPositions, trackUpdateUserSettings.guildPositions) && Intrinsics3.areEqual(this.inlineAttachmentMedia, trackUpdateUserSettings.inlineAttachmentMedia) && Intrinsics3.areEqual(this.inlineEmbedMedia, trackUpdateUserSettings.inlineEmbedMedia) && Intrinsics3.areEqual(this.gifAutoPlay, trackUpdateUserSettings.gifAutoPlay) && Intrinsics3.areEqual(this.locale, trackUpdateUserSettings.locale) && Intrinsics3.areEqual(this.messageDisplayCompact, trackUpdateUserSettings.messageDisplayCompact) && Intrinsics3.areEqual(this.renderEmbeds, trackUpdateUserSettings.renderEmbeds) && Intrinsics3.areEqual(this.renderReactions, trackUpdateUserSettings.renderReactions) && Intrinsics3.areEqual(this.animateEmoji, trackUpdateUserSettings.animateEmoji) && Intrinsics3.areEqual(this.restrictedGuilds, trackUpdateUserSettings.restrictedGuilds) && Intrinsics3.areEqual(this.showCurrentGame, trackUpdateUserSettings.showCurrentGame) && Intrinsics3.areEqual(this.theme, trackUpdateUserSettings.theme) && Intrinsics3.areEqual(this.detectPlatformAccounts, trackUpdateUserSettings.detectPlatformAccounts) && Intrinsics3.areEqual(this.status, trackUpdateUserSettings.status) && Intrinsics3.areEqual(this.defaultGuildsRestricted, trackUpdateUserSettings.defaultGuildsRestricted) && Intrinsics3.areEqual(this.explicitContentFilter, trackUpdateUserSettings.explicitContentFilter) && Intrinsics3.areEqual(this.afkTimeout, trackUpdateUserSettings.afkTimeout) && Intrinsics3.areEqual(this.timezoneOffset, trackUpdateUserSettings.timezoneOffset) && Intrinsics3.areEqual(this.disableGamesTab, trackUpdateUserSettings.disableGamesTab) && Intrinsics3.areEqual(this.numServerFolders, trackUpdateUserSettings.numServerFolders) && Intrinsics3.areEqual(this.streamNotificationsEnabled, trackUpdateUserSettings.streamNotificationsEnabled) && Intrinsics3.areEqual(this.hasCustomStatus, trackUpdateUserSettings.hasCustomStatus) && Intrinsics3.areEqual(this.allowAccessibilityDetection, trackUpdateUserSettings.allowAccessibilityDetection) && Intrinsics3.areEqual(this.contactSyncEnabled, trackUpdateUserSettings.contactSyncEnabled) && Intrinsics3.areEqual(this.nativePhoneIntegrationEnabled, trackUpdateUserSettings.nativePhoneIntegrationEnabled) && Intrinsics3.areEqual(this.animateStickers, trackUpdateUserSettings.animateStickers) && Intrinsics3.areEqual(this.viewNsfwGuilds, trackUpdateUserSettings.viewNsfwGuilds) && Intrinsics3.areEqual(this.passwordless, trackUpdateUserSettings.passwordless);
+        return m.areEqual(this.convertEmoticons, trackUpdateUserSettings.convertEmoticons) && m.areEqual(this.developerMode, trackUpdateUserSettings.developerMode) && m.areEqual(this.enableTtsCommand, trackUpdateUserSettings.enableTtsCommand) && m.areEqual(this.friendSourceFlags, trackUpdateUserSettings.friendSourceFlags) && m.areEqual(this.guildPositions, trackUpdateUserSettings.guildPositions) && m.areEqual(this.inlineAttachmentMedia, trackUpdateUserSettings.inlineAttachmentMedia) && m.areEqual(this.inlineEmbedMedia, trackUpdateUserSettings.inlineEmbedMedia) && m.areEqual(this.gifAutoPlay, trackUpdateUserSettings.gifAutoPlay) && m.areEqual(this.locale, trackUpdateUserSettings.locale) && m.areEqual(this.messageDisplayCompact, trackUpdateUserSettings.messageDisplayCompact) && m.areEqual(this.renderEmbeds, trackUpdateUserSettings.renderEmbeds) && m.areEqual(this.renderReactions, trackUpdateUserSettings.renderReactions) && m.areEqual(this.animateEmoji, trackUpdateUserSettings.animateEmoji) && m.areEqual(this.restrictedGuilds, trackUpdateUserSettings.restrictedGuilds) && m.areEqual(this.showCurrentGame, trackUpdateUserSettings.showCurrentGame) && m.areEqual(this.theme, trackUpdateUserSettings.theme) && m.areEqual(this.detectPlatformAccounts, trackUpdateUserSettings.detectPlatformAccounts) && m.areEqual(this.status, trackUpdateUserSettings.status) && m.areEqual(this.defaultGuildsRestricted, trackUpdateUserSettings.defaultGuildsRestricted) && m.areEqual(this.explicitContentFilter, trackUpdateUserSettings.explicitContentFilter) && m.areEqual(this.afkTimeout, trackUpdateUserSettings.afkTimeout) && m.areEqual(this.timezoneOffset, trackUpdateUserSettings.timezoneOffset) && m.areEqual(this.disableGamesTab, trackUpdateUserSettings.disableGamesTab) && m.areEqual(this.numServerFolders, trackUpdateUserSettings.numServerFolders) && m.areEqual(this.streamNotificationsEnabled, trackUpdateUserSettings.streamNotificationsEnabled) && m.areEqual(this.hasCustomStatus, trackUpdateUserSettings.hasCustomStatus) && m.areEqual(this.allowAccessibilityDetection, trackUpdateUserSettings.allowAccessibilityDetection) && m.areEqual(this.contactSyncEnabled, trackUpdateUserSettings.contactSyncEnabled) && m.areEqual(this.nativePhoneIntegrationEnabled, trackUpdateUserSettings.nativePhoneIntegrationEnabled) && m.areEqual(this.animateStickers, trackUpdateUserSettings.animateStickers) && m.areEqual(this.viewNsfwGuilds, trackUpdateUserSettings.viewNsfwGuilds) && m.areEqual(this.passwordless, trackUpdateUserSettings.passwordless);
     }
 
     public int hashCode() {
@@ -130,7 +130,7 @@ public final /* data */ class TrackUpdateUserSettings implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUpdateUserSettings(convertEmoticons=");
+        StringBuilder sbU = a.U("TrackUpdateUserSettings(convertEmoticons=");
         sbU.append(this.convertEmoticons);
         sbU.append(", developerMode=");
         sbU.append(this.developerMode);
@@ -193,6 +193,6 @@ public final /* data */ class TrackUpdateUserSettings implements AnalyticsSchema
         sbU.append(", viewNsfwGuilds=");
         sbU.append(this.viewNsfwGuilds);
         sbU.append(", passwordless=");
-        return outline.D(sbU, this.passwordless, ")");
+        return a.D(sbU, this.passwordless, ")");
     }
 }

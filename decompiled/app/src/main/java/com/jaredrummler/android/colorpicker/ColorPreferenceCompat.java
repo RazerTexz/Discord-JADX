@@ -11,12 +11,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
-import b.d.b.a.outline;
-import b.k.a.a.ColorPickerDialogListener;
+import b.d.b.a.a;
+import b.k.a.a.f;
 import com.jaredrummler.android.colorpicker.ColorPickerDialog;
 
 /* loaded from: classes3.dex */
-public class ColorPreferenceCompat extends Preference implements ColorPickerDialogListener {
+public class ColorPreferenceCompat extends Preference implements f {
     public int j;
     public boolean k;
     public int l;
@@ -78,7 +78,7 @@ public class ColorPreferenceCompat extends Preference implements ColorPickerDial
         super.onAttached();
         if (this.k) {
             FragmentManager supportFragmentManager = f().getSupportFragmentManager();
-            StringBuilder sbU = outline.U("color_");
+            StringBuilder sbU = a.U("color_");
             sbU.append(getKey());
             ColorPickerDialog colorPickerDialog = (ColorPickerDialog) supportFragmentManager.findFragmentByTag(sbU.toString());
             if (colorPickerDialog != null) {
@@ -114,17 +114,17 @@ public class ColorPreferenceCompat extends Preference implements ColorPickerDial
             ColorPickerDialog colorPickerDialogA = kVar.a();
             colorPickerDialogA.k = this;
             FragmentTransaction fragmentTransactionBeginTransaction = f().getSupportFragmentManager().beginTransaction();
-            StringBuilder sbU = outline.U("color_");
+            StringBuilder sbU = a.U("color_");
             sbU.append(getKey());
             fragmentTransactionBeginTransaction.add(colorPickerDialogA, sbU.toString()).commitAllowingStateLoss();
         }
     }
 
-    @Override // b.k.a.a.ColorPickerDialogListener
+    @Override // b.k.a.a.f
     public void onColorReset(int i) {
     }
 
-    @Override // b.k.a.a.ColorPickerDialogListener
+    @Override // b.k.a.a.f
     public void onColorSelected(int i, @ColorInt int i2) {
         this.j = i2;
         persistInt(i2);
@@ -132,7 +132,7 @@ public class ColorPreferenceCompat extends Preference implements ColorPickerDial
         callChangeListener(Integer.valueOf(i2));
     }
 
-    @Override // b.k.a.a.ColorPickerDialogListener
+    @Override // b.k.a.a.f
     public void onDialogDismissed(int i) {
     }
 

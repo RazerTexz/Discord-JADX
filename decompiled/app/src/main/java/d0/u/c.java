@@ -1,6 +1,6 @@
 package d0.u;
 
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Comparator;
 
 /* compiled from: Comparisons.kt */
@@ -20,8 +20,8 @@ public final class c implements Comparator<Comparable<? super Object>> {
 
     /* renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(Comparable<Object> comparable, Comparable<Object> comparable2) {
-        Intrinsics3.checkNotNullParameter(comparable, "a");
-        Intrinsics3.checkNotNullParameter(comparable2, "b");
+        m.checkNotNullParameter(comparable, "a");
+        m.checkNotNullParameter(comparable2, "b");
         return comparable.compareTo(comparable2);
     }
 }

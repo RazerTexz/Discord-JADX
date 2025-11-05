@@ -11,10 +11,10 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.Fragment2;
+import androidx.fragment.app.FragmentKt;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetSettingsLanguageSelectBinding;
@@ -26,11 +26,11 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.view.recycler.MaxHeightRecyclerView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.settings.WidgetSettingsLanguage;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -42,7 +42,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetSettingsLanguageSelect.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsLanguageSelect extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetSettingsLanguageSelect.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsLanguageSelectBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsLanguageSelect.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsLanguageSelectBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -64,7 +64,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public AdapterItemLocale(@LayoutRes int i, Adapter adapter) {
                 super(i, adapter);
-                Intrinsics3.checkNotNullParameter(adapter, "adapter");
+                m.checkNotNullParameter(adapter, "adapter");
                 View view = this.itemView;
                 int i2 = R.id.flag_icon;
                 ImageView imageView = (ImageView) view.findViewById(R.id.flag_icon);
@@ -79,7 +79,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
                             TextView textView2 = (TextView) view.findViewById(R.id.settings_language_select_item_name_localized);
                             if (textView2 != null) {
                                 WidgetSettingsLanguageSelectItemBinding widgetSettingsLanguageSelectItemBinding = new WidgetSettingsLanguageSelectItemBinding((ConstraintLayout) view, imageView, barrier, textView, textView2);
-                                Intrinsics3.checkNotNullExpressionValue(widgetSettingsLanguageSelectItemBinding, "WidgetSettingsLanguageSe…temBinding.bind(itemView)");
+                                m.checkNotNullExpressionValue(widgetSettingsLanguageSelectItemBinding, "WidgetSettingsLanguageSe…temBinding.bind(itemView)");
                                 this.binding = widgetSettingsLanguageSelectItemBinding;
                                 return;
                             }
@@ -100,18 +100,18 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
 
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Model.Item data) {
-                Intrinsics3.checkNotNullParameter(data, "data");
+                m.checkNotNullParameter(data, "data");
                 super.onConfigure(position, (int) data);
-                this.binding.a.setOnClickListener(new WidgetSettingsLanguageSelect2(this, data));
+                this.binding.a.setOnClickListener(new WidgetSettingsLanguageSelect$Adapter$AdapterItemLocale$onConfigure$1(this, data));
                 TextView textView = this.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(textView, "binding.settingsLanguageSelectItemName");
+                m.checkNotNullExpressionValue(textView, "binding.settingsLanguageSelectItemName");
                 View view = this.itemView;
-                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                m.checkNotNullExpressionValue(view, "itemView");
                 Context context = view.getContext();
                 WidgetSettingsLanguage.Companion companion = WidgetSettingsLanguage.INSTANCE;
                 textView.setText(context.getString(companion.getLocaleResId(data.getLocale())));
                 TextView textView2 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.settingsLanguageSelectItemNameLocalized");
+                m.checkNotNullExpressionValue(textView2, "binding.settingsLanguageSelectItemNameLocalized");
                 textView2.setText(companion.getAsStringInLocale(data.getLocale()));
                 this.binding.f2629b.setImageResource(companion.getLocaleFlagResId(data.getLocale()));
             }
@@ -120,8 +120,8 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Adapter(RecyclerView recyclerView, WidgetSettingsLanguageSelect widgetSettingsLanguageSelect) {
             super(recyclerView, false, 2, null);
-            Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-            Intrinsics3.checkNotNullParameter(widgetSettingsLanguageSelect, "dialog");
+            m.checkNotNullParameter(recyclerView, "recycler");
+            m.checkNotNullParameter(widgetSettingsLanguageSelect, "dialog");
             this.dialog = widgetSettingsLanguageSelect;
         }
 
@@ -136,7 +136,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public AdapterItemLocale onCreateViewHolder(ViewGroup parent, int viewType) {
-            Intrinsics3.checkNotNullParameter(parent, "parent");
+            m.checkNotNullParameter(parent, "parent");
             return new AdapterItemLocale(R.layout.widget_settings_language_select_item, this);
         }
     }
@@ -147,17 +147,17 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
         }
 
         public final void registerForResult(Fragment fragment, Function1<? super String, Unit> onLocaleSelected) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(onLocaleSelected, "onLocaleSelected");
-            Fragment2.setFragmentResultListener(fragment, WidgetSettingsLanguageSelect.REQUEST_KEY_USER_LOCALE, new WidgetSettingsLanguageSelect3(onLocaleSelected));
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(onLocaleSelected, "onLocaleSelected");
+            FragmentKt.setFragmentResultListener(fragment, WidgetSettingsLanguageSelect.REQUEST_KEY_USER_LOCALE, new WidgetSettingsLanguageSelect$Companion$registerForResult$1(onLocaleSelected));
         }
 
         public final void show(Fragment fragment) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(fragment, "fragment");
             WidgetSettingsLanguageSelect widgetSettingsLanguageSelect = new WidgetSettingsLanguageSelect();
             widgetSettingsLanguageSelect.setArguments(new Bundle());
             FragmentManager parentFragmentManager = fragment.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
             widgetSettingsLanguageSelect.show(parentFragmentManager, WidgetSettingsLanguageSelect.class.getName());
         }
 
@@ -177,7 +177,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
             private final int type;
 
             public Item(String str) {
-                Intrinsics3.checkNotNullParameter(str, "locale");
+                m.checkNotNullParameter(str, "locale");
                 this.locale = str;
                 this.key = str;
             }
@@ -195,13 +195,13 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
             }
 
             public final Item copy(String locale) {
-                Intrinsics3.checkNotNullParameter(locale, "locale");
+                m.checkNotNullParameter(locale, "locale");
                 return new Item(locale);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Item) && Intrinsics3.areEqual(this.locale, ((Item) other).locale);
+                    return (other instanceof Item) && m.areEqual(this.locale, ((Item) other).locale);
                 }
                 return true;
             }
@@ -229,7 +229,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
             }
 
             public String toString() {
-                return outline.J(outline.U("Item(locale="), this.locale, ")");
+                return a.J(a.U("Item(locale="), this.locale, ")");
             }
         }
 
@@ -237,8 +237,8 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
         }
 
         public final List<Item> getLocales() {
-            List listListOf = Collections2.listOf((Object[]) new String[]{"da", "de", "en-GB", "en-US", "es-ES", "fr", "hr", "it", "lt", "hu", "nl", "no", "pl", "pt-BR", "ro", "fi", "sv-SE", "vi", "tr", "cs", "el", "bg", "ru", "uk", "ja", "zh-TW", "th", "zh-CN", "ko", "hi"});
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listListOf, 10));
+            List listListOf = n.listOf((Object[]) new String[]{"da", "de", "en-GB", "en-US", "es-ES", "fr", "hr", "it", "lt", "hu", "nl", "no", "pl", "pt-BR", "ro", "fi", "sv-SE", "vi", "tr", "cs", "el", "bg", "ru", "uk", "ja", "zh-TW", "th", "zh-CN", "ko", "hi"});
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(listListOf, 10));
             Iterator it = listListOf.iterator();
             while (it.hasNext()) {
                 arrayList.add(new Item((String) it.next()));
@@ -249,7 +249,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
 
     public WidgetSettingsLanguageSelect() {
         super(R.layout.widget_settings_language_select);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsLanguageSelect4.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsLanguageSelect$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$onLocaleSelected(WidgetSettingsLanguageSelect widgetSettingsLanguageSelect, String str) {
@@ -263,7 +263,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
     private final void onLocaleSelected(String locale) {
         Bundle bundle = new Bundle();
         bundle.putString(RESULT_KEY_USE_LOCALE, locale);
-        Fragment2.setFragmentResult(this, REQUEST_KEY_USER_LOCALE, bundle);
+        FragmentKt.setFragmentResult(this, REQUEST_KEY_USER_LOCALE, bundle);
         dismiss();
     }
 
@@ -272,11 +272,11 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
         super.onResume();
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
         MaxHeightRecyclerView maxHeightRecyclerView = getBinding().f2628b;
-        Intrinsics3.checkNotNullExpressionValue(maxHeightRecyclerView, "binding.settingsLanguageSelectList");
+        m.checkNotNullExpressionValue(maxHeightRecyclerView, "binding.settingsLanguageSelectList");
         Adapter adapter = (Adapter) companion.configure(new Adapter(maxHeightRecyclerView, this));
         this.adapter = adapter;
         if (adapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         adapter.setData(Model.INSTANCE.getLocales());
     }

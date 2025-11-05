@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
+import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStoreDirectoryCardInteracted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreDirectoryCardInteracted implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackStoreSkuMetadata2, TrackPaymentMetadata2 {
+public final /* data */ class TrackStoreDirectoryCardInteracted implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackStoreSkuMetadataReceiver, TrackPaymentMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackPaymentMetadata trackPaymentMetadata;
@@ -46,7 +46,7 @@ public final /* data */ class TrackStoreDirectoryCardInteracted implements Analy
             return false;
         }
         TrackStoreDirectoryCardInteracted trackStoreDirectoryCardInteracted = (TrackStoreDirectoryCardInteracted) other;
-        return Intrinsics3.areEqual(this.loadId, trackStoreDirectoryCardInteracted.loadId) && Intrinsics3.areEqual(this.audioEnabled, trackStoreDirectoryCardInteracted.audioEnabled) && Intrinsics3.areEqual(this.blogPostOpened, trackStoreDirectoryCardInteracted.blogPostOpened) && Intrinsics3.areEqual(this.isHero, trackStoreDirectoryCardInteracted.isHero) && Intrinsics3.areEqual(this.watchTrailer, trackStoreDirectoryCardInteracted.watchTrailer) && Intrinsics3.areEqual(this.nitroLearnMore, trackStoreDirectoryCardInteracted.nitroLearnMore) && Intrinsics3.areEqual(this.premiumLearnMore, trackStoreDirectoryCardInteracted.premiumLearnMore) && Intrinsics3.areEqual(this.listIndex, trackStoreDirectoryCardInteracted.listIndex) && Intrinsics3.areEqual(this.listSearched, trackStoreDirectoryCardInteracted.listSearched) && Intrinsics3.areEqual(this.listSort, trackStoreDirectoryCardInteracted.listSort) && Intrinsics3.areEqual(this.listFilterDistributionType, trackStoreDirectoryCardInteracted.listFilterDistributionType);
+        return m.areEqual(this.loadId, trackStoreDirectoryCardInteracted.loadId) && m.areEqual(this.audioEnabled, trackStoreDirectoryCardInteracted.audioEnabled) && m.areEqual(this.blogPostOpened, trackStoreDirectoryCardInteracted.blogPostOpened) && m.areEqual(this.isHero, trackStoreDirectoryCardInteracted.isHero) && m.areEqual(this.watchTrailer, trackStoreDirectoryCardInteracted.watchTrailer) && m.areEqual(this.nitroLearnMore, trackStoreDirectoryCardInteracted.nitroLearnMore) && m.areEqual(this.premiumLearnMore, trackStoreDirectoryCardInteracted.premiumLearnMore) && m.areEqual(this.listIndex, trackStoreDirectoryCardInteracted.listIndex) && m.areEqual(this.listSearched, trackStoreDirectoryCardInteracted.listSearched) && m.areEqual(this.listSort, trackStoreDirectoryCardInteracted.listSort) && m.areEqual(this.listFilterDistributionType, trackStoreDirectoryCardInteracted.listFilterDistributionType);
     }
 
     public int hashCode() {
@@ -75,7 +75,7 @@ public final /* data */ class TrackStoreDirectoryCardInteracted implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStoreDirectoryCardInteracted(loadId=");
+        StringBuilder sbU = a.U("TrackStoreDirectoryCardInteracted(loadId=");
         sbU.append(this.loadId);
         sbU.append(", audioEnabled=");
         sbU.append(this.audioEnabled);
@@ -96,6 +96,6 @@ public final /* data */ class TrackStoreDirectoryCardInteracted implements Analy
         sbU.append(", listSort=");
         sbU.append(this.listSort);
         sbU.append(", listFilterDistributionType=");
-        return outline.E(sbU, this.listFilterDistributionType, ")");
+        return a.E(sbU, this.listFilterDistributionType, ")");
     }
 }

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.api.channel.ForumTag;
 import com.discord.databinding.WidgetChatListAdapterItemStartBinding;
@@ -27,11 +27,11 @@ import com.discord.widgets.channels.settings.WidgetThreadSettings;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.StartOfChatEntry;
 import com.discord.widgets.forums.ForumPostTagView;
-import com.discord.widgets.forums.PostData2;
+import com.discord.widgets.forums.PostTagData;
 import com.google.android.flexbox.FlexboxLayout;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -60,15 +60,15 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
 
     /* compiled from: WidgetChatListAdapterItemStart.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ GuildMember $threadCreatorMember;
         public final /* synthetic */ String $threadCreatorName;
 
         /* compiled from: WidgetChatListAdapterItemStart.kt */
         /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02751 extends Lambda implements Function1<Hook, Unit> {
-            public C02751() {
+        public static final class C03951 extends o implements Function1<Hook, Unit> {
+            public C03951() {
                 super(1);
             }
 
@@ -80,12 +80,12 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
+                m.checkNotNullParameter(hook, "$receiver");
                 AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
                 hook.replacementText = anonymousClass1.$threadCreatorName;
                 FontUtils fontUtils = FontUtils.INSTANCE;
                 Context context = anonymousClass1.$context;
-                Intrinsics3.checkNotNullExpressionValue(context, "context");
+                m.checkNotNullExpressionValue(context, "context");
                 Typeface themedFont = fontUtils.getThemedFont(context, R.attr.font_primary_semibold);
                 if (themedFont != null) {
                     hook.styles.add(new TypefaceSpanCompat(themedFont));
@@ -112,20 +112,20 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.a("usernameHook", new C02751());
+            m.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.a("usernameHook", new C03951());
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemStart.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $autoArchiveString;
         public final /* synthetic */ Context $context;
 
         /* compiled from: WidgetChatListAdapterItemStart.kt */
         /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -138,12 +138,12 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
+                m.checkNotNullParameter(hook, "$receiver");
                 AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
                 hook.replacementText = anonymousClass2.$autoArchiveString;
                 FontUtils fontUtils = FontUtils.INSTANCE;
                 Context context = anonymousClass2.$context;
-                Intrinsics3.checkNotNullExpressionValue(context, "context");
+                m.checkNotNullExpressionValue(context, "context");
                 Typeface themedFont = fontUtils.getThemedFont(context, R.attr.font_primary_normal);
                 if (themedFont != null) {
                     hook.styles.add(new TypefaceSpanCompat(themedFont));
@@ -167,7 +167,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.a("autoArchiveDurationHook", new AnonymousClass1());
         }
     }
@@ -190,7 +190,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemStart(WidgetChatListAdapter widgetChatListAdapter) {
         super(R.layout.widget_chat_list_adapter_item_start, widgetChatListAdapter);
-        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
         int i = R.id.chat_list_adapter_item_edit_channel;
         TextView textView = (TextView) view.findViewById(R.id.chat_list_adapter_item_edit_channel);
@@ -211,7 +211,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
                             ImageView imageView = (ImageView) view.findViewById(R.id.chat_list_adapter_thread_header_icon);
                             if (imageView != null) {
                                 WidgetChatListAdapterItemStartBinding widgetChatListAdapterItemStartBinding = new WidgetChatListAdapterItemStartBinding((LinearLayout) view, textView, textView2, textView3, textView4, flexboxLayout, imageView);
-                                Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemStartBinding, "WidgetChatListAdapterIte…artBinding.bind(itemView)");
+                                m.checkNotNullExpressionValue(widgetChatListAdapterItemStartBinding, "WidgetChatListAdapterIte…artBinding.bind(itemView)");
                                 this.binding = widgetChatListAdapterItemStartBinding;
                                 return;
                             }
@@ -233,36 +233,36 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
 
     private final void configureChannel(long channelId, String channelName, boolean isTextInVoice, boolean canReadMessageHistory, boolean canManageChannel) {
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemHeader");
-        FormatUtils.n(textView, R.string.android_welcome_message_title_channel, new Object[]{channelName}, null, 4);
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemHeader");
+        b.n(textView, R.string.android_welcome_message_title_channel, new Object[]{channelName}, null, 4);
         TextView textView2 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemSubheader1");
+        m.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemSubheader1");
         textView2.setVisibility(8);
         if (isTextInVoice) {
             ImageView imageView = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatListAdapterThreadHeaderIcon");
+            m.checkNotNullExpressionValue(imageView, "binding.chatListAdapterThreadHeaderIcon");
             imageView.setVisibility(0);
             this.binding.g.setImageResource(R.drawable.ic_chat_message_white_24dp);
         } else {
             ImageView imageView2 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.chatListAdapterThreadHeaderIcon");
+            m.checkNotNullExpressionValue(imageView2, "binding.chatListAdapterThreadHeaderIcon");
             imageView2.setVisibility(8);
         }
         if (canReadMessageHistory) {
             TextView textView3 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemSubheader2");
-            FormatUtils.n(textView3, R.string.android_welcome_message_subtitle_channel, new Object[]{channelName}, null, 4);
+            m.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemSubheader2");
+            b.n(textView3, R.string.android_welcome_message_subtitle_channel, new Object[]{channelName}, null, 4);
         } else {
             TextView textView4 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemSubheader2");
-            FormatUtils.n(textView4, R.string.beginning_channel_no_history, new Object[]{channelName}, null, 4);
+            m.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemSubheader2");
+            b.n(textView4, R.string.beginning_channel_no_history, new Object[]{channelName}, null, 4);
         }
         this.binding.f2333b.setOnClickListener(new AnonymousClass1(channelId));
         TextView textView5 = this.binding.f2333b;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.chatListAdapterItemEditChannel");
-        FormatUtils.n(textView5, R.string.edit_channel, new Object[0], null, 4);
+        m.checkNotNullExpressionValue(textView5, "binding.chatListAdapterItemEditChannel");
+        b.n(textView5, R.string.edit_channel, new Object[0], null, 4);
         TextView textView6 = this.binding.f2333b;
-        Intrinsics3.checkNotNullExpressionValue(textView6, "binding.chatListAdapterItemEditChannel");
+        m.checkNotNullExpressionValue(textView6, "binding.chatListAdapterItemEditChannel");
         textView6.setVisibility(canManageChannel ? 0 : 8);
     }
 
@@ -270,19 +270,19 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
         List listEmptyList;
         ForumPostTagView forumPostTagView;
         TextView textView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemSubheader1");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemSubheader1");
         textView.setVisibility(8);
         TextView textView2 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemSubheader2");
+        m.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemSubheader2");
         textView2.setVisibility(8);
         TextView textView3 = this.binding.f2333b;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemEditChannel");
+        m.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemEditChannel");
         textView3.setVisibility(8);
         ImageView imageView = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatListAdapterThreadHeaderIcon");
+        m.checkNotNullExpressionValue(imageView, "binding.chatListAdapterThreadHeaderIcon");
         imageView.setVisibility(0);
         TextView textView4 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemHeader");
+        m.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemHeader");
         textView4.setText(channelName);
         this.binding.g.setImageResource(R.drawable.ic_channel_forum_post);
         if (availableTags != null) {
@@ -293,17 +293,17 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
                 }
             }
         } else {
-            listEmptyList = Collections2.emptyList();
+            listEmptyList = n.emptyList();
         }
         FlexboxLayout flexboxLayout = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(flexboxLayout, "binding.chatListAdapterTags");
+        m.checkNotNullExpressionValue(flexboxLayout, "binding.chatListAdapterTags");
         flexboxLayout.setVisibility(listEmptyList.isEmpty() ^ true ? 0 : 8);
         FlexboxLayout flexboxLayout2 = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(flexboxLayout2, "binding.chatListAdapterTags");
+        m.checkNotNullExpressionValue(flexboxLayout2, "binding.chatListAdapterTags");
         int childCount = flexboxLayout2.getChildCount();
         for (int size = listEmptyList.size(); size < childCount; size++) {
             View childAt = this.binding.f.getChildAt(size);
-            Intrinsics3.checkNotNullExpressionValue(childAt, "binding.chatListAdapterTags.getChildAt(i)");
+            m.checkNotNullExpressionValue(childAt, "binding.chatListAdapterTags.getChildAt(i)");
             childAt.setVisibility(8);
         }
         int i = 0;
@@ -311,7 +311,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
         for (Object obj2 : listEmptyList) {
             int i3 = i + 1;
             if (i < 0) {
-                Collections2.throwIndexOverflow();
+                n.throwIndexOverflow();
             }
             ForumTag forumTag = (ForumTag) obj2;
             if (i2 < childCount) {
@@ -321,9 +321,9 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
                 i2++;
             } else {
                 FlexboxLayout flexboxLayout3 = this.binding.f;
-                Intrinsics3.checkNotNullExpressionValue(flexboxLayout3, "binding.chatListAdapterTags");
+                m.checkNotNullExpressionValue(flexboxLayout3, "binding.chatListAdapterTags");
                 Context context = flexboxLayout3.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context, "binding.chatListAdapterTags.context");
+                m.checkNotNullExpressionValue(context, "binding.chatListAdapterTags.context");
                 forumPostTagView = new ForumPostTagView(context, null, 0, 6, null);
                 this.binding.f.addView(forumPostTagView);
             }
@@ -333,58 +333,58 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
             ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
             marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, DimenUtils.dpToPixels(6), DimenUtils.dpToPixels(6));
             forumPostTagView.setLayoutParams(marginLayoutParams);
-            forumPostTagView.configureTag(PostData2.INSTANCE.fromTag(forumTag, false));
+            forumPostTagView.configureTag(PostTagData.INSTANCE.fromTag(forumTag, false));
             i = i3;
         }
     }
 
     private final void configureThread(long channelId, String channelName, boolean canReadMessageHistory, boolean canManageThread, GuildMember threadCreatorMember, String threadCreatorName, Integer threadAutoArchiveDuration) throws Resources.NotFoundException {
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemHeader");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemHeader");
         Context context = textView.getContext();
         TextView textView2 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemHeader");
+        m.checkNotNullExpressionValue(textView2, "binding.chatListAdapterItemHeader");
         textView2.setText(channelName);
         TextView textView3 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemSubheader1");
+        m.checkNotNullExpressionValue(textView3, "binding.chatListAdapterItemSubheader1");
         textView3.setVisibility(0);
         TextView textView4 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemSubheader2");
+        m.checkNotNullExpressionValue(textView4, "binding.chatListAdapterItemSubheader2");
         textView4.setVisibility(0);
         ImageView imageView = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatListAdapterThreadHeaderIcon");
+        m.checkNotNullExpressionValue(imageView, "binding.chatListAdapterThreadHeaderIcon");
         imageView.setVisibility(0);
         FlexboxLayout flexboxLayout = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(flexboxLayout, "binding.chatListAdapterTags");
+        m.checkNotNullExpressionValue(flexboxLayout, "binding.chatListAdapterTags");
         flexboxLayout.setVisibility(8);
         this.binding.g.setImageResource(R.drawable.ic_thread);
         TextView textView5 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.chatListAdapterItemSubheader1");
-        FormatUtils.m(textView5, R.string.thread_started_by, new Object[]{threadCreatorName}, new AnonymousClass1(threadCreatorName, context, threadCreatorMember));
+        m.checkNotNullExpressionValue(textView5, "binding.chatListAdapterItemSubheader1");
+        b.m(textView5, R.string.thread_started_by, new Object[]{threadCreatorName}, new AnonymousClass1(threadCreatorName, context, threadCreatorMember));
         if (canReadMessageHistory) {
             ThreadUtils threadUtils = ThreadUtils.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            m.checkNotNullExpressionValue(context, "context");
             String strAutoArchiveDurationName = threadUtils.autoArchiveDurationName(context, threadAutoArchiveDuration != null ? threadAutoArchiveDuration.intValue() : 0);
             TextView textView6 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView6, "binding.chatListAdapterItemSubheader2");
-            FormatUtils.m(textView6, R.string.beginning_thread_archive_description, new Object[]{strAutoArchiveDurationName}, new AnonymousClass2(strAutoArchiveDurationName, context));
+            m.checkNotNullExpressionValue(textView6, "binding.chatListAdapterItemSubheader2");
+            b.m(textView6, R.string.beginning_thread_archive_description, new Object[]{strAutoArchiveDurationName}, new AnonymousClass2(strAutoArchiveDurationName, context));
         } else {
             TextView textView7 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView7, "binding.chatListAdapterItemSubheader2");
-            FormatUtils.n(textView7, R.string.beginning_channel_no_history, new Object[]{channelName}, null, 4);
+            m.checkNotNullExpressionValue(textView7, "binding.chatListAdapterItemSubheader2");
+            b.n(textView7, R.string.beginning_channel_no_history, new Object[]{channelName}, null, 4);
         }
         this.binding.f2333b.setOnClickListener(new AnonymousClass3(channelId));
         TextView textView8 = this.binding.f2333b;
-        Intrinsics3.checkNotNullExpressionValue(textView8, "binding.chatListAdapterItemEditChannel");
-        FormatUtils.n(textView8, R.string.edit_thread, new Object[0], null, 4);
+        m.checkNotNullExpressionValue(textView8, "binding.chatListAdapterItemEditChannel");
+        b.n(textView8, R.string.edit_thread, new Object[0], null, 4);
         TextView textView9 = this.binding.f2333b;
-        Intrinsics3.checkNotNullExpressionValue(textView9, "binding.chatListAdapterItemEditChannel");
+        m.checkNotNullExpressionValue(textView9, "binding.chatListAdapterItemEditChannel");
         textView9.setVisibility(canManageThread ? 0 : 8);
     }
 
     private final int getAuthorTextColor(GuildMember member) {
         View view = this.itemView;
-        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+        m.checkNotNullExpressionValue(view, "itemView");
         return GuildMember.INSTANCE.getColor(member, ColorCompat.getThemedColor(view.getContext(), R.attr.colorHeaderPrimary));
     }
 
@@ -396,7 +396,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         StartOfChatEntry startOfChatEntry = (StartOfChatEntry) data;
         long jComponent1 = startOfChatEntry.getChannelId();

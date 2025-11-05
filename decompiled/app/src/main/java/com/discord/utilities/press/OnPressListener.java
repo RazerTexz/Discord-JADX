@@ -2,7 +2,7 @@ package com.discord.utilities.press;
 
 import android.view.MotionEvent;
 import android.view.View;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -33,7 +33,7 @@ public final class OnPressListener implements View.OnTouchListener {
     }
 
     public OnPressListener(OnPress onPress) {
-        Intrinsics3.checkNotNullParameter(onPress, "onPress");
+        m.checkNotNullParameter(onPress, "onPress");
         this.onPress = onPress;
     }
 
@@ -55,8 +55,8 @@ public final class OnPressListener implements View.OnTouchListener {
     @Override // android.view.View.OnTouchListener
     public boolean onTouch(View view, MotionEvent event) {
         boolean zBooleanValue;
-        Intrinsics3.checkNotNullParameter(view, "view");
-        Intrinsics3.checkNotNullParameter(event, "event");
+        m.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(event, "event");
         Boolean boolIsPressed = isPressed(event);
         if (boolIsPressed == null || this.pressed == (zBooleanValue = boolIsPressed.booleanValue())) {
             return false;
@@ -69,6 +69,6 @@ public final class OnPressListener implements View.OnTouchListener {
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public OnPressListener(Function1<? super Boolean, Unit> function1) {
         this(new AnonymousClass1(function1));
-        Intrinsics3.checkNotNullParameter(function1, "onPress");
+        m.checkNotNullParameter(function1, "onPress");
     }
 }

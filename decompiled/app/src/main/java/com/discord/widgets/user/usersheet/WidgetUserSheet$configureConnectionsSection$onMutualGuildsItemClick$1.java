@@ -3,14 +3,14 @@ package com.discord.widgets.user.usersheet;
 import android.content.Context;
 import com.discord.models.user.User;
 import com.discord.widgets.user.WidgetUserMutualGuilds;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetUserSheet.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserSheet$configureConnectionsSection$onMutualGuildsItemClick$1 extends Lambda implements Function0<Unit> {
+public final class WidgetUserSheet$configureConnectionsSection$onMutualGuildsItemClick$1 extends o implements Function0<Unit> {
     public final /* synthetic */ User $user;
     public final /* synthetic */ WidgetUserSheet this$0;
 
@@ -31,7 +31,7 @@ public final class WidgetUserSheet$configureConnectionsSection$onMutualGuildsIte
     public final void invoke2() {
         WidgetUserMutualGuilds.Companion companion = WidgetUserMutualGuilds.INSTANCE;
         Context contextRequireContext = this.this$0.requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         companion.show(contextRequireContext, this.$user.getId());
     }
 }

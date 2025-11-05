@@ -2,19 +2,19 @@ package com.discord.widgets.settings.profile;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.user.UserProfile;
 import com.discord.models.user.User;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserProfile;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -23,7 +23,7 @@ import rx.Observable;
 
 /* compiled from: EditProfileBannerSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewState> {
+public final class EditProfileBannerSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -33,7 +33,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
 
     /* compiled from: EditProfileBannerSheetViewModel.kt */
     /* renamed from: com.discord.widgets.settings.profile.EditProfileBannerSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -47,7 +47,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             EditProfileBannerSheetViewModel editProfileBannerSheetViewModel = EditProfileBannerSheetViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            m.checkNotNullExpressionValue(storeState, "storeState");
             EditProfileBannerSheetViewModel.access$handleStoreState(editProfileBannerSheetViewModel, storeState);
         }
     }
@@ -58,7 +58,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
 
         private final Observable<StoreState> observeStoreState(StoreUser storeUser, StoreUserProfile storeUserProfile) {
-            return ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{StoreUser.INSTANCE.getMeUpdate(), storeUserProfile}, false, null, null, new EditProfileBannerSheetViewModel2(storeUser, storeUserProfile), 14, null);
+            return ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{StoreUser.INSTANCE.getMeUpdate(), storeUserProfile}, false, null, null, new EditProfileBannerSheetViewModel$Companion$observeStoreState$1(storeUser, storeUserProfile), 14, null);
         }
 
         public static /* synthetic */ Observable observeStoreState$default(Companion companion, StoreUser storeUser, StoreUserProfile storeUserProfile, int i, Object obj) {
@@ -82,8 +82,8 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         private final UserProfile userProfile;
 
         public StoreState(User user, UserProfile userProfile) {
-            Intrinsics3.checkNotNullParameter(user, "user");
-            Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
+            m.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(userProfile, "userProfile");
             this.user = user;
             this.userProfile = userProfile;
         }
@@ -109,8 +109,8 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
 
         public final StoreState copy(User user, UserProfile userProfile) {
-            Intrinsics3.checkNotNullParameter(user, "user");
-            Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
+            m.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(userProfile, "userProfile");
             return new StoreState(user, userProfile);
         }
 
@@ -122,7 +122,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.user, storeState.user) && Intrinsics3.areEqual(this.userProfile, storeState.userProfile);
+            return m.areEqual(this.user, storeState.user) && m.areEqual(this.userProfile, storeState.userProfile);
         }
 
         public final User getUser() {
@@ -141,7 +141,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(user=");
+            StringBuilder sbU = a.U("StoreState(user=");
             sbU.append(this.user);
             sbU.append(", userProfile=");
             sbU.append(this.userProfile);
@@ -156,7 +156,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         private final boolean showPremiumUpsell;
 
         public ViewState(String str, boolean z2) {
-            Intrinsics3.checkNotNullParameter(str, "bannerColorHex");
+            m.checkNotNullParameter(str, "bannerColorHex");
             this.bannerColorHex = str;
             this.showPremiumUpsell = z2;
         }
@@ -182,7 +182,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
 
         public final ViewState copy(String bannerColorHex, boolean showPremiumUpsell) {
-            Intrinsics3.checkNotNullParameter(bannerColorHex, "bannerColorHex");
+            m.checkNotNullParameter(bannerColorHex, "bannerColorHex");
             return new ViewState(bannerColorHex, showPremiumUpsell);
         }
 
@@ -194,7 +194,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.bannerColorHex, viewState.bannerColorHex) && this.showPremiumUpsell == viewState.showPremiumUpsell;
+            return m.areEqual(this.bannerColorHex, viewState.bannerColorHex) && this.showPremiumUpsell == viewState.showPremiumUpsell;
         }
 
         public final String getBannerColorHex() {
@@ -218,10 +218,10 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(bannerColorHex=");
+            StringBuilder sbU = a.U("ViewState(bannerColorHex=");
             sbU.append(this.bannerColorHex);
             sbU.append(", showPremiumUpsell=");
-            return outline.O(sbU, this.showPremiumUpsell, ")");
+            return a.O(sbU, this.showPremiumUpsell, ")");
         }
     }
 
@@ -269,12 +269,12 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public EditProfileBannerSheetViewModel(String str, String str2, Observable<StoreState> observable) {
         super(null);
-        Intrinsics3.checkNotNullParameter(str, "defaultBannerColorHex");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(str, "defaultBannerColorHex");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.defaultBannerColorHex = str;
         this.initialColorPreviewHex = str2;
         Observable<StoreState> observableR = observable.r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), EditProfileBannerSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 }

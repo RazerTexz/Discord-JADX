@@ -1,15 +1,9 @@
 package com.facebook.cache.disk;
 
 import android.content.Context;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.b.a.CacheErrorLogger;
-import b.f.b.a.CacheEventListener;
-import b.f.b.a.NoOpCacheErrorLogger;
-import b.f.b.a.NoOpCacheEventListener;
-import b.f.b.b.DefaultEntryEvictionComparatorSupplier;
-import b.f.b.b.EntryEvictionComparatorSupplier;
-import b.f.d.a.DiskTrimmableRegistry;
-import b.f.d.a.NoOpDiskTrimmableRegistry;
+import b.f.b.a.d;
+import b.f.b.a.e;
+import b.f.b.b.g;
 import com.discord.api.permission.Permission;
 import com.facebook.common.internal.Supplier;
 import java.io.File;
@@ -25,10 +19,10 @@ public class DiskCacheConfig {
     public final long d;
     public final long e;
     public final long f;
-    public final EntryEvictionComparatorSupplier g;
-    public final CacheErrorLogger h;
-    public final CacheEventListener i;
-    public final DiskTrimmableRegistry j;
+    public final g g;
+    public final b.f.b.a.a h;
+    public final b.f.b.a.b i;
+    public final b.f.d.a.a j;
     public final Context k;
 
     public class a implements Supplier<File> {
@@ -49,7 +43,7 @@ public class DiskCacheConfig {
         public final Context e;
         public String a = "image_cache";
         public long c = 41943040;
-        public EntryEvictionComparatorSupplier d = new DefaultEntryEvictionComparatorSupplier();
+        public g d = new b.f.b.b.b();
 
         public b(Context context, a aVar) {
             this.e = context;
@@ -57,12 +51,12 @@ public class DiskCacheConfig {
     }
 
     public DiskCacheConfig(b bVar) {
-        NoOpCacheErrorLogger noOpCacheErrorLogger;
-        NoOpCacheEventListener noOpCacheEventListener;
-        NoOpDiskTrimmableRegistry noOpDiskTrimmableRegistry;
+        d dVar;
+        e eVar;
+        b.f.d.a.b bVar2;
         Context context = bVar.e;
         this.k = context;
-        AnimatableValueParser.C((bVar.f2883b == null && context == null) ? false : true, "Either a non-null context or a base directory path or supplier must be provided.");
+        b.c.a.a0.d.C((bVar.f2883b == null && context == null) ? false : true, "Either a non-null context or a base directory path or supplier must be provided.");
         if (bVar.f2883b == null && context != null) {
             bVar.f2883b = new a();
         }
@@ -76,29 +70,29 @@ public class DiskCacheConfig {
         this.d = bVar.c;
         this.e = 10485760L;
         this.f = Permission.SPEAK;
-        EntryEvictionComparatorSupplier entryEvictionComparatorSupplier = bVar.d;
-        Objects.requireNonNull(entryEvictionComparatorSupplier);
-        this.g = entryEvictionComparatorSupplier;
-        synchronized (NoOpCacheErrorLogger.class) {
-            if (NoOpCacheErrorLogger.a == null) {
-                NoOpCacheErrorLogger.a = new NoOpCacheErrorLogger();
+        g gVar = bVar.d;
+        Objects.requireNonNull(gVar);
+        this.g = gVar;
+        synchronized (d.class) {
+            if (d.a == null) {
+                d.a = new d();
             }
-            noOpCacheErrorLogger = NoOpCacheErrorLogger.a;
+            dVar = d.a;
         }
-        this.h = noOpCacheErrorLogger;
-        synchronized (NoOpCacheEventListener.class) {
-            if (NoOpCacheEventListener.a == null) {
-                NoOpCacheEventListener.a = new NoOpCacheEventListener();
+        this.h = dVar;
+        synchronized (e.class) {
+            if (e.a == null) {
+                e.a = new e();
             }
-            noOpCacheEventListener = NoOpCacheEventListener.a;
+            eVar = e.a;
         }
-        this.i = noOpCacheEventListener;
-        synchronized (NoOpDiskTrimmableRegistry.class) {
-            if (NoOpDiskTrimmableRegistry.a == null) {
-                NoOpDiskTrimmableRegistry.a = new NoOpDiskTrimmableRegistry();
+        this.i = eVar;
+        synchronized (b.f.d.a.b.class) {
+            if (b.f.d.a.b.a == null) {
+                b.f.d.a.b.a = new b.f.d.a.b();
             }
-            noOpDiskTrimmableRegistry = NoOpDiskTrimmableRegistry.a;
+            bVar2 = b.f.d.a.b.a;
         }
-        this.j = noOpDiskTrimmableRegistry;
+        this.j = bVar2;
     }
 }

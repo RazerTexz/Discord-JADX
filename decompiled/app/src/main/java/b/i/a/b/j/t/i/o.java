@@ -5,10 +5,10 @@ import b.i.a.b.j.t.i.t;
 /* compiled from: SQLiteEventStore.java */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class o implements t.d {
-    public final SchemaManager5 a;
+    public final z a;
 
-    public o(SchemaManager5 schemaManager5) {
-        this.a = schemaManager5;
+    public o(z zVar) {
+        this.a = zVar;
     }
 
     @Override // b.i.a.b.j.t.i.t.d

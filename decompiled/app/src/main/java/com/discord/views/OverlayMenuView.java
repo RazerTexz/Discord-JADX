@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.cardview.widget.CardView;
-import b.a.i.ViewOverlayMenuBinding;
-import b.a.i.ViewOverlayMenuContentBinding;
-import b.a.y.OverlayMenuView3;
+import b.a.i.s2;
+import b.a.i.t2;
+import b.a.y.r;
 import com.discord.R;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.app.AppComponent;
@@ -24,8 +24,8 @@ import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.voice.VoiceViewUtils;
 import com.discord.widgets.voice.model.CallModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import defpackage.f;
 import defpackage.i;
 import defpackage.q;
@@ -43,7 +43,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
     public static final /* synthetic */ int j = 0;
 
     /* renamed from: k, reason: from kotlin metadata */
-    public final ViewOverlayMenuBinding binding;
+    public final s2 binding;
 
     /* renamed from: l, reason: from kotlin metadata */
     public final Subject<Void, Void> unsubscribeSignal;
@@ -61,7 +61,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
         public final RtcConnection.Quality d;
 
         public a(Long l, Guild guild, CallModel callModel, RtcConnection.Quality quality) {
-            Intrinsics3.checkNotNullParameter(quality, "rtcQuality");
+            m.checkNotNullParameter(quality, "rtcQuality");
             this.a = l;
             this.f2833b = guild;
             this.c = callModel;
@@ -70,7 +70,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
     }
 
     /* compiled from: OverlayMenuView.kt */
-    public static final class b extends Lambda implements Function1<a, Unit> {
+    public static final class b extends o implements Function1<a, Unit> {
         public b() {
             super(1);
         }
@@ -85,24 +85,24 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
                 if (aVar2.c != null) {
                     overlayMenuView.binding.f197b.d.setOnClickListener(new f(0, overlayMenuView, aVar2));
                     TextView textView = overlayMenuView.binding.f197b.d;
-                    Intrinsics3.checkNotNullExpressionValue(textView, "binding.content.overlayInviteLink");
+                    m.checkNotNullExpressionValue(textView, "binding.content.overlayInviteLink");
                     textView.setVisibility(PermissionUtils.can(1L, aVar2.a) ? 0 : 8);
                     overlayMenuView.binding.f197b.g.setOnClickListener(new i(0, overlayMenuView));
                     overlayMenuView.binding.f197b.f.setOnClickListener(new f(1, overlayMenuView, aVar2));
                     ImageView imageView = overlayMenuView.binding.e;
-                    Intrinsics3.checkNotNullExpressionValue(imageView, "binding.srcToggle");
+                    m.checkNotNullExpressionValue(imageView, "binding.srcToggle");
                     ColorStateList colorStateListValueOf = aVar2.c.getAudioManagerState().getActiveAudioDevice() == DiscordAudioManager.DeviceTypes.SPEAKERPHONE ? ColorStateList.valueOf(-1) : ColorStateList.valueOf(ColorCompat.getColor(overlayMenuView.getContext(), R.color.primary_dark_400));
-                    Intrinsics3.checkNotNullExpressionValue(colorStateListValueOf, "if (selectedOutputDevice…rimary_dark_400))\n      }");
+                    m.checkNotNullExpressionValue(colorStateListValueOf, "if (selectedOutputDevice…rimary_dark_400))\n      }");
                     imageView.setImageTintList(colorStateListValueOf);
                     overlayMenuView.binding.e.setOnClickListener(new i(1, aVar2));
                     ImageView imageView2 = overlayMenuView.binding.d;
-                    Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.muteToggle");
+                    m.checkNotNullExpressionValue(imageView2, "binding.muteToggle");
                     imageView2.setActivated(aVar2.c.isMeMutedByAnySource());
                     overlayMenuView.binding.d.setOnClickListener(new i(2, aVar2));
                     overlayMenuView.binding.c.setOnClickListener(new i(3, overlayMenuView));
                     overlayMenuView.binding.f197b.e.setImageResource(VoiceViewUtils.INSTANCE.getQualityIndicator(aVar2.d));
                     TextView textView2 = overlayMenuView.binding.f197b.c;
-                    Intrinsics3.checkNotNullExpressionValue(textView2, "binding.content.overlayGuildName");
+                    m.checkNotNullExpressionValue(textView2, "binding.content.overlayGuildName");
                     Guild guild = aVar2.f2833b;
                     String name = guild != null ? guild.getName() : null;
                     if (name == null) {
@@ -110,7 +110,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
                     }
                     textView2.setText(name);
                     TextView textView3 = overlayMenuView.binding.f197b.f203b;
-                    Intrinsics3.checkNotNullExpressionValue(textView3, "binding.content.overlayChannelName");
+                    m.checkNotNullExpressionValue(textView3, "binding.content.overlayChannelName");
                     textView3.setText(ChannelUtils.c(aVar2.c.getChannel()));
                 }
             }
@@ -121,7 +121,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OverlayMenuView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(getContext()).inflate(R.layout.view_overlay_menu, this);
         int i = R.id.content;
         View viewFindViewById = findViewById(R.id.content);
@@ -144,7 +144,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
                                 i2 = R.id.overlay_switch_channels;
                                 TextView textView5 = (TextView) viewFindViewById.findViewById(R.id.overlay_switch_channels);
                                 if (textView5 != null) {
-                                    ViewOverlayMenuContentBinding viewOverlayMenuContentBinding = new ViewOverlayMenuContentBinding((CardView) viewFindViewById, textView, textView2, textView3, imageView, textView4, textView5);
+                                    t2 t2Var = new t2((CardView) viewFindViewById, textView, textView2, textView3, imageView, textView4, textView5);
                                     i = R.id.disconnect_btn;
                                     ImageView imageView2 = (ImageView) findViewById(R.id.disconnect_btn);
                                     if (imageView2 != null) {
@@ -154,11 +154,11 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
                                             i = R.id.src_toggle;
                                             ImageView imageView4 = (ImageView) findViewById(R.id.src_toggle);
                                             if (imageView4 != null) {
-                                                ViewOverlayMenuBinding viewOverlayMenuBinding = new ViewOverlayMenuBinding(this, viewOverlayMenuContentBinding, imageView2, imageView3, imageView4);
-                                                Intrinsics3.checkNotNullExpressionValue(viewOverlayMenuBinding, "ViewOverlayMenuBinding.i…ater.from(context), this)");
-                                                this.binding = viewOverlayMenuBinding;
+                                                s2 s2Var = new s2(this, t2Var, imageView2, imageView3, imageView4);
+                                                m.checkNotNullExpressionValue(s2Var, "ViewOverlayMenuBinding.i…ater.from(context), this)");
+                                                this.binding = s2Var;
                                                 PublishSubject publishSubjectK0 = PublishSubject.k0();
-                                                Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+                                                m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
                                                 this.unsubscribeSignal = publishSubjectK0;
                                                 this.onDismissRequested = q.j;
                                                 return;
@@ -188,10 +188,10 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        Observable<R> observableY = StoreStream.INSTANCE.getVoiceChannelSelected().observeSelectedChannel().Y(OverlayMenuView3.j);
-        Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …        }\n              }");
+        Observable<R> observableY = StoreStream.INSTANCE.getVoiceChannelSelected().observeSelectedChannel().Y(r.j);
+        m.checkNotNullExpressionValue(observableY, "StoreStream\n            …        }\n              }");
         Observable observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableR, this, null, 2, null), OverlayMenuView.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new b(), 62, (Object) null);
     }
 
@@ -202,7 +202,7 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
     }
 
     public final void setOnDismissRequested$app_productionGoogleRelease(Function0<Unit> function0) {
-        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
+        m.checkNotNullParameter(function0, "<set-?>");
         this.onDismissRequested = function0;
     }
 }

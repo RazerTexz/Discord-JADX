@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.app.AppBottomSheet;
@@ -18,10 +18,10 @@ import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.google.android.material.radiobutton.MaterialRadioButton;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -33,7 +33,7 @@ import rx.subscriptions.CompositeSubscription;
 /* compiled from: WidgetThreadDraftArchiveSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetThreadDraftArchiveSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadArchiveActionsSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetThreadDraftArchiveSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadArchiveActionsSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -48,7 +48,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long guildId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetThreadDraftArchiveSheet widgetThreadDraftArchiveSheet = new WidgetThreadDraftArchiveSheet();
             Bundle bundle = new Bundle();
             bundle.putLong("INTENT_EXTRA_GUILD_ID", guildId);
@@ -77,10 +77,10 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
 
             public final Observable<Model> get(long guildId) {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable observableI = Observable.i(companion.getThreadDraft().observeDraftState(), companion.getGuilds().observeGuild(guildId), companion.getChannelsSelected().observeSelectedChannel(), WidgetThreadDraftArchiveSheet2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…, guild, channel)\n      }");
+                Observable observableI = Observable.i(companion.getThreadDraft().observeDraftState(), companion.getGuilds().observeGuild(guildId), companion.getChannelsSelected().observeSelectedChannel(), WidgetThreadDraftArchiveSheet$Model$Companion$get$1.INSTANCE);
+                m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…, guild, channel)\n      }");
                 Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableI).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "Observable.combineLatest…  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -90,7 +90,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
 
         public Model(StoreThreadDraft.ThreadDraftState threadDraftState, Guild guild, Channel channel) {
-            Intrinsics3.checkNotNullParameter(threadDraftState, "draftState");
+            m.checkNotNullParameter(threadDraftState, "draftState");
             this.draftState = threadDraftState;
             this.guild = guild;
             this.channel = channel;
@@ -125,7 +125,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
 
         public final Model copy(StoreThreadDraft.ThreadDraftState draftState, Guild guild, Channel channel) {
-            Intrinsics3.checkNotNullParameter(draftState, "draftState");
+            m.checkNotNullParameter(draftState, "draftState");
             return new Model(draftState, guild, channel);
         }
 
@@ -137,7 +137,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.draftState, model.draftState) && Intrinsics3.areEqual(this.guild, model.guild) && Intrinsics3.areEqual(this.channel, model.channel);
+            return m.areEqual(this.draftState, model.draftState) && m.areEqual(this.guild, model.guild) && m.areEqual(this.channel, model.channel);
         }
 
         public final Channel getChannel() {
@@ -162,7 +162,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(draftState=");
+            StringBuilder sbU = a.U("Model(draftState=");
             sbU.append(this.draftState);
             sbU.append(", guild=");
             sbU.append(this.guild);
@@ -175,7 +175,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
 
     /* compiled from: WidgetThreadDraftArchiveSheet.kt */
     /* renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$bindSubscriptions$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
         public AnonymousClass1(WidgetThreadDraftArchiveSheet widgetThreadDraftArchiveSheet) {
             super(1, widgetThreadDraftArchiveSheet, WidgetThreadDraftArchiveSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/threads/WidgetThreadDraftArchiveSheet$Model;)V", 0);
         }
@@ -188,7 +188,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            Intrinsics3.checkNotNullParameter(model, "p1");
+            m.checkNotNullParameter(model, "p1");
             WidgetThreadDraftArchiveSheet.access$configureUI((WidgetThreadDraftArchiveSheet) this.receiver, model);
         }
     }
@@ -255,7 +255,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
 
     public WidgetThreadDraftArchiveSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetThreadDraftArchiveSheet3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetThreadDraftArchiveSheet$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetThreadDraftArchiveSheet widgetThreadDraftArchiveSheet, Model model) {
@@ -275,19 +275,19 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         new Traits.Location(Traits.Location.Page.GUILD_CHANNEL, Traits.Location.Section.THREAD_ARCHIVAL_DURATION_SHEET, Traits.Location.Obj.LIST_ITEM, null, null, 24, null);
         getBinding().d.setOnClickListener(new AnonymousClass1(draftState));
         MaterialRadioButton materialRadioButton = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton, "binding.optionOneHourRadio");
+        m.checkNotNullExpressionValue(materialRadioButton, "binding.optionOneHourRadio");
         materialRadioButton.setChecked(iIntValue == 60);
         getBinding().j.setOnClickListener(new AnonymousClass2(draftState));
         MaterialRadioButton materialRadioButton2 = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton2, "binding.optionTwentyFourHoursRadio");
+        m.checkNotNullExpressionValue(materialRadioButton2, "binding.optionTwentyFourHoursRadio");
         materialRadioButton2.setChecked(iIntValue == 1440);
         getBinding().h.setOnClickListener(new AnonymousClass3(draftState));
         MaterialRadioButton materialRadioButton3 = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton3, "binding.optionThreeDaysRadio");
+        m.checkNotNullExpressionValue(materialRadioButton3, "binding.optionThreeDaysRadio");
         materialRadioButton3.setChecked(iIntValue == 4320);
         getBinding().f.setOnClickListener(new AnonymousClass4(draftState));
         MaterialRadioButton materialRadioButton4 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(materialRadioButton4, "binding.optionSevenDaysRadio");
+        m.checkNotNullExpressionValue(materialRadioButton4, "binding.optionSevenDaysRadio");
         materialRadioButton4.setChecked(iIntValue == 10080);
     }
 
@@ -306,7 +306,7 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
         super.bindSubscriptions(compositeSubscription);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getArgumentsOrDefault().getLong("INTENT_EXTRA_GUILD_ID", -1L)), this, null, 2, null), WidgetThreadDraftArchiveSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
     }

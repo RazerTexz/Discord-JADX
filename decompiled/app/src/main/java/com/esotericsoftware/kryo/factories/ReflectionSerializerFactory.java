@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.factories;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.util.Util;
@@ -28,7 +28,7 @@ public class ReflectionSerializerFactory implements SerializerFactory {
                         return cls.newInstance();
                     }
                 } catch (Exception e) {
-                    StringBuilder sbU = outline.U("Unable to create serializer \"");
+                    StringBuilder sbU = a.U("Unable to create serializer \"");
                     sbU.append(cls.getName());
                     sbU.append("\" for class: ");
                     sbU.append(Util.className(cls2));

@@ -1,6 +1,5 @@
 package b.a.q;
 
-import d0.z.d.Intrinsics3;
 import kotlin.jvm.functions.Function1;
 import rx.functions.Action1;
 
@@ -15,6 +14,6 @@ public final class g0 implements Action1 {
 
     @Override // rx.functions.Action1
     public final /* synthetic */ void call(Object obj) {
-        Intrinsics3.checkNotNullExpressionValue(this.j.invoke(obj), "invoke(...)");
+        d0.z.d.m.checkNotNullExpressionValue(this.j.invoke(obj), "invoke(...)");
     }
 }

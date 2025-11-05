@@ -3,8 +3,8 @@ package com.discord.widgets.tabs;
 import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.models.guild.Guild;
 import com.discord.panels.PanelState;
 import com.discord.stores.StoreGuilds;
@@ -15,11 +15,11 @@ import com.discord.stores.StoreTabsNavigation;
 import com.discord.stores.StoreUser;
 import com.discord.stores.StoreUserRelationships;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Sets5;
-import d0.t._Arrays;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.k;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +33,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: TabsHostViewModel.kt */
 /* loaded from: classes.dex */
-public final class TabsHostViewModel extends AppViewModel<ViewState> {
+public final class TabsHostViewModel extends d0<ViewState> {
     private static final Set<NavigationTab> AT_LEAST_ONE_GUILD_TABS;
 
     /* renamed from: Companion, reason: from kotlin metadata */
@@ -48,7 +48,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: TabsHostViewModel.kt */
     /* renamed from: com.discord.widgets.tabs.TabsHostViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -61,14 +61,14 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             TabsHostViewModel.access$handleStoreState(TabsHostViewModel.this, storeState);
         }
     }
 
     /* compiled from: TabsHostViewModel.kt */
     /* renamed from: com.discord.widgets.tabs.TabsHostViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Integer, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Integer, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -86,7 +86,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: TabsHostViewModel.kt */
     /* renamed from: com.discord.widgets.tabs.TabsHostViewModel$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Unit, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Unit, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -99,7 +99,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
-            Intrinsics3.checkNotNullParameter(unit, "it");
+            m.checkNotNullParameter(unit, "it");
             TabsHostViewModel.access$dismissSearchDialog(TabsHostViewModel.this);
         }
     }
@@ -114,8 +114,8 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(StoreNavigation storeNavigation, StoreTabsNavigation storeTabsNavigation, StoreUser storeUser, StoreGuilds storeGuilds, StoreMentions storeMentions, StoreUserRelationships storeUserRelationships) {
-            Observable<StoreState> observableF = Observable.f(storeNavigation.observeLeftPanelState(), storeTabsNavigation.observeSelectedTab(), storeUser.observeMeId(), storeGuilds.observeGuilds(), storeMentions.observeTotalMentions(), storeUserRelationships.observe(), TabsHostViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableF, "Observable.combineLatest…nships,\n        )\n      }");
+            Observable<StoreState> observableF = Observable.f(storeNavigation.observeLeftPanelState(), storeTabsNavigation.observeSelectedTab(), storeUser.observeMeId(), storeGuilds.observeGuilds(), storeMentions.observeTotalMentions(), storeUserRelationships.observe(), TabsHostViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableF, "Observable.combineLatest…nships,\n        )\n      }");
             return observableF;
         }
 
@@ -179,10 +179,10 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         private final Map<Long, Integer> userRelationships;
 
         public StoreState(PanelState panelState, NavigationTab navigationTab, long j, Map<Long, Guild> map, int i, Map<Long, Integer> map2) {
-            Intrinsics3.checkNotNullParameter(panelState, "leftPanelState");
-            Intrinsics3.checkNotNullParameter(navigationTab, "selectedTab");
-            Intrinsics3.checkNotNullParameter(map, "guildIdToGuildMap");
-            Intrinsics3.checkNotNullParameter(map2, "userRelationships");
+            m.checkNotNullParameter(panelState, "leftPanelState");
+            m.checkNotNullParameter(navigationTab, "selectedTab");
+            m.checkNotNullParameter(map, "guildIdToGuildMap");
+            m.checkNotNullParameter(map2, "userRelationships");
             this.leftPanelState = panelState;
             this.selectedTab = navigationTab;
             this.myUserId = j;
@@ -246,10 +246,10 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(PanelState leftPanelState, NavigationTab selectedTab, long myUserId, Map<Long, Guild> guildIdToGuildMap, int numTotalMentions, Map<Long, Integer> userRelationships) {
-            Intrinsics3.checkNotNullParameter(leftPanelState, "leftPanelState");
-            Intrinsics3.checkNotNullParameter(selectedTab, "selectedTab");
-            Intrinsics3.checkNotNullParameter(guildIdToGuildMap, "guildIdToGuildMap");
-            Intrinsics3.checkNotNullParameter(userRelationships, "userRelationships");
+            m.checkNotNullParameter(leftPanelState, "leftPanelState");
+            m.checkNotNullParameter(selectedTab, "selectedTab");
+            m.checkNotNullParameter(guildIdToGuildMap, "guildIdToGuildMap");
+            m.checkNotNullParameter(userRelationships, "userRelationships");
             return new StoreState(leftPanelState, selectedTab, myUserId, guildIdToGuildMap, numTotalMentions, userRelationships);
         }
 
@@ -261,7 +261,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.leftPanelState, storeState.leftPanelState) && Intrinsics3.areEqual(this.selectedTab, storeState.selectedTab) && this.myUserId == storeState.myUserId && Intrinsics3.areEqual(this.guildIdToGuildMap, storeState.guildIdToGuildMap) && this.numTotalMentions == storeState.numTotalMentions && Intrinsics3.areEqual(this.userRelationships, storeState.userRelationships);
+            return m.areEqual(this.leftPanelState, storeState.leftPanelState) && m.areEqual(this.selectedTab, storeState.selectedTab) && this.myUserId == storeState.myUserId && m.areEqual(this.guildIdToGuildMap, storeState.guildIdToGuildMap) && this.numTotalMentions == storeState.numTotalMentions && m.areEqual(this.userRelationships, storeState.userRelationships);
         }
 
         public final Map<Long, Guild> getGuildIdToGuildMap() {
@@ -300,7 +300,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(leftPanelState=");
+            StringBuilder sbU = a.U("StoreState(leftPanelState=");
             sbU.append(this.leftPanelState);
             sbU.append(", selectedTab=");
             sbU.append(this.selectedTab);
@@ -311,7 +311,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             sbU.append(", numTotalMentions=");
             sbU.append(this.numTotalMentions);
             sbU.append(", userRelationships=");
-            return outline.M(sbU, this.userRelationships, ")");
+            return a.M(sbU, this.userRelationships, ")");
         }
     }
 
@@ -327,8 +327,8 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(NavigationTab navigationTab, boolean z2, int i, long j, Set<? extends NavigationTab> set, int i2, int i3) {
-            Intrinsics3.checkNotNullParameter(navigationTab, "selectedTab");
-            Intrinsics3.checkNotNullParameter(set, "visibleTabs");
+            m.checkNotNullParameter(navigationTab, "selectedTab");
+            m.checkNotNullParameter(set, "visibleTabs");
             this.selectedTab = navigationTab;
             this.showBottomNav = z2;
             this.bottomNavHeight = i;
@@ -377,8 +377,8 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
 
         public final ViewState copy(NavigationTab selectedTab, boolean showBottomNav, int bottomNavHeight, long myUserId, Set<? extends NavigationTab> visibleTabs, int numHomeNotifications, int numFriendsNotifications) {
-            Intrinsics3.checkNotNullParameter(selectedTab, "selectedTab");
-            Intrinsics3.checkNotNullParameter(visibleTabs, "visibleTabs");
+            m.checkNotNullParameter(selectedTab, "selectedTab");
+            m.checkNotNullParameter(visibleTabs, "visibleTabs");
             return new ViewState(selectedTab, showBottomNav, bottomNavHeight, myUserId, visibleTabs, numHomeNotifications, numFriendsNotifications);
         }
 
@@ -390,7 +390,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.selectedTab, viewState.selectedTab) && this.showBottomNav == viewState.showBottomNav && this.bottomNavHeight == viewState.bottomNavHeight && this.myUserId == viewState.myUserId && Intrinsics3.areEqual(this.visibleTabs, viewState.visibleTabs) && this.numHomeNotifications == viewState.numHomeNotifications && this.numFriendsNotifications == viewState.numFriendsNotifications;
+            return m.areEqual(this.selectedTab, viewState.selectedTab) && this.showBottomNav == viewState.showBottomNav && this.bottomNavHeight == viewState.bottomNavHeight && this.myUserId == viewState.myUserId && m.areEqual(this.visibleTabs, viewState.visibleTabs) && this.numHomeNotifications == viewState.numHomeNotifications && this.numFriendsNotifications == viewState.numFriendsNotifications;
         }
 
         public final int getBottomNavHeight() {
@@ -436,7 +436,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(selectedTab=");
+            StringBuilder sbU = a.U("ViewState(selectedTab=");
             sbU.append(this.selectedTab);
             sbU.append(", showBottomNav=");
             sbU.append(this.showBottomNav);
@@ -449,7 +449,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             sbU.append(", numHomeNotifications=");
             sbU.append(this.numHomeNotifications);
             sbU.append(", numFriendsNotifications=");
-            return outline.B(sbU, this.numFriendsNotifications, ")");
+            return a.B(sbU, this.numFriendsNotifications, ")");
         }
     }
 
@@ -466,14 +466,14 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
     }
 
     static {
-        List<NavigationTab> list = _Arrays.toList(NavigationTab.values());
+        List<NavigationTab> list = k.toList(NavigationTab.values());
         TAB_DESTINATIONS = list;
         NavigationTab navigationTab = NavigationTab.HOME;
-        NON_HOME_TAB_DESTINATIONS = _Collections.minus(list, navigationTab);
+        NON_HOME_TAB_DESTINATIONS = u.minus(list, navigationTab);
         NavigationTab navigationTab2 = NavigationTab.FRIENDS;
         NavigationTab navigationTab3 = NavigationTab.SETTINGS;
-        NO_GUILD_TABS = Sets5.setOf((Object[]) new NavigationTab[]{navigationTab, navigationTab2, navigationTab3});
-        AT_LEAST_ONE_GUILD_TABS = Sets5.setOf((Object[]) new NavigationTab[]{navigationTab, navigationTab2, NavigationTab.SEARCH, NavigationTab.MENTIONS, navigationTab3});
+        NO_GUILD_TABS = n0.setOf((Object[]) new NavigationTab[]{navigationTab, navigationTab2, navigationTab3});
+        AT_LEAST_ONE_GUILD_TABS = n0.setOf((Object[]) new NavigationTab[]{navigationTab, navigationTab2, NavigationTab.SEARCH, NavigationTab.MENTIONS, navigationTab3});
     }
 
     public TabsHostViewModel() {
@@ -540,7 +540,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
     private final void handleStoreState(StoreState storeState) {
         this.storeState = storeState;
         NavigationTab selectedTab = storeState.getSelectedTab();
-        boolean z2 = NON_HOME_TAB_DESTINATIONS.contains(selectedTab) || (selectedTab == NavigationTab.HOME && (Intrinsics3.areEqual(storeState.getLeftPanelState(), PanelState.c.a) || Intrinsics3.areEqual(storeState.getLeftPanelState(), PanelState.d.a)));
+        boolean z2 = NON_HOME_TAB_DESTINATIONS.contains(selectedTab) || (selectedTab == NavigationTab.HOME && (m.areEqual(storeState.getLeftPanelState(), PanelState.c.a) || m.areEqual(storeState.getLeftPanelState(), PanelState.d.a)));
         Set<NavigationTab> set = storeState.getGuildIdToGuildMap().values().isEmpty() ^ true ? AT_LEAST_ONE_GUILD_TABS : NO_GUILD_TABS;
         Map<Long, Integer> userRelationships = storeState.getUserRelationships();
         LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -565,7 +565,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -576,7 +576,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
     */
     public final void selectTab(NavigationTab tab) {
         StoreNavigation.PanelAction panelAction;
-        Intrinsics3.checkNotNullParameter(tab, "tab");
+        m.checkNotNullParameter(tab, "tab");
         NavigationTab selectedTab = requireViewState().getSelectedTab();
         StoreTabsNavigation.selectTab$default(this.storeTabsNavigation, tab, false, 2, null);
         int iOrdinal = tab.ordinal();
@@ -590,7 +590,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
                 panelAction = StoreNavigation.PanelAction.OPEN;
             } else {
                 StoreState storeState = this.storeState;
-                if (Intrinsics3.areEqual(storeState != null ? storeState.getLeftPanelState() : null, PanelState.c.a)) {
+                if (m.areEqual(storeState != null ? storeState.getLeftPanelState() : null, PanelState.c.a)) {
                     panelAction = StoreNavigation.PanelAction.CLOSE;
                 }
             }
@@ -601,10 +601,10 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public TabsHostViewModel(BottomNavViewObserver bottomNavViewObserver, StoreTabsNavigation storeTabsNavigation, StoreNavigation storeNavigation, Observable<StoreState> observable) {
         super(new ViewState(NavigationTab.HOME, false, 0, 0L, NO_GUILD_TABS, 0, 0));
-        Intrinsics3.checkNotNullParameter(bottomNavViewObserver, "bottomNavViewObserver");
-        Intrinsics3.checkNotNullParameter(storeTabsNavigation, "storeTabsNavigation");
-        Intrinsics3.checkNotNullParameter(storeNavigation, "storeNavigation");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(bottomNavViewObserver, "bottomNavViewObserver");
+        m.checkNotNullParameter(storeTabsNavigation, "storeTabsNavigation");
+        m.checkNotNullParameter(storeNavigation, "storeNavigation");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.storeTabsNavigation = storeTabsNavigation;
         this.storeNavigation = storeNavigation;
         this.eventSubject = PublishSubject.k0();

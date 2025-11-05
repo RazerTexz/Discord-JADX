@@ -24,7 +24,7 @@ import androidx.core.text.TextDirectionHeuristicsCompat;
 import androidx.core.util.Preconditions;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
-import b.i.a.g.f.StaticLayoutBuilderCompat;
+import b.i.a.g.f.a;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.resources.CancelableFontCallback;
 import com.google.android.material.resources.TextAppearance;
@@ -310,14 +310,14 @@ public final class CollapsingTextHelper {
     private StaticLayout createStaticLayout(int i, float f, boolean z2) {
         StaticLayout staticLayoutA;
         try {
-            StaticLayoutBuilderCompat staticLayoutBuilderCompat = new StaticLayoutBuilderCompat(this.text, this.textPaint, (int) f);
-            staticLayoutBuilderCompat.l = TextUtils.TruncateAt.END;
-            staticLayoutBuilderCompat.k = z2;
-            staticLayoutBuilderCompat.h = Layout.Alignment.ALIGN_NORMAL;
-            staticLayoutBuilderCompat.j = false;
-            staticLayoutBuilderCompat.i = i;
-            staticLayoutA = staticLayoutBuilderCompat.a();
-        } catch (StaticLayoutBuilderCompat.a e) {
+            b.i.a.g.f.a aVar = new b.i.a.g.f.a(this.text, this.textPaint, (int) f);
+            aVar.l = TextUtils.TruncateAt.END;
+            aVar.k = z2;
+            aVar.h = Layout.Alignment.ALIGN_NORMAL;
+            aVar.j = false;
+            aVar.i = i;
+            staticLayoutA = aVar.a();
+        } catch (a.C0123a e) {
             Log.e(TAG, e.getCause().getMessage(), e);
             staticLayoutA = null;
         }

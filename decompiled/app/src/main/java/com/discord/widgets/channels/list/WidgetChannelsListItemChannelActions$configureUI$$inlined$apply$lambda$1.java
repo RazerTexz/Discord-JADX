@@ -4,7 +4,7 @@ import android.view.View;
 import androidx.fragment.app.FragmentManager;
 import com.discord.models.user.User;
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetChannelsListItemChannelActions.kt */
 /* loaded from: classes2.dex */
@@ -24,7 +24,7 @@ public final class WidgetChannelsListItemChannelActions$configureUI$$inlined$app
             WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;
             long id2 = user.getId();
             FragmentManager parentFragmentManager = this.this$0.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             WidgetUserSheet.Companion.show$default(companion, id2, null, parentFragmentManager, null, null, null, null, 122, null);
         }
     }

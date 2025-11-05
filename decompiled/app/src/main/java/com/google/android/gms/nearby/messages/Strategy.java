@@ -2,8 +2,8 @@ package com.google.android.gms.nearby.messages;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import b.i.a.f.j.b.j;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class Strategy extends AbstractSafeParcelable {
     public final int f3018s;
 
     static {
-        AnimatableValueParser.n(true, "mTtlSeconds(%d) must either be TTL_SECONDS_INFINITE, or it must be between 1 and TTL_SECONDS_MAX(%d) inclusive", Integer.MAX_VALUE, 86400);
+        d.n(true, "mTtlSeconds(%d) must either be TTL_SECONDS_INFINITE, or it must be between 1 and TTL_SECONDS_MAX(%d) inclusive", Integer.MAX_VALUE, 86400);
         k = new Strategy(2, 0, Integer.MAX_VALUE, 0, false, 2, 3, 0);
     }
 
@@ -89,7 +89,7 @@ public class Strategy extends AbstractSafeParcelable {
         String strG2;
         int i = this.n;
         int i2 = this.o;
-        String strG3 = i2 != 0 ? i2 != 1 ? outline.g(19, "UNKNOWN:", i2) : "EARSHOT" : "DEFAULT";
+        String strG3 = i2 != 0 ? i2 != 1 ? a.g(19, "UNKNOWN:", i2) : "EARSHOT" : "DEFAULT";
         int i3 = this.q;
         if (i3 == -1) {
             strG = "DEFAULT";
@@ -101,7 +101,7 @@ public class Strategy extends AbstractSafeParcelable {
             if ((i3 & 2) > 0) {
                 arrayList.add("BLE");
             }
-            strG = arrayList.isEmpty() ? outline.g(19, "UNKNOWN:", i3) : arrayList.toString();
+            strG = arrayList.isEmpty() ? a.g(19, "UNKNOWN:", i3) : arrayList.toString();
         }
         int i4 = this.r;
         if (i4 == 3) {
@@ -114,16 +114,16 @@ public class Strategy extends AbstractSafeParcelable {
             if ((i4 & 2) > 0) {
                 arrayList2.add("SCAN");
             }
-            strG2 = arrayList2.isEmpty() ? outline.g(19, "UNKNOWN:", i4) : arrayList2.toString();
+            strG2 = arrayList2.isEmpty() ? a.g(19, "UNKNOWN:", i4) : arrayList2.toString();
         }
         int i5 = this.f3018s;
-        String strG4 = i5 != 0 ? i5 != 1 ? outline.g(20, "UNKNOWN: ", i5) : "ALWAYS_ON" : "DEFAULT";
-        StringBuilder sb = new StringBuilder(outline.b(strG4, outline.b(strG2, outline.b(strG, outline.b(strG3, 102)))));
+        String strG4 = i5 != 0 ? i5 != 1 ? a.g(20, "UNKNOWN: ", i5) : "ALWAYS_ON" : "DEFAULT";
+        StringBuilder sb = new StringBuilder(a.b(strG4, a.b(strG2, a.b(strG, a.b(strG3, 102)))));
         sb.append("Strategy{ttlSeconds=");
         sb.append(i);
         sb.append(", distanceType=");
         sb.append(strG3);
-        outline.s0(sb, ", discoveryMedium=", strG, ", discoveryMode=", strG2);
+        a.s0(sb, ", discoveryMedium=", strG, ", discoveryMode=", strG2);
         sb.append(", backgroundScanMode=");
         sb.append(strG4);
         sb.append('}');
@@ -132,7 +132,7 @@ public class Strategy extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.m;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
@@ -157,6 +157,6 @@ public class Strategy extends AbstractSafeParcelable {
         int i8 = this.l;
         parcel.writeInt(263144);
         parcel.writeInt(i8);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

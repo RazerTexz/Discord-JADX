@@ -1,9 +1,8 @@
 package com.google.gson.internal.bind;
 
 import b.i.a.f.e.o.f;
-import b.i.d.TypeAdapterFactory2;
-import b.i.d.q.JavaVersion;
-import b.i.d.q.x.d.ISO8601Utils;
+import b.i.d.o;
+import b.i.d.q.x.d.a;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
@@ -23,14 +22,14 @@ import java.util.Locale;
 
 /* loaded from: classes3.dex */
 public final class DateTypeAdapter extends TypeAdapter<Date> {
-    public static final TypeAdapterFactory2 a = new AnonymousClass1();
+    public static final o a = new AnonymousClass1();
 
     /* renamed from: b, reason: collision with root package name */
     public final List<DateFormat> f3119b;
 
     /* renamed from: com.google.gson.internal.bind.DateTypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements TypeAdapterFactory2 {
-        @Override // b.i.d.TypeAdapterFactory2
+    public class AnonymousClass1 implements o {
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() == Date.class) {
                 return new DateTypeAdapter();
@@ -47,7 +46,7 @@ public final class DateTypeAdapter extends TypeAdapter<Date> {
         if (!Locale.getDefault().equals(locale)) {
             arrayList.add(DateFormat.getDateTimeInstance(2, 2));
         }
-        if (JavaVersion.a >= 9) {
+        if (b.i.d.q.o.a >= 9) {
             arrayList.add(f.r0(2, 2));
         }
     }
@@ -68,7 +67,7 @@ public final class DateTypeAdapter extends TypeAdapter<Date> {
                 }
             }
             try {
-                return ISO8601Utils.b(strJ, new ParsePosition(0));
+                return a.b(strJ, new ParsePosition(0));
             } catch (ParseException e) {
                 throw new JsonSyntaxException(strJ, e);
             }

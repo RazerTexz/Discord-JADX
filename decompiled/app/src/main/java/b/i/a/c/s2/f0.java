@@ -1,32 +1,30 @@
 package b.i.a.c.s2;
 
-import b.i.a.c.a3.LoadEventInfo;
-import b.i.a.c.a3.MediaLoadData;
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
+import b.i.a.c.f3.p;
+import b.i.a.c.s2.h1;
 import java.io.IOException;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class f0 implements ListenerSet.a {
-    public final /* synthetic */ AnalyticsListener.a a;
+public final /* synthetic */ class f0 implements p.a {
+    public final /* synthetic */ h1.a a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final /* synthetic */ LoadEventInfo f1077b;
-    public final /* synthetic */ MediaLoadData c;
+    public final /* synthetic */ b.i.a.c.a3.t f1077b;
+    public final /* synthetic */ b.i.a.c.a3.w c;
     public final /* synthetic */ IOException d;
     public final /* synthetic */ boolean e;
 
-    public /* synthetic */ f0(AnalyticsListener.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData, IOException iOException, boolean z2) {
+    public /* synthetic */ f0(h1.a aVar, b.i.a.c.a3.t tVar, b.i.a.c.a3.w wVar, IOException iOException, boolean z2) {
         this.a = aVar;
-        this.f1077b = loadEventInfo;
-        this.c = mediaLoadData;
+        this.f1077b = tVar;
+        this.c = wVar;
         this.d = iOException;
         this.e = z2;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((AnalyticsListener) obj).u();
+        ((h1) obj).u();
     }
 }

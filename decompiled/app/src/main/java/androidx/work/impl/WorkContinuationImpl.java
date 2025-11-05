@@ -16,7 +16,7 @@ import androidx.work.WorkRequest;
 import androidx.work.impl.utils.EnqueueRunnable;
 import androidx.work.impl.utils.StatusRunnable;
 import androidx.work.impl.workers.CombineContinuationsWorker;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -109,7 +109,7 @@ public class WorkContinuationImpl extends WorkContinuation {
 
     @Override // androidx.work.WorkContinuation
     @NonNull
-    public ListenableFuture8<List<WorkInfo>> getWorkInfos() {
+    public a<List<WorkInfo>> getWorkInfos() {
         StatusRunnable<List<WorkInfo>> statusRunnableForStringIds = StatusRunnable.forStringIds(this.mWorkManagerImpl, this.mAllIds);
         this.mWorkManagerImpl.getWorkTaskExecutor().executeOnBackgroundThread(statusRunnableForStringIds);
         return statusRunnableForStringIds.getFuture();

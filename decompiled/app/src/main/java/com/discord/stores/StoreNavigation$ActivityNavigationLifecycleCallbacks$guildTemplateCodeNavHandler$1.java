@@ -5,20 +5,20 @@ import com.discord.app.AppActivity;
 import com.discord.stores.StoreNavigation;
 import com.discord.stores.StoreNux;
 import com.discord.widgets.guilds.create.WidgetGuildClone;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 
 /* compiled from: StoreNavigation.kt */
 /* loaded from: classes2.dex */
-public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$guildTemplateCodeNavHandler$1 extends Lambda implements Function2<AppActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Boolean> {
+public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$guildTemplateCodeNavHandler$1 extends o implements Function2<AppActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Boolean> {
     public final /* synthetic */ StoreNavigation.ActivityNavigationLifecycleCallbacks this$0;
 
     /* compiled from: StoreNavigation.kt */
     /* renamed from: com.discord.stores.StoreNavigation$ActivityNavigationLifecycleCallbacks$guildTemplateCodeNavHandler$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -32,7 +32,7 @@ public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$guildTem
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
-            Intrinsics3.checkNotNullParameter(nuxState, "it");
+            m.checkNotNullParameter(nuxState, "it");
             return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, false, null, 62, null);
         }
     }
@@ -50,10 +50,10 @@ public final class StoreNavigation$ActivityNavigationLifecycleCallbacks$guildTem
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(AppActivity appActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation modelGlobalNavigation) {
-        Intrinsics3.checkNotNullParameter(appActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-        Intrinsics3.checkNotNullParameter(modelGlobalNavigation, "model");
+        m.checkNotNullParameter(appActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        m.checkNotNullParameter(modelGlobalNavigation, "model");
         String guildTemplateCode = modelGlobalNavigation.getGuildTemplateCode();
-        if (guildTemplateCode == null || appActivity.h(Reflection2.getOrCreateKotlinClass(WidgetGuildClone.class))) {
+        if (guildTemplateCode == null || appActivity.h(a0.getOrCreateKotlinClass(WidgetGuildClone.class))) {
             return false;
         }
         WidgetGuildClone.INSTANCE.show(appActivity, guildTemplateCode, "Dynamic Link");

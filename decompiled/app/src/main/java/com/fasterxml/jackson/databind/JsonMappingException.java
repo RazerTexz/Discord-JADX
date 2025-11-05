@@ -1,9 +1,8 @@
 package com.fasterxml.jackson.databind;
 
-import b.d.b.a.outline;
-import b.g.a.a.JsonIgnore;
-import b.g.a.b.JsonParser;
-import b.g.a.c.i0.ClassUtil;
+import b.g.a.a.m;
+import b.g.a.b.f;
+import b.g.a.c.i0.d;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.Closeable;
 import java.io.Serializable;
@@ -21,8 +20,8 @@ public class JsonMappingException extends JsonProcessingException {
     public JsonMappingException(Closeable closeable, String str) {
         super(str);
         this.k = closeable;
-        if (closeable instanceof JsonParser) {
-            this._location = ((JsonParser) closeable).a();
+        if (closeable instanceof f) {
+            this._location = ((f) closeable).a();
         }
     }
 
@@ -31,9 +30,9 @@ public class JsonMappingException extends JsonProcessingException {
         if (th instanceof JsonMappingException) {
             jsonMappingException = (JsonMappingException) th;
         } else {
-            String strH = ClassUtil.h(th);
+            String strH = d.h(th);
             if (strH == null || strH.isEmpty()) {
-                StringBuilder sbU = outline.U("(was ");
+                StringBuilder sbU = b.d.b.a.a.U("(was ");
                 sbU.append(th.getClass().getName());
                 sbU.append(")");
                 strH = sbU.toString();
@@ -52,7 +51,7 @@ public class JsonMappingException extends JsonProcessingException {
     }
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException
-    @JsonIgnore
+    @m
     public Object c() {
         return this.k;
     }
@@ -182,8 +181,8 @@ public class JsonMappingException extends JsonProcessingException {
         this.k = closeable;
         if (th instanceof JsonProcessingException) {
             this._location = ((JsonProcessingException) th)._location;
-        } else if (closeable instanceof JsonParser) {
-            this._location = ((JsonParser) closeable).a();
+        } else if (closeable instanceof f) {
+            this._location = ((f) closeable).a();
         }
     }
 }

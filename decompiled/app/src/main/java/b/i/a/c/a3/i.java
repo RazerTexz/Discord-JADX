@@ -1,25 +1,25 @@
 package b.i.a.c.a3;
 
-import b.i.a.c.a3.MediaPeriod;
+import b.i.a.c.a3.x;
 import java.util.Objects;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class i implements Runnable {
-    public final /* synthetic */ ProgressiveMediaPeriod j;
+    public final /* synthetic */ e0 j;
 
-    public /* synthetic */ i(ProgressiveMediaPeriod progressiveMediaPeriod) {
-        this.j = progressiveMediaPeriod;
+    public /* synthetic */ i(e0 e0Var) {
+        this.j = e0Var;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        ProgressiveMediaPeriod progressiveMediaPeriod = this.j;
-        if (progressiveMediaPeriod.W) {
+        e0 e0Var = this.j;
+        if (e0Var.W) {
             return;
         }
-        MediaPeriod.a aVar = progressiveMediaPeriod.B;
+        x.a aVar = e0Var.B;
         Objects.requireNonNull(aVar);
-        aVar.a(progressiveMediaPeriod);
+        aVar.a(e0Var);
     }
 }

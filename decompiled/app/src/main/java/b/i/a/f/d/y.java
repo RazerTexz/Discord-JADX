@@ -7,7 +7,6 @@ import android.os.Message;
 import android.os.Messenger;
 import android.os.Parcelable;
 import android.util.Log;
-import b.d.b.a.outline;
 import com.google.android.gms.cloudmessaging.zza;
 import java.util.Objects;
 import java.util.regex.Matcher;
@@ -78,7 +77,7 @@ public final class y extends b.i.a.f.h.f.a {
                 String stringExtra2 = intent2.getStringExtra("error");
                 if (stringExtra2 == null) {
                     String strValueOf2 = String.valueOf(intent2.getExtras());
-                    outline.h0(strValueOf2.length() + 49, "Unexpected response, no error or registration id ", strValueOf2, "Rpc");
+                    b.d.b.a.a.h0(strValueOf2.length() + 49, "Unexpected response, no error or registration id ", strValueOf2, "Rpc");
                     return;
                 }
                 if (Log.isLoggable("Rpc", 3)) {

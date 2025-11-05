@@ -3,7 +3,7 @@ package defpackage;
 import android.text.TextPaint;
 import android.text.style.BackgroundColorSpan;
 import androidx.annotation.ColorInt;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: SpoilerSpan.kt */
 /* loaded from: classes2.dex */
@@ -26,7 +26,7 @@ public final class SpoilerSpan extends BackgroundColorSpan {
 
     @Override // android.text.style.BackgroundColorSpan, android.text.style.CharacterStyle
     public void updateDrawState(TextPaint textPaint) {
-        Intrinsics3.checkNotNullParameter(textPaint, "textPaint");
+        m.checkNotNullParameter(textPaint, "textPaint");
         if (this.l) {
             textPaint.bgColor = this.k;
             return;

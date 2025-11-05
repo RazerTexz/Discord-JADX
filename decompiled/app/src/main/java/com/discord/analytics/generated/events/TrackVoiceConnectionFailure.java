@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackVoiceConnectionFailure.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVoiceConnectionFailure implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackVoiceConnectionFailure implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence error = null;
     private final CharSequence hostname = null;
@@ -40,7 +40,7 @@ public final /* data */ class TrackVoiceConnectionFailure implements AnalyticsSc
             return false;
         }
         TrackVoiceConnectionFailure trackVoiceConnectionFailure = (TrackVoiceConnectionFailure) other;
-        return Intrinsics3.areEqual(this.error, trackVoiceConnectionFailure.error) && Intrinsics3.areEqual(this.hostname, trackVoiceConnectionFailure.hostname) && Intrinsics3.areEqual(this.cloudflareBestRegion, trackVoiceConnectionFailure.cloudflareBestRegion) && Intrinsics3.areEqual(this.port, trackVoiceConnectionFailure.port) && Intrinsics3.areEqual(this.protocol, trackVoiceConnectionFailure.protocol) && Intrinsics3.areEqual(this.sessionId, trackVoiceConnectionFailure.sessionId) && Intrinsics3.areEqual(this.mediaSessionId, trackVoiceConnectionFailure.mediaSessionId) && Intrinsics3.areEqual(this.context, trackVoiceConnectionFailure.context) && Intrinsics3.areEqual(this.rtcConnectionId, trackVoiceConnectionFailure.rtcConnectionId) && Intrinsics3.areEqual(this.channelId, trackVoiceConnectionFailure.channelId) && Intrinsics3.areEqual(this.guildId, trackVoiceConnectionFailure.guildId) && Intrinsics3.areEqual(this.connectCount, trackVoiceConnectionFailure.connectCount) && Intrinsics3.areEqual(this.voiceBackendVersion, trackVoiceConnectionFailure.voiceBackendVersion) && Intrinsics3.areEqual(this.rtcWorkerBackendVersion, trackVoiceConnectionFailure.rtcWorkerBackendVersion);
+        return m.areEqual(this.error, trackVoiceConnectionFailure.error) && m.areEqual(this.hostname, trackVoiceConnectionFailure.hostname) && m.areEqual(this.cloudflareBestRegion, trackVoiceConnectionFailure.cloudflareBestRegion) && m.areEqual(this.port, trackVoiceConnectionFailure.port) && m.areEqual(this.protocol, trackVoiceConnectionFailure.protocol) && m.areEqual(this.sessionId, trackVoiceConnectionFailure.sessionId) && m.areEqual(this.mediaSessionId, trackVoiceConnectionFailure.mediaSessionId) && m.areEqual(this.context, trackVoiceConnectionFailure.context) && m.areEqual(this.rtcConnectionId, trackVoiceConnectionFailure.rtcConnectionId) && m.areEqual(this.channelId, trackVoiceConnectionFailure.channelId) && m.areEqual(this.guildId, trackVoiceConnectionFailure.guildId) && m.areEqual(this.connectCount, trackVoiceConnectionFailure.connectCount) && m.areEqual(this.voiceBackendVersion, trackVoiceConnectionFailure.voiceBackendVersion) && m.areEqual(this.rtcWorkerBackendVersion, trackVoiceConnectionFailure.rtcWorkerBackendVersion);
     }
 
     public int hashCode() {
@@ -75,7 +75,7 @@ public final /* data */ class TrackVoiceConnectionFailure implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVoiceConnectionFailure(error=");
+        StringBuilder sbU = a.U("TrackVoiceConnectionFailure(error=");
         sbU.append(this.error);
         sbU.append(", hostname=");
         sbU.append(this.hostname);
@@ -102,6 +102,6 @@ public final /* data */ class TrackVoiceConnectionFailure implements AnalyticsSc
         sbU.append(", voiceBackendVersion=");
         sbU.append(this.voiceBackendVersion);
         sbU.append(", rtcWorkerBackendVersion=");
-        return outline.E(sbU, this.rtcWorkerBackendVersion, ")");
+        return a.E(sbU, this.rtcWorkerBackendVersion, ")");
     }
 }

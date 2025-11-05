@@ -3,30 +3,29 @@ package com.discord.widgets.bugreports;
 import android.content.Context;
 import android.net.Uri;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.bugreport.BugReportConfig;
-import com.discord.api.bugreport.BugReportConfig2;
+import com.discord.api.bugreport.Feature;
 import com.discord.api.sticker.Sticker;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreStream;
+import com.discord.stores.utilities.Loading;
 import com.discord.stores.utilities.RestCallState;
-import com.discord.stores.utilities.RestCallState4;
-import com.discord.stores.utilities.RestCallState5;
+import com.discord.stores.utilities.RestCallStateKt;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.fcm.NotificationClient;
 import com.discord.utilities.file.DownloadUtils;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.stickers.StickerUtils;
-import d0.c0.Random;
-import d0.d0._Ranges;
-import d0.g0.Strings4;
-import d0.t.Collections2;
-import d0.t.CollectionsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.c0.c;
+import d0.d0.f;
+import d0.g0.w;
+import d0.t.m;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -42,16 +41,16 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: BugReportViewModel.kt */
 /* loaded from: classes2.dex */
-public final class BugReportViewModel extends AppViewModel<ViewState> {
+public final class BugReportViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final List<BugReportConfig2> genericFeatureAreas = CollectionsJVM.listOf(new BugReportConfig2(NotificationClient.NOTIF_GENERAL, "Android", null));
+    private static final List<Feature> genericFeatureAreas = m.listOf(new Feature(NotificationClient.NOTIF_GENERAL, "Android", null));
     private static final List<Sticker> sendingStickers;
     private static final List<Sticker> successStickers;
     private RestCallState<BugReportConfig> bugReportConfig;
     private final PublishSubject<Event> eventSubject;
-    private BugReportConfig2 feature;
+    private Feature feature;
     private String featureSearchQuery;
     private Integer priority;
     private String reportDescription;
@@ -70,7 +69,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         private Companion() {
         }
 
-        public final List<BugReportConfig2> getGenericFeatureAreas() {
+        public final List<Feature> getGenericFeatureAreas() {
             return BugReportViewModel.access$getGenericFeatureAreas$cp();
         }
 
@@ -113,18 +112,18 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         /* compiled from: BugReportViewModel.kt */
         public static final /* data */ class Report extends ViewState {
             private final Error error;
-            private final BugReportConfig2 feature;
+            private final Feature feature;
             private final Integer priority;
             private final String reportDescription;
             private final String reportName;
             private final Uri screenshotUri;
             private final boolean useScreenshot;
 
-            public /* synthetic */ Report(Uri uri, String str, String str2, Integer num, BugReportConfig2 bugReportConfig2, boolean z2, Error error, int i, DefaultConstructorMarker defaultConstructorMarker) {
-                this(uri, str, str2, num, bugReportConfig2, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? null : error);
+            public /* synthetic */ Report(Uri uri, String str, String str2, Integer num, Feature feature, boolean z2, Error error, int i, DefaultConstructorMarker defaultConstructorMarker) {
+                this(uri, str, str2, num, feature, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? null : error);
             }
 
-            public static /* synthetic */ Report copy$default(Report report, Uri uri, String str, String str2, Integer num, BugReportConfig2 bugReportConfig2, boolean z2, Error error, int i, Object obj) {
+            public static /* synthetic */ Report copy$default(Report report, Uri uri, String str, String str2, Integer num, Feature feature, boolean z2, Error error, int i, Object obj) {
                 if ((i & 1) != 0) {
                     uri = report.screenshotUri;
                 }
@@ -141,9 +140,9 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 }
                 Integer num2 = num;
                 if ((i & 16) != 0) {
-                    bugReportConfig2 = report.feature;
+                    feature = report.feature;
                 }
-                BugReportConfig2 bugReportConfig22 = bugReportConfig2;
+                Feature feature2 = feature;
                 if ((i & 32) != 0) {
                     z2 = report.useScreenshot;
                 }
@@ -151,7 +150,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 if ((i & 64) != 0) {
                     error = report.error;
                 }
-                return report.copy(uri, str3, str4, num2, bugReportConfig22, z3, error);
+                return report.copy(uri, str3, str4, num2, feature2, z3, error);
             }
 
             /* renamed from: component1, reason: from getter */
@@ -175,7 +174,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             /* renamed from: component5, reason: from getter */
-            public final BugReportConfig2 getFeature() {
+            public final Feature getFeature() {
                 return this.feature;
             }
 
@@ -189,8 +188,8 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 return this.error;
             }
 
-            public final Report copy(Uri screenshotUri, String reportName, String reportDescription, Integer priority, BugReportConfig2 feature, boolean useScreenshot, Error error) {
-                Intrinsics3.checkNotNullParameter(screenshotUri, "screenshotUri");
+            public final Report copy(Uri screenshotUri, String reportName, String reportDescription, Integer priority, Feature feature, boolean useScreenshot, Error error) {
+                d0.z.d.m.checkNotNullParameter(screenshotUri, "screenshotUri");
                 return new Report(screenshotUri, reportName, reportDescription, priority, feature, useScreenshot, error);
             }
 
@@ -202,14 +201,14 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Report report = (Report) other;
-                return Intrinsics3.areEqual(this.screenshotUri, report.screenshotUri) && Intrinsics3.areEqual(this.reportName, report.reportName) && Intrinsics3.areEqual(this.reportDescription, report.reportDescription) && Intrinsics3.areEqual(this.priority, report.priority) && Intrinsics3.areEqual(this.feature, report.feature) && this.useScreenshot == report.useScreenshot && Intrinsics3.areEqual(this.error, report.error);
+                return d0.z.d.m.areEqual(this.screenshotUri, report.screenshotUri) && d0.z.d.m.areEqual(this.reportName, report.reportName) && d0.z.d.m.areEqual(this.reportDescription, report.reportDescription) && d0.z.d.m.areEqual(this.priority, report.priority) && d0.z.d.m.areEqual(this.feature, report.feature) && this.useScreenshot == report.useScreenshot && d0.z.d.m.areEqual(this.error, report.error);
             }
 
             public final Error getError() {
                 return this.error;
             }
 
-            public final BugReportConfig2 getFeature() {
+            public final Feature getFeature() {
                 return this.feature;
             }
 
@@ -243,8 +242,8 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 int iHashCode3 = (iHashCode2 + (str2 != null ? str2.hashCode() : 0)) * 31;
                 Integer num = this.priority;
                 int iHashCode4 = (iHashCode3 + (num != null ? num.hashCode() : 0)) * 31;
-                BugReportConfig2 bugReportConfig2 = this.feature;
-                int iHashCode5 = (iHashCode4 + (bugReportConfig2 != null ? bugReportConfig2.hashCode() : 0)) * 31;
+                Feature feature = this.feature;
+                int iHashCode5 = (iHashCode4 + (feature != null ? feature.hashCode() : 0)) * 31;
                 boolean z2 = this.useScreenshot;
                 int i = z2;
                 if (z2 != 0) {
@@ -256,7 +255,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Report(screenshotUri=");
+                StringBuilder sbU = a.U("Report(screenshotUri=");
                 sbU.append(this.screenshotUri);
                 sbU.append(", reportName=");
                 sbU.append(this.reportName);
@@ -275,14 +274,14 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public Report(Uri uri, String str, String str2, Integer num, BugReportConfig2 bugReportConfig2, boolean z2, Error error) {
+            public Report(Uri uri, String str, String str2, Integer num, Feature feature, boolean z2, Error error) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(uri, "screenshotUri");
+                d0.z.d.m.checkNotNullParameter(uri, "screenshotUri");
                 this.screenshotUri = uri;
                 this.reportName = str;
                 this.reportDescription = str2;
                 this.priority = num;
-                this.feature = bugReportConfig2;
+                this.feature = feature;
                 this.useScreenshot = z2;
                 this.error = error;
             }
@@ -290,7 +289,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
         /* compiled from: BugReportViewModel.kt */
         public static final /* data */ class SelectFeature extends ViewState {
-            private final List<BugReportConfig2> features;
+            private final List<Feature> features;
             private final boolean loadingFeatures;
             private final String query;
 
@@ -299,7 +298,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             public /* synthetic */ SelectFeature(String str, boolean z2, List list, int i, DefaultConstructorMarker defaultConstructorMarker) {
-                this((i & 1) != 0 ? null : str, (i & 2) != 0 ? true : z2, (i & 4) != 0 ? Collections2.emptyList() : list);
+                this((i & 1) != 0 ? null : str, (i & 2) != 0 ? true : z2, (i & 4) != 0 ? n.emptyList() : list);
             }
 
             /* JADX WARN: Multi-variable type inference failed */
@@ -326,12 +325,12 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 return this.loadingFeatures;
             }
 
-            public final List<BugReportConfig2> component3() {
+            public final List<Feature> component3() {
                 return this.features;
             }
 
-            public final SelectFeature copy(String query, boolean loadingFeatures, List<BugReportConfig2> features) {
-                Intrinsics3.checkNotNullParameter(features, "features");
+            public final SelectFeature copy(String query, boolean loadingFeatures, List<Feature> features) {
+                d0.z.d.m.checkNotNullParameter(features, "features");
                 return new SelectFeature(query, loadingFeatures, features);
             }
 
@@ -343,10 +342,10 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 SelectFeature selectFeature = (SelectFeature) other;
-                return Intrinsics3.areEqual(this.query, selectFeature.query) && this.loadingFeatures == selectFeature.loadingFeatures && Intrinsics3.areEqual(this.features, selectFeature.features);
+                return d0.z.d.m.areEqual(this.query, selectFeature.query) && this.loadingFeatures == selectFeature.loadingFeatures && d0.z.d.m.areEqual(this.features, selectFeature.features);
             }
 
-            public final List<BugReportConfig2> getFeatures() {
+            public final List<Feature> getFeatures() {
                 return this.features;
             }
 
@@ -368,23 +367,23 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                     i = 1;
                 }
                 int i2 = (iHashCode + i) * 31;
-                List<BugReportConfig2> list = this.features;
+                List<Feature> list = this.features;
                 return i2 + (list != null ? list.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SelectFeature(query=");
+                StringBuilder sbU = a.U("SelectFeature(query=");
                 sbU.append(this.query);
                 sbU.append(", loadingFeatures=");
                 sbU.append(this.loadingFeatures);
                 sbU.append(", features=");
-                return outline.L(sbU, this.features, ")");
+                return a.L(sbU, this.features, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public SelectFeature(String str, boolean z2, List<BugReportConfig2> list) {
+            public SelectFeature(String str, boolean z2, List<Feature> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "features");
+                d0.z.d.m.checkNotNullParameter(list, "features");
                 this.query = str;
                 this.loadingFeatures = z2;
                 this.features = list;
@@ -398,7 +397,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Sending(Sticker sticker) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(sticker, "sendingSticker");
+                d0.z.d.m.checkNotNullParameter(sticker, "sendingSticker");
                 this.sendingSticker = sticker;
             }
 
@@ -415,13 +414,13 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             public final Sending copy(Sticker sendingSticker) {
-                Intrinsics3.checkNotNullParameter(sendingSticker, "sendingSticker");
+                d0.z.d.m.checkNotNullParameter(sendingSticker, "sendingSticker");
                 return new Sending(sendingSticker);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Sending) && Intrinsics3.areEqual(this.sendingSticker, ((Sending) other).sendingSticker);
+                    return (other instanceof Sending) && d0.z.d.m.areEqual(this.sendingSticker, ((Sending) other).sendingSticker);
                 }
                 return true;
             }
@@ -439,7 +438,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Sending(sendingSticker=");
+                StringBuilder sbU = a.U("Sending(sendingSticker=");
                 sbU.append(this.sendingSticker);
                 sbU.append(")");
                 return sbU.toString();
@@ -453,7 +452,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Success(Sticker sticker) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(sticker, "successSticker");
+                d0.z.d.m.checkNotNullParameter(sticker, "successSticker");
                 this.successSticker = sticker;
             }
 
@@ -470,13 +469,13 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             public final Success copy(Sticker successSticker) {
-                Intrinsics3.checkNotNullParameter(successSticker, "successSticker");
+                d0.z.d.m.checkNotNullParameter(successSticker, "successSticker");
                 return new Success(successSticker);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Success) && Intrinsics3.areEqual(this.successSticker, ((Success) other).successSticker);
+                    return (other instanceof Success) && d0.z.d.m.areEqual(this.successSticker, ((Success) other).successSticker);
                 }
                 return true;
             }
@@ -494,7 +493,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Success(successSticker=");
+                StringBuilder sbU = a.U("Success(successSticker=");
                 sbU.append(this.successSticker);
                 sbU.append(")");
                 return sbU.toString();
@@ -511,7 +510,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: BugReportViewModel.kt */
     /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$dismissAfterDelay$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Long, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -531,7 +530,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: BugReportViewModel.kt */
     /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$loadFeatures$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RestCallState<? extends BugReportConfig>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RestCallState<? extends BugReportConfig>, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -544,14 +543,14 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<BugReportConfig> restCallState) {
-            Intrinsics3.checkNotNullParameter(restCallState, "it");
+            d0.z.d.m.checkNotNullParameter(restCallState, "it");
             BugReportViewModel.access$setBugReportConfig$p(BugReportViewModel.this, restCallState);
         }
     }
 
     /* compiled from: BugReportViewModel.kt */
     /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$prefetchStickers$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<DownloadUtils.DownloadState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<DownloadUtils.DownloadState, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -566,13 +565,13 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DownloadUtils.DownloadState downloadState) {
-            Intrinsics3.checkNotNullParameter(downloadState, "it");
+            d0.z.d.m.checkNotNullParameter(downloadState, "it");
         }
     }
 
     /* compiled from: BugReportViewModel.kt */
     /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$prefetchStickers$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<DownloadUtils.DownloadState, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<DownloadUtils.DownloadState, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -587,13 +586,13 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DownloadUtils.DownloadState downloadState) {
-            Intrinsics3.checkNotNullParameter(downloadState, "it");
+            d0.z.d.m.checkNotNullParameter(downloadState, "it");
         }
     }
 
     /* compiled from: BugReportViewModel.kt */
     /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$sendReport$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Unit, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Unit, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -614,7 +613,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: BugReportViewModel.kt */
     /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$sendReport$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -627,15 +626,15 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            d0.z.d.m.checkNotNullParameter(error, "error");
             BugReportViewModel.this.showReport(error);
         }
     }
 
     static {
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        sendingStickers = Collections2.listOfNotNull((Object[]) new Sticker[]{companion.getStickers().getStickers().get(754107634172297306L), companion.getStickers().getStickers().get(751606719611928586L), companion.getStickers().getStickers().get(749049128012742676L), companion.getStickers().getStickers().get(761114619137359892L), companion.getStickers().getStickers().get(783788733987815434L)});
-        successStickers = Collections2.listOfNotNull((Object[]) new Sticker[]{companion.getStickers().getStickers().get(754109076933443614L), companion.getStickers().getStickers().get(751606065447305216L), companion.getStickers().getStickers().get(749053689419006003L), companion.getStickers().getStickers().get(761108384010862602L), companion.getStickers().getStickers().get(783794979704537108L)});
+        sendingStickers = n.listOfNotNull((Object[]) new Sticker[]{companion.getStickers().getStickers().get(754107634172297306L), companion.getStickers().getStickers().get(751606719611928586L), companion.getStickers().getStickers().get(749049128012742676L), companion.getStickers().getStickers().get(761114619137359892L), companion.getStickers().getStickers().get(783788733987815434L)});
+        successStickers = n.listOfNotNull((Object[]) new Sticker[]{companion.getStickers().getStickers().get(754109076933443614L), companion.getStickers().getStickers().get(751606065447305216L), companion.getStickers().getStickers().get(749053689419006003L), companion.getStickers().getStickers().get(761108384010862602L), companion.getStickers().getStickers().get(783794979704537108L)});
     }
 
     public /* synthetic */ BugReportViewModel(Uri uri, String str, RestAPI restAPI, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -676,26 +675,26 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     private final void dismissAfterDelay() {
         Observable<Long> observableD0 = Observable.d0(1500L, TimeUnit.MILLISECONDS);
-        Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable.timer(1500, TimeUnit.MILLISECONDS)");
+        d0.z.d.m.checkNotNullExpressionValue(observableD0, "Observable.timer(1500, TimeUnit.MILLISECONDS)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), BugReportViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
-    private final List<BugReportConfig2> filterFeatures(String filter) {
+    private final List<Feature> filterFeatures(String filter) {
         BugReportConfig bugReportConfigInvoke;
         RestCallState<BugReportConfig> restCallState = this.bugReportConfig;
-        List<BugReportConfig2> listA = (restCallState == null || (bugReportConfigInvoke = restCallState.invoke()) == null) ? null : bugReportConfigInvoke.a();
+        List<Feature> listA = (restCallState == null || (bugReportConfigInvoke = restCallState.invoke()) == null) ? null : bugReportConfigInvoke.a();
         if (listA == null) {
-            listA = Collections2.emptyList();
+            listA = n.emptyList();
         }
-        List<BugReportConfig2> listPlus = _Collections.plus((Collection) listA, (Iterable) genericFeatureAreas);
+        List<Feature> listPlus = u.plus((Collection) listA, (Iterable) genericFeatureAreas);
         if (filter == null) {
             return listPlus;
         }
         ArrayList arrayList = new ArrayList();
         for (Object obj : listPlus) {
-            BugReportConfig2 bugReportConfig2 = (BugReportConfig2) obj;
+            Feature feature = (Feature) obj;
             boolean z2 = true;
-            if (!Strings4.contains((CharSequence) bugReportConfig2.getName(), (CharSequence) filter, true) && !Strings4.contains((CharSequence) bugReportConfig2.getSquad(), (CharSequence) filter, true)) {
+            if (!w.contains((CharSequence) feature.getName(), (CharSequence) filter, true) && !w.contains((CharSequence) feature.getSquad(), (CharSequence) filter, true)) {
                 z2 = false;
             }
             if (z2) {
@@ -712,7 +711,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         bugReportViewModel.showReport(error);
     }
 
-    public final BugReportConfig2 getFeature() {
+    public final Feature getFeature() {
         return this.feature;
     }
 
@@ -757,17 +756,17 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
     }
 
     public final void loadFeatures() {
-        RestCallState5.executeRequest(this.restApi.getBugReportConfig(), new AnonymousClass1());
+        RestCallStateKt.executeRequest(this.restApi.getBugReportConfig(), new AnonymousClass1());
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        d0.z.d.m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     public final void prefetchStickers(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        d0.z.d.m.checkNotNullParameter(context, "context");
         if (this.stickersPrefetched) {
             return;
         }
@@ -777,7 +776,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         this.stickersPrefetched = true;
     }
 
-    public final void selectFeatureArea(BugReportConfig2 feature) {
+    public final void selectFeatureArea(Feature feature) {
         this.feature = feature;
         showReport$default(this, null, 1, null);
     }
@@ -794,12 +793,12 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         updateViewState(new ViewState.Sending(this.sendingSticker));
         RestAPI restAPI = this.restApi;
         String str2 = this.reportDescription;
-        BugReportConfig2 bugReportConfig2 = this.feature;
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(restAPI.sendBugReport(str, str2, iIntValue, bugReportConfig2 != null ? bugReportConfig2.getAsanaInboxId() : null, partB), false, 1, null)), BugReportViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+        Feature feature = this.feature;
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(restAPI.sendBugReport(str, str2, iIntValue, feature != null ? feature.getAsanaInboxId() : null, partB), false, 1, null)), BugReportViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
     }
 
-    public final void setFeature(BugReportConfig2 bugReportConfig2) {
-        this.feature = bugReportConfig2;
+    public final void setFeature(Feature feature) {
+        this.feature = feature;
     }
 
     public final void setPriority(Integer num) {
@@ -824,7 +823,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     public final void showFeatureAreas() {
         String str = this.featureSearchQuery;
-        updateViewState(new ViewState.SelectFeature(str, this.bugReportConfig instanceof RestCallState4, _Collections.sortedWith(filterFeatures(str), new BugReportViewModel$showFeatureAreas$$inlined$sortedBy$1())));
+        updateViewState(new ViewState.SelectFeature(str, this.bugReportConfig instanceof Loading, u.sortedWith(filterFeatures(str), new BugReportViewModel$showFeatureAreas$$inlined$sortedBy$1())));
     }
 
     public final void showReport(Error error) {
@@ -839,14 +838,14 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     @MainThread
     public final void updateReportDescription(String description) {
-        Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        d0.z.d.m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
         this.reportDescription = description;
         showReport$default(this, null, 1, null);
     }
 
     @MainThread
     public final void updateReportName(String name) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        d0.z.d.m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.reportName = name;
         showReport$default(this, null, 1, null);
     }
@@ -860,13 +859,13 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BugReportViewModel(Uri uri, String str, RestAPI restAPI) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(uri, "screenshotUri");
-        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
+        d0.z.d.m.checkNotNullParameter(uri, "screenshotUri");
+        d0.z.d.m.checkNotNullParameter(restAPI, "restApi");
         this.screenshotUri = uri;
         this.screenshotName = str;
         this.restApi = restAPI;
         List<Sticker> list = sendingStickers;
-        int iRandom = _Ranges.random(Collections2.getIndices(list), Random.k);
+        int iRandom = f.random(n.getIndices(list), c.k);
         this.stickerCharacterIndex = iRandom;
         this.sendingSticker = list.get(iRandom);
         this.successSticker = successStickers.get(iRandom);
@@ -877,7 +876,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
 
     /* renamed from: filterFeatures, reason: collision with other method in class */
     public final void m23filterFeatures(String it) {
-        Intrinsics3.checkNotNullParameter(it, "it");
+        d0.z.d.m.checkNotNullParameter(it, "it");
         this.featureSearchQuery = it;
         showFeatureAreas();
     }

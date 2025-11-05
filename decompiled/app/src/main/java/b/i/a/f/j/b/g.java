@@ -2,7 +2,6 @@ package b.i.a.f.j.b;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.internal.nearby.zzgp;
 import com.google.android.gms.internal.nearby.zzgu;
 import com.google.android.gms.nearby.messages.MessageFilter;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 public final class g implements Parcelable.Creator<MessageFilter> {
     @Override // android.os.Parcelable.Creator
     public final MessageFilter createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         ArrayList arrayListV = null;
         ArrayList arrayListV2 = null;
         ArrayList arrayListV3 = null;
@@ -24,22 +23,22 @@ public final class g implements Parcelable.Creator<MessageFilter> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                arrayListV = AnimatableValueParser.V(parcel, i, zzad.CREATOR);
+                arrayListV = b.c.a.a0.d.V(parcel, i, zzad.CREATOR);
             } else if (c == 2) {
-                arrayListV2 = AnimatableValueParser.V(parcel, i, zzgu.CREATOR);
+                arrayListV2 = b.c.a.a0.d.V(parcel, i, zzgu.CREATOR);
             } else if (c == 3) {
-                zE1 = AnimatableValueParser.E1(parcel, i);
+                zE1 = b.c.a.a0.d.E1(parcel, i);
             } else if (c == 4) {
-                arrayListV3 = AnimatableValueParser.V(parcel, i, zzgp.CREATOR);
+                arrayListV3 = b.c.a.a0.d.V(parcel, i, zzgp.CREATOR);
             } else if (c == 5) {
-                iG12 = AnimatableValueParser.G1(parcel, i);
+                iG12 = b.c.a.a0.d.G1(parcel, i);
             } else if (c != 1000) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new MessageFilter(iG1, arrayListV, arrayListV2, zE1, arrayListV3, iG12);
     }
 

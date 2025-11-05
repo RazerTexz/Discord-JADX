@@ -1,7 +1,6 @@
 package com.google.android.exoplayer2.audio;
 
-import b.d.b.a.outline;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -13,7 +12,7 @@ public interface AudioProcessor {
         /* JADX WARN: Illegal instructions before constructor call */
         public UnhandledAudioFormatException(a aVar) {
             String strValueOf = String.valueOf(aVar);
-            super(outline.j(strValueOf.length() + 18, "Unhandled format: ", strValueOf));
+            super(b.d.b.a.a.j(strValueOf.length() + 18, "Unhandled format: ", strValueOf));
         }
     }
 
@@ -30,7 +29,7 @@ public interface AudioProcessor {
             this.f2914b = i;
             this.c = i2;
             this.d = i3;
-            this.e = Util2.z(i3) ? Util2.s(i3, i2) : -1;
+            this.e = e0.z(i3) ? e0.s(i3, i2) : -1;
         }
 
         public String toString() {

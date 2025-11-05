@@ -1,8 +1,8 @@
 package com.discord.api.role;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildhash.GuildHashes;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildRoleCreate.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class GuildRoleCreate {
             return false;
         }
         GuildRoleCreate guildRoleCreate = (GuildRoleCreate) other;
-        return this.guildId == guildRoleCreate.guildId && this.roleId == guildRoleCreate.roleId && Intrinsics3.areEqual(this.role, guildRoleCreate.role) && Intrinsics3.areEqual(this.guildHashes, guildRoleCreate.guildHashes);
+        return this.guildId == guildRoleCreate.guildId && this.roleId == guildRoleCreate.roleId && m.areEqual(this.role, guildRoleCreate.role) && m.areEqual(this.guildHashes, guildRoleCreate.guildHashes);
     }
 
     public int hashCode() {
@@ -49,7 +49,7 @@ public final /* data */ class GuildRoleCreate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleCreate(guildId=");
+        StringBuilder sbU = a.U("GuildRoleCreate(guildId=");
         sbU.append(this.guildId);
         sbU.append(", roleId=");
         sbU.append(this.roleId);

@@ -2,7 +2,7 @@ package com.google.android.gms.nearby.messages;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.j.b.g;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.internal.nearby.zzgp;
@@ -30,7 +30,7 @@ public class MessageFilter extends AbstractSafeParcelable {
         HashSet hashSet = new HashSet();
         ArrayList arrayList = new ArrayList();
         HashSet hashSet2 = new HashSet();
-        AnimatableValueParser.G(true, "At least one of the include methods must be called.");
+        d.G(true, "At least one of the include methods must be called.");
         j = new MessageFilter(2, new ArrayList(hashSet), arrayList, true, new ArrayList(hashSet2), 0);
     }
 
@@ -52,7 +52,7 @@ public class MessageFilter extends AbstractSafeParcelable {
             return false;
         }
         MessageFilter messageFilter = (MessageFilter) obj;
-        return this.n == messageFilter.n && AnimatableValueParser.h0(this.l, messageFilter.l) && AnimatableValueParser.h0(this.m, messageFilter.m) && AnimatableValueParser.h0(this.o, messageFilter.o);
+        return this.n == messageFilter.n && d.h0(this.l, messageFilter.l) && d.h0(this.m, messageFilter.m) && d.h0(this.o, messageFilter.o);
     }
 
     public int hashCode() {
@@ -73,19 +73,19 @@ public class MessageFilter extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.w2(parcel, 1, this.l, false);
-        AnimatableValueParser.w2(parcel, 2, this.m, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.w2(parcel, 1, this.l, false);
+        d.w2(parcel, 2, this.m, false);
         boolean z2 = this.n;
         parcel.writeInt(262147);
         parcel.writeInt(z2 ? 1 : 0);
-        AnimatableValueParser.w2(parcel, 4, this.o, false);
+        d.w2(parcel, 4, this.o, false);
         int i2 = this.p;
         parcel.writeInt(262149);
         parcel.writeInt(i2);
         int i3 = this.k;
         parcel.writeInt(263144);
         parcel.writeInt(i3);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

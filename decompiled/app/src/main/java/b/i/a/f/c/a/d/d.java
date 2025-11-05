@@ -4,10 +4,10 @@ import b.i.a.f.c.a.a;
 
 /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
 /* loaded from: classes3.dex */
-public final class d extends a.C0033a {
+public final class d extends a.C0110a {
 
     /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-    public static final class a extends a.C0033a.C0034a {
+    public static final class a extends a.C0110a.C0111a {
         public final d a() {
             return new d(this, null);
         }

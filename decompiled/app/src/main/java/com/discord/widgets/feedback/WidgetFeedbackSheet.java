@@ -7,16 +7,15 @@ import android.view.View;
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetFeedbackSheetBinding;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.feedback.FeedbackSheetViewModel;
 import com.discord.widgets.guild_delete_feedback.GuildDeleteFeedbackSheetViewModel;
 import com.discord.widgets.voice.feedback.FeedbackIssue;
@@ -25,10 +24,10 @@ import com.discord.widgets.voice.feedback.FeedbackView;
 import com.discord.widgets.voice.feedback.WidgetIssueDetailsForm;
 import com.discord.widgets.voice.feedback.call.CallFeedbackSheetViewModel;
 import com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetViewModel;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
@@ -66,7 +65,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     /* renamed from: viewModelStreamFeedbackSheet$delegate, reason: from kotlin metadata */
     private final Lazy viewModelStreamFeedbackSheet;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetFeedbackSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFeedbackSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetFeedbackSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFeedbackSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -77,7 +76,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
         }
 
         public final WidgetFeedbackSheet newInstance(FeedbackType feedbackType) {
-            Intrinsics3.checkNotNullParameter(feedbackType, "feedbackType");
+            m.checkNotNullParameter(feedbackType, "feedbackType");
             WidgetFeedbackSheet widgetFeedbackSheet = new WidgetFeedbackSheet();
             Bundle bundle = new Bundle();
             bundle.putSerializable(WidgetFeedbackSheet.ARG_FEEDBACK_TYPE, feedbackType);
@@ -112,7 +111,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$bindSubscriptions$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<FeedbackSheetViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<FeedbackSheetViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetFeedbackSheet widgetFeedbackSheet) {
             super(1, widgetFeedbackSheet, WidgetFeedbackSheet.class, "updateView", "updateView(Lcom/discord/widgets/feedback/FeedbackSheetViewModel$ViewState;)V", 0);
         }
@@ -125,14 +124,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FeedbackSheetViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetFeedbackSheet.access$updateView((WidgetFeedbackSheet) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$bindSubscriptions$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<FeedbackSheetViewModel.Event, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<FeedbackSheetViewModel.Event, Unit> {
         public AnonymousClass2(WidgetFeedbackSheet widgetFeedbackSheet) {
             super(1, widgetFeedbackSheet, WidgetFeedbackSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/feedback/FeedbackSheetViewModel$Event;)V", 0);
         }
@@ -145,14 +144,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FeedbackSheetViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "p1");
+            m.checkNotNullParameter(event, "p1");
             WidgetFeedbackSheet.access$handleEvent((WidgetFeedbackSheet) this.receiver, event);
         }
     }
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$handleEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Long, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -165,7 +164,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
-            AppToast.i(WidgetFeedbackSheet.this, R.string.call_feedback_confirmation, 0, 4);
+            b.a.d.m.i(WidgetFeedbackSheet.this, R.string.call_feedback_confirmation, 0, 4);
             WidgetFeedbackSheet.this.requireDialog().cancel();
         }
     }
@@ -184,7 +183,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -203,7 +202,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public AnonymousClass3() {
             super(0);
         }
@@ -222,7 +221,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass4 extends o implements Function0<Unit> {
         public AnonymousClass4() {
             super(0);
         }
@@ -241,7 +240,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<FeedbackIssue, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<FeedbackIssue, Unit> {
         public AnonymousClass5() {
             super(1);
         }
@@ -254,14 +253,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FeedbackIssue feedbackIssue) {
-            Intrinsics3.checkNotNullParameter(feedbackIssue, "issue");
+            m.checkNotNullParameter(feedbackIssue, "issue");
             WidgetFeedbackSheet.access$getViewModel$p(WidgetFeedbackSheet.this).selectIssue(feedbackIssue, WidgetFeedbackSheet.this.getString(feedbackIssue.getReasonStringRes()));
         }
     }
 
     /* compiled from: WidgetFeedbackSheet.kt */
     /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass6 extends o implements Function1<Long, Unit> {
         public AnonymousClass6() {
             super(1);
         }
@@ -281,17 +280,17 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     public WidgetFeedbackSheet() {
         super(false, 1, null);
-        this.onDismissed = WidgetFeedbackSheet3.INSTANCE;
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetFeedbackSheet2.INSTANCE, null, 2, null);
-        WidgetFeedbackSheet4 widgetFeedbackSheet4 = new WidgetFeedbackSheet4(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModelCallFeedbackSheet = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(CallFeedbackSheetViewModel.class), new WidgetFeedbackSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetFeedbackSheet4));
-        WidgetFeedbackSheet6 widgetFeedbackSheet6 = new WidgetFeedbackSheet6(this);
-        AppViewModelDelegates3 appViewModelDelegates32 = new AppViewModelDelegates3(this);
-        this.viewModelStreamFeedbackSheet = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(StreamFeedbackSheetViewModel.class), new WidgetFeedbackSheet$appViewModels$$inlined$viewModels$2(appViewModelDelegates32), new AppViewModelDelegates5(widgetFeedbackSheet6));
-        WidgetFeedbackSheet5 widgetFeedbackSheet5 = new WidgetFeedbackSheet5(this);
-        AppViewModelDelegates3 appViewModelDelegates33 = new AppViewModelDelegates3(this);
-        this.viewModelGuildDeleteFeedbackSheet = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildDeleteFeedbackSheetViewModel.class), new WidgetFeedbackSheet$appViewModels$$inlined$viewModels$3(appViewModelDelegates33), new AppViewModelDelegates5(widgetFeedbackSheet5));
+        this.onDismissed = WidgetFeedbackSheet$onDismissed$1.INSTANCE;
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetFeedbackSheet$binding$2.INSTANCE, null, 2, null);
+        WidgetFeedbackSheet$viewModelCallFeedbackSheet$2 widgetFeedbackSheet$viewModelCallFeedbackSheet$2 = new WidgetFeedbackSheet$viewModelCallFeedbackSheet$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModelCallFeedbackSheet = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(CallFeedbackSheetViewModel.class), new WidgetFeedbackSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetFeedbackSheet$viewModelCallFeedbackSheet$2));
+        WidgetFeedbackSheet$viewModelStreamFeedbackSheet$2 widgetFeedbackSheet$viewModelStreamFeedbackSheet$2 = new WidgetFeedbackSheet$viewModelStreamFeedbackSheet$2(this);
+        g0 g0Var2 = new g0(this);
+        this.viewModelStreamFeedbackSheet = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(StreamFeedbackSheetViewModel.class), new WidgetFeedbackSheet$appViewModels$$inlined$viewModels$2(g0Var2), new i0(widgetFeedbackSheet$viewModelStreamFeedbackSheet$2));
+        WidgetFeedbackSheet$viewModelGuildDeleteFeedbackSheet$2 widgetFeedbackSheet$viewModelGuildDeleteFeedbackSheet$2 = new WidgetFeedbackSheet$viewModelGuildDeleteFeedbackSheet$2(this);
+        g0 g0Var3 = new g0(this);
+        this.viewModelGuildDeleteFeedbackSheet = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildDeleteFeedbackSheetViewModel.class), new WidgetFeedbackSheet$appViewModels$$inlined$viewModels$3(g0Var3), new i0(widgetFeedbackSheet$viewModelGuildDeleteFeedbackSheet$2));
     }
 
     public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(WidgetFeedbackSheet widgetFeedbackSheet) {
@@ -357,14 +356,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
                 return;
             }
             Observable<Long> observableD0 = Observable.d0(SHEET_DISMISS_DELAY_MS, TimeUnit.MILLISECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable\n             …S, TimeUnit.MILLISECONDS)");
+            m.checkNotNullExpressionValue(observableD0, "Observable\n             …S, TimeUnit.MILLISECONDS)");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), WidgetFeedbackSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
             return;
         }
         if (event instanceof FeedbackSheetViewModel.Event.NavigateToIssueDetails) {
             WidgetIssueDetailsForm.Companion companion = WidgetIssueDetailsForm.INSTANCE;
             Context contextRequireContext = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             FeedbackSheetViewModel.Event.NavigateToIssueDetails navigateToIssueDetails = (FeedbackSheetViewModel.Event.NavigateToIssueDetails) event;
             companion.launch(contextRequireContext, navigateToIssueDetails.getPendingFeedback(), navigateToIssueDetails.getShowCxLinkForIssueDetails());
             requireDialog().cancel();
@@ -376,7 +375,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
         if (z2) {
             if (viewState.getShowFaceRatings()) {
                 NestedScrollView nestedScrollView = getBinding().c;
-                Intrinsics3.checkNotNullExpressionValue(nestedScrollView, "binding.feedbackSheetContainer");
+                m.checkNotNullExpressionValue(nestedScrollView, "binding.feedbackSheetContainer");
                 updatePeekHeightPx(nestedScrollView.getMeasuredHeight());
             }
             setBottomSheetState(4);
@@ -390,18 +389,18 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
         AnonymousClass3 anonymousClass3 = new AnonymousClass3();
         AnonymousClass4 anonymousClass4 = new AnonymousClass4();
         String string2 = getString(viewState.getIssuesHeaderTextResId());
-        Intrinsics3.checkNotNullExpressionValue(string2, "getString(viewState.issuesHeaderTextResId)");
+        m.checkNotNullExpressionValue(string2, "getString(viewState.issuesHeaderTextResId)");
         feedbackView.updateView(string, selectedFeedbackRating, anonymousClass2, anonymousClass3, anonymousClass4, string2, viewState.getFeedbackIssues(), new AnonymousClass5());
         if (z2) {
             Observable<Long> observableD0 = Observable.d0(100L, TimeUnit.MILLISECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable\n          .ti…S, TimeUnit.MILLISECONDS)");
+            m.checkNotNullExpressionValue(observableD0, "Observable\n          .ti…S, TimeUnit.MILLISECONDS)");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableD0, this, null, 2, null), WidgetFeedbackSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass6(), 62, (Object) null);
         }
     }
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
         super.bindSubscriptions(compositeSubscription);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), WidgetFeedbackSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetFeedbackSheet.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
@@ -418,7 +417,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
 
     @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnCancelListener
     public void onCancel(DialogInterface dialog) {
-        Intrinsics3.checkNotNullParameter(dialog, "dialog");
+        m.checkNotNullParameter(dialog, "dialog");
         super.onCancel(dialog);
         this.onDismissed.invoke();
     }
@@ -431,7 +430,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
     }
 
     public final void setOnDismissed(Function0<Unit> function0) {
-        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
+        m.checkNotNullParameter(function0, "<set-?>");
         this.onDismissed = function0;
     }
 }

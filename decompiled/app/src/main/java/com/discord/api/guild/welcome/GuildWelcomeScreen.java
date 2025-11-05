@@ -1,8 +1,8 @@
 package com.discord.api.guild.welcome;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: GuildWelcomeScreen.kt */
@@ -28,7 +28,7 @@ public final /* data */ class GuildWelcomeScreen {
             return false;
         }
         GuildWelcomeScreen guildWelcomeScreen = (GuildWelcomeScreen) other;
-        return Intrinsics3.areEqual(this.description, guildWelcomeScreen.description) && Intrinsics3.areEqual(this.welcomeChannels, guildWelcomeScreen.welcomeChannels);
+        return m.areEqual(this.description, guildWelcomeScreen.description) && m.areEqual(this.welcomeChannels, guildWelcomeScreen.welcomeChannels);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class GuildWelcomeScreen {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildWelcomeScreen(description=");
+        StringBuilder sbU = a.U("GuildWelcomeScreen(description=");
         sbU.append(this.description);
         sbU.append(", welcomeChannels=");
-        return outline.L(sbU, this.welcomeChannels, ")");
+        return a.L(sbU, this.welcomeChannels, ")");
     }
 }

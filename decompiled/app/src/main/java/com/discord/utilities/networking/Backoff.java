@@ -1,7 +1,7 @@
 package com.discord.utilities.networking;
 
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutorService;
@@ -60,18 +60,18 @@ public final class Backoff {
 
         @Override // com.discord.utilities.networking.Backoff.Scheduler
         public synchronized void schedule(Function0<Unit> action, long delayMs) {
-            Intrinsics3.checkNotNullParameter(action, "action");
+            m.checkNotNullParameter(action, "action");
             TimerTask timerTask = this.timeoutTimerTask;
             if (timerTask != null) {
                 timerTask.cancel();
             }
-            Backoff2 backoff2 = new Backoff2(this, action);
-            this.timeoutTimerTask = backoff2;
-            schedule(backoff2, delayMs);
+            Backoff$TimerScheduler$schedule$1 backoff$TimerScheduler$schedule$1 = new Backoff$TimerScheduler$schedule$1(this, action);
+            this.timeoutTimerTask = backoff$TimerScheduler$schedule$1;
+            schedule(backoff$TimerScheduler$schedule$1, delayMs);
         }
 
         public TimerScheduler(String str, ExecutorService executorService) {
-            Intrinsics3.checkNotNullParameter(str, "tag");
+            m.checkNotNullParameter(str, "tag");
             this.tag = str;
             this.delegateExecutor = executorService;
         }
@@ -79,7 +79,7 @@ public final class Backoff {
 
     /* compiled from: Backoff.kt */
     /* renamed from: com.discord.utilities.networking.Backoff$fail$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Function0 $callback;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -105,7 +105,7 @@ public final class Backoff {
     }
 
     public Backoff(long j, long j2, int i, boolean z2, Scheduler scheduler) {
-        Intrinsics3.checkNotNullParameter(scheduler, "scheduler");
+        m.checkNotNullParameter(scheduler, "scheduler");
         this.minBackoffMs = j;
         this.maxBackoffMs = j2;
         this.failureThreshold = i;

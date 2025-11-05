@@ -5,7 +5,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ViewPremiumGuildProgressBarBinding;
+import b.a.i.w2;
 import com.discord.app.AppViewFlipper;
 import com.discord.utilities.simple_pager.SimplePager;
 import com.discord.utilities.view.text.LinkifiedTextView;
@@ -51,9 +51,9 @@ public final class WidgetServerBoostStatusBinding implements ViewBinding {
     public final SimplePager k;
 
     @NonNull
-    public final ViewPremiumGuildProgressBarBinding l;
+    public final w2 l;
 
-    public WidgetServerBoostStatusBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull LinkifiedTextView linkifiedTextView, @NonNull TextView textView, @NonNull GuildBoostMarketingView guildBoostMarketingView, @NonNull GuildBoostSubscriptionUpsellView guildBoostSubscriptionUpsellView, @NonNull LinkifiedTextView linkifiedTextView2, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull MaterialButton materialButton3, @NonNull SimplePager simplePager, @NonNull ViewPremiumGuildProgressBarBinding viewPremiumGuildProgressBarBinding) {
+    public WidgetServerBoostStatusBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull LinkifiedTextView linkifiedTextView, @NonNull TextView textView, @NonNull GuildBoostMarketingView guildBoostMarketingView, @NonNull GuildBoostSubscriptionUpsellView guildBoostSubscriptionUpsellView, @NonNull LinkifiedTextView linkifiedTextView2, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull MaterialButton materialButton3, @NonNull SimplePager simplePager, @NonNull w2 w2Var) {
         this.a = coordinatorLayout;
         this.f2535b = appViewFlipper;
         this.c = linkifiedTextView;
@@ -65,7 +65,7 @@ public final class WidgetServerBoostStatusBinding implements ViewBinding {
         this.i = materialButton2;
         this.j = materialButton3;
         this.k = simplePager;
-        this.l = viewPremiumGuildProgressBarBinding;
+        this.l = w2Var;
     }
 
     @Override // androidx.viewbinding.ViewBinding

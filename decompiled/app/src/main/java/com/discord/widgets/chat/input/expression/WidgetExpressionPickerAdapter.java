@@ -9,7 +9,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.view.MarginLayoutParamsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.dimen.DimenUtils;
@@ -20,12 +20,11 @@ import com.discord.utilities.rx.LeadingEdgeThrottle;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.views.StickyHeaderItemDecoration;
 import com.discord.widgets.chat.input.ExpressionPickerItemDecoration;
-import d0.g0.Indent;
-import d0.t.Collections2;
-import d0.t.SetsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.a.OnSubscribeLift;
+import d0.t.m0;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.l.a.r;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
@@ -59,21 +58,21 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         }
 
         public final int calculateNumOfColumns(int margin, float itemSize, int defaultNumColumns, Resources resources) {
-            Intrinsics3.checkNotNullParameter(resources, "resources");
+            m.checkNotNullParameter(resources, "resources");
             DisplayMetrics displayMetrics = resources.getDisplayMetrics();
             int i = (int) ((displayMetrics.widthPixels - margin) / itemSize);
             if (i != 0) {
                 return i;
             }
             AppLog appLog = AppLog.g;
-            StringBuilder sbU = outline.U("\n          invalid dimensions while calculating numColumns\n          displayMetrics.widthPixels: ");
+            StringBuilder sbU = a.U("\n          invalid dimensions while calculating numColumns\n          displayMetrics.widthPixels: ");
             sbU.append(displayMetrics.widthPixels);
             sbU.append("\n          total margin marginStart: ");
             sbU.append(margin);
             sbU.append("\n          itemSize: ");
             sbU.append(itemSize);
             sbU.append("\n        ");
-            Logger.e$default(appLog, Indent.trimIndent(sbU.toString()), null, null, 6, null);
+            Logger.e$default(appLog, d0.g0.m.trimIndent(sbU.toString()), null, null, 6, null);
             return defaultNumColumns;
         }
 
@@ -82,13 +81,13 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         }
 
         public final int calculateNumOfColumns(RecyclerView recyclerView, float itemSize, int defaultNumColumns) {
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            m.checkNotNullParameter(recyclerView, "recyclerView");
             ViewGroup.LayoutParams layoutParams = recyclerView.getLayoutParams();
             int marginStart = layoutParams instanceof ViewGroup.MarginLayoutParams ? MarginLayoutParamsCompat.getMarginStart((ViewGroup.MarginLayoutParams) layoutParams) : 0;
             ViewGroup.LayoutParams layoutParams2 = recyclerView.getLayoutParams();
             int marginEnd = layoutParams2 instanceof ViewGroup.MarginLayoutParams ? MarginLayoutParamsCompat.getMarginEnd((ViewGroup.MarginLayoutParams) layoutParams2) : 0;
             Resources resources = recyclerView.getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "recyclerView.resources");
+            m.checkNotNullExpressionValue(resources, "recyclerView.resources");
             return calculateNumOfColumns(marginStart + marginEnd, itemSize, defaultNumColumns, resources);
         }
     }
@@ -106,7 +105,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         private final StickyHeaderViewHolder stickyHeaderHolder;
 
         public StickyHeadersManager(WidgetExpressionPickerAdapter widgetExpressionPickerAdapter) {
-            Intrinsics3.checkNotNullParameter(widgetExpressionPickerAdapter, "adapter");
+            m.checkNotNullParameter(widgetExpressionPickerAdapter, "adapter");
             StickyHeaderViewHolder stickyHeaderViewHolderCreateStickyHeaderViewHolder = widgetExpressionPickerAdapter.createStickyHeaderViewHolder(widgetExpressionPickerAdapter);
             this.stickyHeaderHolder = stickyHeaderViewHolderCreateStickyHeaderViewHolder;
             this.currentStickyHeaderView = stickyHeaderViewHolderCreateStickyHeaderViewHolder.getItemView();
@@ -121,7 +120,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         }
 
         public final void layoutViews(RecyclerView recyclerView) {
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            m.checkNotNullParameter(recyclerView, "recyclerView");
             View view = this.currentStickyHeaderView;
             if (view != null) {
                 StickyHeaderItemDecoration.LayoutManager.layoutHeaderView(recyclerView, view);
@@ -150,16 +149,16 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
 
         /* compiled from: WidgetExpressionPickerAdapter.kt */
         /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02591 extends RecyclerView.OnScrollListener {
+        public static final class C03791 extends RecyclerView.OnScrollListener {
             public final /* synthetic */ Emitter $emitter;
 
-            public C02591(Emitter emitter) {
+            public C03791(Emitter emitter) {
                 this.$emitter = emitter;
             }
 
             @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+                m.checkNotNullParameter(recyclerView, "recyclerView");
                 super.onScrolled(recyclerView, dx, dy);
                 this.$emitter.onNext(Unit.a);
             }
@@ -175,14 +174,14 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<Unit> emitter) {
-            Intrinsics3.checkNotNullParameter(emitter, "emitter");
-            WidgetExpressionPickerAdapter.this.setOnScrollListener(new C02591(emitter));
+            m.checkNotNullParameter(emitter, "emitter");
+            WidgetExpressionPickerAdapter.this.setOnScrollListener(new C03791(emitter));
         }
     }
 
     /* compiled from: WidgetExpressionPickerAdapter.kt */
     /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Unit, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Unit, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -200,13 +199,13 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
     }
 
     public /* synthetic */ WidgetExpressionPickerAdapter(RecyclerView recyclerView, Set set, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(recyclerView, (i & 2) != 0 ? SetsJVM.setOf(0) : set);
+        this(recyclerView, (i & 2) != 0 ? m0.setOf(0) : set);
     }
 
     private final void setupScrollObservables() {
         Observable observableO = Observable.o(new AnonymousClass1(), Emitter.BackpressureMode.LATEST);
-        Observable observableH0 = Observable.h0(new OnSubscribeLift(observableO.j, new LeadingEdgeThrottle(250L, TimeUnit.MILLISECONDS)));
-        Intrinsics3.checkNotNullExpressionValue(observableH0, "Observable\n        .crea…, TimeUnit.MILLISECONDS))");
+        Observable observableH0 = Observable.h0(new r(observableO.j, new LeadingEdgeThrottle(250L, TimeUnit.MILLISECONDS)));
+        m.checkNotNullExpressionValue(observableH0, "Observable\n        .crea…, TimeUnit.MILLISECONDS))");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(observableH0), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
         RecyclerView.OnScrollListener onScrollListener = this.onScrollListener;
         if (onScrollListener != null) {
@@ -221,12 +220,12 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         MGRecyclerDataPayload mGRecyclerDataPayload = getInternalData().get(position);
         StickyHeadersManager stickyHeadersManager = this.stickyHeaderManager;
         if (stickyHeadersManager == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickyHeaderManager");
+            m.throwUninitializedPropertyAccessException("stickyHeaderManager");
         }
         stickyHeadersManager.getStickyHeaderHolder().bind(position, mGRecyclerDataPayload);
         StickyHeadersManager stickyHeadersManager2 = this.stickyHeaderManager;
         if (stickyHeadersManager2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickyHeaderManager");
+            m.throwUninitializedPropertyAccessException("stickyHeaderManager");
         }
         return stickyHeadersManager2.getCurrentStickyHeaderView();
     }
@@ -234,7 +233,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
     public final List<Integer> getHeaderIndices() {
         List<Integer> list = this.headerIndices;
         if (list == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("headerIndices");
+            m.throwUninitializedPropertyAccessException("headerIndices");
         }
         return list;
     }
@@ -244,7 +243,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         Integer numPrevious;
         List<Integer> list = this.headerIndices;
         if (list == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("headerIndices");
+            m.throwUninitializedPropertyAccessException("headerIndices");
         }
         ListIterator<Integer> listIterator = list.listIterator(list.size());
         while (true) {
@@ -260,7 +259,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         Integer num = numPrevious;
         if (num == null) {
             AppLog appLog = AppLog.g;
-            StringBuilder sbU = outline.U("failed to find header position for item in ");
+            StringBuilder sbU = a.U("failed to find header position for item in ");
             sbU.append(getClass().getName());
             Logger.w$default(appLog, sbU.toString(), null, 2, null);
         }
@@ -290,14 +289,14 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
     public final StickyHeadersManager getStickyHeaderManager() {
         StickyHeadersManager stickyHeadersManager = this.stickyHeaderManager;
         if (stickyHeadersManager == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickyHeaderManager");
+            m.throwUninitializedPropertyAccessException("stickyHeaderManager");
         }
         return stickyHeadersManager;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
         super.onAttachedToRecyclerView(recyclerView);
         this.stickyHeaderManager = new StickyHeadersManager(this);
         recyclerView.addOnLayoutChangeListener(new AnonymousClass1(recyclerView));
@@ -317,14 +316,14 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
 
     @Override // com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple
     public void setData(List<? extends MGRecyclerDataPayload> data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.setData(data);
         ArrayList arrayList = new ArrayList();
         int i = 0;
         for (Object obj : data) {
             int i2 = i + 1;
             if (i < 0) {
-                Collections2.throwIndexOverflow();
+                n.throwIndexOverflow();
             }
             Integer numValueOf = this.headerTypes.contains(Integer.valueOf(((MGRecyclerDataPayload) obj).getType())) ? Integer.valueOf(i) : null;
             if (numValueOf != null) {
@@ -340,7 +339,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         int numColumns = getNumColumns();
         List<Integer> list = this.headerIndices;
         if (list == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("headerIndices");
+            m.throwUninitializedPropertyAccessException("headerIndices");
         }
         ExpressionPickerItemDecoration expressionPickerItemDecoration2 = new ExpressionPickerItemDecoration(numColumns, list, DimenUtils.dpToPixels(8));
         getRecycler().addItemDecoration(expressionPickerItemDecoration2);
@@ -348,7 +347,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
     }
 
     public final void setHeaderIndices(List<Integer> list) {
-        Intrinsics3.checkNotNullParameter(list, "<set-?>");
+        m.checkNotNullParameter(list, "<set-?>");
         this.headerIndices = list;
     }
 
@@ -361,22 +360,22 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
     }
 
     public final void setOnScrollPositionListener(Function1<? super Integer, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onScrollPositionListener = function1;
     }
 
     public final void setStickyHeaderManager(StickyHeadersManager stickyHeadersManager) {
-        Intrinsics3.checkNotNullParameter(stickyHeadersManager, "<set-?>");
+        m.checkNotNullParameter(stickyHeadersManager, "<set-?>");
         this.stickyHeaderManager = stickyHeadersManager;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetExpressionPickerAdapter(RecyclerView recyclerView, Set<Integer> set) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        Intrinsics3.checkNotNullParameter(set, "headerTypes");
+        m.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(set, "headerTypes");
         this.headerTypes = set;
-        this.onScrollPositionListener = WidgetExpressionPickerAdapter2.INSTANCE;
+        this.onScrollPositionListener = WidgetExpressionPickerAdapter$onScrollPositionListener$1.INSTANCE;
         setupScrollObservables();
     }
 }

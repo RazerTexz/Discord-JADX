@@ -1,19 +1,19 @@
 package b.i.a.c.s2;
 
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
+import b.i.a.c.f3.p;
+import b.i.a.c.s2.h1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class t0 implements ListenerSet.a {
-    public final /* synthetic */ AnalyticsListener.a a;
+public final /* synthetic */ class t0 implements p.a {
+    public final /* synthetic */ h1.a a;
 
-    public /* synthetic */ t0(AnalyticsListener.a aVar) {
+    public /* synthetic */ t0(h1.a aVar) {
         this.a = aVar;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((AnalyticsListener) obj).Y();
+        ((h1) obj).Y();
     }
 }

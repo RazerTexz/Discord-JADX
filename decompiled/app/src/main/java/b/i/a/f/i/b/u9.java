@@ -1,6 +1,5 @@
 package b.i.a.f.i.b;
 
-import b.c.a.a0.AnimatableValueParser;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
@@ -15,8 +14,8 @@ public final class u9 {
     public final Object e;
 
     public u9(String str, String str2, String str3, long j, Object obj) {
-        AnimatableValueParser.w(str);
-        AnimatableValueParser.w(str3);
+        b.c.a.a0.d.w(str);
+        b.c.a.a0.d.w(str3);
         Objects.requireNonNull(obj, "null reference");
         this.a = str;
         this.f1576b = str2;

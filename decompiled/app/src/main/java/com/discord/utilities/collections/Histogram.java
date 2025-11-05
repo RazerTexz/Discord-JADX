@@ -3,8 +3,7 @@ package com.discord.utilities.collections;
 import a0.a.a.a;
 import a0.a.a.b;
 import androidx.annotation.VisibleForTesting;
-import b.d.b.a.outline;
-import d0.t.Collections2;
+import d0.t.n;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -163,7 +162,7 @@ public final class Histogram {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Report(min=");
+            StringBuilder sbU = b.d.b.a.a.U("Report(min=");
             sbU.append(this.min);
             sbU.append(", max=");
             sbU.append(this.max);
@@ -182,7 +181,7 @@ public final class Histogram {
             sbU.append(", percentile90=");
             sbU.append(this.percentile90);
             sbU.append(", percentile95=");
-            return outline.C(sbU, this.percentile95, ")");
+            return b.d.b.a.a.C(sbU, this.percentile95, ")");
         }
     }
 
@@ -216,7 +215,7 @@ public final class Histogram {
         long jLongValue;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         Integer num2 = 50;
-        ArrayDeque arrayDeque = new ArrayDeque(Collections2.listOf((Object[]) new Integer[]{25, num2, 75, 90, 95}));
+        ArrayDeque arrayDeque = new ArrayDeque(n.listOf((Object[]) new Integer[]{25, num2, 75, 90, 95}));
         long j = 0;
         for (Map.Entry<Long, Long> entry : this.histogram.entrySet()) {
             long jLongValue2 = entry.getKey().longValue();

@@ -22,7 +22,7 @@ import androidx.annotation.UiThread;
 import androidx.core.os.TraceCompat;
 import androidx.core.util.ObjectsCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
@@ -379,34 +379,34 @@ public class PrecomputedTextCompat implements Spannable {
 
         public String toString() {
             StringBuilder sb = new StringBuilder("{");
-            StringBuilder sbU = outline.U("textSize=");
+            StringBuilder sbU = a.U("textSize=");
             sbU.append(this.mPaint.getTextSize());
             sb.append(sbU.toString());
             sb.append(", textScaleX=" + this.mPaint.getTextScaleX());
             sb.append(", textSkewX=" + this.mPaint.getTextSkewX());
             int i = Build.VERSION.SDK_INT;
-            StringBuilder sbU2 = outline.U(", letterSpacing=");
+            StringBuilder sbU2 = a.U(", letterSpacing=");
             sbU2.append(this.mPaint.getLetterSpacing());
             sb.append(sbU2.toString());
             sb.append(", elegantTextHeight=" + this.mPaint.isElegantTextHeight());
             if (i >= 24) {
-                StringBuilder sbU3 = outline.U(", textLocale=");
+                StringBuilder sbU3 = a.U(", textLocale=");
                 sbU3.append(this.mPaint.getTextLocales());
                 sb.append(sbU3.toString());
             } else {
-                StringBuilder sbU4 = outline.U(", textLocale=");
+                StringBuilder sbU4 = a.U(", textLocale=");
                 sbU4.append(this.mPaint.getTextLocale());
                 sb.append(sbU4.toString());
             }
-            StringBuilder sbU5 = outline.U(", typeface=");
+            StringBuilder sbU5 = a.U(", typeface=");
             sbU5.append(this.mPaint.getTypeface());
             sb.append(sbU5.toString());
             if (i >= 26) {
-                StringBuilder sbU6 = outline.U(", variationSettings=");
+                StringBuilder sbU6 = a.U(", variationSettings=");
                 sbU6.append(this.mPaint.getFontVariationSettings());
                 sb.append(sbU6.toString());
             }
-            StringBuilder sbU7 = outline.U(", textDir=");
+            StringBuilder sbU7 = a.U(", textDir=");
             sbU7.append(this.mTextDir);
             sb.append(sbU7.toString());
             sb.append(", breakStrategy=" + this.mBreakStrategy);

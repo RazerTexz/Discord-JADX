@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackExternalDynamicLinkReceived.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExternalDynamicLinkReceived implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackExternalDynamicLinkReceived implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long fingerprint = null;
     private final CharSequence attemptId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackExternalDynamicLinkReceived implements Analyt
             return false;
         }
         TrackExternalDynamicLinkReceived trackExternalDynamicLinkReceived = (TrackExternalDynamicLinkReceived) other;
-        return Intrinsics3.areEqual(this.fingerprint, trackExternalDynamicLinkReceived.fingerprint) && Intrinsics3.areEqual(this.attemptId, trackExternalDynamicLinkReceived.attemptId) && Intrinsics3.areEqual(this.hasAuthToken, trackExternalDynamicLinkReceived.hasAuthToken) && Intrinsics3.areEqual(this.inviteCode, trackExternalDynamicLinkReceived.inviteCode) && Intrinsics3.areEqual(this.guildTemplateCode, trackExternalDynamicLinkReceived.guildTemplateCode) && Intrinsics3.areEqual(this.isBackgrounded, trackExternalDynamicLinkReceived.isBackgrounded) && Intrinsics3.areEqual(this.linkType, trackExternalDynamicLinkReceived.linkType) && Intrinsics3.areEqual(this.deeplinkSource, trackExternalDynamicLinkReceived.deeplinkSource);
+        return m.areEqual(this.fingerprint, trackExternalDynamicLinkReceived.fingerprint) && m.areEqual(this.attemptId, trackExternalDynamicLinkReceived.attemptId) && m.areEqual(this.hasAuthToken, trackExternalDynamicLinkReceived.hasAuthToken) && m.areEqual(this.inviteCode, trackExternalDynamicLinkReceived.inviteCode) && m.areEqual(this.guildTemplateCode, trackExternalDynamicLinkReceived.guildTemplateCode) && m.areEqual(this.isBackgrounded, trackExternalDynamicLinkReceived.isBackgrounded) && m.areEqual(this.linkType, trackExternalDynamicLinkReceived.linkType) && m.areEqual(this.deeplinkSource, trackExternalDynamicLinkReceived.deeplinkSource);
     }
 
     public int hashCode() {
@@ -57,7 +57,7 @@ public final /* data */ class TrackExternalDynamicLinkReceived implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackExternalDynamicLinkReceived(fingerprint=");
+        StringBuilder sbU = a.U("TrackExternalDynamicLinkReceived(fingerprint=");
         sbU.append(this.fingerprint);
         sbU.append(", attemptId=");
         sbU.append(this.attemptId);
@@ -72,6 +72,6 @@ public final /* data */ class TrackExternalDynamicLinkReceived implements Analyt
         sbU.append(", linkType=");
         sbU.append(this.linkType);
         sbU.append(", deeplinkSource=");
-        return outline.E(sbU, this.deeplinkSource, ")");
+        return a.E(sbU, this.deeplinkSource, ")");
     }
 }

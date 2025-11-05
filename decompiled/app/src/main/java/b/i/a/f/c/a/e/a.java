@@ -10,7 +10,7 @@ import b.i.a.f.h.b.i;
 /* loaded from: classes3.dex */
 public abstract class a extends b.i.a.f.e.h.b<a.d.c> {
     public static final a.g<i> j;
-    public static final a.AbstractC0035a<i, a.d.c> k;
+    public static final a.AbstractC0112a<i, a.d.c> k;
     public static final b.i.a.f.e.h.a<a.d.c> l;
 
     static {

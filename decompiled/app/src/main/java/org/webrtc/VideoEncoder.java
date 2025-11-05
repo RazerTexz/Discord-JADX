@@ -1,7 +1,7 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import org.webrtc.EncodedImage;
 
 /* loaded from: classes3.dex */
@@ -169,10 +169,10 @@ public interface VideoEncoder {
             if (!this.on) {
                 return "OFF";
             }
-            StringBuilder sbU = outline.U("[ ");
+            StringBuilder sbU = a.U("[ ");
             sbU.append(this.low);
             sbU.append(", ");
-            return outline.F(sbU, this.high, " ]");
+            return a.F(sbU, this.high, " ]");
         }
 
         private ScalingSettings() {

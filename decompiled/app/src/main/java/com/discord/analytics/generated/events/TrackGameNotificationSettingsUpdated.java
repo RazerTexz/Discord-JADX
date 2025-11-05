@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGameNotificationSettingsUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGameNotificationSettingsUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackGameNotificationSettingsUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean desktop = null;
     private final Boolean mobile = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackGameNotificationSettingsUpdated implements An
             return false;
         }
         TrackGameNotificationSettingsUpdated trackGameNotificationSettingsUpdated = (TrackGameNotificationSettingsUpdated) other;
-        return Intrinsics3.areEqual(this.desktop, trackGameNotificationSettingsUpdated.desktop) && Intrinsics3.areEqual(this.mobile, trackGameNotificationSettingsUpdated.mobile) && Intrinsics3.areEqual(this.peakHours, trackGameNotificationSettingsUpdated.peakHours) && Intrinsics3.areEqual(this.autoFollow, trackGameNotificationSettingsUpdated.autoFollow);
+        return m.areEqual(this.desktop, trackGameNotificationSettingsUpdated.desktop) && m.areEqual(this.mobile, trackGameNotificationSettingsUpdated.mobile) && m.areEqual(this.peakHours, trackGameNotificationSettingsUpdated.peakHours) && m.areEqual(this.autoFollow, trackGameNotificationSettingsUpdated.autoFollow);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackGameNotificationSettingsUpdated implements An
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGameNotificationSettingsUpdated(desktop=");
+        StringBuilder sbU = a.U("TrackGameNotificationSettingsUpdated(desktop=");
         sbU.append(this.desktop);
         sbU.append(", mobile=");
         sbU.append(this.mobile);
         sbU.append(", peakHours=");
         sbU.append(this.peakHours);
         sbU.append(", autoFollow=");
-        return outline.D(sbU, this.autoFollow, ")");
+        return a.D(sbU, this.autoFollow, ")");
     }
 }

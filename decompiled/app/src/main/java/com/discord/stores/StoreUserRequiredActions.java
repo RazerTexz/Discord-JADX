@@ -4,8 +4,8 @@ import com.discord.api.requiredaction.UserRequiredActionUpdate;
 import com.discord.models.domain.ModelPayload;
 import com.discord.models.requiredaction.RequiredAction;
 import com.discord.stores.updates.ObservationDeck;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 import rx.Observable;
 
@@ -17,7 +17,7 @@ public final class StoreUserRequiredActions extends StoreV2 {
 
     /* compiled from: StoreUserRequiredActions.kt */
     /* renamed from: com.discord.stores.StoreUserRequiredActions$observeUserRequiredAction$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<RequiredAction> {
+    public static final class AnonymousClass1 extends o implements Function0<RequiredAction> {
         public AnonymousClass1() {
             super(0);
         }
@@ -35,7 +35,7 @@ public final class StoreUserRequiredActions extends StoreV2 {
     }
 
     public StoreUserRequiredActions(ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.observationDeck = observationDeck;
         this.userRequiredAction = RequiredAction.NONE;
     }
@@ -48,7 +48,7 @@ public final class StoreUserRequiredActions extends StoreV2 {
         storeUserRequiredActions.userRequiredAction = requiredAction;
     }
 
-    @Store3
+    @StoreThread
     private final void updateUserRequiredAction(RequiredAction userRequiredAction) {
         if (userRequiredAction == RequiredAction.REQUIRE_CAPTCHA) {
             userRequiredAction = RequiredAction.REQUIRE_VERIFIED_PHONE;
@@ -56,15 +56,15 @@ public final class StoreUserRequiredActions extends StoreV2 {
         this.userRequiredAction = userRequiredAction;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
         updateUserRequiredAction(RequiredAction.INSTANCE.fromApiString(payload != null ? payload.getRequiredAction() : null));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleUserRequiredActionUpdate(UserRequiredActionUpdate userRequiredActionUpdate) {
-        Intrinsics3.checkNotNullParameter(userRequiredActionUpdate, "userRequiredActionUpdate");
+        m.checkNotNullParameter(userRequiredActionUpdate, "userRequiredActionUpdate");
         updateUserRequiredAction(RequiredAction.INSTANCE.fromApiString(userRequiredActionUpdate.getRequiredAction()));
         markChanged();
     }

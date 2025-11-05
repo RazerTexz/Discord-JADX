@@ -1,7 +1,7 @@
 package com.discord.models.gifpicker.dto;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: GifDto.kt */
 /* loaded from: classes.dex */
@@ -12,8 +12,8 @@ public final /* data */ class GifDto {
     private final int width;
 
     public GifDto(String str, String str2, int i, int i2) {
-        Intrinsics3.checkNotNullParameter(str, "src");
-        Intrinsics3.checkNotNullParameter(str2, "url");
+        m.checkNotNullParameter(str, "src");
+        m.checkNotNullParameter(str2, "url");
         this.src = str;
         this.url = str2;
         this.width = i;
@@ -57,8 +57,8 @@ public final /* data */ class GifDto {
     }
 
     public final GifDto copy(String src, String url, int width, int height) {
-        Intrinsics3.checkNotNullParameter(src, "src");
-        Intrinsics3.checkNotNullParameter(url, "url");
+        m.checkNotNullParameter(src, "src");
+        m.checkNotNullParameter(url, "url");
         return new GifDto(src, url, width, height);
     }
 
@@ -70,7 +70,7 @@ public final /* data */ class GifDto {
             return false;
         }
         GifDto gifDto = (GifDto) other;
-        return Intrinsics3.areEqual(this.src, gifDto.src) && Intrinsics3.areEqual(this.url, gifDto.url) && this.width == gifDto.width && this.height == gifDto.height;
+        return m.areEqual(this.src, gifDto.src) && m.areEqual(this.url, gifDto.url) && this.width == gifDto.width && this.height == gifDto.height;
     }
 
     public final int getHeight() {
@@ -97,13 +97,13 @@ public final /* data */ class GifDto {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GifDto(src=");
+        StringBuilder sbU = a.U("GifDto(src=");
         sbU.append(this.src);
         sbU.append(", url=");
         sbU.append(this.url);
         sbU.append(", width=");
         sbU.append(this.width);
         sbU.append(", height=");
-        return outline.B(sbU, this.height, ")");
+        return a.B(sbU, this.height, ")");
     }
 }

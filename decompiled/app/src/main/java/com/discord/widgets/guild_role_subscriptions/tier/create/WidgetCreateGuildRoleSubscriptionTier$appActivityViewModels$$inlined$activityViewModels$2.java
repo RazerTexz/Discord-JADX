@@ -2,13 +2,13 @@ package com.discord.widgets.guild_role_subscriptions.tier.create;
 
 import androidx.fragment.app.Fragment;
 import androidx.view.ViewModelProvider;
-import b.d.b.a.outline;
-import d0.z.d.Lambda;
+import b.d.b.a.a;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: FragmentViewModelLazy.kt */
 /* loaded from: classes2.dex */
-public final class WidgetCreateGuildRoleSubscriptionTier$appActivityViewModels$$inlined$activityViewModels$2 extends Lambda implements Function0<ViewModelProvider.Factory> {
+public final class WidgetCreateGuildRoleSubscriptionTier$appActivityViewModels$$inlined$activityViewModels$2 extends o implements Function0<ViewModelProvider.Factory> {
     public final /* synthetic */ Fragment $this_activityViewModels;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -20,7 +20,7 @@ public final class WidgetCreateGuildRoleSubscriptionTier$appActivityViewModels$$
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // kotlin.jvm.functions.Function0
     public final ViewModelProvider.Factory invoke() {
-        return outline.e0(this.$this_activityViewModels, "requireActivity()");
+        return a.e0(this.$this_activityViewModels, "requireActivity()");
     }
 
     @Override // kotlin.jvm.functions.Function0

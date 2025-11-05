@@ -2,7 +2,6 @@ package b.i.a.f.i.b;
 
 import android.content.SharedPreferences;
 import androidx.annotation.WorkerThread;
-import b.c.a.a0.AnimatableValueParser;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
@@ -18,8 +17,8 @@ public final class k4 {
 
     public k4(d4 d4Var, String str, long j, g4 g4Var) {
         this.e = d4Var;
-        AnimatableValueParser.w(str);
-        AnimatableValueParser.l(j > 0);
+        b.c.a.a0.d.w(str);
+        b.c.a.a0.d.l(j > 0);
         this.a = str.concat(":start");
         this.f1541b = str.concat(":count");
         this.c = str.concat(":value");

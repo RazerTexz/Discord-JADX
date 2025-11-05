@@ -1,15 +1,15 @@
 package com.discord.stores;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guild.Guild;
 import com.discord.api.guildmember.GuildMember;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelPayload;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.stores.updates.ObservationDeckProvider;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,11 +20,11 @@ import rx.Observable;
 /* loaded from: classes2.dex */
 public final class StoreGuildMemberCounts extends StoreV2 {
     private final HashMap<Long, Integer> guildMemberCounts = new HashMap<>();
-    private Map<Long, Integer> guildMemberCountsSnapshot = Maps6.emptyMap();
+    private Map<Long, Integer> guildMemberCountsSnapshot = h0.emptyMap();
 
     /* compiled from: StoreGuildMemberCounts.kt */
     /* renamed from: com.discord.stores.StoreGuildMemberCounts$observeApproximateMemberCount$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Integer> {
+    public static final class AnonymousClass1 extends o implements Function0<Integer> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -64,9 +64,9 @@ public final class StoreGuildMemberCounts extends StoreV2 {
         return 0;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        m.checkNotNullParameter(payload, "payload");
         List<Guild> guilds = payload.getGuilds();
         if (guilds != null) {
             for (Guild guild : guilds) {
@@ -76,22 +76,22 @@ public final class StoreGuildMemberCounts extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildCreate(Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         this.guildMemberCounts.put(Long.valueOf(guild.getId()), Integer.valueOf(guild.getMemberCount()));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildDelete(long guildId) {
         this.guildMemberCounts.remove(Long.valueOf(guildId));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildMemberAdd(GuildMember member) {
-        Intrinsics3.checkNotNullParameter(member, "member");
+        m.checkNotNullParameter(member, "member");
         Integer num = this.guildMemberCounts.get(Long.valueOf(member.getGuildId()));
         if (num != null) {
             this.guildMemberCounts.put(Long.valueOf(member.getGuildId()), Integer.valueOf(num.intValue() + 1));
@@ -99,7 +99,7 @@ public final class StoreGuildMemberCounts extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildMemberRemove(long guildId) {
         if (this.guildMemberCounts.get(Long.valueOf(guildId)) != null) {
             this.guildMemberCounts.put(Long.valueOf(guildId), Integer.valueOf(r0.intValue() - 1));
@@ -108,20 +108,20 @@ public final class StoreGuildMemberCounts extends StoreV2 {
     }
 
     public final Observable<Integer> observeApproximateMemberCount(long guildId) {
-        Observable<Integer> observableR = ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.… }.distinctUntilChanged()");
+        Observable<Integer> observableR = ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(guildId), 14, null).r();
+        m.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.… }.distinctUntilChanged()");
         return observableR;
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         try {
             this.guildMemberCountsSnapshot = new HashMap(this.guildMemberCounts);
         } catch (OutOfMemoryError e) {
             AppLog appLog = AppLog.g;
-            StringBuilder sbU = outline.U("OOM in StoreGuildMemberCounts. size: ");
+            StringBuilder sbU = a.U("OOM in StoreGuildMemberCounts. size: ");
             sbU.append(this.guildMemberCounts.size());
             appLog.recordBreadcrumb(sbU.toString(), "StoreGuildMemberCounts");
             throw e;

@@ -16,7 +16,7 @@ import androidx.work.impl.constraints.WorkConstraintsTracker;
 import androidx.work.impl.model.WorkSpec;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 import java.util.Collections;
 import java.util.List;
 
@@ -46,10 +46,10 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
 
     /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$2, reason: invalid class name */
     public class AnonymousClass2 implements Runnable {
-        public final /* synthetic */ ListenableFuture8 val$innerFuture;
+        public final /* synthetic */ a val$innerFuture;
 
-        public AnonymousClass2(ListenableFuture8 listenableFuture8) {
-            this.val$innerFuture = listenableFuture8;
+        public AnonymousClass2(a aVar) {
+            this.val$innerFuture = aVar;
         }
 
         @Override // java.lang.Runnable
@@ -157,8 +157,8 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
         }
         Logger.get().debug(TAG, String.format("Constraints met for delegate %s", string), new Throwable[0]);
         try {
-            ListenableFuture8<ListenableWorker.Result> listenableFuture8StartWork = this.mDelegate.startWork();
-            listenableFuture8StartWork.addListener(new AnonymousClass2(listenableFuture8StartWork), getBackgroundExecutor());
+            a<ListenableWorker.Result> aVarStartWork = this.mDelegate.startWork();
+            aVarStartWork.addListener(new AnonymousClass2(aVarStartWork), getBackgroundExecutor());
         } catch (Throwable th) {
             Logger logger = Logger.get();
             String str = TAG;
@@ -176,7 +176,7 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
 
     @Override // androidx.work.ListenableWorker
     @NonNull
-    public ListenableFuture8<ListenableWorker.Result> startWork() {
+    public a<ListenableWorker.Result> startWork() {
         getBackgroundExecutor().execute(new AnonymousClass1());
         return this.mFuture;
     }

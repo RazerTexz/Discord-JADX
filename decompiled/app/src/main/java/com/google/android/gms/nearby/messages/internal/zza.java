@@ -2,7 +2,7 @@ package com.google.android.gms.nearby.messages.internal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.j.b.e.w;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.nearby.messages.BleSignal;
@@ -60,7 +60,7 @@ public final class zza extends AbstractSafeParcelable implements BleSignal {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
@@ -70,6 +70,6 @@ public final class zza extends AbstractSafeParcelable implements BleSignal {
         int i4 = this.l;
         parcel.writeInt(262147);
         parcel.writeInt(i4);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

@@ -2,8 +2,8 @@ package com.discord.widgets.channels.invite;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.user.User;
 import com.discord.stores.StoreChannels;
@@ -13,12 +13,11 @@ import com.discord.stores.StoreUserRelationships;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.channels.invite.GroupInviteFriendsSheetAdapter;
-import d0.g0.Strings4;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.w;
+import d0.t.h0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -38,7 +37,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: GroupInviteFriendsSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewState> {
+public final class GroupInviteFriendsSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -55,7 +54,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
 
     /* compiled from: GroupInviteFriendsSheetViewModel.kt */
     /* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -68,14 +67,14 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             GroupInviteFriendsSheetViewModel.access$handleStoreState(GroupInviteFriendsSheetViewModel.this, storeState);
         }
     }
 
     /* compiled from: GroupInviteFriendsSheetViewModel.kt */
     /* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<CharSequence, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<CharSequence, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -89,7 +88,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(CharSequence charSequence) {
             GroupInviteFriendsSheetViewModel groupInviteFriendsSheetViewModel = GroupInviteFriendsSheetViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(charSequence, "searchText");
+            m.checkNotNullExpressionValue(charSequence, "searchText");
             GroupInviteFriendsSheetViewModel.access$onSearch(groupInviteFriendsSheetViewModel, charSequence);
         }
     }
@@ -112,19 +111,19 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         private final Observable<Map<Long, User>> observeFriends(StoreUserRelationships storeUserRelationships, StoreUser storeUser) {
-            Observable observableY = storeUserRelationships.observeForType(1).Y(new GroupInviteFriendsSheetViewModel2(storeUser));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "storeUserRelationships.o…ships.keys)\n            }");
+            Observable observableY = storeUserRelationships.observeForType(1).Y(new GroupInviteFriendsSheetViewModel$Companion$observeFriends$1(storeUser));
+            m.checkNotNullExpressionValue(observableY, "storeUserRelationships.o…ships.keys)\n            }");
             return observableY;
         }
 
         private final Observable<StoreState> observeStoreState(long channelId, StoreUserRelationships storeUserRelationships, StoreUser storeUser, StoreChannels storeChannels) {
             if (channelId == -1) {
-                Observable observableG = observeFriends(storeUserRelationships, storeUser).G(GroupInviteFriendsSheetViewModel3.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableG, "observeFriends(storeUser…          )\n            }");
+                Observable observableG = observeFriends(storeUserRelationships, storeUser).G(GroupInviteFriendsSheetViewModel$Companion$observeStoreState$1.INSTANCE);
+                m.checkNotNullExpressionValue(observableG, "observeFriends(storeUser…          )\n            }");
                 return observableG;
             }
-            Observable<StoreState> observableJ = Observable.j(storeChannels.observeChannel(channelId), observeFriends(storeUserRelationships, storeUser), GroupInviteFriendsSheetViewModel4.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable\n             …      )\n                }");
+            Observable<StoreState> observableJ = Observable.j(storeChannels.observeChannel(channelId), observeFriends(storeUserRelationships, storeUser), GroupInviteFriendsSheetViewModel$Companion$observeStoreState$2.INSTANCE);
+            m.checkNotNullExpressionValue(observableJ, "Observable\n             …      )\n                }");
             return observableJ;
         }
 
@@ -164,7 +163,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(Map<Long, ? extends User> map, Channel channel) {
-            Intrinsics3.checkNotNullParameter(map, "friendUsersMap");
+            m.checkNotNullParameter(map, "friendUsersMap");
             this.friendUsersMap = map;
             this.channel = channel;
         }
@@ -190,7 +189,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         public final StoreState copy(Map<Long, ? extends User> friendUsersMap, Channel channel) {
-            Intrinsics3.checkNotNullParameter(friendUsersMap, "friendUsersMap");
+            m.checkNotNullParameter(friendUsersMap, "friendUsersMap");
             return new StoreState(friendUsersMap, channel);
         }
 
@@ -202,7 +201,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.friendUsersMap, storeState.friendUsersMap) && Intrinsics3.areEqual(this.channel, storeState.channel);
+            return m.areEqual(this.friendUsersMap, storeState.friendUsersMap) && m.areEqual(this.channel, storeState.channel);
         }
 
         public final Channel getChannel() {
@@ -221,7 +220,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(friendUsersMap=");
+            StringBuilder sbU = a.U("StoreState(friendUsersMap=");
             sbU.append(this.friendUsersMap);
             sbU.append(", channel=");
             sbU.append(this.channel);
@@ -230,7 +229,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         public /* synthetic */ StoreState(Map map, Channel channel, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i & 1) != 0 ? Maps6.emptyMap() : map, (i & 2) != 0 ? null : channel);
+            this((i & 1) != 0 ? h0.emptyMap() : map, (i & 2) != 0 ? null : channel);
         }
     }
 
@@ -241,8 +240,8 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         private final boolean showSearchIcon;
 
         public ViewState(HashSet<User> hashSet, List<GroupInviteFriendsSheetAdapter.FriendItem> list, boolean z2) {
-            Intrinsics3.checkNotNullParameter(hashSet, "checkedUsers");
-            Intrinsics3.checkNotNullParameter(list, "friendItems");
+            m.checkNotNullParameter(hashSet, "checkedUsers");
+            m.checkNotNullParameter(list, "friendItems");
             this.checkedUsers = hashSet;
             this.friendItems = list;
             this.showSearchIcon = z2;
@@ -276,8 +275,8 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         public final ViewState copy(HashSet<User> checkedUsers, List<GroupInviteFriendsSheetAdapter.FriendItem> friendItems, boolean showSearchIcon) {
-            Intrinsics3.checkNotNullParameter(checkedUsers, "checkedUsers");
-            Intrinsics3.checkNotNullParameter(friendItems, "friendItems");
+            m.checkNotNullParameter(checkedUsers, "checkedUsers");
+            m.checkNotNullParameter(friendItems, "friendItems");
             return new ViewState(checkedUsers, friendItems, showSearchIcon);
         }
 
@@ -289,7 +288,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.checkedUsers, viewState.checkedUsers) && Intrinsics3.areEqual(this.friendItems, viewState.friendItems) && this.showSearchIcon == viewState.showSearchIcon;
+            return m.areEqual(this.checkedUsers, viewState.checkedUsers) && m.areEqual(this.friendItems, viewState.friendItems) && this.showSearchIcon == viewState.showSearchIcon;
         }
 
         public final HashSet<User> getCheckedUsers() {
@@ -319,12 +318,12 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(checkedUsers=");
+            StringBuilder sbU = a.U("ViewState(checkedUsers=");
             sbU.append(this.checkedUsers);
             sbU.append(", friendItems=");
             sbU.append(this.friendItems);
             sbU.append(", showSearchIcon=");
-            return outline.O(sbU, this.showSearchIcon, ")");
+            return a.O(sbU, this.showSearchIcon, ")");
         }
 
         public /* synthetic */ ViewState(HashSet hashSet, List list, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -363,12 +362,12 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         if (channel == null || (listZ = channel.z()) == null) {
             set = null;
         } else {
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listZ, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listZ, 10));
             Iterator<T> it = listZ.iterator();
             while (it.hasNext()) {
                 arrayList.add(Long.valueOf(((com.discord.api.user.User) it.next()).getId()));
             }
-            set = _Collections.toSet(arrayList);
+            set = u.toSet(arrayList);
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry<Long, ? extends User> entry : users.entrySet()) {
@@ -380,7 +379,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
                 linkedHashMap.put(entry.getKey(), entry.getValue());
             }
         }
-        return _Collections.toList(linkedHashMap.values());
+        return u.toList(linkedHashMap.values());
     }
 
     @MainThread
@@ -402,7 +401,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
                 break;
             }
             Object next = it.next();
-            if (Strings4.contains((CharSequence) ((User) next).getUsername(), searchText, true)) {
+            if (w.contains((CharSequence) ((User) next).getUsername(), searchText, true)) {
                 arrayList.add(next);
             }
         }
@@ -412,12 +411,12 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     public final void onChangeUserChecked(User user, boolean isChecked) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         ViewState viewState = getViewState();
         if (viewState != null) {
             if (!isChecked) {
@@ -428,7 +427,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
                 emitChannelFullEvent();
             }
             List<GroupInviteFriendsSheetAdapter.FriendItem> friendItems = viewState.getFriendItems();
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(friendItems, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(friendItems, 10));
             Iterator<T> it = friendItems.iterator();
             while (it.hasNext()) {
                 arrayList.add(((GroupInviteFriendsSheetAdapter.FriendItem) it.next()).getUser());
@@ -439,15 +438,15 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
     }
 
     public final void onSearchTextChanged(CharSequence searchText) {
-        Intrinsics3.checkNotNullParameter(searchText, "searchText");
+        m.checkNotNullParameter(searchText, "searchText");
         this.searchTextChangedPublisher.onNext(searchText);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GroupInviteFriendsSheetViewModel(long j, StoreUser storeUser, int i, Observable<StoreState> observable) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.channelId = j;
         this.storeUser = storeUser;
         this.maxNumMembers = i;
@@ -458,7 +457,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         this.searchTextChangedPublisher = behaviorSubjectK0;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), GroupInviteFriendsSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         Observable<CharSequence> observableP = behaviorSubjectK0.p(150L, TimeUnit.MILLISECONDS);
-        Intrinsics3.checkNotNullExpressionValue(observableP, "searchTextChangedPublish…S, TimeUnit.MILLISECONDS)");
+        m.checkNotNullExpressionValue(observableP, "searchTextChangedPublish…S, TimeUnit.MILLISECONDS)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableP, this, null, 2, null), GroupInviteFriendsSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }
 }

@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ExpressionPickerCategorySelectionOverlineViewBinding;
+import b.a.i.n;
 import com.discord.views.sticker.StickerView;
 
 /* loaded from: classes.dex */
@@ -15,14 +15,14 @@ public final class StickerCategoryItemPackBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final ExpressionPickerCategorySelectionOverlineViewBinding f2149b;
+    public final n f2149b;
 
     @NonNull
     public final StickerView c;
 
-    public StickerCategoryItemPackBinding(@NonNull FrameLayout frameLayout, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding, @NonNull StickerView stickerView) {
+    public StickerCategoryItemPackBinding(@NonNull FrameLayout frameLayout, @NonNull n nVar, @NonNull StickerView stickerView) {
         this.a = frameLayout;
-        this.f2149b = expressionPickerCategorySelectionOverlineViewBinding;
+        this.f2149b = nVar;
         this.c = stickerView;
     }
 

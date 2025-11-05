@@ -16,26 +16,26 @@ import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 import b.i.a.f.e.o.f;
 import com.discord.utilities.logging.Logger;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.t._Arrays;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.o;
+import d0.t.h0;
+import d0.t.k;
+import d0.z.d.m;
 import java.lang.ref.WeakReference;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 import kotlin.Lazy;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import kotlin.ranges.Ranges2;
+import kotlin.ranges.IntRange;
 import kotlinx.coroutines.Job;
-import s.a.CoroutineScope2;
-import s.a.Dispatchers;
 import s.a.h1;
+import s.a.k0;
+import s.a.x0;
 
 /* compiled from: LinkifiedTextView.kt */
 /* loaded from: classes2.dex */
@@ -43,7 +43,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy logger$delegate = LazyJVM.lazy(LinkifiedTextView5.INSTANCE);
+    private static final Lazy logger$delegate = g.lazy(LinkifiedTextView$Companion$logger$2.INSTANCE);
     private static Function2<? super View, ? super String, Unit> onURLSpanClicked;
 
     /* compiled from: LinkifiedTextView.kt */
@@ -108,7 +108,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
 
     @Override // android.widget.TextView
     public void setText(CharSequence text, TextView.BufferType type) {
-        Intrinsics3.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(type, "type");
         try {
             super.setText(text, type);
         } catch (AndroidRuntimeException e) {
@@ -120,7 +120,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
                 setText((CharSequence) null);
             }
         } catch (Exception e2) {
-            if (new Ranges2(24, 25).contains(Build.VERSION.SDK_INT)) {
+            if (new IntRange(24, 25).contains(Build.VERSION.SDK_INT)) {
                 Logger.e$default(Companion.access$getLogger$p(INSTANCE), "Unable to linkify text", e2, null, 4, null);
             } else {
                 super.setText((CharSequence) null, type);
@@ -132,7 +132,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public LinkifiedTextView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "ctx");
+        m.checkNotNullParameter(context, "ctx");
         setOnTouchListener(new ClickableSpanOnTouchListener(0L, onURLSpanClicked, 1, null));
     }
 
@@ -199,7 +199,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
                 return new ClickableSpan[0];
             }
             Object[] spans = spanned.getSpans(offsetForHorizontal, offsetForHorizontal, ClickableSpan.class);
-            Intrinsics3.checkNotNullExpressionValue(spans, "spanned.getSpans(off, of…lickableSpan::class.java)");
+            m.checkNotNullExpressionValue(spans, "spanned.getSpans(off, of…lickableSpan::class.java)");
             return (ClickableSpan[]) spans;
         }
 
@@ -211,30 +211,30 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public boolean onTouch(View view, MotionEvent event) {
-            Intrinsics3.checkNotNullParameter(view, "view");
-            Intrinsics3.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(event, "event");
             TextView textView = (TextView) (!(view instanceof TextView) ? null : view);
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
             if (textView != null) {
                 try {
                     ClickableSpan[] touchedClickableSpans = getTouchedClickableSpans(textView, event);
-                    T t = touchedClickableSpans != null ? (ClickableSpan) _Arrays.firstOrNull(touchedClickableSpans) : 0;
+                    T t = touchedClickableSpans != null ? (ClickableSpan) k.firstOrNull(touchedClickableSpans) : 0;
                     ref$ObjectRef.element = t;
                 } catch (IndexOutOfBoundsException e) {
-                    Tuples2[] tuples2Arr = new Tuples2[8];
-                    tuples2Arr[0] = Tuples.to(NotificationCompat.MessagingStyle.Message.KEY_TEXT, String.valueOf(textView != null ? textView.getText() : null));
-                    tuples2Arr[1] = Tuples.to("view_x", String.valueOf(textView != null ? Float.valueOf(textView.getX()) : null));
-                    tuples2Arr[2] = Tuples.to("view_y", String.valueOf(textView != null ? Float.valueOf(textView.getY()) : null));
-                    tuples2Arr[3] = Tuples.to("event_x", String.valueOf(event.getX()));
-                    tuples2Arr[4] = Tuples.to("event_y", String.valueOf(event.getY()));
-                    tuples2Arr[5] = Tuples.to("event_action", String.valueOf(event.getAction()));
-                    tuples2Arr[6] = Tuples.to("width", String.valueOf(textView != null ? Integer.valueOf(textView.getWidth()) : null));
-                    tuples2Arr[7] = Tuples.to("height", String.valueOf(textView != null ? Integer.valueOf(textView.getHeight()) : null));
-                    Map<String, String> mapMapOf = Maps6.mapOf(tuples2Arr);
+                    Pair[] pairArr = new Pair[8];
+                    pairArr[0] = o.to(NotificationCompat.MessagingStyle.Message.KEY_TEXT, String.valueOf(textView != null ? textView.getText() : null));
+                    pairArr[1] = o.to("view_x", String.valueOf(textView != null ? Float.valueOf(textView.getX()) : null));
+                    pairArr[2] = o.to("view_y", String.valueOf(textView != null ? Float.valueOf(textView.getY()) : null));
+                    pairArr[3] = o.to("event_x", String.valueOf(event.getX()));
+                    pairArr[4] = o.to("event_y", String.valueOf(event.getY()));
+                    pairArr[5] = o.to("event_action", String.valueOf(event.getAction()));
+                    pairArr[6] = o.to("width", String.valueOf(textView != null ? Integer.valueOf(textView.getWidth()) : null));
+                    pairArr[7] = o.to("height", String.valueOf(textView != null ? Integer.valueOf(textView.getHeight()) : null));
+                    Map<String, String> mapMapOf = h0.mapOf(pairArr);
                     Logger loggerAccess$getLogger$p = Companion.access$getLogger$p(LinkifiedTextView.INSTANCE);
                     String name = ClickableSpanOnTouchListener.class.getName();
-                    Intrinsics3.checkNotNullExpressionValue(name, "javaClass.name");
+                    m.checkNotNullExpressionValue(name, "javaClass.name");
                     loggerAccess$getLogger$p.e(name, "failed to get touched clickable spans", e, mapMapOf);
                 }
             }
@@ -253,8 +253,8 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
                     f.t(job2, null, 1, null);
                 }
                 if (((ClickableSpan) ref$ObjectRef.element) instanceof com.discord.utilities.spans.ClickableSpan) {
-                    Job jobH0 = f.H0(CoroutineScope2.j, Dispatchers.a, null, new LinkifiedTextView3(this, new WeakReference(view), ref$ObjectRef, null), 2, null);
-                    ((h1) jobH0).n(false, true, new LinkifiedTextView2(jobH0, this));
+                    Job jobH0 = f.H0(x0.j, k0.a, null, new LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1(this, new WeakReference(view), ref$ObjectRef, null), 2, null);
+                    ((h1) jobH0).n(false, true, new LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$$inlined$apply$lambda$1(jobH0, this));
                     Job andSet = this.job.getAndSet(jobH0);
                     if (andSet != null) {
                         f.t(andSet, null, 1, null);
@@ -271,7 +271,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
                         Function2<View, String, Unit> function2 = this.onURLSpanClicked;
                         if (function2 != null) {
                             String url = ((URLSpan) ((ClickableSpan) t2)).getURL();
-                            Intrinsics3.checkNotNullExpressionValue(url, "clickableSpan.url");
+                            m.checkNotNullExpressionValue(url, "clickableSpan.url");
                             if (function2.invoke(view, url) == null) {
                                 ((ClickableSpan) ref$ObjectRef.element).onClick(view);
                             }

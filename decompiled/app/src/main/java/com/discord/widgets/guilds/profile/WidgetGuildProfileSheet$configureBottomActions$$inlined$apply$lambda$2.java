@@ -3,14 +3,14 @@ package com.discord.widgets.guilds.profile;
 import android.view.View;
 import androidx.fragment.app.ViewKt;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGuildProfileSheet.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildProfileSheet$configureBottomActions$$inlined$apply$lambda$2 extends Lambda implements Function1<View, Unit> {
+public final class WidgetGuildProfileSheet$configureBottomActions$$inlined$apply$lambda$2 extends o implements Function1<View, Unit> {
     public final /* synthetic */ long $guildId$inlined;
     public final /* synthetic */ boolean $showJoinServer$inlined;
     public final /* synthetic */ MaterialButton $this_apply;
@@ -33,11 +33,11 @@ public final class WidgetGuildProfileSheet$configureBottomActions$$inlined$apply
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "it");
+        m.checkNotNullParameter(view, "it");
         WidgetGuildProfileSheetViewModel widgetGuildProfileSheetViewModelAccess$getViewModel$p = WidgetGuildProfileSheet.access$getViewModel$p(this.this$0);
         long j = this.$guildId$inlined;
         MaterialButton materialButton = this.$this_apply;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "this");
+        m.checkNotNullExpressionValue(materialButton, "this");
         widgetGuildProfileSheetViewModelAccess$getViewModel$p.onClickJoinServer(j, ViewKt.findFragment(materialButton));
     }
 }

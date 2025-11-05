@@ -1,7 +1,7 @@
 package com.discord.gateway.io;
 
 import com.discord.gateway.opcodes.Opcode;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: Incoming.kt */
 /* loaded from: classes.dex */
@@ -12,7 +12,7 @@ public final class Incoming {
     private final String type;
 
     public Incoming(String str, Integer num, Opcode opcode, Object obj) {
-        Intrinsics3.checkNotNullParameter(opcode, "opcode");
+        m.checkNotNullParameter(opcode, "opcode");
         this.type = str;
         this.seq = num;
         this.opcode = opcode;

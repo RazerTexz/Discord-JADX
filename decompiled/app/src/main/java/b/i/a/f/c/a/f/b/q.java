@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Binder;
 import android.os.IInterface;
 import android.os.Parcel;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.Status;
@@ -51,7 +50,7 @@ public final class q extends b.i.a.f.h.c.b implements IInterface {
             g.a(context2);
             if (z2) {
                 Status status = Status.j;
-                AnimatableValueParser.z(status, "Result must not be null");
+                b.c.a.a0.d.z(status, "Result must not be null");
                 basePendingResultB = new b.i.a.f.e.h.j.o(cVar);
                 basePendingResultB.g(status);
             } else {
@@ -70,8 +69,8 @@ public final class q extends b.i.a.f.h.c.b implements IInterface {
             b.i.a.f.e.l.a aVar2 = e.j;
             if (strG == null) {
                 Status status2 = new Status(4, null);
-                AnimatableValueParser.z(status2, "Result must not be null");
-                AnimatableValueParser.o(!status2.w0(), "Status code must not be SUCCESS");
+                b.c.a.a0.d.z(status2, "Result must not be null");
+                b.c.a.a0.d.o(!status2.w0(), "Status code must not be SUCCESS");
                 basePendingResultB2 = new b.i.a.f.e.h.e(null, status2);
                 basePendingResultB2.g(status2);
             } else {

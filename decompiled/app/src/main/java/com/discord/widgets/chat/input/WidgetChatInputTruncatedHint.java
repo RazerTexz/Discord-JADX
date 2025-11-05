@@ -3,10 +3,10 @@ package com.discord.widgets.chat.input;
 import android.text.Editable;
 import android.text.TextUtils;
 import com.discord.app.AppFragment;
-import com.discord.utilities.view.text.TextWatcher4;
+import com.discord.utilities.view.text.TextWatcherKt;
 import com.lytefast.flexinput.widget.FlexEditText;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -20,7 +20,7 @@ public final class WidgetChatInputTruncatedHint {
 
     /* compiled from: WidgetChatInputTruncatedHint.kt */
     /* renamed from: com.discord.widgets.chat.input.WidgetChatInputTruncatedHint$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Integer, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -41,7 +41,7 @@ public final class WidgetChatInputTruncatedHint {
 
     /* compiled from: WidgetChatInputTruncatedHint.kt */
     /* renamed from: com.discord.widgets.chat.input.WidgetChatInputTruncatedHint$addBindedTextWatcher$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Editable, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Editable, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -54,13 +54,13 @@ public final class WidgetChatInputTruncatedHint {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
-            Intrinsics3.checkNotNullParameter(editable, "it");
+            m.checkNotNullParameter(editable, "it");
             WidgetChatInputTruncatedHint.access$syncHint(WidgetChatInputTruncatedHint.this);
         }
     }
 
     public WidgetChatInputTruncatedHint(FlexEditText flexEditText) {
-        Intrinsics3.checkNotNullParameter(flexEditText, "editText");
+        m.checkNotNullParameter(flexEditText, "editText");
         this.editText = flexEditText;
         this.previousMaxLines = flexEditText.getMaxLines();
         flexEditText.setOnMaxLinesChangedListener(new AnonymousClass1());
@@ -101,8 +101,8 @@ public final class WidgetChatInputTruncatedHint {
     }
 
     public final void addBindedTextWatcher(AppFragment fragment) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
-        TextWatcher4.addBindedTextWatcher(this.editText, fragment, new AnonymousClass1());
+        m.checkNotNullParameter(fragment, "fragment");
+        TextWatcherKt.addBindedTextWatcher(this.editText, fragment, new AnonymousClass1());
     }
 
     public final FlexEditText getEditText() {
@@ -110,7 +110,7 @@ public final class WidgetChatInputTruncatedHint {
     }
 
     public final void setHint(CharSequence hint) {
-        Intrinsics3.checkNotNullParameter(hint, "hint");
+        m.checkNotNullParameter(hint, "hint");
         this.hint = hint;
         syncHint();
     }

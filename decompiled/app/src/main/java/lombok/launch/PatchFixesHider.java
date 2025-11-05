@@ -5,10 +5,10 @@ import android.animation.AnimatorSet;
 import android.animation.Keyframe;
 import android.animation.ValueAnimator;
 import android.app.AlarmManager;
-import b.f.e.AbstractDataSource3;
-import b.f.e.DataSubscriber;
+import b.f.e.c;
+import b.f.e.f;
 import com.discord.widgets.chat.input.ChatInputViewModel;
-import d0.e0.p.d.m0.g.FqName;
+import d0.e0.p.d.m0.g.b;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -189,7 +189,7 @@ final class PatchFixesHider {
             	at jadx.core.dex.visitors.ssa.SSATransform.process(SSATransform.java:57)
             	at jadx.core.dex.visitors.ssa.SSATransform.visit(SSATransform.java:44)
             */
-        public Delegate(b.f.e.AbstractDataSource3 r3, boolean r4, b.f.e.DataSubscriber r5, boolean r6) {
+        public Delegate(b.f.e.c r3, boolean r4, b.f.e.f r5, boolean r6) {
             /*
                 r2 = this;
                 r0 = r2
@@ -278,9 +278,9 @@ final class PatchFixesHider {
 
         /* JADX WARN: Type inference failed for: r0v2, types: [java.lang.Object[], void] */
         /* renamed from: <init>, reason: not valid java name */
-        public static void m268init(AbstractDataSource3 abstractDataSource3, DataSubscriber dataSubscriber) {
+        public static void m268init(c cVar, f fVar) {
             Method method = GET_CHILDREN;
-            Object[] objArr = {abstractDataSource3, dataSubscriber};
+            Object[] objArr = {cVar, fVar};
         }
     }
 
@@ -562,7 +562,7 @@ final class PatchFixesHider {
             	at jadx.core.dex.visitors.ssa.SSATransform.process(SSATransform.java:57)
             	at jadx.core.dex.visitors.ssa.SSATransform.visit(SSATransform.java:44)
             */
-        public Javadoc(d0.e0.p.d.m0.g.FqName r3, d0.e0.p.d.m0.g.Name r4) {
+        public Javadoc(d0.e0.p.d.m0.g.b r3, d0.e0.p.d.m0.g.e r4) {
             /*
                 r2 = this;
                 r0 = r2
@@ -574,7 +574,7 @@ final class PatchFixesHider {
 
         /* JADX WARN: Type inference failed for: r0v3, types: [java.lang.reflect.Method, void] */
         /* JADX WARN: Type inference failed for: r0v5, types: [java.lang.reflect.Method, void] */
-        static Collection getAllContributedClassesIfPossible(FqName fqName) {
+        static Collection getAllContributedClassesIfPossible(b bVar) {
             Animator.setDuration("lombok.eclipse.agent.PatchJavadoc");
             Class[] clsArr = {String.class, IJavaElement.class};
             GET_HTML = AnimatorSet.end();

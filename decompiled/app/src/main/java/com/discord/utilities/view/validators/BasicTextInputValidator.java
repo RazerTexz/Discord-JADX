@@ -1,10 +1,10 @@
 package com.discord.utilities.view.validators;
 
 import androidx.annotation.StringRes;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -23,7 +23,7 @@ public final class BasicTextInputValidator implements InputValidator<TextInputLa
         }
 
         public final BasicTextInputValidator createRequiredInputValidator(@StringRes int messageResId) {
-            return new BasicTextInputValidator(messageResId, BasicTextInputValidator2.INSTANCE);
+            return new BasicTextInputValidator(messageResId, BasicTextInputValidator$Companion$createRequiredInputValidator$1.INSTANCE);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -33,7 +33,7 @@ public final class BasicTextInputValidator implements InputValidator<TextInputLa
 
     /* JADX WARN: Multi-variable type inference failed */
     public BasicTextInputValidator(@StringRes int i, Function1<? super String, Boolean> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "inputPredicate");
+        m.checkNotNullParameter(function1, "inputPredicate");
         this.messageResId = i;
         this.inputPredicate = function1;
     }
@@ -49,10 +49,10 @@ public final class BasicTextInputValidator implements InputValidator<TextInputLa
 
     /* renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
     public CharSequence getErrorMessage2(TextInputLayout view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         if (this.inputPredicate.invoke(ViewExtensions.getTextOrEmpty(view)).booleanValue()) {
             return null;
         }
-        return FormatUtils.j(view, this.messageResId, new Object[0], null, 4);
+        return b.j(view, this.messageResId, new Object[0], null, 4);
     }
 }

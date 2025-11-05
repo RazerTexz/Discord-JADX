@@ -25,12 +25,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.a.ImageUploadFailedDialog;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.o;
-import b.d.b.a.outline;
-import b.i.a.f.e.o.f;
+import b.a.a.c;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.activity.Activity;
 import com.discord.api.application.Application;
@@ -52,20 +49,20 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.ShareUtils;
 import com.discord.utilities.analytics.AnalyticsTracker;
-import com.discord.utilities.attachments.AttachmentUtils;
+import com.discord.utilities.attachments.AttachmentUtilsKt;
 import com.discord.utilities.captcha.CaptchaErrorBody;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.channel.ChannelSelector;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.guilds.GuildUtils;
+import com.discord.utilities.guilds.GuildUtilsKt;
 import com.discord.utilities.intent.IntentUtils;
-import com.discord.utilities.messagesend.MessageQueue4;
+import com.discord.utilities.messagesend.MessageResult;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.premium.PremiumUtils;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rest.SendUtils;
-import com.discord.utilities.rest.SendUtils5;
+import com.discord.utilities.rest.SendUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
@@ -73,8 +70,8 @@ import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.recycler.PaddedItemDecorator;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import com.discord.utilities.views.ViewCoroutineScope;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import com.discord.utilities.views.ViewCoroutineScopeKt;
 import com.discord.widgets.captcha.WidgetCaptchaBottomSheet;
 import com.discord.widgets.chat.list.ViewEmbedGameInvite;
 import com.discord.widgets.user.search.WidgetGlobalSearchAdapter;
@@ -82,20 +79,17 @@ import com.discord.widgets.user.search.WidgetGlobalSearchModel;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.lytefast.flexinput.model.Attachment;
-import d0.Result3;
-import d0.Tuples;
-import d0.d0._Ranges;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t._Collections;
-import d0.w.h.Intrinsics2;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.a.EmptyObservableHolder;
+import d0.d0.f;
+import d0.g0.t;
+import d0.l;
+import d0.t.n;
+import d0.t.u;
+import d0.w.i.a.e;
+import d0.w.i.a.k;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.a.c;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -103,7 +97,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function0;
@@ -123,7 +117,7 @@ import rx.subjects.BehaviorSubject;
 /* compiled from: WidgetIncomingShare.kt */
 /* loaded from: classes2.dex */
 public final class WidgetIncomingShare extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetIncomingShare.class, "binding", "getBinding()Lcom/discord/databinding/WidgetIncomingShareBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetIncomingShare.class, "binding", "getBinding()Lcom/discord/databinding/WidgetIncomingShareBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -151,7 +145,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* compiled from: WidgetIncomingShare.kt */
         /* renamed from: com.discord.widgets.share.WidgetIncomingShare$Adapter$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Uri, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Uri, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -177,20 +171,20 @@ public final class WidgetIncomingShare extends AppFragment {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ViewHolder(Adapter adapter, ViewImageBinding viewImageBinding) {
                 super(viewImageBinding.a);
-                Intrinsics3.checkNotNullParameter(viewImageBinding, "binding");
+                m.checkNotNullParameter(viewImageBinding, "binding");
                 this.this$0 = adapter;
                 this.binding = viewImageBinding;
             }
 
             public final void bind(Uri uri) {
-                this.binding.a.setOnClickListener(new WidgetIncomingShare2(this, uri));
+                this.binding.a.setOnClickListener(new WidgetIncomingShare$Adapter$ViewHolder$bind$1(this, uri));
                 this.binding.a.setImageURI(uri);
             }
         }
 
         public Adapter(WidgetIncomingShare widgetIncomingShare, ContentModel contentModel, Function1<? super Uri, Unit> function1) {
-            Intrinsics3.checkNotNullParameter(contentModel, "inputModel");
-            Intrinsics3.checkNotNullParameter(function1, "onItemClickListener");
+            m.checkNotNullParameter(contentModel, "inputModel");
+            m.checkNotNullParameter(function1, "onItemClickListener");
             this.this$0 = widgetIncomingShare;
             this.inputModel = contentModel;
             this.onItemClickListener = function1;
@@ -225,25 +219,25 @@ public final class WidgetIncomingShare extends AppFragment {
         }
 
         public final void setData(ContentModel inputModel, Function1<? super Uri, Unit> onItemClickListener) {
-            Intrinsics3.checkNotNullParameter(inputModel, "inputModel");
-            Intrinsics3.checkNotNullParameter(onItemClickListener, "onItemClickListener");
+            m.checkNotNullParameter(inputModel, "inputModel");
+            m.checkNotNullParameter(onItemClickListener, "onItemClickListener");
             this.inputModel = inputModel;
             this.onItemClickListener = onItemClickListener;
         }
 
         public void onBindViewHolder(ViewHolder holder, int position) {
-            Intrinsics3.checkNotNullParameter(holder, "holder");
+            m.checkNotNullParameter(holder, "holder");
             List<Uri> uris = this.inputModel.getUris();
             holder.bind(uris != null ? uris.get(position) : null);
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            Intrinsics3.checkNotNullParameter(parent, "parent");
+            m.checkNotNullParameter(parent, "parent");
             View viewInflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_image, parent, false);
             Objects.requireNonNull(viewInflate, "rootView");
             ViewImageBinding viewImageBinding = new ViewImageBinding((SimpleDraweeView) viewInflate);
-            Intrinsics3.checkNotNullExpressionValue(viewImageBinding, "ViewImageBinding.inflate….context), parent, false)");
+            m.checkNotNullExpressionValue(viewImageBinding, "ViewImageBinding.inflate….context), parent, false)");
             return new ViewHolder(this, viewImageBinding);
         }
 
@@ -268,10 +262,10 @@ public final class WidgetIncomingShare extends AppFragment {
         }
 
         public final void launch(Context context, String text, String recipient) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intentPutExtra = new Intent().putExtra("android.intent.extra.TEXT", text).putExtra(WidgetIncomingShare.EXTRA_RECIPIENT, recipient);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…TRA_RECIPIENT, recipient)");
-            AppScreen2.d(context, WidgetIncomingShare.class, intentPutExtra);
+            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…TRA_RECIPIENT, recipient)");
+            j.d(context, WidgetIncomingShare.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -297,7 +291,7 @@ public final class WidgetIncomingShare extends AppFragment {
             }
 
             public final ContentModel get(Intent recentIntent) {
-                Intrinsics3.checkNotNullParameter(recentIntent, "recentIntent");
+                m.checkNotNullParameter(recentIntent, "recentIntent");
                 ShareUtils.SharedContent sharedContent = ShareUtils.INSTANCE.getSharedContent(recentIntent, false);
                 Long directShareId = IntentUtils.INSTANCE.getDirectShareId(recentIntent);
                 String stringExtra = recentIntent.getStringExtra(WidgetIncomingShare.EXTRA_RECIPIENT);
@@ -393,7 +387,7 @@ public final class WidgetIncomingShare extends AppFragment {
                 return false;
             }
             ContentModel contentModel = (ContentModel) other;
-            return Intrinsics3.areEqual(this.sharedText, contentModel.sharedText) && Intrinsics3.areEqual(this.uris, contentModel.uris) && Intrinsics3.areEqual(this.preselectedRecipientChannel, contentModel.preselectedRecipientChannel) && Intrinsics3.areEqual(this.recipient, contentModel.recipient) && Intrinsics3.areEqual(this.activityActionUri, contentModel.activityActionUri) && Intrinsics3.areEqual(this.activity, contentModel.activity);
+            return m.areEqual(this.sharedText, contentModel.sharedText) && m.areEqual(this.uris, contentModel.uris) && m.areEqual(this.preselectedRecipientChannel, contentModel.preselectedRecipientChannel) && m.areEqual(this.recipient, contentModel.recipient) && m.areEqual(this.activityActionUri, contentModel.activityActionUri) && m.areEqual(this.activity, contentModel.activity);
         }
 
         public final Activity getActivity() {
@@ -436,7 +430,7 @@ public final class WidgetIncomingShare extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ContentModel(sharedText=");
+            StringBuilder sbU = a.U("ContentModel(sharedText=");
             sbU.append(this.sharedText);
             sbU.append(", uris=");
             sbU.append(this.uris);
@@ -469,8 +463,8 @@ public final class WidgetIncomingShare extends AppFragment {
         private final WidgetGlobalSearchModel searchModel;
 
         public Model(ContentModel contentModel, ViewEmbedGameInvite.Model model, String str, WidgetGlobalSearchModel widgetGlobalSearchModel, WidgetGlobalSearchModel.ItemDataPayload itemDataPayload, boolean z2, int i, boolean z3) {
-            Intrinsics3.checkNotNullParameter(contentModel, "contentModel");
-            Intrinsics3.checkNotNullParameter(widgetGlobalSearchModel, "searchModel");
+            m.checkNotNullParameter(contentModel, "contentModel");
+            m.checkNotNullParameter(widgetGlobalSearchModel, "searchModel");
             this.contentModel = contentModel;
             this.gameInviteModel = model;
             this.comment = str;
@@ -518,7 +512,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function3<TextView, Integer, KeyEvent, Boolean> {
+    public static final class AnonymousClass1 extends o implements Function3<TextView, Integer, KeyEvent, Boolean> {
         public final /* synthetic */ Model $this_configureUi;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -533,15 +527,15 @@ public final class WidgetIncomingShare extends AppFragment {
         }
 
         public final boolean invoke(TextView textView, int i, KeyEvent keyEvent) {
-            Intrinsics3.checkNotNullParameter(textView, "<anonymous parameter 0>");
+            m.checkNotNullParameter(textView, "<anonymous parameter 0>");
             if (i != 4 || this.$this_configureUi.getReceiver() == null) {
                 return false;
             }
             WidgetIncomingShare widgetIncomingShare = WidgetIncomingShare.this;
             TextInputLayout textInputLayout = WidgetIncomingShare.access$getBinding$p(widgetIncomingShare).d;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
             Context context = textInputLayout.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.externalShareComment.context");
+            m.checkNotNullExpressionValue(context, "binding.externalShareComment.context");
             WidgetIncomingShare.onSendClicked$default(widgetIncomingShare, context, this.$this_configureUi.getReceiver(), this.$this_configureUi.getGameInviteModel(), this.$this_configureUi.getContentModel(), this.$this_configureUi.getIsOnCooldown(), this.$this_configureUi.getMaxFileSizeMB(), this.$this_configureUi.getIsUserPremium(), null, 128, null);
             return true;
         }
@@ -563,19 +557,19 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
+            m.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != R.id.menu_send) {
                 return;
             }
             WidgetIncomingShare widgetIncomingShare = WidgetIncomingShare.this;
-            Intrinsics3.checkNotNullExpressionValue(context, "ctx");
+            m.checkNotNullExpressionValue(context, "ctx");
             WidgetIncomingShare.onSendClicked$default(widgetIncomingShare, context, this.$this_configureUi.getReceiver(), this.$this_configureUi.getGameInviteModel(), this.$this_configureUi.getContentModel(), this.$this_configureUi.getIsOnCooldown(), this.$this_configureUi.getMaxFileSizeMB(), this.$this_configureUi.getIsUserPremium(), null, 128, null);
         }
     }
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Uri, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Uri, Unit> {
         public final /* synthetic */ ContentModel $this_configureUi;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -598,7 +592,7 @@ public final class WidgetIncomingShare extends AppFragment {
             if (uris != null) {
                 arrayList = new ArrayList();
                 for (Object obj : uris) {
-                    if (!Intrinsics3.areEqual((Uri) obj, uri)) {
+                    if (!m.areEqual((Uri) obj, uri)) {
                         arrayList.add(obj);
                     }
                 }
@@ -611,23 +605,23 @@ public final class WidgetIncomingShare extends AppFragment {
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2, R> implements Func2<MeUser, Channel, Tuples2<? extends MeUser, ? extends Channel>> {
+    public static final class AnonymousClass1<T1, T2, R> implements Func2<MeUser, Channel, Pair<? extends MeUser, ? extends Channel>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         @Override // rx.functions.Func2
-        public /* bridge */ /* synthetic */ Tuples2<? extends MeUser, ? extends Channel> call(MeUser meUser, Channel channel) {
+        public /* bridge */ /* synthetic */ Pair<? extends MeUser, ? extends Channel> call(MeUser meUser, Channel channel) {
             return call2(meUser, channel);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Tuples2<MeUser, Channel> call2(MeUser meUser, Channel channel) {
-            return Tuples.to(meUser, channel);
+        public final Pair<MeUser, Channel> call2(MeUser meUser, Channel channel) {
+            return d0.o.to(meUser, channel);
         }
     }
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Tuples2<? extends MeUser, ? extends Channel>, Observable<? extends Tuples2<? extends MeUser, ? extends MessageQueue4>>> {
+    public static final class AnonymousClass2<T, R> implements b<Pair<? extends MeUser, ? extends Channel>, Observable<? extends Pair<? extends MeUser, ? extends MessageResult>>> {
         public final /* synthetic */ CaptchaHelper.CaptchaPayload $captchaPayload;
         public final /* synthetic */ List $data;
         public final /* synthetic */ ViewEmbedGameInvite.Model $gameInviteModel;
@@ -638,23 +632,23 @@ public final class WidgetIncomingShare extends AppFragment {
             this.$captchaPayload = captchaPayload;
         }
 
-        @Override // j0.k.Func1
-        public /* bridge */ /* synthetic */ Observable<? extends Tuples2<? extends MeUser, ? extends MessageQueue4>> call(Tuples2<? extends MeUser, ? extends Channel> tuples2) {
-            return call2((Tuples2<MeUser, Channel>) tuples2);
+        @Override // j0.k.b
+        public /* bridge */ /* synthetic */ Observable<? extends Pair<? extends MeUser, ? extends MessageResult>> call(Pair<? extends MeUser, ? extends Channel> pair) {
+            return call2((Pair<MeUser, Channel>) pair);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Observable<? extends Tuples2<MeUser, MessageQueue4>> call2(Tuples2<MeUser, Channel> tuples2) {
-            MeUser meUserComponent1 = tuples2.component1();
-            Channel channelComponent2 = tuples2.component2();
+        public final Observable<? extends Pair<MeUser, MessageResult>> call2(Pair<MeUser, Channel> pair) {
+            MeUser meUserComponent1 = pair.component1();
+            Channel channelComponent2 = pair.component2();
             if (channelComponent2 == null) {
-                return EmptyObservableHolder.k;
+                return c.k;
             }
             StoreMessages messages = StoreStream.INSTANCE.getMessages();
             long id2 = channelComponent2.getId();
-            Intrinsics3.checkNotNullExpressionValue(meUserComponent1, "meUser");
+            m.checkNotNullExpressionValue(meUserComponent1, "meUser");
             TextInputLayout textInputLayout = WidgetIncomingShare.access$getBinding$p(WidgetIncomingShare.this).d;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
             String textOrEmpty = ViewExtensions.getTextOrEmpty(textInputLayout);
             List list = this.$data;
             ViewEmbedGameInvite.Model model = this.$gameInviteModel;
@@ -662,13 +656,13 @@ public final class WidgetIncomingShare extends AppFragment {
             ViewEmbedGameInvite.Model model2 = this.$gameInviteModel;
             Activity activity = model2 != null ? model2.getActivity() : null;
             ViewEmbedGameInvite.Model model3 = this.$gameInviteModel;
-            return StoreMessages.sendMessage$default(messages, id2, meUserComponent1, textOrEmpty, null, list, null, null, null, application, activity, model3 != null ? model3.getMessageActivity() : null, null, null, null, this.$captchaPayload, 14464, null).G(new WidgetIncomingShare6(this, meUserComponent1));
+            return StoreMessages.sendMessage$default(messages, id2, meUserComponent1, textOrEmpty, null, list, null, null, null, application, activity, model3 != null ? model3.getMessageActivity() : null, null, null, null, this.$captchaPayload, 14464, null).G(new WidgetIncomingShare$onSendClicked$2$$special$$inlined$let$lambda$1(this, meUserComponent1));
         }
     }
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Tuples2<? extends MeUser, ? extends MessageQueue4>, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Pair<? extends MeUser, ? extends MessageResult>, Unit> {
         public final /* synthetic */ ContentModel $contentModel;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ List $data;
@@ -683,7 +677,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* compiled from: WidgetIncomingShare.kt */
         /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
+        public static final class AnonymousClass2 extends o implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
             public AnonymousClass2() {
                 super(2);
             }
@@ -696,8 +690,8 @@ public final class WidgetIncomingShare extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
-                Intrinsics3.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
-                Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
+                m.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
+                m.checkNotNullParameter(captchaPayload, "captchaPayload");
                 AnonymousClass3 anonymousClass3 = AnonymousClass3.this;
                 WidgetIncomingShare.access$onSendClicked(WidgetIncomingShare.this, anonymousClass3.$context, anonymousClass3.$receiver, anonymousClass3.$gameInviteModel, anonymousClass3.$contentModel, anonymousClass3.$isOnCooldown, anonymousClass3.$maxFileSizeMB, anonymousClass3.$isUserPremium, captchaPayload);
             }
@@ -705,11 +699,11 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* compiled from: WidgetIncomingShare.kt */
         /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3$3, reason: invalid class name and collision with other inner class name */
-        public static final class C03413 extends Lambda implements Function0<Unit> {
+        public static final class C04613 extends o implements Function0<Unit> {
             public final /* synthetic */ MeUser $me;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C03413(MeUser meUser) {
+            public C04613(MeUser meUser) {
                 super(0);
                 this.$me = meUser;
             }
@@ -726,17 +720,17 @@ public final class WidgetIncomingShare extends AppFragment {
                 WidgetGlobalSearchModel.ItemDataPayload itemDataPayload = AnonymousClass3.this.$receiver;
                 int maxFileSizeMB = 0;
                 if (itemDataPayload instanceof WidgetGlobalSearchModel.ItemGuild) {
-                    maxFileSizeMB = GuildUtils.getMaxFileSizeMB(((WidgetGlobalSearchModel.ItemGuild) itemDataPayload).getGuild());
+                    maxFileSizeMB = GuildUtilsKt.getMaxFileSizeMB(((WidgetGlobalSearchModel.ItemGuild) itemDataPayload).getGuild());
                 } else if ((itemDataPayload instanceof WidgetGlobalSearchModel.ItemChannel) && (guild = ((WidgetGlobalSearchModel.ItemChannel) itemDataPayload).getGuild()) != null) {
-                    maxFileSizeMB = GuildUtils.getMaxFileSizeMB(guild);
+                    maxFileSizeMB = GuildUtilsKt.getMaxFileSizeMB(guild);
                 }
                 int iMax = Math.max(maxFileSizeMB, PremiumUtils.INSTANCE.getMaxFileSizeMB(this.$me));
-                ImageUploadFailedDialog.Companion bVar = ImageUploadFailedDialog.INSTANCE;
+                c.Companion bVar = b.a.a.c.INSTANCE;
                 FragmentManager parentFragmentManager = WidgetIncomingShare.this.getParentFragmentManager();
-                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 UserUtils userUtils = UserUtils.INSTANCE;
                 MeUser meUser = this.$me;
-                Intrinsics3.checkNotNullExpressionValue(meUser, "me");
+                m.checkNotNullExpressionValue(meUser, "me");
                 boolean zIsPremium = userUtils.isPremium(meUser);
                 int size = AnonymousClass3.this.$data.size();
                 AnonymousClass3 anonymousClass3 = AnonymousClass3.this;
@@ -761,45 +755,45 @@ public final class WidgetIncomingShare extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Tuples2<? extends MeUser, ? extends MessageQueue4> tuples2) {
-            invoke2((Tuples2<MeUser, ? extends MessageQueue4>) tuples2);
+        public /* bridge */ /* synthetic */ Unit invoke(Pair<? extends MeUser, ? extends MessageResult> pair) {
+            invoke2((Pair<MeUser, ? extends MessageResult>) pair);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Tuples2<MeUser, ? extends MessageQueue4> tuples2) {
-            MeUser meUserComponent1 = tuples2.component1();
-            MessageQueue4 messageQueue4Component2 = tuples2.component2();
-            if (messageQueue4Component2 instanceof MessageQueue4.Success) {
+        public final void invoke2(Pair<MeUser, ? extends MessageResult> pair) {
+            MeUser meUserComponent1 = pair.component1();
+            MessageResult messageResultComponent2 = pair.component2();
+            if (messageResultComponent2 instanceof MessageResult.Success) {
                 WidgetIncomingShare.access$onSendCompleted(WidgetIncomingShare.this);
-                Attachment attachment = (Attachment) _Collections.firstOrNull(this.$data);
+                Attachment attachment = (Attachment) u.firstOrNull(this.$data);
                 if (attachment != null) {
                     AnalyticsTracker.INSTANCE.externalShare(attachment.getUri());
                     return;
                 }
                 return;
             }
-            if (messageQueue4Component2 instanceof MessageQueue4.Slowmode) {
-                int iCoerceAtLeast = _Ranges.coerceAtLeast((int) (((MessageQueue4.Slowmode) messageQueue4Component2).getCooldownMs() / 1000), 1);
+            if (messageResultComponent2 instanceof MessageResult.Slowmode) {
+                int iCoerceAtLeast = f.coerceAtLeast((int) (((MessageResult.Slowmode) messageResultComponent2).getCooldownMs() / 1000), 1);
                 Resources resources = this.$context.getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
-                AppToast.h(this.$context, StringResourceUtils.getQuantityString(resources, this.$context, R.plurals.channel_slowmode_cooldown_seconds, iCoerceAtLeast, Integer.valueOf(iCoerceAtLeast)), 0, null, 12);
+                m.checkNotNullExpressionValue(resources, "context.resources");
+                b.a.d.m.h(this.$context, StringResourceUtilsKt.getQuantityString(resources, this.$context, R.plurals.channel_slowmode_cooldown_seconds, iCoerceAtLeast, Integer.valueOf(iCoerceAtLeast)), 0, null, 12);
                 return;
             }
-            if (messageQueue4Component2 instanceof MessageQueue4.CaptchaRequired) {
-                MessageQueue4.CaptchaRequired captchaRequired = (MessageQueue4.CaptchaRequired) messageQueue4Component2;
+            if (messageResultComponent2 instanceof MessageResult.CaptchaRequired) {
+                MessageResult.CaptchaRequired captchaRequired = (MessageResult.CaptchaRequired) messageResultComponent2;
                 if (captchaRequired.getNonce() != null) {
                     StoreStream.INSTANCE.getMessages().deleteLocalMessage(captchaRequired.getChannelId(), captchaRequired.getNonce());
                 }
                 WidgetCaptchaBottomSheet.Companion.enqueue$default(WidgetCaptchaBottomSheet.INSTANCE, "Message Captcha", new AnonymousClass2(), null, CaptchaErrorBody.INSTANCE.createFromError(captchaRequired.getError()), 4, null);
                 return;
             }
-            if (messageQueue4Component2 instanceof MessageQueue4.UnknownFailure) {
+            if (messageResultComponent2 instanceof MessageResult.UnknownFailure) {
                 SendUtils sendUtils = SendUtils.INSTANCE;
-                Error error = ((MessageQueue4.UnknownFailure) messageQueue4Component2).getError();
+                Error error = ((MessageResult.UnknownFailure) messageResultComponent2).getError();
                 AppActivity appActivity = WidgetIncomingShare.this.getAppActivity();
                 if (appActivity != null) {
-                    SendUtils.handleSendError$default(sendUtils, error, appActivity, new C03413(meUserComponent1), null, 8, null);
+                    SendUtils.handleSendError$default(sendUtils, error, appActivity, new C04613(meUserComponent1), null, 8, null);
                 }
             }
         }
@@ -807,7 +801,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Editable, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Editable, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -820,14 +814,14 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
-            Intrinsics3.checkNotNullParameter(editable, "editable");
+            m.checkNotNullParameter(editable, "editable");
             WidgetIncomingShare.access$getCommentPublisher$p(WidgetIncomingShare.this).onNext(editable.toString());
         }
     }
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Editable, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Editable, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -840,7 +834,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
-            Intrinsics3.checkNotNullParameter(editable, "editable");
+            m.checkNotNullParameter(editable, "editable");
             WidgetIncomingShare.access$getSearchQueryPublisher$p(WidgetIncomingShare.this).onNext(editable.toString());
         }
     }
@@ -856,7 +850,7 @@ public final class WidgetIncomingShare extends AppFragment {
             if (z2) {
                 NestedScrollView nestedScrollView = WidgetIncomingShare.access$getBinding$p(WidgetIncomingShare.this).j;
                 TextInputLayout textInputLayout = WidgetIncomingShare.access$getBinding$p(WidgetIncomingShare.this).d;
-                Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
+                m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
                 nestedScrollView.smoothScrollTo(0, textInputLayout.getBottom());
             }
         }
@@ -867,18 +861,18 @@ public final class WidgetIncomingShare extends AppFragment {
     public static final class AnonymousClass4 implements View.OnClickListener {
 
         /* compiled from: WidgetIncomingShare.kt */
-        @DebugMetadata(c = "com.discord.widgets.share.WidgetIncomingShare$onViewBound$4$1", f = "WidgetIncomingShare.kt", l = {Opcodes.L2D}, m = "invokeSuspend")
+        @e(c = "com.discord.widgets.share.WidgetIncomingShare$onViewBound$4$1", f = "WidgetIncomingShare.kt", l = {Opcodes.L2D}, m = "invokeSuspend")
         /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+        public static final class AnonymousClass1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
             public AnonymousClass1(Continuation continuation) {
                 super(2, continuation);
             }
 
-            @Override // d0.w.i.a.ContinuationImpl
+            @Override // d0.w.i.a.a
             public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-                Intrinsics3.checkNotNullParameter(continuation, "completion");
+                m.checkNotNullParameter(continuation, "completion");
                 return AnonymousClass4.this.new AnonymousClass1(continuation);
             }
 
@@ -887,21 +881,21 @@ public final class WidgetIncomingShare extends AppFragment {
                 return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
             }
 
-            @Override // d0.w.i.a.ContinuationImpl
+            @Override // d0.w.i.a.a
             public final Object invokeSuspend(Object obj) {
-                Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+                Object coroutine_suspended = d0.w.h.c.getCOROUTINE_SUSPENDED();
                 int i = this.label;
                 if (i == 0) {
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     this.label = 1;
-                    if (f.P(200L, this) == coroutine_suspended) {
+                    if (b.i.a.f.e.o.f.P(200L, this) == coroutine_suspended) {
                         return coroutine_suspended;
                     }
                 } else {
                     if (i != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                 }
                 WidgetIncomingShare.access$getBinding$p(WidgetIncomingShare.this).g.requestFocus();
                 return Unit.a;
@@ -914,10 +908,10 @@ public final class WidgetIncomingShare extends AppFragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             TextInputLayout textInputLayout = WidgetIncomingShare.access$getBinding$p(WidgetIncomingShare.this).g;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareSearch");
-            CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(textInputLayout);
+            m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareSearch");
+            CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(textInputLayout);
             if (coroutineScope != null) {
-                f.H0(coroutineScope, null, null, new AnonymousClass1(null), 3, null);
+                b.i.a.f.e.o.f.H0(coroutineScope, null, null, new AnonymousClass1(null), 3, null);
             }
             WidgetIncomingShare.access$getSelectedReceiverPublisher$p(WidgetIncomingShare.this).onNext(null);
         }
@@ -925,7 +919,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Intent, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Intent, Unit> {
         public AnonymousClass5() {
             super(1);
         }
@@ -938,7 +932,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Intent intent) {
-            Intrinsics3.checkNotNullParameter(intent, "it");
+            m.checkNotNullParameter(intent, "it");
             WidgetIncomingShare.access$initialize(WidgetIncomingShare.this, ContentModel.INSTANCE.get(intent));
             WidgetIncomingShare.access$getSelectedReceiverPublisher$p(WidgetIncomingShare.this).onNext(null);
         }
@@ -946,14 +940,14 @@ public final class WidgetIncomingShare extends AppFragment {
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<WidgetGlobalSearchModel.ItemDataPayload, Observable<? extends Model>> {
+    public static final class AnonymousClass1<T, R> implements b<WidgetGlobalSearchModel.ItemDataPayload, Observable<? extends Model>> {
 
         /* compiled from: WidgetIncomingShare.kt */
         /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03421<T, R> implements Func1<ContentModel, Observable<? extends ViewEmbedGameInvite.Model>> {
-            public static final C03421 INSTANCE = new C03421();
+        public static final class C04621<T, R> implements b<ContentModel, Observable<? extends ViewEmbedGameInvite.Model>> {
+            public static final C04621 INSTANCE = new C04621();
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends ViewEmbedGameInvite.Model> call(ContentModel contentModel) {
                 return call2(contentModel);
             }
@@ -966,10 +960,10 @@ public final class WidgetIncomingShare extends AppFragment {
 
         /* compiled from: WidgetIncomingShare.kt */
         /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$2, reason: invalid class name */
-        public static final class AnonymousClass2<T, R> implements Func1<Integer, Boolean> {
+        public static final class AnonymousClass2<T, R> implements b<Integer, Boolean> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Boolean call(Integer num) {
                 return call2(num);
             }
@@ -1000,18 +994,18 @@ public final class WidgetIncomingShare extends AppFragment {
                 WidgetGlobalSearchModel.ItemDataPayload itemDataPayload = this.$receiver;
                 int maxFileSizeMB = 0;
                 if (itemDataPayload instanceof WidgetGlobalSearchModel.ItemGuild) {
-                    maxFileSizeMB = GuildUtils.getMaxFileSizeMB(((WidgetGlobalSearchModel.ItemGuild) itemDataPayload).getGuild());
+                    maxFileSizeMB = GuildUtilsKt.getMaxFileSizeMB(((WidgetGlobalSearchModel.ItemGuild) itemDataPayload).getGuild());
                 } else if ((itemDataPayload instanceof WidgetGlobalSearchModel.ItemChannel) && (guild = ((WidgetGlobalSearchModel.ItemChannel) itemDataPayload).getGuild()) != null) {
-                    maxFileSizeMB = GuildUtils.getMaxFileSizeMB(guild);
+                    maxFileSizeMB = GuildUtilsKt.getMaxFileSizeMB(guild);
                 }
-                Intrinsics3.checkNotNullExpressionValue(contentModel, "contentModel");
-                Intrinsics3.checkNotNullExpressionValue(widgetGlobalSearchModel, "searchModel");
+                m.checkNotNullExpressionValue(contentModel, "contentModel");
+                m.checkNotNullExpressionValue(widgetGlobalSearchModel, "searchModel");
                 WidgetGlobalSearchModel.ItemDataPayload itemDataPayload2 = this.$receiver;
-                Intrinsics3.checkNotNullExpressionValue(bool, "isOnCooldown");
+                m.checkNotNullExpressionValue(bool, "isOnCooldown");
                 boolean zBooleanValue = bool.booleanValue();
                 int iMax = Math.max(maxFileSizeMB, PremiumUtils.INSTANCE.getMaxFileSizeMB(meUser));
                 UserUtils userUtils = UserUtils.INSTANCE;
-                Intrinsics3.checkNotNullExpressionValue(meUser, "meUser");
+                m.checkNotNullExpressionValue(meUser, "meUser");
                 return new Model(contentModel, model, str, widgetGlobalSearchModel, itemDataPayload2, zBooleanValue, iMax, userUtils.isPremium(meUser));
             }
         }
@@ -1019,7 +1013,7 @@ public final class WidgetIncomingShare extends AppFragment {
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Model> call(WidgetGlobalSearchModel.ItemDataPayload itemDataPayload) {
             return call2(itemDataPayload);
         }
@@ -1028,13 +1022,13 @@ public final class WidgetIncomingShare extends AppFragment {
         public final Observable<? extends Model> call2(WidgetGlobalSearchModel.ItemDataPayload itemDataPayload) {
             Channel channel;
             BehaviorSubject behaviorSubjectAccess$getContentPublisher$p = WidgetIncomingShare.access$getContentPublisher$p(WidgetIncomingShare.this);
-            Observable<R> observableY = WidgetIncomingShare.access$getContentPublisher$p(WidgetIncomingShare.this).Y(C03421.INSTANCE);
+            Observable<R> observableY = WidgetIncomingShare.access$getContentPublisher$p(WidgetIncomingShare.this).Y(C04621.INSTANCE);
             BehaviorSubject behaviorSubjectAccess$getCommentPublisher$p = WidgetIncomingShare.access$getCommentPublisher$p(WidgetIncomingShare.this);
-            Intrinsics3.checkNotNullExpressionValue(behaviorSubjectAccess$getCommentPublisher$p, "commentPublisher");
+            m.checkNotNullExpressionValue(behaviorSubjectAccess$getCommentPublisher$p, "commentPublisher");
             Observable observableLeadingEdgeThrottle = ObservableExtensionsKt.leadingEdgeThrottle(behaviorSubjectAccess$getCommentPublisher$p, 500L, TimeUnit.MILLISECONDS);
             WidgetGlobalSearchModel.Companion companion = WidgetGlobalSearchModel.INSTANCE;
             BehaviorSubject behaviorSubjectAccess$getSearchQueryPublisher$p = WidgetIncomingShare.access$getSearchQueryPublisher$p(WidgetIncomingShare.this);
-            Intrinsics3.checkNotNullExpressionValue(behaviorSubjectAccess$getSearchQueryPublisher$p, "searchQueryPublisher");
+            m.checkNotNullExpressionValue(behaviorSubjectAccess$getSearchQueryPublisher$p, "searchQueryPublisher");
             Observable forSend$default = WidgetGlobalSearchModel.Companion.getForSend$default(companion, behaviorSubjectAccess$getSearchQueryPublisher$p, null, 2, null);
             StoreStream.Companion companion2 = StoreStream.INSTANCE;
             return Observable.f(behaviorSubjectAccess$getContentPublisher$p, observableY, observableLeadingEdgeThrottle, forSend$default, companion2.getSlowMode().observeCooldownSecs((itemDataPayload == null || (channel = itemDataPayload.getChannel()) == null) ? null : Long.valueOf(channel.getId()), StoreSlowMode.Type.MessageSend.INSTANCE).G(AnonymousClass2.INSTANCE).r(), StoreUser.observeMe$default(companion2.getUsers(), false, 1, null), new AnonymousClass3(itemDataPayload));
@@ -1043,7 +1037,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
     /* compiled from: WidgetIncomingShare.kt */
     /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Model, Unit> {
         public final /* synthetic */ Clock $clock;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1061,14 +1055,14 @@ public final class WidgetIncomingShare extends AppFragment {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetIncomingShare widgetIncomingShare = WidgetIncomingShare.this;
-            Intrinsics3.checkNotNullExpressionValue(model, "it");
+            m.checkNotNullExpressionValue(model, "it");
             WidgetIncomingShare.access$configureUi(widgetIncomingShare, model, this.$clock);
         }
     }
 
     public WidgetIncomingShare() {
         super(R.layout.widget_incoming_share);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetIncomingShare3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetIncomingShare$binding$2.INSTANCE, null, 2, null);
         this.contentPublisher = BehaviorSubject.k0();
         this.commentPublisher = BehaviorSubject.l0("");
         this.searchQueryPublisher = BehaviorSubject.l0("");
@@ -1121,7 +1115,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
     private final void configureAdapter(Adapter previewAdapter) {
         RecyclerView recyclerView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.externalShareList");
+        m.checkNotNullExpressionValue(recyclerView, "binding.externalShareList");
         recyclerView.setAdapter(previewAdapter);
         ViewCompat.setNestedScrollingEnabled(getBinding().e, false);
         getBinding().e.setHasFixedSize(true);
@@ -1133,23 +1127,23 @@ public final class WidgetIncomingShare extends AppFragment {
         List<Uri> uris;
         configureUi(model.getContentModel());
         TextInputLayout textInputLayout = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
         ViewExtensions.setOnEditorActionListener(textInputLayout, new AnonymousClass1(model));
         if (model.getReceiver() != null) {
             AppViewFlipper appViewFlipper = getBinding().k;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.searchFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper, "binding.searchFlipper");
             appViewFlipper.setDisplayedChild(1);
             TextInputLayout textInputLayout2 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.externalShareSearch");
+            m.checkNotNullExpressionValue(textInputLayout2, "binding.externalShareSearch");
             textInputLayout2.setFocusable(false);
             TextInputLayout textInputLayout3 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.externalShareComment");
+            m.checkNotNullExpressionValue(textInputLayout3, "binding.externalShareComment");
             EditText editText = textInputLayout3.getEditText();
             if (editText != null) {
                 editText.setImeOptions(4);
             }
             String comment = model.getComment();
-            setActionBarOptionsMenu(!(comment == null || StringsJVM.isBlank(comment)) || (((uris = model.getContentModel().getUris()) != null && !uris.isEmpty()) || model.getGameInviteModel() != null) ? R.menu.menu_external_share : R.menu.menu_empty, new AnonymousClass2(model), null);
+            setActionBarOptionsMenu(!(comment == null || t.isBlank(comment)) || (((uris = model.getContentModel().getUris()) != null && !uris.isEmpty()) || model.getGameInviteModel() != null) ? R.menu.menu_external_share : R.menu.menu_empty, new AnonymousClass2(model), null);
             WidgetGlobalSearchModel.ItemDataPayload receiver = model.getReceiver();
             if (receiver instanceof WidgetGlobalSearchModel.ItemUser) {
                 getBinding().l.onConfigure((WidgetGlobalSearchModel.ItemUser) model.getReceiver());
@@ -1160,16 +1154,16 @@ public final class WidgetIncomingShare extends AppFragment {
             }
         } else {
             AppViewFlipper appViewFlipper2 = getBinding().k;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.searchFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper2, "binding.searchFlipper");
             appViewFlipper2.setDisplayedChild(0);
             TextInputLayout textInputLayout4 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.externalShareSearch");
+            m.checkNotNullExpressionValue(textInputLayout4, "binding.externalShareSearch");
             textInputLayout4.setFocusable(true);
             TextInputLayout textInputLayout5 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout5, "binding.externalShareSearch");
+            m.checkNotNullExpressionValue(textInputLayout5, "binding.externalShareSearch");
             textInputLayout5.setFocusableInTouchMode(true);
             TextInputLayout textInputLayout6 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout6, "binding.externalShareComment");
+            m.checkNotNullExpressionValue(textInputLayout6, "binding.externalShareComment");
             EditText editText2 = textInputLayout6.getEditText();
             if (editText2 != null) {
                 editText2.setImeOptions(5);
@@ -1177,26 +1171,26 @@ public final class WidgetIncomingShare extends AppFragment {
             AppFragment.setActionBarOptionsMenu$default(this, R.menu.menu_empty, null, null, 4, null);
         }
         AppViewFlipper appViewFlipper3 = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(appViewFlipper3, "binding.incomingShareResultsFlipper");
+        m.checkNotNullExpressionValue(appViewFlipper3, "binding.incomingShareResultsFlipper");
         appViewFlipper3.setDisplayedChild(model.getSearchModel().getData().isEmpty() ? 1 : 0);
         WidgetGlobalSearchAdapter widgetGlobalSearchAdapter = this.resultsAdapter;
         if (widgetGlobalSearchAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("resultsAdapter");
+            m.throwUninitializedPropertyAccessException("resultsAdapter");
         }
-        widgetGlobalSearchAdapter.setOnUpdated(new WidgetIncomingShare4(this, model));
+        widgetGlobalSearchAdapter.setOnUpdated(new WidgetIncomingShare$configureUi$$inlined$apply$lambda$1(this, model));
         List<WidgetGlobalSearchModel.ItemDataPayload> data = model.getSearchModel().getData();
         ArrayList arrayList = new ArrayList();
         for (Object obj : data) {
             String key = ((WidgetGlobalSearchModel.ItemDataPayload) obj).getKey();
             WidgetGlobalSearchModel.ItemDataPayload receiver2 = model.getReceiver();
-            if (!Intrinsics3.areEqual(key, receiver2 != null ? receiver2.getKey() : null)) {
+            if (!m.areEqual(key, receiver2 != null ? receiver2.getKey() : null)) {
                 arrayList.add(obj);
             }
         }
         widgetGlobalSearchAdapter.setData(arrayList);
-        widgetGlobalSearchAdapter.setOnSelectedListener(new WidgetIncomingShare5(this, model));
+        widgetGlobalSearchAdapter.setOnSelectedListener(new WidgetIncomingShare$configureUi$$inlined$apply$lambda$2(this, model));
         ViewEmbedGameInvite viewEmbedGameInvite = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(viewEmbedGameInvite, "binding.externalShareActivityActionPreview");
+        m.checkNotNullExpressionValue(viewEmbedGameInvite, "binding.externalShareActivityActionPreview");
         viewEmbedGameInvite.setVisibility(model.getGameInviteModel() != null ? 0 : 8);
         ViewEmbedGameInvite.Model gameInviteModel = model.getGameInviteModel();
         if (gameInviteModel != null) {
@@ -1220,18 +1214,18 @@ public final class WidgetIncomingShare extends AppFragment {
         int i = 0;
         if (contentModel.getPreselectedRecipientChannel() != null && (context = getContext()) != null) {
             ChannelSelector.INSTANCE.getInstance().findAndSet(context, contentModel.getPreselectedRecipientChannel().longValue());
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
-            AppScreen2.c(context, false, getMostRecentIntent().setFlags(268468225), 2);
+            m.checkNotNullExpressionValue(context, "context");
+            j.c(context, false, getMostRecentIntent().setFlags(268468225), 2);
             finish();
         }
         TextInputLayout textInputLayout = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareSearch");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareSearch");
         ViewExtensions.setText(textInputLayout, contentModel.getRecipient());
         TextInputLayout textInputLayout2 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.externalShareSearch");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.externalShareSearch");
         ViewExtensions.setSelectionEnd(textInputLayout2);
         TextInputLayout textInputLayout3 = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.externalShareComment");
+        m.checkNotNullExpressionValue(textInputLayout3, "binding.externalShareComment");
         ViewExtensions.setText(textInputLayout3, contentModel.getSharedText());
         this.contentPublisher.onNext(contentModel);
         List<Uri> uris = contentModel.getUris();
@@ -1239,11 +1233,11 @@ public final class WidgetIncomingShare extends AppFragment {
             for (Object obj : uris) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    Collections2.throwIndexOverflow();
+                    n.throwIndexOverflow();
                 }
                 Uri uri = (Uri) obj;
                 Context context2 = getContext();
-                AnalyticsTracker.addAttachment(AnalyticsTracker.ATTACHMENT_SOURCE_SHARE, AttachmentUtils.getMimeType$default(context2 != null ? context2.getContentResolver() : null, uri, null, 4, null), i);
+                AnalyticsTracker.addAttachment(AnalyticsTracker.ATTACHMENT_SOURCE_SHARE, AttachmentUtilsKt.getMimeType$default(context2 != null ? context2.getContentResolver() : null, uri, null, 4, null), i);
                 i = i2;
             }
         }
@@ -1257,53 +1251,53 @@ public final class WidgetIncomingShare extends AppFragment {
         int i;
         boolean z4;
         if (isOnCooldown) {
-            AppToast.g(context, R.string.channel_slowmode_desc_short, 0, null, 12);
+            b.a.d.m.g(context, R.string.channel_slowmode_desc_short, 0, null, 12);
             return;
         }
         if (receiver instanceof WidgetGlobalSearchModel.ItemChannel) {
             WidgetGlobalSearchModel.ItemChannel itemChannel = (WidgetGlobalSearchModel.ItemChannel) receiver;
             ChannelSelector.selectChannel$default(ChannelSelector.INSTANCE.getInstance(), itemChannel.getChannel(), null, null, 6, null);
-            cVarD = o.d(new WidgetIncomingShare7(receiver), itemChannel.getChannel(), 0L, null, 12);
+            cVarD = b.a.d.o.d(new WidgetIncomingShare$onSendClicked$filter$1(receiver), itemChannel.getChannel(), 0L, null, 12);
         } else if (receiver instanceof WidgetGlobalSearchModel.ItemUser) {
             ChannelSelector.INSTANCE.getInstance().findAndSetDirectMessage(context, ((WidgetGlobalSearchModel.ItemUser) receiver).getUser().getId());
-            cVarD = o.d(new WidgetIncomingShare8(receiver), receiver.getChannel(), 0L, null, 12);
+            cVarD = b.a.d.o.d(new WidgetIncomingShare$onSendClicked$filter$2(receiver), receiver.getChannel(), 0L, null, 12);
         } else {
             if (!(receiver instanceof WidgetGlobalSearchModel.ItemGuild)) {
                 return;
             }
             StoreStream.INSTANCE.getGuildSelected().set(((WidgetGlobalSearchModel.ItemGuild) receiver).getGuild().getId());
-            cVarD = o.d(new WidgetIncomingShare9(receiver), receiver.getChannel(), 0L, null, 12);
+            cVarD = b.a.d.o.d(new WidgetIncomingShare$onSendClicked$filter$3(receiver), receiver.getChannel(), 0L, null, 12);
         }
         List<Uri> uris = contentModel.getUris();
         if (uris != null) {
-            listEmptyList = new ArrayList(Iterables2.collectionSizeOrDefault(uris, 10));
+            listEmptyList = new ArrayList(d0.t.o.collectionSizeOrDefault(uris, 10));
             for (Uri uri : uris) {
                 Attachment.Companion companion = Attachment.INSTANCE;
                 ContentResolver contentResolver = context.getContentResolver();
-                Intrinsics3.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
+                m.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
                 listEmptyList.add(companion.b(uri, contentResolver));
             }
         } else {
-            listEmptyList = Collections2.emptyList();
+            listEmptyList = n.emptyList();
         }
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listEmptyList, 10));
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listEmptyList, 10));
         Iterator it = listEmptyList.iterator();
         while (it.hasNext()) {
             Uri uri2 = ((Attachment) it.next()).getUri();
             ContentResolver contentResolver2 = context.getContentResolver();
-            Intrinsics3.checkNotNullExpressionValue(contentResolver2, "context.contentResolver");
-            arrayList.add(Float.valueOf(SendUtils5.computeFileSizeMegabytes(uri2, contentResolver2)));
+            m.checkNotNullExpressionValue(contentResolver2, "context.contentResolver");
+            arrayList.add(Float.valueOf(SendUtilsKt.computeFileSizeMegabytes(uri2, contentResolver2)));
         }
-        Float fM111maxOrNull = _Collections.m111maxOrNull((Iterable<Float>) arrayList);
+        Float fM111maxOrNull = u.m111maxOrNull((Iterable<Float>) arrayList);
         float fFloatValue = fM111maxOrNull != null ? fM111maxOrNull.floatValue() : 0.0f;
-        float fSumOfFloat = _Collections.sumOfFloat(arrayList);
+        float fSumOfFloat = u.sumOfFloat(arrayList);
         boolean z5 = listEmptyList instanceof Collection;
         if (z5 && listEmptyList.isEmpty()) {
             z2 = false;
         } else {
             Iterator it2 = listEmptyList.iterator();
             while (it2.hasNext()) {
-                if (AttachmentUtils.isImage((Attachment) it2.next(), context.getContentResolver())) {
+                if (AttachmentUtilsKt.isImage((Attachment) it2.next(), context.getContentResolver())) {
                     z2 = true;
                     break;
                 }
@@ -1315,7 +1309,7 @@ public final class WidgetIncomingShare extends AppFragment {
         } else {
             Iterator it3 = listEmptyList.iterator();
             while (it3.hasNext()) {
-                if (AttachmentUtils.isVideo((Attachment) it3.next(), context.getContentResolver())) {
+                if (AttachmentUtilsKt.isVideo((Attachment) it3.next(), context.getContentResolver())) {
                     z3 = true;
                     break;
                 }
@@ -1328,7 +1322,7 @@ public final class WidgetIncomingShare extends AppFragment {
         } else {
             Iterator it4 = listEmptyList.iterator();
             while (it4.hasNext()) {
-                if (AttachmentUtils.isGif((Attachment) it4.next(), context.getContentResolver())) {
+                if (AttachmentUtilsKt.isGif((Attachment) it4.next(), context.getContentResolver())) {
                     i = maxFileSizeMB;
                     z4 = true;
                     break;
@@ -1338,21 +1332,21 @@ public final class WidgetIncomingShare extends AppFragment {
             z4 = false;
         }
         if (fSumOfFloat > ((float) i)) {
-            ImageUploadFailedDialog.Companion bVar = ImageUploadFailedDialog.INSTANCE;
+            c.Companion bVar = b.a.a.c.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             bVar.a(parentFragmentManager, isUserPremium, maxFileSizeMB, fFloatValue, fSumOfFloat, null, listEmptyList.size(), z2, z3, z4);
             return;
         }
         StoreStream.Companion companion2 = StoreStream.INSTANCE;
         Observable observableObserveMe$default = StoreUser.observeMe$default(companion2.getUsers(), false, 1, null);
         Observable<R> observableK = companion2.getChannelsSelected().observeSelectedChannel().k(cVarD);
-        Intrinsics3.checkNotNullExpressionValue(observableK, "StoreStream\n            …         .compose(filter)");
+        m.checkNotNullExpressionValue(observableK, "StoreStream\n            …         .compose(filter)");
         Observable observableA = Observable.j(observableObserveMe$default, ObservableExtensionsKt.takeSingleUntilTimeout$default(observableK, 1000L, false, 2, null), AnonymousClass1.INSTANCE).Z(1).A(new AnonymousClass2(listEmptyList, gameInviteModel, captchaPayload));
-        Intrinsics3.checkNotNullExpressionValue(observableA, "Observable\n        .comb…ervable.empty()\n        }");
+        m.checkNotNullExpressionValue(observableA, "Observable\n        .comb…ervable.empty()\n        }");
         WidgetGlobalSearchAdapter widgetGlobalSearchAdapter = this.resultsAdapter;
         if (widgetGlobalSearchAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("resultsAdapter");
+            m.throwUninitializedPropertyAccessException("resultsAdapter");
         }
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer(ObservableExtensionsKt.ui(observableA, this, widgetGlobalSearchAdapter), getBinding().f2479b, 0L), WidgetIncomingShare.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(listEmptyList, context, receiver, gameInviteModel, contentModel, isOnCooldown, maxFileSizeMB, isUserPremium, z2, z3, z4), 62, (Object) null);
     }
@@ -1364,9 +1358,9 @@ public final class WidgetIncomingShare extends AppFragment {
     private final void onSendCompleted() {
         Context context = getContext();
         if (context != null) {
-            Intrinsics3.checkNotNullExpressionValue(context, "this.context ?: return");
-            if (!Intrinsics3.areEqual(getMostRecentIntent().getAction(), "com.discord.intent.action.SDK") && getMostRecentIntent().getBooleanExtra("com.discord.intent.extra.EXTRA_CONTINUE_IN_APP", true)) {
-                AppScreen2.c(context, false, new Intent().addFlags(268468224), 2);
+            m.checkNotNullExpressionValue(context, "this.context ?: return");
+            if (!m.areEqual(getMostRecentIntent().getAction(), "com.discord.intent.action.SDK") && getMostRecentIntent().getBooleanExtra("com.discord.intent.extra.EXTRA_CONTINUE_IN_APP", true)) {
+                j.c(context, false, new Intent().addFlags(268468224), 2);
             }
             finish();
         }
@@ -1374,7 +1368,7 @@ public final class WidgetIncomingShare extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         Context context = getContext();
         if (context == null) {
@@ -1384,30 +1378,30 @@ public final class WidgetIncomingShare extends AppFragment {
         Adapter adapter = new Adapter(this, new ContentModel(null, null, null, null, null, null, 63, null), null, 2, null);
         this.previewAdapter = adapter;
         if (adapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("previewAdapter");
+            m.throwUninitializedPropertyAccessException("previewAdapter");
         }
         configureAdapter(adapter);
         TextInputLayout textInputLayout = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.externalShareComment");
         ViewExtensions.addBindedTextWatcher(textInputLayout, this, new AnonymousClass1());
         RecyclerView recyclerView = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.externalShareSearchResults");
+        m.checkNotNullExpressionValue(recyclerView, "binding.externalShareSearchResults");
         this.resultsAdapter = (WidgetGlobalSearchAdapter) MGRecyclerAdapter.INSTANCE.configure(new WidgetGlobalSearchAdapter(recyclerView));
         ViewCompat.setNestedScrollingEnabled(getBinding().h, false);
         getBinding().h.setHasFixedSize(false);
         TextInputLayout textInputLayout2 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.externalShareSearch");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.externalShareSearch");
         ViewExtensions.addBindedTextWatcher(textInputLayout2, this, new AnonymousClass2());
         TextInputLayout textInputLayout3 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.externalShareSearch");
+        m.checkNotNullExpressionValue(textInputLayout3, "binding.externalShareSearch");
         ViewExtensions.setOnEditTextFocusChangeListener(textInputLayout3, new AnonymousClass3());
         getBinding().m.setOnClickListener(new AnonymousClass4());
         this.selectedReceiverPublisher.onNext(null);
         AppViewFlipper appViewFlipper = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.searchFlipper");
+        m.checkNotNullExpressionValue(appViewFlipper, "binding.searchFlipper");
         appViewFlipper.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_grow_fade_in_from_bottom));
         AppViewFlipper appViewFlipper2 = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.searchFlipper");
+        m.checkNotNullExpressionValue(appViewFlipper2, "binding.searchFlipper");
         appViewFlipper2.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_shrink_fade_out_from_bottom));
         setOnNewIntentListener(new AnonymousClass5());
         initialize(ContentModel.INSTANCE.get(getMostRecentIntent()));
@@ -1417,15 +1411,15 @@ public final class WidgetIncomingShare extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         BehaviorSubject<String> behaviorSubject = this.searchQueryPublisher;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "searchQueryPublisher");
+        m.checkNotNullExpressionValue(behaviorSubject, "searchQueryPublisher");
         StoreGuilds.Actions.requestMembers(this, behaviorSubject, false);
         Clock clock = ClockFactory.get();
         Observable<R> observableY = this.selectedReceiverPublisher.r().Y(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableY, "selectedReceiverPublishe…  )\n          }\n        }");
+        m.checkNotNullExpressionValue(observableY, "selectedReceiverPublishe…  )\n          }\n        }");
         Observable observableComputationLatest = ObservableExtensionsKt.computationLatest(observableY);
         WidgetGlobalSearchAdapter widgetGlobalSearchAdapter = this.resultsAdapter;
         if (widgetGlobalSearchAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("resultsAdapter");
+            m.throwUninitializedPropertyAccessException("resultsAdapter");
         }
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(observableComputationLatest, this, widgetGlobalSearchAdapter), WidgetIncomingShare.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(clock), 62, (Object) null);
     }
@@ -1434,18 +1428,18 @@ public final class WidgetIncomingShare extends AppFragment {
     private final void configureUi(ContentModel contentModel) {
         Adapter adapter = this.previewAdapter;
         if (adapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("previewAdapter");
+            m.throwUninitializedPropertyAccessException("previewAdapter");
         }
         adapter.setData(contentModel, new AnonymousClass5(contentModel));
         Adapter adapter2 = this.previewAdapter;
         if (adapter2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("previewAdapter");
+            m.throwUninitializedPropertyAccessException("previewAdapter");
         }
         adapter2.notifyDataSetChanged();
         List<Uri> uris = contentModel.getUris();
         boolean z2 = (uris == null || uris.isEmpty()) ? false : true;
         CardView cardView = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.externalShareListWrap");
+        m.checkNotNullExpressionValue(cardView, "binding.externalShareListWrap");
         cardView.setVisibility(z2 ? 0 : 8);
         getBinding().d.setHint(z2 ? R.string.add_a_comment_optional : R.string.upload_area_leave_a_comment);
     }

@@ -2,7 +2,7 @@ package org.webrtc.audio;
 
 import android.media.AudioManager;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.webrtc.Logging;
@@ -30,7 +30,7 @@ public class VolumeLogger {
         public void run() {
             int mode = VolumeLogger.access$000(VolumeLogger.this).getMode();
             if (mode == 1) {
-                StringBuilder sbU = outline.U("STREAM_RING stream volume: ");
+                StringBuilder sbU = a.U("STREAM_RING stream volume: ");
                 sbU.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(2));
                 sbU.append(" (max=");
                 sbU.append(this.maxRingVolume);
@@ -39,7 +39,7 @@ public class VolumeLogger {
                 return;
             }
             if (mode == 3) {
-                StringBuilder sbU2 = outline.U("VOICE_CALL stream volume: ");
+                StringBuilder sbU2 = a.U("VOICE_CALL stream volume: ");
                 sbU2.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(0));
                 sbU2.append(" (max=");
                 sbU2.append(this.maxVoiceCallVolume);
@@ -58,13 +58,13 @@ public class VolumeLogger {
     }
 
     public void start() {
-        StringBuilder sbU = outline.U("start");
+        StringBuilder sbU = a.U("start");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
         if (this.timer != null) {
             return;
         }
-        StringBuilder sbU2 = outline.U("audio mode is: ");
+        StringBuilder sbU2 = a.U("audio mode is: ");
         sbU2.append(WebRtcAudioUtils.modeToString(this.audioManager.getMode()));
         Logging.d(TAG, sbU2.toString());
         Timer timer = new Timer(THREAD_NAME);
@@ -73,7 +73,7 @@ public class VolumeLogger {
     }
 
     public void stop() {
-        StringBuilder sbU = outline.U("stop");
+        StringBuilder sbU = a.U("stop");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
         Timer timer = this.timer;

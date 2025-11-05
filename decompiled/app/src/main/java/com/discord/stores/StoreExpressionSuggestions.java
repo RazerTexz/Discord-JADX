@@ -4,8 +4,8 @@ import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -24,7 +24,7 @@ public final class StoreExpressionSuggestions extends StoreV2 {
 
     /* compiled from: StoreExpressionSuggestions.kt */
     /* renamed from: com.discord.stores.StoreExpressionSuggestions$observeSuggestionsEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public AnonymousClass1() {
             super(0);
         }
@@ -42,7 +42,7 @@ public final class StoreExpressionSuggestions extends StoreV2 {
 
     /* compiled from: StoreExpressionSuggestions.kt */
     /* renamed from: com.discord.stores.StoreExpressionSuggestions$setExpressionSuggestionsEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ boolean $enable;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -80,7 +80,7 @@ public final class StoreExpressionSuggestions extends StoreV2 {
         return this.lastSuggestionTrigger;
     }
 
-    @Store3
+    @StoreThread
     public final void handleChannelSelected() {
         this.suggestionsEnabled = true;
         markChanged();
@@ -88,7 +88,7 @@ public final class StoreExpressionSuggestions extends StoreV2 {
 
     public final Observable<Boolean> observeSuggestionsEnabled() {
         Observable<Boolean> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
@@ -97,7 +97,7 @@ public final class StoreExpressionSuggestions extends StoreV2 {
     }
 
     public final void trackExpressionSuggestionsDisplayed(String suggestionTrigger) {
-        Intrinsics3.checkNotNullParameter(suggestionTrigger, "suggestionTrigger");
+        m.checkNotNullParameter(suggestionTrigger, "suggestionTrigger");
         long jCurrentTimeMillis = this.clock.currentTimeMillis();
         if (this.lastTrackedExpressionSuggestionsDisplayed + 60000 <= jCurrentTimeMillis) {
             this.lastTrackedExpressionSuggestionsDisplayed = jCurrentTimeMillis;
@@ -107,9 +107,9 @@ public final class StoreExpressionSuggestions extends StoreV2 {
     }
 
     public StoreExpressionSuggestions(ObservationDeck observationDeck, Dispatcher dispatcher, Clock clock) {
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(clock, "clock");
         this.observationDeck = observationDeck;
         this.dispatcher = dispatcher;
         this.clock = clock;

@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.widgets.guilds.list.GuildListItem;
 import com.discord.widgets.guilds.list.GuildListViewHolder;
 import com.discord.widgets.guilds.list.GuildsDragAndDropCallback;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -112,10 +112,10 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("MoveAbove(fromPosition=");
+                StringBuilder sbU = a.U("MoveAbove(fromPosition=");
                 sbU.append(this.fromPosition);
                 sbU.append(", targetPosition=");
-                return outline.B(sbU, this.targetPosition, ")");
+                return a.B(sbU, this.targetPosition, ")");
             }
         }
 
@@ -178,10 +178,10 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("MoveBelow(fromPosition=");
+                StringBuilder sbU = a.U("MoveBelow(fromPosition=");
                 sbU.append(this.fromPosition);
                 sbU.append(", targetPosition=");
-                return outline.B(sbU, this.targetPosition, ")");
+                return a.B(sbU, this.targetPosition, ")");
             }
         }
 
@@ -244,10 +244,10 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("TargetOperation(fromPosition=");
+                StringBuilder sbU = a.U("TargetOperation(fromPosition=");
                 sbU.append(this.fromPosition);
                 sbU.append(", targetPosition=");
-                return outline.B(sbU, this.targetPosition, ")");
+                return a.B(sbU, this.targetPosition, ")");
             }
         }
 
@@ -292,7 +292,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
         public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-            return Intrinsics3.areEqual((GuildListItem) this.$oldItems.get(oldItemPosition), (GuildListItem) this.$newItems.get(newItemPosition));
+            return m.areEqual((GuildListItem) this.$oldItems.get(oldItemPosition), (GuildListItem) this.$newItems.get(newItemPosition));
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
@@ -326,7 +326,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         public final void onClick(View view) {
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view2 = this.$holder.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view2, "holder.itemView");
+            m.checkNotNullExpressionValue(view2, "holder.itemView");
             interactionListenerAccess$getInteractionListener$p.onItemClicked(view2, this.$item);
         }
     }
@@ -346,14 +346,14 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         public final void onClick(View view) {
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view2 = this.$holder.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view2, "holder.itemView");
+            m.checkNotNullExpressionValue(view2, "holder.itemView");
             interactionListenerAccess$getInteractionListener$p.onItemClicked(view2, this.$item);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Integer, View> {
+    public static final class AnonymousClass1 extends o implements Function1<Integer, View> {
         public final /* synthetic */ ViewGroup $parent;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -374,7 +374,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<GuildListItem.GuildItem, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<GuildListItem.GuildItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -391,17 +391,17 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.GuildItem guildItem) {
-            Intrinsics3.checkNotNullParameter(guildItem, "item");
+            m.checkNotNullParameter(guildItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemClicked(view, guildItem);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<GuildListItem.GuildItem, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<GuildListItem.GuildItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -418,17 +418,17 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.GuildItem guildItem) {
-            Intrinsics3.checkNotNullParameter(guildItem, "item");
+            m.checkNotNullParameter(guildItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemLongPressed(view, guildItem);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<GuildListItem.FolderItem, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<GuildListItem.FolderItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -445,17 +445,17 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.FolderItem folderItem) {
-            Intrinsics3.checkNotNullParameter(folderItem, "item");
+            m.checkNotNullParameter(folderItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemClicked(view, folderItem);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<GuildListItem.FolderItem, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<GuildListItem.FolderItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -472,17 +472,17 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.FolderItem folderItem) {
-            Intrinsics3.checkNotNullParameter(folderItem, "item");
+            m.checkNotNullParameter(folderItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemLongPressed(view, folderItem);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends Lambda implements Function1<GuildListItem.PrivateChannelItem, Unit> {
+    public static final class AnonymousClass6 extends o implements Function1<GuildListItem.PrivateChannelItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -499,17 +499,17 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.PrivateChannelItem privateChannelItem) {
-            Intrinsics3.checkNotNullParameter(privateChannelItem, "item");
+            m.checkNotNullParameter(privateChannelItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemClicked(view, privateChannelItem);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$7, reason: invalid class name */
-    public static final class AnonymousClass7 extends Lambda implements Function1<GuildListItem.PrivateChannelItem, Unit> {
+    public static final class AnonymousClass7 extends o implements Function1<GuildListItem.PrivateChannelItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -526,17 +526,17 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.PrivateChannelItem privateChannelItem) {
-            Intrinsics3.checkNotNullParameter(privateChannelItem, "item");
+            m.checkNotNullParameter(privateChannelItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemLongPressed(view, privateChannelItem);
         }
     }
 
     /* compiled from: WidgetGuildListAdapter.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$8, reason: invalid class name */
-    public static final class AnonymousClass8 extends Lambda implements Function1<GuildListItem.FriendsItem, Unit> {
+    public static final class AnonymousClass8 extends o implements Function1<GuildListItem.FriendsItem, Unit> {
         public final /* synthetic */ View $itemView;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -553,20 +553,20 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.FriendsItem friendsItem) {
-            Intrinsics3.checkNotNullParameter(friendsItem, "item");
+            m.checkNotNullParameter(friendsItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
             View view = this.$itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             interactionListenerAccess$getInteractionListener$p.onItemClicked(view, friendsItem);
         }
     }
 
     public WidgetGuildListAdapter(LinearLayoutManager linearLayoutManager, InteractionListener interactionListener) {
-        Intrinsics3.checkNotNullParameter(linearLayoutManager, "layoutManager");
-        Intrinsics3.checkNotNullParameter(interactionListener, "interactionListener");
+        m.checkNotNullParameter(linearLayoutManager, "layoutManager");
+        m.checkNotNullParameter(interactionListener, "interactionListener");
         this.layoutManager = linearLayoutManager;
         this.interactionListener = interactionListener;
-        this.items = Collections2.emptyList();
+        this.items = n.emptyList();
         this.boundingBoxRect = new Rect();
     }
 
@@ -584,8 +584,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
     @Override // com.discord.widgets.guilds.list.GuildsDragAndDropCallback.Controller
     public RecyclerView.ViewHolder chooseDropTarget(RecyclerView.ViewHolder selected, List<RecyclerView.ViewHolder> dropTargets, int curX, int curY) {
-        Intrinsics3.checkNotNullParameter(selected, "selected");
-        Intrinsics3.checkNotNullParameter(dropTargets, "dropTargets");
+        m.checkNotNullParameter(selected, "selected");
+        m.checkNotNullParameter(dropTargets, "dropTargets");
         this.layoutManager.getTransformedBoundingBox(selected.itemView, false, this.boundingBoxRect);
         this.selectedCenterY = this.boundingBoxRect.centerY();
         int i = Integer.MAX_VALUE;
@@ -629,22 +629,22 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         if (guildListItem instanceof GuildListItem.FriendsItem) {
             return 0;
         }
-        if (Intrinsics3.areEqual(guildListItem, GuildListItem.DividerItem.INSTANCE)) {
+        if (m.areEqual(guildListItem, GuildListItem.DividerItem.INSTANCE)) {
             return 1;
         }
-        if (Intrinsics3.areEqual(guildListItem, GuildListItem.CreateItem.INSTANCE)) {
+        if (m.areEqual(guildListItem, GuildListItem.CreateItem.INSTANCE)) {
             return 5;
         }
         if (guildListItem instanceof GuildListItem.HubItem) {
             return 9;
         }
-        if (Intrinsics3.areEqual(guildListItem, GuildListItem.HelpItem.INSTANCE)) {
+        if (m.areEqual(guildListItem, GuildListItem.HelpItem.INSTANCE)) {
             return 7;
         }
         if (guildListItem instanceof GuildListItem.FolderItem) {
             return 6;
         }
-        if (Intrinsics3.areEqual(guildListItem, GuildListItem.SpaceItem.INSTANCE)) {
+        if (m.areEqual(guildListItem, GuildListItem.SpaceItem.INSTANCE)) {
             return 8;
         }
         throw new NoWhenBranchMatchedException();
@@ -667,7 +667,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
     @Override // com.discord.widgets.guilds.list.GuildsDragAndDropCallback.Controller
     public void onDragStarted(RecyclerView.ViewHolder viewHolder) {
-        Intrinsics3.checkNotNullParameter(viewHolder, "viewHolder");
+        m.checkNotNullParameter(viewHolder, "viewHolder");
         GuildListViewHolder guildListViewHolder = (GuildListViewHolder) viewHolder;
         guildListViewHolder.onDragStarted();
         this.draggingItem = guildListViewHolder;
@@ -694,9 +694,9 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source, RecyclerView.ViewHolder target) {
         boolean z2;
         Operation moveAbove;
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
-        Intrinsics3.checkNotNullParameter(source, "source");
-        Intrinsics3.checkNotNullParameter(target, "target");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(source, "source");
+        m.checkNotNullParameter(target, "target");
         this.interactionListener.onItemMoved();
         long itemId = ((GuildListViewHolder) source).getItemId();
         long itemId2 = ((GuildListViewHolder) target).getItemId();
@@ -706,7 +706,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         for (Object obj : this.items) {
             int i4 = i2 + 1;
             if (i2 < 0) {
-                Collections2.throwIndexOverflow();
+                n.throwIndexOverflow();
             }
             GuildListItem guildListItem = (GuildListItem) obj;
             if (guildListItem.getItemId() == itemId) {
@@ -720,7 +720,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return false;
         }
         View view = source.itemView;
-        Intrinsics3.checkNotNullExpressionValue(view, "source.itemView");
+        m.checkNotNullExpressionValue(view, "source.itemView");
         TargetPosition targetPosition = (((float) Math.abs(this.selectedCenterY - this.targetCenterY)) > (((float) view.getHeight()) * 0.2f) ? 1 : (((float) Math.abs(this.selectedCenterY - this.targetCenterY)) == (((float) view.getHeight()) * 0.2f) ? 0 : -1)) < 0 ? TargetPosition.CENTER : this.selectedCenterY < this.targetCenterY ? TargetPosition.TOP : TargetPosition.BOTTOM;
         GuildListItem guildListItem2 = this.items.get(i);
         GuildListItem guildListItem3 = this.items.get(i3);
@@ -762,20 +762,20 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
     }
 
     public final void setItems(List<? extends GuildListItem> newItems, boolean calculateDiff) {
-        Intrinsics3.checkNotNullParameter(newItems, "newItems");
+        m.checkNotNullParameter(newItems, "newItems");
         if (!calculateDiff) {
             this.items = newItems;
             notifyDataSetChanged();
         } else {
             DiffUtil.DiffResult diffResultCalculateDiff = DiffUtil.calculateDiff(createDiffUtilCallback(this.items, newItems), true);
-            Intrinsics3.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(callback, true)");
+            m.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(callback, true)");
             this.items = newItems;
             diffResultCalculateDiff.dispatchUpdatesTo(this);
         }
     }
 
     public void onBindViewHolder(GuildListViewHolder holder, int position) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         GuildListItem guildListItem = this.items.get(position);
         if (guildListItem instanceof GuildListItem.GuildItem) {
             ((GuildListViewHolder.GuildViewHolder) holder).configure((GuildListItem.GuildItem) guildListItem);
@@ -807,53 +807,53 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public GuildListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         AnonymousClass1 anonymousClass1 = new AnonymousClass1(parent);
         switch (viewType) {
             case 0:
                 View viewInvoke = anonymousClass1.invoke(R.layout.widget_guilds_list_item_profile);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke, "itemView");
                 return new GuildListViewHolder.FriendsViewHolder(viewInvoke, new AnonymousClass8(viewInvoke));
             case 1:
                 View viewInvoke2 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_divider);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke2, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke2, "itemView");
                 return new GuildListViewHolder.SimpleViewHolder(viewInvoke2);
             case 2:
                 View viewInvoke3 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_dm_vertical);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke3, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke3, "itemView");
                 return new GuildListViewHolder.PrivateChannelViewHolder(viewInvoke3, new AnonymousClass6(viewInvoke3), new AnonymousClass7(viewInvoke3));
             case 3:
                 View viewInvoke4 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_guild_vertical);
                 int themedColor = ColorCompat.getThemedColor(parent.getContext(), R.attr.colorBackgroundTertiary);
                 int themedColor2 = ColorCompat.getThemedColor(parent.getContext(), R.attr.primary_600);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke4, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke4, "itemView");
                 return new GuildListViewHolder.GuildViewHolder(viewInvoke4, themedColor, themedColor2, new AnonymousClass2(viewInvoke4), new AnonymousClass3(viewInvoke4));
             case 4:
                 View viewInvoke5 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_guild_unavailable);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke5, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke5, "itemView");
                 return new GuildListViewHolder.SimpleViewHolder(viewInvoke5);
             case 5:
                 View viewInvoke6 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_guild_new);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke6, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke6, "itemView");
                 return new GuildListViewHolder.SimpleViewHolder(viewInvoke6);
             case 6:
                 View viewInvoke7 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_folder);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke7, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke7, "itemView");
                 return new GuildListViewHolder.FolderViewHolder(viewInvoke7, new AnonymousClass4(viewInvoke7), new AnonymousClass5(viewInvoke7));
             case 7:
                 View viewInvoke8 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_guild_nux);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke8, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke8, "itemView");
                 return new GuildListViewHolder.SimpleViewHolder(viewInvoke8);
             case 8:
                 View viewInvoke9 = anonymousClass1.invoke(R.layout.recycler_item_bottom_nav_space);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke9, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke9, "itemView");
                 return new GuildListViewHolder.SpaceViewHolder(viewInvoke9);
             case 9:
                 View viewInvoke10 = anonymousClass1.invoke(R.layout.widget_guilds_list_item_hub_verification);
-                Intrinsics3.checkNotNullExpressionValue(viewInvoke10, "itemView");
+                m.checkNotNullExpressionValue(viewInvoke10, "itemView");
                 return new GuildListViewHolder.DiscordHubViewHolder(viewInvoke10);
             default:
-                throw new IllegalStateException(outline.q("invalid view type: ", viewType));
+                throw new IllegalStateException(a.q("invalid view type: ", viewType));
         }
     }
 }

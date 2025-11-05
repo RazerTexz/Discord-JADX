@@ -1,8 +1,8 @@
 package com.discord.models.friendsuggestions;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: FriendSuggestion.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class FriendSuggestion {
     private final User user;
 
     public FriendSuggestion(User user, String str) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         this.user = user;
         this.publicName = str;
     }
@@ -37,7 +37,7 @@ public final /* data */ class FriendSuggestion {
     }
 
     public final FriendSuggestion copy(User user, String publicName) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         return new FriendSuggestion(user, publicName);
     }
 
@@ -49,7 +49,7 @@ public final /* data */ class FriendSuggestion {
             return false;
         }
         FriendSuggestion friendSuggestion = (FriendSuggestion) other;
-        return Intrinsics3.areEqual(this.user, friendSuggestion.user) && Intrinsics3.areEqual(this.publicName, friendSuggestion.publicName);
+        return m.areEqual(this.user, friendSuggestion.user) && m.areEqual(this.publicName, friendSuggestion.publicName);
     }
 
     public final String getPublicName() {
@@ -68,9 +68,9 @@ public final /* data */ class FriendSuggestion {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("FriendSuggestion(user=");
+        StringBuilder sbU = a.U("FriendSuggestion(user=");
         sbU.append(this.user);
         sbU.append(", publicName=");
-        return outline.J(sbU, this.publicName, ")");
+        return a.J(sbU, this.publicName, ")");
     }
 }

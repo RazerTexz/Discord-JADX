@@ -5,8 +5,8 @@ import com.discord.api.user.User;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,7 +24,7 @@ public final class UserRequestManager {
 
     /* compiled from: UserRequestManager.kt */
     /* renamed from: com.discord.utilities.user.UserRequestManager$requestUser$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<User, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<User, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -45,7 +45,7 @@ public final class UserRequestManager {
 
     /* compiled from: UserRequestManager.kt */
     /* renamed from: com.discord.utilities.user.UserRequestManager$requestUser$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public final /* synthetic */ long $userId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -68,7 +68,7 @@ public final class UserRequestManager {
 
     /* compiled from: UserRequestManager.kt */
     /* renamed from: com.discord.utilities.user.UserRequestManager$requestUser$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ long $userId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -85,14 +85,14 @@ public final class UserRequestManager {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             UserRequestManager.access$onRequestStarted(UserRequestManager.this, this.$userId, subscription);
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public UserRequestManager(Function1<? super User, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "onFlush");
+        m.checkNotNullParameter(function1, "onFlush");
         this.onFlush = function1;
         this.userRequests = new HashMap<>();
     }
@@ -131,7 +131,7 @@ public final class UserRequestManager {
     }
 
     public final synchronized void requestUsers(Collection<Long> userIds) {
-        Intrinsics3.checkNotNullParameter(userIds, "userIds");
+        m.checkNotNullParameter(userIds, "userIds");
         Iterator<T> it = userIds.iterator();
         while (it.hasNext()) {
             requestUser(((Number) it.next()).longValue());

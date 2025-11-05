@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 
@@ -70,7 +70,7 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
             return false;
         }
         GuildRoleSubscriptionGroupListing guildRoleSubscriptionGroupListing = (GuildRoleSubscriptionGroupListing) other;
-        return this.id == guildRoleSubscriptionGroupListing.id && this.guildId == guildRoleSubscriptionGroupListing.guildId && this.applicationId == guildRoleSubscriptionGroupListing.applicationId && Intrinsics3.areEqual(this.imageAsset, guildRoleSubscriptionGroupListing.imageAsset) && Intrinsics3.areEqual(this.description, guildRoleSubscriptionGroupListing.description) && Intrinsics3.areEqual(this.subscriptionListingsIds, guildRoleSubscriptionGroupListing.subscriptionListingsIds) && Intrinsics3.areEqual(this.subscriptionListings, guildRoleSubscriptionGroupListing.subscriptionListings) && this.fullServerGate == guildRoleSubscriptionGroupListing.fullServerGate;
+        return this.id == guildRoleSubscriptionGroupListing.id && this.guildId == guildRoleSubscriptionGroupListing.guildId && this.applicationId == guildRoleSubscriptionGroupListing.applicationId && m.areEqual(this.imageAsset, guildRoleSubscriptionGroupListing.imageAsset) && m.areEqual(this.description, guildRoleSubscriptionGroupListing.description) && m.areEqual(this.subscriptionListingsIds, guildRoleSubscriptionGroupListing.subscriptionListingsIds) && m.areEqual(this.subscriptionListings, guildRoleSubscriptionGroupListing.subscriptionListings) && this.fullServerGate == guildRoleSubscriptionGroupListing.fullServerGate;
     }
 
     /* renamed from: f, reason: from getter */
@@ -115,7 +115,7 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleSubscriptionGroupListing(id=");
+        StringBuilder sbU = a.U("GuildRoleSubscriptionGroupListing(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -130,6 +130,6 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
         sbU.append(", subscriptionListings=");
         sbU.append(this.subscriptionListings);
         sbU.append(", fullServerGate=");
-        return outline.O(sbU, this.fullServerGate, ")");
+        return a.O(sbU, this.fullServerGate, ")");
     }
 }

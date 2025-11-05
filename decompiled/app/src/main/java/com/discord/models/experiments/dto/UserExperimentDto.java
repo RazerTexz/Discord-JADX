@@ -1,14 +1,14 @@
 package com.discord.models.experiments.dto;
 
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
-import b.i.d.TypeAdapterFactory2;
+import b.d.b.a.a;
+import b.i.d.o;
 import com.discord.models.domain.Model;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
@@ -29,7 +29,7 @@ public final /* data */ class UserExperimentDto {
 
         /* JADX WARN: Multi-variable type inference failed */
         public static final UserExperimentDto parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = outline.c0(reader, "reader");
+            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
             ref$ObjectRefC0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
@@ -37,24 +37,24 @@ public final /* data */ class UserExperimentDto {
             ref$ObjectRef2.element = null;
             Ref$ObjectRef ref$ObjectRef3 = new Ref$ObjectRef();
             ref$ObjectRef3.element = null;
-            reader.nextListIndexed(new UserExperimentDto2(ref$ObjectRefC0, reader), new UserExperimentDto3(ref$ObjectRef, reader), new UserExperimentDto4(ref$ObjectRef2, reader), new UserExperimentDto5(ref$ObjectRef3, reader));
+            reader.nextListIndexed(new UserExperimentDto$Parser$parse$1(ref$ObjectRefC0, reader), new UserExperimentDto$Parser$parse$2(ref$ObjectRef, reader), new UserExperimentDto$Parser$parse$3(ref$ObjectRef2, reader), new UserExperimentDto$Parser$parse$4(ref$ObjectRef3, reader));
             Long l = (Long) ref$ObjectRefC0.element;
-            Intrinsics3.checkNotNull(l);
+            m.checkNotNull(l);
             long jLongValue = l.longValue();
             Integer num = (Integer) ref$ObjectRef.element;
-            Intrinsics3.checkNotNull(num);
+            m.checkNotNull(num);
             int iIntValue = num.intValue();
             Integer num2 = (Integer) ref$ObjectRef2.element;
-            Intrinsics3.checkNotNull(num2);
+            m.checkNotNull(num2);
             int iIntValue2 = num2.intValue();
             Integer num3 = (Integer) ref$ObjectRef3.element;
-            Intrinsics3.checkNotNull(num3);
+            m.checkNotNull(num3);
             return new UserExperimentDto(jLongValue, iIntValue, iIntValue2, num3.intValue());
         }
     }
 
     /* compiled from: UserExperimentDto.kt */
-    public static final class TypeAdapterFactory implements TypeAdapterFactory2 {
+    public static final class TypeAdapterFactory implements o {
         public static final TypeAdapterFactory INSTANCE = new TypeAdapterFactory();
 
         /* compiled from: UserExperimentDto.kt */
@@ -84,7 +84,7 @@ public final /* data */ class UserExperimentDto {
         private TypeAdapterFactory() {
         }
 
-        @Override // b.i.d.TypeAdapterFactory2
+        @Override // b.i.d.o
         public <T> com.google.gson.TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
             if (gson == null || type == null || !UserExperimentDto.class.isAssignableFrom(type.getRawType())) {
                 return null;
@@ -176,13 +176,13 @@ public final /* data */ class UserExperimentDto {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("UserExperimentDto(nameHash=");
+        StringBuilder sbU = a.U("UserExperimentDto(nameHash=");
         sbU.append(this.nameHash);
         sbU.append(", revision=");
         sbU.append(this.revision);
         sbU.append(", bucket=");
         sbU.append(this.bucket);
         sbU.append(", population=");
-        return outline.B(sbU, this.population, ")");
+        return a.B(sbU, this.population, ")");
     }
 }

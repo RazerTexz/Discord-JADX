@@ -1,11 +1,11 @@
 package com.discord.utilities.streams;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelApplicationStream;
 import com.discord.models.guild.Guild;
 import com.discord.models.user.User;
 import com.discord.stores.StoreApplicationStreamPreviews;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: StreamContext.kt */
 /* loaded from: classes2.dex */
@@ -27,9 +27,9 @@ public final /* data */ class StreamContext {
     }
 
     public StreamContext(ModelApplicationStream modelApplicationStream, Guild guild, StoreApplicationStreamPreviews.StreamPreview streamPreview, Joinability joinability, User user, String str, boolean z2, boolean z3) {
-        Intrinsics3.checkNotNullParameter(modelApplicationStream, "stream");
-        Intrinsics3.checkNotNullParameter(joinability, "joinability");
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(modelApplicationStream, "stream");
+        m.checkNotNullParameter(joinability, "joinability");
+        m.checkNotNullParameter(user, "user");
         this.stream = modelApplicationStream;
         this.guild = guild;
         this.preview = streamPreview;
@@ -85,9 +85,9 @@ public final /* data */ class StreamContext {
     }
 
     public final StreamContext copy(ModelApplicationStream stream, Guild guild, StoreApplicationStreamPreviews.StreamPreview preview, Joinability joinability, User user, String userNickname, boolean isCurrentUserParticipating, boolean isSelfStream) {
-        Intrinsics3.checkNotNullParameter(stream, "stream");
-        Intrinsics3.checkNotNullParameter(joinability, "joinability");
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(stream, "stream");
+        m.checkNotNullParameter(joinability, "joinability");
+        m.checkNotNullParameter(user, "user");
         return new StreamContext(stream, guild, preview, joinability, user, userNickname, isCurrentUserParticipating, isSelfStream);
     }
 
@@ -99,7 +99,7 @@ public final /* data */ class StreamContext {
             return false;
         }
         StreamContext streamContext = (StreamContext) other;
-        return Intrinsics3.areEqual(this.stream, streamContext.stream) && Intrinsics3.areEqual(this.guild, streamContext.guild) && Intrinsics3.areEqual(this.preview, streamContext.preview) && Intrinsics3.areEqual(this.joinability, streamContext.joinability) && Intrinsics3.areEqual(this.user, streamContext.user) && Intrinsics3.areEqual(this.userNickname, streamContext.userNickname) && this.isCurrentUserParticipating == streamContext.isCurrentUserParticipating && this.isSelfStream == streamContext.isSelfStream;
+        return m.areEqual(this.stream, streamContext.stream) && m.areEqual(this.guild, streamContext.guild) && m.areEqual(this.preview, streamContext.preview) && m.areEqual(this.joinability, streamContext.joinability) && m.areEqual(this.user, streamContext.user) && m.areEqual(this.userNickname, streamContext.userNickname) && this.isCurrentUserParticipating == streamContext.isCurrentUserParticipating && this.isSelfStream == streamContext.isSelfStream;
     }
 
     public final Guild getGuild() {
@@ -159,7 +159,7 @@ public final /* data */ class StreamContext {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StreamContext(stream=");
+        StringBuilder sbU = a.U("StreamContext(stream=");
         sbU.append(this.stream);
         sbU.append(", guild=");
         sbU.append(this.guild);
@@ -174,6 +174,6 @@ public final /* data */ class StreamContext {
         sbU.append(", isCurrentUserParticipating=");
         sbU.append(this.isCurrentUserParticipating);
         sbU.append(", isSelfStream=");
-        return outline.O(sbU, this.isSelfStream, ")");
+        return a.O(sbU, this.isSelfStream, ")");
     }
 }

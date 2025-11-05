@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.Log;
+import b.e.a.a;
 
 /* loaded from: classes.dex */
 public class TaggedFieldSerializerConfig extends FieldSerializerConfig {
@@ -26,7 +26,7 @@ public class TaggedFieldSerializerConfig extends FieldSerializerConfig {
 
     public void setSkipUnknownTags(boolean z2) {
         this.skipUnknownTags = z2;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializerConfig

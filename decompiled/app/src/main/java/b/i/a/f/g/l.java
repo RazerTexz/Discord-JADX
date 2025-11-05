@@ -20,7 +20,7 @@ public final class l extends b.i.a.f.h.g.a implements IInterface {
         parcelG.writeInt(i);
         b.i.a.f.h.g.c.b(parcelG, aVar2);
         Parcel parcelC = c(2, parcelG);
-        b.i.a.f.f.a aVarG = a.AbstractBinderC0040a.g(parcelC.readStrongBinder());
+        b.i.a.f.f.a aVarG = a.AbstractBinderC0117a.g(parcelC.readStrongBinder());
         parcelC.recycle();
         return aVarG;
     }
@@ -32,7 +32,7 @@ public final class l extends b.i.a.f.h.g.a implements IInterface {
         parcelG.writeInt(i);
         b.i.a.f.h.g.c.b(parcelG, aVar2);
         Parcel parcelC = c(3, parcelG);
-        b.i.a.f.f.a aVarG = a.AbstractBinderC0040a.g(parcelC.readStrongBinder());
+        b.i.a.f.f.a aVarG = a.AbstractBinderC0117a.g(parcelC.readStrongBinder());
         parcelC.recycle();
         return aVarG;
     }

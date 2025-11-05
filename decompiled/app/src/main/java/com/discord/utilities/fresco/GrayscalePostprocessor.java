@@ -5,27 +5,27 @@ import android.graphics.Canvas;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
-import b.f.b.a.SimpleCacheKey;
-import b.f.j.q.BasePostprocessor;
+import b.f.b.a.f;
+import b.f.j.q.a;
 import com.facebook.cache.common.CacheKey;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GrayscalePostprocessor.kt */
 /* loaded from: classes2.dex */
-public final class GrayscalePostprocessor extends BasePostprocessor {
-    @Override // b.f.j.q.BasePostprocessor, b.f.j.q.Postprocessor
+public final class GrayscalePostprocessor extends a {
+    @Override // b.f.j.q.a, b.f.j.q.b
     public String getName() {
         String simpleName = GrayscalePostprocessor.class.getSimpleName();
-        Intrinsics3.checkNotNullExpressionValue(simpleName, "javaClass.simpleName");
+        m.checkNotNullExpressionValue(simpleName, "javaClass.simpleName");
         return simpleName;
     }
 
-    @Override // b.f.j.q.BasePostprocessor, b.f.j.q.Postprocessor
+    @Override // b.f.j.q.a, b.f.j.q.b
     public CacheKey getPostprocessorCacheKey() {
-        return new SimpleCacheKey(getName());
+        return new f(getName());
     }
 
-    @Override // b.f.j.q.BasePostprocessor
+    @Override // b.f.j.q.a
     public void process(Bitmap destBitmap, Bitmap sourceBitmap) throws IllegalArgumentException {
         super.process(destBitmap, sourceBitmap);
         if (destBitmap == null || sourceBitmap == null) {

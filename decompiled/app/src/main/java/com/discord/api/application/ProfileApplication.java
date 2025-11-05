@@ -1,15 +1,15 @@
 package com.discord.api.application;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ProfileApplication.kt */
 /* loaded from: classes.dex */
 public final /* data */ class ProfileApplication {
     private final String customInstallUrl;
     private final String id;
-    private final ProfileApplication2 installParams;
+    private final ApplicationInstallParams installParams;
 
     /* renamed from: a, reason: from getter */
     public final String getCustomInstallUrl() {
@@ -22,7 +22,7 @@ public final /* data */ class ProfileApplication {
     }
 
     /* renamed from: c, reason: from getter */
-    public final ProfileApplication2 getInstallParams() {
+    public final ApplicationInstallParams getInstallParams() {
         return this.installParams;
     }
 
@@ -34,7 +34,7 @@ public final /* data */ class ProfileApplication {
             return false;
         }
         ProfileApplication profileApplication = (ProfileApplication) other;
-        return Intrinsics3.areEqual(this.id, profileApplication.id) && Intrinsics3.areEqual(this.customInstallUrl, profileApplication.customInstallUrl) && Intrinsics3.areEqual(this.installParams, profileApplication.installParams);
+        return m.areEqual(this.id, profileApplication.id) && m.areEqual(this.customInstallUrl, profileApplication.customInstallUrl) && m.areEqual(this.installParams, profileApplication.installParams);
     }
 
     public int hashCode() {
@@ -42,12 +42,12 @@ public final /* data */ class ProfileApplication {
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         String str2 = this.customInstallUrl;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        ProfileApplication2 profileApplication2 = this.installParams;
-        return iHashCode2 + (profileApplication2 != null ? profileApplication2.hashCode() : 0);
+        ApplicationInstallParams applicationInstallParams = this.installParams;
+        return iHashCode2 + (applicationInstallParams != null ? applicationInstallParams.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ProfileApplication(id=");
+        StringBuilder sbU = a.U("ProfileApplication(id=");
         sbU.append(this.id);
         sbU.append(", customInstallUrl=");
         sbU.append(this.customInstallUrl);

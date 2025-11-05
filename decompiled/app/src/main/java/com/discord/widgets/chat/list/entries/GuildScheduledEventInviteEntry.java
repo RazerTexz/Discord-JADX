@@ -1,9 +1,9 @@
 package com.discord.widgets.chat.list.entries;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.models.domain.ModelInvite;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildScheduledEventInviteEntry.kt */
 /* loaded from: classes2.dex */
@@ -15,14 +15,14 @@ public final /* data */ class GuildScheduledEventInviteEntry extends ChatListEnt
     private final int type;
 
     public GuildScheduledEventInviteEntry(ModelInvite modelInvite, String str, GuildScheduledEvent guildScheduledEvent) {
-        Intrinsics3.checkNotNullParameter(modelInvite, "invite");
-        Intrinsics3.checkNotNullParameter(str, "inviteCode");
-        Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+        m.checkNotNullParameter(modelInvite, "invite");
+        m.checkNotNullParameter(str, "inviteCode");
+        m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
         this.invite = modelInvite;
         this.inviteCode = str;
         this.guildScheduledEvent = guildScheduledEvent;
         this.type = 43;
-        StringBuilder sbU = outline.U("43 -- ");
+        StringBuilder sbU = a.U("43 -- ");
         sbU.append(guildScheduledEvent.getId());
         sbU.append(" -- ");
         sbU.append(str);
@@ -58,9 +58,9 @@ public final /* data */ class GuildScheduledEventInviteEntry extends ChatListEnt
     }
 
     public final GuildScheduledEventInviteEntry copy(ModelInvite invite, String inviteCode, GuildScheduledEvent guildScheduledEvent) {
-        Intrinsics3.checkNotNullParameter(invite, "invite");
-        Intrinsics3.checkNotNullParameter(inviteCode, "inviteCode");
-        Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
+        m.checkNotNullParameter(invite, "invite");
+        m.checkNotNullParameter(inviteCode, "inviteCode");
+        m.checkNotNullParameter(guildScheduledEvent, "guildScheduledEvent");
         return new GuildScheduledEventInviteEntry(invite, inviteCode, guildScheduledEvent);
     }
 
@@ -72,7 +72,7 @@ public final /* data */ class GuildScheduledEventInviteEntry extends ChatListEnt
             return false;
         }
         GuildScheduledEventInviteEntry guildScheduledEventInviteEntry = (GuildScheduledEventInviteEntry) other;
-        return Intrinsics3.areEqual(this.invite, guildScheduledEventInviteEntry.invite) && Intrinsics3.areEqual(this.inviteCode, guildScheduledEventInviteEntry.inviteCode) && Intrinsics3.areEqual(this.guildScheduledEvent, guildScheduledEventInviteEntry.guildScheduledEvent);
+        return m.areEqual(this.invite, guildScheduledEventInviteEntry.invite) && m.areEqual(this.inviteCode, guildScheduledEventInviteEntry.inviteCode) && m.areEqual(this.guildScheduledEvent, guildScheduledEventInviteEntry.guildScheduledEvent);
     }
 
     public final GuildScheduledEvent getGuildScheduledEvent() {
@@ -107,7 +107,7 @@ public final /* data */ class GuildScheduledEventInviteEntry extends ChatListEnt
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildScheduledEventInviteEntry(invite=");
+        StringBuilder sbU = a.U("GuildScheduledEventInviteEntry(invite=");
         sbU.append(this.invite);
         sbU.append(", inviteCode=");
         sbU.append(this.inviteCode);

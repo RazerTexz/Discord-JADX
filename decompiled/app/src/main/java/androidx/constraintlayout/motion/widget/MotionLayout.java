@@ -42,7 +42,7 @@ import androidx.constraintlayout.widget.StateSet;
 import androidx.core.view.NestedScrollingParent3;
 import androidx.core.view.ViewCompat;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -322,13 +322,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             float fMax = Math.max(f4, f6);
             float fMin2 = f - Math.min(f3, f5);
             float fMax2 = Math.max(f4, f6) - f2;
-            StringBuilder sbU = outline.U("");
+            StringBuilder sbU = a.U("");
             sbU.append(((int) (((fMin2 * 100.0f) / Math.abs(f5 - f3)) + 0.5d)) / 100.0f);
             String string = sbU.toString();
             getTextBounds(string, this.mTextPaint);
             canvas.drawText(string, ((fMin2 / 2.0f) - (this.mBounds.width() / 2)) + fMin, f2 - 20.0f, this.mTextPaint);
             canvas.drawLine(f, f2, Math.min(f3, f5), f2, this.mPaintGraph);
-            StringBuilder sbU2 = outline.U("");
+            StringBuilder sbU2 = a.U("");
             sbU2.append(((int) (((fMax2 * 100.0f) / Math.abs(f6 - f4)) + 0.5d)) / 100.0f);
             String string2 = sbU2.toString();
             getTextBounds(string2, this.mTextPaint);
@@ -357,7 +357,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             path.moveTo(f, f2);
             path.lineTo(f10, f11);
             float fHypot2 = (float) Math.hypot(f10 - f, f11 - f2);
-            StringBuilder sbU = outline.U("");
+            StringBuilder sbU = a.U("");
             sbU.append(((int) ((fHypot2 * 100.0f) / fHypot)) / 100.0f);
             String string = sbU.toString();
             getTextBounds(string, this.mTextPaint);
@@ -366,13 +366,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
         }
 
         private void drawPathScreenTicks(Canvas canvas, float f, float f2, int i, int i2) {
-            StringBuilder sbU = outline.U("");
+            StringBuilder sbU = a.U("");
             sbU.append(((int) ((((f - (i / 2)) * 100.0f) / (MotionLayout.this.getWidth() - i)) + 0.5d)) / 100.0f);
             String string = sbU.toString();
             getTextBounds(string, this.mTextPaint);
             canvas.drawText(string, ((f / 2.0f) - (this.mBounds.width() / 2)) + 0.0f, f2 - 20.0f, this.mTextPaint);
             canvas.drawLine(f, f2, Math.min(0.0f, 1.0f), f2, this.mPaintGraph);
-            StringBuilder sbU2 = outline.U("");
+            StringBuilder sbU2 = a.U("");
             sbU2.append(((int) ((((f2 - (i2 / 2)) * 100.0f) / (MotionLayout.this.getHeight() - i2)) + 0.5d)) / 100.0f);
             String string2 = sbU2.toString();
             getTextBounds(string2, this.mTextPaint);
@@ -563,7 +563,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
 
         private void debugLayout(String str, ConstraintWidgetContainer constraintWidgetContainer) {
             View view = (View) constraintWidgetContainer.getCompanionWidget();
-            StringBuilder sbX = outline.X(str, " ");
+            StringBuilder sbX = a.X(str, " ");
             sbX.append(Debug.getName(view));
             String string = sbX.toString();
             Log.v(MotionLayout.TAG, string + "  ========= " + constraintWidgetContainer);
@@ -571,19 +571,19 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             for (int i = 0; i < size; i++) {
                 String str2 = string + "[" + i + "] ";
                 ConstraintWidget constraintWidget = constraintWidgetContainer.getChildren().get(i);
-                StringBuilder sbU = outline.U("");
+                StringBuilder sbU = a.U("");
                 sbU.append(constraintWidget.mTop.mTarget != null ? ExifInterface.GPS_DIRECTION_TRUE : "_");
-                StringBuilder sbU2 = outline.U(sbU.toString());
+                StringBuilder sbU2 = a.U(sbU.toString());
                 sbU2.append(constraintWidget.mBottom.mTarget != null ? "B" : "_");
-                StringBuilder sbU3 = outline.U(sbU2.toString());
+                StringBuilder sbU3 = a.U(sbU2.toString());
                 sbU3.append(constraintWidget.mLeft.mTarget != null ? "L" : "_");
-                StringBuilder sbU4 = outline.U(sbU3.toString());
+                StringBuilder sbU4 = a.U(sbU3.toString());
                 sbU4.append(constraintWidget.mRight.mTarget != null ? "R" : "_");
                 String string2 = sbU4.toString();
                 View view2 = (View) constraintWidget.getCompanionWidget();
                 String name = Debug.getName(view2);
                 if (view2 instanceof TextView) {
-                    StringBuilder sbX2 = outline.X(name, "(");
+                    StringBuilder sbX2 = a.X(name, "(");
                     sbX2.append((Object) ((TextView) view2).getText());
                     sbX2.append(")");
                     name = sbX2.toString();
@@ -594,29 +594,29 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
         }
 
         private void debugLayoutParam(String str, ConstraintLayout.LayoutParams layoutParams) {
-            StringBuilder sbU = outline.U(" ");
+            StringBuilder sbU = a.U(" ");
             sbU.append(layoutParams.startToStart != -1 ? "SS" : "__");
-            StringBuilder sbU2 = outline.U(sbU.toString());
+            StringBuilder sbU2 = a.U(sbU.toString());
             sbU2.append(layoutParams.startToEnd != -1 ? "|SE" : "|__");
-            StringBuilder sbU3 = outline.U(sbU2.toString());
+            StringBuilder sbU3 = a.U(sbU2.toString());
             sbU3.append(layoutParams.endToStart != -1 ? "|ES" : "|__");
-            StringBuilder sbU4 = outline.U(sbU3.toString());
+            StringBuilder sbU4 = a.U(sbU3.toString());
             sbU4.append(layoutParams.endToEnd != -1 ? "|EE" : "|__");
-            StringBuilder sbU5 = outline.U(sbU4.toString());
+            StringBuilder sbU5 = a.U(sbU4.toString());
             sbU5.append(layoutParams.leftToLeft != -1 ? "|LL" : "|__");
-            StringBuilder sbU6 = outline.U(sbU5.toString());
+            StringBuilder sbU6 = a.U(sbU5.toString());
             sbU6.append(layoutParams.leftToRight != -1 ? "|LR" : "|__");
-            StringBuilder sbU7 = outline.U(sbU6.toString());
+            StringBuilder sbU7 = a.U(sbU6.toString());
             sbU7.append(layoutParams.rightToLeft != -1 ? "|RL" : "|__");
-            StringBuilder sbU8 = outline.U(sbU7.toString());
+            StringBuilder sbU8 = a.U(sbU7.toString());
             sbU8.append(layoutParams.rightToRight != -1 ? "|RR" : "|__");
-            StringBuilder sbU9 = outline.U(sbU8.toString());
+            StringBuilder sbU9 = a.U(sbU8.toString());
             sbU9.append(layoutParams.topToTop != -1 ? "|TT" : "|__");
-            StringBuilder sbU10 = outline.U(sbU9.toString());
+            StringBuilder sbU10 = a.U(sbU9.toString());
             sbU10.append(layoutParams.topToBottom != -1 ? "|TB" : "|__");
-            StringBuilder sbU11 = outline.U(sbU10.toString());
+            StringBuilder sbU11 = a.U(sbU10.toString());
             sbU11.append(layoutParams.bottomToTop != -1 ? "|BT" : "|__");
-            StringBuilder sbU12 = outline.U(sbU11.toString());
+            StringBuilder sbU12 = a.U(sbU11.toString());
             sbU12.append(layoutParams.bottomToBottom != -1 ? "|BB" : "|__");
             Log.v(MotionLayout.TAG, str + sbU12.toString());
         }
@@ -625,37 +625,37 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             String string;
             String string2;
             String string3;
-            StringBuilder sbU = outline.U(" ");
+            StringBuilder sbU = a.U(" ");
             String string4 = "__";
             if (constraintWidget.mTop.mTarget != null) {
-                StringBuilder sbU2 = outline.U(ExifInterface.GPS_DIRECTION_TRUE);
+                StringBuilder sbU2 = a.U(ExifInterface.GPS_DIRECTION_TRUE);
                 sbU2.append(constraintWidget.mTop.mTarget.mType == ConstraintAnchor.Type.TOP ? ExifInterface.GPS_DIRECTION_TRUE : "B");
                 string = sbU2.toString();
             } else {
                 string = "__";
             }
             sbU.append(string);
-            StringBuilder sbU3 = outline.U(sbU.toString());
+            StringBuilder sbU3 = a.U(sbU.toString());
             if (constraintWidget.mBottom.mTarget != null) {
-                StringBuilder sbU4 = outline.U("B");
+                StringBuilder sbU4 = a.U("B");
                 sbU4.append(constraintWidget.mBottom.mTarget.mType == ConstraintAnchor.Type.TOP ? ExifInterface.GPS_DIRECTION_TRUE : "B");
                 string2 = sbU4.toString();
             } else {
                 string2 = "__";
             }
             sbU3.append(string2);
-            StringBuilder sbU5 = outline.U(sbU3.toString());
+            StringBuilder sbU5 = a.U(sbU3.toString());
             if (constraintWidget.mLeft.mTarget != null) {
-                StringBuilder sbU6 = outline.U("L");
+                StringBuilder sbU6 = a.U("L");
                 sbU6.append(constraintWidget.mLeft.mTarget.mType == ConstraintAnchor.Type.LEFT ? "L" : "R");
                 string3 = sbU6.toString();
             } else {
                 string3 = "__";
             }
             sbU5.append(string3);
-            StringBuilder sbU7 = outline.U(sbU5.toString());
+            StringBuilder sbU7 = a.U(sbU5.toString());
             if (constraintWidget.mRight.mTarget != null) {
-                StringBuilder sbU8 = outline.U("R");
+                StringBuilder sbU8 = a.U("R");
                 sbU8.append(constraintWidget.mRight.mTarget.mType == ConstraintAnchor.Type.LEFT ? "L" : "R");
                 string4 = sbU8.toString();
             }
@@ -1188,7 +1188,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
     private void debugPos() {
         for (int i = 0; i < getChildCount(); i++) {
             View childAt = getChildAt(i);
-            StringBuilder sbU = outline.U(" ");
+            StringBuilder sbU = a.U(" ");
             sbU.append(Debug.getLocation());
             sbU.append(" ");
             sbU.append(Debug.getName(this));
@@ -1534,7 +1534,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             }
             Paint paint = new Paint();
             paint.setTextSize(42.0f);
-            StringBuilder sbU = outline.U(this.mLastFps + " fps " + Debug.getState(this, this.mBeginState) + " -> ");
+            StringBuilder sbU = a.U(this.mLastFps + " fps " + Debug.getState(this, this.mBeginState) + " -> ");
             sbU.append(Debug.getState(this, this.mEndState));
             sbU.append(" (progress: ");
             sbU.append(((int) (getProgress() * 1000.0f)) / 10.0f);
@@ -1774,7 +1774,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             this.lastY = y2;
             return;
         }
-        Log.w(TAG, "WARNING could not find view id " + (viewById == null ? outline.q("", i) : viewById.getContext().getResources().getResourceName(i)));
+        Log.w(TAG, "WARNING could not find view id " + (viewById == null ? a.q("", i) : viewById.getContext().getResources().getResourceName(i)));
     }
 
     public ConstraintSet getConstraintSet(int i) {
@@ -2745,13 +2745,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             View childAt = getChildAt(i2);
             int id2 = childAt.getId();
             if (id2 == -1) {
-                StringBuilder sbY = outline.Y("CHECK: ", name, " ALL VIEWS SHOULD HAVE ID's ");
+                StringBuilder sbY = a.Y("CHECK: ", name, " ALL VIEWS SHOULD HAVE ID's ");
                 sbY.append(childAt.getClass().getName());
                 sbY.append(" does not!");
                 Log.w(TAG, sbY.toString());
             }
             if (constraintSet.getConstraint(id2) == null) {
-                StringBuilder sbY2 = outline.Y("CHECK: ", name, " NO CONSTRAINTS for ");
+                StringBuilder sbY2 = a.Y("CHECK: ", name, " NO CONSTRAINTS for ");
                 sbY2.append(Debug.getName(childAt));
                 Log.w(TAG, sbY2.toString());
             }
@@ -2845,7 +2845,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
     }
 
     private void checkStructure(MotionScene.Transition transition) {
-        StringBuilder sbU = outline.U("CHECK: transition = ");
+        StringBuilder sbU = a.U("CHECK: transition = ");
         sbU.append(transition.debugString(getContext()));
         Log.v(TAG, sbU.toString());
         Log.v(TAG, "CHECK: transition.setDuration = " + transition.getDuration());

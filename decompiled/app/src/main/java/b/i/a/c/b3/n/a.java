@@ -1,6 +1,6 @@
 package b.i.a.c.b3.n;
 
-import b.i.a.c.b3.n.Cea708Decoder;
+import b.i.a.c.b3.n.d;
 import java.util.Comparator;
 
 /* compiled from: lambda */
@@ -10,6 +10,6 @@ public final /* synthetic */ class a implements Comparator {
 
     @Override // java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        return Integer.compare(((Cea708Decoder.a) obj2).f853b, ((Cea708Decoder.a) obj).f853b);
+        return Integer.compare(((d.a) obj2).f853b, ((d.a) obj).f853b);
     }
 }

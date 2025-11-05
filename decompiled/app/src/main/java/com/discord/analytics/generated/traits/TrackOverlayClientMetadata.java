@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackOverlayClientMetadata.kt */
 /* loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final /* data */ class TrackOverlayClientMetadata {
             return false;
         }
         TrackOverlayClientMetadata trackOverlayClientMetadata = (TrackOverlayClientMetadata) other;
-        return Intrinsics3.areEqual(this.overlayGameId, trackOverlayClientMetadata.overlayGameId) && Intrinsics3.areEqual(this.overlayGameName, trackOverlayClientMetadata.overlayGameName) && Intrinsics3.areEqual(this.overlayAppId, trackOverlayClientMetadata.overlayAppId);
+        return m.areEqual(this.overlayGameId, trackOverlayClientMetadata.overlayGameId) && m.areEqual(this.overlayGameName, trackOverlayClientMetadata.overlayGameName) && m.areEqual(this.overlayAppId, trackOverlayClientMetadata.overlayAppId);
     }
 
     public int hashCode() {
@@ -31,11 +31,11 @@ public final /* data */ class TrackOverlayClientMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackOverlayClientMetadata(overlayGameId=");
+        StringBuilder sbU = a.U("TrackOverlayClientMetadata(overlayGameId=");
         sbU.append(this.overlayGameId);
         sbU.append(", overlayGameName=");
         sbU.append(this.overlayGameName);
         sbU.append(", overlayAppId=");
-        return outline.G(sbU, this.overlayAppId, ")");
+        return a.G(sbU, this.overlayAppId, ")");
     }
 }

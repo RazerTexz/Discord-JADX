@@ -2,7 +2,7 @@ package com.google.android.gms.auth.api.credentials;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.c.a.d.f;
 import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -29,7 +29,7 @@ public final class CredentialPickerConfig extends AbstractSafeParcelable impleme
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         boolean z2 = this.k;
         parcel.writeInt(262145);
         parcel.writeInt(z2 ? 1 : 0);
@@ -45,6 +45,6 @@ public final class CredentialPickerConfig extends AbstractSafeParcelable impleme
         int i4 = this.j;
         parcel.writeInt(263144);
         parcel.writeInt(i4);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

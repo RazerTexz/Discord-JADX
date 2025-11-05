@@ -6,7 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.MainThread;
 import b.i.a.f.h.l.g;
 import b.i.a.f.h.l.n;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.channel.Channel;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.api.science.Science;
@@ -23,13 +23,11 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.user.UserUtils;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.g0.StringsJVM;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.t.g0;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 import kotlin.Lazy;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -53,7 +51,7 @@ public final class AnalyticsUtils {
 
     /* compiled from: AnalyticsUtils.kt */
     /* renamed from: com.discord.utilities.analytics.AnalyticsUtils$initAppOpen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<MeUser, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<MeUser, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -68,8 +66,8 @@ public final class AnalyticsUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            if (Intrinsics3.areEqual(meUser, UserUtils.INSTANCE.getEMPTY_USER())) {
+            m.checkNotNullParameter(meUser, "meUser");
+            if (m.areEqual(meUser, UserUtils.INSTANCE.getEMPTY_USER())) {
                 AppLog.g(0L, null, null);
                 FirebaseAnalytics firebaseAnalyticsAccess$getFireBaseInstance$p = AnalyticsUtils.access$getFireBaseInstance$p(AnalyticsUtils.INSTANCE);
                 if (firebaseAnalyticsAccess$getFireBaseInstance$p != null) {
@@ -103,18 +101,18 @@ public final class AnalyticsUtils {
     }
 
     public final Map<String, Object> getProperties$app_productionGoogleRelease(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "$this$properties");
-        Tuples2[] tuples2Arr = new Tuples2[3];
-        tuples2Arr[0] = Tuples.to(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID, Long.valueOf(channel.getId()));
-        tuples2Arr[1] = Tuples.to("channel_type", Integer.valueOf(channel.getType()));
+        m.checkNotNullParameter(channel, "$this$properties");
+        Pair[] pairArr = new Pair[3];
+        pairArr[0] = d0.o.to(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID, Long.valueOf(channel.getId()));
+        pairArr[1] = d0.o.to("channel_type", Integer.valueOf(channel.getType()));
         List<User> listZ = channel.z();
-        tuples2Arr[2] = Tuples.to("channel_size_total", Integer.valueOf(listZ != null ? listZ.size() : 0));
-        return Maps6.mapOf(tuples2Arr);
+        pairArr[2] = d0.o.to("channel_size_total", Integer.valueOf(listZ != null ? listZ.size() : 0));
+        return h0.mapOf(pairArr);
     }
 
     @MainThread
     public final void initAppOpen(Application context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         if (fireBaseInstance != null) {
             return;
         }
@@ -128,11 +126,11 @@ public final class AnalyticsUtils {
 
         /* renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
-        private static final Lazy instance$delegate = LazyJVM.lazy(AnalyticsUtils2.INSTANCE);
+        private static final Lazy instance$delegate = d0.g.lazy(AnalyticsUtils$Tracker$Companion$instance$2.INSTANCE);
         private String analyticsToken;
         private final Clock clock;
         private final ConcurrentLinkedQueue<Science.Event> eventsQueue;
-        private final ConcurrentHashMap<Tuples2<String, Long>, Long> eventsThrottledUntilMillis;
+        private final ConcurrentHashMap<Pair<String, Long>, Long> eventsThrottledUntilMillis;
         private boolean fingerprinted;
         private final RestAPI restAPI;
 
@@ -153,9 +151,9 @@ public final class AnalyticsUtils {
         }
 
         public Tracker(Clock clock, RestAPI restAPI, ConcurrentLinkedQueue<Science.Event> concurrentLinkedQueue) {
-            Intrinsics3.checkNotNullParameter(clock, "clock");
-            Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-            Intrinsics3.checkNotNullParameter(concurrentLinkedQueue, "eventsQueue");
+            m.checkNotNullParameter(clock, "clock");
+            m.checkNotNullParameter(restAPI, "restAPI");
+            m.checkNotNullParameter(concurrentLinkedQueue, "eventsQueue");
             this.clock = clock;
             this.restAPI = restAPI;
             this.eventsQueue = concurrentLinkedQueue;
@@ -178,7 +176,7 @@ public final class AnalyticsUtils {
             if (getCanDrain()) {
                 ArrayList arrayList = new ArrayList(this.eventsQueue);
                 this.eventsQueue.clear();
-                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.science(new Science(this.analyticsToken, arrayList)), false, 1, null), getClass(), (Context) null, (Function1) null, new AnalyticsUtils4(this, arrayList), (Function0) null, (Function0) null, AnalyticsUtils3.INSTANCE, 54, (Object) null);
+                ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.science(new Science(this.analyticsToken, arrayList)), false, 1, null), getClass(), (Context) null, (Function1) null, new AnalyticsUtils$Tracker$drainEventsQueue$2(this, arrayList), (Function0) null, (Function0) null, AnalyticsUtils$Tracker$drainEventsQueue$1.INSTANCE, 54, (Object) null);
             }
         }
 
@@ -186,13 +184,13 @@ public final class AnalyticsUtils {
             return (this.eventsQueue.isEmpty() ^ true) && (this.fingerprinted || isAuthed$app_productionGoogleRelease());
         }
 
-        private final boolean isEventThrottled(Tuples2<String, Long> throttleKey) {
+        private final boolean isEventThrottled(Pair<String, Long> throttleKey) {
             long jCurrentTimeMillis = this.clock.currentTimeMillis();
             Long l = this.eventsThrottledUntilMillis.get(throttleKey);
             if (l == null) {
                 l = 0L;
             }
-            Intrinsics3.checkNotNullExpressionValue(l, "eventsThrottledUntilMillis[throttleKey] ?: 0");
+            m.checkNotNullExpressionValue(l, "eventsThrottledUntilMillis[throttleKey] ?: 0");
             return jCurrentTimeMillis < l.longValue();
         }
 
@@ -236,7 +234,7 @@ public final class AnalyticsUtils {
 
         public final boolean isAuthed$app_productionGoogleRelease() {
             String str = this.analyticsToken;
-            return !(str == null || StringsJVM.isBlank(str));
+            return !(str == null || t.isBlank(str));
         }
 
         public final synchronized void setTrackingData(String analyticsToken, boolean fingerprinted) {
@@ -246,9 +244,9 @@ public final class AnalyticsUtils {
             drainEventsQueue();
         }
 
-        public final void track(Tuples2<String, Long> throttleKey, long throttleTimeMs, Function0<? extends Map<String, ? extends Object>> lazyPropertyProvider) {
-            Intrinsics3.checkNotNullParameter(throttleKey, "throttleKey");
-            Intrinsics3.checkNotNullParameter(lazyPropertyProvider, "lazyPropertyProvider");
+        public final void track(Pair<String, Long> throttleKey, long throttleTimeMs, Function0<? extends Map<String, ? extends Object>> lazyPropertyProvider) {
+            m.checkNotNullParameter(throttleKey, "throttleKey");
+            m.checkNotNullParameter(lazyPropertyProvider, "lazyPropertyProvider");
             if (isEventThrottled(throttleKey)) {
                 return;
             }
@@ -257,8 +255,8 @@ public final class AnalyticsUtils {
         }
 
         public final void trackFireBase(String event, Map<String, ? extends Object> properties) {
-            Intrinsics3.checkNotNullParameter(event, "event");
-            Intrinsics3.checkNotNullParameter(properties, "properties");
+            m.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(properties, "properties");
             Bundle bundlePutMap = putMap(new Bundle(), properties);
             FirebaseAnalytics firebaseAnalyticsAccess$getFireBaseInstance$p = AnalyticsUtils.access$getFireBaseInstance$p(AnalyticsUtils.INSTANCE);
             if (firebaseAnalyticsAccess$getFireBaseInstance$p != null) {
@@ -267,33 +265,33 @@ public final class AnalyticsUtils {
         }
 
         public final void track(String event, Map<String, ? extends Object> properties) {
-            Intrinsics3.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(event, "event");
             if (properties == null) {
-                properties = Maps6.emptyMap();
+                properties = h0.emptyMap();
             }
             track(new Science.Event.MapObject(event, properties));
         }
 
         public final void track(AnalyticsSchema analyticsSchema) {
-            Intrinsics3.checkNotNullParameter(analyticsSchema, "analyticsSchema");
-            if (analyticsSchema instanceof TrackGuild2) {
-                TrackGuild2 trackGuild2 = (TrackGuild2) analyticsSchema;
-                trackGuild2.c(AnalyticsUtils6.access$fill(trackGuild2.getTrackGuild()));
+            m.checkNotNullParameter(analyticsSchema, "analyticsSchema");
+            if (analyticsSchema instanceof TrackGuildReceiver) {
+                TrackGuildReceiver trackGuildReceiver = (TrackGuildReceiver) analyticsSchema;
+                trackGuildReceiver.c(AnalyticsUtilsKt.access$fill(trackGuildReceiver.getTrackGuild()));
             }
             track(new Science.Event.SchemaObject(analyticsSchema));
         }
 
         public final void track(Science.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(event, "event");
             this.eventsQueue.add(event);
             Observable<Long> observableD0 = Observable.d0(1500L, TimeUnit.MILLISECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable\n          .ti…0, TimeUnit.MILLISECONDS)");
-            ObservableExtensionsKt.appSubscribe$default(observableD0, Tracker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnalyticsUtils5(this), 62, (Object) null);
+            m.checkNotNullExpressionValue(observableD0, "Observable\n          .ti…0, TimeUnit.MILLISECONDS)");
+            ObservableExtensionsKt.appSubscribe$default(observableD0, Tracker.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnalyticsUtils$Tracker$track$1(this), 62, (Object) null);
         }
     }
 
     public final Map<String, String> getProperties$app_productionGoogleRelease(RtcConnection rtcConnection) {
-        Intrinsics3.checkNotNullParameter(rtcConnection, "$this$properties");
-        return MapsJVM.mapOf(Tuples.to("rtc_connection_id", rtcConnection.id));
+        m.checkNotNullParameter(rtcConnection, "$this$properties");
+        return g0.mapOf(d0.o.to("rtc_connection_id", rtcConnection.id));
     }
 }

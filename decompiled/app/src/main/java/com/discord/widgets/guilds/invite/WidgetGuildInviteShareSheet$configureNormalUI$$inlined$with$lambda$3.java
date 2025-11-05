@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.activity.result.ActivityResultLauncher;
 import com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteSettings;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetGuildInviteShareSheet.kt */
 /* loaded from: classes2.dex */
@@ -27,7 +27,7 @@ public final class WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$l
     public final void onClick(View view) {
         WidgetGuildInviteSettings.Companion companion = WidgetGuildInviteSettings.INSTANCE;
         Context contextRequireContext = this.this$0.requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         ActivityResultLauncher<Intent> activityResultLauncherAccess$getGuildInviteSettingsLauncher$p = WidgetGuildInviteShareSheet.access$getGuildInviteSettingsLauncher$p(this.this$0);
         GuildInvite guildInvite = this.$invite;
         companion.launch(contextRequireContext, activityResultLauncherAccess$getGuildInviteSettingsLauncher$p, guildInvite != null ? guildInvite.getChannelId() : null, WidgetGuildInviteShareSheet.access$getViewModel$p(this.this$0).getGuildId(), "Instant Invite Action Sheet");

@@ -7,8 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.exifinterface.media.ExifInterface;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppLog;
 import com.discord.databinding.WidgetChatListAdapterItemUploadProgressBinding;
@@ -16,22 +15,20 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreMessageUploads;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.drawable.DrawableCompat;
-import com.discord.utilities.file.FileUtils2;
+import com.discord.utilities.file.FileUtilsKt;
 import com.discord.utilities.logging.Logger;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rest.SendUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.views.UploadProgressView;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.UploadProgressEntry;
-import d0.t.Iterables2;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.t.o;
+import d0.z.d.m;
+import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -64,7 +61,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Few(List<Single> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "uploads");
+                m.checkNotNullParameter(list, "uploads");
                 this.uploads = list;
             }
 
@@ -81,13 +78,13 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             }
 
             public final Few copy(List<Single> uploads) {
-                Intrinsics3.checkNotNullParameter(uploads, "uploads");
+                m.checkNotNullParameter(uploads, "uploads");
                 return new Few(uploads);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Few) && Intrinsics3.areEqual(this.uploads, ((Few) other).uploads);
+                    return (other instanceof Few) && m.areEqual(this.uploads, ((Few) other).uploads);
                 }
                 return true;
             }
@@ -105,7 +102,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             }
 
             public String toString() {
-                return outline.L(outline.U("Few(uploads="), this.uploads, ")");
+                return a.L(a.U("Few(uploads="), this.uploads, ")");
             }
         }
 
@@ -182,12 +179,12 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Many(numFiles=");
+                StringBuilder sbU = a.U("Many(numFiles=");
                 sbU.append(this.numFiles);
                 sbU.append(", sizeBytes=");
                 sbU.append(this.sizeBytes);
                 sbU.append(", progress=");
-                return outline.B(sbU, this.progress, ")");
+                return a.B(sbU, this.progress, ")");
             }
         }
 
@@ -253,7 +250,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
                     return false;
                 }
                 Preprocessing preprocessing = (Preprocessing) other;
-                return this.numFiles == preprocessing.numFiles && Intrinsics3.areEqual(this.displayName, preprocessing.displayName) && Intrinsics3.areEqual(this.mimeType, preprocessing.mimeType);
+                return this.numFiles == preprocessing.numFiles && m.areEqual(this.displayName, preprocessing.displayName) && m.areEqual(this.mimeType, preprocessing.mimeType);
             }
 
             public final String getDisplayName() {
@@ -277,12 +274,12 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Preprocessing(numFiles=");
+                StringBuilder sbU = a.U("Preprocessing(numFiles=");
                 sbU.append(this.numFiles);
                 sbU.append(", displayName=");
                 sbU.append(this.displayName);
                 sbU.append(", mimeType=");
-                return outline.J(sbU, this.mimeType, ")");
+                return a.J(sbU, this.mimeType, ")");
             }
         }
 
@@ -296,8 +293,8 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Single(String str, String str2, long j, int i) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-                Intrinsics3.checkNotNullParameter(str2, "mimeType");
+                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(str2, "mimeType");
                 this.name = str;
                 this.mimeType = str2;
                 this.sizeBytes = j;
@@ -343,8 +340,8 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             }
 
             public final Single copy(String name, String mimeType, long sizeBytes, int progress) {
-                Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-                Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+                m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(mimeType, "mimeType");
                 return new Single(name, mimeType, sizeBytes, progress);
             }
 
@@ -356,7 +353,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
                     return false;
                 }
                 Single single = (Single) other;
-                return Intrinsics3.areEqual(this.name, single.name) && Intrinsics3.areEqual(this.mimeType, single.mimeType) && this.sizeBytes == single.sizeBytes && this.progress == single.progress;
+                return m.areEqual(this.name, single.name) && m.areEqual(this.mimeType, single.mimeType) && this.sizeBytes == single.sizeBytes && this.progress == single.progress;
             }
 
             public final String getMimeType() {
@@ -383,14 +380,14 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Single(name=");
+                StringBuilder sbU = a.U("Single(name=");
                 sbU.append(this.name);
                 sbU.append(", mimeType=");
                 sbU.append(this.mimeType);
                 sbU.append(", sizeBytes=");
                 sbU.append(this.sizeBytes);
                 sbU.append(", progress=");
-                return outline.B(sbU, this.progress, ")");
+                return a.B(sbU, this.progress, ")");
             }
         }
 
@@ -427,13 +424,13 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
         }
 
         private final Observable<Model.Few> getFewUploadsObservable(List<SendUtils.FileUpload> uploads, long throttleIntervalMs) {
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(uploads, 10));
             Iterator<T> it = uploads.iterator();
             while (it.hasNext()) {
                 arrayList.add(INSTANCE.getSingleUploadObservable((SendUtils.FileUpload) it.next(), throttleIntervalMs));
             }
             Observable<Model.Few> observableB = Observable.b(arrayList, WidgetChatListAdapterItemUploadProgress$ModelProvider$getFewUploadsObservable$2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableB, "Observable\n          .co…{ it as Model.Single }) }");
+            m.checkNotNullExpressionValue(observableB, "Observable\n          .co…{ it as Model.Single }) }");
             return observableB;
         }
 
@@ -448,17 +445,17 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
                 }
             }
             if (ref$LongRef.element <= 0) {
-                ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(new Model.Many(uploads.size(), -1L, -1));
-                Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable\n            .…          )\n            )");
-                return scalarSynchronousObservable;
+                k kVar = new k(new Model.Many(uploads.size(), -1L, -1));
+                m.checkNotNullExpressionValue(kVar, "Observable\n            .…          )\n            )");
+                return kVar;
             }
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(uploads, 10));
             Iterator<T> it = uploads.iterator();
             while (it.hasNext()) {
                 arrayList.add(ObservableExtensionsKt.leadingEdgeThrottle(((SendUtils.FileUpload) it.next()).getBytesWrittenObservable(), throttleIntervalMs, TimeUnit.MILLISECONDS));
             }
             Observable<Model.Many> observableG = Observable.b(arrayList, WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$3.INSTANCE).G(new WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$4(ref$LongRef)).r().G(new WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$5(uploads, ref$LongRef));
-            Intrinsics3.checkNotNullExpressionValue(observableG, "Observable\n            .…essPercent)\n            }");
+            m.checkNotNullExpressionValue(observableG, "Observable\n            .…essPercent)\n            }");
             return observableG;
         }
 
@@ -473,27 +470,27 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
 
         private final Observable<Model.Single> getSingleUploadObservable(SendUtils.FileUpload upload, long throttleIntervalMs) {
             if (upload.getContentLength() <= 0) {
-                ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(new Model.Single(upload.getName(), upload.getMimeType(), -1L, -1));
-                Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(\n       …E\n            )\n        )");
-                return scalarSynchronousObservable;
+                k kVar = new k(new Model.Single(upload.getName(), upload.getMimeType(), -1L, -1));
+                m.checkNotNullExpressionValue(kVar, "Observable.just(\n       …E\n            )\n        )");
+                return kVar;
             }
             Observable<Model.Single> observableG = ObservableExtensionsKt.leadingEdgeThrottle(upload.getBytesWrittenObservable(), throttleIntervalMs, TimeUnit.MILLISECONDS).G(new WidgetChatListAdapterItemUploadProgress$ModelProvider$getSingleUploadObservable$1(upload)).r().G(new WidgetChatListAdapterItemUploadProgress$ModelProvider$getSingleUploadObservable$2(upload));
-            Intrinsics3.checkNotNullExpressionValue(observableG, "upload\n            .byte…          )\n            }");
+            m.checkNotNullExpressionValue(observableG, "upload\n            .byte…          )\n            }");
             return observableG;
         }
 
         public final Observable<? extends Model> get(String nonce, long throttleIntervalMs) {
-            Intrinsics3.checkNotNullParameter(nonce, "nonce");
+            m.checkNotNullParameter(nonce, "nonce");
             StoreMessageUploads messageUploads = StoreStream.INSTANCE.getMessageUploads();
-            Observable<? extends Model> observableY = ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{messageUploads}, false, null, null, new WidgetChatListAdapterItemUploadProgress$ModelProvider$get$1(messageUploads, nonce), 14, null).Y(new WidgetChatListAdapterItemUploadProgress$ModelProvider$get$2(throttleIntervalMs));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "ObservationDeckProvider.…      }\n        }\n      }");
+            Observable<? extends Model> observableY = ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{messageUploads}, false, null, null, new WidgetChatListAdapterItemUploadProgress$ModelProvider$get$1(messageUploads, nonce), 14, null).Y(new WidgetChatListAdapterItemUploadProgress$ModelProvider$get$2(throttleIntervalMs));
+            m.checkNotNullExpressionValue(observableY, "ObservationDeckProvider.…      }\n        }\n      }");
             return observableY;
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$onConfigure$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends d0.z.d.k implements Function1<Model, Unit> {
         public AnonymousClass1(WidgetChatListAdapterItemUploadProgress widgetChatListAdapterItemUploadProgress) {
             super(1, widgetChatListAdapterItemUploadProgress, WidgetChatListAdapterItemUploadProgress.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemUploadProgress$Model;)V", 0);
         }
@@ -506,14 +503,14 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) throws Resources.NotFoundException {
-            Intrinsics3.checkNotNullParameter(model, "p1");
+            m.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemUploadProgress.access$configureUI((WidgetChatListAdapterItemUploadProgress) this.receiver, model);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$onConfigure$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<Subscription, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -526,7 +523,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemUploadProgress.access$setSubscription$p(WidgetChatListAdapterItemUploadProgress.this, subscription);
         }
     }
@@ -564,7 +561,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemUploadProgress(WidgetChatListAdapter widgetChatListAdapter) {
         super(R.layout.widget_chat_list_adapter_item_upload_progress, widgetChatListAdapter);
-        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
         int i = R.id.progress_cancel_centered;
         ImageView imageView = (ImageView) view.findViewById(R.id.progress_cancel_centered);
@@ -582,7 +579,7 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
                         UploadProgressView uploadProgressView3 = (UploadProgressView) view.findViewById(R.id.upload_progress_3);
                         if (uploadProgressView3 != null) {
                             WidgetChatListAdapterItemUploadProgressBinding widgetChatListAdapterItemUploadProgressBinding = new WidgetChatListAdapterItemUploadProgressBinding((LinearLayout) view, imageView, imageView2, uploadProgressView, uploadProgressView2, uploadProgressView3);
-                            Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemUploadProgressBinding, "WidgetChatListAdapterIte…essBinding.bind(itemView)");
+                            m.checkNotNullExpressionValue(widgetChatListAdapterItemUploadProgressBinding, "WidgetChatListAdapterIte…essBinding.bind(itemView)");
                             this.binding = widgetChatListAdapterItemUploadProgressBinding;
                             return;
                         }
@@ -616,36 +613,36 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
         boolean z4 = uploadState instanceof Model.Few;
         if (z4) {
             UploadProgressView uploadProgressView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(uploadProgressView, "binding.uploadProgress1");
+            m.checkNotNullExpressionValue(uploadProgressView, "binding.uploadProgress1");
             Model.Few few = (Model.Few) uploadState;
             setUploadState(uploadProgressView, few.getUploads().get(0));
             UploadProgressView uploadProgressView2 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(uploadProgressView2, "binding.uploadProgress2");
+            m.checkNotNullExpressionValue(uploadProgressView2, "binding.uploadProgress2");
             setUploadState(uploadProgressView2, few.getUploads().get(1));
             UploadProgressView uploadProgressView3 = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(uploadProgressView3, "binding.uploadProgress3");
+            m.checkNotNullExpressionValue(uploadProgressView3, "binding.uploadProgress3");
             uploadProgressView3.setVisibility(0);
             if (few.getUploads().size() == 3) {
                 UploadProgressView uploadProgressView4 = this.binding.f;
-                Intrinsics3.checkNotNullExpressionValue(uploadProgressView4, "binding.uploadProgress3");
+                m.checkNotNullExpressionValue(uploadProgressView4, "binding.uploadProgress3");
                 uploadProgressView4.setVisibility(0);
                 UploadProgressView uploadProgressView5 = this.binding.f;
-                Intrinsics3.checkNotNullExpressionValue(uploadProgressView5, "binding.uploadProgress3");
+                m.checkNotNullExpressionValue(uploadProgressView5, "binding.uploadProgress3");
                 setUploadState(uploadProgressView5, few.getUploads().get(2));
             } else {
                 UploadProgressView uploadProgressView6 = this.binding.f;
-                Intrinsics3.checkNotNullExpressionValue(uploadProgressView6, "binding.uploadProgress3");
+                m.checkNotNullExpressionValue(uploadProgressView6, "binding.uploadProgress3");
                 uploadProgressView6.setVisibility(8);
             }
         } else {
             UploadProgressView uploadProgressView7 = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(uploadProgressView7, "binding.uploadProgress1");
+            m.checkNotNullExpressionValue(uploadProgressView7, "binding.uploadProgress1");
             setUploadState(uploadProgressView7, uploadState);
             UploadProgressView uploadProgressView8 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(uploadProgressView8, "binding.uploadProgress2");
+            m.checkNotNullExpressionValue(uploadProgressView8, "binding.uploadProgress2");
             uploadProgressView8.setVisibility(8);
             UploadProgressView uploadProgressView9 = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(uploadProgressView9, "binding.uploadProgress3");
+            m.checkNotNullExpressionValue(uploadProgressView9, "binding.uploadProgress3");
             uploadProgressView9.setVisibility(8);
         }
         if ((uploadState instanceof Model.Preprocessing) || ((uploadState instanceof Model.Single) && ((Model.Single) uploadState).getProgress() < 100)) {
@@ -674,28 +671,28 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
         }
         if (z2) {
             ImageView imageView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.progressCancelTop");
+            m.checkNotNullExpressionValue(imageView, "binding.progressCancelTop");
             imageView.setVisibility(z4 ? 0 : 8);
             ImageView imageView2 = this.binding.f2342b;
-            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.progressCancelCentered");
+            m.checkNotNullExpressionValue(imageView2, "binding.progressCancelCentered");
             imageView2.setVisibility(z4 ^ true ? 0 : 8);
             return;
         }
         ImageView imageView3 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.progressCancelTop");
+        m.checkNotNullExpressionValue(imageView3, "binding.progressCancelTop");
         imageView3.setVisibility(8);
         ImageView imageView4 = this.binding.f2342b;
-        Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.progressCancelCentered");
+        m.checkNotNullExpressionValue(imageView4, "binding.progressCancelCentered");
         imageView4.setVisibility(8);
     }
 
     private final void setUploadState(UploadProgressView uploadProgressView, Model model) throws Resources.NotFoundException {
-        if (Intrinsics3.areEqual(model, Model.None.INSTANCE)) {
-            CharSequence charSequenceJ = FormatUtils.j(uploadProgressView, R.string.upload_queued, new Object[0], null, 4);
+        if (m.areEqual(model, Model.None.INSTANCE)) {
+            CharSequence charSequenceJ = b.a.k.b.j(uploadProgressView, R.string.upload_queued, new Object[0], null, 4);
             int i = UploadProgressView.j;
             uploadProgressView.a(charSequenceJ, 0, null);
             Context context = uploadProgressView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            m.checkNotNullExpressionValue(context, "context");
             uploadProgressView.setIcon(DrawableCompat.getThemedDrawableRes$default(context, R.attr.ic_uploads_generic, 0, 2, (Object) null));
             return;
         }
@@ -704,42 +701,42 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
             CharSequence displayName = preprocessing.getDisplayName();
             if (displayName == null) {
                 Resources resources = uploadProgressView.getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                m.checkNotNullExpressionValue(resources, "resources");
                 Context context2 = uploadProgressView.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context2, "context");
-                displayName = StringResourceUtils.getQuantityString(resources, context2, R.plurals.uploading_files_count, preprocessing.getNumFiles(), Integer.valueOf(preprocessing.getNumFiles()));
+                m.checkNotNullExpressionValue(context2, "context");
+                displayName = StringResourceUtilsKt.getQuantityString(resources, context2, R.plurals.uploading_files_count, preprocessing.getNumFiles(), Integer.valueOf(preprocessing.getNumFiles()));
             }
             int i2 = UploadProgressView.j;
             uploadProgressView.a(displayName, -1, null);
             if (preprocessing.getMimeType() != null) {
                 Context context3 = uploadProgressView.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context3, "context");
-                uploadProgressView.setIcon(FileUtils2.getIconForFiletype(context3, preprocessing.getMimeType()));
+                m.checkNotNullExpressionValue(context3, "context");
+                uploadProgressView.setIcon(FileUtilsKt.getIconForFiletype(context3, preprocessing.getMimeType()));
                 return;
             } else {
                 Context context4 = uploadProgressView.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context4, "context");
+                m.checkNotNullExpressionValue(context4, "context");
                 uploadProgressView.setIcon(DrawableCompat.getThemedDrawableRes$default(context4, R.attr.ic_uploads_generic, 0, 2, (Object) null));
                 return;
             }
         }
         if (model instanceof Model.Single) {
             Model.Single single = (Model.Single) model;
-            uploadProgressView.a(single.getName(), single.getProgress() != -1 ? single.getProgress() : -1, FileUtils2.getSizeSubtitle(single.getSizeBytes()));
+            uploadProgressView.a(single.getName(), single.getProgress() != -1 ? single.getProgress() : -1, FileUtilsKt.getSizeSubtitle(single.getSizeBytes()));
             Context context5 = uploadProgressView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context5, "context");
-            uploadProgressView.setIcon(FileUtils2.getIconForFiletype(context5, single.getMimeType()));
+            m.checkNotNullExpressionValue(context5, "context");
+            uploadProgressView.setIcon(FileUtilsKt.getIconForFiletype(context5, single.getMimeType()));
             return;
         }
         if (model instanceof Model.Many) {
             Resources resources2 = uploadProgressView.getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
+            m.checkNotNullExpressionValue(resources2, "resources");
             Context context6 = uploadProgressView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context6, "context");
+            m.checkNotNullExpressionValue(context6, "context");
             Model.Many many = (Model.Many) model;
-            uploadProgressView.a(StringResourceUtils.getQuantityString(resources2, context6, R.plurals.uploading_files_count, many.getNumFiles(), Integer.valueOf(many.getNumFiles())), many.getProgress() != -1 ? many.getProgress() : -1, FileUtils2.getSizeSubtitle(many.getSizeBytes()));
+            uploadProgressView.a(StringResourceUtilsKt.getQuantityString(resources2, context6, R.plurals.uploading_files_count, many.getNumFiles(), Integer.valueOf(many.getNumFiles())), many.getProgress() != -1 ? many.getProgress() : -1, FileUtilsKt.getSizeSubtitle(many.getSizeBytes()));
             Context context7 = uploadProgressView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context7, "context");
+            m.checkNotNullExpressionValue(context7, "context");
             uploadProgressView.setIcon(DrawableCompat.getThemedDrawableRes$default(context7, R.attr.ic_uploads_generic, 0, 2, (Object) null));
         }
     }
@@ -757,10 +754,10 @@ public final class WidgetChatListAdapterItemUploadProgress extends WidgetChatLis
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         Observable<? extends Model> observableL = ModelProvider.INSTANCE.get(((UploadProgressEntry) data).getMessageNonce(), 100L).L();
-        Intrinsics3.checkNotNullExpressionValue(observableL, "ModelProvider.get(data.m…  .onBackpressureLatest()");
+        m.checkNotNullExpressionValue(observableL, "ModelProvider.get(data.m…  .onBackpressureLatest()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(observableL), WidgetChatListAdapterItemUploadProgress.class, (Context) null, new AnonymousClass2(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 58, (Object) null);
         WidgetChatListAdapterItemUploadProgress$onConfigure$cancel$1 widgetChatListAdapterItemUploadProgress$onConfigure$cancel$1 = new WidgetChatListAdapterItemUploadProgress$onConfigure$cancel$1(data);
         this.binding.c.setOnClickListener(new AnonymousClass3(widgetChatListAdapterItemUploadProgress$onConfigure$cancel$1));

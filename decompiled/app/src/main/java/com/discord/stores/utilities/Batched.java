@@ -5,11 +5,11 @@ import b.i.a.f.e.o.f;
 import com.discord.app.AppLog;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.Result3;
-import d0.w.h.Intrinsics2;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.z.d.Intrinsics3;
+import d0.l;
+import d0.w.h.c;
+import d0.w.i.a.e;
+import d0.w.i.a.k;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Unit;
@@ -39,18 +39,18 @@ public final class Batched<T> {
     private final String type;
 
     /* compiled from: Batched.kt */
-    @DebugMetadata(c = "com.discord.stores.utilities.Batched$onNext$1", f = "Batched.kt", l = {82}, m = "invokeSuspend")
+    @e(c = "com.discord.stores.utilities.Batched$onNext$1", f = "Batched.kt", l = {82}, m = "invokeSuspend")
     /* renamed from: com.discord.stores.utilities.Batched$onNext$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
         public AnonymousClass1(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass1(continuation);
         }
 
@@ -59,12 +59,12 @@ public final class Batched<T> {
             return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
-            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
             int i = this.label;
             if (i == 0) {
-                Result3.throwOnFailure(obj);
+                l.throwOnFailure(obj);
                 long jAccess$getDebounceDelayMs$p = Batched.access$getDebounceDelayMs$p(Batched.this);
                 this.label = 1;
                 if (f.P(jAccess$getDebounceDelayMs$p, this) == coroutine_suspended) {
@@ -74,7 +74,7 @@ public final class Batched<T> {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                Result3.throwOnFailure(obj);
+                l.throwOnFailure(obj);
             }
             Batched.this.flush();
             return Unit.a;
@@ -82,9 +82,9 @@ public final class Batched<T> {
     }
 
     public Batched(String str, long j, long j2, CoroutineScope coroutineScope, Clock clock) {
-        Intrinsics3.checkNotNullParameter(str, "type");
-        Intrinsics3.checkNotNullParameter(coroutineScope, "scope");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(str, "type");
+        m.checkNotNullParameter(coroutineScope, "scope");
+        m.checkNotNullParameter(clock, "clock");
         this.type = str;
         this.debounceDelayMs = j;
         this.maxDebounceDelayMs = j2;
@@ -141,7 +141,7 @@ public final class Batched<T> {
 
     /* JADX WARN: Multi-variable type inference failed */
     public final void onNextAny(Object value) {
-        Intrinsics3.checkNotNullParameter(value, "value");
+        m.checkNotNullParameter(value, "value");
         onNext(value);
     }
 

@@ -1,7 +1,7 @@
 package com.discord.api.localizedstring;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.io.Serializable;
 import java.util.Map;
 
@@ -12,8 +12,8 @@ public final /* data */ class LocalizedString implements Serializable {
     private final Map<String, String> localizations;
 
     public LocalizedString(String str, Map<String, String> map) {
-        Intrinsics3.checkNotNullParameter(str, "default");
-        Intrinsics3.checkNotNullParameter(map, "localizations");
+        m.checkNotNullParameter(str, "default");
+        m.checkNotNullParameter(map, "localizations");
         this.default = str;
         this.localizations = map;
     }
@@ -35,7 +35,7 @@ public final /* data */ class LocalizedString implements Serializable {
             return false;
         }
         LocalizedString localizedString = (LocalizedString) other;
-        return Intrinsics3.areEqual(this.default, localizedString.default) && Intrinsics3.areEqual(this.localizations, localizedString.localizations);
+        return m.areEqual(this.default, localizedString.default) && m.areEqual(this.localizations, localizedString.localizations);
     }
 
     public int hashCode() {
@@ -46,9 +46,9 @@ public final /* data */ class LocalizedString implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("LocalizedString(default=");
+        StringBuilder sbU = a.U("LocalizedString(default=");
         sbU.append(this.default);
         sbU.append(", localizations=");
-        return outline.M(sbU, this.localizations, ")");
+        return a.M(sbU, this.localizations, ")");
     }
 }

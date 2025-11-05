@@ -1,26 +1,24 @@
 package b.a.d;
 
 import b.a.d.o;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
 import rx.Observable;
 
 /* compiled from: AppTransformers.kt */
 /* loaded from: classes.dex */
-public final class t<T, R> implements Func1<T, Observable<? extends T>> {
+public final class t<T, R> implements j0.k.b<T, Observable<? extends T>> {
     public final /* synthetic */ o.d j;
 
     public t(o.d dVar) {
         this.j = dVar;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public Object call(Object obj) {
         if (((Boolean) this.j.j.invoke(obj)).booleanValue()) {
-            return new ScalarSynchronousObservable(obj);
+            return new j0.l.e.k(obj);
         }
-        ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(this.j.k);
+        j0.l.e.k kVar = new j0.l.e.k(this.j.k);
         o.d dVar = this.j;
-        return scalarSynchronousObservable.q(dVar.l, dVar.m);
+        return kVar.q(dVar.l, dVar.m);
     }
 }

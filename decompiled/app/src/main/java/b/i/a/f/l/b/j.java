@@ -2,7 +2,6 @@ package b.i.a.f.l.b;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.internal.zau;
 import com.google.android.gms.signin.internal.zam;
@@ -12,7 +11,7 @@ import com.google.android.gms.signin.internal.zam;
 public final class j implements Parcelable.Creator<zam> {
     @Override // android.os.Parcelable.Creator
     public final zam createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         ConnectionResult connectionResult = null;
         zau zauVar = null;
         int iG1 = 0;
@@ -20,16 +19,16 @@ public final class j implements Parcelable.Creator<zam> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                connectionResult = (ConnectionResult) AnimatableValueParser.Q(parcel, i, ConnectionResult.CREATOR);
+                connectionResult = (ConnectionResult) b.c.a.a0.d.Q(parcel, i, ConnectionResult.CREATOR);
             } else if (c != 3) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                zauVar = (zau) AnimatableValueParser.Q(parcel, i, zau.CREATOR);
+                zauVar = (zau) b.c.a.a0.d.Q(parcel, i, zau.CREATOR);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zam(iG1, connectionResult, zauVar);
     }
 

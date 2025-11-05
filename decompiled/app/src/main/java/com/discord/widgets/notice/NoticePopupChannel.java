@@ -8,7 +8,7 @@ import android.text.style.StyleSpan;
 import android.view.View;
 import androidx.core.content.ContextCompat;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -35,20 +35,18 @@ import com.discord.utilities.textprocessing.AstRenderer;
 import com.discord.utilities.textprocessing.DiscordParser;
 import com.discord.utilities.textprocessing.MessageParseState;
 import com.discord.utilities.textprocessing.MessageRenderContext;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
-import d0.Tuples;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.g0.t;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -75,9 +73,9 @@ public final class NoticePopupChannel {
 
         /* JADX WARN: Multi-variable type inference failed */
         public Model(CharSequence charSequence, CharSequence charSequence2, DraweeSpanStringBuilder draweeSpanStringBuilder, String str, Drawable drawable, String str2, Drawable drawable2, Drawable drawable3, Function1<? super View, Unit> function1, List<Sticker> list) {
-            Intrinsics3.checkNotNullParameter(charSequence, "noticeTitle");
-            Intrinsics3.checkNotNullParameter(draweeSpanStringBuilder, "noticeBody");
-            Intrinsics3.checkNotNullParameter(function1, "onClickTopRightIcon");
+            m.checkNotNullParameter(charSequence, "noticeTitle");
+            m.checkNotNullParameter(draweeSpanStringBuilder, "noticeBody");
+            m.checkNotNullParameter(function1, "onClickTopRightIcon");
             this.noticeTitle = charSequence;
             this.noticeSubtitle = charSequence2;
             this.noticeBody = draweeSpanStringBuilder;
@@ -143,9 +141,9 @@ public final class NoticePopupChannel {
         }
 
         public final Model copy(CharSequence noticeTitle, CharSequence noticeSubtitle, DraweeSpanStringBuilder noticeBody, String noticeIconUrl, Drawable noticeBodyBackgroundDrawable, String noticeBodyImageUrl, Drawable noticeBodyImageDrawable, Drawable noticeIconTopRight, Function1<? super View, Unit> onClickTopRightIcon, List<Sticker> noticeStickers) {
-            Intrinsics3.checkNotNullParameter(noticeTitle, "noticeTitle");
-            Intrinsics3.checkNotNullParameter(noticeBody, "noticeBody");
-            Intrinsics3.checkNotNullParameter(onClickTopRightIcon, "onClickTopRightIcon");
+            m.checkNotNullParameter(noticeTitle, "noticeTitle");
+            m.checkNotNullParameter(noticeBody, "noticeBody");
+            m.checkNotNullParameter(onClickTopRightIcon, "onClickTopRightIcon");
             return new Model(noticeTitle, noticeSubtitle, noticeBody, noticeIconUrl, noticeBodyBackgroundDrawable, noticeBodyImageUrl, noticeBodyImageDrawable, noticeIconTopRight, onClickTopRightIcon, noticeStickers);
         }
 
@@ -157,7 +155,7 @@ public final class NoticePopupChannel {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.noticeTitle, model.noticeTitle) && Intrinsics3.areEqual(this.noticeSubtitle, model.noticeSubtitle) && Intrinsics3.areEqual(this.noticeBody, model.noticeBody) && Intrinsics3.areEqual(this.noticeIconUrl, model.noticeIconUrl) && Intrinsics3.areEqual(this.noticeBodyBackgroundDrawable, model.noticeBodyBackgroundDrawable) && Intrinsics3.areEqual(this.noticeBodyImageUrl, model.noticeBodyImageUrl) && Intrinsics3.areEqual(this.noticeBodyImageDrawable, model.noticeBodyImageDrawable) && Intrinsics3.areEqual(this.noticeIconTopRight, model.noticeIconTopRight) && Intrinsics3.areEqual(this.onClickTopRightIcon, model.onClickTopRightIcon) && Intrinsics3.areEqual(this.noticeStickers, model.noticeStickers);
+            return m.areEqual(this.noticeTitle, model.noticeTitle) && m.areEqual(this.noticeSubtitle, model.noticeSubtitle) && m.areEqual(this.noticeBody, model.noticeBody) && m.areEqual(this.noticeIconUrl, model.noticeIconUrl) && m.areEqual(this.noticeBodyBackgroundDrawable, model.noticeBodyBackgroundDrawable) && m.areEqual(this.noticeBodyImageUrl, model.noticeBodyImageUrl) && m.areEqual(this.noticeBodyImageDrawable, model.noticeBodyImageDrawable) && m.areEqual(this.noticeIconTopRight, model.noticeIconTopRight) && m.areEqual(this.onClickTopRightIcon, model.onClickTopRightIcon) && m.areEqual(this.noticeStickers, model.noticeStickers);
         }
 
         public final DraweeSpanStringBuilder getNoticeBody() {
@@ -236,7 +234,7 @@ public final class NoticePopupChannel {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(noticeTitle=");
+            StringBuilder sbU = a.U("Model(noticeTitle=");
             sbU.append(this.noticeTitle);
             sbU.append(", noticeSubtitle=");
             sbU.append(this.noticeSubtitle);
@@ -255,13 +253,13 @@ public final class NoticePopupChannel {
             sbU.append(", onClickTopRightIcon=");
             sbU.append(this.onClickTopRightIcon);
             sbU.append(", noticeStickers=");
-            return outline.L(sbU, this.noticeStickers, ")");
+            return a.L(sbU, this.noticeStickers, ")");
         }
     }
 
     /* compiled from: NoticePopupChannel.kt */
     /* renamed from: com.discord.widgets.notice.NoticePopupChannel$enqueue$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function9<Context, Message, Guild, Channel, Map<Long, ? extends GuildMember>, Long, User, Map<Long, ? extends String>, Map<Long, ? extends GuildRole>, Model> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function9<Context, Message, Guild, Channel, Map<Long, ? extends GuildMember>, Long, User, Map<Long, ? extends String>, Map<Long, ? extends GuildRole>, Model> {
         public AnonymousClass1(NoticePopupChannel noticePopupChannel) {
             super(9, noticePopupChannel, NoticePopupChannel.class, "createModel", "createModel(Landroid/content/Context;Lcom/discord/models/message/Message;Lcom/discord/models/guild/Guild;Lcom/discord/api/channel/Channel;Ljava/util/Map;Ljava/lang/Long;Lcom/discord/models/user/User;Ljava/util/Map;Ljava/util/Map;)Lcom/discord/widgets/notice/NoticePopupChannel$Model;", 0);
         }
@@ -273,19 +271,19 @@ public final class NoticePopupChannel {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Model invoke2(Context context, Message message, Guild guild, Channel channel, Map<Long, GuildMember> map, Long l, User user, Map<Long, String> map2, Map<Long, GuildRole> map3) {
-            Intrinsics3.checkNotNullParameter(context, "p1");
-            Intrinsics3.checkNotNullParameter(message, "p2");
-            Intrinsics3.checkNotNullParameter(map, "p5");
-            Intrinsics3.checkNotNullParameter(user, "p7");
-            Intrinsics3.checkNotNullParameter(map2, "p8");
-            Intrinsics3.checkNotNullParameter(map3, "p9");
+            m.checkNotNullParameter(context, "p1");
+            m.checkNotNullParameter(message, "p2");
+            m.checkNotNullParameter(map, "p5");
+            m.checkNotNullParameter(user, "p7");
+            m.checkNotNullParameter(map2, "p8");
+            m.checkNotNullParameter(map3, "p9");
             return NoticePopupChannel.access$createModel((NoticePopupChannel) this.receiver, context, message, guild, channel, map, l, user, map2, map3);
         }
     }
 
     /* compiled from: NoticePopupChannel.kt */
     /* renamed from: com.discord.widgets.notice.NoticePopupChannel$enqueue$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Model, Unit> {
         public final /* synthetic */ String $noticeName;
         public final /* synthetic */ Function1 $onClick;
 
@@ -326,7 +324,7 @@ public final class NoticePopupChannel {
     /* JADX WARN: Type inference failed for: r8v3, types: [android.graphics.drawable.Drawable] */
     private final Model createModel(Context context, Message message, Guild guild, Channel channel, Map<Long, GuildMember> members, Long selectedChannel, User meUser, Map<Long, String> channelNames, Map<Long, GuildRole> roles) {
         DraweeSpanStringBuilder draweeSpanStringBuilder;
-        Tuples2 tuples2;
+        Pair pair;
         Integer num;
         Channel channel2;
         String forChannel$default;
@@ -340,15 +338,15 @@ public final class NoticePopupChannel {
         if (channel != null) {
             long id2 = channel.getId();
             if (selectedChannel == null || selectedChannel.longValue() != id2) {
-                MessageRenderContext messageRenderContext = new MessageRenderContext(context, meUser.getId(), true, MessageUtils.getNickOrUsernames$default(message, channel, members, null, 8, null), channelNames, roles, 0, null, NoticePopupChannel2.INSTANCE, ColorCompat.getThemedColor(context, R.attr.theme_chat_spoiler_inapp_bg), 0, null, null, null, 15552, null);
+                MessageRenderContext messageRenderContext = new MessageRenderContext(context, meUser.getId(), true, MessageUtils.getNickOrUsernames$default(message, channel, members, null, 8, null), channelNames, roles, 0, null, NoticePopupChannel$createModel$messageRenderContext$1.INSTANCE, ColorCompat.getThemedColor(context, R.attr.theme_chat_spoiler_inapp_bg), 0, null, null, null, 15552, null);
                 String content = message.getContent();
                 if (content == null || (draweeSpanStringBuilder = AstRenderer.render(Parser.parse$default(DiscordParser.createParser$default(false, true, false, false, false, 28, null), content, MessageParseState.INSTANCE.getInitialState(), null, 4, null), messageRenderContext)) == null) {
                     draweeSpanStringBuilder = new DraweeSpanStringBuilder();
                 }
                 DraweeSpanStringBuilder draweeSpanStringBuilder2 = draweeSpanStringBuilder;
-                if (StringsJVM.isBlank(draweeSpanStringBuilder2)) {
+                if (t.isBlank(draweeSpanStringBuilder2)) {
                     List<MessageEmbed> embeds = message.getEmbeds();
-                    String title = (embeds == null || (messageEmbed = (MessageEmbed) _Collections.firstOrNull((List) embeds)) == null) ? null : messageEmbed.getTitle();
+                    String title = (embeds == null || (messageEmbed = (MessageEmbed) u.firstOrNull((List) embeds)) == null) ? null : messageEmbed.getTitle();
                     if (title == null) {
                         title = "";
                     }
@@ -356,18 +354,18 @@ public final class NoticePopupChannel {
                 }
                 long guildId = channel.getGuildId();
                 if (guildId == -1 || guildId == 0) {
-                    tuples2 = Tuples.to(ChannelUtils.c(channel), null);
+                    pair = d0.o.to(ChannelUtils.c(channel), null);
                     num = null;
                 } else {
                     String name = guild != null ? guild.getName() : null;
                     String str = name != null ? name : "";
-                    StringBuilder sbQ = outline.Q(MentionUtils.CHANNELS_CHAR);
+                    StringBuilder sbQ = a.Q(MentionUtilsKt.CHANNELS_CHAR);
                     sbQ.append(ChannelUtils.c(channel));
                     num = null;
-                    tuples2 = Tuples.to(str, sbQ.toString());
+                    pair = d0.o.to(str, sbQ.toString());
                 }
-                String str2 = (String) tuples2.component1();
-                String str3 = (String) tuples2.component2();
+                String str2 = (String) pair.component1();
+                String str3 = (String) pair.component2();
                 if (ChannelUtils.v(channel)) {
                     forChannel$default = IconUtils.getForGuild$default(guild, IconUtils.DEFAULT_ICON_BLURPLE, false, null, 12, null);
                     channel2 = channel;
@@ -381,19 +379,19 @@ public final class NoticePopupChannel {
                     i = 2;
                 } else {
                     com.discord.api.user.User author = message.getAuthor();
-                    Intrinsics3.checkNotNull(author);
+                    m.checkNotNull(author);
                     CoreUser coreUser = new CoreUser(author);
                     i = 2;
-                    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(outline.w(GuildMember.Companion.getNickOrUsername$default(GuildMember.INSTANCE, coreUser, members.get(Long.valueOf(coreUser.getId())), channel, null, 8, null), ": "));
+                    SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(a.w(GuildMember.Companion.getNickOrUsername$default(GuildMember.INSTANCE, coreUser, members.get(Long.valueOf(coreUser.getId())), channel, null, 8, null), ": "));
                     context2 = context;
-                    Iterator it = Collections2.listOf(new ForegroundColorSpan(ColorCompat.getThemedColor(context2, R.attr.primary_000)), new StyleSpan(1)).iterator();
+                    Iterator it = n.listOf(new ForegroundColorSpan(ColorCompat.getThemedColor(context2, R.attr.primary_000)), new StyleSpan(1)).iterator();
                     while (it.hasNext()) {
                         spannableStringBuilder.setSpan(it.next(), 0, spannableStringBuilder.length(), 33);
                     }
                     draweeSpanStringBuilder2.insert(0, (CharSequence) spannableStringBuilder);
                 }
                 List<MessageAttachment> attachments = message.getAttachments();
-                ?? r0 = attachments != null ? (MessageAttachment) _Collections.firstOrNull((List) attachments) : num;
+                ?? r0 = attachments != null ? (MessageAttachment) u.firstOrNull((List) attachments) : num;
                 if (r0 == 0 || !r0.h()) {
                     if ((r0 != 0 ? r0.e() : num) == MessageAttachmentType.IMAGE) {
                         proxyUrl = r0.getProxyUrl();
@@ -416,19 +414,19 @@ public final class NoticePopupChannel {
                     obj2 = obj3;
                     obj = obj3;
                 }
-                return new Model(str2, str3, draweeSpanStringBuilder2, str4, obj2, obj, drawable$default, ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context2, ChannelUtils.B(channel) ? R.attr.ic_close_24dp : R.attr.ic_settings, 0, i, num)), new NoticePopupChannel3(channel2, context2), message.getStickers());
+                return new Model(str2, str3, draweeSpanStringBuilder2, str4, obj2, obj, drawable$default, ContextCompat.getDrawable(context2, DrawableCompat.getThemedDrawableRes$default(context2, ChannelUtils.B(channel) ? R.attr.ic_close_24dp : R.attr.ic_settings, 0, i, num)), new NoticePopupChannel$createModel$onClickTopRightIcon$1(channel2, context2), message.getStickers());
             }
         }
         return null;
     }
 
     public final void enqueue(Context context, String noticeName, Message message, Function1<? super View, Unit> onClick) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(noticeName, "noticeName");
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(onClick, "onClick");
-        ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(context);
-        ScalarSynchronousObservable scalarSynchronousObservable2 = new ScalarSynchronousObservable(message);
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(noticeName, "noticeName");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(onClick, "onClick");
+        j0.l.e.k kVar = new j0.l.e.k(context);
+        j0.l.e.k kVar2 = new j0.l.e.k(message);
         StoreStream.Companion companion = StoreStream.INSTANCE;
         Observable<Guild> observableObserveFromChannelId = companion.getGuilds().observeFromChannelId(message.getChannelId());
         Observable<Channel> observableObserveChannel = companion.getChannels().observeChannel(message.getChannelId());
@@ -440,8 +438,8 @@ public final class NoticePopupChannel {
         Observable<Map<Long, String>> observableObserveNames = companion.getChannels().observeNames();
         StoreGuilds guilds2 = companion.getGuilds();
         Long guildId2 = message.getGuildId();
-        Observable observableC = Observable.c(scalarSynchronousObservable, scalarSynchronousObservable2, observableObserveFromChannelId, observableObserveChannel, observableObserveComputed, observableObserveId, observableObserveMe$default, observableObserveNames, guilds2.observeRoles(guildId2 != null ? guildId2.longValue() : 0L), new NoticePopupChannel4(new AnonymousClass1(this)));
-        Intrinsics3.checkNotNullExpressionValue(observableC, "Observable\n        .comb…is::createModel\n        )");
+        Observable observableC = Observable.c(kVar, kVar2, observableObserveFromChannelId, observableObserveChannel, observableObserveComputed, observableObserveId, observableObserveMe$default, observableObserveNames, guilds2.observeRoles(guildId2 != null ? guildId2.longValue() : 0L), new NoticePopupChannel$sam$rx_functions_Func9$0(new AnonymousClass1(this)));
+        m.checkNotNullExpressionValue(observableC, "Observable\n        .comb…is::createModel\n        )");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableC, 0L, false, 3, null))), NoticePopupChannel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(noticeName, onClick), 62, (Object) null);
     }
 }

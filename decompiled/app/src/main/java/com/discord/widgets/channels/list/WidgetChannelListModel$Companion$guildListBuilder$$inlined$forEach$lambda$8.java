@@ -4,9 +4,9 @@ import com.discord.api.channel.Channel;
 import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.widgets.channels.list.items.ChannelListItemVoiceUser;
 import com.discord.widgets.stage.model.StageChannel;
-import d0.t.Collections2;
-import d0.t.Sets5;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.t.n0;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -17,7 +17,7 @@ import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$8 extends Lambda implements Function0<Collection<? extends ChannelListItemVoiceUser>> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$8 extends o implements Function0<Collection<? extends ChannelListItemVoiceUser>> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -89,14 +89,14 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
         Set<Long> setEmptySet;
         Collection collection = (Collection) this.$voiceStates$inlined.get(Long.valueOf(this.$channelId));
         if (collection == null) {
-            return Collections2.emptyList();
+            return n.emptyList();
         }
         ArrayList arrayList = new ArrayList();
         for (Object obj : collection) {
             ChannelListItemVoiceUser channelListItemVoiceUser = (ChannelListItemVoiceUser) obj;
             StageChannel stageChannel = (StageChannel) this.$stageChannels$inlined.get(Long.valueOf(this.$channelId));
             if (stageChannel == null || (setEmptySet = stageChannel.getSpeakerIds()) == null) {
-                setEmptySet = Sets5.emptySet();
+                setEmptySet = n0.emptySet();
             }
             if (setEmptySet.contains(Long.valueOf(channelListItemVoiceUser.getUser().getId()))) {
                 arrayList.add(obj);

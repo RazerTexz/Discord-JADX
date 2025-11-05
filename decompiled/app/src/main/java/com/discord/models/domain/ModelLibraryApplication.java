@@ -1,9 +1,9 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.application.Application;
 import com.discord.models.domain.Model;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
@@ -32,7 +32,7 @@ public final /* data */ class ModelLibraryApplication {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelLibraryApplication parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = outline.c0(reader, "reader");
+            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
             ref$ObjectRefC0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
@@ -42,9 +42,9 @@ public final /* data */ class ModelLibraryApplication {
             ref$ObjectRef3.element = null;
             Ref$ObjectRef ref$ObjectRef4 = new Ref$ObjectRef();
             ref$ObjectRef4.element = null;
-            reader.nextObject(new ModelLibraryApplication2(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4));
+            reader.nextObject(new ModelLibraryApplication$Parser$parse$1(ref$ObjectRefC0, reader, ref$ObjectRef, ref$ObjectRef2, ref$ObjectRef3, ref$ObjectRef4));
             Application application = (Application) ref$ObjectRefC0.element;
-            Intrinsics3.checkNotNull(application);
+            m.checkNotNull(application);
             String str = (String) ref$ObjectRef.element;
             if (str == null) {
                 str = "";
@@ -60,8 +60,8 @@ public final /* data */ class ModelLibraryApplication {
     }
 
     public ModelLibraryApplication(Application application, String str, long j, int i, long j2) {
-        Intrinsics3.checkNotNullParameter(application, "application");
-        Intrinsics3.checkNotNullParameter(str, "createdAt");
+        m.checkNotNullParameter(application, "application");
+        m.checkNotNullParameter(str, "createdAt");
         this.application = application;
         this.createdAt = str;
         this.skuId = j;
@@ -117,8 +117,8 @@ public final /* data */ class ModelLibraryApplication {
     }
 
     public final ModelLibraryApplication copy(Application application, String createdAt, long skuId, int flags, long branchId) {
-        Intrinsics3.checkNotNullParameter(application, "application");
-        Intrinsics3.checkNotNullParameter(createdAt, "createdAt");
+        m.checkNotNullParameter(application, "application");
+        m.checkNotNullParameter(createdAt, "createdAt");
         return new ModelLibraryApplication(application, createdAt, skuId, flags, branchId);
     }
 
@@ -130,7 +130,7 @@ public final /* data */ class ModelLibraryApplication {
             return false;
         }
         ModelLibraryApplication modelLibraryApplication = (ModelLibraryApplication) other;
-        return Intrinsics3.areEqual(this.application, modelLibraryApplication.application) && Intrinsics3.areEqual(this.createdAt, modelLibraryApplication.createdAt) && this.skuId == modelLibraryApplication.skuId && this.flags == modelLibraryApplication.flags && this.branchId == modelLibraryApplication.branchId;
+        return m.areEqual(this.application, modelLibraryApplication.application) && m.areEqual(this.createdAt, modelLibraryApplication.createdAt) && this.skuId == modelLibraryApplication.skuId && this.flags == modelLibraryApplication.flags && this.branchId == modelLibraryApplication.branchId;
     }
 
     public final Application getApplication() {
@@ -165,7 +165,7 @@ public final /* data */ class ModelLibraryApplication {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelLibraryApplication(application=");
+        StringBuilder sbU = a.U("ModelLibraryApplication(application=");
         sbU.append(this.application);
         sbU.append(", createdAt=");
         sbU.append(this.createdAt);
@@ -174,6 +174,6 @@ public final /* data */ class ModelLibraryApplication {
         sbU.append(", flags=");
         sbU.append(this.flags);
         sbU.append(", branchId=");
-        return outline.C(sbU, this.branchId, ")");
+        return a.C(sbU, this.branchId, ")");
     }
 }

@@ -14,8 +14,8 @@ public final class w1 {
         if (q0Var != null) {
             return q0Var;
         }
-        EventLoop eventLoop = new EventLoop(Thread.currentThread());
-        threadLocal.set(eventLoop);
-        return eventLoop;
+        g gVar = new g(Thread.currentThread());
+        threadLocal.set(gVar);
+        return gVar;
     }
 }

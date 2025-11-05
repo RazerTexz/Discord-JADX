@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: PayoutGroup.kt */
 /* loaded from: classes.dex */
@@ -17,7 +17,7 @@ public final /* data */ class PayoutGroup {
     private final PayoutGroupType groupingType;
     private final long id;
     private final long paymentsCount;
-    private final PayoutGroup2 payout;
+    private final Payout payout;
     private final long payoutId;
     private final String periodEndingAt;
     private final String periodStartingAt;
@@ -32,7 +32,7 @@ public final /* data */ class PayoutGroup {
             return false;
         }
         PayoutGroup payoutGroup = (PayoutGroup) other;
-        return this.id == payoutGroup.id && this.payoutId == payoutGroup.payoutId && this.userId == payoutGroup.userId && this.applicationId == payoutGroup.applicationId && this.groupingId == payoutGroup.groupingId && Intrinsics3.areEqual(this.status, payoutGroup.status) && this.amount == payoutGroup.amount && this.amountPayable == payoutGroup.amountPayable && this.amountDeducted == payoutGroup.amountDeducted && this.paymentsCount == payoutGroup.paymentsCount && this.deductionsCount == payoutGroup.deductionsCount && Intrinsics3.areEqual(this.currency, payoutGroup.currency) && Intrinsics3.areEqual(this.groupingType, payoutGroup.groupingType) && Intrinsics3.areEqual(this.periodStartingAt, payoutGroup.periodStartingAt) && Intrinsics3.areEqual(this.periodEndingAt, payoutGroup.periodEndingAt) && Intrinsics3.areEqual(this.payout, payoutGroup.payout);
+        return this.id == payoutGroup.id && this.payoutId == payoutGroup.payoutId && this.userId == payoutGroup.userId && this.applicationId == payoutGroup.applicationId && this.groupingId == payoutGroup.groupingId && m.areEqual(this.status, payoutGroup.status) && this.amount == payoutGroup.amount && this.amountPayable == payoutGroup.amountPayable && this.amountDeducted == payoutGroup.amountDeducted && this.paymentsCount == payoutGroup.paymentsCount && this.deductionsCount == payoutGroup.deductionsCount && m.areEqual(this.currency, payoutGroup.currency) && m.areEqual(this.groupingType, payoutGroup.groupingType) && m.areEqual(this.periodStartingAt, payoutGroup.periodStartingAt) && m.areEqual(this.periodEndingAt, payoutGroup.periodEndingAt) && m.areEqual(this.payout, payoutGroup.payout);
     }
 
     public int hashCode() {
@@ -65,12 +65,12 @@ public final /* data */ class PayoutGroup {
         int iHashCode4 = (iHashCode3 + (str2 != null ? str2.hashCode() : 0)) * 31;
         String str3 = this.periodEndingAt;
         int iHashCode5 = (iHashCode4 + (str3 != null ? str3.hashCode() : 0)) * 31;
-        PayoutGroup2 payoutGroup2 = this.payout;
-        return iHashCode5 + (payoutGroup2 != null ? payoutGroup2.hashCode() : 0);
+        Payout payout = this.payout;
+        return iHashCode5 + (payout != null ? payout.hashCode() : 0);
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("PayoutGroup(id=");
+        StringBuilder sbU = a.U("PayoutGroup(id=");
         sbU.append(this.id);
         sbU.append(", payoutId=");
         sbU.append(this.payoutId);

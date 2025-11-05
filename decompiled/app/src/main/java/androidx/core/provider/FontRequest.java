@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.util.Preconditions;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.List;
 
 /* loaded from: classes.dex */
@@ -70,7 +70,7 @@ public final class FontRequest {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        StringBuilder sbU = outline.U("FontRequest {mProviderAuthority: ");
+        StringBuilder sbU = a.U("FontRequest {mProviderAuthority: ");
         sbU.append(this.mProviderAuthority);
         sbU.append(", mProviderPackage: ");
         sbU.append(this.mProviderPackage);

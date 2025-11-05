@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.e.h.l;
 import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -19,7 +19,7 @@ public final class Scope extends AbstractSafeParcelable implements ReflectedParc
     public final String k;
 
     public Scope(@RecentlyNonNull String str) {
-        AnimatableValueParser.v(str, "scopeUri must not be null or empty");
+        d.v(str, "scopeUri must not be null or empty");
         this.j = 1;
         this.k = str;
     }
@@ -45,16 +45,16 @@ public final class Scope extends AbstractSafeParcelable implements ReflectedParc
 
     @Override // android.os.Parcelable
     public void writeToParcel(@RecentlyNonNull Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.t2(parcel, 2, this.k, false);
+        d.A2(parcel, iY2);
     }
 
     public Scope(int i, String str) {
-        AnimatableValueParser.v(str, "scopeUri must not be null or empty");
+        d.v(str, "scopeUri must not be null or empty");
         this.j = i;
         this.k = str;
     }

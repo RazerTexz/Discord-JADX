@@ -3,20 +3,20 @@ package com.discord.widgets.servers.guild_role_subscription.upsell;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import androidx.core.os.Bundle2;
+import androidx.core.os.BundleKt;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
-import com.discord.app.AppLogger2;
+import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheetBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.o;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
@@ -24,7 +24,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -41,9 +41,9 @@ public final class WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet extend
         }
 
         public final void show(FragmentManager fragmentManager, long guildId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet widgetGuildRoleSubscriptionOnboardingUpsellBottomSheet = new WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet();
-            widgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.setArguments(Bundle2.bundleOf(Tuples.to("com.discord.intent.extra.EXTRA_GUILD_ID", Long.valueOf(guildId))));
+            widgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_GUILD_ID", Long.valueOf(guildId))));
             widgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.show(fragmentManager, WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.class.getSimpleName());
         }
 
@@ -62,7 +62,7 @@ public final class WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet extend
         public final void onClick(View view) {
             WidgetServerSettingsCreatorMonetizationOnboarding.Companion companion = WidgetServerSettingsCreatorMonetizationOnboarding.INSTANCE;
             Context contextRequireContext = WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             companion.launch(contextRequireContext, WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.access$getGuildId$p(WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.this));
             WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet.this.dismiss();
         }
@@ -82,8 +82,8 @@ public final class WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet extend
 
     public WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet2.INSTANCE, null, 2, null);
-        this.guildId = LazyJVM.lazy(new WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet3(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet$binding$2.INSTANCE, null, 2, null);
+        this.guildId = g.lazy(new WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet$guildId$2(this));
     }
 
     public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet widgetGuildRoleSubscriptionOnboardingUpsellBottomSheet) {
@@ -108,13 +108,13 @@ public final class WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet extend
     }
 
     @Override // com.discord.app.AppBottomSheet, com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
-        return new AppLogger2(false, null, new WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet4(this), 3);
+    public LoggingConfig getLoggingConfig() {
+        return new LoggingConfig(false, null, new WidgetGuildRoleSubscriptionOnboardingUpsellBottomSheet$loggingConfig$1(this), 3);
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         getBinding().c.setOnClickListener(new AnonymousClass1());
         getBinding().f2435b.setOnClickListener(new AnonymousClass2());

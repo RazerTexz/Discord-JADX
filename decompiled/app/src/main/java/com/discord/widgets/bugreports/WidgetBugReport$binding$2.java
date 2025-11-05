@@ -16,13 +16,13 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.textview.MaterialTextView;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetBugReport.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetBugReport$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetBugReportBinding> {
+public final /* synthetic */ class WidgetBugReport$binding$2 extends k implements Function1<View, WidgetBugReportBinding> {
     public static final WidgetBugReport$binding$2 INSTANCE = new WidgetBugReport$binding$2();
 
     public WidgetBugReport$binding$2() {
@@ -36,7 +36,7 @@ public final /* synthetic */ class WidgetBugReport$binding$2 extends FunctionRef
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetBugReportBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.bug_report_clear_screenshot;
         AppCompatImageView appCompatImageView = (AppCompatImageView) view.findViewById(R.id.bug_report_clear_screenshot);
         if (appCompatImageView != null) {

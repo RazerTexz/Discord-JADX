@@ -7,16 +7,15 @@ import com.discord.stores.StoreUserSettingsSystem;
 import com.discord.utilities.analytics.AnalyticsUtils;
 import com.discord.utilities.persister.Persister;
 import com.discord.utilities.time.Clock;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.t.g0;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Map;
 import java.util.UUID;
 import kotlin.Lazy;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -27,7 +26,7 @@ public final class AppStartAnalyticsTracker {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy instance$delegate = LazyJVM.lazy(AppStartAnalyticsTracker2.INSTANCE);
+    private static final Lazy instance$delegate = g.lazy(AppStartAnalyticsTracker$Companion$instance$2.INSTANCE);
     private Long appOpenTimestamp;
     private final Clock clock;
     private final String openAppLoadId;
@@ -46,19 +45,19 @@ public final class AppStartAnalyticsTracker {
         private final Map<String, Object> insertUriProperties(Map<String, Object> map, Uri uri) {
             String host = uri.getHost();
             if (host != null) {
-                Intrinsics3.checkNotNullExpressionValue(host, "it");
+                m.checkNotNullExpressionValue(host, "it");
                 map.put("uri_host", host);
             }
             String scheme = uri.getScheme();
             if (scheme != null) {
-                Intrinsics3.checkNotNullExpressionValue(scheme, "it");
+                m.checkNotNullExpressionValue(scheme, "it");
                 map.put("uri_scheme", scheme);
             }
             String path = uri.getPath();
             if (!(path == null || path.length() == 0)) {
                 if (path.length() > 100) {
                     path = path.substring(0, 99);
-                    Intrinsics3.checkNotNullExpressionValue(path, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                    m.checkNotNullExpressionValue(path, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                 }
                 map.put("uri_path", path);
             }
@@ -78,7 +77,7 @@ public final class AppStartAnalyticsTracker {
 
     /* compiled from: AppStartAnalyticsTracker.kt */
     /* renamed from: com.discord.utilities.analytics.AppStartAnalyticsTracker$appOpen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<String, ? extends Object>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ boolean $isNotificationRoute;
         public final /* synthetic */ Uri $uri;
         public final /* synthetic */ boolean $uriCanBeRouted;
@@ -99,10 +98,10 @@ public final class AppStartAnalyticsTracker {
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
-            Tuples2[] tuples2Arr = new Tuples2[2];
-            tuples2Arr[0] = Tuples.to("opened_from", this.$isNotificationRoute ? "notification" : this.$uriCanBeRouted ? Constants.DEEPLINK : "launcher");
-            tuples2Arr[1] = Tuples.to("theme", AppStartAnalyticsTracker.access$getStoreUserSettingsSystem$p(AppStartAnalyticsTracker.this).getTheme());
-            Map<String, ? extends Object> mapMutableMapOf = Maps6.mutableMapOf(tuples2Arr);
+            Pair[] pairArr = new Pair[2];
+            pairArr[0] = d0.o.to("opened_from", this.$isNotificationRoute ? "notification" : this.$uriCanBeRouted ? Constants.DEEPLINK : "launcher");
+            pairArr[1] = d0.o.to("theme", AppStartAnalyticsTracker.access$getStoreUserSettingsSystem$p(AppStartAnalyticsTracker.this).getTheme());
+            Map<String, ? extends Object> mapMutableMapOf = h0.mutableMapOf(pairArr);
             Companion.access$insertUriProperties(AppStartAnalyticsTracker.INSTANCE, mapMutableMapOf, this.$uri);
             if (AppStartAnalyticsTracker.access$getAppOpenTimestamp$p(AppStartAnalyticsTracker.this) == null) {
                 mapMutableMapOf.put("load_id", AppStartAnalyticsTracker.access$getOpenAppLoadId$p(AppStartAnalyticsTracker.this));
@@ -114,14 +113,14 @@ public final class AppStartAnalyticsTracker {
     }
 
     public AppStartAnalyticsTracker(AnalyticsUtils.Tracker tracker, Clock clock, StoreUserSettingsSystem storeUserSettingsSystem) {
-        Intrinsics3.checkNotNullParameter(tracker, "tracker");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(storeUserSettingsSystem, "storeUserSettingsSystem");
+        m.checkNotNullParameter(tracker, "tracker");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(storeUserSettingsSystem, "storeUserSettingsSystem");
         this.tracker = tracker;
         this.clock = clock;
         this.storeUserSettingsSystem = storeUserSettingsSystem;
         String string = UUID.randomUUID().toString();
-        Intrinsics3.checkNotNullExpressionValue(string, "UUID.randomUUID().toString()");
+        m.checkNotNullExpressionValue(string, "UUID.randomUUID().toString()");
         this.openAppLoadId = string;
     }
 
@@ -150,18 +149,18 @@ public final class AppStartAnalyticsTracker {
     }
 
     public final void appOpen(Uri uri, boolean uriCanBeRouted, boolean isNotificationRoute) {
-        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        this.tracker.track(Tuples.to("app_opened", null), 300000L, new AnonymousClass1(isNotificationRoute, uriCanBeRouted, uri));
+        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        this.tracker.track(d0.o.to("app_opened", null), 300000L, new AnonymousClass1(isNotificationRoute, uriCanBeRouted, uri));
         Persister persister = new Persister(APP_FIRST_LAUNCHED, Boolean.TRUE);
         if (((Boolean) persister.get()).booleanValue()) {
-            this.tracker.track(APP_FIRST_LAUNCHED, MapsJVM.mapOf(Tuples.to("platform", "Android")));
+            this.tracker.track(APP_FIRST_LAUNCHED, g0.mapOf(d0.o.to("platform", "Android")));
             persister.set(Boolean.FALSE, true);
         }
     }
 
     public final void appUiViewed(String screenName, long time) {
-        Intrinsics3.checkNotNullParameter(screenName, "screenName");
+        m.checkNotNullParameter(screenName, "screenName");
         Long l = this.appOpenTimestamp;
-        this.tracker.track("app_ui_viewed", Maps6.mutableMapOf(Tuples.to("screen_name", screenName), Tuples.to("load_id", this.openAppLoadId), Tuples.to("duration_ms_since_app_opened", Long.valueOf(l != null ? time - l.longValue() : -1L)), Tuples.to("has_cached_data", Boolean.TRUE), Tuples.to("theme", this.storeUserSettingsSystem.getTheme())));
+        this.tracker.track("app_ui_viewed", h0.mutableMapOf(d0.o.to("screen_name", screenName), d0.o.to("load_id", this.openAppLoadId), d0.o.to("duration_ms_since_app_opened", Long.valueOf(l != null ? time - l.longValue() : -1L)), d0.o.to("has_cached_data", Boolean.TRUE), d0.o.to("theme", this.storeUserSettingsSystem.getTheme())));
     }
 }

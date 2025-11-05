@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackExpressionPickerTabClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExpressionPickerTabClicked implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackExpressionPickerTabClicked implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence tab = null;
     private final Boolean badged = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackExpressionPickerTabClicked implements Analyti
             return false;
         }
         TrackExpressionPickerTabClicked trackExpressionPickerTabClicked = (TrackExpressionPickerTabClicked) other;
-        return Intrinsics3.areEqual(this.tab, trackExpressionPickerTabClicked.tab) && Intrinsics3.areEqual(this.badged, trackExpressionPickerTabClicked.badged);
+        return m.areEqual(this.tab, trackExpressionPickerTabClicked.tab) && m.areEqual(this.badged, trackExpressionPickerTabClicked.badged);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackExpressionPickerTabClicked implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackExpressionPickerTabClicked(tab=");
+        StringBuilder sbU = a.U("TrackExpressionPickerTabClicked(tab=");
         sbU.append(this.tab);
         sbU.append(", badged=");
-        return outline.D(sbU, this.badged, ")");
+        return a.D(sbU, this.badged, ")");
     }
 }

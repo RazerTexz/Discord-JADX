@@ -3,7 +3,7 @@ package androidx.core.util;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -63,7 +63,7 @@ public class AtomicFile {
         if (this.mNewName.delete()) {
             return;
         }
-        StringBuilder sbU = outline.U("Failed to delete new file ");
+        StringBuilder sbU = a.U("Failed to delete new file ");
         sbU.append(this.mNewName);
         Log.e(LOG_TAG, sbU.toString());
     }
@@ -94,7 +94,7 @@ public class AtomicFile {
             rename(this.mLegacyBackupName, this.mBaseName);
         }
         if (this.mNewName.exists() && this.mBaseName.exists() && !this.mNewName.delete()) {
-            StringBuilder sbU = outline.U("Failed to delete outdated new file ");
+            StringBuilder sbU = a.U("Failed to delete outdated new file ");
             sbU.append(this.mNewName);
             Log.e(LOG_TAG, sbU.toString());
         }
@@ -134,14 +134,14 @@ public class AtomicFile {
             return new FileOutputStream(this.mNewName);
         } catch (FileNotFoundException unused) {
             if (!this.mNewName.getParentFile().mkdirs()) {
-                StringBuilder sbU = outline.U("Failed to create directory for ");
+                StringBuilder sbU = a.U("Failed to create directory for ");
                 sbU.append(this.mNewName);
                 throw new IOException(sbU.toString());
             }
             try {
                 return new FileOutputStream(this.mNewName);
             } catch (FileNotFoundException e) {
-                StringBuilder sbU2 = outline.U("Failed to create new file ");
+                StringBuilder sbU2 = a.U("Failed to create new file ");
                 sbU2.append(this.mNewName);
                 throw new IOException(sbU2.toString(), e);
             }

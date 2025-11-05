@@ -9,23 +9,16 @@ import android.net.Uri;
 import android.os.Build;
 import android.util.Pair;
 import androidx.core.util.Pools;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.d.ImmutableMap;
-import b.f.d.e.FLog;
-import b.f.d.g.PooledByteBufferFactory;
-import b.f.d.g.PooledByteBufferInputStream;
-import b.f.d.l.UriUtil;
-import b.f.i.DefaultImageFormats;
-import b.f.j.d.ResizeOptions;
-import b.f.j.j.EncodedImage2;
-import b.f.j.p.BaseProducerContextCallbacks;
-import b.f.j.p.Consumer2;
-import b.f.j.p.ProducerContext;
-import b.f.j.p.ProducerListener2;
-import b.f.j.p.StatefulProducerRunnable;
-import b.f.j.p.ThumbnailProducer;
-import b.f.k.BitmapUtil;
-import b.f.m.DoNotOptimize;
+import b.f.d.d.f;
+import b.f.d.g.g;
+import b.f.d.g.h;
+import b.f.j.j.e;
+import b.f.j.p.e1;
+import b.f.j.p.k1;
+import b.f.j.p.l;
+import b.f.j.p.x0;
+import b.f.j.p.z0;
+import b.f.m.d;
 import com.facebook.common.memory.PooledByteBuffer;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.imagepipeline.request.ImageRequest;
@@ -38,46 +31,46 @@ import java.util.Objects;
 import java.util.concurrent.Executor;
 
 /* loaded from: classes3.dex */
-public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImage2> {
+public class LocalExifThumbnailProducer implements k1<e> {
     public final Executor a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final PooledByteBufferFactory f2901b;
+    public final g f2901b;
     public final ContentResolver c;
 
-    @DoNotOptimize
+    @d
     public class Api24Utils {
     }
 
-    public class a extends StatefulProducerRunnable<EncodedImage2> {
+    public class a extends e1<e> {
         public final /* synthetic */ ImageRequest o;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(Consumer2 consumer2, ProducerListener2 producerListener2, ProducerContext producerContext, String str, ImageRequest imageRequest) {
-            super(consumer2, producerListener2, producerContext, str);
+        public a(l lVar, z0 z0Var, x0 x0Var, String str, ImageRequest imageRequest) {
+            super(lVar, z0Var, x0Var, str);
             this.o = imageRequest;
         }
 
-        @Override // b.f.j.p.StatefulProducerRunnable
-        public void b(EncodedImage2 encodedImage2) {
-            EncodedImage2 encodedImage22 = encodedImage2;
-            if (encodedImage22 != null) {
-                encodedImage22.close();
+        @Override // b.f.j.p.e1
+        public void b(e eVar) {
+            e eVar2 = eVar;
+            if (eVar2 != null) {
+                eVar2.close();
             }
         }
 
-        @Override // b.f.j.p.StatefulProducerRunnable
-        public Map c(EncodedImage2 encodedImage2) {
-            return ImmutableMap.of("createdThumbnail", Boolean.toString(encodedImage2 != null));
+        @Override // b.f.j.p.e1
+        public Map c(e eVar) {
+            return f.of("createdThumbnail", Boolean.toString(eVar != null));
         }
 
         /* JADX WARN: Removed duplicated region for block: B:15:0x0031  */
         /* JADX WARN: Removed duplicated region for block: B:52:0x009b  */
-        @Override // b.f.j.p.StatefulProducerRunnable
+        @Override // b.f.j.p.e1
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public EncodedImage2 d() throws Exception {
+        public e d() throws Exception {
             String path;
             ExifInterface exifInterface;
             AssetFileDescriptor assetFileDescriptorOpenAssetFileDescriptor;
@@ -86,12 +79,12 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
             Uri uri = this.o.c;
             LocalExifThumbnailProducer localExifThumbnailProducer = LocalExifThumbnailProducer.this;
             ContentResolver contentResolver = localExifThumbnailProducer.c;
-            EncodedImage2 encodedImage2 = null;
+            e eVar = null;
             Cursor cursor = null;
             pair = null;
             Pair pair = null;
-            encodedImage2 = null;
-            if (UriUtil.c(uri)) {
+            eVar = null;
+            if (b.f.d.l.b.c(uri)) {
                 try {
                     Cursor cursorQuery = contentResolver.query(uri, null, null, null, null);
                     if (cursorQuery != null) {
@@ -113,7 +106,7 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
                     th = th2;
                 }
             } else {
-                path = UriUtil.d(uri) ? uri.getPath() : null;
+                path = b.f.d.l.b.d(uri) ? uri.getPath() : null;
             }
             if (path == null) {
                 exifInterface = null;
@@ -126,13 +119,13 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
                     }
                 } catch (IOException unused) {
                 } catch (StackOverflowError unused2) {
-                    FLog.a(LocalExifThumbnailProducer.class, "StackOverflowError in ExifInterface constructor");
+                    b.f.d.e.a.a(LocalExifThumbnailProducer.class, "StackOverflowError in ExifInterface constructor");
                 }
                 if (z2) {
                     exifInterface = new ExifInterface(path);
                 } else {
                     ContentResolver contentResolver2 = localExifThumbnailProducer.c;
-                    if (UriUtil.c(uri)) {
+                    if (b.f.d.l.b.c(uri)) {
                         try {
                             assetFileDescriptorOpenAssetFileDescriptor = contentResolver2.openAssetFileDescriptor(uri, "r");
                         } catch (FileNotFoundException unused3) {
@@ -155,9 +148,9 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
                 Objects.requireNonNull(thumbnail);
                 PooledByteBuffer pooledByteBufferB = LocalExifThumbnailProducer.this.f2901b.b(thumbnail);
                 Objects.requireNonNull(LocalExifThumbnailProducer.this);
-                PooledByteBufferInputStream pooledByteBufferInputStream = new PooledByteBufferInputStream(pooledByteBufferB);
-                Pools.SynchronizedPool<ByteBuffer> synchronizedPool = BitmapUtil.a;
-                Pools.SynchronizedPool<ByteBuffer> synchronizedPool2 = BitmapUtil.a;
+                h hVar = new h(pooledByteBufferB);
+                Pools.SynchronizedPool<ByteBuffer> synchronizedPool = b.f.k.a.a;
+                Pools.SynchronizedPool<ByteBuffer> synchronizedPool2 = b.f.k.a.a;
                 ByteBuffer byteBufferAcquire = synchronizedPool2.acquire();
                 if (byteBufferAcquire == null) {
                     byteBufferAcquire = ByteBuffer.allocate(16384);
@@ -166,68 +159,68 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
                 options.inJustDecodeBounds = true;
                 try {
                     options.inTempStorage = byteBufferAcquire.array();
-                    BitmapFactory.decodeStream(pooledByteBufferInputStream, null, options);
+                    BitmapFactory.decodeStream(hVar, null, options);
                     if (options.outWidth != -1 && options.outHeight != -1) {
                         pair = new Pair(Integer.valueOf(options.outWidth), Integer.valueOf(options.outHeight));
                     }
                     synchronizedPool2.release(byteBufferAcquire);
                     String attribute = exifInterface.getAttribute(androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION);
                     Objects.requireNonNull(attribute);
-                    int iS0 = AnimatableValueParser.s0(Integer.parseInt(attribute));
+                    int iS0 = b.c.a.a0.d.s0(Integer.parseInt(attribute));
                     int iIntValue = pair != null ? ((Integer) pair.first).intValue() : -1;
                     int iIntValue2 = pair != null ? ((Integer) pair.second).intValue() : -1;
                     CloseableReference closeableReferenceA = CloseableReference.A(pooledByteBufferB);
                     try {
-                        encodedImage2 = new EncodedImage2(closeableReferenceA);
-                        encodedImage2.l = DefaultImageFormats.a;
-                        encodedImage2.m = iS0;
-                        encodedImage2.o = iIntValue;
-                        encodedImage2.p = iIntValue2;
+                        eVar = new e(closeableReferenceA);
+                        eVar.l = b.f.i.b.a;
+                        eVar.m = iS0;
+                        eVar.o = iIntValue;
+                        eVar.p = iIntValue2;
                     } finally {
                         if (closeableReferenceA != null) {
                             closeableReferenceA.close();
                         }
                     }
                 } catch (Throwable th3) {
-                    BitmapUtil.a.release(byteBufferAcquire);
+                    b.f.k.a.a.release(byteBufferAcquire);
                     throw th3;
                 }
             }
-            return encodedImage2;
+            return eVar;
         }
     }
 
-    public class b extends BaseProducerContextCallbacks {
-        public final /* synthetic */ StatefulProducerRunnable a;
+    public class b extends b.f.j.p.e {
+        public final /* synthetic */ e1 a;
 
-        public b(LocalExifThumbnailProducer localExifThumbnailProducer, StatefulProducerRunnable statefulProducerRunnable) {
-            this.a = statefulProducerRunnable;
+        public b(LocalExifThumbnailProducer localExifThumbnailProducer, e1 e1Var) {
+            this.a = e1Var;
         }
 
-        @Override // b.f.j.p.ProducerContextCallbacks
+        @Override // b.f.j.p.y0
         public void a() {
             this.a.a();
         }
     }
 
-    public LocalExifThumbnailProducer(Executor executor, PooledByteBufferFactory pooledByteBufferFactory, ContentResolver contentResolver) {
+    public LocalExifThumbnailProducer(Executor executor, g gVar, ContentResolver contentResolver) {
         this.a = executor;
-        this.f2901b = pooledByteBufferFactory;
+        this.f2901b = gVar;
         this.c = contentResolver;
     }
 
-    @Override // b.f.j.p.ThumbnailProducer
-    public boolean a(ResizeOptions resizeOptions) {
-        return AnimatableValueParser.S0(512, 512, resizeOptions);
+    @Override // b.f.j.p.k1
+    public boolean a(b.f.j.d.e eVar) {
+        return b.c.a.a0.d.S0(512, 512, eVar);
     }
 
-    @Override // b.f.j.p.Producer2
-    public void b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
-        ProducerListener2 producerListener2O = producerContext.o();
-        ImageRequest imageRequestE = producerContext.e();
-        producerContext.i("local", "exif");
-        a aVar = new a(consumer2, producerListener2O, producerContext, "LocalExifThumbnailProducer", imageRequestE);
-        producerContext.f(new b(this, aVar));
+    @Override // b.f.j.p.w0
+    public void b(l<e> lVar, x0 x0Var) {
+        z0 z0VarO = x0Var.o();
+        ImageRequest imageRequestE = x0Var.e();
+        x0Var.i("local", "exif");
+        a aVar = new a(lVar, z0VarO, x0Var, "LocalExifThumbnailProducer", imageRequestE);
+        x0Var.f(new b(this, aVar));
         this.a.execute(aVar);
     }
 }

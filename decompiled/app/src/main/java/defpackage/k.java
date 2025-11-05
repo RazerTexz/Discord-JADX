@@ -2,13 +2,13 @@ package defpackage;
 
 import androidx.view.ViewModelStore;
 import androidx.view.ViewModelStoreOwner;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: kotlin-style lambda group */
 /* loaded from: classes2.dex */
-public final class k extends Lambda implements Function0<ViewModelStore> {
+public final class k extends o implements Function0<ViewModelStore> {
     public final /* synthetic */ int j;
     public final /* synthetic */ Object k;
 
@@ -24,34 +24,34 @@ public final class k extends Lambda implements Function0<ViewModelStore> {
         int i = this.j;
         if (i == 0) {
             ViewModelStore viewModelStore = ((ViewModelStoreOwner) ((Function0) this.k).invoke()).getViewModelStore();
-            Intrinsics3.checkNotNullExpressionValue(viewModelStore, "ownerProducer().viewModelStore");
+            m.checkNotNullExpressionValue(viewModelStore, "ownerProducer().viewModelStore");
             return viewModelStore;
         }
         if (i == 1) {
             ViewModelStore viewModelStore2 = ((ViewModelStoreOwner) ((Function0) this.k).invoke()).getViewModelStore();
-            Intrinsics3.checkNotNullExpressionValue(viewModelStore2, "ownerProducer().viewModelStore");
+            m.checkNotNullExpressionValue(viewModelStore2, "ownerProducer().viewModelStore");
             return viewModelStore2;
         }
         if (i == 2) {
             ViewModelStore viewModelStore3 = ((ViewModelStoreOwner) ((Function0) this.k).invoke()).getViewModelStore();
-            Intrinsics3.checkNotNullExpressionValue(viewModelStore3, "ownerProducer().viewModelStore");
+            m.checkNotNullExpressionValue(viewModelStore3, "ownerProducer().viewModelStore");
             return viewModelStore3;
         }
         if (i == 3) {
             ViewModelStore viewModelStore4 = ((ViewModelStoreOwner) ((Function0) this.k).invoke()).getViewModelStore();
-            Intrinsics3.checkNotNullExpressionValue(viewModelStore4, "ownerProducer().viewModelStore");
+            m.checkNotNullExpressionValue(viewModelStore4, "ownerProducer().viewModelStore");
             return viewModelStore4;
         }
         if (i == 4) {
             ViewModelStore viewModelStore5 = ((ViewModelStoreOwner) ((Function0) this.k).invoke()).getViewModelStore();
-            Intrinsics3.checkNotNullExpressionValue(viewModelStore5, "ownerProducer().viewModelStore");
+            m.checkNotNullExpressionValue(viewModelStore5, "ownerProducer().viewModelStore");
             return viewModelStore5;
         }
         if (i != 5) {
             throw null;
         }
         ViewModelStore viewModelStore6 = ((ViewModelStoreOwner) ((Function0) this.k).invoke()).getViewModelStore();
-        Intrinsics3.checkNotNullExpressionValue(viewModelStore6, "ownerProducer().viewModelStore");
+        m.checkNotNullExpressionValue(viewModelStore6, "ownerProducer().viewModelStore");
         return viewModelStore6;
     }
 }

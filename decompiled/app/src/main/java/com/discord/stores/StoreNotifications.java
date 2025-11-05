@@ -7,9 +7,8 @@ import android.view.View;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.app.FrameMetricsAggregator;
 import androidx.core.app.NotificationCompat;
-import b.a.d.o;
-import b.a.e.Backgrounded4;
-import b.d.b.a.outline;
+import b.a.e.d;
+import b.d.b.a.a;
 import b.i.a.f.e.o.f;
 import com.discord.api.channel.Channel;
 import com.discord.api.presence.ClientStatus;
@@ -28,18 +27,16 @@ import com.discord.utilities.rx.ActivityLifecycleCallbacks;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.widgets.notice.NoticePopupChannel;
-import d0.Result3;
-import d0.Tuples;
-import d0.w.h.Intrinsics2;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.l;
+import d0.o;
+import d0.w.h.c;
+import d0.w.i.a.e;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function0;
@@ -48,7 +45,7 @@ import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
 import rx.Observable;
 import rx.functions.Func2;
-import s.a.Dispatchers;
+import s.a.k0;
 
 /* compiled from: StoreNotifications.kt */
 /* loaded from: classes2.dex */
@@ -70,14 +67,14 @@ public final class StoreNotifications extends Store {
 
         @Override // com.discord.utilities.rx.ActivityLifecycleCallbacks
         public void onActivityCreatedOrResumed(AppActivity activity) {
-            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             super.onActivityCreatedOrResumed(activity);
             StoreNotifications.access$setContext$p(StoreNotifications.this, activity);
         }
 
         @Override // com.discord.utilities.rx.ActivityLifecycleCallbacks
         public void onActivityDestroyed(AppActivity activity) {
-            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             super.onActivityDestroyed(activity);
             StoreNotifications.access$setContext$p(StoreNotifications.this, null);
         }
@@ -85,7 +82,7 @@ public final class StoreNotifications extends Store {
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<String, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<String, Unit> {
         public AnonymousClass1(StoreNotifications storeNotifications) {
             super(1, storeNotifications, StoreNotifications.class, "handleRegistrationToken", "handleRegistrationToken(Ljava/lang/String;)V", 0);
         }
@@ -104,23 +101,23 @@ public final class StoreNotifications extends Store {
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$2, reason: invalid class name */
-    public static final class AnonymousClass2<T1, T2, R> implements Func2<NotificationClient.SettingsV2, Boolean, Tuples2<? extends NotificationClient.SettingsV2, ? extends Boolean>> {
+    public static final class AnonymousClass2<T1, T2, R> implements Func2<NotificationClient.SettingsV2, Boolean, Pair<? extends NotificationClient.SettingsV2, ? extends Boolean>> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         @Override // rx.functions.Func2
-        public /* bridge */ /* synthetic */ Tuples2<? extends NotificationClient.SettingsV2, ? extends Boolean> call(NotificationClient.SettingsV2 settingsV2, Boolean bool) {
+        public /* bridge */ /* synthetic */ Pair<? extends NotificationClient.SettingsV2, ? extends Boolean> call(NotificationClient.SettingsV2 settingsV2, Boolean bool) {
             return call2(settingsV2, bool);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final Tuples2<NotificationClient.SettingsV2, Boolean> call2(NotificationClient.SettingsV2 settingsV2, Boolean bool) {
-            return Tuples.to(settingsV2, bool);
+        public final Pair<NotificationClient.SettingsV2, Boolean> call2(NotificationClient.SettingsV2 settingsV2, Boolean bool) {
+            return o.to(settingsV2, bool);
         }
     }
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Tuples2<? extends NotificationClient.SettingsV2, ? extends Boolean>, Unit> {
+    public static final class AnonymousClass3 extends d0.z.d.o implements Function1<Pair<? extends NotificationClient.SettingsV2, ? extends Boolean>, Unit> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
         public AnonymousClass3() {
@@ -128,25 +125,25 @@ public final class StoreNotifications extends Store {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Tuples2<? extends NotificationClient.SettingsV2, ? extends Boolean> tuples2) {
-            invoke2((Tuples2<NotificationClient.SettingsV2, Boolean>) tuples2);
+        public /* bridge */ /* synthetic */ Unit invoke(Pair<? extends NotificationClient.SettingsV2, ? extends Boolean> pair) {
+            invoke2((Pair<NotificationClient.SettingsV2, Boolean>) pair);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Tuples2<NotificationClient.SettingsV2, Boolean> tuples2) {
-            NotificationClient.SettingsV2 settingsV2Component1 = tuples2.component1();
-            Boolean boolComponent2 = tuples2.component2();
+        public final void invoke2(Pair<NotificationClient.SettingsV2, Boolean> pair) {
+            NotificationClient.SettingsV2 settingsV2Component1 = pair.component1();
+            Boolean boolComponent2 = pair.component2();
             NotificationClient notificationClient = NotificationClient.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(settingsV2Component1, "settings");
-            Intrinsics3.checkNotNullExpressionValue(boolComponent2, "isBackgrounded");
+            m.checkNotNullExpressionValue(settingsV2Component1, "settings");
+            m.checkNotNullExpressionValue(boolComponent2, "isBackgrounded");
             notificationClient.updateSettings$app_productionGoogleRelease(settingsV2Component1, boolComponent2.booleanValue());
         }
     }
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$displayPopup$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<View, Unit> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Message $message;
 
@@ -165,20 +162,20 @@ public final class StoreNotifications extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(view, "view");
             Intent intentSelectChannel = IntentUtils.RouteBuilders.selectChannel(this.$channel.getId(), this.$channel.getGuildId(), Long.valueOf(this.$message.getId()));
             intentSelectChannel.putExtra("com.discord.intent.ORIGIN_SOURCE", "com.discord.intent.ORIGIN_NOTIF_INAPP");
             IntentUtils intentUtils = IntentUtils.INSTANCE;
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+            m.checkNotNullExpressionValue(context, "view.context");
             intentUtils.consumeExternalRoutingIntent(intentSelectChannel, context);
         }
     }
 
     /* compiled from: StoreNotifications.kt */
-    @DebugMetadata(c = "com.discord.stores.StoreNotifications$handleChannelSelected$1", f = "StoreNotifications.kt", l = {}, m = "invokeSuspend")
+    @e(c = "com.discord.stores.StoreNotifications$handleChannelSelected$1", f = "StoreNotifications.kt", l = {}, m = "invokeSuspend")
     /* renamed from: com.discord.stores.StoreNotifications$handleChannelSelected$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass1 extends d0.w.i.a.k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ long $channelId;
         public int label;
 
@@ -188,9 +185,9 @@ public final class StoreNotifications extends Store {
             this.$channelId = j;
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass1(this.$channelId, continuation);
         }
 
@@ -199,13 +196,13 @@ public final class StoreNotifications extends Store {
             return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
-            Intrinsics2.getCOROUTINE_SUSPENDED();
+            c.getCOROUTINE_SUSPENDED();
             if (this.label != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            Result3.throwOnFailure(obj);
+            l.throwOnFailure(obj);
             NotificationClient.clear$default(NotificationClient.INSTANCE, this.$channelId, null, false, 6, null);
             return Unit.a;
         }
@@ -213,7 +210,7 @@ public final class StoreNotifications extends Store {
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$setEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $enabled;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -229,14 +226,14 @@ public final class StoreNotifications extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
-            Intrinsics3.checkNotNullParameter(settingsV2, "it");
+            m.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, this.$enabled, false, false, false, false, false, null, null, null, 510, null);
         }
     }
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$setNotificationLightDisabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $notificationLightDisabled;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -252,14 +249,14 @@ public final class StoreNotifications extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
-            Intrinsics3.checkNotNullParameter(settingsV2, "it");
+            m.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, false, false, false, this.$notificationLightDisabled, false, false, null, null, null, 503, null);
         }
     }
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$setNotificationSoundDisabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $notificationSoundDisabled;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -275,14 +272,14 @@ public final class StoreNotifications extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
-            Intrinsics3.checkNotNullParameter(settingsV2, "it");
+            m.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, false, false, false, false, this.$notificationSoundDisabled, false, null, null, null, 495, null);
         }
     }
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$setNotificationsVibrateDisabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<NotificationClient.SettingsV2, NotificationClient.SettingsV2> {
         public final /* synthetic */ boolean $notificationsVibrateDisabled;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -298,14 +295,14 @@ public final class StoreNotifications extends Store {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NotificationClient.SettingsV2 invoke2(NotificationClient.SettingsV2 settingsV2) {
-            Intrinsics3.checkNotNullParameter(settingsV2, "it");
+            m.checkNotNullParameter(settingsV2, "it");
             return NotificationClient.SettingsV2.copy$default(settingsV2, false, false, false, false, false, this.$notificationsVibrateDisabled, null, null, null, 479, null);
         }
     }
 
     /* compiled from: StoreNotifications.kt */
     /* renamed from: com.discord.stores.StoreNotifications$tryTokenPersist$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -324,8 +321,8 @@ public final class StoreNotifications extends Store {
     }
 
     public StoreNotifications(Clock clock, StoreStream storeStream) {
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(storeStream, "stream");
         this.clock = clock;
         this.stream = storeStream;
         this.notificationSettings = new Persister<>("STORE_NOTIFICATIONS_SETTINGS_V2", new NotificationClient.SettingsV2(false, false, false, false, false, false, null, null, null, FrameMetricsAggregator.EVERY_DURATION, null));
@@ -363,10 +360,10 @@ public final class StoreNotifications extends Store {
         NotificationClient.INSTANCE.setRegistrationIdReceived(new AnonymousClass1(this));
         Observable<NotificationClient.SettingsV2> settings = getSettings();
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        Observable observableJ = Observable.j(Observable.h(settings, companion.getAuthentication().getAuthedToken$app_productionGoogleRelease(), companion.getUserSettingsSystem().observeSettings(false), ObservableExtensionsKt.leadingEdgeThrottle(companion.getPermissions().observePermissionsForAllChannels(), 1L, TimeUnit.SECONDS).G(StoreNotifications2.INSTANCE), StoreNotifications3.INSTANCE).r(), Backgrounded4.d.a(), AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable\n        .comb… isBackgrounded\n        }");
+        Observable observableJ = Observable.j(Observable.h(settings, companion.getAuthentication().getAuthedToken$app_productionGoogleRelease(), companion.getUserSettingsSystem().observeSettings(false), ObservableExtensionsKt.leadingEdgeThrottle(companion.getPermissions().observePermissionsForAllChannels(), 1L, TimeUnit.SECONDS).G(StoreNotifications$configureNotificationClient$completedSettings$1.INSTANCE), StoreNotifications$configureNotificationClient$completedSettings$2.INSTANCE).r(), d.d.a(), AnonymousClass2.INSTANCE);
+        m.checkNotNullExpressionValue(observableJ, "Observable\n        .comb… isBackgrounded\n        }");
         Observable observableR = ObservableExtensionsKt.computationBuffered(observableJ).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Observable\n        .comb…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "Observable\n        .comb…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(observableR, (Context) null, "nsClient", (Function1) null, AnonymousClass3.INSTANCE, (Function1) null, (Function0) null, (Function0) null, 117, (Object) null);
     }
 
@@ -376,7 +373,7 @@ public final class StoreNotifications extends Store {
             return;
         }
         NoticePopupChannel noticePopupChannel = NoticePopupChannel.INSTANCE;
-        StringBuilder sbU = outline.U("{InAppNotif}#");
+        StringBuilder sbU = a.U("{InAppNotif}#");
         sbU.append(message.getChannelId());
         noticePopupChannel.enqueue(context, sbU.toString(), message, new AnonymousClass1(channel, message));
     }
@@ -402,10 +399,10 @@ public final class StoreNotifications extends Store {
         if (str == null) {
             this.pushTokenPersisted = null;
         }
-        if (str == null || Intrinsics3.areEqual(this.pushToken, this.pushTokenPersisted)) {
+        if (str == null || m.areEqual(this.pushToken, this.pushTokenPersisted)) {
             return;
         }
-        ObservableExtensionsKt.computationBuffered(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userCreateDevice(new RestAPIParams.UserDevices(this.pushToken)), false, 1, null)).k(o.a.g(null, new AnonymousClass1(), null));
+        ObservableExtensionsKt.computationBuffered(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().userCreateDevice(new RestAPIParams.UserDevices(this.pushToken)), false, 1, null)).k(b.a.d.o.a.g(null, new AnonymousClass1(), null));
     }
 
     public final synchronized String getPushToken() {
@@ -421,15 +418,15 @@ public final class StoreNotifications extends Store {
         tryTokenPersist();
     }
 
-    @Store3
+    @StoreThread
     public final void handleChannelSelected(long channelId) {
-        f.H0(f.c(Dispatchers.a), null, null, new AnonymousClass1(channelId, null), 3, null);
+        f.H0(f.c(k0.a), null, null, new AnonymousClass1(channelId, null), 3, null);
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageCreate(com.discord.api.message.Message message) {
         Channel channel;
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         if (this.notificationSettings.get().isEnabledInApp() && this.stream.getPresences().getLocalPresence().getStatus() != ClientStatus.DND) {
             Map<Long, Integer> relationships = this.stream.getUserRelationships().getRelationships();
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -454,7 +451,7 @@ public final class StoreNotifications extends Store {
                 channel = null;
             }
             if (channel != null) {
-                if (NotificationTextUtils.INSTANCE.shouldNotifyInAppPopup(this.stream.getUsers().getMe(), message, channel, linkedHashMap, map != null ? map.get(Long.valueOf(channel.getParentId())) : null, (Guild) outline.c(channel, this.stream.getGuilds().getGuildsInternal$app_productionGoogleRelease()), this.stream.getGuilds().getGuildMembersComputedInternal$app_productionGoogleRelease(), this.stream.getGuildSettings().getGuildSettingsInternal$app_productionGoogleRelease(), this.stream.getThreadsJoined().getAllJoinedThreadsInternal$app_productionGoogleRelease(), this.stream.getVoiceChannelSelected().getSelectedVoiceChannelId(), (Long) outline.d(channel, this.stream.getPermissions().getPermissionsByChannel()))) {
+                if (NotificationTextUtils.INSTANCE.shouldNotifyInAppPopup(this.stream.getUsers().getMe(), message, channel, linkedHashMap, map != null ? map.get(Long.valueOf(channel.getParentId())) : null, (Guild) a.c(channel, this.stream.getGuilds().getGuildsInternal$app_productionGoogleRelease()), this.stream.getGuilds().getGuildMembersComputedInternal$app_productionGoogleRelease(), this.stream.getGuildSettings().getGuildSettingsInternal$app_productionGoogleRelease(), this.stream.getThreadsJoined().getAllJoinedThreadsInternal$app_productionGoogleRelease(), this.stream.getVoiceChannelSelected().getSelectedVoiceChannelId(), (Long) a.d(channel, this.stream.getPermissions().getPermissionsByChannel()))) {
                     displayPopup(new Message(message), channel);
                 }
             }
@@ -466,7 +463,7 @@ public final class StoreNotifications extends Store {
     }
 
     public final void init(Application application) {
-        Intrinsics3.checkNotNullParameter(application, "application");
+        m.checkNotNullParameter(application, "application");
         super.init((Context) application);
         configureContextSetter(application);
         configureNotificationClient();
@@ -478,7 +475,7 @@ public final class StoreNotifications extends Store {
     }
 
     public final void setEnabledInApp(boolean isEnabledInApp, boolean logToggle) {
-        NotificationClient.SettingsV2 andSet = this.notificationSettings.getAndSet(true, new StoreNotifications4(isEnabledInApp));
+        NotificationClient.SettingsV2 andSet = this.notificationSettings.getAndSet(true, new StoreNotifications$setEnabledInApp$oldValue$1(isEnabledInApp));
         if (!logToggle || andSet.isEnabledInApp() == isEnabledInApp) {
             return;
         }

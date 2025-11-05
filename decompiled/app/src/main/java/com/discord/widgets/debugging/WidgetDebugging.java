@@ -15,8 +15,8 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppLog;
@@ -31,12 +31,12 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -63,7 +63,7 @@ public final class WidgetDebugging extends AppFragment {
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<Boolean> filterSubject;
     private Adapter logsAdapter;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetDebugging.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDebuggingBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetDebugging.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDebuggingBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -73,7 +73,7 @@ public final class WidgetDebugging extends AppFragment {
 
         /* compiled from: WidgetDebugging.kt */
         /* renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function2<List<? extends AppLog.LoggedItem>, List<? extends AppLog.LoggedItem>, Unit> {
+        public static final class AnonymousClass1 extends o implements Function2<List<? extends AppLog.LoggedItem>, List<? extends AppLog.LoggedItem>, Unit> {
             public final /* synthetic */ RecyclerView $recycler;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -90,8 +90,8 @@ public final class WidgetDebugging extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<AppLog.LoggedItem> list, List<AppLog.LoggedItem> list2) {
-                Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
-                Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");
+                m.checkNotNullParameter(list, "<anonymous parameter 0>");
+                m.checkNotNullParameter(list2, "<anonymous parameter 1>");
                 RecyclerView.LayoutManager layoutManager = this.$recycler.getLayoutManager();
                 Objects.requireNonNull(layoutManager, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
                 if (((LinearLayoutManager) layoutManager).findFirstCompletelyVisibleItemPosition() == 0) {
@@ -107,14 +107,14 @@ public final class WidgetDebugging extends AppFragment {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Item(@LayoutRes int i, Adapter adapter) {
                 super(i, adapter);
-                Intrinsics3.checkNotNullParameter(adapter, "adapter");
+                m.checkNotNullParameter(adapter, "adapter");
                 View view = this.itemView;
                 TextView textView = (TextView) view.findViewById(R.id.log_message);
                 if (textView == null) {
                     throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.log_message)));
                 }
                 WidgetDebuggingAdapterItemBinding widgetDebuggingAdapterItemBinding = new WidgetDebuggingAdapterItemBinding((LinearLayout) view, textView);
-                Intrinsics3.checkNotNullExpressionValue(widgetDebuggingAdapterItemBinding, "WidgetDebuggingAdapterItemBinding.bind(itemView)");
+                m.checkNotNullExpressionValue(widgetDebuggingAdapterItemBinding, "WidgetDebuggingAdapterItemBinding.bind(itemView)");
                 this.binding = widgetDebuggingAdapterItemBinding;
             }
 
@@ -140,12 +140,12 @@ public final class WidgetDebugging extends AppFragment {
             */
             public void onConfigure2(int position, AppLog.LoggedItem data) {
                 String string;
-                Intrinsics3.checkNotNullParameter(data, "data");
+                m.checkNotNullParameter(data, "data");
                 super.onConfigure(position, (int) data);
                 TextView textView = this.binding.f2361b;
-                textView.setTextColor(getColor(outline.I(textView, "binding.logMessage", "binding.logMessage.context"), data.priority));
+                textView.setTextColor(getColor(a.I(textView, "binding.logMessage", "binding.logMessage.context"), data.priority));
                 TextView textView2 = this.binding.f2361b;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.logMessage");
+                m.checkNotNullExpressionValue(textView2, "binding.logMessage");
                 StringBuilder sb = new StringBuilder();
                 sb.append(data.message);
                 Throwable th = data.throwable;
@@ -161,19 +161,19 @@ public final class WidgetDebugging extends AppFragment {
                 sb.append(string);
                 textView2.setText(sb.toString());
                 TextView textView3 = this.binding.f2361b;
-                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.logMessage");
+                m.checkNotNullExpressionValue(textView3, "binding.logMessage");
                 textView3.setMaxLines(2);
                 LinearLayout linearLayout = this.binding.a;
-                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
-                ViewExtensions.setOnLongClickListenerConsumeClick(linearLayout, new WidgetDebugging2(this));
-                this.itemView.setOnClickListener(new WidgetDebugging3(this));
+                m.checkNotNullExpressionValue(linearLayout, "binding.root");
+                ViewExtensions.setOnLongClickListenerConsumeClick(linearLayout, new WidgetDebugging$Adapter$Item$onConfigure$2(this));
+                this.itemView.setOnClickListener(new WidgetDebugging$Adapter$Item$onConfigure$3(this));
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Adapter(RecyclerView recyclerView) {
             super(recyclerView, false, 2, null);
-            Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+            m.checkNotNullParameter(recyclerView, "recycler");
             setOnUpdated(new AnonymousClass1(recyclerView));
         }
 
@@ -194,7 +194,7 @@ public final class WidgetDebugging extends AppFragment {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MGRecyclerViewHolder<?, AppLog.LoggedItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-            Intrinsics3.checkNotNullParameter(parent, "parent");
+            m.checkNotNullParameter(parent, "parent");
             if (viewType == 0) {
                 return new Item(R.layout.widget_debugging_adapter_item, this);
             }
@@ -213,8 +213,8 @@ public final class WidgetDebugging extends AppFragment {
         }
 
         public final void launch(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.e(context, WidgetDebugging.class, null, 4);
+            m.checkNotNullParameter(context, "context");
+            j.e(context, WidgetDebugging.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -228,7 +228,7 @@ public final class WidgetDebugging extends AppFragment {
         private final List<AppLog.LoggedItem> logs;
 
         public Model(List<AppLog.LoggedItem> list, boolean z2) {
-            Intrinsics3.checkNotNullParameter(list, "logs");
+            m.checkNotNullParameter(list, "logs");
             this.logs = list;
             this.isFiltered = z2;
         }
@@ -254,7 +254,7 @@ public final class WidgetDebugging extends AppFragment {
         }
 
         public final Model copy(List<AppLog.LoggedItem> logs, boolean isFiltered) {
-            Intrinsics3.checkNotNullParameter(logs, "logs");
+            m.checkNotNullParameter(logs, "logs");
             return new Model(logs, isFiltered);
         }
 
@@ -266,7 +266,7 @@ public final class WidgetDebugging extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.logs, model.logs) && this.isFiltered == model.isFiltered;
+            return m.areEqual(this.logs, model.logs) && this.isFiltered == model.isFiltered;
         }
 
         public final List<AppLog.LoggedItem> getLogs() {
@@ -290,10 +290,10 @@ public final class WidgetDebugging extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(logs=");
+            StringBuilder sbU = a.U("Model(logs=");
             sbU.append(this.logs);
             sbU.append(", isFiltered=");
-            return outline.O(sbU, this.isFiltered, ")");
+            return a.O(sbU, this.isFiltered, ")");
         }
     }
 
@@ -310,7 +310,7 @@ public final class WidgetDebugging extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
+            m.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != R.id.menu_debugging_filter) {
                 return;
             }
@@ -337,24 +337,24 @@ public final class WidgetDebugging extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(R.id.menu_debugging_filter);
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_debugging_filter)");
+            m.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_debugging_filter)");
             menuItemFindItem.setChecked(this.$model.isFiltered());
         }
     }
 
     /* compiled from: WidgetDebugging.kt */
     /* renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<List<AppLog.LoggedItem>, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<List<AppLog.LoggedItem>, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(List<AppLog.LoggedItem> list) {
             return call2(list);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(List<AppLog.LoggedItem> list) {
-            Intrinsics3.checkNotNullExpressionValue(list, "it");
+            m.checkNotNullExpressionValue(list, "it");
             return Boolean.valueOf(!list.isEmpty());
         }
     }
@@ -371,9 +371,9 @@ public final class WidgetDebugging extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<AppLog.LoggedItem> call2(List<AppLog.LoggedItem> list, List<AppLog.LoggedItem> list2) {
-            Intrinsics3.checkNotNullExpressionValue(list, "existingLogs");
-            Intrinsics3.checkNotNullExpressionValue(list2, "newLogs");
-            return _Collections.plus((Collection) list, (Iterable) list2);
+            m.checkNotNullExpressionValue(list, "existingLogs");
+            m.checkNotNullExpressionValue(list2, "newLogs");
+            return u.plus((Collection) list, (Iterable) list2);
         }
     }
 
@@ -389,9 +389,9 @@ public final class WidgetDebugging extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Model call2(List<AppLog.LoggedItem> list, Boolean bool) {
-            Intrinsics3.checkNotNullExpressionValue(bool, "isFiltered");
+            m.checkNotNullExpressionValue(bool, "isFiltered");
             if (bool.booleanValue()) {
-                ArrayList arrayListA0 = outline.a0(list, "logs");
+                ArrayList arrayListA0 = a.a0(list, "logs");
                 for (Object obj : list) {
                     if (((AppLog.LoggedItem) obj).priority > 2) {
                         arrayListA0.add(obj);
@@ -399,14 +399,14 @@ public final class WidgetDebugging extends AppFragment {
                 }
                 list = arrayListA0;
             }
-            Intrinsics3.checkNotNullExpressionValue(list, "filteredLogs");
+            m.checkNotNullExpressionValue(list, "filteredLogs");
             return new Model(list, bool.booleanValue());
         }
     }
 
     /* compiled from: WidgetDebugging.kt */
     /* renamed from: com.discord.widgets.debugging.WidgetDebugging$onViewBoundOrOnResume$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<Model, Unit> {
         public AnonymousClass4(WidgetDebugging widgetDebugging) {
             super(1, widgetDebugging, WidgetDebugging.class, "configureUI", "configureUI(Lcom/discord/widgets/debugging/WidgetDebugging$Model;)V", 0);
         }
@@ -419,14 +419,14 @@ public final class WidgetDebugging extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            Intrinsics3.checkNotNullParameter(model, "p1");
+            m.checkNotNullParameter(model, "p1");
             WidgetDebugging.access$configureUI((WidgetDebugging) this.receiver, model);
         }
     }
 
     public WidgetDebugging() {
         super(R.layout.widget_debugging);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetDebugging4.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetDebugging$binding$2.INSTANCE, null, 2, null);
         this.filterSubject = BehaviorSubject.l0(Boolean.TRUE);
     }
 
@@ -452,14 +452,14 @@ public final class WidgetDebugging extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
         RecyclerView recyclerView = getBinding().f2362b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.debuggingLogs");
+        m.checkNotNullExpressionValue(recyclerView, "binding.debuggingLogs");
         this.logsAdapter = (Adapter) companion.configure(new Adapter(recyclerView));
         RecyclerView recyclerView2 = getBinding().f2362b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.debuggingLogs");
+        m.checkNotNullExpressionValue(recyclerView2, "binding.debuggingLogs");
         RecyclerView.LayoutManager layoutManager = recyclerView2.getLayoutManager();
         Objects.requireNonNull(layoutManager, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
         LinearLayoutManager linearLayoutManager = (LinearLayoutManager) layoutManager;
@@ -474,9 +474,9 @@ public final class WidgetDebugging extends AppFragment {
         super.onViewBoundOrOnResume();
         Objects.requireNonNull(AppLog.g);
         Observable observableR = ObservableExtensionsKt.computationBuffered(AppLog.logsSubject).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "logsSubject\n          .c…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "logsSubject\n          .c…  .distinctUntilChanged()");
         Observable observableJ = Observable.j(observableR.a(200L, TimeUnit.MILLISECONDS).y(AnonymousClass1.INSTANCE).Q(new ArrayList(), AnonymousClass2.INSTANCE), this.filterSubject.r(), AnonymousClass3.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable\n        .comb…gs, isFiltered)\n        }");
+        m.checkNotNullExpressionValue(observableJ, "Observable\n        .comb…gs, isFiltered)\n        }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationBuffered(observableJ), this, null, 2, null), WidgetDebugging.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass4(this), 62, (Object) null);
     }
 }

@@ -1,8 +1,8 @@
 package com.google.zxing;
 
-import b.i.e.BarcodeFormat;
-import b.i.e.ResultMetadataType;
-import b.i.e.ResultPoint;
+import b.i.e.a;
+import b.i.e.j;
+import b.i.e.k;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -12,22 +12,22 @@ public final class Result {
 
     /* renamed from: b, reason: collision with root package name */
     public final byte[] f3140b;
-    public ResultPoint[] c;
-    public final BarcodeFormat d;
-    public Map<ResultMetadataType, Object> e;
+    public k[] c;
+    public final a d;
+    public Map<j, Object> e;
 
-    public Result(String str, byte[] bArr, ResultPoint[] resultPointArr, BarcodeFormat barcodeFormat) {
+    public Result(String str, byte[] bArr, k[] kVarArr, a aVar) {
         System.currentTimeMillis();
         this.a = str;
         this.f3140b = bArr;
-        this.c = resultPointArr;
-        this.d = barcodeFormat;
+        this.c = kVarArr;
+        this.d = aVar;
         this.e = null;
     }
 
-    public void a(Map<ResultMetadataType, Object> map) {
+    public void a(Map<j, Object> map) {
         if (map != null) {
-            Map<ResultMetadataType, Object> map2 = this.e;
+            Map<j, Object> map2 = this.e;
             if (map2 == null) {
                 this.e = map;
             } else {
@@ -36,22 +36,22 @@ public final class Result {
         }
     }
 
-    public void b(ResultMetadataType resultMetadataType, Object obj) {
+    public void b(j jVar, Object obj) {
         if (this.e == null) {
-            this.e = new EnumMap(ResultMetadataType.class);
+            this.e = new EnumMap(j.class);
         }
-        this.e.put(resultMetadataType, obj);
+        this.e.put(jVar, obj);
     }
 
     public String toString() {
         return this.a;
     }
 
-    public Result(String str, byte[] bArr, int i, ResultPoint[] resultPointArr, BarcodeFormat barcodeFormat, long j) {
+    public Result(String str, byte[] bArr, int i, k[] kVarArr, a aVar, long j) {
         this.a = str;
         this.f3140b = bArr;
-        this.c = resultPointArr;
-        this.d = barcodeFormat;
+        this.c = kVarArr;
+        this.d = aVar;
         this.e = null;
     }
 }

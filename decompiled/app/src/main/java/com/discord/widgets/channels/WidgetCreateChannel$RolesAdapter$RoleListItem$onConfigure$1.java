@@ -3,7 +3,7 @@ package com.discord.widgets.channels;
 import android.view.View;
 import com.discord.api.role.GuildRole;
 import com.discord.widgets.channels.WidgetCreateChannel;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetCreateChannel.kt */
 /* loaded from: classes2.dex */
@@ -19,7 +19,7 @@ public final class WidgetCreateChannel$RolesAdapter$RoleListItem$onConfigure$1 i
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         WidgetCreateChannel.RolesAdapter rolesAdapterAccess$getAdapter$p = WidgetCreateChannel.RolesAdapter.RoleListItem.access$getAdapter$p(this.this$0);
-        Intrinsics3.checkNotNullExpressionValue(WidgetCreateChannel.RolesAdapter.RoleListItem.access$getBinding$p(this.this$0).f2180b, "binding.roleItemCheckedSetting");
+        m.checkNotNullExpressionValue(WidgetCreateChannel.RolesAdapter.RoleListItem.access$getBinding$p(this.this$0).f2180b, "binding.roleItemCheckedSetting");
         WidgetCreateChannel.RolesAdapter.access$onRoleClicked(rolesAdapterAccess$getAdapter$p, !r0.isChecked(), this.this$0.getAdapterPosition(), this.$role.getId());
     }
 }

@@ -4,12 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import b.i.a.f.e.o.f;
 import b.i.a.f.n.c0;
-import b.i.c.FirebaseApp2;
-import b.i.c.m.d.Logger3;
-import b.i.c.m.d.k.CrashlyticsBackgroundWorker;
-import b.i.c.m.d.k.CrashlyticsBackgroundWorker2;
-import b.i.c.m.d.k.CrashlyticsCore3;
-import b.i.c.m.d.k.UserMetadata;
+import b.i.c.c;
+import b.i.c.m.d.b;
+import b.i.c.m.d.k.f1;
+import b.i.c.m.d.k.i;
+import b.i.c.m.d.k.j;
+import b.i.c.m.d.k.k0;
 import b.i.c.m.d.k.n;
 import b.i.c.m.d.k.o;
 import b.i.c.m.d.k.p;
@@ -20,17 +20,17 @@ import java.util.Objects;
 
 /* loaded from: classes3.dex */
 public class FirebaseCrashlytics {
-    public final CrashlyticsCore3 a;
+    public final k0 a;
 
-    public FirebaseCrashlytics(@NonNull CrashlyticsCore3 crashlyticsCore3) {
-        this.a = crashlyticsCore3;
+    public FirebaseCrashlytics(@NonNull k0 k0Var) {
+        this.a = k0Var;
     }
 
     @NonNull
     public static FirebaseCrashlytics getInstance() {
-        FirebaseApp2 firebaseApp2B = FirebaseApp2.b();
-        firebaseApp2B.a();
-        FirebaseCrashlytics firebaseCrashlytics = (FirebaseCrashlytics) firebaseApp2B.g.a(FirebaseCrashlytics.class);
+        c cVarB = c.b();
+        cVarB.a();
+        FirebaseCrashlytics firebaseCrashlytics = (FirebaseCrashlytics) cVarB.g.a(FirebaseCrashlytics.class);
         Objects.requireNonNull(firebaseCrashlytics, "FirebaseCrashlytics component is not present.");
         return firebaseCrashlytics;
     }
@@ -41,7 +41,7 @@ public class FirebaseCrashlytics {
         if (xVar.F.compareAndSet(false, true)) {
             return xVar.C.a;
         }
-        Logger3.a.b("checkForUnsentReports should only be called once per execution.");
+        b.a.b("checkForUnsentReports should only be called once per execution.");
         return f.Z(Boolean.FALSE);
     }
 
@@ -56,24 +56,24 @@ public class FirebaseCrashlytics {
     }
 
     public void log(@NonNull String str) {
-        CrashlyticsCore3 crashlyticsCore3 = this.a;
-        Objects.requireNonNull(crashlyticsCore3);
-        long jCurrentTimeMillis = System.currentTimeMillis() - crashlyticsCore3.d;
-        x xVar = crashlyticsCore3.h;
+        k0 k0Var = this.a;
+        Objects.requireNonNull(k0Var);
+        long jCurrentTimeMillis = System.currentTimeMillis() - k0Var.d;
+        x xVar = k0Var.h;
         xVar.m.b(new n(xVar, jCurrentTimeMillis, str));
     }
 
     public void recordException(@NonNull Throwable th) {
         if (th == null) {
-            Logger3.a.g("Crashlytics is ignoring a request to log a null exception.");
+            b.a.g("Crashlytics is ignoring a request to log a null exception.");
             return;
         }
         x xVar = this.a.h;
         Thread threadCurrentThread = Thread.currentThread();
         Objects.requireNonNull(xVar);
         Date date = new Date();
-        CrashlyticsBackgroundWorker crashlyticsBackgroundWorker = xVar.m;
-        crashlyticsBackgroundWorker.b(new CrashlyticsBackgroundWorker2(crashlyticsBackgroundWorker, new o(xVar, date, th, threadCurrentThread)));
+        i iVar = xVar.m;
+        iVar.b(new j(iVar, new o(xVar, date, th, threadCurrentThread)));
     }
 
     public void sendUnsentReports() {
@@ -92,9 +92,9 @@ public class FirebaseCrashlytics {
 
     public void setUserId(@NonNull String str) {
         x xVar = this.a.h;
-        UserMetadata userMetadata = xVar.l;
-        Objects.requireNonNull(userMetadata);
-        userMetadata.a = UserMetadata.b(str);
+        f1 f1Var = xVar.l;
+        Objects.requireNonNull(f1Var);
+        f1Var.a = f1.b(str);
         xVar.m.b(new p(xVar, xVar.l));
     }
 

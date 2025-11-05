@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ViewAddOverrideItemBinding;
+import b.a.i.z1;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.servers.NotificationHighlightsSettingsView;
 import com.discord.widgets.servers.NotificationMuteSettingsView;
@@ -20,7 +20,7 @@ public final class WidgetServerNotificationsBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final ViewAddOverrideItemBinding f2538b;
+    public final z1 f2538b;
 
     @NonNull
     public final RecyclerView c;
@@ -67,9 +67,9 @@ public final class WidgetServerNotificationsBinding implements ViewBinding {
     @NonNull
     public final CheckedSetting q;
 
-    public WidgetServerNotificationsBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull ViewAddOverrideItemBinding viewAddOverrideItemBinding, @NonNull RecyclerView recyclerView, @NonNull CheckedSetting checkedSetting, @NonNull CheckedSetting checkedSetting2, @NonNull CheckedSetting checkedSetting3, @NonNull CheckedSetting checkedSetting4, @NonNull View view, @NonNull LinearLayout linearLayout, @NonNull NotificationHighlightsSettingsView notificationHighlightsSettingsView, @NonNull View view2, @NonNull NotificationMuteSettingsView notificationMuteSettingsView, @NonNull View view3, @NonNull TextView textView, @NonNull CheckedSetting checkedSetting5, @NonNull View view4, @NonNull CheckedSetting checkedSetting6) {
+    public WidgetServerNotificationsBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull z1 z1Var, @NonNull RecyclerView recyclerView, @NonNull CheckedSetting checkedSetting, @NonNull CheckedSetting checkedSetting2, @NonNull CheckedSetting checkedSetting3, @NonNull CheckedSetting checkedSetting4, @NonNull View view, @NonNull LinearLayout linearLayout, @NonNull NotificationHighlightsSettingsView notificationHighlightsSettingsView, @NonNull View view2, @NonNull NotificationMuteSettingsView notificationMuteSettingsView, @NonNull View view3, @NonNull TextView textView, @NonNull CheckedSetting checkedSetting5, @NonNull View view4, @NonNull CheckedSetting checkedSetting6) {
         this.a = coordinatorLayout;
-        this.f2538b = viewAddOverrideItemBinding;
+        this.f2538b = z1Var;
         this.c = recyclerView;
         this.d = checkedSetting;
         this.e = checkedSetting2;

@@ -1,6 +1,6 @@
 package com.facebook.datasource;
 
-import b.f.e.DataSubscriber;
+import b.f.e.f;
 import java.util.Map;
 import java.util.concurrent.Executor;
 
@@ -18,7 +18,7 @@ public interface DataSource<T> {
 
     boolean e();
 
-    void f(DataSubscriber<T> dataSubscriber, Executor executor);
+    void f(f<T> fVar, Executor executor);
 
     float getProgress();
 

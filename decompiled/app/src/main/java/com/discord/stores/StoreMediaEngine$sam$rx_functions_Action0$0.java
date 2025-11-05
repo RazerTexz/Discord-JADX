@@ -1,6 +1,6 @@
 package com.discord.stores;
 
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function0;
 import rx.functions.Action0;
 
@@ -15,6 +15,6 @@ public final class StoreMediaEngine$sam$rx_functions_Action0$0 implements Action
 
     @Override // rx.functions.Action0
     public final /* synthetic */ void call() {
-        Intrinsics3.checkNotNullExpressionValue(this.function.invoke(), "invoke(...)");
+        m.checkNotNullExpressionValue(this.function.invoke(), "invoke(...)");
     }
 }

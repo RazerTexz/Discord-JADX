@@ -10,8 +10,8 @@ public interface a extends IInterface {
 
     /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     /* renamed from: b.i.a.f.f.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractBinderC0040a extends b.i.a.f.h.g.b implements a {
-        public AbstractBinderC0040a() {
+    public static abstract class AbstractBinderC0117a extends b.i.a.f.h.g.b implements a {
+        public AbstractBinderC0117a() {
             super("com.google.android.gms.dynamic.IObjectWrapper");
         }
 

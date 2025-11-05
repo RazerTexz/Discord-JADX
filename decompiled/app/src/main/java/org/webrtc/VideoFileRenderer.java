@@ -2,11 +2,11 @@ package org.webrtc;
 
 import android.os.Handler;
 import android.os.HandlerThread;
-import h0.c.EglBase2;
 import h0.c.d0;
 import h0.c.e0;
 import h0.c.f0;
 import h0.c.g0;
+import h0.c.n0;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -42,7 +42,7 @@ public class VideoFileRenderer implements VideoSink {
 
         @Override // java.lang.Runnable
         public void run() {
-            VideoFileRenderer.access$002(VideoFileRenderer.this, EglBase2.b(this.val$sharedContext, EglBase.CONFIG_PIXEL_BUFFER));
+            VideoFileRenderer.access$002(VideoFileRenderer.this, n0.b(this.val$sharedContext, EglBase.CONFIG_PIXEL_BUFFER));
             VideoFileRenderer.access$000(VideoFileRenderer.this).createDummyPbufferSurface();
             VideoFileRenderer.access$000(VideoFileRenderer.this).makeCurrent();
             VideoFileRenderer.access$102(VideoFileRenderer.this, new YuvConverter());

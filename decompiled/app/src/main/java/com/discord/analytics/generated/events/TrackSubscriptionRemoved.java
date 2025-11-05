@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSubscriptionRemoved.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSubscriptionRemoved implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSubscriptionRemoved implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long subscriptionId = null;
     private final Long subscriptionType = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackSubscriptionRemoved implements AnalyticsSchem
             return false;
         }
         TrackSubscriptionRemoved trackSubscriptionRemoved = (TrackSubscriptionRemoved) other;
-        return Intrinsics3.areEqual(this.subscriptionId, trackSubscriptionRemoved.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackSubscriptionRemoved.subscriptionType) && Intrinsics3.areEqual(this.paymentGatewayPlanId, trackSubscriptionRemoved.paymentGatewayPlanId) && Intrinsics3.areEqual(this.planId, trackSubscriptionRemoved.planId) && Intrinsics3.areEqual(this.paymentGateway, trackSubscriptionRemoved.paymentGateway) && Intrinsics3.areEqual(this.removalType, trackSubscriptionRemoved.removalType);
+        return m.areEqual(this.subscriptionId, trackSubscriptionRemoved.subscriptionId) && m.areEqual(this.subscriptionType, trackSubscriptionRemoved.subscriptionType) && m.areEqual(this.paymentGatewayPlanId, trackSubscriptionRemoved.paymentGatewayPlanId) && m.areEqual(this.planId, trackSubscriptionRemoved.planId) && m.areEqual(this.paymentGateway, trackSubscriptionRemoved.paymentGateway) && m.areEqual(this.removalType, trackSubscriptionRemoved.removalType);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackSubscriptionRemoved implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSubscriptionRemoved(subscriptionId=");
+        StringBuilder sbU = a.U("TrackSubscriptionRemoved(subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", subscriptionType=");
         sbU.append(this.subscriptionType);
@@ -62,6 +62,6 @@ public final /* data */ class TrackSubscriptionRemoved implements AnalyticsSchem
         sbU.append(", paymentGateway=");
         sbU.append(this.paymentGateway);
         sbU.append(", removalType=");
-        return outline.E(sbU, this.removalType, ")");
+        return a.E(sbU, this.removalType, ")");
     }
 }

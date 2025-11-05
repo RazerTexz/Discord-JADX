@@ -9,7 +9,7 @@ import android.util.SparseIntArray;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.constraintlayout.widget.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -120,7 +120,7 @@ public class KeyTrigger extends Key {
                         KeyTrigger.access$702(keyTrigger, typedArray.getResourceId(index, KeyTrigger.access$700(keyTrigger)));
                         break;
                 }
-                StringBuilder sbU = outline.U("unused attribute 0x");
+                StringBuilder sbU = a.U("unused attribute 0x");
                 sbU.append(Integer.toHexString(index));
                 sbU.append("   ");
                 sbU.append(mAttrMap.get(index));
@@ -330,7 +330,7 @@ public class KeyTrigger extends Key {
                 try {
                     this.mFireNegativeCross = view.getClass().getMethod(this.mNegativeCross, new Class[0]);
                 } catch (NoSuchMethodException unused) {
-                    StringBuilder sbU = outline.U("Could not find method \"");
+                    StringBuilder sbU = a.U("Could not find method \"");
                     sbU.append(this.mNegativeCross);
                     sbU.append("\"on class ");
                     sbU.append(view.getClass().getSimpleName());
@@ -342,7 +342,7 @@ public class KeyTrigger extends Key {
             try {
                 this.mFireNegativeCross.invoke(view, new Object[0]);
             } catch (Exception unused2) {
-                StringBuilder sbU2 = outline.U("Exception in call \"");
+                StringBuilder sbU2 = a.U("Exception in call \"");
                 sbU2.append(this.mNegativeCross);
                 sbU2.append("\"on class ");
                 sbU2.append(view.getClass().getSimpleName());
@@ -356,7 +356,7 @@ public class KeyTrigger extends Key {
                 try {
                     this.mFirePositiveCross = view.getClass().getMethod(this.mPositiveCross, new Class[0]);
                 } catch (NoSuchMethodException unused3) {
-                    StringBuilder sbU3 = outline.U("Could not find method \"");
+                    StringBuilder sbU3 = a.U("Could not find method \"");
                     sbU3.append(this.mPositiveCross);
                     sbU3.append("\"on class ");
                     sbU3.append(view.getClass().getSimpleName());
@@ -368,7 +368,7 @@ public class KeyTrigger extends Key {
             try {
                 this.mFirePositiveCross.invoke(view, new Object[0]);
             } catch (Exception unused4) {
-                StringBuilder sbU4 = outline.U("Exception in call \"");
+                StringBuilder sbU4 = a.U("Exception in call \"");
                 sbU4.append(this.mPositiveCross);
                 sbU4.append("\"on class ");
                 sbU4.append(view.getClass().getSimpleName());
@@ -384,7 +384,7 @@ public class KeyTrigger extends Key {
             try {
                 this.mFireCross = view.getClass().getMethod(this.mCross, new Class[0]);
             } catch (NoSuchMethodException unused5) {
-                StringBuilder sbU5 = outline.U("Could not find method \"");
+                StringBuilder sbU5 = a.U("Could not find method \"");
                 sbU5.append(this.mCross);
                 sbU5.append("\"on class ");
                 sbU5.append(view.getClass().getSimpleName());
@@ -396,7 +396,7 @@ public class KeyTrigger extends Key {
         try {
             this.mFireCross.invoke(view, new Object[0]);
         } catch (Exception unused6) {
-            StringBuilder sbU6 = outline.U("Exception in call \"");
+            StringBuilder sbU6 = a.U("Exception in call \"");
             sbU6.append(this.mCross);
             sbU6.append("\"on class ");
             sbU6.append(view.getClass().getSimpleName());

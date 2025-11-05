@@ -7,26 +7,26 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import x.a.a.ICustomTabsCallback;
-import x.a.a.IPostMessageService;
+import x.a.a.a;
+import x.a.a.c;
 
 /* loaded from: classes.dex */
 public class PostMessageService extends Service {
-    private IPostMessageService.a mBinder = new AnonymousClass1();
+    private c.a mBinder = new AnonymousClass1();
 
     /* renamed from: androidx.browser.customtabs.PostMessageService$1, reason: invalid class name */
-    public class AnonymousClass1 extends IPostMessageService.a {
+    public class AnonymousClass1 extends c.a {
         public AnonymousClass1() {
         }
 
-        @Override // x.a.a.IPostMessageService
-        public void onMessageChannelReady(@NonNull ICustomTabsCallback iCustomTabsCallback, @Nullable Bundle bundle) throws RemoteException {
-            iCustomTabsCallback.onMessageChannelReady(bundle);
+        @Override // x.a.a.c
+        public void onMessageChannelReady(@NonNull a aVar, @Nullable Bundle bundle) throws RemoteException {
+            aVar.onMessageChannelReady(bundle);
         }
 
-        @Override // x.a.a.IPostMessageService
-        public void onPostMessage(@NonNull ICustomTabsCallback iCustomTabsCallback, @NonNull String str, @Nullable Bundle bundle) throws RemoteException {
-            iCustomTabsCallback.onPostMessage(str, bundle);
+        @Override // x.a.a.c
+        public void onPostMessage(@NonNull a aVar, @NonNull String str, @Nullable Bundle bundle) throws RemoteException {
+            aVar.onPostMessage(str, bundle);
         }
     }
 

@@ -1,9 +1,9 @@
 package com.discord.widgets.chat.input.gifpicker;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.gifpicker.domain.ModelGifCategory;
 import com.discord.utilities.recycler.DiffKeyProvider;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -19,7 +19,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Standard(ModelGifCategory modelGifCategory) {
             super(null);
-            Intrinsics3.checkNotNullParameter(modelGifCategory, "gifCategory");
+            m.checkNotNullParameter(modelGifCategory, "gifCategory");
             this.gifCategory = modelGifCategory;
         }
 
@@ -36,13 +36,13 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         }
 
         public final Standard copy(ModelGifCategory gifCategory) {
-            Intrinsics3.checkNotNullParameter(gifCategory, "gifCategory");
+            m.checkNotNullParameter(gifCategory, "gifCategory");
             return new Standard(gifCategory);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Standard) && Intrinsics3.areEqual(this.gifCategory, ((Standard) other).gifCategory);
+                return (other instanceof Standard) && m.areEqual(this.gifCategory, ((Standard) other).gifCategory);
             }
             return true;
         }
@@ -60,7 +60,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Standard(gifCategory=");
+            StringBuilder sbU = a.U("Standard(gifCategory=");
             sbU.append(this.gifCategory);
             sbU.append(")");
             return sbU.toString();
@@ -74,7 +74,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Trending(String str) {
             super(null);
-            Intrinsics3.checkNotNullParameter(str, "gifPreviewUrl");
+            m.checkNotNullParameter(str, "gifPreviewUrl");
             this.gifPreviewUrl = str;
         }
 
@@ -91,13 +91,13 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         }
 
         public final Trending copy(String gifPreviewUrl) {
-            Intrinsics3.checkNotNullParameter(gifPreviewUrl, "gifPreviewUrl");
+            m.checkNotNullParameter(gifPreviewUrl, "gifPreviewUrl");
             return new Trending(gifPreviewUrl);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Trending) && Intrinsics3.areEqual(this.gifPreviewUrl, ((Trending) other).gifPreviewUrl);
+                return (other instanceof Trending) && m.areEqual(this.gifPreviewUrl, ((Trending) other).gifPreviewUrl);
             }
             return true;
         }
@@ -115,7 +115,7 @@ public abstract class GifCategoryItem implements DiffKeyProvider, Serializable {
         }
 
         public String toString() {
-            return outline.J(outline.U("Trending(gifPreviewUrl="), this.gifPreviewUrl, ")");
+            return a.J(a.U("Trending(gifPreviewUrl="), this.gifPreviewUrl, ")");
         }
     }
 

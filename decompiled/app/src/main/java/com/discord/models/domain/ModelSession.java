@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
 import b.a.m.a.c0;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.activity.Activity;
 import com.discord.models.domain.Model;
 import java.io.IOException;
@@ -87,7 +87,7 @@ public class ModelSession implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelSession.ClientInfo(os=");
+            StringBuilder sbU = a.U("ModelSession.ClientInfo(os=");
             sbU.append(getOs());
             sbU.append(", client=");
             sbU.append(getClient());
@@ -200,7 +200,7 @@ public class ModelSession implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelSession(sessionId=");
+        StringBuilder sbU = a.U("ModelSession(sessionId=");
         sbU.append(getSessionId());
         sbU.append(", lastModified=");
         sbU.append(getLastModified());

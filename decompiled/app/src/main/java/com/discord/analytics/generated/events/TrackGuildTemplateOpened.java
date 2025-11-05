@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildTemplateOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildTemplateOpened implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackGuildTemplateOpened implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence guildTemplateCode = null;
     private final Long loadTime = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackGuildTemplateOpened implements AnalyticsSchem
             return false;
         }
         TrackGuildTemplateOpened trackGuildTemplateOpened = (TrackGuildTemplateOpened) other;
-        return Intrinsics3.areEqual(this.guildTemplateCode, trackGuildTemplateOpened.guildTemplateCode) && Intrinsics3.areEqual(this.loadTime, trackGuildTemplateOpened.loadTime);
+        return m.areEqual(this.guildTemplateCode, trackGuildTemplateOpened.guildTemplateCode) && m.areEqual(this.loadTime, trackGuildTemplateOpened.loadTime);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackGuildTemplateOpened implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildTemplateOpened(guildTemplateCode=");
+        StringBuilder sbU = a.U("TrackGuildTemplateOpened(guildTemplateCode=");
         sbU.append(this.guildTemplateCode);
         sbU.append(", loadTime=");
-        return outline.G(sbU, this.loadTime, ")");
+        return a.G(sbU, this.loadTime, ")");
     }
 }

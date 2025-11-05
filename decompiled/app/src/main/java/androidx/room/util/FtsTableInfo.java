@@ -4,7 +4,7 @@ import android.database.Cursor;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -140,7 +140,7 @@ public class FtsTableInfo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("FtsTableInfo{name='");
+        StringBuilder sbU = a.U("FtsTableInfo{name='");
         sbU.append(this.name);
         sbU.append('\'');
         sbU.append(", columns=");

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalLocalSettingUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalLocalSettingUpdated implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalLocalSettingUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence settingName = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackActivityInternalLocalSettingUpdated implement
             return false;
         }
         TrackActivityInternalLocalSettingUpdated trackActivityInternalLocalSettingUpdated = (TrackActivityInternalLocalSettingUpdated) other;
-        return Intrinsics3.areEqual(this.settingName, trackActivityInternalLocalSettingUpdated.settingName) && Intrinsics3.areEqual(this.phase, trackActivityInternalLocalSettingUpdated.phase) && Intrinsics3.areEqual(this.valueStr, trackActivityInternalLocalSettingUpdated.valueStr) && Intrinsics3.areEqual(this.prevValueStr, trackActivityInternalLocalSettingUpdated.prevValueStr) && Intrinsics3.areEqual(this.valueBool, trackActivityInternalLocalSettingUpdated.valueBool) && Intrinsics3.areEqual(this.prevValueBool, trackActivityInternalLocalSettingUpdated.prevValueBool) && Intrinsics3.areEqual(this.valueInt, trackActivityInternalLocalSettingUpdated.valueInt) && Intrinsics3.areEqual(this.prevValueInt, trackActivityInternalLocalSettingUpdated.prevValueInt) && Intrinsics3.areEqual(this.valueFloat, trackActivityInternalLocalSettingUpdated.valueFloat) && Intrinsics3.areEqual(this.prevValueFloat, trackActivityInternalLocalSettingUpdated.prevValueFloat);
+        return m.areEqual(this.settingName, trackActivityInternalLocalSettingUpdated.settingName) && m.areEqual(this.phase, trackActivityInternalLocalSettingUpdated.phase) && m.areEqual(this.valueStr, trackActivityInternalLocalSettingUpdated.valueStr) && m.areEqual(this.prevValueStr, trackActivityInternalLocalSettingUpdated.prevValueStr) && m.areEqual(this.valueBool, trackActivityInternalLocalSettingUpdated.valueBool) && m.areEqual(this.prevValueBool, trackActivityInternalLocalSettingUpdated.prevValueBool) && m.areEqual(this.valueInt, trackActivityInternalLocalSettingUpdated.valueInt) && m.areEqual(this.prevValueInt, trackActivityInternalLocalSettingUpdated.prevValueInt) && m.areEqual(this.valueFloat, trackActivityInternalLocalSettingUpdated.valueFloat) && m.areEqual(this.prevValueFloat, trackActivityInternalLocalSettingUpdated.prevValueFloat);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackActivityInternalLocalSettingUpdated implement
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalLocalSettingUpdated(settingName=");
+        StringBuilder sbU = a.U("TrackActivityInternalLocalSettingUpdated(settingName=");
         sbU.append(this.settingName);
         sbU.append(", phase=");
         sbU.append(this.phase);

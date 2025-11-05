@@ -1,12 +1,11 @@
 package b.a.d;
 
-import d0.z.d.Lambda;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: AppTransformers.kt */
 /* loaded from: classes.dex */
-public final class x extends Lambda implements Function0<Unit> {
+public final class x extends d0.z.d.o implements Function0<Unit> {
     public static final x j = new x();
 
     public x() {

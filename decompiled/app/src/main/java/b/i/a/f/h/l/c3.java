@@ -1,6 +1,5 @@
 package b.i.a.f.h.l;
 
-import b.d.b.a.outline;
 import java.util.Objects;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
@@ -38,9 +37,9 @@ public final class c3<T> implements z2<T> {
         Object objK = this.j;
         if (objK == null) {
             String strValueOf = String.valueOf(this.l);
-            objK = outline.k(strValueOf.length() + 25, "<supplier that returned ", strValueOf, ">");
+            objK = b.d.b.a.a.k(strValueOf.length() + 25, "<supplier that returned ", strValueOf, ">");
         }
         String strValueOf2 = String.valueOf(objK);
-        return outline.k(strValueOf2.length() + 19, "Suppliers.memoize(", strValueOf2, ")");
+        return b.d.b.a.a.k(strValueOf2.length() + 19, "Suppliers.memoize(", strValueOf2, ")");
     }
 }

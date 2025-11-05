@@ -1,8 +1,8 @@
 package com.discord.api.report;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -48,7 +48,7 @@ public final /* data */ class ReportNodeElement {
             return false;
         }
         ReportNodeElement reportNodeElement = (ReportNodeElement) other;
-        return Intrinsics3.areEqual(this.type, reportNodeElement.type) && Intrinsics3.areEqual(this.name, reportNodeElement.name) && Intrinsics3.areEqual(this.data, reportNodeElement.data) && this.should_submit_data == reportNodeElement.should_submit_data;
+        return m.areEqual(this.type, reportNodeElement.type) && m.areEqual(this.name, reportNodeElement.name) && m.areEqual(this.data, reportNodeElement.data) && this.should_submit_data == reportNodeElement.should_submit_data;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -68,13 +68,13 @@ public final /* data */ class ReportNodeElement {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ReportNodeElement(type=");
+        StringBuilder sbU = a.U("ReportNodeElement(type=");
         sbU.append(this.type);
         sbU.append(", name=");
         sbU.append(this.name);
         sbU.append(", data=");
         sbU.append(this.data);
         sbU.append(", should_submit_data=");
-        return outline.O(sbU, this.should_submit_data, ")");
+        return a.O(sbU, this.should_submit_data, ")");
     }
 }

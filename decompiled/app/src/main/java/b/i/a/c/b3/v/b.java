@@ -9,6 +9,6 @@ public final /* synthetic */ class b implements Comparator {
 
     @Override // java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        return Long.compare(((WebvttCueInfo) obj).f890b, ((WebvttCueInfo) obj2).f890b);
+        return Long.compare(((g) obj).f890b, ((g) obj2).f890b);
     }
 }

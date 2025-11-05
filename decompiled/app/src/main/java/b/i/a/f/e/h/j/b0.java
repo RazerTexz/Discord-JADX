@@ -1,7 +1,6 @@
 package b.i.a.f.e.h.j;
 
 import android.app.Activity;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.ApiException;
@@ -48,6 +47,6 @@ public class b0 extends t0 {
     @Override // b.i.a.f.e.h.j.t0
     public final void l(ConnectionResult connectionResult, int i) {
         TaskCompletionSource<Void> taskCompletionSource = this.o;
-        taskCompletionSource.a.t(AnimatableValueParser.l0(new Status(connectionResult.l, connectionResult.n, connectionResult.m)));
+        taskCompletionSource.a.t(b.c.a.a0.d.l0(new Status(connectionResult.l, connectionResult.n, connectionResult.m)));
     }
 }

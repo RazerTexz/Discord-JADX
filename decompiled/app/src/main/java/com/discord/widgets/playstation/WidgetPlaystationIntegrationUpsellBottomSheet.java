@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetPlaystationUpsellBottomSheetBinding;
@@ -20,9 +20,9 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.platform.Platform;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -31,7 +31,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetPlaystationIntegrationUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPlaystationUpsellBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetPlaystationIntegrationUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPlaystationUpsellBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -45,7 +45,7 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
         }
 
         public final void show(FragmentManager fragmentManager) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             new WidgetPlaystationIntegrationUpsellBottomSheet().show(fragmentManager, WidgetPlaystationIntegrationUpsellBottomSheet.class.getSimpleName());
         }
 
@@ -66,7 +66,7 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
             StoreUserConnections userConnections = StoreStream.INSTANCE.getUserConnections();
             String platformId = Platform.PLAYSTATION.getPlatformId();
             FragmentActivity fragmentActivityRequireActivity = WidgetPlaystationIntegrationUpsellBottomSheet.this.requireActivity();
-            Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+            m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
             userConnections.authorizeConnection(platformId, fragmentActivityRequireActivity, Traits.Location.Section.PLAYSTATION_UPSELL);
             WidgetPlaystationIntegrationUpsellBottomSheet.this.dismiss();
         }
@@ -81,14 +81,14 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             Dialog dialog = WidgetPlaystationIntegrationUpsellBottomSheet.this.getDialog();
-            Intrinsics3.checkNotNull(dialog);
+            m.checkNotNull(dialog);
             dialog.cancel();
         }
     }
 
     public WidgetPlaystationIntegrationUpsellBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetPlaystationIntegrationUpsellBottomSheet2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetPlaystationIntegrationUpsellBottomSheet$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$logConfirm(WidgetPlaystationIntegrationUpsellBottomSheet widgetPlaystationIntegrationUpsellBottomSheet) {
@@ -114,7 +114,7 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
 
     @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnCancelListener
     public void onCancel(DialogInterface dialog) {
-        Intrinsics3.checkNotNullParameter(dialog, "dialog");
+        m.checkNotNullParameter(dialog, "dialog");
         super.onCancel(dialog);
         logDismiss();
     }
@@ -129,18 +129,18 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         TextView textView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.upsellHeader");
-        textView.setText(FormatUtils.e(this, R.string.user_activity_connect_platform, new Object[0], AnonymousClass1.INSTANCE));
+        m.checkNotNullExpressionValue(textView, "binding.upsellHeader");
+        textView.setText(b.e(this, R.string.user_activity_connect_platform, new Object[0], AnonymousClass1.INSTANCE));
         getBinding().c.setOnClickListener(new AnonymousClass2());
         getBinding().f2511b.setOnClickListener(new AnonymousClass3());
     }
 
     /* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
     /* renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -149,7 +149,7 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("platform", Platform.PLAYSTATION.getProperName());
         }
 

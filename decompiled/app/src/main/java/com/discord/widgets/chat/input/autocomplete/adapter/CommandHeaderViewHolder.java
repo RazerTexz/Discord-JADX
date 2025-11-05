@@ -19,9 +19,9 @@ import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImagesBitmap;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.input.autocomplete.ApplicationPlaceholder;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashSet;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -29,14 +29,14 @@ import kotlin.jvm.functions.Function1;
 
 /* compiled from: CommandHeaderViewHolder.kt */
 /* loaded from: classes2.dex */
-public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder implements StickyHeaderManager2 {
+public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder implements StickyHeaderHolder {
     private final WidgetChatInputCommandApplicationHeaderItemBinding binding;
     private ApplicationPlaceholder currentItem;
     private final View itemView;
 
     /* compiled from: CommandHeaderViewHolder.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.CommandHeaderViewHolder$bind$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<MGImagesBitmap.CloseableBitmaps, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<MGImagesBitmap.CloseableBitmaps, Unit> {
         public final /* synthetic */ String $iconUrl;
         public final /* synthetic */ ApplicationPlaceholder $item;
 
@@ -56,9 +56,9 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MGImagesBitmap.CloseableBitmaps closeableBitmaps) {
             Application application;
-            Intrinsics3.checkNotNullParameter(closeableBitmaps, "closeableBitmaps");
+            m.checkNotNullParameter(closeableBitmaps, "closeableBitmaps");
             ApplicationPlaceholder currentItem = CommandHeaderViewHolder.this.getCurrentItem();
-            if (StringsJVM.equals$default((currentItem == null || (application = currentItem.getApplication()) == null) ? null : application.getIcon(), this.$item.getApplication().getIcon(), false, 2, null)) {
+            if (t.equals$default((currentItem == null || (application = currentItem.getApplication()) == null) ? null : application.getIcon(), this.$item.getApplication().getIcon(), false, 2, null)) {
                 CommandHeaderViewHolder.access$getBinding$p(CommandHeaderViewHolder.this).f2305b.setImageBitmap((Bitmap) closeableBitmaps.get((Object) this.$iconUrl));
             }
         }
@@ -66,7 +66,7 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
 
     /* compiled from: CommandHeaderViewHolder.kt */
     /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.CommandHeaderViewHolder$bind$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ int $tint;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -83,11 +83,11 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "<anonymous parameter 0>");
+            m.checkNotNullParameter(error, "<anonymous parameter 0>");
             ImageView imageView = CommandHeaderViewHolder.access$getBinding$p(CommandHeaderViewHolder.this).f2305b;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatInputApplicationAvatar");
+            m.checkNotNullExpressionValue(imageView, "binding.chatInputApplicationAvatar");
             Context context = imageView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.chatInputApplicationAvatar.context");
+            m.checkNotNullExpressionValue(context, "binding.chatInputApplicationAvatar.context");
             Drawable drawable$default = DrawableCompat.getDrawable$default(context, R.drawable.ic_slash_command_24dp, this.$tint, false, 4, null);
             if (drawable$default != null) {
                 CommandHeaderViewHolder.access$getBinding$p(CommandHeaderViewHolder.this).f2305b.setImageDrawable(drawable$default);
@@ -98,10 +98,10 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CommandHeaderViewHolder(WidgetChatInputCommandApplicationHeaderItemBinding widgetChatInputCommandApplicationHeaderItemBinding) {
         super(widgetChatInputCommandApplicationHeaderItemBinding.a);
-        Intrinsics3.checkNotNullParameter(widgetChatInputCommandApplicationHeaderItemBinding, "binding");
+        m.checkNotNullParameter(widgetChatInputCommandApplicationHeaderItemBinding, "binding");
         this.binding = widgetChatInputCommandApplicationHeaderItemBinding;
         ConstraintLayout constraintLayout = widgetChatInputCommandApplicationHeaderItemBinding.a;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.root");
+        m.checkNotNullExpressionValue(constraintLayout, "binding.root");
         this.itemView = constraintLayout;
     }
 
@@ -109,11 +109,11 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
         return commandHeaderViewHolder.binding;
     }
 
-    @Override // com.discord.widgets.chat.input.autocomplete.adapter.StickyHeaderManager2
+    @Override // com.discord.widgets.chat.input.autocomplete.adapter.StickyHeaderHolder
     public void bind(ApplicationPlaceholder item) {
         String name;
-        Intrinsics3.checkNotNullParameter(item, "item");
-        if (Intrinsics3.areEqual(this.currentItem, item)) {
+        m.checkNotNullParameter(item, "item");
+        if (m.areEqual(this.currentItem, item)) {
             return;
         }
         this.currentItem = item;
@@ -122,10 +122,10 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
             name = item.getApplication().getName();
         }
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatInputApplicationName");
+        m.checkNotNullExpressionValue(textView, "binding.chatInputApplicationName");
         textView.setText(name);
         ImageView imageView = this.binding.f2305b;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatInputApplicationAvatar");
+        m.checkNotNullExpressionValue(imageView, "binding.chatInputApplicationAvatar");
         int themedColor = ColorCompat.getThemedColor(imageView, R.attr.colorTextMuted);
         if (item.getApplication().getIconRes() == null) {
             String applicationIcon$default = IconUtils.getApplicationIcon$default(IconUtils.INSTANCE, item.getApplication(), 0, 2, (Object) null);
@@ -136,9 +136,9 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
             return;
         }
         ImageView imageView2 = this.binding.f2305b;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.chatInputApplicationAvatar");
+        m.checkNotNullExpressionValue(imageView2, "binding.chatInputApplicationAvatar");
         Context context = imageView2.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "binding.chatInputApplicationAvatar.context");
+        m.checkNotNullExpressionValue(context, "binding.chatInputApplicationAvatar.context");
         Drawable drawable$default = DrawableCompat.getDrawable$default(context, item.getApplication().getIconRes().intValue(), themedColor, false, 4, null);
         if (drawable$default != null) {
             this.binding.f2305b.setImageDrawable(drawable$default);
@@ -151,7 +151,7 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
         return this.currentItem;
     }
 
-    @Override // com.discord.widgets.chat.input.autocomplete.adapter.StickyHeaderManager2
+    @Override // com.discord.widgets.chat.input.autocomplete.adapter.StickyHeaderHolder
     public View getItemView() {
         return this.itemView;
     }

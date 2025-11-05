@@ -8,7 +8,7 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: StickyHeaderItemDecoration.kt */
 /* loaded from: classes2.dex */
@@ -26,8 +26,8 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
         }
 
         public static final void layoutHeaderView(ViewGroup parent, View view) {
-            Intrinsics3.checkNotNullParameter(parent, "parent");
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(parent, "parent");
+            m.checkNotNullParameter(view, "view");
             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(parent.getWidth(), BasicMeasure.EXACTLY);
             int iMakeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(parent.getHeight(), 0);
             view.measure(ViewGroup.getChildMeasureSpec(iMakeMeasureSpec, parent.getPaddingRight() + parent.getPaddingLeft(), view.getLayoutParams().width), ViewGroup.getChildMeasureSpec(iMakeMeasureSpec2, parent.getPaddingBottom() + parent.getPaddingTop(), view.getLayoutParams().height));
@@ -57,8 +57,8 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
         */
         public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent event) {
             boolean z2;
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
-            Intrinsics3.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(recyclerView, "recyclerView");
+            m.checkNotNullParameter(event, "event");
             int action = event.getAction();
             if (action == 0) {
                 StickyHeaderItemDecoration.access$setActionDownRawX$p(StickyHeaderItemDecoration.this, Float.valueOf(event.getRawX()));
@@ -91,7 +91,7 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
     }
 
     public StickyHeaderItemDecoration(StickyHeaderAdapter stickyHeaderAdapter) {
-        Intrinsics3.checkNotNullParameter(stickyHeaderAdapter, "adapter");
+        m.checkNotNullParameter(stickyHeaderAdapter, "adapter");
         this.adapter = stickyHeaderAdapter;
     }
 
@@ -152,7 +152,7 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View childAt = parent.getChildAt(i);
-            Intrinsics3.checkNotNullExpressionValue(childAt, "child");
+            m.checkNotNullExpressionValue(childAt, "child");
             int top = childAt.getTop();
             int bottom = childAt.getBottom();
             if (top <= contactPoint && bottom > contactPoint) {
@@ -168,7 +168,7 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
     }
 
     public final void blockClicks(RecyclerView parent) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         parent.addOnItemTouchListener(new AnonymousClass1());
     }
 
@@ -176,9 +176,9 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
     public void onDrawOver(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
         int childAdapterPosition;
         int childAdapterPosition2;
-        Intrinsics3.checkNotNullParameter(canvas, "canvas");
-        Intrinsics3.checkNotNullParameter(parent, "parent");
-        Intrinsics3.checkNotNullParameter(state, "state");
+        m.checkNotNullParameter(canvas, "canvas");
+        m.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(state, "state");
         super.onDrawOver(canvas, parent, state);
         View childAt = parent.getChildAt(0);
         if (childAt == null || (childAdapterPosition = parent.getChildAdapterPosition(childAt)) == -1) {

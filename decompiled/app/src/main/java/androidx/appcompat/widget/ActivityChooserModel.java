@@ -10,7 +10,7 @@ import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Xml;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.adjust.sdk.Constants;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -86,7 +86,7 @@ public class ActivityChooserModel extends DataSetObservable {
         }
 
         public String toString() {
-            StringBuilder sbX = outline.X("[", "resolveInfo:");
+            StringBuilder sbX = a.X("[", "resolveInfo:");
             sbX.append(this.resolveInfo.toString());
             sbX.append("; weight:");
             sbX.append(new BigDecimal(this.weight));
@@ -168,7 +168,7 @@ public class ActivityChooserModel extends DataSetObservable {
         }
 
         public String toString() {
-            StringBuilder sbX = outline.X("[", "; activity:");
+            StringBuilder sbX = a.X("[", "; activity:");
             sbX.append(this.activity);
             sbX.append("; time:");
             sbX.append(this.time);
@@ -270,7 +270,7 @@ public class ActivityChooserModel extends DataSetObservable {
         if (TextUtils.isEmpty(str) || str.endsWith(HISTORY_FILE_EXTENSION)) {
             this.mHistoryFileName = str;
         } else {
-            this.mHistoryFileName = outline.w(str, HISTORY_FILE_EXTENSION);
+            this.mHistoryFileName = a.w(str, HISTORY_FILE_EXTENSION);
         }
     }
 

@@ -9,13 +9,13 @@ import com.discord.models.user.MeUser;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
-import com.discord.utilities.guildmember.GuildMemberUtils;
+import com.discord.utilities.guildmember.GuildMemberUtilsKt;
 import com.discord.utilities.rx.LeadingEdgeThrottle;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.Intrinsics3;
-import j0.l.a.OnSubscribeLift;
+import d0.z.d.m;
+import j0.l.a.r;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -45,11 +45,11 @@ public final class GuildVerificationLevelUtils {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildVerificationLevel call2(Long l, Guild guild, GuildVerificationLevel guildVerificationLevel, Map<Long, GuildMember> map, MeUser meUser, Map<Long, GuildRole> map2) {
             GuildVerificationLevelUtils guildVerificationLevelUtils = GuildVerificationLevelUtils.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(meUser, "me");
-            Intrinsics3.checkNotNullExpressionValue(map, "members");
+            m.checkNotNullExpressionValue(meUser, "me");
+            m.checkNotNullExpressionValue(map, "members");
             GuildMember guildMember = map.get(Long.valueOf(meUser.getId()));
-            Intrinsics3.checkNotNullExpressionValue(guildVerificationLevel, "verificationLevel");
-            Intrinsics3.checkNotNullExpressionValue(l, "joinedAt");
+            m.checkNotNullExpressionValue(guildVerificationLevel, "verificationLevel");
+            m.checkNotNullExpressionValue(l, "joinedAt");
             return GuildVerificationLevelUtils.access$computeVerificationLevelTriggered(guildVerificationLevelUtils, meUser, guild, guildMember, guildVerificationLevel, l.longValue(), this.$clock, map2);
         }
     }
@@ -88,7 +88,7 @@ public final class GuildVerificationLevelUtils {
             return guildVerificationLevel;
         }
         GuildVerificationLevel guildVerificationLevel2 = GuildVerificationLevel.HIGH;
-        if (verificationLevel == guildVerificationLevel2 && !GuildMemberUtils.isGuildMemberOldEnough(joinedAt)) {
+        if (verificationLevel == guildVerificationLevel2 && !GuildMemberUtilsKt.isGuildMemberOldEnough(joinedAt)) {
             return guildVerificationLevel2;
         }
         GuildVerificationLevel guildVerificationLevel3 = GuildVerificationLevel.MEDIUM;
@@ -131,9 +131,9 @@ public final class GuildVerificationLevelUtils {
 
     public final GuildVerificationLevel getVerificationLevelTriggered(long guildId, StoreGuilds guildStore, StoreUser userStore, Clock clock) {
         GuildVerificationLevel verificationLevel;
-        Intrinsics3.checkNotNullParameter(guildStore, "guildStore");
-        Intrinsics3.checkNotNullParameter(userStore, "userStore");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(guildStore, "guildStore");
+        m.checkNotNullParameter(userStore, "userStore");
+        m.checkNotNullParameter(clock, "clock");
         Guild guild = guildStore.getGuild(guildId);
         Map<Long, GuildMember> map = guildStore.getMembers().get(Long.valueOf(guildId));
         MeUser meSnapshot = userStore.getMeSnapshot();
@@ -142,19 +142,19 @@ public final class GuildVerificationLevelUtils {
         if (guild == null || (verificationLevel = guild.getVerificationLevel()) == null) {
             verificationLevel = GuildVerificationLevel.NONE;
         }
-        return computeVerificationLevelTriggered(meSnapshot, guild, guildMember, verificationLevel, GuildMemberUtils.getJoinedAtOrNow(guildStore.getGuildsJoinedAt().get(Long.valueOf(guildId))), clock, map2);
+        return computeVerificationLevelTriggered(meSnapshot, guild, guildMember, verificationLevel, GuildMemberUtilsKt.getJoinedAtOrNow(guildStore.getGuildsJoinedAt().get(Long.valueOf(guildId))), clock, map2);
     }
 
     public final Observable<GuildVerificationLevel> observeVerificationLevelTriggered(long guildId, StoreGuilds guildStore, StoreUser userStore, Clock clock) {
-        Intrinsics3.checkNotNullParameter(guildStore, "guildStore");
-        Intrinsics3.checkNotNullParameter(userStore, "userStore");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(guildStore, "guildStore");
+        m.checkNotNullParameter(userStore, "userStore");
+        m.checkNotNullParameter(clock, "clock");
         Observable<Long> observableObserveJoinedAt = guildStore.observeJoinedAt(guildId);
         Observable<Guild> observableObserveGuild = guildStore.observeGuild(guildId);
         Observable<GuildVerificationLevel> observableObserveVerificationLevel = guildStore.observeVerificationLevel(guildId);
         Observable<Map<Long, GuildMember>> observableObserveComputed = guildStore.observeComputed(guildId);
-        Observable<GuildVerificationLevel> observableR = Observable.f(observableObserveJoinedAt, observableObserveGuild, observableObserveVerificationLevel, Observable.h0(new OnSubscribeLift(observableObserveComputed.j, new LeadingEdgeThrottle(1500L, TimeUnit.MILLISECONDS))), userStore.observeMe(true), guildStore.observeRoles(guildId), new AnonymousClass1(clock)).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Observable\n        .comb…  .distinctUntilChanged()");
+        Observable<GuildVerificationLevel> observableR = Observable.f(observableObserveJoinedAt, observableObserveGuild, observableObserveVerificationLevel, Observable.h0(new r(observableObserveComputed.j, new LeadingEdgeThrottle(1500L, TimeUnit.MILLISECONDS))), userStore.observeMe(true), guildStore.observeRoles(guildId), new AnonymousClass1(clock)).r();
+        m.checkNotNullExpressionValue(observableR, "Observable\n        .comb…  .distinctUntilChanged()");
         return observableR;
     }
 }

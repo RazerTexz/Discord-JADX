@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackHypesquadSubscriptionUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackHypesquadSubscriptionUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackHypesquadSubscriptionUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long houseId = null;
     private final Boolean subscribed = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackHypesquadSubscriptionUpdated implements Analy
             return false;
         }
         TrackHypesquadSubscriptionUpdated trackHypesquadSubscriptionUpdated = (TrackHypesquadSubscriptionUpdated) other;
-        return Intrinsics3.areEqual(this.houseId, trackHypesquadSubscriptionUpdated.houseId) && Intrinsics3.areEqual(this.subscribed, trackHypesquadSubscriptionUpdated.subscribed);
+        return m.areEqual(this.houseId, trackHypesquadSubscriptionUpdated.houseId) && m.areEqual(this.subscribed, trackHypesquadSubscriptionUpdated.subscribed);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackHypesquadSubscriptionUpdated implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackHypesquadSubscriptionUpdated(houseId=");
+        StringBuilder sbU = a.U("TrackHypesquadSubscriptionUpdated(houseId=");
         sbU.append(this.houseId);
         sbU.append(", subscribed=");
-        return outline.D(sbU, this.subscribed, ")");
+        return a.D(sbU, this.subscribed, ")");
     }
 }

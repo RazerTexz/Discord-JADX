@@ -15,7 +15,6 @@ import android.os.Looper;
 import android.text.TextUtils;
 import androidx.annotation.AnyThread;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.BillingResult;
@@ -178,7 +177,7 @@ public class a extends BillingClient {
             String strValueOf = String.valueOf(str11);
             String strValueOf2 = String.valueOf(arrayList.get(i));
             String str12 = str10;
-            String strJ = outline.J(new StringBuilder(strValueOf.length() + strValueOf2.length()), strValueOf, strValueOf2);
+            String strJ = b.d.b.a.a.J(new StringBuilder(strValueOf.length() + strValueOf2.length()), strValueOf, strValueOf2);
             if (i < arrayList.size() - 1) {
                 strJ = String.valueOf(strJ).concat(", ");
             }

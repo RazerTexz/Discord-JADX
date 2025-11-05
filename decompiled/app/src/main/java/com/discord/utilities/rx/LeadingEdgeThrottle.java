@@ -2,7 +2,7 @@ package com.discord.utilities.rx;
 
 import androidx.recyclerview.widget.RecyclerView;
 import b.i.a.f.e.o.f;
-import j0.p.Schedulers2;
+import j0.p.a;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import rx.Observable;
@@ -27,10 +27,10 @@ public class LeadingEdgeThrottle<T> implements Observable.b<T, T> {
         public final /* synthetic */ Scheduler.Worker val$worker;
 
         /* renamed from: com.discord.utilities.rx.LeadingEdgeThrottle$1$1, reason: invalid class name and collision with other inner class name */
-        public class C02231 implements Action0 {
+        public class C03431 implements Action0 {
             public final /* synthetic */ int val$index;
 
-            public C02231(int i) {
+            public C03431(int i) {
                 this.val$index = i;
             }
 
@@ -52,26 +52,26 @@ public class LeadingEdgeThrottle<T> implements Observable.b<T, T> {
             this.self = this;
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onCompleted() {
             this.state.emitAndComplete(this.val$s, this);
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onError(Throwable th) {
             this.val$s.j.onError(th);
             unsubscribe();
             this.state.clear();
         }
 
-        @Override // j0.Observer2
+        @Override // j0.g
         public void onNext(T t) {
             Objects.requireNonNull(LeadingEdgeThrottle.this.scheduler);
             long jCurrentTimeMillis = System.currentTimeMillis();
             int next = this.state.next(t);
             long j = this.lastOnNext;
             if (j != -1 && jCurrentTimeMillis - j < LeadingEdgeThrottle.this.timeInMilliseconds) {
-                this.val$serial.a(this.val$worker.b(new C02231(next), LeadingEdgeThrottle.this.timeInMilliseconds, TimeUnit.MILLISECONDS));
+                this.val$serial.a(this.val$worker.b(new C03431(next), LeadingEdgeThrottle.this.timeInMilliseconds, TimeUnit.MILLISECONDS));
             } else {
                 this.lastOnNext = jCurrentTimeMillis;
                 this.state.emit(next, this.val$s, this.self);
@@ -158,7 +158,7 @@ public class LeadingEdgeThrottle<T> implements Observable.b<T, T> {
         this.scheduler = scheduler;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public /* bridge */ /* synthetic */ Object call(Object obj) {
         return call((Subscriber) obj);
     }
@@ -173,6 +173,6 @@ public class LeadingEdgeThrottle<T> implements Observable.b<T, T> {
     }
 
     public LeadingEdgeThrottle(long j, TimeUnit timeUnit) {
-        this(j, timeUnit, Schedulers2.a());
+        this(j, timeUnit, a.a());
     }
 }

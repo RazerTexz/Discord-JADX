@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackSourceMetadata.kt */
 /* loaded from: classes.dex */
@@ -36,7 +36,7 @@ public final /* data */ class TrackSourceMetadata {
             return false;
         }
         TrackSourceMetadata trackSourceMetadata = (TrackSourceMetadata) other;
-        return Intrinsics3.areEqual(this.sourcePage, trackSourceMetadata.sourcePage) && Intrinsics3.areEqual(this.sourceSection, trackSourceMetadata.sourceSection) && Intrinsics3.areEqual(this.sourceObject, trackSourceMetadata.sourceObject) && Intrinsics3.areEqual(this.sourceObjectType, trackSourceMetadata.sourceObjectType) && Intrinsics3.areEqual(this.sourcePromotionId, trackSourceMetadata.sourcePromotionId);
+        return m.areEqual(this.sourcePage, trackSourceMetadata.sourcePage) && m.areEqual(this.sourceSection, trackSourceMetadata.sourceSection) && m.areEqual(this.sourceObject, trackSourceMetadata.sourceObject) && m.areEqual(this.sourceObjectType, trackSourceMetadata.sourceObjectType) && m.areEqual(this.sourcePromotionId, trackSourceMetadata.sourcePromotionId);
     }
 
     public int hashCode() {
@@ -53,7 +53,7 @@ public final /* data */ class TrackSourceMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSourceMetadata(sourcePage=");
+        StringBuilder sbU = a.U("TrackSourceMetadata(sourcePage=");
         sbU.append(this.sourcePage);
         sbU.append(", sourceSection=");
         sbU.append(this.sourceSection);
@@ -62,6 +62,6 @@ public final /* data */ class TrackSourceMetadata {
         sbU.append(", sourceObjectType=");
         sbU.append(this.sourceObjectType);
         sbU.append(", sourcePromotionId=");
-        return outline.G(sbU, this.sourcePromotionId, ")");
+        return a.G(sbU, this.sourcePromotionId, ")");
     }
 }

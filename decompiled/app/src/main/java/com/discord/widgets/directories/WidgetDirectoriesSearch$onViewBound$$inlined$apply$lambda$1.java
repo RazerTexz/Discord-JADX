@@ -4,7 +4,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import androidx.core.app.NotificationCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TextView.kt */
 /* loaded from: classes2.dex */
@@ -26,7 +26,7 @@ public final class WidgetDirectoriesSearch$onViewBound$$inlined$apply$lambda$1 i
     @Override // android.text.TextWatcher
     public void onTextChanged(CharSequence text, int start, int before, int count) {
         FloatingActionButton floatingActionButton = this.this$0.getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(floatingActionButton, "binding.search");
+        m.checkNotNullExpressionValue(floatingActionButton, "binding.search");
         WidgetDirectoriesSearchViewModel viewModel = this.this$0.getViewModel();
         if (text == null) {
             text = "";

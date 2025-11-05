@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPaymentRefunded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPaymentRefunded implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPaymentRefunded implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long paymentId = null;
     private final Long createdAt = null;
@@ -55,7 +55,7 @@ public final /* data */ class TrackPaymentRefunded implements AnalyticsSchema, T
             return false;
         }
         TrackPaymentRefunded trackPaymentRefunded = (TrackPaymentRefunded) other;
-        return Intrinsics3.areEqual(this.paymentId, trackPaymentRefunded.paymentId) && Intrinsics3.areEqual(this.createdAt, trackPaymentRefunded.createdAt) && Intrinsics3.areEqual(this.paymentType, trackPaymentRefunded.paymentType) && Intrinsics3.areEqual(this.paymentGateway, trackPaymentRefunded.paymentGateway) && Intrinsics3.areEqual(this.price, trackPaymentRefunded.price) && Intrinsics3.areEqual(this.currency, trackPaymentRefunded.currency) && Intrinsics3.areEqual(this.amount, trackPaymentRefunded.amount) && Intrinsics3.areEqual(this.amountRefunded, trackPaymentRefunded.amountRefunded) && Intrinsics3.areEqual(this.tax, trackPaymentRefunded.tax) && Intrinsics3.areEqual(this.taxInclusive, trackPaymentRefunded.taxInclusive) && Intrinsics3.areEqual(this.skuId, trackPaymentRefunded.skuId) && Intrinsics3.areEqual(this.skuType, trackPaymentRefunded.skuType) && Intrinsics3.areEqual(this.skuSubscriptionPlanId, trackPaymentRefunded.skuSubscriptionPlanId) && Intrinsics3.areEqual(this.subscriptionId, trackPaymentRefunded.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackPaymentRefunded.subscriptionType) && Intrinsics3.areEqual(this.subscriptionPaymentGatewayPlanId, trackPaymentRefunded.subscriptionPaymentGatewayPlanId) && Intrinsics3.areEqual(this.subscriptionPlanId, trackPaymentRefunded.subscriptionPlanId) && Intrinsics3.areEqual(this.subscriptionCreatedAt, trackPaymentRefunded.subscriptionCreatedAt) && Intrinsics3.areEqual(this.subscriptionCurrentPeriodStart, trackPaymentRefunded.subscriptionCurrentPeriodStart) && Intrinsics3.areEqual(this.subscriptionCurrentPeriodEnd, trackPaymentRefunded.subscriptionCurrentPeriodEnd) && Intrinsics3.areEqual(this.paymentSourceId, trackPaymentRefunded.paymentSourceId) && Intrinsics3.areEqual(this.paymentSourceCountry, trackPaymentRefunded.paymentSourceCountry) && Intrinsics3.areEqual(this.failureMessage, trackPaymentRefunded.failureMessage) && Intrinsics3.areEqual(this.isGift, trackPaymentRefunded.isGift) && Intrinsics3.areEqual(this.refundReason, trackPaymentRefunded.refundReason) && Intrinsics3.areEqual(this.captured, trackPaymentRefunded.captured) && Intrinsics3.areEqual(this.refunderType, trackPaymentRefunded.refunderType) && Intrinsics3.areEqual(this.refundedBy, trackPaymentRefunded.refundedBy) && Intrinsics3.areEqual(this.refundedOutOfPolicy, trackPaymentRefunded.refundedOutOfPolicy);
+        return m.areEqual(this.paymentId, trackPaymentRefunded.paymentId) && m.areEqual(this.createdAt, trackPaymentRefunded.createdAt) && m.areEqual(this.paymentType, trackPaymentRefunded.paymentType) && m.areEqual(this.paymentGateway, trackPaymentRefunded.paymentGateway) && m.areEqual(this.price, trackPaymentRefunded.price) && m.areEqual(this.currency, trackPaymentRefunded.currency) && m.areEqual(this.amount, trackPaymentRefunded.amount) && m.areEqual(this.amountRefunded, trackPaymentRefunded.amountRefunded) && m.areEqual(this.tax, trackPaymentRefunded.tax) && m.areEqual(this.taxInclusive, trackPaymentRefunded.taxInclusive) && m.areEqual(this.skuId, trackPaymentRefunded.skuId) && m.areEqual(this.skuType, trackPaymentRefunded.skuType) && m.areEqual(this.skuSubscriptionPlanId, trackPaymentRefunded.skuSubscriptionPlanId) && m.areEqual(this.subscriptionId, trackPaymentRefunded.subscriptionId) && m.areEqual(this.subscriptionType, trackPaymentRefunded.subscriptionType) && m.areEqual(this.subscriptionPaymentGatewayPlanId, trackPaymentRefunded.subscriptionPaymentGatewayPlanId) && m.areEqual(this.subscriptionPlanId, trackPaymentRefunded.subscriptionPlanId) && m.areEqual(this.subscriptionCreatedAt, trackPaymentRefunded.subscriptionCreatedAt) && m.areEqual(this.subscriptionCurrentPeriodStart, trackPaymentRefunded.subscriptionCurrentPeriodStart) && m.areEqual(this.subscriptionCurrentPeriodEnd, trackPaymentRefunded.subscriptionCurrentPeriodEnd) && m.areEqual(this.paymentSourceId, trackPaymentRefunded.paymentSourceId) && m.areEqual(this.paymentSourceCountry, trackPaymentRefunded.paymentSourceCountry) && m.areEqual(this.failureMessage, trackPaymentRefunded.failureMessage) && m.areEqual(this.isGift, trackPaymentRefunded.isGift) && m.areEqual(this.refundReason, trackPaymentRefunded.refundReason) && m.areEqual(this.captured, trackPaymentRefunded.captured) && m.areEqual(this.refunderType, trackPaymentRefunded.refunderType) && m.areEqual(this.refundedBy, trackPaymentRefunded.refundedBy) && m.areEqual(this.refundedOutOfPolicy, trackPaymentRefunded.refundedOutOfPolicy);
     }
 
     public int hashCode() {
@@ -120,7 +120,7 @@ public final /* data */ class TrackPaymentRefunded implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPaymentRefunded(paymentId=");
+        StringBuilder sbU = a.U("TrackPaymentRefunded(paymentId=");
         sbU.append(this.paymentId);
         sbU.append(", createdAt=");
         sbU.append(this.createdAt);
@@ -177,6 +177,6 @@ public final /* data */ class TrackPaymentRefunded implements AnalyticsSchema, T
         sbU.append(", refundedBy=");
         sbU.append(this.refundedBy);
         sbU.append(", refundedOutOfPolicy=");
-        return outline.D(sbU, this.refundedOutOfPolicy, ")");
+        return a.D(sbU, this.refundedOutOfPolicy, ")");
     }
 }

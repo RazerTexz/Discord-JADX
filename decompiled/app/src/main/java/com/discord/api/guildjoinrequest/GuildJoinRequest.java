@@ -1,8 +1,8 @@
 package com.discord.api.guildjoinrequest;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildJoinRequest.kt */
 /* loaded from: classes.dex */
@@ -50,7 +50,7 @@ public final /* data */ class GuildJoinRequest {
             return false;
         }
         GuildJoinRequest guildJoinRequest = (GuildJoinRequest) other;
-        return this.userId == guildJoinRequest.userId && Intrinsics3.areEqual(this.user, guildJoinRequest.user) && this.guildId == guildJoinRequest.guildId && Intrinsics3.areEqual(this.createdAt, guildJoinRequest.createdAt) && Intrinsics3.areEqual(this.applicationStatus, guildJoinRequest.applicationStatus) && Intrinsics3.areEqual(this.rejectionReason, guildJoinRequest.rejectionReason) && Intrinsics3.areEqual(this.inviteCode, guildJoinRequest.inviteCode) && Intrinsics3.areEqual(this.lastSeen, guildJoinRequest.lastSeen) && Intrinsics3.areEqual(this.actionedAt, guildJoinRequest.actionedAt);
+        return this.userId == guildJoinRequest.userId && m.areEqual(this.user, guildJoinRequest.user) && this.guildId == guildJoinRequest.guildId && m.areEqual(this.createdAt, guildJoinRequest.createdAt) && m.areEqual(this.applicationStatus, guildJoinRequest.applicationStatus) && m.areEqual(this.rejectionReason, guildJoinRequest.rejectionReason) && m.areEqual(this.inviteCode, guildJoinRequest.inviteCode) && m.areEqual(this.lastSeen, guildJoinRequest.lastSeen) && m.areEqual(this.actionedAt, guildJoinRequest.actionedAt);
     }
 
     public int hashCode() {
@@ -75,7 +75,7 @@ public final /* data */ class GuildJoinRequest {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildJoinRequest(userId=");
+        StringBuilder sbU = a.U("GuildJoinRequest(userId=");
         sbU.append(this.userId);
         sbU.append(", user=");
         sbU.append(this.user);
@@ -92,6 +92,6 @@ public final /* data */ class GuildJoinRequest {
         sbU.append(", lastSeen=");
         sbU.append(this.lastSeen);
         sbU.append(", actionedAt=");
-        return outline.J(sbU, this.actionedAt, ")");
+        return a.J(sbU, this.actionedAt, ")");
     }
 }

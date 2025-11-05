@@ -2,12 +2,12 @@ package com.discord.stores;
 
 import com.discord.models.presence.Presence;
 import com.discord.utilities.collections.SnowflakePartitionMap;
-import d0.z.d.FunctionReferenceImpl;
+import d0.z.d.k;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: StoreStream.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class StoreStream$lazyChannelMembersStore$3 extends FunctionReferenceImpl implements Function1<Long, Presence> {
+public final /* synthetic */ class StoreStream$lazyChannelMembersStore$3 extends k implements Function1<Long, Presence> {
     public StoreStream$lazyChannelMembersStore$3(SnowflakePartitionMap.CopiablePartitionMap copiablePartitionMap) {
         super(1, copiablePartitionMap, SnowflakePartitionMap.CopiablePartitionMap.class, "get", "get(Ljava/lang/Object;)Ljava/lang/Object;", 0);
     }

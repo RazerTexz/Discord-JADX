@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
 import b.a.m.a.h;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
 import com.google.gson.stream.JsonToken;
 import java.io.IOException;
@@ -261,7 +261,7 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelAuditLogEntry.Change(key=");
+            StringBuilder sbU = a.U("ModelAuditLogEntry.Change(key=");
             sbU.append(getKey());
             sbU.append(", oldValue=");
             sbU.append(getOldValue());
@@ -332,7 +332,7 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelAuditLogEntry.ChangeNameId(name=");
+            StringBuilder sbU = a.U("ModelAuditLogEntry.ChangeNameId(name=");
             sbU.append(getName());
             sbU.append(", id=");
             sbU.append(getId());
@@ -445,7 +445,7 @@ public class ModelAuditLogEntry implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelAuditLogEntry.Options(count=");
+            StringBuilder sbU = a.U("ModelAuditLogEntry.Options(count=");
             sbU.append(getCount());
             sbU.append(", channelId=");
             sbU.append(getChannelId());
@@ -643,7 +643,7 @@ public class ModelAuditLogEntry implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelAuditLogEntry(id=");
+        StringBuilder sbU = a.U("ModelAuditLogEntry(id=");
         sbU.append(getId());
         sbU.append(", actionTypeId=");
         sbU.append(getActionTypeId());

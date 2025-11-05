@@ -6,10 +6,9 @@ import android.view.MenuItem;
 import android.view.View;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
+import b.a.d.j;
 import b.a.d.o;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
@@ -23,10 +22,10 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.stateful.StatefulViews;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 import kotlin.text.Regex;
@@ -36,7 +35,7 @@ import rx.functions.Action2;
 /* compiled from: WidgetServerSettingsEmojisEdit.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsEmojisEdit extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerSettingsEmojisEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEmojisEditBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsEmojisEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEmojisEditBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -58,11 +57,11 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
         }
 
         public final void create(Context context, long guildId, long emojiId, String alias) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(alias, "alias");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(alias, "alias");
             Intent intentPutExtra = new Intent().putExtra(WidgetServerSettingsEmojisEdit.EXTRA_GUILD_ID, guildId).putExtra(WidgetServerSettingsEmojisEdit.EXTRA_EMOJI_ID, emojiId).putExtra(WidgetServerSettingsEmojisEdit.EXTRA_EMOJI_ALIAS, alias);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…EXTRA_EMOJI_ALIAS, alias)");
-            AppScreen2.d(context, WidgetServerSettingsEmojisEdit.class, intentPutExtra);
+            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…EXTRA_EMOJI_ALIAS, alias)");
+            j.d(context, WidgetServerSettingsEmojisEdit.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -83,7 +82,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
+            m.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != R.id.menu_server_settings_emoji_delete) {
                 return;
             }
@@ -146,7 +145,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
 
     public WidgetServerSettingsEmojisEdit() {
         super(R.layout.widget_server_settings_emojis_edit);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsEmojisEdit2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsEmojisEdit$binding$2.INSTANCE, null, 2, null);
         this.state = new StatefulViews(R.id.server_settings_emojis_edit_alias);
         this.guildId = -1L;
         this.emojiId = -1L;
@@ -206,7 +205,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
 
     private final void handleSaveAlias() {
         TextInputLayout textInputLayout = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsEmojisEditAlias");
         String strSanitizeEmojiName = sanitizeEmojiName(ViewExtensions.getTextOrEmpty(textInputLayout));
         ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().patchGuildEmoji(this.guildId, this.emojiId, new RestAPIParams.PatchGuildEmoji(strSanitizeEmojiName)), false, 1, null), this, null, 2, null).k(o.i(new AnonymousClass1(strSanitizeEmojiName), this));
     }
@@ -217,15 +216,15 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
         StoreStream.INSTANCE.getGuildEmojis().fetchGuildEmoji(this.guildId);
         StatefulViews statefulViews = this.state;
         TextInputLayout textInputLayout = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsEmojisEditAlias");
         statefulViews.put(textInputLayout.getId(), sanitizedName);
         TextInputLayout textInputLayout2 = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.serverSettingsEmojisEditAlias");
         StatefulViews statefulViews2 = this.state;
         TextInputLayout textInputLayout3 = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout3, "binding.serverSettingsEmojisEditAlias");
         ViewExtensions.setText(textInputLayout2, (CharSequence) statefulViews2.get(textInputLayout3.getId(), sanitizedName));
-        AppToast.j(this, getString(R.string.save_media_success_mobile), 0, 4);
+        b.a.d.m.j(this, getString(R.string.save_media_success_mobile), 0, 4);
     }
 
     private final String sanitizeEmojiName(String name) {
@@ -238,7 +237,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         this.guildId = getMostRecentIntent().getLongExtra(EXTRA_GUILD_ID, -1L);
@@ -249,16 +248,16 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
         }
         this.emojiName = stringExtra;
         TextInputLayout textInputLayout = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsEmojisEditAlias");
         StatefulViews statefulViews = this.state;
         TextInputLayout textInputLayout2 = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.serverSettingsEmojisEditAlias");
         ViewExtensions.setText(textInputLayout, (CharSequence) statefulViews.get(textInputLayout2.getId(), this.emojiName));
         this.state.setupUnsavedChangesConfirmation(this);
         StatefulViews statefulViews2 = this.state;
         FloatingActionButton floatingActionButton = getBinding().c;
         TextInputLayout textInputLayout3 = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout3, "binding.serverSettingsEmojisEditAlias");
         statefulViews2.setupTextWatcherWithSaveAction(this, floatingActionButton, textInputLayout3);
         this.state.configureSaveActionView(getBinding().c);
         getBinding().c.setOnClickListener(new AnonymousClass1());
@@ -268,7 +267,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
             return;
         }
         TextInputLayout textInputLayout4 = getBinding().f2563b;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.serverSettingsEmojisEditAlias");
+        m.checkNotNullExpressionValue(textInputLayout4, "binding.serverSettingsEmojisEditAlias");
         showKeyboard(textInputLayout4);
     }
 }

@@ -1,6 +1,6 @@
 package com.discord.widgets.channels.list;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.guild.GuildMaxVideoChannelUsers;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
@@ -10,7 +10,7 @@ import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
 import com.discord.widgets.channels.list.items.ChannelListItemVoiceChannel;
 import com.discord.widgets.channels.list.items.ChannelListItemVoiceUser;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -22,7 +22,7 @@ import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5 extends Lambda implements Function0<ChannelListItemVoiceChannel> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5 extends o implements Function0<ChannelListItemVoiceChannel> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -127,7 +127,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
                 }
             }
             GuildScheduledEvent guildScheduledEvent2 = (GuildScheduledEvent) channelListItemVoiceChannel;
-            Collection collection = (Collection) outline.d(this.$channel, this.$voiceStates$inlined);
+            Collection collection = (Collection) a.d(this.$channel, this.$voiceStates$inlined);
             if (collection == null) {
                 z2 = false;
                 Channel channel = this.$channel;

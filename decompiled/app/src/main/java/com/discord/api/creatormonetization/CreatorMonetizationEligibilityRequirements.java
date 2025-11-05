@@ -1,7 +1,7 @@
 package com.discord.api.creatormonetization;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
@@ -58,7 +58,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
                 return false;
             }
             HealthScore healthScore = (HealthScore) other;
-            return Intrinsics3.areEqual(this.avgNonnewParticipators, healthScore.avgNonnewParticipators) && Intrinsics3.areEqual(this.avgNonnewCommunicators, healthScore.avgNonnewCommunicators) && Intrinsics3.areEqual(this.numIntentfulJoiners, healthScore.numIntentfulJoiners) && Intrinsics3.areEqual(this.percRetW1Intentful, healthScore.percRetW1Intentful) && Intrinsics3.areEqual(this.guildSize, healthScore.guildSize) && Intrinsics3.areEqual(this.communicators, healthScore.communicators) && Intrinsics3.areEqual(this.percRetW1, healthScore.percRetW1);
+            return m.areEqual(this.avgNonnewParticipators, healthScore.avgNonnewParticipators) && m.areEqual(this.avgNonnewCommunicators, healthScore.avgNonnewCommunicators) && m.areEqual(this.numIntentfulJoiners, healthScore.numIntentfulJoiners) && m.areEqual(this.percRetW1Intentful, healthScore.percRetW1Intentful) && m.areEqual(this.guildSize, healthScore.guildSize) && m.areEqual(this.communicators, healthScore.communicators) && m.areEqual(this.percRetW1, healthScore.percRetW1);
         }
 
         public int hashCode() {
@@ -79,7 +79,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("HealthScore(avgNonnewParticipators=");
+            StringBuilder sbU = a.U("HealthScore(avgNonnewParticipators=");
             sbU.append(this.avgNonnewParticipators);
             sbU.append(", avgNonnewCommunicators=");
             sbU.append(this.avgNonnewCommunicators);
@@ -109,7 +109,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Rejection) && Intrinsics3.areEqual(this.canReapplyAt, ((Rejection) other).canReapplyAt);
+                return (other instanceof Rejection) && m.areEqual(this.canReapplyAt, ((Rejection) other).canReapplyAt);
             }
             return true;
         }
@@ -123,7 +123,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Rejection(canReapplyAt=");
+            StringBuilder sbU = a.U("Rejection(canReapplyAt=");
             sbU.append(this.canReapplyAt);
             sbU.append(")");
             return sbU.toString();
@@ -131,7 +131,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
     }
 
     public CreatorMonetizationEligibilityRequirements(long j, CreatorMonetizationEnableRequest creatorMonetizationEnableRequest, boolean z2, boolean z3, boolean z4, boolean z5, Map<String, ? extends Object> map, boolean z6, boolean z7, boolean z8, HealthScore healthScore, boolean z9, Rejection rejection, int i, int i2) {
-        Intrinsics3.checkNotNullParameter(map, "nsfwProperties");
+        m.checkNotNullParameter(map, "nsfwProperties");
         this.guildId = j;
         this.latestRequest = creatorMonetizationEnableRequest;
         this.canApply = z2;
@@ -166,7 +166,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         int i4 = (i3 & 8192) != 0 ? creatorMonetizationEligibilityRequirements.minimumAgeInDays : i;
         int i5 = (i3 & 16384) != 0 ? creatorMonetizationEligibilityRequirements.minimumSize : i2;
         Objects.requireNonNull(creatorMonetizationEligibilityRequirements);
-        Intrinsics3.checkNotNullParameter(map2, "nsfwProperties");
+        m.checkNotNullParameter(map2, "nsfwProperties");
         return new CreatorMonetizationEligibilityRequirements(j2, creatorMonetizationEnableRequest2, z10, z11, z12, z13, map2, z14, z15, z16, healthScore2, z17, rejection2, i4, i5);
     }
 
@@ -198,7 +198,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
             return false;
         }
         CreatorMonetizationEligibilityRequirements creatorMonetizationEligibilityRequirements = (CreatorMonetizationEligibilityRequirements) other;
-        return this.guildId == creatorMonetizationEligibilityRequirements.guildId && Intrinsics3.areEqual(this.latestRequest, creatorMonetizationEligibilityRequirements.latestRequest) && this.canApply == creatorMonetizationEligibilityRequirements.canApply && this.sufficient == creatorMonetizationEligibilityRequirements.sufficient && this.age == creatorMonetizationEligibilityRequirements.age && this.engagementHealthy == creatorMonetizationEligibilityRequirements.engagementHealthy && Intrinsics3.areEqual(this.nsfwProperties, creatorMonetizationEligibilityRequirements.nsfwProperties) && this.retentionHealthy == creatorMonetizationEligibilityRequirements.retentionHealthy && this.safeEnvironment == creatorMonetizationEligibilityRequirements.safeEnvironment && this.size == creatorMonetizationEligibilityRequirements.size && Intrinsics3.areEqual(this.healthScore, creatorMonetizationEligibilityRequirements.healthScore) && this.healthScorePending == creatorMonetizationEligibilityRequirements.healthScorePending && Intrinsics3.areEqual(this.rejection, creatorMonetizationEligibilityRequirements.rejection) && this.minimumAgeInDays == creatorMonetizationEligibilityRequirements.minimumAgeInDays && this.minimumSize == creatorMonetizationEligibilityRequirements.minimumSize;
+        return this.guildId == creatorMonetizationEligibilityRequirements.guildId && m.areEqual(this.latestRequest, creatorMonetizationEligibilityRequirements.latestRequest) && this.canApply == creatorMonetizationEligibilityRequirements.canApply && this.sufficient == creatorMonetizationEligibilityRequirements.sufficient && this.age == creatorMonetizationEligibilityRequirements.age && this.engagementHealthy == creatorMonetizationEligibilityRequirements.engagementHealthy && m.areEqual(this.nsfwProperties, creatorMonetizationEligibilityRequirements.nsfwProperties) && this.retentionHealthy == creatorMonetizationEligibilityRequirements.retentionHealthy && this.safeEnvironment == creatorMonetizationEligibilityRequirements.safeEnvironment && this.size == creatorMonetizationEligibilityRequirements.size && m.areEqual(this.healthScore, creatorMonetizationEligibilityRequirements.healthScore) && this.healthScorePending == creatorMonetizationEligibilityRequirements.healthScorePending && m.areEqual(this.rejection, creatorMonetizationEligibilityRequirements.rejection) && this.minimumAgeInDays == creatorMonetizationEligibilityRequirements.minimumAgeInDays && this.minimumSize == creatorMonetizationEligibilityRequirements.minimumSize;
     }
 
     /* renamed from: f, reason: from getter */
@@ -304,7 +304,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("CreatorMonetizationEligibilityRequirements(guildId=");
+        StringBuilder sbU = a.U("CreatorMonetizationEligibilityRequirements(guildId=");
         sbU.append(this.guildId);
         sbU.append(", latestRequest=");
         sbU.append(this.latestRequest);
@@ -333,6 +333,6 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         sbU.append(", minimumAgeInDays=");
         sbU.append(this.minimumAgeInDays);
         sbU.append(", minimumSize=");
-        return outline.B(sbU, this.minimumSize, ")");
+        return a.B(sbU, this.minimumSize, ")");
     }
 }

@@ -1,23 +1,23 @@
 package b.i.a.c;
 
-import b.i.a.c.Player2;
-import b.i.a.c.f3.ListenerSet;
+import b.i.a.c.f3.p;
+import b.i.a.c.y1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class z implements ListenerSet.a {
-    public final /* synthetic */ MediaItem2 a;
+public final /* synthetic */ class z implements p.a {
+    public final /* synthetic */ o1 a;
 
     /* renamed from: b, reason: collision with root package name */
     public final /* synthetic */ int f1317b;
 
-    public /* synthetic */ z(MediaItem2 mediaItem2, int i) {
-        this.a = mediaItem2;
+    public /* synthetic */ z(o1 o1Var, int i) {
+        this.a = o1Var;
         this.f1317b = i;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((Player2.c) obj).M(this.a, this.f1317b);
+        ((y1.c) obj).M(this.a, this.f1317b);
     }
 }

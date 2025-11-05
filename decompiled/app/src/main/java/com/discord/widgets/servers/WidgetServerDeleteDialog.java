@@ -10,8 +10,8 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import b.a.d.o;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetServerDeleteDialogBinding;
@@ -25,12 +25,11 @@ import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.guild_delete_feedback.GuildDeleteFeedbackSheetNavigator;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -43,7 +42,7 @@ import rx.functions.Func2;
 /* compiled from: WidgetServerDeleteDialog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerDeleteDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerDeleteDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerDeleteDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerDeleteDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerDeleteDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -58,7 +57,7 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, long guildId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetServerDeleteDialog widgetServerDeleteDialog = new WidgetServerDeleteDialog();
             Bundle bundle = new Bundle();
             bundle.putLong(WidgetServerDeleteDialog.INTENT_GUILD_ID, guildId);
@@ -88,13 +87,13 @@ public final class WidgetServerDeleteDialog extends AppDialog {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
                 Observable observableObserveMe$default = StoreUser.observeMe$default(companion.getUsers(), false, 1, null);
                 Observable<Guild> observableObserveGuild = companion.getGuilds().observeGuild(guildId);
-                WidgetServerDeleteDialog2 widgetServerDeleteDialog2 = WidgetServerDeleteDialog2.INSTANCE;
-                Object widgetServerDeleteDialog4 = widgetServerDeleteDialog2;
-                if (widgetServerDeleteDialog2 != null) {
-                    widgetServerDeleteDialog4 = new WidgetServerDeleteDialog4(widgetServerDeleteDialog2);
+                WidgetServerDeleteDialog$Model$Companion$get$1 widgetServerDeleteDialog$Model$Companion$get$1 = WidgetServerDeleteDialog$Model$Companion$get$1.INSTANCE;
+                Object widgetServerDeleteDialog$sam$rx_functions_Func2$0 = widgetServerDeleteDialog$Model$Companion$get$1;
+                if (widgetServerDeleteDialog$Model$Companion$get$1 != null) {
+                    widgetServerDeleteDialog$sam$rx_functions_Func2$0 = new WidgetServerDeleteDialog$sam$rx_functions_Func2$0(widgetServerDeleteDialog$Model$Companion$get$1);
                 }
-                Observable observableJ = Observable.j(observableObserveMe$default, observableObserveGuild, (Func2) widgetServerDeleteDialog4);
-                Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…      ::Model\n          )");
+                Observable observableJ = Observable.j(observableObserveMe$default, observableObserveGuild, (Func2) widgetServerDeleteDialog$sam$rx_functions_Func2$0);
+                m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…      ::Model\n          )");
                 return ObservableExtensionsKt.computationLatest(observableJ).r();
             }
 
@@ -104,7 +103,7 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         }
 
         public Model(MeUser meUser, Guild guild) {
-            Intrinsics3.checkNotNullParameter(meUser, "me");
+            m.checkNotNullParameter(meUser, "me");
             this.me = meUser;
             this.guild = guild;
         }
@@ -162,14 +161,14 @@ public final class WidgetServerDeleteDialog extends AppDialog {
             RestAPI api = RestAPI.INSTANCE.getApi();
             long id2 = this.$this_configureUI.getGuild().getId();
             TextInputLayout textInputLayout = WidgetServerDeleteDialog.access$getBinding$p(WidgetServerDeleteDialog.this).e;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsDeleteServerMfaCode");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.serverSettingsDeleteServerMfaCode");
             ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(api.deleteGuild(id2, new RestAPIParams.DeleteGuild(ViewExtensions.getTextOrEmpty(textInputLayout))), false, 1, null), WidgetServerDeleteDialog.this, null, 2, null).k(o.j(new AnonymousClass1(), WidgetServerDeleteDialog.this.getContext(), null, 4));
         }
     }
 
     /* compiled from: WidgetServerDeleteDialog.kt */
     /* renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Model, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -183,14 +182,14 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerDeleteDialog widgetServerDeleteDialog = WidgetServerDeleteDialog.this;
-            Intrinsics3.checkNotNullExpressionValue(model, "it");
+            m.checkNotNullExpressionValue(model, "it");
             WidgetServerDeleteDialog.access$configureUI(widgetServerDeleteDialog, model);
         }
     }
 
     public WidgetServerDeleteDialog() {
         super(R.layout.widget_server_delete_dialog);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerDeleteDialog3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerDeleteDialog$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$afterDeleteGuild(WidgetServerDeleteDialog widgetServerDeleteDialog, long j) {
@@ -220,18 +219,18 @@ public final class WidgetServerDeleteDialog extends AppDialog {
             return;
         }
         TextView textView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.serverSettingsDeleteServerHeader");
+        m.checkNotNullExpressionValue(textView, "binding.serverSettingsDeleteServerHeader");
         Context context = getContext();
-        textView.setText(context != null ? FormatUtils.h(context, R.string.delete_server_title, new Object[]{model.getGuild().getName()}, null, 4) : null);
+        textView.setText(context != null ? b.h(context, R.string.delete_server_title, new Object[]{model.getGuild().getName()}, null, 4) : null);
         LinearLayout linearLayout = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.serverSettingsDeleteServerMfaWrap");
+        m.checkNotNullExpressionValue(linearLayout, "binding.serverSettingsDeleteServerMfaWrap");
         linearLayout.setVisibility(model.getMe().getMfaEnabled() ? 0 : 8);
         TextView textView2 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.serverSettingsDeleteServerText");
-        FormatUtils.n(textView2, R.string.delete_server_body, new Object[]{model.getGuild().getName()}, null, 4);
+        m.checkNotNullExpressionValue(textView2, "binding.serverSettingsDeleteServerText");
+        b.n(textView2, R.string.delete_server_body, new Object[]{model.getGuild().getName()}, null, 4);
         getBinding().f2536b.setOnClickListener(new AnonymousClass1());
         MaterialButton materialButton = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.serverSettingsDeleteServerConfirm");
+        m.checkNotNullExpressionValue(materialButton, "binding.serverSettingsDeleteServerConfirm");
         materialButton.setEnabled(model.getGuild().isOwner(model.getMe().getId()));
         getBinding().c.setOnClickListener(new AnonymousClass2(model));
     }
@@ -248,7 +247,7 @@ public final class WidgetServerDeleteDialog extends AppDialog {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<Model> observable = Model.INSTANCE.get$app_productionGoogleRelease(getArgumentsOrDefault().getLong(INTENT_GUILD_ID));
-        Intrinsics3.checkNotNullExpressionValue(observable, "Model.get(guildId)");
+        m.checkNotNullExpressionValue(observable, "Model.get(guildId)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetServerDeleteDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 }

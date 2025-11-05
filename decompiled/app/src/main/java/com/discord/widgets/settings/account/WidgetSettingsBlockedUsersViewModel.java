@@ -2,8 +2,8 @@ package com.discord.widgets.settings.account;
 
 import android.content.Context;
 import androidx.annotation.StringRes;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.models.user.User;
 import com.discord.stores.StoreStream;
@@ -14,10 +14,10 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
-import d0.f0._Sequences2;
-import d0.t._Maps;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.f0.q;
+import d0.t.i0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<ViewState> {
+public final class WidgetSettingsBlockedUsersViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -41,7 +41,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -54,7 +54,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             WidgetSettingsBlockedUsersViewModel.access$handleStoreState(WidgetSettingsBlockedUsersViewModel.this, storeState);
         }
     }
@@ -65,10 +65,10 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
 
         public final Observable<StoreState> observeStores(StoreUserRelationships storeUserRelationships, StoreUser storeUser) {
-            Intrinsics3.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
-            Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-            Observable observableY = storeUserRelationships.observe().Y(new WidgetSettingsBlockedUsersViewModel2(storeUser));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "storeUserRelationships\n …          }\n            }");
+            m.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
+            m.checkNotNullParameter(storeUser, "storeUser");
+            Observable observableY = storeUserRelationships.observe().Y(new WidgetSettingsBlockedUsersViewModel$Companion$observeStores$1(storeUser));
+            m.checkNotNullExpressionValue(observableY, "storeUserRelationships\n …          }\n            }");
             return observableY;
         }
 
@@ -121,7 +121,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             }
 
             public String toString() {
-                return outline.B(outline.U("ShowToast(stringRes="), this.stringRes, ")");
+                return a.B(a.U("ShowToast(stringRes="), this.stringRes, ")");
             }
         }
 
@@ -140,7 +140,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         private final User user;
 
         public Item(User user) {
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             this.user = user;
             this.key = String.valueOf(user.getId());
         }
@@ -158,13 +158,13 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
 
         public final Item copy(User user) {
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             return new Item(user);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Item) && Intrinsics3.areEqual(this.user, ((Item) other).user);
+                return (other instanceof Item) && m.areEqual(this.user, ((Item) other).user);
             }
             return true;
         }
@@ -192,7 +192,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Item(user=");
+            StringBuilder sbU = a.U("Item(user=");
             sbU.append(this.user);
             sbU.append(")");
             return sbU.toString();
@@ -205,7 +205,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(Map<Long, ? extends User> map) {
-            Intrinsics3.checkNotNullParameter(map, "users");
+            m.checkNotNullParameter(map, "users");
             this.users = map;
         }
 
@@ -222,13 +222,13 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
 
         public final StoreState copy(Map<Long, ? extends User> users) {
-            Intrinsics3.checkNotNullParameter(users, "users");
+            m.checkNotNullParameter(users, "users");
             return new StoreState(users);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof StoreState) && Intrinsics3.areEqual(this.users, ((StoreState) other).users);
+                return (other instanceof StoreState) && m.areEqual(this.users, ((StoreState) other).users);
             }
             return true;
         }
@@ -246,7 +246,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
 
         public String toString() {
-            return outline.M(outline.U("StoreState(users="), this.users, ")");
+            return a.M(a.U("StoreState(users="), this.users, ")");
         }
     }
 
@@ -269,7 +269,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(List<Item> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "items");
+                m.checkNotNullParameter(list, "items");
                 this.items = list;
             }
 
@@ -286,13 +286,13 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             }
 
             public final Loaded copy(List<Item> items) {
-                Intrinsics3.checkNotNullParameter(items, "items");
+                m.checkNotNullParameter(items, "items");
                 return new Loaded(items);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.items, ((Loaded) other).items);
+                    return (other instanceof Loaded) && m.areEqual(this.items, ((Loaded) other).items);
                 }
                 return true;
             }
@@ -310,7 +310,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             }
 
             public String toString() {
-                return outline.L(outline.U("Loaded(items="), this.items, ")");
+                return a.L(a.U("Loaded(items="), this.items, ")");
             }
         }
 
@@ -333,7 +333,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends User>, Item> {
+    public static final class AnonymousClass1 extends o implements Function1<Map.Entry<? extends Long, ? extends User>, Item> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -347,7 +347,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Item invoke2(Map.Entry<Long, ? extends User> entry) {
-            Intrinsics3.checkNotNullParameter(entry, "userEntry");
+            m.checkNotNullParameter(entry, "userEntry");
             return new Item(entry.getValue());
         }
     }
@@ -370,7 +370,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -389,7 +389,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
     /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -402,7 +402,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, R.string.default_failure_to_perform_action_message);
         }
     }
@@ -435,7 +435,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
     }
 
     private final List<Item> getItems(Map<Long, ? extends User> users) {
-        return _Sequences2.toList(_Sequences2.sortedWith(_Sequences2.map(_Maps.asSequence(users), AnonymousClass1.INSTANCE), AnonymousClass2.INSTANCE));
+        return q.toList(q.sortedWith(q.map(i0.asSequence(users), AnonymousClass1.INSTANCE), AnonymousClass2.INSTANCE));
     }
 
     private final void handleStoreState(StoreState storeState) {
@@ -453,7 +453,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -464,8 +464,8 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetSettingsBlockedUsersViewModel(Observable<StoreState> observable, RestAPI restAPI) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(restAPI, "restAPI");
         this.restAPI = restAPI;
         this.eventSubject = PublishSubject.k0();
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observable, this, null, 2, null), WidgetSettingsBlockedUsersViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);

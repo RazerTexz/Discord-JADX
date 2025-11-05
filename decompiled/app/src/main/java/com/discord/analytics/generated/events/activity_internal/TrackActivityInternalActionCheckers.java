@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalActionCheckers.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalActionCheckers implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalActionCheckers implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence actionName = null;
@@ -43,7 +43,7 @@ public final /* data */ class TrackActivityInternalActionCheckers implements Ana
             return false;
         }
         TrackActivityInternalActionCheckers trackActivityInternalActionCheckers = (TrackActivityInternalActionCheckers) other;
-        return Intrinsics3.areEqual(this.actionName, trackActivityInternalActionCheckers.actionName) && Intrinsics3.areEqual(this.phase, trackActivityInternalActionCheckers.phase) && Intrinsics3.areEqual(this.moveType, trackActivityInternalActionCheckers.moveType) && Intrinsics3.areEqual(this.interestingMoveType, trackActivityInternalActionCheckers.interestingMoveType) && Intrinsics3.areEqual(this.lockedGame, trackActivityInternalActionCheckers.lockedGame) && Intrinsics3.areEqual(this.timedGame, trackActivityInternalActionCheckers.timedGame) && Intrinsics3.areEqual(this.againstBot, trackActivityInternalActionCheckers.againstBot) && Intrinsics3.areEqual(this.background, trackActivityInternalActionCheckers.background) && Intrinsics3.areEqual(this.pieceSet, trackActivityInternalActionCheckers.pieceSet) && Intrinsics3.areEqual(this.numSpectators, trackActivityInternalActionCheckers.numSpectators) && Intrinsics3.areEqual(this.playerColor, trackActivityInternalActionCheckers.playerColor) && Intrinsics3.areEqual(this.lastScreen, trackActivityInternalActionCheckers.lastScreen) && Intrinsics3.areEqual(this.jumpCount, trackActivityInternalActionCheckers.jumpCount) && Intrinsics3.areEqual(this.reconnectTime, trackActivityInternalActionCheckers.reconnectTime);
+        return m.areEqual(this.actionName, trackActivityInternalActionCheckers.actionName) && m.areEqual(this.phase, trackActivityInternalActionCheckers.phase) && m.areEqual(this.moveType, trackActivityInternalActionCheckers.moveType) && m.areEqual(this.interestingMoveType, trackActivityInternalActionCheckers.interestingMoveType) && m.areEqual(this.lockedGame, trackActivityInternalActionCheckers.lockedGame) && m.areEqual(this.timedGame, trackActivityInternalActionCheckers.timedGame) && m.areEqual(this.againstBot, trackActivityInternalActionCheckers.againstBot) && m.areEqual(this.background, trackActivityInternalActionCheckers.background) && m.areEqual(this.pieceSet, trackActivityInternalActionCheckers.pieceSet) && m.areEqual(this.numSpectators, trackActivityInternalActionCheckers.numSpectators) && m.areEqual(this.playerColor, trackActivityInternalActionCheckers.playerColor) && m.areEqual(this.lastScreen, trackActivityInternalActionCheckers.lastScreen) && m.areEqual(this.jumpCount, trackActivityInternalActionCheckers.jumpCount) && m.areEqual(this.reconnectTime, trackActivityInternalActionCheckers.reconnectTime);
     }
 
     public int hashCode() {
@@ -78,7 +78,7 @@ public final /* data */ class TrackActivityInternalActionCheckers implements Ana
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalActionCheckers(actionName=");
+        StringBuilder sbU = a.U("TrackActivityInternalActionCheckers(actionName=");
         sbU.append(this.actionName);
         sbU.append(", phase=");
         sbU.append(this.phase);
@@ -105,6 +105,6 @@ public final /* data */ class TrackActivityInternalActionCheckers implements Ana
         sbU.append(", jumpCount=");
         sbU.append(this.jumpCount);
         sbU.append(", reconnectTime=");
-        return outline.G(sbU, this.reconnectTime, ")");
+        return a.G(sbU, this.reconnectTime, ")");
     }
 }

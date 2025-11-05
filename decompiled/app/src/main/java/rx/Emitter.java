@@ -1,9 +1,9 @@
 package rx;
 
-import j0.Observer2;
+import j0.g;
 
 /* loaded from: classes3.dex */
-public interface Emitter<T> extends Observer2<T> {
+public interface Emitter<T> extends g<T> {
 
     public enum BackpressureMode {
         NONE,

@@ -9,9 +9,9 @@ import androidx.core.app.NotificationCompat;
 import com.discord.R;
 import com.discord.app.AppActivity;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.extensions.PendingIntentExtensions;
+import com.discord.utilities.extensions.PendingIntentExtensionsKt;
 import com.discord.utilities.intent.IntentUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: VoiceEngineNotificationBuilder.kt */
 /* loaded from: classes2.dex */
@@ -33,18 +33,18 @@ public final class VoiceEngineNotificationBuilder {
     }
 
     private final PendingIntent getServiceActionIntent(Context context, Class<?> cls, String str) {
-        return PendingIntent.getService(context, 0, new Intent(context, cls).setAction(str), PendingIntentExtensions.immutablePendingIntentFlag$default(0, 1, null));
+        return PendingIntent.getService(context, 0, new Intent(context, cls).setAction(str), PendingIntentExtensionsKt.immutablePendingIntentFlag$default(0, 1, null));
     }
 
     public final Notification buildNotification(Context context, String actionMain, String actionDisconnect, String actionStopStream, String actionToggleMuted, String actionToggleDeafened, Class<?> notificationServiceClass, String notificationChannel, long notificationChannelId, CharSequence notificationTitle, CharSequence notificationSubtitle, Class<?> notificationClass, boolean isStreaming, boolean isMuted, boolean isDeafened) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(actionMain, "actionMain");
-        Intrinsics3.checkNotNullParameter(actionDisconnect, "actionDisconnect");
-        Intrinsics3.checkNotNullParameter(actionStopStream, "actionStopStream");
-        Intrinsics3.checkNotNullParameter(actionToggleDeafened, "actionToggleDeafened");
-        Intrinsics3.checkNotNullParameter(notificationServiceClass, "notificationServiceClass");
-        Intrinsics3.checkNotNullParameter(notificationChannel, "notificationChannel");
-        Intrinsics3.checkNotNullParameter(notificationClass, "notificationClass");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(actionMain, "actionMain");
+        m.checkNotNullParameter(actionDisconnect, "actionDisconnect");
+        m.checkNotNullParameter(actionStopStream, "actionStopStream");
+        m.checkNotNullParameter(actionToggleDeafened, "actionToggleDeafened");
+        m.checkNotNullParameter(notificationServiceClass, "notificationServiceClass");
+        m.checkNotNullParameter(notificationChannel, "notificationChannel");
+        m.checkNotNullParameter(notificationClass, "notificationClass");
         NotificationCompat.Builder ongoing = new NotificationCompat.Builder(context, notificationChannel).setContentTitle(notificationTitle).setContentText(notificationSubtitle).setColor(ColorCompat.getThemedColor(context, R.attr.color_brand)).setColorized(true).setSmallIcon(R.drawable.ic_notification_24dp).setContentIntent(getCallScreenNavigationIntent(context, notificationChannelId, actionMain, notificationClass)).setOngoing(true);
         String string = context.getResources().getString(R.string.disconnect_self);
         VoiceEngineNotificationBuilder voiceEngineNotificationBuilder = INSTANCE;
@@ -58,16 +58,16 @@ public final class VoiceEngineNotificationBuilder {
             ongoing.addAction(new NotificationCompat.Action(isDeafened ? R.drawable.ic_headset_white_18dp_deafened : R.drawable.ic_headset_white_18dp, isDeafened ? context.getResources().getString(R.string.undeafen) : context.getResources().getString(R.string.deafen), voiceEngineNotificationBuilder.getServiceActionIntent(context, notificationServiceClass, actionToggleDeafened)));
         }
         Notification notificationBuild = ongoing.build();
-        Intrinsics3.checkNotNullExpressionValue(notificationBuild, "NotificationCompat.Build…     }\n          .build()");
+        m.checkNotNullExpressionValue(notificationBuild, "NotificationCompat.Build…     }\n          .build()");
         return notificationBuild;
     }
 
     public final PendingIntent getCallScreenNavigationIntent(Context context, long j, String str, Class<?> cls) {
-        Intrinsics3.checkNotNullParameter(context, "$this$getCallScreenNavigationIntent");
-        Intrinsics3.checkNotNullParameter(str, "action");
-        Intrinsics3.checkNotNullParameter(cls, "fullscreenClass");
-        PendingIntent activity = PendingIntent.getActivity(context, 0, IntentUtils.RouteBuilders.INSTANCE.connectVoice(j).setClass(context, cls).setAction(str).setFlags(268468224), PendingIntentExtensions.immutablePendingIntentFlag$default(0, 1, null));
-        Intrinsics3.checkNotNullExpressionValue(activity, "PendingIntent.getActivit…lePendingIntentFlag()\n  )");
+        m.checkNotNullParameter(context, "$this$getCallScreenNavigationIntent");
+        m.checkNotNullParameter(str, "action");
+        m.checkNotNullParameter(cls, "fullscreenClass");
+        PendingIntent activity = PendingIntent.getActivity(context, 0, IntentUtils.RouteBuilders.INSTANCE.connectVoice(j).setClass(context, cls).setAction(str).setFlags(268468224), PendingIntentExtensionsKt.immutablePendingIntentFlag$default(0, 1, null));
+        m.checkNotNullExpressionValue(activity, "PendingIntent.getActivit…lePendingIntentFlag()\n  )");
         return activity;
     }
 }

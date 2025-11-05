@@ -2,7 +2,7 @@ package com.discord.player;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: MediaType.kt */
@@ -23,10 +23,10 @@ public enum MediaType implements Parcelable {
 
         @Override // android.os.Parcelable.Creator
         public MediaType createFromParcel(Parcel parcel) {
-            Intrinsics3.checkNotNullParameter(parcel, "parcel");
+            m.checkNotNullParameter(parcel, "parcel");
             String string = parcel.readString();
-            Intrinsics3.checkNotNull(string);
-            Intrinsics3.checkNotNullExpressionValue(string, "parcel.readString()!!");
+            m.checkNotNull(string);
+            m.checkNotNullExpressionValue(string, "parcel.readString()!!");
             return MediaType.valueOf(string);
         }
 
@@ -43,7 +43,7 @@ public enum MediaType implements Parcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int flags) {
-        Intrinsics3.checkNotNullParameter(parcel, "parcel");
+        m.checkNotNullParameter(parcel, "parcel");
         parcel.writeString(name());
     }
 }

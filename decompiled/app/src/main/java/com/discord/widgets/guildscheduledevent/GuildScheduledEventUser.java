@@ -1,12 +1,12 @@
 package com.discord.widgets.guildscheduledevent;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.ApiGuildScheduledEventUser;
 import com.discord.models.member.GuildMember;
 import com.discord.models.user.CoreUser;
 import com.discord.models.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: GuildScheduledEventUser.kt */
@@ -25,7 +25,7 @@ public final /* data */ class GuildScheduledEventUser {
         }
 
         public final GuildScheduledEventUser from(ApiGuildScheduledEventUser apiGuildScheduledEventUser, long guildId) {
-            Intrinsics3.checkNotNullParameter(apiGuildScheduledEventUser, "apiGuildScheduledEventUser");
+            m.checkNotNullParameter(apiGuildScheduledEventUser, "apiGuildScheduledEventUser");
             com.discord.api.user.User userC = apiGuildScheduledEventUser.getUser();
             com.discord.api.guildmember.GuildMember guildMemberA = apiGuildScheduledEventUser.a(guildId);
             if (userC == null || guildMemberA == null) {
@@ -40,8 +40,8 @@ public final /* data */ class GuildScheduledEventUser {
     }
 
     public GuildScheduledEventUser(User user, GuildMember guildMember, long j) {
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(guildMember, "guildMember");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(guildMember, "guildMember");
         this.user = user;
         this.guildMember = guildMember;
         this.guildScheduledEventId = j;
@@ -76,8 +76,8 @@ public final /* data */ class GuildScheduledEventUser {
     }
 
     public final GuildScheduledEventUser copy(User user, GuildMember guildMember, long guildScheduledEventId) {
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(guildMember, "guildMember");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(guildMember, "guildMember");
         return new GuildScheduledEventUser(user, guildMember, guildScheduledEventId);
     }
 
@@ -89,7 +89,7 @@ public final /* data */ class GuildScheduledEventUser {
             return false;
         }
         GuildScheduledEventUser guildScheduledEventUser = (GuildScheduledEventUser) other;
-        return Intrinsics3.areEqual(this.user, guildScheduledEventUser.user) && Intrinsics3.areEqual(this.guildMember, guildScheduledEventUser.guildMember) && this.guildScheduledEventId == guildScheduledEventUser.guildScheduledEventId;
+        return m.areEqual(this.user, guildScheduledEventUser.user) && m.areEqual(this.guildMember, guildScheduledEventUser.guildMember) && this.guildScheduledEventId == guildScheduledEventUser.guildScheduledEventId;
     }
 
     public final GuildMember getGuildMember() {
@@ -112,11 +112,11 @@ public final /* data */ class GuildScheduledEventUser {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildScheduledEventUser(user=");
+        StringBuilder sbU = a.U("GuildScheduledEventUser(user=");
         sbU.append(this.user);
         sbU.append(", guildMember=");
         sbU.append(this.guildMember);
         sbU.append(", guildScheduledEventId=");
-        return outline.C(sbU, this.guildScheduledEventId, ")");
+        return a.C(sbU, this.guildScheduledEventId, ")");
     }
 }

@@ -12,16 +12,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import b.a.i.ViewEligibilityChecklistRowBinding;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.i.h2;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.view.text.LinkifiedTextView;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -37,8 +37,8 @@ public final class EligibilityChecklistView extends LinearLayout {
         private final CharSequence title;
 
         public Requirement(CharSequence charSequence, CharSequence charSequence2, boolean z2) {
-            Intrinsics3.checkNotNullParameter(charSequence, "title");
-            Intrinsics3.checkNotNullParameter(charSequence2, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+            m.checkNotNullParameter(charSequence, "title");
+            m.checkNotNullParameter(charSequence2, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
             this.title = charSequence;
             this.description = charSequence2;
             this.isMet = z2;
@@ -73,8 +73,8 @@ public final class EligibilityChecklistView extends LinearLayout {
         }
 
         public final Requirement copy(CharSequence title, CharSequence description, boolean isMet) {
-            Intrinsics3.checkNotNullParameter(title, "title");
-            Intrinsics3.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+            m.checkNotNullParameter(title, "title");
+            m.checkNotNullParameter(description, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
             return new Requirement(title, description, isMet);
         }
 
@@ -86,7 +86,7 @@ public final class EligibilityChecklistView extends LinearLayout {
                 return false;
             }
             Requirement requirement = (Requirement) other;
-            return Intrinsics3.areEqual(this.title, requirement.title) && Intrinsics3.areEqual(this.description, requirement.description) && this.isMet == requirement.isMet;
+            return m.areEqual(this.title, requirement.title) && m.areEqual(this.description, requirement.description) && this.isMet == requirement.isMet;
         }
 
         public final CharSequence getDescription() {
@@ -116,12 +116,12 @@ public final class EligibilityChecklistView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Requirement(title=");
+            StringBuilder sbU = a.U("Requirement(title=");
             sbU.append(this.title);
             sbU.append(", description=");
             sbU.append(this.description);
             sbU.append(", isMet=");
-            return outline.O(sbU, this.isMet, ")");
+            return a.O(sbU, this.isMet, ")");
         }
     }
 
@@ -134,8 +134,8 @@ public final class EligibilityChecklistView extends LinearLayout {
     }
 
     public final void bind(List<Requirement> requirements) {
-        Intrinsics3.checkNotNullParameter(requirements, "requirements");
-        if (Intrinsics3.areEqual(requirements, this.lastRequirements)) {
+        m.checkNotNullParameter(requirements, "requirements");
+        if (m.areEqual(requirements, this.lastRequirements)) {
             return;
         }
         removeAllViews();
@@ -165,12 +165,12 @@ public final class EligibilityChecklistView extends LinearLayout {
                     TextView textView = (TextView) viewInflate.findViewById(R.id.title);
                     if (textView != null) {
                         ConstraintLayout constraintLayout = (ConstraintLayout) viewInflate;
-                        Intrinsics3.checkNotNullExpressionValue(new ViewEligibilityChecklistRowBinding(constraintLayout, linkifiedTextView, imageView, textView), "ViewEligibilityChecklist…g.inflate(layoutInflater)");
-                        Intrinsics3.checkNotNullExpressionValue(imageView, "eligibilityIndicator");
+                        m.checkNotNullExpressionValue(new h2(constraintLayout, linkifiedTextView, imageView, textView), "ViewEligibilityChecklist…g.inflate(layoutInflater)");
+                        m.checkNotNullExpressionValue(imageView, "eligibilityIndicator");
                         imageView.setActivated(requirement.isMet());
-                        Intrinsics3.checkNotNullExpressionValue(textView, "title");
+                        m.checkNotNullExpressionValue(textView, "title");
                         textView.setText(requirement.getTitle());
-                        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+                        m.checkNotNullExpressionValue(linkifiedTextView, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
                         linkifiedTextView.setText(requirement.getDescription());
                         addView(constraintLayout);
                     }
@@ -185,21 +185,21 @@ public final class EligibilityChecklistView extends LinearLayout {
         super.onFinishInflate();
         setOrientation(1);
         if (isInEditMode()) {
-            CharSequence charSequenceJ = FormatUtils.j(this, R.string.guild_role_subscription_settings_eligibility_requirement_members_eligible, new Object[]{50}, null, 4);
+            CharSequence charSequenceJ = b.j(this, R.string.guild_role_subscription_settings_eligibility_requirement_members_eligible, new Object[]{50}, null, 4);
             String string = getResources().getString(R.string.guild_role_subscription_settings_eligibility_requirement_members_description);
-            Intrinsics3.checkNotNullExpressionValue(string, "resources.getString(\n   …cription,\n              )");
+            m.checkNotNullExpressionValue(string, "resources.getString(\n   …cription,\n              )");
             String string2 = getResources().getString(R.string.guild_role_subscription_settings_eligibility_requirement_violations_eligible);
-            Intrinsics3.checkNotNullExpressionValue(string2, "resources.getString(\n   …_eligible\n              )");
+            m.checkNotNullExpressionValue(string2, "resources.getString(\n   …_eligible\n              )");
             String string3 = getResources().getString(R.string.guild_role_subscription_settings_eligibility_requirement_violations_description);
-            Intrinsics3.checkNotNullExpressionValue(string3, "resources.getString(\n   …cription,\n              )");
-            bind(Collections2.listOf((Object[]) new Requirement[]{new Requirement(charSequenceJ, string, true), new Requirement(string2, string3, true)}));
+            m.checkNotNullExpressionValue(string3, "resources.getString(\n   …cription,\n              )");
+            bind(n.listOf((Object[]) new Requirement[]{new Requirement(charSequenceJ, string, true), new Requirement(string2, string3, true)}));
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public EligibilityChecklistView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        this.lastRequirements = Collections2.emptyList();
+        m.checkNotNullParameter(context, "context");
+        this.lastRequirements = n.emptyList();
     }
 }

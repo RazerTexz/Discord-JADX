@@ -6,7 +6,7 @@ import b.a.m.a.d;
 import b.a.m.a.e;
 import b.a.m.a.f;
 import b.a.m.a.g;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.user.User;
@@ -137,7 +137,7 @@ public class ModelAuditLog implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelAuditLog(users=");
+        StringBuilder sbU = a.U("ModelAuditLog(users=");
         sbU.append(getUsers());
         sbU.append(", webhooks=");
         sbU.append(getWebhooks());

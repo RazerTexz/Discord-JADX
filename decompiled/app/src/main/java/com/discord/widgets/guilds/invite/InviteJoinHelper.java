@@ -5,9 +5,8 @@ import androidx.core.view.PointerIconCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.view.LifecycleOwner;
-import androidx.view.LifecycleOwner2;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
+import androidx.view.LifecycleOwnerKt;
+import b.a.d.j;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -23,12 +22,12 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.channel.ChannelSelector;
-import com.discord.utilities.coroutines.AppCoroutineScope;
-import com.discord.utilities.coroutines.RxCoroutineExtensions;
+import com.discord.utilities.coroutines.AppCoroutineScopeKt;
+import com.discord.utilities.coroutines.RxCoroutineExtensionsKt;
 import com.discord.utilities.error.AppCancellationException;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.features.GrowthTeamFeatures;
-import com.discord.utilities.guilds.GuildCaptchaUtils;
+import com.discord.utilities.guilds.GuildCaptchaUtilsKt;
 import com.discord.utilities.guilds.MemberVerificationUtils;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rest.RestAPI;
@@ -36,21 +35,19 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.list.TextInVoiceFeatureFlag;
 import com.discord.widgets.guilds.join.InviteArgs;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet;
+import com.discord.widgets.hubs.HubEmailArgs;
+import com.discord.widgets.hubs.HubEmailEntryPoint;
 import com.discord.widgets.hubs.WidgetHubEmailFlow;
-import com.discord.widgets.hubs.WidgetHubEmailViewModel2;
-import com.discord.widgets.hubs.WidgetHubEmailViewModel3;
 import com.discord.widgets.stage.StageChannelJoinHelper;
 import com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen;
 import com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet;
-import d0.Result3;
-import d0.w.SafeContinuationJvm;
-import d0.w.h.Intrinsics2;
-import d0.w.h.IntrinsicsJvm;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.w.i.a.DebugProbes;
-import d0.w.i.a.boxing;
-import d0.z.d.Intrinsics3;
+import d0.l;
+import d0.w.g;
+import d0.w.h.b;
+import d0.w.h.c;
+import d0.w.i.a.e;
+import d0.w.i.a.k;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
@@ -70,18 +67,18 @@ public final class InviteJoinHelper {
     public static final InviteJoinHelper INSTANCE = new InviteJoinHelper();
 
     /* compiled from: InviteJoinHelper.kt */
-    @DebugMetadata(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$1", f = "InviteJoinHelper.kt", l = {}, m = "invokeSuspend")
+    @e(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$1", f = "InviteJoinHelper.kt", l = {}, m = "invokeSuspend")
     /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<Error, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass1 extends k implements Function2<Error, Continuation<? super Unit>, Object> {
         public int label;
 
         public AnonymousClass1(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass1(continuation);
         }
 
@@ -90,30 +87,30 @@ public final class InviteJoinHelper {
             return ((AnonymousClass1) create(error, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
-            Intrinsics2.getCOROUTINE_SUSPENDED();
+            c.getCOROUTINE_SUSPENDED();
             if (this.label != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            Result3.throwOnFailure(obj);
+            l.throwOnFailure(obj);
             return Unit.a;
         }
     }
 
     /* compiled from: InviteJoinHelper.kt */
-    @DebugMetadata(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$2", f = "InviteJoinHelper.kt", l = {}, m = "invokeSuspend")
+    @e(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$2", f = "InviteJoinHelper.kt", l = {}, m = "invokeSuspend")
     /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass2 extends k implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         public int label;
 
         public AnonymousClass2(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass2(continuation);
         }
 
@@ -122,30 +119,30 @@ public final class InviteJoinHelper {
             return ((AnonymousClass2) create(modelInvite, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
-            Intrinsics2.getCOROUTINE_SUSPENDED();
+            c.getCOROUTINE_SUSPENDED();
             if (this.label != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            Result3.throwOnFailure(obj);
+            l.throwOnFailure(obj);
             return Unit.a;
         }
     }
 
     /* compiled from: InviteJoinHelper.kt */
-    @DebugMetadata(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$3", f = "InviteJoinHelper.kt", l = {}, m = "invokeSuspend")
+    @e(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$3", f = "InviteJoinHelper.kt", l = {}, m = "invokeSuspend")
     /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass3 extends k implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         public int label;
 
         public AnonymousClass3(Continuation continuation) {
             super(2, continuation);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass3(continuation);
         }
 
@@ -154,21 +151,21 @@ public final class InviteJoinHelper {
             return ((AnonymousClass3) create(modelInvite, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
-            Intrinsics2.getCOROUTINE_SUSPENDED();
+            c.getCOROUTINE_SUSPENDED();
             if (this.label != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            Result3.throwOnFailure(obj);
+            l.throwOnFailure(obj);
             return Unit.a;
         }
     }
 
     /* compiled from: InviteJoinHelper.kt */
-    @DebugMetadata(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$4", f = "InviteJoinHelper.kt", l = {79, 104, 117, 118, Opcodes.IINC, Opcodes.LOOKUPSWITCH, 200}, m = "invokeSuspend")
+    @e(c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$4", f = "InviteJoinHelper.kt", l = {79, 104, 117, 118, Opcodes.IINC, Opcodes.LOOKUPSWITCH, 200}, m = "invokeSuspend")
     /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass4 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ CaptchaHelper.CaptchaPayload $captchaPayload;
         public final /* synthetic */ AppFragment $fragment;
         public final /* synthetic */ ModelInvite $invite;
@@ -196,9 +193,9 @@ public final class InviteJoinHelper {
             this.$onInviteFlowFinished = function23;
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass4(this.$fragment, this.$invite, this.$location, this.$onInvitePostSuccess, this.$captchaPayload, this.$javaClass, this.$onInvitePostError, this.$onInviteFlowFinished, continuation);
         }
 
@@ -230,7 +227,7 @@ public final class InviteJoinHelper {
         /* JADX WARN: Removed duplicated region for block: B:93:0x01f2 A[Catch: AppCancellationException -> 0x0053, TRY_ENTER, TryCatch #0 {AppCancellationException -> 0x0053, blocks: (B:10:0x003d, B:13:0x004c, B:104:0x023b, B:93:0x01f2, B:95:0x0202, B:97:0x0208, B:99:0x020c, B:101:0x0212), top: B:194:0x000b }] */
         /* JADX WARN: Type inference failed for: r0v16, types: [T, android.content.Context] */
         /* JADX WARN: Type inference failed for: r7v15, types: [T, androidx.fragment.app.FragmentManager, java.lang.Object] */
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -258,19 +255,19 @@ public final class InviteJoinHelper {
             Long lBoxLong3;
             ModelInvite modelInvite4;
             Function2 function22;
-            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
             try {
             } catch (AppCancellationException e) {
                 e = e;
             }
             switch (this.label) {
                 case 0:
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     Ref$ObjectRef ref$ObjectRef4 = new Ref$ObjectRef();
                     ref$ObjectRef4.element = this.$fragment.requireContext();
                     Ref$ObjectRef ref$ObjectRef5 = new Ref$ObjectRef();
                     ?? parentFragmentManager = this.$fragment.getParentFragmentManager();
-                    Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
+                    m.checkNotNullExpressionValue(parentFragmentManager, "fragment.parentFragmentManager");
                     ref$ObjectRef5.element = parentFragmentManager;
                     Guild guild3 = this.$invite.guild;
                     boolean z3 = (guild3 == null || (listM3 = guild3.m()) == null || !listM3.contains(GuildFeature.MEMBER_VERIFICATION_GATE_ENABLED)) ? false : true;
@@ -279,16 +276,16 @@ public final class InviteJoinHelper {
                     Guild guild5 = this.$invite.guild;
                     boolean z5 = (guild5 == null || (listM = guild5.m()) == null || !listM.contains(GuildFeature.HUB)) ? false : true;
                     if (z5 && !GrowthTeamFeatures.INSTANCE.isHubEnabled()) {
-                        AppToast.g((Context) ref$ObjectRef4.element, R.string.discord_u_coming_soon_to_mobile, 0, null, 12);
+                        b.a.d.m.g((Context) ref$ObjectRef4.element, R.string.discord_u_coming_soon_to_mobile, 0, null, 12);
                     } else if (z5 && GrowthTeamFeatures.INSTANCE.isHubEmailConnectionEnabled()) {
                         Context context = (Context) ref$ObjectRef4.element;
-                        WidgetHubEmailViewModel3 widgetHubEmailViewModel3 = WidgetHubEmailViewModel3.Invite;
+                        HubEmailEntryPoint hubEmailEntryPoint = HubEmailEntryPoint.Invite;
                         Guild guild6 = this.$invite.guild;
                         String name = guild6 != null ? guild6.getName() : null;
                         if (name == null) {
                             name = "";
                         }
-                        AppScreen2.d(context, WidgetHubEmailFlow.class, new WidgetHubEmailViewModel2(name, this.$invite.getApproximateMemberCount(), widgetHubEmailViewModel3));
+                        j.d(context, WidgetHubEmailFlow.class, new HubEmailArgs(name, this.$invite.getApproximateMemberCount(), hubEmailEntryPoint));
                         FragmentActivity activity = this.$fragment.getActivity();
                         if (activity != null) {
                             activity.onBackPressed();
@@ -299,14 +296,14 @@ public final class InviteJoinHelper {
                         this.L$2 = null;
                         this.L$3 = this;
                         this.label = 1;
-                        SafeContinuationJvm safeContinuationJvm = new SafeContinuationJvm(IntrinsicsJvm.intercepted(this));
+                        g gVar = new g(b.intercepted(this));
                         MemberVerificationUtils memberVerificationUtils = MemberVerificationUtils.INSTANCE;
                         Context context2 = (Context) ref$ObjectRef4.element;
                         Guild guild7 = this.$invite.guild;
-                        memberVerificationUtils.maybeShowVerificationGate(context2, (FragmentManager) ref$ObjectRef5.element, (guild7 == null || (lBoxLong2 = boxing.boxLong(guild7.getId())) == null) ? -1L : lBoxLong2.longValue(), this.$location, this.$invite, new InviteJoinHelper2(safeContinuationJvm), new InviteJoinHelper3(safeContinuationJvm));
-                        orThrow2 = safeContinuationJvm.getOrThrow();
-                        if (orThrow2 == Intrinsics2.getCOROUTINE_SUSPENDED()) {
-                            DebugProbes.probeCoroutineSuspended(this);
+                        memberVerificationUtils.maybeShowVerificationGate(context2, (FragmentManager) ref$ObjectRef5.element, (guild7 == null || (lBoxLong2 = d0.w.i.a.b.boxLong(guild7.getId())) == null) ? -1L : lBoxLong2.longValue(), this.$location, this.$invite, new InviteJoinHelper$joinViaInvite$4$hasCompletedMembershipGate$1$1(gVar), new InviteJoinHelper$joinViaInvite$4$hasCompletedMembershipGate$1$2(gVar));
+                        orThrow2 = gVar.getOrThrow();
+                        if (orThrow2 == c.getCOROUTINE_SUSPENDED()) {
+                            d0.w.i.a.g.probeCoroutineSuspended(this);
                         }
                         if (orThrow2 == coroutine_suspended) {
                             return coroutine_suspended;
@@ -318,14 +315,14 @@ public final class InviteJoinHelper {
                         }
                         guild2 = this.$invite.guild;
                         if (guild2 == null) {
-                            if (((guild2 == null || (lBoxLong3 = boxing.boxLong(guild2.getId())) == null) ? null : StoreStream.INSTANCE.getGuilds().getGuilds().get(boxing.boxLong(lBoxLong3.longValue()))) == null) {
+                            if (((guild2 == null || (lBoxLong3 = d0.w.i.a.b.boxLong(guild2.getId())) == null) ? null : StoreStream.INSTANCE.getGuilds().getGuilds().get(d0.w.i.a.b.boxLong(lBoxLong3.longValue()))) == null) {
                             }
                         }
                     } else {
                         ref$ObjectRef2 = ref$ObjectRef4;
                         modelInvite3 = null;
                         guild2 = this.$invite.guild;
-                        if (((guild2 == null || (lBoxLong3 = boxing.boxLong(guild2.getId())) == null) ? null : StoreStream.INSTANCE.getGuilds().getGuilds().get(boxing.boxLong(lBoxLong3.longValue()))) == null) {
+                        if (((guild2 == null || (lBoxLong3 = d0.w.i.a.b.boxLong(guild2.getId())) == null) ? null : StoreStream.INSTANCE.getGuilds().getGuilds().get(d0.w.i.a.b.boxLong(lBoxLong3.longValue()))) == null) {
                             RestAPI api = RestAPI.INSTANCE.getApi();
                             ModelInvite modelInvite5 = this.$invite;
                             String str = this.$location;
@@ -334,13 +331,13 @@ public final class InviteJoinHelper {
                             CaptchaHelper.CaptchaPayload captchaPayload2 = this.$captchaPayload;
                             Observable observableUi = ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(api.postInviteCode(modelInvite5, str, new RestAPIParams.InviteCode(captchaKey, captchaPayload2 != null ? captchaPayload2.getCaptchaRqtoken() : null)), false, 1, null));
                             Context context3 = (Context) ref$ObjectRef2.element;
-                            Boolean boolBoxBoolean2 = boxing.boxBoolean(true);
+                            Boolean boolBoxBoolean2 = d0.w.i.a.b.boxBoolean(true);
                             this.L$0 = ref$ObjectRef2;
                             this.L$1 = modelInvite3;
                             this.L$2 = null;
                             this.L$3 = null;
                             this.label = 3;
-                            objAppAwaitSingle = RxCoroutineExtensions.appAwaitSingle(observableUi, context3, boolBoxBoolean2, this);
+                            objAppAwaitSingle = RxCoroutineExtensionsKt.appAwaitSingle(observableUi, context3, boolBoxBoolean2, this);
                             if (objAppAwaitSingle == coroutine_suspended) {
                                 return coroutine_suspended;
                             }
@@ -355,7 +352,7 @@ public final class InviteJoinHelper {
                                 modelInvite2 = modelInvite4;
                                 Throwable cause = e.getCause();
                                 if (cause instanceof HttpException) {
-                                    GuildCaptchaUtils.handleHttpException(e.getError(), this.$fragment, new InviteArgs(this.$invite, this.$javaClass, this.$location, this.$onInvitePostError, this.$onInvitePostSuccess, this.$onInviteFlowFinished));
+                                    GuildCaptchaUtilsKt.handleHttpException(e.getError(), this.$fragment, new InviteArgs(this.$invite, this.$javaClass, this.$location, this.$onInvitePostError, this.$onInvitePostSuccess, this.$onInviteFlowFinished));
                                     modelInvite = modelInvite2;
                                     ref$ObjectRef = ref$ObjectRef2;
                                     channel = this.$invite.getChannel();
@@ -400,13 +397,13 @@ public final class InviteJoinHelper {
                             ref$ObjectRef = ref$ObjectRef3;
                             channel = this.$invite.getChannel();
                             if (channel != null) {
-                                Intrinsics3.checkNotNullExpressionValue(channel, "channel");
+                                m.checkNotNullExpressionValue(channel, "channel");
                                 if (ChannelUtils.w(channel)) {
-                                    Long l = StoreStream.INSTANCE.getPermissions().getPermissionsByChannel().get(boxing.boxLong(channel.getId()));
-                                    if ((l == null || (boolBoxBoolean = boxing.boxBoolean(PermissionUtils.can(Permission.CONNECT, boxing.boxLong(l.longValue())))) == null) ? false : boolBoxBoolean.booleanValue()) {
+                                    Long l = StoreStream.INSTANCE.getPermissions().getPermissionsByChannel().get(d0.w.i.a.b.boxLong(channel.getId()));
+                                    if ((l == null || (boolBoxBoolean = d0.w.i.a.b.boxBoolean(PermissionUtils.can(Permission.CONNECT, d0.w.i.a.b.boxLong(l.longValue())))) == null) ? false : boolBoxBoolean.booleanValue()) {
                                         z2 = true;
                                     }
-                                    Boolean boolBoxBoolean3 = boxing.boxBoolean(z2);
+                                    Boolean boolBoxBoolean3 = d0.w.i.a.b.boxBoolean(z2);
                                     if (boolBoxBoolean3 == null) {
                                     }
                                     guild = this.$invite.guild;
@@ -414,7 +411,7 @@ public final class InviteJoinHelper {
                                     }
                                 } else {
                                     z2 = false;
-                                    Boolean boolBoxBoolean32 = boxing.boxBoolean(z2);
+                                    Boolean boolBoxBoolean32 = d0.w.i.a.b.boxBoolean(z2);
                                     boolean zBooleanValue = boolBoxBoolean32 == null ? boolBoxBoolean32.booleanValue() : false;
                                     guild = this.$invite.guild;
                                     if (guild == null) {
@@ -432,7 +429,7 @@ public final class InviteJoinHelper {
                                             return coroutine_suspended;
                                         }
                                     } else {
-                                        if (((guild == null || (lBoxLong = boxing.boxLong(guild.getId())) == null) ? 0L : lBoxLong.longValue()) > 0) {
+                                        if (((guild == null || (lBoxLong = d0.w.i.a.b.boxLong(guild.getId())) == null) ? 0L : lBoxLong.longValue()) > 0) {
                                             if (this.$invite.getGuildScheduledEvent() == null) {
                                                 Channel channel2 = this.$invite.getChannel();
                                                 if (channel2 == null || !ChannelUtils.J(channel2)) {
@@ -448,11 +445,11 @@ public final class InviteJoinHelper {
                                                     this.L$2 = this;
                                                     this.L$3 = null;
                                                     this.label = 6;
-                                                    SafeContinuationJvm safeContinuationJvm2 = new SafeContinuationJvm(IntrinsicsJvm.intercepted(this));
-                                                    this.$fragment.requestMicrophone(new InviteJoinHelper4(safeContinuationJvm2), new InviteJoinHelper5(safeContinuationJvm2));
-                                                    orThrow = safeContinuationJvm2.getOrThrow();
-                                                    if (orThrow == Intrinsics2.getCOROUTINE_SUSPENDED()) {
-                                                        DebugProbes.probeCoroutineSuspended(this);
+                                                    g gVar2 = new g(b.intercepted(this));
+                                                    this.$fragment.requestMicrophone(new InviteJoinHelper$joinViaInvite$4$hasMicrophonePermissions$1$1(gVar2), new InviteJoinHelper$joinViaInvite$4$hasMicrophonePermissions$1$2(gVar2));
+                                                    orThrow = gVar2.getOrThrow();
+                                                    if (orThrow == c.getCOROUTINE_SUSPENDED()) {
+                                                        d0.w.i.a.g.probeCoroutineSuspended(this);
                                                     }
                                                     if (orThrow == coroutine_suspended) {
                                                         return coroutine_suspended;
@@ -491,7 +488,7 @@ public final class InviteJoinHelper {
                 case 1:
                     ModelInvite modelInvite7 = (ModelInvite) this.L$2;
                     Ref$ObjectRef ref$ObjectRef6 = (Ref$ObjectRef) this.L$0;
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     ref$ObjectRef2 = ref$ObjectRef6;
                     modelInvite3 = modelInvite7;
                     orThrow2 = obj;
@@ -502,7 +499,7 @@ public final class InviteJoinHelper {
                 case 2:
                     modelInvite = (ModelInvite) this.L$1;
                     ref$ObjectRef3 = (Ref$ObjectRef) this.L$0;
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     ref$ObjectRef = ref$ObjectRef3;
                     channel = this.$invite.getChannel();
                     if (channel != null) {
@@ -510,7 +507,7 @@ public final class InviteJoinHelper {
                     return Unit.a;
                 case 3:
                     ref$ObjectRef2 = (Ref$ObjectRef) this.L$0;
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     objAppAwaitSingle = obj;
                     modelInvite4 = (ModelInvite) objAppAwaitSingle;
                     function22 = this.$onInvitePostSuccess;
@@ -523,7 +520,7 @@ public final class InviteJoinHelper {
                 case 4:
                     modelInvite2 = (ModelInvite) this.L$1;
                     ref$ObjectRef2 = (Ref$ObjectRef) this.L$0;
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     modelInvite = modelInvite2;
                     ref$ObjectRef = ref$ObjectRef2;
                     channel = this.$invite.getChannel();
@@ -531,12 +528,12 @@ public final class InviteJoinHelper {
                     }
                     return Unit.a;
                 case 5:
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     return Unit.a;
                 case 6:
                     modelInvite = (ModelInvite) this.L$1;
                     ref$ObjectRef = (Ref$ObjectRef) this.L$0;
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     orThrow = obj;
                     if (((Boolean) orThrow).booleanValue()) {
                     }
@@ -552,7 +549,7 @@ public final class InviteJoinHelper {
                     }
                     return Unit.a;
                 case 7:
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     return Unit.a;
                 default:
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -579,7 +576,7 @@ public final class InviteJoinHelper {
         Channel channel = modelInvite.getChannel();
         if (channel != null) {
             ChannelSelector.INSTANCE.getInstance().findAndSet(context, channel.getId());
-            Intrinsics3.checkNotNullExpressionValue(channel, "channel");
+            m.checkNotNullExpressionValue(channel, "channel");
             if (ChannelUtils.J(channel)) {
                 if (TextInVoiceFeatureFlag.INSTANCE.getINSTANCE().isEnabled(Long.valueOf(channel.getGuildId()))) {
                     WidgetCallPreviewFullscreen.Companion.launch$default(WidgetCallPreviewFullscreen.INSTANCE, context, channel.getId(), null, 4, null);
@@ -587,7 +584,7 @@ public final class InviteJoinHelper {
                 }
                 WidgetVoiceBottomSheet.Companion companion = WidgetVoiceBottomSheet.INSTANCE;
                 FragmentManager parentFragmentManager = appFragment.getParentFragmentManager();
-                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "appFragment.parentFragmentManager");
+                m.checkNotNullExpressionValue(parentFragmentManager, "appFragment.parentFragmentManager");
                 companion.show(parentFragmentManager, channel.getId(), true, WidgetVoiceBottomSheet.FeatureContext.HOME);
                 return;
             }
@@ -595,7 +592,7 @@ public final class InviteJoinHelper {
                 StageChannelJoinHelper stageChannelJoinHelper = StageChannelJoinHelper.INSTANCE;
                 Context contextRequireContext = appFragment.requireContext();
                 FragmentManager parentFragmentManager2 = appFragment.getParentFragmentManager();
-                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "appFragment.parentFragmentManager");
+                m.checkNotNullExpressionValue(parentFragmentManager2, "appFragment.parentFragmentManager");
                 StageChannelJoinHelper.connectToStage$default(stageChannelJoinHelper, contextRequireContext, parentFragmentManager2, channel.getId(), false, false, null, null, null, null, null, PointerIconCompat.TYPE_TOP_RIGHT_DIAGONAL_DOUBLE_ARROW, null);
             }
         }
@@ -613,15 +610,15 @@ public final class InviteJoinHelper {
     }
 
     public final Job joinViaInvite(ModelInvite invite, Class<?> javaClass, AppFragment fragment, String location, Function2<? super Error, ? super Continuation<? super Unit>, ? extends Object> onInvitePostError, Function2<? super ModelInvite, ? super Continuation<? super Unit>, ? extends Object> onInvitePostSuccess, Function2<? super ModelInvite, ? super Continuation<? super Unit>, ? extends Object> onInviteFlowFinished, CaptchaHelper.CaptchaPayload captchaPayload) {
-        Intrinsics3.checkNotNullParameter(invite, "invite");
-        Intrinsics3.checkNotNullParameter(javaClass, "javaClass");
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
-        Intrinsics3.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
-        Intrinsics3.checkNotNullParameter(onInvitePostError, "onInvitePostError");
-        Intrinsics3.checkNotNullParameter(onInvitePostSuccess, "onInvitePostSuccess");
-        Intrinsics3.checkNotNullParameter(onInviteFlowFinished, "onInviteFlowFinished");
+        m.checkNotNullParameter(invite, "invite");
+        m.checkNotNullParameter(javaClass, "javaClass");
+        m.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+        m.checkNotNullParameter(onInvitePostError, "onInvitePostError");
+        m.checkNotNullParameter(onInvitePostSuccess, "onInvitePostSuccess");
+        m.checkNotNullParameter(onInviteFlowFinished, "onInviteFlowFinished");
         LifecycleOwner viewLifecycleOwner = fragment.getViewLifecycleOwner();
-        Intrinsics3.checkNotNullExpressionValue(viewLifecycleOwner, "fragment.viewLifecycleOwner");
-        return AppCoroutineScope.appLaunch$default(LifecycleOwner2.getLifecycleScope(viewLifecycleOwner), javaClass, (CoroutineContext) null, (CoroutineStart) null, new AnonymousClass4(fragment, invite, location, onInvitePostSuccess, captchaPayload, javaClass, onInvitePostError, onInviteFlowFinished, null), 6, (Object) null);
+        m.checkNotNullExpressionValue(viewLifecycleOwner, "fragment.viewLifecycleOwner");
+        return AppCoroutineScopeKt.appLaunch$default(LifecycleOwnerKt.getLifecycleScope(viewLifecycleOwner), javaClass, (CoroutineContext) null, (CoroutineStart) null, new AnonymousClass4(fragment, invite, location, onInvitePostSuccess, captchaPayload, javaClass, onInvitePostError, onInviteFlowFinished, null), 6, (Object) null);
     }
 }

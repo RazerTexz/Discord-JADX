@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: ThreadStarterDividerEntry.kt */
 /* loaded from: classes2.dex */
@@ -78,9 +78,9 @@ public final /* data */ class ThreadStarterDividerEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ThreadStarterDividerEntry(channelId=");
+        StringBuilder sbU = a.U("ThreadStarterDividerEntry(channelId=");
         sbU.append(this.channelId);
         sbU.append(", messageId=");
-        return outline.C(sbU, this.messageId, ")");
+        return a.C(sbU, this.messageId, ")");
     }
 }

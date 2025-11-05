@@ -1,7 +1,6 @@
 package d0.e0.p.d.m0.n.n1;
 
-import d0.z.d.Intrinsics3;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
 import java.util.Collection;
 import java.util.List;
 
@@ -12,29 +11,29 @@ public interface n extends q {
     /* compiled from: TypeSystemContext.kt */
     public static final class a {
         public static List<i> fastCorrespondingSupertypes(n nVar, i iVar, l lVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(iVar, "receiver");
-            Intrinsics3.checkNotNullParameter(lVar, "constructor");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(iVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(lVar, "constructor");
             return null;
         }
 
         public static k get(n nVar, j jVar, int i) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(jVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(jVar, "receiver");
             if (jVar instanceof i) {
                 return nVar.getArgument((h) jVar, i);
             }
             if (jVar instanceof d0.e0.p.d.m0.n.n1.a) {
                 k kVar = ((d0.e0.p.d.m0.n.n1.a) jVar).get(i);
-                Intrinsics3.checkNotNullExpressionValue(kVar, "get(index)");
+                d0.z.d.m.checkNotNullExpressionValue(kVar, "get(index)");
                 return kVar;
             }
-            throw new IllegalStateException(("unknown type argument list type: " + jVar + ", " + Reflection2.getOrCreateKotlinClass(jVar.getClass())).toString());
+            throw new IllegalStateException(("unknown type argument list type: " + jVar + ", " + a0.getOrCreateKotlinClass(jVar.getClass())).toString());
         }
 
         public static k getArgumentOrNull(n nVar, i iVar, int i) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(iVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(iVar, "receiver");
             boolean z2 = false;
             if (i >= 0 && i < nVar.argumentsCount(iVar)) {
                 z2 = true;
@@ -46,76 +45,76 @@ public interface n extends q {
         }
 
         public static boolean hasFlexibleNullability(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             return nVar.isMarkedNullable(nVar.lowerBoundIfFlexible(hVar)) != nVar.isMarkedNullable(nVar.upperBoundIfFlexible(hVar));
         }
 
         public static boolean isClassType(n nVar, i iVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(iVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(iVar, "receiver");
             return nVar.isClassTypeConstructor(nVar.typeConstructor(iVar));
         }
 
         public static boolean isDefinitelyNotNullType(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             i iVarAsSimpleType = nVar.asSimpleType(hVar);
             return (iVarAsSimpleType == null ? null : nVar.asDefinitelyNotNullType(iVarAsSimpleType)) != null;
         }
 
         public static boolean isDynamic(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             f fVarAsFlexibleType = nVar.asFlexibleType(hVar);
             return (fVarAsFlexibleType == null ? null : nVar.asDynamicType(fVarAsFlexibleType)) != null;
         }
 
         public static boolean isIntegerLiteralType(n nVar, i iVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(iVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(iVar, "receiver");
             return nVar.isIntegerLiteralTypeConstructor(nVar.typeConstructor(iVar));
         }
 
         public static boolean isMarkedNullable(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             return (hVar instanceof i) && nVar.isMarkedNullable((i) hVar);
         }
 
         public static boolean isNothing(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             return nVar.isNothingConstructor(nVar.typeConstructor(hVar)) && !nVar.isNullableType(hVar);
         }
 
         public static i lowerBoundIfFlexible(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             f fVarAsFlexibleType = nVar.asFlexibleType(hVar);
             if (fVarAsFlexibleType != null) {
                 return nVar.lowerBound(fVarAsFlexibleType);
             }
             i iVarAsSimpleType = nVar.asSimpleType(hVar);
-            Intrinsics3.checkNotNull(iVarAsSimpleType);
+            d0.z.d.m.checkNotNull(iVarAsSimpleType);
             return iVarAsSimpleType;
         }
 
         public static int size(n nVar, j jVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(jVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(jVar, "receiver");
             if (jVar instanceof i) {
                 return nVar.argumentsCount((h) jVar);
             }
             if (jVar instanceof d0.e0.p.d.m0.n.n1.a) {
                 return ((d0.e0.p.d.m0.n.n1.a) jVar).size();
             }
-            throw new IllegalStateException(("unknown type argument list type: " + jVar + ", " + Reflection2.getOrCreateKotlinClass(jVar.getClass())).toString());
+            throw new IllegalStateException(("unknown type argument list type: " + jVar + ", " + a0.getOrCreateKotlinClass(jVar.getClass())).toString());
         }
 
         public static l typeConstructor(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             i iVarAsSimpleType = nVar.asSimpleType(hVar);
             if (iVarAsSimpleType == null) {
                 iVarAsSimpleType = nVar.lowerBoundIfFlexible(hVar);
@@ -124,14 +123,14 @@ public interface n extends q {
         }
 
         public static i upperBoundIfFlexible(n nVar, h hVar) {
-            Intrinsics3.checkNotNullParameter(nVar, "this");
-            Intrinsics3.checkNotNullParameter(hVar, "receiver");
+            d0.z.d.m.checkNotNullParameter(nVar, "this");
+            d0.z.d.m.checkNotNullParameter(hVar, "receiver");
             f fVarAsFlexibleType = nVar.asFlexibleType(hVar);
             if (fVarAsFlexibleType != null) {
                 return nVar.upperBound(fVarAsFlexibleType);
             }
             i iVarAsSimpleType = nVar.asSimpleType(hVar);
-            Intrinsics3.checkNotNull(iVarAsSimpleType);
+            d0.z.d.m.checkNotNull(iVarAsSimpleType);
             return iVarAsSimpleType;
         }
     }

@@ -1,8 +1,8 @@
 package com.discord.api.permission;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: PermissionOverwrite.kt */
 /* loaded from: classes.dex */
@@ -19,7 +19,7 @@ public final /* data */ class PermissionOverwrite {
     }
 
     public PermissionOverwrite(long j, Type type, long j2, long j3) {
-        Intrinsics3.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(type, "type");
         this.id = j;
         this.type = type;
         this.allow = j2;
@@ -31,7 +31,7 @@ public final /* data */ class PermissionOverwrite {
         Type type2 = (i & 2) != 0 ? permissionOverwrite.type : null;
         long j5 = (i & 4) != 0 ? permissionOverwrite.allow : j2;
         long j6 = (i & 8) != 0 ? permissionOverwrite.deny : j3;
-        Intrinsics3.checkNotNullParameter(type2, "type");
+        m.checkNotNullParameter(type2, "type");
         return new PermissionOverwrite(j4, type2, j5, j6);
     }
 
@@ -62,7 +62,7 @@ public final /* data */ class PermissionOverwrite {
             return false;
         }
         PermissionOverwrite permissionOverwrite = (PermissionOverwrite) other;
-        return this.id == permissionOverwrite.id && Intrinsics3.areEqual(this.type, permissionOverwrite.type) && this.allow == permissionOverwrite.allow && this.deny == permissionOverwrite.deny;
+        return this.id == permissionOverwrite.id && m.areEqual(this.type, permissionOverwrite.type) && this.allow == permissionOverwrite.allow && this.deny == permissionOverwrite.deny;
     }
 
     /* renamed from: f, reason: from getter */
@@ -82,13 +82,13 @@ public final /* data */ class PermissionOverwrite {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("PermissionOverwrite(id=");
+        StringBuilder sbU = a.U("PermissionOverwrite(id=");
         sbU.append(this.id);
         sbU.append(", type=");
         sbU.append(this.type);
         sbU.append(", allow=");
         sbU.append(this.allow);
         sbU.append(", deny=");
-        return outline.C(sbU, this.deny, ")");
+        return a.C(sbU, this.deny, ")");
     }
 }

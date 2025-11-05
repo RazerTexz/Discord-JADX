@@ -7,7 +7,6 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import b.i.a.f.e.h.a;
-import b.i.c.FirebaseApp2;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 import com.google.firebase.dynamiclinks.internal.DynamicLinkData;
@@ -22,9 +21,9 @@ public final class e extends b.i.c.o.a {
     @Nullable
     public final b.i.c.j.a.a f1758b;
 
-    public e(FirebaseApp2 firebaseApp2, @Nullable b.i.c.j.a.a aVar) {
-        firebaseApp2.a();
-        this.a = new c(firebaseApp2.d);
+    public e(b.i.c.c cVar, @Nullable b.i.c.j.a.a aVar) {
+        cVar.a();
+        this.a = new c(cVar.d);
         this.f1758b = aVar;
         if (aVar == null) {
             Log.w("FDL", "FDL logging failed. Add a dependency for Firebase Analytics to your app to enable logging of Dynamic Link events.");

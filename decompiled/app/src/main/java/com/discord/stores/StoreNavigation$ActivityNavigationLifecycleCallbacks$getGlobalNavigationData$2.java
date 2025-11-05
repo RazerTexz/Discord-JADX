@@ -8,13 +8,13 @@ import com.discord.stores.StoreNavigation;
 import com.discord.stores.StoreNotices;
 import com.discord.stores.StoreNux;
 import com.discord.widgets.tabs.NavigationTab;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function14;
 
 /* compiled from: StoreNavigation.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2 extends FunctionReferenceImpl implements Function14<StoreNux.NuxState, Boolean, AuthState, Boolean, Boolean, RequiredAction, Boolean, StoreInviteSettings.InviteCode, String, StoreNotices.Notice, StoreNavigation.AgeGate, Uri, NavigationTab, Boolean, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation> {
+public final /* synthetic */ class StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2 extends k implements Function14<StoreNux.NuxState, Boolean, AuthState, Boolean, Boolean, RequiredAction, Boolean, StoreInviteSettings.InviteCode, String, StoreNotices.Notice, StoreNavigation.AgeGate, Uri, NavigationTab, Boolean, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation> {
     public static final StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2 INSTANCE = new StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2();
 
     public StoreNavigation$ActivityNavigationLifecycleCallbacks$getGlobalNavigationData$2() {
@@ -27,10 +27,10 @@ public final /* synthetic */ class StoreNavigation$ActivityNavigationLifecycleCa
     }
 
     public final StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation invoke(StoreNux.NuxState nuxState, boolean z2, AuthState authState, boolean z3, boolean z4, RequiredAction requiredAction, boolean z5, StoreInviteSettings.InviteCode inviteCode, String str, StoreNotices.Notice notice, StoreNavigation.AgeGate ageGate, Uri uri, NavigationTab navigationTab, boolean z6) {
-        Intrinsics3.checkNotNullParameter(nuxState, "p1");
-        Intrinsics3.checkNotNullParameter(requiredAction, "p6");
-        Intrinsics3.checkNotNullParameter(uri, "p12");
-        Intrinsics3.checkNotNullParameter(navigationTab, "p13");
+        m.checkNotNullParameter(nuxState, "p1");
+        m.checkNotNullParameter(requiredAction, "p6");
+        m.checkNotNullParameter(uri, "p12");
+        m.checkNotNullParameter(navigationTab, "p13");
         return new StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation(nuxState, z2, authState, z3, z4, requiredAction, z5, inviteCode, str, notice, ageGate, uri, navigationTab, z6);
     }
 }

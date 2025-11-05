@@ -15,13 +15,13 @@ import com.discord.app.AppViewFlipper;
 import com.discord.databinding.WidgetGuildInviteShareSheetBinding;
 import com.discord.views.SearchInputView;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGuildInviteShareSheet.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetGuildInviteShareSheet$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildInviteShareSheetBinding> {
+public final /* synthetic */ class WidgetGuildInviteShareSheet$binding$2 extends k implements Function1<View, WidgetGuildInviteShareSheetBinding> {
     public static final WidgetGuildInviteShareSheet$binding$2 INSTANCE = new WidgetGuildInviteShareSheet$binding$2();
 
     public WidgetGuildInviteShareSheet$binding$2() {
@@ -35,7 +35,7 @@ public final /* synthetic */ class WidgetGuildInviteShareSheet$binding$2 extends
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildInviteShareSheetBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.copy_link_group;
         ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(R.id.copy_link_group);
         if (constraintLayout != null) {

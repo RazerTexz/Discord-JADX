@@ -1,7 +1,7 @@
 package com.discord.embed;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: RenderableEmbedMedia.kt */
 /* loaded from: classes.dex */
@@ -30,7 +30,7 @@ public final /* data */ class RenderableEmbedMedia {
             return false;
         }
         RenderableEmbedMedia renderableEmbedMedia = (RenderableEmbedMedia) other;
-        return Intrinsics3.areEqual(this.url, renderableEmbedMedia.url) && Intrinsics3.areEqual(this.width, renderableEmbedMedia.width) && Intrinsics3.areEqual(this.height, renderableEmbedMedia.height);
+        return m.areEqual(this.url, renderableEmbedMedia.url) && m.areEqual(this.width, renderableEmbedMedia.width) && m.areEqual(this.height, renderableEmbedMedia.height);
     }
 
     public int hashCode() {
@@ -43,11 +43,11 @@ public final /* data */ class RenderableEmbedMedia {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("RenderableEmbedMedia(url=");
+        StringBuilder sbU = a.U("RenderableEmbedMedia(url=");
         sbU.append(this.url);
         sbU.append(", width=");
         sbU.append(this.width);
         sbU.append(", height=");
-        return outline.F(sbU, this.height, ")");
+        return a.F(sbU, this.height, ")");
     }
 }

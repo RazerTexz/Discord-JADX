@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.room.ColumnInfo;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -98,7 +98,7 @@ public class TableInfo {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Column{name='");
+            StringBuilder sbU = a.U("Column{name='");
             sbU.append(this.name);
             sbU.append('\'');
             sbU.append(", type='");
@@ -170,11 +170,11 @@ public class TableInfo {
         }
 
         public int hashCode() {
-            return this.referenceColumnNames.hashCode() + ((this.columnNames.hashCode() + outline.m(this.onUpdate, outline.m(this.onDelete, this.referenceTable.hashCode() * 31, 31), 31)) * 31);
+            return this.referenceColumnNames.hashCode() + ((this.columnNames.hashCode() + a.m(this.onUpdate, a.m(this.onDelete, this.referenceTable.hashCode() * 31, 31), 31)) * 31);
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ForeignKey{referenceTable='");
+            StringBuilder sbU = a.U("ForeignKey{referenceTable='");
             sbU.append(this.referenceTable);
             sbU.append('\'');
             sbU.append(", onDelete='");
@@ -250,7 +250,7 @@ public class TableInfo {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Index{name='");
+            StringBuilder sbU = a.U("Index{name='");
             sbU.append(this.name);
             sbU.append('\'');
             sbU.append(", unique=");
@@ -434,7 +434,7 @@ public class TableInfo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TableInfo{name='");
+        StringBuilder sbU = a.U("TableInfo{name='");
         sbU.append(this.name);
         sbU.append('\'');
         sbU.append(", columns=");

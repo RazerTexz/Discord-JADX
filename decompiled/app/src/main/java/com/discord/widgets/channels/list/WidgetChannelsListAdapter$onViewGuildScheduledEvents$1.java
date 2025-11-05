@@ -1,14 +1,14 @@
 package com.discord.widgets.channels.list;
 
 import com.discord.models.guild.Guild;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetChannelsListAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelsListAdapter$onViewGuildScheduledEvents$1 extends Lambda implements Function1<Guild, Unit> {
+public final class WidgetChannelsListAdapter$onViewGuildScheduledEvents$1 extends o implements Function1<Guild, Unit> {
     public static final WidgetChannelsListAdapter$onViewGuildScheduledEvents$1 INSTANCE = new WidgetChannelsListAdapter$onViewGuildScheduledEvents$1();
 
     public WidgetChannelsListAdapter$onViewGuildScheduledEvents$1() {
@@ -23,6 +23,6 @@ public final class WidgetChannelsListAdapter$onViewGuildScheduledEvents$1 extend
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "it");
+        m.checkNotNullParameter(guild, "it");
     }
 }

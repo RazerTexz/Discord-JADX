@@ -6,14 +6,14 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.widget.ImageView;
-import b.q.a.k.RotationGestureDetector;
-import b.q.a.l.CropImageView;
+import b.q.a.k.c;
+import b.q.a.l.a;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
-public class GestureCropImageView extends CropImageView {
+public class GestureCropImageView extends b.q.a.l.a {
     public ScaleGestureDetector K;
-    public RotationGestureDetector L;
+    public b.q.a.k.c L;
     public GestureDetector M;
     public float N;
     public float O;
@@ -35,7 +35,7 @@ public class GestureCropImageView extends CropImageView {
                 doubleTapTargetScale = gestureCropImageView.getMaxScale();
             }
             float currentScale = gestureCropImageView.getCurrentScale();
-            CropImageView.b bVar = new CropImageView.b(gestureCropImageView, 200L, currentScale, doubleTapTargetScale - currentScale, x2, y2);
+            a.b bVar = new a.b(gestureCropImageView, 200L, currentScale, doubleTapTargetScale - currentScale, x2, y2);
             gestureCropImageView.E = bVar;
             gestureCropImageView.post(bVar);
             return super.onDoubleTap(motionEvent);
@@ -48,7 +48,7 @@ public class GestureCropImageView extends CropImageView {
         }
     }
 
-    public class c extends RotationGestureDetector.b {
+    public class c extends c.b {
         public c(a aVar) {
         }
     }
@@ -74,12 +74,12 @@ public class GestureCropImageView extends CropImageView {
         this.R = 5;
     }
 
-    @Override // b.q.a.l.TransformImageView2
+    @Override // b.q.a.l.c
     public void c() {
         setScaleType(ImageView.ScaleType.MATRIX);
         this.M = new GestureDetector(getContext(), new b(null), null, true);
         this.K = new ScaleGestureDetector(getContext(), new d(null));
-        this.L = new RotationGestureDetector(new c(null));
+        this.L = new b.q.a.k.c(new c(null));
     }
 
     public int getDoubleTapScaleSteps() {
@@ -104,54 +104,54 @@ public class GestureCropImageView extends CropImageView {
             this.K.onTouchEvent(motionEvent);
         }
         if (this.P) {
-            RotationGestureDetector rotationGestureDetector = this.L;
-            Objects.requireNonNull(rotationGestureDetector);
+            b.q.a.k.c cVar = this.L;
+            Objects.requireNonNull(cVar);
             int actionMasked = motionEvent.getActionMasked();
             if (actionMasked == 0) {
-                rotationGestureDetector.c = motionEvent.getX();
-                rotationGestureDetector.d = motionEvent.getY();
-                rotationGestureDetector.e = motionEvent.findPointerIndex(motionEvent.getPointerId(0));
-                rotationGestureDetector.g = 0.0f;
-                rotationGestureDetector.h = true;
+                cVar.c = motionEvent.getX();
+                cVar.d = motionEvent.getY();
+                cVar.e = motionEvent.findPointerIndex(motionEvent.getPointerId(0));
+                cVar.g = 0.0f;
+                cVar.h = true;
             } else if (actionMasked == 1) {
-                rotationGestureDetector.e = -1;
+                cVar.e = -1;
             } else if (actionMasked != 2) {
                 if (actionMasked == 5) {
-                    rotationGestureDetector.a = motionEvent.getX();
-                    rotationGestureDetector.f1986b = motionEvent.getY();
-                    rotationGestureDetector.f = motionEvent.findPointerIndex(motionEvent.getPointerId(motionEvent.getActionIndex()));
-                    rotationGestureDetector.g = 0.0f;
-                    rotationGestureDetector.h = true;
+                    cVar.a = motionEvent.getX();
+                    cVar.f1986b = motionEvent.getY();
+                    cVar.f = motionEvent.findPointerIndex(motionEvent.getPointerId(motionEvent.getActionIndex()));
+                    cVar.g = 0.0f;
+                    cVar.h = true;
                 } else if (actionMasked == 6) {
-                    rotationGestureDetector.f = -1;
+                    cVar.f = -1;
                 }
-            } else if (rotationGestureDetector.e != -1 && rotationGestureDetector.f != -1 && motionEvent.getPointerCount() > rotationGestureDetector.f) {
-                float x2 = motionEvent.getX(rotationGestureDetector.e);
-                float y2 = motionEvent.getY(rotationGestureDetector.e);
-                float x3 = motionEvent.getX(rotationGestureDetector.f);
-                float y3 = motionEvent.getY(rotationGestureDetector.f);
-                if (rotationGestureDetector.h) {
-                    rotationGestureDetector.g = 0.0f;
-                    rotationGestureDetector.h = false;
+            } else if (cVar.e != -1 && cVar.f != -1 && motionEvent.getPointerCount() > cVar.f) {
+                float x2 = motionEvent.getX(cVar.e);
+                float y2 = motionEvent.getY(cVar.e);
+                float x3 = motionEvent.getX(cVar.f);
+                float y3 = motionEvent.getY(cVar.f);
+                if (cVar.h) {
+                    cVar.g = 0.0f;
+                    cVar.h = false;
                 } else {
-                    float f = rotationGestureDetector.a;
-                    float degrees = (((float) Math.toDegrees((float) Math.atan2(y3 - y2, x3 - x2))) % 360.0f) - (((float) Math.toDegrees((float) Math.atan2(rotationGestureDetector.f1986b - rotationGestureDetector.d, f - rotationGestureDetector.c))) % 360.0f);
-                    rotationGestureDetector.g = degrees;
+                    float f = cVar.a;
+                    float degrees = (((float) Math.toDegrees((float) Math.atan2(y3 - y2, x3 - x2))) % 360.0f) - (((float) Math.toDegrees((float) Math.atan2(cVar.f1986b - cVar.d, f - cVar.c))) % 360.0f);
+                    cVar.g = degrees;
                     if (degrees < -180.0f) {
-                        rotationGestureDetector.g = degrees + 360.0f;
+                        cVar.g = degrees + 360.0f;
                     } else if (degrees > 180.0f) {
-                        rotationGestureDetector.g = degrees - 360.0f;
+                        cVar.g = degrees - 360.0f;
                     }
                 }
-                RotationGestureDetector.a aVar = rotationGestureDetector.i;
+                c.a aVar = cVar.i;
                 if (aVar != null) {
                     GestureCropImageView gestureCropImageView = GestureCropImageView.this;
-                    gestureCropImageView.e(rotationGestureDetector.g, gestureCropImageView.N, gestureCropImageView.O);
+                    gestureCropImageView.e(cVar.g, gestureCropImageView.N, gestureCropImageView.O);
                 }
-                rotationGestureDetector.a = x3;
-                rotationGestureDetector.f1986b = y3;
-                rotationGestureDetector.c = x2;
-                rotationGestureDetector.d = y2;
+                cVar.a = x3;
+                cVar.f1986b = y3;
+                cVar.c = x2;
+                cVar.d = y2;
             }
         }
         if ((motionEvent.getAction() & 255) == 1) {

@@ -10,25 +10,25 @@ import android.view.accessibility.CaptioningManager;
 import android.widget.FrameLayout;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
-import b.c.a.a0.AnimatableValueParser;
-import b.i.a.c.DeviceInfo2;
-import b.i.a.c.MediaItem2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.PlaybackParameters;
-import b.i.a.c.Player;
-import b.i.a.c.Player2;
-import b.i.a.c.Player3;
-import b.i.a.c.Timeline;
-import b.i.a.c.TracksInfo;
-import b.i.a.c.a3.TrackGroupArray;
-import b.i.a.c.b3.Cue;
-import b.i.a.c.c3.TrackSelectionArray;
-import b.i.a.c.d3.CanvasSubtitleOutput;
-import b.i.a.c.d3.CaptionStyleCompat;
-import b.i.a.c.d3.WebViewSubtitleOutput2;
+import b.c.a.a0.d;
+import b.i.a.c.a2;
+import b.i.a.c.a3.o0;
+import b.i.a.c.b3.b;
+import b.i.a.c.c1;
+import b.i.a.c.c3.n;
 import b.i.a.c.d3.g;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.g3.VideoSize;
+import b.i.a.c.d3.j;
+import b.i.a.c.d3.k;
+import b.i.a.c.d3.r;
+import b.i.a.c.f3.e0;
+import b.i.a.c.g3.y;
+import b.i.a.c.o1;
+import b.i.a.c.o2;
+import b.i.a.c.p1;
+import b.i.a.c.p2;
+import b.i.a.c.x1;
+import b.i.a.c.y1;
+import b.i.a.c.z1;
 import com.google.android.exoplayer2.PlaybackException;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.ArrayList;
@@ -37,9 +37,9 @@ import java.util.List;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
-public final class SubtitleView extends FrameLayout implements Player2.e {
-    public List<Cue> j;
-    public CaptionStyleCompat k;
+public final class SubtitleView extends FrameLayout implements y1.e {
+    public List<b> j;
+    public k k;
     public int l;
     public float m;
     public float n;
@@ -52,200 +52,200 @@ public final class SubtitleView extends FrameLayout implements Player2.e {
     public View f2976s;
 
     public interface a {
-        void a(List<Cue> list, CaptionStyleCompat captionStyleCompat, float f, int i, float f2);
+        void a(List<b> list, k kVar, float f, int i, float f2);
     }
 
     public SubtitleView(Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
         this.j = Collections.emptyList();
-        this.k = CaptionStyleCompat.a;
+        this.k = k.a;
         this.l = 0;
         this.m = 0.0533f;
         this.n = 0.08f;
         this.o = true;
         this.p = true;
-        CanvasSubtitleOutput canvasSubtitleOutput = new CanvasSubtitleOutput(context, null);
-        this.r = canvasSubtitleOutput;
-        this.f2976s = canvasSubtitleOutput;
-        addView(canvasSubtitleOutput);
+        j jVar = new j(context, null);
+        this.r = jVar;
+        this.f2976s = jVar;
+        addView(jVar);
         this.q = 1;
     }
 
-    private List<Cue> getCuesWithStylingPreferencesApplied() {
+    private List<b> getCuesWithStylingPreferencesApplied() {
         if (this.o && this.p) {
             return this.j;
         }
         ArrayList arrayList = new ArrayList(this.j.size());
         for (int i = 0; i < this.j.size(); i++) {
-            Cue.b bVarA = this.j.get(i).a();
+            b.C0093b c0093bA = this.j.get(i).a();
             if (!this.o) {
-                bVarA.n = false;
-                CharSequence charSequence = bVarA.a;
+                c0093bA.n = false;
+                CharSequence charSequence = c0093bA.a;
                 if (charSequence instanceof Spanned) {
                     if (!(charSequence instanceof Spannable)) {
-                        bVarA.a = SpannableString.valueOf(charSequence);
+                        c0093bA.a = SpannableString.valueOf(charSequence);
                     }
-                    CharSequence charSequence2 = bVarA.a;
+                    CharSequence charSequence2 = c0093bA.a;
                     Objects.requireNonNull(charSequence2);
-                    AnimatableValueParser.P1((Spannable) charSequence2, g.a);
+                    d.P1((Spannable) charSequence2, g.a);
                 }
-                AnimatableValueParser.O1(bVarA);
+                d.O1(c0093bA);
             } else if (!this.p) {
-                AnimatableValueParser.O1(bVarA);
+                d.O1(c0093bA);
             }
-            arrayList.add(bVarA.a());
+            arrayList.add(c0093bA.a());
         }
         return arrayList;
     }
 
     private float getUserCaptionFontScale() {
         CaptioningManager captioningManager;
-        if (Util2.a < 19 || isInEditMode() || (captioningManager = (CaptioningManager) getContext().getSystemService("captioning")) == null || !captioningManager.isEnabled()) {
+        if (e0.a < 19 || isInEditMode() || (captioningManager = (CaptioningManager) getContext().getSystemService("captioning")) == null || !captioningManager.isEnabled()) {
             return 1.0f;
         }
         return captioningManager.getFontScale();
     }
 
-    private CaptionStyleCompat getUserCaptionStyle() {
-        int i = Util2.a;
+    private k getUserCaptionStyle() {
+        int i = e0.a;
         if (i < 19 || isInEditMode()) {
-            return CaptionStyleCompat.a;
+            return k.a;
         }
         CaptioningManager captioningManager = (CaptioningManager) getContext().getSystemService("captioning");
         if (captioningManager == null || !captioningManager.isEnabled()) {
-            return CaptionStyleCompat.a;
+            return k.a;
         }
         CaptioningManager.CaptionStyle userStyle = captioningManager.getUserStyle();
         if (i < 21) {
-            return new CaptionStyleCompat(userStyle.foregroundColor, userStyle.backgroundColor, 0, userStyle.edgeType, userStyle.edgeColor, userStyle.getTypeface());
+            return new k(userStyle.foregroundColor, userStyle.backgroundColor, 0, userStyle.edgeType, userStyle.edgeColor, userStyle.getTypeface());
         }
-        return new CaptionStyleCompat(userStyle.hasForegroundColor() ? userStyle.foregroundColor : -1, userStyle.hasBackgroundColor() ? userStyle.backgroundColor : ViewCompat.MEASURED_STATE_MASK, userStyle.hasWindowColor() ? userStyle.windowColor : 0, userStyle.hasEdgeType() ? userStyle.edgeType : 0, userStyle.hasEdgeColor() ? userStyle.edgeColor : -1, userStyle.getTypeface());
+        return new k(userStyle.hasForegroundColor() ? userStyle.foregroundColor : -1, userStyle.hasBackgroundColor() ? userStyle.backgroundColor : ViewCompat.MEASURED_STATE_MASK, userStyle.hasWindowColor() ? userStyle.windowColor : 0, userStyle.hasEdgeType() ? userStyle.edgeType : 0, userStyle.hasEdgeColor() ? userStyle.edgeColor : -1, userStyle.getTypeface());
     }
 
     private <T extends View & a> void setView(T t) {
         removeView(this.f2976s);
         View view = this.f2976s;
-        if (view instanceof WebViewSubtitleOutput2) {
-            ((WebViewSubtitleOutput2) view).k.destroy();
+        if (view instanceof r) {
+            ((r) view).k.destroy();
         }
         this.f2976s = t;
         this.r = t;
         addView(t);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void A(MediaMetadata mediaMetadata) {
-        Player.i(this, mediaMetadata);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void A(p1 p1Var) {
+        a2.i(this, p1Var);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void D(boolean z2) {
-        Player.t(this, z2);
+        a2.t(this, z2);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void E(Player2 player2, Player2.d dVar) {
-        Player.e(this, player2, dVar);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void E(y1 y1Var, y1.d dVar) {
+        a2.e(this, y1Var, dVar);
     }
 
-    @Override // b.i.a.c.Player2.e
+    @Override // b.i.a.c.y1.e
     public /* synthetic */ void G(int i, boolean z2) {
-        Player.d(this, i, z2);
+        a2.d(this, i, z2);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void H(boolean z2, int i) {
-        Player3.k(this, z2, i);
+        z1.k(this, z2, i);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void L(int i) {
-        Player.s(this, i);
+        a2.s(this, i);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void M(MediaItem2 mediaItem2, int i) {
-        Player.h(this, mediaItem2, i);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void M(o1 o1Var, int i) {
+        a2.h(this, o1Var, i);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void W(boolean z2, int i) {
-        Player.k(this, z2, i);
+        a2.k(this, z2, i);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void Y(TrackGroupArray trackGroupArray, TrackSelectionArray trackSelectionArray) {
-        Player3.r(this, trackGroupArray, trackSelectionArray);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void Y(o0 o0Var, n nVar) {
+        z1.r(this, o0Var, nVar);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void a() {
-        Player3.o(this);
+        z1.o(this);
     }
 
-    @Override // b.i.a.c.Player2.e
+    @Override // b.i.a.c.y1.e
     public /* synthetic */ void a0(int i, int i2) {
-        Player.v(this, i, i2);
+        a2.v(this, i, i2);
     }
 
-    @Override // b.i.a.c.Player2.e
+    @Override // b.i.a.c.y1.e
     public /* synthetic */ void b(Metadata metadata) {
-        Player.j(this, metadata);
+        a2.j(this, metadata);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void b0(PlaybackParameters playbackParameters) {
-        Player.l(this, playbackParameters);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void b0(x1 x1Var) {
+        a2.l(this, x1Var);
     }
 
-    @Override // b.i.a.c.Player2.e
+    @Override // b.i.a.c.y1.e
     public /* synthetic */ void c() {
-        Player.r(this);
+        a2.r(this);
     }
 
-    @Override // b.i.a.c.Player2.e
+    @Override // b.i.a.c.y1.e
     public /* synthetic */ void d(boolean z2) {
-        Player.u(this, z2);
+        a2.u(this, z2);
     }
 
-    @Override // b.i.a.c.Player2.e
-    public void e(List<Cue> list) {
+    @Override // b.i.a.c.y1.e
+    public void e(List<b> list) {
         setCues(list);
     }
 
-    @Override // b.i.a.c.Player2.e
-    public /* synthetic */ void f(VideoSize videoSize) {
-        Player.y(this, videoSize);
+    @Override // b.i.a.c.y1.e
+    public /* synthetic */ void f(y yVar) {
+        a2.y(this, yVar);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void f0(PlaybackException playbackException) {
-        Player.p(this, playbackException);
+        a2.p(this, playbackException);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void g(Player2.f fVar, Player2.f fVar2, int i) {
-        Player.q(this, fVar, fVar2, i);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void g(y1.f fVar, y1.f fVar2, int i) {
+        a2.q(this, fVar, fVar2, i);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void h(int i) {
-        Player.n(this, i);
+        a2.n(this, i);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void i(boolean z2) {
-        Player3.d(this, z2);
+        z1.d(this, z2);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void j(int i) {
-        Player3.l(this, i);
+        z1.l(this, i);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void j0(boolean z2) {
-        Player.g(this, z2);
+        a2.g(this, z2);
     }
 
     public void k() {
@@ -260,19 +260,19 @@ public final class SubtitleView extends FrameLayout implements Player2.e {
         this.r.a(getCuesWithStylingPreferencesApplied(), this.k, this.m, this.l, this.n);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void p(TracksInfo tracksInfo) {
-        Player.x(this, tracksInfo);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void p(p2 p2Var) {
+        a2.x(this, p2Var);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void r(boolean z2) {
-        Player.f(this, z2);
+        a2.f(this, z2);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void s(PlaybackException playbackException) {
-        Player.o(this, playbackException);
+        a2.o(this, playbackException);
     }
 
     public void setApplyEmbeddedFontSizes(boolean z2) {
@@ -290,7 +290,7 @@ public final class SubtitleView extends FrameLayout implements Player2.e {
         m();
     }
 
-    public void setCues(@Nullable List<Cue> list) {
+    public void setCues(@Nullable List<b> list) {
         if (list == null) {
             list = Collections.emptyList();
         }
@@ -304,8 +304,8 @@ public final class SubtitleView extends FrameLayout implements Player2.e {
         m();
     }
 
-    public void setStyle(CaptionStyleCompat captionStyleCompat) {
-        this.k = captionStyleCompat;
+    public void setStyle(k kVar) {
+        this.k = kVar;
         m();
     }
 
@@ -314,38 +314,38 @@ public final class SubtitleView extends FrameLayout implements Player2.e {
             return;
         }
         if (i == 1) {
-            setView(new CanvasSubtitleOutput(getContext(), null));
+            setView(new j(getContext(), null));
         } else {
             if (i != 2) {
                 throw new IllegalArgumentException();
             }
-            setView(new WebViewSubtitleOutput2(getContext()));
+            setView(new r(getContext()));
         }
         this.q = i;
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void t(Player2.b bVar) {
-        Player.a(this, bVar);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void t(y1.b bVar) {
+        a2.a(this, bVar);
     }
 
-    @Override // b.i.a.c.Player2.c
-    public /* synthetic */ void v(Timeline timeline, int i) {
-        Player.w(this, timeline, i);
+    @Override // b.i.a.c.y1.c
+    public /* synthetic */ void v(o2 o2Var, int i) {
+        a2.w(this, o2Var, i);
     }
 
-    @Override // b.i.a.c.Player2.e
+    @Override // b.i.a.c.y1.e
     public /* synthetic */ void w(float f) {
-        Player.z(this, f);
+        a2.z(this, f);
     }
 
-    @Override // b.i.a.c.Player2.c
+    @Override // b.i.a.c.y1.c
     public /* synthetic */ void y(int i) {
-        Player.m(this, i);
+        a2.m(this, i);
     }
 
-    @Override // b.i.a.c.Player2.e
-    public /* synthetic */ void z(DeviceInfo2 deviceInfo2) {
-        Player.c(this, deviceInfo2);
+    @Override // b.i.a.c.y1.e
+    public /* synthetic */ void z(c1 c1Var) {
+        a2.c(this, c1Var);
     }
 }

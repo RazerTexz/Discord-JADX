@@ -3,9 +3,8 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.p1;
 import java.util.Arrays;
 
 /* loaded from: classes3.dex */
@@ -46,7 +45,7 @@ public final class ApicFrame extends Id3Frame {
             return false;
         }
         ApicFrame apicFrame = (ApicFrame) obj;
-        return this.m == apicFrame.m && Util2.a(this.k, apicFrame.k) && Util2.a(this.l, apicFrame.l) && Arrays.equals(this.n, apicFrame.n);
+        return this.m == apicFrame.m && e0.a(this.k, apicFrame.k) && e0.a(this.l, apicFrame.l) && Arrays.equals(this.n, apicFrame.n);
     }
 
     public int hashCode() {
@@ -58,7 +57,7 @@ public final class ApicFrame extends Id3Frame {
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame, com.google.android.exoplayer2.metadata.Metadata.Entry
-    public void n(MediaMetadata.b bVar) {
+    public void n(p1.b bVar) {
         bVar.b(this.n, this.m);
     }
 
@@ -67,7 +66,7 @@ public final class ApicFrame extends Id3Frame {
         String str = this.j;
         String str2 = this.k;
         String str3 = this.l;
-        StringBuilder sbS = outline.S(outline.b(str3, outline.b(str2, outline.b(str, 25))), str, ": mimeType=", str2, ", description=");
+        StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str3, b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 25))), str, ": mimeType=", str2, ", description=");
         sbS.append(str3);
         return sbS.toString();
     }
@@ -83,7 +82,7 @@ public final class ApicFrame extends Id3Frame {
     public ApicFrame(Parcel parcel) {
         super("APIC");
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         this.k = string;
         this.l = parcel.readString();
         this.m = parcel.readInt();

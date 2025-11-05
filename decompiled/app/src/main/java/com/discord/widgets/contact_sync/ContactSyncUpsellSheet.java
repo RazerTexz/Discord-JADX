@@ -7,9 +7,9 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppViewModelDelegates2;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.ContactSyncUpsellSheetBinding;
@@ -22,14 +22,14 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.spans.ClickableSpan;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.contact_sync.ContactSyncPermissionsSheet;
 import com.discord.widgets.contact_sync.WidgetContactSync;
 import com.discord.widgets.contact_sync.WidgetContactSyncViewModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -40,7 +40,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: ContactSyncUpsellSheet.kt */
 /* loaded from: classes2.dex */
 public final class ContactSyncUpsellSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(ContactSyncUpsellSheet.class, "binding", "getBinding()Lcom/discord/databinding/ContactSyncUpsellSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(ContactSyncUpsellSheet.class, "binding", "getBinding()Lcom/discord/databinding/ContactSyncUpsellSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -57,7 +57,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
         }
 
         public final ContactSyncUpsellSheet show(FragmentManager fragmentManager) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             ContactSyncUpsellSheet contactSyncUpsellSheet = new ContactSyncUpsellSheet();
             contactSyncUpsellSheet.show(fragmentManager, ContactSyncUpsellSheet.class.getSimpleName());
             return contactSyncUpsellSheet;
@@ -87,7 +87,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
     /* compiled from: ContactSyncUpsellSheet.kt */
     /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RenderContext, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -100,12 +100,12 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
         /* compiled from: ContactSyncUpsellSheet.kt */
         /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Hook, Unit> {
 
             /* compiled from: ContactSyncUpsellSheet.kt */
             /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02861 extends Lambda implements Function1<View, Unit> {
-                public C02861() {
+            public static final class C04061 extends o implements Function1<View, Unit> {
+                public C04061() {
                     super(1);
                 }
 
@@ -117,11 +117,11 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
-                    Intrinsics3.checkNotNullParameter(view, "it");
+                    m.checkNotNullParameter(view, "it");
                     AnalyticsTracker.INSTANCE.openPopout("Contact Sync", new Traits.Location("Contact Sync Learn More", null, null, null, null, 30, null));
                     ContactSyncPermissionsSheet.Companion companion = ContactSyncPermissionsSheet.INSTANCE;
                     FragmentManager parentFragmentManager = ContactSyncUpsellSheet.this.getParentFragmentManager();
-                    Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                    m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                     companion.show(parentFragmentManager);
                 }
             }
@@ -132,8 +132,8 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
-                hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(ContactSyncUpsellSheet.this.getContext(), R.color.link)), false, null, new C02861(), 4, null));
+                m.checkNotNullParameter(hook, "$receiver");
+                hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(ContactSyncUpsellSheet.this.getContext(), R.color.link)), false, null, new C04061(), 4, null));
             }
 
             @Override // kotlin.jvm.functions.Function1
@@ -145,7 +145,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.a("learnMoreHook", new AnonymousClass1());
         }
     }
@@ -175,13 +175,13 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             ContactSyncUpsellSheet.this.dismiss();
-            WidgetContactSync.Companion.launch$default(WidgetContactSync.INSTANCE, outline.x(view, "it", "it.context"), null, true, this.$viewState.getAllowPhone(), this.$viewState.getAllowEmail(), 2, null);
+            WidgetContactSync.Companion.launch$default(WidgetContactSync.INSTANCE, a.x(view, "it", "it.context"), null, true, this.$viewState.getAllowPhone(), this.$viewState.getAllowEmail(), 2, null);
         }
     }
 
     /* compiled from: ContactSyncUpsellSheet.kt */
     /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -194,15 +194,15 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetContactSyncViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "it");
+            m.checkNotNullParameter(viewState, "it");
             ContactSyncUpsellSheet.access$configureUI(ContactSyncUpsellSheet.this, viewState);
         }
     }
 
     public ContactSyncUpsellSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, ContactSyncUpsellSheet2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetContactSyncViewModel.class), new ContactSyncUpsellSheet$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(ContactSyncUpsellSheet3.INSTANCE));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, ContactSyncUpsellSheet$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetContactSyncViewModel.class), new ContactSyncUpsellSheet$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(ContactSyncUpsellSheet$viewModel$2.INSTANCE));
     }
 
     public static final /* synthetic */ void access$configureUI(ContactSyncUpsellSheet contactSyncUpsellSheet, WidgetContactSyncViewModel.ViewState viewState) {
@@ -216,12 +216,12 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
     private final void configureUI(WidgetContactSyncViewModel.ViewState viewState) {
         boolean z2 = viewState.getAllowPhone() || viewState.getAllowEmail();
         CheckedSetting checkedSetting = getBinding().d.c;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncUpsel…ontactSyncDiscoveryToggle");
+        m.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncUpsel…ontactSyncDiscoveryToggle");
         checkedSetting.setChecked(z2);
         getBinding().d.c.e(new AnonymousClass1(z2));
         LinkifiedTextView linkifiedTextView = getBinding().d.f171b;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.contactSyncUpsel…contactSyncDiscoveryInfo2");
-        FormatUtils.m(linkifiedTextView, R.string.contact_sync_learn_more, new Object[0], new AnonymousClass2());
+        m.checkNotNullExpressionValue(linkifiedTextView, "binding.contactSyncUpsel…contactSyncDiscoveryInfo2");
+        b.m(linkifiedTextView, R.string.contact_sync_learn_more, new Object[0], new AnonymousClass2());
         getBinding().c.setOnClickListener(new AnonymousClass3());
         getBinding().f2093b.setOnClickListener(new AnonymousClass4(viewState));
     }
@@ -241,7 +241,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
     @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnDismissListener
     public void onDismiss(DialogInterface dialog) {
-        Intrinsics3.checkNotNullParameter(dialog, "dialog");
+        m.checkNotNullParameter(dialog, "dialog");
         super.onDismiss(dialog);
         getViewModel().dismissUpsell();
     }
@@ -254,7 +254,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         setBottomSheetCollapsedStateDisabled();
     }

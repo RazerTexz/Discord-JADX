@@ -3,14 +3,14 @@ package com.discord.widgets.guild_role_subscriptions.setup;
 import android.view.View;
 import com.discord.databinding.WidgetGuildSubscriptionPlanSetupBinding;
 import com.discord.views.steps.StepsView;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.Objects;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanSetup$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildSubscriptionPlanSetupBinding> {
+public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanSetup$binding$2 extends k implements Function1<View, WidgetGuildSubscriptionPlanSetupBinding> {
     public static final WidgetGuildRoleSubscriptionPlanSetup$binding$2 INSTANCE = new WidgetGuildRoleSubscriptionPlanSetup$binding$2();
 
     public WidgetGuildRoleSubscriptionPlanSetup$binding$2() {
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanSetup$binding$
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildSubscriptionPlanSetupBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         Objects.requireNonNull(view, "rootView");
         StepsView stepsView = (StepsView) view;
         return new WidgetGuildSubscriptionPlanSetupBinding(stepsView, stepsView);

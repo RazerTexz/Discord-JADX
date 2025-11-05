@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSystemSurvey.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSystemSurvey implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSystemSurvey implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence cpuBrand = null;
     private final CharSequence cpuVendor = null;
@@ -38,7 +38,7 @@ public final /* data */ class TrackSystemSurvey implements AnalyticsSchema, Trac
             return false;
         }
         TrackSystemSurvey trackSystemSurvey = (TrackSystemSurvey) other;
-        return Intrinsics3.areEqual(this.cpuBrand, trackSystemSurvey.cpuBrand) && Intrinsics3.areEqual(this.cpuVendor, trackSystemSurvey.cpuVendor) && Intrinsics3.areEqual(this.cpuMemory, trackSystemSurvey.cpuMemory) && Intrinsics3.areEqual(this.gpuBrand, trackSystemSurvey.gpuBrand) && Intrinsics3.areEqual(this.gpuCount, trackSystemSurvey.gpuCount) && Intrinsics3.areEqual(this.gpuMemory, trackSystemSurvey.gpuMemory) && Intrinsics3.areEqual(this.batteries, trackSystemSurvey.batteries) && Intrinsics3.areEqual(this.displayMonitors, trackSystemSurvey.displayMonitors) && Intrinsics3.areEqual(this.displayPrimaryWidth, trackSystemSurvey.displayPrimaryWidth) && Intrinsics3.areEqual(this.displayPrimaryHeight, trackSystemSurvey.displayPrimaryHeight) && Intrinsics3.areEqual(this.displayDesktopWidth, trackSystemSurvey.displayDesktopWidth) && Intrinsics3.areEqual(this.displayDesktopHeight, trackSystemSurvey.displayDesktopHeight);
+        return m.areEqual(this.cpuBrand, trackSystemSurvey.cpuBrand) && m.areEqual(this.cpuVendor, trackSystemSurvey.cpuVendor) && m.areEqual(this.cpuMemory, trackSystemSurvey.cpuMemory) && m.areEqual(this.gpuBrand, trackSystemSurvey.gpuBrand) && m.areEqual(this.gpuCount, trackSystemSurvey.gpuCount) && m.areEqual(this.gpuMemory, trackSystemSurvey.gpuMemory) && m.areEqual(this.batteries, trackSystemSurvey.batteries) && m.areEqual(this.displayMonitors, trackSystemSurvey.displayMonitors) && m.areEqual(this.displayPrimaryWidth, trackSystemSurvey.displayPrimaryWidth) && m.areEqual(this.displayPrimaryHeight, trackSystemSurvey.displayPrimaryHeight) && m.areEqual(this.displayDesktopWidth, trackSystemSurvey.displayDesktopWidth) && m.areEqual(this.displayDesktopHeight, trackSystemSurvey.displayDesktopHeight);
     }
 
     public int hashCode() {
@@ -69,7 +69,7 @@ public final /* data */ class TrackSystemSurvey implements AnalyticsSchema, Trac
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSystemSurvey(cpuBrand=");
+        StringBuilder sbU = a.U("TrackSystemSurvey(cpuBrand=");
         sbU.append(this.cpuBrand);
         sbU.append(", cpuVendor=");
         sbU.append(this.cpuVendor);
@@ -92,6 +92,6 @@ public final /* data */ class TrackSystemSurvey implements AnalyticsSchema, Trac
         sbU.append(", displayDesktopWidth=");
         sbU.append(this.displayDesktopWidth);
         sbU.append(", displayDesktopHeight=");
-        return outline.G(sbU, this.displayDesktopHeight, ")");
+        return a.G(sbU, this.displayDesktopHeight, ")");
     }
 }

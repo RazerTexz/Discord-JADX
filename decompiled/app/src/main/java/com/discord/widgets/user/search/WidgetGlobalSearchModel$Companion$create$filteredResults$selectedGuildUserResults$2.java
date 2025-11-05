@@ -2,12 +2,12 @@ package com.discord.widgets.user.search;
 
 import com.discord.models.user.User;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$create$filteredResults$selectedGuildUserResults$2 extends Lambda implements Function1<Long, WidgetGlobalSearchModel.ItemUser> {
+public final class WidgetGlobalSearchModel$Companion$create$filteredResults$selectedGuildUserResults$2 extends o implements Function1<Long, WidgetGlobalSearchModel.ItemUser> {
     public final /* synthetic */ String $sanitizedFilter;
     public final /* synthetic */ WidgetGlobalSearchModel$Companion$create$2 $toItemUser$2;
     public final /* synthetic */ WidgetGlobalSearchModel.UsersContext $usersContext;

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.browser.R;
 import androidx.core.content.res.ResourcesCompat;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
@@ -26,14 +26,14 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
 
     /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$1, reason: invalid class name */
     public class AnonymousClass1 implements Runnable {
-        public final /* synthetic */ ListenableFuture8 val$bitmapFuture;
+        public final /* synthetic */ a val$bitmapFuture;
         public final /* synthetic */ String val$titleText;
         public final /* synthetic */ ViewHolderItem val$viewHolder;
 
-        public AnonymousClass1(String str, ViewHolderItem viewHolderItem, ListenableFuture8 listenableFuture8) {
+        public AnonymousClass1(String str, ViewHolderItem viewHolderItem, a aVar) {
             this.val$titleText = str;
             this.val$viewHolder = viewHolderItem;
-            this.val$bitmapFuture = listenableFuture8;
+            this.val$bitmapFuture = aVar;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -119,8 +119,8 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
         if (browserActionItem.getIconId() != 0) {
             viewHolderItem.mIcon.setImageDrawable(ResourcesCompat.getDrawable(this.mContext.getResources(), browserActionItem.getIconId(), null));
         } else if (browserActionItem.getIconUri() != null) {
-            ListenableFuture8<Bitmap> listenableFuture8LoadBitmap = BrowserServiceFileProvider.loadBitmap(this.mContext.getContentResolver(), browserActionItem.getIconUri());
-            listenableFuture8LoadBitmap.addListener(new AnonymousClass1(title, viewHolderItem, listenableFuture8LoadBitmap), new AnonymousClass2());
+            a<Bitmap> aVarLoadBitmap = BrowserServiceFileProvider.loadBitmap(this.mContext.getContentResolver(), browserActionItem.getIconUri());
+            aVarLoadBitmap.addListener(new AnonymousClass1(title, viewHolderItem, aVarLoadBitmap), new AnonymousClass2());
         } else {
             viewHolderItem.mIcon.setImageBitmap(null);
             viewHolderItem.mIcon.setVisibility(4);

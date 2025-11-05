@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSmsEnqueueSucceeded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSmsEnqueueSucceeded implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSmsEnqueueSucceeded implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence phoneNumber = null;
     private final CharSequence phoneCountry = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackSmsEnqueueSucceeded implements AnalyticsSchem
             return false;
         }
         TrackSmsEnqueueSucceeded trackSmsEnqueueSucceeded = (TrackSmsEnqueueSucceeded) other;
-        return Intrinsics3.areEqual(this.phoneNumber, trackSmsEnqueueSucceeded.phoneNumber) && Intrinsics3.areEqual(this.phoneCountry, trackSmsEnqueueSucceeded.phoneCountry) && Intrinsics3.areEqual(this.carrierName, trackSmsEnqueueSucceeded.carrierName) && Intrinsics3.areEqual(this.carrierType, trackSmsEnqueueSucceeded.carrierType) && Intrinsics3.areEqual(this.source, trackSmsEnqueueSucceeded.source);
+        return m.areEqual(this.phoneNumber, trackSmsEnqueueSucceeded.phoneNumber) && m.areEqual(this.phoneCountry, trackSmsEnqueueSucceeded.phoneCountry) && m.areEqual(this.carrierName, trackSmsEnqueueSucceeded.carrierName) && m.areEqual(this.carrierType, trackSmsEnqueueSucceeded.carrierType) && m.areEqual(this.source, trackSmsEnqueueSucceeded.source);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class TrackSmsEnqueueSucceeded implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSmsEnqueueSucceeded(phoneNumber=");
+        StringBuilder sbU = a.U("TrackSmsEnqueueSucceeded(phoneNumber=");
         sbU.append(this.phoneNumber);
         sbU.append(", phoneCountry=");
         sbU.append(this.phoneCountry);
@@ -57,6 +57,6 @@ public final /* data */ class TrackSmsEnqueueSucceeded implements AnalyticsSchem
         sbU.append(", carrierType=");
         sbU.append(this.carrierType);
         sbU.append(", source=");
-        return outline.E(sbU, this.source, ")");
+        return a.E(sbU, this.source, ")");
     }
 }

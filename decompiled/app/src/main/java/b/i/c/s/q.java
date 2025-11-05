@@ -6,8 +6,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
-import b.d.b.a.outline;
-import b.i.c.FirebaseApp2;
 import java.util.List;
 
 /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
@@ -25,14 +23,14 @@ public class q {
         this.a = context;
     }
 
-    public static String b(FirebaseApp2 firebaseApp2) {
-        firebaseApp2.a();
-        String str = firebaseApp2.f.e;
+    public static String b(b.i.c.c cVar) {
+        cVar.a();
+        String str = cVar.f.e;
         if (str != null) {
             return str;
         }
-        firebaseApp2.a();
-        String str2 = firebaseApp2.f.f1655b;
+        cVar.a();
+        String str2 = cVar.f.f1655b;
         if (!str2.startsWith("1:")) {
             return str2;
         }
@@ -59,7 +57,7 @@ public class q {
             return this.a.getPackageManager().getPackageInfo(str, 0);
         } catch (PackageManager.NameNotFoundException e) {
             String strValueOf = String.valueOf(e);
-            outline.h0(strValueOf.length() + 23, "Failed to find package ", strValueOf, "FirebaseInstanceId");
+            b.d.b.a.a.h0(strValueOf.length() + 23, "Failed to find package ", strValueOf, "FirebaseInstanceId");
             return null;
         }
     }

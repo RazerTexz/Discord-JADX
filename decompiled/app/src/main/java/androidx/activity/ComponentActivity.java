@@ -49,7 +49,7 @@ import androidx.view.ViewModelStoreOwner;
 import androidx.view.ViewTreeLifecycleOwner;
 import androidx.view.ViewTreeSavedStateRegistryOwner;
 import androidx.view.ViewTreeViewModelStoreOwner;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -413,7 +413,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
     @Override // androidx.activity.result.ActivityResultCaller
     @NonNull
     public final <I, O> ActivityResultLauncher<I> registerForActivityResult(@NonNull ActivityResultContract<I, O> activityResultContract, @NonNull ActivityResultRegistry activityResultRegistry, @NonNull ActivityResultCallback<O> activityResultCallback) {
-        StringBuilder sbU = outline.U("activity_rq#");
+        StringBuilder sbU = a.U("activity_rq#");
         sbU.append(this.mNextLocalRequestCode.getAndIncrement());
         return activityResultRegistry.register(sbU.toString(), this, activityResultContract, activityResultCallback);
     }

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAppNativeCrash.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
+public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final Boolean didCrash = null;
@@ -42,7 +42,7 @@ public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, Tr
             return false;
         }
         TrackAppNativeCrash trackAppNativeCrash = (TrackAppNativeCrash) other;
-        return Intrinsics3.areEqual(this.didCrash, trackAppNativeCrash.didCrash) && Intrinsics3.areEqual(this.rendererCrashReason, trackAppNativeCrash.rendererCrashReason) && Intrinsics3.areEqual(this.minidumpExceptionType, trackAppNativeCrash.minidumpExceptionType) && Intrinsics3.areEqual(this.exitReason, trackAppNativeCrash.exitReason) && Intrinsics3.areEqual(this.exitDescription, trackAppNativeCrash.exitDescription) && Intrinsics3.areEqual(this.tombstoneHash, trackAppNativeCrash.tombstoneHash) && Intrinsics3.areEqual(this.tombstoneCause, trackAppNativeCrash.tombstoneCause) && Intrinsics3.areEqual(this.signal, trackAppNativeCrash.signal) && Intrinsics3.areEqual(this.exceptionType, trackAppNativeCrash.exceptionType) && Intrinsics3.areEqual(this.exceptionCode, trackAppNativeCrash.exceptionCode) && Intrinsics3.areEqual(this.terminationReason, trackAppNativeCrash.terminationReason) && Intrinsics3.areEqual(this.binaryName, trackAppNativeCrash.binaryName) && Intrinsics3.areEqual(this.callstackHash, trackAppNativeCrash.callstackHash);
+        return m.areEqual(this.didCrash, trackAppNativeCrash.didCrash) && m.areEqual(this.rendererCrashReason, trackAppNativeCrash.rendererCrashReason) && m.areEqual(this.minidumpExceptionType, trackAppNativeCrash.minidumpExceptionType) && m.areEqual(this.exitReason, trackAppNativeCrash.exitReason) && m.areEqual(this.exitDescription, trackAppNativeCrash.exitDescription) && m.areEqual(this.tombstoneHash, trackAppNativeCrash.tombstoneHash) && m.areEqual(this.tombstoneCause, trackAppNativeCrash.tombstoneCause) && m.areEqual(this.signal, trackAppNativeCrash.signal) && m.areEqual(this.exceptionType, trackAppNativeCrash.exceptionType) && m.areEqual(this.exceptionCode, trackAppNativeCrash.exceptionCode) && m.areEqual(this.terminationReason, trackAppNativeCrash.terminationReason) && m.areEqual(this.binaryName, trackAppNativeCrash.binaryName) && m.areEqual(this.callstackHash, trackAppNativeCrash.callstackHash);
     }
 
     public int hashCode() {
@@ -75,7 +75,7 @@ public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAppNativeCrash(didCrash=");
+        StringBuilder sbU = a.U("TrackAppNativeCrash(didCrash=");
         sbU.append(this.didCrash);
         sbU.append(", rendererCrashReason=");
         sbU.append(this.rendererCrashReason);
@@ -100,6 +100,6 @@ public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, Tr
         sbU.append(", binaryName=");
         sbU.append(this.binaryName);
         sbU.append(", callstackHash=");
-        return outline.E(sbU, this.callstackHash, ")");
+        return a.E(sbU, this.callstackHash, ")");
     }
 }

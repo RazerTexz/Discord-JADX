@@ -2,8 +2,8 @@ package com.google.android.gms.measurement.internal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import b.i.a.f.i.b.q;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Objects;
@@ -28,19 +28,19 @@ public final class zzaq extends AbstractSafeParcelable {
         String str = this.l;
         String str2 = this.j;
         String strValueOf = String.valueOf(this.k);
-        return outline.J(outline.S(strValueOf.length() + outline.b(str2, outline.b(str, 21)), "origin=", str, ",name=", str2), ",params=", strValueOf);
+        return a.J(a.S(strValueOf.length() + a.b(str2, a.b(str, 21)), "origin=", str, ",name=", str2), ",params=", strValueOf);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 2, this.j, false);
-        AnimatableValueParser.s2(parcel, 3, this.k, i, false);
-        AnimatableValueParser.t2(parcel, 4, this.l, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.t2(parcel, 2, this.j, false);
+        d.s2(parcel, 3, this.k, i, false);
+        d.t2(parcel, 4, this.l, false);
         long j = this.m;
         parcel.writeInt(524293);
         parcel.writeLong(j);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 
     public zzaq(zzaq zzaqVar, long j) {

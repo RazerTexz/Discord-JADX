@@ -1,13 +1,13 @@
 package com.discord.utilities.captcha;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import b.i.a.f.e.o.f;
-import b.i.d.FieldNamingPolicy;
-import b.i.d.GsonBuilder;
+import b.i.d.c;
+import b.i.d.e;
 import com.discord.app.AppLog;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.logging.Logger;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -30,15 +30,15 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
         }
 
         public final CaptchaErrorBody createFromError(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             String bodyText = error.getBodyText();
             if (bodyText == null) {
                 return null;
             }
-            GsonBuilder gsonBuilder = new GsonBuilder();
-            gsonBuilder.c = FieldNamingPolicy.m;
+            e eVar = new e();
+            eVar.c = c.m;
             try {
-                return (CaptchaErrorBody) f.E1(CaptchaErrorBody.class).cast(gsonBuilder.a().g(bodyText, CaptchaErrorBody.class));
+                return (CaptchaErrorBody) f.E1(CaptchaErrorBody.class).cast(eVar.a().g(bodyText, CaptchaErrorBody.class));
             } catch (Exception e) {
                 Logger.e$default(AppLog.g, "failed to parse captcha error body", e, null, 4, null);
                 return null;
@@ -46,11 +46,11 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
         }
 
         public final CaptchaErrorBody createFromString(String errorString) {
-            Intrinsics3.checkNotNullParameter(errorString, "errorString");
-            GsonBuilder gsonBuilder = new GsonBuilder();
-            gsonBuilder.c = FieldNamingPolicy.m;
+            m.checkNotNullParameter(errorString, "errorString");
+            e eVar = new e();
+            eVar.c = c.m;
             try {
-                return (CaptchaErrorBody) f.E1(CaptchaErrorBody.class).cast(gsonBuilder.a().g(errorString, CaptchaErrorBody.class));
+                return (CaptchaErrorBody) f.E1(CaptchaErrorBody.class).cast(eVar.a().g(errorString, CaptchaErrorBody.class));
             } catch (Exception e) {
                 Logger.e$default(AppLog.g, "failed to parse captcha error body", e, null, 4, null);
                 return null;
@@ -128,7 +128,7 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
             return false;
         }
         CaptchaErrorBody captchaErrorBody = (CaptchaErrorBody) other;
-        return Intrinsics3.areEqual(this.captchaKey, captchaErrorBody.captchaKey) && Intrinsics3.areEqual(this.captchaSitekey, captchaErrorBody.captchaSitekey) && Intrinsics3.areEqual(this.captchaService, captchaErrorBody.captchaService) && Intrinsics3.areEqual(this.captchaRqdata, captchaErrorBody.captchaRqdata) && Intrinsics3.areEqual(this.captchaRqtoken, captchaErrorBody.captchaRqtoken);
+        return m.areEqual(this.captchaKey, captchaErrorBody.captchaKey) && m.areEqual(this.captchaSitekey, captchaErrorBody.captchaSitekey) && m.areEqual(this.captchaService, captchaErrorBody.captchaService) && m.areEqual(this.captchaRqdata, captchaErrorBody.captchaRqdata) && m.areEqual(this.captchaRqtoken, captchaErrorBody.captchaRqtoken);
     }
 
     public final List<String> getCaptchaKey() {
@@ -165,7 +165,7 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("CaptchaErrorBody(captchaKey=");
+        StringBuilder sbU = a.U("CaptchaErrorBody(captchaKey=");
         sbU.append(this.captchaKey);
         sbU.append(", captchaSitekey=");
         sbU.append(this.captchaSitekey);
@@ -174,6 +174,6 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
         sbU.append(", captchaRqdata=");
         sbU.append(this.captchaRqdata);
         sbU.append(", captchaRqtoken=");
-        return outline.J(sbU, this.captchaRqtoken, ")");
+        return a.J(sbU, this.captchaRqtoken, ")");
     }
 }

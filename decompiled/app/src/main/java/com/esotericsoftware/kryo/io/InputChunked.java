@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.io;
 
-import b.e.a.Log;
+import b.e.a.a;
 import com.esotericsoftware.kryo.KryoException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,7 +27,7 @@ public class InputChunked extends Input {
                 i |= (i3 & Opcodes.LAND) << i2;
                 if ((i3 & 128) == 0) {
                     this.chunkSize = i;
-                    Log.a aVar = Log.a;
+                    a.C0064a c0064a = a.a;
                     return;
                 }
             }
@@ -62,7 +62,7 @@ public class InputChunked extends Input {
             int i = this.chunkSize;
             if (i <= 0) {
                 this.chunkSize = -1;
-                Log.a aVar = Log.a;
+                a.C0064a c0064a = a.a;
                 return;
             }
             skip(i);

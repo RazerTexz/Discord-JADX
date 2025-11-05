@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackMobileWebHandoffFailure.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMobileWebHandoffFailure implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackMobileWebHandoffFailure implements AnalyticsSchema, TrackBaseReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Long fingerprint;
     private final CharSequence reason;
@@ -40,7 +40,7 @@ public final /* data */ class TrackMobileWebHandoffFailure implements AnalyticsS
             return false;
         }
         TrackMobileWebHandoffFailure trackMobileWebHandoffFailure = (TrackMobileWebHandoffFailure) other;
-        return Intrinsics3.areEqual(this.reason, trackMobileWebHandoffFailure.reason) && Intrinsics3.areEqual(this.fingerprint, trackMobileWebHandoffFailure.fingerprint);
+        return m.areEqual(this.reason, trackMobileWebHandoffFailure.reason) && m.areEqual(this.fingerprint, trackMobileWebHandoffFailure.fingerprint);
     }
 
     public int hashCode() {
@@ -51,9 +51,9 @@ public final /* data */ class TrackMobileWebHandoffFailure implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackMobileWebHandoffFailure(reason=");
+        StringBuilder sbU = a.U("TrackMobileWebHandoffFailure(reason=");
         sbU.append(this.reason);
         sbU.append(", fingerprint=");
-        return outline.G(sbU, this.fingerprint, ")");
+        return a.G(sbU, this.fingerprint, ")");
     }
 }

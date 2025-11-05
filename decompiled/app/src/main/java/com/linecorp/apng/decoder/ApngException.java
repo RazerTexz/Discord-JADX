@@ -1,7 +1,7 @@
 package com.linecorp.apng.decoder;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.NoSuchElementException;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -104,7 +104,7 @@ public final class ApngException extends Exception {
             case ERR_UNSUPPORTED_TYPE:
                 return "Unsupported image type.";
             case ERR_WITH_CHILD_EXCEPTION:
-                StringBuilder sbU = outline.U("Failed with sub exception : ");
+                StringBuilder sbU = a.U("Failed with sub exception : ");
                 Throwable cause = getCause();
                 sbU.append(cause != null ? cause.getMessage() : null);
                 return sbU.toString();
@@ -116,13 +116,13 @@ public final class ApngException extends Exception {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ApngException(ErrorCode errorCode, Throwable th) {
         super(th);
-        Intrinsics3.checkNotNullParameter(errorCode, "errorCode");
+        m.checkNotNullParameter(errorCode, "errorCode");
         this.errorCode = errorCode;
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public ApngException(Throwable th) {
         this(ErrorCode.ERR_WITH_CHILD_EXCEPTION, th);
-        Intrinsics3.checkNotNullParameter(th, "throwable");
+        m.checkNotNullParameter(th, "throwable");
     }
 }

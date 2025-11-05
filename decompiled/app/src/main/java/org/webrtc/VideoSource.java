@@ -1,8 +1,8 @@
 package org.webrtc;
 
 import androidx.annotation.Nullable;
-import h0.c.VideoProcessor2;
 import h0.c.i0;
+import h0.c.t0;
 import org.webrtc.VideoProcessor;
 
 /* loaded from: classes3.dex */
@@ -50,7 +50,7 @@ public class VideoSource extends MediaSource {
                     VideoSource.access$300(VideoSource.this).onFrameCaptured(videoFrame, frameAdaptationParametersAdaptFrame);
                     return;
                 }
-                VideoFrame videoFrameB = VideoProcessor2.b(videoFrame, frameAdaptationParametersAdaptFrame);
+                VideoFrame videoFrameB = t0.b(videoFrame, frameAdaptationParametersAdaptFrame);
                 if (videoFrameB != null) {
                     VideoSource.access$000(VideoSource.this).onFrameCaptured(videoFrameB);
                     videoFrameB.release();

@@ -1,12 +1,12 @@
 package com.discord.widgets.user.search;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import java.util.HashSet;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGlobalSearchModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGlobalSearchModel$Companion$create$filteredResults$selectedGuildUserResults$1 extends Lambda implements Function1<Long, Boolean> {
+public final class WidgetGlobalSearchModel$Companion$create$filteredResults$selectedGuildUserResults$1 extends o implements Function1<Long, Boolean> {
     public final /* synthetic */ HashSet $seenUsersIds;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

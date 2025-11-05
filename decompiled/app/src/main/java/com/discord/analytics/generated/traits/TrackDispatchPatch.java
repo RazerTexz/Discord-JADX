@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackDispatchPatch.kt */
@@ -19,7 +19,7 @@ public final /* data */ class TrackDispatchPatch {
             return false;
         }
         TrackDispatchPatch trackDispatchPatch = (TrackDispatchPatch) other;
-        return Intrinsics3.areEqual(this.targetBuildId, trackDispatchPatch.targetBuildId) && Intrinsics3.areEqual(this.targetManifestIds, trackDispatchPatch.targetManifestIds) && Intrinsics3.areEqual(this.patchType, trackDispatchPatch.patchType);
+        return m.areEqual(this.targetBuildId, trackDispatchPatch.targetBuildId) && m.areEqual(this.targetManifestIds, trackDispatchPatch.targetManifestIds) && m.areEqual(this.patchType, trackDispatchPatch.patchType);
     }
 
     public int hashCode() {
@@ -32,11 +32,11 @@ public final /* data */ class TrackDispatchPatch {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDispatchPatch(targetBuildId=");
+        StringBuilder sbU = a.U("TrackDispatchPatch(targetBuildId=");
         sbU.append(this.targetBuildId);
         sbU.append(", targetManifestIds=");
         sbU.append(this.targetManifestIds);
         sbU.append(", patchType=");
-        return outline.E(sbU, this.patchType, ")");
+        return a.E(sbU, this.patchType, ")");
     }
 }

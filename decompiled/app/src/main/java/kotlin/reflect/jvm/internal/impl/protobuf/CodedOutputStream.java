@@ -1,10 +1,10 @@
 package kotlin.reflect.jvm.internal.impl.protobuf;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.adjust.sdk.Constants;
-import d0.e0.p.d.m0.i.ByteString3;
-import d0.e0.p.d.m0.i.LazyFieldLite;
-import d0.e0.p.d.m0.i.MessageLite;
+import d0.e0.p.d.m0.i.c;
+import d0.e0.p.d.m0.i.j;
+import d0.e0.p.d.m0.i.n;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
@@ -44,12 +44,12 @@ public final class CodedOutputStream {
         return computeRawVarint32Size(bArr.length) + bArr.length;
     }
 
-    public static int computeBytesSize(int i, ByteString3 byteString3) {
-        return computeBytesSizeNoTag(byteString3) + computeTagSize(i);
+    public static int computeBytesSize(int i, c cVar) {
+        return computeBytesSizeNoTag(cVar) + computeTagSize(i);
     }
 
-    public static int computeBytesSizeNoTag(ByteString3 byteString3) {
-        return byteString3.size() + computeRawVarint32Size(byteString3.size());
+    public static int computeBytesSizeNoTag(c cVar) {
+        return cVar.size() + computeRawVarint32Size(cVar.size());
     }
 
     public static int computeDoubleSize(int i, double d) {
@@ -84,8 +84,8 @@ public final class CodedOutputStream {
         return 4;
     }
 
-    public static int computeGroupSizeNoTag(MessageLite messageLite) {
-        return messageLite.getSerializedSize();
+    public static int computeGroupSizeNoTag(n nVar) {
+        return nVar.getSerializedSize();
     }
 
     public static int computeInt32Size(int i, int i2) {
@@ -103,17 +103,17 @@ public final class CodedOutputStream {
         return computeRawVarint64Size(j);
     }
 
-    public static int computeLazyFieldSizeNoTag(LazyFieldLite lazyFieldLite) {
-        int serializedSize = lazyFieldLite.getSerializedSize();
+    public static int computeLazyFieldSizeNoTag(j jVar) {
+        int serializedSize = jVar.getSerializedSize();
         return computeRawVarint32Size(serializedSize) + serializedSize;
     }
 
-    public static int computeMessageSize(int i, MessageLite messageLite) {
-        return computeMessageSizeNoTag(messageLite) + computeTagSize(i);
+    public static int computeMessageSize(int i, n nVar) {
+        return computeMessageSizeNoTag(nVar) + computeTagSize(i);
     }
 
-    public static int computeMessageSizeNoTag(MessageLite messageLite) {
-        int serializedSize = messageLite.getSerializedSize();
+    public static int computeMessageSizeNoTag(n nVar) {
+        int serializedSize = nVar.getSerializedSize();
         return computeRawVarint32Size(serializedSize) + serializedSize;
     }
 
@@ -240,14 +240,14 @@ public final class CodedOutputStream {
         writeRawBytes(bArr);
     }
 
-    public void writeBytes(int i, ByteString3 byteString3) throws IOException {
+    public void writeBytes(int i, c cVar) throws IOException {
         writeTag(i, 2);
-        writeBytesNoTag(byteString3);
+        writeBytesNoTag(cVar);
     }
 
-    public void writeBytesNoTag(ByteString3 byteString3) throws IOException {
-        writeRawVarint32(byteString3.size());
-        writeRawBytes(byteString3);
+    public void writeBytesNoTag(c cVar) throws IOException {
+        writeRawVarint32(cVar.size());
+        writeRawBytes(cVar);
     }
 
     public void writeDouble(int i, double d) throws IOException {
@@ -285,14 +285,14 @@ public final class CodedOutputStream {
         writeRawLittleEndian32(Float.floatToRawIntBits(f));
     }
 
-    public void writeGroup(int i, MessageLite messageLite) throws IOException {
+    public void writeGroup(int i, n nVar) throws IOException {
         writeTag(i, 3);
-        writeGroupNoTag(messageLite);
+        writeGroupNoTag(nVar);
         writeTag(i, 4);
     }
 
-    public void writeGroupNoTag(MessageLite messageLite) throws IOException {
-        messageLite.writeTo(this);
+    public void writeGroupNoTag(n nVar) throws IOException {
+        nVar.writeTo(this);
     }
 
     public void writeInt32(int i, int i2) throws IOException {
@@ -312,20 +312,20 @@ public final class CodedOutputStream {
         writeRawVarint64(j);
     }
 
-    public void writeMessage(int i, MessageLite messageLite) throws IOException {
+    public void writeMessage(int i, n nVar) throws IOException {
         writeTag(i, 2);
-        writeMessageNoTag(messageLite);
+        writeMessageNoTag(nVar);
     }
 
-    public void writeMessageNoTag(MessageLite messageLite) throws IOException {
-        writeRawVarint32(messageLite.getSerializedSize());
-        messageLite.writeTo(this);
+    public void writeMessageNoTag(n nVar) throws IOException {
+        writeRawVarint32(nVar.getSerializedSize());
+        nVar.writeTo(this);
     }
 
-    public void writeMessageSetExtension(int i, MessageLite messageLite) throws IOException {
+    public void writeMessageSetExtension(int i, n nVar) throws IOException {
         writeTag(1, 3);
         writeUInt32(2, i);
-        writeMessage(3, messageLite);
+        writeMessage(3, nVar);
         writeTag(1, 4);
     }
 
@@ -340,8 +340,8 @@ public final class CodedOutputStream {
         this.d++;
     }
 
-    public void writeRawBytes(ByteString3 byteString3) throws IOException {
-        writeRawBytes(byteString3, 0, byteString3.size());
+    public void writeRawBytes(c cVar) throws IOException {
+        writeRawBytes(cVar, 0, cVar.size());
     }
 
     public void writeRawLittleEndian32(int i) throws IOException {
@@ -455,40 +455,40 @@ public final class CodedOutputStream {
         writeRawByte((byte) i);
     }
 
-    public void writeRawBytes(ByteString3 byteString3, int i, int i2) throws IOException {
+    public void writeRawBytes(c cVar, int i, int i2) throws IOException {
         int i3 = this.f3806b;
         int i4 = this.c;
         if (i3 - i4 >= i2) {
-            byteString3.copyTo(this.a, i, i4, i2);
+            cVar.copyTo(this.a, i, i4, i2);
             this.c += i2;
             this.d += i2;
             return;
         }
         int i5 = i3 - i4;
-        byteString3.copyTo(this.a, i, i4, i5);
+        cVar.copyTo(this.a, i, i4, i5);
         int i6 = i + i5;
         int i7 = i2 - i5;
         this.c = this.f3806b;
         this.d += i5;
         a();
         if (i7 <= this.f3806b) {
-            byteString3.copyTo(this.a, i6, 0, i7);
+            cVar.copyTo(this.a, i6, 0, i7);
             this.c = i7;
         } else {
             OutputStream outputStream = this.e;
             if (i6 < 0) {
-                throw new IndexOutOfBoundsException(outline.g(30, "Source offset < 0: ", i6));
+                throw new IndexOutOfBoundsException(a.g(30, "Source offset < 0: ", i6));
             }
             if (i7 >= 0) {
                 int i8 = i6 + i7;
-                if (i8 > byteString3.size()) {
-                    throw new IndexOutOfBoundsException(outline.g(39, "Source end offset exceeded: ", i8));
+                if (i8 > cVar.size()) {
+                    throw new IndexOutOfBoundsException(a.g(39, "Source end offset exceeded: ", i8));
                 }
                 if (i7 > 0) {
-                    byteString3.k(outputStream, i6, i7);
+                    cVar.k(outputStream, i6, i7);
                 }
             } else {
-                throw new IndexOutOfBoundsException(outline.g(23, "Length < 0: ", i7));
+                throw new IndexOutOfBoundsException(a.g(23, "Length < 0: ", i7));
             }
         }
         this.d += i7;

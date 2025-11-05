@@ -1,7 +1,7 @@
 package com.discord.api.message.embed;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: EmbedVideo.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class EmbedVideo {
             return false;
         }
         EmbedVideo embedVideo = (EmbedVideo) other;
-        return Intrinsics3.areEqual(this.url, embedVideo.url) && Intrinsics3.areEqual(this.proxyUrl, embedVideo.proxyUrl) && Intrinsics3.areEqual(this.height, embedVideo.height) && Intrinsics3.areEqual(this.width, embedVideo.width);
+        return m.areEqual(this.url, embedVideo.url) && m.areEqual(this.proxyUrl, embedVideo.proxyUrl) && m.areEqual(this.height, embedVideo.height) && m.areEqual(this.width, embedVideo.width);
     }
 
     public int hashCode() {
@@ -54,13 +54,13 @@ public final /* data */ class EmbedVideo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmbedVideo(url=");
+        StringBuilder sbU = a.U("EmbedVideo(url=");
         sbU.append(this.url);
         sbU.append(", proxyUrl=");
         sbU.append(this.proxyUrl);
         sbU.append(", height=");
         sbU.append(this.height);
         sbU.append(", width=");
-        return outline.F(sbU, this.width, ")");
+        return a.F(sbU, this.width, ")");
     }
 }

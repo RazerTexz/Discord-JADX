@@ -46,8 +46,7 @@ import androidx.core.view.OnApplyWindowInsetsListener;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import b.d.b.a.outline;
-import b.i.a.g.h.SnackbarManager;
+import b.i.a.g.h.a;
 import com.google.android.material.R;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.behavior.SwipeDismissBehavior;
@@ -102,7 +101,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     private boolean gestureInsetBottomIgnored;
 
     @NonNull
-    public SnackbarManager.b managerCallback;
+    public a.b managerCallback;
 
     @Nullable
     private Rect originalMargins;
@@ -170,7 +169,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public static class BehaviorDelegate {
-        private SnackbarManager.b managerCallback;
+        private a.b managerCallback;
 
         public BehaviorDelegate(@NonNull SwipeDismissBehavior<?> swipeDismissBehavior) {
             swipeDismissBehavior.setStartAlphaSwipeDistance(0.1f);
@@ -186,10 +185,10 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
             int actionMasked = motionEvent.getActionMasked();
             if (actionMasked == 0) {
                 if (coordinatorLayout.isPointInChildBounds(view, (int) motionEvent.getX(), (int) motionEvent.getY())) {
-                    SnackbarManager.b().e(this.managerCallback);
+                    b.i.a.g.h.a.b().e(this.managerCallback);
                 }
             } else if (actionMasked == 1 || actionMasked == 3) {
-                SnackbarManager.b().f(this.managerCallback);
+                b.i.a.g.h.a.b().f(this.managerCallback);
             }
         }
 
@@ -605,17 +604,17 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    public class o implements SnackbarManager.b {
+    public class o implements a.b {
         public o() {
         }
 
-        @Override // b.i.a.g.h.SnackbarManager.b
+        @Override // b.i.a.g.h.a.b
         public void a(int i) {
             Handler handler = BaseTransientBottomBar.handler;
             handler.sendMessage(handler.obtainMessage(1, i, 0, BaseTransientBottomBar.this));
         }
 
-        @Override // b.i.a.g.h.SnackbarManager.b
+        @Override // b.i.a.g.h.a.b
         public void show() {
             Handler handler = BaseTransientBottomBar.handler;
             handler.sendMessage(handler.obtainMessage(0, BaseTransientBottomBar.this));
@@ -681,9 +680,9 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         @Override // com.google.android.material.behavior.SwipeDismissBehavior.OnDismissListener
         public void onDragStateChanged(int i) {
             if (i == 0) {
-                SnackbarManager.b().f(BaseTransientBottomBar.this.managerCallback);
+                b.i.a.g.h.a.b().f(BaseTransientBottomBar.this.managerCallback);
             } else if (i == 1 || i == 2) {
-                SnackbarManager.b().e(BaseTransientBottomBar.this.managerCallback);
+                b.i.a.g.h.a.b().e(BaseTransientBottomBar.this.managerCallback);
             }
         }
     }
@@ -942,13 +941,13 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     public void dispatchDismiss(int i2) {
-        SnackbarManager snackbarManagerB = SnackbarManager.b();
-        SnackbarManager.b bVar = this.managerCallback;
-        synchronized (snackbarManagerB.f1624b) {
-            if (snackbarManagerB.c(bVar)) {
-                snackbarManagerB.a(snackbarManagerB.d, i2);
-            } else if (snackbarManagerB.d(bVar)) {
-                snackbarManagerB.a(snackbarManagerB.e, i2);
+        b.i.a.g.h.a aVarB = b.i.a.g.h.a.b();
+        a.b bVar = this.managerCallback;
+        synchronized (aVarB.f1624b) {
+            if (aVarB.c(bVar)) {
+                aVarB.a(aVarB.d, i2);
+            } else if (aVarB.d(bVar)) {
+                aVarB.a(aVarB.e, i2);
             }
         }
     }
@@ -1015,32 +1014,32 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
 
     public boolean isShown() {
         boolean zC;
-        SnackbarManager snackbarManagerB = SnackbarManager.b();
-        SnackbarManager.b bVar = this.managerCallback;
-        synchronized (snackbarManagerB.f1624b) {
-            zC = snackbarManagerB.c(bVar);
+        b.i.a.g.h.a aVarB = b.i.a.g.h.a.b();
+        a.b bVar = this.managerCallback;
+        synchronized (aVarB.f1624b) {
+            zC = aVarB.c(bVar);
         }
         return zC;
     }
 
     public boolean isShownOrQueued() {
         boolean z2;
-        SnackbarManager snackbarManagerB = SnackbarManager.b();
-        SnackbarManager.b bVar = this.managerCallback;
-        synchronized (snackbarManagerB.f1624b) {
-            z2 = snackbarManagerB.c(bVar) || snackbarManagerB.d(bVar);
+        b.i.a.g.h.a aVarB = b.i.a.g.h.a.b();
+        a.b bVar = this.managerCallback;
+        synchronized (aVarB.f1624b) {
+            z2 = aVarB.c(bVar) || aVarB.d(bVar);
         }
         return z2;
     }
 
     public void onViewHidden(int i2) {
-        SnackbarManager snackbarManagerB = SnackbarManager.b();
-        SnackbarManager.b bVar = this.managerCallback;
-        synchronized (snackbarManagerB.f1624b) {
-            if (snackbarManagerB.c(bVar)) {
-                snackbarManagerB.d = null;
-                if (snackbarManagerB.e != null) {
-                    snackbarManagerB.h();
+        b.i.a.g.h.a aVarB = b.i.a.g.h.a.b();
+        a.b bVar = this.managerCallback;
+        synchronized (aVarB.f1624b) {
+            if (aVarB.c(bVar)) {
+                aVarB.d = null;
+                if (aVarB.e != null) {
+                    aVarB.h();
                 }
             }
         }
@@ -1057,11 +1056,11 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     public void onViewShown() {
-        SnackbarManager snackbarManagerB = SnackbarManager.b();
-        SnackbarManager.b bVar = this.managerCallback;
-        synchronized (snackbarManagerB.f1624b) {
-            if (snackbarManagerB.c(bVar)) {
-                snackbarManagerB.g(snackbarManagerB.d);
+        b.i.a.g.h.a aVarB = b.i.a.g.h.a.b();
+        a.b bVar = this.managerCallback;
+        synchronized (aVarB.f1624b) {
+            if (aVarB.c(bVar)) {
+                aVarB.g(aVarB.d);
             }
         }
         List<BaseCallback<B>> list = this.callbacks;
@@ -1128,26 +1127,26 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     }
 
     public void show() {
-        SnackbarManager snackbarManagerB = SnackbarManager.b();
+        b.i.a.g.h.a aVarB = b.i.a.g.h.a.b();
         int duration = getDuration();
-        SnackbarManager.b bVar = this.managerCallback;
-        synchronized (snackbarManagerB.f1624b) {
-            if (snackbarManagerB.c(bVar)) {
-                SnackbarManager.c cVar = snackbarManagerB.d;
+        a.b bVar = this.managerCallback;
+        synchronized (aVarB.f1624b) {
+            if (aVarB.c(bVar)) {
+                a.c cVar = aVarB.d;
                 cVar.f1625b = duration;
-                snackbarManagerB.c.removeCallbacksAndMessages(cVar);
-                snackbarManagerB.g(snackbarManagerB.d);
+                aVarB.c.removeCallbacksAndMessages(cVar);
+                aVarB.g(aVarB.d);
                 return;
             }
-            if (snackbarManagerB.d(bVar)) {
-                snackbarManagerB.e.f1625b = duration;
+            if (aVarB.d(bVar)) {
+                aVarB.e.f1625b = duration;
             } else {
-                snackbarManagerB.e = new SnackbarManager.c(duration, bVar);
+                aVarB.e = new a.c(duration, bVar);
             }
-            SnackbarManager.c cVar2 = snackbarManagerB.d;
-            if (cVar2 == null || !snackbarManagerB.a(cVar2, 4)) {
-                snackbarManagerB.d = null;
-                snackbarManagerB.h();
+            a.c cVar2 = aVarB.d;
+            if (cVar2 == null || !aVarB.a(cVar2, 4)) {
+                aVarB.d = null;
+                aVarB.h();
             }
         }
     }
@@ -1214,6 +1213,6 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         if (viewFindViewById != null) {
             return (B) setAnchorView(viewFindViewById);
         }
-        throw new IllegalArgumentException(outline.q("Unable to find anchor view with id: ", i2));
+        throw new IllegalArgumentException(b.d.b.a.a.q("Unable to find anchor view with id: ", i2));
     }
 }

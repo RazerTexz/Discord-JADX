@@ -10,7 +10,7 @@ import androidx.annotation.RequiresPermission;
 import androidx.annotation.Size;
 import androidx.annotation.WorkerThread;
 import androidx.collection.ArrayMap;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.e.o.c;
 import b.i.a.f.e.o.f;
 import b.i.a.f.i.b.a;
@@ -319,7 +319,7 @@ public class AppMeasurement {
             return this.c.i(str);
         }
         this.f3008b.s();
-        AnimatableValueParser.w(str);
+        d.w(str);
         return 25;
     }
 

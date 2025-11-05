@@ -1,6 +1,6 @@
 package org.webrtc;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -122,7 +122,7 @@ public class MediaStream {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("[");
+        StringBuilder sbU = a.U("[");
         sbU.append(getId());
         sbU.append(":A=");
         sbU.append(this.audioTracks.size());

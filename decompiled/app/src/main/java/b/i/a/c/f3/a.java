@@ -1,8 +1,7 @@
 package b.i.a.c.f3;
 
-import b.c.a.a0.AnimatableValueParser;
-import b.i.a.c.f3.FlagSet;
-import b.i.a.c.f3.ListenerSet;
+import b.i.a.c.f3.n;
+import b.i.a.c.f3.p;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArraySet;
 
@@ -11,9 +10,9 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public final /* synthetic */ class a implements Runnable {
     public final /* synthetic */ CopyOnWriteArraySet j;
     public final /* synthetic */ int k;
-    public final /* synthetic */ ListenerSet.a l;
+    public final /* synthetic */ p.a l;
 
-    public /* synthetic */ a(CopyOnWriteArraySet copyOnWriteArraySet, int i, ListenerSet.a aVar) {
+    public /* synthetic */ a(CopyOnWriteArraySet copyOnWriteArraySet, int i, p.a aVar) {
         this.j = copyOnWriteArraySet;
         this.k = i;
         this.l = aVar;
@@ -23,14 +22,14 @@ public final /* synthetic */ class a implements Runnable {
     public final void run() {
         CopyOnWriteArraySet copyOnWriteArraySet = this.j;
         int i = this.k;
-        ListenerSet.a aVar = this.l;
+        p.a aVar = this.l;
         Iterator it = copyOnWriteArraySet.iterator();
         while (it.hasNext()) {
-            ListenerSet.c cVar = (ListenerSet.c) it.next();
+            p.c cVar = (p.c) it.next();
             if (!cVar.d) {
                 if (i != -1) {
-                    FlagSet.b bVar = cVar.f974b;
-                    AnimatableValueParser.D(!bVar.f972b);
+                    n.b bVar = cVar.f974b;
+                    b.c.a.a0.d.D(!bVar.f972b);
                     bVar.a.append(i, true);
                 }
                 cVar.c = true;

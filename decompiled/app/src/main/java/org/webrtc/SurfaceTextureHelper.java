@@ -6,8 +6,8 @@ import android.opengl.GLES20;
 import android.os.Handler;
 import android.os.HandlerThread;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import h0.c.EglBase2;
+import b.d.b.a.a;
+import h0.c.n0;
 import h0.c.r;
 import h0.c.s;
 import h0.c.t;
@@ -119,7 +119,7 @@ public class SurfaceTextureHelper {
 
         @Override // java.lang.Runnable
         public void run() {
-            StringBuilder sbU = outline.U("Setting listener to ");
+            StringBuilder sbU = a.U("Setting listener to ");
             sbU.append(SurfaceTextureHelper.access$300(SurfaceTextureHelper.this));
             Logging.d(SurfaceTextureHelper.TAG, sbU.toString());
             SurfaceTextureHelper surfaceTextureHelper = SurfaceTextureHelper.this;
@@ -324,10 +324,10 @@ public class SurfaceTextureHelper {
 
     public void setTextureSize(int i, int i2) {
         if (i <= 0) {
-            throw new IllegalArgumentException(outline.q("Texture width must be positive, but was ", i));
+            throw new IllegalArgumentException(a.q("Texture width must be positive, but was ", i));
         }
         if (i2 <= 0) {
-            throw new IllegalArgumentException(outline.q("Texture height must be positive, but was ", i2));
+            throw new IllegalArgumentException(a.q("Texture height must be positive, but was ", i2));
         }
         this.surfaceTexture.setDefaultBufferSize(i, i2);
         this.handler.post(new t(this, i, i2));
@@ -362,7 +362,7 @@ public class SurfaceTextureHelper {
         this.timestampAligner = z2 ? new TimestampAligner() : null;
         this.yuvConverter = yuvConverter;
         this.frameRefMonitor = frameRefMonitor;
-        EglBase eglBaseB = EglBase2.b(context, EglBase.CONFIG_PIXEL_BUFFER);
+        EglBase eglBaseB = n0.b(context, EglBase.CONFIG_PIXEL_BUFFER);
         this.eglBase = eglBaseB;
         try {
             eglBaseB.createDummyPbufferSurface();

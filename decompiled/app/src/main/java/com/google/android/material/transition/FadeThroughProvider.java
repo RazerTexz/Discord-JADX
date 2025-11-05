@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.i.a.g.l.TransitionUtils3;
+import b.i.a.g.l.k;
 
 /* loaded from: classes3.dex */
 public final class FadeThroughProvider implements VisibilityAnimatorProvider {
@@ -33,7 +33,7 @@ public final class FadeThroughProvider implements VisibilityAnimatorProvider {
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
         public void onAnimationUpdate(ValueAnimator valueAnimator) {
-            this.a.setAlpha(TransitionUtils3.e(this.f3083b, this.c, this.d, this.e, ((Float) valueAnimator.getAnimatedValue()).floatValue()));
+            this.a.setAlpha(k.e(this.f3083b, this.c, this.d, this.e, ((Float) valueAnimator.getAnimatedValue()).floatValue()));
         }
     }
 

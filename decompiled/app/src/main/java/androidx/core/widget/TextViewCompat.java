@@ -32,7 +32,7 @@ import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 import androidx.core.text.PrecomputedTextCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.restapi.RestAPIBuilder;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -363,7 +363,7 @@ public final class TextViewCompat {
         try {
             return field.getInt(textView);
         } catch (IllegalAccessException unused) {
-            StringBuilder sbU = outline.U("Could not retrieve value of ");
+            StringBuilder sbU = a.U("Could not retrieve value of ");
             sbU.append(field.getName());
             sbU.append(" field.");
             Log.d(LOG_TAG, sbU.toString());

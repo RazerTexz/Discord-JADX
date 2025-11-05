@@ -1,8 +1,8 @@
 package com.discord.models.store.dto;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 
 /* compiled from: ModelStoreAsset.kt */
@@ -16,7 +16,7 @@ public final /* data */ class ModelStoreAsset implements Serializable {
     private final Integer width;
 
     public ModelStoreAsset(long j, int i, String str, String str2, Integer num, Integer num2) {
-        Intrinsics3.checkNotNullParameter(str, "mimeType");
+        m.checkNotNullParameter(str, "mimeType");
         this.id = j;
         this.size = i;
         this.mimeType = str;
@@ -60,7 +60,7 @@ public final /* data */ class ModelStoreAsset implements Serializable {
     }
 
     public final ModelStoreAsset copy(long id2, int size, String mimeType, String filename, Integer width, Integer height) {
-        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+        m.checkNotNullParameter(mimeType, "mimeType");
         return new ModelStoreAsset(id2, size, mimeType, filename, width, height);
     }
 
@@ -72,7 +72,7 @@ public final /* data */ class ModelStoreAsset implements Serializable {
             return false;
         }
         ModelStoreAsset modelStoreAsset = (ModelStoreAsset) other;
-        return this.id == modelStoreAsset.id && this.size == modelStoreAsset.size && Intrinsics3.areEqual(this.mimeType, modelStoreAsset.mimeType) && Intrinsics3.areEqual(this.filename, modelStoreAsset.filename) && Intrinsics3.areEqual(this.width, modelStoreAsset.width) && Intrinsics3.areEqual(this.height, modelStoreAsset.height);
+        return this.id == modelStoreAsset.id && this.size == modelStoreAsset.size && m.areEqual(this.mimeType, modelStoreAsset.mimeType) && m.areEqual(this.filename, modelStoreAsset.filename) && m.areEqual(this.width, modelStoreAsset.width) && m.areEqual(this.height, modelStoreAsset.height);
     }
 
     public final String getFilename() {
@@ -113,7 +113,7 @@ public final /* data */ class ModelStoreAsset implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelStoreAsset(id=");
+        StringBuilder sbU = a.U("ModelStoreAsset(id=");
         sbU.append(this.id);
         sbU.append(", size=");
         sbU.append(this.size);
@@ -124,6 +124,6 @@ public final /* data */ class ModelStoreAsset implements Serializable {
         sbU.append(", width=");
         sbU.append(this.width);
         sbU.append(", height=");
-        return outline.F(sbU, this.height, ")");
+        return a.F(sbU, this.height, ")");
     }
 }

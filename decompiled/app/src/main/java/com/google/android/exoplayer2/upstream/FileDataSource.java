@@ -8,16 +8,16 @@ import androidx.annotation.DoNotInline;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.view.PointerIconCompat;
-import b.i.a.c.e3.BaseDataSource;
-import b.i.a.c.e3.DataSpec;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.e3.g;
+import b.i.a.c.e3.n;
+import b.i.a.c.f3.e0;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
-public final class FileDataSource extends BaseDataSource {
+public final class FileDataSource extends g {
 
     @Nullable
     public RandomAccessFile e;
@@ -53,35 +53,35 @@ public final class FileDataSource extends BaseDataSource {
         super(false);
     }
 
-    @Override // b.i.a.c.e3.DataSource3
-    public long a(DataSpec dataSpec) throws FileDataSourceException {
-        Uri uri = dataSpec.a;
+    @Override // b.i.a.c.e3.l
+    public long a(n nVar) throws FileDataSourceException {
+        Uri uri = nVar.a;
         this.f = uri;
-        r(dataSpec);
+        r(nVar);
         try {
             String path = uri.getPath();
             Objects.requireNonNull(path);
             RandomAccessFile randomAccessFile = new RandomAccessFile(path, "r");
             this.e = randomAccessFile;
             try {
-                randomAccessFile.seek(dataSpec.f);
-                long length = dataSpec.g;
+                randomAccessFile.seek(nVar.f);
+                long length = nVar.g;
                 if (length == -1) {
-                    length = this.e.length() - dataSpec.f;
+                    length = this.e.length() - nVar.f;
                 }
                 this.g = length;
                 if (length < 0) {
                     throw new FileDataSourceException(null, null, 2008);
                 }
                 this.h = true;
-                s(dataSpec);
+                s(nVar);
                 return this.g;
             } catch (IOException e) {
                 throw new FileDataSourceException(e, 2000);
             }
         } catch (FileNotFoundException e2) {
             if (TextUtils.isEmpty(uri.getQuery()) && TextUtils.isEmpty(uri.getFragment())) {
-                throw new FileDataSourceException(e2, (Util2.a < 21 || !a.a(e2.getCause())) ? 2005 : 2006);
+                throw new FileDataSourceException(e2, (e0.a < 21 || !a.a(e2.getCause())) ? 2005 : 2006);
             }
             throw new FileDataSourceException(String.format("uri has query and/or fragment, which are not supported. Did you call Uri.parse() on a string containing '?' or '#'? Use Uri.fromFile(new File(path)) to avoid this. path=%s,query=%s,fragment=%s", uri.getPath(), uri.getQuery(), uri.getFragment()), e2, PointerIconCompat.TYPE_WAIT);
         } catch (SecurityException e3) {
@@ -91,7 +91,7 @@ public final class FileDataSource extends BaseDataSource {
         }
     }
 
-    @Override // b.i.a.c.e3.DataSource3
+    @Override // b.i.a.c.e3.l
     public void close() throws FileDataSourceException {
         this.f = null;
         try {
@@ -112,13 +112,13 @@ public final class FileDataSource extends BaseDataSource {
         }
     }
 
-    @Override // b.i.a.c.e3.DataSource3
+    @Override // b.i.a.c.e3.l
     @Nullable
     public Uri n() {
         return this.f;
     }
 
-    @Override // b.i.a.c.e3.DataReader
+    @Override // b.i.a.c.e3.h
     public int read(byte[] bArr, int i, int i2) throws FileDataSourceException {
         if (i2 == 0) {
             return 0;
@@ -129,7 +129,7 @@ public final class FileDataSource extends BaseDataSource {
         }
         try {
             RandomAccessFile randomAccessFile = this.e;
-            int i3 = Util2.a;
+            int i3 = e0.a;
             int i4 = randomAccessFile.read(bArr, i, (int) Math.min(j, i2));
             if (i4 > 0) {
                 this.g -= i4;

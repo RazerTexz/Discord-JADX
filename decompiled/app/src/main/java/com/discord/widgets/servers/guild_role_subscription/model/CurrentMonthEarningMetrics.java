@@ -1,8 +1,8 @@
 package com.discord.widgets.servers.guild_role_subscription.model;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: CurrentMonthEarningMetrics.kt */
@@ -74,7 +74,7 @@ public final /* data */ class CurrentMonthEarningMetrics {
             return false;
         }
         CurrentMonthEarningMetrics currentMonthEarningMetrics = (CurrentMonthEarningMetrics) other;
-        return this.revenue == currentMonthEarningMetrics.revenue && Intrinsics3.areEqual(this.monthOverMonthRevenueChangePercent, currentMonthEarningMetrics.monthOverMonthRevenueChangePercent) && this.subscriberCount == currentMonthEarningMetrics.subscriberCount && Intrinsics3.areEqual(this.monthOverMonthSubscriberCountChange, currentMonthEarningMetrics.monthOverMonthSubscriberCountChange) && Intrinsics3.areEqual(this.nextPaymentDate, currentMonthEarningMetrics.nextPaymentDate) && Intrinsics3.areEqual(this.revenueSinceDate, currentMonthEarningMetrics.revenueSinceDate);
+        return this.revenue == currentMonthEarningMetrics.revenue && m.areEqual(this.monthOverMonthRevenueChangePercent, currentMonthEarningMetrics.monthOverMonthRevenueChangePercent) && this.subscriberCount == currentMonthEarningMetrics.subscriberCount && m.areEqual(this.monthOverMonthSubscriberCountChange, currentMonthEarningMetrics.monthOverMonthSubscriberCountChange) && m.areEqual(this.nextPaymentDate, currentMonthEarningMetrics.nextPaymentDate) && m.areEqual(this.revenueSinceDate, currentMonthEarningMetrics.revenueSinceDate);
     }
 
     public final Long getMonthOverMonthRevenueChangePercent() {
@@ -114,7 +114,7 @@ public final /* data */ class CurrentMonthEarningMetrics {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("CurrentMonthEarningMetrics(revenue=");
+        StringBuilder sbU = a.U("CurrentMonthEarningMetrics(revenue=");
         sbU.append(this.revenue);
         sbU.append(", monthOverMonthRevenueChangePercent=");
         sbU.append(this.monthOverMonthRevenueChangePercent);
@@ -125,7 +125,7 @@ public final /* data */ class CurrentMonthEarningMetrics {
         sbU.append(", nextPaymentDate=");
         sbU.append(this.nextPaymentDate);
         sbU.append(", revenueSinceDate=");
-        return outline.J(sbU, this.revenueSinceDate, ")");
+        return a.J(sbU, this.revenueSinceDate, ")");
     }
 
     public /* synthetic */ CurrentMonthEarningMetrics(long j, Long l, long j2, Long l2, String str, String str2, int i, DefaultConstructorMarker defaultConstructorMarker) {

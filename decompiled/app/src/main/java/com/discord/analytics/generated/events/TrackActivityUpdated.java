@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackActivityUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Boolean hasMatchSecret = null;
@@ -38,7 +38,7 @@ public final /* data */ class TrackActivityUpdated implements AnalyticsSchema, T
             return false;
         }
         TrackActivityUpdated trackActivityUpdated = (TrackActivityUpdated) other;
-        return Intrinsics3.areEqual(this.applicationId, trackActivityUpdated.applicationId) && Intrinsics3.areEqual(this.hasMatchSecret, trackActivityUpdated.hasMatchSecret) && Intrinsics3.areEqual(this.hasSpectateSecret, trackActivityUpdated.hasSpectateSecret) && Intrinsics3.areEqual(this.hasJoinSecret, trackActivityUpdated.hasJoinSecret) && Intrinsics3.areEqual(this.hasImages, trackActivityUpdated.hasImages) && Intrinsics3.areEqual(this.partyMax, trackActivityUpdated.partyMax) && Intrinsics3.areEqual(this.partyId, trackActivityUpdated.partyId) && Intrinsics3.areEqual(this.platform, trackActivityUpdated.platform) && Intrinsics3.areEqual(this.partyPlatform, trackActivityUpdated.partyPlatform) && Intrinsics3.areEqual(this.trackId, trackActivityUpdated.trackId) && Intrinsics3.areEqual(this.type, trackActivityUpdated.type) && Intrinsics3.areEqual(this.activitySessionId, trackActivityUpdated.activitySessionId);
+        return m.areEqual(this.applicationId, trackActivityUpdated.applicationId) && m.areEqual(this.hasMatchSecret, trackActivityUpdated.hasMatchSecret) && m.areEqual(this.hasSpectateSecret, trackActivityUpdated.hasSpectateSecret) && m.areEqual(this.hasJoinSecret, trackActivityUpdated.hasJoinSecret) && m.areEqual(this.hasImages, trackActivityUpdated.hasImages) && m.areEqual(this.partyMax, trackActivityUpdated.partyMax) && m.areEqual(this.partyId, trackActivityUpdated.partyId) && m.areEqual(this.platform, trackActivityUpdated.platform) && m.areEqual(this.partyPlatform, trackActivityUpdated.partyPlatform) && m.areEqual(this.trackId, trackActivityUpdated.trackId) && m.areEqual(this.type, trackActivityUpdated.type) && m.areEqual(this.activitySessionId, trackActivityUpdated.activitySessionId);
     }
 
     public int hashCode() {
@@ -69,7 +69,7 @@ public final /* data */ class TrackActivityUpdated implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityUpdated(applicationId=");
+        StringBuilder sbU = a.U("TrackActivityUpdated(applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", hasMatchSecret=");
         sbU.append(this.hasMatchSecret);
@@ -92,6 +92,6 @@ public final /* data */ class TrackActivityUpdated implements AnalyticsSchema, T
         sbU.append(", type=");
         sbU.append(this.type);
         sbU.append(", activitySessionId=");
-        return outline.E(sbU, this.activitySessionId, ")");
+        return a.E(sbU, this.activitySessionId, ")");
     }
 }

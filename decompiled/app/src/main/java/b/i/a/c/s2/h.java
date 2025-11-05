@@ -1,36 +1,35 @@
 package b.i.a.c.s2;
 
 import android.util.SparseArray;
-import b.i.a.c.Player2;
-import b.i.a.c.f3.FlagSet;
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
+import b.i.a.c.f3.p;
+import b.i.a.c.s2.h1;
+import b.i.a.c.y1;
 import java.util.Objects;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class h implements ListenerSet.b {
-    public final /* synthetic */ AnalyticsCollector a;
+public final /* synthetic */ class h implements p.b {
+    public final /* synthetic */ g1 a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final /* synthetic */ Player2 f1082b;
+    public final /* synthetic */ y1 f1082b;
 
-    public /* synthetic */ h(AnalyticsCollector analyticsCollector, Player2 player2) {
-        this.a = analyticsCollector;
-        this.f1082b = player2;
+    public /* synthetic */ h(g1 g1Var, y1 y1Var) {
+        this.a = g1Var;
+        this.f1082b = y1Var;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.b
-    public final void a(Object obj, FlagSet flagSet) {
-        AnalyticsListener analyticsListener = (AnalyticsListener) obj;
-        SparseArray<AnalyticsListener.a> sparseArray = this.a.n;
-        SparseArray sparseArray2 = new SparseArray(flagSet.c());
-        for (int i = 0; i < flagSet.c(); i++) {
-            int iB = flagSet.b(i);
-            AnalyticsListener.a aVar = sparseArray.get(iB);
+    @Override // b.i.a.c.f3.p.b
+    public final void a(Object obj, b.i.a.c.f3.n nVar) {
+        h1 h1Var = (h1) obj;
+        SparseArray<h1.a> sparseArray = this.a.n;
+        SparseArray sparseArray2 = new SparseArray(nVar.c());
+        for (int i = 0; i < nVar.c(); i++) {
+            int iB = nVar.b(i);
+            h1.a aVar = sparseArray.get(iB);
             Objects.requireNonNull(aVar);
             sparseArray2.append(iB, aVar);
         }
-        analyticsListener.K();
+        h1Var.K();
     }
 }

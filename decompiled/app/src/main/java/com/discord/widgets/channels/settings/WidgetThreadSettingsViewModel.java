@@ -3,8 +3,8 @@ package com.discord.widgets.channels.settings;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.annotation.StringRes;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -13,13 +13,13 @@ import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -29,13 +29,13 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetThreadSettingsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState> {
+public final class WidgetThreadSettingsViewModel extends d0<ViewState> {
     private final long channelId;
     private final PublishSubject<Event> eventSubject;
 
     /* compiled from: WidgetThreadSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<StoreState> {
+    public static final class AnonymousClass1 extends o implements Function0<StoreState> {
         public final /* synthetic */ StoreChannels $channelStore;
         public final /* synthetic */ StorePermissions $permissionStore;
         public final /* synthetic */ StoreUser $userStore;
@@ -57,13 +57,13 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         @Override // kotlin.jvm.functions.Function0
         public final StoreState invoke() {
             Channel channel = this.$channelStore.getChannel(WidgetThreadSettingsViewModel.this.getChannelId());
-            return new StoreState(channel, channel != null ? ThreadUtils.INSTANCE.canManageThread(this.$userStore.getMeSnapshot(), channel, (Long) outline.d(channel, this.$permissionStore.getPermissionsByChannel())) : false);
+            return new StoreState(channel, channel != null ? ThreadUtils.INSTANCE.canManageThread(this.$userStore.getMeSnapshot(), channel, (Long) a.d(channel, this.$permissionStore.getPermissionsByChannel())) : false);
         }
     }
 
     /* compiled from: WidgetThreadSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -77,7 +77,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetThreadSettingsViewModel widgetThreadSettingsViewModel = WidgetThreadSettingsViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            m.checkNotNullExpressionValue(storeState, "storeState");
             WidgetThreadSettingsViewModel.access$handleStoreState(widgetThreadSettingsViewModel, storeState);
         }
     }
@@ -126,7 +126,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             }
 
             public String toString() {
-                return outline.B(outline.U("ShowToast(messageStringRes="), this.messageStringRes, ")");
+                return a.B(a.U("ShowToast(messageStringRes="), this.messageStringRes, ")");
             }
         }
 
@@ -180,7 +180,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.channel, storeState.channel) && this.canManageThread == storeState.canManageThread;
+            return m.areEqual(this.channel, storeState.channel) && this.canManageThread == storeState.canManageThread;
         }
 
         public final boolean getCanManageThread() {
@@ -204,10 +204,10 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(channel=");
+            StringBuilder sbU = a.U("StoreState(channel=");
             sbU.append(this.channel);
             sbU.append(", canManageThread=");
-            return outline.O(sbU, this.canManageThread, ")");
+            return a.O(sbU, this.canManageThread, ")");
         }
     }
 
@@ -235,7 +235,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(Channel channel, String str, int i, boolean z2, boolean z3, boolean z4) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(channel, "channel");
                 this.channel = channel;
                 this.channelNameDraft = str;
                 this.slowModeCooldownDraft = i;
@@ -301,7 +301,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             }
 
             public final Valid copy(Channel channel, String channelNameDraft, int slowModeCooldownDraft, boolean hasUnsavedChanges, boolean canManageThread, boolean isPinsEnabled) {
-                Intrinsics3.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(channel, "channel");
                 return new Valid(channel, channelNameDraft, slowModeCooldownDraft, hasUnsavedChanges, canManageThread, isPinsEnabled);
             }
 
@@ -313,7 +313,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.channel, valid.channel) && Intrinsics3.areEqual(this.channelNameDraft, valid.channelNameDraft) && this.slowModeCooldownDraft == valid.slowModeCooldownDraft && this.hasUnsavedChanges == valid.hasUnsavedChanges && this.canManageThread == valid.canManageThread && this.isPinsEnabled == valid.isPinsEnabled;
+                return m.areEqual(this.channel, valid.channel) && m.areEqual(this.channelNameDraft, valid.channelNameDraft) && this.slowModeCooldownDraft == valid.slowModeCooldownDraft && this.hasUnsavedChanges == valid.hasUnsavedChanges && this.canManageThread == valid.canManageThread && this.isPinsEnabled == valid.isPinsEnabled;
             }
 
             public final boolean getCanManageThread() {
@@ -363,7 +363,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(channel=");
+                StringBuilder sbU = a.U("Valid(channel=");
                 sbU.append(this.channel);
                 sbU.append(", channelNameDraft=");
                 sbU.append(this.channelNameDraft);
@@ -374,7 +374,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
                 sbU.append(", canManageThread=");
                 sbU.append(this.canManageThread);
                 sbU.append(", isPinsEnabled=");
-                return outline.O(sbU, this.isPinsEnabled, ")");
+                return a.O(sbU, this.isPinsEnabled, ")");
             }
         }
 
@@ -388,7 +388,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
     /* compiled from: WidgetThreadSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$onThreadDeleted$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -401,7 +401,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             Integer numB = ChannelUtils.b(channel);
             if (numB != null) {
                 PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);
@@ -412,7 +412,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
     /* compiled from: WidgetThreadSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$onThreadDeleted$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -425,7 +425,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(new Event.ShowToast(R.string.default_failure_to_perform_action_message));
         }
@@ -433,7 +433,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
     /* compiled from: WidgetThreadSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$saveThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -446,7 +446,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "it");
+            m.checkNotNullParameter(channel, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(new Event.ShowToast(R.string.thread_settings_updated));
         }
@@ -454,7 +454,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
     /* compiled from: WidgetThreadSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$saveThread$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -467,7 +467,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(new Event.ShowToast(R.string.default_failure_to_perform_action_message));
         }
@@ -481,8 +481,8 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         StoreChannels channels = companion.getChannels();
         StorePermissions permissions = companion.getPermissions();
         StoreUser users = companion.getUsers();
-        Observable observableR = ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{channels, permissions, users}, false, null, null, new AnonymousClass1(channels, users, permissions), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.…  .distinctUntilChanged()");
+        Observable observableR = ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{channels, permissions, users}, false, null, null, new AnonymousClass1(channels, users, permissions), 14, null).r();
+        m.checkNotNullExpressionValue(observableR, "ObservationDeckProvider.…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableR, this, null, 2, null), WidgetThreadSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }
 
@@ -520,13 +520,13 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     @MainThread
     public final void onChannelNameInputChanged(String value) {
-        Intrinsics3.checkNotNullParameter(value, "value");
+        m.checkNotNullParameter(value, "value");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Valid)) {
             viewState = null;
@@ -560,7 +560,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
         ViewState.Valid valid = (ViewState.Valid) viewState;
         if (valid != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(RestAPI.editTextChannel$default(RestAPI.INSTANCE.getApi(), this.channelId, Intrinsics3.areEqual(valid.getChannel().getName(), valid.getChannelNameDraft()) ^ true ? valid.getChannelNameDraft() : null, null, null, null, valid.getChannel().getRateLimitPerUser() != valid.getSlowModeCooldownDraft() ? Integer.valueOf(valid.getSlowModeCooldownDraft()) : null, null, 92, null), this, null, 2, null), WidgetThreadSettingsViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(RestAPI.editTextChannel$default(RestAPI.INSTANCE.getApi(), this.channelId, m.areEqual(valid.getChannel().getName(), valid.getChannelNameDraft()) ^ true ? valid.getChannelNameDraft() : null, null, null, null, valid.getChannel().getRateLimitPerUser() != valid.getSlowModeCooldownDraft() ? Integer.valueOf(valid.getSlowModeCooldownDraft()) : null, null, 92, null), this, null, 2, null), WidgetThreadSettingsViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
         }
     }
 }

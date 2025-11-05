@@ -1,13 +1,13 @@
 package com.discord.widgets.user;
 
 import com.discord.widgets.user.WidgetUserMentions;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserMentions$Model$MessageLoader$tryLoad$1 extends Lambda implements Function1<WidgetUserMentions.Model.MessageLoader.LoadingState, WidgetUserMentions.Model.MessageLoader.LoadingState> {
+public final class WidgetUserMentions$Model$MessageLoader$tryLoad$1 extends o implements Function1<WidgetUserMentions.Model.MessageLoader.LoadingState, WidgetUserMentions.Model.MessageLoader.LoadingState> {
     public static final WidgetUserMentions$Model$MessageLoader$tryLoad$1 INSTANCE = new WidgetUserMentions$Model$MessageLoader$tryLoad$1();
 
     public WidgetUserMentions$Model$MessageLoader$tryLoad$1() {
@@ -16,7 +16,7 @@ public final class WidgetUserMentions$Model$MessageLoader$tryLoad$1 extends Lamb
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetUserMentions.Model.MessageLoader.LoadingState invoke2(WidgetUserMentions.Model.MessageLoader.LoadingState loadingState) {
-        Intrinsics3.checkNotNullParameter(loadingState, "it");
+        m.checkNotNullParameter(loadingState, "it");
         return loadingState;
     }
 

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackStoreDirectoryExited.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreDirectoryExited implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackStoreDirectoryExited implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final List<Long> applicationIdsViewed = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackStoreDirectoryExited implements AnalyticsSche
             return false;
         }
         TrackStoreDirectoryExited trackStoreDirectoryExited = (TrackStoreDirectoryExited) other;
-        return Intrinsics3.areEqual(this.loadId, trackStoreDirectoryExited.loadId) && Intrinsics3.areEqual(this.applicationIdsViewed, trackStoreDirectoryExited.applicationIdsViewed) && Intrinsics3.areEqual(this.skuIdsViewed, trackStoreDirectoryExited.skuIdsViewed) && Intrinsics3.areEqual(this.durationMs, trackStoreDirectoryExited.durationMs);
+        return m.areEqual(this.loadId, trackStoreDirectoryExited.loadId) && m.areEqual(this.applicationIdsViewed, trackStoreDirectoryExited.applicationIdsViewed) && m.areEqual(this.skuIdsViewed, trackStoreDirectoryExited.skuIdsViewed) && m.areEqual(this.durationMs, trackStoreDirectoryExited.durationMs);
     }
 
     public int hashCode() {
@@ -46,13 +46,13 @@ public final /* data */ class TrackStoreDirectoryExited implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStoreDirectoryExited(loadId=");
+        StringBuilder sbU = a.U("TrackStoreDirectoryExited(loadId=");
         sbU.append(this.loadId);
         sbU.append(", applicationIdsViewed=");
         sbU.append(this.applicationIdsViewed);
         sbU.append(", skuIdsViewed=");
         sbU.append(this.skuIdsViewed);
         sbU.append(", durationMs=");
-        return outline.G(sbU, this.durationMs, ")");
+        return a.G(sbU, this.durationMs, ")");
     }
 }

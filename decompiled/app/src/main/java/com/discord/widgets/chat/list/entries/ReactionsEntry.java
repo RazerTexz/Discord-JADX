@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.message.Message;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ReactionsEntry.kt */
 /* loaded from: classes2.dex */
@@ -15,7 +15,7 @@ public final /* data */ class ReactionsEntry extends ChatListEntry {
     private final int type;
 
     public ReactionsEntry(Message message, boolean z2, boolean z3, boolean z4) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         this.message = message;
         this.canAddReactions = z2;
         this.canCreateReactions = z3;
@@ -65,7 +65,7 @@ public final /* data */ class ReactionsEntry extends ChatListEntry {
     }
 
     public final ReactionsEntry copy(Message message, boolean canAddReactions, boolean canCreateReactions, boolean animateEmojis) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         return new ReactionsEntry(message, canAddReactions, canCreateReactions, animateEmojis);
     }
 
@@ -77,7 +77,7 @@ public final /* data */ class ReactionsEntry extends ChatListEntry {
             return false;
         }
         ReactionsEntry reactionsEntry = (ReactionsEntry) other;
-        return Intrinsics3.areEqual(this.message, reactionsEntry.message) && this.canAddReactions == reactionsEntry.canAddReactions && this.canCreateReactions == reactionsEntry.canCreateReactions && this.animateEmojis == reactionsEntry.animateEmojis;
+        return m.areEqual(this.message, reactionsEntry.message) && this.canAddReactions == reactionsEntry.canAddReactions && this.canCreateReactions == reactionsEntry.canCreateReactions && this.animateEmojis == reactionsEntry.animateEmojis;
     }
 
     public final boolean getAnimateEmojis() {
@@ -127,13 +127,13 @@ public final /* data */ class ReactionsEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ReactionsEntry(message=");
+        StringBuilder sbU = a.U("ReactionsEntry(message=");
         sbU.append(this.message);
         sbU.append(", canAddReactions=");
         sbU.append(this.canAddReactions);
         sbU.append(", canCreateReactions=");
         sbU.append(this.canCreateReactions);
         sbU.append(", animateEmojis=");
-        return outline.O(sbU, this.animateEmojis, ")");
+        return a.O(sbU, this.animateEmojis, ")");
     }
 }

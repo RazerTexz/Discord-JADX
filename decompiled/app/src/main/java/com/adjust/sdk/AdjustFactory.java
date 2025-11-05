@@ -1,7 +1,7 @@
 package com.adjust.sdk;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.adjust.sdk.UtilNetworking;
 import com.discord.stores.StoreGuildScheduledEvents;
 import java.io.IOException;
@@ -46,8 +46,8 @@ public class AdjustFactory {
     public static class AnonymousClass1 implements UtilNetworking.IConnectionOptions {
 
         /* renamed from: com.adjust.sdk.AdjustFactory$1$1, reason: invalid class name and collision with other inner class name */
-        public class C00631 implements X509TrustManager {
-            public C00631() {
+        public class C01831 implements X509TrustManager {
+            public C01831() {
             }
 
             @Override // javax.net.ssl.X509TrustManager
@@ -94,7 +94,7 @@ public class AdjustFactory {
             new UtilNetworking.ConnectionOptions().applyConnectionOptions(httpsURLConnection, str);
             try {
                 SSLContext sSLContext = SSLContext.getInstance("TLS");
-                sSLContext.init(null, new TrustManager[]{new C00631()}, new SecureRandom());
+                sSLContext.init(null, new TrustManager[]{new C01831()}, new SecureRandom());
                 httpsURLConnection.setSSLSocketFactory(sSLContext.getSocketFactory());
                 httpsURLConnection.setHostnameVerifier(new AnonymousClass2());
             } catch (Exception e) {
@@ -123,7 +123,7 @@ public class AdjustFactory {
             String hexString = Integer.toHexString(b2);
             int length = hexString.length();
             if (length == 1) {
-                hexString = outline.w("0", hexString);
+                hexString = a.w("0", hexString);
             }
             if (length > 2) {
                 hexString = hexString.substring(length - 2, length);

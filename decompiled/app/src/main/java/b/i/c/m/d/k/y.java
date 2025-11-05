@@ -2,9 +2,6 @@ package b.i.c.m.d.k;
 
 import android.os.Build;
 import b.i.c.m.d.k.x;
-import b.i.c.m.d.p.ByteString2;
-import b.i.c.m.d.p.CodedOutputStream2;
-import b.i.c.m.d.p.SessionProtobufHelper;
 
 /* compiled from: CrashlyticsController.java */
 /* loaded from: classes3.dex */
@@ -28,7 +25,7 @@ public class y implements x.g {
     }
 
     @Override // b.i.c.m.d.k.x.g
-    public void a(CodedOutputStream2 codedOutputStream2) throws Exception {
+    public void a(b.i.c.m.d.p.c cVar) throws Exception {
         int i = this.a;
         String str = Build.MODEL;
         int i2 = this.f1705b;
@@ -38,28 +35,28 @@ public class y implements x.g {
         int i3 = this.f;
         String str2 = Build.MANUFACTURER;
         String str3 = Build.PRODUCT;
-        ByteString2 byteString2J = SessionProtobufHelper.j(str);
-        ByteString2 byteString2J2 = SessionProtobufHelper.j(str3);
-        ByteString2 byteString2J3 = SessionProtobufHelper.j(str2);
-        codedOutputStream2.r(9, 2);
-        int iC = CodedOutputStream2.c(3, i) + 0;
-        int iB = byteString2J == null ? 0 : CodedOutputStream2.b(4, byteString2J);
-        int iF = CodedOutputStream2.f(5, i2);
-        int iH = CodedOutputStream2.h(6, j);
-        int iH2 = CodedOutputStream2.h(7, j2);
-        codedOutputStream2.o(CodedOutputStream2.f(12, i3) + CodedOutputStream2.a(10, z2) + iH2 + iH + iF + iC + iB + (byteString2J3 == null ? 0 : CodedOutputStream2.b(13, byteString2J3)) + (byteString2J2 == null ? 0 : CodedOutputStream2.b(14, byteString2J2)));
-        codedOutputStream2.m(3, i);
-        codedOutputStream2.l(4, byteString2J);
-        codedOutputStream2.s(5, i2);
-        codedOutputStream2.t(6, j);
-        codedOutputStream2.t(7, j2);
-        codedOutputStream2.k(10, z2);
-        codedOutputStream2.s(12, i3);
-        if (byteString2J3 != null) {
-            codedOutputStream2.l(13, byteString2J3);
+        b.i.c.m.d.p.a aVarJ = b.i.c.m.d.p.d.j(str);
+        b.i.c.m.d.p.a aVarJ2 = b.i.c.m.d.p.d.j(str3);
+        b.i.c.m.d.p.a aVarJ3 = b.i.c.m.d.p.d.j(str2);
+        cVar.r(9, 2);
+        int iC = b.i.c.m.d.p.c.c(3, i) + 0;
+        int iB = aVarJ == null ? 0 : b.i.c.m.d.p.c.b(4, aVarJ);
+        int iF = b.i.c.m.d.p.c.f(5, i2);
+        int iH = b.i.c.m.d.p.c.h(6, j);
+        int iH2 = b.i.c.m.d.p.c.h(7, j2);
+        cVar.o(b.i.c.m.d.p.c.f(12, i3) + b.i.c.m.d.p.c.a(10, z2) + iH2 + iH + iF + iC + iB + (aVarJ3 == null ? 0 : b.i.c.m.d.p.c.b(13, aVarJ3)) + (aVarJ2 == null ? 0 : b.i.c.m.d.p.c.b(14, aVarJ2)));
+        cVar.m(3, i);
+        cVar.l(4, aVarJ);
+        cVar.s(5, i2);
+        cVar.t(6, j);
+        cVar.t(7, j2);
+        cVar.k(10, z2);
+        cVar.s(12, i3);
+        if (aVarJ3 != null) {
+            cVar.l(13, aVarJ3);
         }
-        if (byteString2J2 != null) {
-            codedOutputStream2.l(14, byteString2J2);
+        if (aVarJ2 != null) {
+            cVar.l(14, aVarJ2);
         }
     }
 }

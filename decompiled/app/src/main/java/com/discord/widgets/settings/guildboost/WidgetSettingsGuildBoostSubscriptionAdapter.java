@@ -13,8 +13,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.ViewSettingsBoostedBoostListitemBinding;
 import com.discord.databinding.ViewSettingsBoostedGuildListitemBinding;
@@ -30,14 +30,14 @@ import com.discord.utilities.images.MGImages;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.time.TimeUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.guildboost.GuildBoostProgressView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
+import d0.g0.t;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Unit;
@@ -61,7 +61,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GuildBoostListItem(WidgetSettingsGuildBoostSubscriptionAdapter widgetSettingsGuildBoostSubscriptionAdapter) {
             super(R.layout.view_settings_boosted_boost_listitem, widgetSettingsGuildBoostSubscriptionAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSettingsGuildBoostSubscriptionAdapter, "adapter");
+            m.checkNotNullParameter(widgetSettingsGuildBoostSubscriptionAdapter, "adapter");
             View view = this.itemView;
             int i = R.id.boosted_boost_action;
             TextView textView = (TextView) view.findViewById(R.id.boosted_boost_action);
@@ -76,7 +76,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                         TextView textView3 = (TextView) view.findViewById(R.id.boosted_boost_date);
                         if (textView3 != null) {
                             ViewSettingsBoostedBoostListitemBinding viewSettingsBoostedBoostListitemBinding = new ViewSettingsBoostedBoostListitemBinding((RelativeLayout) view, textView, imageView, textView2, textView3);
-                            Intrinsics3.checkNotNullExpressionValue(viewSettingsBoostedBoostListitemBinding, "ViewSettingsBoostedBoost…temBinding.bind(itemView)");
+                            m.checkNotNullExpressionValue(viewSettingsBoostedBoostListitemBinding, "ViewSettingsBoostedBoost…temBinding.bind(itemView)");
                             this.binding = viewSettingsBoostedBoostListitemBinding;
                             return;
                         }
@@ -101,15 +101,15 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             MenuItem menuItemFindItem2 = popupMenu.getMenu().findItem(R.id.menu_settings_premium_guild_sub_cancel);
             MenuItem menuItemFindItem3 = popupMenu.getMenu().findItem(R.id.menu_settings_premium_guild_sub_uncancel);
             boolean canceled = data.getBoostSlot().getCanceled();
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "transfer");
+            m.checkNotNullExpressionValue(menuItemFindItem, "transfer");
             menuItemFindItem.setVisible(!hasCooldown);
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem2, "cancel");
+            m.checkNotNullExpressionValue(menuItemFindItem2, "cancel");
             menuItemFindItem2.setVisible(!canceled && canBeCancelled);
-            Intrinsics3.checkNotNullExpressionValue(menuItemFindItem3, "uncancel");
+            m.checkNotNullExpressionValue(menuItemFindItem3, "uncancel");
             menuItemFindItem3.setVisible(canceled && canBeUncancelled);
-            menuItemFindItem.setOnMenuItemClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter3(this, data));
-            menuItemFindItem2.setOnMenuItemClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter4(this, data));
-            menuItemFindItem3.setOnMenuItemClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter5(this, data));
+            menuItemFindItem.setOnMenuItemClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$showGuildBoostPopup$1(this, data));
+            menuItemFindItem2.setOnMenuItemClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$showGuildBoostPopup$2(this, data));
+            menuItemFindItem3.setOnMenuItemClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$showGuildBoostPopup$3(this, data));
             popupMenu.show();
         }
 
@@ -129,13 +129,13 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             CharSequence charSequenceH;
             int themedDrawableRes$default;
             String boostEndsAt;
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             if (!(data instanceof Item.GuildBoostItem)) {
                 throw new Exception("Incorrect List Item Type or null data");
             }
             View view = this.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             Context context = view.getContext();
             long jCurrentTimeMillis = ClockFactory.get().currentTimeMillis();
             Item.GuildBoostItem guildBoostItem = (Item.GuildBoostItem) data;
@@ -147,10 +147,10 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             Long lValueOf = premiumGuildSubscription2 != null ? Long.valueOf((premiumGuildSubscription2.getId() >>> 22) + SnowflakeUtils.DISCORD_EPOCH) : null;
             boolean canceled = boostSlot.getCanceled();
             ImageView imageView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.boostedBoostCancelled");
+            m.checkNotNullExpressionValue(imageView, "binding.boostedBoostCancelled");
             imageView.setVisibility(canceled ? 0 : 8);
             TextView textView = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.boostedBoostDate");
+            m.checkNotNullExpressionValue(textView, "binding.boostedBoostDate");
             if (lValueOf == null || (string = DateFormat.format("MMMM dd, yyy", lValueOf.longValue())) == null) {
                 string = context.getString(R.string.premium_guild_subscription_unused_slot_description);
             }
@@ -161,11 +161,11 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                 c = 1;
                 strReplace$default = null;
             } else {
-                Intrinsics3.checkNotNullExpressionValue(context, "context");
+                m.checkNotNullExpressionValue(context, "context");
                 str = "context";
                 i = 0;
                 c = 1;
-                strReplace$default = StringsJVM.replace$default(FormatUtils.h(context, R.string.premium_guild_subscription_pending_cancelation, new Object[]{TimeUtils.renderUtcDate$default(TimeUtils.INSTANCE, boostEndsAt, context, (String) null, (java.text.DateFormat) null, 0, 28, (Object) null)}, null, 4).toString(), "*", "", false, 4, (Object) null);
+                strReplace$default = t.replace$default(b.h(context, R.string.premium_guild_subscription_pending_cancelation, new Object[]{TimeUtils.renderUtcDate$default(TimeUtils.INSTANCE, boostEndsAt, context, (String) null, (java.text.DateFormat) null, 0, 28, (Object) null)}, null, 4).toString(), "*", "", false, 4, (Object) null);
             }
             if (z3) {
                 long jMax = Math.max(boostSlot.getCooldownExpiresAtTimestamp() - jCurrentTimeMillis, 0L);
@@ -173,44 +173,44 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                 long j2 = jMax - (86400000 * j);
                 long j3 = j2 / 3600000;
                 str2 = str;
-                Intrinsics3.checkNotNullExpressionValue(context, str2);
+                m.checkNotNullExpressionValue(context, str2);
                 Object[] objArr = new Object[3];
                 objArr[i] = String.valueOf(j);
                 objArr[c] = String.valueOf(j3);
                 objArr[2] = String.valueOf((j2 - (3600000 * j3)) / 60000);
-                charSequenceH = FormatUtils.h(context, R.string.premium_guild_cooldown_available_countdown, objArr, null, 4);
+                charSequenceH = b.h(context, R.string.premium_guild_cooldown_available_countdown, objArr, null, 4);
             } else {
                 str2 = str;
                 charSequenceH = null;
             }
             if (strReplace$default == null && charSequenceH == null) {
                 TextView textView2 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.boostedBoostCooldown");
+                m.checkNotNullExpressionValue(textView2, "binding.boostedBoostCooldown");
                 textView2.setVisibility(8);
             } else if (strReplace$default != null && charSequenceH != null) {
                 TextView textView3 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.boostedBoostCooldown");
+                m.checkNotNullExpressionValue(textView3, "binding.boostedBoostCooldown");
                 ViewExtensions.setTextAndVisibilityBy(textView3, charSequenceH + " - " + strReplace$default);
             } else if (strReplace$default != null && charSequenceH == null) {
                 TextView textView4 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.boostedBoostCooldown");
+                m.checkNotNullExpressionValue(textView4, "binding.boostedBoostCooldown");
                 ViewExtensions.setTextAndVisibilityBy(textView4, strReplace$default);
             } else if (strReplace$default == null && charSequenceH != null) {
                 TextView textView5 = this.binding.d;
-                Intrinsics3.checkNotNullExpressionValue(textView5, "binding.boostedBoostCooldown");
+                m.checkNotNullExpressionValue(textView5, "binding.boostedBoostCooldown");
                 ViewExtensions.setTextAndVisibilityBy(textView5, charSequenceH);
             }
             TextView textView6 = this.binding.f2212b;
-            Intrinsics3.checkNotNullExpressionValue(textView6, "binding.boostedBoostAction");
+            m.checkNotNullExpressionValue(textView6, "binding.boostedBoostAction");
             textView6.setText((z2 || z3) ? "" : context.getString(R.string.premium_guild_subscription_select_server_button));
             if (!z3 || (!canceled && WidgetSettingsGuildBoostSubscriptionAdapter.access$getCanCancelBoosts$p((WidgetSettingsGuildBoostSubscriptionAdapter) this.adapter)) || (canceled && WidgetSettingsGuildBoostSubscriptionAdapter.access$getCanUncancelBoosts$p((WidgetSettingsGuildBoostSubscriptionAdapter) this.adapter))) {
-                Intrinsics3.checkNotNullExpressionValue(context, str2);
+                m.checkNotNullExpressionValue(context, str2);
                 themedDrawableRes$default = DrawableCompat.getThemedDrawableRes$default(context, R.attr.ic_overflow, i, 2, (Object) null);
             } else {
                 themedDrawableRes$default = 0;
             }
             this.binding.f2212b.setCompoundDrawablesWithIntrinsicBounds(i, i, themedDrawableRes$default, i);
-            this.binding.f2212b.setOnClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter2(this, z2, z3, data, boostSlot));
+            this.binding.f2212b.setOnClickListener(new WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$onConfigure$2(this, z2, z3, data, boostSlot));
         }
     }
 
@@ -221,7 +221,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GuildListItem(WidgetSettingsGuildBoostSubscriptionAdapter widgetSettingsGuildBoostSubscriptionAdapter) {
             super(R.layout.view_settings_boosted_guild_listitem, widgetSettingsGuildBoostSubscriptionAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSettingsGuildBoostSubscriptionAdapter, "adapter");
+            m.checkNotNullParameter(widgetSettingsGuildBoostSubscriptionAdapter, "adapter");
             View view = this.itemView;
             int i = R.id.boosted_guild_banner;
             SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(R.id.boosted_guild_banner);
@@ -242,7 +242,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                                 TextView textView2 = (TextView) view.findViewById(R.id.boosted_sample_guild_name);
                                 if (textView2 != null) {
                                     ViewSettingsBoostedGuildListitemBinding viewSettingsBoostedGuildListitemBinding = new ViewSettingsBoostedGuildListitemBinding((LinearLayout) view, simpleDraweeView, viewFindViewById, guildBoostProgressView, textView, simpleDraweeView2, textView2);
-                                    Intrinsics3.checkNotNullExpressionValue(viewSettingsBoostedGuildListitemBinding, "ViewSettingsBoostedGuild…temBinding.bind(itemView)");
+                                    m.checkNotNullExpressionValue(viewSettingsBoostedGuildListitemBinding, "ViewSettingsBoostedGuild…temBinding.bind(itemView)");
                                     this.binding = viewSettingsBoostedGuildListitemBinding;
                                     return;
                                 }
@@ -261,41 +261,41 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             if (data instanceof Item.GuildItem) {
                 Item.GuildItem guildItem = (Item.GuildItem) data;
                 if (guildItem.getGuild() != null) {
                     View view = this.itemView;
-                    Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                    m.checkNotNullExpressionValue(view, "itemView");
                     Context context = view.getContext();
                     if (guildItem.getGuild().getBanner() != null) {
                         SimpleDraweeView simpleDraweeView = this.binding.f2213b;
                         IconUtils iconUtils = IconUtils.INSTANCE;
                         Guild guild = guildItem.getGuild();
-                        Intrinsics3.checkNotNullExpressionValue(context, "context");
+                        m.checkNotNullExpressionValue(context, "context");
                         simpleDraweeView.setImageURI(IconUtils.getBannerForGuild$default(iconUtils, guild, Integer.valueOf(context.getResources().getDimensionPixelSize(R.dimen.nav_panel_width)), false, 4, null));
                         View view2 = this.binding.c;
-                        Intrinsics3.checkNotNullExpressionValue(view2, "binding.boostedGuildGradient");
+                        m.checkNotNullExpressionValue(view2, "binding.boostedGuildGradient");
                         view2.setVisibility(0);
                     } else {
                         SimpleDraweeView simpleDraweeView2 = this.binding.f2213b;
-                        Intrinsics3.checkNotNullExpressionValue(context, "context");
+                        m.checkNotNullExpressionValue(context, "context");
                         simpleDraweeView2.setBackgroundResource(DrawableCompat.getThemedDrawableRes$default(context, R.attr.bg_subscription_placeholder_pattern, 0, 2, (Object) null));
                         View view3 = this.binding.c;
-                        Intrinsics3.checkNotNullExpressionValue(view3, "binding.boostedGuildGradient");
+                        m.checkNotNullExpressionValue(view3, "binding.boostedGuildGradient");
                         view3.setVisibility(8);
                     }
                     SimpleDraweeView simpleDraweeView3 = this.binding.f;
-                    Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.boostedSampleGuildIcon");
+                    m.checkNotNullExpressionValue(simpleDraweeView3, "binding.boostedSampleGuildIcon");
                     IconUtils.setIcon$default(simpleDraweeView3, IconUtils.getForGuild$default(guildItem.getGuild(), null, false, null, 14, null), 0, (Function1) null, (MGImages.ChangeDetector) null, 28, (Object) null);
                     TextView textView = this.binding.g;
-                    Intrinsics3.checkNotNullExpressionValue(textView, "binding.boostedSampleGuildName");
+                    m.checkNotNullExpressionValue(textView, "binding.boostedSampleGuildName");
                     textView.setText(guildItem.getGuild().getName());
-                    CharSequence i18nPluralString = StringResourceUtils.getI18nPluralString(context, R.plurals.premium_guild_subscription_guild_subsription_subtitle_numSubscriptions, guildItem.getBoostCount(), Integer.valueOf(guildItem.getBoostCount()));
+                    CharSequence i18nPluralString = StringResourceUtilsKt.getI18nPluralString(context, R.plurals.premium_guild_subscription_guild_subsription_subtitle_numSubscriptions, guildItem.getBoostCount(), Integer.valueOf(guildItem.getBoostCount()));
                     TextView textView2 = this.binding.e;
-                    Intrinsics3.checkNotNullExpressionValue(textView2, "binding.boostedSampleGuildCount");
-                    textView2.setText(FormatUtils.h(context, R.string.premium_guild_subscription_guild_subsription_subtitle, new Object[]{i18nPluralString}, null, 4));
+                    m.checkNotNullExpressionValue(textView2, "binding.boostedSampleGuildCount");
+                    textView2.setText(b.h(context, R.string.premium_guild_subscription_guild_subsription_subtitle, new Object[]{i18nPluralString}, null, 4));
                     this.binding.d.a(guildItem.getGuild().getId(), guildItem.getGuild().getPremiumTier(), guildItem.getGuild().getPremiumSubscriptionCount());
                     return;
                 }
@@ -311,12 +311,12 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public HeaderListItem(WidgetSettingsGuildBoostSubscriptionAdapter widgetSettingsGuildBoostSubscriptionAdapter) {
             super(R.layout.view_settings_boosted_header_listitem, widgetSettingsGuildBoostSubscriptionAdapter);
-            Intrinsics3.checkNotNullParameter(widgetSettingsGuildBoostSubscriptionAdapter, "adapter");
+            m.checkNotNullParameter(widgetSettingsGuildBoostSubscriptionAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             TextView textView = (TextView) view;
             ViewSettingsBoostedHeaderListitemBinding viewSettingsBoostedHeaderListitemBinding = new ViewSettingsBoostedHeaderListitemBinding(textView, textView);
-            Intrinsics3.checkNotNullExpressionValue(viewSettingsBoostedHeaderListitemBinding, "ViewSettingsBoostedHeade…temBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(viewSettingsBoostedHeaderListitemBinding, "ViewSettingsBoostedHeade…temBinding.bind(itemView)");
             this.binding = viewSettingsBoostedHeaderListitemBinding;
         }
 
@@ -327,15 +327,15 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             if (!(data instanceof Item.HeaderItem)) {
                 throw new Exception("Incorrect List Item Type or null data");
             }
             TextView textView = this.binding.f2214b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.boostedHeader");
+            m.checkNotNullExpressionValue(textView, "binding.boostedHeader");
             View view = this.itemView;
-            Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+            m.checkNotNullExpressionValue(view, "itemView");
             textView.setText(view.getContext().getString(((Item.HeaderItem) data).getHeaderStringId()));
         }
     }
@@ -356,7 +356,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public GuildBoostItem(ModelGuildBoostSlot modelGuildBoostSlot, String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelGuildBoostSlot, "boostSlot");
+                m.checkNotNullParameter(modelGuildBoostSlot, "boostSlot");
                 this.boostSlot = modelGuildBoostSlot;
                 this.boostEndsAt = str;
                 this.type = 1;
@@ -384,7 +384,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             }
 
             public final GuildBoostItem copy(ModelGuildBoostSlot boostSlot, String boostEndsAt) {
-                Intrinsics3.checkNotNullParameter(boostSlot, "boostSlot");
+                m.checkNotNullParameter(boostSlot, "boostSlot");
                 return new GuildBoostItem(boostSlot, boostEndsAt);
             }
 
@@ -396,7 +396,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                     return false;
                 }
                 GuildBoostItem guildBoostItem = (GuildBoostItem) other;
-                return Intrinsics3.areEqual(this.boostSlot, guildBoostItem.boostSlot) && Intrinsics3.areEqual(this.boostEndsAt, guildBoostItem.boostEndsAt);
+                return m.areEqual(this.boostSlot, guildBoostItem.boostSlot) && m.areEqual(this.boostEndsAt, guildBoostItem.boostEndsAt);
             }
 
             public final String getBoostEndsAt() {
@@ -425,10 +425,10 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("GuildBoostItem(boostSlot=");
+                StringBuilder sbU = a.U("GuildBoostItem(boostSlot=");
                 sbU.append(this.boostSlot);
                 sbU.append(", boostEndsAt=");
-                return outline.J(sbU, this.boostEndsAt, ")");
+                return a.J(sbU, this.boostEndsAt, ")");
             }
         }
 
@@ -478,7 +478,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                     return false;
                 }
                 GuildItem guildItem = (GuildItem) other;
-                return Intrinsics3.areEqual(this.guild, guildItem.guild) && this.boostCount == guildItem.boostCount;
+                return m.areEqual(this.guild, guildItem.guild) && this.boostCount == guildItem.boostCount;
             }
 
             public final int getBoostCount() {
@@ -505,10 +505,10 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("GuildItem(guild=");
+                StringBuilder sbU = a.U("GuildItem(guild=");
                 sbU.append(this.guild);
                 sbU.append(", boostCount=");
-                return outline.B(sbU, this.boostCount, ")");
+                return a.B(sbU, this.boostCount, ")");
             }
         }
 
@@ -567,7 +567,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             }
 
             public String toString() {
-                return outline.B(outline.U("HeaderItem(headerStringId="), this.headerStringId, ")");
+                return a.B(a.U("HeaderItem(headerStringId="), this.headerStringId, ")");
             }
         }
 
@@ -582,10 +582,10 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetSettingsGuildBoostSubscriptionAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        this.subscribeListener = WidgetSettingsGuildBoostSubscriptionAdapter7.INSTANCE;
-        this.transferListener = WidgetSettingsGuildBoostSubscriptionAdapter8.INSTANCE;
-        this.cancelListener = WidgetSettingsGuildBoostSubscriptionAdapter6.INSTANCE;
+        m.checkNotNullParameter(recyclerView, "recycler");
+        this.subscribeListener = WidgetSettingsGuildBoostSubscriptionAdapter$subscribeListener$1.INSTANCE;
+        this.transferListener = WidgetSettingsGuildBoostSubscriptionAdapter$transferListener$1.INSTANCE;
+        this.cancelListener = WidgetSettingsGuildBoostSubscriptionAdapter$cancelListener$1.INSTANCE;
     }
 
     public static final /* synthetic */ boolean access$getCanCancelBoosts$p(WidgetSettingsGuildBoostSubscriptionAdapter widgetSettingsGuildBoostSubscriptionAdapter) {
@@ -629,10 +629,10 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
     }
 
     public final void configure(List<? extends Item> guildBoostItems, Function1<? super Long, Unit> subscribeListener, Function2<? super ModelGuildBoostSlot, ? super Long, Unit> transferListener, Function2<? super Long, ? super Boolean, Unit> cancelListener, boolean canCancelBoosts, boolean canUncancelBoosts) {
-        Intrinsics3.checkNotNullParameter(guildBoostItems, "guildBoostItems");
-        Intrinsics3.checkNotNullParameter(subscribeListener, "subscribeListener");
-        Intrinsics3.checkNotNullParameter(transferListener, "transferListener");
-        Intrinsics3.checkNotNullParameter(cancelListener, "cancelListener");
+        m.checkNotNullParameter(guildBoostItems, "guildBoostItems");
+        m.checkNotNullParameter(subscribeListener, "subscribeListener");
+        m.checkNotNullParameter(transferListener, "transferListener");
+        m.checkNotNullParameter(cancelListener, "cancelListener");
         setData(guildBoostItems);
         this.subscribeListener = subscribeListener;
         this.transferListener = transferListener;
@@ -648,7 +648,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<WidgetSettingsGuildBoostSubscriptionAdapter, Item> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new GuildListItem(this);
         }

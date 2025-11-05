@@ -8,7 +8,7 @@ import android.media.AudioTrack;
 import android.os.Build;
 import android.os.Process;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.nio.ByteBuffer;
 import org.webrtc.ContextUtils;
 import org.webrtc.Logging;
@@ -93,7 +93,7 @@ public class WebRtcAudioTrack {
                     WebRtcAudioTrack.access$000(WebRtcAudioTrack.this).stop();
                     Logging.d(WebRtcAudioTrack.TAG, "AudioTrack.stop is done.");
                 } catch (IllegalStateException e) {
-                    StringBuilder sbU = outline.U("AudioTrack.stop failed: ");
+                    StringBuilder sbU = a.U("AudioTrack.stop failed: ");
                     sbU.append(e.getMessage());
                     Logging.e(WebRtcAudioTrack.TAG, sbU.toString());
                 }
@@ -190,7 +190,7 @@ public class WebRtcAudioTrack {
             Logging.w(TAG, "Unable to use fast mode since requested sample rate is not native");
         }
         if (usageAttribute != DEFAULT_USAGE) {
-            StringBuilder sbU = outline.U("A non default usage attribute is used: ");
+            StringBuilder sbU = a.U("A non default usage attribute is used: ");
             sbU.append(usageAttribute);
             Logging.w(TAG, sbU.toString());
         }
@@ -238,7 +238,7 @@ public class WebRtcAudioTrack {
         this.threadChecker.checkIsOnValidThread();
         Logging.d(TAG, "initPlayout(sampleRate=" + i + ", channels=" + i2 + ", bufferSizeFactor=" + d + ")");
         this.byteBuffer = ByteBuffer.allocateDirect((i / 100) * i2 * 2);
-        StringBuilder sbU = outline.U("byteBuffer.capacity: ");
+        StringBuilder sbU = a.U("byteBuffer.capacity: ");
         sbU.append(this.byteBuffer.capacity());
         Logging.d(TAG, sbU.toString());
         this.emptyBytes = new byte[this.byteBuffer.capacity()];
@@ -278,7 +278,7 @@ public class WebRtcAudioTrack {
 
     private void logBufferCapacityInFrames() {
         if (Build.VERSION.SDK_INT >= 24) {
-            StringBuilder sbU = outline.U("AudioTrack: buffer capacity in frames: ");
+            StringBuilder sbU = a.U("AudioTrack: buffer capacity in frames: ");
             sbU.append(this.audioTrack.getBufferCapacityInFrames());
             Logging.d(TAG, sbU.toString());
         }
@@ -286,14 +286,14 @@ public class WebRtcAudioTrack {
 
     private void logBufferSizeInFrames() {
         if (Build.VERSION.SDK_INT >= 23) {
-            StringBuilder sbU = outline.U("AudioTrack: buffer size in frames: ");
+            StringBuilder sbU = a.U("AudioTrack: buffer size in frames: ");
             sbU.append(this.audioTrack.getBufferSizeInFrames());
             Logging.d(TAG, sbU.toString());
         }
     }
 
     private void logMainParameters() {
-        StringBuilder sbU = outline.U("AudioTrack: session ID: ");
+        StringBuilder sbU = a.U("AudioTrack: session ID: ");
         sbU.append(this.audioTrack.getAudioSessionId());
         sbU.append(", channels: ");
         sbU.append(this.audioTrack.getChannelCount());
@@ -311,7 +311,7 @@ public class WebRtcAudioTrack {
 
     private void logUnderrunCount() {
         if (Build.VERSION.SDK_INT >= 24) {
-            StringBuilder sbU = outline.U("underrun count: ");
+            StringBuilder sbU = a.U("underrun count: ");
             sbU.append(this.audioTrack.getUnderrunCount());
             Logging.d(TAG, sbU.toString());
         }

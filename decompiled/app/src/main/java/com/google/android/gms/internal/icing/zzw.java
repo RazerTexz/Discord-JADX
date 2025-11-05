@@ -2,7 +2,7 @@ package com.google.android.gms.internal.icing;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.h.k.u;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Locale;
@@ -39,16 +39,16 @@ public final class zzw extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.s2(parcel, 1, this.j, i, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.s2(parcel, 1, this.j, i, false);
         long j = this.k;
         parcel.writeInt(524290);
         parcel.writeLong(j);
         int i2 = this.l;
         parcel.writeInt(262147);
         parcel.writeInt(i2);
-        AnimatableValueParser.t2(parcel, 4, this.m, false);
-        AnimatableValueParser.s2(parcel, 5, this.n, i, false);
+        d.t2(parcel, 4, this.m, false);
+        d.s2(parcel, 5, this.n, i, false);
         boolean z2 = this.o;
         parcel.writeInt(262150);
         parcel.writeInt(z2 ? 1 : 0);
@@ -58,7 +58,7 @@ public final class zzw extends AbstractSafeParcelable {
         int i4 = this.q;
         parcel.writeInt(262152);
         parcel.writeInt(i4);
-        AnimatableValueParser.t2(parcel, 9, this.r, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.t2(parcel, 9, this.r, false);
+        d.A2(parcel, iY2);
     }
 }

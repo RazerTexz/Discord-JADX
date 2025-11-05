@@ -3,8 +3,8 @@ package com.discord.widgets.servers.guildboost;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAppliedGuildBoost;
 import com.discord.models.domain.ModelGuildBoostSlot;
 import com.discord.models.guild.Guild;
@@ -14,9 +14,8 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.CollectionsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -31,7 +30,7 @@ import rx.functions.Func2;
 
 /* compiled from: GuildBoostInProgressViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState> {
+public final class GuildBoostInProgressViewModel extends d0<ViewState> {
     private Subscription guildBoostSubscription;
     private final long guildId;
     private final StoreGuildBoost storeGuildBoost;
@@ -48,14 +47,14 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Guild guild, StoreGuildBoost.State state) {
-            Intrinsics3.checkNotNullExpressionValue(state, "guildBoostState");
+            m.checkNotNullExpressionValue(state, "guildBoostState");
             return new StoreState(guild, state);
         }
     }
 
     /* compiled from: GuildBoostInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -68,7 +67,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             GuildBoostInProgressViewModel.access$handleStoreState(GuildBoostInProgressViewModel.this, storeState);
         }
     }
@@ -87,7 +86,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         private final StoreGuildBoost.State guildBoostState;
 
         public StoreState(Guild guild, StoreGuildBoost.State state) {
-            Intrinsics3.checkNotNullParameter(state, "guildBoostState");
+            m.checkNotNullParameter(state, "guildBoostState");
             this.guild = guild;
             this.guildBoostState = state;
         }
@@ -113,7 +112,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         }
 
         public final StoreState copy(Guild guild, StoreGuildBoost.State guildBoostState) {
-            Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+            m.checkNotNullParameter(guildBoostState, "guildBoostState");
             return new StoreState(guild, guildBoostState);
         }
 
@@ -125,7 +124,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.guildBoostState, storeState.guildBoostState);
+            return m.areEqual(this.guild, storeState.guild) && m.areEqual(this.guildBoostState, storeState.guildBoostState);
         }
 
         public final Guild getGuild() {
@@ -144,7 +143,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(guild=");
+            StringBuilder sbU = a.U("StoreState(guild=");
             sbU.append(this.guild);
             sbU.append(", guildBoostState=");
             sbU.append(this.guildBoostState);
@@ -204,7 +203,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             }
 
             public final Loaded copy(GuildBoostState guildBoostState, Guild guild, int subscriptionCount, boolean canShowConfirmationDialog) {
-                Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+                m.checkNotNullParameter(guildBoostState, "guildBoostState");
                 return new Loaded(guildBoostState, guild, subscriptionCount, canShowConfirmationDialog);
             }
 
@@ -216,7 +215,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(getGuildBoostState(), loaded.getGuildBoostState()) && Intrinsics3.areEqual(this.guild, loaded.guild) && this.subscriptionCount == loaded.subscriptionCount && this.canShowConfirmationDialog == loaded.canShowConfirmationDialog;
+                return m.areEqual(getGuildBoostState(), loaded.getGuildBoostState()) && m.areEqual(this.guild, loaded.guild) && this.subscriptionCount == loaded.subscriptionCount && this.canShowConfirmationDialog == loaded.canShowConfirmationDialog;
             }
 
             public final boolean getCanShowConfirmationDialog() {
@@ -251,20 +250,20 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(guildBoostState=");
+                StringBuilder sbU = a.U("Loaded(guildBoostState=");
                 sbU.append(getGuildBoostState());
                 sbU.append(", guild=");
                 sbU.append(this.guild);
                 sbU.append(", subscriptionCount=");
                 sbU.append(this.subscriptionCount);
                 sbU.append(", canShowConfirmationDialog=");
-                return outline.O(sbU, this.canShowConfirmationDialog, ")");
+                return a.O(sbU, this.canShowConfirmationDialog, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(GuildBoostState guildBoostState, Guild guild, int i, boolean z2) {
                 super(guildBoostState, null);
-                Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+                m.checkNotNullParameter(guildBoostState, "guildBoostState");
                 this.guildBoostState = guildBoostState;
                 this.guild = guild;
                 this.subscriptionCount = i;
@@ -279,7 +278,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Uninitialized(GuildBoostState guildBoostState) {
                 super(guildBoostState, null);
-                Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+                m.checkNotNullParameter(guildBoostState, "guildBoostState");
                 this.guildBoostState = guildBoostState;
             }
 
@@ -295,13 +294,13 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             }
 
             public final Uninitialized copy(GuildBoostState guildBoostState) {
-                Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+                m.checkNotNullParameter(guildBoostState, "guildBoostState");
                 return new Uninitialized(guildBoostState);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Uninitialized) && Intrinsics3.areEqual(getGuildBoostState(), ((Uninitialized) other).getGuildBoostState());
+                    return (other instanceof Uninitialized) && m.areEqual(getGuildBoostState(), ((Uninitialized) other).getGuildBoostState());
                 }
                 return true;
             }
@@ -320,7 +319,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Uninitialized(guildBoostState=");
+                StringBuilder sbU = a.U("Uninitialized(guildBoostState=");
                 sbU.append(getGuildBoostState());
                 sbU.append(")");
                 return sbU.toString();
@@ -342,7 +341,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
 
     /* compiled from: GuildBoostInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -355,14 +354,14 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             GuildBoostInProgressViewModel.access$setGuildBoostSubscription$p(GuildBoostInProgressViewModel.this, subscription);
         }
     }
 
     /* compiled from: GuildBoostInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -375,14 +374,14 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             GuildBoostInProgressViewModel.access$handleGuildBoostingError(GuildBoostInProgressViewModel.this);
         }
     }
 
     /* compiled from: GuildBoostInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<List<? extends ModelAppliedGuildBoost>, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<List<? extends ModelAppliedGuildBoost>, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -395,7 +394,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelAppliedGuildBoost> list) {
-            Intrinsics3.checkNotNullParameter(list, "it");
+            m.checkNotNullParameter(list, "it");
             GuildBoostInProgressViewModel.access$handleGuildBoostingCompleted(GuildBoostInProgressViewModel.this);
         }
     }
@@ -406,7 +405,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         if ((i & 4) != 0) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
             observable = Observable.j(companion.getGuilds().observeGuild(j), StoreGuildBoost.observeGuildBoostState$default(companion.getGuildBoosts(), null, 1, null), AnonymousClass1.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observable, "Observable.combineLatest…guild, guildBoostState) }");
+            m.checkNotNullExpressionValue(observable, "Observable.combineLatest…guild, guildBoostState) }");
         }
         this(j, storeGuildBoost, observable);
     }
@@ -490,7 +489,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
                 ModelAppliedGuildBoost premiumGuildSubscription = ((ModelGuildBoostSlot) obj).getPremiumGuildSubscription();
                 Long lValueOf = premiumGuildSubscription != null ? Long.valueOf(premiumGuildSubscription.getGuildId()) : null;
                 Guild guild = storeState.getGuild();
-                if (Intrinsics3.areEqual(lValueOf, guild != null ? Long.valueOf(guild.getId()) : null)) {
+                if (m.areEqual(lValueOf, guild != null ? Long.valueOf(guild.getId()) : null)) {
                     arrayList.add(obj);
                 }
             }
@@ -505,7 +504,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         return this.storeGuildBoost;
     }
 
-    @Override // b.a.d.AppViewModel, androidx.view.ViewModel
+    @Override // b.a.d.d0, androidx.view.ViewModel
     public void onCleared() {
         super.onCleared();
         Subscription subscription = this.guildBoostSubscription;
@@ -517,14 +516,14 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
     @MainThread
     public final void subscribeToGuildBoost(long guildId, long slotId) {
         handleGuildBoostingStarted();
-        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().subscribeToGuild(guildId, new RestAPIParams.GuildBoosting(CollectionsJVM.listOf(Long.valueOf(slotId)))), false, 1, null), this, null, 2, null), StoreGuildBoost.class, (Context) null, new AnonymousClass1(), new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass3(), 50, (Object) null);
+        ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().subscribeToGuild(guildId, new RestAPIParams.GuildBoosting(d0.t.m.listOf(Long.valueOf(slotId)))), false, 1, null), this, null, 2, null), StoreGuildBoost.class, (Context) null, new AnonymousClass1(), new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass3(), 50, (Object) null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildBoostInProgressViewModel(long j, StoreGuildBoost storeGuildBoost, Observable<StoreState> observable) {
         super(new ViewState.Uninitialized(GuildBoostState.NOT_IN_PROGRESS));
-        Intrinsics3.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.guildId = j;
         this.storeGuildBoost = storeGuildBoost;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), GuildBoostInProgressViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);

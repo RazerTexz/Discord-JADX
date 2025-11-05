@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import android.text.format.DateUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.i.a.g.d.UtcDates;
+import b.i.a.g.d.l;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -43,7 +43,7 @@ public final class Month implements Comparable<Month>, Parcelable {
 
     public Month(@NonNull Calendar calendar) {
         calendar.set(5, 1);
-        Calendar calendarD = UtcDates.d(calendar);
+        Calendar calendarD = l.d(calendar);
         this.j = calendarD;
         this.k = calendarD.get(2);
         this.l = calendarD.get(1);
@@ -54,7 +54,7 @@ public final class Month implements Comparable<Month>, Parcelable {
 
     @NonNull
     public static Month g(int i, int i2) {
-        Calendar calendarI = UtcDates.i();
+        Calendar calendarI = l.i();
         calendarI.set(1, i);
         calendarI.set(2, i2);
         return new Month(calendarI);
@@ -62,14 +62,14 @@ public final class Month implements Comparable<Month>, Parcelable {
 
     @NonNull
     public static Month h(long j) {
-        Calendar calendarI = UtcDates.i();
+        Calendar calendarI = l.i();
         calendarI.setTimeInMillis(j);
         return new Month(calendarI);
     }
 
     @NonNull
     public static Month i() {
-        return new Month(UtcDates.h());
+        return new Month(l.h());
     }
 
     @Override // java.lang.Comparable
@@ -107,7 +107,7 @@ public final class Month implements Comparable<Month>, Parcelable {
     }
 
     public long k(int i) {
-        Calendar calendarD = UtcDates.d(this.j);
+        Calendar calendarD = l.d(this.j);
         calendarD.set(5, i);
         return calendarD.getTimeInMillis();
     }
@@ -122,7 +122,7 @@ public final class Month implements Comparable<Month>, Parcelable {
 
     @NonNull
     public Month m(int i) {
-        Calendar calendarD = UtcDates.d(this.j);
+        Calendar calendarD = l.d(this.j);
         calendarD.add(2, i);
         return new Month(calendarD);
     }

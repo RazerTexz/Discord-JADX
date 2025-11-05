@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.Log;
+import b.e.a.a;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.io.Input;
@@ -26,7 +26,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
         FieldSerializer.CachedField[] cachedFieldArr = (FieldSerializer.CachedField[]) graphContext.get(this);
         if (cachedFieldArr == null) {
             int varInt = input.readVarInt(true);
-            Log.a aVar = Log.a;
+            a.C0064a c0064a = a.a;
             String[] strArr = new String[varInt];
             for (int i = 0; i < varInt; i++) {
                 strArr[i] = input.readString();
@@ -40,7 +40,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
                     int i3 = 0;
                     while (true) {
                         if (i3 >= length) {
-                            Log.a aVar2 = Log.a;
+                            a.C0064a c0064a2 = a.a;
                             break;
                         }
                         if (getCachedFieldName(fields[i3]).equals(str)) {
@@ -58,7 +58,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
                     int i6 = 0;
                     while (true) {
                         if (i6 > i5) {
-                            Log.a aVar3 = Log.a;
+                            a.C0064a c0064a3 = a.a;
                             break;
                         }
                         int i7 = (i6 + i5) >>> 1;
@@ -85,7 +85,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
                 field = getField(getCachedFieldName(field));
             }
             if (field == null) {
-                Log.a aVar4 = Log.a;
+                a.C0064a c0064a4 = a.a;
                 inputChunked.nextChunks();
             } else {
                 field.read(inputChunked, tCreate);
@@ -101,7 +101,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
         ObjectMap graphContext = kryo.getGraphContext();
         if (!graphContext.containsKey(this)) {
             graphContext.put(this, null);
-            Log.a aVar = Log.a;
+            a.C0064a c0064a = a.a;
             output.writeVarInt(fields.length, true);
             for (FieldSerializer.CachedField cachedField : fields) {
                 output.writeString(getCachedFieldName(cachedField));

@@ -1,14 +1,14 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelSubscription;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -47,7 +47,7 @@ public final class StoreSubscriptions extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(List<ModelSubscription> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "subscriptions");
+                m.checkNotNullParameter(list, "subscriptions");
                 this.subscriptions = list;
             }
 
@@ -64,13 +64,13 @@ public final class StoreSubscriptions extends StoreV2 {
             }
 
             public final Loaded copy(List<ModelSubscription> subscriptions) {
-                Intrinsics3.checkNotNullParameter(subscriptions, "subscriptions");
+                m.checkNotNullParameter(subscriptions, "subscriptions");
                 return new Loaded(subscriptions);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.subscriptions, ((Loaded) other).subscriptions);
+                    return (other instanceof Loaded) && m.areEqual(this.subscriptions, ((Loaded) other).subscriptions);
                 }
                 return true;
             }
@@ -104,7 +104,7 @@ public final class StoreSubscriptions extends StoreV2 {
             }
 
             public String toString() {
-                return outline.L(outline.U("Loaded(subscriptions="), this.subscriptions, ")");
+                return a.L(a.U("Loaded(subscriptions="), this.subscriptions, ")");
             }
         }
 
@@ -136,19 +136,19 @@ public final class StoreSubscriptions extends StoreV2 {
 
     /* compiled from: StoreSubscriptions.kt */
     /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
 
         /* compiled from: StoreSubscriptions.kt */
         /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01801 extends Lambda implements Function1<List<? extends ModelSubscription>, Unit> {
+        public static final class C03001 extends o implements Function1<List<? extends ModelSubscription>, Unit> {
 
             /* compiled from: StoreSubscriptions.kt */
             /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01811 extends Lambda implements Function0<Unit> {
+            public static final class C03011 extends o implements Function0<Unit> {
                 public final /* synthetic */ List $subscriptions;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C01811(List list) {
+                public C03011(List list) {
                     super(0);
                     this.$subscriptions = list;
                 }
@@ -165,7 +165,7 @@ public final class StoreSubscriptions extends StoreV2 {
                 }
             }
 
-            public C01801() {
+            public C03001() {
                 super(1);
             }
 
@@ -177,19 +177,19 @@ public final class StoreSubscriptions extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<ModelSubscription> list) {
-                Intrinsics3.checkNotNullParameter(list, "subscriptions");
-                StoreSubscriptions.access$getDispatcher$p(StoreSubscriptions.this).schedule(new C01811(list));
+                m.checkNotNullParameter(list, "subscriptions");
+                StoreSubscriptions.access$getDispatcher$p(StoreSubscriptions.this).schedule(new C03011(list));
             }
         }
 
         /* compiled from: StoreSubscriptions.kt */
         /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
             /* compiled from: StoreSubscriptions.kt */
             /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01821 extends Lambda implements Function0<Unit> {
-                public C01821() {
+            public static final class C03021 extends o implements Function0<Unit> {
+                public C03021() {
                     super(0);
                 }
 
@@ -217,8 +217,8 @@ public final class StoreSubscriptions extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
-                StoreSubscriptions.access$getDispatcher$p(StoreSubscriptions.this).schedule(new C01821());
+                m.checkNotNullParameter(error, "it");
+                StoreSubscriptions.access$getDispatcher$p(StoreSubscriptions.this).schedule(new C03021());
             }
         }
 
@@ -238,13 +238,13 @@ public final class StoreSubscriptions extends StoreV2 {
                 return;
             }
             StoreSubscriptions.access$handleSubscriptionsFetchStart(StoreSubscriptions.this);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreSubscriptions.access$getRestAPI$p(StoreSubscriptions.this).getSubscriptions(), false, 1, null), StoreSubscriptions.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C01801(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreSubscriptions.access$getRestAPI$p(StoreSubscriptions.this).getSubscriptions(), false, 1, null), StoreSubscriptions.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C03001(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreSubscriptions.kt */
     /* renamed from: com.discord.stores.StoreSubscriptions$observeSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<SubscriptionsState> {
+    public static final class AnonymousClass1 extends o implements Function0<SubscriptionsState> {
         public AnonymousClass1() {
             super(0);
         }
@@ -262,9 +262,9 @@ public final class StoreSubscriptions extends StoreV2 {
     }
 
     public StoreSubscriptions(ObservationDeck observationDeck, Dispatcher dispatcher, RestAPI restAPI) {
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(restAPI, "restAPI");
         this.observationDeck = observationDeck;
         this.dispatcher = dispatcher;
         this.restAPI = restAPI;
@@ -301,19 +301,19 @@ public final class StoreSubscriptions extends StoreV2 {
         storeSubscriptions.subscriptionsState = subscriptionsState;
     }
 
-    @Store3
+    @StoreThread
     private final void handleSubscriptionsFetchFailure() {
         this.subscriptionsState = SubscriptionsState.Failure.INSTANCE;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     private final void handleSubscriptionsFetchStart() {
         this.subscriptionsState = SubscriptionsState.Loading.INSTANCE;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     private final void handleSubscriptionsFetchSuccess(List<ModelSubscription> subscriptions) {
         this.subscriptionsState = new SubscriptionsState.Loaded(subscriptions);
         markChanged();
@@ -328,13 +328,13 @@ public final class StoreSubscriptions extends StoreV2 {
         return this.subscriptionsStateSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handlePreLogout() {
         this.subscriptionsState = SubscriptionsState.Unfetched.INSTANCE;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleUserSubscriptionsUpdate() {
         fetchSubscriptions();
     }
@@ -349,7 +349,7 @@ public final class StoreSubscriptions extends StoreV2 {
 
     public final Observable<SubscriptionsState> observeSubscriptions() {
         Observable<SubscriptionsState> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -360,7 +360,7 @@ public final class StoreSubscriptions extends StoreV2 {
         if (subscriptionsStateCopy instanceof SubscriptionsState.Loaded) {
             SubscriptionsState.Loaded loaded = (SubscriptionsState.Loaded) subscriptionsStateCopy;
             subscriptionsStateCopy = loaded.copy(new ArrayList(loaded.getSubscriptions()));
-        } else if (!Intrinsics3.areEqual(subscriptionsStateCopy, SubscriptionsState.Failure.INSTANCE) && !Intrinsics3.areEqual(subscriptionsStateCopy, SubscriptionsState.Loading.INSTANCE) && !Intrinsics3.areEqual(subscriptionsStateCopy, SubscriptionsState.Unfetched.INSTANCE)) {
+        } else if (!m.areEqual(subscriptionsStateCopy, SubscriptionsState.Failure.INSTANCE) && !m.areEqual(subscriptionsStateCopy, SubscriptionsState.Loading.INSTANCE) && !m.areEqual(subscriptionsStateCopy, SubscriptionsState.Unfetched.INSTANCE)) {
             throw new NoWhenBranchMatchedException();
         }
         this.subscriptionsStateSnapshot = subscriptionsStateCopy;

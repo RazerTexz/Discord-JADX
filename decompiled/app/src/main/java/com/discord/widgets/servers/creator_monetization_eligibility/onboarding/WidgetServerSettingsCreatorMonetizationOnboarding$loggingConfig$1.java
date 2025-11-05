@@ -4,21 +4,21 @@ import com.discord.analytics.generated.events.impression.TrackImpressionEnableCr
 import com.discord.analytics.generated.events.impression.TrackImpressionEnableCreatorMonetizationCreateRequestLanding;
 import com.discord.analytics.generated.traits.TrackGuild;
 import com.discord.api.science.AnalyticsSchema;
-import com.discord.app.AppLogger2;
+import com.discord.app.LoggingConfig;
 import com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
 /* loaded from: classes2.dex */
-public final class WidgetServerSettingsCreatorMonetizationOnboarding$loggingConfig$1 extends Lambda implements Function1<ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState, AppLogger2> {
+public final class WidgetServerSettingsCreatorMonetizationOnboarding$loggingConfig$1 extends o implements Function1<ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState, LoggingConfig> {
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;
 
     /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$loggingConfig$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<AnalyticsSchema> {
+    public static final class AnonymousClass1 extends o implements Function0<AnalyticsSchema> {
         public final /* synthetic */ ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState $state;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -43,7 +43,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding$loggingConf
 
     /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$loggingConfig$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<AnalyticsSchema> {
+    public static final class AnonymousClass2 extends o implements Function0<AnalyticsSchema> {
         public final /* synthetic */ ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState $state;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -73,22 +73,22 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding$loggingConf
     }
 
     @Override // kotlin.jvm.functions.Function1
-    public /* bridge */ /* synthetic */ AppLogger2 invoke(ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState viewState) {
+    public /* bridge */ /* synthetic */ LoggingConfig invoke(ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState viewState) {
         return invoke2(viewState);
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
-    public final AppLogger2 invoke2(ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState viewState) {
-        AppLogger2 appLogger2;
-        Intrinsics3.checkNotNullParameter(viewState, "state");
+    public final LoggingConfig invoke2(ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState viewState) {
+        LoggingConfig loggingConfig;
+        m.checkNotNullParameter(viewState, "state");
         if (viewState instanceof ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState.CreateRequest) {
-            appLogger2 = new AppLogger2(false, null, new AnonymousClass1(viewState), 3);
+            loggingConfig = new LoggingConfig(false, null, new AnonymousClass1(viewState), 3);
         } else {
             if (!(viewState instanceof ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState.AcceptTerms)) {
                 return null;
             }
-            appLogger2 = new AppLogger2(false, null, new AnonymousClass2(viewState), 3);
+            loggingConfig = new LoggingConfig(false, null, new AnonymousClass2(viewState), 3);
         }
-        return appLogger2;
+        return loggingConfig;
     }
 }

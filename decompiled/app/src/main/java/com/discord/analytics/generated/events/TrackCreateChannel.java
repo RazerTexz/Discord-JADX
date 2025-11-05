@@ -1,21 +1,21 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuildLfgGroup;
-import com.discord.analytics.generated.traits.TrackGuildLfgGroup2;
+import com.discord.analytics.generated.traits.TrackGuildLfgGroupReceiver;
 import com.discord.analytics.generated.traits.TrackLfgGroup;
-import com.discord.analytics.generated.traits.TrackLfgGroup2;
+import com.discord.analytics.generated.traits.TrackLfgGroupReceiver;
 import com.discord.analytics.generated.traits.TrackThread;
-import com.discord.analytics.generated.traits.TrackThread2;
+import com.discord.analytics.generated.traits.TrackThreadReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackCreateChannel.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCreateChannel implements AnalyticsSchema, TrackBase2, TrackLfgGroup2, TrackGuildLfgGroup2, TrackThread2 {
+public final /* data */ class TrackCreateChannel implements AnalyticsSchema, TrackBaseReceiver, TrackLfgGroupReceiver, TrackGuildLfgGroupReceiver, TrackThreadReceiver {
     private TrackBase trackBase;
     private TrackGuildLfgGroup trackGuildLfgGroup;
     private TrackLfgGroup trackLfgGroup;
@@ -48,7 +48,7 @@ public final /* data */ class TrackCreateChannel implements AnalyticsSchema, Tra
             return false;
         }
         TrackCreateChannel trackCreateChannel = (TrackCreateChannel) other;
-        return Intrinsics3.areEqual(this.channelId, trackCreateChannel.channelId) && Intrinsics3.areEqual(this.channelType, trackCreateChannel.channelType) && Intrinsics3.areEqual(this.recipientIds, trackCreateChannel.recipientIds) && Intrinsics3.areEqual(this.originChannelId, trackCreateChannel.originChannelId) && Intrinsics3.areEqual(this.guildId, trackCreateChannel.guildId) && Intrinsics3.areEqual(this.guildName, trackCreateChannel.guildName) && Intrinsics3.areEqual(this.channelName, trackCreateChannel.channelName) && Intrinsics3.areEqual(this.isNsfw, trackCreateChannel.isNsfw) && Intrinsics3.areEqual(this.parentId, trackCreateChannel.parentId) && Intrinsics3.areEqual(this.starterMessageAgeMinutes, trackCreateChannel.starterMessageAgeMinutes) && Intrinsics3.areEqual(this.activeThreadCount, trackCreateChannel.activeThreadCount) && Intrinsics3.areEqual(this.activeAnnouncementThreadCount, trackCreateChannel.activeAnnouncementThreadCount);
+        return m.areEqual(this.channelId, trackCreateChannel.channelId) && m.areEqual(this.channelType, trackCreateChannel.channelType) && m.areEqual(this.recipientIds, trackCreateChannel.recipientIds) && m.areEqual(this.originChannelId, trackCreateChannel.originChannelId) && m.areEqual(this.guildId, trackCreateChannel.guildId) && m.areEqual(this.guildName, trackCreateChannel.guildName) && m.areEqual(this.channelName, trackCreateChannel.channelName) && m.areEqual(this.isNsfw, trackCreateChannel.isNsfw) && m.areEqual(this.parentId, trackCreateChannel.parentId) && m.areEqual(this.starterMessageAgeMinutes, trackCreateChannel.starterMessageAgeMinutes) && m.areEqual(this.activeThreadCount, trackCreateChannel.activeThreadCount) && m.areEqual(this.activeAnnouncementThreadCount, trackCreateChannel.activeAnnouncementThreadCount);
     }
 
     public int hashCode() {
@@ -79,7 +79,7 @@ public final /* data */ class TrackCreateChannel implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackCreateChannel(channelId=");
+        StringBuilder sbU = a.U("TrackCreateChannel(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -102,6 +102,6 @@ public final /* data */ class TrackCreateChannel implements AnalyticsSchema, Tra
         sbU.append(", activeThreadCount=");
         sbU.append(this.activeThreadCount);
         sbU.append(", activeAnnouncementThreadCount=");
-        return outline.G(sbU, this.activeAnnouncementThreadCount, ")");
+        return a.G(sbU, this.activeAnnouncementThreadCount, ")");
     }
 }

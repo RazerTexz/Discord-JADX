@@ -3,15 +3,15 @@ package com.discord.widgets.servers.community;
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunityViewModel;
-import j0.k.Func1;
+import j0.k.b;
 import java.util.Objects;
 
 /* compiled from: ObservableExtensions.kt */
 /* loaded from: classes2.dex */
-public final class WidgetServerSettingsCommunityThirdStep$onViewBoundOrOnResume$$inlined$filterIs$2<T, R> implements Func1<Object, T> {
+public final class WidgetServerSettingsCommunityThirdStep$onViewBoundOrOnResume$$inlined$filterIs$2<T, R> implements b<Object, T> {
     public static final WidgetServerSettingsCommunityThirdStep$onViewBoundOrOnResume$$inlined$filterIs$2 INSTANCE = new WidgetServerSettingsCommunityThirdStep$onViewBoundOrOnResume$$inlined$filterIs$2();
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public final T call(Object obj) {
         Objects.requireNonNull(obj, "null cannot be cast to non-null type com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded");
         return (T) ((WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded) obj);

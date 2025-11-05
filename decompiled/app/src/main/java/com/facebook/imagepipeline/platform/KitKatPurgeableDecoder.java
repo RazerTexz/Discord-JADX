@@ -4,22 +4,22 @@ import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import androidx.exifinterface.media.ExifInterface;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.d.DoNotStrip;
-import b.f.j.l.FlexByteArrayPool;
+import b.c.a.a0.d;
+import b.f.d.d.c;
+import b.f.j.l.n;
 import com.facebook.common.memory.PooledByteBuffer;
 import com.facebook.common.references.CloseableReference;
 import com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder;
 
-@DoNotStrip
+@c
 @TargetApi(19)
 /* loaded from: classes3.dex */
 public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
-    public final FlexByteArrayPool c;
+    public final n c;
 
-    @DoNotStrip
-    public KitKatPurgeableDecoder(FlexByteArrayPool flexByteArrayPool) {
-        this.c = flexByteArrayPool;
+    @c
+    public KitKatPurgeableDecoder(n nVar) {
+        this.c = nVar;
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
@@ -31,7 +31,7 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
             byte[] bArrU = closeableReferenceA.u();
             pooledByteBufferU.i(0, bArrU, 0, size);
             Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrU, 0, size, options);
-            AnimatableValueParser.y(bitmapDecodeByteArray, "BitmapFactory returned null");
+            d.y(bitmapDecodeByteArray, "BitmapFactory returned null");
             closeableReferenceA.close();
             return bitmapDecodeByteArray;
         } catch (Throwable th) {
@@ -46,7 +46,7 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
     public Bitmap d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
         byte[] bArr = DalvikPurgeableDecoder.e(closeableReference, i) ? null : DalvikPurgeableDecoder.a;
         PooledByteBuffer pooledByteBufferU = closeableReference.u();
-        AnimatableValueParser.i(Boolean.valueOf(i <= pooledByteBufferU.size()));
+        d.i(Boolean.valueOf(i <= pooledByteBufferU.size()));
         int i2 = i + 2;
         CloseableReference<byte[]> closeableReferenceA = this.c.a(i2);
         try {
@@ -58,7 +58,7 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
                 i = i2;
             }
             Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrU, 0, i, options);
-            AnimatableValueParser.y(bitmapDecodeByteArray, "BitmapFactory returned null");
+            d.y(bitmapDecodeByteArray, "BitmapFactory returned null");
             closeableReferenceA.close();
             return bitmapDecodeByteArray;
         } catch (Throwable th) {

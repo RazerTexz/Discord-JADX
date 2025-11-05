@@ -7,8 +7,8 @@ import android.view.Window;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.PremiumStickerUpsellDialogBinding;
@@ -16,18 +16,18 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.billing.GooglePlaySku;
 import com.discord.utilities.premium.PremiumUtils;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.settings.premium.WidgetSettingsPremium;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 
 /* compiled from: StickerPremiumUpsellDialog.kt */
 /* loaded from: classes.dex */
 public final class StickerPremiumUpsellDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(StickerPremiumUpsellDialog.class, "binding", "getBinding()Lcom/discord/databinding/PremiumStickerUpsellDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(StickerPremiumUpsellDialog.class, "binding", "getBinding()Lcom/discord/databinding/PremiumStickerUpsellDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -41,8 +41,8 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, Traits.Location analyticsLocation) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(analyticsLocation, "analyticsLocation");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(analyticsLocation, "analyticsLocation");
             AnalyticsTracker.INSTANCE.openModal(Traits.Location.Section.STICKER_PREMIUM_TIER_2_UPSELL_MODAL, analyticsLocation);
             new StickerPremiumUpsellDialog().show(fragmentManager, StickerPremiumUpsellDialog.class.getSimpleName());
         }
@@ -75,7 +75,7 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
             StickerPremiumUpsellDialog.this.dismiss();
             WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
             Context contextRequireContext = StickerPremiumUpsellDialog.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             companion.launch(contextRequireContext, 1, Traits.Location.Section.STICKER_PREMIUM_TIER_2_UPSELL_MODAL);
         }
     }
@@ -94,7 +94,7 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
 
     public StickerPremiumUpsellDialog() {
         super(R.layout.premium_sticker_upsell_dialog);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, StickerPremiumUpsellDialog2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, StickerPremiumUpsellDialog$binding$2.INSTANCE, null, 2, null);
     }
 
     private final PremiumStickerUpsellDialogBinding getBinding() {
@@ -105,7 +105,7 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
     public void onStart() {
         super.onStart();
         Dialog dialogRequireDialog = requireDialog();
-        Intrinsics3.checkNotNullExpressionValue(dialogRequireDialog, "requireDialog()");
+        m.checkNotNullExpressionValue(dialogRequireDialog, "requireDialog()");
         Window window = dialogRequireDialog.getWindow();
         if (window != null) {
             window.setLayout(-1, -2);
@@ -119,18 +119,18 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
         String skuPrice = PremiumUtils.INSTANCE.getSkuPrice(GooglePlaySku.PREMIUM_TIER_2_MONTHLY.getSkuName());
         if (skuPrice != null) {
             TextView textView = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.premiumUpsellDescription");
-            FormatUtils.n(textView, R.string.premium_upsell_feature_pretext, new Object[]{skuPrice}, null, 4);
+            m.checkNotNullExpressionValue(textView, "binding.premiumUpsellDescription");
+            b.n(textView, R.string.premium_upsell_feature_pretext, new Object[]{skuPrice}, null, 4);
         } else {
             TextView textView2 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.premiumUpsellDescription");
-            FormatUtils.n(textView2, R.string.premium_upsell_feature_pretext_without_price, new Object[0], null, 4);
+            m.checkNotNullExpressionValue(textView2, "binding.premiumUpsellDescription");
+            b.n(textView2, R.string.premium_upsell_feature_pretext_without_price, new Object[0], null, 4);
         }
         TextView textView3 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.premiumUpsellPerkBoosts");
+        m.checkNotNullExpressionValue(textView3, "binding.premiumUpsellPerkBoosts");
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-        FormatUtils.n(textView3, R.string.premium_upsell_feature_free_guild_subscription, new Object[]{StringResourceUtils.getI18nPluralString(contextRequireContext, R.plurals.premium_upsell_feature_free_guild_subscription_numFreeGuildSubscriptions, 2, 2)}, null, 4);
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        b.n(textView3, R.string.premium_upsell_feature_free_guild_subscription, new Object[]{StringResourceUtilsKt.getI18nPluralString(contextRequireContext, R.plurals.premium_upsell_feature_free_guild_subscription_numFreeGuildSubscriptions, 2, 2)}, null, 4);
         getBinding().c.setOnClickListener(new AnonymousClass1());
         getBinding().f.setOnClickListener(new AnonymousClass2());
         getBinding().f2136b.setOnClickListener(new AnonymousClass3());

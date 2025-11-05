@@ -1,8 +1,8 @@
 package com.facebook.imageutils;
 
-import b.f.m.DoNotOptimize;
+import b.f.m.d;
 
-@DoNotOptimize
+@d
 /* loaded from: classes3.dex */
 public class HeifExifUtil$HeifExifUtilAndroidN {
     private HeifExifUtil$HeifExifUtilAndroidN() {

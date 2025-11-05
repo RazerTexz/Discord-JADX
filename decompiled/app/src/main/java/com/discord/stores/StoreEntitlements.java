@@ -1,16 +1,16 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelEntitlement;
 import com.discord.restapi.RestAPIInterface;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -54,8 +54,8 @@ public final class StoreEntitlements extends StoreV2 {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(Map<Long, ? extends List<ModelEntitlement>> map, Map<Long, ? extends List<ModelEntitlement>> map2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(map, "giftableEntitlements");
-                Intrinsics3.checkNotNullParameter(map2, "ownedEntitlements");
+                m.checkNotNullParameter(map, "giftableEntitlements");
+                m.checkNotNullParameter(map2, "ownedEntitlements");
                 this.giftableEntitlements = map;
                 this.ownedEntitlements = map2;
             }
@@ -80,8 +80,8 @@ public final class StoreEntitlements extends StoreV2 {
             }
 
             public final Loaded copy(Map<Long, ? extends List<ModelEntitlement>> giftableEntitlements, Map<Long, ? extends List<ModelEntitlement>> ownedEntitlements) {
-                Intrinsics3.checkNotNullParameter(giftableEntitlements, "giftableEntitlements");
-                Intrinsics3.checkNotNullParameter(ownedEntitlements, "ownedEntitlements");
+                m.checkNotNullParameter(giftableEntitlements, "giftableEntitlements");
+                m.checkNotNullParameter(ownedEntitlements, "ownedEntitlements");
                 return new Loaded(giftableEntitlements, ownedEntitlements);
             }
 
@@ -98,7 +98,7 @@ public final class StoreEntitlements extends StoreV2 {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.giftableEntitlements, loaded.giftableEntitlements) && Intrinsics3.areEqual(this.ownedEntitlements, loaded.ownedEntitlements);
+                return m.areEqual(this.giftableEntitlements, loaded.giftableEntitlements) && m.areEqual(this.ownedEntitlements, loaded.ownedEntitlements);
             }
 
             public final Map<Long, List<ModelEntitlement>> getGiftableEntitlements() {
@@ -117,10 +117,10 @@ public final class StoreEntitlements extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(giftableEntitlements=");
+                StringBuilder sbU = a.U("Loaded(giftableEntitlements=");
                 sbU.append(this.giftableEntitlements);
                 sbU.append(", ownedEntitlements=");
-                return outline.M(sbU, this.ownedEntitlements, ")");
+                return a.M(sbU, this.ownedEntitlements, ")");
             }
 
             @Override // com.discord.stores.StoreEntitlements.State
@@ -152,7 +152,7 @@ public final class StoreEntitlements extends StoreV2 {
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -171,11 +171,11 @@ public final class StoreEntitlements extends StoreV2 {
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
         /* compiled from: StoreEntitlements.kt */
         /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -204,19 +204,19 @@ public final class StoreEntitlements extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1());
         }
     }
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<List<? extends ModelEntitlement>, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<List<? extends ModelEntitlement>, Unit> {
         public final /* synthetic */ long $applicationId;
 
         /* compiled from: StoreEntitlements.kt */
         /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ List $entitlements;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -252,14 +252,14 @@ public final class StoreEntitlements extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelEntitlement> list) {
-            Intrinsics3.checkNotNullParameter(list, "entitlements");
+            m.checkNotNullParameter(list, "entitlements");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -278,11 +278,11 @@ public final class StoreEntitlements extends StoreV2 {
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
         /* compiled from: StoreEntitlements.kt */
         /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -311,18 +311,18 @@ public final class StoreEntitlements extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1());
         }
     }
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<List<? extends ModelEntitlement>, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<List<? extends ModelEntitlement>, Unit> {
 
         /* compiled from: StoreEntitlements.kt */
         /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ List $entitlements;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -355,14 +355,14 @@ public final class StoreEntitlements extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelEntitlement> list) {
-            Intrinsics3.checkNotNullParameter(list, "entitlements");
+            m.checkNotNullParameter(list, "entitlements");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreEntitlements.kt */
     /* renamed from: com.discord.stores.StoreEntitlements$observeEntitlementState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<State> {
+    public static final class AnonymousClass1 extends o implements Function0<State> {
         public AnonymousClass1() {
             super(0);
         }
@@ -410,23 +410,23 @@ public final class StoreEntitlements extends StoreV2 {
         return this.stateSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchEntitlementsSuccess(long applicationId, List<ModelEntitlement> entitlements) {
-        Intrinsics3.checkNotNullParameter(entitlements, "entitlements");
+        m.checkNotNullParameter(entitlements, "entitlements");
         this.entitlementMap.put(Long.valueOf(applicationId), entitlements);
         this.state = new State.Loaded(this.giftEntitlementMap, this.entitlementMap);
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchError() {
         this.state = State.Failure.INSTANCE;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchGiftsSuccess(List<ModelEntitlement> giftEntitlements) {
-        Intrinsics3.checkNotNullParameter(giftEntitlements, "giftEntitlements");
+        m.checkNotNullParameter(giftEntitlements, "giftEntitlements");
         HashMap map = new HashMap();
         for (ModelEntitlement modelEntitlement : giftEntitlements) {
             List arrayList = (List) map.get(Long.valueOf(modelEntitlement.getSkuId()));
@@ -441,7 +441,7 @@ public final class StoreEntitlements extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchingState() {
         this.state = State.Loading.INSTANCE;
         markChanged();
@@ -452,20 +452,20 @@ public final class StoreEntitlements extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         this.stateSnapshot = this.state.deepCopy();
     }
 
     public StoreEntitlements(Dispatcher dispatcher, ObservationDeck observationDeck, RestAPI restAPI) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(restAPI, "restAPI");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.restAPI = restAPI;
-        this.giftEntitlementMap = Maps6.emptyMap();
+        this.giftEntitlementMap = h0.emptyMap();
         this.entitlementMap = new LinkedHashMap();
         State.Loading loading = State.Loading.INSTANCE;
         this.state = loading;

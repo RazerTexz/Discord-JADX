@@ -2,7 +2,7 @@ package androidx.constraintlayout.solver;
 
 import androidx.constraintlayout.solver.LinearSystem;
 import androidx.constraintlayout.solver.SolverVariable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 
 /* loaded from: classes.dex */
@@ -392,13 +392,13 @@ public class ArrayRow implements LinearSystem.Row {
         if (this.variable == null) {
             string = "0";
         } else {
-            StringBuilder sbU = outline.U("");
+            StringBuilder sbU = a.U("");
             sbU.append(this.variable);
             string = sbU.toString();
         }
-        String strW = outline.w(string, " = ");
+        String strW = a.w(string, " = ");
         if (this.constantValue != 0.0f) {
-            StringBuilder sbU2 = outline.U(strW);
+            StringBuilder sbU2 = a.U(strW);
             sbU2.append(this.constantValue);
             strW = sbU2.toString();
             z2 = true;
@@ -414,18 +414,18 @@ public class ArrayRow implements LinearSystem.Row {
                     String string2 = variable.toString();
                     if (!z2) {
                         if (variableValue < 0.0f) {
-                            strW = outline.w(strW, "- ");
+                            strW = a.w(strW, "- ");
                             variableValue *= -1.0f;
                         }
-                        strW = variableValue == 1.0f ? outline.w(strW, string2) : strW + variableValue + " " + string2;
+                        strW = variableValue == 1.0f ? a.w(strW, string2) : strW + variableValue + " " + string2;
                         z2 = true;
                     } else if (variableValue > 0.0f) {
-                        strW = outline.w(strW, " + ");
+                        strW = a.w(strW, " + ");
                         if (variableValue == 1.0f) {
                         }
                         z2 = true;
                     } else {
-                        strW = outline.w(strW, " - ");
+                        strW = a.w(strW, " - ");
                         variableValue *= -1.0f;
                         if (variableValue == 1.0f) {
                         }
@@ -434,7 +434,7 @@ public class ArrayRow implements LinearSystem.Row {
                 }
             }
         }
-        return !z2 ? outline.w(strW, "0.0") : strW;
+        return !z2 ? a.w(strW, "0.0") : strW;
     }
 
     public String toString() {

@@ -7,7 +7,7 @@ import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -36,7 +36,7 @@ public final class ChannelPermissionsAddMemberUtils {
 
     public final Observable<List<Void>> addPermissionOverwrites(long channelId, Map<Long, ? extends PermissionOverwrite.Type> selectedItems, long permission) {
         RestAPIParams.ChannelPermissionOverwrites channelPermissionOverwritesCreateForRole;
-        Intrinsics3.checkNotNullParameter(selectedItems, "selectedItems");
+        m.checkNotNullParameter(selectedItems, "selectedItems");
         Channel channel = StoreStream.INSTANCE.getChannels().getChannel(channelId);
         ArrayList arrayList = new ArrayList(selectedItems.size());
         for (Map.Entry<Long, ? extends PermissionOverwrite.Type> entry : selectedItems.entrySet()) {
@@ -57,7 +57,7 @@ public final class ChannelPermissionsAddMemberUtils {
             arrayList.add(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePermissionOverwrites(channelId, jLongValue, channelPermissionOverwritesCreateForRole), false, 1, null));
         }
         Observable<List<Void>> observableF0 = Observable.l(arrayList).f0();
-        Intrinsics3.checkNotNullExpressionValue(observableF0, "Observable.concat(overwr…quests)\n        .toList()");
+        m.checkNotNullExpressionValue(observableF0, "Observable.concat(overwr…quests)\n        .toList()");
         return observableF0;
     }
 }

@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.io;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.KryoException;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -249,7 +249,7 @@ public class Output extends OutputStream {
             return false;
         }
         if (i > this.maxCapacity) {
-            StringBuilder sbU = outline.U("Buffer overflow. Max capacity: ");
+            StringBuilder sbU = a.U("Buffer overflow. Max capacity: ");
             sbU.append(this.maxCapacity);
             sbU.append(", required: ");
             sbU.append(i);
@@ -263,7 +263,7 @@ public class Output extends OutputStream {
             }
             int i3 = this.maxCapacity;
             if (i2 == i3) {
-                StringBuilder sbU2 = outline.U("Buffer overflow. Available: ");
+                StringBuilder sbU2 = a.U("Buffer overflow. Available: ");
                 sbU2.append(this.capacity - this.position);
                 sbU2.append(", required: ");
                 sbU2.append(i);
@@ -821,14 +821,14 @@ public class Output extends OutputStream {
             throw new IllegalArgumentException("buffer cannot be null.");
         }
         if (bArr.length > i && i != -1) {
-            StringBuilder sbU = outline.U("buffer has length: ");
+            StringBuilder sbU = a.U("buffer has length: ");
             sbU.append(bArr.length);
             sbU.append(" cannot be greater than maxBufferSize: ");
             sbU.append(i);
             throw new IllegalArgumentException(sbU.toString());
         }
         if (i < -1) {
-            throw new IllegalArgumentException(outline.q("maxBufferSize cannot be < -1: ", i));
+            throw new IllegalArgumentException(a.q("maxBufferSize cannot be < -1: ", i));
         }
         this.buffer = bArr;
         if (i == -1) {
@@ -851,7 +851,7 @@ public class Output extends OutputStream {
 
     public Output(int i, int i2) {
         if (i > i2 && i2 != -1) {
-            throw new IllegalArgumentException(outline.s("bufferSize: ", i, " cannot be greater than maxBufferSize: ", i2));
+            throw new IllegalArgumentException(a.s("bufferSize: ", i, " cannot be greater than maxBufferSize: ", i2));
         }
         if (i2 >= -1) {
             this.capacity = i;
@@ -859,7 +859,7 @@ public class Output extends OutputStream {
             this.buffer = new byte[i];
             return;
         }
-        throw new IllegalArgumentException(outline.q("maxBufferSize cannot be < -1: ", i2));
+        throw new IllegalArgumentException(a.q("maxBufferSize cannot be < -1: ", i2));
     }
 
     @Override // java.io.OutputStream

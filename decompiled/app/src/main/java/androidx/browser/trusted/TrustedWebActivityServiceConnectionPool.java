@@ -11,8 +11,7 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;
-import b.d.b.a.outline;
-import b.i.b.d.a.ListenableFuture8;
+import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -120,7 +119,7 @@ public final class TrustedWebActivityServiceConnectionPool {
             return null;
         }
         if (z2) {
-            StringBuilder sbU = outline.U("Found ");
+            StringBuilder sbU = a.U("Found ");
             sbU.append(resolveInfoResolveService.serviceInfo.name);
             sbU.append(" to handle request for ");
             sbU.append(uri);
@@ -137,7 +136,7 @@ public final class TrustedWebActivityServiceConnectionPool {
 
     @NonNull
     @MainThread
-    public ListenableFuture8<TrustedWebActivityServiceConnection> connect(@NonNull Uri uri, @NonNull Set<Token> set, @NonNull Executor executor) {
+    public b.i.b.d.a.a<TrustedWebActivityServiceConnection> connect(@NonNull Uri uri, @NonNull Set<Token> set, @NonNull Executor executor) {
         ConnectionHolder connectionHolder = this.mConnections.get(uri);
         if (connectionHolder != null) {
             return connectionHolder.getServiceWrapper();

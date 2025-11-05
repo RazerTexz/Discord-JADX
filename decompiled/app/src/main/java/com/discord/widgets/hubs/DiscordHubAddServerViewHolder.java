@@ -8,7 +8,7 @@ import com.discord.models.guild.Guild;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.views.SimpleRecyclerAdapter;
 import com.discord.views.GuildView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -36,10 +36,10 @@ public final class DiscordHubAddServerViewHolder extends SimpleRecyclerAdapter.V
     /* JADX WARN: Illegal instructions before constructor call */
     /* JADX WARN: Multi-variable type inference failed */
     public DiscordHubAddServerViewHolder(DiscordHubAddServerListItemBinding discordHubAddServerListItemBinding, Function1<? super Long, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(discordHubAddServerListItemBinding, "binding");
-        Intrinsics3.checkNotNullParameter(function1, "onClickListener");
+        m.checkNotNullParameter(discordHubAddServerListItemBinding, "binding");
+        m.checkNotNullParameter(function1, "onClickListener");
         FrameLayout frameLayout = discordHubAddServerListItemBinding.a;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.root");
+        m.checkNotNullExpressionValue(frameLayout, "binding.root");
         super(frameLayout);
         this.binding = discordHubAddServerListItemBinding;
         this.onClickListener = function1;
@@ -60,9 +60,9 @@ public final class DiscordHubAddServerViewHolder extends SimpleRecyclerAdapter.V
 
     /* renamed from: bind, reason: avoid collision after fix types in other method */
     public void bind2(Guild data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         TextView textView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.discordUAddServerListItemText");
+        m.checkNotNullExpressionValue(textView, "binding.discordUAddServerListItemText");
         textView.setText(data.getName());
         GuildView guildView = this.binding.f2098b;
         guildView.b();

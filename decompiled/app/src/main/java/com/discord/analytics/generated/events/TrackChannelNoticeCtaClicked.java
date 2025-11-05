@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackChannelNoticeCtaClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long guildId = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsS
             return false;
         }
         TrackChannelNoticeCtaClicked trackChannelNoticeCtaClicked = (TrackChannelNoticeCtaClicked) other;
-        return Intrinsics3.areEqual(this.source, trackChannelNoticeCtaClicked.source) && Intrinsics3.areEqual(this.guildId, trackChannelNoticeCtaClicked.guildId) && Intrinsics3.areEqual(this.noticeType, trackChannelNoticeCtaClicked.noticeType);
+        return m.areEqual(this.source, trackChannelNoticeCtaClicked.source) && m.areEqual(this.guildId, trackChannelNoticeCtaClicked.guildId) && m.areEqual(this.noticeType, trackChannelNoticeCtaClicked.noticeType);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackChannelNoticeCtaClicked implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackChannelNoticeCtaClicked(source=");
+        StringBuilder sbU = a.U("TrackChannelNoticeCtaClicked(source=");
         sbU.append(this.source);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", noticeType=");
-        return outline.E(sbU, this.noticeType, ")");
+        return a.E(sbU, this.noticeType, ")");
     }
 }

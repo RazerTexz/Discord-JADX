@@ -1,7 +1,7 @@
 package com.discord.api.thread;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ThreadMemberListUpdate.kt */
@@ -33,7 +33,7 @@ public final /* data */ class ThreadMemberListUpdate {
             return false;
         }
         ThreadMemberListUpdate threadMemberListUpdate = (ThreadMemberListUpdate) other;
-        return this.guildId == threadMemberListUpdate.guildId && this.threadId == threadMemberListUpdate.threadId && Intrinsics3.areEqual(this.members, threadMemberListUpdate.members);
+        return this.guildId == threadMemberListUpdate.guildId && this.threadId == threadMemberListUpdate.threadId && m.areEqual(this.members, threadMemberListUpdate.members);
     }
 
     public int hashCode() {
@@ -45,11 +45,11 @@ public final /* data */ class ThreadMemberListUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ThreadMemberListUpdate(guildId=");
+        StringBuilder sbU = a.U("ThreadMemberListUpdate(guildId=");
         sbU.append(this.guildId);
         sbU.append(", threadId=");
         sbU.append(this.threadId);
         sbU.append(", members=");
-        return outline.L(sbU, this.members, ")");
+        return a.L(sbU, this.members, ")");
     }
 }

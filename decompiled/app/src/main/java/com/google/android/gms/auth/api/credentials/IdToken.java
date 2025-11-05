@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.c.a.d.i;
 import com.google.android.gms.common.internal.ReflectedParcelable;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -22,8 +22,8 @@ public final class IdToken extends AbstractSafeParcelable implements ReflectedPa
     public final String k;
 
     public IdToken(@NonNull String str, @NonNull String str2) {
-        AnimatableValueParser.o(!TextUtils.isEmpty(str), "account type string cannot be null or empty");
-        AnimatableValueParser.o(!TextUtils.isEmpty(str2), "id token string cannot be null or empty");
+        d.o(!TextUtils.isEmpty(str), "account type string cannot be null or empty");
+        d.o(!TextUtils.isEmpty(str2), "id token string cannot be null or empty");
         this.j = str;
         this.k = str2;
     }
@@ -36,14 +36,14 @@ public final class IdToken extends AbstractSafeParcelable implements ReflectedPa
             return false;
         }
         IdToken idToken = (IdToken) obj;
-        return AnimatableValueParser.h0(this.j, idToken.j) && AnimatableValueParser.h0(this.k, idToken.k);
+        return d.h0(this.j, idToken.j) && d.h0(this.k, idToken.k);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 1, this.j, false);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        int iY2 = d.y2(parcel, 20293);
+        d.t2(parcel, 1, this.j, false);
+        d.t2(parcel, 2, this.k, false);
+        d.A2(parcel, iY2);
     }
 }

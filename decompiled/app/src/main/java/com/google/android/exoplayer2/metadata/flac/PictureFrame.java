@@ -3,11 +3,9 @@ package com.google.android.exoplayer2.metadata.flac;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.z2.Metadata2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.Arrays;
 
@@ -63,23 +61,23 @@ public final class PictureFrame implements Metadata.Entry {
     }
 
     public int hashCode() {
-        return Arrays.hashCode(this.q) + ((((((((outline.m(this.l, outline.m(this.k, (this.j + 527) * 31, 31), 31) + this.m) * 31) + this.n) * 31) + this.o) * 31) + this.p) * 31);
+        return Arrays.hashCode(this.q) + ((((((((b.d.b.a.a.m(this.l, b.d.b.a.a.m(this.k, (this.j + 527) * 31, 31), 31) + this.m) * 31) + this.n) * 31) + this.o) * 31) + this.p) * 31);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public void n(MediaMetadata.b bVar) {
+    public void n(p1.b bVar) {
         bVar.b(this.q, this.j);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     public /* synthetic */ byte[] o0() {
-        return Metadata2.a(this);
+        return b.i.a.c.z2.a.a(this);
     }
 
     public String toString() {
         String str = this.k;
         String str2 = this.l;
-        return outline.l(outline.b(str2, outline.b(str, 32)), "Picture: mimeType=", str, ", description=", str2);
+        return b.d.b.a.a.l(b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 32)), "Picture: mimeType=", str, ", description=", str2);
     }
 
     @Override // android.os.Parcelable
@@ -95,14 +93,14 @@ public final class PictureFrame implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ Format2 y() {
-        return Metadata2.b(this);
+    public /* synthetic */ j1 y() {
+        return b.i.a.c.z2.a.b(this);
     }
 
     public PictureFrame(Parcel parcel) {
         this.j = parcel.readInt();
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         this.k = string;
         this.l = parcel.readString();
         this.m = parcel.readInt();

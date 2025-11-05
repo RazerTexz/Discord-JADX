@@ -1,23 +1,23 @@
 package i0;
 
-import i0.DefaultCallAdapterFactory;
+import i0.i;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class a implements Runnable {
-    public final /* synthetic */ DefaultCallAdapterFactory.b.a j;
-    public final /* synthetic */ Callback3 k;
+    public final /* synthetic */ i.b.a j;
+    public final /* synthetic */ f k;
     public final /* synthetic */ Throwable l;
 
-    public /* synthetic */ a(DefaultCallAdapterFactory.b.a aVar, Callback3 callback3, Throwable th) {
+    public /* synthetic */ a(i.b.a aVar, f fVar, Throwable th) {
         this.j = aVar;
-        this.k = callback3;
+        this.k = fVar;
         this.l = th;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        DefaultCallAdapterFactory.b.a aVar = this.j;
-        this.k.a(DefaultCallAdapterFactory.b.this, this.l);
+        i.b.a aVar = this.j;
+        this.k.a(i.b.this, this.l);
     }
 }

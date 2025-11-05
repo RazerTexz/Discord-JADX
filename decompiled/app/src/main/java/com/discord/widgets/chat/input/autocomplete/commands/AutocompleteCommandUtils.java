@@ -2,16 +2,16 @@ package com.discord.widgets.chat.input.autocomplete.commands;
 
 import androidx.annotation.MainThread;
 import androidx.annotation.VisibleForTesting;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.commands.ApplicationCommandType;
 import com.discord.api.commands.CommandChoice;
 import com.discord.models.commands.Application;
 import com.discord.models.commands.ApplicationCommand;
-import com.discord.models.commands.ApplicationCommand2;
+import com.discord.models.commands.ApplicationCommandKt;
 import com.discord.models.commands.ApplicationCommandOption;
 import com.discord.stores.StoreApplicationCommandsKt;
 import com.discord.utilities.SnowflakeUtils;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import com.discord.widgets.chat.input.autocomplete.ApplicationCommandChoiceAutocompletable;
 import com.discord.widgets.chat.input.autocomplete.Autocompletable;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteModelUtils;
@@ -36,14 +36,13 @@ import com.discord.widgets.chat.input.models.SnowflakeOptionValue;
 import com.discord.widgets.chat.input.models.StringOptionValue;
 import com.discord.widgets.chat.input.models.UserOptionValue;
 import com.lytefast.flexinput.model.Attachment;
-import d0.g0.Regex2;
-import d0.g0.StringNumberConversions;
-import d0.g0.Strings4;
-import d0.g0.StringsJVM;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.t._CollectionsJvm;
-import d0.z.d.Intrinsics3;
+import d0.g0.e;
+import d0.g0.s;
+import d0.g0.t;
+import d0.g0.w;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
@@ -57,7 +56,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.ranges.Ranges2;
+import kotlin.ranges.IntRange;
 import kotlin.text.MatchResult;
 import kotlin.text.Regex;
 
@@ -169,13 +168,13 @@ public final class AutocompleteCommandUtils {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final InputEditTextAction.InsertText appendParam(CharSequence input, ApplicationCommandOption applicationCommandsOption, Integer insertIndex) {
-        Intrinsics3.checkNotNullParameter(input, "input");
-        Intrinsics3.checkNotNullParameter(applicationCommandsOption, "applicationCommandsOption");
+        m.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(applicationCommandsOption, "applicationCommandsOption");
         input.length();
         String str = "";
-        StringBuilder sbU = outline.U((Strings4.endsWith$default(input, ' ', false, 2, (Object) null) || insertIndex != null) ? "" : " ");
+        StringBuilder sbU = a.U((w.endsWith$default(input, ' ', false, 2, (Object) null) || insertIndex != null) ? "" : " ");
         sbU.append(applicationCommandsOption.getName());
-        sbU.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+        sbU.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
         String string = sbU.toString();
         int iOrdinal = applicationCommandsOption.getType().ordinal();
         if (iOrdinal == 5) {
@@ -184,18 +183,18 @@ public final class AutocompleteCommandUtils {
             str = "#";
         } else if (iOrdinal == 7 || iOrdinal == 8) {
         }
-        String strW = outline.w(string, str);
+        String strW = a.w(string, str);
         int iIntValue = insertIndex != null ? insertIndex.intValue() : input.length();
-        return new InputEditTextAction.InsertText(input, strW, new Ranges2(iIntValue, iIntValue), strW.length() + input.length());
+        return new InputEditTextAction.InsertText(input, strW, new IntRange(iIntValue, iIntValue), strW.length() + input.length());
     }
 
     @MainThread
     public final InputEditTextAction appendTextForCommandForInput(MentionInputModel.VerifiedCommandInputModel model) {
-        Intrinsics3.checkNotNullParameter(model, "model");
+        m.checkNotNullParameter(model, "model");
         ApplicationCommand selectedCommand = model.getInputCommandContext().getSelectedCommand();
         if (selectedCommand != null && selectedCommand.getOptions().size() == 1) {
-            ApplicationCommandOption applicationCommandOption = (ApplicationCommandOption) _Collections.first((List) selectedCommand.getOptions());
-            StringBuilder sbQ = outline.Q(MentionUtils.SLASH_CHAR);
+            ApplicationCommandOption applicationCommandOption = (ApplicationCommandOption) u.first((List) selectedCommand.getOptions());
+            StringBuilder sbQ = a.Q(MentionUtilsKt.SLASH_CHAR);
             sbQ.append(selectedCommand.getName());
             sbQ.append(' ');
             String string = sbQ.toString();
@@ -208,15 +207,15 @@ public final class AutocompleteCommandUtils {
 
     public final Map<ApplicationCommandOption, OptionRange> findOptionRanges(CharSequence charSequence, ApplicationCommand applicationCommand, Map<ApplicationCommandOption, ? extends Attachment<?>> map) {
         List<ApplicationCommandOption> options;
-        Ranges2 ranges2FindValueRange;
-        Intrinsics3.checkNotNullParameter(charSequence, "$this$findOptionRanges");
-        Intrinsics3.checkNotNullParameter(map, "attachments");
+        IntRange intRangeFindValueRange;
+        m.checkNotNullParameter(charSequence, "$this$findOptionRanges");
+        m.checkNotNullParameter(map, "attachments");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         if (applicationCommand != null && (options = applicationCommand.getOptions()) != null) {
             for (ApplicationCommandOption applicationCommandOption : options) {
                 AutocompleteCommandUtils autocompleteCommandUtils = INSTANCE;
                 Integer numFindStartOfParam = autocompleteCommandUtils.findStartOfParam(charSequence, applicationCommandOption.getName());
-                if (numFindStartOfParam != null && (ranges2FindValueRange = autocompleteCommandUtils.findValueRange(charSequence, applicationCommand, applicationCommandOption.getName())) != null) {
+                if (numFindStartOfParam != null && (intRangeFindValueRange = autocompleteCommandUtils.findValueRange(charSequence, applicationCommand, applicationCommandOption.getName())) != null) {
                     Attachment<?> attachment = map.get(applicationCommandOption);
                     String displayName = attachment != null ? attachment.getDisplayName() : null;
                 }
@@ -227,10 +226,10 @@ public final class AutocompleteCommandUtils {
 
     @VisibleForTesting
     public final Integer findStartOfParam(CharSequence charSequence, String str) {
-        Ranges2 range;
-        Intrinsics3.checkNotNullParameter(charSequence, "$this$findStartOfParam");
-        Intrinsics3.checkNotNullParameter(str, "paramName");
-        MatchResult matchResultFind$default = Regex.find$default(new Regex("[\\s|\\n]" + str + MentionUtils.EMOJIS_AND_STICKERS_CHAR), charSequence, 0, 2, null);
+        IntRange range;
+        m.checkNotNullParameter(charSequence, "$this$findStartOfParam");
+        m.checkNotNullParameter(str, "paramName");
+        MatchResult matchResultFind$default = Regex.find$default(new Regex("[\\s|\\n]" + str + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR), charSequence, 0, 2, null);
         int first = (matchResultFind$default == null || (range = matchResultFind$default.getRange()) == null) ? -1 : range.getFirst();
         if (first == -1) {
             return null;
@@ -240,8 +239,8 @@ public final class AutocompleteCommandUtils {
 
     @VisibleForTesting
     public final Integer findStartOfValue(CharSequence charSequence, String str) {
-        Intrinsics3.checkNotNullParameter(charSequence, "$this$findStartOfValue");
-        Intrinsics3.checkNotNullParameter(str, "paramName");
+        m.checkNotNullParameter(charSequence, "$this$findStartOfValue");
+        m.checkNotNullParameter(str, "paramName");
         Integer numFindStartOfParam = findStartOfParam(charSequence, str);
         int iIntValue = numFindStartOfParam != null ? numFindStartOfParam.intValue() : -1;
         if (iIntValue != -1) {
@@ -250,15 +249,15 @@ public final class AutocompleteCommandUtils {
         return null;
     }
 
-    public final Ranges2 findValueRange(CharSequence charSequence, ApplicationCommand applicationCommand, String str) {
+    public final IntRange findValueRange(CharSequence charSequence, ApplicationCommand applicationCommand, String str) {
         int first;
-        Regex2 next;
-        Ranges2 range;
+        e next;
+        IntRange range;
         ApplicationCommandOption applicationCommandOption;
         List<ApplicationCommandOption> options;
         Object next2;
-        Intrinsics3.checkNotNullParameter(charSequence, "$this$findValueRange");
-        Intrinsics3.checkNotNullParameter(str, "paramName");
+        m.checkNotNullParameter(charSequence, "$this$findValueRange");
+        m.checkNotNullParameter(str, "paramName");
         Integer numFindStartOfValue = findStartOfValue(charSequence, str);
         if (numFindStartOfValue == null) {
             return null;
@@ -270,14 +269,14 @@ public final class AutocompleteCommandUtils {
                 first = -1;
                 break;
             }
-            Iterator<Regex2> it2 = ((MatchResult) it.next()).getGroups().iterator();
+            Iterator<e> it2 = ((MatchResult) it.next()).getGroups().iterator();
             while (true) {
                 if (!it2.hasNext()) {
                     next = null;
                     break;
                 }
                 next = it2.next();
-                Regex2 regex2 = next;
+                e eVar = next;
                 if (applicationCommand == null || (options = applicationCommand.getOptions()) == null) {
                     applicationCommandOption = null;
                 } else {
@@ -288,7 +287,7 @@ public final class AutocompleteCommandUtils {
                             break;
                         }
                         next2 = it3.next();
-                        if (Intrinsics3.areEqual(regex2 != null ? regex2.getValue() : null, ((ApplicationCommandOption) next2).getName())) {
+                        if (m.areEqual(eVar != null ? eVar.getValue() : null, ((ApplicationCommandOption) next2).getName())) {
                             break;
                         }
                     }
@@ -298,43 +297,43 @@ public final class AutocompleteCommandUtils {
                     break;
                 }
             }
-            Regex2 regex22 = next;
-            first = (regex22 == null || (range = regex22.getRange()) == null) ? -1 : range.getFirst();
+            e eVar2 = next;
+            first = (eVar2 == null || (range = eVar2.getRange()) == null) ? -1 : range.getFirst();
             if (first != -1) {
                 break;
             }
         }
-        return first == -1 ? new Ranges2(iIntValue, charSequence.length()) : new Ranges2(iIntValue, first + iIntValue);
+        return first == -1 ? new IntRange(iIntValue, charSequence.length()) : new IntRange(iIntValue, first + iIntValue);
     }
 
     public final String getCommandPrefix(CharSequence charSequence) {
         List<String> groupValues;
-        Intrinsics3.checkNotNullParameter(charSequence, "$this$getCommandPrefix");
+        m.checkNotNullParameter(charSequence, "$this$getCommandPrefix");
         MatchResult matchResultFind$default = Regex.find$default(new Regex("^(/([\\p{L}0-9-_]+\\s*){0,3})"), charSequence, 0, 2, null);
         if (matchResultFind$default == null || (groupValues = matchResultFind$default.getGroupValues()) == null) {
             return null;
         }
-        return (String) _Collections.getOrNull(groupValues, 1);
+        return (String) u.getOrNull(groupValues, 1);
     }
 
     public final Set<ApplicationCommandOption> getErrorsToShowForCommandParameters(ApplicationCommand selectedCommand, ApplicationCommandOption selectedCommandOption, ApplicationCommandOption previouslySelected, Map<ApplicationCommandOption, Boolean> validMap, Map<ApplicationCommandOption, ? extends CommandOptionValue> parsedCommandOptions) {
-        Intrinsics3.checkNotNullParameter(validMap, "validMap");
-        Intrinsics3.checkNotNullParameter(parsedCommandOptions, "parsedCommandOptions");
+        m.checkNotNullParameter(validMap, "validMap");
+        m.checkNotNullParameter(parsedCommandOptions, "parsedCommandOptions");
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         if (selectedCommand == null) {
-            return Sets5.emptySet();
+            return n0.emptySet();
         }
         for (ApplicationCommandOption applicationCommandOption : selectedCommand.getOptions()) {
             if (parsedCommandOptions.containsKey(applicationCommandOption)) {
                 CommandOptionValue commandOptionValue = parsedCommandOptions.get(applicationCommandOption);
                 String strValueOf = String.valueOf(commandOptionValue != null ? commandOptionValue.getValue() : null);
                 boolean z2 = false;
-                boolean z3 = StringsJVM.isBlank(strValueOf) || (strValueOf.length() == 1 && MentionUtils.getDEFAULT_LEADING_IDENTIFIERS().contains(Character.valueOf(strValueOf.charAt(0))));
-                boolean zAreEqual = Intrinsics3.areEqual(selectedCommandOption, applicationCommandOption);
-                boolean z4 = previouslySelected != null && Intrinsics3.areEqual(previouslySelected, applicationCommandOption);
+                boolean z3 = t.isBlank(strValueOf) || (strValueOf.length() == 1 && MentionUtilsKt.getDEFAULT_LEADING_IDENTIFIERS().contains(Character.valueOf(strValueOf.charAt(0))));
+                boolean zAreEqual = m.areEqual(selectedCommandOption, applicationCommandOption);
+                boolean z4 = previouslySelected != null && m.areEqual(previouslySelected, applicationCommandOption);
                 boolean zContainsKey = parsedCommandOptions.containsKey(applicationCommandOption);
                 boolean z5 = (zAreEqual && z4) || (zAreEqual && z3);
-                if (Intrinsics3.areEqual(validMap.get(applicationCommandOption), Boolean.FALSE) && !z5 && zContainsKey) {
+                if (m.areEqual(validMap.get(applicationCommandOption), Boolean.FALSE) && !z5 && zContainsKey) {
                     z2 = true;
                 }
                 if (z2) {
@@ -365,9 +364,9 @@ public final class AutocompleteCommandUtils {
         Iterator it;
         long j = userId;
         List<Long> list = userRoles;
-        Intrinsics3.checkNotNullParameter(input, "input");
-        Intrinsics3.checkNotNullParameter(list, "userRoles");
-        Intrinsics3.checkNotNullParameter(applicationCommands, "applicationCommands");
+        m.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(list, "userRoles");
+        m.checkNotNullParameter(applicationCommands, "applicationCommands");
         String commandPrefix = getCommandPrefix(input);
         Application application = null;
         Object obj = null;
@@ -375,23 +374,23 @@ public final class AutocompleteCommandUtils {
             applicationCommand = null;
         } else if (selectedCommand != null) {
             String strSubstring = commandPrefix.substring(1);
-            Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
+            m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
             StringBuilder sb = new StringBuilder();
             String name = selectedCommand.getName();
             if (name == null) {
                 name = "";
             }
-            if (!StringsJVM.startsWith$default(strSubstring, outline.J(sb, name, " "), false, 2, null)) {
-                Intrinsics3.checkNotNullExpressionValue(commandPrefix.substring(1), "(this as java.lang.String).substring(startIndex)");
-                if (!Intrinsics3.areEqual(r12, selectedCommand.getName() != null ? r13 : "")) {
+            if (!t.startsWith$default(strSubstring, a.J(sb, name, " "), false, 2, null)) {
+                m.checkNotNullExpressionValue(commandPrefix.substring(1), "(this as java.lang.String).substring(startIndex)");
+                if (!m.areEqual(r12, selectedCommand.getName() != null ? r13 : "")) {
                     if (commandPrefix.length() > 0) {
                         List<ApplicationCommand> listFlattenSubCommands = StoreApplicationCommandsKt.flattenSubCommands(applicationCommands.getQueryCommands());
                         String strSubstring2 = commandPrefix.substring(1);
-                        Intrinsics3.checkNotNullExpressionValue(strSubstring2, "(this as java.lang.String).substring(startIndex)");
+                        m.checkNotNullExpressionValue(strSubstring2, "(this as java.lang.String).substring(startIndex)");
                         ArrayList arrayList = new ArrayList();
                         for (Object obj2 : listFlattenSubCommands) {
                             ApplicationCommand applicationCommand4 = (ApplicationCommand) obj2;
-                            if (ApplicationCommand2.hasPermission(applicationCommand4, j, list) && (StringsJVM.startsWith$default(applicationCommand4.getName(), strSubstring2, false, 2, null) && (Intrinsics3.areEqual(strSubstring2, applicationCommand4.getName()) ^ true))) {
+                            if (ApplicationCommandKt.hasPermission(applicationCommand4, j, list) && (t.startsWith$default(applicationCommand4.getName(), strSubstring2, false, 2, null) && (m.areEqual(strSubstring2, applicationCommand4.getName()) ^ true))) {
                                 arrayList.add(obj2);
                             }
                         }
@@ -400,12 +399,12 @@ public final class AutocompleteCommandUtils {
                         boolean z2 = false;
                         for (Object obj3 : listFlattenSubCommands) {
                             ApplicationCommand applicationCommand5 = (ApplicationCommand) obj3;
-                            boolean zHasPermission = ApplicationCommand2.hasPermission(applicationCommand5, j, list);
-                            boolean zAreEqual = Intrinsics3.areEqual(strSubstring2, applicationCommand5.getName());
+                            boolean zHasPermission = ApplicationCommandKt.hasPermission(applicationCommand5, j, list);
+                            boolean zAreEqual = m.areEqual(strSubstring2, applicationCommand5.getName());
                             StringBuilder sb2 = new StringBuilder();
                             sb2.append(applicationCommand5.getName());
                             sb2.append(" ");
-                            boolean z3 = zHasPermission && (StringsJVM.startsWith$default(strSubstring2, sb2.toString(), false, 2, null) || zAreEqual);
+                            boolean z3 = zHasPermission && (t.startsWith$default(strSubstring2, sb2.toString(), false, 2, null) || zAreEqual);
                             if (z3 && applicationCommand5.getName().length() == length) {
                                 z2 = true;
                             } else if (z3 && applicationCommand5.getName().length() > length) {
@@ -441,7 +440,7 @@ public final class AutocompleteCommandUtils {
                         if (arrayList.isEmpty()) {
                             if (z2) {
                                 obj = null;
-                                applicationCommand3 = StringsJVM.startsWith$default(input.subSequence(1, input.length()).toString(), Intrinsics3.stringPlus(applicationCommand != null ? applicationCommand.getName() : null, " "), false, 2, null) ? null : null;
+                                applicationCommand3 = t.startsWith$default(input.subSequence(1, input.length()).toString(), m.stringPlus(applicationCommand != null ? applicationCommand.getName() : null, " "), false, 2, null) ? null : null;
                             } else {
                                 obj = null;
                             }
@@ -484,10 +483,10 @@ public final class AutocompleteCommandUtils {
     */
     public final Map<ApplicationCommandOption, Boolean> getInputValidity(ApplicationCommand selectedCommand, Map<ApplicationCommandOption, ? extends CommandOptionValue> parsedCommandOptions, Map<ApplicationCommandOption, ? extends Attachment<?>> commandOptionAttachments, ChatInputMentionsMap inputMentionsMap) {
         Object next;
-        Intrinsics3.checkNotNullParameter(selectedCommand, "selectedCommand");
-        Intrinsics3.checkNotNullParameter(parsedCommandOptions, "parsedCommandOptions");
-        Intrinsics3.checkNotNullParameter(commandOptionAttachments, "commandOptionAttachments");
-        Intrinsics3.checkNotNullParameter(inputMentionsMap, "inputMentionsMap");
+        m.checkNotNullParameter(selectedCommand, "selectedCommand");
+        m.checkNotNullParameter(parsedCommandOptions, "parsedCommandOptions");
+        m.checkNotNullParameter(commandOptionAttachments, "commandOptionAttachments");
+        m.checkNotNullParameter(inputMentionsMap, "inputMentionsMap");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (ApplicationCommandOption applicationCommandOption : selectedCommand.getOptions()) {
             if (applicationCommandOption.getType() == ApplicationCommandType.ATTACHMENT) {
@@ -504,18 +503,18 @@ public final class AutocompleteCommandUtils {
                         if (!(choices instanceof Collection) || !choices.isEmpty()) {
                             Iterator<T> it = choices.iterator();
                             while (it.hasNext()) {
-                                if (Intrinsics3.areEqual(((CommandChoice) it.next()).getValue(), commandOptionValue.getValue().toString())) {
+                                if (m.areEqual(((CommandChoice) it.next()).getValue(), commandOptionValue.getValue().toString())) {
                                     z2 = true;
                                 }
                             }
                         }
                         linkedHashMap.put(applicationCommandOption, Boolean.valueOf(z2));
                     } else if (applicationCommandOption.getAutocomplete()) {
-                        Iterator it2 = _CollectionsJvm.filterIsInstance(inputMentionsMap.getMentions().values(), ApplicationCommandChoiceAutocompletable.class).iterator();
+                        Iterator it2 = d0.t.t.filterIsInstance(inputMentionsMap.getMentions().values(), ApplicationCommandChoiceAutocompletable.class).iterator();
                         while (true) {
                             if (it2.hasNext()) {
                                 next = it2.next();
-                                if (Intrinsics3.areEqual(((ApplicationCommandChoiceAutocompletable) next).getOptionName(), applicationCommandOption.getName())) {
+                                if (m.areEqual(((ApplicationCommandChoiceAutocompletable) next).getOptionName(), applicationCommandOption.getName())) {
                                 }
                             } else {
                                 next = null;
@@ -532,7 +531,7 @@ public final class AutocompleteCommandUtils {
                                 linkedHashMap.put(applicationCommandOption, Boolean.valueOf(z2));
                                 break;
                             case STRING:
-                                if ((commandOptionValue instanceof StringOptionValue) && (!StringsJVM.isBlank(commandOptionValue.getValue().toString()))) {
+                                if ((commandOptionValue instanceof StringOptionValue) && (!t.isBlank(commandOptionValue.getValue().toString()))) {
                                 }
                                 linkedHashMap.put(applicationCommandOption, Boolean.valueOf(z2));
                                 break;
@@ -621,10 +620,10 @@ public final class AutocompleteCommandUtils {
     }
 
     public final ApplicationCommand getSelectedCommand(List<? extends ApplicationCommand> commands, String prefix, String input, long userId, List<Long> roles) {
-        Intrinsics3.checkNotNullParameter(commands, "commands");
-        Intrinsics3.checkNotNullParameter(prefix, "prefix");
-        Intrinsics3.checkNotNullParameter(input, "input");
-        Intrinsics3.checkNotNullParameter(roles, "roles");
+        m.checkNotNullParameter(commands, "commands");
+        m.checkNotNullParameter(prefix, "prefix");
+        m.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(roles, "roles");
         Object obj = null;
         if (!(prefix.length() > 0)) {
             return null;
@@ -637,9 +636,9 @@ public final class AutocompleteCommandUtils {
             Object next = it.next();
             ApplicationCommand applicationCommand = (ApplicationCommand) next;
             StringBuilder sb = new StringBuilder();
-            sb.append(String.valueOf(MentionUtils.SLASH_CHAR) + applicationCommand.getName());
+            sb.append(String.valueOf(MentionUtilsKt.SLASH_CHAR) + applicationCommand.getName());
             sb.append(' ');
-            if (StringsJVM.startsWith$default(input, sb.toString(), false, 2, null) && ApplicationCommand2.hasPermission(applicationCommand, userId, roles)) {
+            if (t.startsWith$default(input, sb.toString(), false, 2, null) && ApplicationCommandKt.hasPermission(applicationCommand, userId, roles)) {
                 obj = next;
                 break;
             }
@@ -672,10 +671,10 @@ public final class AutocompleteCommandUtils {
         Object next2;
         CommandOptionValue integerOptionValue;
         CommandOptionValue numberOptionValue;
-        Intrinsics3.checkNotNullParameter(input, "input");
-        Intrinsics3.checkNotNullParameter(command, "command");
-        Intrinsics3.checkNotNullParameter(mentionMap, "mentionMap");
-        Intrinsics3.checkNotNullParameter(attachments, "attachments");
+        m.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(command, "command");
+        m.checkNotNullParameter(mentionMap, "mentionMap");
+        m.checkNotNullParameter(attachments, "attachments");
         Map<ApplicationCommandOption, OptionRange> mapFindOptionRanges = findOptionRanges(input, command, attachments);
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry<ApplicationCommandOption, OptionRange> entry : mapFindOptionRanges.entrySet()) {
@@ -683,7 +682,7 @@ public final class AutocompleteCommandUtils {
             OptionRange value2 = entry.getValue();
             String string = input.subSequence(value2.getValue().getFirst(), value2.getValue().getLast()).toString();
             Objects.requireNonNull(string, "null cannot be cast to non-null type kotlin.CharSequence");
-            String string2 = Strings4.trim(string).toString();
+            String string2 = w.trim(string).toString();
             Iterator<T> it = mentionMap.getMentions().values().iterator();
             while (true) {
                 stringOptionValue = null;
@@ -707,7 +706,7 @@ public final class AutocompleteCommandUtils {
                             next2 = it2.next();
                             String name = ((CommandChoice) next2).getName();
                             Objects.requireNonNull(name, "null cannot be cast to non-null type kotlin.CharSequence");
-                            if (Intrinsics3.areEqual(Strings4.trim(name).toString(), string2)) {
+                            if (m.areEqual(w.trim(name).toString(), string2)) {
                             }
                         } else {
                             next2 = null;
@@ -724,7 +723,7 @@ public final class AutocompleteCommandUtils {
                     stringOptionValue = new StringOptionValue(value);
                     break;
                 case 3:
-                    Long lAsSafeNumberOrNull = asSafeNumberOrNull(StringNumberConversions.toLongOrNull(value));
+                    Long lAsSafeNumberOrNull = asSafeNumberOrNull(s.toLongOrNull(value));
                     if (lAsSafeNumberOrNull != null) {
                         integerOptionValue = new IntegerOptionValue(lAsSafeNumberOrNull.longValue());
                         stringOptionValue = integerOptionValue;
@@ -792,7 +791,7 @@ public final class AutocompleteCommandUtils {
                     Attachment<?> attachment = attachments.get(key);
                     if (attachment != null) {
                         String string3 = attachment.getUri().toString();
-                        Intrinsics3.checkNotNullExpressionValue(string3, "it.uri.toString()");
+                        m.checkNotNullExpressionValue(string3, "it.uri.toString()");
                         numberOptionValue = new AttachmentOptionValue(string3);
                         stringOptionValue = numberOptionValue;
                         break;
@@ -817,18 +816,18 @@ public final class AutocompleteCommandUtils {
         if (str == null) {
             return null;
         }
-        if (Strings4.endsWith$default((CharSequence) Strings4.trim(str).toString(), MentionUtils.EMOJIS_AND_STICKERS_CHAR, false, 2, (Object) null)) {
-            return Strings4.trim(str).toString();
+        if (w.endsWith$default((CharSequence) w.trim(str).toString(), MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR, false, 2, (Object) null)) {
+            return w.trim(str).toString();
         }
-        if (!Strings4.contains$default((CharSequence) str, MentionUtils.EMOJIS_AND_STICKERS_CHAR, false, 2, (Object) null)) {
+        if (!w.contains$default((CharSequence) str, MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR, false, 2, (Object) null)) {
             return str;
         }
-        List listSplit$default = Strings4.split$default((CharSequence) str, new char[]{MentionUtils.EMOJIS_AND_STICKERS_CHAR}, false, 0, 6, (Object) null);
-        String str2 = (String) _Collections.firstOrNull(listSplit$default);
-        String string = str2 != null ? Strings4.trim(str2).toString() : null;
-        String strJoinToString$default = _Collections.joinToString$default(listSplit$default.subList(1, listSplit$default.size()), ":", null, null, 0, null, null, 62, null);
+        List listSplit$default = w.split$default((CharSequence) str, new char[]{MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR}, false, 0, 6, (Object) null);
+        String str2 = (String) u.firstOrNull(listSplit$default);
+        String string = str2 != null ? w.trim(str2).toString() : null;
+        String strJoinToString$default = u.joinToString$default(listSplit$default.subList(1, listSplit$default.size()), ":", null, null, 0, null, null, 62, null);
         Objects.requireNonNull(strJoinToString$default, "null cannot be cast to non-null type kotlin.CharSequence");
-        return outline.y(string, ": ", Strings4.trim(strJoinToString$default).toString());
+        return a.y(string, ": ", w.trim(strJoinToString$default).toString());
     }
 
     private final Integer asSafeNumberOrNull(Integer num) {

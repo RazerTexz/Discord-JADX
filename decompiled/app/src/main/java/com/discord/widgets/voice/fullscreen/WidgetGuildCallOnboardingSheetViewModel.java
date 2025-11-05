@@ -4,8 +4,8 @@ import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.stores.StoreChannels;
 import com.discord.stores.StoreGuilds;
@@ -14,10 +14,10 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreVoiceChannelSelected;
 import com.discord.stores.StoreVoiceStates;
 import com.discord.utilities.rx.ObservableExtensionsKt;
+import com.discord.utilities.voice.VoiceChannelJoinability;
 import com.discord.utilities.voice.VoiceChannelJoinabilityUtils;
-import com.discord.utilities.voice.VoiceChannelJoinabilityUtils2;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -28,7 +28,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<ViewState> {
+public final class WidgetGuildCallOnboardingSheetViewModel extends d0<ViewState> {
     private final long channelId;
     private final StoreChannels channelsStore;
     private final PublishSubject<Event> eventSubject;
@@ -39,7 +39,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
 
     /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheetViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass1(WidgetGuildCallOnboardingSheetViewModel widgetGuildCallOnboardingSheetViewModel) {
             super(1, widgetGuildCallOnboardingSheetViewModel, WidgetGuildCallOnboardingSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/voice/fullscreen/WidgetGuildCallOnboardingSheetViewModel$StoreState;)V", 0);
         }
@@ -52,7 +52,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             WidgetGuildCallOnboardingSheetViewModel.access$handleStoreState((WidgetGuildCallOnboardingSheetViewModel) this.receiver, storeState);
         }
     }
@@ -103,7 +103,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
                     return false;
                 }
                 LaunchGuildCallScreen launchGuildCallScreen = (LaunchGuildCallScreen) other;
-                return this.channelId == launchGuildCallScreen.channelId && Intrinsics3.areEqual(this.guildId, launchGuildCallScreen.guildId);
+                return this.channelId == launchGuildCallScreen.channelId && m.areEqual(this.guildId, launchGuildCallScreen.guildId);
             }
 
             public final long getChannelId() {
@@ -121,10 +121,10 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("LaunchGuildCallScreen(channelId=");
+                StringBuilder sbU = a.U("LaunchGuildCallScreen(channelId=");
                 sbU.append(this.channelId);
                 sbU.append(", guildId=");
-                return outline.G(sbU, this.guildId, ")");
+                return a.G(sbU, this.guildId, ")");
             }
         }
 
@@ -148,22 +148,22 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
     /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Long guildId;
-        private final VoiceChannelJoinabilityUtils2 voiceChannelJoinability;
+        private final VoiceChannelJoinability voiceChannelJoinability;
 
-        public StoreState(Long l, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2) {
-            Intrinsics3.checkNotNullParameter(voiceChannelJoinabilityUtils2, "voiceChannelJoinability");
+        public StoreState(Long l, VoiceChannelJoinability voiceChannelJoinability) {
+            m.checkNotNullParameter(voiceChannelJoinability, "voiceChannelJoinability");
             this.guildId = l;
-            this.voiceChannelJoinability = voiceChannelJoinabilityUtils2;
+            this.voiceChannelJoinability = voiceChannelJoinability;
         }
 
-        public static /* synthetic */ StoreState copy$default(StoreState storeState, Long l, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2, int i, Object obj) {
+        public static /* synthetic */ StoreState copy$default(StoreState storeState, Long l, VoiceChannelJoinability voiceChannelJoinability, int i, Object obj) {
             if ((i & 1) != 0) {
                 l = storeState.guildId;
             }
             if ((i & 2) != 0) {
-                voiceChannelJoinabilityUtils2 = storeState.voiceChannelJoinability;
+                voiceChannelJoinability = storeState.voiceChannelJoinability;
             }
-            return storeState.copy(l, voiceChannelJoinabilityUtils2);
+            return storeState.copy(l, voiceChannelJoinability);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -172,12 +172,12 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         }
 
         /* renamed from: component2, reason: from getter */
-        public final VoiceChannelJoinabilityUtils2 getVoiceChannelJoinability() {
+        public final VoiceChannelJoinability getVoiceChannelJoinability() {
             return this.voiceChannelJoinability;
         }
 
-        public final StoreState copy(Long guildId, VoiceChannelJoinabilityUtils2 voiceChannelJoinability) {
-            Intrinsics3.checkNotNullParameter(voiceChannelJoinability, "voiceChannelJoinability");
+        public final StoreState copy(Long guildId, VoiceChannelJoinability voiceChannelJoinability) {
+            m.checkNotNullParameter(voiceChannelJoinability, "voiceChannelJoinability");
             return new StoreState(guildId, voiceChannelJoinability);
         }
 
@@ -189,26 +189,26 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.guildId, storeState.guildId) && Intrinsics3.areEqual(this.voiceChannelJoinability, storeState.voiceChannelJoinability);
+            return m.areEqual(this.guildId, storeState.guildId) && m.areEqual(this.voiceChannelJoinability, storeState.voiceChannelJoinability);
         }
 
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        public final VoiceChannelJoinabilityUtils2 getVoiceChannelJoinability() {
+        public final VoiceChannelJoinability getVoiceChannelJoinability() {
             return this.voiceChannelJoinability;
         }
 
         public int hashCode() {
             Long l = this.guildId;
             int iHashCode = (l != null ? l.hashCode() : 0) * 31;
-            VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2 = this.voiceChannelJoinability;
-            return iHashCode + (voiceChannelJoinabilityUtils2 != null ? voiceChannelJoinabilityUtils2.hashCode() : 0);
+            VoiceChannelJoinability voiceChannelJoinability = this.voiceChannelJoinability;
+            return iHashCode + (voiceChannelJoinability != null ? voiceChannelJoinability.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(guildId=");
+            StringBuilder sbU = a.U("StoreState(guildId=");
             sbU.append(this.guildId);
             sbU.append(", voiceChannelJoinability=");
             sbU.append(this.voiceChannelJoinability);
@@ -223,24 +223,24 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Long guildId;
-            private final VoiceChannelJoinabilityUtils2 joinability;
+            private final VoiceChannelJoinability joinability;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public Loaded(Long l, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2) {
+            public Loaded(Long l, VoiceChannelJoinability voiceChannelJoinability) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(voiceChannelJoinabilityUtils2, "joinability");
+                m.checkNotNullParameter(voiceChannelJoinability, "joinability");
                 this.guildId = l;
-                this.joinability = voiceChannelJoinabilityUtils2;
+                this.joinability = voiceChannelJoinability;
             }
 
-            public static /* synthetic */ Loaded copy$default(Loaded loaded, Long l, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2, int i, Object obj) {
+            public static /* synthetic */ Loaded copy$default(Loaded loaded, Long l, VoiceChannelJoinability voiceChannelJoinability, int i, Object obj) {
                 if ((i & 1) != 0) {
                     l = loaded.guildId;
                 }
                 if ((i & 2) != 0) {
-                    voiceChannelJoinabilityUtils2 = loaded.joinability;
+                    voiceChannelJoinability = loaded.joinability;
                 }
-                return loaded.copy(l, voiceChannelJoinabilityUtils2);
+                return loaded.copy(l, voiceChannelJoinability);
             }
 
             /* renamed from: component1, reason: from getter */
@@ -249,12 +249,12 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             }
 
             /* renamed from: component2, reason: from getter */
-            public final VoiceChannelJoinabilityUtils2 getJoinability() {
+            public final VoiceChannelJoinability getJoinability() {
                 return this.joinability;
             }
 
-            public final Loaded copy(Long guildId, VoiceChannelJoinabilityUtils2 joinability) {
-                Intrinsics3.checkNotNullParameter(joinability, "joinability");
+            public final Loaded copy(Long guildId, VoiceChannelJoinability joinability) {
+                m.checkNotNullParameter(joinability, "joinability");
                 return new Loaded(guildId, joinability);
             }
 
@@ -266,26 +266,26 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.guildId, loaded.guildId) && Intrinsics3.areEqual(this.joinability, loaded.joinability);
+                return m.areEqual(this.guildId, loaded.guildId) && m.areEqual(this.joinability, loaded.joinability);
             }
 
             public final Long getGuildId() {
                 return this.guildId;
             }
 
-            public final VoiceChannelJoinabilityUtils2 getJoinability() {
+            public final VoiceChannelJoinability getJoinability() {
                 return this.joinability;
             }
 
             public int hashCode() {
                 Long l = this.guildId;
                 int iHashCode = (l != null ? l.hashCode() : 0) * 31;
-                VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2 = this.joinability;
-                return iHashCode + (voiceChannelJoinabilityUtils2 != null ? voiceChannelJoinabilityUtils2.hashCode() : 0);
+                VoiceChannelJoinability voiceChannelJoinability = this.joinability;
+                return iHashCode + (voiceChannelJoinability != null ? voiceChannelJoinability.hashCode() : 0);
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(guildId=");
+                StringBuilder sbU = a.U("Loaded(guildId=");
                 sbU.append(this.guildId);
                 sbU.append(", joinability=");
                 sbU.append(this.joinability);
@@ -315,32 +315,32 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
-            VoiceChannelJoinabilityUtils2.values();
+            VoiceChannelJoinability.values();
             int[] iArr = new int[5];
             $EnumSwitchMapping$0 = iArr;
-            iArr[VoiceChannelJoinabilityUtils2.CAN_JOIN.ordinal()] = 1;
-            iArr[VoiceChannelJoinabilityUtils2.GUILD_VIDEO_AT_CAPACITY.ordinal()] = 2;
-            iArr[VoiceChannelJoinabilityUtils2.PERMISSIONS_MISSING.ordinal()] = 3;
-            iArr[VoiceChannelJoinabilityUtils2.CHANNEL_FULL.ordinal()] = 4;
-            iArr[VoiceChannelJoinabilityUtils2.CHANNEL_DOES_NOT_EXIST.ordinal()] = 5;
+            iArr[VoiceChannelJoinability.CAN_JOIN.ordinal()] = 1;
+            iArr[VoiceChannelJoinability.GUILD_VIDEO_AT_CAPACITY.ordinal()] = 2;
+            iArr[VoiceChannelJoinability.PERMISSIONS_MISSING.ordinal()] = 3;
+            iArr[VoiceChannelJoinability.CHANNEL_FULL.ordinal()] = 4;
+            iArr[VoiceChannelJoinability.CHANNEL_DOES_NOT_EXIST.ordinal()] = 5;
         }
     }
 
     /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheetViewModel$observeStoreState$1, reason: invalid class name */
-    public static final class AnonymousClass1<T1, T2, R> implements Func2<Channel, VoiceChannelJoinabilityUtils2, StoreState> {
+    public static final class AnonymousClass1<T1, T2, R> implements Func2<Channel, VoiceChannelJoinability, StoreState> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         @Override // rx.functions.Func2
-        public /* bridge */ /* synthetic */ StoreState call(Channel channel, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2) {
-            return call2(channel, voiceChannelJoinabilityUtils2);
+        public /* bridge */ /* synthetic */ StoreState call(Channel channel, VoiceChannelJoinability voiceChannelJoinability) {
+            return call2(channel, voiceChannelJoinability);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
-        public final StoreState call2(Channel channel, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2) {
+        public final StoreState call2(Channel channel, VoiceChannelJoinability voiceChannelJoinability) {
             Long lValueOf = channel != null ? Long.valueOf(channel.getGuildId()) : null;
-            Intrinsics3.checkNotNullExpressionValue(voiceChannelJoinabilityUtils2, "joinability");
-            return new StoreState(lValueOf, voiceChannelJoinabilityUtils2);
+            m.checkNotNullExpressionValue(voiceChannelJoinability, "joinability");
+            return new StoreState(lValueOf, voiceChannelJoinability);
         }
     }
 
@@ -359,13 +359,13 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
 
     private final Observable<StoreState> observeStoreState() {
         Observable<StoreState> observableJ = Observable.j(this.channelsStore.observeChannel(this.channelId), VoiceChannelJoinabilityUtils.observeJoinability$default(VoiceChannelJoinabilityUtils.INSTANCE, this.channelId, this.channelsStore, this.guildsStore, this.permissionsStore, this.voiceStatesStore, null, null, 96, null), AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…dId, joinability)\n      }");
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…dId, joinability)\n      }");
         return observableJ;
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -395,11 +395,11 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildCallOnboardingSheetViewModel(long j, StoreVoiceChannelSelected storeVoiceChannelSelected, StorePermissions storePermissions, StoreChannels storeChannels, StoreGuilds storeGuilds, StoreVoiceStates storeVoiceStates) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeVoiceChannelSelected, "selectedVoiceChannelStore");
-        Intrinsics3.checkNotNullParameter(storePermissions, "permissionsStore");
-        Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "guildsStore");
-        Intrinsics3.checkNotNullParameter(storeVoiceStates, "voiceStatesStore");
+        m.checkNotNullParameter(storeVoiceChannelSelected, "selectedVoiceChannelStore");
+        m.checkNotNullParameter(storePermissions, "permissionsStore");
+        m.checkNotNullParameter(storeChannels, "channelsStore");
+        m.checkNotNullParameter(storeGuilds, "guildsStore");
+        m.checkNotNullParameter(storeVoiceStates, "voiceStatesStore");
         this.channelId = j;
         this.selectedVoiceChannelStore = storeVoiceChannelSelected;
         this.permissionsStore = storePermissions;
@@ -408,7 +408,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         this.voiceStatesStore = storeVoiceStates;
         this.eventSubject = PublishSubject.k0();
         Observable<StoreState> observableR = observeStoreState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observeStoreState()\n    …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observeStoreState()\n    …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetGuildCallOnboardingSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
     }
 }

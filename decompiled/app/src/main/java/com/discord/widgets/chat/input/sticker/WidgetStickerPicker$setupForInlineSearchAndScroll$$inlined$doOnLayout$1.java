@@ -3,7 +3,7 @@ package com.discord.widgets.chat.input.sticker;
 import android.view.View;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: View.kt */
 /* loaded from: classes2.dex */
@@ -20,12 +20,12 @@ public final class WidgetStickerPicker$setupForInlineSearchAndScroll$$inlined$do
 
     @Override // android.view.View.OnLayoutChangeListener
     public void onLayoutChange(View view, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         view.removeOnLayoutChangeListener(this);
         WidgetStickerPicker.access$getViewModel$p(this.this$0).setSearchText(this.$searchText$inlined);
         WidgetStickerPicker.access$getViewModel$p(this.this$0).setSelectedCategoryId(this.$packId$inlined);
         RecyclerView recyclerView = WidgetStickerPicker.access$getBinding$p(this.this$0).k;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.chatInputStickerPickerRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.chatInputStickerPickerRecycler");
         if (!ViewCompat.isLaidOut(recyclerView) || recyclerView.isLayoutRequested()) {
             recyclerView.addOnLayoutChangeListener(new WidgetStickerPicker$setupForInlineSearchAndScroll$$inlined$doOnLayout$1$lambda$1(this));
         } else {

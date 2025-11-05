@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
 import android.util.Log;
-import b.d.b.a.outline;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.io.File;
 import java.util.HashSet;
@@ -26,7 +25,7 @@ public final class p extends SQLiteOpenHelper {
 
     public static Set<String> b(SQLiteDatabase sQLiteDatabase, String str) {
         HashSet hashSet = new HashSet();
-        Cursor cursorRawQuery = sQLiteDatabase.rawQuery(outline.k(str.length() + 22, "SELECT * FROM ", str, " LIMIT 0"), null);
+        Cursor cursorRawQuery = sQLiteDatabase.rawQuery(b.d.b.a.a.k(str.length() + 22, "SELECT * FROM ", str, " LIMIT 0"), null);
         try {
             for (String str2 : cursorRawQuery.getColumnNames()) {
                 hashSet.add(str2);
@@ -95,7 +94,7 @@ public final class p extends SQLiteOpenHelper {
             if (m0Var != null) {
                 m0Var.A("Invalid version number", str);
             } else {
-                Log.e(e0.f1411b.a, str != null ? outline.k(str.length() + 23, "Invalid version number", ":", str) : "Invalid version number");
+                Log.e(e0.f1411b.a, str != null ? b.d.b.a.a.k(str.length() + 23, "Invalid version number", ":", str) : "Invalid version number");
             }
             i = 0;
         }

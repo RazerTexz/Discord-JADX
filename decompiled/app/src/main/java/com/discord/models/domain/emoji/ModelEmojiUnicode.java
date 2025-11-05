@@ -8,9 +8,8 @@ import android.text.TextUtils;
 import b.a.m.a.h0.a;
 import b.a.m.a.h0.b;
 import b.a.m.a.h0.c;
-import b.d.b.a.outline;
 import com.discord.models.domain.Model;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -114,7 +113,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelEmojiUnicode.Bundle(emojis=");
+            StringBuilder sbU = b.d.b.a.a.U("ModelEmojiUnicode.Bundle(emojis=");
             sbU.append(getEmojis());
             sbU.append(")");
             return sbU.toString();
@@ -295,7 +294,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
             str = getFirstName();
         }
         try {
-            return Pattern.compile("([^\\\\]|^):" + str + MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+            return Pattern.compile("([^\\\\]|^):" + str + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
         } catch (PatternSyntaxException unused) {
             return Pattern.compile("$^");
         }
@@ -354,7 +353,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelEmojiUnicode(names=");
+        StringBuilder sbU = b.d.b.a.a.U("ModelEmojiUnicode(names=");
         sbU.append(getNames());
         sbU.append(", surrogates=");
         sbU.append(getSurrogates());

@@ -2,16 +2,16 @@ package com.discord.widgets.channels.list;
 
 import androidx.core.app.NotificationCompat;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
+import d0.z.d.m;
+import j0.k.b;
 import rx.Observable;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$get$1<T, R> implements Func1<Long, Observable<? extends WidgetChannelListModel>> {
+public final class WidgetChannelListModel$Companion$get$1<T, R> implements b<Long, Observable<? extends WidgetChannelListModel>> {
     public static final WidgetChannelListModel$Companion$get$1 INSTANCE = new WidgetChannelListModel$Companion$get$1();
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public /* bridge */ /* synthetic */ Observable<? extends WidgetChannelListModel> call(Long l) {
         return call2(l);
     }
@@ -22,7 +22,7 @@ public final class WidgetChannelListModel$Companion$get$1<T, R> implements Func1
             return WidgetChannelListModel.Companion.access$getPrivateChannelList(WidgetChannelListModel.INSTANCE);
         }
         WidgetChannelListModel.Companion companion = WidgetChannelListModel.INSTANCE;
-        Intrinsics3.checkNotNullExpressionValue(l, "guildId");
+        m.checkNotNullExpressionValue(l, "guildId");
         return WidgetChannelListModel.Companion.access$getSelectedGuildChannelList(companion, l.longValue());
     }
 }

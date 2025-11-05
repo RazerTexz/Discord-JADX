@@ -13,13 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.R;
 import com.discord.databinding.WidgetCreateChannelBinding;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetCreateChannel.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetCreateChannel$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetCreateChannelBinding> {
+public final /* synthetic */ class WidgetCreateChannel$binding$2 extends k implements Function1<View, WidgetCreateChannelBinding> {
     public static final WidgetCreateChannel$binding$2 INSTANCE = new WidgetCreateChannel$binding$2();
 
     public WidgetCreateChannel$binding$2() {
@@ -33,7 +33,7 @@ public final /* synthetic */ class WidgetCreateChannel$binding$2 extends Functio
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetCreateChannelBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.create_channel_announcements_container;
         ConstraintLayout constraintLayout = (ConstraintLayout) view.findViewById(R.id.create_channel_announcements_container);
         if (constraintLayout != null) {

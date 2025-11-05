@@ -1,25 +1,25 @@
 package b.i.a.c.a3;
 
-import b.i.a.c.a3.MediaSourceEventListener;
+import b.i.a.c.a3.b0;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class e implements Runnable {
-    public final /* synthetic */ MediaSourceEventListener.a j;
-    public final /* synthetic */ MediaSourceEventListener k;
-    public final /* synthetic */ LoadEventInfo l;
-    public final /* synthetic */ MediaLoadData m;
+    public final /* synthetic */ b0.a j;
+    public final /* synthetic */ b0 k;
+    public final /* synthetic */ t l;
+    public final /* synthetic */ w m;
 
-    public /* synthetic */ e(MediaSourceEventListener.a aVar, MediaSourceEventListener mediaSourceEventListener, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
+    public /* synthetic */ e(b0.a aVar, b0 b0Var, t tVar, w wVar) {
         this.j = aVar;
-        this.k = mediaSourceEventListener;
-        this.l = loadEventInfo;
-        this.m = mediaLoadData;
+        this.k = b0Var;
+        this.l = tVar;
+        this.m = wVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        MediaSourceEventListener.a aVar = this.j;
+        b0.a aVar = this.j;
         this.k.x(aVar.a, aVar.f807b, this.l, this.m);
     }
 }

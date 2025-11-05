@@ -14,10 +14,10 @@ import com.discord.stores.StoreStream;
 import com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog;
 import com.discord.widgets.servers.member_verification.MemberVerificationSuccessDialog;
 import com.discord.widgets.servers.member_verification.WidgetMemberVerification;
-import d0.Standard2;
-import d0.t.Sets5;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.j;
+import d0.t.n0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -44,7 +44,7 @@ public final class MemberVerificationUtils {
 
     /* compiled from: MemberVerificationUtils.kt */
     /* renamed from: com.discord.utilities.guilds.MemberVerificationUtils$maybeShowVerificationGate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -120,18 +120,18 @@ public final class MemberVerificationUtils {
             collectionM = (invite == null || (guild2 = invite.guild) == null) ? null : guild2.m();
         }
         if (collectionM == null) {
-            collectionM = Sets5.emptySet();
+            collectionM = n0.emptySet();
         }
         return collectionM.contains(GuildFeature.MEMBER_VERIFICATION_GATE_ENABLED) && collectionM.contains(GuildFeature.COMMUNITY);
     }
 
     public final void maybeShowVerificationGate(Context context, FragmentManager fragmentManager, long guildId, String location, ModelInvite invite, Function0<Unit> onMembershipGated, Function0<Unit> onFullMembership) {
         int iOrdinal;
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-        Intrinsics3.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
-        Intrinsics3.checkNotNullParameter(onMembershipGated, "onMembershipGated");
-        Intrinsics3.checkNotNullParameter(onFullMembership, "onFullMembership");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(location, ModelAuditLogEntry.CHANGE_KEY_LOCATION);
+        m.checkNotNullParameter(onMembershipGated, "onMembershipGated");
+        m.checkNotNullParameter(onFullMembership, "onFullMembership");
         StoreStream.Companion companion = StoreStream.INSTANCE;
         StoreGuilds guilds = companion.getGuilds();
         GuildMember member = guilds.getMember(guildId, companion.getUsers().getMeSnapshot().getId());
@@ -159,7 +159,7 @@ public final class MemberVerificationUtils {
             showMemberVerificationPendingDialog(fragmentManager, guildId);
         } else if (iOrdinal != 3) {
             if (iOrdinal == 4) {
-                throw new Standard2(null, 1, null);
+                throw new j(null, 1, null);
             }
         } else {
             onFullMembership.invoke();

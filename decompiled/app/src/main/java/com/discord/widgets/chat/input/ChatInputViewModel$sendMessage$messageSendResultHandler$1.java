@@ -3,13 +3,13 @@ package com.discord.widgets.chat.input;
 import android.content.Context;
 import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
-import com.discord.utilities.messagesend.MessageQueue4;
+import com.discord.utilities.messagesend.MessageResult;
 import com.discord.utilities.premium.PremiumUtils;
 import com.discord.utilities.rest.SendUtils;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.chat.input.ChatInputViewModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
@@ -17,7 +17,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 extends Lambda implements Function2<MessageQueue4, Guild, Unit> {
+public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 extends o implements Function2<MessageResult, Guild, Unit> {
     public final /* synthetic */ ChatInputViewModel.AttachmentContext $attachmentsContext;
     public final /* synthetic */ Context $context;
     public final /* synthetic */ boolean $isThreadDraft;
@@ -27,7 +27,7 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageSendResultHandler$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Guild $guild;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -55,7 +55,7 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
 
     /* compiled from: ChatInputViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageSendResultHandler$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -85,18 +85,18 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
     }
 
     @Override // kotlin.jvm.functions.Function2
-    public /* bridge */ /* synthetic */ Unit invoke(MessageQueue4 messageQueue4, Guild guild) {
-        invoke2(messageQueue4, guild);
+    public /* bridge */ /* synthetic */ Unit invoke(MessageResult messageResult, Guild guild) {
+        invoke2(messageResult, guild);
         return Unit.a;
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
-    public final void invoke2(MessageQueue4 messageQueue4, Guild guild) {
-        Intrinsics3.checkNotNullParameter(messageQueue4, "messageResult");
-        if (messageQueue4 instanceof MessageQueue4.CaptchaRequired) {
-            SendUtils.INSTANCE.handleCaptchaRequired((MessageQueue4.CaptchaRequired) messageQueue4);
-        } else if (messageQueue4 instanceof MessageQueue4.UnknownFailure) {
-            SendUtils.INSTANCE.handleSendError(((MessageQueue4.UnknownFailure) messageQueue4).getError(), this.$context, new AnonymousClass1(guild), new AnonymousClass2());
+    public final void invoke2(MessageResult messageResult, Guild guild) {
+        m.checkNotNullParameter(messageResult, "messageResult");
+        if (messageResult instanceof MessageResult.CaptchaRequired) {
+            SendUtils.INSTANCE.handleCaptchaRequired((MessageResult.CaptchaRequired) messageResult);
+        } else if (messageResult instanceof MessageResult.UnknownFailure) {
+            SendUtils.INSTANCE.handleSendError(((MessageResult.UnknownFailure) messageResult).getError(), this.$context, new AnonymousClass1(guild), new AnonymousClass2());
         } else if (this.$isThreadDraft) {
             ChatInputViewModel.access$getStoreThreadDraft$p(this.this$0).clearDraftState();
         }

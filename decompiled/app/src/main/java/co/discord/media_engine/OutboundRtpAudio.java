@@ -1,8 +1,8 @@
 package co.discord.media_engine;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -24,8 +24,8 @@ public final /* data */ class OutboundRtpAudio {
     private final long voiceActivityDetectorProcessTime;
 
     public OutboundRtpAudio(String str, long j, StatsCodec statsCodec, long j2, long j3, int i, float f, float f2, boolean z2, long j4, long j5, boolean z3, long j6, boolean z4, long j7) {
-        Intrinsics3.checkNotNullParameter(str, "type");
-        Intrinsics3.checkNotNullParameter(statsCodec, "codec");
+        m.checkNotNullParameter(str, "type");
+        m.checkNotNullParameter(statsCodec, "codec");
         this.type = str;
         this.ssrc = j;
         this.codec = statsCodec;
@@ -123,8 +123,8 @@ public final /* data */ class OutboundRtpAudio {
     }
 
     public final OutboundRtpAudio copy(String type, long ssrc, StatsCodec codec, long bytesSent, long packetsSent, int packetsLost, float fractionLost, float audioLevel, boolean audioDetected, long framesCaptured, long framesRendered, boolean noiseCancellerIsEnabled, long noiseCancellerProcessTime, boolean voiceActivityDetectorIsEnabled, long voiceActivityDetectorProcessTime) {
-        Intrinsics3.checkNotNullParameter(type, "type");
-        Intrinsics3.checkNotNullParameter(codec, "codec");
+        m.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(codec, "codec");
         return new OutboundRtpAudio(type, ssrc, codec, bytesSent, packetsSent, packetsLost, fractionLost, audioLevel, audioDetected, framesCaptured, framesRendered, noiseCancellerIsEnabled, noiseCancellerProcessTime, voiceActivityDetectorIsEnabled, voiceActivityDetectorProcessTime);
     }
 
@@ -136,7 +136,7 @@ public final /* data */ class OutboundRtpAudio {
             return false;
         }
         OutboundRtpAudio outboundRtpAudio = (OutboundRtpAudio) other;
-        return Intrinsics3.areEqual(this.type, outboundRtpAudio.type) && this.ssrc == outboundRtpAudio.ssrc && Intrinsics3.areEqual(this.codec, outboundRtpAudio.codec) && this.bytesSent == outboundRtpAudio.bytesSent && this.packetsSent == outboundRtpAudio.packetsSent && this.packetsLost == outboundRtpAudio.packetsLost && Float.compare(this.fractionLost, outboundRtpAudio.fractionLost) == 0 && Float.compare(this.audioLevel, outboundRtpAudio.audioLevel) == 0 && this.audioDetected == outboundRtpAudio.audioDetected && this.framesCaptured == outboundRtpAudio.framesCaptured && this.framesRendered == outboundRtpAudio.framesRendered && this.noiseCancellerIsEnabled == outboundRtpAudio.noiseCancellerIsEnabled && this.noiseCancellerProcessTime == outboundRtpAudio.noiseCancellerProcessTime && this.voiceActivityDetectorIsEnabled == outboundRtpAudio.voiceActivityDetectorIsEnabled && this.voiceActivityDetectorProcessTime == outboundRtpAudio.voiceActivityDetectorProcessTime;
+        return m.areEqual(this.type, outboundRtpAudio.type) && this.ssrc == outboundRtpAudio.ssrc && m.areEqual(this.codec, outboundRtpAudio.codec) && this.bytesSent == outboundRtpAudio.bytesSent && this.packetsSent == outboundRtpAudio.packetsSent && this.packetsLost == outboundRtpAudio.packetsLost && Float.compare(this.fractionLost, outboundRtpAudio.fractionLost) == 0 && Float.compare(this.audioLevel, outboundRtpAudio.audioLevel) == 0 && this.audioDetected == outboundRtpAudio.audioDetected && this.framesCaptured == outboundRtpAudio.framesCaptured && this.framesRendered == outboundRtpAudio.framesRendered && this.noiseCancellerIsEnabled == outboundRtpAudio.noiseCancellerIsEnabled && this.noiseCancellerProcessTime == outboundRtpAudio.noiseCancellerProcessTime && this.voiceActivityDetectorIsEnabled == outboundRtpAudio.voiceActivityDetectorIsEnabled && this.voiceActivityDetectorProcessTime == outboundRtpAudio.voiceActivityDetectorProcessTime;
     }
 
     public final boolean getAudioDetected() {
@@ -222,7 +222,7 @@ public final /* data */ class OutboundRtpAudio {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("OutboundRtpAudio(type=");
+        StringBuilder sbU = a.U("OutboundRtpAudio(type=");
         sbU.append(this.type);
         sbU.append(", ssrc=");
         sbU.append(this.ssrc);
@@ -251,6 +251,6 @@ public final /* data */ class OutboundRtpAudio {
         sbU.append(", voiceActivityDetectorIsEnabled=");
         sbU.append(this.voiceActivityDetectorIsEnabled);
         sbU.append(", voiceActivityDetectorProcessTime=");
-        return outline.C(sbU, this.voiceActivityDetectorProcessTime, ")");
+        return a.C(sbU, this.voiceActivityDetectorProcessTime, ")");
     }
 }

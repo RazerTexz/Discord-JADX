@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackUserAccountUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserAccountUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackUserAccountUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean isUserSetDiscriminator = null;
     private final Long oldDiscriminator = null;
@@ -47,7 +47,7 @@ public final /* data */ class TrackUserAccountUpdated implements AnalyticsSchema
             return false;
         }
         TrackUserAccountUpdated trackUserAccountUpdated = (TrackUserAccountUpdated) other;
-        return Intrinsics3.areEqual(this.isUserSetDiscriminator, trackUserAccountUpdated.isUserSetDiscriminator) && Intrinsics3.areEqual(this.oldDiscriminator, trackUserAccountUpdated.oldDiscriminator) && Intrinsics3.areEqual(this.newDiscriminator, trackUserAccountUpdated.newDiscriminator) && Intrinsics3.areEqual(this.oldUsername, trackUserAccountUpdated.oldUsername) && Intrinsics3.areEqual(this.newUsername, trackUserAccountUpdated.newUsername) && Intrinsics3.areEqual(this.oldEmail, trackUserAccountUpdated.oldEmail) && Intrinsics3.areEqual(this.newEmail, trackUserAccountUpdated.newEmail) && Intrinsics3.areEqual(this.hasBanner, trackUserAccountUpdated.hasBanner) && Intrinsics3.areEqual(this.hasBannerColor, trackUserAccountUpdated.hasBannerColor) && Intrinsics3.areEqual(this.hasBio, trackUserAccountUpdated.hasBio) && Intrinsics3.areEqual(this.hasPremium, trackUserAccountUpdated.hasPremium) && Intrinsics3.areEqual(this.hasAvatar, trackUserAccountUpdated.hasAvatar) && Intrinsics3.areEqual(this.hasAnimatedAvatar, trackUserAccountUpdated.hasAnimatedAvatar) && Intrinsics3.areEqual(this.updatedBio, trackUserAccountUpdated.updatedBio) && Intrinsics3.areEqual(this.updatedBanner, trackUserAccountUpdated.updatedBanner) && Intrinsics3.areEqual(this.updatedBannerColor, trackUserAccountUpdated.updatedBannerColor) && Intrinsics3.areEqual(this.updatedAvatar, trackUserAccountUpdated.updatedAvatar) && Intrinsics3.areEqual(this.bioCustomEmojiCount, trackUserAccountUpdated.bioCustomEmojiCount) && Intrinsics3.areEqual(this.hasPronouns, trackUserAccountUpdated.hasPronouns) && Intrinsics3.areEqual(this.updatedPronouns, trackUserAccountUpdated.updatedPronouns) && Intrinsics3.areEqual(this.updatedPassword, trackUserAccountUpdated.updatedPassword);
+        return m.areEqual(this.isUserSetDiscriminator, trackUserAccountUpdated.isUserSetDiscriminator) && m.areEqual(this.oldDiscriminator, trackUserAccountUpdated.oldDiscriminator) && m.areEqual(this.newDiscriminator, trackUserAccountUpdated.newDiscriminator) && m.areEqual(this.oldUsername, trackUserAccountUpdated.oldUsername) && m.areEqual(this.newUsername, trackUserAccountUpdated.newUsername) && m.areEqual(this.oldEmail, trackUserAccountUpdated.oldEmail) && m.areEqual(this.newEmail, trackUserAccountUpdated.newEmail) && m.areEqual(this.hasBanner, trackUserAccountUpdated.hasBanner) && m.areEqual(this.hasBannerColor, trackUserAccountUpdated.hasBannerColor) && m.areEqual(this.hasBio, trackUserAccountUpdated.hasBio) && m.areEqual(this.hasPremium, trackUserAccountUpdated.hasPremium) && m.areEqual(this.hasAvatar, trackUserAccountUpdated.hasAvatar) && m.areEqual(this.hasAnimatedAvatar, trackUserAccountUpdated.hasAnimatedAvatar) && m.areEqual(this.updatedBio, trackUserAccountUpdated.updatedBio) && m.areEqual(this.updatedBanner, trackUserAccountUpdated.updatedBanner) && m.areEqual(this.updatedBannerColor, trackUserAccountUpdated.updatedBannerColor) && m.areEqual(this.updatedAvatar, trackUserAccountUpdated.updatedAvatar) && m.areEqual(this.bioCustomEmojiCount, trackUserAccountUpdated.bioCustomEmojiCount) && m.areEqual(this.hasPronouns, trackUserAccountUpdated.hasPronouns) && m.areEqual(this.updatedPronouns, trackUserAccountUpdated.updatedPronouns) && m.areEqual(this.updatedPassword, trackUserAccountUpdated.updatedPassword);
     }
 
     public int hashCode() {
@@ -96,7 +96,7 @@ public final /* data */ class TrackUserAccountUpdated implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUserAccountUpdated(isUserSetDiscriminator=");
+        StringBuilder sbU = a.U("TrackUserAccountUpdated(isUserSetDiscriminator=");
         sbU.append(this.isUserSetDiscriminator);
         sbU.append(", oldDiscriminator=");
         sbU.append(this.oldDiscriminator);
@@ -137,6 +137,6 @@ public final /* data */ class TrackUserAccountUpdated implements AnalyticsSchema
         sbU.append(", updatedPronouns=");
         sbU.append(this.updatedPronouns);
         sbU.append(", updatedPassword=");
-        return outline.D(sbU, this.updatedPassword, ")");
+        return a.D(sbU, this.updatedPassword, ")");
     }
 }

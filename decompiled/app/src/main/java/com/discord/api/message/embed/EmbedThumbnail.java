@@ -1,7 +1,7 @@
 package com.discord.api.message.embed;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: EmbedThumbnail.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class EmbedThumbnail {
             return false;
         }
         EmbedThumbnail embedThumbnail = (EmbedThumbnail) other;
-        return Intrinsics3.areEqual(this.url, embedThumbnail.url) && Intrinsics3.areEqual(this.proxyUrl, embedThumbnail.proxyUrl) && Intrinsics3.areEqual(this.height, embedThumbnail.height) && Intrinsics3.areEqual(this.width, embedThumbnail.width);
+        return m.areEqual(this.url, embedThumbnail.url) && m.areEqual(this.proxyUrl, embedThumbnail.proxyUrl) && m.areEqual(this.height, embedThumbnail.height) && m.areEqual(this.width, embedThumbnail.width);
     }
 
     public int hashCode() {
@@ -54,13 +54,13 @@ public final /* data */ class EmbedThumbnail {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmbedThumbnail(url=");
+        StringBuilder sbU = a.U("EmbedThumbnail(url=");
         sbU.append(this.url);
         sbU.append(", proxyUrl=");
         sbU.append(this.proxyUrl);
         sbU.append(", height=");
         sbU.append(this.height);
         sbU.append(", width=");
-        return outline.F(sbU, this.width, ")");
+        return a.F(sbU, this.width, ")");
     }
 }

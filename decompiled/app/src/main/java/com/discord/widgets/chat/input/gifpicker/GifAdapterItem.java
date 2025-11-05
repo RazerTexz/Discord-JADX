@@ -1,12 +1,12 @@
 package com.discord.widgets.chat.input.gifpicker;
 
 import androidx.annotation.StringRes;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.gifpicker.dto.ModelGif;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.recycler.DiffKeyProvider;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -29,7 +29,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SuggestedTermsEmptyResults(List<String> list, int i) {
                 super(list, ViewType.VIEW_TYPE_GIF_SEARCH_TERMS_EMPTY_RESULTS, i, null);
-                Intrinsics3.checkNotNullParameter(list, "terms");
+                m.checkNotNullParameter(list, "terms");
                 this.terms = list;
                 this.titleResId = i;
             }
@@ -54,7 +54,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             }
 
             public final SuggestedTermsEmptyResults copy(List<String> terms, int titleResId) {
-                Intrinsics3.checkNotNullParameter(terms, "terms");
+                m.checkNotNullParameter(terms, "terms");
                 return new SuggestedTermsEmptyResults(terms, titleResId);
             }
 
@@ -66,7 +66,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
                     return false;
                 }
                 SuggestedTermsEmptyResults suggestedTermsEmptyResults = (SuggestedTermsEmptyResults) other;
-                return Intrinsics3.areEqual(getTerms(), suggestedTermsEmptyResults.getTerms()) && getTitleResId() == suggestedTermsEmptyResults.getTitleResId();
+                return m.areEqual(getTerms(), suggestedTermsEmptyResults.getTerms()) && getTitleResId() == suggestedTermsEmptyResults.getTitleResId();
             }
 
             @Override // com.discord.widgets.chat.input.gifpicker.GifAdapterItem.SuggestedTermsItem
@@ -85,7 +85,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SuggestedTermsEmptyResults(terms=");
+                StringBuilder sbU = a.U("SuggestedTermsEmptyResults(terms=");
                 sbU.append(getTerms());
                 sbU.append(", titleResId=");
                 sbU.append(getTitleResId());
@@ -102,7 +102,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SuggestedTermsNonEmptyResults(List<String> list, int i) {
                 super(list, ViewType.VIEW_TYPE_GIF_SEARCH_TERMS_NON_EMPTY_RESULTS, i, null);
-                Intrinsics3.checkNotNullParameter(list, "terms");
+                m.checkNotNullParameter(list, "terms");
                 this.terms = list;
                 this.titleResId = i;
             }
@@ -127,7 +127,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             }
 
             public final SuggestedTermsNonEmptyResults copy(List<String> terms, int titleResId) {
-                Intrinsics3.checkNotNullParameter(terms, "terms");
+                m.checkNotNullParameter(terms, "terms");
                 return new SuggestedTermsNonEmptyResults(terms, titleResId);
             }
 
@@ -139,7 +139,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
                     return false;
                 }
                 SuggestedTermsNonEmptyResults suggestedTermsNonEmptyResults = (SuggestedTermsNonEmptyResults) other;
-                return Intrinsics3.areEqual(getTerms(), suggestedTermsNonEmptyResults.getTerms()) && getTitleResId() == suggestedTermsNonEmptyResults.getTitleResId();
+                return m.areEqual(getTerms(), suggestedTermsNonEmptyResults.getTerms()) && getTitleResId() == suggestedTermsNonEmptyResults.getTitleResId();
             }
 
             @Override // com.discord.widgets.chat.input.gifpicker.GifAdapterItem.SuggestedTermsItem
@@ -158,7 +158,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SuggestedTermsNonEmptyResults(terms=");
+                StringBuilder sbU = a.U("SuggestedTermsNonEmptyResults(terms=");
                 sbU.append(getTerms());
                 sbU.append(", titleResId=");
                 sbU.append(getTitleResId());
@@ -173,7 +173,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
 
         @Override // com.discord.utilities.recycler.DiffKeyProvider
         public String getKey() {
-            return String.valueOf((_Collections.joinToString$default(getTerms(), null, null, null, 0, null, null, 63, null) + getTitleResId()).hashCode());
+            return String.valueOf((u.joinToString$default(getTerms(), null, null, null, 0, null, null, 63, null) + getTitleResId()).hashCode());
         }
 
         public List<String> getTerms() {
@@ -243,7 +243,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GifItem(ModelGif modelGif, String str) {
             super(ViewType.VIEW_TYPE_GIF_ITEM, null);
-            Intrinsics3.checkNotNullParameter(modelGif, IconUtils.ANIMATED_IMAGE_EXTENSION);
+            m.checkNotNullParameter(modelGif, IconUtils.ANIMATED_IMAGE_EXTENSION);
             this.gif = modelGif;
             this.query = str;
             this.key = String.valueOf(hashCode());
@@ -270,7 +270,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
         }
 
         public final GifItem copy(ModelGif gif, String query) {
-            Intrinsics3.checkNotNullParameter(gif, IconUtils.ANIMATED_IMAGE_EXTENSION);
+            m.checkNotNullParameter(gif, IconUtils.ANIMATED_IMAGE_EXTENSION);
             return new GifItem(gif, query);
         }
 
@@ -282,7 +282,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
                 return false;
             }
             GifItem gifItem = (GifItem) other;
-            return Intrinsics3.areEqual(this.gif, gifItem.gif) && Intrinsics3.areEqual(this.query, gifItem.query);
+            return m.areEqual(this.gif, gifItem.gif) && m.areEqual(this.query, gifItem.query);
         }
 
         public final ModelGif getGif() {
@@ -306,10 +306,10 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("GifItem(gif=");
+            StringBuilder sbU = a.U("GifItem(gif=");
             sbU.append(this.gif);
             sbU.append(", query=");
-            return outline.J(sbU, this.query, ")");
+            return a.J(sbU, this.query, ")");
         }
 
         public /* synthetic */ GifItem(ModelGif modelGif, String str, int i, DefaultConstructorMarker defaultConstructorMarker) {

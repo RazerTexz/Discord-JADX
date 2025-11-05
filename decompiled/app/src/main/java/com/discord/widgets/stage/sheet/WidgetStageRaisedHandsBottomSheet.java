@@ -7,16 +7,15 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.constraintlayout.widget.Group;
 import androidx.core.content.ContextCompat;
-import androidx.core.os.Bundle2;
+import androidx.core.os.BundleKt;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.DividerItemDecoration;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetStageRaisedHandsBottomSheetBinding;
@@ -26,17 +25,16 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.recycler.MaxHeightRecyclerView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel;
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textview.MaterialTextView;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.o;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -48,7 +46,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetStageRaisedHandsBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageRaisedHandsBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetStageRaisedHandsBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageRaisedHandsBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -72,9 +70,9 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
         }
 
         public final WidgetStageRaisedHandsBottomSheet show(FragmentManager fragmentManager, long channelId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetStageRaisedHandsBottomSheet widgetStageRaisedHandsBottomSheet = new WidgetStageRaisedHandsBottomSheet();
-            widgetStageRaisedHandsBottomSheet.setArguments(Bundle2.bundleOf(Tuples.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
+            widgetStageRaisedHandsBottomSheet.setArguments(BundleKt.bundleOf(o.to("com.discord.intent.extra.EXTRA_CHANNEL_ID", Long.valueOf(channelId))));
             widgetStageRaisedHandsBottomSheet.show(fragmentManager, WidgetStageRaisedHandsBottomSheet.class.getSimpleName());
             return widgetStageRaisedHandsBottomSheet;
         }
@@ -91,8 +89,8 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
         /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
         /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$configureToggleSpeakerState$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03451 extends Lambda implements Function0<Unit> {
-            public C03451() {
+        public static final class C04651 extends d0.z.d.o implements Function0<Unit> {
+            public C04651() {
                 super(0);
             }
 
@@ -104,13 +102,13 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
-                AppToast.g(WidgetStageRaisedHandsBottomSheet.this.getContext(), R.string.stage_channel_permission_microphone_denied, 0, null, 12);
+                b.a.d.m.g(WidgetStageRaisedHandsBottomSheet.this.getContext(), R.string.stage_channel_permission_microphone_denied, 0, null, 12);
             }
         }
 
         /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
         /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$configureToggleSpeakerState$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass2 extends d0.z.d.o implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
             }
@@ -140,14 +138,14 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
                 if (zIsSpeaker) {
                     return;
                 }
-                WidgetStageRaisedHandsBottomSheet.this.requestMicrophone(new C03451(), new AnonymousClass2());
+                WidgetStageRaisedHandsBottomSheet.this.requestMicrophone(new C04651(), new AnonymousClass2());
             }
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetStageRaisedHandsBottomSheetViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<WidgetStageRaisedHandsBottomSheetViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -160,14 +158,14 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageRaisedHandsBottomSheetViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "viewState");
+            m.checkNotNullParameter(viewState, "viewState");
             WidgetStageRaisedHandsBottomSheet.access$configureUI(WidgetStageRaisedHandsBottomSheet.this, viewState);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<WidgetStageRaisedHandsBottomSheetViewModel.Event, Unit> {
+    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<WidgetStageRaisedHandsBottomSheetViewModel.Event, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -180,14 +178,14 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageRaisedHandsBottomSheetViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "event");
+            m.checkNotNullParameter(event, "event");
             WidgetStageRaisedHandsBottomSheet.access$handleEvent(WidgetStageRaisedHandsBottomSheet.this, event);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$onViewCreated$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
+    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -200,19 +198,19 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
-            Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
+            m.checkNotNullParameter(voiceUser, "voiceUser");
             WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;
             long id2 = voiceUser.getUser().getId();
             Long lValueOf = Long.valueOf(WidgetStageRaisedHandsBottomSheet.access$getChannelId$p(WidgetStageRaisedHandsBottomSheet.this));
             FragmentManager parentFragmentManager = WidgetStageRaisedHandsBottomSheet.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             WidgetUserSheet.Companion.show$default(companion, id2, lValueOf, parentFragmentManager, null, null, null, null, 120, null);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$onViewCreated$3, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass3 extends FunctionReferenceImpl implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
+    public static final /* synthetic */ class AnonymousClass3 extends k implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public AnonymousClass3(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
             super(1, widgetStageRaisedHandsBottomSheetViewModel, WidgetStageRaisedHandsBottomSheetViewModel.class, "dismissRequestToSpeak", "dismissRequestToSpeak(Lcom/discord/stores/StoreVoiceParticipants$VoiceUser;)V", 0);
         }
@@ -225,14 +223,14 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
-            Intrinsics3.checkNotNullParameter(voiceUser, "p1");
+            m.checkNotNullParameter(voiceUser, "p1");
             ((WidgetStageRaisedHandsBottomSheetViewModel) this.receiver).dismissRequestToSpeak(voiceUser);
         }
     }
 
     /* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$onViewCreated$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends FunctionReferenceImpl implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
+    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public AnonymousClass4(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
             super(1, widgetStageRaisedHandsBottomSheetViewModel, WidgetStageRaisedHandsBottomSheetViewModel.class, "inviteToSpeak", "inviteToSpeak(Lcom/discord/stores/StoreVoiceParticipants$VoiceUser;)V", 0);
         }
@@ -245,19 +243,19 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
-            Intrinsics3.checkNotNullParameter(voiceUser, "p1");
+            m.checkNotNullParameter(voiceUser, "p1");
             ((WidgetStageRaisedHandsBottomSheetViewModel) this.receiver).inviteToSpeak(voiceUser);
         }
     }
 
     public WidgetStageRaisedHandsBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetStageRaisedHandsBottomSheet3.INSTANCE, null, 2, null);
-        this.adapter = LazyJVM.lazy(new WidgetStageRaisedHandsBottomSheet2(this));
-        this.channelId = LazyJVM.lazy(new WidgetStageRaisedHandsBottomSheet4(this));
-        WidgetStageRaisedHandsBottomSheet6 widgetStageRaisedHandsBottomSheet6 = new WidgetStageRaisedHandsBottomSheet6(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetStageRaisedHandsBottomSheetViewModel.class), new WidgetStageRaisedHandsBottomSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetStageRaisedHandsBottomSheet6));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetStageRaisedHandsBottomSheet$binding$2.INSTANCE, null, 2, null);
+        this.adapter = g.lazy(new WidgetStageRaisedHandsBottomSheet$adapter$2(this));
+        this.channelId = g.lazy(new WidgetStageRaisedHandsBottomSheet$channelId$2(this));
+        WidgetStageRaisedHandsBottomSheet$viewModel$2 widgetStageRaisedHandsBottomSheet$viewModel$2 = new WidgetStageRaisedHandsBottomSheet$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetStageRaisedHandsBottomSheetViewModel.class), new WidgetStageRaisedHandsBottomSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetStageRaisedHandsBottomSheet$viewModel$2));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetStageRaisedHandsBottomSheet widgetStageRaisedHandsBottomSheet, WidgetStageRaisedHandsBottomSheetViewModel.ViewState viewState) {
@@ -289,7 +287,7 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
         int i;
         getBinding().g.setOnClickListener(new AnonymousClass1(viewState));
         MaterialTextView materialTextView = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(materialTextView, "binding.toggleSpeakerStateButton");
+        m.checkNotNullExpressionValue(materialTextView, "binding.toggleSpeakerStateButton");
         boolean zIsSpeaker = viewState.isSpeaker();
         if (zIsSpeaker) {
             string = getString(R.string.move_me_to_audience);
@@ -320,18 +318,18 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
             SwitchMaterial switchMaterial = getBinding().d;
             switchMaterial.setEnabled(!loaded.isUpdatingRequestToSpeakPermissions());
             if (!loaded.isUpdatingRequestToSpeakPermissions()) {
-                ViewExtensions.setProgrammaticChecked(switchMaterial, loaded.isRequestToSpeakEnabled(), new WidgetStageRaisedHandsBottomSheet5(this, viewState));
+                ViewExtensions.setProgrammaticChecked(switchMaterial, loaded.isRequestToSpeakEnabled(), new WidgetStageRaisedHandsBottomSheet$configureUI$$inlined$apply$lambda$1(this, viewState));
             }
             if (!this.hasReceivedInitialRaisedHandsState) {
                 this.hasReceivedInitialRaisedHandsState = true;
                 switchMaterial.jumpDrawablesToCurrentState();
             }
             Group group = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(group, "binding.raisedHandsEmptyGroup");
+            m.checkNotNullExpressionValue(group, "binding.raisedHandsEmptyGroup");
             group.setVisibility(loaded.getIsEmpty() ? 0 : 8);
             MaterialTextView materialTextView = getBinding().f2657b;
-            Intrinsics3.checkNotNullExpressionValue(materialTextView, "binding.raisedHandsCountLabel");
-            FormatUtils.n(materialTextView, R.string.request_to_speak_list_title, new Object[]{Integer.valueOf(loaded.getRaisedHandsParticipants().size())}, null, 4);
+            m.checkNotNullExpressionValue(materialTextView, "binding.raisedHandsCountLabel");
+            b.n(materialTextView, R.string.request_to_speak_list_title, new Object[]{Integer.valueOf(loaded.getRaisedHandsParticipants().size())}, null, 4);
             configureToggleSpeakerState(loaded);
             getAdapter().setData(loaded.getRaisedHandsParticipants());
         }
@@ -375,7 +373,7 @@ public final class WidgetStageRaisedHandsBottomSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         this.hasReceivedInitialRaisedHandsState = false;
         MaxHeightRecyclerView maxHeightRecyclerView = getBinding().e;

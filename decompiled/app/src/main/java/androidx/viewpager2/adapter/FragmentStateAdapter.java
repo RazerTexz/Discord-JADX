@@ -24,7 +24,7 @@ import androidx.view.Lifecycle;
 import androidx.view.LifecycleEventObserver;
 import androidx.view.LifecycleOwner;
 import androidx.viewpager2.widget.ViewPager2;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Iterator;
 
 /* loaded from: classes.dex */
@@ -286,7 +286,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
 
     @NonNull
     private static String createKey(@NonNull String str, long j) {
-        return outline.t(str, j);
+        return a.t(str, j);
     }
 
     private void ensureFragment(int i) {
@@ -499,7 +499,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             } else {
                 scheduleViewAttach(fragment, container);
                 FragmentTransaction fragmentTransactionBeginTransaction = this.mFragmentManager.beginTransaction();
-                StringBuilder sbU = outline.U("f");
+                StringBuilder sbU = a.U("f");
                 sbU.append(fragmentViewHolder.getItemId());
                 fragmentTransactionBeginTransaction.add(fragment, sbU.toString()).setMaxLifecycle(fragment, Lifecycle.State.STARTED).commitNow();
                 this.mFragmentMaxLifecycleEnforcer.updateFragmentMaxLifecycle(false);
@@ -521,7 +521,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
                 this.mFragments.put(parseIdFromKey(str, KEY_PREFIX_FRAGMENT), this.mFragmentManager.getFragment(bundle, str));
             } else {
                 if (!isValidKey(str, KEY_PREFIX_STATE)) {
-                    throw new IllegalArgumentException(outline.w("Unexpected key in savedState: ", str));
+                    throw new IllegalArgumentException(a.w("Unexpected key in savedState: ", str));
                 }
                 long idFromKey = parseIdFromKey(str, KEY_PREFIX_STATE);
                 Fragment.SavedState savedState = (Fragment.SavedState) bundle.getParcelable(str);

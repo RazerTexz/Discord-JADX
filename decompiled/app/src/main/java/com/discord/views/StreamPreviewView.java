@@ -10,14 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.MainThread;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.NotificationCompat;
-import b.a.i.ViewStreamPreviewBinding;
-import b.a.k.FormatUtils;
+import b.a.i.z3;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.stores.StoreApplicationStreamPreviews;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 
 /* compiled from: StreamPreviewView.kt */
@@ -25,12 +25,12 @@ import kotlin.NoWhenBranchMatchedException;
 public final class StreamPreviewView extends FrameLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final ViewStreamPreviewBinding binding;
+    public final z3 binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StreamPreviewView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         View viewInflate = LayoutInflater.from(getContext()).inflate(R.layout.view_stream_preview, (ViewGroup) this, false);
         addView(viewInflate);
         int i = R.id.stream_preview_image;
@@ -42,9 +42,9 @@ public final class StreamPreviewView extends FrameLayout {
                 i = R.id.stream_preview_placeholder_caption;
                 TextView textView2 = (TextView) viewInflate.findViewById(R.id.stream_preview_placeholder_caption);
                 if (textView2 != null) {
-                    ViewStreamPreviewBinding viewStreamPreviewBinding = new ViewStreamPreviewBinding((ConstraintLayout) viewInflate, simpleDraweeView, textView, textView2);
-                    Intrinsics3.checkNotNullExpressionValue(viewStreamPreviewBinding, "ViewStreamPreviewBinding…rom(context), this, true)");
-                    this.binding = viewStreamPreviewBinding;
+                    z3 z3Var = new z3((ConstraintLayout) viewInflate, simpleDraweeView, textView, textView2);
+                    m.checkNotNullExpressionValue(z3Var, "ViewStreamPreviewBinding…rom(context), this, true)");
+                    this.binding = z3Var;
                     setClickable(true);
                     setFocusable(false);
                     setFocusableInTouchMode(false);
@@ -57,7 +57,7 @@ public final class StreamPreviewView extends FrameLayout {
 
     private final void setCaptionText(CharSequence text) {
         TextView textView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.streamPreviewPlaceholderCaption");
+        m.checkNotNullExpressionValue(textView, "binding.streamPreviewPlaceholderCaption");
         ViewExtensions.setTextAndVisibilityBy(textView, text);
     }
 
@@ -67,14 +67,14 @@ public final class StreamPreviewView extends FrameLayout {
 
     private final void setOverlayCaptionText(CharSequence text) {
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.streamPreviewOverlayText");
+        m.checkNotNullExpressionValue(textView, "binding.streamPreviewOverlayText");
         ViewExtensions.setTextAndVisibilityBy(textView, text);
     }
 
     @MainThread
     public final void a(StoreApplicationStreamPreviews.StreamPreview preview, StreamContext.Joinability joinability, boolean isAlreadyWatchingStream) {
-        Intrinsics3.checkNotNullParameter(preview, "preview");
-        Intrinsics3.checkNotNullParameter(joinability, "joinability");
+        m.checkNotNullParameter(preview, "preview");
+        m.checkNotNullParameter(joinability, "joinability");
         if (preview instanceof StoreApplicationStreamPreviews.StreamPreview.Fetching) {
             setCaptionText(getContext().getString(R.string.stream_preview_loading));
         } else {
@@ -95,19 +95,19 @@ public final class StreamPreviewView extends FrameLayout {
             }
         }
         if (isAlreadyWatchingStream) {
-            setOverlayCaptionText(FormatUtils.j(this, R.string.watch_stream_watching, new Object[0], null, 4));
+            setOverlayCaptionText(b.j(this, R.string.watch_stream_watching, new Object[0], null, 4));
             return;
         }
         int iOrdinal = joinability.ordinal();
         if (iOrdinal == 0) {
-            setOverlayCaptionText(FormatUtils.j(this, R.string.join_stream, new Object[0], null, 4));
+            setOverlayCaptionText(b.j(this, R.string.join_stream, new Object[0], null, 4));
         } else if (iOrdinal == 1) {
-            setOverlayCaptionText(FormatUtils.j(this, R.string.unable_to_join_channel_full, new Object[0], null, 4));
+            setOverlayCaptionText(b.j(this, R.string.unable_to_join_channel_full, new Object[0], null, 4));
         } else {
             if (iOrdinal != 2) {
                 throw new NoWhenBranchMatchedException();
             }
-            setOverlayCaptionText(FormatUtils.j(this, R.string.channel_locked_short, new Object[0], null, 4));
+            setOverlayCaptionText(b.j(this, R.string.channel_locked_short, new Object[0], null, 4));
         }
     }
 }

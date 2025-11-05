@@ -1,7 +1,6 @@
 package b.i.a.f.e.h.j;
 
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.e.h.a;
 import b.i.a.f.e.h.a.d;
 import java.util.Arrays;
@@ -34,7 +33,7 @@ public final class b<O extends a.d> {
             return false;
         }
         b bVar = (b) obj;
-        return AnimatableValueParser.h0(this.f1354b, bVar.f1354b) && AnimatableValueParser.h0(this.c, bVar.c);
+        return b.c.a.a0.d.h0(this.f1354b, bVar.f1354b) && b.c.a.a0.d.h0(this.c, bVar.c);
     }
 
     public final int hashCode() {

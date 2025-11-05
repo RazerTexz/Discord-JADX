@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLfgBrowserViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLfgBrowserViewed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackLfgBrowserViewed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long gameId = null;
     private final CharSequence gameName = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackLfgBrowserViewed implements AnalyticsSchema, 
             return false;
         }
         TrackLfgBrowserViewed trackLfgBrowserViewed = (TrackLfgBrowserViewed) other;
-        return Intrinsics3.areEqual(this.gameId, trackLfgBrowserViewed.gameId) && Intrinsics3.areEqual(this.gameName, trackLfgBrowserViewed.gameName) && Intrinsics3.areEqual(this.isRefresh, trackLfgBrowserViewed.isRefresh) && Intrinsics3.areEqual(this.numGroups, trackLfgBrowserViewed.numGroups);
+        return m.areEqual(this.gameId, trackLfgBrowserViewed.gameId) && m.areEqual(this.gameName, trackLfgBrowserViewed.gameName) && m.areEqual(this.isRefresh, trackLfgBrowserViewed.isRefresh) && m.areEqual(this.numGroups, trackLfgBrowserViewed.numGroups);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackLfgBrowserViewed implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLfgBrowserViewed(gameId=");
+        StringBuilder sbU = a.U("TrackLfgBrowserViewed(gameId=");
         sbU.append(this.gameId);
         sbU.append(", gameName=");
         sbU.append(this.gameName);
         sbU.append(", isRefresh=");
         sbU.append(this.isRefresh);
         sbU.append(", numGroups=");
-        return outline.G(sbU, this.numGroups, ")");
+        return a.G(sbU, this.numGroups, ")");
     }
 }

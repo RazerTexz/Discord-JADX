@@ -1,8 +1,8 @@
 package co.discord.media_engine.internal;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.Arrays;
 
 /* compiled from: NativeStatistics.kt */
@@ -27,9 +27,9 @@ public final /* data */ class OutboundVideo {
     private final int targetMediaBitrate;
 
     public OutboundVideo(String str, int i, int i2, boolean z2, boolean z3, int i3, int i4, String str2, long j, int i5, int i6, int i7, int i8, long j2, Substream[] substreamArr, boolean z4, int i9) {
-        Intrinsics3.checkNotNullParameter(str, "codecName");
-        Intrinsics3.checkNotNullParameter(str2, "encoderImplementationName");
-        Intrinsics3.checkNotNullParameter(substreamArr, "substreams");
+        m.checkNotNullParameter(str, "codecName");
+        m.checkNotNullParameter(str2, "encoderImplementationName");
+        m.checkNotNullParameter(substreamArr, "substreams");
         this.codecName = str;
         this.codecPayloadType = i;
         this.avgEncodeTime = i2;
@@ -139,9 +139,9 @@ public final /* data */ class OutboundVideo {
     }
 
     public final OutboundVideo copy(String codecName, int codecPayloadType, int avgEncodeTime, boolean bwLimitedResolution, boolean cpuLimitedResolution, int encodeFrameRate, int encodeUsage, String encoderImplementationName, long framesEncoded, int inputFrameRate, int mediaBitrate, int numberOfCPUAdaptChanges, int numberOfQualityAdaptChanges, long qpSum, Substream[] substreams, boolean suspended, int targetMediaBitrate) {
-        Intrinsics3.checkNotNullParameter(codecName, "codecName");
-        Intrinsics3.checkNotNullParameter(encoderImplementationName, "encoderImplementationName");
-        Intrinsics3.checkNotNullParameter(substreams, "substreams");
+        m.checkNotNullParameter(codecName, "codecName");
+        m.checkNotNullParameter(encoderImplementationName, "encoderImplementationName");
+        m.checkNotNullParameter(substreams, "substreams");
         return new OutboundVideo(codecName, codecPayloadType, avgEncodeTime, bwLimitedResolution, cpuLimitedResolution, encodeFrameRate, encodeUsage, encoderImplementationName, framesEncoded, inputFrameRate, mediaBitrate, numberOfCPUAdaptChanges, numberOfQualityAdaptChanges, qpSum, substreams, suspended, targetMediaBitrate);
     }
 
@@ -153,7 +153,7 @@ public final /* data */ class OutboundVideo {
             return false;
         }
         OutboundVideo outboundVideo = (OutboundVideo) other;
-        return Intrinsics3.areEqual(this.codecName, outboundVideo.codecName) && this.codecPayloadType == outboundVideo.codecPayloadType && this.avgEncodeTime == outboundVideo.avgEncodeTime && this.bwLimitedResolution == outboundVideo.bwLimitedResolution && this.cpuLimitedResolution == outboundVideo.cpuLimitedResolution && this.encodeFrameRate == outboundVideo.encodeFrameRate && this.encodeUsage == outboundVideo.encodeUsage && Intrinsics3.areEqual(this.encoderImplementationName, outboundVideo.encoderImplementationName) && this.framesEncoded == outboundVideo.framesEncoded && this.inputFrameRate == outboundVideo.inputFrameRate && this.mediaBitrate == outboundVideo.mediaBitrate && this.numberOfCPUAdaptChanges == outboundVideo.numberOfCPUAdaptChanges && this.numberOfQualityAdaptChanges == outboundVideo.numberOfQualityAdaptChanges && this.qpSum == outboundVideo.qpSum && Intrinsics3.areEqual(this.substreams, outboundVideo.substreams) && this.suspended == outboundVideo.suspended && this.targetMediaBitrate == outboundVideo.targetMediaBitrate;
+        return m.areEqual(this.codecName, outboundVideo.codecName) && this.codecPayloadType == outboundVideo.codecPayloadType && this.avgEncodeTime == outboundVideo.avgEncodeTime && this.bwLimitedResolution == outboundVideo.bwLimitedResolution && this.cpuLimitedResolution == outboundVideo.cpuLimitedResolution && this.encodeFrameRate == outboundVideo.encodeFrameRate && this.encodeUsage == outboundVideo.encodeUsage && m.areEqual(this.encoderImplementationName, outboundVideo.encoderImplementationName) && this.framesEncoded == outboundVideo.framesEncoded && this.inputFrameRate == outboundVideo.inputFrameRate && this.mediaBitrate == outboundVideo.mediaBitrate && this.numberOfCPUAdaptChanges == outboundVideo.numberOfCPUAdaptChanges && this.numberOfQualityAdaptChanges == outboundVideo.numberOfQualityAdaptChanges && this.qpSum == outboundVideo.qpSum && m.areEqual(this.substreams, outboundVideo.substreams) && this.suspended == outboundVideo.suspended && this.targetMediaBitrate == outboundVideo.targetMediaBitrate;
     }
 
     public final int getAvgEncodeTime() {
@@ -249,7 +249,7 @@ public final /* data */ class OutboundVideo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("OutboundVideo(codecName=");
+        StringBuilder sbU = a.U("OutboundVideo(codecName=");
         sbU.append(this.codecName);
         sbU.append(", codecPayloadType=");
         sbU.append(this.codecPayloadType);
@@ -282,6 +282,6 @@ public final /* data */ class OutboundVideo {
         sbU.append(", suspended=");
         sbU.append(this.suspended);
         sbU.append(", targetMediaBitrate=");
-        return outline.B(sbU, this.targetMediaBitrate, ")");
+        return a.B(sbU, this.targetMediaBitrate, ")");
     }
 }

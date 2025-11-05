@@ -6,7 +6,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-import b.a.e.Backgrounded4;
+import b.a.e.d;
 import b.i.a.f.e.o.f;
 import com.discord.R;
 import com.discord.api.channel.Channel;
@@ -18,22 +18,22 @@ import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.lifecycle.ApplicationProvider;
 import com.discord.utilities.voice.VoiceEngineForegroundService;
 import com.discord.utilities.voice.VoiceEngineNotificationBuilder;
-import d0.LazyJVM;
-import d0.Result3;
-import d0.w.h.Intrinsics2;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.w.i.a.boxing;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.l;
+import d0.w.h.c;
+import d0.w.i.a.b;
+import d0.w.i.a.e;
+import d0.w.i.a.k;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlinx.coroutines.CoroutineScope;
-import s.a.Builders5;
-import s.a.CoroutineScope2;
-import s.a.Dispatchers;
+import s.a.h;
+import s.a.k0;
+import s.a.x0;
 
 /* compiled from: StageChannelNotifications.kt */
 /* loaded from: classes2.dex */
@@ -41,7 +41,7 @@ public final class StageChannelNotifications {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(StageChannelNotifications2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(StageChannelNotifications$Companion$INSTANCE$2.INSTANCE);
     private static final long NOTIFICATION_ICON_FETCH_DELAY_MS = 250;
     public static final String NOTIFICATION_TAG = "stage-channels";
     private final StoreChannels channelsStore;
@@ -75,13 +75,13 @@ public final class StageChannelNotifications {
             }
 
             public final void cancel(Context context) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 NotificationManagerCompat.from(context).cancel(StageChannelNotifications.NOTIFICATION_TAG, 102);
             }
 
             public final void notify(Context context, Notification notification) {
-                Intrinsics3.checkNotNullParameter(context, "context");
-                Intrinsics3.checkNotNullParameter(notification, "notification");
+                m.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(notification, "notification");
                 NotificationManagerCompat.from(context).notify(StageChannelNotifications.NOTIFICATION_TAG, 102, notification);
             }
         }
@@ -91,9 +91,9 @@ public final class StageChannelNotifications {
     }
 
     /* compiled from: StageChannelNotifications.kt */
-    @DebugMetadata(c = "com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1", f = "StageChannelNotifications.kt", l = {49}, m = "invokeSuspend")
+    @e(c = "com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1", f = "StageChannelNotifications.kt", l = {49}, m = "invokeSuspend")
     /* renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ NotificationCompat.Builder $builder;
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Application $context;
@@ -107,9 +107,9 @@ public final class StageChannelNotifications {
             this.$context = application;
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass1(this.$channel, this.$builder, this.$context, continuation);
         }
 
@@ -119,24 +119,24 @@ public final class StageChannelNotifications {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:18:0x0061  */
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public final Object invokeSuspend(Object obj) {
-            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
             int i = this.label;
             Bitmap bitmap = null;
             if (i == 0) {
-                Result3.throwOnFailure(obj);
+                l.throwOnFailure(obj);
                 String forChannel$default = IconUtils.getForChannel$default(this.$channel, null, 2, null);
                 if (forChannel$default == null) {
-                    forChannel$default = IconUtils.getForGuild$default(StoreStream.INSTANCE.getGuilds().getGuilds().get(boxing.boxLong(this.$channel.getGuildId())), null, false, null, 14, null);
+                    forChannel$default = IconUtils.getForGuild$default(StoreStream.INSTANCE.getGuilds().getGuilds().get(b.boxLong(this.$channel.getGuildId())), null, false, null, 14, null);
                 }
                 if (forChannel$default != null) {
-                    StageChannelNotifications4 stageChannelNotifications4 = new StageChannelNotifications4(null, this, forChannel$default);
+                    StageChannelNotifications$onInvitedToSpeak$1$invokeSuspend$$inlined$let$lambda$1 stageChannelNotifications$onInvitedToSpeak$1$invokeSuspend$$inlined$let$lambda$1 = new StageChannelNotifications$onInvitedToSpeak$1$invokeSuspend$$inlined$let$lambda$1(null, this, forChannel$default);
                     this.label = 1;
-                    obj = Builders5.b(StageChannelNotifications.NOTIFICATION_ICON_FETCH_DELAY_MS, stageChannelNotifications4, this);
+                    obj = h.b(StageChannelNotifications.NOTIFICATION_ICON_FETCH_DELAY_MS, stageChannelNotifications$onInvitedToSpeak$1$invokeSuspend$$inlined$let$lambda$1, this);
                     if (obj == coroutine_suspended) {
                         return coroutine_suspended;
                     }
@@ -147,21 +147,21 @@ public final class StageChannelNotifications {
                 Notifications.InvitedToSpeak invitedToSpeak = Notifications.InvitedToSpeak.INSTANCE;
                 Application application = this.$context;
                 Notification notificationBuild = this.$builder.build();
-                Intrinsics3.checkNotNullExpressionValue(notificationBuild, "builder.build()");
+                m.checkNotNullExpressionValue(notificationBuild, "builder.build()");
                 invitedToSpeak.notify(application, notificationBuild);
                 return Unit.a;
             }
             if (i != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            Result3.throwOnFailure(obj);
+            l.throwOnFailure(obj);
             bitmap = (Bitmap) obj;
             if (bitmap != null) {
             }
             Notifications.InvitedToSpeak invitedToSpeak2 = Notifications.InvitedToSpeak.INSTANCE;
             Application application2 = this.$context;
             Notification notificationBuild2 = this.$builder.build();
-            Intrinsics3.checkNotNullExpressionValue(notificationBuild2, "builder.build()");
+            m.checkNotNullExpressionValue(notificationBuild2, "builder.build()");
             invitedToSpeak2.notify(application2, notificationBuild2);
             return Unit.a;
         }
@@ -172,7 +172,7 @@ public final class StageChannelNotifications {
     }
 
     public StageChannelNotifications(StoreChannels storeChannels) {
-        Intrinsics3.checkNotNullParameter(storeChannels, "channelsStore");
+        m.checkNotNullParameter(storeChannels, "channelsStore");
         this.channelsStore = storeChannels;
     }
 
@@ -187,7 +187,7 @@ public final class StageChannelNotifications {
             topic = channel.getName();
         }
         NotificationCompat.Builder contentIntent = color.setContentTitle(topic).setSmallIcon(R.drawable.ic_channel_stage_24dp_white).setContentIntent(VoiceEngineNotificationBuilder.getCallScreenNavigationIntent$default(VoiceEngineNotificationBuilder.INSTANCE, context, channel.getId(), null, null, 6, null));
-        Intrinsics3.checkNotNullExpressionValue(contentIntent, "NotificationCompat.Build…gationIntent(channel.id))");
+        m.checkNotNullExpressionValue(contentIntent, "NotificationCompat.Build…gationIntent(channel.id))");
         return contentIntent;
     }
 
@@ -197,15 +197,15 @@ public final class StageChannelNotifications {
 
     public final void onInvitedToSpeak(long channelId) {
         Channel channel;
-        Backgrounded4 backgrounded4 = Backgrounded4.d;
-        if (!Backgrounded4.a || (channel = this.channelsStore.getChannel(channelId)) == null) {
+        d dVar = d.d;
+        if (!d.a || (channel = this.channelsStore.getChannel(channelId)) == null) {
             return;
         }
         Application application = ApplicationProvider.INSTANCE.get();
         VoiceEngineForegroundService.Companion companion = VoiceEngineForegroundService.INSTANCE;
         NotificationCompat.Builder builderAddAction = createChannelNotificationBuilder(application, channel).setContentText(application.getString(R.string.stage_speak_invite_header)).addAction(0, application.getString(R.string.stage_speak_invite_accept), companion.stageInviteAckPendingIntent(application, channelId, true)).addAction(0, application.getString(R.string.stage_speak_invite_decline), companion.stageInviteAckPendingIntent(application, channelId, false));
-        Intrinsics3.checkNotNullExpressionValue(builderAddAction, "createChannelNotificatio…_decline), declineIntent)");
-        f.H0(CoroutineScope2.j, Dispatchers.f3842b, null, new AnonymousClass1(channel, builderAddAction, application, null), 2, null);
+        m.checkNotNullExpressionValue(builderAddAction, "createChannelNotificatio…_decline), declineIntent)");
+        f.H0(x0.j, k0.f3842b, null, new AnonymousClass1(channel, builderAddAction, application, null), 2, null);
     }
 
     public final void onInvitedToSpeakAckFailed(long channelId) {
@@ -214,7 +214,7 @@ public final class StageChannelNotifications {
             Application application = ApplicationProvider.INSTANCE.get();
             Notifications.InvitedToSpeak invitedToSpeak = Notifications.InvitedToSpeak.INSTANCE;
             Notification notificationBuild = createChannelNotificationBuilder(application, channel).setContentText(application.getString(R.string.error_generic_title)).build();
-            Intrinsics3.checkNotNullExpressionValue(notificationBuild, "createChannelNotificatio…le))\n            .build()");
+            m.checkNotNullExpressionValue(notificationBuild, "createChannelNotificatio…le))\n            .build()");
             invitedToSpeak.notify(application, notificationBuild);
         }
     }

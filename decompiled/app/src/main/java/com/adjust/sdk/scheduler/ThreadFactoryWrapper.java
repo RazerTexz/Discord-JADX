@@ -1,6 +1,6 @@
 package com.adjust.sdk.scheduler;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.adjust.sdk.AdjustFactory;
 import com.adjust.sdk.Constants;
 import java.lang.Thread;
@@ -30,7 +30,7 @@ public class ThreadFactoryWrapper implements ThreadFactory {
     public Thread newThread(Runnable runnable) {
         Thread threadNewThread = Executors.defaultThreadFactory().newThread(runnable);
         threadNewThread.setPriority(9);
-        StringBuilder sbU = outline.U(Constants.THREAD_PREFIX);
+        StringBuilder sbU = a.U(Constants.THREAD_PREFIX);
         sbU.append(threadNewThread.getName());
         sbU.append("-");
         sbU.append(this.source);

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAgeGateSubmitted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAgeGateSubmitted implements AnalyticsSchema, TrackBase2, TrackSourceMetadata2 {
+public final /* data */ class TrackAgeGateSubmitted implements AnalyticsSchema, TrackBaseReceiver, TrackSourceMetadataReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Long dob;
     private final Long dobDay;
@@ -45,7 +45,7 @@ public final /* data */ class TrackAgeGateSubmitted implements AnalyticsSchema, 
             return false;
         }
         TrackAgeGateSubmitted trackAgeGateSubmitted = (TrackAgeGateSubmitted) other;
-        return Intrinsics3.areEqual(this.dob, trackAgeGateSubmitted.dob) && Intrinsics3.areEqual(this.dobDay, trackAgeGateSubmitted.dobDay) && Intrinsics3.areEqual(this.dobMonth, trackAgeGateSubmitted.dobMonth) && Intrinsics3.areEqual(this.dobYear, trackAgeGateSubmitted.dobYear);
+        return m.areEqual(this.dob, trackAgeGateSubmitted.dob) && m.areEqual(this.dobDay, trackAgeGateSubmitted.dobDay) && m.areEqual(this.dobMonth, trackAgeGateSubmitted.dobMonth) && m.areEqual(this.dobYear, trackAgeGateSubmitted.dobYear);
     }
 
     public int hashCode() {
@@ -60,14 +60,14 @@ public final /* data */ class TrackAgeGateSubmitted implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAgeGateSubmitted(dob=");
+        StringBuilder sbU = a.U("TrackAgeGateSubmitted(dob=");
         sbU.append(this.dob);
         sbU.append(", dobDay=");
         sbU.append(this.dobDay);
         sbU.append(", dobMonth=");
         sbU.append(this.dobMonth);
         sbU.append(", dobYear=");
-        return outline.G(sbU, this.dobYear, ")");
+        return a.G(sbU, this.dobYear, ")");
     }
 
     public TrackAgeGateSubmitted(Long l, Long l2, Long l3, Long l4) {

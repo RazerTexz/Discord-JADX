@@ -23,10 +23,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.DialogFragment;
-import b.d.b.a.outline;
-import b.i.a.g.k.TimePickerClockPresenter;
-import b.i.a.g.k.TimePickerPresenter;
-import b.i.a.g.k.TimePickerTextInputPresenter;
+import b.i.a.g.k.f;
+import b.i.a.g.k.g;
+import b.i.a.g.k.i;
 import com.google.android.material.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.resources.MaterialAttributes;
@@ -47,7 +46,7 @@ public final class MaterialTimePicker extends DialogFragment {
     public static final String TITLE_TEXT_EXTRA = "TIME_PICKER_TITLE_TEXT";
 
     @Nullable
-    private TimePickerPresenter activePresenter;
+    private g activePresenter;
 
     @DrawableRes
     private int clockIcon;
@@ -60,10 +59,10 @@ public final class MaterialTimePicker extends DialogFragment {
     private TimeModel time;
 
     @Nullable
-    private TimePickerClockPresenter timePickerClockPresenter;
+    private f timePickerClockPresenter;
 
     @Nullable
-    private TimePickerTextInputPresenter timePickerTextInputPresenter;
+    private i timePickerTextInputPresenter;
     private TimePickerView timePickerView;
     private String titleText;
     private final Set<View.OnClickListener> positiveButtonListeners = new LinkedHashSet();
@@ -215,7 +214,7 @@ public final class MaterialTimePicker extends DialogFragment {
         materialTimePicker.updateInputMode(materialButton);
     }
 
-    public static /* synthetic */ TimePickerTextInputPresenter access$700(MaterialTimePicker materialTimePicker) {
+    public static /* synthetic */ i access$700(MaterialTimePicker materialTimePicker) {
         return materialTimePicker.timePickerTextInputPresenter;
     }
 
@@ -234,26 +233,26 @@ public final class MaterialTimePicker extends DialogFragment {
         if (i == 1) {
             return new Pair<>(Integer.valueOf(this.clockIcon), Integer.valueOf(R.string.material_timepicker_clock_mode_description));
         }
-        throw new IllegalArgumentException(outline.q("no icon for mode: ", i));
+        throw new IllegalArgumentException(b.d.b.a.a.q("no icon for mode: ", i));
     }
 
-    private TimePickerPresenter initializeOrRetrieveActivePresenterForMode(int i) {
+    private g initializeOrRetrieveActivePresenterForMode(int i) {
         if (i == 0) {
-            TimePickerClockPresenter timePickerClockPresenter = this.timePickerClockPresenter;
-            if (timePickerClockPresenter == null) {
-                timePickerClockPresenter = new TimePickerClockPresenter(this.timePickerView, this.time);
+            f fVar = this.timePickerClockPresenter;
+            if (fVar == null) {
+                fVar = new f(this.timePickerView, this.time);
             }
-            this.timePickerClockPresenter = timePickerClockPresenter;
-            return timePickerClockPresenter;
+            this.timePickerClockPresenter = fVar;
+            return fVar;
         }
         if (this.timePickerTextInputPresenter == null) {
             LinearLayout linearLayout = (LinearLayout) this.textInputStub.inflate();
             this.textInputView = linearLayout;
-            this.timePickerTextInputPresenter = new TimePickerTextInputPresenter(linearLayout, this.time);
+            this.timePickerTextInputPresenter = new i(linearLayout, this.time);
         }
-        TimePickerTextInputPresenter timePickerTextInputPresenter = this.timePickerTextInputPresenter;
-        timePickerTextInputPresenter.n.setChecked(false);
-        timePickerTextInputPresenter.o.setChecked(false);
+        i iVar = this.timePickerTextInputPresenter;
+        iVar.n.setChecked(false);
+        iVar.o.setChecked(false);
         return this.timePickerTextInputPresenter;
     }
 
@@ -286,13 +285,13 @@ public final class MaterialTimePicker extends DialogFragment {
     }
 
     private void updateInputMode(MaterialButton materialButton) {
-        TimePickerPresenter timePickerPresenter = this.activePresenter;
-        if (timePickerPresenter != null) {
-            timePickerPresenter.c();
+        g gVar = this.activePresenter;
+        if (gVar != null) {
+            gVar.c();
         }
-        TimePickerPresenter timePickerPresenterInitializeOrRetrieveActivePresenterForMode = initializeOrRetrieveActivePresenterForMode(this.inputMode);
-        this.activePresenter = timePickerPresenterInitializeOrRetrieveActivePresenterForMode;
-        timePickerPresenterInitializeOrRetrieveActivePresenterForMode.show();
+        g gVarInitializeOrRetrieveActivePresenterForMode = initializeOrRetrieveActivePresenterForMode(this.inputMode);
+        this.activePresenter = gVarInitializeOrRetrieveActivePresenterForMode;
+        gVarInitializeOrRetrieveActivePresenterForMode.show();
         this.activePresenter.a();
         Pair<Integer, Integer> pairDataForMode = dataForMode(this.inputMode);
         materialButton.setIconResource(((Integer) pairDataForMode.first).intValue());
@@ -346,7 +345,7 @@ public final class MaterialTimePicker extends DialogFragment {
     }
 
     @Nullable
-    public TimePickerClockPresenter getTimePickerClockPresenter() {
+    public f getTimePickerClockPresenter() {
         return this.timePickerClockPresenter;
     }
 

@@ -2,8 +2,8 @@ package com.discord.widgets.user;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.guild.PruneCountResponse;
 import com.discord.models.guild.Guild;
 import com.discord.models.user.MeUser;
@@ -13,15 +13,15 @@ import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -34,7 +34,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetPruneUsersViewModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
+public final class WidgetPruneUsersViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -50,10 +50,10 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<StoreData, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<StoreData, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(StoreData storeData) {
             return call2(storeData);
         }
@@ -66,7 +66,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Boolean, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -79,7 +79,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
-            Intrinsics3.checkNotNullExpressionValue(bool, "canKick");
+            m.checkNotNullExpressionValue(bool, "canKick");
             if (bool.booleanValue()) {
                 WidgetPruneUsersViewModel.access$getUpdatedPruneCount(WidgetPruneUsersViewModel.this);
             } else {
@@ -94,11 +94,11 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
         }
 
         public final Observable<StoreData> observeStoreState(long guildId, ObservationDeck observationDeck, StorePermissions storePermissions, StoreGuilds storeGuilds, StoreUser storeUsers) {
-            Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-            Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
-            Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-            Intrinsics3.checkNotNullParameter(storeUsers, "storeUsers");
-            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{storePermissions, storeGuilds, storeUsers}, false, null, null, new WidgetPruneUsersViewModel2(storePermissions, guildId, storeGuilds, storeUsers), 14, null);
+            m.checkNotNullParameter(observationDeck, "observationDeck");
+            m.checkNotNullParameter(storePermissions, "storePermissions");
+            m.checkNotNullParameter(storeGuilds, "storeGuilds");
+            m.checkNotNullParameter(storeUsers, "storeUsers");
+            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{storePermissions, storeGuilds, storeUsers}, false, null, null, new WidgetPruneUsersViewModel$Companion$observeStoreState$1(storePermissions, guildId, storeGuilds, storeUsers), 14, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -125,7 +125,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public RestClientFailed(Throwable th) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(th, "throwable");
+                m.checkNotNullParameter(th, "throwable");
                 this.throwable = th;
             }
 
@@ -142,13 +142,13 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public final RestClientFailed copy(Throwable throwable) {
-                Intrinsics3.checkNotNullParameter(throwable, "throwable");
+                m.checkNotNullParameter(throwable, "throwable");
                 return new RestClientFailed(throwable);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof RestClientFailed) && Intrinsics3.areEqual(this.throwable, ((RestClientFailed) other).throwable);
+                    return (other instanceof RestClientFailed) && m.areEqual(this.throwable, ((RestClientFailed) other).throwable);
                 }
                 return true;
             }
@@ -166,7 +166,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("RestClientFailed(throwable=");
+                StringBuilder sbU = a.U("RestClientFailed(throwable=");
                 sbU.append(this.throwable);
                 sbU.append(")");
                 return sbU.toString();
@@ -249,7 +249,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreData storeData = (StoreData) other;
-            return Intrinsics3.areEqual(this.permission, storeData.permission) && Intrinsics3.areEqual(this.guild, storeData.guild) && Intrinsics3.areEqual(this.user, storeData.user);
+            return m.areEqual(this.permission, storeData.permission) && m.areEqual(this.guild, storeData.guild) && m.areEqual(this.user, storeData.user);
         }
 
         public final Guild getGuild() {
@@ -274,7 +274,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreData(permission=");
+            StringBuilder sbU = a.U("StoreData(permission=");
             sbU.append(this.permission);
             sbU.append(", guild=");
             sbU.append(this.guild);
@@ -333,7 +333,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                return outline.O(outline.U("LoadFailed(dismiss="), this.dismiss, ")");
+                return a.O(a.U("LoadFailed(dismiss="), this.dismiss, ")");
             }
         }
 
@@ -376,7 +376,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loaded copy(PruneDays pruneDays, int pruneCount, boolean pruneInProgress) {
-                Intrinsics3.checkNotNullParameter(pruneDays, "pruneDays");
+                m.checkNotNullParameter(pruneDays, "pruneDays");
                 return new Loaded(pruneDays, pruneCount, pruneInProgress);
             }
 
@@ -388,7 +388,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.pruneDays, loaded.pruneDays) && this.pruneCount == loaded.pruneCount && this.pruneInProgress == loaded.pruneInProgress;
+                return m.areEqual(this.pruneDays, loaded.pruneDays) && this.pruneCount == loaded.pruneCount && this.pruneInProgress == loaded.pruneInProgress;
             }
 
             public final boolean getPruneButtonEnabled() {
@@ -416,18 +416,18 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(pruneDays=");
+                StringBuilder sbU = a.U("Loaded(pruneDays=");
                 sbU.append(this.pruneDays);
                 sbU.append(", pruneCount=");
                 sbU.append(this.pruneCount);
                 sbU.append(", pruneInProgress=");
-                return outline.O(sbU, this.pruneInProgress, ")");
+                return a.O(sbU, this.pruneInProgress, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(PruneDays pruneDays, int i, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(pruneDays, "pruneDays");
+                m.checkNotNullParameter(pruneDays, "pruneDays");
                 this.pruneDays = pruneDays;
                 this.pruneCount = i;
                 this.pruneInProgress = z2;
@@ -442,8 +442,8 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loading(PruneDays pruneDays, String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(pruneDays, "whichPruneDays");
-                Intrinsics3.checkNotNullParameter(str, "guildName");
+                m.checkNotNullParameter(pruneDays, "whichPruneDays");
+                m.checkNotNullParameter(str, "guildName");
                 this.whichPruneDays = pruneDays;
                 this.guildName = str;
             }
@@ -469,8 +469,8 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loading copy(PruneDays whichPruneDays, String guildName) {
-                Intrinsics3.checkNotNullParameter(whichPruneDays, "whichPruneDays");
-                Intrinsics3.checkNotNullParameter(guildName, "guildName");
+                m.checkNotNullParameter(whichPruneDays, "whichPruneDays");
+                m.checkNotNullParameter(guildName, "guildName");
                 return new Loading(whichPruneDays, guildName);
             }
 
@@ -482,7 +482,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loading loading = (Loading) other;
-                return Intrinsics3.areEqual(this.whichPruneDays, loading.whichPruneDays) && Intrinsics3.areEqual(this.guildName, loading.guildName);
+                return m.areEqual(this.whichPruneDays, loading.whichPruneDays) && m.areEqual(this.guildName, loading.guildName);
             }
 
             public final String getGuildName() {
@@ -501,10 +501,10 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loading(whichPruneDays=");
+                StringBuilder sbU = a.U("Loading(whichPruneDays=");
                 sbU.append(this.whichPruneDays);
                 sbU.append(", guildName=");
-                return outline.J(sbU, this.guildName, ")");
+                return a.J(sbU, this.guildName, ")");
             }
         }
 
@@ -518,10 +518,10 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$getUpdatedPruneCount$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<PruneCountResponse, Integer> {
+    public static final class AnonymousClass1<T, R> implements b<PruneCountResponse, Integer> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Integer call(PruneCountResponse pruneCountResponse) {
             return call2(pruneCountResponse);
         }
@@ -534,11 +534,11 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$getUpdatedPruneCount$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Integer, ViewState> {
+    public static final class AnonymousClass2<T, R> implements b<Integer, ViewState> {
         public AnonymousClass2() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ ViewState call(Integer num) {
             return call2(num);
         }
@@ -546,7 +546,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final ViewState call2(Integer num) {
             PruneDays pruneDaysAccess$getWhichPruneDays$p = WidgetPruneUsersViewModel.access$getWhichPruneDays$p(WidgetPruneUsersViewModel.this);
-            Intrinsics3.checkNotNullExpressionValue(num, "count");
+            m.checkNotNullExpressionValue(num, "count");
             return new ViewState.Loaded(pruneDaysAccess$getWhichPruneDays$p, num.intValue(), false, 4, null);
         }
     }
@@ -565,17 +565,17 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetPruneUsersViewModel.access$getEventSubject$p(WidgetPruneUsersViewModel.this);
-            Intrinsics3.checkNotNullExpressionValue(th, "it");
+            m.checkNotNullExpressionValue(th, "it");
             publishSubjectAccess$getEventSubject$p.k.onNext(new Event.RestClientFailed(th));
         }
     }
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$getUpdatedPruneCount$4, reason: invalid class name */
-    public static final class AnonymousClass4<T, R> implements Func1<Throwable, ViewState> {
+    public static final class AnonymousClass4<T, R> implements b<Throwable, ViewState> {
         public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ ViewState call(Throwable th) {
             return call2(th);
         }
@@ -588,7 +588,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$getUpdatedPruneCount$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass5() {
             super(1);
         }
@@ -601,7 +601,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "request");
+            m.checkNotNullParameter(subscription, "request");
             Subscription subscriptionAccess$getPruneCountRequest$p = WidgetPruneUsersViewModel.access$getPruneCountRequest$p(WidgetPruneUsersViewModel.this);
             if (subscriptionAccess$getPruneCountRequest$p != null) {
                 subscriptionAccess$getPruneCountRequest$p.unsubscribe();
@@ -612,7 +612,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$getUpdatedPruneCount$6, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass6 extends FunctionReferenceImpl implements Function1<ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass6 extends k implements Function1<ViewState, Unit> {
         public AnonymousClass6(WidgetPruneUsersViewModel widgetPruneUsersViewModel) {
             super(1, widgetPruneUsersViewModel, WidgetPruneUsersViewModel.class, "updateViewState", "updateViewState(Ljava/lang/Object;)V", 0);
         }
@@ -625,14 +625,14 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetPruneUsersViewModel.access$updateViewState((WidgetPruneUsersViewModel) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$pruneClicked$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -652,7 +652,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$pruneClicked$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -671,7 +671,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetPruneUsersViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$pruneClicked$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -684,10 +684,10 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetPruneUsersViewModel.access$getEventSubject$p(WidgetPruneUsersViewModel.this);
             Throwable throwable = error.getThrowable();
-            Intrinsics3.checkNotNullExpressionValue(throwable, "it.throwable");
+            m.checkNotNullExpressionValue(throwable, "it.throwable");
             publishSubjectAccess$getEventSubject$p.k.onNext(new Event.RestClientFailed(throwable));
         }
     }
@@ -708,7 +708,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
         RestAPI api = (i & 16) != 0 ? RestAPI.INSTANCE.getApi() : restAPI;
         if ((i & 32) != 0) {
             Companion companion = INSTANCE;
-            ObservationDeck observationDeck = ObservationDeck4.get();
+            ObservationDeck observationDeck = ObservationDeckProvider.get();
             StoreStream.Companion companion2 = StoreStream.INSTANCE;
             observableObserveStoreState = companion.observeStoreState(j, observationDeck, companion2.getPermissions(), companion2.getGuilds(), users);
         } else {
@@ -756,7 +756,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
     private final void getUpdatedPruneCount() {
         updateViewState(getLoadingState());
         Observable observableM = ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.getPruneCount(this.guildId, this.whichPruneDays.getCount()), false, 1, null).G(AnonymousClass1.INSTANCE).G(new AnonymousClass2()).t(new AnonymousClass3()).M(AnonymousClass4.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableM, "restAPI.getPruneCount(gu…Failed(dismiss = false) }");
+        m.checkNotNullExpressionValue(observableM, "restAPI.getPruneCount(gu…Failed(dismiss = false) }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM, this, null, 2, null), WidgetPruneUsersViewModel.class, (Context) null, new AnonymousClass5(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass6(this), 58, (Object) null);
     }
 
@@ -775,7 +775,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -787,7 +787,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
     }
 
     public final void pruneDaysSelected(PruneDays days) {
-        Intrinsics3.checkNotNullParameter(days, "days");
+        m.checkNotNullParameter(days, "days");
         this.whichPruneDays = days;
         getUpdatedPruneCount();
     }
@@ -795,11 +795,11 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetPruneUsersViewModel(long j, StoreGuilds storeGuilds, StoreUser storeUser, String str, RestAPI restAPI, Observable<StoreData> observable) {
         super(new ViewState.Loading(DEFAULT_DAYS, str));
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUsers");
-        Intrinsics3.checkNotNullParameter(str, "guildName");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(observable, "storeDataObservable");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeUser, "storeUsers");
+        m.checkNotNullParameter(str, "guildName");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observable, "storeDataObservable");
         this.guildId = j;
         this.storeGuilds = storeGuilds;
         this.storeUsers = storeUser;
@@ -810,7 +810,7 @@ public final class WidgetPruneUsersViewModel extends AppViewModel<ViewState> {
         Objects.requireNonNull(viewState, "null cannot be cast to non-null type com.discord.widgets.user.WidgetPruneUsersViewModel.ViewState.Loading");
         this.whichPruneDays = ((ViewState.Loading) viewState).getWhichPruneDays();
         Observable observableR = observable.G(AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "storeDataObservable\n    …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "storeDataObservable\n    …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetPruneUsersViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }
 }

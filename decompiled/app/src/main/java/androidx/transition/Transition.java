@@ -26,7 +26,7 @@ import androidx.collection.LongSparseArray;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
@@ -462,7 +462,7 @@ public abstract class Transition implements Cloneable {
                 iArr[i] = 4;
             } else {
                 if (!strTrim.isEmpty()) {
-                    throw new InflateException(outline.y("Unknown match type in matchOrder: '", strTrim, "'"));
+                    throw new InflateException(a.y("Unknown match type in matchOrder: '", strTrim, "'"));
                 }
                 int[] iArr2 = new int[iArr.length - 1];
                 System.arraycopy(iArr, 0, iArr2, 0, i);
@@ -1234,20 +1234,20 @@ public abstract class Transition implements Cloneable {
     }
 
     public String toString(String str) {
-        StringBuilder sbU = outline.U(str);
+        StringBuilder sbU = a.U(str);
         sbU.append(getClass().getSimpleName());
         sbU.append("@");
         sbU.append(Integer.toHexString(hashCode()));
         sbU.append(": ");
         String string = sbU.toString();
         if (this.mDuration != -1) {
-            string = outline.C(outline.X(string, "dur("), this.mDuration, ") ");
+            string = a.C(a.X(string, "dur("), this.mDuration, ") ");
         }
         if (this.mStartDelay != -1) {
-            string = outline.C(outline.X(string, "dly("), this.mStartDelay, ") ");
+            string = a.C(a.X(string, "dly("), this.mStartDelay, ") ");
         }
         if (this.mInterpolator != null) {
-            StringBuilder sbX = outline.X(string, "interp(");
+            StringBuilder sbX = a.X(string, "interp(");
             sbX.append(this.mInterpolator);
             sbX.append(") ");
             string = sbX.toString();
@@ -1255,13 +1255,13 @@ public abstract class Transition implements Cloneable {
         if (this.mTargetIds.size() <= 0 && this.mTargets.size() <= 0) {
             return string;
         }
-        String strW = outline.w(string, "tgts(");
+        String strW = a.w(string, "tgts(");
         if (this.mTargetIds.size() > 0) {
             for (int i = 0; i < this.mTargetIds.size(); i++) {
                 if (i > 0) {
-                    strW = outline.w(strW, ", ");
+                    strW = a.w(strW, ", ");
                 }
-                StringBuilder sbU2 = outline.U(strW);
+                StringBuilder sbU2 = a.U(strW);
                 sbU2.append(this.mTargetIds.get(i));
                 strW = sbU2.toString();
             }
@@ -1269,14 +1269,14 @@ public abstract class Transition implements Cloneable {
         if (this.mTargets.size() > 0) {
             for (int i2 = 0; i2 < this.mTargets.size(); i2++) {
                 if (i2 > 0) {
-                    strW = outline.w(strW, ", ");
+                    strW = a.w(strW, ", ");
                 }
-                StringBuilder sbU3 = outline.U(strW);
+                StringBuilder sbU3 = a.U(strW);
                 sbU3.append(this.mTargets.get(i2));
                 strW = sbU3.toString();
             }
         }
-        return outline.w(strW, ")");
+        return a.w(strW, ")");
     }
 
     @NonNull

@@ -1,11 +1,11 @@
 package com.discord.widgets.media;
 
-import b.a.d.AppViewModel;
+import b.a.d.d0;
 import kotlin.Unit;
 
 /* compiled from: WidgetMediaViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetMediaViewModel extends AppViewModel<Unit> {
+public final class WidgetMediaViewModel extends d0<Unit> {
     private long currentPlayerPositionMs;
     private boolean isPlaying;
     private boolean showCoverFrame;

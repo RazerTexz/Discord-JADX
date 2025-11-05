@@ -1,8 +1,8 @@
 package com.discord.api.stageinstance;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: StageInstance.kt */
 /* loaded from: classes.dex */
@@ -47,7 +47,7 @@ public final /* data */ class StageInstance {
             return false;
         }
         StageInstance stageInstance = (StageInstance) other;
-        return this.id == stageInstance.id && this.guildId == stageInstance.guildId && this.channelId == stageInstance.channelId && Intrinsics3.areEqual(this.topic, stageInstance.topic) && Intrinsics3.areEqual(this.privacyLevel, stageInstance.privacyLevel) && Intrinsics3.areEqual(this.inviteCode, stageInstance.inviteCode);
+        return this.id == stageInstance.id && this.guildId == stageInstance.guildId && this.channelId == stageInstance.channelId && m.areEqual(this.topic, stageInstance.topic) && m.areEqual(this.privacyLevel, stageInstance.privacyLevel) && m.areEqual(this.inviteCode, stageInstance.inviteCode);
     }
 
     /* renamed from: f, reason: from getter */
@@ -70,7 +70,7 @@ public final /* data */ class StageInstance {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StageInstance(id=");
+        StringBuilder sbU = a.U("StageInstance(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -81,6 +81,6 @@ public final /* data */ class StageInstance {
         sbU.append(", privacyLevel=");
         sbU.append(this.privacyLevel);
         sbU.append(", inviteCode=");
-        return outline.J(sbU, this.inviteCode, ")");
+        return a.J(sbU, this.inviteCode, ")");
     }
 }

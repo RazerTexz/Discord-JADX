@@ -2,11 +2,11 @@ package com.discord.stores;
 
 import com.discord.stores.StoreV2;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.MutablePropertyReference1Impl;
-import d0.z.d.Reflection2;
+import com.discord.stores.updates.ObservationDeckProvider;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
+import d0.z.d.s;
 import java.util.concurrent.TimeUnit;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.KProperty;
@@ -15,14 +15,14 @@ import rx.Observable;
 /* compiled from: StoreConnectionOpen.kt */
 /* loaded from: classes2.dex */
 public final class StoreConnectionOpen extends StoreV2 {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(StoreConnectionOpen.class, "isConnectionOpen", "isConnectionOpen()Z", 0))};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a0.mutableProperty1(new s(StoreConnectionOpen.class, "isConnectionOpen", "isConnectionOpen()Z", 0))};
 
     /* renamed from: isConnectionOpen$delegate, reason: from kotlin metadata */
     private final StoreV2.MarkChangedDelegate isConnectionOpen = new StoreV2.MarkChangedDelegate(Boolean.FALSE, null, 2, null);
 
     /* compiled from: StoreConnectionOpen.kt */
     /* renamed from: com.discord.stores.StoreConnectionOpen$observeConnectionOpen$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public AnonymousClass1() {
             super(0);
         }
@@ -61,7 +61,7 @@ public final class StoreConnectionOpen extends StoreV2 {
         this.isConnectionOpen.setValue(this, $$delegatedProperties[0], Boolean.valueOf(z2));
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnected(boolean connected) {
         if (connected) {
             return;
@@ -69,17 +69,17 @@ public final class StoreConnectionOpen extends StoreV2 {
         setConnectionOpen(false);
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen() {
         setConnectionOpen(true);
     }
 
     public final Observable<Boolean> observeConnectionOpen(boolean delayForUI) {
-        Observable<Boolean> observableConnectRx$default = ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
+        Observable<Boolean> observableConnectRx$default = ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
         if (delayForUI) {
             observableConnectRx$default = observableConnectRx$default.q(100L, TimeUnit.MILLISECONDS);
         }
-        Intrinsics3.checkNotNullExpressionValue(observableConnectRx$default, "ObservationDeckProvider\n…            }\n          }");
+        m.checkNotNullExpressionValue(observableConnectRx$default, "ObservationDeckProvider\n…            }\n          }");
         return observableConnectRx$default;
     }
 }

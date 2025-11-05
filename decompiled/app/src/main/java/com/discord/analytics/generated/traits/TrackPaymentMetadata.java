@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackPaymentMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackPaymentMetadata {
             return false;
         }
         TrackPaymentMetadata trackPaymentMetadata = (TrackPaymentMetadata) other;
-        return Intrinsics3.areEqual(this.paymentType, trackPaymentMetadata.paymentType) && Intrinsics3.areEqual(this.price, trackPaymentMetadata.price) && Intrinsics3.areEqual(this.regularPrice, trackPaymentMetadata.regularPrice) && Intrinsics3.areEqual(this.currency, trackPaymentMetadata.currency) && Intrinsics3.areEqual(this.isGift, trackPaymentMetadata.isGift);
+        return m.areEqual(this.paymentType, trackPaymentMetadata.paymentType) && m.areEqual(this.price, trackPaymentMetadata.price) && m.areEqual(this.regularPrice, trackPaymentMetadata.regularPrice) && m.areEqual(this.currency, trackPaymentMetadata.currency) && m.areEqual(this.isGift, trackPaymentMetadata.isGift);
     }
 
     public int hashCode() {
@@ -37,7 +37,7 @@ public final /* data */ class TrackPaymentMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPaymentMetadata(paymentType=");
+        StringBuilder sbU = a.U("TrackPaymentMetadata(paymentType=");
         sbU.append(this.paymentType);
         sbU.append(", price=");
         sbU.append(this.price);
@@ -46,6 +46,6 @@ public final /* data */ class TrackPaymentMetadata {
         sbU.append(", currency=");
         sbU.append(this.currency);
         sbU.append(", isGift=");
-        return outline.D(sbU, this.isGift, ")");
+        return a.D(sbU, this.isGift, ")");
     }
 }

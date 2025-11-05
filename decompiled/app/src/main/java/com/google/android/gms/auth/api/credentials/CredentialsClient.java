@@ -7,8 +7,8 @@ import b.i.a.f.e.h.b;
 
 /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
 /* loaded from: classes3.dex */
-public class CredentialsClient extends b<a.C0033a> {
-    public CredentialsClient(@NonNull Context context, @NonNull a.C0033a c0033a) {
-        super(context, a.e, c0033a, new b.i.a.f.e.h.j.a());
+public class CredentialsClient extends b<a.C0110a> {
+    public CredentialsClient(@NonNull Context context, @NonNull a.C0110a c0110a) {
+        super(context, a.e, c0110a, new b.i.a.f.e.h.j.a());
     }
 }

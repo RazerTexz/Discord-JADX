@@ -1,13 +1,13 @@
 package com.discord.widgets.chat.input.models;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.sticker.Sticker;
 import com.discord.models.commands.ApplicationCommandOption;
-import com.discord.widgets.chat.AutocompleteUtils2;
+import com.discord.widgets.chat.AutocompleteTypes;
 import com.discord.widgets.chat.input.autocomplete.Autocompletable;
 import com.discord.widgets.chat.input.autocomplete.EmojiAutocompletable;
 import com.discord.widgets.chat.input.autocomplete.LeadingIdentifier;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,10 +38,10 @@ public final /* data */ class AutocompleteInputSelectionModel {
 
     /* JADX WARN: Multi-variable type inference failed */
     public AutocompleteInputSelectionModel(MentionToken mentionToken, Map<LeadingIdentifier, ? extends List<? extends Autocompletable>> map, InputSelectionModel inputSelectionModel, Set<ApplicationCommandOption> set, List<Sticker> list) {
-        Intrinsics3.checkNotNullParameter(map, "filteredAutocompletables");
-        Intrinsics3.checkNotNullParameter(inputSelectionModel, "inputSelectionModel");
-        Intrinsics3.checkNotNullParameter(set, "showErrorsForOptions");
-        Intrinsics3.checkNotNullParameter(list, "stickerMatches");
+        m.checkNotNullParameter(map, "filteredAutocompletables");
+        m.checkNotNullParameter(inputSelectionModel, "inputSelectionModel");
+        m.checkNotNullParameter(set, "showErrorsForOptions");
+        m.checkNotNullParameter(list, "stickerMatches");
         this.autocompleteToken = mentionToken;
         this.filteredAutocompletables = map;
         this.inputSelectionModel = inputSelectionModel;
@@ -94,10 +94,10 @@ public final /* data */ class AutocompleteInputSelectionModel {
     }
 
     public final AutocompleteInputSelectionModel copy(MentionToken autocompleteToken, Map<LeadingIdentifier, ? extends List<? extends Autocompletable>> filteredAutocompletables, InputSelectionModel inputSelectionModel, Set<ApplicationCommandOption> showErrorsForOptions, List<Sticker> stickerMatches) {
-        Intrinsics3.checkNotNullParameter(filteredAutocompletables, "filteredAutocompletables");
-        Intrinsics3.checkNotNullParameter(inputSelectionModel, "inputSelectionModel");
-        Intrinsics3.checkNotNullParameter(showErrorsForOptions, "showErrorsForOptions");
-        Intrinsics3.checkNotNullParameter(stickerMatches, "stickerMatches");
+        m.checkNotNullParameter(filteredAutocompletables, "filteredAutocompletables");
+        m.checkNotNullParameter(inputSelectionModel, "inputSelectionModel");
+        m.checkNotNullParameter(showErrorsForOptions, "showErrorsForOptions");
+        m.checkNotNullParameter(stickerMatches, "stickerMatches");
         return new AutocompleteInputSelectionModel(autocompleteToken, filteredAutocompletables, inputSelectionModel, showErrorsForOptions, stickerMatches);
     }
 
@@ -109,7 +109,7 @@ public final /* data */ class AutocompleteInputSelectionModel {
             return false;
         }
         AutocompleteInputSelectionModel autocompleteInputSelectionModel = (AutocompleteInputSelectionModel) other;
-        return Intrinsics3.areEqual(this.autocompleteToken, autocompleteInputSelectionModel.autocompleteToken) && Intrinsics3.areEqual(this.filteredAutocompletables, autocompleteInputSelectionModel.filteredAutocompletables) && Intrinsics3.areEqual(this.inputSelectionModel, autocompleteInputSelectionModel.inputSelectionModel) && Intrinsics3.areEqual(this.showErrorsForOptions, autocompleteInputSelectionModel.showErrorsForOptions) && Intrinsics3.areEqual(this.stickerMatches, autocompleteInputSelectionModel.stickerMatches);
+        return m.areEqual(this.autocompleteToken, autocompleteInputSelectionModel.autocompleteToken) && m.areEqual(this.filteredAutocompletables, autocompleteInputSelectionModel.filteredAutocompletables) && m.areEqual(this.inputSelectionModel, autocompleteInputSelectionModel.inputSelectionModel) && m.areEqual(this.showErrorsForOptions, autocompleteInputSelectionModel.showErrorsForOptions) && m.areEqual(this.stickerMatches, autocompleteInputSelectionModel.stickerMatches);
     }
 
     public final MentionToken getAutocompleteToken() {
@@ -122,16 +122,16 @@ public final /* data */ class AutocompleteInputSelectionModel {
         if (leadingIdentifier != null) {
             int iOrdinal = leadingIdentifier.ordinal();
             if (iOrdinal == 0) {
-                return AutocompleteUtils2.COMMANDS;
+                return AutocompleteTypes.COMMANDS;
             }
             if (iOrdinal == 1) {
-                return AutocompleteUtils2.EMOJIS_AND_STICKERS;
+                return AutocompleteTypes.EMOJIS_AND_STICKERS;
             }
             if (iOrdinal == 2) {
-                return AutocompleteUtils2.CHANNELS;
+                return AutocompleteTypes.CHANNELS;
             }
             if (iOrdinal == 3) {
-                return AutocompleteUtils2.MENTIONS;
+                return AutocompleteTypes.MENTIONS;
             }
         }
         return "CHOICE";
@@ -185,7 +185,7 @@ public final /* data */ class AutocompleteInputSelectionModel {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("AutocompleteInputSelectionModel(autocompleteToken=");
+        StringBuilder sbU = a.U("AutocompleteInputSelectionModel(autocompleteToken=");
         sbU.append(this.autocompleteToken);
         sbU.append(", filteredAutocompletables=");
         sbU.append(this.filteredAutocompletables);
@@ -194,6 +194,6 @@ public final /* data */ class AutocompleteInputSelectionModel {
         sbU.append(", showErrorsForOptions=");
         sbU.append(this.showErrorsForOptions);
         sbU.append(", stickerMatches=");
-        return outline.L(sbU, this.stickerMatches, ")");
+        return a.L(sbU, this.stickerMatches, ")");
     }
 }

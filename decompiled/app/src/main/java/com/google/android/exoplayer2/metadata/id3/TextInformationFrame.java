@@ -3,9 +3,8 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.p1;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,11 +62,11 @@ public final class TextInformationFrame extends Id3Frame {
             return false;
         }
         TextInformationFrame textInformationFrame = (TextInformationFrame) obj;
-        return Util2.a(this.j, textInformationFrame.j) && Util2.a(this.k, textInformationFrame.k) && Util2.a(this.l, textInformationFrame.l);
+        return e0.a(this.j, textInformationFrame.j) && e0.a(this.k, textInformationFrame.k) && e0.a(this.l, textInformationFrame.l);
     }
 
     public int hashCode() {
-        int iM = outline.m(this.j, 527, 31);
+        int iM = b.d.b.a.a.m(this.j, 527, 31);
         String str = this.k;
         int iHashCode = (iM + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.l;
@@ -76,7 +75,7 @@ public final class TextInformationFrame extends Id3Frame {
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame, com.google.android.exoplayer2.metadata.Metadata.Entry
-    public void n(MediaMetadata.b bVar) {
+    public void n(p1.b bVar) {
         String str = this.j;
         str.hashCode();
         char c = 65535;
@@ -245,7 +244,7 @@ public final class TextInformationFrame extends Id3Frame {
                     break;
                 case 6:
                 case 20:
-                    String[] strArrH = Util2.H(this.l, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN);
+                    String[] strArrH = e0.H(this.l, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN);
                     int i3 = Integer.parseInt(strArrH[0]);
                     Integer numValueOf = strArrH.length > 1 ? Integer.valueOf(Integer.parseInt(strArrH[1])) : null;
                     bVar.n = Integer.valueOf(i3);
@@ -299,7 +298,7 @@ public final class TextInformationFrame extends Id3Frame {
         String str = this.j;
         String str2 = this.k;
         String str3 = this.l;
-        StringBuilder sbS = outline.S(outline.b(str3, outline.b(str2, outline.b(str, 22))), str, ": description=", str2, ": value=");
+        StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str3, b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 22))), str, ": description=", str2, ": value=");
         sbS.append(str3);
         return sbS.toString();
     }
@@ -314,7 +313,7 @@ public final class TextInformationFrame extends Id3Frame {
     /* JADX WARN: Illegal instructions before constructor call */
     public TextInformationFrame(Parcel parcel) {
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         super(string);
         this.k = parcel.readString();
         this.l = parcel.readString();

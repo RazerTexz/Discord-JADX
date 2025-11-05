@@ -2,12 +2,12 @@ package com.discord.widgets.chat.input;
 
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.FragmentManager;
-import b.i.c.m.d.k.CommonUtils;
+import b.i.c.m.d.k.h;
 import com.discord.widgets.chat.input.attachments.AttachmentBottomSheet;
 import com.lytefast.flexinput.model.Attachment;
 import com.lytefast.flexinput.utils.SelectionAggregator;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -16,12 +16,12 @@ import kotlin.jvm.functions.Function2;
 /* JADX INFO: Add missing generic type declarations: [T] */
 /* compiled from: WidgetChatInputAttachments.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1<T> extends Lambda implements Function2<SelectionAggregator<T>, T, Unit> {
+public final class WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1<T> extends o implements Function2<SelectionAggregator<T>, T, Unit> {
     public final /* synthetic */ WidgetChatInputAttachments this$0;
 
     /* compiled from: WidgetChatInputAttachments.kt */
     /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ SelectionAggregator $aggregator;
         public final /* synthetic */ Attachment $attachment;
 
@@ -46,7 +46,7 @@ public final class WidgetChatInputAttachments$createPreviewAdapter$onAttachmentS
 
     /* compiled from: WidgetChatInputAttachments.kt */
     /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Boolean, Unit> {
         public final /* synthetic */ SelectionAggregator $aggregator;
         public final /* synthetic */ Attachment $attachment;
 
@@ -83,12 +83,12 @@ public final class WidgetChatInputAttachments$createPreviewAdapter$onAttachmentS
 
     /* JADX WARN: Incorrect types in method signature: (Lcom/lytefast/flexinput/utils/SelectionAggregator<TT;>;TT;)V */
     public final void invoke(SelectionAggregator selectionAggregator, Attachment attachment) {
-        Intrinsics3.checkNotNullParameter(selectionAggregator, "aggregator");
-        Intrinsics3.checkNotNullParameter(attachment, "attachment");
-        CommonUtils.r(WidgetChatInputAttachments.access$getFlexInputFragment$p(this.this$0).requireContext(), WidgetChatInputAttachments.access$getFlexInputFragment$p(this.this$0).l());
+        m.checkNotNullParameter(selectionAggregator, "aggregator");
+        m.checkNotNullParameter(attachment, "attachment");
+        h.r(WidgetChatInputAttachments.access$getFlexInputFragment$p(this.this$0).requireContext(), WidgetChatInputAttachments.access$getFlexInputFragment$p(this.this$0).l());
         AttachmentBottomSheet.Companion companion = AttachmentBottomSheet.INSTANCE;
         FragmentManager childFragmentManager = WidgetChatInputAttachments.access$getFlexInputFragment$p(this.this$0).getChildFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(childFragmentManager, "flexInputFragment.childFragmentManager");
+        m.checkNotNullExpressionValue(childFragmentManager, "flexInputFragment.childFragmentManager");
         AttachmentBottomSheet.Companion.show$default(companion, childFragmentManager, attachment, new AnonymousClass1(selectionAggregator, attachment), new AnonymousClass2(attachment, selectionAggregator), null, 16, null);
     }
 }

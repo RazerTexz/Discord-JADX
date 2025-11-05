@@ -4,11 +4,7 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Base64;
 import androidx.core.app.NotificationCompat;
-import b.i.a.b.Encoding2;
-import b.i.a.b.j.EventInternal;
-import b.i.a.b.j.TransportContext;
 import b.i.a.b.j.t.i.t;
-import b.i.a.b.j.w.PriorityMapping;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.Arrays;
 import java.util.Collections;
@@ -20,49 +16,49 @@ public final /* synthetic */ class s implements t.b {
     public final t a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final TransportContext f801b;
-    public final EventInternal c;
+    public final b.i.a.b.j.i f801b;
+    public final b.i.a.b.j.f c;
 
-    public s(t tVar, TransportContext transportContext, EventInternal eventInternal) {
+    public s(t tVar, b.i.a.b.j.i iVar, b.i.a.b.j.f fVar) {
         this.a = tVar;
-        this.f801b = transportContext;
-        this.c = eventInternal;
+        this.f801b = iVar;
+        this.c = fVar;
     }
 
     @Override // b.i.a.b.j.t.i.t.b
     public Object apply(Object obj) {
         long jInsert;
         t tVar = this.a;
-        TransportContext transportContext = this.f801b;
-        EventInternal eventInternal = this.c;
+        b.i.a.b.j.i iVar = this.f801b;
+        b.i.a.b.j.f fVar = this.c;
         SQLiteDatabase sQLiteDatabase = (SQLiteDatabase) obj;
-        Encoding2 encoding2 = t.j;
+        b.i.a.b.b bVar = t.j;
         if (tVar.b().compileStatement("PRAGMA page_size").simpleQueryForLong() * tVar.b().compileStatement("PRAGMA page_count").simpleQueryForLong() >= tVar.n.e()) {
             return -1L;
         }
-        Long lC = tVar.c(sQLiteDatabase, transportContext);
+        Long lC = tVar.c(sQLiteDatabase, iVar);
         if (lC != null) {
             jInsert = lC.longValue();
         } else {
             ContentValues contentValues = new ContentValues();
-            contentValues.put("backend_name", transportContext.b());
-            contentValues.put("priority", Integer.valueOf(PriorityMapping.a(transportContext.d())));
+            contentValues.put("backend_name", iVar.b());
+            contentValues.put("priority", Integer.valueOf(b.i.a.b.j.w.a.a(iVar.d())));
             contentValues.put("next_request_ms", (Integer) 0);
-            if (transportContext.c() != null) {
-                contentValues.put(NotificationCompat.MessagingStyle.Message.KEY_EXTRAS_BUNDLE, Base64.encodeToString(transportContext.c(), 0));
+            if (iVar.c() != null) {
+                contentValues.put(NotificationCompat.MessagingStyle.Message.KEY_EXTRAS_BUNDLE, Base64.encodeToString(iVar.c(), 0));
             }
             jInsert = sQLiteDatabase.insert("transport_contexts", null, contentValues);
         }
         int iD = tVar.n.d();
-        byte[] bArr = eventInternal.d().f766b;
+        byte[] bArr = fVar.d().f766b;
         boolean z2 = bArr.length <= iD;
         ContentValues contentValues2 = new ContentValues();
         contentValues2.put("context_id", Long.valueOf(jInsert));
-        contentValues2.put("transport_name", eventInternal.g());
-        contentValues2.put("timestamp_ms", Long.valueOf(eventInternal.e()));
-        contentValues2.put("uptime_ms", Long.valueOf(eventInternal.h()));
-        contentValues2.put("payload_encoding", eventInternal.d().a.a);
-        contentValues2.put(ModelAuditLogEntry.CHANGE_KEY_CODE, eventInternal.c());
+        contentValues2.put("transport_name", fVar.g());
+        contentValues2.put("timestamp_ms", Long.valueOf(fVar.e()));
+        contentValues2.put("uptime_ms", Long.valueOf(fVar.h()));
+        contentValues2.put("payload_encoding", fVar.d().a.a);
+        contentValues2.put(ModelAuditLogEntry.CHANGE_KEY_CODE, fVar.c());
         contentValues2.put("num_attempts", (Integer) 0);
         contentValues2.put("inline", Boolean.valueOf(z2));
         contentValues2.put("payload", z2 ? bArr : new byte[0]);
@@ -78,7 +74,7 @@ public final /* synthetic */ class s implements t.b {
                 sQLiteDatabase.insert("event_payloads", null, contentValues3);
             }
         }
-        for (Map.Entry entry : Collections.unmodifiableMap(eventInternal.b()).entrySet()) {
+        for (Map.Entry entry : Collections.unmodifiableMap(fVar.b()).entrySet()) {
             ContentValues contentValues4 = new ContentValues();
             contentValues4.put("event_id", Long.valueOf(jInsert2));
             contentValues4.put(ModelAuditLogEntry.CHANGE_KEY_NAME, (String) entry.getKey());

@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackFriendAddViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendAddViewed implements AnalyticsSchema, TrackBase2, TrackSourceMetadata2 {
+public final /* data */ class TrackFriendAddViewed implements AnalyticsSchema, TrackBaseReceiver, TrackSourceMetadataReceiver {
     private TrackBase trackBase;
     private TrackSourceMetadata trackSourceMetadata;
     private final Long suggestionCount = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackFriendAddViewed implements AnalyticsSchema, T
             return false;
         }
         TrackFriendAddViewed trackFriendAddViewed = (TrackFriendAddViewed) other;
-        return Intrinsics3.areEqual(this.suggestionCount, trackFriendAddViewed.suggestionCount) && Intrinsics3.areEqual(this.friendAddType, trackFriendAddViewed.friendAddType);
+        return m.areEqual(this.suggestionCount, trackFriendAddViewed.suggestionCount) && m.areEqual(this.friendAddType, trackFriendAddViewed.friendAddType);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackFriendAddViewed implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackFriendAddViewed(suggestionCount=");
+        StringBuilder sbU = a.U("TrackFriendAddViewed(suggestionCount=");
         sbU.append(this.suggestionCount);
         sbU.append(", friendAddType=");
-        return outline.E(sbU, this.friendAddType, ")");
+        return a.E(sbU, this.friendAddType, ")");
     }
 }

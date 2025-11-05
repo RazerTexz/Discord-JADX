@@ -11,7 +11,7 @@ import androidx.annotation.WorkerThread;
 import androidx.collection.ArrayMap;
 import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.util.AtomicFile;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -215,11 +215,11 @@ public class ShortcutsInfoSerialization {
         } catch (Exception e2) {
             e = e2;
             fileOutputStream = fileOutputStreamStartWrite;
-            StringBuilder sbU = outline.U("Failed to write to file ");
+            StringBuilder sbU = a.U("Failed to write to file ");
             sbU.append(atomicFile.getBaseFile());
             Log.e("ShortcutInfoCompatSaver", sbU.toString(), e);
             atomicFile.failWrite(fileOutputStream);
-            StringBuilder sbU2 = outline.U("Failed to write to file ");
+            StringBuilder sbU2 = a.U("Failed to write to file ");
             sbU2.append(atomicFile.getBaseFile());
             throw new RuntimeException(sbU2.toString(), e);
         }

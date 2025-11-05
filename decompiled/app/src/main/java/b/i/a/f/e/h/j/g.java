@@ -20,8 +20,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 import androidx.collection.ArrayMap;
 import androidx.collection.ArraySet;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
 import b.i.a.f.e.h.a;
 import b.i.a.f.e.h.c;
 import b.i.a.f.e.h.j.k;
@@ -108,10 +106,10 @@ public class g implements Handler.Callback {
             Looper looper = g.this.f1359x.getLooper();
             b.i.a.f.e.k.c cVarA = bVar.a().a();
             b.i.a.f.e.h.a<O> aVar = bVar.f1351b;
-            AnimatableValueParser.G(aVar.a != null, "This API was constructed with a SimpleClientBuilder. Use getSimpleClientBuilder");
-            a.AbstractC0035a<?, O> abstractC0035a = aVar.a;
-            Objects.requireNonNull(abstractC0035a, "null reference");
-            a.f fVarA = abstractC0035a.a(bVar.a, looper, cVarA, bVar.c, this, this);
+            b.c.a.a0.d.G(aVar.a != null, "This API was constructed with a SimpleClientBuilder. Use getSimpleClientBuilder");
+            a.AbstractC0112a<?, O> abstractC0112a = aVar.a;
+            Objects.requireNonNull(abstractC0112a, "null reference");
+            a.f fVarA = abstractC0112a.a(bVar.a, looper, cVarA, bVar.c, this, this);
             this.f1361b = fVarA;
             if (fVarA instanceof b.i.a.f.e.k.y) {
                 throw new NoSuchMethodError();
@@ -152,7 +150,7 @@ public class g implements Handler.Callback {
 
         @WorkerThread
         public final void b() throws PackageManager.NameNotFoundException {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             Status status = g.j;
             f(status);
             x0 x0Var = this.e;
@@ -212,7 +210,7 @@ public class g implements Handler.Callback {
         @WorkerThread
         public final void e(@NonNull ConnectionResult connectionResult, @Nullable Exception exc) {
             b.i.a.f.l.f fVar;
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             g0 g0Var = this.i;
             if (g0Var != null && (fVar = g0Var.g) != null) {
                 fVar.h();
@@ -229,13 +227,13 @@ public class g implements Handler.Callback {
                 return;
             }
             if (exc != null) {
-                AnimatableValueParser.s(g.this.f1359x);
+                b.c.a.a0.d.s(g.this.f1359x);
                 h(null, exc, false);
                 return;
             }
             if (!g.this.f1360y) {
                 Status statusP = p(connectionResult);
-                AnimatableValueParser.s(g.this.f1359x);
+                b.c.a.a0.d.s(g.this.f1359x);
                 h(statusP, null, false);
                 return;
             }
@@ -248,7 +246,7 @@ public class g implements Handler.Callback {
             }
             if (!this.j) {
                 Status statusP2 = p(connectionResult);
-                AnimatableValueParser.s(g.this.f1359x);
+                b.c.a.a0.d.s(g.this.f1359x);
                 h(statusP2, null, false);
             } else {
                 Handler handler = g.this.f1359x;
@@ -260,7 +258,7 @@ public class g implements Handler.Callback {
 
         @WorkerThread
         public final void f(Status status) {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             h(status, null, false);
         }
 
@@ -272,7 +270,7 @@ public class g implements Handler.Callback {
 
         @WorkerThread
         public final void h(@Nullable Status status, @Nullable Exception exc, boolean z2) {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             if ((status == null) == (exc == null)) {
                 throw new IllegalArgumentException("Status XOR exception should be null");
             }
@@ -301,7 +299,7 @@ public class g implements Handler.Callback {
 
         @WorkerThread
         public final void j(s sVar) throws PackageManager.NameNotFoundException {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             if (this.f1361b.j()) {
                 if (m(sVar)) {
                     w();
@@ -322,7 +320,7 @@ public class g implements Handler.Callback {
 
         @WorkerThread
         public final boolean k(boolean z2) {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             if (!this.f1361b.j() || this.g.size() != 0) {
                 return false;
             }
@@ -364,7 +362,7 @@ public class g implements Handler.Callback {
             String name = this.c.getClass().getName();
             String str = featureA.j;
             long jW0 = featureA.w0();
-            StringBuilder sbS = outline.S(outline.b(str, name.length() + 77), name, " could not execute call because it requires feature (", str, ", ");
+            StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str, name.length() + 77), name, " could not execute call because it requires feature (", str, ", ");
             sbS.append(jW0);
             sbS.append(").");
             Log.w("GoogleApiManager", sbS.toString());
@@ -408,7 +406,7 @@ public class g implements Handler.Callback {
                 return;
             }
             r0 next = it.next();
-            if (AnimatableValueParser.h0(connectionResult, ConnectionResult.j)) {
+            if (b.c.a.a0.d.h0(connectionResult, ConnectionResult.j)) {
                 this.f1361b.f();
             }
             Objects.requireNonNull(next);
@@ -431,18 +429,18 @@ public class g implements Handler.Callback {
         public final Status p(ConnectionResult connectionResult) {
             String str = this.d.f1354b.c;
             String strValueOf = String.valueOf(connectionResult);
-            return new Status(17, outline.l(strValueOf.length() + outline.b(str, 63), "API: ", str, " is not available on this device. Connection failed with: ", strValueOf));
+            return new Status(17, b.d.b.a.a.l(strValueOf.length() + b.d.b.a.a.b(str, 63), "API: ", str, " is not available on this device. Connection failed with: ", strValueOf));
         }
 
         @WorkerThread
         public final void q() {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             this.l = null;
         }
 
         @WorkerThread
         public final void r() throws PackageManager.NameNotFoundException {
-            AnimatableValueParser.s(g.this.f1359x);
+            b.c.a.a0.d.s(g.this.f1359x);
             if (this.f1361b.j() || this.f1361b.e()) {
                 return;
             }
@@ -473,11 +471,11 @@ public class g implements Handler.Callback {
                         fVar2.h();
                     }
                     g0Var.f.h = Integer.valueOf(System.identityHashCode(g0Var));
-                    a.AbstractC0035a<? extends b.i.a.f.l.f, b.i.a.f.l.a> abstractC0035a = g0Var.d;
+                    a.AbstractC0112a<? extends b.i.a.f.l.f, b.i.a.f.l.a> abstractC0112a = g0Var.d;
                     Context context = g0Var.f1364b;
                     Looper looper = g0Var.c.getLooper();
                     b.i.a.f.e.k.c cVar = g0Var.f;
-                    g0Var.g = (b.i.a.f.l.f) abstractC0035a.a(context, looper, cVar, cVar.g, g0Var, g0Var);
+                    g0Var.g = (b.i.a.f.l.f) abstractC0112a.a(context, looper, cVar, cVar.g, g0Var, g0Var);
                     g0Var.h = bVar;
                     Set<Scope> set = g0Var.e;
                     if (set == null || set.isEmpty()) {
@@ -593,11 +591,11 @@ public class g implements Handler.Callback {
         public final void b(ConnectionResult connectionResult) {
             a<?> aVar = g.this.t.get(this.f1362b);
             if (aVar != null) {
-                AnimatableValueParser.s(g.this.f1359x);
+                b.c.a.a0.d.s(g.this.f1359x);
                 a.f fVar = aVar.f1361b;
                 String name = aVar.c.getClass().getName();
                 String strValueOf = String.valueOf(connectionResult);
-                fVar.c(outline.l(strValueOf.length() + name.length() + 25, "onSignInFailed for ", name, " with ", strValueOf));
+                fVar.c(b.d.b.a.a.l(strValueOf.length() + name.length() + 25, "onSignInFailed for ", name, " with ", strValueOf));
                 aVar.e(connectionResult, null);
             }
         }
@@ -618,7 +616,7 @@ public class g implements Handler.Callback {
         public final boolean equals(@Nullable Object obj) {
             if (obj != null && (obj instanceof c)) {
                 c cVar = (c) obj;
-                if (AnimatableValueParser.h0(this.a, cVar.a) && AnimatableValueParser.h0(this.f1363b, cVar.f1363b)) {
+                if (b.c.a.a0.d.h0(this.a, cVar.a) && b.c.a.a0.d.h0(this.f1363b, cVar.f1363b)) {
                     return true;
                 }
             }
@@ -645,10 +643,10 @@ public class g implements Handler.Callback {
         this.p = googleApiAvailability;
         this.q = new b.i.a.f.e.k.r(googleApiAvailability);
         PackageManager packageManager = context.getPackageManager();
-        if (AnimatableValueParser.f == null) {
-            AnimatableValueParser.f = Boolean.valueOf(b.i.a.f.e.o.f.A0() && packageManager.hasSystemFeature("android.hardware.type.automotive"));
+        if (b.c.a.a0.d.f == null) {
+            b.c.a.a0.d.f = Boolean.valueOf(b.i.a.f.e.o.f.A0() && packageManager.hasSystemFeature("android.hardware.type.automotive"));
         }
-        if (AnimatableValueParser.f.booleanValue()) {
+        if (b.c.a.a0.d.f.booleanValue()) {
             this.f1360y = false;
         }
         cVar.sendMessage(cVar.obtainMessage(6));
@@ -781,8 +779,8 @@ public class g implements Handler.Callback {
                     AtomicBoolean atomicBoolean = b.i.a.f.e.e.a;
                     String strY0 = ConnectionResult.y0(i4);
                     String str = connectionResult.n;
-                    Status status = new Status(17, outline.l(outline.b(str, outline.b(strY0, 69)), "Error resolution was canceled by the user, original error message: ", strY0, ": ", str));
-                    AnimatableValueParser.s(g.this.f1359x);
+                    Status status = new Status(17, b.d.b.a.a.l(b.d.b.a.a.b(str, b.d.b.a.a.b(strY0, 69)), "Error resolution was canceled by the user, original error message: ", strY0, ": ", str));
+                    b.c.a.a0.d.s(g.this.f1359x);
                     next.h(status, null, false);
                 } else {
                     StringBuilder sb = new StringBuilder(76);
@@ -819,7 +817,7 @@ public class g implements Handler.Callback {
             case 9:
                 if (this.t.containsKey(message.obj)) {
                     a<?> aVar2 = this.t.get(message.obj);
-                    AnimatableValueParser.s(g.this.f1359x);
+                    b.c.a.a0.d.s(g.this.f1359x);
                     if (aVar2.j) {
                         aVar2.r();
                     }
@@ -838,12 +836,12 @@ public class g implements Handler.Callback {
             case 11:
                 if (this.t.containsKey(message.obj)) {
                     a<?> aVar3 = this.t.get(message.obj);
-                    AnimatableValueParser.s(g.this.f1359x);
+                    b.c.a.a0.d.s(g.this.f1359x);
                     if (aVar3.j) {
                         aVar3.v();
                         g gVar = g.this;
                         Status status2 = gVar.p.c(gVar.o) == 18 ? new Status(8, "Connection timed out while waiting for Google Play services update to complete.") : new Status(8, "API failed to connect while resuming due to an unknown error.");
-                        AnimatableValueParser.s(g.this.f1359x);
+                        b.c.a.a0.d.s(g.this.f1359x);
                         aVar3.h(status2, null, false);
                         aVar3.f1361b.c("Timing out connection while resuming.");
                     }
@@ -889,7 +887,7 @@ public class g implements Handler.Callback {
                                 int i5 = 0;
                                 while (true) {
                                     if (i5 < length) {
-                                        if (AnimatableValueParser.h0(featureArrF[i5], feature)) {
+                                        if (b.c.a.a0.d.h0(featureArrF[i5], feature)) {
                                             z2 = i5 >= 0;
                                         } else {
                                             i5++;
@@ -913,7 +911,7 @@ public class g implements Handler.Callback {
                 }
                 return true;
             default:
-                outline.g0(31, "Unknown message id: ", i, "GoogleApiManager");
+                b.d.b.a.a.g0(31, "Unknown message id: ", i, "GoogleApiManager");
                 return false;
         }
     }

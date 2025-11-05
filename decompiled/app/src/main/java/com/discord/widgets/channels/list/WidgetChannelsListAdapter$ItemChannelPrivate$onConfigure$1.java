@@ -4,14 +4,14 @@ import android.view.View;
 import com.discord.widgets.channels.list.WidgetChannelsListAdapter;
 import com.discord.widgets.channels.list.items.ChannelListItem;
 import com.discord.widgets.channels.list.items.ChannelListItemPrivate;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetChannelsListAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelsListAdapter$ItemChannelPrivate$onConfigure$1 extends Lambda implements Function1<View, Unit> {
+public final class WidgetChannelsListAdapter$ItemChannelPrivate$onConfigure$1 extends o implements Function1<View, Unit> {
     public final /* synthetic */ ChannelListItem $data;
     public final /* synthetic */ WidgetChannelsListAdapter.ItemChannelPrivate this$0;
 
@@ -30,7 +30,7 @@ public final class WidgetChannelsListAdapter$ItemChannelPrivate$onConfigure$1 ex
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "it");
+        m.checkNotNullParameter(view, "it");
         WidgetChannelsListAdapter.ItemChannelPrivate.access$getAdapter$p(this.this$0).getOnSelectChannelOptions().invoke(((ChannelListItemPrivate) this.$data).getChannel());
     }
 }

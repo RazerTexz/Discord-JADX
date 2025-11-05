@@ -3,7 +3,7 @@ package com.discord.models.member;
 import a0.a.a.b;
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelRecipientNick;
 import com.discord.api.role.GuildRole;
@@ -14,7 +14,7 @@ import com.discord.stores.StoreGuilds;
 import com.discord.utilities.guilds.RoleUtils;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -66,7 +66,7 @@ public final /* data */ class GuildMember {
         public final GuildMember from(com.discord.api.guildmember.GuildMember apiGuildMember, long guildId, Map<Long, GuildRole> guildRoles, StoreGuilds storeGuilds) {
             Map<Long, Map<Long, GuildRole>> roles;
             GuildRole guildRole;
-            Intrinsics3.checkNotNullParameter(apiGuildMember, "apiGuildMember");
+            m.checkNotNullParameter(apiGuildMember, "apiGuildMember");
             List<Long> listL = apiGuildMember.l();
             Iterator<Long> it = listL.iterator();
             GuildRole guildRole2 = null;
@@ -96,7 +96,7 @@ public final /* data */ class GuildMember {
 
         public final GuildRole getHighestRoleIconRole(List<Long> roles, Map<Long, GuildRole> guildRoles) {
             GuildRole guildRole;
-            Intrinsics3.checkNotNullParameter(roles, "roles");
+            m.checkNotNullParameter(roles, "roles");
             Iterator<Long> it = roles.iterator();
             GuildRole guildRole2 = null;
             while (it.hasNext()) {
@@ -111,7 +111,7 @@ public final /* data */ class GuildMember {
         }
 
         public final String getNickOrUsername(GuildMember member, User user) {
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             return getNickOrUsername(user, member, null, null);
         }
 
@@ -123,7 +123,7 @@ public final /* data */ class GuildMember {
             ChannelRecipientNick channelRecipientNick;
             String nick;
             Object next;
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             String nick2 = null;
             if (nicks == null) {
                 nicks = channel != null ? channel.q() : null;
@@ -265,7 +265,7 @@ public final /* data */ class GuildMember {
             return false;
         }
         GuildMember guildMember = (GuildMember) other;
-        return this.color == guildMember.color && this.hoistRoleId == guildMember.hoistRoleId && Intrinsics3.areEqual(this.roles, guildMember.roles) && Intrinsics3.areEqual(this.nick, guildMember.nick) && Intrinsics3.areEqual(this.premiumSince, guildMember.premiumSince) && this.pending == guildMember.pending && Intrinsics3.areEqual(this.joinedAt, guildMember.joinedAt) && this.guildId == guildMember.guildId && this.userId == guildMember.userId && Intrinsics3.areEqual(this.avatarHash, guildMember.avatarHash) && Intrinsics3.areEqual(this.bannerHash, guildMember.bannerHash) && Intrinsics3.areEqual(this.bio, guildMember.bio) && Intrinsics3.areEqual(this.communicationDisabledUntil, guildMember.communicationDisabledUntil);
+        return this.color == guildMember.color && this.hoistRoleId == guildMember.hoistRoleId && m.areEqual(this.roles, guildMember.roles) && m.areEqual(this.nick, guildMember.nick) && m.areEqual(this.premiumSince, guildMember.premiumSince) && this.pending == guildMember.pending && m.areEqual(this.joinedAt, guildMember.joinedAt) && this.guildId == guildMember.guildId && this.userId == guildMember.userId && m.areEqual(this.avatarHash, guildMember.avatarHash) && m.areEqual(this.bannerHash, guildMember.bannerHash) && m.areEqual(this.bio, guildMember.bio) && m.areEqual(this.communicationDisabledUntil, guildMember.communicationDisabledUntil);
     }
 
     public final String getAvatarHash() {
@@ -370,7 +370,7 @@ public final /* data */ class GuildMember {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildMember(color=");
+        StringBuilder sbU = a.U("GuildMember(color=");
         sbU.append(this.color);
         sbU.append(", hoistRoleId=");
         sbU.append(this.hoistRoleId);

@@ -9,7 +9,7 @@ import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
@@ -43,7 +43,7 @@ public interface SupportSQLiteOpenHelper extends Closeable {
         }
 
         public void onCorruption(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
-            StringBuilder sbU = outline.U("Corruption reported by sqlite on database: ");
+            StringBuilder sbU = a.U("Corruption reported by sqlite on database: ");
             sbU.append(supportSQLiteDatabase.getPath());
             Log.e(TAG, sbU.toString());
             if (!supportSQLiteDatabase.isOpen()) {
@@ -75,7 +75,7 @@ public interface SupportSQLiteOpenHelper extends Closeable {
         public abstract void onCreate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase);
 
         public void onDowngrade(@NonNull SupportSQLiteDatabase supportSQLiteDatabase, int i, int i2) {
-            throw new SQLiteException(outline.s("Can't downgrade database from version ", i, " to ", i2));
+            throw new SQLiteException(a.s("Can't downgrade database from version ", i, " to ", i2));
         }
 
         public void onOpen(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {

@@ -1,24 +1,24 @@
 package b.i.a.c.s2;
 
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
+import b.i.a.c.f3.p;
+import b.i.a.c.p1;
+import b.i.a.c.s2.h1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class r0 implements ListenerSet.a {
-    public final /* synthetic */ AnalyticsListener.a a;
+public final /* synthetic */ class r0 implements p.a {
+    public final /* synthetic */ h1.a a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final /* synthetic */ MediaMetadata f1101b;
+    public final /* synthetic */ p1 f1101b;
 
-    public /* synthetic */ r0(AnalyticsListener.a aVar, MediaMetadata mediaMetadata) {
+    public /* synthetic */ r0(h1.a aVar, p1 p1Var) {
         this.a = aVar;
-        this.f1101b = mediaMetadata;
+        this.f1101b = p1Var;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((AnalyticsListener) obj).o0();
+        ((h1) obj).o0();
     }
 }

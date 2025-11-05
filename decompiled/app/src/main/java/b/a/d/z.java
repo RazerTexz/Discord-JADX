@@ -1,18 +1,17 @@
 package b.a.d;
 
-import j0.k.Func1;
 import rx.Observable;
 
 /* compiled from: AppTransformers.kt */
 /* loaded from: classes.dex */
-public final class z<T, R> implements Func1<T, Observable<? extends R>> {
+public final class z<T, R> implements j0.k.b<T, Observable<? extends R>> {
     public final /* synthetic */ a0 j;
 
     public z(a0 a0Var) {
         this.j = a0Var;
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public Object call(Object obj) {
         return ((Boolean) this.j.j.invoke(obj)).booleanValue() ? (Observable) this.j.k.invoke(obj) : (Observable) this.j.l.invoke(obj);
     }

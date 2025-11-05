@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNewsLinkShared.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNewsLinkShared implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackSourceMetadata2 {
+public final /* data */ class TrackNewsLinkShared implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackSourceMetadataReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -26,13 +26,13 @@ public final /* data */ class TrackNewsLinkShared implements AnalyticsSchema, Tr
     private final Long recipientId = null;
     private final transient String analyticsSchemaTypeName = "news_link_shared";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -51,7 +51,7 @@ public final /* data */ class TrackNewsLinkShared implements AnalyticsSchema, Tr
             return false;
         }
         TrackNewsLinkShared trackNewsLinkShared = (TrackNewsLinkShared) other;
-        return Intrinsics3.areEqual(this.newsUrl, trackNewsLinkShared.newsUrl) && Intrinsics3.areEqual(this.newsId, trackNewsLinkShared.newsId) && Intrinsics3.areEqual(this.applicationId, trackNewsLinkShared.applicationId) && Intrinsics3.areEqual(this.applicationName, trackNewsLinkShared.applicationName) && Intrinsics3.areEqual(this.recipientId, trackNewsLinkShared.recipientId);
+        return m.areEqual(this.newsUrl, trackNewsLinkShared.newsUrl) && m.areEqual(this.newsId, trackNewsLinkShared.newsId) && m.areEqual(this.applicationId, trackNewsLinkShared.applicationId) && m.areEqual(this.applicationName, trackNewsLinkShared.applicationName) && m.areEqual(this.recipientId, trackNewsLinkShared.recipientId);
     }
 
     public int hashCode() {
@@ -68,7 +68,7 @@ public final /* data */ class TrackNewsLinkShared implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNewsLinkShared(newsUrl=");
+        StringBuilder sbU = a.U("TrackNewsLinkShared(newsUrl=");
         sbU.append(this.newsUrl);
         sbU.append(", newsId=");
         sbU.append(this.newsId);
@@ -77,6 +77,6 @@ public final /* data */ class TrackNewsLinkShared implements AnalyticsSchema, Tr
         sbU.append(", applicationName=");
         sbU.append(this.applicationName);
         sbU.append(", recipientId=");
-        return outline.G(sbU, this.recipientId, ")");
+        return a.G(sbU, this.recipientId, ")");
     }
 }

@@ -1,7 +1,7 @@
 package com.discord.api.presence;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: ClientStatuses.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class ClientStatuses {
             return false;
         }
         ClientStatuses clientStatuses = (ClientStatuses) other;
-        return Intrinsics3.areEqual(this.desktop, clientStatuses.desktop) && Intrinsics3.areEqual(this.web, clientStatuses.web) && Intrinsics3.areEqual(this.mobile, clientStatuses.mobile);
+        return m.areEqual(this.desktop, clientStatuses.desktop) && m.areEqual(this.web, clientStatuses.web) && m.areEqual(this.mobile, clientStatuses.mobile);
     }
 
     public int hashCode() {
@@ -52,7 +52,7 @@ public final /* data */ class ClientStatuses {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ClientStatuses(desktop=");
+        StringBuilder sbU = a.U("ClientStatuses(desktop=");
         sbU.append(this.desktop);
         sbU.append(", web=");
         sbU.append(this.web);

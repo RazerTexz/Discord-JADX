@@ -1,8 +1,8 @@
 package com.discord.api.report;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Map;
 
 /* compiled from: InAppReportsMenu.kt */
@@ -49,7 +49,7 @@ public final /* data */ class MenuAPIResponse {
             return false;
         }
         MenuAPIResponse menuAPIResponse = (MenuAPIResponse) other;
-        return Intrinsics3.areEqual(this.name, menuAPIResponse.name) && Intrinsics3.areEqual(this.variant, menuAPIResponse.variant) && Intrinsics3.areEqual(this.version, menuAPIResponse.version) && Intrinsics3.areEqual(this.language, menuAPIResponse.language) && this.success_node_id == menuAPIResponse.success_node_id && this.root_node_id == menuAPIResponse.root_node_id && Intrinsics3.areEqual(this.postback_url, menuAPIResponse.postback_url) && Intrinsics3.areEqual(this.nodes, menuAPIResponse.nodes);
+        return m.areEqual(this.name, menuAPIResponse.name) && m.areEqual(this.variant, menuAPIResponse.variant) && m.areEqual(this.version, menuAPIResponse.version) && m.areEqual(this.language, menuAPIResponse.language) && this.success_node_id == menuAPIResponse.success_node_id && this.root_node_id == menuAPIResponse.root_node_id && m.areEqual(this.postback_url, menuAPIResponse.postback_url) && m.areEqual(this.nodes, menuAPIResponse.nodes);
     }
 
     /* renamed from: f, reason: from getter */
@@ -78,7 +78,7 @@ public final /* data */ class MenuAPIResponse {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MenuAPIResponse(name=");
+        StringBuilder sbU = a.U("MenuAPIResponse(name=");
         sbU.append(this.name);
         sbU.append(", variant=");
         sbU.append(this.variant);
@@ -93,6 +93,6 @@ public final /* data */ class MenuAPIResponse {
         sbU.append(", postback_url=");
         sbU.append(this.postback_url);
         sbU.append(", nodes=");
-        return outline.M(sbU, this.nodes, ")");
+        return a.M(sbU, this.nodes, ")");
     }
 }

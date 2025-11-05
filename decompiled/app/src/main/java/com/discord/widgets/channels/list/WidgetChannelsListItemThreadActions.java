@@ -10,9 +10,8 @@ import android.widget.TextView;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.AppToast;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -34,14 +33,14 @@ import com.discord.utilities.rest.RestAPIAbortMessages;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.channels.list.WidgetThreadArchiveActions;
 import com.discord.widgets.channels.settings.WidgetChannelNotificationSettings;
 import com.discord.widgets.channels.settings.WidgetThreadSettings;
 import com.discord.widgets.settings.WidgetMuteSettingsSheet;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Locale;
 import java.util.Objects;
 import kotlin.Unit;
@@ -55,7 +54,7 @@ import rx.subscriptions.CompositeSubscription;
 /* compiled from: WidgetChannelsListItemThreadActions.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetChannelsListItemThreadActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelsListItemThreadActionsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelsListItemThreadActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelsListItemThreadActionsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -70,7 +69,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long channelId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetChannelsListItemThreadActions widgetChannelsListItemThreadActions = new WidgetChannelsListItemThreadActions();
             Bundle bundle = new Bundle();
             bundle.putLong(WidgetChannelsListItemThreadActions.INTENT_EXTRA_CHANNEL_ID, channelId);
@@ -107,10 +106,10 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             }
 
             public final Observable<Model> get(long channelId) {
-                Observable<R> observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(WidgetChannelsListItemThreadActions2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …        }\n              }");
+                Observable<R> observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(WidgetChannelsListItemThreadActions$Model$Companion$get$1.INSTANCE);
+                m.checkNotNullExpressionValue(observableY, "StoreStream\n            …        }\n              }");
                 Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -120,8 +119,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
 
         public Model(MeUser meUser, Channel channel, Guild guild, Channel channel2, int i, StoreThreadsJoined.JoinedThread joinedThread, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6) {
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(channel, "channel");
             this.meUser = meUser;
             this.channel = channel;
             this.guild = guild;
@@ -196,8 +195,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
 
         public final Model copy(MeUser meUser, Channel channel, Guild guild, Channel parentChannel, int notificationSetting, StoreThreadsJoined.JoinedThread joinedThread, boolean isActiveThread, boolean isModerator, boolean canManageThread, boolean canUnarchiveThread, boolean isMuted) {
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(channel, "channel");
             return new Model(meUser, channel, guild, parentChannel, notificationSetting, joinedThread, isActiveThread, isModerator, canManageThread, canUnarchiveThread, isMuted);
         }
 
@@ -209,7 +208,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.meUser, model.meUser) && Intrinsics3.areEqual(this.channel, model.channel) && Intrinsics3.areEqual(this.guild, model.guild) && Intrinsics3.areEqual(this.parentChannel, model.parentChannel) && this.notificationSetting == model.notificationSetting && Intrinsics3.areEqual(this.joinedThread, model.joinedThread) && this.isActiveThread == model.isActiveThread && this.isModerator == model.isModerator && this.canManageThread == model.canManageThread && this.canUnarchiveThread == model.canUnarchiveThread && this.isMuted == model.isMuted;
+            return m.areEqual(this.meUser, model.meUser) && m.areEqual(this.channel, model.channel) && m.areEqual(this.guild, model.guild) && m.areEqual(this.parentChannel, model.parentChannel) && this.notificationSetting == model.notificationSetting && m.areEqual(this.joinedThread, model.joinedThread) && this.isActiveThread == model.isActiveThread && this.isModerator == model.isModerator && this.canManageThread == model.canManageThread && this.canUnarchiveThread == model.canUnarchiveThread && this.isMuted == model.isMuted;
         }
 
         public final boolean getCanManageThread() {
@@ -302,7 +301,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(meUser=");
+            StringBuilder sbU = a.U("Model(meUser=");
             sbU.append(this.meUser);
             sbU.append(", channel=");
             sbU.append(this.channel);
@@ -323,13 +322,13 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             sbU.append(", canUnarchiveThread=");
             sbU.append(this.canUnarchiveThread);
             sbU.append(", isMuted=");
-            return outline.O(sbU, this.isMuted, ")");
+            return a.O(sbU, this.isMuted, ")");
         }
     }
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$bindSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -348,7 +347,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -365,14 +364,14 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             StoreStream.INSTANCE.getMessageAck().ack(this.$this_configureUI.getChannel().getId(), false, true);
         }
     }
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -389,18 +388,18 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             if (this.$this_configureUI.isMuted()) {
                 StoreUserGuildSettings userGuildSettings = StoreStream.INSTANCE.getUserGuildSettings();
                 Context contextRequireContext = WidgetChannelsListItemThreadActions.this.requireContext();
-                Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+                m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
                 StoreUserGuildSettings.setChannelMuted$default(userGuildSettings, contextRequireContext, this.$this_configureUI.getChannel().getId(), false, null, 8, null);
                 return;
             }
             WidgetMuteSettingsSheet.Companion companion = WidgetMuteSettingsSheet.INSTANCE;
             long id2 = this.$this_configureUI.getChannel().getId();
             FragmentManager parentFragmentManager = WidgetChannelsListItemThreadActions.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.showForChannel(id2, parentFragmentManager);
         }
     }
@@ -418,14 +417,14 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         public final void onClick(View view) {
             WidgetChannelNotificationSettings.Companion companion = WidgetChannelNotificationSettings.INSTANCE;
             Context contextRequireContext = WidgetChannelsListItemThreadActions.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetChannelNotificationSettings.Companion.launch$default(companion, contextRequireContext, this.$this_configureUI.getChannel().getId(), false, 4, null);
         }
     }
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -442,18 +441,18 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             WidgetThreadSettings.Companion companion = WidgetThreadSettings.INSTANCE;
             long id2 = this.$this_configureUI.getChannel().getId();
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+            m.checkNotNullExpressionValue(context, "it.context");
             companion.launch(id2, context);
         }
     }
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -470,10 +469,10 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             WidgetThreadArchiveActions.Companion companion = WidgetThreadArchiveActions.INSTANCE;
             FragmentManager parentFragmentManager = WidgetChannelsListItemThreadActions.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, this.$this_configureUI.getChannel().getId(), this.$this_configureUI.getChannel().getGuildId());
         }
     }
@@ -510,7 +509,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$8, reason: invalid class name */
-    public static final class AnonymousClass8 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass8 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -527,16 +526,16 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
-            AppToast.c(context, String.valueOf(this.$this_configureUI.getChannel().getId()), 0, 4);
+            m.checkNotNullExpressionValue(context, "it.context");
+            b.a.d.m.c(context, String.valueOf(this.$this_configureUI.getChannel().getId()), 0, 4);
         }
     }
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$leaveThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -555,7 +554,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$unarchiveThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -568,17 +567,17 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             Error.Response response = error.getResponse();
-            Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+            m.checkNotNullExpressionValue(response, "error.response");
             Integer abortCodeMessageResId = RestAPIAbortMessages.getAbortCodeMessageResId(response.getCode());
-            AppToast.g(WidgetChannelsListItemThreadActions.this.getContext(), abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.network_error_bad_request, 0, null, 12);
+            b.a.d.m.g(WidgetChannelsListItemThreadActions.this.getContext(), abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.network_error_bad_request, 0, null, 12);
         }
     }
 
     /* compiled from: WidgetChannelsListItemThreadActions.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$unarchiveThread$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Channel, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -591,14 +590,14 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "it");
+            m.checkNotNullParameter(channel, "it");
             WidgetChannelsListItemThreadActions.this.dismiss();
         }
     }
 
     public WidgetChannelsListItemThreadActions() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelsListItemThreadActions3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelsListItemThreadActions$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetChannelsListItemThreadActions widgetChannelsListItemThreadActions, Model model) throws Resources.NotFoundException {
@@ -622,86 +621,86 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
         if (model.getGuild() != null) {
             SimpleDraweeView simpleDraweeView = getBinding().i;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.channelsListItemThreadActionsIcon");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.channelsListItemThreadActionsIcon");
             IconUtils.setIcon$default((ImageView) simpleDraweeView, model.getGuild(), 0, (MGImages.ChangeDetector) null, false, 28, (Object) null);
         } else {
             SimpleDraweeView simpleDraweeView2 = getBinding().i;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.channelsListItemThreadActionsIcon");
+            m.checkNotNullExpressionValue(simpleDraweeView2, "binding.channelsListItemThreadActionsIcon");
             IconUtils.setIcon$default(simpleDraweeView2, model.getChannel(), 0, (MGImages.ChangeDetector) null, 12, (Object) null);
         }
         TextView textView = getBinding().m;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.channelsListItemThreadActionsTitle");
+        m.checkNotNullExpressionValue(textView, "binding.channelsListItemThreadActionsTitle");
         Channel channel = model.getChannel();
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
         textView.setText(ChannelUtils.e(channel, contextRequireContext, false, 2));
         TextView textView2 = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.channelsListItemThreadActionsMarkAsRead");
+        m.checkNotNullExpressionValue(textView2, "binding.channelsListItemThreadActionsMarkAsRead");
         setOnClickAndDismissListener(textView2, new AnonymousClass1(model));
         TextView textView3 = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.channelsListItemThreadActionsMute");
+        m.checkNotNullExpressionValue(textView3, "binding.channelsListItemThreadActionsMute");
         Channel channel2 = model.getChannel();
         boolean zIsMuted = model.isMuted();
         Context contextRequireContext2 = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
         textView3.setText(getMuteThreadText(channel2, zIsMuted, contextRequireContext2));
         TextView textView4 = getBinding().l;
         boolean zIsMuted2 = model.isMuted();
         Context contextRequireContext3 = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext3, "requireContext()");
+        m.checkNotNullExpressionValue(contextRequireContext3, "requireContext()");
         textView4.setCompoundDrawablesWithIntrinsicBounds(getMuteIconResId(zIsMuted2, contextRequireContext3), 0, 0, 0);
         TextView textView5 = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.channelsListItemThreadActionsMute");
+        m.checkNotNullExpressionValue(textView5, "binding.channelsListItemThreadActionsMute");
         setOnClickAndDismissListener(textView5, new AnonymousClass2(model));
         getBinding().d.setOnClickListener(new AnonymousClass3(model));
         View view = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(view, "binding.channelsListItemThreadActionsDivider");
+        m.checkNotNullExpressionValue(view, "binding.channelsListItemThreadActionsDivider");
         view.setVisibility(model.isActiveThread() ? 0 : 8);
         TextView textView6 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView6, "binding.channelsListItemThreadActionsEdit");
+        m.checkNotNullExpressionValue(textView6, "binding.channelsListItemThreadActionsEdit");
         textView6.setVisibility(model.getCanManageThread() ? 0 : 8);
         TextView textView7 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView7, "binding.channelsListItemThreadActionsEdit");
+        m.checkNotNullExpressionValue(textView7, "binding.channelsListItemThreadActionsEdit");
         setOnClickAndDismissListener(textView7, new AnonymousClass4(model));
         boolean z2 = model.getCanManageThread() && ((threadMetadata2 = model.getChannel().getThreadMetadata()) == null || !threadMetadata2.getArchived());
         LinearLayout linearLayout = getBinding().f2297b;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.channelsListItem…eadActionsArchiveSettings");
+        m.checkNotNullExpressionValue(linearLayout, "binding.channelsListItem…eadActionsArchiveSettings");
         linearLayout.setVisibility(z2 ? 0 : 8);
         if (z2) {
             ThreadUtils threadUtils = ThreadUtils.INSTANCE;
             Context contextRequireContext4 = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext4, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext4, "requireContext()");
             ThreadMetadata threadMetadata3 = model.getChannel().getThreadMetadata();
-            Intrinsics3.checkNotNull(threadMetadata3);
+            m.checkNotNull(threadMetadata3);
             String strAutoArchiveDurationName = threadUtils.autoArchiveDurationName(contextRequireContext4, threadMetadata3.getAutoArchiveDuration());
             TextView textView8 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView8, "binding.channelsListItem…sArchiveSettingsSubheader");
+            m.checkNotNullExpressionValue(textView8, "binding.channelsListItem…sArchiveSettingsSubheader");
             Locale locale = Locale.getDefault();
-            Intrinsics3.checkNotNullExpressionValue(locale, "Locale.getDefault()");
+            m.checkNotNullExpressionValue(locale, "Locale.getDefault()");
             Objects.requireNonNull(strAutoArchiveDurationName, "null cannot be cast to non-null type java.lang.String");
             String lowerCase = strAutoArchiveDurationName.toLowerCase(locale);
-            Intrinsics3.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
-            textView8.setText(FormatUtils.k(this, R.string.auto_archive_thread_after, new Object[]{lowerCase}, null, 4));
+            m.checkNotNullExpressionValue(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+            textView8.setText(b.k(this, R.string.auto_archive_thread_after, new Object[]{lowerCase}, null, 4));
         }
         LinearLayout linearLayout2 = getBinding().f2297b;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.channelsListItem…eadActionsArchiveSettings");
+        m.checkNotNullExpressionValue(linearLayout2, "binding.channelsListItem…eadActionsArchiveSettings");
         setOnClickAndDismissListener(linearLayout2, new AnonymousClass5(model));
         TextView textView9 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textView9, "binding.channelsListItemThreadActionsUnarchive");
+        m.checkNotNullExpressionValue(textView9, "binding.channelsListItemThreadActionsUnarchive");
         textView9.setVisibility(model.getCanUnarchiveThread() && (threadMetadata = model.getChannel().getThreadMetadata()) != null && threadMetadata.getArchived() ? 0 : 8);
         getBinding().n.setOnClickListener(new AnonymousClass6(model));
         TextView textView10 = getBinding().j;
-        Intrinsics3.checkNotNullExpressionValue(textView10, "binding.channelsListItemThreadActionsLeave");
+        m.checkNotNullExpressionValue(textView10, "binding.channelsListItemThreadActionsLeave");
         textView10.setVisibility(model.getJoinedThread() != null ? 0 : 8);
         getBinding().j.setOnClickListener(new AnonymousClass7(model));
         View view2 = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(view2, "binding.channelsListItem…adActionsDeveloperDivider");
+        m.checkNotNullExpressionValue(view2, "binding.channelsListItem…adActionsDeveloperDivider");
         view2.setVisibility(model.getIsDeveloper() ? 0 : 8);
         TextView textView11 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView11, "binding.channelsListItemThreadActionsCopyId");
+        m.checkNotNullExpressionValue(textView11, "binding.channelsListItemThreadActionsCopyId");
         textView11.setVisibility(model.getIsDeveloper() ? 0 : 8);
         TextView textView12 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView12, "binding.channelsListItemThreadActionsCopyId");
+        m.checkNotNullExpressionValue(textView12, "binding.channelsListItemThreadActionsCopyId");
         setOnClickAndDismissListener(textView12, new AnonymousClass8(model));
     }
 
@@ -714,7 +713,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
     }
 
     private final CharSequence getMuteThreadText(Channel channel, boolean isMuted, Context context) {
-        return isMuted ? FormatUtils.h(context, R.string.unmute, new Object[0], null, 4) : FormatUtils.h(context, R.string.mute_channel, new Object[]{ChannelUtils.e(channel, context, false, 2)}, null, 4);
+        return isMuted ? b.h(context, R.string.unmute, new Object[0], null, 4) : b.h(context, R.string.mute_channel, new Object[]{ChannelUtils.e(channel, context, false, 2)}, null, 4);
     }
 
     private final void leaveThread(Channel channel) {
@@ -734,7 +733,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet
     public void bindSubscriptions(CompositeSubscription compositeSubscription) {
-        Intrinsics3.checkNotNullParameter(compositeSubscription, "compositeSubscription");
+        m.checkNotNullParameter(compositeSubscription, "compositeSubscription");
         super.bindSubscriptions(compositeSubscription);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(getArgumentsOrDefault().getLong(INTENT_EXTRA_CHANNEL_ID, -1L)), this, null, 2, null), WidgetChannelsListItemThreadActions.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }

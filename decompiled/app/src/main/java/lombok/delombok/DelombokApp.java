@@ -149,12 +149,12 @@ public class DelombokApp extends LombokApp {
         public Enumeration<URL> getResources(String name) throws IOException {
             JarEntry entry = this.val$toolsJarFile.getJarEntry(name);
             Enumeration<URL> parent = super.getResources(name);
-            return entry == null ? super.getResources(name) : new C04351(parent, this.val$toolsJar, name);
+            return entry == null ? super.getResources(name) : new C06421(parent, this.val$toolsJar, name);
         }
 
         /* renamed from: lombok.delombok.DelombokApp$1$1, reason: invalid class name and collision with other inner class name */
         /* loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1$1.SCL.lombok */
-        class C04351 implements Enumeration<URL> {
+        class C06421 implements Enumeration<URL> {
             private boolean first = false;
             private final /* synthetic */ Enumeration val$parent;
             private final /* synthetic */ File val$toolsJar;
@@ -165,7 +165,7 @@ public class DelombokApp extends LombokApp {
                 return nextElement();
             }
 
-            C04351(Enumeration enumeration, File file, String str) {
+            C06421(Enumeration enumeration, File file, String str) {
                 this.val$parent = enumeration;
                 this.val$toolsJar = file;
                 this.val$name = str;

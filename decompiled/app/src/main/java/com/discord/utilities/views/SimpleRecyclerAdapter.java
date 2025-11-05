@@ -15,8 +15,8 @@ import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.utilities.views.SimpleRecyclerAdapter.ViewHolder;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.jvm.functions.Function2;
@@ -37,14 +37,14 @@ public class SimpleRecyclerAdapter<T, VH extends ViewHolder<T>> extends Recycler
         }
 
         public final void addThemedDivider(RecyclerView recyclerView) throws Resources.NotFoundException {
-            Intrinsics3.checkNotNullParameter(recyclerView, "$this$addThemedDivider");
+            m.checkNotNullParameter(recyclerView, "$this$addThemedDivider");
             int themedDrawableRes$default = DrawableCompat.getThemedDrawableRes$default(recyclerView, R.attr.colorPrimaryDivider, 0, 2, (Object) null);
             Resources resources = recyclerView.getResources();
             Context context = recyclerView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            m.checkNotNullExpressionValue(context, "context");
             Drawable drawable = ResourcesCompat.getDrawable(resources, themedDrawableRes$default, context.getTheme());
             if (drawable != null) {
-                Intrinsics3.checkNotNullExpressionValue(drawable, "ResourcesCompat.getDrawa… context.theme) ?: return");
+                m.checkNotNullExpressionValue(drawable, "ResourcesCompat.getDrawa… context.theme) ?: return");
                 Context context2 = recyclerView.getContext();
                 RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
                 Objects.requireNonNull(layoutManager, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
@@ -64,14 +64,14 @@ public class SimpleRecyclerAdapter<T, VH extends ViewHolder<T>> extends Recycler
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder(View view) {
             super(view);
-            Intrinsics3.checkNotNullParameter(view, "itemView");
+            m.checkNotNullParameter(view, "itemView");
         }
 
         public abstract void bind(T data);
     }
 
     public /* synthetic */ SimpleRecyclerAdapter(List list, Function2 function2, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i & 1) != 0 ? Collections2.emptyList() : list, function2);
+        this((i & 1) != 0 ? n.emptyList() : list, function2);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -90,30 +90,30 @@ public class SimpleRecyclerAdapter<T, VH extends ViewHolder<T>> extends Recycler
     }
 
     public final void setData(List<? extends T> data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         this.data = data;
         notifyDataSetChanged();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public SimpleRecyclerAdapter(List<? extends T> list, Function2<? super LayoutInflater, ? super ViewGroup, ? extends VH> function2) {
-        Intrinsics3.checkNotNullParameter(list, "data");
-        Intrinsics3.checkNotNullParameter(function2, "createViewHolder");
+        m.checkNotNullParameter(list, "data");
+        m.checkNotNullParameter(function2, "createViewHolder");
         this.data = list;
         this.createViewHolder = function2;
     }
 
     public void onBindViewHolder(VH holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         holder.bind(this.data.get(position));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public VH onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         Function2<LayoutInflater, ViewGroup, VH> function2 = this.createViewHolder;
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
-        Intrinsics3.checkNotNullExpressionValue(layoutInflaterFrom, "LayoutInflater.from(parent.context)");
+        m.checkNotNullExpressionValue(layoutInflaterFrom, "LayoutInflater.from(parent.context)");
         return function2.invoke(layoutInflaterFrom, parent);
     }
 }

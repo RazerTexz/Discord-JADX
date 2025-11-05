@@ -1,6 +1,6 @@
 package b.i.a.c.e3;
 
-import b.i.a.c.e3.SlidingPercentile;
+import b.i.a.c.e3.x;
 import java.util.Comparator;
 
 /* compiled from: lambda */
@@ -10,7 +10,7 @@ public final /* synthetic */ class c implements Comparator {
 
     @Override // java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        int i = SlidingPercentile.a;
-        return Float.compare(((SlidingPercentile.b) obj).c, ((SlidingPercentile.b) obj2).c);
+        int i = x.a;
+        return Float.compare(((x.b) obj).c, ((x.b) obj2).c);
     }
 }

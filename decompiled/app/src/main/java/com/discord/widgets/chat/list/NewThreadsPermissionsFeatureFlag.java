@@ -7,8 +7,8 @@ import com.discord.models.guild.Guild;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
@@ -20,7 +20,7 @@ public final class NewThreadsPermissionsFeatureFlag {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(NewThreadsPermissionsFeatureFlag2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(NewThreadsPermissionsFeatureFlag$Companion$INSTANCE$2.INSTANCE);
     private final StoreExperiments storeExperiments;
     private final StoreGuilds storeGuilds;
 
@@ -62,8 +62,8 @@ public final class NewThreadsPermissionsFeatureFlag {
     }
 
     public NewThreadsPermissionsFeatureFlag(StoreExperiments storeExperiments, StoreGuilds storeGuilds) {
-        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeExperiments, "storeExperiments");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
         this.storeExperiments = storeExperiments;
         this.storeGuilds = storeGuilds;
     }
@@ -82,7 +82,7 @@ public final class NewThreadsPermissionsFeatureFlag {
 
     public final Observable<Boolean> observeEnabled(long guildId) {
         Observable<Boolean> observableJ = Observable.j(this.storeExperiments.observeGuildExperiment("2021-08_threads_permissions", guildId, true), this.storeGuilds.observeGuild(guildId), new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…dExperiment, guild)\n    }");
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…dExperiment, guild)\n    }");
         return observableJ;
     }
 

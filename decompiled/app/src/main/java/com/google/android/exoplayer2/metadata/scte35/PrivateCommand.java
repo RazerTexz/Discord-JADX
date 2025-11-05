@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.metadata.scte35;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
 
 /* loaded from: classes3.dex */
 public final class PrivateCommand extends SpliceCommand {
@@ -40,7 +40,7 @@ public final class PrivateCommand extends SpliceCommand {
         this.j = parcel.readLong();
         this.k = parcel.readLong();
         byte[] bArrCreateByteArray = parcel.createByteArray();
-        int i = Util2.a;
+        int i = e0.a;
         this.l = bArrCreateByteArray;
     }
 }

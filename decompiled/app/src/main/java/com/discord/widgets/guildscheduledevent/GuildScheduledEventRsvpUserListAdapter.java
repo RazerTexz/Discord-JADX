@@ -17,7 +17,7 @@ import com.discord.utilities.user.UserUtils;
 import com.discord.views.StatusView;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventRsvpUserListItem;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -46,7 +46,7 @@ public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdap
                         TextView textView2 = (TextView) view.findViewById(R.id.user_profile_adapter_item_user_name);
                         if (textView2 != null) {
                             GuildScheduledEventRsvpUserListAdapterItemBinding guildScheduledEventRsvpUserListAdapterItemBinding = new GuildScheduledEventRsvpUserListAdapterItemBinding((RelativeLayout) view, simpleDraweeView, textView, statusView, textView2);
-                            Intrinsics3.checkNotNullExpressionValue(guildScheduledEventRsvpUserListAdapterItemBinding, "GuildScheduledEventRsvpU…temBinding.bind(itemView)");
+                            m.checkNotNullExpressionValue(guildScheduledEventRsvpUserListAdapterItemBinding, "GuildScheduledEventRsvpU…temBinding.bind(itemView)");
                             this.binding = guildScheduledEventRsvpUserListAdapterItemBinding;
                             return;
                         }
@@ -68,22 +68,22 @@ public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdap
         @SuppressLint({"SetTextI18n"})
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GuildScheduledEventRsvpUserListItem data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             GuildScheduledEventRsvpUserListItem.RsvpUser rsvpUser = (GuildScheduledEventRsvpUserListItem.RsvpUser) data;
-            this.itemView.setOnClickListener(new GuildScheduledEventRsvpUserListAdapter2(this, rsvpUser));
+            this.itemView.setOnClickListener(new GuildScheduledEventRsvpUserListAdapter$UserViewHolder$onConfigure$1(this, rsvpUser));
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.userProfileAdapterItemUserName");
+            m.checkNotNullExpressionValue(textView, "binding.userProfileAdapterItemUserName");
             textView.setText(rsvpUser.getDisplayName());
             if (rsvpUser.getNickname() == null) {
                 TextView textView2 = this.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.userProfileAdapterItemDiscriminator");
+                m.checkNotNullExpressionValue(textView2, "binding.userProfileAdapterItemDiscriminator");
                 textView2.setText(UserUtils.INSTANCE.padDiscriminator(rsvpUser.getDiscriminator()));
             }
             String forGuildMember$default = rsvpUser.getGuildAvatar() != null ? IconUtils.getForGuildMember$default(IconUtils.INSTANCE, rsvpUser.getGuildAvatar(), rsvpUser.getGuildId(), rsvpUser.getUserId(), null, false, 24, null) : IconUtils.getForUser$default(Long.valueOf(rsvpUser.getUserId()), rsvpUser.getUserAvatar(), null, false, null, 28, null);
             if (forGuildMember$default != null) {
                 SimpleDraweeView simpleDraweeView = this.binding.f2122b;
-                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.userProfileAdapterItemAvatar");
+                m.checkNotNullExpressionValue(simpleDraweeView, "binding.userProfileAdapterItemAvatar");
                 IconUtils.setIcon$default(simpleDraweeView, forGuildMember$default, R.dimen.avatar_size_standard, (Function1) null, (MGImages.ChangeDetector) null, 24, (Object) null);
             }
         }
@@ -93,8 +93,8 @@ public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdap
     /* JADX WARN: Multi-variable type inference failed */
     public GuildScheduledEventRsvpUserListAdapter(RecyclerView recyclerView, Function1<? super Long, Unit> function1) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
-        Intrinsics3.checkNotNullParameter(function1, "onItemClick");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(function1, "onItemClick");
         this.onItemClick = function1;
     }
 
@@ -109,7 +109,7 @@ public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdap
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, GuildScheduledEventRsvpUserListItem> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new UserViewHolder();
         }

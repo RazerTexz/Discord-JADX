@@ -5,7 +5,7 @@ import android.media.AudioRecord;
 import android.media.AudioTrack;
 import android.os.Build;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.webrtc.ContextUtils;
@@ -63,7 +63,7 @@ public class WebRtcAudioManager {
             public void run() {
                 int mode = VolumeLogger.access$000(VolumeLogger.this).getMode();
                 if (mode == 1) {
-                    StringBuilder sbU = outline.U("STREAM_RING stream volume: ");
+                    StringBuilder sbU = a.U("STREAM_RING stream volume: ");
                     sbU.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(2));
                     sbU.append(" (max=");
                     sbU.append(this.maxRingVolume);
@@ -72,7 +72,7 @@ public class WebRtcAudioManager {
                     return;
                 }
                 if (mode == 3) {
-                    StringBuilder sbU2 = outline.U("VOICE_CALL stream volume: ");
+                    StringBuilder sbU2 = a.U("VOICE_CALL stream volume: ");
                     sbU2.append(VolumeLogger.access$000(VolumeLogger.this).getStreamVolume(0));
                     sbU2.append(" (max=");
                     sbU2.append(this.maxVoiceCallVolume);
@@ -110,7 +110,7 @@ public class WebRtcAudioManager {
     }
 
     public WebRtcAudioManager(long j) {
-        StringBuilder sbU = outline.U("ctor");
+        StringBuilder sbU = a.U("ctor");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
         this.nativeAudioManager = j;
@@ -129,7 +129,7 @@ public class WebRtcAudioManager {
     }
 
     private void dispose() {
-        StringBuilder sbU = outline.U("dispose");
+        StringBuilder sbU = a.U("dispose");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
         if (this.initialized) {
@@ -165,7 +165,7 @@ public class WebRtcAudioManager {
             return 8000;
         }
         if (WebRtcAudioUtils.isDefaultSampleRateOverridden()) {
-            StringBuilder sbU = outline.U("Default sample rate is overriden to ");
+            StringBuilder sbU = a.U("Default sample rate is overriden to ");
             sbU.append(WebRtcAudioUtils.getDefaultSampleRateHz());
             sbU.append(" Hz");
             Logging.d(TAG, sbU.toString());
@@ -194,13 +194,13 @@ public class WebRtcAudioManager {
     }
 
     private boolean init() {
-        StringBuilder sbU = outline.U("init");
+        StringBuilder sbU = a.U("init");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
         if (this.initialized) {
             return true;
         }
-        StringBuilder sbU2 = outline.U("audio mode is: ");
+        StringBuilder sbU2 = a.U("audio mode is: ");
         sbU2.append(WebRtcAudioUtils.modeToString(this.audioManager.getMode()));
         Logging.d(TAG, sbU2.toString());
         this.initialized = true;

@@ -17,25 +17,25 @@ public class a {
 
     /* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
     /* renamed from: b.i.a.f.i.a.a$a, reason: collision with other inner class name */
-    public interface InterfaceC0041a extends z5 {
+    public interface InterfaceC0118a extends z5 {
     }
 
     public a(g gVar) {
         this.a = gVar;
     }
 
-    public void a(InterfaceC0041a interfaceC0041a) {
+    public void a(InterfaceC0118a interfaceC0118a) {
         g gVar = this.a;
         Objects.requireNonNull(gVar);
         synchronized (gVar.g) {
             for (int i = 0; i < gVar.g.size(); i++) {
-                if (interfaceC0041a.equals(gVar.g.get(i).first)) {
+                if (interfaceC0118a.equals(gVar.g.get(i).first)) {
                     Log.w(gVar.c, "OnEventListener already registered.");
                     return;
                 }
             }
-            g.c cVar = new g.c(interfaceC0041a);
-            gVar.g.add(new Pair<>(interfaceC0041a, cVar));
+            g.c cVar = new g.c(interfaceC0118a);
+            gVar.g.add(new Pair<>(interfaceC0118a, cVar));
             if (gVar.j != null) {
                 try {
                     gVar.j.registerOnMeasurementEventListener(cVar);

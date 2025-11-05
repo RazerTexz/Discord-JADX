@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLibraryViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLibraryViewed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackLibraryViewed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final Long numApplicationsTotal = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackLibraryViewed implements AnalyticsSchema, Tra
             return false;
         }
         TrackLibraryViewed trackLibraryViewed = (TrackLibraryViewed) other;
-        return Intrinsics3.areEqual(this.loadId, trackLibraryViewed.loadId) && Intrinsics3.areEqual(this.numApplicationsTotal, trackLibraryViewed.numApplicationsTotal) && Intrinsics3.areEqual(this.numApplicationsBattlenet, trackLibraryViewed.numApplicationsBattlenet) && Intrinsics3.areEqual(this.numApplicationsDiscord, trackLibraryViewed.numApplicationsDiscord) && Intrinsics3.areEqual(this.numApplicationsSteam, trackLibraryViewed.numApplicationsSteam) && Intrinsics3.areEqual(this.numApplicationsTwitch, trackLibraryViewed.numApplicationsTwitch) && Intrinsics3.areEqual(this.numApplicationsUplay, trackLibraryViewed.numApplicationsUplay) && Intrinsics3.areEqual(this.numApplicationsOrigin, trackLibraryViewed.numApplicationsOrigin) && Intrinsics3.areEqual(this.numApplicationsGog, trackLibraryViewed.numApplicationsGog) && Intrinsics3.areEqual(this.numApplicationsEpic, trackLibraryViewed.numApplicationsEpic);
+        return m.areEqual(this.loadId, trackLibraryViewed.loadId) && m.areEqual(this.numApplicationsTotal, trackLibraryViewed.numApplicationsTotal) && m.areEqual(this.numApplicationsBattlenet, trackLibraryViewed.numApplicationsBattlenet) && m.areEqual(this.numApplicationsDiscord, trackLibraryViewed.numApplicationsDiscord) && m.areEqual(this.numApplicationsSteam, trackLibraryViewed.numApplicationsSteam) && m.areEqual(this.numApplicationsTwitch, trackLibraryViewed.numApplicationsTwitch) && m.areEqual(this.numApplicationsUplay, trackLibraryViewed.numApplicationsUplay) && m.areEqual(this.numApplicationsOrigin, trackLibraryViewed.numApplicationsOrigin) && m.areEqual(this.numApplicationsGog, trackLibraryViewed.numApplicationsGog) && m.areEqual(this.numApplicationsEpic, trackLibraryViewed.numApplicationsEpic);
     }
 
     public int hashCode() {
@@ -63,7 +63,7 @@ public final /* data */ class TrackLibraryViewed implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLibraryViewed(loadId=");
+        StringBuilder sbU = a.U("TrackLibraryViewed(loadId=");
         sbU.append(this.loadId);
         sbU.append(", numApplicationsTotal=");
         sbU.append(this.numApplicationsTotal);
@@ -82,6 +82,6 @@ public final /* data */ class TrackLibraryViewed implements AnalyticsSchema, Tra
         sbU.append(", numApplicationsGog=");
         sbU.append(this.numApplicationsGog);
         sbU.append(", numApplicationsEpic=");
-        return outline.G(sbU, this.numApplicationsEpic, ")");
+        return a.G(sbU, this.numApplicationsEpic, ")");
     }
 }

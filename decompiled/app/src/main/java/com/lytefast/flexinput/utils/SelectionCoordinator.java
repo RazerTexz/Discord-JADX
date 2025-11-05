@@ -4,11 +4,10 @@ import androidx.collection.ArrayMap;
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.recyclerview.widget.RecyclerView;
-import b.b.a.g.SelectionCoordinator2;
-import b.d.b.a.outline;
+import b.b.a.g.b;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
-import d0.z.d.TypeIntrinsics;
+import d0.z.d.e0;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
@@ -40,7 +39,7 @@ public class SelectionCoordinator<I, T extends I> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RestorationException(String str) {
             super(str);
-            Intrinsics3.checkNotNullParameter(str, NotificationCompat.CATEGORY_MESSAGE);
+            m.checkNotNullParameter(str, NotificationCompat.CATEGORY_MESSAGE);
         }
     }
 
@@ -64,7 +63,7 @@ public class SelectionCoordinator<I, T extends I> {
                 return false;
             }
             a aVar = (a) obj;
-            return Intrinsics3.areEqual(this.a, aVar.a) && this.f3171b == aVar.f3171b;
+            return m.areEqual(this.a, aVar.a) && this.f3171b == aVar.f3171b;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -80,10 +79,10 @@ public class SelectionCoordinator<I, T extends I> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("SelectionEvent(item=");
+            StringBuilder sbU = b.d.b.a.a.U("SelectionEvent(item=");
             sbU.append(this.a);
             sbU.append(", isSelected=");
-            return outline.O(sbU, this.f3171b, ")");
+            return b.d.b.a.a.O(sbU, this.f3171b, ")");
         }
     }
 
@@ -93,11 +92,11 @@ public class SelectionCoordinator<I, T extends I> {
 
     public SelectionCoordinator(ArrayMap arrayMap, ItemSelectionListener itemSelectionListener, int i) {
         ArrayMap<T, Integer> arrayMap2 = (i & 1) != 0 ? new ArrayMap<>(4) : null;
-        SelectionCoordinator2 selectionCoordinator2 = (i & 2) != 0 ? new SelectionCoordinator2() : null;
-        Intrinsics3.checkNotNullParameter(arrayMap2, "selectedItemPositionMap");
-        Intrinsics3.checkNotNullParameter(selectionCoordinator2, "itemSelectionListener");
+        b bVar = (i & 2) != 0 ? new b() : null;
+        m.checkNotNullParameter(arrayMap2, "selectedItemPositionMap");
+        m.checkNotNullParameter(bVar, "itemSelectionListener");
         this.selectedItemPositionMap = arrayMap2;
-        this.itemSelectionListener = selectionCoordinator2;
+        this.itemSelectionListener = bVar;
     }
 
     public final boolean a(T item, int position) {
@@ -113,7 +112,7 @@ public class SelectionCoordinator<I, T extends I> {
     }
 
     public final void b(ArrayList<? extends I> selectedItems) throws RestorationException {
-        Intrinsics3.checkNotNullParameter(selectedItems, "selectedItems");
+        m.checkNotNullParameter(selectedItems, "selectedItems");
         if (this.adapter != null) {
             throw new RestorationException("cannot restoreSelections after adapter set: prevents mismatches");
         }
@@ -141,7 +140,7 @@ public class SelectionCoordinator<I, T extends I> {
     public final boolean d(I item) {
         ArrayMap<T, Integer> arrayMap = this.selectedItemPositionMap;
         Objects.requireNonNull(arrayMap, "null cannot be cast to non-null type kotlin.collections.MutableMap<K, V>");
-        Integer num = (Integer) TypeIntrinsics.asMutableMap(arrayMap).remove(item);
+        Integer num = (Integer) e0.asMutableMap(arrayMap).remove(item);
         if (num == null) {
             return false;
         }

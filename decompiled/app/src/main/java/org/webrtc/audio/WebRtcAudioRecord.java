@@ -11,8 +11,7 @@ import android.os.Build;
 import android.os.Process;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import b.d.b.a.outline;
-import h0.c.u0.a;
+import b.d.b.a.a;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
@@ -138,7 +137,7 @@ public class WebRtcAudioRecord {
                     WebRtcAudioRecord.access$200(WebRtcAudioRecord.this, 1);
                 }
             } catch (IllegalStateException e) {
-                StringBuilder sbU = outline.U("AudioRecord.stop failed: ");
+                StringBuilder sbU = a.U("AudioRecord.stop failed: ");
                 sbU.append(e.getMessage());
                 Logging.e(WebRtcAudioRecord.TAG, sbU.toString());
             }
@@ -230,7 +229,7 @@ public class WebRtcAudioRecord {
     }
 
     private void doAudioRecordStateCallback(int i) {
-        StringBuilder sbU = outline.U("doAudioRecordStateCallback: ");
+        StringBuilder sbU = a.U("doAudioRecordStateCallback: ");
         sbU.append(audioStateToString(i));
         Logging.d(TAG, sbU.toString());
         JavaAudioDeviceModule.AudioRecordStateCallback audioRecordStateCallback = this.stateCallback;
@@ -264,7 +263,7 @@ public class WebRtcAudioRecord {
                 i2 = 4;
                 if (i != 4) {
                     if (i != 13) {
-                        throw new IllegalArgumentException(outline.q("Bad audio format ", i));
+                        throw new IllegalArgumentException(a.q("Bad audio format ", i));
                     }
                 }
             }
@@ -287,7 +286,7 @@ public class WebRtcAudioRecord {
             reportWebRtcAudioRecordInitError("ByteBuffer does not have backing array.");
             return -1;
         }
-        StringBuilder sbU = outline.U("byteBuffer.capacity: ");
+        StringBuilder sbU = a.U("byteBuffer.capacity: ");
         sbU.append(this.byteBuffer.capacity());
         Logging.d(TAG, sbU.toString());
         this.emptyBytes = new byte[this.byteBuffer.capacity()];
@@ -295,7 +294,7 @@ public class WebRtcAudioRecord {
         int iChannelCountToConfiguration = channelCountToConfiguration(i2);
         int minBufferSize = AudioRecord.getMinBufferSize(i, iChannelCountToConfiguration, this.audioFormat);
         if (minBufferSize == -1 || minBufferSize == -2) {
-            reportWebRtcAudioRecordInitError(outline.q("AudioRecord.getMinBufferSize failed: ", minBufferSize));
+            reportWebRtcAudioRecordInitError(a.q("AudioRecord.getMinBufferSize failed: ", minBufferSize));
             return -1;
         }
         Logging.d(TAG, "AudioRecord.getMinBufferSize: " + minBufferSize);
@@ -390,7 +389,7 @@ public class WebRtcAudioRecord {
     }
 
     private void logMainParameters() {
-        StringBuilder sbU = outline.U("AudioRecord: session ID: ");
+        StringBuilder sbU = a.U("AudioRecord: session ID: ");
         sbU.append(this.audioRecord.getAudioSessionId());
         sbU.append(", channels: ");
         sbU.append(this.audioRecord.getChannelCount());
@@ -402,7 +401,7 @@ public class WebRtcAudioRecord {
     @TargetApi(23)
     private void logMainParametersExtended() {
         if (Build.VERSION.SDK_INT >= 23) {
-            StringBuilder sbU = outline.U("AudioRecord: buffer size in frames: ");
+            StringBuilder sbU = a.U("AudioRecord: buffer size in frames: ");
             sbU.append(this.audioRecord.getBufferSizeInFrames());
             Logging.d(TAG, sbU.toString());
         }
@@ -481,7 +480,7 @@ public class WebRtcAudioRecord {
         if (Build.VERSION.SDK_INT < 24) {
             return;
         }
-        a aVar = new a(this, audioRecord);
+        h0.c.u0.a aVar = new h0.c.u0.a(this, audioRecord);
         ScheduledFuture<String> scheduledFuture = this.future;
         if (scheduledFuture != null && !scheduledFuture.isDone()) {
             this.future.cancel(true);
@@ -498,7 +497,7 @@ public class WebRtcAudioRecord {
             this.audioRecord.startRecording();
             if (this.audioRecord.getRecordingState() != 3) {
                 JavaAudioDeviceModule.AudioRecordStartErrorCode audioRecordStartErrorCode = JavaAudioDeviceModule.AudioRecordStartErrorCode.AUDIO_RECORD_START_STATE_MISMATCH;
-                StringBuilder sbU = outline.U("AudioRecord.startRecording failed - incorrect state: ");
+                StringBuilder sbU = a.U("AudioRecord.startRecording failed - incorrect state: ");
                 sbU.append(this.audioRecord.getRecordingState());
                 reportWebRtcAudioRecordStartError(audioRecordStartErrorCode, sbU.toString());
                 return false;
@@ -510,7 +509,7 @@ public class WebRtcAudioRecord {
             return true;
         } catch (IllegalStateException e) {
             JavaAudioDeviceModule.AudioRecordStartErrorCode audioRecordStartErrorCode2 = JavaAudioDeviceModule.AudioRecordStartErrorCode.AUDIO_RECORD_START_EXCEPTION;
-            StringBuilder sbU2 = outline.U("AudioRecord.startRecording failed: ");
+            StringBuilder sbU2 = a.U("AudioRecord.startRecording failed: ");
             sbU2.append(e.getMessage());
             reportWebRtcAudioRecordStartError(audioRecordStartErrorCode2, sbU2.toString());
             return false;
@@ -602,7 +601,7 @@ public class WebRtcAudioRecord {
     @RequiresApi(23)
     @TargetApi(23)
     public void setPreferredDevice(@Nullable AudioDeviceInfo audioDeviceInfo) {
-        StringBuilder sbU = outline.U("setPreferredDevice ");
+        StringBuilder sbU = a.U("setPreferredDevice ");
         sbU.append(audioDeviceInfo != null ? Integer.valueOf(audioDeviceInfo.getId()) : null);
         Logging.d(TAG, sbU.toString());
         this.preferredDevice = audioDeviceInfo;
@@ -632,7 +631,7 @@ public class WebRtcAudioRecord {
         this.audioSamplesReadyCallback = samplesReadyCallback;
         this.isAcousticEchoCancelerSupported = z2;
         this.isNoiseSuppressorSupported = z3;
-        StringBuilder sbU = outline.U("ctor");
+        StringBuilder sbU = a.U("ctor");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
     }

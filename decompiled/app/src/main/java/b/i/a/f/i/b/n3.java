@@ -7,7 +7,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
 import androidx.core.os.EnvironmentCompat;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.h.l.ib;
 import b.i.a.f.h.l.lb;
 import com.google.android.gms.common.R;
@@ -94,7 +93,7 @@ public final class n3 extends a5 {
         this.g = 0L;
         Context context = this.a.f1570b;
         Object obj = b.i.a.f.e.h.j.h.a;
-        AnimatableValueParser.z(context, "Context must not be null.");
+        b.c.a.a0.d.z(context, "Context must not be null.");
         synchronized (b.i.a.f.e.h.j.h.a) {
             if (b.i.a.f.e.h.j.h.f1365b == null) {
                 b.i.a.f.e.h.j.h.f1365b = new b.i.a.f.e.h.j.h(context);
@@ -187,7 +186,7 @@ public final class n3 extends a5 {
         this.i = null;
         c cVar = this.a.h;
         Objects.requireNonNull(cVar);
-        AnimatableValueParser.w("analytics.safelisted_events");
+        b.c.a.a0.d.w("analytics.safelisted_events");
         Bundle bundleD = cVar.D();
         if (bundleD != null) {
             if (bundleD.containsKey("analytics.safelisted_events")) {

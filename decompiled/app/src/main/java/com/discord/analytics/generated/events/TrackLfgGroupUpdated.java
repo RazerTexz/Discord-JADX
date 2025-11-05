@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackLfgGroup;
-import com.discord.analytics.generated.traits.TrackLfgGroup2;
+import com.discord.analytics.generated.traits.TrackLfgGroupReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLfgGroupUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLfgGroupUpdated implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackLfgGroup2 {
+public final /* data */ class TrackLfgGroupUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackLfgGroupReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackLfgGroup trackLfgGroup;
@@ -36,7 +36,7 @@ public final /* data */ class TrackLfgGroupUpdated implements AnalyticsSchema, T
             return false;
         }
         TrackLfgGroupUpdated trackLfgGroupUpdated = (TrackLfgGroupUpdated) other;
-        return Intrinsics3.areEqual(this.updatedSize, trackLfgGroupUpdated.updatedSize) && Intrinsics3.areEqual(this.previousSize, trackLfgGroupUpdated.previousSize) && Intrinsics3.areEqual(this.updatedTitle, trackLfgGroupUpdated.updatedTitle) && Intrinsics3.areEqual(this.updatedDescription, trackLfgGroupUpdated.updatedDescription);
+        return m.areEqual(this.updatedSize, trackLfgGroupUpdated.updatedSize) && m.areEqual(this.previousSize, trackLfgGroupUpdated.previousSize) && m.areEqual(this.updatedTitle, trackLfgGroupUpdated.updatedTitle) && m.areEqual(this.updatedDescription, trackLfgGroupUpdated.updatedDescription);
     }
 
     public int hashCode() {
@@ -51,13 +51,13 @@ public final /* data */ class TrackLfgGroupUpdated implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLfgGroupUpdated(updatedSize=");
+        StringBuilder sbU = a.U("TrackLfgGroupUpdated(updatedSize=");
         sbU.append(this.updatedSize);
         sbU.append(", previousSize=");
         sbU.append(this.previousSize);
         sbU.append(", updatedTitle=");
         sbU.append(this.updatedTitle);
         sbU.append(", updatedDescription=");
-        return outline.D(sbU, this.updatedDescription, ")");
+        return a.D(sbU, this.updatedDescription, ")");
     }
 }

@@ -2,14 +2,13 @@ package b.i.a.f.f;
 
 import android.os.IBinder;
 import androidx.annotation.RecentlyNonNull;
-import b.d.b.a.outline;
 import b.i.a.f.f.a;
 import java.lang.reflect.Field;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
 /* loaded from: classes3.dex */
-public final class b<T> extends a.AbstractBinderC0040a {
+public final class b<T> extends a.AbstractBinderC0117a {
     public final T a;
 
     public b(T t) {
@@ -32,7 +31,7 @@ public final class b<T> extends a.AbstractBinderC0040a {
             }
         }
         if (i != 1) {
-            throw new IllegalArgumentException(outline.g(64, "Unexpected number of IObjectWrapper declared fields: ", declaredFields.length));
+            throw new IllegalArgumentException(b.d.b.a.a.g(64, "Unexpected number of IObjectWrapper declared fields: ", declaredFields.length));
         }
         Objects.requireNonNull(field, "null reference");
         if (field.isAccessible()) {

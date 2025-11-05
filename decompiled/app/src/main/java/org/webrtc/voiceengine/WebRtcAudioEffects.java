@@ -5,7 +5,7 @@ import android.media.audiofx.AudioEffect;
 import android.media.audiofx.NoiseSuppressor;
 import android.os.Build;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.List;
 import java.util.UUID;
 import org.webrtc.Logging;
@@ -29,7 +29,7 @@ public class WebRtcAudioEffects {
     private boolean shouldEnableNs;
 
     private WebRtcAudioEffects() {
-        StringBuilder sbU = outline.U("ctor");
+        StringBuilder sbU = a.U("ctor");
         sbU.append(WebRtcAudioUtils.getThreadInfo());
         Logging.d(TAG, sbU.toString());
     }
@@ -151,7 +151,7 @@ public class WebRtcAudioEffects {
                 if (this.aec.setEnabled(z2) != 0) {
                     Logging.e(TAG, "Failed to set the AcousticEchoCanceler state");
                 }
-                StringBuilder sbU = outline.U("AcousticEchoCanceler: was ");
+                StringBuilder sbU = a.U("AcousticEchoCanceler: was ");
                 sbU.append(enabled ? "enabled" : "disabled");
                 sbU.append(", enable: ");
                 sbU.append(z2);
@@ -174,7 +174,7 @@ public class WebRtcAudioEffects {
             if (this.ns.setEnabled(z3) != 0) {
                 Logging.e(TAG, "Failed to set the NoiseSuppressor state");
             }
-            StringBuilder sbU2 = outline.U("NoiseSuppressor: was ");
+            StringBuilder sbU2 = a.U("NoiseSuppressor: was ");
             sbU2.append(enabled2 ? "enabled" : "disabled");
             sbU2.append(", enable: ");
             sbU2.append(z3);

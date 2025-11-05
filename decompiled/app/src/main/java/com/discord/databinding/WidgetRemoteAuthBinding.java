@@ -4,9 +4,9 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.WidgetRemoteAuthNotFoundBinding;
-import b.a.i.WidgetRemoteAuthPendingLoginBinding;
-import b.a.i.WidgetRemoteAuthSuccessBinding;
+import b.a.i.v5;
+import b.a.i.w5;
+import b.a.i.x5;
 import com.discord.app.AppViewFlipper;
 
 /* loaded from: classes.dex */
@@ -17,22 +17,22 @@ public final class WidgetRemoteAuthBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final WidgetRemoteAuthSuccessBinding f2519b;
+    public final x5 f2519b;
 
     @NonNull
-    public final WidgetRemoteAuthNotFoundBinding c;
+    public final v5 c;
 
     @NonNull
-    public final WidgetRemoteAuthPendingLoginBinding d;
+    public final w5 d;
 
     @NonNull
     public final AppViewFlipper e;
 
-    public WidgetRemoteAuthBinding(@NonNull RelativeLayout relativeLayout, @NonNull WidgetRemoteAuthSuccessBinding widgetRemoteAuthSuccessBinding, @NonNull WidgetRemoteAuthNotFoundBinding widgetRemoteAuthNotFoundBinding, @NonNull WidgetRemoteAuthPendingLoginBinding widgetRemoteAuthPendingLoginBinding, @NonNull AppViewFlipper appViewFlipper) {
+    public WidgetRemoteAuthBinding(@NonNull RelativeLayout relativeLayout, @NonNull x5 x5Var, @NonNull v5 v5Var, @NonNull w5 w5Var, @NonNull AppViewFlipper appViewFlipper) {
         this.a = relativeLayout;
-        this.f2519b = widgetRemoteAuthSuccessBinding;
-        this.c = widgetRemoteAuthNotFoundBinding;
-        this.d = widgetRemoteAuthPendingLoginBinding;
+        this.f2519b = x5Var;
+        this.c = v5Var;
+        this.d = w5Var;
         this.e = appViewFlipper;
     }
 

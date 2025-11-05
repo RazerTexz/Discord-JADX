@@ -5,13 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Base64;
 import androidx.core.app.NotificationCompat;
-import b.i.a.b.j.AutoValue_TransportContext;
-import b.i.a.b.j.TransportContext;
-import b.i.a.b.j.TransportRuntime;
-import b.i.a.b.j.t.h.AlarmManagerSchedulerBroadcastReceiver2;
-import b.i.a.b.j.t.h.Uploader;
-import b.i.a.b.j.t.h.Uploader6;
-import b.i.a.b.j.w.PriorityMapping;
+import b.i.a.b.j.b;
+import b.i.a.b.j.i;
+import b.i.a.b.j.n;
+import b.i.a.b.j.t.h.g;
+import b.i.a.b.j.t.h.l;
+import b.i.a.b.j.w.a;
 
 /* loaded from: classes3.dex */
 public class AlarmManagerSchedulerBroadcastReceiver extends BroadcastReceiver {
@@ -23,14 +22,14 @@ public class AlarmManagerSchedulerBroadcastReceiver extends BroadcastReceiver {
         String queryParameter2 = intent.getData().getQueryParameter(NotificationCompat.MessagingStyle.Message.KEY_EXTRAS_BUNDLE);
         int iIntValue = Integer.valueOf(intent.getData().getQueryParameter("priority")).intValue();
         int i = intent.getExtras().getInt("attemptNumber");
-        TransportRuntime.b(context);
-        TransportContext.a aVarA = TransportContext.a();
+        n.b(context);
+        i.a aVarA = i.a();
         aVarA.b(queryParameter);
-        aVarA.c(PriorityMapping.b(iIntValue));
+        aVarA.c(a.b(iIntValue));
         if (queryParameter2 != null) {
-            ((AutoValue_TransportContext.b) aVarA).f764b = Base64.decode(queryParameter2, 0);
+            ((b.C0087b) aVarA).f764b = Base64.decode(queryParameter2, 0);
         }
-        Uploader6 uploader6 = TransportRuntime.a().e;
-        uploader6.e.execute(new Uploader(uploader6, aVarA.a(), i, AlarmManagerSchedulerBroadcastReceiver2.j));
+        l lVar = n.a().e;
+        lVar.e.execute(new g(lVar, aVarA.a(), i, b.i.a.b.j.t.h.a.j));
     }
 }

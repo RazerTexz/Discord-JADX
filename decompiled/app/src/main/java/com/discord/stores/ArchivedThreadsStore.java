@@ -1,28 +1,28 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.message.Message;
 import com.discord.api.thread.ThreadListing;
 import com.discord.api.thread.ThreadMetadata;
 import com.discord.restapi.utils.RetryWithDelay;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -34,9 +34,9 @@ import rx.Subscription;
 /* loaded from: classes2.dex */
 public final class ArchivedThreadsStore extends StoreV2 {
     private final Dispatcher dispatcher;
-    private Map<Tuples2<Long, ThreadListingType>, Subscription> fetchSubscriptions;
-    private Map<Tuples2<Long, ThreadListingType>, ThreadListingState> listings;
-    private Map<Tuples2<Long, ThreadListingType>, ? extends ThreadListingState> listingsSnapshot;
+    private Map<Pair<Long, ThreadListingType>, Subscription> fetchSubscriptions;
+    private Map<Pair<Long, ThreadListingType>, ThreadListingState> listings;
+    private Map<Pair<Long, ThreadListingType>, ? extends ThreadListingState> listingsSnapshot;
     private final ObservationDeck observationDeck;
     private final StoreForumPostMessages storeForumPostMessages;
     private final StoreStream storeStream;
@@ -62,7 +62,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Listing(List<Channel> list, boolean z2, boolean z3) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "threads");
+                m.checkNotNullParameter(list, "threads");
                 this.threads = list;
                 this.hasMore = z2;
                 this.isLoadingMore = z3;
@@ -97,7 +97,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
 
             public final Listing copy(List<Channel> threads, boolean hasMore, boolean isLoadingMore) {
-                Intrinsics3.checkNotNullParameter(threads, "threads");
+                m.checkNotNullParameter(threads, "threads");
                 return new Listing(threads, hasMore, isLoadingMore);
             }
 
@@ -109,7 +109,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                     return false;
                 }
                 Listing listing = (Listing) other;
-                return Intrinsics3.areEqual(this.threads, listing.threads) && this.hasMore == listing.hasMore && this.isLoadingMore == listing.isLoadingMore;
+                return m.areEqual(this.threads, listing.threads) && this.hasMore == listing.hasMore && this.isLoadingMore == listing.isLoadingMore;
             }
 
             public final boolean getHasMore() {
@@ -139,12 +139,12 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Listing(threads=");
+                StringBuilder sbU = a.U("Listing(threads=");
                 sbU.append(this.threads);
                 sbU.append(", hasMore=");
                 sbU.append(this.hasMore);
                 sbU.append(", isLoadingMore=");
-                return outline.O(sbU, this.isLoadingMore, ")");
+                return a.O(sbU, this.isLoadingMore, ")");
             }
         }
 
@@ -185,12 +185,12 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
             @Override // com.discord.stores.ArchivedThreadsStore.ThreadListingType
             public Observable<ThreadListing> fetchNext(long channelId, List<Channel> threads) {
-                Intrinsics3.checkNotNullParameter(threads, "threads");
+                m.checkNotNullParameter(threads, "threads");
                 try {
                     return RestAPI.INSTANCE.getApi().getAllPrivateArchivedThreads(channelId, Companion.access$getLastArchiveTimestamp(ThreadListingType.INSTANCE, threads));
                 } catch (IllegalStateException e) {
                     Observable<ThreadListing> observableX = Observable.x(e);
-                    Intrinsics3.checkNotNullExpressionValue(observableX, "Observable.error(e)");
+                    m.checkNotNullExpressionValue(observableX, "Observable.error(e)");
                     return observableX;
                 }
             }
@@ -204,12 +204,12 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
             @Override // com.discord.stores.ArchivedThreadsStore.ThreadListingType
             public Observable<ThreadListing> fetchNext(long channelId, List<Channel> threads) {
-                Intrinsics3.checkNotNullParameter(threads, "threads");
+                m.checkNotNullParameter(threads, "threads");
                 try {
                     return RestAPI.INSTANCE.getApi().getAllPublicArchivedThreads(channelId, Companion.access$getLastArchiveTimestamp(ThreadListingType.INSTANCE, threads));
                 } catch (IllegalStateException e) {
                     Observable<ThreadListing> observableX = Observable.x(e);
-                    Intrinsics3.checkNotNullExpressionValue(observableX, "Observable.error(e)");
+                    m.checkNotNullExpressionValue(observableX, "Observable.error(e)");
                     return observableX;
                 }
             }
@@ -229,7 +229,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                 if (threads.isEmpty()) {
                     return null;
                 }
-                ThreadMetadata threadMetadata = ((Channel) _Collections.last((List) threads)).getThreadMetadata();
+                ThreadMetadata threadMetadata = ((Channel) u.last((List) threads)).getThreadMetadata();
                 if (threadMetadata == null || (archiveTimestamp = threadMetadata.getArchiveTimestamp()) == null) {
                     throw new IllegalStateException("Thread missing threadMetadata");
                 }
@@ -249,8 +249,8 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
             @Override // com.discord.stores.ArchivedThreadsStore.ThreadListingType
             public Observable<ThreadListing> fetchNext(long channelId, List<Channel> threads) {
-                Intrinsics3.checkNotNullParameter(threads, "threads");
-                Channel channel = (Channel) _Collections.lastOrNull((List) threads);
+                m.checkNotNullParameter(threads, "threads");
+                Channel channel = (Channel) u.lastOrNull((List) threads);
                 return RestAPI.INSTANCE.getApi().getMyPrivateArchivedThreads(channelId, channel != null ? Long.valueOf(channel.getId()) : null);
             }
         }
@@ -286,7 +286,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
     /* compiled from: ArchivedThreadsStore.kt */
     /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Function0 $onTerminated;
         public final /* synthetic */ boolean $reload;
@@ -294,13 +294,13 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
         /* compiled from: ArchivedThreadsStore.kt */
         /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00701 extends Lambda implements Function1<Subscription, Unit> {
-            public final /* synthetic */ Tuples2 $key;
+        public static final class C01901 extends o implements Function1<Subscription, Unit> {
+            public final /* synthetic */ Pair $key;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C00701(Tuples2 tuples2) {
+            public C01901(Pair pair) {
                 super(1);
-                this.$key = tuples2;
+                this.$key = pair;
             }
 
             @Override // kotlin.jvm.functions.Function1
@@ -311,20 +311,20 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Subscription subscription) {
-                Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+                m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
                 ArchivedThreadsStore.access$getFetchSubscriptions$p(ArchivedThreadsStore.this).put(this.$key, subscription);
             }
         }
 
         /* compiled from: ArchivedThreadsStore.kt */
         /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
-            public final /* synthetic */ Tuples2 $key;
+        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
+            public final /* synthetic */ Pair $key;
 
             /* compiled from: ArchivedThreadsStore.kt */
             /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00711 extends Lambda implements Function0<Unit> {
-                public C00711() {
+            public static final class C01911 extends o implements Function0<Unit> {
+                public C01911() {
                     super(0);
                 }
 
@@ -342,9 +342,9 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public AnonymousClass2(Tuples2 tuples2) {
+            public AnonymousClass2(Pair pair) {
                 super(1);
-                this.$key = tuples2;
+                this.$key = pair;
             }
 
             @Override // kotlin.jvm.functions.Function1
@@ -355,14 +355,14 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
-                ArchivedThreadsStore.access$getDispatcher$p(ArchivedThreadsStore.this).schedule(new C00711());
+                m.checkNotNullParameter(error, "it");
+                ArchivedThreadsStore.access$getDispatcher$p(ArchivedThreadsStore.this).schedule(new C01911());
             }
         }
 
         /* compiled from: ArchivedThreadsStore.kt */
         /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass3 extends o implements Function0<Unit> {
             public AnonymousClass3() {
                 super(0);
             }
@@ -383,17 +383,17 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
         /* compiled from: ArchivedThreadsStore.kt */
         /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$4, reason: invalid class name */
-        public static final class AnonymousClass4 extends Lambda implements Function1<ThreadListing, Unit> {
+        public static final class AnonymousClass4 extends o implements Function1<ThreadListing, Unit> {
             public final /* synthetic */ List $currentThreads;
-            public final /* synthetic */ Tuples2 $key;
+            public final /* synthetic */ Pair $key;
 
             /* compiled from: ArchivedThreadsStore.kt */
             /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$4$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00721 extends Lambda implements Function0<Unit> {
+            public static final class C01921 extends o implements Function0<Unit> {
                 public final /* synthetic */ ThreadListing $result;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C00721(ThreadListing threadListing) {
+                public C01921(ThreadListing threadListing) {
                     super(0);
                     this.$result = threadListing;
                 }
@@ -412,7 +412,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                     }
                     Map mapAccess$getListings$p = ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this);
                     AnonymousClass4 anonymousClass4 = AnonymousClass4.this;
-                    mapAccess$getListings$p.put(anonymousClass4.$key, new ThreadListingState.Listing(_Collections.plus((Collection) anonymousClass4.$currentThreads, (Iterable) this.$result.c()), this.$result.getHasMore(), false));
+                    mapAccess$getListings$p.put(anonymousClass4.$key, new ThreadListingState.Listing(u.plus((Collection) anonymousClass4.$currentThreads, (Iterable) this.$result.c()), this.$result.getHasMore(), false));
                     List<Message> listA = this.$result.a();
                     if (listA != null) {
                         ArchivedThreadsStore.access$getStoreForumPostMessages$p(ArchivedThreadsStore.this).bulkCreateFirstMessage(listA);
@@ -422,9 +422,9 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public AnonymousClass4(Tuples2 tuples2, List list) {
+            public AnonymousClass4(Pair pair, List list) {
                 super(1);
-                this.$key = tuples2;
+                this.$key = pair;
                 this.$currentThreads = list;
             }
 
@@ -436,8 +436,8 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ThreadListing threadListing) {
-                Intrinsics3.checkNotNullParameter(threadListing, "result");
-                ArchivedThreadsStore.access$getDispatcher$p(ArchivedThreadsStore.this).schedule(new C00721(threadListing));
+                m.checkNotNullParameter(threadListing, "result");
+                ArchivedThreadsStore.access$getDispatcher$p(ArchivedThreadsStore.this).schedule(new C01921(threadListing));
             }
         }
 
@@ -458,23 +458,23 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            Tuples2 tuples2 = new Tuples2(Long.valueOf(this.$channelId), this.$threadListingType);
-            ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this).get(tuples2);
+            Pair pair = new Pair(Long.valueOf(this.$channelId), this.$threadListingType);
+            ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this).get(pair);
             boolean z2 = threadListingState instanceof ThreadListingState.Listing;
-            List<Channel> listEmptyList = (!z2 || this.$reload) ? Collections2.emptyList() : ((ThreadListingState.Listing) threadListingState).getThreads();
-            ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this).put(tuples2, z2 ? ThreadListingState.Listing.copy$default((ThreadListingState.Listing) threadListingState, null, false, true, 3, null) : new ThreadListingState.Listing(listEmptyList, true, true));
+            List<Channel> listEmptyList = (!z2 || this.$reload) ? n.emptyList() : ((ThreadListingState.Listing) threadListingState).getThreads();
+            ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this).put(pair, z2 ? ThreadListingState.Listing.copy$default((ThreadListingState.Listing) threadListingState, null, false, true, 3, null) : new ThreadListingState.Listing(listEmptyList, true, true));
             ArchivedThreadsStore.this.markChanged();
-            Subscription subscription = (Subscription) ArchivedThreadsStore.access$getFetchSubscriptions$p(ArchivedThreadsStore.this).get(tuples2);
+            Subscription subscription = (Subscription) ArchivedThreadsStore.access$getFetchSubscriptions$p(ArchivedThreadsStore.this).get(pair);
             if (subscription != null) {
                 subscription.unsubscribe();
             }
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RetryWithDelay.restRetry$default(RetryWithDelay.INSTANCE, this.$threadListingType.fetchNext(this.$channelId, listEmptyList), 0L, null, null, 7, null), false, 1, null), ArchivedThreadsStore.this.getClass(), (Context) null, new C00701(tuples2), new AnonymousClass2(tuples2), (Function0) null, new AnonymousClass3(), new AnonymousClass4(tuples2, listEmptyList), 18, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RetryWithDelay.restRetry$default(RetryWithDelay.INSTANCE, this.$threadListingType.fetchNext(this.$channelId, listEmptyList), 0L, null, null, 7, null), false, 1, null), ArchivedThreadsStore.this.getClass(), (Context) null, new C01901(pair), new AnonymousClass2(pair), (Function0) null, new AnonymousClass3(), new AnonymousClass4(pair, listEmptyList), 18, (Object) null);
         }
     }
 
     /* compiled from: ArchivedThreadsStore.kt */
     /* renamed from: com.discord.stores.ArchivedThreadsStore$loadAndObserveThreadListing$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<ThreadListingState> {
+    public static final class AnonymousClass1 extends o implements Function0<ThreadListingState> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ ThreadListingType $threadListingType;
 
@@ -493,14 +493,14 @@ public final class ArchivedThreadsStore extends StoreV2 {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // kotlin.jvm.functions.Function0
         public final ThreadListingState invoke() {
-            ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListingsSnapshot$p(ArchivedThreadsStore.this).get(new Tuples2(Long.valueOf(this.$channelId), this.$threadListingType));
+            ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListingsSnapshot$p(ArchivedThreadsStore.this).get(new Pair(Long.valueOf(this.$channelId), this.$threadListingType));
             return threadListingState != null ? threadListingState : ThreadListingState.Uninitialized.INSTANCE;
         }
     }
 
     /* compiled from: ArchivedThreadsStore.kt */
     /* renamed from: com.discord.stores.ArchivedThreadsStore$observeGuildForumThreadListing$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<ThreadListingState> {
+    public static final class AnonymousClass1 extends o implements Function0<ThreadListingState> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -517,13 +517,13 @@ public final class ArchivedThreadsStore extends StoreV2 {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // kotlin.jvm.functions.Function0
         public final ThreadListingState invoke() {
-            ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListingsSnapshot$p(ArchivedThreadsStore.this).get(new Tuples2(Long.valueOf(this.$channelId), ThreadListingType.ALL_ARCHIVED_PUBLIC_THREADS));
+            ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListingsSnapshot$p(ArchivedThreadsStore.this).get(new Pair(Long.valueOf(this.$channelId), ThreadListingType.ALL_ARCHIVED_PUBLIC_THREADS));
             return threadListingState != null ? threadListingState : ThreadListingState.Uninitialized.INSTANCE;
         }
     }
 
     public /* synthetic */ ArchivedThreadsStore(StoreStream storeStream, Dispatcher dispatcher, StoreForumPostMessages storeForumPostMessages, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(storeStream, dispatcher, storeForumPostMessages, (i & 8) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(storeStream, dispatcher, storeForumPostMessages, (i & 8) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(ArchivedThreadsStore archivedThreadsStore) {
@@ -586,11 +586,11 @@ public final class ArchivedThreadsStore extends StoreV2 {
     }
 
     public final void fetchListing(long channelId, ThreadListingType threadListingType, boolean reload, Function0<Unit> onTerminated) {
-        Intrinsics3.checkNotNullParameter(threadListingType, "threadListingType");
+        m.checkNotNullParameter(threadListingType, "threadListingType");
         this.dispatcher.schedule(new AnonymousClass1(channelId, threadListingType, reload, onTerminated));
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen() {
         this.listings = new HashMap();
         Iterator<T> it = this.fetchSubscriptions.values().iterator();
@@ -607,30 +607,30 @@ public final class ArchivedThreadsStore extends StoreV2 {
     }
 
     public final Observable<ThreadListingState> loadAndObserveThreadListing(long channelId, ThreadListingType threadListingType) {
-        Intrinsics3.checkNotNullParameter(threadListingType, "threadListingType");
+        m.checkNotNullParameter(threadListingType, "threadListingType");
         fetchListing$default(this, channelId, threadListingType, true, null, 8, null);
         Observable<ThreadListingState> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId, threadListingType), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<ThreadListingState> observeGuildForumThreadListing(long channelId) {
         Observable<ThreadListingState> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         this.listingsSnapshot = new HashMap(this.listings);
     }
 
     public ArchivedThreadsStore(StoreStream storeStream, Dispatcher dispatcher, StoreForumPostMessages storeForumPostMessages, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(storeStream, "storeStream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeStream, "storeStream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeForumPostMessages, "storeForumPostMessages");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.storeStream = storeStream;
         this.dispatcher = dispatcher;
         this.storeForumPostMessages = storeForumPostMessages;

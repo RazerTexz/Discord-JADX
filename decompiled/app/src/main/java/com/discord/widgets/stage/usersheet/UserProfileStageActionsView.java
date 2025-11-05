@@ -7,14 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.voice.state.StageRequestToSpeakState;
 import com.discord.databinding.UserProfileStageActionsViewBinding;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.widgets.stage.StageRoles;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -93,7 +93,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
 
         /* renamed from: copy-am1GJgw, reason: not valid java name */
         public final ViewState m53copyam1GJgw(boolean isMe, Channel channel, StageRoles userStageRole, StageRequestToSpeakState userRequestToSpeakState, boolean userInSameVoiceChannel, boolean canMuteMembers, boolean isUpdatingSuppressed, boolean isInvitingToSpeak) {
-            Intrinsics3.checkNotNullParameter(userRequestToSpeakState, "userRequestToSpeakState");
+            m.checkNotNullParameter(userRequestToSpeakState, "userRequestToSpeakState");
             return new ViewState(isMe, channel, userStageRole, userRequestToSpeakState, userInSameVoiceChannel, canMuteMembers, isUpdatingSuppressed, isInvitingToSpeak);
         }
 
@@ -105,7 +105,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.isMe == viewState.isMe && Intrinsics3.areEqual(this.channel, viewState.channel) && Intrinsics3.areEqual(this.userStageRole, viewState.userStageRole) && Intrinsics3.areEqual(this.userRequestToSpeakState, viewState.userRequestToSpeakState) && this.userInSameVoiceChannel == viewState.userInSameVoiceChannel && this.canMuteMembers == viewState.canMuteMembers && this.isUpdatingSuppressed == viewState.isUpdatingSuppressed && this.isInvitingToSpeak == viewState.isInvitingToSpeak;
+            return this.isMe == viewState.isMe && m.areEqual(this.channel, viewState.channel) && m.areEqual(this.userStageRole, viewState.userStageRole) && m.areEqual(this.userRequestToSpeakState, viewState.userRequestToSpeakState) && this.userInSameVoiceChannel == viewState.userInSameVoiceChannel && this.canMuteMembers == viewState.canMuteMembers && this.isUpdatingSuppressed == viewState.isUpdatingSuppressed && this.isInvitingToSpeak == viewState.isInvitingToSpeak;
         }
 
         public final boolean getCanMuteMembers() {
@@ -184,7 +184,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(isMe=");
+            StringBuilder sbU = a.U("ViewState(isMe=");
             sbU.append(this.isMe);
             sbU.append(", channel=");
             sbU.append(this.channel);
@@ -199,7 +199,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
             sbU.append(", isUpdatingSuppressed=");
             sbU.append(this.isUpdatingSuppressed);
             sbU.append(", isInvitingToSpeak=");
-            return outline.O(sbU, this.isInvitingToSpeak, ")");
+            return a.O(sbU, this.isInvitingToSpeak, ")");
         }
 
         public /* synthetic */ ViewState(boolean z2, Channel channel, StageRoles stageRoles, StageRequestToSpeakState stageRequestToSpeakState, boolean z3, boolean z4, boolean z5, boolean z6, DefaultConstructorMarker defaultConstructorMarker) {
@@ -244,8 +244,8 @@ public final class UserProfileStageActionsView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserProfileStageActionsView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(attributeSet, "attrs");
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.user_profile_stage_actions_view, (ViewGroup) this, false);
         addView(viewInflate);
         int i = R.id.user_profile_stage_invite_to_speak;
@@ -255,7 +255,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
             TextView textView2 = (TextView) viewInflate.findViewById(R.id.user_profile_stage_move_to_audience);
             if (textView2 != null) {
                 UserProfileStageActionsViewBinding userProfileStageActionsViewBinding = new UserProfileStageActionsViewBinding((LinearLayout) viewInflate, textView, textView2);
-                Intrinsics3.checkNotNullExpressionValue(userProfileStageActionsViewBinding, "UserProfileStageActionsV…rom(context), this, true)");
+                m.checkNotNullExpressionValue(userProfileStageActionsViewBinding, "UserProfileStageActionsV…rom(context), this, true)");
                 this.binding = userProfileStageActionsViewBinding;
                 return;
             }
@@ -264,17 +264,17 @@ public final class UserProfileStageActionsView extends LinearLayout {
     }
 
     public final void setOnInviteToSpeak(Function0<Unit> onInviteToSpeak) {
-        Intrinsics3.checkNotNullParameter(onInviteToSpeak, "onInviteToSpeak");
+        m.checkNotNullParameter(onInviteToSpeak, "onInviteToSpeak");
         this.binding.f2167b.setOnClickListener(new AnonymousClass1(onInviteToSpeak));
     }
 
     public final void setOnMoveToAudience(Function0<Unit> onMoveToAudience) {
-        Intrinsics3.checkNotNullParameter(onMoveToAudience, "onMoveToAudience");
+        m.checkNotNullParameter(onMoveToAudience, "onMoveToAudience");
         this.binding.c.setOnClickListener(new AnonymousClass1(onMoveToAudience));
     }
 
     public final void updateView(ViewState viewState) {
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(viewState, "viewState");
         if (!viewState.getUserInSameVoiceChannel() || !viewState.getCanMuteMembers()) {
             setVisibility(8);
             return;

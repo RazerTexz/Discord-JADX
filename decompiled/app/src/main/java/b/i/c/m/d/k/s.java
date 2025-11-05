@@ -1,6 +1,5 @@
 package b.i.c.m.d.k;
 
-import b.i.c.m.d.Logger3;
 import b.i.c.m.d.k.x;
 import java.io.File;
 import java.util.HashSet;
@@ -22,14 +21,14 @@ public class s implements Runnable {
         Objects.requireNonNull(xVar);
         HashSet hashSet = new HashSet();
         for (File file : fileArrR) {
-            Logger3.a.b("Found invalid session part file: " + file);
+            b.i.c.m.d.b.a.b("Found invalid session part file: " + file);
             hashSet.add(x.o(file));
         }
         if (hashSet.isEmpty()) {
             return;
         }
         for (File file2 : x.r(xVar.l(), new t(xVar, hashSet))) {
-            Logger3.a.b("Deleting invalid session file: " + file2);
+            b.i.c.m.d.b.a.b("Deleting invalid session file: " + file2);
             file2.delete();
         }
     }

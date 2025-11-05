@@ -1,11 +1,11 @@
 package com.discord.widgets.friends;
 
-import b.a.d.AppViewModel;
+import b.a.d.d0;
 import kotlin.Unit;
 
 /* compiled from: WidgetFriendsFindNearbyViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetFriendsFindNearbyViewModel extends AppViewModel<Unit> {
+public final class WidgetFriendsFindNearbyViewModel extends d0<Unit> {
     private Integer discriminator;
     private String username;
 

@@ -12,12 +12,12 @@ import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
-import b.a.i.SearchInputViewBinding;
+import b.a.i.j1;
 import com.discord.R;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.view.text.TextWatcher;
 import com.google.android.material.textfield.TextInputEditText;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import defpackage.p;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -30,7 +30,7 @@ public final class SearchInputView extends ConstraintLayout {
     public static final /* synthetic */ int j = 0;
 
     /* renamed from: k, reason: from kotlin metadata */
-    public final SearchInputViewBinding binding;
+    public final j1 binding;
 
     /* renamed from: l, reason: from kotlin metadata */
     public String searchIconContentDescription;
@@ -50,7 +50,7 @@ public final class SearchInputView extends ConstraintLayout {
         public void call(String str) {
             String str2 = str;
             Function1 function1 = this.k;
-            Intrinsics3.checkNotNullExpressionValue(str2, "searchQuery");
+            m.checkNotNullExpressionValue(str2, "searchQuery");
             function1.invoke(str2);
             SearchInputView searchInputView = SearchInputView.this;
             int i = SearchInputView.j;
@@ -77,7 +77,7 @@ public final class SearchInputView extends ConstraintLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SearchInputView(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(getContext()).inflate(R.layout.search_input_view, this);
         int i = R.id.search_clear;
         ImageView imageView = (ImageView) findViewById(R.id.search_clear);
@@ -85,9 +85,9 @@ public final class SearchInputView extends ConstraintLayout {
             i = R.id.search_input_edit_text;
             TextInputEditText textInputEditText = (TextInputEditText) findViewById(R.id.search_input_edit_text);
             if (textInputEditText != null) {
-                SearchInputViewBinding searchInputViewBinding = new SearchInputViewBinding(this, imageView, textInputEditText);
-                Intrinsics3.checkNotNullExpressionValue(searchInputViewBinding, "SearchInputViewBinding.i…ater.from(context), this)");
-                this.binding = searchInputViewBinding;
+                j1 j1Var = new j1(this, imageView, textInputEditText);
+                m.checkNotNullExpressionValue(j1Var, "SearchInputViewBinding.i…ater.from(context), this)");
+                this.binding = j1Var;
                 this.searchIconContentDescription = "";
                 this.onClearClicked = new p(1, this);
                 Drawable drawable = null;
@@ -98,12 +98,12 @@ public final class SearchInputView extends ConstraintLayout {
                 }
                 setBackground(drawable);
                 TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.a.SearchInputView);
-                Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…tyleable.SearchInputView)");
+                m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…tyleable.SearchInputView)");
                 String string = typedArrayObtainStyledAttributes.getString(0);
                 String string2 = typedArrayObtainStyledAttributes.getString(1);
                 this.searchIconContentDescription = string2 == null ? "" : string2;
                 typedArrayObtainStyledAttributes.recycle();
-                Intrinsics3.checkNotNullExpressionValue(textInputEditText, "searchInputEditText");
+                m.checkNotNullExpressionValue(textInputEditText, "searchInputEditText");
                 textInputEditText.setHint(string);
                 setText("");
                 return;
@@ -113,33 +113,33 @@ public final class SearchInputView extends ConstraintLayout {
     }
 
     public final void a(Fragment fragment, Function1<? super String, Unit> onAfterTextChanged) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
-        Intrinsics3.checkNotNullParameter(onAfterTextChanged, "onAfterTextChanged");
+        m.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(onAfterTextChanged, "onAfterTextChanged");
         TextWatcher.Companion companion = TextWatcher.INSTANCE;
         TextInputEditText textInputEditText = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.searchInputEditText");
+        m.checkNotNullExpressionValue(textInputEditText, "binding.searchInputEditText");
         companion.addBindedTextWatcher(fragment, textInputEditText, new a(onAfterTextChanged));
     }
 
     public final void b(String searchQuery) {
         boolean z2 = searchQuery.length() == 0;
-        SearchInputViewBinding searchInputViewBinding = this.binding;
-        searchInputViewBinding.f139b.setImageResource(z2 ? R.drawable.ic_search_16dp : R.drawable.ic_clear_white_24dp);
-        ImageView imageView = searchInputViewBinding.f139b;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "searchClear");
+        j1 j1Var = this.binding;
+        j1Var.f139b.setImageResource(z2 ? R.drawable.ic_search_16dp : R.drawable.ic_clear_white_24dp);
+        ImageView imageView = j1Var.f139b;
+        m.checkNotNullExpressionValue(imageView, "searchClear");
         imageView.setImageTintList(z2 ? ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorTextMuted)) : ColorStateList.valueOf(ColorCompat.getThemedColor(getContext(), R.attr.colorTextNormal)));
-        ImageView imageView2 = searchInputViewBinding.f139b;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "searchClear");
+        ImageView imageView2 = j1Var.f139b;
+        m.checkNotNullExpressionValue(imageView2, "searchClear");
         imageView2.setContentDescription(z2 ? this.searchIconContentDescription : getContext().getString(R.string.reset));
-        ImageView imageView3 = searchInputViewBinding.f139b;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "searchClear");
+        ImageView imageView3 = j1Var.f139b;
+        m.checkNotNullExpressionValue(imageView3, "searchClear");
         imageView3.setImportantForAccessibility(z2 ? 2 : 0);
-        searchInputViewBinding.f139b.setOnClickListener(new b(z2, searchQuery));
+        j1Var.f139b.setOnClickListener(new b(z2, searchQuery));
     }
 
     public final View getEditText() {
         TextInputEditText textInputEditText = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.searchInputEditText");
+        m.checkNotNullExpressionValue(textInputEditText, "binding.searchInputEditText");
         return textInputEditText;
     }
 
@@ -148,19 +148,19 @@ public final class SearchInputView extends ConstraintLayout {
     }
 
     public final void setHint(CharSequence hint) {
-        Intrinsics3.checkNotNullParameter(hint, "hint");
+        m.checkNotNullParameter(hint, "hint");
         TextInputEditText textInputEditText = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "binding.searchInputEditText");
+        m.checkNotNullExpressionValue(textInputEditText, "binding.searchInputEditText");
         textInputEditText.setHint(hint);
     }
 
     public final void setOnClearClicked(Function0<Unit> function0) {
-        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
+        m.checkNotNullParameter(function0, "<set-?>");
         this.onClearClicked = function0;
     }
 
     public final void setText(String searchQuery) {
-        Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
+        m.checkNotNullParameter(searchQuery, "searchQuery");
         this.binding.c.setText(searchQuery);
         b(searchQuery);
     }

@@ -2,7 +2,7 @@ package org.webrtc;
 
 import android.content.Context;
 import android.os.SystemClock;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -55,7 +55,7 @@ public class FileVideoCapturer implements VideoCapturer {
             while (true) {
                 int i = this.mediaFile.read();
                 if (i == -1) {
-                    throw new RuntimeException(outline.w("Found end of file before end of header for file: ", str));
+                    throw new RuntimeException(a.w("Found end of file before end of header for file: ", str));
                 }
                 if (i == 10) {
                     this.videoStart = this.mediaFileChannel.position();

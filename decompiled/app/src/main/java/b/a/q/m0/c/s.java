@@ -1,9 +1,8 @@
 package b.a.q.m0.c;
 
 import androidx.annotation.NonNull;
-import co.discord.media_engine.DeviceDescription4;
+import co.discord.media_engine.VideoInputDeviceDescription;
 import com.hammerandchisel.libdiscord.Discord;
-import d0.z.d.Intrinsics3;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: MediaEngineLegacy.kt */
@@ -16,8 +15,8 @@ public final class s implements Discord.GetVideoInputDevicesCallback {
     }
 
     @Override // com.hammerandchisel.libdiscord.Discord.GetVideoInputDevicesCallback
-    public final /* synthetic */ void onDevices(@NonNull DeviceDescription4[] deviceDescription4Arr) {
-        Intrinsics3.checkNotNullParameter(deviceDescription4Arr, "p0");
-        Intrinsics3.checkNotNullExpressionValue(this.a.invoke(deviceDescription4Arr), "invoke(...)");
+    public final /* synthetic */ void onDevices(@NonNull VideoInputDeviceDescription[] videoInputDeviceDescriptionArr) {
+        d0.z.d.m.checkNotNullParameter(videoInputDeviceDescriptionArr, "p0");
+        d0.z.d.m.checkNotNullExpressionValue(this.a.invoke(videoInputDeviceDescriptionArr), "invoke(...)");
     }
 }

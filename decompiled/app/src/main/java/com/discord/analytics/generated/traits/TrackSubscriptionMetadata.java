@@ -1,8 +1,8 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSubscriptionMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackSubscriptionMetadata {
             return false;
         }
         TrackSubscriptionMetadata trackSubscriptionMetadata = (TrackSubscriptionMetadata) other;
-        return Intrinsics3.areEqual(this.subscriptionPlanGatewayPlanId, trackSubscriptionMetadata.subscriptionPlanGatewayPlanId) && Intrinsics3.areEqual(this.subscriptionType, trackSubscriptionMetadata.subscriptionType) && Intrinsics3.areEqual(this.subscriptionPlanId, trackSubscriptionMetadata.subscriptionPlanId) && Intrinsics3.areEqual(this.code, trackSubscriptionMetadata.code);
+        return m.areEqual(this.subscriptionPlanGatewayPlanId, trackSubscriptionMetadata.subscriptionPlanGatewayPlanId) && m.areEqual(this.subscriptionType, trackSubscriptionMetadata.subscriptionType) && m.areEqual(this.subscriptionPlanId, trackSubscriptionMetadata.subscriptionPlanId) && m.areEqual(this.code, trackSubscriptionMetadata.code);
     }
 
     public int hashCode() {
@@ -35,13 +35,13 @@ public final /* data */ class TrackSubscriptionMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSubscriptionMetadata(subscriptionPlanGatewayPlanId=");
+        StringBuilder sbU = a.U("TrackSubscriptionMetadata(subscriptionPlanGatewayPlanId=");
         sbU.append(this.subscriptionPlanGatewayPlanId);
         sbU.append(", subscriptionType=");
         sbU.append(this.subscriptionType);
         sbU.append(", subscriptionPlanId=");
         sbU.append(this.subscriptionPlanId);
         sbU.append(", code=");
-        return outline.E(sbU, this.code, ")");
+        return a.E(sbU, this.code, ")");
     }
 }

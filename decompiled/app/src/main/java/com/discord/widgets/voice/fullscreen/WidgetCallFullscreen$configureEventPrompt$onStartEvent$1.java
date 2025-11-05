@@ -1,15 +1,15 @@
 package com.discord.widgets.voice.fullscreen;
 
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
-import com.discord.widgets.guildscheduledevent.GuildScheduledEventModel2;
+import com.discord.widgets.guildscheduledevent.GuildScheduledEventModelKt;
 import com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetCallFullscreen.kt */
 /* loaded from: classes.dex */
-public final class WidgetCallFullscreen$configureEventPrompt$onStartEvent$1 extends Lambda implements Function0<Unit> {
+public final class WidgetCallFullscreen$configureEventPrompt$onStartEvent$1 extends o implements Function0<Unit> {
     public final /* synthetic */ GuildScheduledEvent $startableEvent;
     public final /* synthetic */ WidgetCallFullscreen this$0;
 
@@ -31,6 +31,6 @@ public final class WidgetCallFullscreen$configureEventPrompt$onStartEvent$1 exte
         if (this.$startableEvent == null) {
             return;
         }
-        WidgetPreviewGuildScheduledEvent.Companion.launch$default(WidgetPreviewGuildScheduledEvent.INSTANCE, this.this$0.requireContext(), GuildScheduledEventModel2.toModel(this.$startableEvent), new WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData(this.$startableEvent.getId(), WidgetPreviewGuildScheduledEvent.Companion.Action.START_EVENT), null, false, 24, null);
+        WidgetPreviewGuildScheduledEvent.Companion.launch$default(WidgetPreviewGuildScheduledEvent.INSTANCE, this.this$0.requireContext(), GuildScheduledEventModelKt.toModel(this.$startableEvent), new WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData(this.$startableEvent.getId(), WidgetPreviewGuildScheduledEvent.Companion.Action.START_EVENT), null, false, 24, null);
     }
 }

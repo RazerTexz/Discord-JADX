@@ -13,7 +13,6 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
 import androidx.annotation.RecentlyNullable;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.g.b;
 import b.i.a.f.g.c;
 import b.i.a.f.g.d;
@@ -102,7 +101,7 @@ public final class DynamiteModule {
             Class<?> clsLoadClass = classLoader.loadClass(sb.toString());
             Field declaredField = clsLoadClass.getDeclaredField("MODULE_ID");
             Field declaredField2 = clsLoadClass.getDeclaredField("MODULE_VERSION");
-            if (AnimatableValueParser.h0(declaredField.get(null), str)) {
+            if (b.c.a.a0.d.h0(declaredField.get(null), str)) {
                 return declaredField2.getInt(null);
             }
             String strValueOf = String.valueOf(declaredField.get(null));

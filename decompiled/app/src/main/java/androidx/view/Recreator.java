@@ -7,7 +7,7 @@ import androidx.view.GenericLifecycleObserver;
 import androidx.view.Lifecycle;
 import androidx.view.LifecycleOwner;
 import androidx.view.SavedStateRegistry;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -54,16 +54,16 @@ public final class Recreator implements GenericLifecycleObserver {
                 try {
                     ((SavedStateRegistry.AutoRecreated) declaredConstructor.newInstance(new Object[0])).onRecreated(this.mOwner);
                 } catch (Exception e) {
-                    throw new RuntimeException(outline.w("Failed to instantiate ", str), e);
+                    throw new RuntimeException(a.w("Failed to instantiate ", str), e);
                 }
             } catch (NoSuchMethodException e2) {
-                StringBuilder sbU = outline.U("Class");
+                StringBuilder sbU = a.U("Class");
                 sbU.append(clsAsSubclass.getSimpleName());
                 sbU.append(" must have default constructor in order to be automatically recreated");
                 throw new IllegalStateException(sbU.toString(), e2);
             }
         } catch (ClassNotFoundException e3) {
-            throw new RuntimeException(outline.y("Class ", str, " wasn't found"), e3);
+            throw new RuntimeException(a.y("Class ", str, " wasn't found"), e3);
         }
     }
 

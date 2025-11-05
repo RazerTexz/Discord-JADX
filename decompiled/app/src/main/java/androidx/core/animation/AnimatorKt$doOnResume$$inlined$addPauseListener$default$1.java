@@ -1,7 +1,7 @@
 package androidx.core.animation;
 
 import android.animation.Animator;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: Animator.kt */
@@ -15,12 +15,12 @@ public final class AnimatorKt$doOnResume$$inlined$addPauseListener$default$1 imp
 
     @Override // android.animation.Animator.AnimatorPauseListener
     public void onAnimationPause(Animator animator) {
-        Intrinsics3.checkNotNullParameter(animator, "animator");
+        m.checkNotNullParameter(animator, "animator");
     }
 
     @Override // android.animation.Animator.AnimatorPauseListener
     public void onAnimationResume(Animator animator) {
-        Intrinsics3.checkNotNullParameter(animator, "animator");
+        m.checkNotNullParameter(animator, "animator");
         this.$onResume.invoke(animator);
     }
 }

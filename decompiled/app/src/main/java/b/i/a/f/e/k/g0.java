@@ -2,7 +2,6 @@ package b.i.a.f.e.k;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.internal.RootTelemetryConfiguration;
 
 /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
@@ -10,7 +9,7 @@ import com.google.android.gms.common.internal.RootTelemetryConfiguration;
 public final class g0 implements Parcelable.Creator<RootTelemetryConfiguration> {
     @Override // android.os.Parcelable.Creator
     public final RootTelemetryConfiguration createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         int iG1 = 0;
         boolean zE1 = false;
         boolean zE12 = false;
@@ -20,20 +19,20 @@ public final class g0 implements Parcelable.Creator<RootTelemetryConfiguration> 
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                zE1 = AnimatableValueParser.E1(parcel, i);
+                zE1 = b.c.a.a0.d.E1(parcel, i);
             } else if (c == 3) {
-                zE12 = AnimatableValueParser.E1(parcel, i);
+                zE12 = b.c.a.a0.d.E1(parcel, i);
             } else if (c == 4) {
-                iG12 = AnimatableValueParser.G1(parcel, i);
+                iG12 = b.c.a.a0.d.G1(parcel, i);
             } else if (c != 5) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                iG13 = AnimatableValueParser.G1(parcel, i);
+                iG13 = b.c.a.a0.d.G1(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new RootTelemetryConfiguration(iG1, zE1, zE12, iG12, iG13);
     }
 

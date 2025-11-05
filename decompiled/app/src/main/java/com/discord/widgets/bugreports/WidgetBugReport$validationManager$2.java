@@ -7,13 +7,13 @@ import com.discord.utilities.view.validators.Input;
 import com.discord.utilities.view.validators.InputValidator;
 import com.discord.utilities.view.validators.ValidationManager;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetBugReport.kt */
 /* loaded from: classes2.dex */
-public final class WidgetBugReport$validationManager$2 extends Lambda implements Function0<ValidationManager> {
+public final class WidgetBugReport$validationManager$2 extends o implements Function0<ValidationManager> {
     public final /* synthetic */ WidgetBugReport this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -31,11 +31,11 @@ public final class WidgetBugReport$validationManager$2 extends Lambda implements
     @Override // kotlin.jvm.functions.Function0
     public final ValidationManager invoke() {
         TextInputLayout textInputLayout = WidgetBugReport.access$getBinding$p(this.this$0).h;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.bugReportName");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.bugReportName");
         BasicTextInputValidator.Companion companion = BasicTextInputValidator.INSTANCE;
         InputValidator[] inputValidatorArr = {companion.createRequiredInputValidator(R.string.bug_report_error_name_required)};
         TextInputLayout textInputLayout2 = WidgetBugReport.access$getBinding$p(this.this$0).j;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.bugReportPriority");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.bugReportPriority");
         return new ValidationManager(new Input.TextInputLayoutInput(ModelAuditLogEntry.CHANGE_KEY_NAME, textInputLayout, inputValidatorArr), new Input.TextInputLayoutInput("priority", textInputLayout2, companion.createRequiredInputValidator(R.string.bug_report_error_priority_required)));
     }
 }

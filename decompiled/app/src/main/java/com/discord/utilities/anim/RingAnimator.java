@@ -4,7 +4,7 @@ import android.animation.ObjectAnimator;
 import android.util.Property;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: RingAnimator.kt */
@@ -16,8 +16,8 @@ public final class RingAnimator {
     private final View view;
 
     public RingAnimator(View view, Function0<Boolean> function0) {
-        Intrinsics3.checkNotNullParameter(view, "view");
-        Intrinsics3.checkNotNullParameter(function0, "ringingPredicate");
+        m.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(function0, "ringingPredicate");
         this.view = view;
         this.ringingPredicate = function0;
         ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.ALPHA, 1.0f, 0.1f);
@@ -53,7 +53,7 @@ public final class RingAnimator {
             }
             this.fadeAnim.cancel();
             ObjectAnimator objectAnimator = this.fadeAnim;
-            Intrinsics3.checkNotNullExpressionValue(objectAnimator, "fadeAnim");
+            m.checkNotNullExpressionValue(objectAnimator, "fadeAnim");
             objectAnimator.setDuration(0L);
         }
     }

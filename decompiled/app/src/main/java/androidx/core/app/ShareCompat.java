@@ -23,7 +23,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.core.content.IntentCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 
 /* loaded from: classes.dex */
@@ -500,7 +500,7 @@ public final class ShareCompat {
             if (i == 0) {
                 return (Uri) this.mIntent.getParcelableExtra("android.intent.extra.STREAM");
             }
-            StringBuilder sbU = outline.U("Stream items available: ");
+            StringBuilder sbU = a.U("Stream items available: ");
             sbU.append(getStreamCount());
             sbU.append(" index requested: ");
             sbU.append(i);
@@ -515,7 +515,7 @@ public final class ShareCompat {
     public static void configureMenuItem(@NonNull MenuItem menuItem, @NonNull IntentBuilder intentBuilder) {
         ActionProvider actionProvider = menuItem.getActionProvider();
         ShareActionProvider shareActionProvider = !(actionProvider instanceof ShareActionProvider) ? new ShareActionProvider(intentBuilder.getContext()) : (ShareActionProvider) actionProvider;
-        StringBuilder sbU = outline.U(HISTORY_FILENAME_PREFIX);
+        StringBuilder sbU = a.U(HISTORY_FILENAME_PREFIX);
         sbU.append(intentBuilder.getContext().getClass().getName());
         shareActionProvider.setShareHistoryFileName(sbU.toString());
         shareActionProvider.setShareIntent(intentBuilder.getIntent());
@@ -555,6 +555,6 @@ public final class ShareCompat {
             configureMenuItem(menuItemFindItem, intentBuilder);
             return;
         }
-        throw new IllegalArgumentException(outline.r("Could not find menu item with id ", i, " in the supplied menu"));
+        throw new IllegalArgumentException(a.r("Could not find menu item with id ", i, " in the supplied menu"));
     }
 }

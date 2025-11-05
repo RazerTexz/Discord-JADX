@@ -3,7 +3,7 @@ package com.google.android.gms.auth.api.credentials;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.c.a.d.g;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Objects;
@@ -47,24 +47,24 @@ public final class CredentialRequest extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         boolean z2 = this.k;
         parcel.writeInt(262145);
         parcel.writeInt(z2 ? 1 : 0);
-        AnimatableValueParser.u2(parcel, 2, this.l, false);
-        AnimatableValueParser.s2(parcel, 3, this.m, i, false);
-        AnimatableValueParser.s2(parcel, 4, this.n, i, false);
+        d.u2(parcel, 2, this.l, false);
+        d.s2(parcel, 3, this.m, i, false);
+        d.s2(parcel, 4, this.n, i, false);
         boolean z3 = this.o;
         parcel.writeInt(262149);
         parcel.writeInt(z3 ? 1 : 0);
-        AnimatableValueParser.t2(parcel, 6, this.p, false);
-        AnimatableValueParser.t2(parcel, 7, this.q, false);
+        d.t2(parcel, 6, this.p, false);
+        d.t2(parcel, 7, this.q, false);
         boolean z4 = this.r;
         parcel.writeInt(262152);
         parcel.writeInt(z4 ? 1 : 0);
         int i2 = this.j;
         parcel.writeInt(263144);
         parcel.writeInt(i2);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

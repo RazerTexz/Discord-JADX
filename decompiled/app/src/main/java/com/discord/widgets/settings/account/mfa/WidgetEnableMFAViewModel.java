@@ -2,8 +2,8 @@ package com.discord.widgets.settings.account.mfa;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.auth.mfa.EnableMfaResponse;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.StoreMFA;
@@ -13,8 +13,8 @@ import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.concurrent.TimeUnit;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -26,7 +26,7 @@ import rx.subscriptions.CompositeSubscription;
 
 /* compiled from: WidgetEnableMFAViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
+public final class WidgetEnableMFAViewModel extends d0<ViewState> {
     private String encodedTotpSecret;
     private String password;
     private CompositeSubscription subs;
@@ -78,7 +78,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.isLoading == viewState.isLoading && Intrinsics3.areEqual(this.screenIndex, viewState.screenIndex);
+            return this.isLoading == viewState.isLoading && m.areEqual(this.screenIndex, viewState.screenIndex);
         }
 
         public final Integer getScreenIndex() {
@@ -105,10 +105,10 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(isLoading=");
+            StringBuilder sbU = a.U("ViewState(isLoading=");
             sbU.append(this.isLoading);
             sbU.append(", screenIndex=");
-            return outline.F(sbU, this.screenIndex, ")");
+            return a.F(sbU, this.screenIndex, ")");
         }
 
         public /* synthetic */ ViewState(boolean z2, Integer num, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -118,7 +118,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetEnableMFAViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<EnableMfaResponse, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<EnableMfaResponse, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -137,7 +137,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetEnableMFAViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -150,14 +150,14 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetEnableMFAViewModel.access$handleMFAFailure(WidgetEnableMFAViewModel.this);
         }
     }
 
     /* compiled from: WidgetEnableMFAViewModel.kt */
     /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -170,7 +170,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             WidgetEnableMFAViewModel.access$getSubs$p(WidgetEnableMFAViewModel.this).a(subscription);
         }
     }
@@ -212,8 +212,8 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
     @MainThread
     public final void enableMFA(Context context, String mfaCode) {
         String str;
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(mfaCode, "mfaCode");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(mfaCode, "mfaCode");
         updateViewState(new ViewState(true, null));
         RestAPI api = RestAPI.INSTANCE.getApi();
         String str2 = this.encodedTotpSecret;
@@ -221,7 +221,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
             return;
         }
         Observable<EnableMfaResponse> observableQ = api.enableMFA(new RestAPIParams.EnableMFA(mfaCode, str2, str)).q(2000L, TimeUnit.MILLISECONDS);
-        Intrinsics3.checkNotNullExpressionValue(observableQ, "RestAPI\n        .api\n   …0, TimeUnit.MILLISECONDS)");
+        m.checkNotNullExpressionValue(observableQ, "RestAPI\n        .api\n   …0, TimeUnit.MILLISECONDS)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(observableQ, false, 1, null), this, null, 2, null), WidgetEnableMFAViewModel.class, context, new AnonymousClass3(), new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 48, (Object) null);
     }
 
@@ -235,7 +235,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
         return this.totpSecret;
     }
 
-    @Override // b.a.d.AppViewModel, androidx.view.ViewModel
+    @Override // b.a.d.d0, androidx.view.ViewModel
     public void onCleared() {
         super.onCleared();
         this.subs.b();
@@ -243,13 +243,13 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
 
     @MainThread
     public final void setPassword(String password) {
-        Intrinsics3.checkNotNullParameter(password, WidgetSettingsAccountChangePassword.CURRENT_PASSWORD_FIELD);
+        m.checkNotNullParameter(password, WidgetSettingsAccountChangePassword.CURRENT_PASSWORD_FIELD);
         this.password = password;
     }
 
     @MainThread
     public final void setTotpSecret(String secret) {
-        Intrinsics3.checkNotNullParameter(secret, "secret");
+        m.checkNotNullParameter(secret, "secret");
         this.totpSecret = secret;
         AuthUtils authUtils = AuthUtils.INSTANCE;
         if (secret != null) {

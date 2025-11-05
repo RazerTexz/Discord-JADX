@@ -14,7 +14,7 @@ import com.discord.api.presence.ClientStatuses;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.presence.Presence;
 import com.discord.utilities.presence.PresenceUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: StatusView.kt */
 /* loaded from: classes2.dex */
@@ -35,14 +35,14 @@ public final class StatusView extends AppCompatImageView {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StatusView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         this.cornerRadius = 2.0f;
         this.showMobile = true;
         this.isCircle = true;
         setAdjustViewBounds(true);
         setScaleType(ImageView.ScaleType.FIT_XY);
         TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.a.StatusView, 0, 0);
-        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…yleable.StatusView, 0, 0)");
+        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…yleable.StatusView, 0, 0)");
         try {
             setBorderWidth((int) typedArrayObtainStyledAttributes.getDimension(1, 0.0f));
             int color = typedArrayObtainStyledAttributes.getColor(0, 0);
@@ -60,14 +60,14 @@ public final class StatusView extends AppCompatImageView {
 
     @Override // android.widget.ImageView, android.view.View
     public void onDraw(Canvas canvas) {
-        Intrinsics3.checkNotNullParameter(canvas, "canvas");
+        m.checkNotNullParameter(canvas, "canvas");
         if (this.isCircle) {
             float width = getWidth() / 2.0f;
             float height = getHeight() / 2.0f;
             float width2 = getWidth() / 2.0f;
             Paint paint = this.backgroundPaint;
             if (paint == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("backgroundPaint");
+                m.throwUninitializedPropertyAccessException("backgroundPaint");
             }
             canvas.drawCircle(width, height, width2, paint);
         } else {
@@ -76,7 +76,7 @@ public final class StatusView extends AppCompatImageView {
             float f = this.cornerRadius;
             Paint paint2 = this.backgroundPaint;
             if (paint2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("backgroundPaint");
+                m.throwUninitializedPropertyAccessException("backgroundPaint");
             }
             canvas.drawRoundRect(0.0f, 0.0f, width3, height2, f, f, paint2);
         }

@@ -1,21 +1,20 @@
 package s.a.d2.g;
 
-import b.d.b.a.outline;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.Job;
-import s.a.a.Scopes2;
+import s.a.a.r;
 
 /* compiled from: SafeCollector.common.kt */
 /* loaded from: classes3.dex */
-public final class g extends Lambda implements Function2<Integer, CoroutineContext.Element, Integer> {
-    public final /* synthetic */ SafeCollector3 $this_checkContext;
+public final class g extends o implements Function2<Integer, CoroutineContext.Element, Integer> {
+    public final /* synthetic */ e $this_checkContext;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public g(SafeCollector3 safeCollector3) {
+    public g(e eVar) {
         super(2);
-        this.$this_checkContext = safeCollector3;
+        this.$this_checkContext = eVar;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:16:0x0031  */
@@ -35,10 +34,10 @@ public final class g extends Lambda implements Function2<Integer, CoroutineConte
             Job job2 = (Job) element2;
             while (true) {
                 if (job2 != null) {
-                    if (job2 == job || !(job2 instanceof Scopes2)) {
+                    if (job2 == job || !(job2 instanceof r)) {
                         break;
                     }
-                    job2 = (Job) ((Scopes2) job2).l.get(Job.INSTANCE);
+                    job2 = (Job) ((r) job2).l.get(Job.INSTANCE);
                 } else {
                     job2 = null;
                     break;
@@ -51,7 +50,7 @@ public final class g extends Lambda implements Function2<Integer, CoroutineConte
                 sb.append(job2);
                 sb.append(", expected child of ");
                 sb.append(job);
-                throw new IllegalStateException(outline.K(sb, ".\n", "\t\tFlowCollector is not thread-safe and concurrent emissions are prohibited.\n", "\t\tTo mitigate this restriction please use 'channelFlow' builder instead of 'flow'").toString());
+                throw new IllegalStateException(b.d.b.a.a.K(sb, ".\n", "\t\tFlowCollector is not thread-safe and concurrent emissions are prohibited.\n", "\t\tTo mitigate this restriction please use 'channelFlow' builder instead of 'flow'").toString());
             }
             if (job != null) {
             }

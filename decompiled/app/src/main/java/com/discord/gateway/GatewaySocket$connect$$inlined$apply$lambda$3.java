@@ -1,14 +1,14 @@
 package com.discord.gateway;
 
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.InputStreamReader;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
 /* compiled from: GatewaySocket.kt */
 /* loaded from: classes.dex */
-public final class GatewaySocket$connect$$inlined$apply$lambda$3 extends Lambda implements Function2<InputStreamReader, Integer, Unit> {
+public final class GatewaySocket$connect$$inlined$apply$lambda$3 extends o implements Function2<InputStreamReader, Integer, Unit> {
     public final /* synthetic */ String $gatewayUrl$inlined;
     public final /* synthetic */ GatewaySocket this$0;
 
@@ -26,7 +26,7 @@ public final class GatewaySocket$connect$$inlined$apply$lambda$3 extends Lambda 
     }
 
     public final void invoke(InputStreamReader inputStreamReader, int i) {
-        Intrinsics3.checkNotNullParameter(inputStreamReader, "reader");
+        m.checkNotNullParameter(inputStreamReader, "reader");
         GatewaySocket.access$handleWebSocketMessage(this.this$0, inputStreamReader, i);
     }
 }

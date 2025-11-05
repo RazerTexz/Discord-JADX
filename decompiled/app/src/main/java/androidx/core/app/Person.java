@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.graphics.drawable.IconCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class Person {
@@ -170,7 +170,7 @@ public class Person {
         if (this.mName == null) {
             return "";
         }
-        StringBuilder sbU = outline.U("name:");
+        StringBuilder sbU = a.U("name:");
         sbU.append((Object) this.mName);
         return sbU.toString();
     }

@@ -13,9 +13,9 @@ import android.os.Handler;
 import android.util.Range;
 import android.view.Surface;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import h0.c.CameraSession2;
+import b.d.b.a.a;
 import h0.c.d;
+import h0.c.l0;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -76,7 +76,7 @@ public class Camera2Session implements CameraSession {
         }
 
         private String getErrorDescription(int i) {
-            return i != 1 ? i != 2 ? i != 3 ? i != 4 ? i != 5 ? outline.q("Unknown camera error: ", i) : "Camera service has encountered a fatal error." : "Camera device has encountered a fatal error." : "Camera device could not be opened due to a device policy." : "Camera device could not be opened because there are too many other open camera devices." : "Camera device is in use already.";
+            return i != 1 ? i != 2 ? i != 3 ? i != 4 ? i != 5 ? a.q("Unknown camera error: ", i) : "Camera service has encountered a fatal error." : "Camera device has encountered a fatal error." : "Camera device could not be opened due to a device policy." : "Camera device could not be opened because there are too many other open camera devices." : "Camera device is in use already.";
         }
 
         @Override // android.hardware.camera2.CameraDevice.StateCallback
@@ -172,7 +172,7 @@ public class Camera2Session implements CameraSession {
                 Camera2Session.access$1602(Camera2Session.this, true);
                 Camera2Session.access$1800().addSample((int) TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - Camera2Session.access$1700(Camera2Session.this)));
             }
-            VideoFrame videoFrame2 = new VideoFrame(CameraSession2.a((TextureBufferImpl) videoFrame.getBuffer(), Camera2Session.access$1900(Camera2Session.this), -Camera2Session.access$2000(Camera2Session.this)), Camera2Session.access$2100(Camera2Session.this), videoFrame.getTimestampNs());
+            VideoFrame videoFrame2 = new VideoFrame(l0.a((TextureBufferImpl) videoFrame.getBuffer(), Camera2Session.access$1900(Camera2Session.this), -Camera2Session.access$2000(Camera2Session.this)), Camera2Session.access$2100(Camera2Session.this), videoFrame.getTimestampNs());
             Camera2Session.access$500(Camera2Session.this).onFrameCaptured(Camera2Session.this, videoFrame2);
             videoFrame2.release();
         }
@@ -368,13 +368,13 @@ public class Camera2Session implements CameraSession {
         Size closestSupportedSize = CameraEnumerationAndroid.getClosestSupportedSize(supportedSizes, this.width, this.height);
         CameraEnumerationAndroid.reportCameraResolution(camera2ResolutionHistogram, closestSupportedSize);
         this.captureFormat = new CameraEnumerationAndroid.CaptureFormat(closestSupportedSize.width, closestSupportedSize.height, closestSupportedFramerateRange);
-        StringBuilder sbU = outline.U("Using capture format: ");
+        StringBuilder sbU = a.U("Using capture format: ");
         sbU.append(this.captureFormat);
         Logging.d(TAG, sbU.toString());
     }
 
     private int getFrameOrientation() {
-        int iB = CameraSession2.b(this.applicationContext);
+        int iB = l0.b(this.applicationContext);
         if (!this.isCameraFrontFacing) {
             iB = 360 - iB;
         }
@@ -383,7 +383,7 @@ public class Camera2Session implements CameraSession {
 
     private void openCamera() {
         checkIsOnCameraThread();
-        StringBuilder sbU = outline.U("Opening camera ");
+        StringBuilder sbU = a.U("Opening camera ");
         sbU.append(this.cameraId);
         Logging.d(TAG, sbU.toString());
         this.events.onCameraOpening();
@@ -418,7 +418,7 @@ public class Camera2Session implements CameraSession {
             findCaptureFormat();
             openCamera();
         } catch (CameraAccessException e) {
-            StringBuilder sbU = outline.U("getCameraCharacteristics(): ");
+            StringBuilder sbU = a.U("getCameraCharacteristics(): ");
             sbU.append(e.getMessage());
             reportError(sbU.toString());
         }
@@ -448,7 +448,7 @@ public class Camera2Session implements CameraSession {
 
     @Override // org.webrtc.CameraSession
     public void stop() {
-        StringBuilder sbU = outline.U("Stop camera2 session on camera ");
+        StringBuilder sbU = a.U("Stop camera2 session on camera ");
         sbU.append(this.cameraId);
         Logging.d(TAG, sbU.toString());
         checkIsOnCameraThread();

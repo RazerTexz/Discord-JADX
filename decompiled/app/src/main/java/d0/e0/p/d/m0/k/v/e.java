@@ -1,10 +1,7 @@
 package d0.e0.p.d.m0.k.v;
 
-import b.d.b.a.outline;
-import d0.e0.p.d.m0.c.ModuleDescriptor2;
-import d0.e0.p.d.m0.n.KotlinType;
-import d0.e0.p.d.m0.n.KotlinType4;
-import d0.z.d.Intrinsics3;
+import d0.e0.p.d.m0.n.c0;
+import d0.e0.p.d.m0.n.j0;
 
 /* compiled from: constantValues.kt */
 /* loaded from: classes3.dex */
@@ -14,8 +11,8 @@ public final class e extends p<Character> {
     }
 
     @Override // d0.e0.p.d.m0.k.v.g
-    public /* bridge */ /* synthetic */ KotlinType getType(ModuleDescriptor2 moduleDescriptor2) {
-        return getType(moduleDescriptor2);
+    public /* bridge */ /* synthetic */ c0 getType(d0.e0.p.d.m0.c.c0 c0Var) {
+        return getType(c0Var);
     }
 
     @Override // d0.e0.p.d.m0.k.v.g
@@ -43,14 +40,14 @@ public final class e extends p<Character> {
             strValueOf = z2 ? String.valueOf(cCharValue) : "?";
         }
         objArr[1] = strValueOf;
-        return outline.P(objArr, 2, "\\u%04X ('%s')", "java.lang.String.format(this, *args)");
+        return b.d.b.a.a.P(objArr, 2, "\\u%04X ('%s')", "java.lang.String.format(this, *args)");
     }
 
     @Override // d0.e0.p.d.m0.k.v.g
-    public KotlinType4 getType(ModuleDescriptor2 moduleDescriptor2) {
-        Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
-        KotlinType4 charType = moduleDescriptor2.getBuiltIns().getCharType();
-        Intrinsics3.checkNotNullExpressionValue(charType, "module.builtIns.charType");
+    public j0 getType(d0.e0.p.d.m0.c.c0 c0Var) {
+        d0.z.d.m.checkNotNullParameter(c0Var, "module");
+        j0 charType = c0Var.getBuiltIns().getCharType();
+        d0.z.d.m.checkNotNullExpressionValue(charType, "module.builtIns.charType");
         return charType;
     }
 }

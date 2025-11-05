@@ -3,14 +3,14 @@ package com.discord.widgets.guild_role_subscriptions.tier.create;
 import android.view.View;
 import com.discord.databinding.WidgetCreateGuildRoleSubscriptionTierBinding;
 import com.discord.views.steps.StepsView;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.Objects;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetCreateGuildRoleSubscriptionTier$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetCreateGuildRoleSubscriptionTierBinding> {
+public final /* synthetic */ class WidgetCreateGuildRoleSubscriptionTier$binding$2 extends k implements Function1<View, WidgetCreateGuildRoleSubscriptionTierBinding> {
     public static final WidgetCreateGuildRoleSubscriptionTier$binding$2 INSTANCE = new WidgetCreateGuildRoleSubscriptionTier$binding$2();
 
     public WidgetCreateGuildRoleSubscriptionTier$binding$2() {
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetCreateGuildRoleSubscriptionTier$binding
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetCreateGuildRoleSubscriptionTierBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         Objects.requireNonNull(view, "rootView");
         StepsView stepsView = (StepsView) view;
         return new WidgetCreateGuildRoleSubscriptionTierBinding(stepsView, stepsView);

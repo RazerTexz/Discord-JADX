@@ -1,7 +1,7 @@
 package com.discord.api.forum;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: ForumUnread.kt */
 /* loaded from: classes.dex */
@@ -28,7 +28,7 @@ public final /* data */ class ForumUnread {
             return false;
         }
         ForumUnread forumUnread = (ForumUnread) other;
-        return this.threadId == forumUnread.threadId && this.missing == forumUnread.missing && Intrinsics3.areEqual(this.count, forumUnread.count);
+        return this.threadId == forumUnread.threadId && this.missing == forumUnread.missing && m.areEqual(this.count, forumUnread.count);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -46,11 +46,11 @@ public final /* data */ class ForumUnread {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ForumUnread(threadId=");
+        StringBuilder sbU = a.U("ForumUnread(threadId=");
         sbU.append(this.threadId);
         sbU.append(", missing=");
         sbU.append(this.missing);
         sbU.append(", count=");
-        return outline.F(sbU, this.count, ")");
+        return a.F(sbU, this.count, ")");
     }
 }

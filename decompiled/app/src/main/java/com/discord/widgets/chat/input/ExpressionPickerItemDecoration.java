@@ -3,7 +3,7 @@ package com.discord.widgets.chat.input;
 import android.graphics.Rect;
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -16,7 +16,7 @@ public final class ExpressionPickerItemDecoration extends RecyclerView.ItemDecor
     private final int numOfColumns;
 
     public ExpressionPickerItemDecoration(int i, List<Integer> list, int i2) {
-        Intrinsics3.checkNotNullParameter(list, "headerIndices");
+        m.checkNotNullParameter(list, "headerIndices");
         this.numOfColumns = i;
         this.headerIndices = list;
         this.bottomPaddingForLastRow = i2;
@@ -61,10 +61,10 @@ public final class ExpressionPickerItemDecoration extends RecyclerView.ItemDecor
 
     @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-        Intrinsics3.checkNotNullParameter(outRect, "outRect");
-        Intrinsics3.checkNotNullParameter(view, "view");
-        Intrinsics3.checkNotNullParameter(parent, "parent");
-        Intrinsics3.checkNotNullParameter(state, "state");
+        m.checkNotNullParameter(outRect, "outRect");
+        m.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(state, "state");
         super.getItemOffsets(outRect, view, parent, state);
         if (this.headerIndices.isEmpty()) {
             return;

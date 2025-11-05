@@ -1,12 +1,11 @@
 package com.discord.rtcconnection.socket.io;
 
-import a0.a.a.b;
 import androidx.core.app.FrameMetricsAggregator;
-import b.d.b.a.outline;
-import b.i.d.p.SerializedName;
+import b.d.b.a.a;
+import b.i.d.p.b;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.gson.JsonElement;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import org.webrtc.MediaStreamTrack;
@@ -19,7 +18,7 @@ public final class Payloads {
     /* compiled from: Payloads.kt */
     public static final /* data */ class ClientDisconnect {
 
-        @SerializedName("user_id")
+        @b("user_id")
         private final long userId;
 
         public ClientDisconnect(long j) {
@@ -54,35 +53,35 @@ public final class Payloads {
         }
 
         public int hashCode() {
-            return b.a(this.userId);
+            return a0.a.a.b.a(this.userId);
         }
 
         public String toString() {
-            return outline.C(outline.U("ClientDisconnect(userId="), this.userId, ")");
+            return a.C(a.U("ClientDisconnect(userId="), this.userId, ")");
         }
     }
 
     /* compiled from: Payloads.kt */
     public static final /* data */ class Description {
 
-        @SerializedName("audio_codec")
+        @b("audio_codec")
         private final String audioCodec;
 
-        @SerializedName("media_session_id")
+        @b("media_session_id")
         private final String mediaSessionId;
         private final String mode;
 
-        @SerializedName("secret_key")
+        @b("secret_key")
         private final List<Integer> secretKey;
 
-        @SerializedName("video_codec")
+        @b("video_codec")
         private final String videoCodec;
 
         public Description(List<Integer> list, String str, String str2, String str3, String str4) {
-            Intrinsics3.checkNotNullParameter(list, "secretKey");
-            Intrinsics3.checkNotNullParameter(str2, "audioCodec");
-            Intrinsics3.checkNotNullParameter(str3, "videoCodec");
-            Intrinsics3.checkNotNullParameter(str4, "mode");
+            m.checkNotNullParameter(list, "secretKey");
+            m.checkNotNullParameter(str2, "audioCodec");
+            m.checkNotNullParameter(str3, "videoCodec");
+            m.checkNotNullParameter(str4, "mode");
             this.secretKey = list;
             this.mediaSessionId = str;
             this.audioCodec = str2;
@@ -137,10 +136,10 @@ public final class Payloads {
         }
 
         public final Description copy(List<Integer> secretKey, String mediaSessionId, String audioCodec, String videoCodec, String mode) {
-            Intrinsics3.checkNotNullParameter(secretKey, "secretKey");
-            Intrinsics3.checkNotNullParameter(audioCodec, "audioCodec");
-            Intrinsics3.checkNotNullParameter(videoCodec, "videoCodec");
-            Intrinsics3.checkNotNullParameter(mode, "mode");
+            m.checkNotNullParameter(secretKey, "secretKey");
+            m.checkNotNullParameter(audioCodec, "audioCodec");
+            m.checkNotNullParameter(videoCodec, "videoCodec");
+            m.checkNotNullParameter(mode, "mode");
             return new Description(secretKey, mediaSessionId, audioCodec, videoCodec, mode);
         }
 
@@ -152,7 +151,7 @@ public final class Payloads {
                 return false;
             }
             Description description = (Description) other;
-            return Intrinsics3.areEqual(this.secretKey, description.secretKey) && Intrinsics3.areEqual(this.mediaSessionId, description.mediaSessionId) && Intrinsics3.areEqual(this.audioCodec, description.audioCodec) && Intrinsics3.areEqual(this.videoCodec, description.videoCodec) && Intrinsics3.areEqual(this.mode, description.mode);
+            return m.areEqual(this.secretKey, description.secretKey) && m.areEqual(this.mediaSessionId, description.mediaSessionId) && m.areEqual(this.audioCodec, description.audioCodec) && m.areEqual(this.videoCodec, description.videoCodec) && m.areEqual(this.mode, description.mode);
         }
 
         public final String getAudioCodec() {
@@ -189,7 +188,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Description(secretKey=");
+            StringBuilder sbU = a.U("Description(secretKey=");
             sbU.append(this.secretKey);
             sbU.append(", mediaSessionId=");
             sbU.append(this.mediaSessionId);
@@ -198,17 +197,17 @@ public final class Payloads {
             sbU.append(", videoCodec=");
             sbU.append(this.videoCodec);
             sbU.append(", mode=");
-            return outline.J(sbU, this.mode, ")");
+            return a.J(sbU, this.mode, ")");
         }
     }
 
     /* compiled from: Payloads.kt */
     public static final /* data */ class Hello {
 
-        @SerializedName("heartbeat_interval")
+        @b("heartbeat_interval")
         private final long heartbeatIntervalMs;
 
-        @SerializedName("v")
+        @b("v")
         private final int serverVersion;
 
         public Hello(long j, int i) {
@@ -260,37 +259,37 @@ public final class Payloads {
         }
 
         public int hashCode() {
-            return (b.a(this.heartbeatIntervalMs) * 31) + this.serverVersion;
+            return (a0.a.a.b.a(this.heartbeatIntervalMs) * 31) + this.serverVersion;
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Hello(heartbeatIntervalMs=");
+            StringBuilder sbU = a.U("Hello(heartbeatIntervalMs=");
             sbU.append(this.heartbeatIntervalMs);
             sbU.append(", serverVersion=");
-            return outline.B(sbU, this.serverVersion, ")");
+            return a.B(sbU, this.serverVersion, ")");
         }
     }
 
     /* compiled from: Payloads.kt */
     public static final /* data */ class Identify {
 
-        @SerializedName("server_id")
+        @b("server_id")
         private final String serverId;
 
-        @SerializedName("session_id")
+        @b("session_id")
         private final String sessionId;
         private final List<Stream> streams;
         private final String token;
 
-        @SerializedName("user_id")
+        @b("user_id")
         private final long userId;
         private final boolean video;
 
         public Identify(String str, long j, String str2, String str3, boolean z2, List<Stream> list) {
-            Intrinsics3.checkNotNullParameter(str, "serverId");
-            Intrinsics3.checkNotNullParameter(str2, "sessionId");
-            Intrinsics3.checkNotNullParameter(str3, "token");
-            Intrinsics3.checkNotNullParameter(list, "streams");
+            m.checkNotNullParameter(str, "serverId");
+            m.checkNotNullParameter(str2, "sessionId");
+            m.checkNotNullParameter(str3, "token");
+            m.checkNotNullParameter(list, "streams");
             this.serverId = str;
             this.userId = j;
             this.sessionId = str2;
@@ -355,10 +354,10 @@ public final class Payloads {
         }
 
         public final Identify copy(String serverId, long userId, String sessionId, String token, boolean video, List<Stream> streams) {
-            Intrinsics3.checkNotNullParameter(serverId, "serverId");
-            Intrinsics3.checkNotNullParameter(sessionId, "sessionId");
-            Intrinsics3.checkNotNullParameter(token, "token");
-            Intrinsics3.checkNotNullParameter(streams, "streams");
+            m.checkNotNullParameter(serverId, "serverId");
+            m.checkNotNullParameter(sessionId, "sessionId");
+            m.checkNotNullParameter(token, "token");
+            m.checkNotNullParameter(streams, "streams");
             return new Identify(serverId, userId, sessionId, token, video, streams);
         }
 
@@ -370,7 +369,7 @@ public final class Payloads {
                 return false;
             }
             Identify identify = (Identify) other;
-            return Intrinsics3.areEqual(this.serverId, identify.serverId) && this.userId == identify.userId && Intrinsics3.areEqual(this.sessionId, identify.sessionId) && Intrinsics3.areEqual(this.token, identify.token) && this.video == identify.video && Intrinsics3.areEqual(this.streams, identify.streams);
+            return m.areEqual(this.serverId, identify.serverId) && this.userId == identify.userId && m.areEqual(this.sessionId, identify.sessionId) && m.areEqual(this.token, identify.token) && this.video == identify.video && m.areEqual(this.streams, identify.streams);
         }
 
         public final String getServerId() {
@@ -400,7 +399,7 @@ public final class Payloads {
         /* JADX WARN: Multi-variable type inference failed */
         public int hashCode() {
             String str = this.serverId;
-            int iA = (b.a(this.userId) + ((str != null ? str.hashCode() : 0) * 31)) * 31;
+            int iA = (a0.a.a.b.a(this.userId) + ((str != null ? str.hashCode() : 0) * 31)) * 31;
             String str2 = this.sessionId;
             int iHashCode = (iA + (str2 != null ? str2.hashCode() : 0)) * 31;
             String str3 = this.token;
@@ -416,7 +415,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Identify(serverId=");
+            StringBuilder sbU = a.U("Identify(serverId=");
             sbU.append(this.serverId);
             sbU.append(", userId=");
             sbU.append(this.userId);
@@ -427,21 +426,21 @@ public final class Payloads {
             sbU.append(", video=");
             sbU.append(this.video);
             sbU.append(", streams=");
-            return outline.L(sbU, this.streams, ")");
+            return a.L(sbU, this.streams, ")");
         }
     }
 
     /* compiled from: Payloads.kt */
     public static final /* data */ class Incoming {
 
-        @SerializedName("d")
+        @b("d")
         private final JsonElement data;
 
-        @SerializedName("op")
+        @b("op")
         private final int opcode;
 
         public Incoming(int i, JsonElement jsonElement) {
-            Intrinsics3.checkNotNullParameter(jsonElement, "data");
+            m.checkNotNullParameter(jsonElement, "data");
             this.opcode = i;
             this.data = jsonElement;
         }
@@ -467,7 +466,7 @@ public final class Payloads {
         }
 
         public final Incoming copy(int opcode, JsonElement data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new Incoming(opcode, data);
         }
 
@@ -479,7 +478,7 @@ public final class Payloads {
                 return false;
             }
             Incoming incoming = (Incoming) other;
-            return this.opcode == incoming.opcode && Intrinsics3.areEqual(this.data, incoming.data);
+            return this.opcode == incoming.opcode && m.areEqual(this.data, incoming.data);
         }
 
         public final JsonElement getData() {
@@ -497,7 +496,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Incoming(opcode=");
+            StringBuilder sbU = a.U("Incoming(opcode=");
             sbU.append(this.opcode);
             sbU.append(", data=");
             sbU.append(this.data);
@@ -509,14 +508,14 @@ public final class Payloads {
     /* compiled from: Payloads.kt */
     public static final /* data */ class Outgoing {
 
-        @SerializedName("d")
+        @b("d")
         private final Object data;
 
-        @SerializedName("op")
+        @b("op")
         private final int opcode;
 
         public Outgoing(int i, Object obj) {
-            Intrinsics3.checkNotNullParameter(obj, "data");
+            m.checkNotNullParameter(obj, "data");
             this.opcode = i;
             this.data = obj;
         }
@@ -542,7 +541,7 @@ public final class Payloads {
         }
 
         public final Outgoing copy(int opcode, Object data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             return new Outgoing(opcode, data);
         }
 
@@ -554,7 +553,7 @@ public final class Payloads {
                 return false;
             }
             Outgoing outgoing = (Outgoing) other;
-            return this.opcode == outgoing.opcode && Intrinsics3.areEqual(this.data, outgoing.data);
+            return this.opcode == outgoing.opcode && m.areEqual(this.data, outgoing.data);
         }
 
         public final Object getData() {
@@ -572,7 +571,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Outgoing(opcode=");
+            StringBuilder sbU = a.U("Outgoing(opcode=");
             sbU.append(this.opcode);
             sbU.append(", data=");
             sbU.append(this.data);
@@ -591,17 +590,17 @@ public final class Payloads {
         public static final /* data */ class CodecInfo {
             private final String name;
 
-            @SerializedName("payload_type")
+            @b("payload_type")
             private final int payloadType;
             private final int priority;
 
-            @SerializedName("rtx_payload_type")
+            @b("rtx_payload_type")
             private final Integer rtxPayloadType;
             private final String type;
 
             public CodecInfo(String str, int i, String str2, int i2, Integer num) {
-                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-                Intrinsics3.checkNotNullParameter(str2, "type");
+                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(str2, "type");
                 this.name = str;
                 this.priority = i;
                 this.type = str2;
@@ -657,8 +656,8 @@ public final class Payloads {
             }
 
             public final CodecInfo copy(String name, int priority, String type, int payloadType, Integer rtxPayloadType) {
-                Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-                Intrinsics3.checkNotNullParameter(type, "type");
+                m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(type, "type");
                 return new CodecInfo(name, priority, type, payloadType, rtxPayloadType);
             }
 
@@ -670,7 +669,7 @@ public final class Payloads {
                     return false;
                 }
                 CodecInfo codecInfo = (CodecInfo) other;
-                return Intrinsics3.areEqual(this.name, codecInfo.name) && this.priority == codecInfo.priority && Intrinsics3.areEqual(this.type, codecInfo.type) && this.payloadType == codecInfo.payloadType && Intrinsics3.areEqual(this.rtxPayloadType, codecInfo.rtxPayloadType);
+                return m.areEqual(this.name, codecInfo.name) && this.priority == codecInfo.priority && m.areEqual(this.type, codecInfo.type) && this.payloadType == codecInfo.payloadType && m.areEqual(this.rtxPayloadType, codecInfo.rtxPayloadType);
             }
 
             public final String getName() {
@@ -703,7 +702,7 @@ public final class Payloads {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("CodecInfo(name=");
+                StringBuilder sbU = a.U("CodecInfo(name=");
                 sbU.append(this.name);
                 sbU.append(", priority=");
                 sbU.append(this.priority);
@@ -712,7 +711,7 @@ public final class Payloads {
                 sbU.append(", payloadType=");
                 sbU.append(this.payloadType);
                 sbU.append(", rtxPayloadType=");
-                return outline.F(sbU, this.rtxPayloadType, ")");
+                return a.F(sbU, this.rtxPayloadType, ")");
             }
         }
 
@@ -723,8 +722,8 @@ public final class Payloads {
             private final int port;
 
             public ProtocolInfo(String str, int i, String str2) {
-                Intrinsics3.checkNotNullParameter(str, "address");
-                Intrinsics3.checkNotNullParameter(str2, "mode");
+                m.checkNotNullParameter(str, "address");
+                m.checkNotNullParameter(str2, "mode");
                 this.address = str;
                 this.port = i;
                 this.mode = str2;
@@ -759,8 +758,8 @@ public final class Payloads {
             }
 
             public final ProtocolInfo copy(String address, int port, String mode) {
-                Intrinsics3.checkNotNullParameter(address, "address");
-                Intrinsics3.checkNotNullParameter(mode, "mode");
+                m.checkNotNullParameter(address, "address");
+                m.checkNotNullParameter(mode, "mode");
                 return new ProtocolInfo(address, port, mode);
             }
 
@@ -772,7 +771,7 @@ public final class Payloads {
                     return false;
                 }
                 ProtocolInfo protocolInfo = (ProtocolInfo) other;
-                return Intrinsics3.areEqual(this.address, protocolInfo.address) && this.port == protocolInfo.port && Intrinsics3.areEqual(this.mode, protocolInfo.mode);
+                return m.areEqual(this.address, protocolInfo.address) && this.port == protocolInfo.port && m.areEqual(this.mode, protocolInfo.mode);
             }
 
             public final String getAddress() {
@@ -795,18 +794,18 @@ public final class Payloads {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("ProtocolInfo(address=");
+                StringBuilder sbU = a.U("ProtocolInfo(address=");
                 sbU.append(this.address);
                 sbU.append(", port=");
                 sbU.append(this.port);
                 sbU.append(", mode=");
-                return outline.J(sbU, this.mode, ")");
+                return a.J(sbU, this.mode, ")");
             }
         }
 
         public Protocol(String str, ProtocolInfo protocolInfo, List<CodecInfo> list) {
-            Intrinsics3.checkNotNullParameter(str, "protocol");
-            Intrinsics3.checkNotNullParameter(protocolInfo, "data");
+            m.checkNotNullParameter(str, "protocol");
+            m.checkNotNullParameter(protocolInfo, "data");
             this.protocol = str;
             this.data = protocolInfo;
             this.codecs = list;
@@ -841,8 +840,8 @@ public final class Payloads {
         }
 
         public final Protocol copy(String protocol, ProtocolInfo data, List<CodecInfo> codecs) {
-            Intrinsics3.checkNotNullParameter(protocol, "protocol");
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(protocol, "protocol");
+            m.checkNotNullParameter(data, "data");
             return new Protocol(protocol, data, codecs);
         }
 
@@ -854,7 +853,7 @@ public final class Payloads {
                 return false;
             }
             Protocol protocol = (Protocol) other;
-            return Intrinsics3.areEqual(this.protocol, protocol.protocol) && Intrinsics3.areEqual(this.data, protocol.data) && Intrinsics3.areEqual(this.codecs, protocol.codecs);
+            return m.areEqual(this.protocol, protocol.protocol) && m.areEqual(this.data, protocol.data) && m.areEqual(this.codecs, protocol.codecs);
         }
 
         public final List<CodecInfo> getCodecs() {
@@ -879,12 +878,12 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Protocol(protocol=");
+            StringBuilder sbU = a.U("Protocol(protocol=");
             sbU.append(this.protocol);
             sbU.append(", data=");
             sbU.append(this.data);
             sbU.append(", codecs=");
-            return outline.L(sbU, this.codecs, ")");
+            return a.L(sbU, this.codecs, ")");
         }
     }
 
@@ -896,8 +895,8 @@ public final class Payloads {
         private final List<Stream> streams;
 
         public Ready(int i, int i2, String str, List<Stream> list) {
-            Intrinsics3.checkNotNullParameter(str, "ip");
-            Intrinsics3.checkNotNullParameter(list, "streams");
+            m.checkNotNullParameter(str, "ip");
+            m.checkNotNullParameter(list, "streams");
             this.ssrc = i;
             this.port = i2;
             this.ip = str;
@@ -941,8 +940,8 @@ public final class Payloads {
         }
 
         public final Ready copy(int ssrc, int port, String ip, List<Stream> streams) {
-            Intrinsics3.checkNotNullParameter(ip, "ip");
-            Intrinsics3.checkNotNullParameter(streams, "streams");
+            m.checkNotNullParameter(ip, "ip");
+            m.checkNotNullParameter(streams, "streams");
             return new Ready(ssrc, port, ip, streams);
         }
 
@@ -954,7 +953,7 @@ public final class Payloads {
                 return false;
             }
             Ready ready = (Ready) other;
-            return this.ssrc == ready.ssrc && this.port == ready.port && Intrinsics3.areEqual(this.ip, ready.ip) && Intrinsics3.areEqual(this.streams, ready.streams);
+            return this.ssrc == ready.ssrc && this.port == ready.port && m.areEqual(this.ip, ready.ip) && m.areEqual(this.streams, ready.streams);
         }
 
         public final String getIp() {
@@ -982,14 +981,14 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Ready(ssrc=");
+            StringBuilder sbU = a.U("Ready(ssrc=");
             sbU.append(this.ssrc);
             sbU.append(", port=");
             sbU.append(this.port);
             sbU.append(", ip=");
             sbU.append(this.ip);
             sbU.append(", streams=");
-            return outline.L(sbU, this.streams, ")");
+            return a.L(sbU, this.streams, ")");
         }
     }
 
@@ -1002,15 +1001,15 @@ public final class Payloads {
     /* compiled from: Payloads.kt */
     public static final /* data */ class Resume {
 
-        @SerializedName("server_id")
+        @b("server_id")
         private final String serverId;
 
-        @SerializedName("session_id")
+        @b("session_id")
         private final String sessionId;
         private final String token;
 
         public Resume(String str, String str2, String str3) {
-            outline.q0(str, "token", str2, "sessionId", str3, "serverId");
+            a.q0(str, "token", str2, "sessionId", str3, "serverId");
             this.token = str;
             this.sessionId = str2;
             this.serverId = str3;
@@ -1045,9 +1044,9 @@ public final class Payloads {
         }
 
         public final Resume copy(String token, String sessionId, String serverId) {
-            Intrinsics3.checkNotNullParameter(token, "token");
-            Intrinsics3.checkNotNullParameter(sessionId, "sessionId");
-            Intrinsics3.checkNotNullParameter(serverId, "serverId");
+            m.checkNotNullParameter(token, "token");
+            m.checkNotNullParameter(sessionId, "sessionId");
+            m.checkNotNullParameter(serverId, "serverId");
             return new Resume(token, sessionId, serverId);
         }
 
@@ -1059,7 +1058,7 @@ public final class Payloads {
                 return false;
             }
             Resume resume = (Resume) other;
-            return Intrinsics3.areEqual(this.token, resume.token) && Intrinsics3.areEqual(this.sessionId, resume.sessionId) && Intrinsics3.areEqual(this.serverId, resume.serverId);
+            return m.areEqual(this.token, resume.token) && m.areEqual(this.sessionId, resume.sessionId) && m.areEqual(this.serverId, resume.serverId);
         }
 
         public final String getServerId() {
@@ -1084,19 +1083,19 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Resume(token=");
+            StringBuilder sbU = a.U("Resume(token=");
             sbU.append(this.token);
             sbU.append(", sessionId=");
             sbU.append(this.sessionId);
             sbU.append(", serverId=");
-            return outline.J(sbU, this.serverId, ")");
+            return a.J(sbU, this.serverId, ")");
         }
     }
 
     /* compiled from: Payloads.kt */
     public static final /* data */ class SessionUpdate {
 
-        @SerializedName("media_session_id")
+        @b("media_session_id")
         private final String mediaSessionId;
 
         public SessionUpdate(String str) {
@@ -1121,7 +1120,7 @@ public final class Payloads {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof SessionUpdate) && Intrinsics3.areEqual(this.mediaSessionId, ((SessionUpdate) other).mediaSessionId);
+                return (other instanceof SessionUpdate) && m.areEqual(this.mediaSessionId, ((SessionUpdate) other).mediaSessionId);
             }
             return true;
         }
@@ -1139,7 +1138,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            return outline.J(outline.U("SessionUpdate(mediaSessionId="), this.mediaSessionId, ")");
+            return a.J(a.U("SessionUpdate(mediaSessionId="), this.mediaSessionId, ")");
         }
     }
 
@@ -1151,7 +1150,7 @@ public final class Payloads {
         private final Integer speaking;
         private final int ssrc;
 
-        @SerializedName("user_id")
+        @b("user_id")
         private final Long userId;
 
         public Speaking(int i, Integer num, Integer num2, Long l) {
@@ -1209,7 +1208,7 @@ public final class Payloads {
                 return false;
             }
             Speaking speaking = (Speaking) other;
-            return this.ssrc == speaking.ssrc && Intrinsics3.areEqual(this.speaking, speaking.speaking) && Intrinsics3.areEqual(this.delay, speaking.delay) && Intrinsics3.areEqual(this.userId, speaking.userId);
+            return this.ssrc == speaking.ssrc && m.areEqual(this.speaking, speaking.speaking) && m.areEqual(this.delay, speaking.delay) && m.areEqual(this.userId, speaking.userId);
         }
 
         public final Integer getDelay() {
@@ -1239,14 +1238,14 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Speaking(ssrc=");
+            StringBuilder sbU = a.U("Speaking(ssrc=");
             sbU.append(this.ssrc);
             sbU.append(", speaking=");
             sbU.append(this.speaking);
             sbU.append(", delay=");
             sbU.append(this.delay);
             sbU.append(", userId=");
-            return outline.G(sbU, this.userId, ")");
+            return a.G(sbU, this.userId, ")");
         }
 
         public /* synthetic */ Speaking(int i, Integer num, Integer num2, Long l, int i2, DefaultConstructorMarker defaultConstructorMarker) {
@@ -1258,18 +1257,18 @@ public final class Payloads {
     public static final /* data */ class Stream {
         private final Boolean active;
 
-        @SerializedName("max_bitrate")
+        @b("max_bitrate")
         private final Integer maxBitrate;
 
-        @SerializedName("max_framerate")
+        @b("max_framerate")
         private final Integer maxFrameRate;
 
-        @SerializedName("max_resolution")
+        @b("max_resolution")
         private final MaxResolution maxResolution;
         private final Integer quality;
         private final String rid;
 
-        @SerializedName("rtx_ssrc")
+        @b("rtx_ssrc")
         private final Integer rtxSsrc;
         private final Integer ssrc;
         private final String type;
@@ -1281,7 +1280,7 @@ public final class Payloads {
             private final int width;
 
             public MaxResolution(ResolutionType resolutionType, int i, int i2) {
-                Intrinsics3.checkNotNullParameter(resolutionType, "type");
+                m.checkNotNullParameter(resolutionType, "type");
                 this.type = resolutionType;
                 this.width = i;
                 this.height = i2;
@@ -1316,7 +1315,7 @@ public final class Payloads {
             }
 
             public final MaxResolution copy(ResolutionType type, int width, int height) {
-                Intrinsics3.checkNotNullParameter(type, "type");
+                m.checkNotNullParameter(type, "type");
                 return new MaxResolution(type, width, height);
             }
 
@@ -1328,7 +1327,7 @@ public final class Payloads {
                     return false;
                 }
                 MaxResolution maxResolution = (MaxResolution) other;
-                return Intrinsics3.areEqual(this.type, maxResolution.type) && this.width == maxResolution.width && this.height == maxResolution.height;
+                return m.areEqual(this.type, maxResolution.type) && this.width == maxResolution.width && this.height == maxResolution.height;
             }
 
             public final int getHeight() {
@@ -1349,12 +1348,12 @@ public final class Payloads {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("MaxResolution(type=");
+                StringBuilder sbU = a.U("MaxResolution(type=");
                 sbU.append(this.type);
                 sbU.append(", width=");
                 sbU.append(this.width);
                 sbU.append(", height=");
-                return outline.B(sbU, this.height, ")");
+                return a.B(sbU, this.height, ")");
             }
         }
 
@@ -1435,7 +1434,7 @@ public final class Payloads {
                 return false;
             }
             Stream stream = (Stream) other;
-            return Intrinsics3.areEqual(this.type, stream.type) && Intrinsics3.areEqual(this.rid, stream.rid) && Intrinsics3.areEqual(this.maxFrameRate, stream.maxFrameRate) && Intrinsics3.areEqual(this.quality, stream.quality) && Intrinsics3.areEqual(this.ssrc, stream.ssrc) && Intrinsics3.areEqual(this.rtxSsrc, stream.rtxSsrc) && Intrinsics3.areEqual(this.maxResolution, stream.maxResolution) && Intrinsics3.areEqual(this.active, stream.active) && Intrinsics3.areEqual(this.maxBitrate, stream.maxBitrate);
+            return m.areEqual(this.type, stream.type) && m.areEqual(this.rid, stream.rid) && m.areEqual(this.maxFrameRate, stream.maxFrameRate) && m.areEqual(this.quality, stream.quality) && m.areEqual(this.ssrc, stream.ssrc) && m.areEqual(this.rtxSsrc, stream.rtxSsrc) && m.areEqual(this.maxResolution, stream.maxResolution) && m.areEqual(this.active, stream.active) && m.areEqual(this.maxBitrate, stream.maxBitrate);
         }
 
         public final Boolean getActive() {
@@ -1496,7 +1495,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Stream(type=");
+            StringBuilder sbU = a.U("Stream(type=");
             sbU.append(this.type);
             sbU.append(", rid=");
             sbU.append(this.rid);
@@ -1513,7 +1512,7 @@ public final class Payloads {
             sbU.append(", active=");
             sbU.append(this.active);
             sbU.append(", maxBitrate=");
-            return outline.F(sbU, this.maxBitrate, ")");
+            return a.F(sbU, this.maxBitrate, ")");
         }
 
         public /* synthetic */ Stream(String str, String str2, Integer num, Integer num2, Integer num3, Integer num4, MaxResolution maxResolution, Boolean bool, Integer num5, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -1524,17 +1523,17 @@ public final class Payloads {
     /* compiled from: Payloads.kt */
     public static final /* data */ class Video {
 
-        @SerializedName("audio_ssrc")
+        @b("audio_ssrc")
         private final int audioSsrc;
 
-        @SerializedName("rtx_ssrc")
+        @b("rtx_ssrc")
         private final int rtxSsrc;
         private final List<Stream> streams;
 
-        @SerializedName("user_id")
+        @b("user_id")
         private final Long userId;
 
-        @SerializedName("video_ssrc")
+        @b("video_ssrc")
         private final int videoSsrc;
 
         public Video(int i, int i2, int i3, Long l, List<Stream> list) {
@@ -1603,7 +1602,7 @@ public final class Payloads {
                 return false;
             }
             Video video = (Video) other;
-            return this.audioSsrc == video.audioSsrc && this.videoSsrc == video.videoSsrc && this.rtxSsrc == video.rtxSsrc && Intrinsics3.areEqual(this.userId, video.userId) && Intrinsics3.areEqual(this.streams, video.streams);
+            return this.audioSsrc == video.audioSsrc && this.videoSsrc == video.videoSsrc && this.rtxSsrc == video.rtxSsrc && m.areEqual(this.userId, video.userId) && m.areEqual(this.streams, video.streams);
         }
 
         public final int getAudioSsrc() {
@@ -1635,7 +1634,7 @@ public final class Payloads {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Video(audioSsrc=");
+            StringBuilder sbU = a.U("Video(audioSsrc=");
             sbU.append(this.audioSsrc);
             sbU.append(", videoSsrc=");
             sbU.append(this.videoSsrc);
@@ -1644,7 +1643,7 @@ public final class Payloads {
             sbU.append(", userId=");
             sbU.append(this.userId);
             sbU.append(", streams=");
-            return outline.L(sbU, this.streams, ")");
+            return a.L(sbU, this.streams, ")");
         }
 
         public /* synthetic */ Video(int i, int i2, int i3, Long l, List list, int i4, DefaultConstructorMarker defaultConstructorMarker) {

@@ -7,15 +7,15 @@ import com.discord.models.user.User;
 import com.discord.stores.StorePendingReplies;
 import com.discord.stores.StoreStream;
 import com.discord.widgets.chat.input.ChatInputViewModel;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import j0.k.b;
+import j0.l.e.k;
 import rx.Observable;
 import rx.functions.Func2;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$Companion$getPendingReplyStateObservable$1<T, R> implements Func1<StorePendingReplies.PendingReply, Observable<? extends ChatInputViewModel.StoreState.Loaded.PendingReply>> {
+public final class ChatInputViewModel$Companion$getPendingReplyStateObservable$1<T, R> implements b<StorePendingReplies.PendingReply, Observable<? extends ChatInputViewModel.StoreState.Loaded.PendingReply>> {
     public static final ChatInputViewModel$Companion$getPendingReplyStateObservable$1 INSTANCE = new ChatInputViewModel$Companion$getPendingReplyStateObservable$1();
 
     /* compiled from: ChatInputViewModel.kt */
@@ -40,28 +40,28 @@ public final class ChatInputViewModel$Companion$getPendingReplyStateObservable$1
 
     /* renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ChatInputViewModel.StoreState.Loaded.PendingReply> call2(StorePendingReplies.PendingReply pendingReply) {
-        Observable<R> scalarSynchronousObservable;
+        Observable<R> kVar;
         if (pendingReply == null) {
-            return new ScalarSynchronousObservable(null);
+            return new k(null);
         }
         if (pendingReply.getOriginalMessage().isWebhook()) {
             com.discord.api.user.User author = pendingReply.getOriginalMessage().getAuthor();
-            Intrinsics3.checkNotNull(author);
-            return new ScalarSynchronousObservable(new ChatInputViewModel.StoreState.Loaded.PendingReply(pendingReply, new CoreUser(author), null));
+            m.checkNotNull(author);
+            return new k(new ChatInputViewModel.StoreState.Loaded.PendingReply(pendingReply, new CoreUser(author), null));
         }
         com.discord.api.user.User author2 = pendingReply.getOriginalMessage().getAuthor();
-        Intrinsics3.checkNotNull(author2);
+        m.checkNotNull(author2);
         long id2 = author2.getId();
         Long guildId = pendingReply.getMessageReference().getGuildId();
         if (guildId != null) {
-            scalarSynchronousObservable = StoreStream.INSTANCE.getGuilds().observeComputed(guildId.longValue()).G(new ChatInputViewModel$Companion$getPendingReplyStateObservable$1$$special$$inlined$let$lambda$1(id2)).r();
+            kVar = StoreStream.INSTANCE.getGuilds().observeComputed(guildId.longValue()).G(new ChatInputViewModel$Companion$getPendingReplyStateObservable$1$$special$$inlined$let$lambda$1(id2)).r();
         } else {
-            scalarSynchronousObservable = new ScalarSynchronousObservable(null);
+            kVar = new k(null);
         }
-        return Observable.j(StoreStream.INSTANCE.getUsers().observeUser(id2), scalarSynchronousObservable, new AnonymousClass1(pendingReply));
+        return Observable.j(StoreStream.INSTANCE.getUsers().observeUser(id2), kVar, new AnonymousClass1(pendingReply));
     }
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public /* bridge */ /* synthetic */ Observable<? extends ChatInputViewModel.StoreState.Loaded.PendingReply> call(StorePendingReplies.PendingReply pendingReply) {
         return call2(pendingReply);
     }

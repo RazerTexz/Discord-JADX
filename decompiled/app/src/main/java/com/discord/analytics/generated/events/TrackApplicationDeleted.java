@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackApplicationDeleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationDeleted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackApplicationDeleted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long botId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackApplicationDeleted implements AnalyticsSchema
             return false;
         }
         TrackApplicationDeleted trackApplicationDeleted = (TrackApplicationDeleted) other;
-        return Intrinsics3.areEqual(this.applicationId, trackApplicationDeleted.applicationId) && Intrinsics3.areEqual(this.botId, trackApplicationDeleted.botId) && Intrinsics3.areEqual(this.name, trackApplicationDeleted.name) && Intrinsics3.areEqual(this.hasBot, trackApplicationDeleted.hasBot) && Intrinsics3.areEqual(this.hasRedirectUri, trackApplicationDeleted.hasRedirectUri);
+        return m.areEqual(this.applicationId, trackApplicationDeleted.applicationId) && m.areEqual(this.botId, trackApplicationDeleted.botId) && m.areEqual(this.name, trackApplicationDeleted.name) && m.areEqual(this.hasBot, trackApplicationDeleted.hasBot) && m.areEqual(this.hasRedirectUri, trackApplicationDeleted.hasRedirectUri);
     }
 
     public int hashCode() {
@@ -49,7 +49,7 @@ public final /* data */ class TrackApplicationDeleted implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackApplicationDeleted(applicationId=");
+        StringBuilder sbU = a.U("TrackApplicationDeleted(applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", botId=");
         sbU.append(this.botId);
@@ -58,6 +58,6 @@ public final /* data */ class TrackApplicationDeleted implements AnalyticsSchema
         sbU.append(", hasBot=");
         sbU.append(this.hasBot);
         sbU.append(", hasRedirectUri=");
-        return outline.D(sbU, this.hasRedirectUri, ")");
+        return a.D(sbU, this.hasRedirectUri, ")");
     }
 }

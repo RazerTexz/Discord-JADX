@@ -5,8 +5,8 @@ import com.discord.api.presence.ClientStatus;
 import com.discord.models.guild.Guild;
 import com.discord.models.presence.Presence;
 import com.discord.widgets.user.search.WidgetGlobalSearchModel;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.Collection;
 
 /* compiled from: WidgetGlobalSearchScoreStrategy.kt */
@@ -62,8 +62,8 @@ public final class WidgetGlobalSearchScoreStrategy {
     */
     public final int score(WidgetGlobalSearchModel.ItemDataPayload itemDataPayload, int i, Collection<Long> collection) {
         int iScoreChannel;
-        Intrinsics3.checkNotNullParameter(itemDataPayload, "$this$score");
-        Intrinsics3.checkNotNullParameter(collection, "frecencyChannels");
+        m.checkNotNullParameter(itemDataPayload, "$this$score");
+        m.checkNotNullParameter(collection, "frecencyChannels");
         Channel channel = itemDataPayload.getChannel();
         int iScoreFrecency = scoreFrecency(collection, channel != null ? channel.getId() : 0L);
         if (!(itemDataPayload instanceof WidgetGlobalSearchModel.ItemUser)) {
@@ -83,14 +83,14 @@ public final class WidgetGlobalSearchScoreStrategy {
     }
 
     public final int scoreChannel(WidgetGlobalSearchModel.ItemChannel itemChannel) {
-        Intrinsics3.checkNotNullParameter(itemChannel, "$this$scoreChannel");
+        m.checkNotNullParameter(itemChannel, "$this$scoreChannel");
         Guild guild = itemChannel.getGuild();
         return (guild != null ? guild.getMemberCount() : 0) > 200 ? -5 : 0;
     }
 
     public final int scoreFrecency(Collection<Long> collection, long j) {
-        Intrinsics3.checkNotNullParameter(collection, "$this$scoreFrecency");
-        int iIndexOf = _Collections.indexOf(collection, Long.valueOf(j));
+        m.checkNotNullParameter(collection, "$this$scoreFrecency");
+        int iIndexOf = u.indexOf(collection, Long.valueOf(j));
         if (iIndexOf == -1) {
             return 0;
         }
@@ -104,7 +104,7 @@ public final class WidgetGlobalSearchScoreStrategy {
     }
 
     public final int scoreMatchedResult(WidgetGlobalSearchModel.MatchedResult matchedResult) {
-        Intrinsics3.checkNotNullParameter(matchedResult, "$this$scoreMatchedResult");
+        m.checkNotNullParameter(matchedResult, "$this$scoreMatchedResult");
         int firstMatchIndex = matchedResult.getFirstMatchIndex();
         int i = 0;
         int iMin = firstMatchIndex == -1 ? (-100) - Math.min(matchedResult.getValue().length(), 20) : (firstMatchIndex >= 0 && 10 >= firstMatchIndex) ? 15 - matchedResult.getFirstMatchIndex() : 0;
@@ -122,7 +122,7 @@ public final class WidgetGlobalSearchScoreStrategy {
     */
     public final int scoreUser(WidgetGlobalSearchModel.ItemUser itemUser, int i) {
         int i2;
-        Intrinsics3.checkNotNullParameter(itemUser, "$this$scoreUser");
+        m.checkNotNullParameter(itemUser, "$this$scoreUser");
         SearchType searchType = i != 1 ? SearchType.NONE : SearchType.USER;
         Presence presence = itemUser.getPresence();
         ClientStatus status = presence != null ? presence.getStatus() : null;
@@ -130,6 +130,6 @@ public final class WidgetGlobalSearchScoreStrategy {
             int iOrdinal = status.ordinal();
             i2 = iOrdinal != 0 ? iOrdinal != 1 ? iOrdinal != 2 ? 0 : 2 : 3 : 4;
         }
-        return i2 + (itemUser.isFriend() ? searchType.getFriendWeight() : 0) + (itemUser.getChannel() != null ? searchType.getDmChannelWeight() : 0) + (Intrinsics3.areEqual(itemUser.getMatchedResult().getValue(), itemUser.getUser().getUsername()) ? 2 : 0);
+        return i2 + (itemUser.isFriend() ? searchType.getFriendWeight() : 0) + (itemUser.getChannel() != null ? searchType.getDmChannelWeight() : 0) + (m.areEqual(itemUser.getMatchedResult().getValue(), itemUser.getUser().getUsername()) ? 2 : 0);
     }
 }

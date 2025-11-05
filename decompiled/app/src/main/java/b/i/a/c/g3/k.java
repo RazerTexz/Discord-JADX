@@ -1,31 +1,30 @@
 package b.i.a.c.g3;
 
-import b.i.a.c.Format2;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.g3.VideoRendererEventListener2;
-import b.i.a.c.v2.DecoderReuseEvaluation;
+import b.i.a.c.f3.e0;
+import b.i.a.c.g3.x;
+import b.i.a.c.j1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class k implements Runnable {
-    public final /* synthetic */ VideoRendererEventListener2.a j;
-    public final /* synthetic */ Format2 k;
-    public final /* synthetic */ DecoderReuseEvaluation l;
+    public final /* synthetic */ x.a j;
+    public final /* synthetic */ j1 k;
+    public final /* synthetic */ b.i.a.c.v2.g l;
 
-    public /* synthetic */ k(VideoRendererEventListener2.a aVar, Format2 format2, DecoderReuseEvaluation decoderReuseEvaluation) {
+    public /* synthetic */ k(x.a aVar, j1 j1Var, b.i.a.c.v2.g gVar) {
         this.j = aVar;
-        this.k = format2;
-        this.l = decoderReuseEvaluation;
+        this.k = j1Var;
+        this.l = gVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        VideoRendererEventListener2.a aVar = this.j;
-        Format2 format2 = this.k;
-        DecoderReuseEvaluation decoderReuseEvaluation = this.l;
-        VideoRendererEventListener2 videoRendererEventListener2 = aVar.f995b;
-        int i = Util2.a;
-        videoRendererEventListener2.O(format2);
-        aVar.f995b.Q(format2, decoderReuseEvaluation);
+        x.a aVar = this.j;
+        j1 j1Var = this.k;
+        b.i.a.c.v2.g gVar = this.l;
+        x xVar = aVar.f995b;
+        int i = e0.a;
+        xVar.O(j1Var);
+        aVar.f995b.Q(j1Var, gVar);
     }
 }

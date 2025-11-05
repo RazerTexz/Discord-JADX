@@ -4,7 +4,7 @@ import kotlinx.coroutines.Job;
 
 /* compiled from: JobSupport.kt */
 /* loaded from: classes3.dex */
-public class f1 extends h1 implements CompletableJob {
+public class f1 extends h1 implements u {
     public final boolean k;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -13,15 +13,15 @@ public class f1 extends h1 implements CompletableJob {
         super(true);
         boolean z2 = true;
         P(job);
-        Job4 job4 = (Job4) this._parentHandle;
-        q qVar = (q) (job4 instanceof q ? job4 : null);
+        p pVar = (p) this._parentHandle;
+        q qVar = (q) (pVar instanceof q ? pVar : null);
         if (qVar == null || (h1Var = (h1) qVar.m) == null) {
             z2 = false;
             break;
         }
         while (!h1Var.J()) {
-            Job4 job42 = (Job4) h1Var._parentHandle;
-            q qVar2 = (q) (job42 instanceof q ? job42 : null);
+            p pVar2 = (p) h1Var._parentHandle;
+            q qVar2 = (q) (pVar2 instanceof q ? pVar2 : null);
             if (qVar2 == null || (h1Var = (h1) qVar2.m) == null) {
                 z2 = false;
                 break;

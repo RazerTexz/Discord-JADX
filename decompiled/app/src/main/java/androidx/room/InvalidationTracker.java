@@ -16,7 +16,7 @@ import androidx.sqlite.db.SimpleSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import androidx.view.LiveData;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.Collections;
@@ -336,7 +336,7 @@ public class InvalidationTracker {
     }
 
     private static void appendTriggerName(StringBuilder sb, String str, String str2) {
-        outline.s0(sb, "`", "room_table_modification_trigger_", str, "_");
+        a.s0(sb, "`", "room_table_modification_trigger_", str, "_");
         sb.append(str2);
         sb.append("`");
     }
@@ -362,9 +362,9 @@ public class InvalidationTracker {
             sb.setLength(0);
             sb.append("CREATE TEMP TRIGGER IF NOT EXISTS ");
             appendTriggerName(sb, str, str2);
-            outline.s0(sb, " AFTER ", str2, " ON `", str);
-            outline.s0(sb, "` BEGIN UPDATE ", UPDATE_TABLE_NAME, " SET ", INVALIDATED_COLUMN_NAME);
-            outline.s0(sb, " = 1", " WHERE ", TABLE_ID_COLUMN_NAME, " = ");
+            a.s0(sb, " AFTER ", str2, " ON `", str);
+            a.s0(sb, "` BEGIN UPDATE ", UPDATE_TABLE_NAME, " SET ", INVALIDATED_COLUMN_NAME);
+            a.s0(sb, " = 1", " WHERE ", TABLE_ID_COLUMN_NAME, " = ");
             sb.append(i);
             sb.append(" AND ");
             sb.append(INVALIDATED_COLUMN_NAME);
@@ -389,7 +389,7 @@ public class InvalidationTracker {
         String[] strArrResolveViews = resolveViews(strArr);
         for (String str : strArrResolveViews) {
             if (!this.mTableIdLookup.containsKey(str.toLowerCase(Locale.US))) {
-                throw new IllegalArgumentException(outline.w("There is no table with name ", str));
+                throw new IllegalArgumentException(a.w("There is no table with name ", str));
             }
         }
         return strArrResolveViews;
@@ -405,7 +405,7 @@ public class InvalidationTracker {
         for (int i = 0; i < length; i++) {
             Integer num = this.mTableIdLookup.get(strArrResolveViews[i].toLowerCase(Locale.US));
             if (num == null) {
-                StringBuilder sbU = outline.U("There is no table with name ");
+                StringBuilder sbU = a.U("There is no table with name ");
                 sbU.append(strArrResolveViews[i]);
                 throw new IllegalArgumentException(sbU.toString());
             }

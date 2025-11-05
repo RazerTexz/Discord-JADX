@@ -1,11 +1,11 @@
 package com.discord.utilities.collections;
 
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
-import d0.t._Collections;
-import d0.z.d.CollectionToArray;
-import d0.z.d.Intrinsics3;
-import d0.z.d.g0.KMarkers5;
+import b.d.b.a.a;
+import d0.t.u;
+import d0.z.d.g;
+import d0.z.d.g0.e;
+import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -14,7 +14,7 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: LeastRecentlyAddedSet.kt */
 /* loaded from: classes2.dex */
-public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
+public final class LeastRecentlyAddedSet<E> implements Set<E>, e {
     private final LinkedHashSet<E> _set;
     private final int maxSize;
 
@@ -23,7 +23,7 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
     }
 
     public LeastRecentlyAddedSet(int i, LinkedHashSet<E> linkedHashSet) {
-        Intrinsics3.checkNotNullParameter(linkedHashSet, "_set");
+        m.checkNotNullParameter(linkedHashSet, "_set");
         this.maxSize = i;
         this._set = linkedHashSet;
     }
@@ -33,7 +33,7 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
         boolean zRemove;
         zRemove = this._set.remove(element);
         Iterator<E> it = this._set.iterator();
-        Intrinsics3.checkNotNullExpressionValue(it, "_set.iterator()");
+        m.checkNotNullExpressionValue(it, "_set.iterator()");
         while (this._set.size() >= this.maxSize) {
             it.next();
             it.remove();
@@ -44,7 +44,7 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
 
     @Override // java.util.Set, java.util.Collection
     public boolean addAll(Collection<? extends E> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         return this._set.addAll(elements);
     }
 
@@ -60,7 +60,7 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
 
     @Override // java.util.Set, java.util.Collection
     public boolean containsAll(Collection<? extends Object> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         return this._set.containsAll(elements);
     }
 
@@ -80,7 +80,7 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
     @Override // java.util.Set, java.util.Collection, java.lang.Iterable
     public Iterator<E> iterator() {
         Iterator<E> it = this._set.iterator();
-        Intrinsics3.checkNotNullExpressionValue(it, "iterator(...)");
+        m.checkNotNullExpressionValue(it, "iterator(...)");
         return it;
     }
 
@@ -91,13 +91,13 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
 
     @Override // java.util.Set, java.util.Collection
     public boolean removeAll(Collection<? extends Object> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         return this._set.removeAll(elements);
     }
 
     @Override // java.util.Set, java.util.Collection
     public boolean retainAll(Collection<? extends Object> elements) {
-        Intrinsics3.checkNotNullParameter(elements, "elements");
+        m.checkNotNullParameter(elements, "elements");
         return this._set.retainAll(elements);
     }
 
@@ -108,17 +108,17 @@ public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
 
     @Override // java.util.Set, java.util.Collection
     public Object[] toArray() {
-        return CollectionToArray.toArray(this);
+        return g.toArray(this);
     }
 
     @Override // java.util.Set, java.util.Collection
     public <T> T[] toArray(T[] tArr) {
-        return (T[]) CollectionToArray.toArray(this, tArr);
+        return (T[]) g.toArray(this, tArr);
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("LRA Set ");
-        sbU.append(_Collections.toList(this._set));
+        StringBuilder sbU = a.U("LRA Set ");
+        sbU.append(u.toList(this._set));
         return sbU.toString();
     }
 

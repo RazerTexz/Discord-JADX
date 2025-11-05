@@ -1,10 +1,10 @@
 package com.discord.utilities.time;
 
 import android.app.Application;
-import b.m.a.AndroidClockFactory;
-import b.m.a.g.KronosClockImpl;
-import com.lyft.kronos.Clock8;
-import d0.z.d.Intrinsics3;
+import b.m.a.a;
+import b.m.a.g.b;
+import com.lyft.kronos.KronosClock;
+import d0.z.d.m;
 
 /* compiled from: ClockFactory.kt */
 /* loaded from: classes2.dex */
@@ -18,15 +18,15 @@ public final class ClockFactory {
     public static final Clock get() {
         NtpClock ntpClock2 = ntpClock;
         if (ntpClock2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("ntpClock");
+            m.throwUninitializedPropertyAccessException("ntpClock");
         }
         return ntpClock2;
     }
 
     public final void init(Application application) {
-        Intrinsics3.checkNotNullParameter(application, "application");
-        Clock8 clock8A = AndroidClockFactory.a(application, null, null, 0L, 0L, 0L, 62);
-        ((KronosClockImpl) clock8A).a.b();
-        ntpClock = new NtpClock(clock8A);
+        m.checkNotNullParameter(application, "application");
+        KronosClock kronosClockA = a.a(application, null, null, 0L, 0L, 0L, 62);
+        ((b) kronosClockA).a.b();
+        ntpClock = new NtpClock(kronosClockA);
     }
 }

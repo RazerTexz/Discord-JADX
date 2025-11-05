@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.stageinstance.StageInstance;
 import com.discord.api.stageinstance.StageInstancePrivacyLevel;
@@ -16,10 +16,10 @@ import com.discord.databinding.WidgetStageAudienceNoticeBottomSheetBinding;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -30,7 +30,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetStageAudienceNoticeBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageAudienceNoticeBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetStageAudienceNoticeBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageAudienceNoticeBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -47,7 +47,7 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, long channelId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetStageAudienceNoticeManager widgetStageAudienceNoticeManager = WidgetStageAudienceNoticeManager.INSTANCE;
             if (widgetStageAudienceNoticeManager.hasUserSeenAudienceNotice()) {
                 return;
@@ -67,7 +67,7 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
 
     /* compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
     /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceNoticeBottomSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StageInstance, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StageInstance, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -98,8 +98,8 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
 
     public WidgetStageAudienceNoticeBottomSheet() {
         super(false, 1, null);
-        this.channelId = LazyJVM.lazy(new WidgetStageAudienceNoticeBottomSheet3(this));
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetStageAudienceNoticeBottomSheet2.INSTANCE, null, 2, null);
+        this.channelId = g.lazy(new WidgetStageAudienceNoticeBottomSheet$channelId$2(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetStageAudienceNoticeBottomSheet$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetStageAudienceNoticeBottomSheet widgetStageAudienceNoticeBottomSheet, StageInstance stageInstance) {
@@ -113,10 +113,10 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
     private final void configureUI(StageInstance stageInstance) {
         boolean z2 = (stageInstance != null ? stageInstance.getPrivacyLevel() : null) == StageInstancePrivacyLevel.PUBLIC;
         ImageView imageView = getBinding().f2648b;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.bullet4Icon");
+        m.checkNotNullExpressionValue(imageView, "binding.bullet4Icon");
         imageView.setVisibility(z2 ? 0 : 8);
         TextView textView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.bullet4Label");
+        m.checkNotNullExpressionValue(textView, "binding.bullet4Label");
         textView.setVisibility(z2 ? 0 : 8);
     }
 
@@ -141,10 +141,10 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         WidgetStageAudienceNoticeBottomSheetBinding binding = getBinding();
-        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        m.checkNotNullExpressionValue(binding, "binding");
         setPeekHeightBottomView(binding.a);
         getBinding().d.setOnClickListener(new AnonymousClass1());
     }

@@ -12,17 +12,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import androidx.annotation.ColorInt;
-import b.a.i.UserAvatarPresenceViewBinding;
-import b.a.y.s0.UserAvatarPresenceView2;
-import b.a.y.s0.UserAvatarPresenceView3;
-import b.d.b.a.outline;
+import b.a.i.v1;
 import com.discord.R;
 import com.discord.models.member.GuildMember;
 import com.discord.models.presence.Presence;
 import com.discord.models.user.User;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompat2;
+import com.discord.utilities.color.ColorCompatKt;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
 import com.discord.utilities.streams.StreamContext;
@@ -30,9 +27,9 @@ import com.discord.utilities.user.UserUtils;
 import com.discord.views.StatusView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -43,7 +40,7 @@ import kotlin.jvm.functions.Function2;
 public final class UserAvatarPresenceView extends RelativeLayout {
 
     /* renamed from: j, reason: from kotlin metadata */
-    public final UserAvatarPresenceViewBinding binding;
+    public final v1 binding;
 
     /* renamed from: k, reason: from kotlin metadata */
     public final MGImages.DistinctChangeDetector imagesChangeDetector;
@@ -55,7 +52,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
     public Function2<? super Bitmap, ? super String, Unit> onAvatarBitmapLoadedListener;
 
     /* compiled from: UserAvatarPresenceView.kt */
-    public static final class b extends Lambda implements Function2<Bitmap, String, Unit> {
+    public static final class b extends o implements Function2<Bitmap, String, Unit> {
         public static final b j = new b();
 
         public b() {
@@ -64,13 +61,13 @@ public final class UserAvatarPresenceView extends RelativeLayout {
 
         @Override // kotlin.jvm.functions.Function2
         public Unit invoke(Bitmap bitmap, String str) {
-            Intrinsics3.checkNotNullParameter(bitmap, "<anonymous parameter 0>");
+            m.checkNotNullParameter(bitmap, "<anonymous parameter 0>");
             return Unit.a;
         }
     }
 
     /* compiled from: UserAvatarPresenceView.kt */
-    public static final class c extends Lambda implements Function1<ImageRequestBuilder, Unit> {
+    public static final class c extends o implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $iconUrl;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -82,14 +79,14 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(ImageRequestBuilder imageRequestBuilder) {
             ImageRequestBuilder imageRequestBuilder2 = imageRequestBuilder;
-            Intrinsics3.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
-            imageRequestBuilder2.l = new UserAvatarPresenceView2(this);
+            m.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
+            imageRequestBuilder2.l = new b.a.y.s0.a(this);
             return Unit.a;
         }
     }
 
     /* compiled from: UserAvatarPresenceView.kt */
-    public static final class d extends Lambda implements Function1<ImageRequestBuilder, Unit> {
+    public static final class d extends o implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $iconUrl;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -101,8 +98,8 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(ImageRequestBuilder imageRequestBuilder) {
             ImageRequestBuilder imageRequestBuilder2 = imageRequestBuilder;
-            Intrinsics3.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
-            imageRequestBuilder2.l = new UserAvatarPresenceView3(this);
+            m.checkNotNullParameter(imageRequestBuilder2, "imageRequestBuilder");
+            imageRequestBuilder2.l = new b.a.y.s0.b(this);
             return Unit.a;
         }
     }
@@ -110,8 +107,8 @@ public final class UserAvatarPresenceView extends RelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserAvatarPresenceView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(attributeSet, "attrs");
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.user_avatar_presence_view, (ViewGroup) this, false);
         addView(viewInflate);
         int i = R.id.avatar;
@@ -130,18 +127,18 @@ public final class UserAvatarPresenceView extends RelativeLayout {
                         i = R.id.user_avatar_presence_status;
                         StatusView statusView = (StatusView) viewInflate.findViewById(R.id.user_avatar_presence_status);
                         if (statusView != null) {
-                            UserAvatarPresenceViewBinding userAvatarPresenceViewBinding = new UserAvatarPresenceViewBinding(relativeLayout, simpleDraweeView, frameLayout, imageView, simpleDraweeView2, relativeLayout, statusView);
-                            Intrinsics3.checkNotNullExpressionValue(userAvatarPresenceViewBinding, "UserAvatarPresenceViewBi…rom(context), this, true)");
-                            this.binding = userAvatarPresenceViewBinding;
+                            v1 v1Var = new v1(relativeLayout, simpleDraweeView, frameLayout, imageView, simpleDraweeView2, relativeLayout, statusView);
+                            m.checkNotNullExpressionValue(v1Var, "UserAvatarPresenceViewBi…rom(context), this, true)");
+                            this.binding = v1Var;
                             this.imagesChangeDetector = new MGImages.DistinctChangeDetector();
                             this.onAvatarBitmapLoadedListener = b.j;
                             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.a.UserAvatarPresenceView);
-                            Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…e.UserAvatarPresenceView)");
+                            m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…e.UserAvatarPresenceView)");
                             int color = typedArrayObtainStyledAttributes.getColor(0, ColorCompat.getThemedColor(this, R.attr.primary_700));
                             this.cutoutSpacePx = typedArrayObtainStyledAttributes.getDimensionPixelSize(1, 0);
                             typedArrayObtainStyledAttributes.recycle();
                             setAvatarBackgroundColor(color);
-                            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.avatar");
+                            m.checkNotNullExpressionValue(simpleDraweeView, "binding.avatar");
                             simpleDraweeView.setClipToOutline(true);
                             return;
                         }
@@ -163,13 +160,13 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         String forUser$default;
         String forGuildMember$default;
         boolean z2;
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(viewState, "viewState");
         GuildMember guildMember = viewState.e;
         User user = viewState.a;
         boolean z3 = !AccessibilityUtils.INSTANCE.isReducedMotionEnabled();
         if (guildMember == null || !guildMember.hasAvatar()) {
             String avatar = user.getAvatar();
-            if (avatar == null || !StringsJVM.startsWith$default(avatar, "data:", false, 2, null)) {
+            if (avatar == null || !t.startsWith$default(avatar, "data:", false, 2, null)) {
                 String avatar2 = user.getAvatar();
                 if (avatar2 != null) {
                     zIsDataUrlForGif = z3 && IconUtils.INSTANCE.isImageHashAnimated(avatar2);
@@ -183,7 +180,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
             }
         } else {
             forUser$default = guildMember.getAvatarHash();
-            if (forUser$default == null || !StringsJVM.startsWith$default(forUser$default, "data:", false, 2, null)) {
+            if (forUser$default == null || !t.startsWith$default(forUser$default, "data:", false, 2, null)) {
                 if (forUser$default != null) {
                     z2 = z3 && IconUtils.INSTANCE.isImageHashAnimated(forUser$default);
                 } else {
@@ -192,16 +189,16 @@ public final class UserAvatarPresenceView extends RelativeLayout {
                 forGuildMember$default = IconUtils.getForGuildMember$default(IconUtils.INSTANCE, guildMember, null, z3, 2, null);
                 zIsDataUrlForGif = z2;
                 SimpleDraweeView simpleDraweeView = this.binding.f215b;
-                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.avatar");
+                m.checkNotNullExpressionValue(simpleDraweeView, "binding.avatar");
                 IconUtils.setIcon$default(simpleDraweeView, forGuildMember$default, 0, new c(forGuildMember$default), this.imagesChangeDetector, 4, (Object) null);
                 if (zIsDataUrlForGif) {
                     String forUser$default2 = (guildMember == null || !guildMember.hasAvatar()) ? IconUtils.getForUser$default(viewState.a, false, null, 4, null) : IconUtils.getForGuildMember$default(IconUtils.INSTANCE, guildMember, null, false, 2, null);
                     SimpleDraweeView simpleDraweeView2 = this.binding.d;
-                    Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.staticAvatar");
+                    m.checkNotNullExpressionValue(simpleDraweeView2, "binding.staticAvatar");
                     IconUtils.setIcon$default(simpleDraweeView2, forUser$default2, 0, new d(forUser$default2), this.imagesChangeDetector, 4, (Object) null);
                 }
                 StatusView statusView = this.binding.e;
-                Intrinsics3.checkNotNullExpressionValue(statusView, "binding.userAvatarPresenceStatus");
+                m.checkNotNullExpressionValue(statusView, "binding.userAvatarPresenceStatus");
                 statusView.setVisibility(!viewState.d && UserUtils.INSTANCE.isStatusVisible(viewState.a, viewState.f2846b, true) ? 0 : 8);
                 this.binding.e.setPresence(viewState.f2846b);
             }
@@ -209,12 +206,12 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         }
         forGuildMember$default = forUser$default;
         SimpleDraweeView simpleDraweeView3 = this.binding.f215b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.avatar");
+        m.checkNotNullExpressionValue(simpleDraweeView3, "binding.avatar");
         IconUtils.setIcon$default(simpleDraweeView3, forGuildMember$default, 0, new c(forGuildMember$default), this.imagesChangeDetector, 4, (Object) null);
         if (zIsDataUrlForGif) {
         }
         StatusView statusView2 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(statusView2, "binding.userAvatarPresenceStatus");
+        m.checkNotNullExpressionValue(statusView2, "binding.userAvatarPresenceStatus");
         statusView2.setVisibility(!viewState.d && UserUtils.INSTANCE.isStatusVisible(viewState.a, viewState.f2846b, true) ? 0 : 8);
         this.binding.e.setPresence(viewState.f2846b);
     }
@@ -224,7 +221,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int size = View.MeasureSpec.getSize(widthMeasureSpec);
         ImageView imageView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.avatarCutout");
+        m.checkNotNullExpressionValue(imageView, "binding.avatarCutout");
         ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
         layoutParams.width = size;
@@ -232,7 +229,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         imageView.setLayoutParams(layoutParams);
         int i = size - (this.cutoutSpacePx * 2);
         SimpleDraweeView simpleDraweeView = this.binding.f215b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.avatar");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.avatar");
         ViewGroup.LayoutParams layoutParams2 = simpleDraweeView.getLayoutParams();
         Objects.requireNonNull(layoutParams2, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
         layoutParams2.width = i;
@@ -243,7 +240,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         float f3 = 0.0375f * f;
         float f4 = f * 0.05f;
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         float f5 = resources.getDisplayMetrics().density;
         float f6 = 12 * f5;
         if (f2 < f6) {
@@ -255,17 +252,17 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         float f8 = f3;
         float fMax = Math.max(f3, f5 * 2);
         StatusView statusView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(statusView, "binding.userAvatarPresenceStatus");
+        m.checkNotNullExpressionValue(statusView, "binding.userAvatarPresenceStatus");
         ViewGroup.LayoutParams layoutParams3 = statusView.getLayoutParams();
         layoutParams3.width = (int) f2;
         StatusView statusView2 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(statusView2, "binding.userAvatarPresenceStatus");
+        m.checkNotNullExpressionValue(statusView2, "binding.userAvatarPresenceStatus");
         statusView2.setLayoutParams(layoutParams3);
         StatusView statusView3 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(statusView3, "binding.userAvatarPresenceStatus");
+        m.checkNotNullExpressionValue(statusView3, "binding.userAvatarPresenceStatus");
         statusView3.setTranslationX(f8 - this.cutoutSpacePx);
         StatusView statusView4 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(statusView4, "binding.userAvatarPresenceStatus");
+        m.checkNotNullExpressionValue(statusView4, "binding.userAvatarPresenceStatus");
         statusView4.setTranslationY(f8 - this.cutoutSpacePx);
         this.binding.e.setBorderWidth((int) fMax);
         this.binding.e.setCornerRadius(f4);
@@ -274,12 +271,12 @@ public final class UserAvatarPresenceView extends RelativeLayout {
     public final void setAvatarBackgroundColor(@ColorInt int backgroundColor) {
         this.binding.e.setBackgroundColor(backgroundColor);
         ImageView imageView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.avatarCutout");
-        ColorCompat2.tintWithColor(imageView, backgroundColor);
+        m.checkNotNullExpressionValue(imageView, "binding.avatarCutout");
+        ColorCompatKt.tintWithColor(imageView, backgroundColor);
     }
 
     public final void setOnAvatarBitmapLoadedListener(Function2<? super Bitmap, ? super String, Unit> onAvatarBitmapLoadedListener) {
-        Intrinsics3.checkNotNullParameter(onAvatarBitmapLoadedListener, "onAvatarBitmapLoadedListener");
+        m.checkNotNullParameter(onAvatarBitmapLoadedListener, "onAvatarBitmapLoadedListener");
         this.onAvatarBitmapLoadedListener = onAvatarBitmapLoadedListener;
     }
 
@@ -295,7 +292,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
 
         public a(User user, Presence presence, StreamContext streamContext, boolean z2, GuildMember guildMember, int i) {
             int i2 = i & 16;
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             this.a = user;
             this.f2846b = presence;
             this.c = streamContext;
@@ -311,7 +308,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
                 return false;
             }
             a aVar = (a) obj;
-            return Intrinsics3.areEqual(this.a, aVar.a) && Intrinsics3.areEqual(this.f2846b, aVar.f2846b) && Intrinsics3.areEqual(this.c, aVar.c) && this.d == aVar.d && Intrinsics3.areEqual(this.e, aVar.e);
+            return m.areEqual(this.a, aVar.a) && m.areEqual(this.f2846b, aVar.f2846b) && m.areEqual(this.c, aVar.c) && this.d == aVar.d && m.areEqual(this.e, aVar.e);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -333,7 +330,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(user=");
+            StringBuilder sbU = b.d.b.a.a.U("ViewState(user=");
             sbU.append(this.a);
             sbU.append(", presence=");
             sbU.append(this.f2846b);
@@ -348,7 +345,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         }
 
         public a(User user, Presence presence, StreamContext streamContext, boolean z2, GuildMember guildMember) {
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             this.a = user;
             this.f2846b = presence;
             this.c = streamContext;

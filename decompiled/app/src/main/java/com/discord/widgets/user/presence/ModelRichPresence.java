@@ -1,13 +1,13 @@
 package com.discord.widgets.user.presence;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.activity.Activity;
 import com.discord.api.application.Application;
 import com.discord.models.presence.Presence;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUserPresence;
 import com.discord.utilities.presence.PresenceUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
 
@@ -33,9 +33,9 @@ public final /* data */ class ModelRichPresence {
         }
 
         public final Observable<ModelRichPresence> get(long userId, StoreUserPresence storeUserPresence) {
-            Intrinsics3.checkNotNullParameter(storeUserPresence, "storeUserPresence");
-            Observable observableY = storeUserPresence.observePresenceForUser(userId).Y(ModelRichPresence2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableY, "storeUserPresence\n      …          }\n            }");
+            m.checkNotNullParameter(storeUserPresence, "storeUserPresence");
+            Observable observableY = storeUserPresence.observePresenceForUser(userId).Y(ModelRichPresence$Companion$get$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableY, "storeUserPresence\n      …          }\n            }");
             return observableY;
         }
 
@@ -45,7 +45,7 @@ public final /* data */ class ModelRichPresence {
     }
 
     public ModelRichPresence(Presence presence, Application application) {
-        Intrinsics3.checkNotNullParameter(presence, "presence");
+        m.checkNotNullParameter(presence, "presence");
         this.presence = presence;
         this.primaryApplication = application;
     }
@@ -75,7 +75,7 @@ public final /* data */ class ModelRichPresence {
     }
 
     public final ModelRichPresence copy(Presence presence, Application primaryApplication) {
-        Intrinsics3.checkNotNullParameter(presence, "presence");
+        m.checkNotNullParameter(presence, "presence");
         return new ModelRichPresence(presence, primaryApplication);
     }
 
@@ -87,7 +87,7 @@ public final /* data */ class ModelRichPresence {
             return false;
         }
         ModelRichPresence modelRichPresence = (ModelRichPresence) other;
-        return Intrinsics3.areEqual(this.presence, modelRichPresence.presence) && Intrinsics3.areEqual(this.primaryApplication, modelRichPresence.primaryApplication);
+        return m.areEqual(this.presence, modelRichPresence.presence) && m.areEqual(this.primaryApplication, modelRichPresence.primaryApplication);
     }
 
     public final Presence getPresence() {
@@ -110,7 +110,7 @@ public final /* data */ class ModelRichPresence {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelRichPresence(presence=");
+        StringBuilder sbU = a.U("ModelRichPresence(presence=");
         sbU.append(this.presence);
         sbU.append(", primaryApplication=");
         sbU.append(this.primaryApplication);

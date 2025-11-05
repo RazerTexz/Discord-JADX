@@ -1,7 +1,7 @@
 package co.discord.media_engine.internal;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -111,7 +111,7 @@ public final /* data */ class RtcpStats {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("RtcpStats(fractionLost=");
+        StringBuilder sbU = a.U("RtcpStats(fractionLost=");
         sbU.append(this.fractionLost);
         sbU.append(", packetsLost=");
         sbU.append(this.packetsLost);
@@ -124,6 +124,6 @@ public final /* data */ class RtcpStats {
         sbU.append(", pliPackets=");
         sbU.append(this.pliPackets);
         sbU.append(", uniqueNackRequests=");
-        return outline.C(sbU, this.uniqueNackRequests, ")");
+        return a.C(sbU, this.uniqueNackRequests, ")");
     }
 }

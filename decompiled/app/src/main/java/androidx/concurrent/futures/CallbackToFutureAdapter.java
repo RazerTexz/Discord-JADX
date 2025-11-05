@@ -2,8 +2,7 @@ package androidx.concurrent.futures;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.b.d.a.ListenableFuture8;
+import b.d.b.a.a;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
@@ -36,7 +35,7 @@ public final class CallbackToFutureAdapter {
             ResolvableFuture<Void> resolvableFuture;
             SafeFuture<T> safeFuture = this.future;
             if (safeFuture != null && !safeFuture.isDone()) {
-                StringBuilder sbU = outline.U("The completer object was garbage collected - this future would otherwise never complete. The tag was: ");
+                StringBuilder sbU = a.U("The completer object was garbage collected - this future would otherwise never complete. The tag was: ");
                 sbU.append(this.tag);
                 safeFuture.setException(new FutureGarbageCollectedException(sbU.toString()));
             }
@@ -99,7 +98,7 @@ public final class CallbackToFutureAdapter {
         Object attachCompleter(@NonNull Completer<T> completer) throws Exception;
     }
 
-    public static final class SafeFuture<T> implements ListenableFuture8<T> {
+    public static final class SafeFuture<T> implements b.i.b.d.a.a<T> {
         public final WeakReference<Completer<T>> completerWeakReference;
         private final AbstractResolvableFuture<T> delegate = new AnonymousClass1();
 
@@ -114,7 +113,7 @@ public final class CallbackToFutureAdapter {
                 if (completer == null) {
                     return "Completer object has been garbage collected, future will fail soon";
                 }
-                StringBuilder sbU = outline.U("tag=[");
+                StringBuilder sbU = a.U("tag=[");
                 sbU.append(completer.tag);
                 sbU.append("]");
                 return sbU.toString();
@@ -125,7 +124,7 @@ public final class CallbackToFutureAdapter {
             this.completerWeakReference = new WeakReference<>(completer);
         }
 
-        @Override // b.i.b.d.a.ListenableFuture8
+        @Override // b.i.b.d.a.a
         public void addListener(@NonNull Runnable runnable, @NonNull Executor executor) {
             this.delegate.addListener(runnable, executor);
         }
@@ -181,7 +180,7 @@ public final class CallbackToFutureAdapter {
     }
 
     @NonNull
-    public static <T> ListenableFuture8<T> getFuture(@NonNull Resolver<T> resolver) {
+    public static <T> b.i.b.d.a.a<T> getFuture(@NonNull Resolver<T> resolver) {
         Completer<T> completer = new Completer<>();
         SafeFuture<T> safeFuture = new SafeFuture<>(completer);
         completer.future = safeFuture;

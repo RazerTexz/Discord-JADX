@@ -1,24 +1,21 @@
 package b.i.a.c;
 
-import b.i.a.c.ExoPlayer2;
-import b.i.a.c.f3.Clock4;
-import b.i.a.c.s2.AnalyticsCollector;
-import b.i.b.a.Supplier2;
+import b.i.a.c.e1;
 import java.util.Objects;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class i implements Supplier2 {
-    public final /* synthetic */ ExoPlayer2.b j;
+public final /* synthetic */ class i implements b.i.b.a.l {
+    public final /* synthetic */ e1.b j;
 
-    public /* synthetic */ i(ExoPlayer2.b bVar) {
+    public /* synthetic */ i(e1.b bVar) {
         this.j = bVar;
     }
 
-    @Override // b.i.b.a.Supplier2
+    @Override // b.i.b.a.l
     public final Object get() {
-        Clock4 clock4 = this.j.f923b;
-        Objects.requireNonNull(clock4);
-        return new AnalyticsCollector(clock4);
+        b.i.a.c.f3.g gVar = this.j.f923b;
+        Objects.requireNonNull(gVar);
+        return new b.i.a.c.s2.g1(gVar);
     }
 }

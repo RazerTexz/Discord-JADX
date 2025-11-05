@@ -4,7 +4,6 @@ import android.opengl.GLES20;
 import android.opengl.GLU;
 import android.text.TextUtils;
 import android.util.Log;
-import b.d.b.a.outline;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -57,7 +56,7 @@ public final class GlUtil {
             GLES20.glGetShaderiv(iGlCreateShader, 35713, iArr, 0);
             if (iArr[0] != 1) {
                 String strGlGetShaderInfoLog = GLES20.glGetShaderInfoLog(iGlCreateShader);
-                StringBuilder sb = new StringBuilder(outline.b(str, outline.b(strGlGetShaderInfoLog, 10)));
+                StringBuilder sb = new StringBuilder(b.d.b.a.a.b(str, b.d.b.a.a.b(strGlGetShaderInfoLog, 10)));
                 sb.append(strGlGetShaderInfoLog);
                 sb.append(", source: ");
                 sb.append(str);

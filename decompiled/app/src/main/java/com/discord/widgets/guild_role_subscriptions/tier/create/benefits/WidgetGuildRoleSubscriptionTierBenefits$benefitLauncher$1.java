@@ -1,13 +1,13 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create.benefits;
 
 import com.discord.widgets.guild_role_subscriptions.tier.model.Benefit;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
 /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildRoleSubscriptionTierBenefits$benefitLauncher$1 extends Lambda implements Function2<Benefit, Benefit, Unit> {
+public final class WidgetGuildRoleSubscriptionTierBenefits$benefitLauncher$1 extends o implements Function2<Benefit, Benefit, Unit> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -1,7 +1,7 @@
 package com.discord.utilities.views;
 
 import androidx.annotation.MainThread;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.lang.ref.WeakReference;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class ViewVisibilityObserverProvider {
 
     @MainThread
     public final ViewVisibilityObserver get(String featureName) {
-        Intrinsics3.checkNotNullParameter(featureName, "featureName");
+        m.checkNotNullParameter(featureName, "featureName");
         Map<String, WeakReference<ViewVisibilityObserver>> map = featureNameToObserverRefMap;
         WeakReference<ViewVisibilityObserver> weakReference = map.get(featureName);
         ViewVisibilityObserver viewVisibilityObserver = weakReference != null ? weakReference.get() : null;

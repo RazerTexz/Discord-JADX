@@ -1,22 +1,22 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackPaymentMetadata;
-import com.discord.analytics.generated.traits.TrackPaymentMetadata2;
+import com.discord.analytics.generated.traits.TrackPaymentMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStoreListingViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStoreListingViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSourceMetadata2, TrackStoreSkuMetadata2, TrackPaymentMetadata2 {
+public final /* data */ class TrackStoreListingViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver, TrackStoreSkuMetadataReceiver, TrackPaymentMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackPaymentMetadata trackPaymentMetadata;
@@ -64,7 +64,7 @@ public final /* data */ class TrackStoreListingViewed implements AnalyticsSchema
             return false;
         }
         TrackStoreListingViewed trackStoreListingViewed = (TrackStoreListingViewed) other;
-        return Intrinsics3.areEqual(this.loadId, trackStoreListingViewed.loadId) && Intrinsics3.areEqual(this.hasDescription, trackStoreListingViewed.hasDescription) && Intrinsics3.areEqual(this.hasStaffReview, trackStoreListingViewed.hasStaffReview) && Intrinsics3.areEqual(this.carouselImageCount, trackStoreListingViewed.carouselImageCount) && Intrinsics3.areEqual(this.carouselVideoCount, trackStoreListingViewed.carouselVideoCount) && Intrinsics3.areEqual(this.hasNews, trackStoreListingViewed.hasNews) && Intrinsics3.areEqual(this.hasSinglePlayer, trackStoreListingViewed.hasSinglePlayer) && Intrinsics3.areEqual(this.hasOnlineMultiplayer, trackStoreListingViewed.hasOnlineMultiplayer) && Intrinsics3.areEqual(this.hasLocalMultiplayer, trackStoreListingViewed.hasLocalMultiplayer) && Intrinsics3.areEqual(this.hasPvpFeatures, trackStoreListingViewed.hasPvpFeatures) && Intrinsics3.areEqual(this.hasCoop, trackStoreListingViewed.hasCoop) && Intrinsics3.areEqual(this.hasLocalCoop, trackStoreListingViewed.hasLocalCoop) && Intrinsics3.areEqual(this.hasOnlineCoop, trackStoreListingViewed.hasOnlineCoop) && Intrinsics3.areEqual(this.hasCrossPlatform, trackStoreListingViewed.hasCrossPlatform) && Intrinsics3.areEqual(this.hasRichPresence, trackStoreListingViewed.hasRichPresence) && Intrinsics3.areEqual(this.hasGameInvites, trackStoreListingViewed.hasGameInvites) && Intrinsics3.areEqual(this.hasSpectatorMode, trackStoreListingViewed.hasSpectatorMode) && Intrinsics3.areEqual(this.hasControllerSupport, trackStoreListingViewed.hasControllerSupport) && Intrinsics3.areEqual(this.hasCloudSaves, trackStoreListingViewed.hasCloudSaves) && Intrinsics3.areEqual(this.hasSecureNetworking, trackStoreListingViewed.hasSecureNetworking) && Intrinsics3.areEqual(this.promotionId, trackStoreListingViewed.promotionId) && Intrinsics3.areEqual(this.listIndex, trackStoreListingViewed.listIndex) && Intrinsics3.areEqual(this.listSearched, trackStoreListingViewed.listSearched) && Intrinsics3.areEqual(this.listSort, trackStoreListingViewed.listSort) && Intrinsics3.areEqual(this.listFilterDistributionType, trackStoreListingViewed.listFilterDistributionType) && Intrinsics3.areEqual(this.source, trackStoreListingViewed.source);
+        return m.areEqual(this.loadId, trackStoreListingViewed.loadId) && m.areEqual(this.hasDescription, trackStoreListingViewed.hasDescription) && m.areEqual(this.hasStaffReview, trackStoreListingViewed.hasStaffReview) && m.areEqual(this.carouselImageCount, trackStoreListingViewed.carouselImageCount) && m.areEqual(this.carouselVideoCount, trackStoreListingViewed.carouselVideoCount) && m.areEqual(this.hasNews, trackStoreListingViewed.hasNews) && m.areEqual(this.hasSinglePlayer, trackStoreListingViewed.hasSinglePlayer) && m.areEqual(this.hasOnlineMultiplayer, trackStoreListingViewed.hasOnlineMultiplayer) && m.areEqual(this.hasLocalMultiplayer, trackStoreListingViewed.hasLocalMultiplayer) && m.areEqual(this.hasPvpFeatures, trackStoreListingViewed.hasPvpFeatures) && m.areEqual(this.hasCoop, trackStoreListingViewed.hasCoop) && m.areEqual(this.hasLocalCoop, trackStoreListingViewed.hasLocalCoop) && m.areEqual(this.hasOnlineCoop, trackStoreListingViewed.hasOnlineCoop) && m.areEqual(this.hasCrossPlatform, trackStoreListingViewed.hasCrossPlatform) && m.areEqual(this.hasRichPresence, trackStoreListingViewed.hasRichPresence) && m.areEqual(this.hasGameInvites, trackStoreListingViewed.hasGameInvites) && m.areEqual(this.hasSpectatorMode, trackStoreListingViewed.hasSpectatorMode) && m.areEqual(this.hasControllerSupport, trackStoreListingViewed.hasControllerSupport) && m.areEqual(this.hasCloudSaves, trackStoreListingViewed.hasCloudSaves) && m.areEqual(this.hasSecureNetworking, trackStoreListingViewed.hasSecureNetworking) && m.areEqual(this.promotionId, trackStoreListingViewed.promotionId) && m.areEqual(this.listIndex, trackStoreListingViewed.listIndex) && m.areEqual(this.listSearched, trackStoreListingViewed.listSearched) && m.areEqual(this.listSort, trackStoreListingViewed.listSort) && m.areEqual(this.listFilterDistributionType, trackStoreListingViewed.listFilterDistributionType) && m.areEqual(this.source, trackStoreListingViewed.source);
     }
 
     public int hashCode() {
@@ -123,7 +123,7 @@ public final /* data */ class TrackStoreListingViewed implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStoreListingViewed(loadId=");
+        StringBuilder sbU = a.U("TrackStoreListingViewed(loadId=");
         sbU.append(this.loadId);
         sbU.append(", hasDescription=");
         sbU.append(this.hasDescription);
@@ -174,6 +174,6 @@ public final /* data */ class TrackStoreListingViewed implements AnalyticsSchema
         sbU.append(", listFilterDistributionType=");
         sbU.append(this.listFilterDistributionType);
         sbU.append(", source=");
-        return outline.E(sbU, this.source, ")");
+        return a.E(sbU, this.source, ")");
     }
 }

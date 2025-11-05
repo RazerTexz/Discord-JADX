@@ -3,8 +3,8 @@ package com.discord.app;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.utilities.analytics.AnalyticsUtils;
 import com.discord.utilities.features.GrowthTeamFeatures;
-import d0.e0.KProperty3;
-import d0.z.d.Intrinsics3;
+import d0.e0.g;
+import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -31,14 +31,14 @@ public final class AppLogger {
 
     /* compiled from: AppLogger.kt */
     public interface a {
-        AppLogger2 getLoggingConfig();
+        LoggingConfig getLoggingConfig();
     }
 
     public AppLogger(a aVar, AnalyticsUtils.Tracker tracker, boolean z2, int i) {
         AnalyticsUtils.Tracker companion = (i & 2) != 0 ? AnalyticsUtils.Tracker.INSTANCE.getInstance() : null;
         z2 = (i & 4) != 0 ? GrowthTeamFeatures.INSTANCE.isImpressionLoggingEnabled() : z2;
-        Intrinsics3.checkNotNullParameter(aVar, "provider");
-        Intrinsics3.checkNotNullParameter(companion, "tracker");
+        m.checkNotNullParameter(aVar, "provider");
+        m.checkNotNullParameter(companion, "tracker");
         this.provider = aVar;
         this.tracker = companion;
         this.isImpressionLoggingEnabled = z2;
@@ -51,7 +51,7 @@ public final class AppLogger {
             this.tracker.track(analyticsSchema);
             return;
         }
-        AppLogger2 loggingConfig = this.provider.getLoggingConfig();
+        LoggingConfig loggingConfig = this.provider.getLoggingConfig();
         if (loggingConfig == null || (function0 = loggingConfig.impressionSchemaProvider) == null || (analyticsSchemaInvoke = function0.invoke()) == null) {
             return;
         }
@@ -66,7 +66,7 @@ public final class AppLogger {
         AnalyticsSchema analyticsSchemaInvoke;
         boolean z2;
         if (this.isImpressionLoggingEnabled) {
-            AppLogger2 loggingConfig = this.provider.getLoggingConfig();
+            LoggingConfig loggingConfig = this.provider.getLoggingConfig();
             if (loggingConfig != null) {
                 Function0<AnalyticsSchema> function0 = loggingConfig.impressionSchemaProvider;
                 if (function0 == null || (analyticsSchemaInvoke = function0.invoke()) == null) {
@@ -84,13 +84,13 @@ public final class AppLogger {
                     return;
                 }
                 if (loggingConfig.autoLogImpressionOnChanged) {
-                    if (!loggingConfig.autoLogImpressionProperties.isEmpty() || !(!Intrinsics3.areEqual(r2, analyticsSchemaInvoke))) {
-                        List<KProperty3<?, ?>> list = loggingConfig.autoLogImpressionProperties;
+                    if (!loggingConfig.autoLogImpressionProperties.isEmpty() || !(!m.areEqual(r2, analyticsSchemaInvoke))) {
+                        List<g<?, ?>> list = loggingConfig.autoLogImpressionProperties;
                         if (!(list instanceof Collection) || !list.isEmpty()) {
                             Iterator<T> it = list.iterator();
                             while (it.hasNext()) {
-                                KProperty3 kProperty3 = (KProperty3) it.next();
-                                if ((!(kProperty3 instanceof KProperty3) ? null : kProperty3) != null ? !Intrinsics3.areEqual(kProperty3.get(analyticsSchemaInvoke), kProperty3.get(r2)) : false) {
+                                g gVar = (g) it.next();
+                                if ((!(gVar instanceof g) ? null : gVar) != null ? !m.areEqual(gVar.get(analyticsSchemaInvoke), gVar.get(r2)) : false) {
                                     z2 = true;
                                     break;
                                 }

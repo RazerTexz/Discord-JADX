@@ -2,14 +2,14 @@ package com.google.android.exoplayer2.decoder;
 
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
-import b.i.a.c.ExoPlayerLibraryInfo;
-import b.i.a.c.v2.Buffer2;
-import b.i.a.c.v2.CryptoInfo;
+import b.i.a.c.i1;
+import b.i.a.c.v2.a;
+import b.i.a.c.v2.c;
 import java.nio.ByteBuffer;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNull;
 
 /* loaded from: classes3.dex */
-public class DecoderInputBuffer extends Buffer2 {
+public class DecoderInputBuffer extends a {
 
     @Nullable
     public ByteBuffer l;
@@ -19,7 +19,7 @@ public class DecoderInputBuffer extends Buffer2 {
     @Nullable
     public ByteBuffer o;
     public final int p;
-    public final CryptoInfo k = new CryptoInfo();
+    public final c k = new c();
     public final int q = 0;
 
     public static final class InsufficientCapacityException extends IllegalStateException {
@@ -40,7 +40,7 @@ public class DecoderInputBuffer extends Buffer2 {
     }
 
     static {
-        ExoPlayerLibraryInfo.a("goog.exo.decoder");
+        i1.a("goog.exo.decoder");
     }
 
     public DecoderInputBuffer(int i) {

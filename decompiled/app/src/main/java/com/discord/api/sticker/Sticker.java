@@ -1,8 +1,8 @@
 package com.discord.api.sticker;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.NoWhenBranchMatchedException;
 
@@ -35,11 +35,11 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
 
     public Sticker(long j, Long l, Long l2, String str, String str2, StickerFormatType stickerFormatType, String str3, StickerType stickerType, Boolean bool, int i) {
         int i2 = i & 256;
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
-        Intrinsics3.checkNotNullParameter(stickerFormatType, "formatType");
-        Intrinsics3.checkNotNullParameter(str3, ModelAuditLogEntry.CHANGE_KEY_TAGS);
-        Intrinsics3.checkNotNullParameter(stickerType, "type");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
+        m.checkNotNullParameter(stickerFormatType, "formatType");
+        m.checkNotNullParameter(str3, ModelAuditLogEntry.CHANGE_KEY_TAGS);
+        m.checkNotNullParameter(stickerType, "type");
         this.id = j;
         this.packId = l;
         this.guildId = l2;
@@ -96,7 +96,7 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
             return false;
         }
         Sticker sticker = (Sticker) other;
-        return this.id == sticker.id && Intrinsics3.areEqual(this.packId, sticker.packId) && Intrinsics3.areEqual(this.guildId, sticker.guildId) && Intrinsics3.areEqual(this.name, sticker.name) && Intrinsics3.areEqual(this.description, sticker.description) && Intrinsics3.areEqual(this.formatType, sticker.formatType) && Intrinsics3.areEqual(this.tags, sticker.tags) && Intrinsics3.areEqual(this.type, sticker.type) && Intrinsics3.areEqual(this.available, sticker.available);
+        return this.id == sticker.id && m.areEqual(this.packId, sticker.packId) && m.areEqual(this.guildId, sticker.guildId) && m.areEqual(this.name, sticker.name) && m.areEqual(this.description, sticker.description) && m.areEqual(this.formatType, sticker.formatType) && m.areEqual(this.tags, sticker.tags) && m.areEqual(this.type, sticker.type) && m.areEqual(this.available, sticker.available);
     }
 
     /* renamed from: f, reason: from getter */
@@ -160,7 +160,7 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Sticker(id=");
+        StringBuilder sbU = a.U("Sticker(id=");
         sbU.append(this.id);
         sbU.append(", packId=");
         sbU.append(this.packId);
@@ -177,6 +177,6 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
         sbU.append(", type=");
         sbU.append(this.type);
         sbU.append(", available=");
-        return outline.D(sbU, this.available, ")");
+        return a.D(sbU, this.available, ")");
     }
 }

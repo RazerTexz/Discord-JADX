@@ -14,8 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.util.Pair;
 import b.i.a.f.e.o.f;
-import b.i.a.g.d.DateFormatTextWatcher;
-import b.i.a.g.d.UtcDates;
+import b.i.a.g.d.c;
+import b.i.a.g.d.l;
 import com.google.android.material.R;
 import com.google.android.material.internal.ManufacturerUtils;
 import com.google.android.material.internal.ViewUtils;
@@ -35,7 +35,7 @@ public class SingleDateSelector implements DateSelector<Long> {
     @Nullable
     private Long selectedItem;
 
-    public class a extends DateFormatTextWatcher {
+    public class a extends c {
         public final /* synthetic */ OnSelectionChangedListener p;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -44,12 +44,12 @@ public class SingleDateSelector implements DateSelector<Long> {
             this.p = onSelectionChangedListener;
         }
 
-        @Override // b.i.a.g.d.DateFormatTextWatcher
+        @Override // b.i.a.g.d.c
         public void a() {
             this.p.onIncompleteSelectionChanged();
         }
 
-        @Override // b.i.a.g.d.DateFormatTextWatcher
+        @Override // b.i.a.g.d.c
         public void b(@Nullable Long l) {
             if (l == null) {
                 SingleDateSelector.access$000(SingleDateSelector.this);
@@ -151,8 +151,8 @@ public class SingleDateSelector implements DateSelector<Long> {
         if (ManufacturerUtils.isDateInputKeyboardMissingSeparatorCharacters()) {
             editText.setInputType(17);
         }
-        SimpleDateFormat simpleDateFormatE = UtcDates.e();
-        String strF = UtcDates.f(viewInflate.getResources(), simpleDateFormatE);
+        SimpleDateFormat simpleDateFormatE = l.e();
+        String strF = l.f(viewInflate.getResources(), simpleDateFormatE);
         textInputLayout.setPlaceholderText(strF);
         Long l = this.selectedItem;
         if (l != null) {
@@ -187,6 +187,6 @@ public class SingleDateSelector implements DateSelector<Long> {
 
     /* renamed from: setSelection, reason: avoid collision after fix types in other method */
     public void setSelection2(@Nullable Long l) {
-        this.selectedItem = l == null ? null : Long.valueOf(UtcDates.a(l.longValue()));
+        this.selectedItem = l == null ? null : Long.valueOf(l.a(l.longValue()));
     }
 }

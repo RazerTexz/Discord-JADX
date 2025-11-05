@@ -1,15 +1,14 @@
 package d0.e0.p.d.m0.n.n1;
 
-import d0.e0.p.d.m0.n.Variance;
-import d0.z.d.Intrinsics3;
+import d0.e0.p.d.m0.n.j1;
 import kotlin.NoWhenBranchMatchedException;
 
 /* compiled from: TypeSystemContext.kt */
 /* loaded from: classes3.dex */
 public final class o {
-    public static final r convertVariance(Variance variance) {
-        Intrinsics3.checkNotNullParameter(variance, "<this>");
-        int iOrdinal = variance.ordinal();
+    public static final r convertVariance(j1 j1Var) {
+        d0.z.d.m.checkNotNullParameter(j1Var, "<this>");
+        int iOrdinal = j1Var.ordinal();
         if (iOrdinal == 0) {
             return r.INV;
         }

@@ -5,12 +5,10 @@ import android.content.ContentResolver;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import androidx.core.app.NotificationCompat;
-import b.a.s.ScreenshotContentObserver;
-import b.a.s.ScreenshotDetector2;
-import b.d.b.a.outline;
+import b.a.s.b;
 import com.discord.utilities.logging.Logger;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import rx.subjects.PublishSubject;
@@ -24,10 +22,10 @@ public final class ScreenshotDetector {
     public final PublishSubject<Screenshot> publishSubject;
 
     /* renamed from: c, reason: from kotlin metadata */
-    public final ScreenshotContentObserver screenshotContentObserver;
+    public final b screenshotContentObserver;
 
     /* renamed from: d, reason: from kotlin metadata */
-    public final ScreenshotDetector2 activityCallbacks;
+    public final b.a.s.a activityCallbacks;
 
     /* renamed from: e, reason: from kotlin metadata */
     public boolean enabled;
@@ -48,8 +46,8 @@ public final class ScreenshotDetector {
         public final String filename;
 
         public Screenshot(Uri uri, String str) {
-            Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-            Intrinsics3.checkNotNullParameter(str, "filename");
+            m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            m.checkNotNullParameter(str, "filename");
             this.uri = uri;
             this.filename = str;
         }
@@ -62,7 +60,7 @@ public final class ScreenshotDetector {
                 return false;
             }
             Screenshot screenshot = (Screenshot) other;
-            return Intrinsics3.areEqual(this.uri, screenshot.uri) && Intrinsics3.areEqual(this.filename, screenshot.filename);
+            return m.areEqual(this.uri, screenshot.uri) && m.areEqual(this.filename, screenshot.filename);
         }
 
         public int hashCode() {
@@ -73,15 +71,15 @@ public final class ScreenshotDetector {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Screenshot(uri=");
+            StringBuilder sbU = b.d.b.a.a.U("Screenshot(uri=");
             sbU.append(this.uri);
             sbU.append(", filename=");
-            return outline.J(sbU, this.filename, ")");
+            return b.d.b.a.a.J(sbU, this.filename, ")");
         }
     }
 
     /* compiled from: ScreenshotDetector.kt */
-    public static final class a extends Lambda implements Function2<Uri, String, Unit> {
+    public static final class a extends o implements Function2<Uri, String, Unit> {
         public a() {
             super(2);
         }
@@ -90,8 +88,8 @@ public final class ScreenshotDetector {
         public Unit invoke(Uri uri, String str) {
             Uri uri2 = uri;
             String str2 = str;
-            Intrinsics3.checkNotNullParameter(uri2, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-            Intrinsics3.checkNotNullParameter(str2, "filename");
+            m.checkNotNullParameter(uri2, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            m.checkNotNullParameter(str2, "filename");
             ScreenshotDetector screenshotDetector = ScreenshotDetector.this;
             if (screenshotDetector.enabled) {
                 PublishSubject<Screenshot> publishSubject = screenshotDetector.publishSubject;
@@ -102,29 +100,29 @@ public final class ScreenshotDetector {
     }
 
     public ScreenshotDetector(Application application, Logger logger, SharedPreferences sharedPreferences) {
-        Intrinsics3.checkNotNullParameter(application, "applicationContext");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        Intrinsics3.checkNotNullParameter(sharedPreferences, "cache");
+        m.checkNotNullParameter(application, "applicationContext");
+        m.checkNotNullParameter(logger, "logger");
+        m.checkNotNullParameter(sharedPreferences, "cache");
         this.logger = logger;
         this.cache = sharedPreferences;
         PublishSubject<Screenshot> publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.publishSubject = publishSubjectK0;
         ContentResolver contentResolver = application.getContentResolver();
-        Intrinsics3.checkNotNullExpressionValue(contentResolver, "applicationContext.contentResolver");
-        ScreenshotContentObserver screenshotContentObserver = new ScreenshotContentObserver(logger, contentResolver, null, new a(), 4);
-        this.screenshotContentObserver = screenshotContentObserver;
-        ScreenshotDetector2 screenshotDetector2 = new ScreenshotDetector2(screenshotContentObserver);
-        this.activityCallbacks = screenshotDetector2;
+        m.checkNotNullExpressionValue(contentResolver, "applicationContext.contentResolver");
+        b bVar = new b(logger, contentResolver, null, new a(), 4);
+        this.screenshotContentObserver = bVar;
+        b.a.s.a aVar = new b.a.s.a(bVar);
+        this.activityCallbacks = aVar;
         a(sharedPreferences.getBoolean("screenshot_detection_enabled", false));
-        application.registerActivityLifecycleCallbacks(screenshotDetector2);
-        screenshotDetector2.a(this.enabled);
+        application.registerActivityLifecycleCallbacks(aVar);
+        aVar.a(this.enabled);
     }
 
     public final void a(boolean z2) {
         this.enabled = z2;
         SharedPreferences.Editor editorEdit = this.cache.edit();
-        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
+        m.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putBoolean("screenshot_detection_enabled", z2);
         editorEdit.apply();
         this.activityCallbacks.a(z2);

@@ -15,25 +15,23 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
-import com.discord.app.AppLogger2;
+import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetGuildCreateBinding;
 import com.discord.dialogs.ImageUploadDialog;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
-import com.discord.utilities.view.text.TextWatcher4;
+import com.discord.utilities.view.text.TextWatcherKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.ScreenTitleView;
 import com.discord.widgets.guilds.create.GuildCreateCloneViews;
 import com.discord.widgets.guilds.create.WidgetGuildCreateViewModel;
@@ -41,10 +39,10 @@ import com.discord.widgets.guilds.invite.GuildInviteShareSheetFeatureFlag;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteShare;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet;
 import com.discord.widgets.nux.WidgetNuxChannelPrompt;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -66,11 +64,11 @@ public class WidgetGuildCreate extends AppFragment {
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private String currentImageUri;
-    private final AppLogger2 loggingConfig;
+    private final LoggingConfig loggingConfig;
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildCreate.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCreateBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildCreate.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCreateBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -81,19 +79,19 @@ public class WidgetGuildCreate extends AppFragment {
         }
 
         public final void show(Context context, Options options) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(options, "options");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(options, "options");
             Intent intent = new Intent();
             intent.putExtra(WidgetGuildCreate.EXTRA_OPTIONS, options);
-            AppScreen2.d(context, WidgetGuildCreate.class, intent);
+            j.d(context, WidgetGuildCreate.class, intent);
         }
 
         public final void showFragment(AppFragment fragment, Options options) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(options, "options");
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(options, "options");
             Bundle bundle = new Bundle();
             bundle.putParcelable(WidgetGuildCreate.EXTRA_OPTIONS, options);
-            AppScreen2.g(AppScreen2.g, fragment.getParentFragmentManager(), fragment.requireContext(), WidgetGuildCreate.class, 0, true, null, bundle, 40);
+            j.g(j.g, fragment.getParentFragmentManager(), fragment.requireContext(), WidgetGuildCreate.class, 0, true, null, bundle, 40);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -114,7 +112,7 @@ public class WidgetGuildCreate extends AppFragment {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator
             public final Options createFromParcel(Parcel parcel) {
-                Intrinsics3.checkNotNullParameter(parcel, "in");
+                m.checkNotNullParameter(parcel, "in");
                 return new Options(parcel.readString(), (StockGuildTemplate) Enum.valueOf(StockGuildTemplate.class, parcel.readString()), parcel.readInt() != 0, parcel.readString(), parcel.readInt() != 0);
             }
 
@@ -136,8 +134,8 @@ public class WidgetGuildCreate extends AppFragment {
         }
 
         public Options(String str, StockGuildTemplate stockGuildTemplate, boolean z2, String str2, boolean z3) {
-            Intrinsics3.checkNotNullParameter(str, "analyticsLocation");
-            Intrinsics3.checkNotNullParameter(stockGuildTemplate, "template");
+            m.checkNotNullParameter(str, "analyticsLocation");
+            m.checkNotNullParameter(stockGuildTemplate, "template");
             this.analyticsLocation = str;
             this.template = stockGuildTemplate;
             this.showChannelPrompt = z2;
@@ -193,8 +191,8 @@ public class WidgetGuildCreate extends AppFragment {
         }
 
         public final Options copy(String analyticsLocation, StockGuildTemplate template, boolean showChannelPrompt, String customTitle, boolean closeWithResult) {
-            Intrinsics3.checkNotNullParameter(analyticsLocation, "analyticsLocation");
-            Intrinsics3.checkNotNullParameter(template, "template");
+            m.checkNotNullParameter(analyticsLocation, "analyticsLocation");
+            m.checkNotNullParameter(template, "template");
             return new Options(analyticsLocation, template, showChannelPrompt, customTitle, closeWithResult);
         }
 
@@ -211,7 +209,7 @@ public class WidgetGuildCreate extends AppFragment {
                 return false;
             }
             Options options = (Options) other;
-            return Intrinsics3.areEqual(this.analyticsLocation, options.analyticsLocation) && Intrinsics3.areEqual(this.template, options.template) && this.showChannelPrompt == options.showChannelPrompt && Intrinsics3.areEqual(this.customTitle, options.customTitle) && this.closeWithResult == options.closeWithResult;
+            return m.areEqual(this.analyticsLocation, options.analyticsLocation) && m.areEqual(this.template, options.template) && this.showChannelPrompt == options.showChannelPrompt && m.areEqual(this.customTitle, options.customTitle) && this.closeWithResult == options.closeWithResult;
         }
 
         public final String getAnalyticsLocation() {
@@ -253,7 +251,7 @@ public class WidgetGuildCreate extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Options(analyticsLocation=");
+            StringBuilder sbU = a.U("Options(analyticsLocation=");
             sbU.append(this.analyticsLocation);
             sbU.append(", template=");
             sbU.append(this.template);
@@ -262,12 +260,12 @@ public class WidgetGuildCreate extends AppFragment {
             sbU.append(", customTitle=");
             sbU.append(this.customTitle);
             sbU.append(", closeWithResult=");
-            return outline.O(sbU, this.closeWithResult, ")");
+            return a.O(sbU, this.closeWithResult, ")");
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int flags) {
-            Intrinsics3.checkNotNullParameter(parcel, "parcel");
+            m.checkNotNullParameter(parcel, "parcel");
             parcel.writeString(this.analyticsLocation);
             parcel.writeString(this.template.name());
             parcel.writeInt(this.showChannelPrompt ? 1 : 0);
@@ -289,7 +287,7 @@ public class WidgetGuildCreate extends AppFragment {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator
             public final Result createFromParcel(Parcel parcel) {
-                Intrinsics3.checkNotNullParameter(parcel, "in");
+                m.checkNotNullParameter(parcel, "in");
                 return new Result(parcel.readLong());
             }
 
@@ -351,12 +349,12 @@ public class WidgetGuildCreate extends AppFragment {
         }
 
         public String toString() {
-            return outline.C(outline.U("Result(guildId="), this.guildId, ")");
+            return a.C(a.U("Result(guildId="), this.guildId, ")");
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int flags) {
-            Intrinsics3.checkNotNullParameter(parcel, "parcel");
+            m.checkNotNullParameter(parcel, "parcel");
             parcel.writeLong(this.guildId);
         }
     }
@@ -397,7 +395,7 @@ public class WidgetGuildCreate extends AppFragment {
 
     /* compiled from: WidgetGuildCreate.kt */
     /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetGuildCreateViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<WidgetGuildCreateViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -410,14 +408,14 @@ public class WidgetGuildCreate extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildCreateViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "it");
+            m.checkNotNullParameter(viewState, "it");
             WidgetGuildCreate.this.configureUI(viewState);
         }
     }
 
     /* compiled from: WidgetGuildCreate.kt */
     /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<WidgetGuildCreateViewModel.Event, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<WidgetGuildCreateViewModel.Event, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -430,7 +428,7 @@ public class WidgetGuildCreate extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildCreateViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "it");
+            m.checkNotNullParameter(event, "it");
             WidgetGuildCreate.access$handleEvent(WidgetGuildCreate.this, event);
         }
     }
@@ -451,7 +449,7 @@ public class WidgetGuildCreate extends AppFragment {
 
     /* compiled from: WidgetGuildCreate.kt */
     /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<String, Unit> {
         public AnonymousClass4() {
             super(1);
         }
@@ -464,7 +462,7 @@ public class WidgetGuildCreate extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "it");
+            m.checkNotNullParameter(str, "it");
             WidgetGuildCreate.access$getViewModel$p(WidgetGuildCreate.this).updateGuildName(str);
         }
     }
@@ -489,12 +487,12 @@ public class WidgetGuildCreate extends AppFragment {
 
     public WidgetGuildCreate(@LayoutRes int i) {
         super(i);
-        this.args = LazyJVM.lazy(new WidgetGuildCreate$$special$$inlined$args$1(this, EXTRA_OPTIONS));
-        WidgetGuildCreate4 widgetGuildCreate4 = new WidgetGuildCreate4(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetGuildCreateViewModel.class), new WidgetGuildCreate$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildCreate4));
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildCreate2.INSTANCE, null, 2, null);
-        this.loggingConfig = new AppLogger2(false, null, new WidgetGuildCreate3(this), 3);
+        this.args = g.lazy(new WidgetGuildCreate$$special$$inlined$args$1(this, EXTRA_OPTIONS));
+        WidgetGuildCreate$viewModel$2 widgetGuildCreate$viewModel$2 = new WidgetGuildCreate$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetGuildCreateViewModel.class), new WidgetGuildCreate$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildCreate$viewModel$2));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildCreate$binding$2.INSTANCE, null, 2, null);
+        this.loggingConfig = new LoggingConfig(false, null, new WidgetGuildCreate$loggingConfig$1(this), 3);
     }
 
     public static final /* synthetic */ WidgetGuildCreateViewModel access$getViewModel$p(WidgetGuildCreate widgetGuildCreate) {
@@ -515,7 +513,7 @@ public class WidgetGuildCreate extends AppFragment {
 
     private final void handleEvent(WidgetGuildCreateViewModel.Event event) {
         if (event instanceof WidgetGuildCreateViewModel.Event.ShowToast) {
-            AppToast.i(this, ((WidgetGuildCreateViewModel.Event.ShowToast) event).getStringResId(), 0, 4);
+            b.a.d.m.i(this, ((WidgetGuildCreateViewModel.Event.ShowToast) event).getStringResId(), 0, 4);
             return;
         }
         if (event instanceof WidgetGuildCreateViewModel.Event.LaunchChannelPrompt) {
@@ -526,7 +524,7 @@ public class WidgetGuildCreate extends AppFragment {
         if (event instanceof WidgetGuildCreateViewModel.Event.CloseWithResult) {
             FragmentActivity activity = getActivity();
             if (activity != null) {
-                activity.setResult(-1, AnimatableValueParser.g2(new Result(((WidgetGuildCreateViewModel.Event.CloseWithResult) event).getGuildId())));
+                activity.setResult(-1, d.g2(new Result(((WidgetGuildCreateViewModel.Event.CloseWithResult) event).getGuildId())));
                 activity.finish();
                 return;
             }
@@ -535,12 +533,12 @@ public class WidgetGuildCreate extends AppFragment {
         if (event instanceof WidgetGuildCreateViewModel.Event.LaunchInviteShareScreen) {
             if (GuildInviteShareSheetFeatureFlag.INSTANCE.getINSTANCE().isEnabled()) {
                 WidgetGuildInviteShareSheet.Companion.enqueueNoticeForHomeTab$default(WidgetGuildInviteShareSheet.INSTANCE, null, ((WidgetGuildCreateViewModel.Event.LaunchInviteShareScreen) event).getGuildId(), "Guild Create", 1, null);
-                AppScreen2.c(requireContext(), false, null, 6);
+                j.c(requireContext(), false, null, 6);
             } else {
                 WidgetGuildInviteShare.Companion companion = WidgetGuildInviteShare.INSTANCE;
                 Context contextRequireContext = requireContext();
                 FragmentManager parentFragmentManager = getParentFragmentManager();
-                Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                 WidgetGuildInviteShare.Companion.launch$default(companion, contextRequireContext, parentFragmentManager, ((WidgetGuildCreateViewModel.Event.LaunchInviteShareScreen) event).getGuildId(), null, true, null, null, "Guild Create", 96, null);
             }
             requireActivity().finish();
@@ -549,14 +547,14 @@ public class WidgetGuildCreate extends AppFragment {
 
     public void configureUI(WidgetGuildCreateViewModel.ViewState viewState) {
         ScreenTitleView screenTitleView;
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
-        if (!Intrinsics3.areEqual(viewState, WidgetGuildCreateViewModel.ViewState.Uninitialized.INSTANCE) && (viewState instanceof WidgetGuildCreateViewModel.ViewState.Initialized)) {
+        m.checkNotNullParameter(viewState, "viewState");
+        if (!m.areEqual(viewState, WidgetGuildCreateViewModel.ViewState.Uninitialized.INSTANCE) && (viewState instanceof WidgetGuildCreateViewModel.ViewState.Initialized)) {
             WidgetGuildCreateViewModel.ViewState.Initialized initialized = (WidgetGuildCreateViewModel.ViewState.Initialized) viewState;
             String guildName = initialized.getGuildName(requireContext());
-            if (!Intrinsics3.areEqual(guildName, ViewExtensions.getTextOrEmpty(getViews().getGuildCreateName()))) {
+            if (!m.areEqual(guildName, ViewExtensions.getTextOrEmpty(getViews().getGuildCreateName()))) {
                 ViewExtensions.setText(getViews().getGuildCreateName(), guildName);
             }
-            if (!Intrinsics3.areEqual(this.currentImageUri, initialized.getGuildIconUri())) {
+            if (!m.areEqual(this.currentImageUri, initialized.getGuildIconUri())) {
                 getViews().getIconUploaderPlaceholderGroup().setVisibility(initialized.getGuildIconUri() == null ? 0 : 8);
                 IconUtils.setIcon$default(getViews().getIconUploaderImage(), initialized.getGuildIconUri(), R.dimen.avatar_size_xxlarge, (Function1) null, (MGImages.ChangeDetector) null, 24, (Object) null);
                 this.currentImageUri = initialized.getGuildIconUri();
@@ -577,31 +575,31 @@ public class WidgetGuildCreate extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
+    public LoggingConfig getLoggingConfig() {
         return this.loggingConfig;
     }
 
     public GuildCreateCloneViews getViews() {
         GuildCreateCloneViews.Companion companion = GuildCreateCloneViews.INSTANCE;
         WidgetGuildCreateBinding binding = getBinding();
-        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        m.checkNotNullExpressionValue(binding, "binding");
         return companion.from(binding);
     }
 
     @Override // com.discord.app.AppFragment
     public void onImageChosen(Uri uri, String mimeType) {
-        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        m.checkNotNullParameter(mimeType, "mimeType");
         super.onImageChosen(uri, mimeType);
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         MGImages.prepareImageUpload(uri, mimeType, parentFragmentManager, this, new AnonymousClass1(), ImageUploadDialog.PreviewType.GUILD_AVATAR);
     }
 
     @Override // com.discord.app.AppFragment
     public void onImageCropped(Uri uri, String mimeType) {
-        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        m.checkNotNullParameter(mimeType, "mimeType");
         super.onImageCropped(uri, mimeType);
         MGImages.requestDataUrl(requireContext(), uri, mimeType, new AnonymousClass1());
     }
@@ -612,10 +610,10 @@ public class WidgetGuildCreate extends AppFragment {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeViewState(), this, null, 2, null), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
         getViews().getGuildCreateIconUploader().setOnClickListener(new AnonymousClass3());
-        FormatUtils.n(getViews().getGuidelinesTextView(), R.string.create_server_guidelines, new Object[]{GUIDELINES_URL}, null, 4);
+        b.a.k.b.n(getViews().getGuidelinesTextView(), R.string.create_server_guidelines, new Object[]{GUIDELINES_URL}, null, 4);
         EditText editText = getViews().getGuildCreateName().getEditText();
         if (editText != null) {
-            TextWatcher4.addLifecycleAwareTextWatcher(editText, this, new AnonymousClass4());
+            TextWatcherKt.addLifecycleAwareTextWatcher(editText, this, new AnonymousClass4());
         }
         getViews().getGuildCreateButton().setOnClickListener(new AnonymousClass5());
     }

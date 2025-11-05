@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: TimestampEntry.kt */
 /* loaded from: classes2.dex */
@@ -78,9 +78,9 @@ public final /* data */ class TimestampEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TimestampEntry(messageId=");
+        StringBuilder sbU = a.U("TimestampEntry(messageId=");
         sbU.append(this.messageId);
         sbU.append(", timestamp=");
-        return outline.C(sbU, this.timestamp, ")");
+        return a.C(sbU, this.timestamp, ")");
     }
 }

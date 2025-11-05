@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ImageAsset.kt */
 /* loaded from: classes.dex */
@@ -27,7 +27,7 @@ public final /* data */ class ImageAsset {
             return false;
         }
         ImageAsset imageAsset = (ImageAsset) other;
-        return this.id == imageAsset.id && Intrinsics3.areEqual(this.size, imageAsset.size) && Intrinsics3.areEqual(this.mimeType, imageAsset.mimeType) && Intrinsics3.areEqual(this.filename, imageAsset.filename) && Intrinsics3.areEqual(this.width, imageAsset.width) && Intrinsics3.areEqual(this.height, imageAsset.height);
+        return this.id == imageAsset.id && m.areEqual(this.size, imageAsset.size) && m.areEqual(this.mimeType, imageAsset.mimeType) && m.areEqual(this.filename, imageAsset.filename) && m.areEqual(this.width, imageAsset.width) && m.areEqual(this.height, imageAsset.height);
     }
 
     public int hashCode() {
@@ -46,7 +46,7 @@ public final /* data */ class ImageAsset {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ImageAsset(id=");
+        StringBuilder sbU = a.U("ImageAsset(id=");
         sbU.append(this.id);
         sbU.append(", size=");
         sbU.append(this.size);
@@ -57,6 +57,6 @@ public final /* data */ class ImageAsset {
         sbU.append(", width=");
         sbU.append(this.width);
         sbU.append(", height=");
-        return outline.F(sbU, this.height, ")");
+        return a.F(sbU, this.height, ")");
     }
 }

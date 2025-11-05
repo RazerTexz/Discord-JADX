@@ -7,32 +7,31 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates2;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
-import com.discord.app.AppLogger2;
+import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetServerSettingsCommunityOverviewBinding;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.channels.WidgetChannelSelector;
 import com.discord.widgets.servers.community.WidgetConfirmRemoveCommunityDialog;
 import com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverviewViewModel;
 import com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps;
 import com.discord.widgets.settings.WidgetSettingsLanguage;
 import com.discord.widgets.settings.WidgetSettingsLanguageSelect;
-import d0.LazyJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -45,7 +44,7 @@ import rx.Observable;
 /* compiled from: WidgetServerSettingsCommunityOverview.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsCommunityOverview extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerSettingsCommunityOverview.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunityOverviewBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsCommunityOverview.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunityOverviewBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -58,7 +57,7 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
 
     /* renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
-    private final AppLogger2 loggingConfig;
+    private final LoggingConfig loggingConfig;
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
@@ -69,11 +68,11 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
 
         public final void create(Context context, long guildId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             StoreStream.INSTANCE.getAnalytics().onGuildSettingsPaneViewed("COMMUNITY_OVERVIEW", guildId);
             Intent intentPutExtra = new Intent().putExtra("INTENT_EXTRA_GUILD_ID", guildId);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…_EXTRA_GUILD_ID, guildId)");
-            AppScreen2.d(context, WidgetServerSettingsCommunityOverview.class, intentPutExtra);
+            m.checkNotNullExpressionValue(intentPutExtra, "Intent()\n          .putE…_EXTRA_GUILD_ID, guildId)");
+            j.d(context, WidgetServerSettingsCommunityOverview.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -138,7 +137,7 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
             if (appActivity != null) {
                 WidgetConfirmRemoveCommunityDialog.Companion companion = WidgetConfirmRemoveCommunityDialog.INSTANCE;
                 FragmentManager supportFragmentManager = appActivity.getSupportFragmentManager();
-                Intrinsics3.checkNotNullExpressionValue(supportFragmentManager, "appActivity.supportFragmentManager");
+                m.checkNotNullExpressionValue(supportFragmentManager, "appActivity.supportFragmentManager");
                 companion.show(supportFragmentManager, this.$viewState.getGuild().getId());
             }
         }
@@ -146,7 +145,7 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
 
     /* compiled from: WidgetServerSettingsCommunityOverview.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -159,14 +158,14 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "locale");
+            m.checkNotNullParameter(str, "locale");
             WidgetServerSettingsCommunityOverview.access$getViewModel$p(WidgetServerSettingsCommunityOverview.this).saveLocale(str);
         }
     }
 
     /* compiled from: WidgetServerSettingsCommunityOverview.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function2<Long, String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function2<Long, String, Unit> {
         public AnonymousClass2() {
             super(2);
         }
@@ -178,14 +177,14 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
 
         public final void invoke(long j, String str) {
-            Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 1>");
+            m.checkNotNullParameter(str, "<anonymous parameter 1>");
             WidgetServerSettingsCommunityOverview.access$getViewModel$p(WidgetServerSettingsCommunityOverview.this).saveRulesChannel(j);
         }
     }
 
     /* compiled from: WidgetServerSettingsCommunityOverview.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function2<Long, String, Unit> {
+    public static final class AnonymousClass3 extends o implements Function2<Long, String, Unit> {
         public AnonymousClass3() {
             super(2);
         }
@@ -197,14 +196,14 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
 
         public final void invoke(long j, String str) {
-            Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 1>");
+            m.checkNotNullParameter(str, "<anonymous parameter 1>");
             WidgetServerSettingsCommunityOverview.access$getViewModel$p(WidgetServerSettingsCommunityOverview.this).saveCommunityUpdatesChannel(j);
         }
     }
 
     /* compiled from: WidgetServerSettingsCommunityOverview.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<WidgetServerSettingsCommunityOverviewViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetServerSettingsCommunityOverviewViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetServerSettingsCommunityOverview widgetServerSettingsCommunityOverview) {
             super(1, widgetServerSettingsCommunityOverview, WidgetServerSettingsCommunityOverview.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/community/WidgetServerSettingsCommunityOverviewViewModel$ViewState;)V", 0);
         }
@@ -217,14 +216,14 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsCommunityOverviewViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetServerSettingsCommunityOverview.access$configureUI((WidgetServerSettingsCommunityOverview) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetServerSettingsCommunityOverview.kt */
     /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<WidgetServerSettingsCommunityOverviewViewModel.Event, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<WidgetServerSettingsCommunityOverviewViewModel.Event, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -237,29 +236,29 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsCommunityOverviewViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "event");
-            if (Intrinsics3.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.DisableCommunitySuccess.INSTANCE)) {
+            m.checkNotNullParameter(event, "event");
+            if (m.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.DisableCommunitySuccess.INSTANCE)) {
                 WidgetServerSettingsCommunityOverview.this.requireActivity().finish();
                 WidgetServerSettingsEnableCommunitySteps.Companion companion = WidgetServerSettingsEnableCommunitySteps.INSTANCE;
                 FragmentActivity fragmentActivityRequireActivity = WidgetServerSettingsCommunityOverview.this.requireActivity();
-                Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+                m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
                 companion.create(fragmentActivityRequireActivity, WidgetServerSettingsCommunityOverview.this.getGuildId());
                 return;
             }
-            if (Intrinsics3.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.SaveSuccess.INSTANCE)) {
-                AppToast.i(WidgetServerSettingsCommunityOverview.this, R.string.server_settings_updated, 0, 4);
-            } else if (Intrinsics3.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.Error.INSTANCE)) {
-                AppToast.i(WidgetServerSettingsCommunityOverview.this, R.string.guild_settings_public_update_failed, 0, 4);
+            if (m.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.SaveSuccess.INSTANCE)) {
+                b.a.d.m.i(WidgetServerSettingsCommunityOverview.this, R.string.server_settings_updated, 0, 4);
+            } else if (m.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.Error.INSTANCE)) {
+                b.a.d.m.i(WidgetServerSettingsCommunityOverview.this, R.string.guild_settings_public_update_failed, 0, 4);
             }
         }
     }
 
     public WidgetServerSettingsCommunityOverview() {
         super(R.layout.widget_server_settings_community_overview);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsCommunityOverview2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetServerSettingsCommunityOverviewViewModel.class), new WidgetServerSettingsCommunityOverview$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(new WidgetServerSettingsCommunityOverview5(this)));
-        this.guildId = LazyJVM.lazy(new WidgetServerSettingsCommunityOverview3(this));
-        this.loggingConfig = new AppLogger2(false, null, WidgetServerSettingsCommunityOverview4.INSTANCE, 3);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsCommunityOverview$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetServerSettingsCommunityOverviewViewModel.class), new WidgetServerSettingsCommunityOverview$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(new WidgetServerSettingsCommunityOverview$viewModel$2(this)));
+        this.guildId = g.lazy(new WidgetServerSettingsCommunityOverview$guildId$2(this));
+        this.loggingConfig = new LoggingConfig(false, null, WidgetServerSettingsCommunityOverview$loggingConfig$1.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetServerSettingsCommunityOverview widgetServerSettingsCommunityOverview, WidgetServerSettingsCommunityOverviewViewModel.ViewState viewState) {
@@ -271,7 +270,7 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
     }
 
     private final void configureUI(WidgetServerSettingsCommunityOverviewViewModel.ViewState viewState) {
-        if (Intrinsics3.areEqual(viewState, WidgetServerSettingsCommunityOverviewViewModel.ViewState.Invalid.INSTANCE)) {
+        if (m.areEqual(viewState, WidgetServerSettingsCommunityOverviewViewModel.ViewState.Invalid.INSTANCE)) {
             requireActivity().finish();
         } else if (viewState instanceof WidgetServerSettingsCommunityOverviewViewModel.ViewState.Loaded) {
             configureValidUI((WidgetServerSettingsCommunityOverviewViewModel.ViewState.Loaded) viewState);
@@ -284,16 +283,16 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         String strE;
         getBinding().e.setIsLoading(false);
         String string = viewState.getRulesChannel() == null ? requireContext().getString(R.string.guild_settings_public_no_option_selected) : ChannelUtils.e(viewState.getRulesChannel(), requireContext(), false, 2);
-        Intrinsics3.checkNotNullExpressionValue(string, "when (viewState.rulesCha…t(requireContext())\n    }");
+        m.checkNotNullExpressionValue(string, "when (viewState.rulesCha…t(requireContext())\n    }");
         if (viewState.getUpdatesChannel() == null) {
             strE = requireContext().getString(R.string.guild_settings_public_no_option_selected);
         } else {
             Channel updatesChannel = viewState.getUpdatesChannel();
             FragmentActivity fragmentActivityRequireActivity = requireActivity();
-            Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+            m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
             strE = ChannelUtils.e(updatesChannel, fragmentActivityRequireActivity, false, 2);
         }
-        Intrinsics3.checkNotNullExpressionValue(strE, "when (viewState.updatesC…(requireActivity())\n    }");
+        m.checkNotNullExpressionValue(strE, "when (viewState.updatesC…(requireActivity())\n    }");
         getBinding().f2553b.setSubtitle(string);
         getBinding().c.setSubtitle(strE);
         getBinding().d.setSubtitle(WidgetSettingsLanguage.INSTANCE.getAsStringInLocale(viewState.getGuild().getPreferredLocale()));
@@ -320,13 +319,13 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
+    public LoggingConfig getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         WidgetSettingsLanguageSelect.INSTANCE.registerForResult(this, new AnonymousClass1());
         WidgetChannelSelector.Companion companion = WidgetChannelSelector.INSTANCE;
@@ -340,7 +339,7 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         setActionBarTitle(R.string.guild_settings_community);
         Observable<WidgetServerSettingsCommunityOverviewViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetServerSettingsCommunityOverview.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetServerSettingsCommunityOverview.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }

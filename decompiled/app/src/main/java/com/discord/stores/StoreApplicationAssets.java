@@ -3,13 +3,13 @@ package com.discord.stores;
 import android.content.Context;
 import com.discord.api.application.ApplicationAsset;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -34,20 +34,20 @@ public final class StoreApplicationAssets extends StoreV2 {
 
     /* compiled from: StoreApplicationAssets.kt */
     /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $appId;
 
         /* compiled from: StoreApplicationAssets.kt */
         /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00791 extends Lambda implements Function1<List<? extends ApplicationAsset>, Unit> {
+        public static final class C01991 extends o implements Function1<List<? extends ApplicationAsset>, Unit> {
 
             /* compiled from: StoreApplicationAssets.kt */
             /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00801 extends Lambda implements Function0<Unit> {
+            public static final class C02001 extends o implements Function0<Unit> {
                 public final /* synthetic */ List $applicationAssets;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C00801(List list) {
+                public C02001(List list) {
                     super(0);
                     this.$applicationAssets = list;
                 }
@@ -66,7 +66,7 @@ public final class StoreApplicationAssets extends StoreV2 {
                 }
             }
 
-            public C00791() {
+            public C01991() {
                 super(1);
             }
 
@@ -78,19 +78,19 @@ public final class StoreApplicationAssets extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<ApplicationAsset> list) {
-                Intrinsics3.checkNotNullParameter(list, "applicationAssets");
-                StoreApplicationAssets.access$getDispatcher$p(StoreApplicationAssets.this).schedule(new C00801(list));
+                m.checkNotNullParameter(list, "applicationAssets");
+                StoreApplicationAssets.access$getDispatcher$p(StoreApplicationAssets.this).schedule(new C02001(list));
             }
         }
 
         /* compiled from: StoreApplicationAssets.kt */
         /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
             /* compiled from: StoreApplicationAssets.kt */
             /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C00811 extends Lambda implements Function0<Unit> {
-                public C00811() {
+            public static final class C02011 extends o implements Function0<Unit> {
+                public C02011() {
                     super(0);
                 }
 
@@ -118,8 +118,8 @@ public final class StoreApplicationAssets extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
-                StoreApplicationAssets.access$getDispatcher$p(StoreApplicationAssets.this).schedule(new C00811());
+                m.checkNotNullParameter(error, "it");
+                StoreApplicationAssets.access$getDispatcher$p(StoreApplicationAssets.this).schedule(new C02011());
             }
         }
 
@@ -140,13 +140,13 @@ public final class StoreApplicationAssets extends StoreV2 {
             if (StoreApplicationAssets.access$getEmbeddedAppBackgrounds$p(StoreApplicationAssets.this).containsKey(Long.valueOf(this.$appId)) || StoreApplicationAssets.access$getEmbeddedAppBackgroundsLoading$p(StoreApplicationAssets.this).contains(Long.valueOf(this.$appId))) {
                 return;
             }
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreApplicationAssets.access$getRestApi$p(StoreApplicationAssets.this).getApplicationAssets(this.$appId), false, 1, null), StoreApplicationAssets.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C00791(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreApplicationAssets.access$getRestApi$p(StoreApplicationAssets.this).getApplicationAssets(this.$appId), false, 1, null), StoreApplicationAssets.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C01991(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreApplicationAssets.kt */
     /* renamed from: com.discord.stores.StoreApplicationAssets$observeEmbeddedAppBackgrounds$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends ApplicationAsset>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends ApplicationAsset>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -164,7 +164,7 @@ public final class StoreApplicationAssets extends StoreV2 {
     }
 
     public /* synthetic */ StoreApplicationAssets(Dispatcher dispatcher, ObservationDeck observationDeck, RestAPI restAPI, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck, (i & 4) != 0 ? RestAPI.INSTANCE.getApi() : restAPI);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck, (i & 4) != 0 ? RestAPI.INSTANCE.getApi() : restAPI);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreApplicationAssets storeApplicationAssets) {
@@ -187,7 +187,7 @@ public final class StoreApplicationAssets extends StoreV2 {
         storeApplicationAssets.handleApplicationAssets(j, list);
     }
 
-    @Store3
+    @StoreThread
     private final void handleApplicationAssets(long applicationId, List<ApplicationAsset> appAssets) {
         Object next;
         Iterator<T> it = appAssets.iterator();
@@ -197,7 +197,7 @@ public final class StoreApplicationAssets extends StoreV2 {
                 break;
             } else {
                 next = it.next();
-                if (Intrinsics3.areEqual(((ApplicationAsset) next).getName(), "embedded_background")) {
+                if (m.areEqual(((ApplicationAsset) next).getName(), "embedded_background")) {
                     break;
                 }
             }
@@ -228,14 +228,14 @@ public final class StoreApplicationAssets extends StoreV2 {
     }
 
     public StoreApplicationAssets(Dispatcher dispatcher, ObservationDeck observationDeck, RestAPI restAPI) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(restAPI, "restApi");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.restApi = restAPI;
         this.embeddedAppBackgrounds = new LinkedHashMap();
         this.embeddedAppBackgroundsLoading = new HashSet<>();
-        this.embeddedAppBackgroundsSnapshot = Maps6.emptyMap();
+        this.embeddedAppBackgroundsSnapshot = h0.emptyMap();
     }
 }

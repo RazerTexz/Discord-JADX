@@ -5,8 +5,8 @@ import android.media.MediaFormat;
 import android.os.SystemClock;
 import android.view.Surface;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import h0.c.VideoDecoder2;
+import b.d.b.a.a;
+import h0.c.p0;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.concurrent.BlockingDeque;
@@ -109,7 +109,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
 
     public AndroidVideoDecoder(MediaCodecWrapperFactory mediaCodecWrapperFactory, String str, VideoCodecMimeType videoCodecMimeType, int i, @Nullable EglBase.Context context) {
         if (!isSupportedColorFormat(i)) {
-            throw new IllegalArgumentException(outline.q("Unsupported color format: ", i));
+            throw new IllegalArgumentException(a.q("Unsupported color format: ", i));
         }
         Logging.d(TAG, "ctor name: " + str + " type: " + videoCodecMimeType + " color format: " + i + " context: " + context);
         this.mediaCodecWrapperFactory = mediaCodecWrapperFactory;
@@ -135,7 +135,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
 
     private VideoFrame.Buffer copyI420Buffer(ByteBuffer byteBuffer, int i, int i2, int i3, int i4) {
         if (i % 2 != 0) {
-            throw new AssertionError(outline.q("Stride is not divisible by two: ", i));
+            throw new AssertionError(a.q("Stride is not divisible by two: ", i));
         }
         int i5 = (i3 + 1) / 2;
         int i6 = i2 % 2;
@@ -191,7 +191,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
         }
         int i7 = bufferInfo.size;
         if (i7 < ((i3 * i4) * 3) / 2) {
-            StringBuilder sbU = outline.U("Insufficient output buffer size: ");
+            StringBuilder sbU = a.U("Insufficient output buffer size: ");
             sbU.append(bufferInfo.size);
             Logging.e(TAG, sbU.toString());
             return;
@@ -265,7 +265,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
                 return VideoCodecStatus.FALLBACK_SOFTWARE;
             }
         } catch (IOException | IllegalArgumentException | IllegalStateException unused) {
-            StringBuilder sbU = outline.U("Cannot create media decoder ");
+            StringBuilder sbU = a.U("Cannot create media decoder ");
             sbU.append(this.codecName);
             Logging.e(TAG, sbU.toString());
             return VideoCodecStatus.FALLBACK_SOFTWARE;
@@ -302,11 +302,11 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
             this.height = integer2;
             if (this.surfaceTextureHelper == null && mediaFormat.containsKey("color-format")) {
                 this.colorFormat = mediaFormat.getInteger("color-format");
-                StringBuilder sbU = outline.U("Color: 0x");
+                StringBuilder sbU = a.U("Color: 0x");
                 sbU.append(Integer.toHexString(this.colorFormat));
                 Logging.d(TAG, sbU.toString());
                 if (!isSupportedColorFormat(this.colorFormat)) {
-                    StringBuilder sbU2 = outline.U("Unsupported color format: ");
+                    StringBuilder sbU2 = a.U("Unsupported color format: ");
                     sbU2.append(this.colorFormat);
                     stopOnOutputThread(new IllegalStateException(sbU2.toString()));
                     return;
@@ -391,7 +391,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
 
     @Override // org.webrtc.VideoDecoder
     public /* synthetic */ long createNativeVideoDecoder() {
-        return VideoDecoder2.a(this);
+        return p0.a(this);
     }
 
     public SurfaceTextureHelper createSurfaceTextureHelper() {
@@ -405,7 +405,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
         VideoCodecStatus videoCodecStatusReinitDecode;
         this.decoderThreadChecker.checkIsOnValidThread();
         if (this.codec == null || this.callback == null) {
-            StringBuilder sbU = outline.U("decode uninitalized, codec: ");
+            StringBuilder sbU = a.U("decode uninitalized, codec: ");
             sbU.append(this.codec != null);
             sbU.append(", callback: ");
             sbU.append(this.callback);
@@ -508,7 +508,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
 
     @Override // org.webrtc.VideoDecoder
     public /* synthetic */ boolean getPrefersLateDecoding() {
-        return VideoDecoder2.b(this);
+        return p0.b(this);
     }
 
     @Override // org.webrtc.VideoDecoder

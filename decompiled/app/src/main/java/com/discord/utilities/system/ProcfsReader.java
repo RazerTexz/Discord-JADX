@@ -1,12 +1,12 @@
 package com.discord.utilities.system;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.LazyJVM;
-import d0.g0.StringNumberConversions;
-import d0.g0.Strings4;
-import d0.y.FileReadWrite;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.g;
+import d0.g0.s;
+import d0.g0.w;
+import d0.y.f;
+import d0.z.d.m;
 import java.io.File;
 import java.util.List;
 import kotlin.Lazy;
@@ -17,7 +17,7 @@ public final class ProcfsReader {
     public static final ProcfsReader INSTANCE = new ProcfsReader();
 
     /* renamed from: pid$delegate, reason: from kotlin metadata */
-    private static final Lazy pid = LazyJVM.lazy(ProcfsReader2.INSTANCE);
+    private static final Lazy pid = g.lazy(ProcfsReader$pid$2.INSTANCE);
     private static final Stat default = new Stat(0, 0, 0, 0);
 
     /* compiled from: ProcfsReader.kt */
@@ -94,14 +94,14 @@ public final class ProcfsReader {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Stat(userTime=");
+            StringBuilder sbU = a.U("Stat(userTime=");
             sbU.append(this.userTime);
             sbU.append(", systemTime=");
             sbU.append(this.systemTime);
             sbU.append(", totalTime=");
             sbU.append(this.totalTime);
             sbU.append(", rssPages=");
-            return outline.C(sbU, this.rssPages, ")");
+            return a.C(sbU, this.rssPages, ")");
         }
     }
 
@@ -116,7 +116,7 @@ public final class ProcfsReader {
         if (input.length() == 0) {
             return default;
         }
-        List listSplit$default = Strings4.split$default((CharSequence) input, new char[]{' '}, false, 0, 6, (Object) null);
+        List listSplit$default = w.split$default((CharSequence) input, new char[]{' '}, false, 0, 6, (Object) null);
         long j = toLong((String) listSplit$default.get(13));
         long j2 = toLong((String) listSplit$default.get(14));
         return new Stat(j, j2, j + j2, toLong((String) listSplit$default.get(23)));
@@ -125,7 +125,7 @@ public final class ProcfsReader {
     private final String readFile(File file) {
         try {
             if (file.exists()) {
-                return FileReadWrite.readText$default(file, null, 1, null);
+                return f.readText$default(file, null, 1, null);
             }
             return null;
         } catch (Exception unused) {
@@ -134,7 +134,7 @@ public final class ProcfsReader {
     }
 
     private final long toLong(String s2) {
-        Long longOrNull = StringNumberConversions.toLongOrNull(s2);
+        Long longOrNull = s.toLongOrNull(s2);
         if (longOrNull != null) {
             return longOrNull.longValue();
         }
@@ -142,11 +142,11 @@ public final class ProcfsReader {
     }
 
     public final Stat readStatFile() {
-        return readStatFile(new File(outline.B(outline.U("/proc/"), getPid(), "/stat")));
+        return readStatFile(new File(a.B(a.U("/proc/"), getPid(), "/stat")));
     }
 
     public final Stat readStatFile(File file) {
-        Intrinsics3.checkNotNullParameter(file, "file");
+        m.checkNotNullParameter(file, "file");
         String file2 = readFile(file);
         return file2 != null ? parsePidStats(file2) : default;
     }

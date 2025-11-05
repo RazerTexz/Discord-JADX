@@ -11,7 +11,7 @@ import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 import androidx.annotation.StyleableRes;
 import androidx.appcompat.widget.TintTypedArray;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.google.android.material.R;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
@@ -66,7 +66,7 @@ public final class ThemeEnforcement {
 
     private static void checkTheme(@NonNull Context context, @NonNull int[] iArr, String str) {
         if (!isTheme(context, iArr)) {
-            throw new IllegalArgumentException(outline.y("The style on this component requires your app theme to be ", str, " (or a descendant)."));
+            throw new IllegalArgumentException(a.y("The style on this component requires your app theme to be ", str, " (or a descendant)."));
         }
     }
 

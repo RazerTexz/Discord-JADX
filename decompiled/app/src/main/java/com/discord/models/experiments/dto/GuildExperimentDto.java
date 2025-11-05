@@ -1,9 +1,9 @@
 package com.discord.models.experiments.dto;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.Ref$ObjectRef;
@@ -27,7 +27,7 @@ public final /* data */ class GuildExperimentDto {
         /* JADX WARN: Multi-variable type inference failed */
         /* JADX WARN: Type inference failed for: r5v0, types: [T, java.util.List] */
         public static final GuildExperimentDto parse(Model.JsonReader jsonReader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = outline.c0(jsonReader, "jsonReader");
+            Ref$ObjectRef ref$ObjectRefC0 = a.c0(jsonReader, "jsonReader");
             ref$ObjectRefC0.element = null;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
             ref$ObjectRef.element = null;
@@ -36,25 +36,25 @@ public final /* data */ class GuildExperimentDto {
             Ref$ObjectRef ref$ObjectRef3 = new Ref$ObjectRef();
             ref$ObjectRef3.element = null;
             Ref$ObjectRef ref$ObjectRef4 = new Ref$ObjectRef();
-            ref$ObjectRef4.element = Collections2.emptyList();
+            ref$ObjectRef4.element = n.emptyList();
             jsonReader.nextListIndexed(new GuildExperimentDto$Parser$parse$1(ref$ObjectRefC0, jsonReader), new GuildExperimentDto$Parser$parse$2(ref$ObjectRef, jsonReader), new GuildExperimentDto$Parser$parse$3(ref$ObjectRef2, jsonReader), new GuildExperimentDto$Parser$parse$4(ref$ObjectRef3, jsonReader), new GuildExperimentDto$Parser$parse$5(ref$ObjectRef4, jsonReader));
             Long l = (Long) ref$ObjectRefC0.element;
-            Intrinsics3.checkNotNull(l);
+            m.checkNotNull(l);
             long jLongValue = l.longValue();
             String str = (String) ref$ObjectRef.element;
             Integer num = (Integer) ref$ObjectRef2.element;
-            Intrinsics3.checkNotNull(num);
+            m.checkNotNull(num);
             int iIntValue = num.intValue();
             List list = (List) ref$ObjectRef4.element;
             List list2 = (List) ref$ObjectRef3.element;
-            Intrinsics3.checkNotNull(list2);
+            m.checkNotNull(list2);
             return new GuildExperimentDto(jLongValue, str, iIntValue, list2, list);
         }
     }
 
     public GuildExperimentDto(long j, String str, int i, List<GuildExperimentPopulationDto> list, List<GuildExperimentOverridesDto> list2) {
-        Intrinsics3.checkNotNullParameter(list, "populations");
-        Intrinsics3.checkNotNullParameter(list2, "overrides");
+        m.checkNotNullParameter(list, "populations");
+        m.checkNotNullParameter(list2, "overrides");
         this.experimentIdHash = j;
         this.hashKey = str;
         this.revision = i;
@@ -109,8 +109,8 @@ public final /* data */ class GuildExperimentDto {
     }
 
     public final GuildExperimentDto copy(long experimentIdHash, String hashKey, int revision, List<GuildExperimentPopulationDto> populations, List<GuildExperimentOverridesDto> overrides) {
-        Intrinsics3.checkNotNullParameter(populations, "populations");
-        Intrinsics3.checkNotNullParameter(overrides, "overrides");
+        m.checkNotNullParameter(populations, "populations");
+        m.checkNotNullParameter(overrides, "overrides");
         return new GuildExperimentDto(experimentIdHash, hashKey, revision, populations, overrides);
     }
 
@@ -122,7 +122,7 @@ public final /* data */ class GuildExperimentDto {
             return false;
         }
         GuildExperimentDto guildExperimentDto = (GuildExperimentDto) other;
-        return this.experimentIdHash == guildExperimentDto.experimentIdHash && Intrinsics3.areEqual(this.hashKey, guildExperimentDto.hashKey) && this.revision == guildExperimentDto.revision && Intrinsics3.areEqual(this.populations, guildExperimentDto.populations) && Intrinsics3.areEqual(this.overrides, guildExperimentDto.overrides);
+        return this.experimentIdHash == guildExperimentDto.experimentIdHash && m.areEqual(this.hashKey, guildExperimentDto.hashKey) && this.revision == guildExperimentDto.revision && m.areEqual(this.populations, guildExperimentDto.populations) && m.areEqual(this.overrides, guildExperimentDto.overrides);
     }
 
     public final long getExperimentIdHash() {
@@ -157,7 +157,7 @@ public final /* data */ class GuildExperimentDto {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildExperimentDto(experimentIdHash=");
+        StringBuilder sbU = a.U("GuildExperimentDto(experimentIdHash=");
         sbU.append(this.experimentIdHash);
         sbU.append(", hashKey=");
         sbU.append(this.hashKey);
@@ -166,6 +166,6 @@ public final /* data */ class GuildExperimentDto {
         sbU.append(", populations=");
         sbU.append(this.populations);
         sbU.append(", overrides=");
-        return outline.L(sbU, this.overrides, ")");
+        return a.L(sbU, this.overrides, ")");
     }
 }

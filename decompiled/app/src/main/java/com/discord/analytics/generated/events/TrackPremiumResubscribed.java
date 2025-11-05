@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPremiumResubscribed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumResubscribed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPremiumResubscribed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean success = null;
     private final CharSequence errorCode = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackPremiumResubscribed implements AnalyticsSchem
             return false;
         }
         TrackPremiumResubscribed trackPremiumResubscribed = (TrackPremiumResubscribed) other;
-        return Intrinsics3.areEqual(this.success, trackPremiumResubscribed.success) && Intrinsics3.areEqual(this.errorCode, trackPremiumResubscribed.errorCode) && Intrinsics3.areEqual(this.plan, trackPremiumResubscribed.plan) && Intrinsics3.areEqual(this.paymentGateway, trackPremiumResubscribed.paymentGateway);
+        return m.areEqual(this.success, trackPremiumResubscribed.success) && m.areEqual(this.errorCode, trackPremiumResubscribed.errorCode) && m.areEqual(this.plan, trackPremiumResubscribed.plan) && m.areEqual(this.paymentGateway, trackPremiumResubscribed.paymentGateway);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackPremiumResubscribed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPremiumResubscribed(success=");
+        StringBuilder sbU = a.U("TrackPremiumResubscribed(success=");
         sbU.append(this.success);
         sbU.append(", errorCode=");
         sbU.append(this.errorCode);
         sbU.append(", plan=");
         sbU.append(this.plan);
         sbU.append(", paymentGateway=");
-        return outline.E(sbU, this.paymentGateway, ")");
+        return a.E(sbU, this.paymentGateway, ")");
     }
 }

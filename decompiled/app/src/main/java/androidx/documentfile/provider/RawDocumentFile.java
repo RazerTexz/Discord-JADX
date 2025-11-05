@@ -4,7 +4,7 @@ import android.net.Uri;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -69,7 +69,7 @@ public class RawDocumentFile extends DocumentFile {
     public DocumentFile createFile(String str, String str2) {
         String extensionFromMimeType = MimeTypeMap.getSingleton().getExtensionFromMimeType(str);
         if (extensionFromMimeType != null) {
-            str2 = outline.y(str2, ".", extensionFromMimeType);
+            str2 = a.y(str2, ".", extensionFromMimeType);
         }
         File file = new File(this.mFile, str2);
         try {

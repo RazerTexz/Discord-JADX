@@ -1,8 +1,8 @@
 package com.discord.widgets.user;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.activity.Activity;
 import com.discord.api.activity.ActivityEmoji;
 import com.discord.api.presence.ClientStatus;
@@ -17,11 +17,11 @@ import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.user.profile.UserStatusPresenceCustomView;
-import d0.c0.Random;
-import d0.t._Arrays;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.c0.c;
+import d0.t.k;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Map;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -31,7 +31,7 @@ import rx.Observable;
 
 /* compiled from: WidgetUserStatusSheetViewModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState> {
+public final class WidgetUserStatusSheetViewModel extends d0<ViewState> {
     private boolean hasTrackedOpenPopout;
     private final RestAPI restAPI;
     private final StoreUserPresence storePresences;
@@ -43,7 +43,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
 
     /* compiled from: WidgetUserStatusSheetViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -56,7 +56,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             WidgetUserStatusSheetViewModel.access$handleStoreState(WidgetUserStatusSheetViewModel.this, storeState);
         }
     }
@@ -71,8 +71,8 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
         }
 
         private final Observable<StoreState> observeStoreState(StoreUserPresence storePresences) {
-            Observable observableG = storePresences.observeLocalPresence().G(WidgetUserStatusSheetViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "storePresences\n         …          )\n            }");
+            Observable observableG = storePresences.observeLocalPresence().G(WidgetUserStatusSheetViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableG, "storePresences\n         …          )\n            }");
             return observableG;
         }
 
@@ -107,7 +107,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof StoreState) && Intrinsics3.areEqual(this.customStatusActivity, ((StoreState) other).customStatusActivity);
+                return (other instanceof StoreState) && m.areEqual(this.customStatusActivity, ((StoreState) other).customStatusActivity);
             }
             return true;
         }
@@ -125,7 +125,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(customStatusActivity=");
+            StringBuilder sbU = a.U("StoreState(customStatusActivity=");
             sbU.append(this.customStatusActivity);
             sbU.append(")");
             return sbU.toString();
@@ -142,7 +142,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(UserStatusPresenceCustomView.ViewState viewState) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(viewState, "customStatusViewState");
+                m.checkNotNullParameter(viewState, "customStatusViewState");
                 this.customStatusViewState = viewState;
             }
 
@@ -159,13 +159,13 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             }
 
             public final Loaded copy(UserStatusPresenceCustomView.ViewState customStatusViewState) {
-                Intrinsics3.checkNotNullParameter(customStatusViewState, "customStatusViewState");
+                m.checkNotNullParameter(customStatusViewState, "customStatusViewState");
                 return new Loaded(customStatusViewState);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.customStatusViewState, ((Loaded) other).customStatusViewState);
+                    return (other instanceof Loaded) && m.areEqual(this.customStatusViewState, ((Loaded) other).customStatusViewState);
                 }
                 return true;
             }
@@ -183,7 +183,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(customStatusViewState=");
+                StringBuilder sbU = a.U("Loaded(customStatusViewState=");
                 sbU.append(this.customStatusViewState);
                 sbU.append(")");
                 return sbU.toString();
@@ -209,7 +209,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
 
     /* compiled from: WidgetUserStatusSheetViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$clearCustomStatus$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserSettings, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelUserSettings, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -224,13 +224,13 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
-            Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
+            m.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
     /* compiled from: WidgetUserStatusSheetViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$setStatus$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserSettings, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelUserSettings, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -245,7 +245,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
-            Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
+            m.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
@@ -267,9 +267,9 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
     private final ModelEmojiUnicode getPlaceholderEmoji() {
         Map<String, ModelEmojiUnicode> unicodeEmojisNamesMap = StoreStream.INSTANCE.getEmojis().getUnicodeEmojisNamesMap();
         String[] strArr = CUSTOM_EMOJI_PLACEHOLDER_EMOJIS;
-        Random.a aVar = Random.k;
-        ModelEmojiUnicode modelEmojiUnicode = unicodeEmojisNamesMap.get(_Arrays.random(strArr, aVar));
-        return modelEmojiUnicode != null ? modelEmojiUnicode : (ModelEmojiUnicode) _Collections.random(unicodeEmojisNamesMap.values(), aVar);
+        c.a aVar = c.k;
+        ModelEmojiUnicode modelEmojiUnicode = unicodeEmojisNamesMap.get(k.random(strArr, aVar));
+        return modelEmojiUnicode != null ? modelEmojiUnicode : (ModelEmojiUnicode) u.random(unicodeEmojisNamesMap.values(), aVar);
     }
 
     private final void handleStoreState(StoreState storeState) {
@@ -313,17 +313,17 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
     }
 
     public final void setStatus(ClientStatus status) {
-        Intrinsics3.checkNotNullParameter(status, "status");
+        m.checkNotNullParameter(status, "status");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithStatus(status)), false, 1, null), WidgetUserStatusSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetUserStatusSheetViewModel(StoreUserSettings storeUserSettings, StoreUserPresence storeUserPresence, RestAPI restAPI, Observable<StoreState> observable) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-        Intrinsics3.checkNotNullParameter(storeUserPresence, "storePresences");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+        m.checkNotNullParameter(storeUserPresence, "storePresences");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.storeUserSettings = storeUserSettings;
         this.storePresences = storeUserPresence;
         this.restAPI = restAPI;

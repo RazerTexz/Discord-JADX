@@ -5,23 +5,23 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.ViewDialogConfirmationBinding;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 
 /* compiled from: WidgetMainSurveyDialog.kt */
 /* loaded from: classes2.dex */
 public final class WidgetMainSurveyDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetMainSurveyDialog.class, "binding", "getBinding()Lcom/discord/databinding/ViewDialogConfirmationBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetMainSurveyDialog.class, "binding", "getBinding()Lcom/discord/databinding/ViewDialogConfirmationBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -39,11 +39,11 @@ public final class WidgetMainSurveyDialog extends AppDialog {
         }
 
         public final void show(FragmentManager fragmentManager, String surveyId, String surveyUrl, String surveyBody, String surveyTitle) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(surveyId, "surveyId");
-            Intrinsics3.checkNotNullParameter(surveyUrl, "surveyUrl");
-            Intrinsics3.checkNotNullParameter(surveyBody, "surveyBody");
-            Intrinsics3.checkNotNullParameter(surveyTitle, "surveyTitle");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(surveyId, "surveyId");
+            m.checkNotNullParameter(surveyUrl, "surveyUrl");
+            m.checkNotNullParameter(surveyBody, "surveyBody");
+            m.checkNotNullParameter(surveyTitle, "surveyTitle");
             WidgetMainSurveyDialog widgetMainSurveyDialog = new WidgetMainSurveyDialog();
             Bundle bundle = new Bundle();
             bundle.putString(WidgetMainSurveyDialog.EXTRA_SURVEY_ID, surveyId);
@@ -82,14 +82,14 @@ public final class WidgetMainSurveyDialog extends AppDialog {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, outline.x(view, "button", "button.context"), this.$surveyUrl, false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, a.x(view, "button", "button.context"), this.$surveyUrl, false, false, null, 28, null);
             WidgetMainSurveyDialog.this.dismiss();
         }
     }
 
     public WidgetMainSurveyDialog() {
         super(R.layout.view_dialog_confirmation);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetMainSurveyDialog2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetMainSurveyDialog$binding$2.INSTANCE, null, 2, null);
     }
 
     private final ViewDialogConfirmationBinding getBinding() {
@@ -98,7 +98,7 @@ public final class WidgetMainSurveyDialog extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         Bundle arguments = getArguments();
         String string = arguments != null ? arguments.getString(EXTRA_SURVEY_URL) : null;
@@ -111,17 +111,17 @@ public final class WidgetMainSurveyDialog extends AppDialog {
         if (!(string == null || string.length() == 0)) {
             if (!(string3 == null || string3.length() == 0)) {
                 TextView textView = getBinding().d;
-                Intrinsics3.checkNotNullExpressionValue(textView, "binding.viewDialogConfirmationHeader");
+                m.checkNotNullExpressionValue(textView, "binding.viewDialogConfirmationHeader");
                 textView.setText(string4);
                 TextView textView2 = getBinding().e;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.viewDialogConfirmationText");
+                m.checkNotNullExpressionValue(textView2, "binding.viewDialogConfirmationText");
                 textView2.setText(string2);
                 MaterialButton materialButton = getBinding().f2185b;
-                Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.viewDialogConfirmationCancel");
+                m.checkNotNullExpressionValue(materialButton, "binding.viewDialogConfirmationCancel");
                 materialButton.setText(getString(R.string.no_thanks));
                 getBinding().f2185b.setOnClickListener(new AnonymousClass1());
                 MaterialButton materialButton2 = getBinding().c;
-                Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.viewDialogConfirmationConfirm");
+                m.checkNotNullExpressionValue(materialButton2, "binding.viewDialogConfirmationConfirm");
                 materialButton2.setText(getString(R.string.okay));
                 getBinding().c.setOnClickListener(new AnonymousClass2(string));
                 AnalyticsTracker.INSTANCE.surveyViewed(string3);

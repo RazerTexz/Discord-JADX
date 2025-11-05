@@ -1,8 +1,8 @@
 package com.discord.api.botuikit;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 
 /* compiled from: ComponentEmoji.kt */
@@ -35,7 +35,7 @@ public final /* data */ class ComponentEmoji implements Serializable {
             return false;
         }
         ComponentEmoji componentEmoji = (ComponentEmoji) other;
-        return Intrinsics3.areEqual(this.id, componentEmoji.id) && Intrinsics3.areEqual(this.name, componentEmoji.name) && Intrinsics3.areEqual(this.animated, componentEmoji.animated);
+        return m.areEqual(this.id, componentEmoji.id) && m.areEqual(this.name, componentEmoji.name) && m.areEqual(this.animated, componentEmoji.animated);
     }
 
     public int hashCode() {
@@ -48,11 +48,11 @@ public final /* data */ class ComponentEmoji implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ComponentEmoji(id=");
+        StringBuilder sbU = a.U("ComponentEmoji(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);
         sbU.append(", animated=");
-        return outline.D(sbU, this.animated, ")");
+        return a.D(sbU, this.animated, ")");
     }
 }

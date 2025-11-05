@@ -1,19 +1,19 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
+import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkActionInviteResolve.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionInviteResolve implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
+public final /* data */ class TrackNetworkActionInviteResolve implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Boolean authenticated;
     private final Long channelId;
@@ -49,7 +49,7 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
         this.analyticsSchemaTypeName = "network_action_invite_resolve";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
     public void b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
@@ -68,7 +68,7 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
             return false;
         }
         TrackNetworkActionInviteResolve trackNetworkActionInviteResolve = (TrackNetworkActionInviteResolve) other;
-        return Intrinsics3.areEqual(this.resolved, trackNetworkActionInviteResolve.resolved) && Intrinsics3.areEqual(this.code, trackNetworkActionInviteResolve.code) && Intrinsics3.areEqual(this.authenticated, trackNetworkActionInviteResolve.authenticated) && Intrinsics3.areEqual(this.guildId, trackNetworkActionInviteResolve.guildId) && Intrinsics3.areEqual(this.channelId, trackNetworkActionInviteResolve.channelId) && Intrinsics3.areEqual(this.channelType, trackNetworkActionInviteResolve.channelType) && Intrinsics3.areEqual(this.inviterId, trackNetworkActionInviteResolve.inviterId) && Intrinsics3.areEqual(this.sizeTotal, trackNetworkActionInviteResolve.sizeTotal) && Intrinsics3.areEqual(this.sizeOnline, trackNetworkActionInviteResolve.sizeOnline) && Intrinsics3.areEqual(this.inviteType, trackNetworkActionInviteResolve.inviteType) && Intrinsics3.areEqual(this.destinationUserId, trackNetworkActionInviteResolve.destinationUserId) && Intrinsics3.areEqual(this.userBanned, trackNetworkActionInviteResolve.userBanned) && Intrinsics3.areEqual(this.inputValue, trackNetworkActionInviteResolve.inputValue);
+        return m.areEqual(this.resolved, trackNetworkActionInviteResolve.resolved) && m.areEqual(this.code, trackNetworkActionInviteResolve.code) && m.areEqual(this.authenticated, trackNetworkActionInviteResolve.authenticated) && m.areEqual(this.guildId, trackNetworkActionInviteResolve.guildId) && m.areEqual(this.channelId, trackNetworkActionInviteResolve.channelId) && m.areEqual(this.channelType, trackNetworkActionInviteResolve.channelType) && m.areEqual(this.inviterId, trackNetworkActionInviteResolve.inviterId) && m.areEqual(this.sizeTotal, trackNetworkActionInviteResolve.sizeTotal) && m.areEqual(this.sizeOnline, trackNetworkActionInviteResolve.sizeOnline) && m.areEqual(this.inviteType, trackNetworkActionInviteResolve.inviteType) && m.areEqual(this.destinationUserId, trackNetworkActionInviteResolve.destinationUserId) && m.areEqual(this.userBanned, trackNetworkActionInviteResolve.userBanned) && m.areEqual(this.inputValue, trackNetworkActionInviteResolve.inputValue);
     }
 
     public int hashCode() {
@@ -101,7 +101,7 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkActionInviteResolve(resolved=");
+        StringBuilder sbU = a.U("TrackNetworkActionInviteResolve(resolved=");
         sbU.append(this.resolved);
         sbU.append(", code=");
         sbU.append(this.code);
@@ -126,7 +126,7 @@ public final /* data */ class TrackNetworkActionInviteResolve implements Analyti
         sbU.append(", userBanned=");
         sbU.append(this.userBanned);
         sbU.append(", inputValue=");
-        return outline.E(sbU, this.inputValue, ")");
+        return a.E(sbU, this.inputValue, ")");
     }
 
     public TrackNetworkActionInviteResolve() {

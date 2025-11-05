@@ -3,7 +3,7 @@ package com.discord.widgets.user;
 import androidx.core.app.NotificationCompat;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.user.WidgetUserMentions;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import rx.functions.Action1;
 
 /* compiled from: WidgetUserMentions.kt */
@@ -25,7 +25,7 @@ public final class WidgetUserMentions$WidgetUserMentionFilter$onResume$3<T> impl
         WidgetUserMentions.WidgetUserMentionFilter widgetUserMentionFilter = this.this$0;
         WidgetUserMentions.Model.MessageLoader.Filters filtersAccess$getFilters$p = WidgetUserMentions.WidgetUserMentionFilter.access$getFilters$p(widgetUserMentionFilter);
         CheckedSetting checkedSetting = WidgetUserMentions.WidgetUserMentionFilter.access$getBinding$p(this.this$0).c;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.userMentionsFilterIncludeRoles");
+        m.checkNotNullExpressionValue(checkedSetting, "binding.userMentionsFilterIncludeRoles");
         WidgetUserMentions.WidgetUserMentionFilter.access$updateFilters(widgetUserMentionFilter, WidgetUserMentions.Model.MessageLoader.Filters.copy$default(filtersAccess$getFilters$p, 0L, false, false, checkedSetting.isChecked(), 7, null));
         WidgetUserMentions.WidgetUserMentionFilter.access$delayedDismiss(this.this$0);
     }

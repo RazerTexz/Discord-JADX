@@ -1,17 +1,16 @@
 package com.discord.stores;
 
 import androidx.core.app.NotificationCompat;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import com.discord.api.guild.Guild;
 import com.discord.api.voice.state.VoiceState;
 import com.discord.models.domain.ModelPayload;
 import com.discord.stores.updates.ObservationDeck;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.a.OnSubscribeToMap;
-import j0.l.e.UtilityFunctions;
+import d0.t.h0;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.a.l0;
+import j0.l.e.m;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -36,7 +35,7 @@ public final class StoreVoiceStates extends StoreV2 {
 
     /* compiled from: StoreVoiceStates.kt */
     /* renamed from: com.discord.stores.StoreVoiceStates$observe$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends VoiceState>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends VoiceState>> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -54,22 +53,22 @@ public final class StoreVoiceStates extends StoreV2 {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends VoiceState> invoke2() {
             Map<Long, ? extends VoiceState> map = (Map) StoreVoiceStates.access$getVoiceStatesSnapshot$p(StoreVoiceStates.this).get(Long.valueOf(this.$guildId));
-            return map != null ? map : Maps6.emptyMap();
+            return map != null ? map : h0.emptyMap();
         }
     }
 
     /* compiled from: StoreVoiceStates.kt */
     /* renamed from: com.discord.stores.StoreVoiceStates$observe$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Map<Long, ? extends VoiceState>, Observable<? extends Map<Long, VoiceState>>> {
+    public static final class AnonymousClass2<T, R> implements b<Map<Long, ? extends VoiceState>, Observable<? extends Map<Long, VoiceState>>> {
         public final /* synthetic */ long $channelId;
 
         /* compiled from: StoreVoiceStates.kt */
         /* renamed from: com.discord.stores.StoreVoiceStates$observe$2$1, reason: invalid class name */
-        public static final class AnonymousClass1<T, R> implements Func1<VoiceState, Boolean> {
+        public static final class AnonymousClass1<T, R> implements b<VoiceState, Boolean> {
             public AnonymousClass1() {
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Boolean call(VoiceState voiceState) {
                 return call2(voiceState);
             }
@@ -83,10 +82,10 @@ public final class StoreVoiceStates extends StoreV2 {
 
         /* compiled from: StoreVoiceStates.kt */
         /* renamed from: com.discord.stores.StoreVoiceStates$observe$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C02002<T, R> implements Func1<VoiceState, Long> {
-            public static final C02002 INSTANCE = new C02002();
+        public static final class C03202<T, R> implements b<VoiceState, Long> {
+            public static final C03202 INSTANCE = new C03202();
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Long call(VoiceState voiceState) {
                 return call2(voiceState);
             }
@@ -101,21 +100,21 @@ public final class StoreVoiceStates extends StoreV2 {
             this.$channelId = j;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Map<Long, VoiceState>> call(Map<Long, ? extends VoiceState> map) {
             return call2((Map<Long, VoiceState>) map);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, VoiceState>> call2(Map<Long, VoiceState> map) {
-            return Observable.h0(new OnSubscribeToMap(Observable.B(map.values()).y(new AnonymousClass1()), C02002.INSTANCE, UtilityFunctions.a.INSTANCE));
+            return Observable.h0(new l0(Observable.B(map.values()).y(new AnonymousClass1()), C03202.INSTANCE, m.a.INSTANCE));
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public StoreVoiceStates(Function3<? super Long, ? super Long, ? super Long, Unit> function3, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(function3, "notifyVoiceStatesUpdated");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        d0.z.d.m.checkNotNullParameter(function3, "notifyVoiceStatesUpdated");
+        d0.z.d.m.checkNotNullParameter(observationDeck, "observationDeck");
         this.notifyVoiceStatesUpdated = function3;
         this.observationDeck = observationDeck;
         HashMap<Long, HashMap<Long, VoiceState>> map = new HashMap<>();
@@ -132,7 +131,7 @@ public final class StoreVoiceStates extends StoreV2 {
         storeVoiceStates.voiceStatesSnapshot = map;
     }
 
-    @Store3
+    @StoreThread
     private final void clear() {
         this.dirtyGuildIds.addAll(this.voiceStates.keySet());
         this.voiceStates.clear();
@@ -140,7 +139,7 @@ public final class StoreVoiceStates extends StoreV2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:39:0x00bf  */
-    @Store3
+    @StoreThread
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -149,7 +148,7 @@ public final class StoreVoiceStates extends StoreV2 {
         Long l;
         long jLongValue = guildId != null ? guildId.longValue() : voiceState.getGuildId();
         long userId = voiceState.getUserId();
-        if ((!Intrinsics3.areEqual(voiceState.getSessionId(), this.sessionId)) && (l = this.myUserId) != null && userId == l.longValue()) {
+        if ((!d0.z.d.m.areEqual(voiceState.getSessionId(), this.sessionId)) && (l = this.myUserId) != null && userId == l.longValue()) {
             HashMap<Long, VoiceState> map = this.voiceStates.get(Long.valueOf(jLongValue));
             if (map != null && map.remove(Long.valueOf(userId)) != null) {
                 this.dirtyGuildIds.add(Long.valueOf(jLongValue));
@@ -163,7 +162,7 @@ public final class StoreVoiceStates extends StoreV2 {
                 map3 = new HashMap<>();
             }
             long jLongValue2 = 0;
-            if (AnimatableValueParser.X0(voiceState)) {
+            if (d.X0(voiceState)) {
                 VoiceState voiceStateRemove = map3.remove(Long.valueOf(userId));
                 if (voiceStateRemove != null) {
                     Long channelId2 = voiceStateRemove.getChannelId();
@@ -178,7 +177,7 @@ public final class StoreVoiceStates extends StoreV2 {
                     this.notifyVoiceStatesUpdated.invoke(Long.valueOf(jLongValue), Long.valueOf(jLongValue2), Long.valueOf(userId));
                 }
             } else {
-                if (!Intrinsics3.areEqual(voiceState, map3.get(Long.valueOf(userId)))) {
+                if (!d0.z.d.m.areEqual(voiceState, map3.get(Long.valueOf(userId)))) {
                     VoiceState voiceState2 = map3.get(Long.valueOf(userId));
                     if (voiceState2 != null && (channelId = voiceState2.getChannelId()) != null) {
                         jLongValue2 = channelId.longValue();
@@ -210,7 +209,7 @@ public final class StoreVoiceStates extends StoreV2 {
     public final Map<Long, VoiceState> getForChannel(long guildId, long channelId) {
         Map<Long, VoiceState> mapEmptyMap = this.voiceStatesSnapshot.get(Long.valueOf(guildId));
         if (mapEmptyMap == null) {
-            mapEmptyMap = Maps6.emptyMap();
+            mapEmptyMap = h0.emptyMap();
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry<Long, VoiceState> entry : mapEmptyMap.entrySet()) {
@@ -222,26 +221,26 @@ public final class StoreVoiceStates extends StoreV2 {
         return linkedHashMap;
     }
 
-    @Store3
+    @StoreThread
     public final Map<Long, Map<Long, VoiceState>> getInternal$app_productionGoogleRelease() {
         return this.voiceStates;
     }
 
-    @Store3
+    @StoreThread
     public final void handleAuthToken(String authToken) {
         if (authToken == null) {
             clear();
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        d0.z.d.m.checkNotNullParameter(payload, "payload");
         this.sessionId = payload.getSessionId();
         this.myUserId = Long.valueOf(payload.getMe().getId());
         clear();
         List<Guild> guilds = payload.getGuilds();
-        Intrinsics3.checkNotNullExpressionValue(guilds, "payload.guilds");
+        d0.z.d.m.checkNotNullExpressionValue(guilds, "payload.guilds");
         for (Guild guild : guilds) {
             List<VoiceState> listR = guild.R();
             if (listR != null) {
@@ -253,9 +252,9 @@ public final class StoreVoiceStates extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildAdd(Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        d0.z.d.m.checkNotNullParameter(guild, "guild");
         List<VoiceState> listR = guild.R();
         if (listR != null) {
             Iterator<T> it = listR.iterator();
@@ -265,17 +264,17 @@ public final class StoreVoiceStates extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildRemove(Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        d0.z.d.m.checkNotNullParameter(guild, "guild");
         this.voiceStates.remove(Long.valueOf(guild.getId()));
         this.dirtyGuildIds.add(Long.valueOf(guild.getId()));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceStateUpdate(VoiceState voiceState) {
-        Intrinsics3.checkNotNullParameter(voiceState, "voiceState");
+        d0.z.d.m.checkNotNullParameter(voiceState, "voiceState");
         updateVoiceState$default(this, voiceState, null, 2, null);
     }
 
@@ -288,7 +287,7 @@ public final class StoreVoiceStates extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         HashMap map = new HashMap(this.voiceStates.size());
         for (Map.Entry<Long, HashMap<Long, VoiceState>> entry : this.voiceStates.entrySet()) {
@@ -309,7 +308,7 @@ public final class StoreVoiceStates extends StoreV2 {
 
     public final Observable<Map<Long, VoiceState>> observe(long guildId, long channelId) {
         Observable<Map<Long, VoiceState>> observableR = observe(guildId).Y(new AnonymousClass2(channelId)).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observe(guildId)\n       …  .distinctUntilChanged()");
+        d0.z.d.m.checkNotNullExpressionValue(observableR, "observe(guildId)\n       …  .distinctUntilChanged()");
         return observableR;
     }
 }

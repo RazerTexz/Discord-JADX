@@ -33,7 +33,7 @@ import androidx.core.util.ObjectsCompat;
 import androidx.core.view.OnApplyWindowInsetsListener;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import b.i.a.g.a.ViewOffsetHelper;
+import b.i.a.g.a.d;
 import com.google.android.material.R;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.appbar.AppBarLayout;
@@ -117,7 +117,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
             for (int i2 = 0; i2 < childCount; i2++) {
                 View childAt = CollapsingToolbarLayout.this.getChildAt(i2);
                 LayoutParams layoutParams = (LayoutParams) childAt.getLayoutParams();
-                ViewOffsetHelper viewOffsetHelper = CollapsingToolbarLayout.getViewOffsetHelper(childAt);
+                d viewOffsetHelper = CollapsingToolbarLayout.getViewOffsetHelper(childAt);
                 int i3 = layoutParams.collapseMode;
                 if (i3 == 1) {
                     viewOffsetHelper.b(MathUtils.clamp(-i, 0, CollapsingToolbarLayout.this.getMaxOffsetForPinChild(childAt)));
@@ -218,15 +218,15 @@ public class CollapsingToolbarLayout extends FrameLayout {
     }
 
     @NonNull
-    public static ViewOffsetHelper getViewOffsetHelper(@NonNull View view) {
+    public static d getViewOffsetHelper(@NonNull View view) {
         int i = R.id.view_offset_helper;
-        ViewOffsetHelper viewOffsetHelper = (ViewOffsetHelper) view.getTag(i);
-        if (viewOffsetHelper != null) {
-            return viewOffsetHelper;
+        d dVar = (d) view.getTag(i);
+        if (dVar != null) {
+            return dVar;
         }
-        ViewOffsetHelper viewOffsetHelper2 = new ViewOffsetHelper(view);
-        view.setTag(i, viewOffsetHelper2);
-        return viewOffsetHelper2;
+        d dVar2 = new d(view);
+        view.setTag(i, dVar2);
+        return dVar2;
     }
 
     private static boolean isToolbar(View view) {
@@ -507,7 +507,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
         int childCount2 = getChildCount();
         for (int i6 = 0; i6 < childCount2; i6++) {
-            ViewOffsetHelper viewOffsetHelper = getViewOffsetHelper(getChildAt(i6));
+            d viewOffsetHelper = getViewOffsetHelper(getChildAt(i6));
             viewOffsetHelper.f1603b = viewOffsetHelper.a.getTop();
             viewOffsetHelper.c = viewOffsetHelper.a.getLeft();
         }

@@ -1,12 +1,12 @@
 package kotlin.text;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import d0.f0.n;
-import d0.g0.Regex4;
-import d0.g0.Regex5;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.h;
+import d0.g0.i;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
@@ -23,7 +23,7 @@ public final class Regex implements Serializable {
 
     /* renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private Set<? extends Regex5> _options;
+    private Set<? extends i> _options;
     private final Pattern nativePattern;
 
     /* compiled from: Regex.kt */
@@ -38,9 +38,9 @@ public final class Regex implements Serializable {
         }
 
         public final String escape(String str) {
-            Intrinsics3.checkNotNullParameter(str, "literal");
+            m.checkNotNullParameter(str, "literal");
             String strQuote = Pattern.quote(str);
-            Intrinsics3.checkNotNullExpressionValue(strQuote, "Pattern.quote(literal)");
+            m.checkNotNullExpressionValue(strQuote, "Pattern.quote(literal)");
             return strQuote;
         }
     }
@@ -62,20 +62,20 @@ public final class Regex implements Serializable {
         }
 
         public b(String str, int i) {
-            Intrinsics3.checkNotNullParameter(str, "pattern");
+            m.checkNotNullParameter(str, "pattern");
             this.pattern = str;
             this.flags = i;
         }
 
         private final Object readResolve() {
             Pattern patternCompile = Pattern.compile(this.pattern, this.flags);
-            Intrinsics3.checkNotNullExpressionValue(patternCompile, "Pattern.compile(pattern, flags)");
+            m.checkNotNullExpressionValue(patternCompile, "Pattern.compile(pattern, flags)");
             return new Regex(patternCompile);
         }
     }
 
     /* compiled from: Regex.kt */
-    public static final class c extends Lambda implements Function0<MatchResult> {
+    public static final class c extends o implements Function0<MatchResult> {
         public final /* synthetic */ CharSequence $input;
         public final /* synthetic */ int $startIndex;
 
@@ -99,7 +99,7 @@ public final class Regex implements Serializable {
     }
 
     /* compiled from: Regex.kt */
-    public static final /* synthetic */ class d extends FunctionReferenceImpl implements Function1<MatchResult, MatchResult> {
+    public static final /* synthetic */ class d extends k implements Function1<MatchResult, MatchResult> {
         public static final d j = new d();
 
         public d() {
@@ -113,13 +113,13 @@ public final class Regex implements Serializable {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final MatchResult invoke2(MatchResult matchResult) {
-            Intrinsics3.checkNotNullParameter(matchResult, "p1");
+            m.checkNotNullParameter(matchResult, "p1");
             return matchResult.next();
         }
     }
 
     public Regex(Pattern pattern) {
-        Intrinsics3.checkNotNullParameter(pattern, "nativePattern");
+        m.checkNotNullParameter(pattern, "nativePattern");
         this.nativePattern = pattern;
     }
 
@@ -139,49 +139,49 @@ public final class Regex implements Serializable {
 
     private final Object writeReplace() {
         String strPattern = this.nativePattern.pattern();
-        Intrinsics3.checkNotNullExpressionValue(strPattern, "nativePattern.pattern()");
+        m.checkNotNullExpressionValue(strPattern, "nativePattern.pattern()");
         return new b(strPattern, this.nativePattern.flags());
     }
 
     public final boolean containsMatchIn(CharSequence input) {
-        Intrinsics3.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(input, "input");
         return this.nativePattern.matcher(input).find();
     }
 
     public final MatchResult find(CharSequence input, int startIndex) {
-        Intrinsics3.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(input, "input");
         Matcher matcher = this.nativePattern.matcher(input);
-        Intrinsics3.checkNotNullExpressionValue(matcher, "nativePattern.matcher(input)");
-        return Regex4.access$findNext(matcher, startIndex, input);
+        m.checkNotNullExpressionValue(matcher, "nativePattern.matcher(input)");
+        return h.access$findNext(matcher, startIndex, input);
     }
 
     public final Sequence<MatchResult> findAll(CharSequence input, int startIndex) {
-        Intrinsics3.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(input, "input");
         if (startIndex >= 0 && startIndex <= input.length()) {
             return n.generateSequence((Function0) new c(input, startIndex), (Function1) d.j);
         }
-        StringBuilder sbV = outline.V("Start index out of bounds: ", startIndex, ", input length: ");
+        StringBuilder sbV = a.V("Start index out of bounds: ", startIndex, ", input length: ");
         sbV.append(input.length());
         throw new IndexOutOfBoundsException(sbV.toString());
     }
 
     public final MatchResult matchEntire(CharSequence input) {
-        Intrinsics3.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(input, "input");
         Matcher matcher = this.nativePattern.matcher(input);
-        Intrinsics3.checkNotNullExpressionValue(matcher, "nativePattern.matcher(input)");
-        return Regex4.access$matchEntire(matcher, input);
+        m.checkNotNullExpressionValue(matcher, "nativePattern.matcher(input)");
+        return h.access$matchEntire(matcher, input);
     }
 
     public final boolean matches(CharSequence input) {
-        Intrinsics3.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(input, "input");
         return this.nativePattern.matcher(input).matches();
     }
 
     public final String replace(CharSequence input, String replacement) {
-        Intrinsics3.checkNotNullParameter(input, "input");
-        Intrinsics3.checkNotNullParameter(replacement, "replacement");
+        m.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(replacement, "replacement");
         String strReplaceAll = this.nativePattern.matcher(input).replaceAll(replacement);
-        Intrinsics3.checkNotNullExpressionValue(strReplaceAll, "nativePattern.matcher(in…).replaceAll(replacement)");
+        m.checkNotNullExpressionValue(strReplaceAll, "nativePattern.matcher(in…).replaceAll(replacement)");
         return strReplaceAll;
     }
 
@@ -192,21 +192,21 @@ public final class Regex implements Serializable {
 
     public String toString() {
         String string = this.nativePattern.toString();
-        Intrinsics3.checkNotNullExpressionValue(string, "nativePattern.toString()");
+        m.checkNotNullExpressionValue(string, "nativePattern.toString()");
         return string;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     public Regex(String str) {
-        Intrinsics3.checkNotNullParameter(str, "pattern");
+        m.checkNotNullParameter(str, "pattern");
         Pattern patternCompile = Pattern.compile(str);
-        Intrinsics3.checkNotNullExpressionValue(patternCompile, "Pattern.compile(pattern)");
+        m.checkNotNullExpressionValue(patternCompile, "Pattern.compile(pattern)");
         this(patternCompile);
     }
 
     public final String replace(CharSequence input, Function1<? super MatchResult, ? extends CharSequence> transform) {
-        Intrinsics3.checkNotNullParameter(input, "input");
-        Intrinsics3.checkNotNullParameter(transform, "transform");
+        m.checkNotNullParameter(input, "input");
+        m.checkNotNullParameter(transform, "transform");
         int iIntValue = 0;
         MatchResult matchResultFind$default = find$default(this, input, 0, 2, null);
         if (matchResultFind$default == null) {
@@ -215,7 +215,7 @@ public final class Regex implements Serializable {
         int length = input.length();
         StringBuilder sb = new StringBuilder(length);
         do {
-            Intrinsics3.checkNotNull(matchResultFind$default);
+            m.checkNotNull(matchResultFind$default);
             sb.append(input, iIntValue, matchResultFind$default.getRange().getStart().intValue());
             sb.append(transform.invoke(matchResultFind$default));
             iIntValue = matchResultFind$default.getRange().getEndInclusive().intValue() + 1;
@@ -228,16 +228,16 @@ public final class Regex implements Serializable {
             sb.append(input, iIntValue, length);
         }
         String string = sb.toString();
-        Intrinsics3.checkNotNullExpressionValue(string, "sb.toString()");
+        m.checkNotNullExpressionValue(string, "sb.toString()");
         return string;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public Regex(String str, Regex5 regex5) {
-        Intrinsics3.checkNotNullParameter(str, "pattern");
-        Intrinsics3.checkNotNullParameter(regex5, "option");
-        Pattern patternCompile = Pattern.compile(str, Companion.access$ensureUnicodeCase(INSTANCE, regex5.getValue()));
-        Intrinsics3.checkNotNullExpressionValue(patternCompile, "Pattern.compile(pattern,…nicodeCase(option.value))");
+    public Regex(String str, i iVar) {
+        m.checkNotNullParameter(str, "pattern");
+        m.checkNotNullParameter(iVar, "option");
+        Pattern patternCompile = Pattern.compile(str, Companion.access$ensureUnicodeCase(INSTANCE, iVar.getValue()));
+        m.checkNotNullExpressionValue(patternCompile, "Pattern.compile(pattern,…nicodeCase(option.value))");
         this(patternCompile);
     }
 }

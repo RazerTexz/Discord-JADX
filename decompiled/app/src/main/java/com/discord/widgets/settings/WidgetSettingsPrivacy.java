@@ -12,13 +12,11 @@ import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.AppHelpDesk;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.o;
-import b.a.i.WidgetSettingsPrivacyDefaultsBinding;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f;
+import b.a.d.j;
+import b.a.i.b6;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.app.AppFragment;
@@ -26,8 +24,8 @@ import com.discord.databinding.ViewDialogConfirmationBinding;
 import com.discord.databinding.WidgetSettingsPrivacyBinding;
 import com.discord.i18n.Hook;
 import com.discord.i18n.RenderContext;
-import com.discord.models.domain.ModelUserConsents2;
-import com.discord.models.domain.ModelUserConsents3;
+import com.discord.models.domain.Consents;
+import com.discord.models.domain.Harvest;
 import com.discord.models.domain.ModelUserSettings;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.models.guild.Guild;
@@ -48,7 +46,7 @@ import com.discord.utilities.time.TimeUtils;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
 import com.discord.widgets.contact_sync.ContactSyncFlowAnalytics;
@@ -56,16 +54,13 @@ import com.discord.widgets.contact_sync.WidgetContactSync;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.settings.account.WidgetSettingsAccount;
 import com.google.android.material.button.MaterialButton;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.MapsJVM;
-import d0.t.Sets5;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.g;
+import d0.t.g0;
+import d0.t.n;
+import d0.t.n0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -83,7 +78,7 @@ import rx.functions.Func7;
 /* compiled from: WidgetSettingsPrivacy.kt */
 /* loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetSettingsPrivacy.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsPrivacyBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetSettingsPrivacy.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsPrivacyBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -106,8 +101,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         public final void launch(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppScreen2.e(context, WidgetSettingsPrivacy.class, null, 4);
+            m.checkNotNullParameter(context, "context");
+            j.e(context, WidgetSettingsPrivacy.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -126,7 +121,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         private final int userDiscoveryFlags;
 
         public LocalState(MeUser meUser, int i, boolean z2, ModelUserSettings.FriendSourceFlags friendSourceFlags, ConnectedAccount connectedAccount, Experiment experiment, int i2) {
-            Intrinsics3.checkNotNullParameter(meUser, "me");
+            m.checkNotNullParameter(meUser, "me");
             this.me = meUser;
             this.explicitContentFilter = i;
             this.defaultRestrictedGuilds = z2;
@@ -202,7 +197,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         public final LocalState copy(MeUser me2, int explicitContentFilter, boolean defaultRestrictedGuilds, ModelUserSettings.FriendSourceFlags friendSourceFlags, ConnectedAccount contactSyncConnection, Experiment contactSyncExperiment, int userDiscoveryFlags) {
-            Intrinsics3.checkNotNullParameter(me2, "me");
+            m.checkNotNullParameter(me2, "me");
             return new LocalState(me2, explicitContentFilter, defaultRestrictedGuilds, friendSourceFlags, contactSyncConnection, contactSyncExperiment, userDiscoveryFlags);
         }
 
@@ -214,7 +209,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return false;
             }
             LocalState localState = (LocalState) other;
-            return Intrinsics3.areEqual(this.me, localState.me) && this.explicitContentFilter == localState.explicitContentFilter && this.defaultRestrictedGuilds == localState.defaultRestrictedGuilds && Intrinsics3.areEqual(this.friendSourceFlags, localState.friendSourceFlags) && Intrinsics3.areEqual(this.contactSyncConnection, localState.contactSyncConnection) && Intrinsics3.areEqual(this.contactSyncExperiment, localState.contactSyncExperiment) && this.userDiscoveryFlags == localState.userDiscoveryFlags;
+            return m.areEqual(this.me, localState.me) && this.explicitContentFilter == localState.explicitContentFilter && this.defaultRestrictedGuilds == localState.defaultRestrictedGuilds && m.areEqual(this.friendSourceFlags, localState.friendSourceFlags) && m.areEqual(this.contactSyncConnection, localState.contactSyncConnection) && m.areEqual(this.contactSyncExperiment, localState.contactSyncExperiment) && this.userDiscoveryFlags == localState.userDiscoveryFlags;
         }
 
         public final ConnectedAccount getContactSyncConnection() {
@@ -264,7 +259,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("LocalState(me=");
+            StringBuilder sbU = a.U("LocalState(me=");
             sbU.append(this.me);
             sbU.append(", explicitContentFilter=");
             sbU.append(this.explicitContentFilter);
@@ -277,7 +272,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             sbU.append(", contactSyncExperiment=");
             sbU.append(this.contactSyncExperiment);
             sbU.append(", userDiscoveryFlags=");
-            return outline.B(sbU, this.userDiscoveryFlags, ")");
+            return a.B(sbU, this.userDiscoveryFlags, ")");
         }
     }
 
@@ -286,7 +281,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
-        private final ModelUserConsents2 consents;
+        private final Consents consents;
         private final ConnectedAccount contactSyncConnection;
         private final boolean defaultRestrictedGuilds;
         private final int explicitContentFilter;
@@ -317,9 +312,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                     widgetSettingsPrivacy$sam$rx_functions_Func7$0 = new WidgetSettingsPrivacy$sam$rx_functions_Func7$0(widgetSettingsPrivacy$sam$rx_functions_Func7$0);
                 }
                 Observable observableY = Observable.e(observableObserveMe$default, observableObserveExplicitContentFilter, observableObserveIsDefaultGuildsRestricted, observableObserveFriendSourceFlags, observableG, observableObserveUserExperiment, observableObserveFriendDiscoveryFlags, (Func7) widgetSettingsPrivacy$sam$rx_functions_Func7$0).Y(WidgetSettingsPrivacy$Model$Companion$get$3.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableY, "Observable\n          .co…            }\n          }");
+                m.checkNotNullExpressionValue(observableY, "Observable\n          .co…            }\n          }");
                 Observable<Model> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "Observable\n          .co…  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "Observable\n          .co…  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -328,9 +323,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             }
         }
 
-        public Model(MeUser meUser, int i, boolean z2, ModelUserSettings.FriendSourceFlags friendSourceFlags, int i2, ConnectedAccount connectedAccount, boolean z3, ModelUserConsents2 modelUserConsents2, RestAPI.HarvestState harvestState) {
-            Intrinsics3.checkNotNullParameter(meUser, "me");
-            Intrinsics3.checkNotNullParameter(modelUserConsents2, "consents");
+        public Model(MeUser meUser, int i, boolean z2, ModelUserSettings.FriendSourceFlags friendSourceFlags, int i2, ConnectedAccount connectedAccount, boolean z3, Consents consents, RestAPI.HarvestState harvestState) {
+            m.checkNotNullParameter(meUser, "me");
+            m.checkNotNullParameter(consents, "consents");
             this.me = meUser;
             this.explicitContentFilter = i;
             this.defaultRestrictedGuilds = z2;
@@ -338,12 +333,12 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             this.userDiscoveryFlags = i2;
             this.contactSyncConnection = connectedAccount;
             this.showContactSync = z3;
-            this.consents = modelUserConsents2;
+            this.consents = consents;
             this.harvestState = harvestState;
         }
 
-        public static /* synthetic */ Model copy$default(Model model, MeUser meUser, int i, boolean z2, ModelUserSettings.FriendSourceFlags friendSourceFlags, int i2, ConnectedAccount connectedAccount, boolean z3, ModelUserConsents2 modelUserConsents2, RestAPI.HarvestState harvestState, int i3, Object obj) {
-            return model.copy((i3 & 1) != 0 ? model.me : meUser, (i3 & 2) != 0 ? model.explicitContentFilter : i, (i3 & 4) != 0 ? model.defaultRestrictedGuilds : z2, (i3 & 8) != 0 ? model.friendSourceFlags : friendSourceFlags, (i3 & 16) != 0 ? model.userDiscoveryFlags : i2, (i3 & 32) != 0 ? model.contactSyncConnection : connectedAccount, (i3 & 64) != 0 ? model.showContactSync : z3, (i3 & 128) != 0 ? model.consents : modelUserConsents2, (i3 & 256) != 0 ? model.harvestState : harvestState);
+        public static /* synthetic */ Model copy$default(Model model, MeUser meUser, int i, boolean z2, ModelUserSettings.FriendSourceFlags friendSourceFlags, int i2, ConnectedAccount connectedAccount, boolean z3, Consents consents, RestAPI.HarvestState harvestState, int i3, Object obj) {
+            return model.copy((i3 & 1) != 0 ? model.me : meUser, (i3 & 2) != 0 ? model.explicitContentFilter : i, (i3 & 4) != 0 ? model.defaultRestrictedGuilds : z2, (i3 & 8) != 0 ? model.friendSourceFlags : friendSourceFlags, (i3 & 16) != 0 ? model.userDiscoveryFlags : i2, (i3 & 32) != 0 ? model.contactSyncConnection : connectedAccount, (i3 & 64) != 0 ? model.showContactSync : z3, (i3 & 128) != 0 ? model.consents : consents, (i3 & 256) != 0 ? model.harvestState : harvestState);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -382,7 +377,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         /* renamed from: component8, reason: from getter */
-        public final ModelUserConsents2 getConsents() {
+        public final Consents getConsents() {
             return this.consents;
         }
 
@@ -391,9 +386,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return this.harvestState;
         }
 
-        public final Model copy(MeUser me2, int explicitContentFilter, boolean defaultRestrictedGuilds, ModelUserSettings.FriendSourceFlags friendSourceFlags, int userDiscoveryFlags, ConnectedAccount contactSyncConnection, boolean showContactSync, ModelUserConsents2 consents, RestAPI.HarvestState harvestState) {
-            Intrinsics3.checkNotNullParameter(me2, "me");
-            Intrinsics3.checkNotNullParameter(consents, "consents");
+        public final Model copy(MeUser me2, int explicitContentFilter, boolean defaultRestrictedGuilds, ModelUserSettings.FriendSourceFlags friendSourceFlags, int userDiscoveryFlags, ConnectedAccount contactSyncConnection, boolean showContactSync, Consents consents, RestAPI.HarvestState harvestState) {
+            m.checkNotNullParameter(me2, "me");
+            m.checkNotNullParameter(consents, "consents");
             return new Model(me2, explicitContentFilter, defaultRestrictedGuilds, friendSourceFlags, userDiscoveryFlags, contactSyncConnection, showContactSync, consents, harvestState);
         }
 
@@ -405,10 +400,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.me, model.me) && this.explicitContentFilter == model.explicitContentFilter && this.defaultRestrictedGuilds == model.defaultRestrictedGuilds && Intrinsics3.areEqual(this.friendSourceFlags, model.friendSourceFlags) && this.userDiscoveryFlags == model.userDiscoveryFlags && Intrinsics3.areEqual(this.contactSyncConnection, model.contactSyncConnection) && this.showContactSync == model.showContactSync && Intrinsics3.areEqual(this.consents, model.consents) && Intrinsics3.areEqual(this.harvestState, model.harvestState);
+            return m.areEqual(this.me, model.me) && this.explicitContentFilter == model.explicitContentFilter && this.defaultRestrictedGuilds == model.defaultRestrictedGuilds && m.areEqual(this.friendSourceFlags, model.friendSourceFlags) && this.userDiscoveryFlags == model.userDiscoveryFlags && m.areEqual(this.contactSyncConnection, model.contactSyncConnection) && this.showContactSync == model.showContactSync && m.areEqual(this.consents, model.consents) && m.areEqual(this.harvestState, model.harvestState);
         }
 
-        public final ModelUserConsents2 getConsents() {
+        public final Consents getConsents() {
             return this.consents;
         }
 
@@ -460,14 +455,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             int iHashCode3 = (iHashCode2 + (connectedAccount != null ? connectedAccount.hashCode() : 0)) * 31;
             boolean z3 = this.showContactSync;
             int i3 = (iHashCode3 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
-            ModelUserConsents2 modelUserConsents2 = this.consents;
-            int iHashCode4 = (i3 + (modelUserConsents2 != null ? modelUserConsents2.hashCode() : 0)) * 31;
+            Consents consents = this.consents;
+            int iHashCode4 = (i3 + (consents != null ? consents.hashCode() : 0)) * 31;
             RestAPI.HarvestState harvestState = this.harvestState;
             return iHashCode4 + (harvestState != null ? harvestState.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(me=");
+            StringBuilder sbU = a.U("Model(me=");
             sbU.append(this.me);
             sbU.append(", explicitContentFilter=");
             sbU.append(this.explicitContentFilter);
@@ -492,7 +487,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -505,14 +500,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03271 extends Lambda implements Function1<Hook, Unit> {
+        public static final class C04471 extends o implements Function1<Hook, Unit> {
 
             /* compiled from: WidgetSettingsPrivacy.kt */
             /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C03281 extends Lambda implements Function1<View, Unit> {
-                public static final C03281 INSTANCE = new C03281();
+            public static final class C04481 extends o implements Function1<View, Unit> {
+                public static final C04481 INSTANCE = new C04481();
 
-                public C03281() {
+                public C04481() {
                     super(1);
                 }
 
@@ -524,22 +519,22 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
-                    Intrinsics3.checkNotNullParameter(view, "it");
+                    m.checkNotNullParameter(view, "it");
                     UriHandler uriHandler = UriHandler.INSTANCE;
                     Context context = view.getContext();
-                    Intrinsics3.checkNotNullExpressionValue(context, "it.context");
-                    UriHandler.handle$default(uriHandler, context, AppHelpDesk.a.a(360061878534L, null), false, false, null, 28, null);
+                    m.checkNotNullExpressionValue(context, "it.context");
+                    UriHandler.handle$default(uriHandler, context, f.a.a(360061878534L, null), false, false, null, 28, null);
                 }
             }
 
-            public C03271() {
+            public C04471() {
                 super(1);
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
-                hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(WidgetSettingsPrivacy.this.getContext(), R.color.link)), false, null, C03281.INSTANCE, 4, null));
+                m.checkNotNullParameter(hook, "$receiver");
+                hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(WidgetSettingsPrivacy.this.getContext(), R.color.link)), false, null, C04481.INSTANCE, 4, null));
             }
 
             @Override // kotlin.jvm.functions.Function1
@@ -551,8 +546,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.a("onClick", new C03271());
+            m.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.a("onClick", new C04471());
         }
     }
 
@@ -568,12 +563,12 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).c;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingEnabled");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingEnabled");
             boolean z2 = !checkedSetting.isChecked();
             if (this.$model.getContactSyncConnection() == null) {
                 if (z2) {
                     AnalyticsTracker.INSTANCE.openModal("Contact Sync", new Traits.Location(Traits.Location.Page.USER_SETTINGS, null, null, null, null, 30, null));
-                    ContactSyncFlowAnalytics.Companion.trackStart$default(ContactSyncFlowAnalytics.INSTANCE, false, MapsJVM.mapOf(Tuples.to("location_page", Traits.Location.Page.USER_SETTINGS)), 1, null);
+                    ContactSyncFlowAnalytics.Companion.trackStart$default(ContactSyncFlowAnalytics.INSTANCE, false, g0.mapOf(d0.o.to("location_page", Traits.Location.Page.USER_SETTINGS)), 1, null);
                     WidgetContactSync.Companion.launch$default(WidgetContactSync.INSTANCE, WidgetSettingsPrivacy.this.requireContext(), null, false, false, false, 30, null);
                     return;
                 }
@@ -581,10 +576,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             }
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).e;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingPhone");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingPhone");
             boolean zIsChecked = checkedSetting2.isChecked();
             CheckedSetting checkedSetting3 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2635b;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEmail");
+            m.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEmail");
             analyticsTracker.contactSyncToggled(z2, zIsChecked, checkedSetting3.isChecked());
             WidgetSettingsPrivacy.access$toggleContactSync(WidgetSettingsPrivacy.this, this.$model.getContactSyncConnection(), z2);
         }
@@ -599,17 +594,17 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).e;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingPhone");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingPhone");
             boolean z2 = !checkedSetting.isChecked();
             CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2635b;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingEmail");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingEmail");
             boolean zIsChecked = checkedSetting2.isChecked();
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             CheckedSetting checkedSetting3 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).c;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEnabled");
+            m.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEnabled");
             boolean zIsChecked2 = checkedSetting3.isChecked();
             CheckedSetting checkedSetting4 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2635b;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.contactSyncSettingEmail");
+            m.checkNotNullExpressionValue(checkedSetting4, "binding.contactSyncSettingEmail");
             analyticsTracker.contactSyncToggled(zIsChecked2, z2, checkedSetting4.isChecked());
             WidgetSettingsPrivacy.access$updateFriendDiscoveryFlags(WidgetSettingsPrivacy.this, z2, zIsChecked);
         }
@@ -624,17 +619,17 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2635b;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingEmail");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingEmail");
             boolean z2 = !checkedSetting.isChecked();
             CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).e;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingPhone");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingPhone");
             boolean zIsChecked = checkedSetting2.isChecked();
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             CheckedSetting checkedSetting3 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).c;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEnabled");
+            m.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEnabled");
             boolean zIsChecked2 = checkedSetting3.isChecked();
             CheckedSetting checkedSetting4 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).e;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.contactSyncSettingPhone");
+            m.checkNotNullExpressionValue(checkedSetting4, "binding.contactSyncSettingPhone");
             analyticsTracker.contactSyncToggled(zIsChecked2, checkedSetting4.isChecked(), z2);
             WidgetSettingsPrivacy.access$updateFriendDiscoveryFlags(WidgetSettingsPrivacy.this, zIsChecked, z2);
         }
@@ -701,7 +696,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
-            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
+            m.checkNotNullExpressionValue(bool, "checked");
             WidgetSettingsPrivacy.access$updateFriendSourceFlags(widgetSettingsPrivacy, 0, bool.booleanValue());
         }
     }
@@ -720,7 +715,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
-            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
+            m.checkNotNullExpressionValue(bool, "checked");
             WidgetSettingsPrivacy.access$updateFriendSourceFlags(widgetSettingsPrivacy, 1, bool.booleanValue());
         }
     }
@@ -739,7 +734,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
-            Intrinsics3.checkNotNullExpressionValue(bool, "checked");
+            m.checkNotNullExpressionValue(bool, "checked");
             WidgetSettingsPrivacy.access$updateFriendSourceFlags(widgetSettingsPrivacy, 2, bool.booleanValue());
         }
     }
@@ -751,15 +746,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C03291 extends Lambda implements Function5<AlertDialog, TextView, TextView, TextView, TextView, Unit> {
+        public static final class C04491 extends o implements Function5<AlertDialog, TextView, TextView, TextView, TextView, Unit> {
             public final /* synthetic */ Boolean $consented;
 
             /* compiled from: WidgetSettingsPrivacy.kt */
             /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class ViewOnClickListenerC03301 implements View.OnClickListener {
+            public static final class ViewOnClickListenerC04501 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
-                public ViewOnClickListenerC03301(AlertDialog alertDialog) {
+                public ViewOnClickListenerC04501(AlertDialog alertDialog) {
                     this.$dialog = alertDialog;
                 }
 
@@ -767,10 +762,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 public final void onClick(View view) {
                     this.$dialog.dismiss();
                     CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2639z;
-                    Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
+                    m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
                     checkedSetting.setChecked(true);
                     CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2639z;
-                    Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyStatistics");
+                    m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyStatistics");
                     checkedSetting2.setEnabled(true);
                 }
             }
@@ -787,19 +782,19 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view) {
                     this.$dialog.dismiss();
-                    C03291 c03291 = C03291.this;
+                    C04491 c04491 = C04491.this;
                     WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
-                    Boolean bool = c03291.$consented;
-                    Intrinsics3.checkNotNullExpressionValue(bool, "consented");
+                    Boolean bool = c04491.$consented;
+                    m.checkNotNullExpressionValue(bool, "consented");
                     boolean zBooleanValue = bool.booleanValue();
                     CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2639z;
-                    Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
+                    m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
                     WidgetSettingsPrivacy.access$toggleConsent(widgetSettingsPrivacy, zBooleanValue, RestAPIParams.Consents.Type.USAGE_STATS, checkedSetting);
                 }
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C03291(Boolean bool) {
+            public C04491(Boolean bool) {
                 super(5);
                 this.$consented = bool;
             }
@@ -812,15 +807,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(AlertDialog alertDialog, TextView textView, TextView textView2, TextView textView3, TextView textView4) {
-                Intrinsics3.checkNotNullParameter(alertDialog, "dialog");
-                Intrinsics3.checkNotNullParameter(textView, "dialogHeader");
-                Intrinsics3.checkNotNullParameter(textView2, "dialogBody");
-                Intrinsics3.checkNotNullParameter(textView3, "dialogCancel");
-                Intrinsics3.checkNotNullParameter(textView4, "dialogConfirm");
+                m.checkNotNullParameter(alertDialog, "dialog");
+                m.checkNotNullParameter(textView, "dialogHeader");
+                m.checkNotNullParameter(textView2, "dialogBody");
+                m.checkNotNullParameter(textView3, "dialogCancel");
+                m.checkNotNullParameter(textView4, "dialogConfirm");
                 textView.setText(R.string.usage_statistics_disable_modal_title);
                 textView2.setText(R.string.usage_statistics_disable_modal_body);
                 textView3.setText(R.string.usage_statistics_disable_modal_cancel);
-                textView3.setOnClickListener(new ViewOnClickListenerC03301(alertDialog));
+                textView3.setOnClickListener(new ViewOnClickListenerC04501(alertDialog));
                 textView4.setText(R.string.usage_statistics_disable_modal_confirm);
                 textView4.setOnClickListener(new AnonymousClass2(alertDialog));
             }
@@ -838,17 +833,17 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2639z;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
             checkedSetting.setEnabled(false);
-            Intrinsics3.checkNotNullExpressionValue(bool, "consented");
+            m.checkNotNullExpressionValue(bool, "consented");
             if (!bool.booleanValue()) {
-                WidgetSettingsPrivacy.access$confirmConsent(WidgetSettingsPrivacy.this, this.$context, new C03291(bool));
+                WidgetSettingsPrivacy.access$confirmConsent(WidgetSettingsPrivacy.this, this.$context, new C04491(bool));
                 return;
             }
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
             boolean zBooleanValue = bool.booleanValue();
             CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2639z;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyStatistics");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyStatistics");
             WidgetSettingsPrivacy.access$toggleConsent(widgetSettingsPrivacy, zBooleanValue, RestAPIParams.Consents.Type.USAGE_STATS, checkedSetting2);
         }
     }
@@ -860,15 +855,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function5<AlertDialog, TextView, TextView, TextView, TextView, Unit> {
+        public static final class AnonymousClass1 extends o implements Function5<AlertDialog, TextView, TextView, TextView, TextView, Unit> {
             public final /* synthetic */ Boolean $consented;
 
             /* compiled from: WidgetSettingsPrivacy.kt */
             /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class ViewOnClickListenerC03311 implements View.OnClickListener {
+            public static final class ViewOnClickListenerC04511 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
-                public ViewOnClickListenerC03311(AlertDialog alertDialog) {
+                public ViewOnClickListenerC04511(AlertDialog alertDialog) {
                     this.$dialog = alertDialog;
                 }
 
@@ -876,20 +871,20 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 public final void onClick(View view) {
                     this.$dialog.dismiss();
                     CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).v;
-                    Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
+                    m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
                     checkedSetting.setChecked(true);
                     CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).v;
-                    Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
+                    m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
                     checkedSetting2.setEnabled(true);
                 }
             }
 
             /* compiled from: WidgetSettingsPrivacy.kt */
             /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1$2, reason: invalid class name and collision with other inner class name */
-            public static final class ViewOnClickListenerC03322 implements View.OnClickListener {
+            public static final class ViewOnClickListenerC04522 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
-                public ViewOnClickListenerC03322(AlertDialog alertDialog) {
+                public ViewOnClickListenerC04522(AlertDialog alertDialog) {
                     this.$dialog = alertDialog;
                 }
 
@@ -899,10 +894,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                     AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
                     WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
                     Boolean bool = anonymousClass1.$consented;
-                    Intrinsics3.checkNotNullExpressionValue(bool, "consented");
+                    m.checkNotNullExpressionValue(bool, "consented");
                     boolean zBooleanValue = bool.booleanValue();
                     CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).v;
-                    Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
+                    m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
                     WidgetSettingsPrivacy.access$toggleConsent(widgetSettingsPrivacy, zBooleanValue, RestAPIParams.Consents.Type.PERSONALIZATION, checkedSetting);
                 }
             }
@@ -921,17 +916,17 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(AlertDialog alertDialog, TextView textView, TextView textView2, TextView textView3, TextView textView4) {
-                Intrinsics3.checkNotNullParameter(alertDialog, "dialog");
-                Intrinsics3.checkNotNullParameter(textView, "dialogHeader");
-                Intrinsics3.checkNotNullParameter(textView2, "dialogBody");
-                Intrinsics3.checkNotNullParameter(textView3, "dialogCancel");
-                Intrinsics3.checkNotNullParameter(textView4, "dialogConfirm");
+                m.checkNotNullParameter(alertDialog, "dialog");
+                m.checkNotNullParameter(textView, "dialogHeader");
+                m.checkNotNullParameter(textView2, "dialogBody");
+                m.checkNotNullParameter(textView3, "dialogCancel");
+                m.checkNotNullParameter(textView4, "dialogConfirm");
                 textView.setText(R.string.personalization_disable_modal_title);
                 textView2.setText(R.string.personalization_disable_modal_body);
                 textView3.setText(R.string.personalization_disable_modal_cancel);
-                textView3.setOnClickListener(new ViewOnClickListenerC03311(alertDialog));
+                textView3.setOnClickListener(new ViewOnClickListenerC04511(alertDialog));
                 textView4.setText(R.string.personalization_disable_modal_confirm);
-                textView4.setOnClickListener(new ViewOnClickListenerC03322(alertDialog));
+                textView4.setOnClickListener(new ViewOnClickListenerC04522(alertDialog));
             }
         }
 
@@ -947,9 +942,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).v;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
             checkedSetting.setEnabled(false);
-            Intrinsics3.checkNotNullExpressionValue(bool, "consented");
+            m.checkNotNullExpressionValue(bool, "consented");
             if (!bool.booleanValue()) {
                 WidgetSettingsPrivacy.access$confirmConsent(WidgetSettingsPrivacy.this, this.$context, new AnonymousClass1(bool));
                 return;
@@ -957,7 +952,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
             boolean zBooleanValue = bool.booleanValue();
             CheckedSetting checkedSetting2 = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).v;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
             WidgetSettingsPrivacy.access$toggleConsent(widgetSettingsPrivacy, zBooleanValue, RestAPIParams.Consents.Type.PERSONALIZATION, checkedSetting2);
         }
     }
@@ -978,9 +973,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             RestAPI.HarvestState harvestState;
             Context context = WidgetSettingsPrivacy.this.getContext();
             if (context != null) {
-                Intrinsics3.checkNotNullExpressionValue(context, "context ?: return@setOnClickListener");
+                m.checkNotNullExpressionValue(context, "context ?: return@setOnClickListener");
                 if (!this.$isMeVerified || (harvestState = this.$harvestState) == null) {
-                    AppToast.i(WidgetSettingsPrivacy.this, R.string.data_privacy_controls_request_data_tooltip, 0, 4);
+                    b.a.d.m.i(WidgetSettingsPrivacy.this, R.string.data_privacy_controls_request_data_tooltip, 0, 4);
                 } else {
                     WidgetSettingsPrivacy.access$onRequestDataClick(WidgetSettingsPrivacy.this, context, harvestState);
                 }
@@ -990,7 +985,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserConsents3, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Harvest, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1000,25 +995,25 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(ModelUserConsents3 modelUserConsents3) {
-            invoke2(modelUserConsents3);
+        public /* bridge */ /* synthetic */ Unit invoke(Harvest harvest) {
+            invoke2(harvest);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(ModelUserConsents3 modelUserConsents3) {
-            Intrinsics3.checkNotNullParameter(modelUserConsents3, "requestedHarvest");
+        public final void invoke2(Harvest harvest) {
+            m.checkNotNullParameter(harvest, "requestedHarvest");
             WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(new WidgetNoticeDialog.Builder(this.$context).setTitle(R.string.data_privacy_controls_request_data_success_title).setMessage(R.string.data_privacy_controls_request_data_success_body), R.string.okay, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = WidgetSettingsPrivacy.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             positiveButton$default.show(parentFragmentManager);
-            WidgetSettingsPrivacy.access$configureRequestDataButton(WidgetSettingsPrivacy.this, true, new RestAPI.HarvestState.LastRequested(modelUserConsents3));
+            WidgetSettingsPrivacy.access$configureRequestDataButton(WidgetSettingsPrivacy.this, true, new RestAPI.HarvestState.LastRequested(harvest));
         }
     }
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1047,25 +1042,25 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             WidgetNoticeDialog.Builder title = new WidgetNoticeDialog.Builder(this.$context).setTitle(R.string.data_privacy_controls_request_data_failure_title);
             String strH = str;
             if (str == null) {
-                strH = FormatUtils.h(this.$context, R.string.data_privacy_controls_request_data_failure_body, new Object[0], null, 4);
+                strH = b.h(this.$context, R.string.data_privacy_controls_request_data_failure_body, new Object[0], null, 4);
             }
             WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(title.setMessage(strH), R.string.okay, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = WidgetSettingsPrivacy.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             positiveButton$default.show(parentFragmentManager);
         }
     }
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ AnonymousClass2 $handleRequestError$2;
         public final /* synthetic */ AnonymousClass1 $handleRequestSuccess$1;
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -1078,10 +1073,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
+                m.checkNotNullParameter(error, "it");
                 AnonymousClass2 anonymousClass2 = AnonymousClass3.this.$handleRequestError$2;
                 Error.Response response = error.getResponse();
-                Intrinsics3.checkNotNullExpressionValue(response, "it.response");
+                m.checkNotNullExpressionValue(response, "it.response");
                 anonymousClass2.invoke2(response.getMessage());
                 error.setShowErrorToasts(false);
             }
@@ -1089,21 +1084,21 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<ModelUserConsents3, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Harvest, Unit> {
             public AnonymousClass2() {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ Unit invoke(ModelUserConsents3 modelUserConsents3) {
-                invoke2(modelUserConsents3);
+            public /* bridge */ /* synthetic */ Unit invoke(Harvest harvest) {
+                invoke2(harvest);
                 return Unit.a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final void invoke2(ModelUserConsents3 modelUserConsents3) {
-                if (modelUserConsents3 != null) {
-                    AnonymousClass3.this.$handleRequestSuccess$1.invoke2(modelUserConsents3);
+            public final void invoke2(Harvest harvest) {
+                if (harvest != null) {
+                    AnonymousClass3.this.$handleRequestSuccess$1.invoke2(harvest);
                 } else {
                     AnonymousClass2.invoke$default(AnonymousClass3.this.$handleRequestError$2, null, 1, null);
                 }
@@ -1132,13 +1127,13 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass4 extends o implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ AnonymousClass3 $requestHarvest$3;
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -1151,7 +1146,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                Intrinsics3.checkNotNullParameter(view, "it");
+                m.checkNotNullParameter(view, "it");
                 AnonymousClass4.this.$requestHarvest$3.invoke2();
             }
         }
@@ -1173,19 +1168,19 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         public final void invoke2() {
             WidgetNoticeDialog.Builder negativeButton$default = WidgetNoticeDialog.Builder.setNegativeButton$default(new WidgetNoticeDialog.Builder(this.$context).setTitle(R.string.data_privacy_controls_request_data_download).setMessage(R.string.data_privacy_controls_request_data_modal_note).setPositiveButton(R.string.okay, new AnonymousClass1()), R.string.cancel, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = WidgetSettingsPrivacy.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             negativeButton$default.show(parentFragmentManager);
         }
     }
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RenderContext, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         /* compiled from: WidgetSettingsPrivacy.kt */
         /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -1200,11 +1195,11 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                Intrinsics3.checkNotNullParameter(view, "it");
+                m.checkNotNullParameter(view, "it");
                 UriHandler uriHandler = UriHandler.INSTANCE;
                 Context context = view.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context, "it.context");
-                UriHandler.handle$default(uriHandler, context, AppHelpDesk.a.a(360004066391L, null), false, false, null, 28, null);
+                m.checkNotNullExpressionValue(context, "it.context");
+                UriHandler.handle$default(uriHandler, context, f.a.a(360004066391L, null), false, false, null, 28, null);
             }
         }
 
@@ -1220,7 +1215,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.b("onClick", AnonymousClass1.INSTANCE);
         }
     }
@@ -1233,9 +1228,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetSettingsAccount.Companion companion = WidgetSettingsAccount.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(view, "it");
+            m.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+            m.checkNotNullExpressionValue(context, "it.context");
             WidgetSettingsAccount.Companion.launch$default(companion, context, true, null, 4, null);
         }
     }
@@ -1251,13 +1246,13 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, outline.x(view, "it", "it.context"), this.$dataRequestArticleUrl, false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, a.x(view, "it", "it.context"), this.$dataRequestArticleUrl, false, false, null, 28, null);
         }
     }
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Model, Unit> {
         public AnonymousClass1(WidgetSettingsPrivacy widgetSettingsPrivacy) {
             super(1, widgetSettingsPrivacy, WidgetSettingsPrivacy.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/WidgetSettingsPrivacy$Model;)V", 0);
         }
@@ -1270,14 +1265,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
-            Intrinsics3.checkNotNullParameter(model, "p1");
+            m.checkNotNullParameter(model, "p1");
             WidgetSettingsPrivacy.access$configureUI((WidgetSettingsPrivacy) this.receiver, model);
         }
     }
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Boolean, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -1290,14 +1285,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
         public final void invoke(boolean z2) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f2638y;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyScreenreaderDetection");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyScreenreaderDetection");
             checkedSetting.setChecked(z2);
         }
     }
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$toggleConsent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ CheckedSetting $toggle;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1343,10 +1338,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$updateDefaultGuildsRestricted$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Guild>, Set<? extends Long>> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<Map<Long, ? extends Guild>, Set<? extends Long>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Set<? extends Long> call(Map<Long, ? extends Guild> map) {
             return call2((Map<Long, Guild>) map);
         }
@@ -1359,7 +1354,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     /* compiled from: WidgetSettingsPrivacy.kt */
     /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$updateDefaultGuildsRestricted$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Set<? extends Long>, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Set<? extends Long>, Unit> {
         public final /* synthetic */ boolean $defaultGuildsRestricted;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1382,9 +1377,9 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     public WidgetSettingsPrivacy() {
         super(R.layout.widget_settings_privacy);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetSettingsPrivacy$binding$2.INSTANCE, null, 2, null);
-        this.explicitContentRadios = LazyJVM.lazy(new WidgetSettingsPrivacy$explicitContentRadios$2(this));
-        this.friendSourceRadios = LazyJVM.lazy(new WidgetSettingsPrivacy$friendSourceRadios$2(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetSettingsPrivacy$binding$2.INSTANCE, null, 2, null);
+        this.explicitContentRadios = g.lazy(new WidgetSettingsPrivacy$explicitContentRadios$2(this));
+        this.friendSourceRadios = g.lazy(new WidgetSettingsPrivacy$friendSourceRadios$2(this));
         this.userSettings = StoreStream.INSTANCE.getUserSettings();
     }
 
@@ -1442,33 +1437,33 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     private final void configureContactSyncOptions(Model model) {
         LinearLayout linearLayout = getBinding().j;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsPrivacyContactSync");
+        m.checkNotNullExpressionValue(linearLayout, "binding.settingsPrivacyContactSync");
         linearLayout.setVisibility(model.getShowContactSync() ? 0 : 8);
         if (model.getShowContactSync()) {
             TextView textView = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.contactSyncSettingInfo");
-            FormatUtils.m(textView, R.string.contact_sync_info_settings_2, new Object[0], new AnonymousClass1());
+            m.checkNotNullExpressionValue(textView, "binding.contactSyncSettingInfo");
+            b.m(textView, R.string.contact_sync_info_settings_2, new Object[0], new AnonymousClass1());
             TextView textView2 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.contactSyncSettingInfo");
+            m.checkNotNullExpressionValue(textView2, "binding.contactSyncSettingInfo");
             textView2.setMovementMethod(LinkMovementMethod.getInstance());
             CheckedSetting checkedSetting = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingEnabled");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.contactSyncSettingEnabled");
             ConnectedAccount contactSyncConnection = model.getContactSyncConnection();
             checkedSetting.setChecked(contactSyncConnection != null && contactSyncConnection.getFriendSync());
             CheckedSetting checkedSetting2 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingPhone");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.contactSyncSettingPhone");
             checkedSetting2.setChecked((model.getUserDiscoveryFlags() & 2) == 2);
             CheckedSetting checkedSetting3 = getBinding().f2635b;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEmail");
+            m.checkNotNullExpressionValue(checkedSetting3, "binding.contactSyncSettingEmail");
             checkedSetting3.setChecked((model.getUserDiscoveryFlags() & 4) == 4);
             getBinding().c.e(new AnonymousClass2(model));
             getBinding().e.e(new AnonymousClass3());
             getBinding().f2635b.e(new AnonymousClass4());
             CheckedSetting checkedSetting4 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.contactSyncSettingStaffOnly");
+            m.checkNotNullExpressionValue(checkedSetting4, "binding.contactSyncSettingStaffOnly");
             checkedSetting4.setVisibility(UserUtils.INSTANCE.isStaff(model.getMe()) ? 0 : 8);
             CheckedSetting checkedSetting5 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting5, "binding.contactSyncSettingStaffOnly");
+            m.checkNotNullExpressionValue(checkedSetting5, "binding.contactSyncSettingStaffOnly");
             checkedSetting5.setChecked(true);
             getBinding().f.e(new AnonymousClass5(model));
         }
@@ -1476,7 +1471,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     private final void configureDefaultGuildsRestricted(Model model) {
         CheckedSetting checkedSetting = getBinding().m;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyDefaultRestrictedGuilds");
+        m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyDefaultRestrictedGuilds");
         checkedSetting.setChecked(!model.getDefaultRestrictedGuilds());
         getBinding().m.e(new AnonymousClass1(model));
     }
@@ -1497,15 +1492,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         ModelUserSettings.FriendSourceFlags friendSourceFlags = model.getFriendSourceFlags();
         boolean zIsAll = friendSourceFlags != null ? friendSourceFlags.isAll() : false;
         CheckedSetting checkedSetting = getFriendSourceRadios().get(0);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "friendSourceRadios[0]");
+        m.checkNotNullExpressionValue(checkedSetting, "friendSourceRadios[0]");
         checkedSetting.setChecked(zIsAll);
         CheckedSetting checkedSetting2 = getFriendSourceRadios().get(1);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "friendSourceRadios[1]");
+        m.checkNotNullExpressionValue(checkedSetting2, "friendSourceRadios[1]");
         CheckedSetting checkedSetting3 = checkedSetting2;
         ModelUserSettings.FriendSourceFlags friendSourceFlags2 = model.getFriendSourceFlags();
         checkedSetting3.setChecked((friendSourceFlags2 != null ? friendSourceFlags2.isMutualFriends() : false) || zIsAll);
         CheckedSetting checkedSetting4 = getFriendSourceRadios().get(2);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "friendSourceRadios[2]");
+        m.checkNotNullExpressionValue(checkedSetting4, "friendSourceRadios[2]");
         CheckedSetting checkedSetting5 = checkedSetting4;
         ModelUserSettings.FriendSourceFlags friendSourceFlags3 = model.getFriendSourceFlags();
         checkedSetting5.setChecked((friendSourceFlags3 != null ? friendSourceFlags3.isMutualGuilds() : false) || zIsAll);
@@ -1514,16 +1509,16 @@ public final class WidgetSettingsPrivacy extends AppFragment {
     private final void configurePrivacyControls(Model model) {
         Context context = getContext();
         if (context != null) {
-            Intrinsics3.checkNotNullExpressionValue(context, "context ?: return");
+            m.checkNotNullExpressionValue(context, "context ?: return");
             LinearLayout linearLayout = getBinding().k;
-            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.settingsPrivacyControls");
+            m.checkNotNullExpressionValue(linearLayout, "binding.settingsPrivacyControls");
             linearLayout.setVisibility(0);
             CheckedSetting checkedSetting = getBinding().f2639z;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
             checkedSetting.setChecked(model.getConsents().getUsageStatistics().getConsented());
             getBinding().f2639z.setOnCheckedListener(new AnonymousClass1(context));
             CheckedSetting checkedSetting2 = getBinding().v;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
             checkedSetting2.setChecked(model.getConsents().getPersonalization().getConsented());
             getBinding().v.setOnCheckedListener(new AnonymousClass2(context));
         }
@@ -1538,13 +1533,13 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         configureFriendSourceRadio(model);
         configureContactSyncOptions(model);
         CheckedSetting checkedSetting = getExplicitContentRadios().get(0);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "explicitContentRadios[0]");
+        m.checkNotNullExpressionValue(checkedSetting, "explicitContentRadios[0]");
         configureExplicitContentRadio(model, checkedSetting, 0);
         CheckedSetting checkedSetting2 = getExplicitContentRadios().get(1);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "explicitContentRadios[1]");
+        m.checkNotNullExpressionValue(checkedSetting2, "explicitContentRadios[1]");
         configureExplicitContentRadio(model, checkedSetting2, 1);
         CheckedSetting checkedSetting3 = getExplicitContentRadios().get(2);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "explicitContentRadios[2]");
+        m.checkNotNullExpressionValue(checkedSetting3, "explicitContentRadios[2]");
         configureExplicitContentRadio(model, checkedSetting3, 2);
         configurePrivacyControls(model);
         configureRequestDataButton(model.getMe().isVerified(), model.getHarvestState());
@@ -1552,17 +1547,17 @@ public final class WidgetSettingsPrivacy extends AppFragment {
 
     private final void confirmConsent(Context context, Function5<? super AlertDialog, ? super TextView, ? super TextView, ? super TextView, ? super TextView, Unit> function5) {
         ViewDialogConfirmationBinding viewDialogConfirmationBindingA = ViewDialogConfirmationBinding.a(getLayoutInflater().inflate(R.layout.view_dialog_confirmation, (ViewGroup) null, false));
-        Intrinsics3.checkNotNullExpressionValue(viewDialogConfirmationBindingA, "ViewDialogConfirmationBi…outInflater, null, false)");
+        m.checkNotNullExpressionValue(viewDialogConfirmationBindingA, "ViewDialogConfirmationBi…outInflater, null, false)");
         AlertDialog alertDialogCreate = new AlertDialog.Builder(context).setView(viewDialogConfirmationBindingA.a).setCancelable(false).create();
-        Intrinsics3.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(this…(false)\n        .create()");
+        m.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(this…(false)\n        .create()");
         TextView textView = viewDialogConfirmationBindingA.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.viewDialogConfirmationHeader");
+        m.checkNotNullExpressionValue(textView, "binding.viewDialogConfirmationHeader");
         TextView textView2 = viewDialogConfirmationBindingA.e;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.viewDialogConfirmationText");
+        m.checkNotNullExpressionValue(textView2, "binding.viewDialogConfirmationText");
         MaterialButton materialButton = viewDialogConfirmationBindingA.f2185b;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.viewDialogConfirmationCancel");
+        m.checkNotNullExpressionValue(materialButton, "binding.viewDialogConfirmationCancel");
         MaterialButton materialButton2 = viewDialogConfirmationBindingA.c;
-        Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.viewDialogConfirmationConfirm");
+        m.checkNotNullExpressionValue(materialButton2, "binding.viewDialogConfirmationConfirm");
         function5.invoke(alertDialogCreate, textView, textView2, materialButton, materialButton2);
         alertDialogCreate.show();
     }
@@ -1596,8 +1591,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return;
         }
         if (harvestState instanceof RestAPI.HarvestState.LastRequested) {
-            ModelUserConsents3 data = ((RestAPI.HarvestState.LastRequested) harvestState).getData();
-            if (ModelUserConsents3.canRequest$default(data, 0L, 1, null)) {
+            Harvest data = ((RestAPI.HarvestState.LastRequested) harvestState).getData();
+            if (Harvest.canRequest$default(data, 0L, 1, null)) {
                 anonymousClass4.invoke2();
             } else {
                 showNextAvailableRequestAlert(data.nextAvailableRequestInMillis());
@@ -1614,14 +1609,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             MaterialButton materialButton2 = (MaterialButton) viewInflate.findViewById(R.id.settings_privacy_defaults_existing_yes);
             if (materialButton2 != null) {
                 LinearLayout linearLayout = (LinearLayout) viewInflate;
-                Intrinsics3.checkNotNullExpressionValue(new WidgetSettingsPrivacyDefaultsBinding(linearLayout, materialButton, materialButton2), "WidgetSettingsPrivacyDef…outInflater, null, false)");
+                m.checkNotNullExpressionValue(new b6(linearLayout, materialButton, materialButton2), "WidgetSettingsPrivacyDef…outInflater, null, false)");
                 materialButton.setOnClickListener(new WidgetSettingsPrivacy$showDefaultGuildsRestrictedExistingServers$$inlined$apply$lambda$1(this, defaultGuildsRestricted));
                 materialButton2.setOnClickListener(new WidgetSettingsPrivacy$showDefaultGuildsRestrictedExistingServers$$inlined$apply$lambda$2(this, defaultGuildsRestricted));
                 AlertDialog alertDialog = this.dialog;
                 if (alertDialog != null) {
                     alertDialog.dismiss();
                 }
-                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+                m.checkNotNullExpressionValue(linearLayout, "binding.root");
                 AlertDialog alertDialogCreate = new AlertDialog.Builder(linearLayout.getContext()).setView(linearLayout).create();
                 this.dialog = alertDialogCreate;
                 if (alertDialogCreate != null) {
@@ -1637,16 +1632,16 @@ public final class WidgetSettingsPrivacy extends AppFragment {
     private final void showNextAvailableRequestAlert(long nextAvailableRequestMillis) {
         Context context = getContext();
         if (context != null) {
-            Intrinsics3.checkNotNullExpressionValue(context, "context ?: return");
-            WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(new WidgetNoticeDialog.Builder(context).setTitle(R.string.data_privacy_rate_limit_title).setMessage(FormatUtils.h(context, R.string.data_download_requested_status_note, new Object[]{TimeUtils.renderUtcDate$default(TimeUtils.INSTANCE, nextAvailableRequestMillis, context, 0, 4, null)}, null, 4)), R.string.okay, (Function1) null, 2, (Object) null);
+            m.checkNotNullExpressionValue(context, "context ?: return");
+            WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(new WidgetNoticeDialog.Builder(context).setTitle(R.string.data_privacy_rate_limit_title).setMessage(b.h(context, R.string.data_download_requested_status_note, new Object[]{TimeUtils.renderUtcDate$default(TimeUtils.INSTANCE, nextAvailableRequestMillis, context, 0, 4, null)}, null, 4)), R.string.okay, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             positiveButton$default.show(parentFragmentManager);
         }
     }
 
     private final void toggleConsent(boolean consented, String consentType, CheckedSetting toggle) {
-        ObservableExtensionsKt.withDimmer(ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.getApi().setConsent(consented, consentType), this, null, 2, null), getBinding().g, 100L).k(o.a.g(getContext(), new AnonymousClass1(toggle), new AnonymousClass2(toggle, consented)));
+        ObservableExtensionsKt.withDimmer(ObservableExtensionsKt.ui$default(RestAPI.INSTANCE.getApi().setConsent(consented, consentType), this, null, 2, null), getBinding().g, 100L).k(b.a.d.o.a.g(getContext(), new AnonymousClass1(toggle), new AnonymousClass2(toggle, consented)));
     }
 
     private final void toggleContactSync(ConnectedAccount contactsAccount, boolean syncFriends) {
@@ -1661,8 +1656,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
     }
 
     private final void updateDefaultGuildsRestricted(boolean defaultGuildsRestricted, boolean applyToExistingGuilds) {
-        Observable observableZ = (!applyToExistingGuilds ? new ScalarSynchronousObservable(null) : !defaultGuildsRestricted ? new ScalarSynchronousObservable(Sets5.emptySet()) : StoreStream.INSTANCE.getGuilds().observeGuilds().G(AnonymousClass1.INSTANCE)).Z(1);
-        Intrinsics3.checkNotNullExpressionValue(observableZ, "when {\n      !applyToExi… }\n    }\n        .take(1)");
+        Observable observableZ = (!applyToExistingGuilds ? new j0.l.e.k(null) : !defaultGuildsRestricted ? new j0.l.e.k(n0.emptySet()) : StoreStream.INSTANCE.getGuilds().observeGuilds().G(AnonymousClass1.INSTANCE)).Z(1);
+        m.checkNotNullExpressionValue(observableZ, "when {\n      !applyToExi… }\n    }\n        .take(1)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableZ), this, null, 2, null), WidgetSettingsPrivacy.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(defaultGuildsRestricted), 62, (Object) null);
         AlertDialog alertDialog = this.dialog;
         if (alertDialog != null) {
@@ -1681,13 +1676,13 @@ public final class WidgetSettingsPrivacy extends AppFragment {
     private final void updateFriendSourceFlags(int index, boolean checked) {
         boolean z2 = false;
         CheckedSetting checkedSetting = getFriendSourceRadios().get(0);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "friendSourceRadios[0]");
+        m.checkNotNullExpressionValue(checkedSetting, "friendSourceRadios[0]");
         boolean zIsChecked = checkedSetting.isChecked();
         CheckedSetting checkedSetting2 = getFriendSourceRadios().get(1);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "friendSourceRadios[1]");
+        m.checkNotNullExpressionValue(checkedSetting2, "friendSourceRadios[1]");
         boolean zIsChecked2 = checkedSetting2.isChecked();
         CheckedSetting checkedSetting3 = getFriendSourceRadios().get(2);
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "friendSourceRadios[2]");
+        m.checkNotNullExpressionValue(checkedSetting3, "friendSourceRadios[2]");
         boolean zIsChecked3 = checkedSetting3.isChecked();
         if ((zIsChecked && zIsChecked2 && zIsChecked3) || (index == 0 && checked)) {
             z2 = true;
@@ -1707,7 +1702,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
     @Override // com.discord.app.AppFragment
     @SuppressLint({"SetTextI18n"})
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         setActionBarSubtitle(R.string.user_settings);
@@ -1715,41 +1710,41 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         this.radioManagerExplicit = new RadioManager(getExplicitContentRadios());
         CheckedSetting checkedSetting = getBinding().v;
         CheckedSetting checkedSetting2 = getBinding().v;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
-        AppHelpDesk appHelpDesk = AppHelpDesk.a;
-        checkedSetting.h(FormatUtils.j(checkedSetting2, R.string.data_privacy_controls_personalization_note_learn_more, new Object[]{appHelpDesk.a(360004109911L, null)}, null, 4), true);
+        m.checkNotNullExpressionValue(checkedSetting2, "binding.settingsPrivacyPersonalization");
+        f fVar = f.a;
+        checkedSetting.h(b.j(checkedSetting2, R.string.data_privacy_controls_personalization_note_learn_more, new Object[]{fVar.a(360004109911L, null)}, null, 4), true);
         CheckedSetting checkedSetting3 = getBinding().f2638y;
         CheckedSetting checkedSetting4 = getBinding().f2638y;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.settingsPrivacyScreenreaderDetection");
-        checkedSetting3.h(FormatUtils.j(checkedSetting4, R.string.data_privacy_controls_allow_accessibility_detection_note, new Object[]{appHelpDesk.a(360035966492L, null)}, null, 4), true);
+        m.checkNotNullExpressionValue(checkedSetting4, "binding.settingsPrivacyScreenreaderDetection");
+        checkedSetting3.h(b.j(checkedSetting4, R.string.data_privacy_controls_allow_accessibility_detection_note, new Object[]{fVar.a(360035966492L, null)}, null, 4), true);
         CheckedSetting checkedSetting5 = getBinding().f2638y;
         checkedSetting5.setOnCheckedListener(new WidgetSettingsPrivacy$onViewBound$$inlined$apply$lambda$1(checkedSetting5, this));
         getBinding().i.setButtonVisibility(false);
         CheckedSetting checkedSetting6 = getBinding().i;
         CheckedSetting checkedSetting7 = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting7, "binding.settingsPrivacyBasicService");
-        checkedSetting6.h(FormatUtils.d(checkedSetting7, R.string.data_privacy_controls_basic_service_note, new Object[0], AnonymousClass2.INSTANCE), true);
+        m.checkNotNullExpressionValue(checkedSetting7, "binding.settingsPrivacyBasicService");
+        checkedSetting6.h(b.d(checkedSetting7, R.string.data_privacy_controls_basic_service_note, new Object[0], AnonymousClass2.INSTANCE), true);
         getBinding().i.e(AnonymousClass3.INSTANCE);
-        String strA = appHelpDesk.a(360004027692L, null);
+        String strA = fVar.a(360004027692L, null);
         TextView textView = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.requestDataLink");
+        m.checkNotNullExpressionValue(textView, "binding.requestDataLink");
         StringBuilder sb = new StringBuilder();
         sb.append('[');
         TextView textView2 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.requestDataLink");
-        sb.append(FormatUtils.j(textView2, R.string.notice_whats_this, new Object[0], null, 4));
+        m.checkNotNullExpressionValue(textView2, "binding.requestDataLink");
+        sb.append(b.j(textView2, R.string.notice_whats_this, new Object[0], null, 4));
         sb.append("](");
         sb.append(strA);
         sb.append(')');
-        textView.setText(FormatUtils.l(sb.toString(), new Object[0], null, 2));
+        textView.setText(b.l(sb.toString(), new Object[0], null, 2));
         getBinding().h.setOnClickListener(new AnonymousClass4(strA));
         CheckedSetting checkedSetting8 = getBinding().f2639z;
         CheckedSetting checkedSetting9 = getBinding().f2639z;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting9, "binding.settingsPrivacyStatistics");
-        checkedSetting8.h(FormatUtils.j(checkedSetting9, R.string.data_privacy_controls_usage_statistics_note, new Object[]{appHelpDesk.a(360004109911L, null)}, null, 4), true);
-        for (TextView textView3 : Collections2.listOf((Object[]) new TextView[]{getBinding().f2637x, getBinding().n, getBinding().u, getBinding().l})) {
+        m.checkNotNullExpressionValue(checkedSetting9, "binding.settingsPrivacyStatistics");
+        checkedSetting8.h(b.j(checkedSetting9, R.string.data_privacy_controls_usage_statistics_note, new Object[]{fVar.a(360004109911L, null)}, null, 4), true);
+        for (TextView textView3 : n.listOf((Object[]) new TextView[]{getBinding().f2637x, getBinding().n, getBinding().u, getBinding().l})) {
             AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "header");
+            m.checkNotNullExpressionValue(textView3, "header");
             accessibilityUtils.setViewIsHeading(textView3);
         }
     }

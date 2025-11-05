@@ -7,15 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import b.a.d.AppHelpDesk;
-import b.d.b.a.outline;
+import b.a.d.f;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.NotificationHighlightsSettingsViewBinding;
 import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.views.CheckedSetting;
 import com.google.android.material.card.MaterialCardView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -107,12 +107,12 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(isMuted=");
+            StringBuilder sbU = a.U("ViewState(isMuted=");
             sbU.append(this.isMuted);
             sbU.append(", notifyHighlights=");
             sbU.append(this.notifyHighlights);
             sbU.append(", serverTooLarge=");
-            return outline.O(sbU, this.serverTooLarge, ")");
+            return a.O(sbU, this.serverTooLarge, ")");
         }
     }
 
@@ -147,15 +147,15 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, outline.I(NotificationHighlightsSettingsView.access$getBinding$p(NotificationHighlightsSettingsView.this).f2130b, "binding.highlightsLearnMore", "binding.highlightsLearnMore.context"), AppHelpDesk.a.a(5304469213079L, null), false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, a.I(NotificationHighlightsSettingsView.access$getBinding$p(NotificationHighlightsSettingsView.this).f2130b, "binding.highlightsLearnMore", "binding.highlightsLearnMore.context"), f.a.a(5304469213079L, null), false, false, null, 28, null);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public NotificationHighlightsSettingsView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(attributeSet, "attrs");
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.notification_highlights_settings_view, (ViewGroup) this, false);
         addView(viewInflate);
         int i = R.id.highlights_learn_more;
@@ -168,7 +168,7 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
                 MaterialCardView materialCardView = (MaterialCardView) viewInflate.findViewById(R.id.highlights_warning);
                 if (materialCardView != null) {
                     NotificationHighlightsSettingsViewBinding notificationHighlightsSettingsViewBinding = new NotificationHighlightsSettingsViewBinding((LinearLayout) viewInflate, textView, checkedSetting, materialCardView);
-                    Intrinsics3.checkNotNullExpressionValue(notificationHighlightsSettingsViewBinding, "NotificationHighlightsSe…rom(context), this, true)");
+                    m.checkNotNullExpressionValue(notificationHighlightsSettingsViewBinding, "NotificationHighlightsSe…rom(context), this, true)");
                     this.binding = notificationHighlightsSettingsViewBinding;
                     return;
                 }
@@ -182,15 +182,15 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
     }
 
     public final void updateView(ViewState viewState, Function1<? super Integer, Unit> onToggled) {
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
-        Intrinsics3.checkNotNullParameter(onToggled, "onToggled");
+        m.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(onToggled, "onToggled");
         boolean zIsMuted = viewState.isMuted();
         int notifyHighlights = viewState.getNotifyHighlights();
         boolean serverTooLarge = viewState.getServerTooLarge();
         this.binding.c.setLabelTagText(R.string.beta);
         this.binding.c.setLabelTagVisibility(true);
         CheckedSetting checkedSetting = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.highlightsSwitch");
+        m.checkNotNullExpressionValue(checkedSetting, "binding.highlightsSwitch");
         checkedSetting.setChecked((notifyHighlights == ModelNotificationSettings.HIGHLIGHTS_DISABLED || zIsMuted) ? false : true);
         if (zIsMuted) {
             CheckedSetting.d(this.binding.c, null, 1);
@@ -199,7 +199,7 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
         }
         this.binding.f2130b.setOnClickListener(new AnonymousClass2());
         MaterialCardView materialCardView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.highlightsWarning");
+        m.checkNotNullExpressionValue(materialCardView, "binding.highlightsWarning");
         materialCardView.setVisibility((!serverTooLarge || zIsMuted || notifyHighlights == ModelNotificationSettings.HIGHLIGHTS_DISABLED) ? false : true ? 0 : 8);
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackTransactionCompleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackTransactionCompleted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackTransactionCompleted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long paymentId = null;
     private final Long paymentGateway = null;
@@ -47,7 +47,7 @@ public final /* data */ class TrackTransactionCompleted implements AnalyticsSche
             return false;
         }
         TrackTransactionCompleted trackTransactionCompleted = (TrackTransactionCompleted) other;
-        return Intrinsics3.areEqual(this.paymentId, trackTransactionCompleted.paymentId) && Intrinsics3.areEqual(this.paymentGateway, trackTransactionCompleted.paymentGateway) && Intrinsics3.areEqual(this.createdAt, trackTransactionCompleted.createdAt) && Intrinsics3.areEqual(this.transactionId, trackTransactionCompleted.transactionId) && Intrinsics3.areEqual(this.transactionType, trackTransactionCompleted.transactionType) && Intrinsics3.areEqual(this.skuId, trackTransactionCompleted.skuId) && Intrinsics3.areEqual(this.exchangeRate, trackTransactionCompleted.exchangeRate) && Intrinsics3.areEqual(this.presentmentCurrency, trackTransactionCompleted.presentmentCurrency) && Intrinsics3.areEqual(this.settlementCurrency, trackTransactionCompleted.settlementCurrency) && Intrinsics3.areEqual(this.presentmentAmount, trackTransactionCompleted.presentmentAmount) && Intrinsics3.areEqual(this.presentmentFees, trackTransactionCompleted.presentmentFees) && Intrinsics3.areEqual(this.presentmentTax, trackTransactionCompleted.presentmentTax) && Intrinsics3.areEqual(this.settlementAmount, trackTransactionCompleted.settlementAmount) && Intrinsics3.areEqual(this.settlementFees, trackTransactionCompleted.settlementFees) && Intrinsics3.areEqual(this.settlementTax, trackTransactionCompleted.settlementTax) && Intrinsics3.areEqual(this.netPresentmentAmount, trackTransactionCompleted.netPresentmentAmount) && Intrinsics3.areEqual(this.netPresentmentFees, trackTransactionCompleted.netPresentmentFees) && Intrinsics3.areEqual(this.netPresentmentTax, trackTransactionCompleted.netPresentmentTax) && Intrinsics3.areEqual(this.netSettlementAmount, trackTransactionCompleted.netSettlementAmount) && Intrinsics3.areEqual(this.netSettlementFees, trackTransactionCompleted.netSettlementFees) && Intrinsics3.areEqual(this.netSettlementTax, trackTransactionCompleted.netSettlementTax);
+        return m.areEqual(this.paymentId, trackTransactionCompleted.paymentId) && m.areEqual(this.paymentGateway, trackTransactionCompleted.paymentGateway) && m.areEqual(this.createdAt, trackTransactionCompleted.createdAt) && m.areEqual(this.transactionId, trackTransactionCompleted.transactionId) && m.areEqual(this.transactionType, trackTransactionCompleted.transactionType) && m.areEqual(this.skuId, trackTransactionCompleted.skuId) && m.areEqual(this.exchangeRate, trackTransactionCompleted.exchangeRate) && m.areEqual(this.presentmentCurrency, trackTransactionCompleted.presentmentCurrency) && m.areEqual(this.settlementCurrency, trackTransactionCompleted.settlementCurrency) && m.areEqual(this.presentmentAmount, trackTransactionCompleted.presentmentAmount) && m.areEqual(this.presentmentFees, trackTransactionCompleted.presentmentFees) && m.areEqual(this.presentmentTax, trackTransactionCompleted.presentmentTax) && m.areEqual(this.settlementAmount, trackTransactionCompleted.settlementAmount) && m.areEqual(this.settlementFees, trackTransactionCompleted.settlementFees) && m.areEqual(this.settlementTax, trackTransactionCompleted.settlementTax) && m.areEqual(this.netPresentmentAmount, trackTransactionCompleted.netPresentmentAmount) && m.areEqual(this.netPresentmentFees, trackTransactionCompleted.netPresentmentFees) && m.areEqual(this.netPresentmentTax, trackTransactionCompleted.netPresentmentTax) && m.areEqual(this.netSettlementAmount, trackTransactionCompleted.netSettlementAmount) && m.areEqual(this.netSettlementFees, trackTransactionCompleted.netSettlementFees) && m.areEqual(this.netSettlementTax, trackTransactionCompleted.netSettlementTax);
     }
 
     public int hashCode() {
@@ -96,7 +96,7 @@ public final /* data */ class TrackTransactionCompleted implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackTransactionCompleted(paymentId=");
+        StringBuilder sbU = a.U("TrackTransactionCompleted(paymentId=");
         sbU.append(this.paymentId);
         sbU.append(", paymentGateway=");
         sbU.append(this.paymentGateway);
@@ -137,6 +137,6 @@ public final /* data */ class TrackTransactionCompleted implements AnalyticsSche
         sbU.append(", netSettlementFees=");
         sbU.append(this.netSettlementFees);
         sbU.append(", netSettlementTax=");
-        return outline.G(sbU, this.netSettlementTax, ")");
+        return a.G(sbU, this.netSettlementTax, ")");
     }
 }

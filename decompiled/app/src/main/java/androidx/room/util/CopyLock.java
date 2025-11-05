@@ -2,7 +2,7 @@ package androidx.room.util;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class CopyLock {
     private final Lock mThreadLock;
 
     public CopyLock(@NonNull String str, @NonNull File file, boolean z2) {
-        File file2 = new File(file, outline.w(str, ".lck"));
+        File file2 = new File(file, a.w(str, ".lck"));
         this.mCopyLockFile = file2;
         this.mThreadLock = getThreadLock(file2.getAbsolutePath());
         this.mFileLevelLock = z2;

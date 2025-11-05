@@ -1,31 +1,31 @@
 package com.discord.analytics.generated.events.impression;
 
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.analytics.generated.traits.TrackImpressionMetadata;
-import com.discord.analytics.generated.traits.TrackImpressionMetadata2;
+import com.discord.analytics.generated.traits.TrackImpressionMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
 
 /* compiled from: TrackImpressionPremiumGuildSubscriptionMarketingPage.kt */
 /* loaded from: classes.dex */
-public final class TrackImpressionPremiumGuildSubscriptionMarketingPage implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackLocationMetadata2, TrackImpressionMetadata2 {
+public final class TrackImpressionPremiumGuildSubscriptionMarketingPage implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackLocationMetadataReceiver, TrackImpressionMetadataReceiver {
     private final transient String analyticsSchemaTypeName = "impression_premium_guild_subscription_marketing_page";
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private TrackImpressionMetadata trackImpressionMetadata;
     private TrackLocationMetadata trackLocationMetadata;
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }

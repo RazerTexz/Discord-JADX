@@ -19,9 +19,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
-import b.i.a.g.e.AnimatorTracker;
-import b.i.a.g.e.BaseMotionStrategy;
-import b.i.a.g.e.MotionStrategy;
 import com.google.android.material.R;
 import com.google.android.material.animation.MotionSpec;
 import com.google.android.material.appbar.AppBarLayout;
@@ -44,23 +41,23 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
 
     @NonNull
     private final CoordinatorLayout.Behavior<ExtendedFloatingActionButton> behavior;
-    private final AnimatorTracker changeVisibilityTracker;
+    private final b.i.a.g.e.a changeVisibilityTracker;
     private final int collapsedSize;
 
     @NonNull
-    private final MotionStrategy extendStrategy;
+    private final b.i.a.g.e.j extendStrategy;
     private int extendedPaddingEnd;
     private int extendedPaddingStart;
-    private final MotionStrategy hideStrategy;
+    private final b.i.a.g.e.j hideStrategy;
     private boolean isExtended;
     private boolean isTransforming;
 
     @NonNull
     public ColorStateList originalTextCsl;
-    private final MotionStrategy showStrategy;
+    private final b.i.a.g.e.j showStrategy;
 
     @NonNull
-    private final MotionStrategy shrinkStrategy;
+    private final b.i.a.g.e.j shrinkStrategy;
     private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
     public static final Property<View, Float> WIDTH = new d(Float.class, "width");
     public static final Property<View, Float> HEIGHT = new e(Float.class, "height");
@@ -306,11 +303,11 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         public boolean a;
 
         /* renamed from: b, reason: collision with root package name */
-        public final /* synthetic */ MotionStrategy f3039b;
+        public final /* synthetic */ b.i.a.g.e.j f3039b;
         public final /* synthetic */ OnChangedCallback c;
 
-        public c(ExtendedFloatingActionButton extendedFloatingActionButton, MotionStrategy motionStrategy, OnChangedCallback onChangedCallback) {
-            this.f3039b = motionStrategy;
+        public c(ExtendedFloatingActionButton extendedFloatingActionButton, b.i.a.g.e.j jVar, OnChangedCallback onChangedCallback) {
+            this.f3039b = jVar;
             this.c = onChangedCallback;
         }
 
@@ -410,22 +407,22 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    public class h extends BaseMotionStrategy {
+    public class h extends b.i.a.g.e.b {
         public final k g;
         public final boolean h;
 
-        public h(AnimatorTracker animatorTracker, k kVar, boolean z2) {
-            super(ExtendedFloatingActionButton.this, animatorTracker);
+        public h(b.i.a.g.e.a aVar, k kVar, boolean z2) {
+            super(ExtendedFloatingActionButton.this, aVar);
             this.g = kVar;
             this.h = z2;
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public int b() {
             return this.h ? R.animator.mtrl_extended_fab_change_size_expand_motion_spec : R.animator.mtrl_extended_fab_change_size_collapse_motion_spec;
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public void c() {
             ExtendedFloatingActionButton.access$702(ExtendedFloatingActionButton.this, this.h);
             ViewGroup.LayoutParams layoutParams = ExtendedFloatingActionButton.this.getLayoutParams();
@@ -438,12 +435,12 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             ExtendedFloatingActionButton.this.requestLayout();
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public boolean d() {
             return this.h == ExtendedFloatingActionButton.access$700(ExtendedFloatingActionButton.this) || ExtendedFloatingActionButton.this.getIcon() == null || TextUtils.isEmpty(ExtendedFloatingActionButton.this.getText());
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void e() {
             super.e();
             ExtendedFloatingActionButton.access$802(ExtendedFloatingActionButton.this, false);
@@ -456,7 +453,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             layoutParams.height = this.g.a().height;
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         @NonNull
         public AnimatorSet f() {
             MotionSpec motionSpecI = i();
@@ -489,7 +486,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             return h(motionSpecI);
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public void g(@Nullable OnChangedCallback onChangedCallback) {
             if (onChangedCallback == null) {
                 return;
@@ -501,49 +498,49 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             }
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void onAnimationStart(Animator animator) {
-            AnimatorTracker animatorTracker = this.d;
-            Animator animator2 = animatorTracker.a;
+            b.i.a.g.e.a aVar = this.d;
+            Animator animator2 = aVar.a;
             if (animator2 != null) {
                 animator2.cancel();
             }
-            animatorTracker.a = animator;
+            aVar.a = animator;
             ExtendedFloatingActionButton.access$702(ExtendedFloatingActionButton.this, this.h);
             ExtendedFloatingActionButton.access$802(ExtendedFloatingActionButton.this, true);
             ExtendedFloatingActionButton.this.setHorizontallyScrolling(true);
         }
     }
 
-    public class i extends BaseMotionStrategy {
+    public class i extends b.i.a.g.e.b {
         public boolean g;
 
-        public i(AnimatorTracker animatorTracker) {
-            super(ExtendedFloatingActionButton.this, animatorTracker);
+        public i(b.i.a.g.e.a aVar) {
+            super(ExtendedFloatingActionButton.this, aVar);
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void a() {
             this.d.a = null;
             this.g = true;
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public int b() {
             return R.animator.mtrl_extended_fab_hide_motion_spec;
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public void c() {
             ExtendedFloatingActionButton.this.setVisibility(8);
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public boolean d() {
             return ExtendedFloatingActionButton.access$1100(ExtendedFloatingActionButton.this);
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void e() {
             super.e();
             ExtendedFloatingActionButton.access$902(ExtendedFloatingActionButton.this, 0);
@@ -553,38 +550,38 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             ExtendedFloatingActionButton.this.setVisibility(8);
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public void g(@Nullable OnChangedCallback onChangedCallback) {
             if (onChangedCallback != null) {
                 onChangedCallback.onHidden(ExtendedFloatingActionButton.this);
             }
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void onAnimationStart(Animator animator) {
-            AnimatorTracker animatorTracker = this.d;
-            Animator animator2 = animatorTracker.a;
+            b.i.a.g.e.a aVar = this.d;
+            Animator animator2 = aVar.a;
             if (animator2 != null) {
                 animator2.cancel();
             }
-            animatorTracker.a = animator;
+            aVar.a = animator;
             this.g = false;
             ExtendedFloatingActionButton.this.setVisibility(0);
             ExtendedFloatingActionButton.access$902(ExtendedFloatingActionButton.this, 1);
         }
     }
 
-    public class j extends BaseMotionStrategy {
-        public j(AnimatorTracker animatorTracker) {
-            super(ExtendedFloatingActionButton.this, animatorTracker);
+    public class j extends b.i.a.g.e.b {
+        public j(b.i.a.g.e.a aVar) {
+            super(ExtendedFloatingActionButton.this, aVar);
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public int b() {
             return R.animator.mtrl_extended_fab_show_motion_spec;
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public void c() {
             ExtendedFloatingActionButton.this.setVisibility(0);
             ExtendedFloatingActionButton.this.setAlpha(1.0f);
@@ -592,32 +589,32 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             ExtendedFloatingActionButton.this.setScaleX(1.0f);
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public boolean d() {
             return ExtendedFloatingActionButton.access$1000(ExtendedFloatingActionButton.this);
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void e() {
             super.e();
             ExtendedFloatingActionButton.access$902(ExtendedFloatingActionButton.this, 0);
         }
 
-        @Override // b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.j
         public void g(@Nullable OnChangedCallback onChangedCallback) {
             if (onChangedCallback != null) {
                 onChangedCallback.onShown(ExtendedFloatingActionButton.this);
             }
         }
 
-        @Override // b.i.a.g.e.BaseMotionStrategy, b.i.a.g.e.MotionStrategy
+        @Override // b.i.a.g.e.b, b.i.a.g.e.j
         public void onAnimationStart(Animator animator) {
-            AnimatorTracker animatorTracker = this.d;
-            Animator animator2 = animatorTracker.a;
+            b.i.a.g.e.a aVar = this.d;
+            Animator animator2 = aVar.a;
             if (animator2 != null) {
                 animator2.cancel();
             }
-            animatorTracker.a = animator;
+            aVar.a = animator;
             ExtendedFloatingActionButton.this.setVisibility(0);
             ExtendedFloatingActionButton.access$902(ExtendedFloatingActionButton.this, 2);
         }
@@ -655,23 +652,23 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         return extendedFloatingActionButton.isOrWillBeHidden();
     }
 
-    public static /* synthetic */ MotionStrategy access$200(ExtendedFloatingActionButton extendedFloatingActionButton) {
+    public static /* synthetic */ b.i.a.g.e.j access$200(ExtendedFloatingActionButton extendedFloatingActionButton) {
         return extendedFloatingActionButton.shrinkStrategy;
     }
 
-    public static /* synthetic */ MotionStrategy access$300(ExtendedFloatingActionButton extendedFloatingActionButton) {
+    public static /* synthetic */ b.i.a.g.e.j access$300(ExtendedFloatingActionButton extendedFloatingActionButton) {
         return extendedFloatingActionButton.hideStrategy;
     }
 
-    public static /* synthetic */ void access$400(ExtendedFloatingActionButton extendedFloatingActionButton, MotionStrategy motionStrategy, OnChangedCallback onChangedCallback) {
-        extendedFloatingActionButton.performMotion(motionStrategy, onChangedCallback);
+    public static /* synthetic */ void access$400(ExtendedFloatingActionButton extendedFloatingActionButton, b.i.a.g.e.j jVar, OnChangedCallback onChangedCallback) {
+        extendedFloatingActionButton.performMotion(jVar, onChangedCallback);
     }
 
-    public static /* synthetic */ MotionStrategy access$500(ExtendedFloatingActionButton extendedFloatingActionButton) {
+    public static /* synthetic */ b.i.a.g.e.j access$500(ExtendedFloatingActionButton extendedFloatingActionButton) {
         return extendedFloatingActionButton.extendStrategy;
     }
 
-    public static /* synthetic */ MotionStrategy access$600(ExtendedFloatingActionButton extendedFloatingActionButton) {
+    public static /* synthetic */ b.i.a.g.e.j access$600(ExtendedFloatingActionButton extendedFloatingActionButton) {
         return extendedFloatingActionButton.showStrategy;
     }
 
@@ -702,19 +699,19 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         return getVisibility() != 0 ? this.animState == 2 : this.animState != 1;
     }
 
-    private void performMotion(@NonNull MotionStrategy motionStrategy, @Nullable OnChangedCallback onChangedCallback) {
-        if (motionStrategy.d()) {
+    private void performMotion(@NonNull b.i.a.g.e.j jVar, @Nullable OnChangedCallback onChangedCallback) {
+        if (jVar.d()) {
             return;
         }
         if (!shouldAnimateVisibilityChange()) {
-            motionStrategy.c();
-            motionStrategy.g(onChangedCallback);
+            jVar.c();
+            jVar.g(onChangedCallback);
             return;
         }
         measure(0, 0);
-        AnimatorSet animatorSetF = motionStrategy.f();
-        animatorSetF.addListener(new c(this, motionStrategy, onChangedCallback));
-        Iterator<Animator.AnimatorListener> it = ((BaseMotionStrategy) motionStrategy).c.iterator();
+        AnimatorSet animatorSetF = jVar.f();
+        animatorSetF.addListener(new c(this, jVar, onChangedCallback));
+        Iterator<Animator.AnimatorListener> it = ((b.i.a.g.e.b) jVar).c.iterator();
         while (it.hasNext()) {
             animatorSetF.addListener(it.next());
         }
@@ -730,19 +727,19 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public void addOnExtendAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.extendStrategy).c.add(animatorListener);
+        ((b.i.a.g.e.b) this.extendStrategy).c.add(animatorListener);
     }
 
     public void addOnHideAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.hideStrategy).c.add(animatorListener);
+        ((b.i.a.g.e.b) this.hideStrategy).c.add(animatorListener);
     }
 
     public void addOnShowAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.showStrategy).c.add(animatorListener);
+        ((b.i.a.g.e.b) this.showStrategy).c.add(animatorListener);
     }
 
     public void addOnShrinkAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.shrinkStrategy).c.add(animatorListener);
+        ((b.i.a.g.e.b) this.shrinkStrategy).c.add(animatorListener);
     }
 
     public void extend() {
@@ -767,22 +764,22 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
 
     @Nullable
     public MotionSpec getExtendMotionSpec() {
-        return ((BaseMotionStrategy) this.extendStrategy).f;
+        return ((b.i.a.g.e.b) this.extendStrategy).f;
     }
 
     @Nullable
     public MotionSpec getHideMotionSpec() {
-        return ((BaseMotionStrategy) this.hideStrategy).f;
+        return ((b.i.a.g.e.b) this.hideStrategy).f;
     }
 
     @Nullable
     public MotionSpec getShowMotionSpec() {
-        return ((BaseMotionStrategy) this.showStrategy).f;
+        return ((b.i.a.g.e.b) this.showStrategy).f;
     }
 
     @Nullable
     public MotionSpec getShrinkMotionSpec() {
-        return ((BaseMotionStrategy) this.shrinkStrategy).f;
+        return ((b.i.a.g.e.b) this.shrinkStrategy).f;
     }
 
     public void hide() {
@@ -803,19 +800,19 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public void removeOnExtendAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.extendStrategy).c.remove(animatorListener);
+        ((b.i.a.g.e.b) this.extendStrategy).c.remove(animatorListener);
     }
 
     public void removeOnHideAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.hideStrategy).c.remove(animatorListener);
+        ((b.i.a.g.e.b) this.hideStrategy).c.remove(animatorListener);
     }
 
     public void removeOnShowAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.showStrategy).c.remove(animatorListener);
+        ((b.i.a.g.e.b) this.showStrategy).c.remove(animatorListener);
     }
 
     public void removeOnShrinkAnimationListener(@NonNull Animator.AnimatorListener animatorListener) {
-        ((BaseMotionStrategy) this.shrinkStrategy).c.remove(animatorListener);
+        ((b.i.a.g.e.b) this.shrinkStrategy).c.remove(animatorListener);
     }
 
     public void setAnimateShowBeforeLayout(boolean z2) {
@@ -823,7 +820,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public void setExtendMotionSpec(@Nullable MotionSpec motionSpec) {
-        ((BaseMotionStrategy) this.extendStrategy).f = motionSpec;
+        ((b.i.a.g.e.b) this.extendStrategy).f = motionSpec;
     }
 
     public void setExtendMotionSpecResource(@AnimatorRes int i2) {
@@ -834,15 +831,15 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         if (this.isExtended == z2) {
             return;
         }
-        MotionStrategy motionStrategy = z2 ? this.extendStrategy : this.shrinkStrategy;
-        if (motionStrategy.d()) {
+        b.i.a.g.e.j jVar = z2 ? this.extendStrategy : this.shrinkStrategy;
+        if (jVar.d()) {
             return;
         }
-        motionStrategy.c();
+        jVar.c();
     }
 
     public void setHideMotionSpec(@Nullable MotionSpec motionSpec) {
-        ((BaseMotionStrategy) this.hideStrategy).f = motionSpec;
+        ((b.i.a.g.e.b) this.hideStrategy).f = motionSpec;
     }
 
     public void setHideMotionSpecResource(@AnimatorRes int i2) {
@@ -870,7 +867,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public void setShowMotionSpec(@Nullable MotionSpec motionSpec) {
-        ((BaseMotionStrategy) this.showStrategy).f = motionSpec;
+        ((b.i.a.g.e.b) this.showStrategy).f = motionSpec;
     }
 
     public void setShowMotionSpecResource(@AnimatorRes int i2) {
@@ -878,7 +875,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public void setShrinkMotionSpec(@Nullable MotionSpec motionSpec) {
-        ((BaseMotionStrategy) this.shrinkStrategy).f = motionSpec;
+        ((b.i.a.g.e.b) this.shrinkStrategy).f = motionSpec;
     }
 
     public void setShrinkMotionSpecResource(@AnimatorRes int i2) {
@@ -928,11 +925,11 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         int i3 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i2, i3), attributeSet, i2);
         this.animState = 0;
-        AnimatorTracker animatorTracker = new AnimatorTracker();
-        this.changeVisibilityTracker = animatorTracker;
-        j jVar = new j(animatorTracker);
+        b.i.a.g.e.a aVar = new b.i.a.g.e.a();
+        this.changeVisibilityTracker = aVar;
+        j jVar = new j(aVar);
         this.showStrategy = jVar;
-        i iVar = new i(animatorTracker);
+        i iVar = new i(aVar);
         this.hideStrategy = iVar;
         this.isExtended = true;
         this.isTransforming = false;
@@ -947,10 +944,10 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         this.collapsedSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(R.styleable.ExtendedFloatingActionButton_collapsedSize, -1);
         this.extendedPaddingStart = ViewCompat.getPaddingStart(this);
         this.extendedPaddingEnd = ViewCompat.getPaddingEnd(this);
-        AnimatorTracker animatorTracker2 = new AnimatorTracker();
-        h hVar = new h(animatorTracker2, new a(), true);
+        b.i.a.g.e.a aVar2 = new b.i.a.g.e.a();
+        h hVar = new h(aVar2, new a(), true);
         this.extendStrategy = hVar;
-        h hVar2 = new h(animatorTracker2, new b(), false);
+        h hVar2 = new h(aVar2, new b(), false);
         this.shrinkStrategy = hVar2;
         jVar.f = motionSpecCreateFromAttribute;
         iVar.f = motionSpecCreateFromAttribute2;

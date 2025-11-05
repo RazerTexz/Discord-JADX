@@ -2,7 +2,7 @@ package com.adjust.sdk;
 
 import android.net.Uri;
 import androidx.browser.trusted.sharing.ShareTarget;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -262,8 +262,8 @@ public class UtilNetworking {
         String string = "";
         for (Map.Entry entry : map2.entrySet()) {
             if (entry.getValue() != null) {
-                strJ = outline.J(outline.U(strJ), (String) entry.getKey(), " ");
-                StringBuilder sbU = outline.U(string);
+                strJ = a.J(a.U(strJ), (String) entry.getKey(), " ");
+                StringBuilder sbU = a.U(string);
                 sbU.append((String) entry.getValue());
                 string = sbU.toString();
             }

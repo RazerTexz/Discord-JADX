@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackDirectoryEntry.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,7 @@ public final /* data */ class TrackDirectoryEntry {
             return false;
         }
         TrackDirectoryEntry trackDirectoryEntry = (TrackDirectoryEntry) other;
-        return Intrinsics3.areEqual(this.directoryChannelId, trackDirectoryEntry.directoryChannelId) && Intrinsics3.areEqual(this.directoryGuildId, trackDirectoryEntry.directoryGuildId) && Intrinsics3.areEqual(this.entityId, trackDirectoryEntry.entityId) && Intrinsics3.areEqual(this.authorId, trackDirectoryEntry.authorId) && Intrinsics3.areEqual(this.entityType, trackDirectoryEntry.entityType) && Intrinsics3.areEqual(this.createdAt, trackDirectoryEntry.createdAt) && Intrinsics3.areEqual(this.primaryCategoryId, trackDirectoryEntry.primaryCategoryId) && Intrinsics3.areEqual(this.entryDescription, trackDirectoryEntry.entryDescription);
+        return m.areEqual(this.directoryChannelId, trackDirectoryEntry.directoryChannelId) && m.areEqual(this.directoryGuildId, trackDirectoryEntry.directoryGuildId) && m.areEqual(this.entityId, trackDirectoryEntry.entityId) && m.areEqual(this.authorId, trackDirectoryEntry.authorId) && m.areEqual(this.entityType, trackDirectoryEntry.entityType) && m.areEqual(this.createdAt, trackDirectoryEntry.createdAt) && m.areEqual(this.primaryCategoryId, trackDirectoryEntry.primaryCategoryId) && m.areEqual(this.entryDescription, trackDirectoryEntry.entryDescription);
     }
 
     public int hashCode() {
@@ -46,7 +46,7 @@ public final /* data */ class TrackDirectoryEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDirectoryEntry(directoryChannelId=");
+        StringBuilder sbU = a.U("TrackDirectoryEntry(directoryChannelId=");
         sbU.append(this.directoryChannelId);
         sbU.append(", directoryGuildId=");
         sbU.append(this.directoryGuildId);
@@ -61,6 +61,6 @@ public final /* data */ class TrackDirectoryEntry {
         sbU.append(", primaryCategoryId=");
         sbU.append(this.primaryCategoryId);
         sbU.append(", entryDescription=");
-        return outline.E(sbU, this.entryDescription, ")");
+        return a.E(sbU, this.entryDescription, ")");
     }
 }

@@ -3,7 +3,6 @@ package b.i.a.f.c.a.f.b;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.auth.api.signin.internal.GoogleSignInOptionsExtensionParcelable;
 
 /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
@@ -11,7 +10,7 @@ import com.google.android.gms.auth.api.signin.internal.GoogleSignInOptionsExtens
 public final class b implements Parcelable.Creator<GoogleSignInOptionsExtensionParcelable> {
     @Override // android.os.Parcelable.Creator
     public final GoogleSignInOptionsExtensionParcelable createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         int iG1 = 0;
         Bundle bundleM = null;
         int iG12 = 0;
@@ -19,16 +18,16 @@ public final class b implements Parcelable.Creator<GoogleSignInOptionsExtensionP
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                iG12 = AnimatableValueParser.G1(parcel, i);
+                iG12 = b.c.a.a0.d.G1(parcel, i);
             } else if (c != 3) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                bundleM = AnimatableValueParser.M(parcel, i);
+                bundleM = b.c.a.a0.d.M(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new GoogleSignInOptionsExtensionParcelable(iG1, iG12, bundleM);
     }
 

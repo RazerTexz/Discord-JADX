@@ -3,7 +3,6 @@ package b.i.a.f.e.k;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.internal.zau;
 
@@ -12,7 +11,7 @@ import com.google.android.gms.common.internal.zau;
 public final class x implements Parcelable.Creator<zau> {
     @Override // android.os.Parcelable.Creator
     public final zau createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         IBinder iBinderF1 = null;
         ConnectionResult connectionResult = null;
         int iG1 = 0;
@@ -22,20 +21,20 @@ public final class x implements Parcelable.Creator<zau> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                iBinderF1 = AnimatableValueParser.F1(parcel, i);
+                iBinderF1 = b.c.a.a0.d.F1(parcel, i);
             } else if (c == 3) {
-                connectionResult = (ConnectionResult) AnimatableValueParser.Q(parcel, i, ConnectionResult.CREATOR);
+                connectionResult = (ConnectionResult) b.c.a.a0.d.Q(parcel, i, ConnectionResult.CREATOR);
             } else if (c == 4) {
-                zE1 = AnimatableValueParser.E1(parcel, i);
+                zE1 = b.c.a.a0.d.E1(parcel, i);
             } else if (c != 5) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                zE12 = AnimatableValueParser.E1(parcel, i);
+                zE12 = b.c.a.a0.d.E1(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zau(iG1, iBinderF1, connectionResult, zE1, zE12);
     }
 

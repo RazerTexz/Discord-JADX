@@ -5,7 +5,7 @@ import android.util.SparseArray;
 import android.view.View;
 import androidx.constraintlayout.motion.utils.CurveFit;
 import androidx.constraintlayout.widget.ConstraintAttribute;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -326,7 +326,7 @@ public abstract class SplineSet {
         String string = this.mType;
         DecimalFormat decimalFormat = new DecimalFormat("##.##");
         for (int i = 0; i < this.count; i++) {
-            StringBuilder sbX = outline.X(string, "[");
+            StringBuilder sbX = a.X(string, "[");
             sbX.append(this.mTimePoints[i]);
             sbX.append(" , ");
             sbX.append(decimalFormat.format(this.mValues[i]));

@@ -1,12 +1,12 @@
 package com.discord.api.embeddedactivities;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.activity.ActivityAssets;
 import com.discord.api.activity.ActivitySecrets;
 import com.discord.api.activity.ActivityTimestamps;
 import com.discord.api.activity.ActivityType;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: EmbeddedActivity.kt */
 /* loaded from: classes.dex */
@@ -54,7 +54,7 @@ public final /* data */ class EmbeddedActivity {
             return false;
         }
         EmbeddedActivity embeddedActivity = (EmbeddedActivity) other;
-        return this.applicationId == embeddedActivity.applicationId && Intrinsics3.areEqual(this.assets, embeddedActivity.assets) && Intrinsics3.areEqual(this.createdAt, embeddedActivity.createdAt) && Intrinsics3.areEqual(this.details, embeddedActivity.details) && Intrinsics3.areEqual(this.name, embeddedActivity.name) && Intrinsics3.areEqual(this.secrets, embeddedActivity.secrets) && Intrinsics3.areEqual(this.state, embeddedActivity.state) && Intrinsics3.areEqual(this.timestamps, embeddedActivity.timestamps) && Intrinsics3.areEqual(this.type, embeddedActivity.type);
+        return this.applicationId == embeddedActivity.applicationId && m.areEqual(this.assets, embeddedActivity.assets) && m.areEqual(this.createdAt, embeddedActivity.createdAt) && m.areEqual(this.details, embeddedActivity.details) && m.areEqual(this.name, embeddedActivity.name) && m.areEqual(this.secrets, embeddedActivity.secrets) && m.areEqual(this.state, embeddedActivity.state) && m.areEqual(this.timestamps, embeddedActivity.timestamps) && m.areEqual(this.type, embeddedActivity.type);
     }
 
     /* renamed from: f, reason: from getter */
@@ -99,7 +99,7 @@ public final /* data */ class EmbeddedActivity {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmbeddedActivity(applicationId=");
+        StringBuilder sbU = a.U("EmbeddedActivity(applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", assets=");
         sbU.append(this.assets);

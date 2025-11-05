@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: GiftEntry.kt */
 /* loaded from: classes2.dex */
@@ -15,7 +15,7 @@ public final /* data */ class GiftEntry extends ChatListEntry {
     private final long userId;
 
     public GiftEntry(long j, long j2, long j3, String str) {
-        Intrinsics3.checkNotNullParameter(str, "giftCode");
+        m.checkNotNullParameter(str, "giftCode");
         this.userId = j;
         this.messageId = j2;
         this.channelId = j3;
@@ -49,7 +49,7 @@ public final /* data */ class GiftEntry extends ChatListEntry {
     }
 
     public final GiftEntry copy(long userId, long messageId, long channelId, String giftCode) {
-        Intrinsics3.checkNotNullParameter(giftCode, "giftCode");
+        m.checkNotNullParameter(giftCode, "giftCode");
         return new GiftEntry(userId, messageId, channelId, giftCode);
     }
 
@@ -61,7 +61,7 @@ public final /* data */ class GiftEntry extends ChatListEntry {
             return false;
         }
         GiftEntry giftEntry = (GiftEntry) other;
-        return this.userId == giftEntry.userId && this.messageId == giftEntry.messageId && this.channelId == giftEntry.channelId && Intrinsics3.areEqual(this.giftCode, giftEntry.giftCode);
+        return this.userId == giftEntry.userId && this.messageId == giftEntry.messageId && this.channelId == giftEntry.channelId && m.areEqual(this.giftCode, giftEntry.giftCode);
     }
 
     public final long getChannelId() {
@@ -97,13 +97,13 @@ public final /* data */ class GiftEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GiftEntry(userId=");
+        StringBuilder sbU = a.U("GiftEntry(userId=");
         sbU.append(this.userId);
         sbU.append(", messageId=");
         sbU.append(this.messageId);
         sbU.append(", channelId=");
         sbU.append(this.channelId);
         sbU.append(", giftCode=");
-        return outline.J(sbU, this.giftCode, ")");
+        return a.J(sbU, this.giftCode, ")");
     }
 }

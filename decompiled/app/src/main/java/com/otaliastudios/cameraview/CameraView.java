@@ -30,65 +30,21 @@ import androidx.view.Lifecycle;
 import androidx.view.LifecycleObserver;
 import androidx.view.LifecycleOwner;
 import androidx.view.OnLifecycleEvent;
-import b.d.b.a.outline;
-import b.i.a.f.e.o.f;
-import b.o.a.CameraListener;
-import b.o.a.CameraLogger;
-import b.o.a.CameraOptions;
-import b.o.a.CameraUtils2;
-import b.o.a.PictureResult;
-import b.o.a.m.Audio;
-import b.o.a.m.AudioCodec;
-import b.o.a.m.Control;
-import b.o.a.m.Engine;
-import b.o.a.m.Facing;
-import b.o.a.m.Flash;
-import b.o.a.m.Grid;
-import b.o.a.m.Hdr;
-import b.o.a.m.Mode3;
-import b.o.a.m.PictureFormat;
-import b.o.a.m.Preview;
-import b.o.a.m.VideoCodec;
-import b.o.a.m.WhiteBalance;
-import b.o.a.n.Camera1Engine2;
-import b.o.a.n.Camera2Engine;
-import b.o.a.n.CameraEngine;
-import b.o.a.n.t.Angles;
-import b.o.a.n.t.Reference2;
-import b.o.a.n.v.CameraState2;
-import b.o.a.o.Filter2;
-import b.o.a.o.NoFilter;
-import b.o.a.o.OneParameterFilter;
-import b.o.a.o.TwoParameterFilter;
-import b.o.a.p.Frame2;
-import b.o.a.p.FrameProcessor;
-import b.o.a.q.Gesture;
-import b.o.a.q.GestureAction;
-import b.o.a.q.GestureFinder;
-import b.o.a.q.PinchGestureFinder;
-import b.o.a.q.ScrollGestureFinder;
-import b.o.a.q.TapGestureFinder;
-import b.o.a.r.GridLinesLayout;
-import b.o.a.r.OrientationHelper2;
-import b.o.a.s.AutoFocusMarker;
-import b.o.a.s.AutoFocusTrigger;
-import b.o.a.s.MarkerLayout;
-import b.o.a.t.MeteringRegion;
-import b.o.a.t.MeteringRegions;
-import b.o.a.u.OverlayLayout;
-import b.o.a.w.CameraPreview;
-import b.o.a.w.FilterCameraPreview;
-import b.o.a.w.GlCameraPreview2;
-import b.o.a.w.SurfaceCameraPreview2;
-import b.o.a.w.TextureCameraPreview2;
-import b.o.a.x.AspectRatio2;
-import b.o.a.x.Size3;
-import b.o.a.x.SizeSelector;
-import b.o.a.x.SizeSelectors;
-import b.o.a.x.SizeSelectors2;
-import b.o.a.x.SizeSelectors3;
-import b.o.a.x.SizeSelectors4;
-import b.o.a.x.SizeSelectors5;
+import b.o.a.l;
+import b.o.a.m.h;
+import b.o.a.m.j;
+import b.o.a.m.k;
+import b.o.a.m.l;
+import b.o.a.m.m;
+import b.o.a.n.i;
+import b.o.a.p.d;
+import b.o.a.q.c;
+import b.o.a.q.e;
+import b.o.a.q.f;
+import b.o.a.q.g;
+import b.o.a.r.f;
+import b.o.a.s.c;
+import b.o.a.u.c;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -105,44 +61,44 @@ import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes3.dex */
 public class CameraView extends FrameLayout implements LifecycleObserver {
     public static final String j;
-    public static final CameraLogger k;
-    public Size3 A;
+    public static final b.o.a.b k;
+    public b.o.a.x.b A;
     public MediaActionSound B;
-    public AutoFocusMarker C;
+    public b.o.a.s.a C;
 
     @VisibleForTesting
-    public List<CameraListener> D;
+    public List<b.o.a.a> D;
 
     @VisibleForTesting
-    public List<FrameProcessor> E;
+    public List<d> E;
     public Lifecycle F;
 
     @VisibleForTesting
-    public PinchGestureFinder G;
+    public e G;
 
     @VisibleForTesting
-    public TapGestureFinder H;
+    public g H;
 
     @VisibleForTesting
-    public ScrollGestureFinder I;
+    public f I;
 
     @VisibleForTesting
-    public GridLinesLayout J;
+    public b.o.a.r.d J;
 
     @VisibleForTesting
-    public MarkerLayout K;
+    public c K;
     public boolean L;
     public boolean M;
 
     @VisibleForTesting
-    public OverlayLayout N;
+    public b.o.a.u.c N;
     public boolean l;
     public boolean m;
     public boolean n;
-    public HashMap<Gesture, GestureAction> o;
-    public Preview p;
-    public Engine q;
-    public Filter2 r;
+    public HashMap<b.o.a.q.a, b.o.a.q.b> o;
+    public k p;
+    public b.o.a.m.d q;
+    public b.o.a.o.b r;
 
     /* renamed from: s, reason: collision with root package name */
     public int f3173s;
@@ -154,13 +110,13 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     public b w;
 
     /* renamed from: x, reason: collision with root package name */
-    public CameraPreview f3174x;
+    public b.o.a.w.a f3174x;
 
     /* renamed from: y, reason: collision with root package name */
-    public OrientationHelper2 f3175y;
+    public b.o.a.r.f f3175y;
 
     /* renamed from: z, reason: collision with root package name */
-    public CameraEngine f3176z;
+    public i f3176z;
 
     public class a implements ThreadFactory {
         public final AtomicInteger j = new AtomicInteger(1);
@@ -170,18 +126,18 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(@NonNull Runnable runnable) {
-            StringBuilder sbU = outline.U("FrameExecutor #");
+            StringBuilder sbU = b.d.b.a.a.U("FrameExecutor #");
             sbU.append(this.j.getAndIncrement());
             return new Thread(runnable, sbU.toString());
         }
     }
 
     @VisibleForTesting
-    public class b implements CameraEngine.g, OrientationHelper2.c, GestureFinder.a {
+    public class b implements i.g, f.c, c.a {
         public final String a;
 
         /* renamed from: b, reason: collision with root package name */
-        public final CameraLogger f3177b;
+        public final b.o.a.b f3177b;
 
         public class a implements Runnable {
             public final /* synthetic */ float j;
@@ -194,7 +150,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
             @Override // java.lang.Runnable
             public void run() {
-                Iterator<CameraListener> it = CameraView.this.D.iterator();
+                Iterator<b.o.a.a> it = CameraView.this.D.iterator();
                 while (it.hasNext()) {
                     Objects.requireNonNull(it.next());
                 }
@@ -202,12 +158,12 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
 
         /* renamed from: com.otaliastudios.cameraview.CameraView$b$b, reason: collision with other inner class name */
-        public class RunnableC0371b implements Runnable {
+        public class RunnableC0491b implements Runnable {
             public final /* synthetic */ float j;
             public final /* synthetic */ float[] k;
             public final /* synthetic */ PointF[] l;
 
-            public RunnableC0371b(float f, float[] fArr, PointF[] pointFArr) {
+            public RunnableC0491b(float f, float[] fArr, PointF[] pointFArr) {
                 this.j = f;
                 this.k = fArr;
                 this.l = pointFArr;
@@ -215,7 +171,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
             @Override // java.lang.Runnable
             public void run() {
-                Iterator<CameraListener> it = CameraView.this.D.iterator();
+                Iterator<b.o.a.a> it = CameraView.this.D.iterator();
                 while (it.hasNext()) {
                     Objects.requireNonNull(it.next());
                 }
@@ -223,16 +179,16 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
 
         public class c implements Runnable {
-            public final /* synthetic */ Frame2 j;
+            public final /* synthetic */ b.o.a.p.b j;
 
-            public c(Frame2 frame2) {
-                this.j = frame2;
+            public c(b.o.a.p.b bVar) {
+                this.j = bVar;
             }
 
             @Override // java.lang.Runnable
             public void run() {
                 b.this.f3177b.a(0, "dispatchFrame: executing. Passing", Long.valueOf(this.j.a()), "to processors.");
-                Iterator<FrameProcessor> it = CameraView.this.E.iterator();
+                Iterator<b.o.a.p.d> it = CameraView.this.E.iterator();
                 while (it.hasNext()) {
                     try {
                         it.next().a(this.j);
@@ -253,7 +209,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
             @Override // java.lang.Runnable
             public void run() {
-                Iterator<CameraListener> it = CameraView.this.D.iterator();
+                Iterator<b.o.a.a> it = CameraView.this.D.iterator();
                 while (it.hasNext()) {
                     it.next().b(this.j);
                 }
@@ -272,18 +228,18 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
         public class f implements Runnable {
             public final /* synthetic */ PointF j;
-            public final /* synthetic */ Gesture k;
+            public final /* synthetic */ b.o.a.q.a k;
 
-            public f(PointF pointF, Gesture gesture) {
+            public f(PointF pointF, b.o.a.q.a aVar) {
                 this.j = pointF;
-                this.k = gesture;
+                this.k = aVar;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                MarkerLayout markerLayout = CameraView.this.K;
+                b.o.a.s.c cVar = CameraView.this.K;
                 PointF[] pointFArr = {this.j};
-                View view = markerLayout.j.get(1);
+                View view = cVar.j.get(1);
                 if (view != null) {
                     view.clearAnimation();
                     PointF pointF = pointFArr[0];
@@ -292,11 +248,11 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                     view.setTranslationX(width);
                     view.setTranslationY(height);
                 }
-                AutoFocusMarker autoFocusMarker = CameraView.this.C;
-                if (autoFocusMarker != null) {
-                    autoFocusMarker.a(this.k != null ? AutoFocusTrigger.GESTURE : AutoFocusTrigger.METHOD, this.j);
+                b.o.a.s.a aVar = CameraView.this.C;
+                if (aVar != null) {
+                    aVar.a(this.k != null ? b.o.a.s.b.GESTURE : b.o.a.s.b.METHOD, this.j);
                 }
-                Iterator<CameraListener> it = CameraView.this.D.iterator();
+                Iterator<b.o.a.a> it = CameraView.this.D.iterator();
                 while (it.hasNext()) {
                     Objects.requireNonNull(it.next());
                 }
@@ -305,12 +261,12 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
         public class g implements Runnable {
             public final /* synthetic */ boolean j;
-            public final /* synthetic */ Gesture k;
+            public final /* synthetic */ b.o.a.q.a k;
             public final /* synthetic */ PointF l;
 
-            public g(boolean z2, Gesture gesture, PointF pointF) {
+            public g(boolean z2, b.o.a.q.a aVar, PointF pointF) {
                 this.j = z2;
-                this.k = gesture;
+                this.k = aVar;
                 this.l = pointF;
             }
 
@@ -324,11 +280,11 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                     }
                     cameraView.B.play(1);
                 }
-                AutoFocusMarker autoFocusMarker = CameraView.this.C;
-                if (autoFocusMarker != null) {
-                    autoFocusMarker.c(this.k != null ? AutoFocusTrigger.GESTURE : AutoFocusTrigger.METHOD, this.j, this.l);
+                b.o.a.s.a aVar = CameraView.this.C;
+                if (aVar != null) {
+                    aVar.c(this.k != null ? b.o.a.s.b.GESTURE : b.o.a.s.b.METHOD, this.j, this.l);
                 }
-                Iterator<CameraListener> it = CameraView.this.D.iterator();
+                Iterator<b.o.a.a> it = CameraView.this.D.iterator();
                 while (it.hasNext()) {
                     Objects.requireNonNull(it.next());
                 }
@@ -338,7 +294,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         public b() {
             String simpleName = b.class.getSimpleName();
             this.a = simpleName;
-            this.f3177b = new CameraLogger(simpleName);
+            this.f3177b = new b.o.a.b(simpleName);
         }
 
         public void a(CameraException cameraException) {
@@ -346,28 +302,28 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             CameraView.this.u.post(new d(cameraException));
         }
 
-        public void b(@NonNull Frame2 frame2) {
-            this.f3177b.a(0, "dispatchFrame:", Long.valueOf(frame2.a()), "processors:", Integer.valueOf(CameraView.this.E.size()));
+        public void b(@NonNull b.o.a.p.b bVar) {
+            this.f3177b.a(0, "dispatchFrame:", Long.valueOf(bVar.a()), "processors:", Integer.valueOf(CameraView.this.E.size()));
             if (CameraView.this.E.isEmpty()) {
-                frame2.b();
+                bVar.b();
             } else {
-                CameraView.this.v.execute(new c(frame2));
+                CameraView.this.v.execute(new c(bVar));
             }
         }
 
         public void c(float f2, @NonNull float[] fArr, @Nullable PointF[] pointFArr) {
             this.f3177b.a(1, "dispatchOnExposureCorrectionChanged", Float.valueOf(f2));
-            CameraView.this.u.post(new RunnableC0371b(f2, fArr, pointFArr));
+            CameraView.this.u.post(new RunnableC0491b(f2, fArr, pointFArr));
         }
 
-        public void d(@Nullable Gesture gesture, boolean z2, @NonNull PointF pointF) {
-            this.f3177b.a(1, "dispatchOnFocusEnd", gesture, Boolean.valueOf(z2), pointF);
-            CameraView.this.u.post(new g(z2, gesture, pointF));
+        public void d(@Nullable b.o.a.q.a aVar, boolean z2, @NonNull PointF pointF) {
+            this.f3177b.a(1, "dispatchOnFocusEnd", aVar, Boolean.valueOf(z2), pointF);
+            CameraView.this.u.post(new g(z2, aVar, pointF));
         }
 
-        public void e(@Nullable Gesture gesture, @NonNull PointF pointF) {
-            this.f3177b.a(1, "dispatchOnFocusStart", gesture, pointF);
-            CameraView.this.u.post(new f(pointF, gesture));
+        public void e(@Nullable b.o.a.q.a aVar, @NonNull PointF pointF) {
+            this.f3177b.a(1, "dispatchOnFocusStart", aVar, pointF);
+            CameraView.this.u.post(new f(pointF, aVar));
         }
 
         public void f(float f2, @Nullable PointF[] pointFArr) {
@@ -381,14 +337,14 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
 
         public void h() {
-            Size3 size3C = CameraView.this.f3176z.C(Reference2.VIEW);
-            if (size3C == null) {
+            b.o.a.x.b bVarC = CameraView.this.f3176z.C(b.o.a.n.t.b.VIEW);
+            if (bVarC == null) {
                 throw new RuntimeException("Preview stream size should not be null here.");
             }
-            if (size3C.equals(CameraView.this.A)) {
-                this.f3177b.a(1, "onCameraPreviewStreamSizeChanged:", "swallowing because the preview size has not changed.", size3C);
+            if (bVarC.equals(CameraView.this.A)) {
+                this.f3177b.a(1, "onCameraPreviewStreamSizeChanged:", "swallowing because the preview size has not changed.", bVarC);
             } else {
-                this.f3177b.a(1, "onCameraPreviewStreamSizeChanged: posting a requestLayout call.", "Preview stream size:", size3C);
+                this.f3177b.a(1, "onCameraPreviewStreamSizeChanged: posting a requestLayout call.", "Preview stream size:", bVarC);
                 CameraView.this.u.post(new e());
             }
         }
@@ -397,7 +353,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     static {
         String simpleName = CameraView.class.getSimpleName();
         j = simpleName;
-        k = new CameraLogger(simpleName);
+        k = new b.o.a.b(simpleName);
     }
 
     public CameraView(@NonNull Context context, @Nullable AttributeSet attributeSet) {
@@ -405,8 +361,8 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         int i2;
         int i3;
         int i4;
-        SizeSelector sizeSelector;
-        Filter2 noFilter;
+        b.o.a.x.c cVar;
+        b.o.a.o.b cVar2;
         super(context, attributeSet);
         this.o = new HashMap<>(4);
         this.D = new CopyOnWriteArrayList();
@@ -418,33 +374,33 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
         setWillNotDraw(false);
         TypedArray typedArrayObtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, R.c.CameraView, 0, 0);
-        int integer = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraPreview, Preview.GL_SURFACE.g());
+        int integer = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraPreview, k.GL_SURFACE.g());
         int i5 = R.c.CameraView_cameraFacing;
-        Facing facing = Facing.BACK;
-        if (!CameraUtils2.a(facing)) {
-            Facing facing2 = Facing.FRONT;
-            if (CameraUtils2.a(facing2)) {
-                facing = facing2;
+        b.o.a.m.e eVar = b.o.a.m.e.BACK;
+        if (!b.o.a.e.a(eVar)) {
+            b.o.a.m.e eVar2 = b.o.a.m.e.FRONT;
+            if (b.o.a.e.a(eVar2)) {
+                eVar = eVar2;
             }
         }
-        int integer2 = typedArrayObtainStyledAttributes.getInteger(i5, facing.g());
-        int integer3 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraFlash, Flash.OFF.g());
-        int integer4 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGrid, Grid.OFF.g());
-        int integer5 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraWhiteBalance, WhiteBalance.AUTO.g());
-        int integer6 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraMode, Mode3.PICTURE.g());
-        int integer7 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraHdr, Hdr.OFF.g());
-        int integer8 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraAudio, Audio.ON.g());
-        int integer9 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraVideoCodec, VideoCodec.DEVICE_DEFAULT.g());
-        int integer10 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraAudioCodec, AudioCodec.DEVICE_DEFAULT.g());
-        int integer11 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraEngine, Engine.CAMERA1.g());
-        int integer12 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraPictureFormat, PictureFormat.JPEG.g());
+        int integer2 = typedArrayObtainStyledAttributes.getInteger(i5, eVar.g());
+        int integer3 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraFlash, b.o.a.m.f.OFF.g());
+        int integer4 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGrid, b.o.a.m.g.OFF.g());
+        int integer5 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraWhiteBalance, m.AUTO.g());
+        int integer6 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraMode, b.o.a.m.i.PICTURE.g());
+        int integer7 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraHdr, h.OFF.g());
+        int integer8 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraAudio, b.o.a.m.a.ON.g());
+        int integer9 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraVideoCodec, l.DEVICE_DEFAULT.g());
+        int integer10 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraAudioCodec, b.o.a.m.b.DEVICE_DEFAULT.g());
+        int integer11 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraEngine, b.o.a.m.d.CAMERA1.g());
+        int integer12 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraPictureFormat, j.JPEG.g());
         boolean z2 = typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraPlaySounds, true);
         boolean z3 = typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraUseDeviceOrientation, true);
         this.L = typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraExperimental, false);
         this.n = typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraRequestPermissions, true);
-        this.p = Preview.f(integer);
-        this.q = Engine.f(integer11);
-        int color = typedArrayObtainStyledAttributes.getColor(R.c.CameraView_cameraGridColor, GridLinesLayout.j);
+        this.p = k.f(integer);
+        this.q = b.o.a.m.d.f(integer11);
+        int color = typedArrayObtainStyledAttributes.getColor(R.c.CameraView_cameraGridColor, b.o.a.r.d.j);
         long j2 = (long) typedArrayObtainStyledAttributes.getFloat(R.c.CameraView_cameraVideoMaxSize, 0.0f);
         int integer13 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraVideoMaxDuration, 0);
         int integer14 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraVideoBitRate, 0);
@@ -467,139 +423,139 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         if (typedArrayObtainStyledAttributes.hasValue(i6)) {
             i = integer8;
             i2 = 0;
-            arrayList.add(f.N0(typedArrayObtainStyledAttributes.getInteger(i6, 0)));
+            arrayList.add(b.i.a.f.e.o.f.N0(typedArrayObtainStyledAttributes.getInteger(i6, 0)));
         } else {
             i = integer8;
             i2 = 0;
         }
         int i7 = R.c.CameraView_cameraPictureSizeMaxWidth;
         if (typedArrayObtainStyledAttributes.hasValue(i7)) {
-            arrayList.add(f.L0(typedArrayObtainStyledAttributes.getInteger(i7, i2)));
+            arrayList.add(b.i.a.f.e.o.f.L0(typedArrayObtainStyledAttributes.getInteger(i7, i2)));
         }
         int i8 = R.c.CameraView_cameraPictureSizeMinHeight;
         if (typedArrayObtainStyledAttributes.hasValue(i8)) {
-            arrayList.add(f.M0(typedArrayObtainStyledAttributes.getInteger(i8, i2)));
+            arrayList.add(b.i.a.f.e.o.f.M0(typedArrayObtainStyledAttributes.getInteger(i8, i2)));
         }
         int i9 = R.c.CameraView_cameraPictureSizeMaxHeight;
         if (typedArrayObtainStyledAttributes.hasValue(i9)) {
-            arrayList.add(f.K0(typedArrayObtainStyledAttributes.getInteger(i9, i2)));
+            arrayList.add(b.i.a.f.e.o.f.K0(typedArrayObtainStyledAttributes.getInteger(i9, i2)));
         }
         int i10 = R.c.CameraView_cameraPictureSizeMinArea;
         if (typedArrayObtainStyledAttributes.hasValue(i10)) {
-            arrayList.add(f.D1(new SizeSelectors5(typedArrayObtainStyledAttributes.getInteger(i10, i2))));
+            arrayList.add(b.i.a.f.e.o.f.D1(new b.o.a.x.h(typedArrayObtainStyledAttributes.getInteger(i10, i2))));
         }
         int i11 = R.c.CameraView_cameraPictureSizeMaxArea;
         if (typedArrayObtainStyledAttributes.hasValue(i11)) {
-            arrayList.add(f.D1(new SizeSelectors4(typedArrayObtainStyledAttributes.getInteger(i11, 0))));
+            arrayList.add(b.i.a.f.e.o.f.D1(new b.o.a.x.g(typedArrayObtainStyledAttributes.getInteger(i11, 0))));
         }
         int i12 = R.c.CameraView_cameraPictureSizeAspectRatio;
         if (typedArrayObtainStyledAttributes.hasValue(i12)) {
             i3 = integer7;
-            arrayList.add(f.D1(new SizeSelectors(AspectRatio2.h(typedArrayObtainStyledAttributes.getString(i12)).i(), 0.0f)));
+            arrayList.add(b.i.a.f.e.o.f.D1(new b.o.a.x.d(b.o.a.x.a.h(typedArrayObtainStyledAttributes.getString(i12)).i(), 0.0f)));
         } else {
             i3 = integer7;
         }
         if (typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraPictureSizeSmallest, false)) {
-            arrayList.add(new SizeSelectors3());
+            arrayList.add(new b.o.a.x.f());
         }
         if (typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraPictureSizeBiggest, false)) {
-            arrayList.add(new SizeSelectors2());
+            arrayList.add(new b.o.a.x.e());
         }
-        SizeSelector sizeSelectorG = !arrayList.isEmpty() ? f.g((SizeSelector[]) arrayList.toArray(new SizeSelector[0])) : new SizeSelectors2();
+        b.o.a.x.c cVarG = !arrayList.isEmpty() ? b.i.a.f.e.o.f.g((b.o.a.x.c[]) arrayList.toArray(new b.o.a.x.c[0])) : new b.o.a.x.e();
         ArrayList arrayList2 = new ArrayList(3);
         int i13 = R.c.CameraView_cameraVideoSizeMinWidth;
         if (typedArrayObtainStyledAttributes.hasValue(i13)) {
             i4 = 0;
-            arrayList2.add(f.N0(typedArrayObtainStyledAttributes.getInteger(i13, 0)));
+            arrayList2.add(b.i.a.f.e.o.f.N0(typedArrayObtainStyledAttributes.getInteger(i13, 0)));
         } else {
             i4 = 0;
         }
         int i14 = R.c.CameraView_cameraVideoSizeMaxWidth;
         if (typedArrayObtainStyledAttributes.hasValue(i14)) {
-            arrayList2.add(f.L0(typedArrayObtainStyledAttributes.getInteger(i14, i4)));
+            arrayList2.add(b.i.a.f.e.o.f.L0(typedArrayObtainStyledAttributes.getInteger(i14, i4)));
         }
         int i15 = R.c.CameraView_cameraVideoSizeMinHeight;
         if (typedArrayObtainStyledAttributes.hasValue(i15)) {
-            arrayList2.add(f.M0(typedArrayObtainStyledAttributes.getInteger(i15, i4)));
+            arrayList2.add(b.i.a.f.e.o.f.M0(typedArrayObtainStyledAttributes.getInteger(i15, i4)));
         }
         int i16 = R.c.CameraView_cameraVideoSizeMaxHeight;
         if (typedArrayObtainStyledAttributes.hasValue(i16)) {
-            arrayList2.add(f.K0(typedArrayObtainStyledAttributes.getInteger(i16, i4)));
+            arrayList2.add(b.i.a.f.e.o.f.K0(typedArrayObtainStyledAttributes.getInteger(i16, i4)));
         }
         int i17 = R.c.CameraView_cameraVideoSizeMinArea;
         if (typedArrayObtainStyledAttributes.hasValue(i17)) {
-            arrayList2.add(f.D1(new SizeSelectors5(typedArrayObtainStyledAttributes.getInteger(i17, i4))));
+            arrayList2.add(b.i.a.f.e.o.f.D1(new b.o.a.x.h(typedArrayObtainStyledAttributes.getInteger(i17, i4))));
         }
         int i18 = R.c.CameraView_cameraVideoSizeMaxArea;
         if (typedArrayObtainStyledAttributes.hasValue(i18)) {
-            arrayList2.add(f.D1(new SizeSelectors4(typedArrayObtainStyledAttributes.getInteger(i18, 0))));
+            arrayList2.add(b.i.a.f.e.o.f.D1(new b.o.a.x.g(typedArrayObtainStyledAttributes.getInteger(i18, 0))));
         }
         int i19 = R.c.CameraView_cameraVideoSizeAspectRatio;
         if (typedArrayObtainStyledAttributes.hasValue(i19)) {
-            sizeSelector = sizeSelectorG;
-            arrayList2.add(f.D1(new SizeSelectors(AspectRatio2.h(typedArrayObtainStyledAttributes.getString(i19)).i(), 0.0f)));
+            cVar = cVarG;
+            arrayList2.add(b.i.a.f.e.o.f.D1(new b.o.a.x.d(b.o.a.x.a.h(typedArrayObtainStyledAttributes.getString(i19)).i(), 0.0f)));
         } else {
-            sizeSelector = sizeSelectorG;
+            cVar = cVarG;
         }
         if (typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraVideoSizeSmallest, false)) {
-            arrayList2.add(new SizeSelectors3());
+            arrayList2.add(new b.o.a.x.f());
         }
         if (typedArrayObtainStyledAttributes.getBoolean(R.c.CameraView_cameraVideoSizeBiggest, false)) {
-            arrayList2.add(new SizeSelectors2());
+            arrayList2.add(new b.o.a.x.e());
         }
-        SizeSelector sizeSelectorG2 = !arrayList2.isEmpty() ? f.g((SizeSelector[]) arrayList2.toArray(new SizeSelector[0])) : new SizeSelectors2();
+        b.o.a.x.c cVarG2 = !arrayList2.isEmpty() ? b.i.a.f.e.o.f.g((b.o.a.x.c[]) arrayList2.toArray(new b.o.a.x.c[0])) : new b.o.a.x.e();
         int i20 = R.c.CameraView_cameraGestureTap;
-        GestureAction gestureAction = GestureAction.j;
-        int integer24 = typedArrayObtainStyledAttributes.getInteger(i20, gestureAction.h());
-        int integer25 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGestureLongTap, gestureAction.h());
-        int integer26 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGesturePinch, gestureAction.h());
-        int integer27 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGestureScrollHorizontal, gestureAction.h());
-        int integer28 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGestureScrollVertical, gestureAction.h());
+        b.o.a.q.b bVar = b.o.a.q.b.j;
+        int integer24 = typedArrayObtainStyledAttributes.getInteger(i20, bVar.h());
+        int integer25 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGestureLongTap, bVar.h());
+        int integer26 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGesturePinch, bVar.h());
+        int integer27 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGestureScrollHorizontal, bVar.h());
+        int integer28 = typedArrayObtainStyledAttributes.getInteger(R.c.CameraView_cameraGestureScrollVertical, bVar.h());
         String string = typedArrayObtainStyledAttributes.getString(R.c.CameraView_cameraAutoFocusMarker);
-        AutoFocusMarker autoFocusMarker = null;
+        b.o.a.s.a aVar = null;
         if (string != null) {
             try {
-                autoFocusMarker = (AutoFocusMarker) Class.forName(string).newInstance();
+                aVar = (b.o.a.s.a) Class.forName(string).newInstance();
             } catch (Exception unused) {
             }
         }
         try {
-            noFilter = (Filter2) Class.forName(typedArrayObtainStyledAttributes.getString(R.c.CameraView_cameraFilter)).newInstance();
+            cVar2 = (b.o.a.o.b) Class.forName(typedArrayObtainStyledAttributes.getString(R.c.CameraView_cameraFilter)).newInstance();
         } catch (Exception unused2) {
-            noFilter = new NoFilter();
+            cVar2 = new b.o.a.o.c();
         }
         typedArrayObtainStyledAttributes.recycle();
         this.w = new b();
         this.u = new Handler(Looper.getMainLooper());
-        this.G = new PinchGestureFinder(this.w);
-        this.H = new TapGestureFinder(this.w);
-        this.I = new ScrollGestureFinder(this.w);
-        this.J = new GridLinesLayout(context);
-        this.N = new OverlayLayout(context);
-        this.K = new MarkerLayout(context);
+        this.G = new e(this.w);
+        this.H = new g(this.w);
+        this.I = new b.o.a.q.f(this.w);
+        this.J = new b.o.a.r.d(context);
+        this.N = new b.o.a.u.c(context);
+        this.K = new b.o.a.s.c(context);
         addView(this.J);
         addView(this.K);
         addView(this.N);
         b();
         setPlaySounds(z2);
         setUseDeviceOrientation(z3);
-        setGrid(Grid.f(integer4));
+        setGrid(b.o.a.m.g.f(integer4));
         setGridColor(color);
         setDrawHardwareOverlays(z7);
-        setFacing(Facing.f(integer2));
-        setFlash(Flash.f(integer3));
-        setMode(Mode3.f(integer6));
-        setWhiteBalance(WhiteBalance.f(integer5));
-        setHdr(Hdr.f(i3));
-        setAudio(Audio.f(i));
+        setFacing(b.o.a.m.e.f(integer2));
+        setFlash(b.o.a.m.f.f(integer3));
+        setMode(b.o.a.m.i.f(integer6));
+        setWhiteBalance(m.f(integer5));
+        setHdr(h.f(i3));
+        setAudio(b.o.a.m.a.f(i));
         setAudioBitRate(integer15);
-        setAudioCodec(AudioCodec.f(integer10));
-        setPictureSize(sizeSelector);
+        setAudioCodec(b.o.a.m.b.f(integer10));
+        setPictureSize(cVar);
         setPictureMetering(z5);
         setPictureSnapshotMetering(z6);
-        setPictureFormat(PictureFormat.f(integer12));
-        setVideoSize(sizeSelectorG2);
-        setVideoCodec(VideoCodec.f(integer9));
+        setPictureFormat(j.f(integer12));
+        setVideoSize(cVarG2);
+        setVideoCodec(l.f(integer9));
         setVideoMaxSize(j2);
         setVideoMaxDuration(integer13);
         setVideoBitRate(integer14);
@@ -613,22 +569,22 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         setFrameProcessingFormat(integer21);
         setFrameProcessingPoolSize(integer22);
         setFrameProcessingExecutors(integer23);
-        e(Gesture.k, GestureAction.f(integer24));
-        e(Gesture.l, GestureAction.f(integer25));
-        e(Gesture.j, GestureAction.f(integer26));
-        e(Gesture.m, GestureAction.f(integer27));
-        e(Gesture.n, GestureAction.f(integer28));
-        setAutoFocusMarker(autoFocusMarker);
-        setFilter(noFilter);
-        this.f3175y = new OrientationHelper2(context, this.w);
+        e(b.o.a.q.a.k, b.o.a.q.b.f(integer24));
+        e(b.o.a.q.a.l, b.o.a.q.b.f(integer25));
+        e(b.o.a.q.a.j, b.o.a.q.b.f(integer26));
+        e(b.o.a.q.a.m, b.o.a.q.b.f(integer27));
+        e(b.o.a.q.a.n, b.o.a.q.b.f(integer28));
+        setAutoFocusMarker(aVar);
+        setFilter(cVar2);
+        this.f3175y = new b.o.a.r.f(context, this.w);
     }
 
     @SuppressLint({"NewApi"})
-    public boolean a(@NonNull Audio audio) {
-        Audio audio2 = Audio.STEREO;
-        Audio audio3 = Audio.MONO;
-        Audio audio4 = Audio.ON;
-        if (audio == audio4 || audio == audio3 || audio == audio2) {
+    public boolean a(@NonNull b.o.a.m.a aVar) {
+        b.o.a.m.a aVar2 = b.o.a.m.a.STEREO;
+        b.o.a.m.a aVar3 = b.o.a.m.a.MONO;
+        b.o.a.m.a aVar4 = b.o.a.m.a.ON;
+        if (aVar == aVar4 || aVar == aVar3 || aVar == aVar2) {
             try {
                 for (String str : getContext().getPackageManager().getPackageInfo(getContext().getPackageName(), 4096).requestedPermissions) {
                     if (!str.equals("android.permission.RECORD_AUDIO")) {
@@ -642,7 +598,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             return true;
         }
         Context context = getContext();
-        boolean z2 = audio == audio4 || audio == audio3 || audio == audio2;
+        boolean z2 = aVar == aVar4 || aVar == aVar3 || aVar == aVar2;
         boolean z3 = context.checkSelfPermission("android.permission.CAMERA") != 0;
         boolean z4 = z2 && context.checkSelfPermission("android.permission.RECORD_AUDIO") != 0;
         if (!z3 && !z4) {
@@ -673,7 +629,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     public void addView(View view, int i, ViewGroup.LayoutParams layoutParams) {
         if (!this.M) {
             Objects.requireNonNull(this.N);
-            if (layoutParams instanceof OverlayLayout.a) {
+            if (layoutParams instanceof c.a) {
                 this.N.addView(view, layoutParams);
                 return;
             }
@@ -682,25 +638,25 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     public final void b() {
-        CameraEngine camera1Engine2;
-        CameraLogger cameraLogger = k;
-        cameraLogger.a(2, "doInstantiateEngine:", "instantiating. engine:", this.q);
-        Engine engine = this.q;
-        b bVar = this.w;
-        if (this.L && engine == Engine.CAMERA2) {
-            camera1Engine2 = new Camera2Engine(bVar);
+        i bVar;
+        b.o.a.b bVar2 = k;
+        bVar2.a(2, "doInstantiateEngine:", "instantiating. engine:", this.q);
+        b.o.a.m.d dVar = this.q;
+        b bVar3 = this.w;
+        if (this.L && dVar == b.o.a.m.d.CAMERA2) {
+            bVar = new b.o.a.n.d(bVar3);
         } else {
-            this.q = Engine.CAMERA1;
-            camera1Engine2 = new Camera1Engine2(bVar);
+            this.q = b.o.a.m.d.CAMERA1;
+            bVar = new b.o.a.n.b(bVar3);
         }
-        this.f3176z = camera1Engine2;
-        cameraLogger.a(2, "doInstantiateEngine:", "instantiated. engine:", camera1Engine2.getClass().getSimpleName());
+        this.f3176z = bVar;
+        bVar2.a(2, "doInstantiateEngine:", "instantiated. engine:", bVar.getClass().getSimpleName());
         this.f3176z.o0(this.N);
     }
 
     public final boolean c() {
-        CameraEngine cameraEngine = this.f3176z;
-        return cameraEngine.n.f == CameraState2.OFF && !cameraEngine.O();
+        i iVar = this.f3176z;
+        return iVar.n.f == b.o.a.n.v.e.OFF && !iVar.O();
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
@@ -708,25 +664,25 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         if (this.M) {
             return;
         }
-        OrientationHelper2 orientationHelper2 = this.f3175y;
-        if (orientationHelper2.h) {
-            orientationHelper2.h = false;
-            orientationHelper2.d.disable();
-            ((DisplayManager) orientationHelper2.f1951b.getSystemService("display")).unregisterDisplayListener(orientationHelper2.f);
-            orientationHelper2.g = -1;
-            orientationHelper2.e = -1;
+        b.o.a.r.f fVar = this.f3175y;
+        if (fVar.h) {
+            fVar.h = false;
+            fVar.d.disable();
+            ((DisplayManager) fVar.f1951b.getSystemService("display")).unregisterDisplayListener(fVar.f);
+            fVar.g = -1;
+            fVar.e = -1;
         }
         this.f3176z.L0(false);
-        CameraPreview cameraPreview = this.f3174x;
-        if (cameraPreview != null) {
-            cameraPreview.p();
+        b.o.a.w.a aVar = this.f3174x;
+        if (aVar != null) {
+            aVar.p();
         }
     }
 
     public boolean d() {
-        CameraState2 cameraState2 = this.f3176z.n.f;
-        CameraState2 cameraState22 = CameraState2.ENGINE;
-        return cameraState2.f(cameraState22) && this.f3176z.n.g.f(cameraState22);
+        b.o.a.n.v.e eVar = this.f3176z.n.f;
+        b.o.a.n.v.e eVar2 = b.o.a.n.v.e.ENGINE;
+        return eVar.f(eVar2) && this.f3176z.n.g.f(eVar2);
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
@@ -741,31 +697,31 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             this.f3176z.k0(false);
         }
         this.f3176z.d(true, 0);
-        CameraPreview cameraPreview = this.f3174x;
-        if (cameraPreview != null) {
-            cameraPreview.o();
+        b.o.a.w.a aVar = this.f3174x;
+        if (aVar != null) {
+            aVar.o();
         }
     }
 
-    public boolean e(@NonNull Gesture gesture, @NonNull GestureAction gestureAction) {
-        GestureAction gestureAction2 = GestureAction.j;
-        if (!gesture.f(gestureAction)) {
-            e(gesture, gestureAction2);
+    public boolean e(@NonNull b.o.a.q.a aVar, @NonNull b.o.a.q.b bVar) {
+        b.o.a.q.b bVar2 = b.o.a.q.b.j;
+        if (!aVar.f(bVar)) {
+            e(aVar, bVar2);
             return false;
         }
-        this.o.put(gesture, gestureAction);
-        int iOrdinal = gesture.ordinal();
+        this.o.put(aVar, bVar);
+        int iOrdinal = aVar.ordinal();
         if (iOrdinal == 0) {
-            this.G.a = this.o.get(Gesture.j) != gestureAction2;
+            this.G.a = this.o.get(b.o.a.q.a.j) != bVar2;
         } else if (iOrdinal == 1 || iOrdinal == 2) {
-            this.H.a = (this.o.get(Gesture.k) == gestureAction2 && this.o.get(Gesture.l) == gestureAction2) ? false : true;
+            this.H.a = (this.o.get(b.o.a.q.a.k) == bVar2 && this.o.get(b.o.a.q.a.l) == bVar2) ? false : true;
         } else if (iOrdinal == 3 || iOrdinal == 4) {
-            this.I.a = (this.o.get(Gesture.m) == gestureAction2 && this.o.get(Gesture.n) == gestureAction2) ? false : true;
+            this.I.a = (this.o.get(b.o.a.q.a.m) == bVar2 && this.o.get(b.o.a.q.a.n) == bVar2) ? false : true;
         }
         this.t = 0;
-        Iterator<GestureAction> it = this.o.values().iterator();
+        Iterator<b.o.a.q.b> it = this.o.values().iterator();
         while (it.hasNext()) {
-            this.t += it.next() == gestureAction2 ? 0 : 1;
+            this.t += it.next() == bVar2 ? 0 : 1;
         }
         return true;
     }
@@ -783,42 +739,42 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         return "EXACTLY";
     }
 
-    public final void g(@NonNull GestureFinder gestureFinder, @NonNull CameraOptions cameraOptions) {
-        Gesture gesture = gestureFinder.f1947b;
-        GestureAction gestureAction = this.o.get(gesture);
-        PointF[] pointFArr = gestureFinder.c;
-        switch (gestureAction.ordinal()) {
+    public final void g(@NonNull b.o.a.q.c cVar, @NonNull b.o.a.c cVar2) {
+        b.o.a.q.a aVar = cVar.f1947b;
+        b.o.a.q.b bVar = this.o.get(aVar);
+        PointF[] pointFArr = cVar.c;
+        switch (bVar.ordinal()) {
             case 1:
                 float width = getWidth();
                 float height = getHeight();
-                RectF rectFA = MeteringRegions.a(pointFArr[0], width * 0.05f, 0.05f * height);
+                RectF rectFA = b.o.a.t.b.a(pointFArr[0], width * 0.05f, 0.05f * height);
                 ArrayList arrayList = new ArrayList();
                 PointF pointF = new PointF(rectFA.centerX(), rectFA.centerY());
                 float fWidth = rectFA.width();
                 float fHeight = rectFA.height();
-                arrayList.add(new MeteringRegion(rectFA, 1000));
-                arrayList.add(new MeteringRegion(MeteringRegions.a(pointF, fWidth * 1.5f, fHeight * 1.5f), Math.round(1000 * 0.1f)));
+                arrayList.add(new b.o.a.t.a(rectFA, 1000));
+                arrayList.add(new b.o.a.t.a(b.o.a.t.b.a(pointF, fWidth * 1.5f, fHeight * 1.5f), Math.round(1000 * 0.1f)));
                 ArrayList arrayList2 = new ArrayList();
                 Iterator it = arrayList.iterator();
                 while (it.hasNext()) {
-                    MeteringRegion meteringRegion = (MeteringRegion) it.next();
-                    Objects.requireNonNull(meteringRegion);
+                    b.o.a.t.a aVar2 = (b.o.a.t.a) it.next();
+                    Objects.requireNonNull(aVar2);
                     RectF rectF = new RectF(0.0f, 0.0f, width, height);
                     RectF rectF2 = new RectF();
-                    rectF2.set(Math.max(rectF.left, meteringRegion.j.left), Math.max(rectF.top, meteringRegion.j.top), Math.min(rectF.right, meteringRegion.j.right), Math.min(rectF.bottom, meteringRegion.j.bottom));
-                    arrayList2.add(new MeteringRegion(rectF2, meteringRegion.k));
+                    rectF2.set(Math.max(rectF.left, aVar2.j.left), Math.max(rectF.top, aVar2.j.top), Math.min(rectF.right, aVar2.j.right), Math.min(rectF.bottom, aVar2.j.bottom));
+                    arrayList2.add(new b.o.a.t.a(rectF2, aVar2.k));
                 }
-                this.f3176z.I0(gesture, new MeteringRegions(arrayList2), pointFArr[0]);
+                this.f3176z.I0(aVar, new b.o.a.t.b(arrayList2), pointFArr[0]);
                 break;
             case 2:
-                this.f3176z.O0(new PictureResult.a());
+                this.f3176z.O0(new l.a());
                 break;
             case 3:
-                this.f3176z.P0(new PictureResult.a());
+                this.f3176z.P0(new l.a());
                 break;
             case 4:
                 float fN = this.f3176z.N();
-                float fA = gestureFinder.a(fN, 0.0f, 1.0f);
+                float fA = cVar.a(fN, 0.0f, 1.0f);
                 if (fA != fN) {
                     this.f3176z.G0(fA, pointFArr, true);
                     break;
@@ -826,32 +782,32 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                 break;
             case 5:
                 float fK = this.f3176z.k();
-                float f = cameraOptions.m;
-                float f2 = cameraOptions.n;
-                float fA2 = gestureFinder.a(fK, f, f2);
+                float f = cVar2.m;
+                float f2 = cVar2.n;
+                float fA2 = cVar.a(fK, f, f2);
                 if (fA2 != fK) {
                     this.f3176z.d0(fA2, new float[]{f, f2}, pointFArr, true);
                     break;
                 }
                 break;
             case 6:
-                if (getFilter() instanceof OneParameterFilter) {
-                    OneParameterFilter oneParameterFilter = (OneParameterFilter) getFilter();
-                    float fI = oneParameterFilter.i();
-                    float fA3 = gestureFinder.a(fI, 0.0f, 1.0f);
+                if (getFilter() instanceof b.o.a.o.d) {
+                    b.o.a.o.d dVar = (b.o.a.o.d) getFilter();
+                    float fI = dVar.i();
+                    float fA3 = cVar.a(fI, 0.0f, 1.0f);
                     if (fA3 != fI) {
-                        oneParameterFilter.d(fA3);
+                        dVar.d(fA3);
                         break;
                     }
                 }
                 break;
             case 7:
-                if (getFilter() instanceof TwoParameterFilter) {
-                    TwoParameterFilter twoParameterFilter = (TwoParameterFilter) getFilter();
-                    float fG = twoParameterFilter.g();
-                    float fA4 = gestureFinder.a(fG, 0.0f, 1.0f);
+                if (getFilter() instanceof b.o.a.o.e) {
+                    b.o.a.o.e eVar = (b.o.a.o.e) getFilter();
+                    float fG = eVar.g();
+                    float fA4 = cVar.a(fG, 0.0f, 1.0f);
                     if (fA4 != fG) {
-                        twoParameterFilter.b(fA4);
+                        eVar.b(fA4);
                         break;
                     }
                 }
@@ -865,7 +821,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Audio getAudio() {
+    public b.o.a.m.a getAudio() {
         return this.f3176z.f();
     }
 
@@ -874,7 +830,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public AudioCodec getAudioCodec() {
+    public b.o.a.m.b getAudioCodec() {
         return this.f3176z.h();
     }
 
@@ -883,7 +839,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @Nullable
-    public CameraOptions getCameraOptions() {
+    public b.o.a.c getCameraOptions() {
         return this.f3176z.j();
     }
 
@@ -892,7 +848,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Engine getEngine() {
+    public b.o.a.m.d getEngine() {
         return this.q;
     }
 
@@ -901,26 +857,26 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Facing getFacing() {
+    public b.o.a.m.e getFacing() {
         return this.f3176z.l();
     }
 
     @NonNull
-    public Filter2 getFilter() {
+    public b.o.a.o.b getFilter() {
         Object obj = this.f3174x;
         if (obj == null) {
             return this.r;
         }
-        if (obj instanceof FilterCameraPreview) {
-            return ((FilterCameraPreview) obj).c();
+        if (obj instanceof b.o.a.w.b) {
+            return ((b.o.a.w.b) obj).c();
         }
-        StringBuilder sbU = outline.U("Filters are only supported by the GL_SURFACE preview. Current:");
+        StringBuilder sbU = b.d.b.a.a.U("Filters are only supported by the GL_SURFACE preview. Current:");
         sbU.append(this.p);
         throw new RuntimeException(sbU.toString());
     }
 
     @NonNull
-    public Flash getFlash() {
+    public b.o.a.m.f getFlash() {
         return this.f3176z.m();
     }
 
@@ -945,7 +901,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Grid getGrid() {
+    public b.o.a.m.g getGrid() {
         return this.J.getGridMode();
     }
 
@@ -954,7 +910,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Hdr getHdr() {
+    public h getHdr() {
         return this.f3176z.r();
     }
 
@@ -964,12 +920,12 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Mode3 getMode() {
+    public b.o.a.m.i getMode() {
         return this.f3176z.t();
     }
 
     @NonNull
-    public PictureFormat getPictureFormat() {
+    public j getPictureFormat() {
         return this.f3176z.u();
     }
 
@@ -978,8 +934,8 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @Nullable
-    public Size3 getPictureSize() {
-        return this.f3176z.w(Reference2.OUTPUT);
+    public b.o.a.x.b getPictureSize() {
+        return this.f3176z.w(b.o.a.n.t.b.OUTPUT);
     }
 
     public boolean getPictureSnapshotMetering() {
@@ -991,7 +947,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public Preview getPreview() {
+    public k getPreview() {
         return this.p;
     }
 
@@ -1012,22 +968,22 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @Nullable
-    public Size3 getSnapshotSize() {
-        Size3 size3 = null;
+    public b.o.a.x.b getSnapshotSize() {
+        b.o.a.x.b bVar = null;
         if (getWidth() != 0 && getHeight() != 0) {
-            CameraEngine cameraEngine = this.f3176z;
-            Reference2 reference2 = Reference2.VIEW;
-            Size3 size3F = cameraEngine.F(reference2);
-            if (size3F == null) {
+            i iVar = this.f3176z;
+            b.o.a.n.t.b bVar2 = b.o.a.n.t.b.VIEW;
+            b.o.a.x.b bVarF = iVar.F(bVar2);
+            if (bVarF == null) {
                 return null;
             }
-            Rect rectL = f.L(size3F, AspectRatio2.f(getWidth(), getHeight()));
-            size3 = new Size3(rectL.width(), rectL.height());
-            if (this.f3176z.e().b(reference2, Reference2.OUTPUT)) {
-                return size3.f();
+            Rect rectL = b.i.a.f.e.o.f.L(bVarF, b.o.a.x.a.f(getWidth(), getHeight()));
+            bVar = new b.o.a.x.b(rectL.width(), rectL.height());
+            if (this.f3176z.e().b(bVar2, b.o.a.n.t.b.OUTPUT)) {
+                return bVar.f();
             }
         }
-        return size3;
+        return bVar;
     }
 
     public boolean getUseDeviceOrientation() {
@@ -1039,7 +995,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @NonNull
-    public VideoCodec getVideoCodec() {
+    public b.o.a.m.l getVideoCodec() {
         return this.f3176z.H();
     }
 
@@ -1052,12 +1008,12 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @Nullable
-    public Size3 getVideoSize() {
-        return this.f3176z.K(Reference2.OUTPUT);
+    public b.o.a.x.b getVideoSize() {
+        return this.f3176z.K(b.o.a.n.t.b.OUTPUT);
     }
 
     @NonNull
-    public WhiteBalance getWhiteBalance() {
+    public m getWhiteBalance() {
         return this.f3176z.M();
     }
 
@@ -1067,28 +1023,28 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
-        CameraPreview surfaceCameraPreview2;
+        b.o.a.w.a hVar;
         super.onAttachedToWindow();
         if (!this.M && this.f3174x == null) {
-            CameraLogger cameraLogger = k;
-            cameraLogger.a(2, "doInstantiateEngine:", "instantiating. preview:", this.p);
-            Preview preview = this.p;
+            b.o.a.b bVar = k;
+            bVar.a(2, "doInstantiateEngine:", "instantiating. preview:", this.p);
+            k kVar = this.p;
             Context context = getContext();
-            int iOrdinal = preview.ordinal();
+            int iOrdinal = kVar.ordinal();
             if (iOrdinal == 0) {
-                surfaceCameraPreview2 = new SurfaceCameraPreview2(context, this);
+                hVar = new b.o.a.w.h(context, this);
             } else if (iOrdinal == 1 && isHardwareAccelerated()) {
-                surfaceCameraPreview2 = new TextureCameraPreview2(context, this);
+                hVar = new b.o.a.w.j(context, this);
             } else {
-                this.p = Preview.GL_SURFACE;
-                surfaceCameraPreview2 = new GlCameraPreview2(context, this);
+                this.p = k.GL_SURFACE;
+                hVar = new b.o.a.w.d(context, this);
             }
-            this.f3174x = surfaceCameraPreview2;
-            cameraLogger.a(2, "doInstantiateEngine:", "instantiated. preview:", surfaceCameraPreview2.getClass().getSimpleName());
+            this.f3174x = hVar;
+            bVar.a(2, "doInstantiateEngine:", "instantiated. preview:", hVar.getClass().getSimpleName());
             this.f3176z.u0(this.f3174x);
-            Filter2 filter2 = this.r;
-            if (filter2 != null) {
-                setFilter(filter2);
+            b.o.a.o.b bVar2 = this.r;
+            if (bVar2 != null) {
+                setFilter(bVar2);
                 this.r = null;
             }
         }
@@ -1111,9 +1067,9 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             super.onMeasure(View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(i), BasicMeasure.EXACTLY), View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(i2), BasicMeasure.EXACTLY));
             return;
         }
-        Size3 size3C = this.f3176z.C(Reference2.VIEW);
-        this.A = size3C;
-        if (size3C == null) {
+        b.o.a.x.b bVarC = this.f3176z.C(b.o.a.n.t.b.VIEW);
+        this.A = bVarC;
+        if (bVarC == null) {
             k.a(2, "onMeasure:", "surface is not ready. Calling default behavior.");
             super.onMeasure(i, i2);
             return;
@@ -1122,9 +1078,9 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         int mode2 = View.MeasureSpec.getMode(i2);
         int size = View.MeasureSpec.getSize(i);
         int size2 = View.MeasureSpec.getSize(i2);
-        Size3 size3 = this.A;
-        float f = size3.j;
-        float f2 = size3.k;
+        b.o.a.x.b bVar = this.A;
+        float f = bVar.j;
+        float f2 = bVar.k;
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         if (this.f3174x.u()) {
             if (mode == Integer.MIN_VALUE && layoutParams.width == -1) {
@@ -1141,23 +1097,23 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                 mode2 = Integer.MIN_VALUE;
             }
         }
-        CameraLogger cameraLogger = k;
-        StringBuilder sbV = outline.V("requested dimensions are (", size, "[");
+        b.o.a.b bVar2 = k;
+        StringBuilder sbV = b.d.b.a.a.V("requested dimensions are (", size, "[");
         sbV.append(f(mode));
         sbV.append("]x");
         sbV.append(size2);
         sbV.append("[");
         sbV.append(f(mode2));
         sbV.append("])");
-        cameraLogger.a(1, "onMeasure:", sbV.toString());
-        cameraLogger.a(1, "onMeasure:", "previewSize is", "(" + f + "x" + f2 + ")");
+        bVar2.a(1, "onMeasure:", sbV.toString());
+        bVar2.a(1, "onMeasure:", "previewSize is", "(" + f + "x" + f2 + ")");
         if (mode == 1073741824 && mode2 == 1073741824) {
-            cameraLogger.a(1, "onMeasure:", "both are MATCH_PARENT or fixed value. We adapt.", "This means CROP_CENTER.", "(" + size + "x" + size2 + ")");
+            bVar2.a(1, "onMeasure:", "both are MATCH_PARENT or fixed value. We adapt.", "This means CROP_CENTER.", "(" + size + "x" + size2 + ")");
             super.onMeasure(i, i2);
             return;
         }
         if (mode == 0 && mode2 == 0) {
-            cameraLogger.a(1, "onMeasure:", "both are completely free.", "We respect that and extend to the whole preview size.", "(" + f + "x" + f2 + ")");
+            bVar2.a(1, "onMeasure:", "both are completely free.", "We respect that and extend to the whole preview size.", "(" + f + "x" + f2 + ")");
             super.onMeasure(View.MeasureSpec.makeMeasureSpec((int) f, BasicMeasure.EXACTLY), View.MeasureSpec.makeMeasureSpec((int) f2, BasicMeasure.EXACTLY));
             return;
         }
@@ -1168,7 +1124,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             } else {
                 size2 = Math.round(size * f3);
             }
-            cameraLogger.a(1, "onMeasure:", "one dimension was free, we adapted it to fit the ratio.", "(" + size + "x" + size2 + ")");
+            bVar2.a(1, "onMeasure:", "one dimension was free, we adapted it to fit the ratio.", "(" + size + "x" + size2 + ")");
             super.onMeasure(View.MeasureSpec.makeMeasureSpec(size, BasicMeasure.EXACTLY), View.MeasureSpec.makeMeasureSpec(size2, BasicMeasure.EXACTLY));
             return;
         }
@@ -1178,7 +1134,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             } else {
                 size2 = Math.min(Math.round(size * f3), size2);
             }
-            cameraLogger.a(1, "onMeasure:", "one dimension was EXACTLY, another AT_MOST.", "We have TRIED to fit the aspect ratio, but it's not guaranteed.", "(" + size + "x" + size2 + ")");
+            bVar2.a(1, "onMeasure:", "one dimension was EXACTLY, another AT_MOST.", "We have TRIED to fit the aspect ratio, but it's not guaranteed.", "(" + size + "x" + size2 + ")");
             super.onMeasure(View.MeasureSpec.makeMeasureSpec(size, BasicMeasure.EXACTLY), View.MeasureSpec.makeMeasureSpec(size2, BasicMeasure.EXACTLY));
             return;
         }
@@ -1189,7 +1145,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         } else {
             size = Math.round(f4 / f3);
         }
-        cameraLogger.a(1, "onMeasure:", "both dimension were AT_MOST.", "We fit the preview aspect ratio.", "(" + size + "x" + size2 + ")");
+        bVar2.a(1, "onMeasure:", "both dimension were AT_MOST.", "We fit the preview aspect ratio.", "(" + size + "x" + size2 + ")");
         super.onMeasure(View.MeasureSpec.makeMeasureSpec(size, BasicMeasure.EXACTLY), View.MeasureSpec.makeMeasureSpec(size2, BasicMeasure.EXACTLY));
     }
 
@@ -1199,24 +1155,24 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         if (!d()) {
             return true;
         }
-        CameraOptions cameraOptionsJ = this.f3176z.j();
-        if (cameraOptionsJ == null) {
+        b.o.a.c cVarJ = this.f3176z.j();
+        if (cVarJ == null) {
             throw new IllegalStateException("Options should not be null here.");
         }
-        PinchGestureFinder pinchGestureFinder = this.G;
-        if (!pinchGestureFinder.a ? false : pinchGestureFinder.c(motionEvent)) {
+        e eVar = this.G;
+        if (!eVar.a ? false : eVar.c(motionEvent)) {
             k.a(1, "onTouchEvent", "pinch!");
-            g(this.G, cameraOptionsJ);
+            g(this.G, cVarJ);
         } else {
-            ScrollGestureFinder scrollGestureFinder = this.I;
-            if (!scrollGestureFinder.a ? false : scrollGestureFinder.c(motionEvent)) {
+            b.o.a.q.f fVar = this.I;
+            if (!fVar.a ? false : fVar.c(motionEvent)) {
                 k.a(1, "onTouchEvent", "scroll!");
-                g(this.I, cameraOptionsJ);
+                g(this.I, cVarJ);
             } else {
-                TapGestureFinder tapGestureFinder = this.H;
-                if (!tapGestureFinder.a ? false : tapGestureFinder.c(motionEvent)) {
+                g gVar = this.H;
+                if (!gVar.a ? false : gVar.c(motionEvent)) {
                     k.a(1, "onTouchEvent", "tap!");
-                    g(this.H, cameraOptionsJ);
+                    g(this.H, cVarJ);
                 }
             }
         }
@@ -1228,23 +1184,23 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         if (this.M) {
             return;
         }
-        CameraPreview cameraPreview = this.f3174x;
-        if (cameraPreview != null) {
-            cameraPreview.q();
+        b.o.a.w.a aVar = this.f3174x;
+        if (aVar != null) {
+            aVar.q();
         }
         if (a(getAudio())) {
-            OrientationHelper2 orientationHelper2 = this.f3175y;
-            if (!orientationHelper2.h) {
-                orientationHelper2.h = true;
-                orientationHelper2.g = orientationHelper2.a();
-                ((DisplayManager) orientationHelper2.f1951b.getSystemService("display")).registerDisplayListener(orientationHelper2.f, orientationHelper2.a);
-                orientationHelper2.d.enable();
+            b.o.a.r.f fVar = this.f3175y;
+            if (!fVar.h) {
+                fVar.h = true;
+                fVar.g = fVar.a();
+                ((DisplayManager) fVar.f1951b.getSystemService("display")).registerDisplayListener(fVar.f, fVar.a);
+                fVar.d.enable();
             }
-            Angles anglesE = this.f3176z.e();
+            b.o.a.n.t.a aVarE = this.f3176z.e();
             int i = this.f3175y.g;
-            anglesE.e(i);
-            anglesE.d = i;
-            anglesE.d();
+            aVarE.e(i);
+            aVarE.d = i;
+            aVarE.d();
             this.f3176z.H0();
         }
     }
@@ -1254,7 +1210,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         if (!this.M && layoutParams != null) {
             Objects.requireNonNull(this.N);
-            if (layoutParams instanceof OverlayLayout.a) {
+            if (layoutParams instanceof c.a) {
                 this.N.removeView(view);
                 return;
             }
@@ -1262,57 +1218,57 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         super.removeView(view);
     }
 
-    public void set(@NonNull Control control) {
-        if (control instanceof Audio) {
-            setAudio((Audio) control);
+    public void set(@NonNull b.o.a.m.c cVar) {
+        if (cVar instanceof b.o.a.m.a) {
+            setAudio((b.o.a.m.a) cVar);
             return;
         }
-        if (control instanceof Facing) {
-            setFacing((Facing) control);
+        if (cVar instanceof b.o.a.m.e) {
+            setFacing((b.o.a.m.e) cVar);
             return;
         }
-        if (control instanceof Flash) {
-            setFlash((Flash) control);
+        if (cVar instanceof b.o.a.m.f) {
+            setFlash((b.o.a.m.f) cVar);
             return;
         }
-        if (control instanceof Grid) {
-            setGrid((Grid) control);
+        if (cVar instanceof b.o.a.m.g) {
+            setGrid((b.o.a.m.g) cVar);
             return;
         }
-        if (control instanceof Hdr) {
-            setHdr((Hdr) control);
+        if (cVar instanceof h) {
+            setHdr((h) cVar);
             return;
         }
-        if (control instanceof Mode3) {
-            setMode((Mode3) control);
+        if (cVar instanceof b.o.a.m.i) {
+            setMode((b.o.a.m.i) cVar);
             return;
         }
-        if (control instanceof WhiteBalance) {
-            setWhiteBalance((WhiteBalance) control);
+        if (cVar instanceof m) {
+            setWhiteBalance((m) cVar);
             return;
         }
-        if (control instanceof VideoCodec) {
-            setVideoCodec((VideoCodec) control);
+        if (cVar instanceof b.o.a.m.l) {
+            setVideoCodec((b.o.a.m.l) cVar);
             return;
         }
-        if (control instanceof AudioCodec) {
-            setAudioCodec((AudioCodec) control);
+        if (cVar instanceof b.o.a.m.b) {
+            setAudioCodec((b.o.a.m.b) cVar);
             return;
         }
-        if (control instanceof Preview) {
-            setPreview((Preview) control);
-        } else if (control instanceof Engine) {
-            setEngine((Engine) control);
-        } else if (control instanceof PictureFormat) {
-            setPictureFormat((PictureFormat) control);
+        if (cVar instanceof k) {
+            setPreview((k) cVar);
+        } else if (cVar instanceof b.o.a.m.d) {
+            setEngine((b.o.a.m.d) cVar);
+        } else if (cVar instanceof j) {
+            setPictureFormat((j) cVar);
         }
     }
 
-    public void setAudio(@NonNull Audio audio) {
-        if (audio == getAudio() || c()) {
-            this.f3176z.Z(audio);
-        } else if (a(audio)) {
-            this.f3176z.Z(audio);
+    public void setAudio(@NonNull b.o.a.m.a aVar) {
+        if (aVar == getAudio() || c()) {
+            this.f3176z.Z(aVar);
+        } else if (a(aVar)) {
+            this.f3176z.Z(aVar);
         } else {
             close();
         }
@@ -1322,23 +1278,23 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.a0(i);
     }
 
-    public void setAudioCodec(@NonNull AudioCodec audioCodec) {
-        this.f3176z.b0(audioCodec);
+    public void setAudioCodec(@NonNull b.o.a.m.b bVar) {
+        this.f3176z.b0(bVar);
     }
 
-    public void setAutoFocusMarker(@Nullable AutoFocusMarker autoFocusMarker) {
+    public void setAutoFocusMarker(@Nullable b.o.a.s.a aVar) {
         View viewB;
-        this.C = autoFocusMarker;
-        MarkerLayout markerLayout = this.K;
-        View view = markerLayout.j.get(1);
+        this.C = aVar;
+        b.o.a.s.c cVar = this.K;
+        View view = cVar.j.get(1);
         if (view != null) {
-            markerLayout.removeView(view);
+            cVar.removeView(view);
         }
-        if (autoFocusMarker == null || (viewB = autoFocusMarker.b(markerLayout.getContext(), markerLayout)) == null) {
+        if (aVar == null || (viewB = aVar.b(cVar.getContext(), cVar)) == null) {
             return;
         }
-        markerLayout.j.put(1, viewB);
-        markerLayout.addView(viewB);
+        cVar.j.put(1, viewB);
+        cVar.addView(viewB);
     }
 
     public void setAutoFocusResetDelay(long j2) {
@@ -1349,39 +1305,39 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.N.setHardwareCanvasEnabled(z2);
     }
 
-    public void setEngine(@NonNull Engine engine) {
+    public void setEngine(@NonNull b.o.a.m.d dVar) {
         if (c()) {
-            this.q = engine;
-            CameraEngine cameraEngine = this.f3176z;
+            this.q = dVar;
+            i iVar = this.f3176z;
             b();
-            CameraPreview cameraPreview = this.f3174x;
-            if (cameraPreview != null) {
-                this.f3176z.u0(cameraPreview);
+            b.o.a.w.a aVar = this.f3174x;
+            if (aVar != null) {
+                this.f3176z.u0(aVar);
             }
-            setFacing(cameraEngine.l());
-            setFlash(cameraEngine.m());
-            setMode(cameraEngine.t());
-            setWhiteBalance(cameraEngine.M());
-            setHdr(cameraEngine.r());
-            setAudio(cameraEngine.f());
-            setAudioBitRate(cameraEngine.g());
-            setAudioCodec(cameraEngine.h());
-            setPictureSize(cameraEngine.x());
-            setPictureFormat(cameraEngine.u());
-            setVideoSize(cameraEngine.L());
-            setVideoCodec(cameraEngine.H());
-            setVideoMaxSize(cameraEngine.J());
-            setVideoMaxDuration(cameraEngine.I());
-            setVideoBitRate(cameraEngine.G());
-            setAutoFocusResetDelay(cameraEngine.i());
-            setPreviewFrameRate(cameraEngine.A());
-            setPreviewFrameRateExact(cameraEngine.B());
-            setSnapshotMaxWidth(cameraEngine.E());
-            setSnapshotMaxHeight(cameraEngine.D());
-            setFrameProcessingMaxWidth(cameraEngine.p());
-            setFrameProcessingMaxHeight(cameraEngine.o());
+            setFacing(iVar.l());
+            setFlash(iVar.m());
+            setMode(iVar.t());
+            setWhiteBalance(iVar.M());
+            setHdr(iVar.r());
+            setAudio(iVar.f());
+            setAudioBitRate(iVar.g());
+            setAudioCodec(iVar.h());
+            setPictureSize(iVar.x());
+            setPictureFormat(iVar.u());
+            setVideoSize(iVar.L());
+            setVideoCodec(iVar.H());
+            setVideoMaxSize(iVar.J());
+            setVideoMaxDuration(iVar.I());
+            setVideoBitRate(iVar.G());
+            setAutoFocusResetDelay(iVar.i());
+            setPreviewFrameRate(iVar.A());
+            setPreviewFrameRateExact(iVar.B());
+            setSnapshotMaxWidth(iVar.E());
+            setSnapshotMaxHeight(iVar.D());
+            setFrameProcessingMaxWidth(iVar.p());
+            setFrameProcessingMaxHeight(iVar.o());
             setFrameProcessingFormat(0);
-            setFrameProcessingPoolSize(cameraEngine.q());
+            setFrameProcessingPoolSize(iVar.q());
             this.f3176z.k0(!this.E.isEmpty());
         }
     }
@@ -1391,7 +1347,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     public void setExposureCorrection(float f) {
-        CameraOptions cameraOptions = getCameraOptions();
+        b.o.a.c cameraOptions = getCameraOptions();
         if (cameraOptions != null) {
             float f2 = cameraOptions.m;
             float f3 = cameraOptions.n;
@@ -1405,34 +1361,34 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
     }
 
-    public void setFacing(@NonNull Facing facing) {
-        this.f3176z.e0(facing);
+    public void setFacing(@NonNull b.o.a.m.e eVar) {
+        this.f3176z.e0(eVar);
     }
 
-    public void setFilter(@NonNull Filter2 filter2) {
+    public void setFilter(@NonNull b.o.a.o.b bVar) {
         Object obj = this.f3174x;
         if (obj == null) {
-            this.r = filter2;
+            this.r = bVar;
             return;
         }
-        boolean z2 = obj instanceof FilterCameraPreview;
-        if (!(filter2 instanceof NoFilter) && !z2) {
-            StringBuilder sbU = outline.U("Filters are only supported by the GL_SURFACE preview. Current preview:");
+        boolean z2 = obj instanceof b.o.a.w.b;
+        if (!(bVar instanceof b.o.a.o.c) && !z2) {
+            StringBuilder sbU = b.d.b.a.a.U("Filters are only supported by the GL_SURFACE preview. Current preview:");
             sbU.append(this.p);
             throw new RuntimeException(sbU.toString());
         }
         if (z2) {
-            ((FilterCameraPreview) obj).a(filter2);
+            ((b.o.a.w.b) obj).a(bVar);
         }
     }
 
-    public void setFlash(@NonNull Flash flash) {
-        this.f3176z.f0(flash);
+    public void setFlash(@NonNull b.o.a.m.f fVar) {
+        this.f3176z.f0(fVar);
     }
 
     public void setFrameProcessingExecutors(int i) {
         if (i < 1) {
-            throw new IllegalArgumentException(outline.q("Need at least 1 executor, got ", i));
+            throw new IllegalArgumentException(b.d.b.a.a.q("Need at least 1 executor, got ", i));
         }
         this.f3173s = i;
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(i, i, 4L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new a(this));
@@ -1456,16 +1412,16 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.j0(i);
     }
 
-    public void setGrid(@NonNull Grid grid) {
-        this.J.setGridMode(grid);
+    public void setGrid(@NonNull b.o.a.m.g gVar) {
+        this.J.setGridMode(gVar);
     }
 
     public void setGridColor(@ColorInt int i) {
         this.J.setGridColor(i);
     }
 
-    public void setHdr(@NonNull Hdr hdr) {
-        this.f3176z.l0(hdr);
+    public void setHdr(@NonNull h hVar) {
+        this.f3176z.l0(hVar);
     }
 
     public void setLifecycleOwner(@Nullable LifecycleOwner lifecycleOwner) {
@@ -1492,20 +1448,20 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.m0(location);
     }
 
-    public void setMode(@NonNull Mode3 mode3) {
-        this.f3176z.n0(mode3);
+    public void setMode(@NonNull b.o.a.m.i iVar) {
+        this.f3176z.n0(iVar);
     }
 
-    public void setPictureFormat(@NonNull PictureFormat pictureFormat) {
-        this.f3176z.p0(pictureFormat);
+    public void setPictureFormat(@NonNull j jVar) {
+        this.f3176z.p0(jVar);
     }
 
     public void setPictureMetering(boolean z2) {
         this.f3176z.q0(z2);
     }
 
-    public void setPictureSize(@NonNull SizeSelector sizeSelector) {
-        this.f3176z.r0(sizeSelector);
+    public void setPictureSize(@NonNull b.o.a.x.c cVar) {
+        this.f3176z.r0(cVar);
     }
 
     public void setPictureSnapshotMetering(boolean z2) {
@@ -1517,14 +1473,14 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.t0(z2);
     }
 
-    public void setPreview(@NonNull Preview preview) {
-        CameraPreview cameraPreview;
-        if (preview != this.p) {
-            this.p = preview;
-            if ((getWindowToken() != null) || (cameraPreview = this.f3174x) == null) {
+    public void setPreview(@NonNull k kVar) {
+        b.o.a.w.a aVar;
+        if (kVar != this.p) {
+            this.p = kVar;
+            if ((getWindowToken() != null) || (aVar = this.f3174x) == null) {
                 return;
             }
-            cameraPreview.o();
+            aVar.o();
             this.f3174x = null;
         }
     }
@@ -1537,8 +1493,8 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.w0(z2);
     }
 
-    public void setPreviewStreamSize(@NonNull SizeSelector sizeSelector) {
-        this.f3176z.x0(sizeSelector);
+    public void setPreviewStreamSize(@NonNull b.o.a.x.c cVar) {
+        this.f3176z.x0(cVar);
     }
 
     public void setRequestPermissions(boolean z2) {
@@ -1561,8 +1517,8 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.A0(i);
     }
 
-    public void setVideoCodec(@NonNull VideoCodec videoCodec) {
-        this.f3176z.B0(videoCodec);
+    public void setVideoCodec(@NonNull b.o.a.m.l lVar) {
+        this.f3176z.B0(lVar);
     }
 
     public void setVideoMaxDuration(int i) {
@@ -1573,12 +1529,12 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f3176z.D0(j2);
     }
 
-    public void setVideoSize(@NonNull SizeSelector sizeSelector) {
-        this.f3176z.E0(sizeSelector);
+    public void setVideoSize(@NonNull b.o.a.x.c cVar) {
+        this.f3176z.E0(cVar);
     }
 
-    public void setWhiteBalance(@NonNull WhiteBalance whiteBalance) {
-        this.f3176z.F0(whiteBalance);
+    public void setWhiteBalance(@NonNull m mVar) {
+        this.f3176z.F0(mVar);
     }
 
     public void setZoom(float f) {
@@ -1594,10 +1550,10 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     @Override // android.widget.FrameLayout, android.view.ViewGroup
     public FrameLayout.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
         if (!this.M) {
-            OverlayLayout overlayLayout = this.N;
-            Objects.requireNonNull(overlayLayout);
+            b.o.a.u.c cVar = this.N;
+            Objects.requireNonNull(cVar);
             if (attributeSet != null) {
-                TypedArray typedArrayObtainStyledAttributes = overlayLayout.getContext().obtainStyledAttributes(attributeSet, R.c.CameraView_Layout);
+                TypedArray typedArrayObtainStyledAttributes = cVar.getContext().obtainStyledAttributes(attributeSet, R.c.CameraView_Layout);
                 z = typedArrayObtainStyledAttributes.hasValue(R.c.CameraView_Layout_layout_drawOnPreview) || typedArrayObtainStyledAttributes.hasValue(R.c.CameraView_Layout_layout_drawOnPictureSnapshot) || typedArrayObtainStyledAttributes.hasValue(R.c.CameraView_Layout_layout_drawOnVideoSnapshot);
                 typedArrayObtainStyledAttributes.recycle();
             }

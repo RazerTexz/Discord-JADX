@@ -1,12 +1,12 @@
 package com.discord.widgets.chat.input;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendCommand$validated$1 extends Lambda implements Function0<Unit> {
+public final class ChatInputViewModel$sendCommand$validated$1 extends o implements Function0<Unit> {
     public static final ChatInputViewModel$sendCommand$validated$1 INSTANCE = new ChatInputViewModel$sendCommand$validated$1();
 
     public ChatInputViewModel$sendCommand$validated$1() {

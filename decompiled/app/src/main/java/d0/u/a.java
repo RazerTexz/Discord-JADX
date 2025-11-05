@@ -1,6 +1,6 @@
 package d0.u;
 
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Comparator;
 import kotlin.jvm.functions.Function1;
 
@@ -10,10 +10,10 @@ public class a {
 
     /* compiled from: Comparisons.kt */
     /* renamed from: d0.u.a$a, reason: collision with other inner class name */
-    public static final class C0420a<T> implements Comparator {
+    public static final class C0597a<T> implements Comparator {
         public final /* synthetic */ Function1[] j;
 
-        public C0420a(Function1[] function1Arr) {
+        public C0597a(Function1[] function1Arr) {
             this.j = function1Arr;
         }
 
@@ -51,9 +51,9 @@ public class a {
     }
 
     public static final <T> Comparator<T> compareBy(Function1<? super T, ? extends Comparable<?>>... function1Arr) {
-        Intrinsics3.checkNotNullParameter(function1Arr, "selectors");
+        m.checkNotNullParameter(function1Arr, "selectors");
         if (function1Arr.length > 0) {
-            return new C0420a(function1Arr);
+            return new C0597a(function1Arr);
         }
         throw new IllegalArgumentException("Failed requirement.".toString());
     }
@@ -76,8 +76,8 @@ public class a {
     }
 
     public static final <T> Comparator<T> then(Comparator<T> comparator, Comparator<? super T> comparator2) {
-        Intrinsics3.checkNotNullParameter(comparator, "$this$then");
-        Intrinsics3.checkNotNullParameter(comparator2, "comparator");
+        m.checkNotNullParameter(comparator, "$this$then");
+        m.checkNotNullParameter(comparator2, "comparator");
         return new b(comparator, comparator2);
     }
 }

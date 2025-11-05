@@ -1,9 +1,9 @@
 package kotlin.text;
 
-import d0.g0.MatchResult2;
-import d0.z.d.Intrinsics3;
+import d0.g0.f;
+import d0.z.d.m;
 import java.util.List;
-import kotlin.ranges.Ranges2;
+import kotlin.ranges.IntRange;
 
 /* compiled from: MatchResult.kt */
 /* loaded from: classes3.dex */
@@ -21,7 +21,7 @@ public interface MatchResult {
         public final MatchResult a;
 
         public b(MatchResult matchResult) {
-            Intrinsics3.checkNotNullParameter(matchResult, "match");
+            m.checkNotNullParameter(matchResult, "match");
             this.a = matchResult;
         }
 
@@ -34,9 +34,9 @@ public interface MatchResult {
 
     List<String> getGroupValues();
 
-    MatchResult2 getGroups();
+    f getGroups();
 
-    Ranges2 getRange();
+    IntRange getRange();
 
     String getValue();
 

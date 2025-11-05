@@ -1,8 +1,8 @@
 package com.discord.api.message.embed;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: EmbedFooter.kt */
 /* loaded from: classes.dex */
@@ -29,7 +29,7 @@ public final /* data */ class EmbedFooter {
             return false;
         }
         EmbedFooter embedFooter = (EmbedFooter) other;
-        return Intrinsics3.areEqual(this.text, embedFooter.text) && Intrinsics3.areEqual(this.iconUrl, embedFooter.iconUrl) && Intrinsics3.areEqual(this.proxyIconUrl, embedFooter.proxyIconUrl);
+        return m.areEqual(this.text, embedFooter.text) && m.areEqual(this.iconUrl, embedFooter.iconUrl) && m.areEqual(this.proxyIconUrl, embedFooter.proxyIconUrl);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class EmbedFooter {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmbedFooter(text=");
+        StringBuilder sbU = a.U("EmbedFooter(text=");
         sbU.append(this.text);
         sbU.append(", iconUrl=");
         sbU.append(this.iconUrl);
         sbU.append(", proxyIconUrl=");
-        return outline.J(sbU, this.proxyIconUrl, ")");
+        return a.J(sbU, this.proxyIconUrl, ")");
     }
 }

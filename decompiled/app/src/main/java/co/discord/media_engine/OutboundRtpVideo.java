@@ -1,9 +1,9 @@
 package co.discord.media_engine;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -33,10 +33,10 @@ public final /* data */ class OutboundRtpVideo {
     private final String type;
 
     public OutboundRtpVideo(String str, long j, StatsCodec statsCodec, long j2, long j3, int i, float f, int i2, int i3, int i4, String str2, int i5, Resolution resolution, long j4, long j5, int i6, int i7, long j6, long j7, long j8, long j9, boolean z2, boolean z3) {
-        Intrinsics3.checkNotNullParameter(str, "type");
-        Intrinsics3.checkNotNullParameter(statsCodec, "codec");
-        Intrinsics3.checkNotNullParameter(str2, "encoderImplementationName");
-        Intrinsics3.checkNotNullParameter(resolution, "resolution");
+        m.checkNotNullParameter(str, "type");
+        m.checkNotNullParameter(statsCodec, "codec");
+        m.checkNotNullParameter(str2, "encoderImplementationName");
+        m.checkNotNullParameter(resolution, "resolution");
         this.type = str;
         this.ssrc = j;
         this.codec = statsCodec;
@@ -192,10 +192,10 @@ public final /* data */ class OutboundRtpVideo {
     }
 
     public final OutboundRtpVideo copy(String type, long ssrc, StatsCodec codec, long bytesSent, long packetsSent, int packetsLost, float fractionLost, int bitrate, int bitrateTarget, int encodeUsage, String encoderImplementationName, int averageEncodeTime, Resolution resolution, long framesSent, long framesEncoded, int frameRateInput, int frameRateEncode, long firCount, long nackCount, long pliCount, long qpSum, boolean bandwidthLimitedResolution, boolean cpuLimitedResolution) {
-        Intrinsics3.checkNotNullParameter(type, "type");
-        Intrinsics3.checkNotNullParameter(codec, "codec");
-        Intrinsics3.checkNotNullParameter(encoderImplementationName, "encoderImplementationName");
-        Intrinsics3.checkNotNullParameter(resolution, "resolution");
+        m.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(codec, "codec");
+        m.checkNotNullParameter(encoderImplementationName, "encoderImplementationName");
+        m.checkNotNullParameter(resolution, "resolution");
         return new OutboundRtpVideo(type, ssrc, codec, bytesSent, packetsSent, packetsLost, fractionLost, bitrate, bitrateTarget, encodeUsage, encoderImplementationName, averageEncodeTime, resolution, framesSent, framesEncoded, frameRateInput, frameRateEncode, firCount, nackCount, pliCount, qpSum, bandwidthLimitedResolution, cpuLimitedResolution);
     }
 
@@ -207,7 +207,7 @@ public final /* data */ class OutboundRtpVideo {
             return false;
         }
         OutboundRtpVideo outboundRtpVideo = (OutboundRtpVideo) other;
-        return Intrinsics3.areEqual(this.type, outboundRtpVideo.type) && this.ssrc == outboundRtpVideo.ssrc && Intrinsics3.areEqual(this.codec, outboundRtpVideo.codec) && this.bytesSent == outboundRtpVideo.bytesSent && this.packetsSent == outboundRtpVideo.packetsSent && this.packetsLost == outboundRtpVideo.packetsLost && Float.compare(this.fractionLost, outboundRtpVideo.fractionLost) == 0 && this.bitrate == outboundRtpVideo.bitrate && this.bitrateTarget == outboundRtpVideo.bitrateTarget && this.encodeUsage == outboundRtpVideo.encodeUsage && Intrinsics3.areEqual(this.encoderImplementationName, outboundRtpVideo.encoderImplementationName) && this.averageEncodeTime == outboundRtpVideo.averageEncodeTime && Intrinsics3.areEqual(this.resolution, outboundRtpVideo.resolution) && this.framesSent == outboundRtpVideo.framesSent && this.framesEncoded == outboundRtpVideo.framesEncoded && this.frameRateInput == outboundRtpVideo.frameRateInput && this.frameRateEncode == outboundRtpVideo.frameRateEncode && this.firCount == outboundRtpVideo.firCount && this.nackCount == outboundRtpVideo.nackCount && this.pliCount == outboundRtpVideo.pliCount && this.qpSum == outboundRtpVideo.qpSum && this.bandwidthLimitedResolution == outboundRtpVideo.bandwidthLimitedResolution && this.cpuLimitedResolution == outboundRtpVideo.cpuLimitedResolution;
+        return m.areEqual(this.type, outboundRtpVideo.type) && this.ssrc == outboundRtpVideo.ssrc && m.areEqual(this.codec, outboundRtpVideo.codec) && this.bytesSent == outboundRtpVideo.bytesSent && this.packetsSent == outboundRtpVideo.packetsSent && this.packetsLost == outboundRtpVideo.packetsLost && Float.compare(this.fractionLost, outboundRtpVideo.fractionLost) == 0 && this.bitrate == outboundRtpVideo.bitrate && this.bitrateTarget == outboundRtpVideo.bitrateTarget && this.encodeUsage == outboundRtpVideo.encodeUsage && m.areEqual(this.encoderImplementationName, outboundRtpVideo.encoderImplementationName) && this.averageEncodeTime == outboundRtpVideo.averageEncodeTime && m.areEqual(this.resolution, outboundRtpVideo.resolution) && this.framesSent == outboundRtpVideo.framesSent && this.framesEncoded == outboundRtpVideo.framesEncoded && this.frameRateInput == outboundRtpVideo.frameRateInput && this.frameRateEncode == outboundRtpVideo.frameRateEncode && this.firCount == outboundRtpVideo.firCount && this.nackCount == outboundRtpVideo.nackCount && this.pliCount == outboundRtpVideo.pliCount && this.qpSum == outboundRtpVideo.qpSum && this.bandwidthLimitedResolution == outboundRtpVideo.bandwidthLimitedResolution && this.cpuLimitedResolution == outboundRtpVideo.cpuLimitedResolution;
     }
 
     public final int getAverageEncodeTime() {
@@ -323,7 +323,7 @@ public final /* data */ class OutboundRtpVideo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("OutboundRtpVideo(type=");
+        StringBuilder sbU = a.U("OutboundRtpVideo(type=");
         sbU.append(this.type);
         sbU.append(", ssrc=");
         sbU.append(this.ssrc);
@@ -368,6 +368,6 @@ public final /* data */ class OutboundRtpVideo {
         sbU.append(", bandwidthLimitedResolution=");
         sbU.append(this.bandwidthLimitedResolution);
         sbU.append(", cpuLimitedResolution=");
-        return outline.O(sbU, this.cpuLimitedResolution, ")");
+        return a.O(sbU, this.cpuLimitedResolution, ")");
     }
 }

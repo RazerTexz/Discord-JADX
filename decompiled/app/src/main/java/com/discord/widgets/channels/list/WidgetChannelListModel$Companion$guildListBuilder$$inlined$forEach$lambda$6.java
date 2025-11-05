@@ -1,13 +1,13 @@
 package com.discord.widgets.channels.list;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.stageinstance.StageInstance;
 import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
 import com.discord.widgets.channels.list.items.ChannelListItemStageVoiceChannel;
 import com.discord.widgets.stage.model.StageChannel;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -17,7 +17,7 @@ import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6 extends Lambda implements Function0<ChannelListItemStageVoiceChannel> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6 extends o implements Function0<ChannelListItemStageVoiceChannel> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -100,8 +100,8 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
         Long l = this.$permissions;
         boolean locked = vocalChannelDataInvoke2.getLocked();
         int numUsersConnected = vocalChannelDataInvoke2.getNumUsersConnected();
-        StageInstance stageInstance = (StageInstance) outline.d(this.$channel, this.$stageInstances$inlined);
-        StageChannel stageChannel = (StageChannel) outline.d(this.$channel, this.$stageChannels$inlined);
+        StageInstance stageInstance = (StageInstance) a.d(this.$channel, this.$stageInstances$inlined);
+        StageChannel stageChannel = (StageChannel) a.d(this.$channel, this.$stageChannels$inlined);
         return new ChannelListItemStageVoiceChannel(channel, voiceChannelSelected, l, locked, numUsersConnected, stageInstance, (stageChannel == null || (speakerIds = stageChannel.getSpeakerIds()) == null || !(speakerIds.isEmpty() ^ true)) ? false : true, vocalChannelDataInvoke2.isGuildRoleSubscriptionLockedChannel(), vocalChannelDataInvoke2.isGuildRoleSubscriptionChannel());
     }
 }

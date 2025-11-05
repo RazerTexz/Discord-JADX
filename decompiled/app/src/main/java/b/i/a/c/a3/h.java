@@ -1,31 +1,31 @@
 package b.i.a.c.a3;
 
-import b.i.a.c.x2.SeekMap;
+import b.i.a.c.x2.t;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class h implements Runnable {
-    public final /* synthetic */ ProgressiveMediaPeriod j;
-    public final /* synthetic */ SeekMap k;
+    public final /* synthetic */ e0 j;
+    public final /* synthetic */ b.i.a.c.x2.t k;
 
-    public /* synthetic */ h(ProgressiveMediaPeriod progressiveMediaPeriod, SeekMap seekMap) {
-        this.j = progressiveMediaPeriod;
-        this.k = seekMap;
+    public /* synthetic */ h(e0 e0Var, b.i.a.c.x2.t tVar) {
+        this.j = e0Var;
+        this.k = tVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        ProgressiveMediaPeriod progressiveMediaPeriod = this.j;
-        SeekMap seekMap = this.k;
-        progressiveMediaPeriod.J = progressiveMediaPeriod.C == null ? seekMap : new SeekMap.b(-9223372036854775807L, 0L);
-        progressiveMediaPeriod.K = seekMap.i();
-        boolean z2 = progressiveMediaPeriod.Q == -1 && seekMap.i() == -9223372036854775807L;
-        progressiveMediaPeriod.L = z2;
-        progressiveMediaPeriod.M = z2 ? 7 : 1;
-        ((ProgressiveMediaSource) progressiveMediaPeriod.r).u(progressiveMediaPeriod.K, seekMap.c(), progressiveMediaPeriod.L);
-        if (progressiveMediaPeriod.G) {
+        e0 e0Var = this.j;
+        b.i.a.c.x2.t tVar = this.k;
+        e0Var.J = e0Var.C == null ? tVar : new t.b(-9223372036854775807L, 0L);
+        e0Var.K = tVar.i();
+        boolean z2 = e0Var.Q == -1 && tVar.i() == -9223372036854775807L;
+        e0Var.L = z2;
+        e0Var.M = z2 ? 7 : 1;
+        ((f0) e0Var.r).u(e0Var.K, tVar.c(), e0Var.L);
+        if (e0Var.G) {
             return;
         }
-        progressiveMediaPeriod.x();
+        e0Var.x();
     }
 }

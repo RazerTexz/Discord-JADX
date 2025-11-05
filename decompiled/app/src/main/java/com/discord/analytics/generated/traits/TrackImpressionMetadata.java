@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackImpressionMetadata.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class TrackImpressionMetadata {
             return false;
         }
         TrackImpressionMetadata trackImpressionMetadata = (TrackImpressionMetadata) other;
-        return Intrinsics3.areEqual(this.sequenceId, trackImpressionMetadata.sequenceId) && Intrinsics3.areEqual(this.impressionName, trackImpressionMetadata.impressionName) && Intrinsics3.areEqual(this.impressionType, trackImpressionMetadata.impressionType) && Intrinsics3.areEqual(this.impressionGroup, trackImpressionMetadata.impressionGroup);
+        return m.areEqual(this.sequenceId, trackImpressionMetadata.sequenceId) && m.areEqual(this.impressionName, trackImpressionMetadata.impressionName) && m.areEqual(this.impressionType, trackImpressionMetadata.impressionType) && m.areEqual(this.impressionGroup, trackImpressionMetadata.impressionGroup);
     }
 
     public int hashCode() {
@@ -49,13 +49,13 @@ public final /* data */ class TrackImpressionMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackImpressionMetadata(sequenceId=");
+        StringBuilder sbU = a.U("TrackImpressionMetadata(sequenceId=");
         sbU.append(this.sequenceId);
         sbU.append(", impressionName=");
         sbU.append(this.impressionName);
         sbU.append(", impressionType=");
         sbU.append(this.impressionType);
         sbU.append(", impressionGroup=");
-        return outline.E(sbU, this.impressionGroup, ")");
+        return a.E(sbU, this.impressionGroup, ")");
     }
 }

@@ -3,8 +3,7 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
 
 /* loaded from: classes3.dex */
 public final class InternalFrame extends Id3Frame {
@@ -40,7 +39,7 @@ public final class InternalFrame extends Id3Frame {
             return false;
         }
         InternalFrame internalFrame = (InternalFrame) obj;
-        return Util2.a(this.l, internalFrame.l) && Util2.a(this.k, internalFrame.k) && Util2.a(this.m, internalFrame.m);
+        return e0.a(this.l, internalFrame.l) && e0.a(this.k, internalFrame.k) && e0.a(this.m, internalFrame.m);
     }
 
     public int hashCode() {
@@ -57,7 +56,7 @@ public final class InternalFrame extends Id3Frame {
         String str = this.j;
         String str2 = this.k;
         String str3 = this.l;
-        StringBuilder sbS = outline.S(outline.b(str3, outline.b(str2, outline.b(str, 23))), str, ": domain=", str2, ", description=");
+        StringBuilder sbS = b.d.b.a.a.S(b.d.b.a.a.b(str3, b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 23))), str, ": domain=", str2, ", description=");
         sbS.append(str3);
         return sbS.toString();
     }
@@ -72,7 +71,7 @@ public final class InternalFrame extends Id3Frame {
     public InternalFrame(Parcel parcel) {
         super("----");
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         this.k = string;
         this.l = parcel.readString();
         this.m = parcel.readString();

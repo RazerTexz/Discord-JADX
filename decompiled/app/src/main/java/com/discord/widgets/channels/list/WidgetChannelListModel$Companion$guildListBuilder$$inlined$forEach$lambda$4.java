@@ -7,8 +7,8 @@ import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
 import com.discord.widgets.channels.list.items.ChannelListItemThread;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -18,7 +18,7 @@ import kotlin.jvm.functions.Function2;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4 extends Lambda implements Function2<Channel, StoreThreadsJoined.JoinedThread, ChannelListItemThread> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4 extends o implements Function2<Channel, StoreThreadsJoined.JoinedThread, ChannelListItemThread> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -86,7 +86,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ChannelListItemThread invoke2(Channel channel, StoreThreadsJoined.JoinedThread joinedThread) {
-        Intrinsics3.checkNotNullParameter(channel, "thread");
+        m.checkNotNullParameter(channel, "thread");
         Long l = this.$guild$inlined.getChannelPermissions().get(Long.valueOf(channel.getId()));
         ModelNotificationSettings.ChannelOverride channelOverride = this.$guild$inlined.getNotificationSettings().getChannelOverride(channel.getParentId());
         boolean z2 = channelOverride != null && channelOverride.isMuted();

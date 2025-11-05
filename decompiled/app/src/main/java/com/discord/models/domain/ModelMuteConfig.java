@@ -1,10 +1,10 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.thread.MuteConfig;
 import com.discord.models.domain.Model;
 import com.discord.utilities.time.TimeUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$ObjectRef;
@@ -37,9 +37,9 @@ public final /* data */ class ModelMuteConfig {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.discord.models.domain.Model.Parser
         public ModelMuteConfig parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = outline.c0(reader, "reader");
+            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
             ref$ObjectRefC0.element = null;
-            reader.nextObject(new ModelMuteConfig2(ref$ObjectRefC0, reader));
+            reader.nextObject(new ModelMuteConfig$Parser$parse$1(ref$ObjectRefC0, reader));
             return new ModelMuteConfig((String) ref$ObjectRefC0.element);
         }
     }
@@ -85,7 +85,7 @@ public final /* data */ class ModelMuteConfig {
             return false;
         }
         ModelMuteConfig modelMuteConfig = (ModelMuteConfig) other;
-        return Intrinsics3.areEqual(this.endTimeMs, modelMuteConfig.endTimeMs) && Intrinsics3.areEqual(this.endTime, modelMuteConfig.endTime);
+        return m.areEqual(this.endTimeMs, modelMuteConfig.endTimeMs) && m.areEqual(this.endTime, modelMuteConfig.endTime);
     }
 
     public final String getEndTime() {
@@ -104,10 +104,10 @@ public final /* data */ class ModelMuteConfig {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelMuteConfig(endTimeMs=");
+        StringBuilder sbU = a.U("ModelMuteConfig(endTimeMs=");
         sbU.append(this.endTimeMs);
         sbU.append(", endTime=");
-        return outline.J(sbU, this.endTime, ")");
+        return a.J(sbU, this.endTime, ")");
     }
 
     public ModelMuteConfig(Long l) {

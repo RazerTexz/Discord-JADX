@@ -5,8 +5,8 @@ import b.i.a.f.e.o.f;
 import com.discord.models.authentication.AuthState;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
-import d0.t.Sets5;
-import d0.z.d.Intrinsics3;
+import d0.t.n0;
+import d0.z.d.m;
 
 /* compiled from: AuthStateCache.kt */
 /* loaded from: classes2.dex */
@@ -25,7 +25,7 @@ public final class AuthStateCache {
     }
 
     public AuthStateCache(SharedPreferences sharedPreferences) {
-        Intrinsics3.checkNotNullParameter(sharedPreferences, "prefs");
+        m.checkNotNullParameter(sharedPreferences, "prefs");
         this.prefs = sharedPreferences;
         this.gson = new Gson();
     }
@@ -33,7 +33,7 @@ public final class AuthStateCache {
     public final void cacheAuthState(AuthState authState) throws JsonIOException {
         if (authState == null) {
             SharedPreferences.Editor editorEdit = this.prefs.edit();
-            Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
+            m.checkNotNullExpressionValue(editorEdit, "editor");
             editorEdit.remove(Keys.AUTH_STATE);
             editorEdit.remove(Keys.TOKEN);
             editorEdit.apply();
@@ -41,7 +41,7 @@ public final class AuthStateCache {
         }
         String strM = this.gson.m(authState);
         SharedPreferences.Editor editorEdit2 = this.prefs.edit();
-        Intrinsics3.checkNotNullExpressionValue(editorEdit2, "editor");
+        m.checkNotNullExpressionValue(editorEdit2, "editor");
         editorEdit2.putString(Keys.AUTH_STATE, strM);
         editorEdit2.putString(Keys.TOKEN, authState.getToken());
         editorEdit2.apply();
@@ -57,7 +57,7 @@ public final class AuthStateCache {
         }
         String string2 = this.prefs.getString(Keys.TOKEN, null);
         if (string2 != null) {
-            return AuthState.INSTANCE.from(string2, Sets5.emptySet());
+            return AuthState.INSTANCE.from(string2, n0.emptySet());
         }
         return null;
     }

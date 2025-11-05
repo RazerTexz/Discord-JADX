@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackApplicationAssetDeleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationAssetDeleted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackApplicationAssetDeleted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long id = null;
     private final Long applicationId = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackApplicationAssetDeleted implements AnalyticsS
             return false;
         }
         TrackApplicationAssetDeleted trackApplicationAssetDeleted = (TrackApplicationAssetDeleted) other;
-        return Intrinsics3.areEqual(this.id, trackApplicationAssetDeleted.id) && Intrinsics3.areEqual(this.applicationId, trackApplicationAssetDeleted.applicationId) && Intrinsics3.areEqual(this.botId, trackApplicationAssetDeleted.botId) && Intrinsics3.areEqual(this.applicationName, trackApplicationAssetDeleted.applicationName) && Intrinsics3.areEqual(this.hasBot, trackApplicationAssetDeleted.hasBot) && Intrinsics3.areEqual(this.hasRedirectUri, trackApplicationAssetDeleted.hasRedirectUri) && Intrinsics3.areEqual(this.type, trackApplicationAssetDeleted.type) && Intrinsics3.areEqual(this.name, trackApplicationAssetDeleted.name);
+        return m.areEqual(this.id, trackApplicationAssetDeleted.id) && m.areEqual(this.applicationId, trackApplicationAssetDeleted.applicationId) && m.areEqual(this.botId, trackApplicationAssetDeleted.botId) && m.areEqual(this.applicationName, trackApplicationAssetDeleted.applicationName) && m.areEqual(this.hasBot, trackApplicationAssetDeleted.hasBot) && m.areEqual(this.hasRedirectUri, trackApplicationAssetDeleted.hasRedirectUri) && m.areEqual(this.type, trackApplicationAssetDeleted.type) && m.areEqual(this.name, trackApplicationAssetDeleted.name);
     }
 
     public int hashCode() {
@@ -58,7 +58,7 @@ public final /* data */ class TrackApplicationAssetDeleted implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackApplicationAssetDeleted(id=");
+        StringBuilder sbU = a.U("TrackApplicationAssetDeleted(id=");
         sbU.append(this.id);
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
@@ -73,6 +73,6 @@ public final /* data */ class TrackApplicationAssetDeleted implements AnalyticsS
         sbU.append(", type=");
         sbU.append(this.type);
         sbU.append(", name=");
-        return outline.E(sbU, this.name, ")");
+        return a.E(sbU, this.name, ")");
     }
 }

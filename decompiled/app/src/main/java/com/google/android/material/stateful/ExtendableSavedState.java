@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.collection.SimpleArrayMap;
 import androidx.customview.view.AbsSavedState;
-import b.d.b.a.outline;
 
 /* loaded from: classes3.dex */
 public class ExtendableSavedState extends AbsSavedState {
@@ -42,7 +41,7 @@ public class ExtendableSavedState extends AbsSavedState {
 
     @NonNull
     public String toString() {
-        StringBuilder sbU = outline.U("ExtendableSavedState{");
+        StringBuilder sbU = b.d.b.a.a.U("ExtendableSavedState{");
         sbU.append(Integer.toHexString(System.identityHashCode(this)));
         sbU.append(" states=");
         sbU.append(this.extendableStates);

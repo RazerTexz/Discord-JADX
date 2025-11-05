@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackAfCard;
-import com.discord.analytics.generated.traits.TrackAfCard2;
+import com.discord.analytics.generated.traits.TrackAfCardReceiver;
 import com.discord.analytics.generated.traits.TrackAfGame;
-import com.discord.analytics.generated.traits.TrackAfGame2;
+import com.discord.analytics.generated.traits.TrackAfGameReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGameNewsOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGameNewsOpened implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackAfCard2, TrackAfGame2 {
+public final /* data */ class TrackGameNewsOpened implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackAfCardReceiver, TrackAfGameReceiver {
     private TrackAfCard trackAfCard;
     private TrackAfGame trackAfGame;
     private TrackBase trackBase;
@@ -38,7 +38,7 @@ public final /* data */ class TrackGameNewsOpened implements AnalyticsSchema, Tr
             return false;
         }
         TrackGameNewsOpened trackGameNewsOpened = (TrackGameNewsOpened) other;
-        return Intrinsics3.areEqual(this.newsUrl, trackGameNewsOpened.newsUrl) && Intrinsics3.areEqual(this.newsIndex, trackGameNewsOpened.newsIndex) && Intrinsics3.areEqual(this.newsId, trackGameNewsOpened.newsId);
+        return m.areEqual(this.newsUrl, trackGameNewsOpened.newsUrl) && m.areEqual(this.newsIndex, trackGameNewsOpened.newsIndex) && m.areEqual(this.newsId, trackGameNewsOpened.newsId);
     }
 
     public int hashCode() {
@@ -51,11 +51,11 @@ public final /* data */ class TrackGameNewsOpened implements AnalyticsSchema, Tr
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGameNewsOpened(newsUrl=");
+        StringBuilder sbU = a.U("TrackGameNewsOpened(newsUrl=");
         sbU.append(this.newsUrl);
         sbU.append(", newsIndex=");
         sbU.append(this.newsIndex);
         sbU.append(", newsId=");
-        return outline.G(sbU, this.newsId, ")");
+        return a.G(sbU, this.newsId, ")");
     }
 }

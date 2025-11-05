@@ -12,8 +12,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.i.WidgetCallFullscreenAudioShareWarningBinding;
-import b.a.i.WidgetCallFullscreenPrivateCallBinding;
+import b.a.i.p4;
+import b.a.i.q4;
 import com.discord.R;
 import com.discord.databinding.WidgetCallFullscreenBinding;
 import com.discord.views.calls.CallEventsButtonView;
@@ -27,13 +27,13 @@ import com.discord.widgets.voice.fullscreen.grid.PrivateCallGridView;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetCallFullscreen.kt */
 /* loaded from: classes.dex */
-public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetCallFullscreenBinding> {
+public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends k implements Function1<View, WidgetCallFullscreenBinding> {
     public static final WidgetCallFullscreen$binding$2 INSTANCE = new WidgetCallFullscreen$binding$2();
 
     public WidgetCallFullscreen$binding$2() {
@@ -47,7 +47,7 @@ public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends Functi
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetCallFullscreenBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.action_bar_toolbar;
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.action_bar_toolbar);
         if (toolbar != null) {
@@ -60,7 +60,7 @@ public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends Functi
                     i = R.id.audio_share;
                     View viewFindViewById = view.findViewById(R.id.audio_share);
                     if (viewFindViewById != null) {
-                        WidgetCallFullscreenAudioShareWarningBinding widgetCallFullscreenAudioShareWarningBinding = new WidgetCallFullscreenAudioShareWarningBinding(viewFindViewById, viewFindViewById);
+                        p4 p4Var = new p4(viewFindViewById, viewFindViewById);
                         Barrier barrier = (Barrier) view.findViewById(R.id.call_audio_share_warning_barrier);
                         if (barrier != null) {
                             ConstraintLayout constraintLayout = (ConstraintLayout) view;
@@ -120,7 +120,7 @@ public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends Functi
                                                                                                                         i2 = R.id.private_call_status_secondary;
                                                                                                                         TextView textView7 = (TextView) viewFindViewById2.findViewById(R.id.private_call_status_secondary);
                                                                                                                         if (textView7 != null) {
-                                                                                                                            WidgetCallFullscreenPrivateCallBinding widgetCallFullscreenPrivateCallBinding = new WidgetCallFullscreenPrivateCallBinding(relativeLayout2, privateCallBlurredGridView, textView4, relativeLayout2, linearLayout2, privateCallGridView, textView5, textView6, textView7);
+                                                                                                                            q4 q4Var = new q4(relativeLayout2, privateCallBlurredGridView, textView4, relativeLayout2, linearLayout2, privateCallGridView, textView5, textView6, textView7);
                                                                                                                             ConstraintLayout constraintLayout4 = (ConstraintLayout) view.findViewById(R.id.stage_call_speaking_chip);
                                                                                                                             if (constraintLayout4 != null) {
                                                                                                                                 UserSummaryView userSummaryView = (UserSummaryView) view.findViewById(R.id.stage_call_speaking_user_summary);
@@ -137,7 +137,7 @@ public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends Functi
                                                                                                                                                     if (voiceControlsSheetView != null) {
                                                                                                                                                         FragmentContainerView fragmentContainerView = (FragmentContainerView) view.findViewById(R.id.widget_global_status);
                                                                                                                                                         if (fragmentContainerView != null) {
-                                                                                                                                                            return new WidgetCallFullscreenBinding(constraintLayout, toolbar, appBarLayout, relativeLayout, widgetCallFullscreenAudioShareWarningBinding, barrier, constraintLayout, coordinatorLayout, materialButton, textView, constraintLayout2, linearLayout, materialButton2, videoCallParticipantView, recyclerView, materialButton3, constraintLayout3, textView2, textView3, imageView, recyclerView2, stageCallVisitCommunityView, viewStub, widgetCallFullscreenPrivateCallBinding, constraintLayout4, userSummaryView, materialTextView, callEventsButtonView, voiceCallActiveEventView, barrier2, voiceControlsSheetView, fragmentContainerView);
+                                                                                                                                                            return new WidgetCallFullscreenBinding(constraintLayout, toolbar, appBarLayout, relativeLayout, p4Var, barrier, constraintLayout, coordinatorLayout, materialButton, textView, constraintLayout2, linearLayout, materialButton2, videoCallParticipantView, recyclerView, materialButton3, constraintLayout3, textView2, textView3, imageView, recyclerView2, stageCallVisitCommunityView, viewStub, q4Var, constraintLayout4, userSummaryView, materialTextView, callEventsButtonView, voiceCallActiveEventView, barrier2, voiceControlsSheetView, fragmentContainerView);
                                                                                                                                                         }
                                                                                                                                                         i = R.id.widget_global_status;
                                                                                                                                                     } else {

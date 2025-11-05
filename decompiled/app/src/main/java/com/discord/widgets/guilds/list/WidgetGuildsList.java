@@ -15,12 +15,11 @@ import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetGuildsListBinding;
@@ -31,11 +30,11 @@ import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.drawable.DrawableCompat;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.channels.list.WidgetChannelListUnreads;
 import com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions;
 import com.discord.widgets.guilds.contextmenu.WidgetFolderContextMenu;
@@ -45,14 +44,14 @@ import com.discord.widgets.guilds.list.GuildListItem;
 import com.discord.widgets.guilds.list.WidgetGuildListAdapter;
 import com.discord.widgets.guilds.list.WidgetGuildsListViewModel;
 import com.discord.widgets.home.WidgetHome;
+import com.discord.widgets.hubs.HubEmailArgs;
 import com.discord.widgets.hubs.WidgetHubEmailFlow;
-import com.discord.widgets.hubs.WidgetHubEmailViewModel2;
 import com.discord.widgets.nux.WidgetGuildTemplates;
 import com.discord.widgets.nux.WidgetNavigationHelp;
 import com.discord.widgets.tabs.BottomNavViewObserver;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
@@ -66,7 +65,7 @@ import rx.Observable;
 /* compiled from: WidgetGuildsList.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildsList extends AppFragment implements WidgetGuildListAdapter.InteractionListener {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildsList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildsListBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildsList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildsListBinding;", 0)};
     private WidgetGuildListAdapter adapter;
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
@@ -93,16 +92,16 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
             public final Observable<AddGuildHint> get() {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
-                Observable observableY = Observable.i(companion.getNux().getNuxState(), StoreConnectionOpen.observeConnectionOpen$default(companion.getConnectionOpen(), false, 1, null), companion.getChannels().observeGuildAndPrivateChannels(), WidgetGuildsList2.INSTANCE).y(WidgetGuildsList3.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableY, "Observable\n             ….filter { it.isEligible }");
-                Observable<AddGuildHint> observableM = ObservableExtensionsKt.takeSingleUntilTimeout$default(observableY, 0L, false, 3, null).M(WidgetGuildsList4.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableM, "Observable\n             … = false)\n              }");
+                Observable observableY = Observable.i(companion.getNux().getNuxState(), StoreConnectionOpen.observeConnectionOpen$default(companion.getConnectionOpen(), false, 1, null), companion.getChannels().observeGuildAndPrivateChannels(), WidgetGuildsList$AddGuildHint$Companion$get$1.INSTANCE).y(WidgetGuildsList$AddGuildHint$Companion$get$2.INSTANCE);
+                m.checkNotNullExpressionValue(observableY, "Observable\n             ….filter { it.isEligible }");
+                Observable<AddGuildHint> observableM = ObservableExtensionsKt.takeSingleUntilTimeout$default(observableY, 0L, false, 3, null).M(WidgetGuildsList$AddGuildHint$Companion$get$3.INSTANCE);
+                m.checkNotNullExpressionValue(observableM, "Observable\n             … = false)\n              }");
                 return observableM;
             }
 
             public final Observable<Boolean> getDismissAction() {
-                Observable observableG = StoreStream.INSTANCE.getNavigation().observeLeftPanelState().G(WidgetGuildsList5.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableG, "StoreStream\n            …te == PanelState.Closed }");
+                Observable observableG = StoreStream.INSTANCE.getNavigation().observeLeftPanelState().G(WidgetGuildsList$AddGuildHint$Companion$getDismissAction$1.INSTANCE);
+                m.checkNotNullExpressionValue(observableG, "StoreStream\n            …te == PanelState.Closed }");
                 return observableG;
             }
 
@@ -175,10 +174,10 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("AddGuildHint(isEligible=");
+            StringBuilder sbU = a.U("AddGuildHint(isEligible=");
             sbU.append(this.isEligible);
             sbU.append(", isAddGuildHint=");
-            return outline.O(sbU, this.isAddGuildHint, ")");
+            return a.O(sbU, this.isAddGuildHint, ")");
         }
 
         public /* synthetic */ AddGuildHint(boolean z2, boolean z3, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -188,7 +187,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$configureAddGuildHint$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -202,14 +201,14 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
-            Intrinsics3.checkNotNullParameter(nuxState, "nux");
+            m.checkNotNullParameter(nuxState, "nux");
             return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, false, null, 47, null);
         }
     }
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$configureBottomNavSpace$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Integer, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -223,20 +222,20 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         public final void invoke(int i) {
             WidgetGuildsList.access$getAdapter$p(WidgetGuildsList.this).handleBottomNavHeight(i);
             ViewStub viewStub = WidgetGuildsList.access$getBinding$p(WidgetGuildsList.this).c;
-            Intrinsics3.checkNotNullExpressionValue(viewStub, "binding.guildListUnreadsStub");
+            m.checkNotNullExpressionValue(viewStub, "binding.guildListUnreadsStub");
             ViewGroup.LayoutParams layoutParams = viewStub.getLayoutParams();
             Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
             ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
             marginLayoutParams.setMargins(marginLayoutParams.leftMargin, marginLayoutParams.topMargin, marginLayoutParams.rightMargin, i);
             ViewStub viewStub2 = WidgetGuildsList.access$getBinding$p(WidgetGuildsList.this).c;
-            Intrinsics3.checkNotNullExpressionValue(viewStub2, "binding.guildListUnreadsStub");
+            m.checkNotNullExpressionValue(viewStub2, "binding.guildListUnreadsStub");
             viewStub2.setLayoutParams(marginLayoutParams);
         }
     }
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<WidgetGuildsListViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<WidgetGuildsListViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -249,14 +248,14 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildsListViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "it");
+            m.checkNotNullParameter(viewState, "it");
             WidgetGuildsList.access$configureUI(WidgetGuildsList.this, viewState);
         }
     }
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<WidgetGuildsListViewModel.Event, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<WidgetGuildsListViewModel.Event, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -269,14 +268,14 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildsListViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "it");
+            m.checkNotNullParameter(event, "it");
             WidgetGuildsList.access$handleEvent(WidgetGuildsList.this, event);
         }
     }
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<AddGuildHint, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<AddGuildHint, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -289,14 +288,14 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AddGuildHint addGuildHint) {
-            Intrinsics3.checkNotNullParameter(addGuildHint, "it");
+            m.checkNotNullParameter(addGuildHint, "it");
             WidgetGuildsList.access$configureAddGuildHint(WidgetGuildsList.this, addGuildHint);
         }
     }
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Boolean, Unit> {
         public AnonymousClass4() {
             super(1);
         }
@@ -316,7 +315,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Integer> {
+    public static final class AnonymousClass1 extends o implements Function0<Integer> {
         public AnonymousClass1() {
             super(0);
         }
@@ -334,7 +333,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     /* compiled from: WidgetGuildsList.kt */
     /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
 
         /* compiled from: WidgetGuildsList.kt */
         /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$2$1, reason: invalid class name */
@@ -360,7 +359,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             WidgetGuildsList.access$setGuildListAddHint$p(WidgetGuildsList.this, view);
             View viewAccess$getGuildListAddHint$p = WidgetGuildsList.access$getGuildListAddHint$p(WidgetGuildsList.this);
             if (viewAccess$getGuildListAddHint$p != null) {
@@ -371,11 +370,11 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     public WidgetGuildsList() {
         super(R.layout.widget_guilds_list);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildsList6.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildsList$binding$2.INSTANCE, null, 2, null);
         this.bottomNavViewObserver = BottomNavViewObserver.INSTANCE.getINSTANCE();
-        WidgetGuildsList7 widgetGuildsList7 = WidgetGuildsList7.INSTANCE;
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetGuildsListViewModel.class), new WidgetGuildsList$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildsList7));
+        WidgetGuildsList$viewModel$2 widgetGuildsList$viewModel$2 = WidgetGuildsList$viewModel$2.INSTANCE;
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetGuildsListViewModel.class), new WidgetGuildsList$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildsList$viewModel$2));
     }
 
     public static final /* synthetic */ void access$configureAddGuildHint(WidgetGuildsList widgetGuildsList, AddGuildHint addGuildHint) {
@@ -393,7 +392,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
     public static final /* synthetic */ WidgetGuildListAdapter access$getAdapter$p(WidgetGuildsList widgetGuildsList) {
         WidgetGuildListAdapter widgetGuildListAdapter = widgetGuildsList.adapter;
         if (widgetGuildListAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         return widgetGuildListAdapter;
     }
@@ -420,13 +419,13 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     private final void announceFolderToggle(GuildListItem.FolderItem item) {
         Object[] objArr = new Object[2];
-        objArr[0] = FormatUtils.k(this, item.isOpen() ? R.string.collapsed : R.string.expanded, new Object[0], null, 4);
+        objArr[0] = b.k(this, item.isOpen() ? R.string.collapsed : R.string.expanded, new Object[0], null, 4);
         String name = item.getName();
         if (name == null) {
             name = "";
         }
         objArr[1] = name;
-        AccessibilityUtils.INSTANCE.sendAnnouncement(requireContext(), outline.P(objArr, 2, "%s, %s", "java.lang.String.format(this, *args)"));
+        AccessibilityUtils.INSTANCE.sendAnnouncement(requireContext(), a.P(objArr, 2, "%s, %s", "java.lang.String.format(this, *args)"));
     }
 
     private final void configureAddGuildHint(AddGuildHint addGuildHint) {
@@ -451,7 +450,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         if (viewState instanceof WidgetGuildsListViewModel.ViewState.Loaded) {
             WidgetGuildListAdapter widgetGuildListAdapter = this.adapter;
             if (widgetGuildListAdapter == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+                m.throwUninitializedPropertyAccessException("adapter");
             }
             WidgetGuildsListViewModel.ViewState.Loaded loaded = (WidgetGuildsListViewModel.ViewState.Loaded) viewState;
             widgetGuildListAdapter.setItems(loaded.getItems(), !loaded.getWasDragResult());
@@ -513,16 +512,16 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             announceFolderToggle(((WidgetGuildsListViewModel.Event.AnnounceFolderToggleForAccessibility) event).getItem());
             return;
         }
-        if (Intrinsics3.areEqual(event, WidgetGuildsListViewModel.Event.ShowCreateGuild.INSTANCE)) {
+        if (m.areEqual(event, WidgetGuildsListViewModel.Event.ShowCreateGuild.INSTANCE)) {
             showCreateGuild();
             return;
         }
-        if (Intrinsics3.areEqual(event, WidgetGuildsListViewModel.Event.ShowHubVerification.INSTANCE)) {
+        if (m.areEqual(event, WidgetGuildsListViewModel.Event.ShowHubVerification.INSTANCE)) {
             showHubVerification();
-        } else if (Intrinsics3.areEqual(event, WidgetGuildsListViewModel.Event.ShowHelp.INSTANCE)) {
+        } else if (m.areEqual(event, WidgetGuildsListViewModel.Event.ShowHelp.INSTANCE)) {
             showHelp();
         } else {
-            if (!Intrinsics3.areEqual(event, WidgetGuildsListViewModel.Event.FocusFirstElement.INSTANCE)) {
+            if (!m.areEqual(event, WidgetGuildsListViewModel.Event.FocusFirstElement.INSTANCE)) {
                 throw new NoWhenBranchMatchedException();
             }
             focusFirstElement();
@@ -531,49 +530,49 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     private final void setupRecycler() {
         RecyclerView recyclerView = getBinding().f2458b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.guildList");
+        m.checkNotNullExpressionValue(recyclerView, "binding.guildList");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(recyclerView.getContext(), 1, false);
         WidgetGuildListAdapter widgetGuildListAdapter = new WidgetGuildListAdapter(linearLayoutManager, this);
         this.adapter = widgetGuildListAdapter;
         if (widgetGuildListAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         widgetGuildListAdapter.setHasStableIds(true);
         RecyclerView recyclerView2 = getBinding().f2458b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.guildList");
+        m.checkNotNullExpressionValue(recyclerView2, "binding.guildList");
         recyclerView2.setItemAnimator(null);
         RecyclerView recyclerView3 = getBinding().f2458b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.guildList");
+        m.checkNotNullExpressionValue(recyclerView3, "binding.guildList");
         recyclerView3.setLayoutManager(linearLayoutManager);
         RecyclerView recyclerView4 = getBinding().f2458b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView4, "binding.guildList");
+        m.checkNotNullExpressionValue(recyclerView4, "binding.guildList");
         WidgetGuildListAdapter widgetGuildListAdapter2 = this.adapter;
         if (widgetGuildListAdapter2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         recyclerView4.setAdapter(widgetGuildListAdapter2);
         WidgetGuildListAdapter widgetGuildListAdapter3 = this.adapter;
         if (widgetGuildListAdapter3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            m.throwUninitializedPropertyAccessException("adapter");
         }
         new ItemTouchHelper(new GuildsDragAndDropCallback(widgetGuildListAdapter3)).attachToRecyclerView(getBinding().f2458b);
         RecyclerView recyclerView5 = getBinding().f2458b;
         Drawable drawable = ContextCompat.getDrawable(requireContext(), DrawableCompat.getThemedDrawableRes$default(requireContext(), R.attr.bg_folder_no_children, 0, 2, (Object) null));
-        Intrinsics3.checkNotNull(drawable);
-        Intrinsics3.checkNotNullExpressionValue(drawable, "ContextCompat.getDrawabl…children)\n            )!!");
+        m.checkNotNull(drawable);
+        m.checkNotNullExpressionValue(drawable, "ContextCompat.getDrawabl…children)\n            )!!");
         Drawable drawable2 = ContextCompat.getDrawable(requireContext(), DrawableCompat.getThemedDrawableRes$default(requireContext(), R.attr.bg_folder_tintable_no_children, 0, 2, (Object) null));
-        Intrinsics3.checkNotNull(drawable2);
-        Intrinsics3.checkNotNullExpressionValue(drawable2, "ContextCompat.getDrawabl…children)\n            )!!");
+        m.checkNotNull(drawable2);
+        m.checkNotNullExpressionValue(drawable2, "ContextCompat.getDrawabl…children)\n            )!!");
         Drawable drawable3 = ContextCompat.getDrawable(requireContext(), DrawableCompat.getThemedDrawableRes$default(requireContext(), R.attr.bg_folder_with_children, 0, 2, (Object) null));
-        Intrinsics3.checkNotNull(drawable3);
-        Intrinsics3.checkNotNullExpressionValue(drawable3, "ContextCompat.getDrawabl…children)\n            )!!");
+        m.checkNotNull(drawable3);
+        m.checkNotNullExpressionValue(drawable3, "ContextCompat.getDrawabl…children)\n            )!!");
         recyclerView5.addItemDecoration(new FolderItemDecoration(drawable, drawable2, drawable3, requireContext().getResources().getDimensionPixelSize(R.dimen.avatar_size_large)));
     }
 
     private final void showChannelActions(long channelId) {
         WidgetChannelsListItemChannelActions.Companion companion = WidgetChannelsListItemChannelActions.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         companion.show(parentFragmentManager, channelId);
     }
 
@@ -586,18 +585,18 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         dismissAddGuildHint(true);
         WidgetNavigationHelp.Companion companion = WidgetNavigationHelp.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         companion.show(parentFragmentManager);
     }
 
     private final void showHubVerification() {
-        AppScreen2.d(requireContext(), WidgetHubEmailFlow.class, new WidgetHubEmailViewModel2(null, 0, null, 7, null));
+        j.d(requireContext(), WidgetHubEmailFlow.class, new HubEmailArgs(null, 0, null, 7, null));
     }
 
     private final void showUnavailableGuildsToast(int unavailableGuildCount) {
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-        AppToast.h(getContext(), FormatUtils.l(StringResourceUtils.getQuantityString(resources, requireContext(), R.plurals.partial_outage_count, unavailableGuildCount, Integer.valueOf(unavailableGuildCount)), new Object[0], null, 2), 0, null, 12);
+        m.checkNotNullExpressionValue(resources, "resources");
+        b.a.d.m.h(getContext(), b.l(StringResourceUtilsKt.getQuantityString(resources, requireContext(), R.plurals.partial_outage_count, unavailableGuildCount, Integer.valueOf(unavailableGuildCount)), new Object[0], null, 2), 0, null, 12);
     }
 
     @Override // com.discord.widgets.guilds.list.WidgetGuildListAdapter.InteractionListener
@@ -607,19 +606,19 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     @Override // com.discord.widgets.guilds.list.WidgetGuildListAdapter.InteractionListener
     public void onItemClicked(View view, GuildListItem item) {
-        Intrinsics3.checkNotNullParameter(view, "view");
-        Intrinsics3.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(item, "item");
         WidgetGuildsListViewModel viewModel = getViewModel();
         Context contextRequireContext = requireContext();
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         viewModel.onItemClicked(item, contextRequireContext, parentFragmentManager);
     }
 
     @Override // com.discord.widgets.guilds.list.WidgetGuildListAdapter.InteractionListener
     public void onItemLongPressed(View view, GuildListItem item) {
-        Intrinsics3.checkNotNullParameter(view, "view");
-        Intrinsics3.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(item, "item");
         boolean z2 = item instanceof GuildListItem.GuildItem;
         if (!z2 && !(item instanceof GuildListItem.FolderItem)) {
             getViewModel().onItemLongPressed(item);
@@ -630,14 +629,14 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         if (z2) {
             WidgetGuildContextMenu.Companion companion = WidgetGuildContextMenu.INSTANCE;
             FragmentActivity fragmentActivityRequireActivity = requireActivity();
-            Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+            m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
             companion.show(fragmentActivityRequireActivity, pointF, ((GuildListItem.GuildItem) item).getGuild().getId());
             return;
         }
         if (item instanceof GuildListItem.FolderItem) {
             WidgetFolderContextMenu.Companion companion2 = WidgetFolderContextMenu.INSTANCE;
             FragmentActivity fragmentActivityRequireActivity2 = requireActivity();
-            Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity2, "requireActivity()");
+            m.checkNotNullExpressionValue(fragmentActivityRequireActivity2, "requireActivity()");
             companion2.show(fragmentActivityRequireActivity2, pointF, ((GuildListItem.FolderItem) item).getFolderId());
         }
     }
@@ -646,17 +645,17 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
     public void onItemMoved() {
         WidgetGuildContextMenu.Companion companion = WidgetGuildContextMenu.INSTANCE;
         FragmentActivity fragmentActivityRequireActivity = requireActivity();
-        Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
+        m.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");
         companion.hide(fragmentActivityRequireActivity, true);
         WidgetFolderContextMenu.Companion companion2 = WidgetFolderContextMenu.INSTANCE;
         FragmentActivity fragmentActivityRequireActivity2 = requireActivity();
-        Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity2, "requireActivity()");
+        m.checkNotNullExpressionValue(fragmentActivityRequireActivity2, "requireActivity()");
         companion2.hide(fragmentActivityRequireActivity2, true);
     }
 
     @Override // com.discord.widgets.guilds.list.WidgetGuildListAdapter.InteractionListener
     public void onOperation(WidgetGuildListAdapter.Operation operation) {
-        Intrinsics3.checkNotNullParameter(operation, "operation");
+        m.checkNotNullParameter(operation, "operation");
         if (operation instanceof WidgetGuildListAdapter.Operation.MoveAbove) {
             WidgetGuildListAdapter.Operation.MoveAbove moveAbove = (WidgetGuildListAdapter.Operation.MoveAbove) operation;
             getViewModel().moveAbove(moveAbove.getFromPosition(), moveAbove.getTargetPosition());
@@ -682,13 +681,13 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setupRecycler();
         ViewStub viewStub = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(viewStub, "binding.guildListUnreadsStub");
+        m.checkNotNullExpressionValue(viewStub, "binding.guildListUnreadsStub");
         RecyclerView recyclerView = getBinding().f2458b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.guildList");
+        m.checkNotNullExpressionValue(recyclerView, "binding.guildList");
         WidgetChannelListUnreads widgetChannelListUnreads = new WidgetChannelListUnreads(viewStub, recyclerView, null, new AnonymousClass1(), 0, 0, false, 116, null);
         this.guildListUnreads = widgetChannelListUnreads;
         if (widgetChannelListUnreads != null) {

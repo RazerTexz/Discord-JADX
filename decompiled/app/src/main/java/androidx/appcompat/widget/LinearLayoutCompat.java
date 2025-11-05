@@ -17,7 +17,7 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.InputDeviceCompat;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.google.android.material.badge.BadgeDrawable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -1217,7 +1217,7 @@ public class LinearLayoutCompat extends ViewGroup {
             this.mBaselineAlignedChildIndex = i;
             return;
         }
-        StringBuilder sbU = outline.U("base aligned child index out of range (0, ");
+        StringBuilder sbU = a.U("base aligned child index out of range (0, ");
         sbU.append(getChildCount());
         sbU.append(")");
         throw new IllegalArgumentException(sbU.toString());

@@ -3,7 +3,7 @@ package com.discord.widgets.guilds.profile;
 import androidx.core.app.NotificationCompat;
 import com.discord.app.AppActivity;
 import com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import rx.functions.Action1;
 
 /* compiled from: WidgetGuildProfileSheet.kt */
@@ -29,7 +29,7 @@ public final class WidgetGuildProfileSheet$configureGuildActions$$inlined$apply$
         WidgetGuildProfileSheetViewModel widgetGuildProfileSheetViewModelAccess$getViewModel$p = WidgetGuildProfileSheet.access$getViewModel$p(this.this$0);
         AppActivity appActivity = this.this$0.getAppActivity();
         long j = this.$guildId$inlined;
-        Intrinsics3.checkNotNullExpressionValue(bool, "checked");
+        m.checkNotNullExpressionValue(bool, "checked");
         widgetGuildProfileSheetViewModelAccess$getViewModel$p.setAllowDM(appActivity, j, bool.booleanValue());
     }
 }

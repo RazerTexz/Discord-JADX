@@ -2,7 +2,7 @@ package org.objectweb.asm;
 
 import androidx.core.view.InputDeviceCompat;
 import androidx.core.view.ViewCompat;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -114,7 +114,7 @@ public class ClassReader {
     }
 
     public ClassReader(String className) throws IOException {
-        this(readStream(ClassLoader.getSystemResourceAsStream(className.replace('.', MentionUtils.SLASH_CHAR) + ".class"), true));
+        this(readStream(ClassLoader.getSystemResourceAsStream(className.replace('.', MentionUtilsKt.SLASH_CHAR) + ".class"), true));
     }
 
     private static byte[] readStream(InputStream inputStream, boolean close) throws IOException {

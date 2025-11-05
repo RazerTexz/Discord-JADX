@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class FragmentStore {
     }
 
     public void dump(@NonNull String str, @Nullable FileDescriptor fileDescriptor, @NonNull PrintWriter printWriter, @Nullable String[] strArr) {
-        String strW = outline.w(str, "    ");
+        String strW = a.w(str, "    ");
         if (!this.mActive.isEmpty()) {
             printWriter.print(str);
             printWriter.print("Active Fragments:");
@@ -282,7 +282,7 @@ public class FragmentStore {
             for (String str : list) {
                 Fragment fragmentFindActiveFragment = findActiveFragment(str);
                 if (fragmentFindActiveFragment == null) {
-                    throw new IllegalStateException(outline.y("No instantiated fragment for (", str, ")"));
+                    throw new IllegalStateException(a.y("No instantiated fragment for (", str, ")"));
                 }
                 if (FragmentManager.isLoggingEnabled(2)) {
                     Log.v("FragmentManager", "restoreSaveState: added (" + str + "): " + fragmentFindActiveFragment);

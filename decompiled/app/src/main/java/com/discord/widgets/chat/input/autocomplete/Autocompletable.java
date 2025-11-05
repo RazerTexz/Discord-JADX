@@ -2,7 +2,7 @@ package com.discord.widgets.chat.input.autocomplete;
 
 import androidx.core.app.NotificationCompat;
 import com.discord.utilities.collections.MultiListIterator;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -31,7 +31,7 @@ public abstract class Autocompletable {
             return getInputTextMatchers().iterator();
         }
         List<String> autocompleteTextMatchers2 = getAutocompleteTextMatchers();
-        Intrinsics3.checkNotNull(autocompleteTextMatchers2);
+        m.checkNotNull(autocompleteTextMatchers2);
         return new MultiListIterator(getInputTextMatchers(), autocompleteTextMatchers2);
     }
 
@@ -41,7 +41,7 @@ public abstract class Autocompletable {
             return getInputTextMatchers().iterator();
         }
         List<String> hiddenInputTextMatchers2 = getHiddenInputTextMatchers();
-        Intrinsics3.checkNotNull(hiddenInputTextMatchers2);
+        m.checkNotNull(hiddenInputTextMatchers2);
         return new MultiListIterator(getInputTextMatchers(), hiddenInputTextMatchers2);
     }
 
@@ -50,7 +50,7 @@ public abstract class Autocompletable {
     }
 
     public final boolean matchesText(String text) {
-        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         if (getInputTextMatchers().contains(text)) {
             return true;
         }

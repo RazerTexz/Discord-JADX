@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPremiumUpgradeCompleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean success = null;
     private final CharSequence errorCode = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsS
             return false;
         }
         TrackPremiumUpgradeCompleted trackPremiumUpgradeCompleted = (TrackPremiumUpgradeCompleted) other;
-        return Intrinsics3.areEqual(this.success, trackPremiumUpgradeCompleted.success) && Intrinsics3.areEqual(this.errorCode, trackPremiumUpgradeCompleted.errorCode) && Intrinsics3.areEqual(this.plan, trackPremiumUpgradeCompleted.plan);
+        return m.areEqual(this.success, trackPremiumUpgradeCompleted.success) && m.areEqual(this.errorCode, trackPremiumUpgradeCompleted.errorCode) && m.areEqual(this.plan, trackPremiumUpgradeCompleted.plan);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackPremiumUpgradeCompleted implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPremiumUpgradeCompleted(success=");
+        StringBuilder sbU = a.U("TrackPremiumUpgradeCompleted(success=");
         sbU.append(this.success);
         sbU.append(", errorCode=");
         sbU.append(this.errorCode);
         sbU.append(", plan=");
-        return outline.E(sbU, this.plan, ")");
+        return a.E(sbU, this.plan, ")");
     }
 }

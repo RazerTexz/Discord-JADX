@@ -1,7 +1,7 @@
 package com.discord.stores;
 
 import com.discord.rtcconnection.mediaengine.MediaEngine;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: StoreMediaEngine.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final class StoreMediaEngine$init$echoCancellationCallback$1 implements M
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngine.b
     public void onEchoCancellationUpdated(MediaEngine.EchoCancellationInfo info) {
-        Intrinsics3.checkNotNullParameter(info, "info");
+        m.checkNotNullParameter(info, "info");
         StoreMediaEngine.access$getDispatcher$p(this.this$0).schedule(new StoreMediaEngine$init$echoCancellationCallback$1$onEchoCancellationUpdated$1(info));
     }
 }

@@ -2,11 +2,11 @@ package com.discord.stores;
 
 import android.content.Context;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.persister.Persister;
-import d0.t.Sets5;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashSet;
 import java.util.Set;
 import kotlin.Unit;
@@ -25,7 +25,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
 
     /* compiled from: StoreExpandedGuildFolders.kt */
     /* renamed from: com.discord.stores.StoreExpandedGuildFolders$closeFolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $folderId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -48,7 +48,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
 
     /* compiled from: StoreExpandedGuildFolders.kt */
     /* renamed from: com.discord.stores.StoreExpandedGuildFolders$observeOpenFolderIds$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Set<? extends Long>> {
+    public static final class AnonymousClass1 extends o implements Function0<Set<? extends Long>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -67,7 +67,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
 
     /* compiled from: StoreExpandedGuildFolders.kt */
     /* renamed from: com.discord.stores.StoreExpandedGuildFolders$openFolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $folderId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -89,7 +89,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
     }
 
     public /* synthetic */ StoreExpandedGuildFolders(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public final void closeFolder(long folderId) {
@@ -100,13 +100,13 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
         return this.openFolderIdsSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleFolderClosed(long folderId) {
         this.openFolderIds.remove(Long.valueOf(folderId));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleFolderOpened(long folderId) {
         this.openFolderIds.add(Long.valueOf(folderId));
         markChanged();
@@ -114,7 +114,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         this.openFolderIds.addAll(this.openFolderIdsCache.get());
         markChanged();
     }
@@ -128,7 +128,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         HashSet hashSet = new HashSet(this.openFolderIds);
@@ -137,11 +137,11 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
     }
 
     public StoreExpandedGuildFolders(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
-        this.openFolderIdsSnapshot = Sets5.emptySet();
+        this.openFolderIdsSnapshot = n0.emptySet();
         this.openFolderIds = new HashSet();
         this.openFolderIdsCache = new Persister<>("CACHE_KEY_OPEN_FOLDERS", new HashSet());
     }

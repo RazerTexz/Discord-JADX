@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.provider.FontsContractCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -90,10 +90,10 @@ public class FontProvider {
         String providerAuthority = fontRequest.getProviderAuthority();
         ProviderInfo providerInfoResolveContentProvider = packageManager.resolveContentProvider(providerAuthority, 0);
         if (providerInfoResolveContentProvider == null) {
-            throw new PackageManager.NameNotFoundException(outline.w("No package found for authority: ", providerAuthority));
+            throw new PackageManager.NameNotFoundException(a.w("No package found for authority: ", providerAuthority));
         }
         if (!providerInfoResolveContentProvider.packageName.equals(fontRequest.getProviderPackage())) {
-            StringBuilder sbY = outline.Y("Found content provider ", providerAuthority, ", but package was not ");
+            StringBuilder sbY = a.Y("Found content provider ", providerAuthority, ", but package was not ");
             sbY.append(fontRequest.getProviderPackage());
             throw new PackageManager.NameNotFoundException(sbY.toString());
         }

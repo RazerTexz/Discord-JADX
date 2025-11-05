@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackNetworkInformation;
-import com.discord.analytics.generated.traits.TrackNetworkInformation2;
+import com.discord.analytics.generated.traits.TrackNetworkInformationReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackVideoStreamStarted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoStreamStarted implements AnalyticsSchema, TrackBase2, TrackNetworkInformation2 {
+public final /* data */ class TrackVideoStreamStarted implements AnalyticsSchema, TrackBaseReceiver, TrackNetworkInformationReceiver {
     private TrackBase trackBase;
     private TrackNetworkInformation trackNetworkInformation;
     private final Long guildId = null;
@@ -48,7 +48,7 @@ public final /* data */ class TrackVideoStreamStarted implements AnalyticsSchema
             return false;
         }
         TrackVideoStreamStarted trackVideoStreamStarted = (TrackVideoStreamStarted) other;
-        return Intrinsics3.areEqual(this.guildId, trackVideoStreamStarted.guildId) && Intrinsics3.areEqual(this.channelId, trackVideoStreamStarted.channelId) && Intrinsics3.areEqual(this.rtcConnectionId, trackVideoStreamStarted.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackVideoStreamStarted.mediaSessionId) && Intrinsics3.areEqual(this.parentMediaSessionId, trackVideoStreamStarted.parentMediaSessionId) && Intrinsics3.areEqual(this.senderUserId, trackVideoStreamStarted.senderUserId) && Intrinsics3.areEqual(this.context, trackVideoStreamStarted.context) && Intrinsics3.areEqual(this.participantType, trackVideoStreamStarted.participantType) && Intrinsics3.areEqual(this.shareApplicationName, trackVideoStreamStarted.shareApplicationName) && Intrinsics3.areEqual(this.shareApplicationId, trackVideoStreamStarted.shareApplicationId) && Intrinsics3.areEqual(this.shareApplicationExecutable, trackVideoStreamStarted.shareApplicationExecutable) && Intrinsics3.areEqual(this.streamRegion, trackVideoStreamStarted.streamRegion) && Intrinsics3.areEqual(this.guildRegion, trackVideoStreamStarted.guildRegion) && Intrinsics3.areEqual(this.videoLayout, trackVideoStreamStarted.videoLayout) && Intrinsics3.areEqual(this.videoInputResolution, trackVideoStreamStarted.videoInputResolution) && Intrinsics3.areEqual(this.videoInputFrameRate, trackVideoStreamStarted.videoInputFrameRate) && Intrinsics3.areEqual(this.soundshareSession, trackVideoStreamStarted.soundshareSession) && Intrinsics3.areEqual(this.shareGameName, trackVideoStreamStarted.shareGameName) && Intrinsics3.areEqual(this.shareGameId, trackVideoStreamStarted.shareGameId);
+        return m.areEqual(this.guildId, trackVideoStreamStarted.guildId) && m.areEqual(this.channelId, trackVideoStreamStarted.channelId) && m.areEqual(this.rtcConnectionId, trackVideoStreamStarted.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackVideoStreamStarted.mediaSessionId) && m.areEqual(this.parentMediaSessionId, trackVideoStreamStarted.parentMediaSessionId) && m.areEqual(this.senderUserId, trackVideoStreamStarted.senderUserId) && m.areEqual(this.context, trackVideoStreamStarted.context) && m.areEqual(this.participantType, trackVideoStreamStarted.participantType) && m.areEqual(this.shareApplicationName, trackVideoStreamStarted.shareApplicationName) && m.areEqual(this.shareApplicationId, trackVideoStreamStarted.shareApplicationId) && m.areEqual(this.shareApplicationExecutable, trackVideoStreamStarted.shareApplicationExecutable) && m.areEqual(this.streamRegion, trackVideoStreamStarted.streamRegion) && m.areEqual(this.guildRegion, trackVideoStreamStarted.guildRegion) && m.areEqual(this.videoLayout, trackVideoStreamStarted.videoLayout) && m.areEqual(this.videoInputResolution, trackVideoStreamStarted.videoInputResolution) && m.areEqual(this.videoInputFrameRate, trackVideoStreamStarted.videoInputFrameRate) && m.areEqual(this.soundshareSession, trackVideoStreamStarted.soundshareSession) && m.areEqual(this.shareGameName, trackVideoStreamStarted.shareGameName) && m.areEqual(this.shareGameId, trackVideoStreamStarted.shareGameId);
     }
 
     public int hashCode() {
@@ -93,7 +93,7 @@ public final /* data */ class TrackVideoStreamStarted implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVideoStreamStarted(guildId=");
+        StringBuilder sbU = a.U("TrackVideoStreamStarted(guildId=");
         sbU.append(this.guildId);
         sbU.append(", channelId=");
         sbU.append(this.channelId);
@@ -130,6 +130,6 @@ public final /* data */ class TrackVideoStreamStarted implements AnalyticsSchema
         sbU.append(", shareGameName=");
         sbU.append(this.shareGameName);
         sbU.append(", shareGameId=");
-        return outline.G(sbU, this.shareGameId, ")");
+        return a.G(sbU, this.shareGameId, ")");
     }
 }

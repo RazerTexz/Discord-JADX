@@ -11,10 +11,9 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -34,20 +33,18 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.channel.ChannelSelector;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.internal.LinkedTreeMap;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.t.o;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -56,7 +53,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -70,7 +67,7 @@ import rx.subjects.BehaviorSubject;
 /* compiled from: WidgetGroupInviteFriends.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGroupInviteFriends.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGroupInviteFriendsBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGroupInviteFriends.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGroupInviteFriendsBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -95,10 +92,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
 
         public final void launch(Context context, String source) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(source, "source");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(source, "source");
             AnalyticsTracker.openModal$default("DM Group Create", source, null, 4, null);
-            AppScreen2.e(context, WidgetGroupInviteFriends.class, null, 4);
+            j.e(context, WidgetGroupInviteFriends.class, null, 4);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -106,12 +103,12 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
 
         public final void launch(Context context, long channelId, String source) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(source, "source");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(source, "source");
             AnalyticsTracker.openModal$default("DM Group Add", source, null, 4, null);
             Intent intent = new Intent();
             intent.putExtra(WidgetGroupInviteFriends.INTENT_EXTRA_CHANNEL_ID, channelId);
-            AppScreen2.d(context, WidgetGroupInviteFriends.class, intent);
+            j.d(context, WidgetGroupInviteFriends.class, intent);
         }
     }
 
@@ -139,8 +136,8 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
                 /* JADX WARN: Multi-variable type inference failed */
                 public AddedUsersInput(Collection<? extends User> collection, String str) {
-                    Intrinsics3.checkNotNullParameter(collection, "addedUsers");
-                    Intrinsics3.checkNotNullParameter(str, "filter");
+                    m.checkNotNullParameter(collection, "addedUsers");
+                    m.checkNotNullParameter(str, "filter");
                     this.addedUsers = collection;
                     this.filter = str;
                 }
@@ -166,8 +163,8 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 }
 
                 public final AddedUsersInput copy(Collection<? extends User> addedUsers, String filter) {
-                    Intrinsics3.checkNotNullParameter(addedUsers, "addedUsers");
-                    Intrinsics3.checkNotNullParameter(filter, "filter");
+                    m.checkNotNullParameter(addedUsers, "addedUsers");
+                    m.checkNotNullParameter(filter, "filter");
                     return new AddedUsersInput(addedUsers, filter);
                 }
 
@@ -179,7 +176,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                         return false;
                     }
                     AddedUsersInput addedUsersInput = (AddedUsersInput) other;
-                    return Intrinsics3.areEqual(this.addedUsers, addedUsersInput.addedUsers) && Intrinsics3.areEqual(this.filter, addedUsersInput.filter);
+                    return m.areEqual(this.addedUsers, addedUsersInput.addedUsers) && m.areEqual(this.filter, addedUsersInput.filter);
                 }
 
                 public final Collection<User> getAddedUsers() {
@@ -198,10 +195,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = outline.U("AddedUsersInput(addedUsers=");
+                    StringBuilder sbU = a.U("AddedUsersInput(addedUsers=");
                     sbU.append(this.addedUsers);
                     sbU.append(", filter=");
-                    return outline.J(sbU, this.filter, ")");
+                    return a.J(sbU, this.filter, ")");
                 }
             }
 
@@ -215,16 +212,16 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             @SuppressLint({"DefaultLocale"})
             private final Observable<ModelAppUserRelationship> getFilteredFriends(Collection<? extends User> oldExcludeUsers, String nameFilter) {
                 if (oldExcludeUsers == null) {
-                    oldExcludeUsers = Collections2.emptyList();
+                    oldExcludeUsers = n.emptyList();
                 }
                 Observable<ModelAppUserRelationship> observableY = Observable.B(oldExcludeUsers).G(WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$1.INSTANCE).f0().A(new WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2(nameFilter)).Y(WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$3.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableY, "Observable\n            .…          }\n            }");
+                m.checkNotNullExpressionValue(observableY, "Observable\n            .…          }\n            }");
                 return observableY;
             }
 
             private final Observable<Model> getForAdd(long channelId, Observable<Collection<User>> addedUsersPublisher, Observable<String> filterPublisher) {
                 Observable observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(new WidgetGroupInviteFriends$Model$Companion$getForAdd$1(addedUsersPublisher, filterPublisher));
-                Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
+                m.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
                 return observableY;
             }
 
@@ -235,7 +232,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                     widgetGroupInviteFriends$sam$rx_functions_Func2$0 = new WidgetGroupInviteFriends$sam$rx_functions_Func2$0(widgetGroupInviteFriends$Model$Companion$getForCreate$1);
                 }
                 Observable<Model> observableY = Observable.j(addedUsersPublisher, filterPublisher, (Func2) widgetGroupInviteFriends$sam$rx_functions_Func2$0).Y(WidgetGroupInviteFriends$Model$Companion$getForCreate$2.INSTANCE);
-                Intrinsics3.checkNotNullExpressionValue(observableY, "Observable\n            .…          }\n            }");
+                m.checkNotNullExpressionValue(observableY, "Observable\n            .…          }\n            }");
                 return observableY;
             }
 
@@ -243,15 +240,15 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
 
             public final Observable<Model> get(long channelId, Observable<Collection<User>> addedUsersPublisher, Observable<String> filterPublisher) {
-                Intrinsics3.checkNotNullParameter(addedUsersPublisher, "addedUsersPublisher");
-                Intrinsics3.checkNotNullParameter(filterPublisher, "filterPublisher");
+                m.checkNotNullParameter(addedUsersPublisher, "addedUsersPublisher");
+                m.checkNotNullParameter(filterPublisher, "filterPublisher");
                 return channelId == -1 ? getForCreate(addedUsersPublisher, filterPublisher) : getForAdd(channelId, addedUsersPublisher, filterPublisher);
             }
 
             public final Observable<? extends Collection<User>> getFriendChanges(Observable<Collection<User>> addedUsers) {
-                Intrinsics3.checkNotNullParameter(addedUsers, "addedUsers");
+                m.checkNotNullParameter(addedUsers, "addedUsers");
                 Observable<? extends Collection<User>> observableR = StoreStream.INSTANCE.getUserRelationships().observeForType(1).Y(new WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1(addedUsers)).r();
-                Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
+                m.checkNotNullExpressionValue(observableR, "StoreStream\n            …  .distinctUntilChanged()");
                 return observableR;
             }
 
@@ -269,10 +266,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
             /* JADX WARN: Multi-variable type inference failed */
             public ModelAppUserRelationship(Map<Long, Integer> map, Map<Long, Presence> map2, Map<Long, ? extends User> map3, Map<Long, ? extends ModelApplicationStream> map4) {
-                Intrinsics3.checkNotNullParameter(map, "relationships");
-                Intrinsics3.checkNotNullParameter(map2, "presences");
-                Intrinsics3.checkNotNullParameter(map3, "users");
-                Intrinsics3.checkNotNullParameter(map4, "streams");
+                m.checkNotNullParameter(map, "relationships");
+                m.checkNotNullParameter(map2, "presences");
+                m.checkNotNullParameter(map3, "users");
+                m.checkNotNullParameter(map4, "streams");
                 this.relationships = map;
                 this.presences = map2;
                 this.users = map3;
@@ -313,10 +310,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
 
             public final ModelAppUserRelationship copy(Map<Long, Integer> relationships, Map<Long, Presence> presences, Map<Long, ? extends User> users, Map<Long, ? extends ModelApplicationStream> streams) {
-                Intrinsics3.checkNotNullParameter(relationships, "relationships");
-                Intrinsics3.checkNotNullParameter(presences, "presences");
-                Intrinsics3.checkNotNullParameter(users, "users");
-                Intrinsics3.checkNotNullParameter(streams, "streams");
+                m.checkNotNullParameter(relationships, "relationships");
+                m.checkNotNullParameter(presences, "presences");
+                m.checkNotNullParameter(users, "users");
+                m.checkNotNullParameter(streams, "streams");
                 return new ModelAppUserRelationship(relationships, presences, users, streams);
             }
 
@@ -328,7 +325,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                     return false;
                 }
                 ModelAppUserRelationship modelAppUserRelationship = (ModelAppUserRelationship) other;
-                return Intrinsics3.areEqual(this.relationships, modelAppUserRelationship.relationships) && Intrinsics3.areEqual(this.presences, modelAppUserRelationship.presences) && Intrinsics3.areEqual(this.users, modelAppUserRelationship.users) && Intrinsics3.areEqual(this.streams, modelAppUserRelationship.streams);
+                return m.areEqual(this.relationships, modelAppUserRelationship.relationships) && m.areEqual(this.presences, modelAppUserRelationship.presences) && m.areEqual(this.users, modelAppUserRelationship.users) && m.areEqual(this.streams, modelAppUserRelationship.streams);
             }
 
             public final Map<Long, Presence> getPresences() {
@@ -359,21 +356,21 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("ModelAppUserRelationship(relationships=");
+                StringBuilder sbU = a.U("ModelAppUserRelationship(relationships=");
                 sbU.append(this.relationships);
                 sbU.append(", presences=");
                 sbU.append(this.presences);
                 sbU.append(", users=");
                 sbU.append(this.users);
                 sbU.append(", streams=");
-                return outline.M(sbU, this.streams, ")");
+                return a.M(sbU, this.streams, ")");
             }
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         public Model(Channel channel, String str, Collection<? extends User> collection, List<FriendItem> list, int i, int i2) {
-            Intrinsics3.checkNotNullParameter(collection, "selectedUsers");
-            Intrinsics3.checkNotNullParameter(list, "potentialAdditions");
+            m.checkNotNullParameter(collection, "selectedUsers");
+            m.checkNotNullParameter(list, "potentialAdditions");
             this.channel = channel;
             this.filterText = str;
             this.selectedUsers = collection;
@@ -437,8 +434,8 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
 
         public final Model copy(Channel channel, String filterText, Collection<? extends User> selectedUsers, List<FriendItem> potentialAdditions, int mode, int maxGroupMemberCount) {
-            Intrinsics3.checkNotNullParameter(selectedUsers, "selectedUsers");
-            Intrinsics3.checkNotNullParameter(potentialAdditions, "potentialAdditions");
+            m.checkNotNullParameter(selectedUsers, "selectedUsers");
+            m.checkNotNullParameter(potentialAdditions, "potentialAdditions");
             return new Model(channel, filterText, selectedUsers, potentialAdditions, mode, maxGroupMemberCount);
         }
 
@@ -450,7 +447,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.channel, model.channel) && Intrinsics3.areEqual(this.filterText, model.filterText) && Intrinsics3.areEqual(this.selectedUsers, model.selectedUsers) && Intrinsics3.areEqual(this.potentialAdditions, model.potentialAdditions) && this.mode == model.mode && this.maxGroupMemberCount == model.maxGroupMemberCount;
+            return m.areEqual(this.channel, model.channel) && m.areEqual(this.filterText, model.filterText) && m.areEqual(this.selectedUsers, model.selectedUsers) && m.areEqual(this.potentialAdditions, model.potentialAdditions) && this.mode == model.mode && this.maxGroupMemberCount == model.maxGroupMemberCount;
         }
 
         public final Channel getChannel() {
@@ -499,7 +496,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(channel=");
+            StringBuilder sbU = a.U("Model(channel=");
             sbU.append(this.channel);
             sbU.append(", filterText=");
             sbU.append(this.filterText);
@@ -510,7 +507,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             sbU.append(", mode=");
             sbU.append(this.mode);
             sbU.append(", maxGroupMemberCount=");
-            return outline.B(sbU, this.maxGroupMemberCount, ")");
+            return a.B(sbU, this.maxGroupMemberCount, ")");
         }
 
         /* compiled from: WidgetGroupInviteFriends.kt */
@@ -532,16 +529,16 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 }
 
                 public final List<FriendItem> createData(ModelAppUserRelationship friends, Collection<? extends User> alreadyAddedUsers) {
-                    Intrinsics3.checkNotNullParameter(friends, "friends");
-                    Intrinsics3.checkNotNullParameter(alreadyAddedUsers, "alreadyAddedUsers");
-                    ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(alreadyAddedUsers, 10));
+                    m.checkNotNullParameter(friends, "friends");
+                    m.checkNotNullParameter(alreadyAddedUsers, "alreadyAddedUsers");
+                    ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(alreadyAddedUsers, 10));
                     Iterator<T> it = alreadyAddedUsers.iterator();
                     while (it.hasNext()) {
                         arrayList.add(Long.valueOf(((User) it.next()).getId()));
                     }
-                    Set set = _Collections.toSet(arrayList);
+                    Set set = u.toSet(arrayList);
                     Set<Long> setKeySet = friends.getUsers().keySet();
-                    ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(setKeySet, 10));
+                    ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(setKeySet, 10));
                     Iterator<T> it2 = setKeySet.iterator();
                     while (it2.hasNext()) {
                         long jLongValue = ((Number) it2.next()).longValue();
@@ -615,7 +612,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                     return false;
                 }
                 FriendItem friendItem = (FriendItem) other;
-                return Intrinsics3.areEqual(this.user, friendItem.user) && Intrinsics3.areEqual(this.presence, friendItem.presence) && this.isSelected == friendItem.isSelected && this.isApplicationStreaming == friendItem.isApplicationStreaming;
+                return m.areEqual(this.user, friendItem.user) && m.areEqual(this.presence, friendItem.presence) && this.isSelected == friendItem.isSelected && this.isApplicationStreaming == friendItem.isApplicationStreaming;
             }
 
             @Override // com.discord.utilities.mg_recycler.MGRecyclerDataPayload, com.discord.utilities.recycler.DiffKeyProvider
@@ -661,14 +658,14 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("FriendItem(user=");
+                StringBuilder sbU = a.U("FriendItem(user=");
                 sbU.append(this.user);
                 sbU.append(", presence=");
                 sbU.append(this.presence);
                 sbU.append(", isSelected=");
                 sbU.append(this.isSelected);
                 sbU.append(", isApplicationStreaming=");
-                return outline.O(sbU, this.isApplicationStreaming, ")");
+                return a.O(sbU, this.isApplicationStreaming, ")");
             }
 
             public /* synthetic */ FriendItem(User user, Presence presence, boolean z2, boolean z3, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -703,7 +700,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
     /* compiled from: WidgetGroupInviteFriends.kt */
     /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$configureUI$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<User, Boolean, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function2<User, Boolean, Unit> {
         public final /* synthetic */ Model $data;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -719,11 +716,11 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
 
         public final void invoke(User user, boolean z2) {
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             if (!z2) {
                 WidgetGroupInviteFriends.access$unselectUser(WidgetGroupInviteFriends.this, user);
             } else if (this.$data.getTotalNumRecipients() >= this.$data.getMaxGroupMemberCount()) {
-                AppToast.i(WidgetGroupInviteFriends.this, R.string.group_dm_invite_full_sub, 0, 4);
+                b.a.d.m.i(WidgetGroupInviteFriends.this, R.string.group_dm_invite_full_sub, 0, 4);
             } else {
                 WidgetGroupInviteFriends.access$selectUser(WidgetGroupInviteFriends.this, user);
             }
@@ -732,7 +729,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
     /* compiled from: WidgetGroupInviteFriends.kt */
     /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<UserDataContract, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<UserDataContract, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -755,7 +752,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
     /* compiled from: WidgetGroupInviteFriends.kt */
     /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Object, Unit> {
+    public static final class AnonymousClass2 extends d0.z.d.o implements Function1<Object, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -774,7 +771,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
     /* compiled from: WidgetGroupInviteFriends.kt */
     /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$3, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass3 extends FunctionReferenceImpl implements Function1<Collection<? extends User>, Unit> {
+    public static final /* synthetic */ class AnonymousClass3 extends k implements Function1<Collection<? extends User>, Unit> {
         public AnonymousClass3(BehaviorSubject behaviorSubject) {
             super(1, behaviorSubject, BehaviorSubject.class, "onNext", "onNext(Ljava/lang/Object;)V", 0);
         }
@@ -793,7 +790,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
     /* compiled from: WidgetGroupInviteFriends.kt */
     /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$4, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass4 extends FunctionReferenceImpl implements Function1<Model, Unit> {
+    public static final /* synthetic */ class AnonymousClass4 extends k implements Function1<Model, Unit> {
         public AnonymousClass4(WidgetGroupInviteFriends widgetGroupInviteFriends) {
             super(1, widgetGroupInviteFriends, WidgetGroupInviteFriends.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/WidgetGroupInviteFriends$Model;)V", 0);
         }
@@ -818,7 +815,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            AppToast.g(WidgetGroupInviteFriends.this.getContext(), R.string.group_dm_invite_full_sub, 0, null, 12);
+            b.a.d.m.g(WidgetGroupInviteFriends.this.getContext(), R.string.group_dm_invite_full_sub, 0, null, 12);
         }
     }
 
@@ -829,30 +826,30 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
         /* compiled from: WidgetGroupInviteFriends.kt */
         /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C02452<T1, T2, R> implements Func2<Channel, Long, Tuples2<? extends Channel, ? extends Long>> {
-            public static final C02452 INSTANCE = new C02452();
+        public static final class C03652<T1, T2, R> implements Func2<Channel, Long, Pair<? extends Channel, ? extends Long>> {
+            public static final C03652 INSTANCE = new C03652();
 
             @Override // rx.functions.Func2
-            public /* bridge */ /* synthetic */ Tuples2<? extends Channel, ? extends Long> call(Channel channel, Long l) {
+            public /* bridge */ /* synthetic */ Pair<? extends Channel, ? extends Long> call(Channel channel, Long l) {
                 return call2(channel, l);
             }
 
             /* renamed from: call, reason: avoid collision after fix types in other method */
-            public final Tuples2<Channel, Long> call2(Channel channel, Long l) {
-                return Tuples.to(channel, l);
+            public final Pair<Channel, Long> call2(Channel channel, Long l) {
+                return d0.o.to(channel, l);
             }
         }
 
         /* compiled from: WidgetGroupInviteFriends.kt */
         /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends Lambda implements Function1<Tuples2<? extends Channel, ? extends Long>, Unit> {
+        public static final class AnonymousClass3 extends d0.z.d.o implements Function1<Pair<? extends Channel, ? extends Long>, Unit> {
 
             /* compiled from: WidgetGroupInviteFriends.kt */
             /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$3$2, reason: invalid class name and collision with other inner class name */
-            public static final class C02462 extends Lambda implements Function0<Unit> {
-                public static final C02462 INSTANCE = new C02462();
+            public static final class C03662 extends d0.z.d.o implements Function0<Unit> {
+                public static final C03662 INSTANCE = new C03662();
 
-                public C02462() {
+                public C03662() {
                     super(0);
                 }
 
@@ -873,20 +870,20 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ Unit invoke(Tuples2<? extends Channel, ? extends Long> tuples2) throws Exception {
-                invoke2((Tuples2<Channel, Long>) tuples2);
+            public /* bridge */ /* synthetic */ Unit invoke(Pair<? extends Channel, ? extends Long> pair) throws Exception {
+                invoke2((Pair<Channel, Long>) pair);
                 return Unit.a;
             }
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final void invoke2(Tuples2<Channel, Long> tuples2) throws Exception {
-                Channel channelComponent1 = tuples2.component1();
-                Long lComponent2 = tuples2.component2();
+            public final void invoke2(Pair<Channel, Long> pair) throws Exception {
+                Channel channelComponent1 = pair.component1();
+                Long lComponent2 = pair.component2();
                 ChannelSelector.selectChannel$default(ChannelSelector.INSTANCE.getInstance(), 0L, channelComponent1.getId(), null, null, 12, null);
                 StoreStream.Companion companion = StoreStream.INSTANCE;
                 StoreTabsNavigation.selectHomeTab$default(companion.getTabsNavigation(), StoreNavigation.PanelAction.CLOSE, false, 2, null);
                 Channel channel = AnonymousClass2.this.$data.getChannel();
-                if (Intrinsics3.areEqual(lComponent2, channel != null ? Long.valueOf(channel.getId()) : null)) {
+                if (m.areEqual(lComponent2, channel != null ? Long.valueOf(channel.getId()) : null)) {
                     Channel channel2 = AnonymousClass2.this.$data.getChannel();
                     if (channel2 == null || !ChannelUtils.z(channel2)) {
                         companion.getVoiceChannelSelected().clear();
@@ -894,13 +891,13 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                         WidgetGroupInviteFriends widgetGroupInviteFriends = WidgetGroupInviteFriends.this;
                         Context contextRequireContext = widgetGroupInviteFriends.requireContext();
                         FragmentManager parentFragmentManager = WidgetGroupInviteFriends.this.getParentFragmentManager();
-                        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-                        calls.call(widgetGroupInviteFriends, contextRequireContext, parentFragmentManager, channelComponent1.getId(), C02462.INSTANCE);
+                        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                        calls.call(widgetGroupInviteFriends, contextRequireContext, parentFragmentManager, channelComponent1.getId(), C03662.INSTANCE);
                     } else {
                         StoreCalls calls2 = companion.getCalls();
                         long id2 = channelComponent1.getId();
                         Collection<User> selectedUsers = AnonymousClass2.this.$data.getSelectedUsers();
-                        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(selectedUsers, 10));
+                        ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(selectedUsers, 10));
                         Iterator<T> it = selectedUsers.iterator();
                         while (it.hasNext()) {
                             arrayList.add(Long.valueOf(((User) it.next()).getId()));
@@ -923,28 +920,28 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         public final void onClick(View view) {
             Observable<Channel> observableCreateGroupDM;
             if (this.$data.getChannel() != null) {
-                observableCreateGroupDM = RestAPI.INSTANCE.getApi().addGroupRecipients(this.$data.getChannel().getId(), _Collections.toList(this.$data.getSelectedUsers()));
+                observableCreateGroupDM = RestAPI.INSTANCE.getApi().addGroupRecipients(this.$data.getChannel().getId(), u.toList(this.$data.getSelectedUsers()));
             } else if (this.$data.getSelectedUsers().size() == 1) {
-                observableCreateGroupDM = RestAPI.INSTANCE.getApi().createOrFetchDM(((User) _Collections.first(this.$data.getSelectedUsers())).getId());
+                observableCreateGroupDM = RestAPI.INSTANCE.getApi().createOrFetchDM(((User) u.first(this.$data.getSelectedUsers())).getId());
             } else {
                 RestAPI api = RestAPI.INSTANCE.getApi();
                 Collection<User> selectedUsers = this.$data.getSelectedUsers();
-                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(selectedUsers, 10));
+                ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(selectedUsers, 10));
                 Iterator<T> it = selectedUsers.iterator();
                 while (it.hasNext()) {
                     arrayList.add(Long.valueOf(((User) it.next()).getId()));
                 }
                 observableCreateGroupDM = api.createGroupDM(arrayList);
             }
-            Observable observableJ = Observable.j(observableCreateGroupDM, ObservableExtensionsKt.takeSingleUntilTimeout$default(StoreStream.INSTANCE.getVoiceChannelSelected().observeSelectedVoiceChannelId(), 0L, false, 3, null), C02452.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…dVoiceChannelId\n        }");
+            Observable observableJ = Observable.j(observableCreateGroupDM, ObservableExtensionsKt.takeSingleUntilTimeout$default(StoreStream.INSTANCE.getVoiceChannelSelected().observeSelectedVoiceChannelId(), 0L, false, 3, null), C03652.INSTANCE);
+            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…dVoiceChannelId\n        }");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableJ, WidgetGroupInviteFriends.this, null, 2, null), WidgetGroupInviteFriends.this.getClass(), WidgetGroupInviteFriends.this.requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 60, (Object) null);
         }
     }
 
     public WidgetGroupInviteFriends() {
         super(R.layout.widget_group_invite_friends);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGroupInviteFriends$binding$2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGroupInviteFriends$binding$2.INSTANCE, null, 2, null);
         this.addedUsers = new LinkedTreeMap<>();
         this.filterPublisher = BehaviorSubject.l0("");
         this.addedUsersPublisher = BehaviorSubject.l0(new ArrayList());
@@ -985,7 +982,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 break;
             }
             User next = it.next();
-            getBinding().f2406b.b(next.getUsername(), FormatUtils.k(this, R.string.remove_role_or_user, new Object[]{next.getUsername()}, null, 4).toString(), Long.valueOf(next.getId()), new UserDataContract(next));
+            getBinding().f2406b.b(next.getUsername(), b.k(this, R.string.remove_role_or_user, new Object[]{next.getUsername()}, null, 4).toString(), Long.valueOf(next.getId()), new UserDataContract(next));
             hashSet.add(Long.valueOf(next.getId()));
         }
         String filterText = data.getFilterText();
@@ -1003,7 +1000,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             size = listZ.size();
         }
         AppViewFlipper appViewFlipper = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.groupInviteFriendsViewFlipper");
+        m.checkNotNullExpressionValue(appViewFlipper, "binding.groupInviteFriendsViewFlipper");
         appViewFlipper.setDisplayedChild(getChildToDisplay(data.getMaxGroupMemberCount(), 1 + size, potentialAdditions));
         WidgetGroupInviteFriendsAdapter widgetGroupInviteFriendsAdapter = this.adapter;
         if (widgetGroupInviteFriendsAdapter != null) {
@@ -1025,7 +1022,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
     }
 
     private final void selectUser(User user) {
-        getBinding().f2406b.b(user.getUsername(), FormatUtils.k(this, R.string.remove_role_or_user, new Object[]{user.getUsername()}, null, 4).toString(), Long.valueOf(user.getId()), new UserDataContract(user));
+        getBinding().f2406b.b(user.getUsername(), b.k(this, R.string.remove_role_or_user, new Object[]{user.getUsername()}, null, 4).toString(), Long.valueOf(user.getId()), new UserDataContract(user));
         this.addedUsers.put(Long.valueOf(user.getId()), user);
         this.addedUsersPublisher.onNext(new ArrayList(this.addedUsers.values()));
     }
@@ -1034,12 +1031,12 @@ public final class WidgetGroupInviteFriends extends AppFragment {
     private final void setupFAB(Model data) {
         if (!(!data.getSelectedUsers().isEmpty())) {
             FloatingActionButton floatingActionButton = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(floatingActionButton, "binding.groupInviteFriendsSaveFab");
+            m.checkNotNullExpressionValue(floatingActionButton, "binding.groupInviteFriendsSaveFab");
             floatingActionButton.setVisibility(8);
             return;
         }
         FloatingActionButton floatingActionButton2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(floatingActionButton2, "binding.groupInviteFriendsSaveFab");
+        m.checkNotNullExpressionValue(floatingActionButton2, "binding.groupInviteFriendsSaveFab");
         floatingActionButton2.setVisibility(0);
         if (data.getTotalNumRecipients() > data.getMaxGroupMemberCount()) {
             getBinding().e.setOnClickListener(new AnonymousClass1());
@@ -1055,7 +1052,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
     private final void setupToolbar(Model data) throws Resources.NotFoundException {
         CharSequence quantityString;
         if (data.getChannel() != null) {
-            setActionBarTitle(FormatUtils.k(this, R.string.group_dm_invite_with_name, new Object[]{ChannelUtils.e(data.getChannel(), requireContext(), false, 2)}, null, 4));
+            setActionBarTitle(b.k(this, R.string.group_dm_invite_with_name, new Object[]{ChannelUtils.e(data.getChannel(), requireContext(), false, 2)}, null, 4));
         } else {
             setActionBarTitle(getString(R.string.invite_friend_modal_title));
         }
@@ -1063,27 +1060,27 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             int maxGroupMemberCount = data.getMaxGroupMemberCount() - data.getTotalNumRecipients();
             if (maxGroupMemberCount > 0) {
                 Resources resources = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-                quantityString = StringResourceUtils.getQuantityString(resources, requireContext(), R.plurals.group_dm_invite_remaining_number, maxGroupMemberCount, Integer.valueOf(maxGroupMemberCount));
+                m.checkNotNullExpressionValue(resources, "resources");
+                quantityString = StringResourceUtilsKt.getQuantityString(resources, requireContext(), R.plurals.group_dm_invite_remaining_number, maxGroupMemberCount, Integer.valueOf(maxGroupMemberCount));
             } else if (maxGroupMemberCount == 0) {
                 quantityString = getString(R.string.group_dm_invite_will_fill_mobile);
-                Intrinsics3.checkNotNullExpressionValue(quantityString, "getString(R.string.group…_invite_will_fill_mobile)");
+                m.checkNotNullExpressionValue(quantityString, "getString(R.string.group…_invite_will_fill_mobile)");
             } else {
                 int i = maxGroupMemberCount * (-1);
                 Resources resources2 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-                quantityString = StringResourceUtils.getQuantityString(resources2, requireContext(), R.plurals.group_dm_invite_unselect_users_number, i, Integer.valueOf(i));
+                m.checkNotNullExpressionValue(resources2, "resources");
+                quantityString = StringResourceUtilsKt.getQuantityString(resources2, requireContext(), R.plurals.group_dm_invite_unselect_users_number, i, Integer.valueOf(i));
             }
             RelativeLayout relativeLayout = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.groupInviteFriendsRecipientsContainer");
+            m.checkNotNullExpressionValue(relativeLayout, "binding.groupInviteFriendsRecipientsContainer");
             relativeLayout.setVisibility(0);
         } else {
             List<com.discord.api.user.User> listZ = data.getChannel().z();
             if ((listZ != null ? listZ.size() : 1) >= data.getMaxGroupMemberCount()) {
                 quantityString = getString(R.string.group_dm_invite_full_main);
-                Intrinsics3.checkNotNullExpressionValue(quantityString, "getString(R.string.group_dm_invite_full_main)");
+                m.checkNotNullExpressionValue(quantityString, "getString(R.string.group_dm_invite_full_main)");
                 RelativeLayout relativeLayout2 = getBinding().c;
-                Intrinsics3.checkNotNullExpressionValue(relativeLayout2, "binding.groupInviteFriendsRecipientsContainer");
+                m.checkNotNullExpressionValue(relativeLayout2, "binding.groupInviteFriendsRecipientsContainer");
                 relativeLayout2.setVisibility(8);
             }
         }
@@ -1097,11 +1094,11 @@ public final class WidgetGroupInviteFriends extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
         RecyclerView recyclerView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.groupInviteFriendsRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.groupInviteFriendsRecycler");
         this.adapter = (WidgetGroupInviteFriendsAdapter) companion.configure(new WidgetGroupInviteFriendsAdapter(recyclerView));
     }
 
@@ -1115,13 +1112,13 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         getBinding().f2406b.setTextChangedListener(new AnonymousClass2());
         Model.Companion companion = Model.INSTANCE;
         BehaviorSubject<Collection<User>> behaviorSubject = this.addedUsersPublisher;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "addedUsersPublisher");
+        m.checkNotNullExpressionValue(behaviorSubject, "addedUsersPublisher");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(companion.getFriendChanges(behaviorSubject), this, this.adapter), WidgetGroupInviteFriends.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(this.addedUsersPublisher), 62, (Object) null);
         long longExtra = getMostRecentIntent().getLongExtra(INTENT_EXTRA_CHANNEL_ID, -1L);
         BehaviorSubject<Collection<User>> behaviorSubject2 = this.addedUsersPublisher;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject2, "addedUsersPublisher");
+        m.checkNotNullExpressionValue(behaviorSubject2, "addedUsersPublisher");
         BehaviorSubject<String> behaviorSubject3 = this.filterPublisher;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject3, "filterPublisher");
+        m.checkNotNullExpressionValue(behaviorSubject3, "filterPublisher");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(companion.get(longExtra, behaviorSubject2, behaviorSubject3), this, this.adapter), WidgetGroupInviteFriends.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass4(this), 62, (Object) null);
     }
 }

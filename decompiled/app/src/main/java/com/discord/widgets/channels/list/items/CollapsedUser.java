@@ -1,11 +1,11 @@
 package com.discord.widgets.channels.list.items;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.user.User;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: CollapsedUser.kt */
@@ -42,7 +42,7 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
     }
 
     public CollapsedUser(User user, boolean z2, long j) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         this.user = user;
         this.emptySlot = z2;
         this.extraCount = j;
@@ -78,7 +78,7 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
     }
 
     public final CollapsedUser copy(User user, boolean emptySlot, long extraCount) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         return new CollapsedUser(user, emptySlot, extraCount);
     }
 
@@ -90,7 +90,7 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
             return false;
         }
         CollapsedUser collapsedUser = (CollapsedUser) other;
-        return Intrinsics3.areEqual(this.user, collapsedUser.user) && this.emptySlot == collapsedUser.emptySlot && this.extraCount == collapsedUser.extraCount;
+        return m.areEqual(this.user, collapsedUser.user) && this.emptySlot == collapsedUser.emptySlot && this.extraCount == collapsedUser.extraCount;
     }
 
     public final boolean getEmptySlot() {
@@ -128,12 +128,12 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("CollapsedUser(user=");
+        StringBuilder sbU = a.U("CollapsedUser(user=");
         sbU.append(this.user);
         sbU.append(", emptySlot=");
         sbU.append(this.emptySlot);
         sbU.append(", extraCount=");
-        return outline.C(sbU, this.extraCount, ")");
+        return a.C(sbU, this.extraCount, ")");
     }
 
     public /* synthetic */ CollapsedUser(User user, boolean z2, long j, int i, DefaultConstructorMarker defaultConstructorMarker) {

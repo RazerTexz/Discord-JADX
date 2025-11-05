@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: ModelTypingResponse.kt */
 /* loaded from: classes.dex */
@@ -46,7 +46,7 @@ public final /* data */ class ModelTypingResponse {
             return false;
         }
         ModelTypingResponse modelTypingResponse = (ModelTypingResponse) other;
-        return Intrinsics3.areEqual(this.messageSendCooldownMs, modelTypingResponse.messageSendCooldownMs) && Intrinsics3.areEqual(this.threadCreateCooldownMs, modelTypingResponse.threadCreateCooldownMs);
+        return m.areEqual(this.messageSendCooldownMs, modelTypingResponse.messageSendCooldownMs) && m.areEqual(this.threadCreateCooldownMs, modelTypingResponse.threadCreateCooldownMs);
     }
 
     public final Long getMessageSendCooldownMs() {
@@ -65,9 +65,9 @@ public final /* data */ class ModelTypingResponse {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelTypingResponse(messageSendCooldownMs=");
+        StringBuilder sbU = a.U("ModelTypingResponse(messageSendCooldownMs=");
         sbU.append(this.messageSendCooldownMs);
         sbU.append(", threadCreateCooldownMs=");
-        return outline.G(sbU, this.threadCreateCooldownMs, ")");
+        return a.G(sbU, this.threadCreateCooldownMs, ")");
     }
 }

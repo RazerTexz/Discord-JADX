@@ -1,6 +1,5 @@
 package b.i.a.f.i.b;
 
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.measurement.internal.zzn;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
@@ -22,7 +21,7 @@ public final class k5 implements Runnable {
         if (b.i.a.f.h.l.t8.b() && k9Var.k.h.o(p.J0)) {
             k9Var.f().b();
             k9Var.P();
-            AnimatableValueParser.w(zznVar.j);
+            b.c.a.a0.d.w(zznVar.j);
             d dVarB = d.b(zznVar.F);
             d dVarA = k9Var.a(zznVar.j);
             k9Var.g().n.c("Setting consent, package, consent", zznVar.j, dVarB);

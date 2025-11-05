@@ -5,7 +5,7 @@ import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import androidx.constraintlayout.solver.widgets.Helper;
 import androidx.constraintlayout.solver.widgets.analyzer.DependencyNode;
 import androidx.constraintlayout.solver.widgets.analyzer.WidgetRun;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class HorizontalWidgetRun extends WidgetRun {
@@ -279,7 +279,7 @@ public class HorizontalWidgetRun extends WidgetRun {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("HorizontalRun ");
+        StringBuilder sbU = a.U("HorizontalRun ");
         sbU.append(this.widget.getDebugName());
         return sbU.toString();
     }

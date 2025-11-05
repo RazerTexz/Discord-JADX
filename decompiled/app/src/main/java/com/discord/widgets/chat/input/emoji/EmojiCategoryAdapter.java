@@ -6,8 +6,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.i.ExpressionPickerCategorySelectionOverlineViewBinding;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppComponent;
 import com.discord.databinding.EmojiCategoryItemGuildBinding;
@@ -16,9 +15,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.recycler.DiffCreator;
 import com.discord.widgets.chat.input.emoji.EmojiCategoryItem;
 import com.discord.widgets.chat.input.emoji.EmojiCategoryViewHolder;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +36,7 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
 
     /* compiled from: EmojiCategoryAdapter.kt */
     /* renamed from: com.discord.widgets.chat.input.emoji.EmojiCategoryAdapter$setItems$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends EmojiCategoryItem>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<List<? extends EmojiCategoryItem>, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -50,7 +49,7 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends EmojiCategoryItem> list) {
-            Intrinsics3.checkNotNullParameter(list, "items");
+            m.checkNotNullParameter(list, "items");
             EmojiCategoryAdapter.access$setItems$p(EmojiCategoryAdapter.this, list);
             Iterator<? extends EmojiCategoryItem> it = list.iterator();
             int i = 0;
@@ -124,24 +123,24 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
     }
 
     public final void setItems(List<? extends EmojiCategoryItem> newItems) {
-        Intrinsics3.checkNotNullParameter(newItems, "newItems");
+        m.checkNotNullParameter(newItems, "newItems");
         this.diffCreator.dispatchDiffUpdatesAsync(this, new AnonymousClass1(), this.items, newItems);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public EmojiCategoryAdapter(Function1<? super EmojiCategoryItem, Unit> function1, Function1<? super Integer, Unit> function12, AppComponent appComponent, DiffCreator<List<EmojiCategoryItem>, EmojiCategoryViewHolder> diffCreator) {
-        Intrinsics3.checkNotNullParameter(function1, "onCategoryClicked");
-        Intrinsics3.checkNotNullParameter(function12, "onSelectedItemAdapterPositionUpdated");
-        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
-        Intrinsics3.checkNotNullParameter(diffCreator, "diffCreator");
+        m.checkNotNullParameter(function1, "onCategoryClicked");
+        m.checkNotNullParameter(function12, "onSelectedItemAdapterPositionUpdated");
+        m.checkNotNullParameter(appComponent, "appComponent");
+        m.checkNotNullParameter(diffCreator, "diffCreator");
         this.onCategoryClicked = function1;
         this.onSelectedItemAdapterPositionUpdated = function12;
         this.diffCreator = diffCreator;
-        this.items = Collections2.emptyList();
+        this.items = n.emptyList();
     }
 
     public void onBindViewHolder(EmojiCategoryViewHolder holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         if (holder instanceof EmojiCategoryViewHolder.Standard) {
             EmojiCategoryItem emojiCategoryItem = this.items.get(position);
             Objects.requireNonNull(emojiCategoryItem, "null cannot be cast to non-null type com.discord.widgets.chat.input.emoji.EmojiCategoryItem.StandardItem");
@@ -155,7 +154,7 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public EmojiCategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
         int i = R.id.overline;
         if (viewType == 0) {
@@ -164,8 +163,8 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
             if (imageView != null) {
                 View viewFindViewById = viewInflate.findViewById(R.id.overline);
                 if (viewFindViewById != null) {
-                    EmojiCategoryItemStandardBinding emojiCategoryItemStandardBinding = new EmojiCategoryItemStandardBinding((FrameLayout) viewInflate, imageView, new ExpressionPickerCategorySelectionOverlineViewBinding(viewFindViewById, viewFindViewById));
-                    Intrinsics3.checkNotNullExpressionValue(emojiCategoryItemStandardBinding, "EmojiCategoryItemStandar…(inflater, parent, false)");
+                    EmojiCategoryItemStandardBinding emojiCategoryItemStandardBinding = new EmojiCategoryItemStandardBinding((FrameLayout) viewInflate, imageView, new b.a.i.n(viewFindViewById, viewFindViewById));
+                    m.checkNotNullExpressionValue(emojiCategoryItemStandardBinding, "EmojiCategoryItemStandar…(inflater, parent, false)");
                     return new EmojiCategoryViewHolder.Standard(emojiCategoryItemStandardBinding);
                 }
             } else {
@@ -174,7 +173,7 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
             throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
         }
         if (viewType != 1) {
-            StringBuilder sbV = outline.V("invalid viewType ", viewType, " for ");
+            StringBuilder sbV = a.V("invalid viewType ", viewType, " for ");
             sbV.append(EmojiCategoryAdapter.class.getSimpleName());
             throw new IllegalArgumentException(sbV.toString());
         }
@@ -183,8 +182,8 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
         if (guildIcon != null) {
             View viewFindViewById2 = viewInflate2.findViewById(R.id.overline);
             if (viewFindViewById2 != null) {
-                EmojiCategoryItemGuildBinding emojiCategoryItemGuildBinding = new EmojiCategoryItemGuildBinding((FrameLayout) viewInflate2, guildIcon, new ExpressionPickerCategorySelectionOverlineViewBinding(viewFindViewById2, viewFindViewById2));
-                Intrinsics3.checkNotNullExpressionValue(emojiCategoryItemGuildBinding, "EmojiCategoryItemGuildBi…(inflater, parent, false)");
+                EmojiCategoryItemGuildBinding emojiCategoryItemGuildBinding = new EmojiCategoryItemGuildBinding((FrameLayout) viewInflate2, guildIcon, new b.a.i.n(viewFindViewById2, viewFindViewById2));
+                m.checkNotNullExpressionValue(emojiCategoryItemGuildBinding, "EmojiCategoryItemGuildBi…(inflater, parent, false)");
                 return new EmojiCategoryViewHolder.Guild(emojiCategoryItemGuildBinding);
             }
         } else {

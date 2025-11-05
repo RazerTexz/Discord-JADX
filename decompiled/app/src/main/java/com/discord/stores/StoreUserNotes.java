@@ -1,18 +1,18 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelUserNote;
 import com.discord.restapi.RestAPIParams;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.g0.StringsJVM;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Unit;
@@ -49,7 +49,7 @@ public final class StoreUserNotes extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(ModelUserNote modelUserNote) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelUserNote, "note");
+                m.checkNotNullParameter(modelUserNote, "note");
                 this.note = modelUserNote;
             }
 
@@ -66,13 +66,13 @@ public final class StoreUserNotes extends StoreV2 {
             }
 
             public final Loaded copy(ModelUserNote note) {
-                Intrinsics3.checkNotNullParameter(note, "note");
+                m.checkNotNullParameter(note, "note");
                 return new Loaded(note);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.note, ((Loaded) other).note);
+                    return (other instanceof Loaded) && m.areEqual(this.note, ((Loaded) other).note);
                 }
                 return true;
             }
@@ -90,7 +90,7 @@ public final class StoreUserNotes extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(note=");
+                StringBuilder sbU = a.U("Loaded(note=");
                 sbU.append(this.note);
                 sbU.append(")");
                 return sbU.toString();
@@ -116,20 +116,20 @@ public final class StoreUserNotes extends StoreV2 {
 
     /* compiled from: StoreUserNotes.kt */
     /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $userId;
 
         /* compiled from: StoreUserNotes.kt */
         /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01851 extends Lambda implements Function1<ModelUserNote, Unit> {
+        public static final class C03051 extends o implements Function1<ModelUserNote, Unit> {
 
             /* compiled from: StoreUserNotes.kt */
             /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01861 extends Lambda implements Function0<Unit> {
+            public static final class C03061 extends o implements Function0<Unit> {
                 public final /* synthetic */ ModelUserNote $note;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C01861(ModelUserNote modelUserNote) {
+                public C03061(ModelUserNote modelUserNote) {
                     super(0);
                     this.$note = modelUserNote;
                 }
@@ -146,7 +146,7 @@ public final class StoreUserNotes extends StoreV2 {
                 }
             }
 
-            public C01851() {
+            public C03051() {
                 super(1);
             }
 
@@ -158,19 +158,19 @@ public final class StoreUserNotes extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelUserNote modelUserNote) {
-                Intrinsics3.checkNotNullParameter(modelUserNote, "note");
-                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C01861(modelUserNote));
+                m.checkNotNullParameter(modelUserNote, "note");
+                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C03061(modelUserNote));
             }
         }
 
         /* compiled from: StoreUserNotes.kt */
         /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
 
             /* compiled from: StoreUserNotes.kt */
             /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01871 extends Lambda implements Function0<Unit> {
-                public C01871() {
+            public static final class C03071 extends o implements Function0<Unit> {
+                public C03071() {
                     super(0);
                 }
 
@@ -199,8 +199,8 @@ public final class StoreUserNotes extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "it");
-                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C01871());
+                m.checkNotNullParameter(error, "it");
+                StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C03071());
             }
         }
 
@@ -222,13 +222,13 @@ public final class StoreUserNotes extends StoreV2 {
                 return;
             }
             StoreUserNotes.access$getNotesByUserId$p(StoreUserNotes.this).put(Long.valueOf(this.$userId), UserNoteState.Loading.INSTANCE);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreUserNotes.access$getRestAPI$p(StoreUserNotes.this).getUserNote(this.$userId), false, 1, null), StoreUserNotes.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C01851(), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreUserNotes.access$getRestAPI$p(StoreUserNotes.this).getUserNote(this.$userId), false, 1, null), StoreUserNotes.this.getClass(), (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new C03051(), 54, (Object) null);
         }
     }
 
     /* compiled from: StoreUserNotes.kt */
     /* renamed from: com.discord.stores.StoreUserNotes$observeUserNote$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<UserNoteState> {
+    public static final class AnonymousClass1 extends o implements Function0<UserNoteState> {
         public final /* synthetic */ long $userId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -252,14 +252,14 @@ public final class StoreUserNotes extends StoreV2 {
 
     /* compiled from: StoreUserNotes.kt */
     /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ String $note;
         public final /* synthetic */ long $userId;
 
         /* compiled from: StoreUserNotes.kt */
         /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01881 extends Lambda implements Function0<Unit> {
-            public C01881() {
+        public static final class C03081 extends o implements Function0<Unit> {
+            public C03081() {
                 super(0);
             }
 
@@ -291,12 +291,12 @@ public final class StoreUserNotes extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
-            StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C01881());
+            StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C03081());
         }
     }
 
     public /* synthetic */ StoreUserNotes(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreUserNotes storeUserNotes) {
@@ -323,13 +323,13 @@ public final class StoreUserNotes extends StoreV2 {
         storeUserNotes.updateNoteInternal(j, str);
     }
 
-    @Store3
+    @StoreThread
     private final void handleRequestUserNoteError(long userId) {
         this.notesByUserId.put(Long.valueOf(userId), UserNoteState.Empty.INSTANCE);
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     private final void handleRequestUserNoteSuccess(ModelUserNote note) {
         long noteUserId = note.getNoteUserId();
         String note2 = note.getNote();
@@ -339,9 +339,9 @@ public final class StoreUserNotes extends StoreV2 {
         updateNoteInternal(noteUserId, note2);
     }
 
-    @Store3
+    @StoreThread
     private final void updateNoteInternal(long userId, String note) {
-        if (StringsJVM.isBlank(note)) {
+        if (t.isBlank(note)) {
             this.notesByUserId.put(Long.valueOf(userId), UserNoteState.Empty.INSTANCE);
         } else {
             this.notesByUserId.put(Long.valueOf(userId), new UserNoteState.Loaded(new ModelUserNote(userId, note)));
@@ -353,15 +353,15 @@ public final class StoreUserNotes extends StoreV2 {
         return this.notesByUserIdSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen() {
         this.notesByUserId.clear();
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleNoteUpdate(ModelUserNote.Update update) {
-        Intrinsics3.checkNotNullParameter(update, "update");
+        m.checkNotNullParameter(update, "update");
         updateNoteInternal(update.getId(), update.getNote());
     }
 
@@ -371,12 +371,12 @@ public final class StoreUserNotes extends StoreV2 {
 
     public final Observable<UserNoteState> observeUserNote(long userId) {
         Observable<UserNoteState> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(userId), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
     public final void saveNote(Context context, long userId, String note) {
-        Intrinsics3.checkNotNullParameter(note, "note");
+        m.checkNotNullParameter(note, "note");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.updateUserNotes(userId, new RestAPIParams.UserNoteUpdate(note)), false, 1, null), StoreUserNotes.class, context, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(userId, note), 60, (Object) null);
     }
 
@@ -387,13 +387,13 @@ public final class StoreUserNotes extends StoreV2 {
     }
 
     public StoreUserNotes(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.restAPI = restAPI;
         this.observationDeck = observationDeck;
         this.notesByUserId = new HashMap();
-        this.notesByUserIdSnapshot = Maps6.emptyMap();
+        this.notesByUserIdSnapshot = h0.emptyMap();
     }
 }

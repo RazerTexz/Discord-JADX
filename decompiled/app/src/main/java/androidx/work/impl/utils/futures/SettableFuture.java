@@ -2,7 +2,7 @@ package androidx.work.impl.utils.futures;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes.dex */
@@ -25,7 +25,7 @@ public final class SettableFuture<V> extends AbstractFuture<V> {
     }
 
     @Override // androidx.work.impl.utils.futures.AbstractFuture
-    public boolean setFuture(ListenableFuture8<? extends V> listenableFuture8) {
-        return super.setFuture(listenableFuture8);
+    public boolean setFuture(a<? extends V> aVar) {
+        return super.setFuture(aVar);
     }
 }

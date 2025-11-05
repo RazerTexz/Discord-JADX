@@ -1,9 +1,9 @@
 package co.discord.media_engine;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -13,7 +13,7 @@ public final /* data */ class ReceiverReport {
     private final String id;
 
     public ReceiverReport(String str, long j, int i) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
         this.id = str;
         this.bitrate = j;
         this.fractionLost = i;
@@ -48,7 +48,7 @@ public final /* data */ class ReceiverReport {
     }
 
     public final ReceiverReport copy(String id2, long bitrate, int fractionLost) {
-        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
         return new ReceiverReport(id2, bitrate, fractionLost);
     }
 
@@ -60,7 +60,7 @@ public final /* data */ class ReceiverReport {
             return false;
         }
         ReceiverReport receiverReport = (ReceiverReport) other;
-        return Intrinsics3.areEqual(this.id, receiverReport.id) && this.bitrate == receiverReport.bitrate && this.fractionLost == receiverReport.fractionLost;
+        return m.areEqual(this.id, receiverReport.id) && this.bitrate == receiverReport.bitrate && this.fractionLost == receiverReport.fractionLost;
     }
 
     public final long getBitrate() {
@@ -81,11 +81,11 @@ public final /* data */ class ReceiverReport {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ReceiverReport(id=");
+        StringBuilder sbU = a.U("ReceiverReport(id=");
         sbU.append(this.id);
         sbU.append(", bitrate=");
         sbU.append(this.bitrate);
         sbU.append(", fractionLost=");
-        return outline.B(sbU, this.fractionLost, ")");
+        return a.B(sbU, this.fractionLost, ")");
     }
 }

@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.e.a.Log;
+import b.e.a.a;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 
 /* loaded from: classes.dex */
@@ -16,7 +16,7 @@ public class FieldSerializerConfig implements Cloneable {
     private boolean useAsm = true ^ FieldSerializer.unsafeAvailable;
 
     public FieldSerializerConfig() {
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     /* renamed from: clone, reason: collision with other method in class */
@@ -62,7 +62,7 @@ public class FieldSerializerConfig implements Cloneable {
 
     public void setCachedFieldNameStrategy(FieldSerializer.CachedFieldNameStrategy cachedFieldNameStrategy) {
         this.cachedFieldNameStrategy = cachedFieldNameStrategy;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     public void setCopyTransient(boolean z2) {
@@ -71,27 +71,27 @@ public class FieldSerializerConfig implements Cloneable {
 
     public void setFieldsAsAccessible(boolean z2) {
         this.setFieldsAsAccessible = z2;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     public void setFieldsCanBeNull(boolean z2) {
         this.fieldsCanBeNull = z2;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     public void setFixedFieldTypes(boolean z2) {
         this.fixedFieldTypes = z2;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     public void setIgnoreSyntheticFields(boolean z2) {
         this.ignoreSyntheticFields = z2;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     public void setOptimizedGenerics(boolean z2) {
         this.optimizedGenerics = z2;
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
     }
 
     public void setSerializeTransient(boolean z2) {
@@ -102,9 +102,9 @@ public class FieldSerializerConfig implements Cloneable {
         this.useAsm = z2;
         if (!z2 && !FieldSerializer.unsafeAvailable) {
             this.useAsm = true;
-            Log.a aVar = Log.a;
+            a.C0064a c0064a = a.a;
         }
-        Log.a aVar2 = Log.a;
+        a.C0064a c0064a2 = a.a;
     }
 
     public FieldSerializerConfig clone() {

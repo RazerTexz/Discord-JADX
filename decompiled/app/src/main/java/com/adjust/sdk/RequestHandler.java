@@ -1,6 +1,6 @@
 package com.adjust.sdk;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.adjust.sdk.scheduler.SingleThreadCachedScheduler;
 import com.adjust.sdk.scheduler.ThreadExecutor;
 import java.io.IOException;
@@ -63,26 +63,26 @@ public class RequestHandler implements IRequestHandler {
         if (activityPackage.getActivityKind() == ActivityKind.GDPR) {
             baseUrl = AdjustFactory.getGdprUrl();
             if (this.gdprPath != null) {
-                StringBuilder sbU = outline.U(baseUrl);
+                StringBuilder sbU = a.U(baseUrl);
                 sbU.append(this.gdprPath);
                 baseUrl = sbU.toString();
             }
         } else if (activityPackage.getActivityKind() == ActivityKind.SUBSCRIPTION) {
             baseUrl = AdjustFactory.getSubscriptionUrl();
             if (this.subscriptionPath != null) {
-                StringBuilder sbU2 = outline.U(baseUrl);
+                StringBuilder sbU2 = a.U(baseUrl);
                 sbU2.append(this.subscriptionPath);
                 baseUrl = sbU2.toString();
             }
         } else {
             baseUrl = AdjustFactory.getBaseUrl();
             if (this.basePath != null) {
-                StringBuilder sbU3 = outline.U(baseUrl);
+                StringBuilder sbU3 = a.U(baseUrl);
                 sbU3.append(this.basePath);
                 baseUrl = sbU3.toString();
             }
         }
-        StringBuilder sbU4 = outline.U(baseUrl);
+        StringBuilder sbU4 = a.U(baseUrl);
         sbU4.append(activityPackage.getPath());
         try {
             ResponseData responseDataCreatePOSTHttpsURLConnection = UtilNetworking.createPOSTHttpsURLConnection(sbU4.toString(), activityPackage, i);

@@ -1,16 +1,12 @@
 package b.i.c.o.b;
 
-import b.i.c.FirebaseApp2;
-import b.i.c.l.ComponentContainer;
-import b.i.c.l.ComponentFactory;
-
 /* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class f implements ComponentFactory {
-    public static final ComponentFactory a = new f();
+public final /* synthetic */ class f implements b.i.c.l.f {
+    public static final b.i.c.l.f a = new f();
 
-    @Override // b.i.c.l.ComponentFactory
-    public final Object a(ComponentContainer componentContainer) {
-        return new e((FirebaseApp2) componentContainer.a(FirebaseApp2.class), (b.i.c.j.a.a) componentContainer.a(b.i.c.j.a.a.class));
+    @Override // b.i.c.l.f
+    public final Object a(b.i.c.l.e eVar) {
+        return new e((b.i.c.c) eVar.a(b.i.c.c.class), (b.i.c.j.a.a) eVar.a(b.i.c.j.a.a.class));
     }
 }

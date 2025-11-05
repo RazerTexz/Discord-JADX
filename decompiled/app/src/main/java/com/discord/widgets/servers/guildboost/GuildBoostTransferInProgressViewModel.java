@@ -3,8 +3,8 @@ package com.discord.widgets.servers.guildboost;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAppliedGuildBoost;
 import com.discord.models.domain.ModelGuildBoostSlot;
 import com.discord.models.guild.Guild;
@@ -14,10 +14,9 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.CollectionsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -31,7 +30,7 @@ import rx.functions.Func3;
 
 /* compiled from: GuildBoostTransferInProgressViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildBoostTransferInProgressViewModel extends AppViewModel<ViewState> {
+public final class GuildBoostTransferInProgressViewModel extends d0<ViewState> {
     private final long boostId;
     private Subscription guildBoostingSubscription;
     private final long previousGuildId;
@@ -52,14 +51,14 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Guild guild, Guild guild2, StoreGuildBoost.State state) {
-            Intrinsics3.checkNotNullExpressionValue(state, "guildBoostState");
+            m.checkNotNullExpressionValue(state, "guildBoostState");
             return new StoreState(guild, guild2, state);
         }
     }
 
     /* compiled from: GuildBoostTransferInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -72,7 +71,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             GuildBoostTransferInProgressViewModel.access$handleStoreState(GuildBoostTransferInProgressViewModel.this, storeState);
         }
     }
@@ -84,7 +83,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         private final Guild targetGuild;
 
         public StoreState(Guild guild, Guild guild2, StoreGuildBoost.State state) {
-            Intrinsics3.checkNotNullParameter(state, "guildBoostState");
+            m.checkNotNullParameter(state, "guildBoostState");
             this.previousGuild = guild;
             this.targetGuild = guild2;
             this.guildBoostState = state;
@@ -119,7 +118,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         }
 
         public final StoreState copy(Guild previousGuild, Guild targetGuild, StoreGuildBoost.State guildBoostState) {
-            Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
+            m.checkNotNullParameter(guildBoostState, "guildBoostState");
             return new StoreState(previousGuild, targetGuild, guildBoostState);
         }
 
@@ -131,7 +130,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.previousGuild, storeState.previousGuild) && Intrinsics3.areEqual(this.targetGuild, storeState.targetGuild) && Intrinsics3.areEqual(this.guildBoostState, storeState.guildBoostState);
+            return m.areEqual(this.previousGuild, storeState.previousGuild) && m.areEqual(this.targetGuild, storeState.targetGuild) && m.areEqual(this.guildBoostState, storeState.guildBoostState);
         }
 
         public final StoreGuildBoost.State getGuildBoostState() {
@@ -156,7 +155,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(previousGuild=");
+            StringBuilder sbU = a.U("StoreState(previousGuild=");
             sbU.append(this.previousGuild);
             sbU.append(", targetGuild=");
             sbU.append(this.targetGuild);
@@ -205,7 +204,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public PostTransfer(Guild guild, int i) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(guild, "targetGuild");
+                m.checkNotNullParameter(guild, "targetGuild");
                 this.targetGuild = guild;
                 this.targetGuildSubscriptionCount = i;
             }
@@ -231,7 +230,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
 
             public final PostTransfer copy(Guild targetGuild, int targetGuildSubscriptionCount) {
-                Intrinsics3.checkNotNullParameter(targetGuild, "targetGuild");
+                m.checkNotNullParameter(targetGuild, "targetGuild");
                 return new PostTransfer(targetGuild, targetGuildSubscriptionCount);
             }
 
@@ -243,7 +242,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
                     return false;
                 }
                 PostTransfer postTransfer = (PostTransfer) other;
-                return Intrinsics3.areEqual(this.targetGuild, postTransfer.targetGuild) && this.targetGuildSubscriptionCount == postTransfer.targetGuildSubscriptionCount;
+                return m.areEqual(this.targetGuild, postTransfer.targetGuild) && this.targetGuildSubscriptionCount == postTransfer.targetGuildSubscriptionCount;
             }
 
             public final Guild getTargetGuild() {
@@ -260,10 +259,10 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("PostTransfer(targetGuild=");
+                StringBuilder sbU = a.U("PostTransfer(targetGuild=");
                 sbU.append(this.targetGuild);
                 sbU.append(", targetGuildSubscriptionCount=");
-                return outline.B(sbU, this.targetGuildSubscriptionCount, ")");
+                return a.B(sbU, this.targetGuildSubscriptionCount, ")");
             }
         }
 
@@ -277,8 +276,8 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public PreTransfer(Guild guild, Guild guild2, int i, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(guild, "previousGuild");
-                Intrinsics3.checkNotNullParameter(guild2, "targetGuild");
+                m.checkNotNullParameter(guild, "previousGuild");
+                m.checkNotNullParameter(guild2, "targetGuild");
                 this.previousGuild = guild;
                 this.targetGuild = guild2;
                 this.targetGuildSubscriptionCount = i;
@@ -322,8 +321,8 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
 
             public final PreTransfer copy(Guild previousGuild, Guild targetGuild, int targetGuildSubscriptionCount, boolean isTransferInProgress) {
-                Intrinsics3.checkNotNullParameter(previousGuild, "previousGuild");
-                Intrinsics3.checkNotNullParameter(targetGuild, "targetGuild");
+                m.checkNotNullParameter(previousGuild, "previousGuild");
+                m.checkNotNullParameter(targetGuild, "targetGuild");
                 return new PreTransfer(previousGuild, targetGuild, targetGuildSubscriptionCount, isTransferInProgress);
             }
 
@@ -335,7 +334,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
                     return false;
                 }
                 PreTransfer preTransfer = (PreTransfer) other;
-                return Intrinsics3.areEqual(this.previousGuild, preTransfer.previousGuild) && Intrinsics3.areEqual(this.targetGuild, preTransfer.targetGuild) && this.targetGuildSubscriptionCount == preTransfer.targetGuildSubscriptionCount && this.isTransferInProgress == preTransfer.isTransferInProgress;
+                return m.areEqual(this.previousGuild, preTransfer.previousGuild) && m.areEqual(this.targetGuild, preTransfer.targetGuild) && this.targetGuildSubscriptionCount == preTransfer.targetGuildSubscriptionCount && this.isTransferInProgress == preTransfer.isTransferInProgress;
             }
 
             public final Guild getPreviousGuild() {
@@ -369,14 +368,14 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("PreTransfer(previousGuild=");
+                StringBuilder sbU = a.U("PreTransfer(previousGuild=");
                 sbU.append(this.previousGuild);
                 sbU.append(", targetGuild=");
                 sbU.append(this.targetGuild);
                 sbU.append(", targetGuildSubscriptionCount=");
                 sbU.append(this.targetGuildSubscriptionCount);
                 sbU.append(", isTransferInProgress=");
-                return outline.O(sbU, this.isTransferInProgress, ")");
+                return a.O(sbU, this.isTransferInProgress, ")");
             }
         }
 
@@ -390,24 +389,24 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
 
     /* compiled from: GuildBoostTransferInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Void, Observable<? extends List<? extends ModelAppliedGuildBoost>>> {
+    public static final class AnonymousClass1<T, R> implements b<Void, Observable<? extends List<? extends ModelAppliedGuildBoost>>> {
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends List<? extends ModelAppliedGuildBoost>> call(Void r1) {
             return call2(r1);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends List<ModelAppliedGuildBoost>> call2(Void r6) {
-            return GuildBoostTransferInProgressViewModel.this.getRestAPI().subscribeToGuild(GuildBoostTransferInProgressViewModel.this.getTargetGuildId(), new RestAPIParams.GuildBoosting(CollectionsJVM.listOf(Long.valueOf(GuildBoostTransferInProgressViewModel.this.getSlotId()))));
+            return GuildBoostTransferInProgressViewModel.this.getRestAPI().subscribeToGuild(GuildBoostTransferInProgressViewModel.this.getTargetGuildId(), new RestAPIParams.GuildBoosting(d0.t.m.listOf(Long.valueOf(GuildBoostTransferInProgressViewModel.this.getSlotId()))));
         }
     }
 
     /* compiled from: GuildBoostTransferInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -420,14 +419,14 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             GuildBoostTransferInProgressViewModel.access$handleGuildBoostingError(GuildBoostTransferInProgressViewModel.this);
         }
     }
 
     /* compiled from: GuildBoostTransferInProgressViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostTransferInProgressViewModel$transferGuildBoost$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<List<? extends ModelAppliedGuildBoost>, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<List<? extends ModelAppliedGuildBoost>, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -452,7 +451,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         if ((i & 64) != 0) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
             Observable observableI = Observable.i(companion.getGuilds().observeGuild(j3), companion.getGuilds().observeGuild(j4), StoreGuildBoost.observeGuildBoostState$default(companion.getGuildBoosts(), null, 1, null), AnonymousClass1.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…guildBoostState\n    )\n  }");
+            m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…guildBoostState\n    )\n  }");
             observable2 = observableI;
         } else {
             observable2 = observable;
@@ -544,7 +543,7 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
         return this.targetGuildId;
     }
 
-    @Override // b.a.d.AppViewModel, androidx.view.ViewModel
+    @Override // b.a.d.d0, androidx.view.ViewModel
     public void onCleared() {
         Subscription subscription = this.guildBoostingSubscription;
         if (subscription != null) {
@@ -557,16 +556,16 @@ public final class GuildBoostTransferInProgressViewModel extends AppViewModel<Vi
     public final void transferGuildBoost() {
         handleGuildBoostingStarted();
         Observable<R> observableA = this.restAPI.unsubscribeToGuild(this.previousGuildId, this.boostId).A(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableA, "restAPI\n        .unsubsc…              )\n        }");
+        m.checkNotNullExpressionValue(observableA, "restAPI\n        .unsubsc…              )\n        }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(observableA, false, 1, null), this, null, 2, null), GuildBoostTransferInProgressViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass3(), 54, (Object) null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildBoostTransferInProgressViewModel(long j, long j2, long j3, long j4, RestAPI restAPI, StoreGuildBoost storeGuildBoost, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.slotId = j;
         this.boostId = j2;
         this.previousGuildId = j3;

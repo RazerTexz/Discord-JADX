@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
 import java.util.Arrays;
 
 /* loaded from: classes3.dex */
@@ -51,7 +51,7 @@ public final class ChapterFrame extends Id3Frame {
             return false;
         }
         ChapterFrame chapterFrame = (ChapterFrame) obj;
-        return this.l == chapterFrame.l && this.m == chapterFrame.m && this.n == chapterFrame.n && this.o == chapterFrame.o && Util2.a(this.k, chapterFrame.k) && Arrays.equals(this.p, chapterFrame.p);
+        return this.l == chapterFrame.l && this.m == chapterFrame.m && this.n == chapterFrame.n && this.o == chapterFrame.o && e0.a(this.k, chapterFrame.k) && Arrays.equals(this.p, chapterFrame.p);
     }
 
     public int hashCode() {
@@ -76,7 +76,7 @@ public final class ChapterFrame extends Id3Frame {
     public ChapterFrame(Parcel parcel) {
         super("CHAP");
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         this.k = string;
         this.l = parcel.readInt();
         this.m = parcel.readInt();

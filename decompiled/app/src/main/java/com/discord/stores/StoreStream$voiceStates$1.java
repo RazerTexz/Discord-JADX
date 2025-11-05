@@ -1,12 +1,12 @@
 package com.discord.stores;
 
-import d0.z.d.FunctionReferenceImpl;
+import d0.z.d.k;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function3;
 
 /* compiled from: StoreStream.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class StoreStream$voiceStates$1 extends FunctionReferenceImpl implements Function3<Long, Long, Long, Unit> {
+public final /* synthetic */ class StoreStream$voiceStates$1 extends k implements Function3<Long, Long, Long, Unit> {
     public StoreStream$voiceStates$1(StoreStream storeStream) {
         super(3, storeStream, StoreStream.class, "handleVoiceStatesUpdated", "handleVoiceStatesUpdated(JJJ)V", 0);
     }

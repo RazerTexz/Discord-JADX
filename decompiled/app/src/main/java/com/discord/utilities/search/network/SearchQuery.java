@@ -6,10 +6,10 @@ import com.discord.utilities.search.query.node.answer.AnswerNode;
 import com.discord.utilities.search.query.node.content.ContentNode;
 import com.discord.utilities.search.query.node.filter.FilterNode;
 import com.discord.utilities.search.validation.SearchData;
-import d0.g0.Strings4;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.g0.w;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,8 +35,8 @@ public final class SearchQuery {
         }
 
         public final void appendParam(String paramKey, String param) {
-            Intrinsics3.checkNotNullParameter(paramKey, "paramKey");
-            Intrinsics3.checkNotNullParameter(param, "param");
+            m.checkNotNullParameter(paramKey, "paramKey");
+            m.checkNotNullParameter(param, "param");
             List<String> arrayList = this.paramsMap.get(paramKey);
             if (arrayList == null) {
                 arrayList = new ArrayList<>();
@@ -46,8 +46,8 @@ public final class SearchQuery {
         }
 
         public final SearchQuery buildFrom(List<? extends QueryNode> queryNodes, SearchData searchData) {
-            Intrinsics3.checkNotNullParameter(queryNodes, "queryNodes");
-            Intrinsics3.checkNotNullParameter(searchData, "searchData");
+            m.checkNotNullParameter(queryNodes, "queryNodes");
+            m.checkNotNullParameter(searchData, "searchData");
             loop0: while (true) {
                 FilterType filterType = null;
                 for (QueryNode queryNode : queryNodes) {
@@ -55,7 +55,7 @@ public final class SearchQuery {
                         filterType = ((FilterNode) queryNode).getFilterType();
                     } else if (queryNode instanceof AnswerNode) {
                         AnswerNode answerNode = (AnswerNode) queryNode;
-                        if (_Collections.contains(answerNode.getValidFilters(), filterType)) {
+                        if (u.contains(answerNode.getValidFilters(), filterType)) {
                             answerNode.updateQuery(this, searchData, filterType);
                         } else {
                             appendContent(queryNode.getText());
@@ -67,11 +67,11 @@ public final class SearchQuery {
                 break loop0;
             }
             String string = this.contentBuilder.toString();
-            Intrinsics3.checkNotNullExpressionValue(string, "contentBuilder.toString()");
+            m.checkNotNullExpressionValue(string, "contentBuilder.toString()");
             Objects.requireNonNull(string, "null cannot be cast to non-null type kotlin.CharSequence");
-            String string2 = Strings4.trim(string).toString();
+            String string2 = w.trim(string).toString();
             if (string2.length() > 0) {
-                this.paramsMap.put("content", Collections2.mutableListOf(string2));
+                this.paramsMap.put("content", n.mutableListOf(string2));
             }
             return new SearchQuery(this.paramsMap, this.includeNsfw);
         }
@@ -84,7 +84,7 @@ public final class SearchQuery {
 
     /* JADX WARN: Multi-variable type inference failed */
     public SearchQuery(Map<String, ? extends List<String>> map, boolean z2) {
-        Intrinsics3.checkNotNullParameter(map, "params");
+        m.checkNotNullParameter(map, "params");
         this.params = map;
         this.includeNsfw = z2;
     }

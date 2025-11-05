@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.LayoutIconUploaderBinding;
+import b.a.i.r0;
 import com.discord.app.AppViewFlipper;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
@@ -32,7 +32,7 @@ public final class WidgetGuildCloneBinding implements ViewBinding {
     public final LinkifiedTextView d;
 
     @NonNull
-    public final LayoutIconUploaderBinding e;
+    public final r0 e;
 
     @NonNull
     public final TextInputLayout f;
@@ -49,12 +49,12 @@ public final class WidgetGuildCloneBinding implements ViewBinding {
     @NonNull
     public final LinearLayout j;
 
-    public WidgetGuildCloneBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LoadingButton loadingButton, @NonNull AppViewFlipper appViewFlipper, @NonNull LinkifiedTextView linkifiedTextView, @NonNull LayoutIconUploaderBinding layoutIconUploaderBinding, @NonNull TextInputLayout textInputLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull GuildTemplateChannelsView guildTemplateChannelsView, @NonNull RolesListView rolesListView, @NonNull LinearLayout linearLayout, @NonNull ProgressBar progressBar) {
+    public WidgetGuildCloneBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LoadingButton loadingButton, @NonNull AppViewFlipper appViewFlipper, @NonNull LinkifiedTextView linkifiedTextView, @NonNull r0 r0Var, @NonNull TextInputLayout textInputLayout, @NonNull TextView textView, @NonNull TextView textView2, @NonNull GuildTemplateChannelsView guildTemplateChannelsView, @NonNull RolesListView rolesListView, @NonNull LinearLayout linearLayout, @NonNull ProgressBar progressBar) {
         this.a = coordinatorLayout;
         this.f2410b = loadingButton;
         this.c = appViewFlipper;
         this.d = linkifiedTextView;
-        this.e = layoutIconUploaderBinding;
+        this.e = r0Var;
         this.f = textInputLayout;
         this.g = textView2;
         this.h = guildTemplateChannelsView;

@@ -55,8 +55,6 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.widget.TextViewCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import b.i.a.g.i.ElasticTabIndicatorInterpolator;
-import b.i.a.g.i.TabIndicatorInterpolator;
 import com.google.android.material.R;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.badge.BadgeDrawable;
@@ -145,7 +143,7 @@ public class TabLayout extends HorizontalScrollView {
     public int tabIndicatorAnimationMode;
     public boolean tabIndicatorFullWidth;
     public int tabIndicatorGravity;
-    private TabIndicatorInterpolator tabIndicatorInterpolator;
+    private b.i.a.g.i.b tabIndicatorInterpolator;
     public int tabMaxWidth;
     public int tabPaddingBottom;
     public int tabPaddingEnd;
@@ -923,11 +921,11 @@ public class TabLayout extends HorizontalScrollView {
 
         public final void a() {
             View childAt = getChildAt(this.k);
-            TabIndicatorInterpolator tabIndicatorInterpolatorAccess$1200 = TabLayout.access$1200(TabLayout.this);
+            b.i.a.g.i.b bVarAccess$1200 = TabLayout.access$1200(TabLayout.this);
             TabLayout tabLayout = TabLayout.this;
             Drawable drawable = tabLayout.tabSelectedIndicator;
-            Objects.requireNonNull(tabIndicatorInterpolatorAccess$1200);
-            RectF rectFA = TabIndicatorInterpolator.a(tabLayout, childAt);
+            Objects.requireNonNull(bVarAccess$1200);
+            RectF rectFA = b.i.a.g.i.b.a(tabLayout, childAt);
             drawable.setBounds((int) rectFA.left, drawable.getBounds().top, (int) rectFA.right, drawable.getBounds().bottom);
         }
 
@@ -939,9 +937,9 @@ public class TabLayout extends HorizontalScrollView {
 
         public final void c(View view, View view2, float f) {
             if (view != null && view.getWidth() > 0) {
-                TabIndicatorInterpolator tabIndicatorInterpolatorAccess$1200 = TabLayout.access$1200(TabLayout.this);
+                b.i.a.g.i.b bVarAccess$1200 = TabLayout.access$1200(TabLayout.this);
                 TabLayout tabLayout = TabLayout.this;
-                tabIndicatorInterpolatorAccess$1200.b(tabLayout, view, view2, f, tabLayout.tabSelectedIndicator);
+                bVarAccess$1200.b(tabLayout, view, view2, f, tabLayout.tabSelectedIndicator);
             } else {
                 Drawable drawable = TabLayout.this.tabSelectedIndicator;
                 drawable.setBounds(-1, drawable.getBounds().top, -1, TabLayout.this.tabSelectedIndicator.getBounds().bottom);
@@ -1075,7 +1073,7 @@ public class TabLayout extends HorizontalScrollView {
         this(context, null);
     }
 
-    public static /* synthetic */ TabIndicatorInterpolator access$1200(TabLayout tabLayout) {
+    public static /* synthetic */ b.i.a.g.i.b access$1200(TabLayout tabLayout) {
         return tabLayout.tabIndicatorInterpolator;
     }
 
@@ -1713,10 +1711,10 @@ public class TabLayout extends HorizontalScrollView {
     public void setTabIndicatorAnimationMode(int i) {
         this.tabIndicatorAnimationMode = i;
         if (i == 0) {
-            this.tabIndicatorInterpolator = new TabIndicatorInterpolator();
+            this.tabIndicatorInterpolator = new b.i.a.g.i.b();
         } else {
             if (i == 1) {
-                this.tabIndicatorInterpolator = new ElasticTabIndicatorInterpolator();
+                this.tabIndicatorInterpolator = new b.i.a.g.i.a();
                 return;
             }
             throw new IllegalArgumentException(i + " is not a valid TabIndicatorAnimationMode");

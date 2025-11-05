@@ -10,12 +10,11 @@ import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 import b.a.x.a.a;
 import b.a.x.a.b;
-import b.d.b.a.outline;
 import com.discord.R;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.captcha.CaptchaHelper;
-import com.discord.utilities.guildautomod.AutoModUtils2;
+import com.discord.utilities.guildautomod.AutoModBlockFailure;
 import com.discord.utilities.images.MGImagesBitmap;
 import com.discord.utilities.rest.RestAPIAbortMessages;
 import java.io.IOException;
@@ -309,7 +308,7 @@ public class Error {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Error.Response(code=");
+            StringBuilder sbU = b.d.b.a.a.U("Error.Response(code=");
             sbU.append(getCode());
             sbU.append(", retryAfter=");
             sbU.append(this.retryAfter);
@@ -393,10 +392,10 @@ public class Error {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Error.SkemaErrorItem(code=");
+            StringBuilder sbU = b.d.b.a.a.U("Error.SkemaErrorItem(code=");
             sbU.append(this.code);
             sbU.append(", message=");
-            return outline.J(sbU, this.message, ")");
+            return b.d.b.a.a.J(sbU, this.message, ")");
         }
 
         public /* synthetic */ SkemaErrorItem(AnonymousClass1 anonymousClass1) {
@@ -532,7 +531,7 @@ public class Error {
                 message = th.getMessage() != null ? th.getMessage() : "";
                 type = (message.contains("Canceled") || message.contains("Connection reset by peer") || message.contains("stream was reset:") || (th instanceof NoRouteToHostException) || (th instanceof SocketException) || (th instanceof InterruptedIOException) || (th.getCause() != null && (th.getCause() instanceof InterruptedException)) || (th.getCause() instanceof SocketTimeoutException)) ? Type.NETWORK : ((th instanceof SSLHandshakeException) || (th instanceof SSLException)) ? Type.SSL : Type.OTHER;
             } else {
-                type = th instanceof TimeoutException ? Type.TIMEOUT : th instanceof CaptchaHelper.Failure ? Type.CAPTCHA_KNOWN_FAILURE : th instanceof MGImagesBitmap.ImageNotFoundException ? Type.IMAGE_NOT_FOUND : th instanceof AutoModUtils2 ? Type.AUTOMOD_MESSAGE_BLOCKED : Type.OTHER;
+                type = th instanceof TimeoutException ? Type.TIMEOUT : th instanceof CaptchaHelper.Failure ? Type.CAPTCHA_KNOWN_FAILURE : th instanceof MGImagesBitmap.ImageNotFoundException ? Type.IMAGE_NOT_FOUND : th instanceof AutoModBlockFailure ? Type.AUTOMOD_MESSAGE_BLOCKED : Type.OTHER;
             }
             type2 = type;
             response = null;
@@ -601,7 +600,7 @@ public class Error {
             try {
                 action1.call(errorCreate);
             } catch (Exception e) {
-                StringBuilder sbX = outline.X(str, " / ");
+                StringBuilder sbX = b.d.b.a.a.X(str, " / ");
                 sbX.append(errorCreate.toString());
                 onUnhandledError.call(str, new Exception(sbX.toString(), e), null);
                 return;
@@ -756,7 +755,7 @@ public class Error {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Error(showErrorToasts=");
+        StringBuilder sbU = b.d.b.a.a.U("Error(showErrorToasts=");
         sbU.append(this.showErrorToasts);
         sbU.append(", shouldLog=");
         sbU.append(this.shouldLog);
@@ -839,10 +838,10 @@ public class Error {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Error.SkemaError(errors=");
+            StringBuilder sbU = b.d.b.a.a.U("Error.SkemaError(errors=");
             sbU.append(this.errors);
             sbU.append(", subErrors=");
-            return outline.M(sbU, this.subErrors, ")");
+            return b.d.b.a.a.M(sbU, this.subErrors, ")");
         }
 
         public /* synthetic */ SkemaError(AnonymousClass1 anonymousClass1) {

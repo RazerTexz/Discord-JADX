@@ -8,7 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.LayoutFullscreenCallPreviewEmptyBinding;
+import b.a.i.q0;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.MaterialButton;
 
@@ -50,9 +50,9 @@ public final class WidgetCallPreviewFullscreenBinding implements ViewBinding {
     public final RecyclerView k;
 
     @NonNull
-    public final LayoutFullscreenCallPreviewEmptyBinding l;
+    public final q0 l;
 
-    public WidgetCallPreviewFullscreenBinding(@NonNull ConstraintLayout constraintLayout, @NonNull Toolbar toolbar, @NonNull AppBarLayout appBarLayout, @NonNull ConstraintLayout constraintLayout2, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull ConstraintLayout constraintLayout4, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull ViewStub viewStub, @NonNull RecyclerView recyclerView, @NonNull LayoutFullscreenCallPreviewEmptyBinding layoutFullscreenCallPreviewEmptyBinding) {
+    public WidgetCallPreviewFullscreenBinding(@NonNull ConstraintLayout constraintLayout, @NonNull Toolbar toolbar, @NonNull AppBarLayout appBarLayout, @NonNull ConstraintLayout constraintLayout2, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull ConstraintLayout constraintLayout4, @NonNull MaterialButton materialButton, @NonNull MaterialButton materialButton2, @NonNull ViewStub viewStub, @NonNull RecyclerView recyclerView, @NonNull q0 q0Var) {
         this.a = constraintLayout;
         this.f2249b = toolbar;
         this.c = appBarLayout;
@@ -64,7 +64,7 @@ public final class WidgetCallPreviewFullscreenBinding implements ViewBinding {
         this.i = materialButton2;
         this.j = viewStub;
         this.k = recyclerView;
-        this.l = layoutFullscreenCallPreviewEmptyBinding;
+        this.l = q0Var;
     }
 
     @Override // androidx.viewbinding.ViewBinding

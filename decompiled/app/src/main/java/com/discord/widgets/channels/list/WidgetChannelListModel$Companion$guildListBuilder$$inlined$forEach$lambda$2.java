@@ -1,6 +1,6 @@
 package com.discord.widgets.channels.list;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -9,8 +9,8 @@ import com.discord.api.role.GuildRole;
 import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -22,7 +22,7 @@ import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2 extends Lambda implements Function1<Channel, WidgetChannelListModel.Companion.VocalChannelData> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$2 extends o implements Function1<Channel, WidgetChannelListModel.Companion.VocalChannelData> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -96,12 +96,12 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
     public final WidgetChannelListModel.Companion.VocalChannelData invoke2(Channel channel) {
         PermissionOverwrite permissionOverwrite;
         Object obj;
-        Intrinsics3.checkNotNullParameter(channel, "vocalChannel");
+        m.checkNotNullParameter(channel, "vocalChannel");
         long j = this.$channelId;
         boolean z2 = j == this.$selectedVoiceChannelId$inlined;
         Channel channel2 = this.$selectedChannel$inlined;
         boolean z3 = channel2 != null && j == channel2.getId();
-        Collection collection = (Collection) outline.d(this.$channel, this.$voiceStates$inlined);
+        Collection collection = (Collection) a.d(this.$channel, this.$voiceStates$inlined);
         int size = collection != null ? collection.size() : 0;
         boolean zCan = PermissionUtils.can(Permission.VIEW_CHANNEL, this.$permissions);
         boolean z4 = this.$canSeeGuildRoleSubscriptions$inlined && ChannelUtils.t(channel, this.$guild$inlined.getGuild(), this.$guild$inlined.getEveryoneRole(), this.$guild$inlined.getGuildRoles());

@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
-import b.a.d.AppHelpDesk;
-import b.a.k.FormatUtils;
+import b.a.d.f;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.databinding.WidgetChatListAdapterItemEphemeralMessageBinding;
 import com.discord.i18n.Hook;
@@ -20,8 +20,8 @@ import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.EphemeralMessageEntry;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Objects;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -42,26 +42,26 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
         public final void onClick(View view) {
             UriHandler uriHandler = UriHandler.INSTANCE;
             ImageView imageView = WidgetChatListAdapterItemEphemeralMessage.access$getBinding$p(WidgetChatListAdapterItemEphemeralMessage.this).d;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.chatListAdapterItemIconHelp");
+            m.checkNotNullExpressionValue(imageView, "binding.chatListAdapterItemIconHelp");
             Context context = imageView.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.chatListAdapterItemIconHelp.context");
-            UriHandler.handle$default(uriHandler, context, AppHelpDesk.a.a(1500000580222L, null), false, false, null, 28, null);
+            m.checkNotNullExpressionValue(context, "binding.chatListAdapterItemIconHelp.context");
+            UriHandler.handle$default(uriHandler, context, f.a.a(1500000580222L, null), false, false, null, 28, null);
         }
     }
 
     /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Message $message;
 
         /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
         /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Hook, Unit> {
 
             /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
             /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C02731 extends Lambda implements Function2<String, View, Unit> {
-                public C02731() {
+            public static final class C03931 extends o implements Function2<String, View, Unit> {
+                public C03931() {
                     super(2);
                 }
 
@@ -73,8 +73,8 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(String str, View view) {
-                    Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 0>");
-                    Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 1>");
+                    m.checkNotNullParameter(str, "<anonymous parameter 0>");
+                    m.checkNotNullParameter(view, "<anonymous parameter 1>");
                     WidgetChatListAdapterItemEphemeralMessage.access$getAdapter$p(WidgetChatListAdapterItemEphemeralMessage.this).getEventHandler().onDismissClicked(AnonymousClass2.this.$message);
                 }
             }
@@ -91,14 +91,14 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
+                m.checkNotNullParameter(hook, "$receiver");
                 View view = WidgetChatListAdapterItemEphemeralMessage.this.itemView;
-                Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+                m.checkNotNullExpressionValue(view, "itemView");
                 Integer numValueOf = Integer.valueOf(ColorCompat.getColor(view, R.color.brand));
-                C02731 c02731 = new C02731();
+                C03931 c03931 = new C03931();
                 Objects.requireNonNull(hook);
-                Intrinsics3.checkNotNullParameter(c02731, "onClick");
-                hook.clickHandler = new Hook.a(numValueOf, c02731);
+                m.checkNotNullParameter(c03931, "onClick");
+                hook.clickHandler = new Hook.a(numValueOf, c03931);
             }
         }
 
@@ -116,7 +116,7 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.a("handleDelete", new AnonymousClass1());
         }
     }
@@ -124,7 +124,7 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemEphemeralMessage(WidgetChatListAdapter widgetChatListAdapter) {
         super(R.layout.widget_chat_list_adapter_item_ephemeral_message, widgetChatListAdapter);
-        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
         int i = R.id.chat_list_adapter_item_gutter_bg;
         View viewFindViewById = view.findViewById(R.id.chat_list_adapter_item_gutter_bg);
@@ -145,7 +145,7 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
                             Guideline guideline = (Guideline) view.findViewById(R.id.uikit_chat_guideline);
                             if (guideline != null) {
                                 WidgetChatListAdapterItemEphemeralMessageBinding widgetChatListAdapterItemEphemeralMessageBinding = new WidgetChatListAdapterItemEphemeralMessageBinding((ConstraintLayout) view, viewFindViewById, viewFindViewById2, imageView, textView, imageView2, guideline);
-                                Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemEphemeralMessageBinding, "WidgetChatListAdapterIte…ageBinding.bind(itemView)");
+                                m.checkNotNullExpressionValue(widgetChatListAdapterItemEphemeralMessageBinding, "WidgetChatListAdapterIte…ageBinding.bind(itemView)");
                                 this.binding = widgetChatListAdapterItemEphemeralMessageBinding;
                                 return;
                             }
@@ -173,22 +173,22 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         Message message = ((EphemeralMessageEntry) data).getMessage();
         View view = this.binding.f2318b;
-        Intrinsics3.checkNotNullExpressionValue(view, "binding.chatListAdapterItemGutterBg");
+        m.checkNotNullExpressionValue(view, "binding.chatListAdapterItemGutterBg");
         View view2 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(view2, "binding.chatListAdapterItemHighlightedBg");
+        m.checkNotNullExpressionValue(view2, "binding.chatListAdapterItemHighlightedBg");
         configureCellHighlight(message, view2, view);
         this.binding.d.setOnClickListener(new AnonymousClass1());
         TextView textView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextDismiss");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemTextDismiss");
         String quantityString = textView.getResources().getQuantityString(R.plurals.only_you_can_see_and_delete_these_count, 1);
-        Intrinsics3.checkNotNullExpressionValue(quantityString, "itemDismiss.resources.ge…nd_delete_these_count, 1)");
+        m.checkNotNullExpressionValue(quantityString, "itemDismiss.resources.ge…nd_delete_these_count, 1)");
         String quantityString2 = textView.getResources().getQuantityString(R.plurals.only_you_can_see_and_delete_these_countMessages, 1);
-        Intrinsics3.checkNotNullExpressionValue(quantityString2, "itemDismiss.resources.ge…e_these_countMessages, 1)");
+        m.checkNotNullExpressionValue(quantityString2, "itemDismiss.resources.ge…e_these_countMessages, 1)");
         textView.setMovementMethod(LinkMovementMethod.getInstance());
-        textView.setText(FormatUtils.d(textView, R.string.only_you_can_see_and_delete_these, new Object[]{quantityString, quantityString2}, new AnonymousClass2(message)));
+        textView.setText(b.d(textView, R.string.only_you_can_see_and_delete_these, new Object[]{quantityString, quantityString2}, new AnonymousClass2(message)));
     }
 }

@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.input;
 
 import com.discord.widgets.chat.input.ChatInputViewModel;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
@@ -9,7 +9,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: ChatInputViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChatInputViewModel$sendCommand$validated$3 extends Lambda implements Function2<Integer, Boolean, Unit> {
+public final class ChatInputViewModel$sendCommand$validated$3 extends o implements Function2<Integer, Boolean, Unit> {
     public final /* synthetic */ ChatInputViewModel.AttachmentContext $attachmentsContext;
     public final /* synthetic */ Function0 $commandResendCompressedHandler;
     public final /* synthetic */ ChatInputViewModel this$0;

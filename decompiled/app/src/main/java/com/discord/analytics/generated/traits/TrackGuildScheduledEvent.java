@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildScheduledEvent.kt */
 /* loaded from: classes.dex */
@@ -17,7 +17,7 @@ public final /* data */ class TrackGuildScheduledEvent {
             return false;
         }
         TrackGuildScheduledEvent trackGuildScheduledEvent = (TrackGuildScheduledEvent) other;
-        return Intrinsics3.areEqual(this.isEveryoneRoleVisible, trackGuildScheduledEvent.isEveryoneRoleVisible) && Intrinsics3.areEqual(this.associatedToDirectoryChannel, trackGuildScheduledEvent.associatedToDirectoryChannel);
+        return m.areEqual(this.isEveryoneRoleVisible, trackGuildScheduledEvent.isEveryoneRoleVisible) && m.areEqual(this.associatedToDirectoryChannel, trackGuildScheduledEvent.associatedToDirectoryChannel);
     }
 
     public int hashCode() {
@@ -28,9 +28,9 @@ public final /* data */ class TrackGuildScheduledEvent {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildScheduledEvent(isEveryoneRoleVisible=");
+        StringBuilder sbU = a.U("TrackGuildScheduledEvent(isEveryoneRoleVisible=");
         sbU.append(this.isEveryoneRoleVisible);
         sbU.append(", associatedToDirectoryChannel=");
-        return outline.D(sbU, this.associatedToDirectoryChannel, ")");
+        return a.D(sbU, this.associatedToDirectoryChannel, ")");
     }
 }

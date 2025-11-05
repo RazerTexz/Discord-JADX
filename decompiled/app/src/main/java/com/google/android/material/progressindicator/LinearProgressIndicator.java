@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.view.ViewCompat;
-import b.i.a.g.g.LinearIndeterminateContiguousAnimatorDelegate2;
-import b.i.a.g.g.LinearIndeterminateDisjointAnimatorDelegate2;
+import b.i.a.g.g.j;
+import b.i.a.g.g.l;
 import com.google.android.material.R;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -92,9 +92,9 @@ public final class LinearProgressIndicator extends BaseProgressIndicator<LinearP
         linearProgressIndicatorSpec.indeterminateAnimationType = i;
         linearProgressIndicatorSpec.validateSpec();
         if (i == 0) {
-            getIndeterminateDrawable().setAnimatorDelegate(new LinearIndeterminateContiguousAnimatorDelegate2((LinearProgressIndicatorSpec) this.spec));
+            getIndeterminateDrawable().setAnimatorDelegate(new j((LinearProgressIndicatorSpec) this.spec));
         } else {
-            getIndeterminateDrawable().setAnimatorDelegate(new LinearIndeterminateDisjointAnimatorDelegate2(getContext(), (LinearProgressIndicatorSpec) this.spec));
+            getIndeterminateDrawable().setAnimatorDelegate(new l(getContext(), (LinearProgressIndicatorSpec) this.spec));
         }
         invalidate();
     }

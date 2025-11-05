@@ -2,13 +2,13 @@ package com.discord.stores;
 
 import com.discord.rtcconnection.mediaengine.MediaEngine;
 import com.discord.utilities.analytics.AnalyticsTracker;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: StoreMediaEngine.kt */
 /* loaded from: classes2.dex */
-public final class StoreMediaEngine$init$echoCancellationCallback$1$onEchoCancellationUpdated$1 extends Lambda implements Function0<Unit> {
+public final class StoreMediaEngine$init$echoCancellationCallback$1$onEchoCancellationUpdated$1 extends o implements Function0<Unit> {
     public final /* synthetic */ MediaEngine.EchoCancellationInfo $info;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

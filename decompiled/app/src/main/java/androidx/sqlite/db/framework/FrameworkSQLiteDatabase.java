@@ -16,7 +16,7 @@ import androidx.sqlite.db.SimpleSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteStatement;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -93,8 +93,8 @@ public class FrameworkSQLiteDatabase implements SupportSQLiteDatabase {
 
     @Override // androidx.sqlite.db.SupportSQLiteDatabase
     public int delete(String str, String str2, Object[] objArr) {
-        StringBuilder sbX = outline.X("DELETE FROM ", str);
-        sbX.append(TextUtils.isEmpty(str2) ? "" : outline.w(" WHERE ", str2));
+        StringBuilder sbX = a.X("DELETE FROM ", str);
+        sbX.append(TextUtils.isEmpty(str2) ? "" : a.w(" WHERE ", str2));
         SupportSQLiteStatement supportSQLiteStatementCompileStatement = compileStatement(sbX.toString());
         SimpleSQLiteQuery.bind(supportSQLiteStatementCompileStatement, objArr);
         return supportSQLiteStatementCompileStatement.executeUpdateDelete();

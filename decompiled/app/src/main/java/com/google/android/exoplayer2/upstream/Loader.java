@@ -6,14 +6,11 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import b.i.a.c.a3.BundledExtractorsAdapter;
-import b.i.a.c.a3.ProgressiveMediaPeriod;
-import b.i.a.c.a3.SampleQueue;
-import b.i.a.c.f3.Log2;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.x2.Extractor;
+import b.i.a.c.a3.e0;
+import b.i.a.c.a3.h0;
+import b.i.a.c.a3.m;
+import b.i.a.c.f3.q;
+import b.i.a.c.x2.h;
 import com.google.android.exoplayer2.drm.DrmSession;
 import java.io.IOException;
 import java.util.Objects;
@@ -39,7 +36,7 @@ public final class Loader {
         public UnexpectedLoaderException(Throwable th) {
             String simpleName = th.getClass().getSimpleName();
             String message = th.getMessage();
-            super(outline.l(outline.b(message, simpleName.length() + 13), "Unexpected ", simpleName, ": ", message), th);
+            super(b.d.b.a.a.l(b.d.b.a.a.b(message, simpleName.length() + 13), "Unexpected ", simpleName, ": ", message), th);
         }
     }
 
@@ -101,7 +98,7 @@ public final class Loader {
             } else {
                 synchronized (this) {
                     this.q = true;
-                    ((ProgressiveMediaPeriod.a) this.k).h = true;
+                    ((e0.a) this.k).h = true;
                     Thread thread = this.p;
                     if (thread != null) {
                         thread.interrupt();
@@ -120,7 +117,7 @@ public final class Loader {
 
         /* JADX WARN: Multi-variable type inference failed */
         public void b(long j) {
-            AnimatableValueParser.D(Loader.this.d == null);
+            b.c.a.a0.d.D(Loader.this.d == null);
             Loader loader = Loader.this;
             loader.d = this;
             if (j > 0) {
@@ -164,7 +161,7 @@ public final class Loader {
                     bVar.d(this.k, jElapsedRealtime, j);
                     return;
                 } catch (RuntimeException e) {
-                    Log2.b("LoadTask", "Unexpected exception handling load completed", e);
+                    q.b("LoadTask", "Unexpected exception handling load completed", e);
                     Loader.this.e = new UnexpectedLoaderException(e);
                     return;
                 }
@@ -202,12 +199,12 @@ public final class Loader {
                 }
                 if (z2) {
                     String simpleName = this.k.getClass().getSimpleName();
-                    AnimatableValueParser.f(simpleName.length() != 0 ? "load:".concat(simpleName) : new String("load:"));
+                    b.c.a.a0.d.f(simpleName.length() != 0 ? "load:".concat(simpleName) : new String("load:"));
                     try {
-                        ((ProgressiveMediaPeriod.a) this.k).b();
-                        AnimatableValueParser.d0();
+                        ((e0.a) this.k).b();
+                        b.c.a.a0.d.d0();
                     } catch (Throwable th) {
-                        AnimatableValueParser.d0();
+                        b.c.a.a0.d.d0();
                         throw th;
                     }
                 }
@@ -228,11 +225,11 @@ public final class Loader {
                 if (this.r) {
                     return;
                 }
-                Log2.b("LoadTask", "OutOfMemory error loading stream", e2);
+                q.b("LoadTask", "OutOfMemory error loading stream", e2);
                 obtainMessage(2, new UnexpectedLoaderException(e2)).sendToTarget();
             } catch (Error e3) {
                 if (!this.r) {
-                    Log2.b("LoadTask", "Unexpected error loading stream", e3);
+                    q.b("LoadTask", "Unexpected error loading stream", e3);
                     obtainMessage(3, e3).sendToTarget();
                 }
                 throw e3;
@@ -240,7 +237,7 @@ public final class Loader {
                 if (this.r) {
                     return;
                 }
-                Log2.b("LoadTask", "Unexpected exception loading stream", e4);
+                q.b("LoadTask", "Unexpected exception loading stream", e4);
                 obtainMessage(2, new UnexpectedLoaderException(e4)).sendToTarget();
             }
         }
@@ -261,29 +258,29 @@ public final class Loader {
 
         @Override // java.lang.Runnable
         public void run() {
-            ProgressiveMediaPeriod progressiveMediaPeriod = (ProgressiveMediaPeriod) this.j;
-            for (SampleQueue sampleQueue : progressiveMediaPeriod.D) {
-                sampleQueue.s(true);
-                DrmSession drmSession = sampleQueue.i;
+            e0 e0Var = (e0) this.j;
+            for (h0 h0Var : e0Var.D) {
+                h0Var.s(true);
+                DrmSession drmSession = h0Var.i;
                 if (drmSession != null) {
-                    drmSession.b(sampleQueue.e);
-                    sampleQueue.i = null;
-                    sampleQueue.h = null;
+                    drmSession.b(h0Var.e);
+                    h0Var.i = null;
+                    h0Var.h = null;
                 }
             }
-            BundledExtractorsAdapter bundledExtractorsAdapter = (BundledExtractorsAdapter) progressiveMediaPeriod.w;
-            Extractor extractor = bundledExtractorsAdapter.f828b;
-            if (extractor != null) {
-                extractor.release();
-                bundledExtractorsAdapter.f828b = null;
+            m mVar = (m) e0Var.w;
+            h hVar = mVar.f828b;
+            if (hVar != null) {
+                hVar.release();
+                mVar.f828b = null;
             }
-            bundledExtractorsAdapter.c = null;
+            mVar.c = null;
         }
     }
 
     public Loader(String str) {
         String strConcat = str.length() != 0 ? "ExoPlayer:Loader:".concat(str) : new String("ExoPlayer:Loader:");
-        int i = Util2.a;
+        int i = b.i.a.c.f3.e0.a;
         this.c = Executors.newSingleThreadExecutor(new b.i.a.c.f3.d(strConcat));
     }
 

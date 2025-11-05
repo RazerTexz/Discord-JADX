@@ -6,17 +6,17 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetRadioSelectorBottomSheetBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.utilities.views.SimpleRecyclerAdapter;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -26,7 +26,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetRadioSelectorBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetRadioSelectorBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetRadioSelectorBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetRadioSelectorBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetRadioSelectorBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetRadioSelectorBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -46,14 +46,14 @@ public final class WidgetRadioSelectorBottomSheet extends AppBottomSheet {
         private Companion() {
         }
 
-        public final void show(FragmentManager fragmentManager, WidgetRadioSelectorBottomSheet3 items, Function1<? super Integer, Unit> onSelected) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(items, "items");
-            Intrinsics3.checkNotNullParameter(onSelected, "onSelected");
+        public final void show(FragmentManager fragmentManager, RadioSelectorItems items, Function1<? super Integer, Unit> onSelected) {
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(items, "items");
+            m.checkNotNullParameter(onSelected, "onSelected");
             WidgetRadioSelectorBottomSheet widgetRadioSelectorBottomSheet = new WidgetRadioSelectorBottomSheet();
-            widgetRadioSelectorBottomSheet.setArguments(AnimatableValueParser.e2(items));
+            widgetRadioSelectorBottomSheet.setArguments(d.e2(items));
             widgetRadioSelectorBottomSheet.setOnSelected(onSelected);
-            widgetRadioSelectorBottomSheet.show(fragmentManager, Reflection2.getOrCreateKotlinClass(WidgetRadioSelectorBottomSheet.class).toString());
+            widgetRadioSelectorBottomSheet.show(fragmentManager, a0.getOrCreateKotlinClass(WidgetRadioSelectorBottomSheet.class).toString());
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -63,17 +63,17 @@ public final class WidgetRadioSelectorBottomSheet extends AppBottomSheet {
 
     public WidgetRadioSelectorBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetRadioSelectorBottomSheet6.INSTANCE, null, 2, null);
-        this.args = LazyJVM.lazy(new WidgetRadioSelectorBottomSheet$$special$$inlined$args$1(this, "intent_args_key"));
-        this.adapter = LazyJVM.lazy(new WidgetRadioSelectorBottomSheet5(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetRadioSelectorBottomSheet$binding$2.INSTANCE, null, 2, null);
+        this.args = g.lazy(new WidgetRadioSelectorBottomSheet$$special$$inlined$args$1(this, "intent_args_key"));
+        this.adapter = g.lazy(new WidgetRadioSelectorBottomSheet$adapter$2(this));
     }
 
-    public final SimpleRecyclerAdapter<WidgetRadioSelectorBottomSheet2, WidgetRadioSelectorBottomSheet4> getAdapter() {
+    public final SimpleRecyclerAdapter<RadioSelectorItem, RadioSelectorViewHolder> getAdapter() {
         return (SimpleRecyclerAdapter) this.adapter.getValue();
     }
 
-    public final WidgetRadioSelectorBottomSheet3 getArgs() {
-        return (WidgetRadioSelectorBottomSheet3) this.args.getValue();
+    public final RadioSelectorItems getArgs() {
+        return (RadioSelectorItems) this.args.getValue();
     }
 
     public final WidgetRadioSelectorBottomSheetBinding getBinding() {
@@ -91,13 +91,13 @@ public final class WidgetRadioSelectorBottomSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
+        m.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
         recyclerView.setAdapter(getAdapter());
         TextView textView = getBinding().f2517b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.radioSelectorBottomSheetTitle");
+        m.checkNotNullExpressionValue(textView, "binding.radioSelectorBottomSheetTitle");
         textView.setText(getArgs().getTitle());
     }
 

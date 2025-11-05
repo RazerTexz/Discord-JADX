@@ -1,8 +1,8 @@
 package com.discord.widgets.directories;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.directory.DirectoryEntryGuild;
 import com.discord.api.guild.Guild;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -13,22 +13,21 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
+import com.discord.stores.utilities.Default;
 import com.discord.stores.utilities.RestCallState;
-import com.discord.stores.utilities.RestCallState2;
-import com.discord.stores.utilities.RestCallState5;
+import com.discord.stores.utilities.RestCallStateKt;
 import com.discord.utilities.directories.DirectoryUtils;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.guilds.join.GuildJoinHelper;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t.Sets5;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.widgets.guilds.join.GuildJoinHelperKt;
+import d0.g;
+import d0.g0.t;
+import d0.t.n;
+import d0.t.n0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import java.util.Set;
 import kotlin.Lazy;
@@ -41,7 +40,7 @@ import rx.Observable;
 
 /* compiled from: WidgetDirectoriesSearchViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewState> {
+public final class WidgetDirectoriesSearchViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -51,7 +50,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
 
     /* compiled from: WidgetDirectoriesSearchViewModel.kt */
     /* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<ViewState, Unit> {
         public AnonymousClass1(WidgetDirectoriesSearchViewModel widgetDirectoriesSearchViewModel) {
             super(1, widgetDirectoriesSearchViewModel, WidgetDirectoriesSearchViewModel.class, "handleNewState", "handleNewState(Lcom/discord/widgets/directories/WidgetDirectoriesSearchViewModel$ViewState;)V", 0);
         }
@@ -64,7 +63,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetDirectoriesSearchViewModel.access$handleNewState((WidgetDirectoriesSearchViewModel) this.receiver, viewState);
         }
     }
@@ -79,7 +78,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         }
 
         private final Observable<ViewState> observeStores(long channelId, ObservationDeck observationDeck, StoreGuilds guildsStore, StoreGuildSelected guildSelectedStore, StoreChannels channelsStore, StorePermissions permissionsStore) {
-            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{guildsStore, guildSelectedStore, channelsStore, permissionsStore}, false, null, null, new WidgetDirectoriesSearchViewModel2(permissionsStore, guildsStore, guildSelectedStore, channelId), 14, null);
+            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{guildsStore, guildSelectedStore, channelsStore, permissionsStore}, false, null, null, new WidgetDirectoriesSearchViewModel$Companion$observeStores$1(permissionsStore, guildsStore, guildSelectedStore, channelId), 14, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -89,7 +88,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
 
     /* compiled from: WidgetDirectoriesSearchViewModel.kt */
     /* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$joinGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Guild, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Guild, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -104,13 +103,13 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Guild guild) {
-            Intrinsics3.checkNotNullParameter(guild, "it");
+            m.checkNotNullParameter(guild, "it");
         }
     }
 
     /* compiled from: WidgetDirectoriesSearchViewModel.kt */
     /* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$searchForDirectories$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild>>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild>>, Unit> {
         public final /* synthetic */ CharSequence $query;
         public final /* synthetic */ ViewState $viewState;
 
@@ -129,7 +128,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends List<DirectoryEntryGuild>> restCallState) {
-            Intrinsics3.checkNotNullParameter(restCallState, "entriesState");
+            m.checkNotNullParameter(restCallState, "entriesState");
             WidgetDirectoriesSearchViewModel widgetDirectoriesSearchViewModel = WidgetDirectoriesSearchViewModel.this;
             ViewState viewState = this.$viewState;
             String string = this.$query.toString();
@@ -148,7 +147,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         StoreDirectories directories = (i & 4) != 0 ? StoreStream.INSTANCE.getDirectories() : storeDirectories;
         if ((i & 8) != 0) {
             Companion companion = INSTANCE;
-            ObservationDeck observationDeck = ObservationDeck4.get();
+            ObservationDeck observationDeck = ObservationDeckProvider.get();
             StoreStream.Companion companion2 = StoreStream.INSTANCE;
             observableAccess$observeStores = Companion.access$observeStores(companion, j, observationDeck, companion2.getGuilds(), companion2.getGuildSelected(), companion2.getChannels(), companion2.getPermissions());
         } else {
@@ -192,8 +191,8 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
     }
 
     public final void joinGuild(Context context, long id2, long directoryChannelId) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        GuildJoinHelper.joinGuild$default(context, id2, false, null, Long.valueOf(directoryChannelId), this.restAPI.jsonObjectOf(Tuples.to("source", DirectoryUtils.JOIN_GUILD_SOURCE)), WidgetDirectoriesSearchViewModel.class, null, null, null, AnonymousClass1.INSTANCE, 896, null);
+        m.checkNotNullParameter(context, "context");
+        GuildJoinHelperKt.joinGuild$default(context, id2, false, null, Long.valueOf(directoryChannelId), this.restAPI.jsonObjectOf(d0.o.to("source", DirectoryUtils.JOIN_GUILD_SOURCE)), WidgetDirectoriesSearchViewModel.class, null, null, null, AnonymousClass1.INSTANCE, 896, null);
     }
 
     public final void removeGuild(long id2, long directoryChannelId) {
@@ -201,19 +200,19 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
     }
 
     public final void searchForDirectories(long channelId, CharSequence query) {
-        Intrinsics3.checkNotNullParameter(query, "query");
+        m.checkNotNullParameter(query, "query");
         ViewState viewState = getViewState();
         if (viewState == null || shouldNotSearch(query)) {
             return;
         }
-        RestCallState5.executeRequest(this.restAPI.searchServers(channelId, query.toString()), new AnonymousClass1(viewState, query));
+        RestCallStateKt.executeRequest(this.restAPI.searchServers(channelId, query.toString()), new AnonymousClass1(viewState, query));
     }
 
     public final boolean shouldNotSearch(CharSequence searchTerm) {
-        Intrinsics3.checkNotNullParameter(searchTerm, "searchTerm");
-        if (!StringsJVM.isBlank(searchTerm)) {
+        m.checkNotNullParameter(searchTerm, "searchTerm");
+        if (!t.isBlank(searchTerm)) {
             ViewState viewState = getViewState();
-            if (!Intrinsics3.areEqual(viewState != null ? viewState.getCurrentSearchTerm() : null, searchTerm.toString())) {
+            if (!m.areEqual(viewState != null ? viewState.getCurrentSearchTerm() : null, searchTerm.toString())) {
                 return false;
             }
         }
@@ -239,11 +238,11 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(com.discord.models.guild.Guild guild, String str, List<DirectoryEntryGuild> list, Set<Long> set, Set<Long> set2, boolean z2, RestCallState<? extends List<DirectoryEntryGuild>> restCallState) {
-            Intrinsics3.checkNotNullParameter(str, "currentSearchTerm");
-            Intrinsics3.checkNotNullParameter(list, "directories");
-            Intrinsics3.checkNotNullParameter(set, "joinedGuildIds");
-            Intrinsics3.checkNotNullParameter(set2, "adminGuildIds");
-            Intrinsics3.checkNotNullParameter(restCallState, "directoriesState");
+            m.checkNotNullParameter(str, "currentSearchTerm");
+            m.checkNotNullParameter(list, "directories");
+            m.checkNotNullParameter(set, "joinedGuildIds");
+            m.checkNotNullParameter(set2, "adminGuildIds");
+            m.checkNotNullParameter(restCallState, "directoriesState");
             this.guild = guild;
             this.currentSearchTerm = str;
             this.directories = list;
@@ -251,7 +250,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             this.adminGuildIds = set2;
             this.hasAddGuildPermissions = z2;
             this.directoriesState = restCallState;
-            this.directoryEntryData = LazyJVM.lazy(new WidgetDirectoriesSearchViewModel3(this));
+            this.directoryEntryData = g.lazy(new WidgetDirectoriesSearchViewModel$ViewState$directoryEntryData$2(this));
         }
 
         public static /* synthetic */ ViewState copy$default(ViewState viewState, com.discord.models.guild.Guild guild, String str, List list, Set set, Set set2, boolean z2, RestCallState restCallState, int i, Object obj) {
@@ -316,11 +315,11 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         }
 
         public final ViewState copy(com.discord.models.guild.Guild guild, String currentSearchTerm, List<DirectoryEntryGuild> directories, Set<Long> joinedGuildIds, Set<Long> adminGuildIds, boolean hasAddGuildPermissions, RestCallState<? extends List<DirectoryEntryGuild>> directoriesState) {
-            Intrinsics3.checkNotNullParameter(currentSearchTerm, "currentSearchTerm");
-            Intrinsics3.checkNotNullParameter(directories, "directories");
-            Intrinsics3.checkNotNullParameter(joinedGuildIds, "joinedGuildIds");
-            Intrinsics3.checkNotNullParameter(adminGuildIds, "adminGuildIds");
-            Intrinsics3.checkNotNullParameter(directoriesState, "directoriesState");
+            m.checkNotNullParameter(currentSearchTerm, "currentSearchTerm");
+            m.checkNotNullParameter(directories, "directories");
+            m.checkNotNullParameter(joinedGuildIds, "joinedGuildIds");
+            m.checkNotNullParameter(adminGuildIds, "adminGuildIds");
+            m.checkNotNullParameter(directoriesState, "directoriesState");
             return new ViewState(guild, currentSearchTerm, directories, joinedGuildIds, adminGuildIds, hasAddGuildPermissions, directoriesState);
         }
 
@@ -332,7 +331,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.guild, viewState.guild) && Intrinsics3.areEqual(this.currentSearchTerm, viewState.currentSearchTerm) && Intrinsics3.areEqual(this.directories, viewState.directories) && Intrinsics3.areEqual(this.joinedGuildIds, viewState.joinedGuildIds) && Intrinsics3.areEqual(this.adminGuildIds, viewState.adminGuildIds) && this.hasAddGuildPermissions == viewState.hasAddGuildPermissions && Intrinsics3.areEqual(this.directoriesState, viewState.directoriesState);
+            return m.areEqual(this.guild, viewState.guild) && m.areEqual(this.currentSearchTerm, viewState.currentSearchTerm) && m.areEqual(this.directories, viewState.directories) && m.areEqual(this.joinedGuildIds, viewState.joinedGuildIds) && m.areEqual(this.adminGuildIds, viewState.adminGuildIds) && this.hasAddGuildPermissions == viewState.hasAddGuildPermissions && m.areEqual(this.directoriesState, viewState.directoriesState);
         }
 
         public final Set<Long> getAdminGuildIds() {
@@ -390,7 +389,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(guild=");
+            StringBuilder sbU = a.U("ViewState(guild=");
             sbU.append(this.guild);
             sbU.append(", currentSearchTerm=");
             sbU.append(this.currentSearchTerm);
@@ -409,16 +408,16 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         }
 
         public /* synthetic */ ViewState(com.discord.models.guild.Guild guild, String str, List list, Set set, Set set2, boolean z2, RestCallState restCallState, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i & 1) != 0 ? null : guild, (i & 2) != 0 ? "" : str, (i & 4) != 0 ? Collections2.emptyList() : list, (i & 8) != 0 ? Sets5.emptySet() : set, (i & 16) != 0 ? Sets5.emptySet() : set2, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? RestCallState2.INSTANCE : restCallState);
+            this((i & 1) != 0 ? null : guild, (i & 2) != 0 ? "" : str, (i & 4) != 0 ? n.emptyList() : list, (i & 8) != 0 ? n0.emptySet() : set, (i & 16) != 0 ? n0.emptySet() : set2, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? Default.INSTANCE : restCallState);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetDirectoriesSearchViewModel(long j, RestAPI restAPI, StoreDirectories storeDirectories, Observable<ViewState> observable) {
         super(new ViewState(null, null, null, null, null, false, null, Opcodes.LAND, null));
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(storeDirectories, "directoriesStore");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(storeDirectories, "directoriesStore");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.channelId = j;
         this.restAPI = restAPI;
         this.directoriesStore = storeDirectories;

@@ -7,7 +7,7 @@ import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import h0.c.y;
 import org.webrtc.EglBase;
 import org.webrtc.EglRenderer;
@@ -75,7 +75,7 @@ public class SurfaceViewRenderer extends SurfaceView implements SurfaceHolder.Ca
         }
         int iMin = Math.min(getWidth(), i);
         int iMin2 = Math.min(getHeight(), i2);
-        StringBuilder sbU = outline.U("updateSurfaceSize. Layout size: ");
+        StringBuilder sbU = a.U("updateSurfaceSize. Layout size: ");
         sbU.append(getWidth());
         sbU.append("x");
         sbU.append(getHeight());
@@ -161,7 +161,7 @@ public class SurfaceViewRenderer extends SurfaceView implements SurfaceHolder.Ca
         ThreadUtils.checkIsOnMainThread();
         Point pointMeasure = this.videoLayoutMeasure.measure(i, i2, this.rotatedFrameWidth, this.rotatedFrameHeight);
         setMeasuredDimension(pointMeasure.x, pointMeasure.y);
-        StringBuilder sbU = outline.U("onMeasure(). New size: ");
+        StringBuilder sbU = a.U("onMeasure(). New size: ");
         sbU.append(pointMeasure.x);
         sbU.append("x");
         sbU.append(pointMeasure.y);

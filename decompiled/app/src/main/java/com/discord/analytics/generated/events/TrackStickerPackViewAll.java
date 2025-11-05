@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStickerPackViewAll.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStickerPackViewAll implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackLocationMetadata2 {
+public final /* data */ class TrackStickerPackViewAll implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -23,13 +23,13 @@ public final /* data */ class TrackStickerPackViewAll implements AnalyticsSchema
     private final Long stickerPackId = null;
     private final transient String analyticsSchemaTypeName = "sticker_pack_view_all";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -48,7 +48,7 @@ public final /* data */ class TrackStickerPackViewAll implements AnalyticsSchema
             return false;
         }
         TrackStickerPackViewAll trackStickerPackViewAll = (TrackStickerPackViewAll) other;
-        return Intrinsics3.areEqual(this.stickerId, trackStickerPackViewAll.stickerId) && Intrinsics3.areEqual(this.stickerPackId, trackStickerPackViewAll.stickerPackId);
+        return m.areEqual(this.stickerId, trackStickerPackViewAll.stickerId) && m.areEqual(this.stickerPackId, trackStickerPackViewAll.stickerPackId);
     }
 
     public int hashCode() {
@@ -59,9 +59,9 @@ public final /* data */ class TrackStickerPackViewAll implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStickerPackViewAll(stickerId=");
+        StringBuilder sbU = a.U("TrackStickerPackViewAll(stickerId=");
         sbU.append(this.stickerId);
         sbU.append(", stickerPackId=");
-        return outline.G(sbU, this.stickerPackId, ")");
+        return a.G(sbU, this.stickerPackId, ")");
     }
 }

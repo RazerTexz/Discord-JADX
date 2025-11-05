@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelBan;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -26,16 +26,16 @@ public final class StoreBans extends StoreV2 {
 
     /* compiled from: StoreBans.kt */
     /* renamed from: com.discord.stores.StoreBans$observeBans$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends ModelBan>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<List<? extends ModelBan>, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreBans.kt */
         /* renamed from: com.discord.stores.StoreBans$observeBans$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00941 extends Lambda implements Function0<Unit> {
+        public static final class C02141 extends o implements Function0<Unit> {
             public final /* synthetic */ List $bans;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C00941(List list) {
+            public C02141(List list) {
                 super(0);
                 this.$bans = list;
             }
@@ -77,14 +77,14 @@ public final class StoreBans extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ModelBan> list) {
-            Intrinsics3.checkNotNullParameter(list, "bans");
-            StoreBans.access$getDispatcher$p(StoreBans.this).schedule(new C00941(list));
+            m.checkNotNullParameter(list, "bans");
+            StoreBans.access$getDispatcher$p(StoreBans.this).schedule(new C02141(list));
         }
     }
 
     /* compiled from: StoreBans.kt */
     /* renamed from: com.discord.stores.StoreBans$observeBans$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Map<Long, ? extends ModelBan>> {
+    public static final class AnonymousClass2 extends o implements Function0<Map<Long, ? extends ModelBan>> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -106,8 +106,8 @@ public final class StoreBans extends StoreV2 {
     }
 
     public StoreBans(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.bannedUsers = new HashMap<>();
@@ -130,9 +130,9 @@ public final class StoreBans extends StoreV2 {
         storeBans.bannedUsersSnapshot = map;
     }
 
-    @Store3
+    @StoreThread
     public final void handleBanAdd(ModelBan ban) {
-        Intrinsics3.checkNotNullParameter(ban, "ban");
+        m.checkNotNullParameter(ban, "ban");
         if (this.bannedUsers.get(Long.valueOf(ban.getGuildId())) != null) {
             HashMap<Long, ModelBan> map = this.bannedUsers.get(Long.valueOf(ban.getGuildId()));
             if (map != null) {
@@ -142,9 +142,9 @@ public final class StoreBans extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleBanRemove(ModelBan ban) {
-        Intrinsics3.checkNotNullParameter(ban, "ban");
+        m.checkNotNullParameter(ban, "ban");
         if (this.bannedUsers.get(Long.valueOf(ban.getGuildId())) != null) {
             HashMap<Long, ModelBan> map = this.bannedUsers.get(Long.valueOf(ban.getGuildId()));
             if (map != null) {

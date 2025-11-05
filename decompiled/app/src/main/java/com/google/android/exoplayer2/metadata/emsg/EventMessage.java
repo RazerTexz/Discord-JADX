@@ -3,18 +3,17 @@ package com.google.android.exoplayer2.metadata.emsg;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.z2.Metadata2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.Arrays;
 
 /* loaded from: classes3.dex */
 public final class EventMessage implements Metadata.Entry {
     public static final Parcelable.Creator<EventMessage> CREATOR;
-    public static final Format2 j;
-    public static final Format2 k;
+    public static final j1 j;
+    public static final j1 k;
     public final String l;
     public final String m;
     public final long n;
@@ -35,10 +34,10 @@ public final class EventMessage implements Metadata.Entry {
     }
 
     static {
-        Format2.b bVar = new Format2.b();
+        j1.b bVar = new j1.b();
         bVar.k = "application/id3";
         j = bVar.a();
-        Format2.b bVar2 = new Format2.b();
+        j1.b bVar2 = new j1.b();
         bVar2.k = "application/x-scte35";
         k = bVar2.a();
         CREATOR = new a();
@@ -65,7 +64,7 @@ public final class EventMessage implements Metadata.Entry {
             return false;
         }
         EventMessage eventMessage = (EventMessage) obj;
-        return this.n == eventMessage.n && this.o == eventMessage.o && Util2.a(this.l, eventMessage.l) && Util2.a(this.m, eventMessage.m) && Arrays.equals(this.p, eventMessage.p);
+        return this.n == eventMessage.n && this.o == eventMessage.o && e0.a(this.l, eventMessage.l) && e0.a(this.m, eventMessage.m) && Arrays.equals(this.p, eventMessage.p);
     }
 
     public int hashCode() {
@@ -83,8 +82,8 @@ public final class EventMessage implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(MediaMetadata.b bVar) {
-        Metadata2.c(this, bVar);
+    public /* synthetic */ void n(p1.b bVar) {
+        b.i.a.c.z2.a.c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
@@ -124,7 +123,7 @@ public final class EventMessage implements Metadata.Entry {
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     @Nullable
-    public Format2 y() {
+    public j1 y() {
         String str = this.l;
         str.hashCode();
         switch (str) {
@@ -140,7 +139,7 @@ public final class EventMessage implements Metadata.Entry {
 
     public EventMessage(Parcel parcel) {
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         this.l = string;
         this.m = parcel.readString();
         this.n = parcel.readLong();

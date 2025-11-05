@@ -1,9 +1,9 @@
 package com.discord.api.stageinstance;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guild.GuildFeature;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Set;
 
 /* compiled from: RecommendedStageInstanceGuild.kt */
@@ -22,7 +22,7 @@ public final /* data */ class RecommendedStageInstanceGuild {
             return false;
         }
         RecommendedStageInstanceGuild recommendedStageInstanceGuild = (RecommendedStageInstanceGuild) other;
-        return this.id == recommendedStageInstanceGuild.id && Intrinsics3.areEqual(this.name, recommendedStageInstanceGuild.name) && Intrinsics3.areEqual(this.icon, recommendedStageInstanceGuild.icon) && Intrinsics3.areEqual(this.features, recommendedStageInstanceGuild.features);
+        return this.id == recommendedStageInstanceGuild.id && m.areEqual(this.name, recommendedStageInstanceGuild.name) && m.areEqual(this.icon, recommendedStageInstanceGuild.icon) && m.areEqual(this.features, recommendedStageInstanceGuild.features);
     }
 
     public int hashCode() {
@@ -37,13 +37,13 @@ public final /* data */ class RecommendedStageInstanceGuild {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("RecommendedStageInstanceGuild(id=");
+        StringBuilder sbU = a.U("RecommendedStageInstanceGuild(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);
         sbU.append(", icon=");
         sbU.append(this.icon);
         sbU.append(", features=");
-        return outline.N(sbU, this.features, ")");
+        return a.N(sbU, this.features, ")");
     }
 }

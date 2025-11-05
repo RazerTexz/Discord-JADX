@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackPriceByCurrency;
-import com.discord.analytics.generated.traits.TrackPriceByCurrency2;
+import com.discord.analytics.generated.traits.TrackPriceByCurrencyReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackSkuUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackBase2, TrackPriceByCurrency2 {
+public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackBaseReceiver, TrackPriceByCurrencyReceiver {
     private TrackBase trackBase;
     private TrackPriceByCurrency trackPriceByCurrency;
     private final Long skuId = null;
@@ -51,7 +51,7 @@ public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackB
             return false;
         }
         TrackSkuUpdated trackSkuUpdated = (TrackSkuUpdated) other;
-        return Intrinsics3.areEqual(this.skuId, trackSkuUpdated.skuId) && Intrinsics3.areEqual(this.updateFrom, trackSkuUpdated.updateFrom) && Intrinsics3.areEqual(this.updateType, trackSkuUpdated.updateType) && Intrinsics3.areEqual(this.storeTitle, trackSkuUpdated.storeTitle) && Intrinsics3.areEqual(this.dependentSkuId, trackSkuUpdated.dependentSkuId) && Intrinsics3.areEqual(this.bundledSkuIds, trackSkuUpdated.bundledSkuIds) && Intrinsics3.areEqual(this.accessType, trackSkuUpdated.accessType) && Intrinsics3.areEqual(this.releaseDate, trackSkuUpdated.releaseDate) && Intrinsics3.areEqual(this.isPremium, trackSkuUpdated.isPremium) && Intrinsics3.areEqual(this.isDistribution, trackSkuUpdated.isDistribution) && Intrinsics3.areEqual(this.available, trackSkuUpdated.available) && Intrinsics3.areEqual(this.availableLocales, trackSkuUpdated.availableLocales) && Intrinsics3.areEqual(this.metacriticId, trackSkuUpdated.metacriticId) && Intrinsics3.areEqual(this.isExclusive, trackSkuUpdated.isExclusive) && Intrinsics3.areEqual(this.genres, trackSkuUpdated.genres) && Intrinsics3.areEqual(this.features, trackSkuUpdated.features) && Intrinsics3.areEqual(this.contentRatingPegi, trackSkuUpdated.contentRatingPegi) && Intrinsics3.areEqual(this.contentRatingEsrb, trackSkuUpdated.contentRatingEsrb) && Intrinsics3.areEqual(this.regularPriceTier, trackSkuUpdated.regularPriceTier) && Intrinsics3.areEqual(this.priceTier, trackSkuUpdated.priceTier);
+        return m.areEqual(this.skuId, trackSkuUpdated.skuId) && m.areEqual(this.updateFrom, trackSkuUpdated.updateFrom) && m.areEqual(this.updateType, trackSkuUpdated.updateType) && m.areEqual(this.storeTitle, trackSkuUpdated.storeTitle) && m.areEqual(this.dependentSkuId, trackSkuUpdated.dependentSkuId) && m.areEqual(this.bundledSkuIds, trackSkuUpdated.bundledSkuIds) && m.areEqual(this.accessType, trackSkuUpdated.accessType) && m.areEqual(this.releaseDate, trackSkuUpdated.releaseDate) && m.areEqual(this.isPremium, trackSkuUpdated.isPremium) && m.areEqual(this.isDistribution, trackSkuUpdated.isDistribution) && m.areEqual(this.available, trackSkuUpdated.available) && m.areEqual(this.availableLocales, trackSkuUpdated.availableLocales) && m.areEqual(this.metacriticId, trackSkuUpdated.metacriticId) && m.areEqual(this.isExclusive, trackSkuUpdated.isExclusive) && m.areEqual(this.genres, trackSkuUpdated.genres) && m.areEqual(this.features, trackSkuUpdated.features) && m.areEqual(this.contentRatingPegi, trackSkuUpdated.contentRatingPegi) && m.areEqual(this.contentRatingEsrb, trackSkuUpdated.contentRatingEsrb) && m.areEqual(this.regularPriceTier, trackSkuUpdated.regularPriceTier) && m.areEqual(this.priceTier, trackSkuUpdated.priceTier);
     }
 
     public int hashCode() {
@@ -98,7 +98,7 @@ public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSkuUpdated(skuId=");
+        StringBuilder sbU = a.U("TrackSkuUpdated(skuId=");
         sbU.append(this.skuId);
         sbU.append(", updateFrom=");
         sbU.append(this.updateFrom);
@@ -137,6 +137,6 @@ public final /* data */ class TrackSkuUpdated implements AnalyticsSchema, TrackB
         sbU.append(", regularPriceTier=");
         sbU.append(this.regularPriceTier);
         sbU.append(", priceTier=");
-        return outline.G(sbU, this.priceTier, ")");
+        return a.G(sbU, this.priceTier, ")");
     }
 }

@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildFeedItemFeatured.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildFeedItemFeatured implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
+public final /* data */ class TrackGuildFeedItemFeatured implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -23,13 +23,13 @@ public final /* data */ class TrackGuildFeedItemFeatured implements AnalyticsSch
     private final Long referenceMessageId = null;
     private final transient String analyticsSchemaTypeName = "guild_feed_item_featured";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -48,7 +48,7 @@ public final /* data */ class TrackGuildFeedItemFeatured implements AnalyticsSch
             return false;
         }
         TrackGuildFeedItemFeatured trackGuildFeedItemFeatured = (TrackGuildFeedItemFeatured) other;
-        return Intrinsics3.areEqual(this.entityType, trackGuildFeedItemFeatured.entityType) && Intrinsics3.areEqual(this.entityId, trackGuildFeedItemFeatured.entityId) && Intrinsics3.areEqual(this.featureUntil, trackGuildFeedItemFeatured.featureUntil) && Intrinsics3.areEqual(this.numMessageUrls, trackGuildFeedItemFeatured.numMessageUrls) && Intrinsics3.areEqual(this.referenceMessageId, trackGuildFeedItemFeatured.referenceMessageId);
+        return m.areEqual(this.entityType, trackGuildFeedItemFeatured.entityType) && m.areEqual(this.entityId, trackGuildFeedItemFeatured.entityId) && m.areEqual(this.featureUntil, trackGuildFeedItemFeatured.featureUntil) && m.areEqual(this.numMessageUrls, trackGuildFeedItemFeatured.numMessageUrls) && m.areEqual(this.referenceMessageId, trackGuildFeedItemFeatured.referenceMessageId);
     }
 
     public int hashCode() {
@@ -65,7 +65,7 @@ public final /* data */ class TrackGuildFeedItemFeatured implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildFeedItemFeatured(entityType=");
+        StringBuilder sbU = a.U("TrackGuildFeedItemFeatured(entityType=");
         sbU.append(this.entityType);
         sbU.append(", entityId=");
         sbU.append(this.entityId);
@@ -74,6 +74,6 @@ public final /* data */ class TrackGuildFeedItemFeatured implements AnalyticsSch
         sbU.append(", numMessageUrls=");
         sbU.append(this.numMessageUrls);
         sbU.append(", referenceMessageId=");
-        return outline.G(sbU, this.referenceMessageId, ")");
+        return a.G(sbU, this.referenceMessageId, ")");
     }
 }

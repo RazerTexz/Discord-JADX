@@ -1,14 +1,14 @@
 package com.discord.stores;
 
 import com.discord.stores.StoreMediaEngine;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: StoreMediaEngine.kt */
 /* loaded from: classes2.dex */
-public final class StoreMediaEngine$EngineListener$onConnecting$1 extends Lambda implements Function1<StoreMediaEngine.Listener, Unit> {
+public final class StoreMediaEngine$EngineListener$onConnecting$1 extends o implements Function1<StoreMediaEngine.Listener, Unit> {
     public static final StoreMediaEngine$EngineListener$onConnecting$1 INSTANCE = new StoreMediaEngine$EngineListener$onConnecting$1();
 
     public StoreMediaEngine$EngineListener$onConnecting$1() {
@@ -23,7 +23,7 @@ public final class StoreMediaEngine$EngineListener$onConnecting$1 extends Lambda
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(StoreMediaEngine.Listener listener) {
-        Intrinsics3.checkNotNullParameter(listener, "it");
+        m.checkNotNullParameter(listener, "it");
         listener.onConnecting();
     }
 }

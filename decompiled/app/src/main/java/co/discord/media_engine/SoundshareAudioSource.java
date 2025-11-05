@@ -3,9 +3,9 @@ package co.discord.media_engine;
 import android.media.AudioRecord;
 import android.os.Process;
 import android.util.Log;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.nio.ByteBuffer;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import org.webrtc.ThreadUtils;
@@ -42,9 +42,9 @@ public final class SoundshareAudioSource {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AudioRecordThread(SoundshareAudioSource soundshareAudioSource, String str, AudioRecord audioRecord, ByteBuffer byteBuffer, long j) {
             super(str);
-            Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-            Intrinsics3.checkNotNullParameter(audioRecord, "audioRecord");
-            Intrinsics3.checkNotNullParameter(byteBuffer, "byteBuffer");
+            m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            m.checkNotNullParameter(audioRecord, "audioRecord");
+            m.checkNotNullParameter(byteBuffer, "byteBuffer");
             this.this$0 = soundshareAudioSource;
             this.audioRecord = audioRecord;
             this.byteBuffer = byteBuffer;
@@ -82,7 +82,7 @@ public final class SoundshareAudioSource {
             try {
                 this.audioRecord.stop();
             } catch (IllegalStateException e) {
-                StringBuilder sbU = outline.U("AudioRecord.stop failed: ");
+                StringBuilder sbU = a.U("AudioRecord.stop failed: ");
                 sbU.append(e.getMessage());
                 Log.e(SoundshareAudioSource.TAG, sbU.toString());
             }
@@ -187,7 +187,7 @@ public final class SoundshareAudioSource {
     }
 
     public final boolean startRecording(AudioRecord audioRecord) {
-        Intrinsics3.checkNotNullParameter(audioRecord, "audioRecord");
+        m.checkNotNullParameter(audioRecord, "audioRecord");
         int channelCount = audioRecord.getChannelCount();
         int sampleRate = audioRecord.getSampleRate();
         if (this.audioRecord != null) {
@@ -201,7 +201,7 @@ public final class SoundshareAudioSource {
         nativeCacheDirectBufferAddress(this.nativeInstance, byteBufferAllocateDirect);
         int minBufferSize = AudioRecord.getMinBufferSize(sampleRate, channelCountToConfiguration(channelCount), 2);
         if (minBufferSize == -1 || minBufferSize == -2) {
-            reportSoundshareAudioSourceInitError(outline.q("AudioRecord.getMinBufferSize failed: ", minBufferSize));
+            reportSoundshareAudioSourceInitError(a.q("AudioRecord.getMinBufferSize failed: ", minBufferSize));
             return false;
         }
         Math.max(minBufferSize * 2, byteBufferAllocateDirect.capacity());
@@ -220,10 +220,10 @@ public final class SoundshareAudioSource {
                         reportSoundshareAudioSourceStartError("AudioRecord.startRecording failed - incorrect state :" + audioRecord.getRecordingState());
                         return false;
                     }
-                    Intrinsics3.checkNotNullExpressionValue(byteBufferAllocateDirect, "byteBuffer");
+                    m.checkNotNullExpressionValue(byteBufferAllocateDirect, "byteBuffer");
                     AudioRecordThread audioRecordThread = new AudioRecordThread(this, "SoundshareThread", audioRecord, byteBufferAllocateDirect, rtcTimeNanos);
                     this.audioThread = audioRecordThread;
-                    Intrinsics3.checkNotNull(audioRecordThread);
+                    m.checkNotNull(audioRecordThread);
                     audioRecordThread.start();
                     return true;
                 } catch (IllegalStateException e) {

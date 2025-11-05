@@ -1,12 +1,11 @@
 package b.a.q;
 
-import d0.z.d.Lambda;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: RtcConnection.kt */
 /* loaded from: classes.dex */
-public final class c0 extends Lambda implements Function0<Unit> {
+public final class c0 extends d0.z.d.o implements Function0<Unit> {
     public final /* synthetic */ d0 this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

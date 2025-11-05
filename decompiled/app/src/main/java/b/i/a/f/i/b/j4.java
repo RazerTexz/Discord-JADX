@@ -2,7 +2,6 @@ package b.i.a.f.i.b;
 
 import android.content.SharedPreferences;
 import androidx.annotation.WorkerThread;
-import b.c.a.a0.AnimatableValueParser;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
 /* loaded from: classes3.dex */
@@ -16,7 +15,7 @@ public final class j4 {
 
     public j4(d4 d4Var, String str) {
         this.d = d4Var;
-        AnimatableValueParser.w(str);
+        b.c.a.a0.d.w(str);
         this.a = str;
     }
 

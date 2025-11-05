@@ -5,7 +5,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ExpressionPickerCategorySelectionOverlineViewBinding;
+import b.a.i.n;
 
 /* loaded from: classes.dex */
 public final class EmojiCategoryItemStandardBinding implements ViewBinding {
@@ -18,12 +18,12 @@ public final class EmojiCategoryItemStandardBinding implements ViewBinding {
     public final ImageView f2100b;
 
     @NonNull
-    public final ExpressionPickerCategorySelectionOverlineViewBinding c;
+    public final n c;
 
-    public EmojiCategoryItemStandardBinding(@NonNull FrameLayout frameLayout, @NonNull ImageView imageView, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+    public EmojiCategoryItemStandardBinding(@NonNull FrameLayout frameLayout, @NonNull ImageView imageView, @NonNull n nVar) {
         this.a = frameLayout;
         this.f2100b = imageView;
-        this.c = expressionPickerCategorySelectionOverlineViewBinding;
+        this.c = nVar;
     }
 
     @Override // androidx.viewbinding.ViewBinding

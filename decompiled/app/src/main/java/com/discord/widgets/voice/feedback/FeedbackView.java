@@ -19,9 +19,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
+import d0.o;
+import d0.t.h0;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +44,7 @@ public final class FeedbackView extends LinearLayout {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public IssueViewHolder(@LayoutRes int i, IssuesAdapter issuesAdapter) {
             super(i, issuesAdapter);
-            Intrinsics3.checkNotNullParameter(issuesAdapter, "adapter");
+            m.checkNotNullParameter(issuesAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "null cannot be cast to non-null type android.widget.TextView");
             this.issueItem = (TextView) view;
@@ -61,11 +61,11 @@ public final class FeedbackView extends LinearLayout {
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FeedbackIssue data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             TextView textView = this.issueItem;
             textView.setText(textView.getResources().getString(data.getReasonStringRes()));
-            this.issueItem.setOnClickListener(new FeedbackView2(this, data));
+            this.issueItem.setOnClickListener(new FeedbackView$IssueViewHolder$onConfigure$1(this, data));
         }
     }
 
@@ -76,8 +76,8 @@ public final class FeedbackView extends LinearLayout {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public IssuesAdapter(RecyclerView recyclerView) {
             super(recyclerView, false, 2, null);
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
-            this.onIssueClick = FeedbackView3.INSTANCE;
+            m.checkNotNullParameter(recyclerView, "recyclerView");
+            this.onIssueClick = FeedbackView$IssuesAdapter$onIssueClick$1.INSTANCE;
         }
 
         public final Function1<FeedbackIssue, Unit> getOnIssueClick() {
@@ -90,13 +90,13 @@ public final class FeedbackView extends LinearLayout {
         }
 
         public final void setOnIssueClick(Function1<? super FeedbackIssue, Unit> function1) {
-            Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+            m.checkNotNullParameter(function1, "<set-?>");
             this.onIssueClick = function1;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MGRecyclerViewHolder<IssuesAdapter, FeedbackIssue> onCreateViewHolder(ViewGroup parent, int viewType) {
-            Intrinsics3.checkNotNullParameter(parent, "parent");
+            m.checkNotNullParameter(parent, "parent");
             return new IssueViewHolder(R.layout.selectable_list_item, this);
         }
     }
@@ -149,8 +149,8 @@ public final class FeedbackView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public FeedbackView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(attributeSet, "attrs");
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.feedback_view, (ViewGroup) this, false);
         addView(viewInflate);
         int i = R.id.feedback_happy_rating;
@@ -178,11 +178,11 @@ public final class FeedbackView extends LinearLayout {
                                     ImageView imageView = (ImageView) viewInflate.findViewById(R.id.feedback_sad_rating);
                                     if (imageView != null) {
                                         FeedbackViewBinding feedbackViewBinding = new FeedbackViewBinding((LinearLayout) viewInflate, imageButton, textView, cardView, recyclerView, imageButton2, constraintLayout, textView2, imageView);
-                                        Intrinsics3.checkNotNullExpressionValue(feedbackViewBinding, "FeedbackViewBinding.infl…rom(context), this, true)");
+                                        m.checkNotNullExpressionValue(feedbackViewBinding, "FeedbackViewBinding.infl…rom(context), this, true)");
                                         this.binding = feedbackViewBinding;
-                                        this.viewToFeedbackRatingMap = Maps6.mapOf(Tuples.to(imageView, FeedbackRating.BAD), Tuples.to(imageButton2, FeedbackRating.NEUTRAL), Tuples.to(imageButton, FeedbackRating.GOOD));
+                                        this.viewToFeedbackRatingMap = h0.mapOf(o.to(imageView, FeedbackRating.BAD), o.to(imageButton2, FeedbackRating.NEUTRAL), o.to(imageButton, FeedbackRating.GOOD));
                                         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
-                                        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.feedbackIssuesRecycler");
+                                        m.checkNotNullExpressionValue(recyclerView, "binding.feedbackIssuesRecycler");
                                         this.issuesAdapter = (IssuesAdapter) companion.configure(new IssuesAdapter(recyclerView));
                                         recyclerView.setHasFixedSize(false);
                                         return;
@@ -198,19 +198,19 @@ public final class FeedbackView extends LinearLayout {
     }
 
     public final void updateView(String ratingSummaryPromptText, FeedbackRating selectedFeedbackRating, Function0<Unit> onSadRatingClick, Function0<Unit> onNeutralRatingClick, Function0<Unit> onHappyRatingClick, String issuesHeaderText, List<? extends FeedbackIssue> feedbackIssues, Function1<? super FeedbackIssue, Unit> onIssueClick) {
-        Intrinsics3.checkNotNullParameter(selectedFeedbackRating, "selectedFeedbackRating");
-        Intrinsics3.checkNotNullParameter(onSadRatingClick, "onSadRatingClick");
-        Intrinsics3.checkNotNullParameter(onNeutralRatingClick, "onNeutralRatingClick");
-        Intrinsics3.checkNotNullParameter(onHappyRatingClick, "onHappyRatingClick");
-        Intrinsics3.checkNotNullParameter(issuesHeaderText, "issuesHeaderText");
-        Intrinsics3.checkNotNullParameter(feedbackIssues, "feedbackIssues");
-        Intrinsics3.checkNotNullParameter(onIssueClick, "onIssueClick");
+        m.checkNotNullParameter(selectedFeedbackRating, "selectedFeedbackRating");
+        m.checkNotNullParameter(onSadRatingClick, "onSadRatingClick");
+        m.checkNotNullParameter(onNeutralRatingClick, "onNeutralRatingClick");
+        m.checkNotNullParameter(onHappyRatingClick, "onHappyRatingClick");
+        m.checkNotNullParameter(issuesHeaderText, "issuesHeaderText");
+        m.checkNotNullParameter(feedbackIssues, "feedbackIssues");
+        m.checkNotNullParameter(onIssueClick, "onIssueClick");
         boolean z2 = ratingSummaryPromptText != null;
         ConstraintLayout constraintLayout = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.feedbackRatingContainer");
+        m.checkNotNullExpressionValue(constraintLayout, "binding.feedbackRatingContainer");
         constraintLayout.setVisibility(z2 ? 0 : 8);
         TextView textView = this.binding.h;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.feedbackRatingSummaryPrompt");
+        m.checkNotNullExpressionValue(textView, "binding.feedbackRatingSummaryPrompt");
         textView.setText(ratingSummaryPromptText);
         this.binding.i.setOnClickListener(new AnonymousClass1(onSadRatingClick));
         this.binding.f.setOnClickListener(new AnonymousClass2(onNeutralRatingClick));
@@ -222,16 +222,16 @@ public final class FeedbackView extends LinearLayout {
         }
         boolean z3 = !feedbackIssues.isEmpty();
         TextView textView2 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.feedbackIssueSectionHeader");
+        m.checkNotNullExpressionValue(textView2, "binding.feedbackIssueSectionHeader");
         textView2.setText(issuesHeaderText);
         TextView textView3 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.feedbackIssueSectionHeader");
+        m.checkNotNullExpressionValue(textView3, "binding.feedbackIssueSectionHeader");
         textView3.setVisibility(z3 ? 0 : 8);
         CardView cardView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.feedbackIssuesCard");
+        m.checkNotNullExpressionValue(cardView, "binding.feedbackIssuesCard");
         cardView.setVisibility(z3 ? 0 : 8);
         RecyclerView recyclerView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.feedbackIssuesRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.feedbackIssuesRecycler");
         recyclerView.setVisibility(z3 ? 0 : 8);
         this.issuesAdapter.setOnIssueClick(onIssueClick);
         this.issuesAdapter.setData(feedbackIssues);

@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.io;
 
-import b.e.a.Log;
+import b.e.a.a;
 import com.esotericsoftware.kryo.KryoException;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -14,7 +14,7 @@ public class OutputChunked extends Output {
 
     private void writeChunkSize() throws IOException {
         int iPosition = position();
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
         OutputStream outputStream = getOutputStream();
         if ((iPosition & (-128)) == 0) {
             outputStream.write(iPosition);
@@ -44,7 +44,7 @@ public class OutputChunked extends Output {
 
     public void endChunks() throws KryoException {
         flush();
-        Log.a aVar = Log.a;
+        a.C0064a c0064a = a.a;
         try {
             getOutputStream().write(0);
         } catch (IOException e) {

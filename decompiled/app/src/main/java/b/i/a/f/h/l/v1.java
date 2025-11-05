@@ -1,7 +1,6 @@
 package b.i.a.f.h.l;
 
 import android.content.Context;
-import b.d.b.a.outline;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
 /* loaded from: classes3.dex */
@@ -49,7 +48,7 @@ public final class v1 extends t2 {
     public final String toString() {
         String strValueOf = String.valueOf(this.a);
         String strValueOf2 = String.valueOf(this.f1498b);
-        StringBuilder sbS = outline.S(strValueOf2.length() + strValueOf.length() + 46, "FlagsContext{context=", strValueOf, ", hermeticFileOverrides=", strValueOf2);
+        StringBuilder sbS = b.d.b.a.a.S(strValueOf2.length() + strValueOf.length() + 46, "FlagsContext{context=", strValueOf, ", hermeticFileOverrides=", strValueOf2);
         sbS.append("}");
         return sbS.toString();
     }

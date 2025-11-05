@@ -1,8 +1,8 @@
 package com.discord.api.stageinstance;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildmember.GuildMember;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: RecommendedStageInstance.kt */
@@ -42,7 +42,7 @@ public final /* data */ class RecommendedStageInstance {
             return false;
         }
         RecommendedStageInstance recommendedStageInstance = (RecommendedStageInstance) other;
-        return Intrinsics3.areEqual(this.guild, recommendedStageInstance.guild) && Intrinsics3.areEqual(this.instance, recommendedStageInstance.instance) && Intrinsics3.areEqual(this.speakers, recommendedStageInstance.speakers) && Intrinsics3.areEqual(this.sampleSpeakerMembers, recommendedStageInstance.sampleSpeakerMembers) && this.participantCount == recommendedStageInstance.participantCount && this.source == recommendedStageInstance.source && Double.compare(this.score, recommendedStageInstance.score) == 0;
+        return m.areEqual(this.guild, recommendedStageInstance.guild) && m.areEqual(this.instance, recommendedStageInstance.instance) && m.areEqual(this.speakers, recommendedStageInstance.speakers) && m.areEqual(this.sampleSpeakerMembers, recommendedStageInstance.sampleSpeakerMembers) && this.participantCount == recommendedStageInstance.participantCount && this.source == recommendedStageInstance.source && Double.compare(this.score, recommendedStageInstance.score) == 0;
     }
 
     public int hashCode() {
@@ -59,7 +59,7 @@ public final /* data */ class RecommendedStageInstance {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("RecommendedStageInstance(guild=");
+        StringBuilder sbU = a.U("RecommendedStageInstance(guild=");
         sbU.append(this.guild);
         sbU.append(", instance=");
         sbU.append(this.instance);

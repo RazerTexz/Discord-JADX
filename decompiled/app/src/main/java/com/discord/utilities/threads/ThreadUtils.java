@@ -2,7 +2,6 @@ package com.discord.utilities.threads;
 
 import android.content.Context;
 import android.content.res.Resources;
-import b.a.d.AppToast;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -30,13 +29,12 @@ import com.discord.utilities.time.TimeUtils;
 import com.discord.widgets.chat.list.CreateThreadsFeatureFlag;
 import com.discord.widgets.chat.list.NewThreadsPermissionsFeatureFlag;
 import com.discord.widgets.chat.list.ViewThreadsFeatureFlag;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t._CollectionsJvm;
-import d0.z.d.Intrinsics3;
+import d0.o;
+import d0.t.g0;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.t;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -53,7 +51,7 @@ public final class ThreadUtils {
     public static final int DEFAULT_AUTO_ARCHIVE_DURATION = 1440;
     public static final int MAX_DISPLAYED_THREAD_BROWSER_ICON_COUNT = 99;
     public static final ThreadUtils INSTANCE = new ThreadUtils();
-    private static final LinkedHashMap<Integer, Integer> THREAD_AUTO_ARCHIVE_DURATION_NAMES = Maps6.linkedMapOf(Tuples.to(60, Integer.valueOf(R.string.auto_archive_duration_1_hour)), Tuples.to(1440, Integer.valueOf(R.string.auto_archive_duration_24_hours)), Tuples.to(Integer.valueOf(ThreadArchiveDurations.THREE_DAYS_IN_MINUTES), Integer.valueOf(R.string.auto_archive_duration_3_days)), Tuples.to(Integer.valueOf(ThreadArchiveDurations.SEVEN_DAYS_IN_MINUTES), Integer.valueOf(R.string.auto_archive_duration_1_week)));
+    private static final LinkedHashMap<Integer, Integer> THREAD_AUTO_ARCHIVE_DURATION_NAMES = h0.linkedMapOf(o.to(60, Integer.valueOf(R.string.auto_archive_duration_1_hour)), o.to(1440, Integer.valueOf(R.string.auto_archive_duration_24_hours)), o.to(Integer.valueOf(ThreadArchiveDurations.THREE_DAYS_IN_MINUTES), Integer.valueOf(R.string.auto_archive_duration_3_days)), o.to(Integer.valueOf(ThreadArchiveDurations.SEVEN_DAYS_IN_MINUTES), Integer.valueOf(R.string.auto_archive_duration_1_week)));
 
     /* compiled from: ThreadUtils.kt */
     public static final class ThreadArchiveDurations {
@@ -113,7 +111,7 @@ public final class ThreadUtils {
         boolean z2;
         Collection collectionEmptyList = (Collection) sortedThreadsMap.get(Long.valueOf(selectedThread.getParentId()));
         if (collectionEmptyList == null) {
-            collectionEmptyList = Collections2.emptyList();
+            collectionEmptyList = n.emptyList();
         }
         if ((collectionEmptyList instanceof Collection) && collectionEmptyList.isEmpty()) {
             z2 = false;
@@ -130,22 +128,22 @@ public final class ThreadUtils {
         if (z2) {
             return sortedThreadsMap;
         }
-        Map<Long, Collection<Channel>> mutableMap = Maps6.toMutableMap(sortedThreadsMap);
+        Map<Long, Collection<Channel>> mutableMap = h0.toMutableMap(sortedThreadsMap);
         Long lValueOf = Long.valueOf(selectedThread.getParentId());
-        List listMutableListOf = Collections2.mutableListOf(selectedThread);
+        List listMutableListOf = n.mutableListOf(selectedThread);
         listMutableListOf.addAll(collectionEmptyList);
         mutableMap.put(lValueOf, listMutableListOf);
         return mutableMap;
     }
 
     private final Map<Long, Collection<Channel>> sortThreadsByJoinedDate(Map<Long, ? extends Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> threadsMap) {
-        LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(threadsMap.size()));
+        LinkedHashMap linkedHashMap = new LinkedHashMap(g0.mapCapacity(threadsMap.size()));
         Iterator<T> it = threadsMap.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
             Object key = entry.getKey();
-            SortedSet sortedSet = _CollectionsJvm.toSortedSet(((Map) entry.getValue()).values(), INSTANCE.getThreadTimestampComparator());
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(sortedSet, 10));
+            SortedSet sortedSet = t.toSortedSet(((Map) entry.getValue()).values(), INSTANCE.getThreadTimestampComparator());
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(sortedSet, 10));
             Iterator it2 = sortedSet.iterator();
             while (it2.hasNext()) {
                 arrayList.add(((StoreThreadsActiveJoined.ActiveJoinedThread) it2.next()).getChannel());
@@ -156,17 +154,17 @@ public final class ThreadUtils {
     }
 
     public final String autoArchiveDurationName(Context context, int minutes) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         Integer num = THREAD_AUTO_ARCHIVE_DURATION_NAMES.get(Integer.valueOf(minutes));
         if (num != null) {
-            Intrinsics3.checkNotNullExpressionValue(num, "it");
+            m.checkNotNullExpressionValue(num, "it");
             String string = context.getString(num.intValue());
             if (string != null) {
                 return string;
             }
         }
         String quantityString = context.getResources().getQuantityString(R.plurals.duration_hours_hours, minutes / 60);
-        Intrinsics3.checkNotNullExpressionValue(quantityString, "context.resources.getQua…ours_hours, minutes / 60)");
+        m.checkNotNullExpressionValue(quantityString, "context.resources.getQua…ours_hours, minutes / 60)");
         return quantityString;
     }
 
@@ -197,8 +195,8 @@ public final class ThreadUtils {
     }
 
     public final boolean canManageThread(User user, Channel channel, Long channelPermissions) {
-        Intrinsics3.checkNotNullParameter(user, "user");
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(channel, "channel");
         if (channel.getOwnerId() == user.getId() && PermissionUtils.INSTANCE.hasAccessWrite(channel, channelPermissions)) {
             return true;
         }
@@ -206,9 +204,9 @@ public final class ThreadUtils {
     }
 
     public final boolean canUnarchiveThread(Channel channel, Long channelPermissions) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
-        return Intrinsics3.areEqual(threadMetadata != null ? Boolean.valueOf(threadMetadata.getLocked()) : null, Boolean.TRUE) ? PermissionUtils.can(Permission.MANAGE_THREADS, channelPermissions) && PermissionUtils.INSTANCE.hasAccessWrite(channel, channelPermissions) : PermissionUtils.INSTANCE.hasAccessWrite(channel, channelPermissions);
+        return m.areEqual(threadMetadata != null ? Boolean.valueOf(threadMetadata.getLocked()) : null, Boolean.TRUE) ? PermissionUtils.can(Permission.MANAGE_THREADS, channelPermissions) && PermissionUtils.INSTANCE.hasAccessWrite(channel, channelPermissions) : PermissionUtils.INSTANCE.hasAccessWrite(channel, channelPermissions);
     }
 
     public final boolean canViewAllPrivateThreads(Long channelPermissions) {
@@ -221,7 +219,7 @@ public final class ThreadUtils {
 
     public final long computeThreadAutoArchiveTimeMs(Channel channel) {
         String archiveTimestamp;
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         long lastMessageId = (channel.getLastMessageId() >>> 22) + SnowflakeUtils.DISCORD_EPOCH;
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
         int autoArchiveDuration = (threadMetadata != null ? threadMetadata.getAutoArchiveDuration() : 0) * 60 * 1000;
@@ -252,7 +250,7 @@ public final class ThreadUtils {
     }
 
     public final Observable<Channel> createThread(long parentChannelId, Long parentMessageId, int type, String name, Integer autoArchiveDuration, String location) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         RestAPIParams.ThreadCreationSettings threadCreationSettings = new RestAPIParams.ThreadCreationSettings(name, type, autoArchiveDuration);
         return parentMessageId == null ? RestAPI.INSTANCE.getApi().createThread(parentChannelId, location, threadCreationSettings) : RestAPI.INSTANCE.getApi().createThreadFromMessage(parentChannelId, parentMessageId.longValue(), location, threadCreationSettings);
     }
@@ -263,8 +261,8 @@ public final class ThreadUtils {
 
     public final long getThreadAckMessageTimestamp(Channel channel, Long l, Long l2, Clock clock) {
         String archiveTimestamp;
-        Intrinsics3.checkNotNullParameter(channel, "$this$getThreadAckMessageTimestamp");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(channel, "$this$getThreadAckMessageTimestamp");
+        m.checkNotNullParameter(clock, "clock");
         long jLongValue = l != null ? l.longValue() : clock.currentTimeMillis();
         long jLongValue2 = l2 != null ? l2.longValue() - 5000 : 0L;
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
@@ -276,24 +274,24 @@ public final class ThreadUtils {
     }
 
     public final void handleThreadCreateError(Context context, Error error, long channelId) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(error, "error");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(error, "error");
         Error.Response response = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+        m.checkNotNullExpressionValue(response, "error.response");
         Integer abortCodeMessageResId = RestAPIAbortMessages.getAbortCodeMessageResId(response.getCode());
         Error.Response response2 = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
+        m.checkNotNullExpressionValue(response2, "error.response");
         if (response2.getCode() == 20016) {
             Error.Response response3 = error.getResponse();
-            Intrinsics3.checkNotNullExpressionValue(response3, "error.response");
+            m.checkNotNullExpressionValue(response3, "error.response");
             Long retryAfterMs = response3.getRetryAfterMs();
             if (retryAfterMs == null) {
                 retryAfterMs = 0L;
             }
-            Intrinsics3.checkNotNullExpressionValue(retryAfterMs, "error.response.retryAfterMs ?: 0");
+            m.checkNotNullExpressionValue(retryAfterMs, "error.response.retryAfterMs ?: 0");
             StoreStream.INSTANCE.getSlowMode().onCooldown(channelId, retryAfterMs.longValue(), StoreSlowMode.Type.ThreadCreate.INSTANCE);
         }
-        AppToast.g(context, abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.network_error_bad_request, 0, null, 12);
+        b.a.d.m.g(context, abortCodeMessageResId != null ? abortCodeMessageResId.intValue() : R.string.network_error_bad_request, 0, null, 12);
     }
 
     public final boolean isThreadModerator(Long channelPermissions) {
@@ -305,9 +303,9 @@ public final class ThreadUtils {
     }
 
     public final Map<Long, Collection<Channel>> sortThreadsForChannelList(Map<Long, ? extends Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> threadsMap, Channel selectedChannel) {
-        Intrinsics3.checkNotNullParameter(threadsMap, "threadsMap");
+        m.checkNotNullParameter(threadsMap, "threadsMap");
         if (!ViewThreadsFeatureFlag.INSTANCE.getINSTANCE().isEnabled()) {
-            return Maps6.emptyMap();
+            return h0.emptyMap();
         }
         Map<Long, Collection<Channel>> mapSortThreadsByJoinedDate = sortThreadsByJoinedDate(threadsMap);
         return (selectedChannel == null || !ChannelUtils.H(selectedChannel)) ? mapSortThreadsByJoinedDate : prependSelectedThread(mapSortThreadsByJoinedDate, selectedChannel);

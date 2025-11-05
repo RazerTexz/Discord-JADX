@@ -2,7 +2,7 @@ package com.discord.widgets.bugreports;
 
 import a0.a.a.b;
 import androidx.annotation.StringRes;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 
 /* compiled from: WidgetBugReport.kt */
@@ -78,11 +78,11 @@ public final /* data */ class Priority {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Priority(title=");
+        StringBuilder sbU = a.U("Priority(title=");
         sbU.append(this.title);
         sbU.append(", description=");
         sbU.append(this.description);
         sbU.append(", emojiId=");
-        return outline.C(sbU, this.emojiId, ")");
+        return a.C(sbU, this.emojiId, ")");
     }
 }

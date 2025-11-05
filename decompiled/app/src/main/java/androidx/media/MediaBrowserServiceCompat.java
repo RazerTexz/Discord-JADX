@@ -30,7 +30,7 @@ import androidx.collection.ArrayMap;
 import androidx.core.app.BundleCompat;
 import androidx.core.util.Pair;
 import androidx.media.MediaSessionManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import x.a.b.b.a.IMediaSession;
+import x.a.b.b.a.b;
 
 /* loaded from: classes.dex */
 public abstract class MediaBrowserServiceCompat extends Service {
@@ -97,7 +97,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
             if (MediaBrowserServiceCompat.this.mConnections.get(this.val$connection.callbacks.asBinder()) != this.val$connection) {
                 if (MediaBrowserServiceCompat.DEBUG) {
-                    StringBuilder sbU = outline.U("Not sending onLoadChildren result for connection that has been disconnected. pkg=");
+                    StringBuilder sbU = a.U("Not sending onLoadChildren result for connection that has been disconnected. pkg=");
                     sbU.append(this.val$connection.pkg);
                     sbU.append(" id=");
                     sbU.append(this.val$parentId);
@@ -112,10 +112,10 @@ public abstract class MediaBrowserServiceCompat extends Service {
             try {
                 this.val$connection.callbacks.onLoadChildren(this.val$parentId, list, this.val$subscribeOptions, this.val$notifyChildrenChangedOptions);
             } catch (RemoteException unused) {
-                StringBuilder sbU2 = outline.U("Calling onLoadChildren() failed for id=");
+                StringBuilder sbU2 = a.U("Calling onLoadChildren() failed for id=");
                 sbU2.append(this.val$parentId);
                 sbU2.append(" package=");
-                outline.r0(sbU2, this.val$connection.pkg, MediaBrowserServiceCompat.TAG);
+                a.r0(sbU2, this.val$connection.pkg, MediaBrowserServiceCompat.TAG);
             }
         }
     }
@@ -493,8 +493,8 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 BundleCompat.putBinder(extras, MediaBrowserProtocol.EXTRA_MESSENGER_BINDER, this.mMessenger.getBinder());
                 MediaSessionCompat.Token token = MediaBrowserServiceCompat.this.mSession;
                 if (token != null) {
-                    IMediaSession iMediaSessionB = token.b();
-                    BundleCompat.putBinder(extras, MediaBrowserProtocol.EXTRA_SESSION_BINDER, iMediaSessionB == null ? null : iMediaSessionB.asBinder());
+                    b bVarB = token.b();
+                    BundleCompat.putBinder(extras, MediaBrowserProtocol.EXTRA_SESSION_BINDER, bVarB == null ? null : bVarB.asBinder());
                 } else {
                     this.mRootExtrasList.add(extras);
                 }
@@ -537,11 +537,11 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void setSessionTokenOnHandler(MediaSessionCompat.Token token) {
             if (!this.mRootExtrasList.isEmpty()) {
-                IMediaSession iMediaSessionB = token.b();
-                if (iMediaSessionB != null) {
+                b bVarB = token.b();
+                if (bVarB != null) {
                     Iterator<Bundle> it = this.mRootExtrasList.iterator();
                     while (it.hasNext()) {
-                        BundleCompat.putBinder(it.next(), MediaBrowserProtocol.EXTRA_SESSION_BINDER, iMediaSessionB.asBinder());
+                        BundleCompat.putBinder(it.next(), MediaBrowserProtocol.EXTRA_SESSION_BINDER, bVarB.asBinder());
                     }
                 }
                 this.mRootExtrasList.clear();
@@ -766,7 +766,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     try {
                         next.callbacks.onConnect(next.root.getRootId(), this.val$token, next.root.getExtras());
                     } catch (RemoteException unused) {
-                        StringBuilder sbU = outline.U("Connection for ");
+                        StringBuilder sbU = a.U("Connection for ");
                         sbU.append(next.pkg);
                         sbU.append(" is no longer valid.");
                         Log.w(MediaBrowserServiceCompat.TAG, sbU.toString());
@@ -905,19 +905,19 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void detach() {
             if (this.mDetachCalled) {
-                StringBuilder sbU = outline.U("detach() called when detach() had already been called for: ");
+                StringBuilder sbU = a.U("detach() called when detach() had already been called for: ");
                 sbU.append(this.mDebug);
                 throw new IllegalStateException(sbU.toString());
             }
             if (this.mSendResultCalled) {
-                StringBuilder sbU2 = outline.U("detach() called when sendResult() had already been called for: ");
+                StringBuilder sbU2 = a.U("detach() called when sendResult() had already been called for: ");
                 sbU2.append(this.mDebug);
                 throw new IllegalStateException(sbU2.toString());
             }
             if (!this.mSendErrorCalled) {
                 this.mDetachCalled = true;
             } else {
-                StringBuilder sbU3 = outline.U("detach() called when sendError() had already been called for: ");
+                StringBuilder sbU3 = a.U("detach() called when sendError() had already been called for: ");
                 sbU3.append(this.mDebug);
                 throw new IllegalStateException(sbU3.toString());
             }
@@ -932,13 +932,13 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
 
         public void onErrorSent(@Nullable Bundle bundle) {
-            StringBuilder sbU = outline.U("It is not supported to send an error for ");
+            StringBuilder sbU = a.U("It is not supported to send an error for ");
             sbU.append(this.mDebug);
             throw new UnsupportedOperationException(sbU.toString());
         }
 
         public void onProgressUpdateSent(@Nullable Bundle bundle) {
-            StringBuilder sbU = outline.U("It is not supported to send an interim update for ");
+            StringBuilder sbU = a.U("It is not supported to send an interim update for ");
             sbU.append(this.mDebug);
             throw new UnsupportedOperationException(sbU.toString());
         }
@@ -948,7 +948,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void sendError(@Nullable Bundle bundle) {
             if (this.mSendResultCalled || this.mSendErrorCalled) {
-                StringBuilder sbU = outline.U("sendError() called when either sendResult() or sendError() had already been called for: ");
+                StringBuilder sbU = a.U("sendError() called when either sendResult() or sendError() had already been called for: ");
                 sbU.append(this.mDebug);
                 throw new IllegalStateException(sbU.toString());
             }
@@ -958,7 +958,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void sendProgressUpdate(@Nullable Bundle bundle) {
             if (this.mSendResultCalled || this.mSendErrorCalled) {
-                StringBuilder sbU = outline.U("sendProgressUpdate() called when either sendResult() or sendError() had already been called for: ");
+                StringBuilder sbU = a.U("sendProgressUpdate() called when either sendResult() or sendError() had already been called for: ");
                 sbU.append(this.mDebug);
                 throw new IllegalStateException(sbU.toString());
             }
@@ -968,7 +968,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
         public void sendResult(@Nullable T t) {
             if (this.mSendResultCalled || this.mSendErrorCalled) {
-                StringBuilder sbU = outline.U("sendResult() called when either sendResult() or sendError() had already been called for: ");
+                StringBuilder sbU = a.U("sendResult() called when either sendResult() or sendError() had already been called for: ");
                 sbU.append(this.mDebug);
                 throw new IllegalStateException(sbU.toString());
             }
@@ -1053,7 +1053,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 MediaBrowserServiceCompat mediaBrowserServiceCompat2 = MediaBrowserServiceCompat.this;
                 mediaBrowserServiceCompat2.mCurConnection = null;
                 if (browserRootOnGetRoot == null) {
-                    StringBuilder sbU = outline.U("No root for client ");
+                    StringBuilder sbU = a.U("No root for client ");
                     sbU.append(this.val$pkg);
                     sbU.append(" from service ");
                     sbU.append(getClass().getName());
@@ -1062,7 +1062,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                         this.val$callbacks.onConnectFailed();
                         return;
                     } catch (RemoteException unused) {
-                        outline.r0(outline.U("Calling onConnectFailed() failed. Ignoring. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
+                        a.r0(a.U("Calling onConnectFailed() failed. Ignoring. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
                         return;
                     }
                 }
@@ -1073,7 +1073,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                         this.val$callbacks.onConnect(connectionRecord.root.getRootId(), MediaBrowserServiceCompat.this.mSession, connectionRecord.root.getExtras());
                     }
                 } catch (RemoteException unused2) {
-                    outline.r0(outline.U("Calling onConnect() failed. Dropping client. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
+                    a.r0(a.U("Calling onConnect() failed. Dropping client. pkg="), this.val$pkg, MediaBrowserServiceCompat.TAG);
                     MediaBrowserServiceCompat.this.mConnections.remove(iBinderAsBinder);
                 }
             }
@@ -1114,7 +1114,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    outline.r0(outline.U("addSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
+                    a.r0(a.U("addSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
                 } else {
                     MediaBrowserServiceCompat.this.addSubscription(this.val$id, connectionRecord, this.val$token, this.val$options);
                 }
@@ -1137,12 +1137,12 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    outline.r0(outline.U("removeSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
+                    a.r0(a.U("removeSubscription for callback that isn't registered id="), this.val$id, MediaBrowserServiceCompat.TAG);
                 } else {
                     if (MediaBrowserServiceCompat.this.removeSubscription(this.val$id, connectionRecord, this.val$token)) {
                         return;
                     }
-                    StringBuilder sbU = outline.U("removeSubscription called for ");
+                    StringBuilder sbU = a.U("removeSubscription called for ");
                     sbU.append(this.val$id);
                     sbU.append(" which is not subscribed");
                     Log.w(MediaBrowserServiceCompat.TAG, sbU.toString());
@@ -1166,7 +1166,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    outline.r0(outline.U("getMediaItem for callback that isn't registered id="), this.val$mediaId, MediaBrowserServiceCompat.TAG);
+                    a.r0(a.U("getMediaItem for callback that isn't registered id="), this.val$mediaId, MediaBrowserServiceCompat.TAG);
                 } else {
                     MediaBrowserServiceCompat.this.performLoadItem(this.val$mediaId, connectionRecord, this.val$receiver);
                 }
@@ -1253,7 +1253,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             public void run() {
                 ConnectionRecord connectionRecord = MediaBrowserServiceCompat.this.mConnections.get(this.val$callbacks.asBinder());
                 if (connectionRecord == null) {
-                    outline.r0(outline.U("search for callback that isn't registered query="), this.val$query, MediaBrowserServiceCompat.TAG);
+                    a.r0(a.U("search for callback that isn't registered query="), this.val$query, MediaBrowserServiceCompat.TAG);
                 } else {
                     MediaBrowserServiceCompat.this.performSearch(this.val$query, this.val$extras, connectionRecord, this.val$receiver);
                 }
@@ -1281,7 +1281,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                     MediaBrowserServiceCompat.this.performCustomAction(this.val$action, this.val$extras, connectionRecord, this.val$receiver);
                     return;
                 }
-                StringBuilder sbU = outline.U("sendCustomAction for callback that isn't registered action=");
+                StringBuilder sbU = a.U("sendCustomAction for callback that isn't registered action=");
                 sbU.append(this.val$action);
                 sbU.append(", extras=");
                 sbU.append(this.val$extras);
@@ -1634,7 +1634,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
         this.mCurConnection = null;
         if (!anonymousClass1.isDone()) {
-            throw new IllegalStateException(outline.K(outline.U("onLoadChildren must call detach() or sendResult() before returning for package="), connectionRecord.pkg, " id=", str));
+            throw new IllegalStateException(a.K(a.U("onLoadChildren must call detach() or sendResult() before returning for package="), connectionRecord.pkg, " id=", str));
         }
     }
 
@@ -1644,7 +1644,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         onLoadItem(str, anonymousClass2);
         this.mCurConnection = null;
         if (!anonymousClass2.isDone()) {
-            throw new IllegalStateException(outline.w("onLoadItem must call detach() or sendResult() before returning for id=", str));
+            throw new IllegalStateException(a.w("onLoadItem must call detach() or sendResult() before returning for id=", str));
         }
     }
 
@@ -1654,7 +1654,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         onSearch(str, bundle, anonymousClass3);
         this.mCurConnection = null;
         if (!anonymousClass3.isDone()) {
-            throw new IllegalStateException(outline.w("onSearch must call detach() or sendResult() before returning for query=", str));
+            throw new IllegalStateException(a.w("onSearch must call detach() or sendResult() before returning for query=", str));
         }
     }
 

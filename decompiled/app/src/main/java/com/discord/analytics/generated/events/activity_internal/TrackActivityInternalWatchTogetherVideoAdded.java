@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalWatchTogetherVideoAdded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalWatchTogetherVideoAdded implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalWatchTogetherVideoAdded implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final Boolean isHost = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackActivityInternalWatchTogetherVideoAdded imple
             return false;
         }
         TrackActivityInternalWatchTogetherVideoAdded trackActivityInternalWatchTogetherVideoAdded = (TrackActivityInternalWatchTogetherVideoAdded) other;
-        return Intrinsics3.areEqual(this.isHost, trackActivityInternalWatchTogetherVideoAdded.isHost) && Intrinsics3.areEqual(this.via, trackActivityInternalWatchTogetherVideoAdded.via);
+        return m.areEqual(this.isHost, trackActivityInternalWatchTogetherVideoAdded.isHost) && m.areEqual(this.via, trackActivityInternalWatchTogetherVideoAdded.via);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackActivityInternalWatchTogetherVideoAdded imple
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalWatchTogetherVideoAdded(isHost=");
+        StringBuilder sbU = a.U("TrackActivityInternalWatchTogetherVideoAdded(isHost=");
         sbU.append(this.isHost);
         sbU.append(", via=");
-        return outline.E(sbU, this.via, ")");
+        return a.E(sbU, this.via, ")");
     }
 }

@@ -1,7 +1,7 @@
 package com.discord.models.gifpicker.dto;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: ModelGif.kt */
@@ -21,7 +21,7 @@ public final /* data */ class ModelGif {
         }
 
         public final ModelGif createFromGifDto(GifDto gifDto) {
-            Intrinsics3.checkNotNullParameter(gifDto, "gifDto");
+            m.checkNotNullParameter(gifDto, "gifDto");
             return new ModelGif(gifDto.getSrc(), gifDto.getUrl(), gifDto.getWidth(), gifDto.getHeight());
         }
 
@@ -31,8 +31,8 @@ public final /* data */ class ModelGif {
     }
 
     public ModelGif(String str, String str2, int i, int i2) {
-        Intrinsics3.checkNotNullParameter(str, "gifImageUrl");
-        Intrinsics3.checkNotNullParameter(str2, "tenorGifUrl");
+        m.checkNotNullParameter(str, "gifImageUrl");
+        m.checkNotNullParameter(str2, "tenorGifUrl");
         this.gifImageUrl = str;
         this.tenorGifUrl = str2;
         this.width = i;
@@ -76,8 +76,8 @@ public final /* data */ class ModelGif {
     }
 
     public final ModelGif copy(String gifImageUrl, String tenorGifUrl, int width, int height) {
-        Intrinsics3.checkNotNullParameter(gifImageUrl, "gifImageUrl");
-        Intrinsics3.checkNotNullParameter(tenorGifUrl, "tenorGifUrl");
+        m.checkNotNullParameter(gifImageUrl, "gifImageUrl");
+        m.checkNotNullParameter(tenorGifUrl, "tenorGifUrl");
         return new ModelGif(gifImageUrl, tenorGifUrl, width, height);
     }
 
@@ -89,7 +89,7 @@ public final /* data */ class ModelGif {
             return false;
         }
         ModelGif modelGif = (ModelGif) other;
-        return Intrinsics3.areEqual(this.gifImageUrl, modelGif.gifImageUrl) && Intrinsics3.areEqual(this.tenorGifUrl, modelGif.tenorGifUrl) && this.width == modelGif.width && this.height == modelGif.height;
+        return m.areEqual(this.gifImageUrl, modelGif.gifImageUrl) && m.areEqual(this.tenorGifUrl, modelGif.tenorGifUrl) && this.width == modelGif.width && this.height == modelGif.height;
     }
 
     public final String getGifImageUrl() {
@@ -116,13 +116,13 @@ public final /* data */ class ModelGif {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelGif(gifImageUrl=");
+        StringBuilder sbU = a.U("ModelGif(gifImageUrl=");
         sbU.append(this.gifImageUrl);
         sbU.append(", tenorGifUrl=");
         sbU.append(this.tenorGifUrl);
         sbU.append(", width=");
         sbU.append(this.width);
         sbU.append(", height=");
-        return outline.B(sbU, this.height, ")");
+        return a.B(sbU, this.height, ")");
     }
 }

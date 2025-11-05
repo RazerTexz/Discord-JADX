@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuildTemplate;
-import com.discord.analytics.generated.traits.TrackGuildTemplate2;
+import com.discord.analytics.generated.traits.TrackGuildTemplateReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildTemplateResolved.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildTemplateResolved implements AnalyticsSchema, TrackBase2, TrackGuildTemplate2 {
+public final /* data */ class TrackGuildTemplateResolved implements AnalyticsSchema, TrackBaseReceiver, TrackGuildTemplateReceiver {
     private TrackBase trackBase;
     private TrackGuildTemplate trackGuildTemplate;
     private final Boolean resolved = null;
@@ -24,7 +24,7 @@ public final /* data */ class TrackGuildTemplateResolved implements AnalyticsSch
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackGuildTemplateResolved) && Intrinsics3.areEqual(this.resolved, ((TrackGuildTemplateResolved) other).resolved);
+            return (other instanceof TrackGuildTemplateResolved) && m.areEqual(this.resolved, ((TrackGuildTemplateResolved) other).resolved);
         }
         return true;
     }
@@ -38,6 +38,6 @@ public final /* data */ class TrackGuildTemplateResolved implements AnalyticsSch
     }
 
     public String toString() {
-        return outline.D(outline.U("TrackGuildTemplateResolved(resolved="), this.resolved, ")");
+        return a.D(a.U("TrackGuildTemplateResolved(resolved="), this.resolved, ")");
     }
 }

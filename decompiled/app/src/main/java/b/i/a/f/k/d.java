@@ -2,7 +2,6 @@ package b.i.a.f.k;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.safetynet.HarmfulAppsData;
 import com.google.android.gms.safetynet.zzd;
 
@@ -10,7 +9,7 @@ import com.google.android.gms.safetynet.zzd;
 public final class d implements Parcelable.Creator<zzd> {
     @Override // android.os.Parcelable.Creator
     public final zzd createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         long jH1 = 0;
         HarmfulAppsData[] harmfulAppsDataArr = null;
         int iG1 = 0;
@@ -19,18 +18,18 @@ public final class d implements Parcelable.Creator<zzd> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 2) {
-                jH1 = AnimatableValueParser.H1(parcel, i);
+                jH1 = b.c.a.a0.d.H1(parcel, i);
             } else if (c == 3) {
-                harmfulAppsDataArr = (HarmfulAppsData[]) AnimatableValueParser.U(parcel, i, HarmfulAppsData.CREATOR);
+                harmfulAppsDataArr = (HarmfulAppsData[]) b.c.a.a0.d.U(parcel, i, HarmfulAppsData.CREATOR);
             } else if (c == 4) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c != 5) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                zE1 = AnimatableValueParser.E1(parcel, i);
+                zE1 = b.c.a.a0.d.E1(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zzd(jH1, harmfulAppsDataArr, iG1, zE1);
     }
 

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackScreenshareFinished.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackScreenshareFinished implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackScreenshareFinished implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long channelId = null;
@@ -53,7 +53,7 @@ public final /* data */ class TrackScreenshareFinished implements AnalyticsSchem
             return false;
         }
         TrackScreenshareFinished trackScreenshareFinished = (TrackScreenshareFinished) other;
-        return Intrinsics3.areEqual(this.guildId, trackScreenshareFinished.guildId) && Intrinsics3.areEqual(this.channelId, trackScreenshareFinished.channelId) && Intrinsics3.areEqual(this.context, trackScreenshareFinished.context) && Intrinsics3.areEqual(this.screenshareFrames, trackScreenshareFinished.screenshareFrames) && Intrinsics3.areEqual(this.videohookFrames, trackScreenshareFinished.videohookFrames) && Intrinsics3.areEqual(this.hybridDxgiFrames, trackScreenshareFinished.hybridDxgiFrames) && Intrinsics3.areEqual(this.hybridGdiFrames, trackScreenshareFinished.hybridGdiFrames) && Intrinsics3.areEqual(this.hybridVideohookFrames, trackScreenshareFinished.hybridVideohookFrames) && Intrinsics3.areEqual(this.soundshareSession, trackScreenshareFinished.soundshareSession) && Intrinsics3.areEqual(this.shareGameName, trackScreenshareFinished.shareGameName) && Intrinsics3.areEqual(this.shareGameId, trackScreenshareFinished.shareGameId) && Intrinsics3.areEqual(this.desktopCapturerType, trackScreenshareFinished.desktopCapturerType) && Intrinsics3.areEqual(this.screens, trackScreenshareFinished.screens) && Intrinsics3.areEqual(this.windows, trackScreenshareFinished.windows) && Intrinsics3.areEqual(this.cpu, trackScreenshareFinished.cpu) && Intrinsics3.areEqual(this.gpu, trackScreenshareFinished.gpu) && Intrinsics3.areEqual(this.cpuBrand, trackScreenshareFinished.cpuBrand) && Intrinsics3.areEqual(this.cpuVendor, trackScreenshareFinished.cpuVendor) && Intrinsics3.areEqual(this.cpuMemory, trackScreenshareFinished.cpuMemory) && Intrinsics3.areEqual(this.gpuBrand, trackScreenshareFinished.gpuBrand) && Intrinsics3.areEqual(this.gpuCount, trackScreenshareFinished.gpuCount) && Intrinsics3.areEqual(this.gpuMemory, trackScreenshareFinished.gpuMemory) && Intrinsics3.areEqual(this.mediaSessionId, trackScreenshareFinished.mediaSessionId) && Intrinsics3.areEqual(this.rtcConnectionId, trackScreenshareFinished.rtcConnectionId) && Intrinsics3.areEqual(this.quartzFrames, trackScreenshareFinished.quartzFrames) && Intrinsics3.areEqual(this.activity, trackScreenshareFinished.activity);
+        return m.areEqual(this.guildId, trackScreenshareFinished.guildId) && m.areEqual(this.channelId, trackScreenshareFinished.channelId) && m.areEqual(this.context, trackScreenshareFinished.context) && m.areEqual(this.screenshareFrames, trackScreenshareFinished.screenshareFrames) && m.areEqual(this.videohookFrames, trackScreenshareFinished.videohookFrames) && m.areEqual(this.hybridDxgiFrames, trackScreenshareFinished.hybridDxgiFrames) && m.areEqual(this.hybridGdiFrames, trackScreenshareFinished.hybridGdiFrames) && m.areEqual(this.hybridVideohookFrames, trackScreenshareFinished.hybridVideohookFrames) && m.areEqual(this.soundshareSession, trackScreenshareFinished.soundshareSession) && m.areEqual(this.shareGameName, trackScreenshareFinished.shareGameName) && m.areEqual(this.shareGameId, trackScreenshareFinished.shareGameId) && m.areEqual(this.desktopCapturerType, trackScreenshareFinished.desktopCapturerType) && m.areEqual(this.screens, trackScreenshareFinished.screens) && m.areEqual(this.windows, trackScreenshareFinished.windows) && m.areEqual(this.cpu, trackScreenshareFinished.cpu) && m.areEqual(this.gpu, trackScreenshareFinished.gpu) && m.areEqual(this.cpuBrand, trackScreenshareFinished.cpuBrand) && m.areEqual(this.cpuVendor, trackScreenshareFinished.cpuVendor) && m.areEqual(this.cpuMemory, trackScreenshareFinished.cpuMemory) && m.areEqual(this.gpuBrand, trackScreenshareFinished.gpuBrand) && m.areEqual(this.gpuCount, trackScreenshareFinished.gpuCount) && m.areEqual(this.gpuMemory, trackScreenshareFinished.gpuMemory) && m.areEqual(this.mediaSessionId, trackScreenshareFinished.mediaSessionId) && m.areEqual(this.rtcConnectionId, trackScreenshareFinished.rtcConnectionId) && m.areEqual(this.quartzFrames, trackScreenshareFinished.quartzFrames) && m.areEqual(this.activity, trackScreenshareFinished.activity);
     }
 
     public int hashCode() {
@@ -112,7 +112,7 @@ public final /* data */ class TrackScreenshareFinished implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackScreenshareFinished(guildId=");
+        StringBuilder sbU = a.U("TrackScreenshareFinished(guildId=");
         sbU.append(this.guildId);
         sbU.append(", channelId=");
         sbU.append(this.channelId);

@@ -1,7 +1,7 @@
 package com.discord.rtcconnection.socket.io;
 
-import d0.Tuples;
-import d0.t.Maps6;
+import d0.o;
+import d0.t.h0;
 import java.util.Map;
 
 /* compiled from: Opcodes.kt */
@@ -22,7 +22,7 @@ public final class Opcodes {
     public static final int SPEAKING = 5;
     public static final int VIDEO = 12;
     public static final Opcodes INSTANCE = new Opcodes();
-    private static final Map<Integer, String> nameLookup = Maps6.mapOf(Tuples.to(0, "IDENTIFY"), Tuples.to(1, "SELECT_PROTOCOL"), Tuples.to(2, "READY"), Tuples.to(3, "HEARTBEAT"), Tuples.to(4, "SELECT_PROTOCOL_ACK"), Tuples.to(5, "SPEAKING"), Tuples.to(6, "HEARTBEAT_ACK"), Tuples.to(7, "RESUME"), Tuples.to(8, "HELLO"), Tuples.to(9, "RESUMED"), Tuples.to(12, "VIDEO"), Tuples.to(13, "CLIENT_DISCONNECT"), Tuples.to(14, "SESSION_UPDATE"), Tuples.to(15, "MEDIA_SINK_WANTS"));
+    private static final Map<Integer, String> nameLookup = h0.mapOf(o.to(0, "IDENTIFY"), o.to(1, "SELECT_PROTOCOL"), o.to(2, "READY"), o.to(3, "HEARTBEAT"), o.to(4, "SELECT_PROTOCOL_ACK"), o.to(5, "SPEAKING"), o.to(6, "HEARTBEAT_ACK"), o.to(7, "RESUME"), o.to(8, "HELLO"), o.to(9, "RESUMED"), o.to(12, "VIDEO"), o.to(13, "CLIENT_DISCONNECT"), o.to(14, "SESSION_UPDATE"), o.to(15, "MEDIA_SINK_WANTS"));
 
     private Opcodes() {
     }

@@ -24,7 +24,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.cursoradapter.widget.ResourceCursorAdapter;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -121,7 +121,7 @@ public class SuggestionsAdapter extends ResourceCursorAdapter implements View.On
             if (drawable != null) {
                 return drawable;
             }
-            StringBuilder sbV = outline.V("Invalid icon resource ", iconResource, " for ");
+            StringBuilder sbV = a.V("Invalid icon resource ", iconResource, " for ");
             sbV.append(componentName.flattenToShortString());
             Log.w(LOG_TAG, sbV.toString());
             return null;

@@ -3,14 +3,14 @@ package com.discord.utilities.intent;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import com.discord.widgets.user.search.WidgetGlobalSearchDialog;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: RouteHandlers.kt */
 /* loaded from: classes2.dex */
-public final class RouteHandlers$selectFeature$settingMap$5 extends Lambda implements Function1<FragmentActivity, Unit> {
+public final class RouteHandlers$selectFeature$settingMap$5 extends o implements Function1<FragmentActivity, Unit> {
     public static final RouteHandlers$selectFeature$settingMap$5 INSTANCE = new RouteHandlers$selectFeature$settingMap$5();
 
     public RouteHandlers$selectFeature$settingMap$5() {
@@ -25,10 +25,10 @@ public final class RouteHandlers$selectFeature$settingMap$5 extends Lambda imple
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(FragmentActivity fragmentActivity) {
-        Intrinsics3.checkNotNullParameter(fragmentActivity, "ctx");
+        m.checkNotNullParameter(fragmentActivity, "ctx");
         WidgetGlobalSearchDialog.Companion companion = WidgetGlobalSearchDialog.INSTANCE;
         FragmentManager supportFragmentManager = fragmentActivity.getSupportFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(supportFragmentManager, "ctx.supportFragmentManager");
+        m.checkNotNullExpressionValue(supportFragmentManager, "ctx.supportFragmentManager");
         WidgetGlobalSearchDialog.Companion.show$default(companion, supportFragmentManager, null, 2, null);
     }
 }

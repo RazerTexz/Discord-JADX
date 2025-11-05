@@ -1,14 +1,13 @@
 package defpackage;
 
 import android.view.View;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: kotlin-style lambda group */
 /* loaded from: classes2.dex */
-public final class o extends Lambda implements Function1<View, Unit> {
+public final class o extends d0.z.d.o implements Function1<View, Unit> {
     public static final o j = new o(0);
     public static final o k = new o(1);
     public static final o l = new o(2);
@@ -26,25 +25,25 @@ public final class o extends Lambda implements Function1<View, Unit> {
     public final Unit invoke(View view) {
         int i = this.o;
         if (i == 0) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             return Unit.a;
         }
         if (i == 1) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             return Unit.a;
         }
         if (i == 2) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             return Unit.a;
         }
         if (i == 3) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             return Unit.a;
         }
         if (i != 4) {
             throw null;
         }
-        Intrinsics3.checkNotNullParameter(view, "it");
+        m.checkNotNullParameter(view, "it");
         return Unit.a;
     }
 }

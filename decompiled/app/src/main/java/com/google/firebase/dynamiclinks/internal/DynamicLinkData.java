@@ -4,7 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.c.o.b.a;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 
@@ -32,9 +32,9 @@ public class DynamicLinkData extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 1, this.j, false);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.t2(parcel, 1, this.j, false);
+        d.t2(parcel, 2, this.k, false);
         int i2 = this.l;
         parcel.writeInt(262147);
         parcel.writeInt(i2);
@@ -45,8 +45,8 @@ public class DynamicLinkData extends AbstractSafeParcelable {
         if (bundle == null) {
             bundle = new Bundle();
         }
-        AnimatableValueParser.p2(parcel, 5, bundle, false);
-        AnimatableValueParser.s2(parcel, 6, this.o, i, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.p2(parcel, 5, bundle, false);
+        d.s2(parcel, 6, this.o, i, false);
+        d.A2(parcel, iY2);
     }
 }

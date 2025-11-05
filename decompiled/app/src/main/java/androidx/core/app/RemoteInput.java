@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.HashMap;
@@ -243,7 +243,7 @@ public final class RemoteInput {
     }
 
     private static String getExtraResultsKeyForData(String str) {
-        return outline.w(EXTRA_DATA_TYPE_RESULTS_DATA, str);
+        return a.w(EXTRA_DATA_TYPE_RESULTS_DATA, str);
     }
 
     public static Bundle getResultsFromIntent(Intent intent) {

@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.core.os.CancellationSignal;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -197,7 +197,7 @@ public abstract class SpecialEffectsController {
 
     public void enqueueAdd(@NonNull Operation.State state, @NonNull FragmentStateManager fragmentStateManager) {
         if (FragmentManager.isLoggingEnabled(2)) {
-            StringBuilder sbU = outline.U("SpecialEffectsController: Enqueuing add operation for fragment ");
+            StringBuilder sbU = a.U("SpecialEffectsController: Enqueuing add operation for fragment ");
             sbU.append(fragmentStateManager.getFragment());
             Log.v(FragmentManager.TAG, sbU.toString());
         }
@@ -206,7 +206,7 @@ public abstract class SpecialEffectsController {
 
     public void enqueueHide(@NonNull FragmentStateManager fragmentStateManager) {
         if (FragmentManager.isLoggingEnabled(2)) {
-            StringBuilder sbU = outline.U("SpecialEffectsController: Enqueuing hide operation for fragment ");
+            StringBuilder sbU = a.U("SpecialEffectsController: Enqueuing hide operation for fragment ");
             sbU.append(fragmentStateManager.getFragment());
             Log.v(FragmentManager.TAG, sbU.toString());
         }
@@ -215,7 +215,7 @@ public abstract class SpecialEffectsController {
 
     public void enqueueRemove(@NonNull FragmentStateManager fragmentStateManager) {
         if (FragmentManager.isLoggingEnabled(2)) {
-            StringBuilder sbU = outline.U("SpecialEffectsController: Enqueuing remove operation for fragment ");
+            StringBuilder sbU = a.U("SpecialEffectsController: Enqueuing remove operation for fragment ");
             sbU.append(fragmentStateManager.getFragment());
             Log.v(FragmentManager.TAG, sbU.toString());
         }
@@ -224,7 +224,7 @@ public abstract class SpecialEffectsController {
 
     public void enqueueShow(@NonNull FragmentStateManager fragmentStateManager) {
         if (FragmentManager.isLoggingEnabled(2)) {
-            StringBuilder sbU = outline.U("SpecialEffectsController: Enqueuing show operation for fragment ");
+            StringBuilder sbU = a.U("SpecialEffectsController: Enqueuing show operation for fragment ");
             sbU.append(fragmentStateManager.getFragment());
             Log.v(FragmentManager.TAG, sbU.toString());
         }
@@ -487,7 +487,7 @@ public abstract class SpecialEffectsController {
             if (iOrdinal == 0) {
                 if (this.mFinalState != State.REMOVED) {
                     if (FragmentManager.isLoggingEnabled(2)) {
-                        StringBuilder sbU = outline.U("SpecialEffectsController: For fragment ");
+                        StringBuilder sbU = a.U("SpecialEffectsController: For fragment ");
                         sbU.append(this.mFragment);
                         sbU.append(" mFinalState = ");
                         sbU.append(this.mFinalState);
@@ -504,7 +504,7 @@ public abstract class SpecialEffectsController {
             if (iOrdinal == 1) {
                 if (this.mFinalState == State.REMOVED) {
                     if (FragmentManager.isLoggingEnabled(2)) {
-                        StringBuilder sbU2 = outline.U("SpecialEffectsController: For fragment ");
+                        StringBuilder sbU2 = a.U("SpecialEffectsController: For fragment ");
                         sbU2.append(this.mFragment);
                         sbU2.append(" mFinalState = REMOVED -> VISIBLE. mLifecycleImpact = ");
                         sbU2.append(this.mLifecycleImpact);
@@ -521,7 +521,7 @@ public abstract class SpecialEffectsController {
                 return;
             }
             if (FragmentManager.isLoggingEnabled(2)) {
-                StringBuilder sbU3 = outline.U("SpecialEffectsController: For fragment ");
+                StringBuilder sbU3 = a.U("SpecialEffectsController: For fragment ");
                 sbU3.append(this.mFragment);
                 sbU3.append(" mFinalState = ");
                 sbU3.append(this.mFinalState);
@@ -539,7 +539,7 @@ public abstract class SpecialEffectsController {
 
         @NonNull
         public String toString() {
-            StringBuilder sbX = outline.X("Operation ", "{");
+            StringBuilder sbX = a.X("Operation ", "{");
             sbX.append(Integer.toHexString(System.identityHashCode(this)));
             sbX.append("} ");
             sbX.append("{");
@@ -615,7 +615,7 @@ public abstract class SpecialEffectsController {
                 if (i == 8) {
                     return GONE;
                 }
-                throw new IllegalArgumentException(outline.q("Unknown visibility ", i));
+                throw new IllegalArgumentException(a.q("Unknown visibility ", i));
             }
         }
     }

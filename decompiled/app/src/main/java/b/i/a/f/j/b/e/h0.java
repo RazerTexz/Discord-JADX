@@ -4,7 +4,6 @@ import android.app.PendingIntent;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.nearby.messages.MessageFilter;
 import com.google.android.gms.nearby.messages.Strategy;
 import com.google.android.gms.nearby.messages.internal.ClientAppContext;
@@ -14,7 +13,7 @@ import com.google.android.gms.nearby.messages.internal.SubscribeRequest;
 public final class h0 implements Parcelable.Creator<SubscribeRequest> {
     @Override // android.os.Parcelable.Creator
     public final SubscribeRequest createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         IBinder iBinderF1 = null;
         Strategy strategy = null;
         IBinder iBinderF12 = null;
@@ -36,62 +35,62 @@ public final class h0 implements Parcelable.Creator<SubscribeRequest> {
             int i = parcel.readInt();
             switch ((char) i) {
                 case 1:
-                    iG1 = AnimatableValueParser.G1(parcel, i);
+                    iG1 = b.c.a.a0.d.G1(parcel, i);
                     break;
                 case 2:
-                    iBinderF1 = AnimatableValueParser.F1(parcel, i);
+                    iBinderF1 = b.c.a.a0.d.F1(parcel, i);
                     break;
                 case 3:
-                    strategy = (Strategy) AnimatableValueParser.Q(parcel, i, Strategy.CREATOR);
+                    strategy = (Strategy) b.c.a.a0.d.Q(parcel, i, Strategy.CREATOR);
                     break;
                 case 4:
-                    iBinderF12 = AnimatableValueParser.F1(parcel, i);
+                    iBinderF12 = b.c.a.a0.d.F1(parcel, i);
                     break;
                 case 5:
-                    messageFilter = (MessageFilter) AnimatableValueParser.Q(parcel, i, MessageFilter.CREATOR);
+                    messageFilter = (MessageFilter) b.c.a.a0.d.Q(parcel, i, MessageFilter.CREATOR);
                     break;
                 case 6:
-                    pendingIntent = (PendingIntent) AnimatableValueParser.Q(parcel, i, PendingIntent.CREATOR);
+                    pendingIntent = (PendingIntent) b.c.a.a0.d.Q(parcel, i, PendingIntent.CREATOR);
                     break;
                 case 7:
-                    iG12 = AnimatableValueParser.G1(parcel, i);
+                    iG12 = b.c.a.a0.d.G1(parcel, i);
                     break;
                 case '\b':
-                    strR = AnimatableValueParser.R(parcel, i);
+                    strR = b.c.a.a0.d.R(parcel, i);
                     break;
                 case '\t':
-                    strR2 = AnimatableValueParser.R(parcel, i);
+                    strR2 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case '\n':
-                    bArrN = AnimatableValueParser.N(parcel, i);
+                    bArrN = b.c.a.a0.d.N(parcel, i);
                     break;
                 case 11:
-                    zE1 = AnimatableValueParser.E1(parcel, i);
+                    zE1 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case '\f':
-                    iBinderF13 = AnimatableValueParser.F1(parcel, i);
+                    iBinderF13 = b.c.a.a0.d.F1(parcel, i);
                     break;
                 case '\r':
-                    zE12 = AnimatableValueParser.E1(parcel, i);
+                    zE12 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case 14:
-                    clientAppContext = (ClientAppContext) AnimatableValueParser.Q(parcel, i, ClientAppContext.CREATOR);
+                    clientAppContext = (ClientAppContext) b.c.a.a0.d.Q(parcel, i, ClientAppContext.CREATOR);
                     break;
                 case 15:
-                    zE13 = AnimatableValueParser.E1(parcel, i);
+                    zE13 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case 16:
-                    iG13 = AnimatableValueParser.G1(parcel, i);
+                    iG13 = b.c.a.a0.d.G1(parcel, i);
                     break;
                 case 17:
-                    iG14 = AnimatableValueParser.G1(parcel, i);
+                    iG14 = b.c.a.a0.d.G1(parcel, i);
                     break;
                 default:
-                    AnimatableValueParser.d2(parcel, i);
+                    b.c.a.a0.d.d2(parcel, i);
                     break;
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new SubscribeRequest(iG1, iBinderF1, strategy, iBinderF12, messageFilter, pendingIntent, iG12, strR, strR2, bArrN, zE1, iBinderF13, zE12, clientAppContext, zE13, iG13, iG14);
     }
 

@@ -1,20 +1,20 @@
 package com.discord.stores;
 
 import android.content.Context;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelApplicationStream;
 import com.discord.models.domain.ModelApplicationStreamPreview;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.time.Clock;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -91,7 +91,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Resolved) && Intrinsics3.areEqual(this.url, ((Resolved) other).url);
+                    return (other instanceof Resolved) && m.areEqual(this.url, ((Resolved) other).url);
                 }
                 return true;
             }
@@ -109,7 +109,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             }
 
             public String toString() {
-                return outline.J(outline.U("Resolved(url="), this.url, ")");
+                return a.J(a.U("Resolved(url="), this.url, ")");
             }
         }
 
@@ -123,7 +123,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -146,7 +146,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -163,19 +163,19 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreApplicationStreamPreviews.access$getFetchStreamPreviewSubscriptions$p(StoreApplicationStreamPreviews.this).put(this.$streamKey, subscription);
         }
     }
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<ModelApplicationStreamPreview, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<ModelApplicationStreamPreview, Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* compiled from: StoreApplicationStreamPreviews.kt */
         /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ ModelApplicationStreamPreview $res;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -211,19 +211,19 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelApplicationStreamPreview modelApplicationStreamPreview) {
-            Intrinsics3.checkNotNullParameter(modelApplicationStreamPreview, "res");
+            m.checkNotNullParameter(modelApplicationStreamPreview, "res");
             StoreApplicationStreamPreviews.access$getDispatcher$p(StoreApplicationStreamPreviews.this).schedule(new AnonymousClass1(modelApplicationStreamPreview));
         }
     }
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* compiled from: StoreApplicationStreamPreviews.kt */
         /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -259,14 +259,14 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             StoreApplicationStreamPreviews.access$getDispatcher$p(StoreApplicationStreamPreviews.this).schedule(new AnonymousClass1(error));
         }
     }
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass5 extends o implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -289,7 +289,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -306,14 +306,14 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
+            m.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreApplicationStreamPreviews.access$getFetchStreamPreviewSubscriptions$p(StoreApplicationStreamPreviews.this).put(this.$streamKey, subscription);
         }
     }
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -336,12 +336,12 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Long, Unit> {
         public final /* synthetic */ String $streamKey;
 
         /* compiled from: StoreApplicationStreamPreviews.kt */
         /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -379,7 +379,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
 
     /* compiled from: StoreApplicationStreamPreviews.kt */
     /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$observeStreamPreview$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<StreamPreview> {
+    public static final class AnonymousClass1 extends o implements Function0<StreamPreview> {
         public final /* synthetic */ String $streamKey;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -401,7 +401,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
     }
 
     public /* synthetic */ StoreApplicationStreamPreviews(Dispatcher dispatcher, Clock clock, RestAPI restAPI, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, clock, (i & 4) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 8) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, clock, (i & 4) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 8) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ void access$fetchStreamPreviewIfNotFetching(StoreApplicationStreamPreviews storeApplicationStreamPreviews, String str) {
@@ -426,7 +426,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
     }
 
     public final void fetchStreamPreviewIfNotFetching(StreamContext streamContext) {
-        Intrinsics3.checkNotNullParameter(streamContext, "streamContext");
+        m.checkNotNullParameter(streamContext, "streamContext");
         fetchStreamPreviewIfNotFetching(streamContext.getPreview(), streamContext.getStream().getEncodedStreamKey());
     }
 
@@ -434,10 +434,10 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
         return this.streamKeyToPreviewMapSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchFailed(String streamKey, Error error) {
-        Intrinsics3.checkNotNullParameter(streamKey, "streamKey");
-        Intrinsics3.checkNotNullParameter(error, "error");
+        m.checkNotNullParameter(streamKey, "streamKey");
+        m.checkNotNullParameter(error, "error");
         Long lValueOf = null;
         this.streamKeyToPreviewMap.put(streamKey, new StreamPreview.Resolved(null));
         Throwable throwable = error.getThrowable();
@@ -447,13 +447,13 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
         HttpException httpException = (HttpException) throwable;
         Integer numValueOf = httpException != null ? Integer.valueOf(httpException.a()) : null;
         Error.Response response = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+        m.checkNotNullExpressionValue(response, "error.response");
         Long retryAfterMs = response.getRetryAfterMs();
         Integer num = this.fetchAttempts.get(streamKey);
         if (num == null) {
             num = 0;
         }
-        Intrinsics3.checkNotNullExpressionValue(num, "fetchAttempts[streamKey] ?: 0");
+        m.checkNotNullExpressionValue(num, "fetchAttempts[streamKey] ?: 0");
         int iIntValue = num.intValue() + 1;
         long jLongValue = iIntValue * 10000;
         if (numValueOf == null) {
@@ -472,64 +472,64 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
                 subscription.unsubscribe();
             }
             Observable<Long> observableD0 = Observable.d0(lValueOf.longValue(), TimeUnit.MILLISECONDS);
-            Intrinsics3.checkNotNullExpressionValue(observableD0, "Observable.timer(retryAf…s, TimeUnit.MILLISECONDS)");
+            m.checkNotNullExpressionValue(observableD0, "Observable.timer(retryAf…s, TimeUnit.MILLISECONDS)");
             ObservableExtensionsKt.appSubscribe$default(observableD0, StoreApplicationStreamPreviews.class, (Context) null, new AnonymousClass1(streamKey), (Function1) null, new AnonymousClass2(streamKey), (Function0) null, new AnonymousClass3(streamKey), 42, (Object) null);
         }
         this.fetchAttempts.put(streamKey, Integer.valueOf(iIntValue));
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchStart(String streamKey) {
-        Intrinsics3.checkNotNullParameter(streamKey, "streamKey");
+        m.checkNotNullParameter(streamKey, "streamKey");
         this.streamKeyToPreviewMap.put(streamKey, StreamPreview.Fetching.INSTANCE);
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleFetchSuccess(String streamKey, String url) {
-        Intrinsics3.checkNotNullParameter(streamKey, "streamKey");
-        Intrinsics3.checkNotNullParameter(url, "url");
+        m.checkNotNullParameter(streamKey, "streamKey");
+        m.checkNotNullParameter(url, "url");
         this.streamKeyToPreviewMap.put(streamKey, new StreamPreview.Resolved(url));
         this.fetchAttempts.remove(streamKey);
         markChanged();
     }
 
     public final Observable<StreamPreview> observeStreamPreview(ModelApplicationStream applicationStream) {
-        Intrinsics3.checkNotNullParameter(applicationStream, "applicationStream");
+        m.checkNotNullParameter(applicationStream, "applicationStream");
         return observeStreamPreview(applicationStream.getEncodedStreamKey());
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         this.streamKeyToPreviewMapSnapshot = new HashMap(this.streamKeyToPreviewMap);
     }
 
     public final Observable<StreamPreview> observeStreamPreview(String streamKey) {
-        Intrinsics3.checkNotNullParameter(streamKey, "streamKey");
+        m.checkNotNullParameter(streamKey, "streamKey");
         Observable<StreamPreview> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(streamKey), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
     public StoreApplicationStreamPreviews(Dispatcher dispatcher, Clock clock, RestAPI restAPI, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.clock = clock;
         this.restAPI = restAPI;
         this.observationDeck = observationDeck;
         this.streamKeyToPreviewMap = new HashMap();
-        this.streamKeyToPreviewMapSnapshot = Maps6.emptyMap();
+        this.streamKeyToPreviewMapSnapshot = h0.emptyMap();
         this.fetchAttempts = new HashMap<>();
         this.fetchStreamPreviewSubscriptions = new HashMap<>();
     }
 
-    @Store3
+    @StoreThread
     private final void fetchStreamPreviewIfNotFetching(String streamKey) {
         fetchStreamPreviewIfNotFetching(this.streamKeyToPreviewMap.get(streamKey), streamKey);
     }

@@ -1,43 +1,39 @@
 package com.facebook.imagepipeline.request;
 
 import android.net.Uri;
-import b.d.b.a.outline;
-import b.f.d.l.UriUtil;
-import b.f.j.d.BytesRange;
-import b.f.j.d.ImageDecodeOptions;
-import b.f.j.d.Priority2;
-import b.f.j.d.ResizeOptions;
-import b.f.j.d.RotationOptions;
-import b.f.j.k.RequestListener;
-import b.f.j.q.Postprocessor;
+import b.f.j.d.a;
+import b.f.j.d.b;
+import b.f.j.d.d;
+import b.f.j.d.f;
+import b.f.j.k.e;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.facebook.imagepipeline.request.ImageRequest;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
 public class ImageRequestBuilder {
-    public RequestListener n;
+    public e n;
     public int p;
     public Uri a = null;
 
     /* renamed from: b, reason: collision with root package name */
     public ImageRequest.c f2904b = ImageRequest.c.FULL_FETCH;
     public int c = 0;
-    public ResizeOptions d = null;
-    public RotationOptions e = null;
-    public ImageDecodeOptions f = ImageDecodeOptions.a;
+    public b.f.j.d.e d = null;
+    public f e = null;
+    public b f = b.a;
     public ImageRequest.b g = ImageRequest.b.DEFAULT;
     public boolean h = false;
     public boolean i = false;
     public boolean j = false;
-    public Priority2 k = Priority2.HIGH;
-    public Postprocessor l = null;
+    public d k = d.HIGH;
+    public b.f.j.q.b l = null;
     public Boolean m = null;
-    public BytesRange o = null;
+    public a o = null;
 
     public static class BuilderException extends RuntimeException {
         public BuilderException(String str) {
-            super(outline.w("Invalid request builder: ", str));
+            super(b.d.b.a.a.w("Invalid request builder: ", str));
         }
     }
 
@@ -53,7 +49,7 @@ public class ImageRequestBuilder {
         if (uri == null) {
             throw new BuilderException("Source must be set!");
         }
-        if ("res".equals(UriUtil.a(uri))) {
+        if ("res".equals(b.f.d.l.b.a(uri))) {
             if (!this.a.isAbsolute()) {
                 throw new BuilderException("Resource URI path must be absolute.");
             }
@@ -66,7 +62,7 @@ public class ImageRequestBuilder {
                 throw new BuilderException("Resource URI path must be a resource id.");
             }
         }
-        if (!ModelAuditLogEntry.CHANGE_KEY_ASSET.equals(UriUtil.a(this.a)) || this.a.isAbsolute()) {
+        if (!ModelAuditLogEntry.CHANGE_KEY_ASSET.equals(b.f.d.l.b.a(this.a)) || this.a.isAbsolute()) {
             return new ImageRequest(this);
         }
         throw new BuilderException("Asset URI path must be absolute.");

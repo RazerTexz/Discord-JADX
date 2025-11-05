@@ -29,9 +29,9 @@ import androidx.core.util.Pair;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentTransaction;
-import b.i.a.g.d.MonthAdapter;
-import b.i.a.g.d.PickerFragment;
-import b.i.a.g.d.UtcDates;
+import b.i.a.g.d.g;
+import b.i.a.g.d.i;
+import b.i.a.g.d.l;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.dialog.InsetDialogOnTouchListener;
 import com.google.android.material.internal.CheckableImageButton;
@@ -70,7 +70,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
 
     @StyleRes
     private int overrideThemeResId;
-    private PickerFragment<S> pickerFragment;
+    private i<S> pickerFragment;
     private CharSequence titleText;
 
     @StringRes
@@ -191,7 +191,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         Resources resources = context.getResources();
         int dimensionPixelOffset = resources.getDimensionPixelOffset(com.google.android.material.R.dimen.mtrl_calendar_navigation_bottom_padding) + resources.getDimensionPixelOffset(com.google.android.material.R.dimen.mtrl_calendar_navigation_top_padding) + resources.getDimensionPixelSize(com.google.android.material.R.dimen.mtrl_calendar_navigation_height);
         int dimensionPixelSize = resources.getDimensionPixelSize(com.google.android.material.R.dimen.mtrl_calendar_days_of_week_height);
-        int i = MonthAdapter.j;
+        int i = g.j;
         return dimensionPixelOffset + dimensionPixelSize + (resources.getDimensionPixelOffset(com.google.android.material.R.dimen.mtrl_calendar_month_vertical_padding) * (i - 1)) + (resources.getDimensionPixelSize(com.google.android.material.R.dimen.mtrl_calendar_day_height) * i) + resources.getDimensionPixelOffset(com.google.android.material.R.dimen.mtrl_calendar_bottom_padding);
     }
 
@@ -261,7 +261,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
     }
 
     public static long todayInUtcMilliseconds() {
-        return UtcDates.h().getTimeInMillis();
+        return l.h().getTimeInMillis();
     }
 
     private void updateHeader() {

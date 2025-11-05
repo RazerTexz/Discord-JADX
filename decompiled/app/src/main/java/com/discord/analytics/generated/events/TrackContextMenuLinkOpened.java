@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackContextMenuLinkOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackContextMenuLinkOpened implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackContextMenuLinkOpened implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final CharSequence href = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackContextMenuLinkOpened implements AnalyticsSch
             return false;
         }
         TrackContextMenuLinkOpened trackContextMenuLinkOpened = (TrackContextMenuLinkOpened) other;
-        return Intrinsics3.areEqual(this.channelId, trackContextMenuLinkOpened.channelId) && Intrinsics3.areEqual(this.href, trackContextMenuLinkOpened.href);
+        return m.areEqual(this.channelId, trackContextMenuLinkOpened.channelId) && m.areEqual(this.href, trackContextMenuLinkOpened.href);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackContextMenuLinkOpened implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackContextMenuLinkOpened(channelId=");
+        StringBuilder sbU = a.U("TrackContextMenuLinkOpened(channelId=");
         sbU.append(this.channelId);
         sbU.append(", href=");
-        return outline.E(sbU, this.href, ")");
+        return a.E(sbU, this.href, ")");
     }
 }

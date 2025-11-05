@@ -6,7 +6,7 @@ import com.discord.panels.OverlappingPanelsLayout;
 import com.discord.stores.StoreChannelsSelected;
 import com.discord.stores.StoreGuildSelected;
 import com.discord.stores.StoreStream;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
 import rx.functions.Func2;
@@ -55,15 +55,15 @@ public final class LeftPanelManager {
     }
 
     public LeftPanelManager(StoreChannelsSelected storeChannelsSelected, StoreGuildSelected storeGuildSelected) {
-        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        Intrinsics3.checkNotNullParameter(storeGuildSelected, "storeGuildSelected");
+        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        m.checkNotNullParameter(storeGuildSelected, "storeGuildSelected");
         this.storeChannelsSelected = storeChannelsSelected;
         this.storeGuildSelected = storeGuildSelected;
     }
 
     public final Observable<OverlappingPanelsLayout.LockState> observeLockState() {
         Observable<OverlappingPanelsLayout.LockState> observableR = Observable.j(this.storeChannelsSelected.observeResolvedSelectedChannel(), this.storeGuildSelected.observeSelectedGuildId(), AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Observable.combineLatest… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "Observable.combineLatest… }.distinctUntilChanged()");
         return observableR;
     }
 

@@ -2,13 +2,13 @@ package com.discord.stores;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.sticker.Sticker;
 import com.discord.api.sticker.StickerType;
 import com.discord.models.sticker.dto.ModelStickerPack;
 import com.discord.models.sticker.dto.ModelStickerStoreDirectory;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.frecency.FrecencyTracker;
 import com.discord.utilities.media.MediaFrecencyTracker;
 import com.discord.utilities.persister.Persister;
@@ -16,16 +16,14 @@ import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.d0._Ranges;
-import d0.t.Collections2;
-import d0.t.CollectionsJVM;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.d0.f;
+import d0.t.g0;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -68,7 +66,7 @@ public final class StoreStickers extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(ModelStickerPack modelStickerPack) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelStickerPack, "stickerPack");
+                m.checkNotNullParameter(modelStickerPack, "stickerPack");
                 this.stickerPack = modelStickerPack;
             }
 
@@ -85,13 +83,13 @@ public final class StoreStickers extends StoreV2 {
             }
 
             public final Loaded copy(ModelStickerPack stickerPack) {
-                Intrinsics3.checkNotNullParameter(stickerPack, "stickerPack");
+                m.checkNotNullParameter(stickerPack, "stickerPack");
                 return new Loaded(stickerPack);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.stickerPack, ((Loaded) other).stickerPack);
+                    return (other instanceof Loaded) && m.areEqual(this.stickerPack, ((Loaded) other).stickerPack);
                 }
                 return true;
             }
@@ -109,7 +107,7 @@ public final class StoreStickers extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(stickerPack=");
+                StringBuilder sbU = a.U("Loaded(stickerPack=");
                 sbU.append(this.stickerPack);
                 sbU.append(")");
                 return sbU.toString();
@@ -144,15 +142,15 @@ public final class StoreStickers extends StoreV2 {
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$fetchEnabledStickerDirectory$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelStickerStoreDirectory, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelStickerStoreDirectory, Unit> {
 
         /* compiled from: StoreStickers.kt */
         /* renamed from: com.discord.stores.StoreStickers$fetchEnabledStickerDirectory$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01741 extends Lambda implements Function0<Unit> {
+        public static final class C02941 extends o implements Function0<Unit> {
             public final /* synthetic */ ModelStickerStoreDirectory $directory;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C01741(ModelStickerStoreDirectory modelStickerStoreDirectory) {
+            public C02941(ModelStickerStoreDirectory modelStickerStoreDirectory) {
                 super(0);
                 this.$directory = modelStickerStoreDirectory;
             }
@@ -183,27 +181,27 @@ public final class StoreStickers extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelStickerStoreDirectory modelStickerStoreDirectory) {
-            Intrinsics3.checkNotNullParameter(modelStickerStoreDirectory, "directory");
-            StoreStickers.access$getDispatcher$p(StoreStickers.this).schedule(new C01741(modelStickerStoreDirectory));
+            m.checkNotNullParameter(modelStickerStoreDirectory, "directory");
+            StoreStickers.access$getDispatcher$p(StoreStickers.this).schedule(new C02941(modelStickerStoreDirectory));
         }
     }
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$fetchStickerPack$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $stickerPackId;
 
         /* compiled from: StoreStickers.kt */
         /* renamed from: com.discord.stores.StoreStickers$fetchStickerPack$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01751 extends Lambda implements Function1<ModelStickerPack, Unit> {
+        public static final class C02951 extends o implements Function1<ModelStickerPack, Unit> {
 
             /* compiled from: StoreStickers.kt */
             /* renamed from: com.discord.stores.StoreStickers$fetchStickerPack$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01761 extends Lambda implements Function0<Unit> {
+            public static final class C02961 extends o implements Function0<Unit> {
                 public final /* synthetic */ ModelStickerPack $newPack;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                public C01761(ModelStickerPack modelStickerPack) {
+                public C02961(ModelStickerPack modelStickerPack) {
                     super(0);
                     this.$newPack = modelStickerPack;
                 }
@@ -216,11 +214,11 @@ public final class StoreStickers extends StoreV2 {
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
-                    StoreStickers.this.handleNewLoadedStickerPacks(CollectionsJVM.listOf(this.$newPack));
+                    StoreStickers.this.handleNewLoadedStickerPacks(d0.t.m.listOf(this.$newPack));
                 }
             }
 
-            public C01751() {
+            public C02951() {
                 super(1);
             }
 
@@ -232,8 +230,8 @@ public final class StoreStickers extends StoreV2 {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelStickerPack modelStickerPack) {
-                Intrinsics3.checkNotNullParameter(modelStickerPack, "newPack");
-                StoreStickers.access$getDispatcher$p(StoreStickers.this).schedule(new C01761(modelStickerPack));
+                m.checkNotNullParameter(modelStickerPack, "newPack");
+                StoreStickers.access$getDispatcher$p(StoreStickers.this).schedule(new C02961(modelStickerPack));
             }
         }
 
@@ -251,14 +249,14 @@ public final class StoreStickers extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
-            StoreStickers.this.handleNewLoadingStickerPacks(CollectionsJVM.listOf(Long.valueOf(this.$stickerPackId)));
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreStickers.access$getApi$p(StoreStickers.this).getStickerPack(this.$stickerPackId), false, 1, null), StoreStickers.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C01751(), 62, (Object) null);
+            StoreStickers.this.handleNewLoadingStickerPacks(d0.t.m.listOf(Long.valueOf(this.$stickerPackId)));
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StoreStickers.access$getApi$p(StoreStickers.this).getStickerPack(this.$stickerPackId), false, 1, null), StoreStickers.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C02951(), 62, (Object) null);
         }
     }
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$handleDeletedStickers$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ List $stickerIds;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -285,7 +283,7 @@ public final class StoreStickers extends StoreV2 {
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$observeEnabledStickerPacks$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<List<? extends ModelStickerPack>> {
+    public static final class AnonymousClass1 extends o implements Function0<List<? extends ModelStickerPack>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -304,10 +302,10 @@ public final class StoreStickers extends StoreV2 {
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$observeFrequentlyUsedStickerIds$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<MediaFrecencyTracker, List<? extends Long>> {
+    public static final class AnonymousClass1<T, R> implements b<MediaFrecencyTracker, List<? extends Long>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ List<? extends Long> call(MediaFrecencyTracker mediaFrecencyTracker) {
             return call2(mediaFrecencyTracker);
         }
@@ -315,7 +313,7 @@ public final class StoreStickers extends StoreV2 {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Long> call2(MediaFrecencyTracker mediaFrecencyTracker) {
             Collection sortedKeys$default = FrecencyTracker.getSortedKeys$default(mediaFrecencyTracker, 0L, 1, null);
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(sortedKeys$default, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(sortedKeys$default, 10));
             Iterator<T> it = sortedKeys$default.iterator();
             while (it.hasNext()) {
                 arrayList.add(Long.valueOf(Long.parseLong((String) it.next())));
@@ -326,7 +324,7 @@ public final class StoreStickers extends StoreV2 {
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$observeStickerPack$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $stickerPackId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -352,7 +350,7 @@ public final class StoreStickers extends StoreV2 {
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$observeStickerPack$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<StickerPackState> {
+    public static final class AnonymousClass2 extends o implements Function0<StickerPackState> {
         public final /* synthetic */ long $stickerPackId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -376,7 +374,7 @@ public final class StoreStickers extends StoreV2 {
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$observeStickerPacks$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<List<? extends StickerPackState>> {
+    public static final class AnonymousClass1 extends o implements Function0<List<? extends StickerPackState>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -389,13 +387,13 @@ public final class StoreStickers extends StoreV2 {
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends StickerPackState> invoke2() {
-            return _Collections.toList(StoreStickers.access$getStickerPacks$p(StoreStickers.this).values());
+            return u.toList(StoreStickers.access$getStickerPacks$p(StoreStickers.this).values());
         }
     }
 
     /* compiled from: StoreStickers.kt */
     /* renamed from: com.discord.stores.StoreStickers$onStickerUsed$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Sticker $sticker;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -418,7 +416,7 @@ public final class StoreStickers extends StoreV2 {
     }
 
     public /* synthetic */ StoreStickers(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck, Clock clock, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck, (i & 8) != 0 ? ClockFactory.get() : clock);
+        this(dispatcher, (i & 2) != 0 ? RestAPI.INSTANCE.getApi() : restAPI, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck, (i & 8) != 0 ? ClockFactory.get() : clock);
     }
 
     public static final /* synthetic */ RestAPI access$getApi$p(StoreStickers storeStickers) {
@@ -497,7 +495,7 @@ public final class StoreStickers extends StoreV2 {
     }
 
     public final void handleDeletedStickers(List<Long> stickerIds) {
-        Intrinsics3.checkNotNullParameter(stickerIds, "stickerIds");
+        m.checkNotNullParameter(stickerIds, "stickerIds");
         this.dispatcher.schedule(new AnonymousClass1(stickerIds));
     }
 
@@ -506,22 +504,22 @@ public final class StoreStickers extends StoreV2 {
             return;
         }
         Long packId = sticker.getPackId();
-        Intrinsics3.checkNotNull(packId);
+        m.checkNotNull(packId);
         fetchStickerPack(packId.longValue());
     }
 
-    @Store3
+    @StoreThread
     public final void handleNewEnabledStickerDirectory(List<ModelStickerPack> enabledPacks) {
-        Intrinsics3.checkNotNullParameter(enabledPacks, "enabledPacks");
+        m.checkNotNullParameter(enabledPacks, "enabledPacks");
         handleNewLoadedStickerPacks(enabledPacks);
         this.enabledStickerPacks = enabledPacks;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleNewLoadedStickerPacks(List<ModelStickerPack> newStickerPacks) {
-        Intrinsics3.checkNotNullParameter(newStickerPacks, "newStickerPacks");
-        Map<Long, ? extends StickerPackState> mutableMap = Maps6.toMutableMap(this.stickerPacks);
+        m.checkNotNullParameter(newStickerPacks, "newStickerPacks");
+        Map<Long, ? extends StickerPackState> mutableMap = h0.toMutableMap(this.stickerPacks);
         for (ModelStickerPack modelStickerPack : newStickerPacks) {
             StickerPackState stickerPackState = this.stickerPacks.get(Long.valueOf(modelStickerPack.getId()));
             if (stickerPackState == null || !(stickerPackState instanceof StickerPackState.Loaded) || ((StickerPackState.Loaded) stickerPackState).getStickerPack().getStoreListing() == null) {
@@ -532,10 +530,10 @@ public final class StoreStickers extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleNewLoadingStickerPacks(List<Long> stickerPackIds) {
-        Intrinsics3.checkNotNullParameter(stickerPackIds, "stickerPackIds");
-        Map<Long, ? extends StickerPackState> mutableMap = Maps6.toMutableMap(this.stickerPacks);
+        m.checkNotNullParameter(stickerPackIds, "stickerPackIds");
+        Map<Long, ? extends StickerPackState> mutableMap = h0.toMutableMap(this.stickerPacks);
         Iterator<T> it = stickerPackIds.iterator();
         while (it.hasNext()) {
             mutableMap.put(Long.valueOf(((Number) it.next()).longValue()), StickerPackState.Loading.INSTANCE);
@@ -544,7 +542,7 @@ public final class StoreStickers extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handlePreLogout() {
         Persister.clear$default(this.frecencyCache, false, 1, null);
     }
@@ -559,7 +557,7 @@ public final class StoreStickers extends StoreV2 {
 
     public final Observable<List<Long>> observeFrequentlyUsedStickerIds() {
         Observable observableG = this.frecencyCache.getObservable().G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "frecencyCache.getObserva…ckerId.toLong() }\n      }");
+        m.checkNotNullExpressionValue(observableG, "frecencyCache.getObserva…ckerId.toLong() }\n      }");
         return observableG;
     }
 
@@ -573,12 +571,12 @@ public final class StoreStickers extends StoreV2 {
     }
 
     public final void onStickerUsed(Sticker sticker) {
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(sticker, "sticker");
         this.dispatcher.schedule(new AnonymousClass1(sticker));
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         HashMap map = new HashMap(this.stickerPacks);
         this.stickerPacksSnapshot = map;
@@ -589,44 +587,44 @@ public final class StoreStickers extends StoreV2 {
                 arrayList.add(obj);
             }
         }
-        ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+        ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
             arrayList2.add(((StickerPackState.Loaded) it.next()).getStickerPack().getStickers());
         }
-        List listFlatten = Iterables2.flatten(arrayList2);
-        LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(listFlatten, 10)), 16));
+        List listFlatten = d0.t.o.flatten(arrayList2);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(listFlatten, 10)), 16));
         for (Object obj2 : listFlatten) {
             linkedHashMap.put(Long.valueOf(((Sticker) obj2).getId()), obj2);
         }
         this.stickersSnapshot = linkedHashMap;
         this.enabledStickerPacksSnapshot = new ArrayList(this.enabledStickerPacks);
         List<ModelStickerPack> list = this.enabledStickerPacks;
-        ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
+        ArrayList arrayList3 = new ArrayList(d0.t.o.collectionSizeOrDefault(list, 10));
         Iterator<T> it2 = list.iterator();
         while (it2.hasNext()) {
             arrayList3.add(((ModelStickerPack) it2.next()).getStickers());
         }
-        this.enabledStickerPacksStickersSnapshot = new ArrayList(Iterables2.flatten(arrayList3));
+        this.enabledStickerPacksStickersSnapshot = new ArrayList(d0.t.o.flatten(arrayList3));
     }
 
     public StoreStickers(Dispatcher dispatcher, RestAPI restAPI, ObservationDeck observationDeck, Clock clock) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(restAPI, "api");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(restAPI, "api");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(clock, "clock");
         this.dispatcher = dispatcher;
         this.api = restAPI;
         this.observationDeck = observationDeck;
         this.clock = clock;
-        this.stickerPacks = Maps6.emptyMap();
-        this.stickerPacksSnapshot = Maps6.emptyMap();
-        this.stickersSnapshot = Maps6.emptyMap();
+        this.stickerPacks = h0.emptyMap();
+        this.stickerPacksSnapshot = h0.emptyMap();
+        this.stickersSnapshot = h0.emptyMap();
         Persister<MediaFrecencyTracker> persister = new Persister<>("STICKER_HISTORY_V1", new MediaFrecencyTracker(20, 1));
         this.frecencyCache = persister;
         this.frecency = persister.get();
-        this.enabledStickerPacks = Collections2.emptyList();
-        this.enabledStickerPacksSnapshot = Collections2.emptyList();
-        this.enabledStickerPacksStickersSnapshot = Collections2.emptyList();
+        this.enabledStickerPacks = n.emptyList();
+        this.enabledStickerPacksSnapshot = n.emptyList();
+        this.enabledStickerPacksStickersSnapshot = n.emptyList();
     }
 }

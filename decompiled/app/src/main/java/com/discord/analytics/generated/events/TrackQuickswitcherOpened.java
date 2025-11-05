@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackQuickswitcherOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence source = null;
     private final Long currentGuildId = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchem
             return false;
         }
         TrackQuickswitcherOpened trackQuickswitcherOpened = (TrackQuickswitcherOpened) other;
-        return Intrinsics3.areEqual(this.source, trackQuickswitcherOpened.source) && Intrinsics3.areEqual(this.currentGuildId, trackQuickswitcherOpened.currentGuildId) && Intrinsics3.areEqual(this.currentChannelId, trackQuickswitcherOpened.currentChannelId) && Intrinsics3.areEqual(this.currentChannelType, trackQuickswitcherOpened.currentChannelType);
+        return m.areEqual(this.source, trackQuickswitcherOpened.source) && m.areEqual(this.currentGuildId, trackQuickswitcherOpened.currentGuildId) && m.areEqual(this.currentChannelId, trackQuickswitcherOpened.currentChannelId) && m.areEqual(this.currentChannelType, trackQuickswitcherOpened.currentChannelType);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackQuickswitcherOpened implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackQuickswitcherOpened(source=");
+        StringBuilder sbU = a.U("TrackQuickswitcherOpened(source=");
         sbU.append(this.source);
         sbU.append(", currentGuildId=");
         sbU.append(this.currentGuildId);
         sbU.append(", currentChannelId=");
         sbU.append(this.currentChannelId);
         sbU.append(", currentChannelType=");
-        return outline.G(sbU, this.currentChannelType, ")");
+        return a.G(sbU, this.currentChannelType, ")");
     }
 }

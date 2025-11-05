@@ -10,9 +10,9 @@ import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.WidgetChatInputCommunicationDisabledGuardBinding;
-import b.a.i.WidgetChatInputGuardBinding;
-import b.a.i.WidgetChatInputMemberVerificationGuardBinding;
+import b.a.i.t4;
+import b.a.i.u4;
+import b.a.i.v4;
 
 /* loaded from: classes.dex */
 public final class WidgetChatInputBinding implements ViewBinding {
@@ -70,16 +70,16 @@ public final class WidgetChatInputBinding implements ViewBinding {
     public final LinearLayout q;
 
     @NonNull
-    public final WidgetChatInputGuardBinding r;
+    public final u4 r;
 
     /* renamed from: s, reason: collision with root package name */
     @NonNull
-    public final WidgetChatInputCommunicationDisabledGuardBinding f2304s;
+    public final t4 f2304s;
 
     @NonNull
-    public final WidgetChatInputMemberVerificationGuardBinding t;
+    public final v4 t;
 
-    public WidgetChatInputBinding(@NonNull LinearLayout linearLayout, @NonNull WidgetChatInputApplicationCommandsBinding widgetChatInputApplicationCommandsBinding, @NonNull RecyclerView recyclerView, @NonNull LinearLayout linearLayout2, @NonNull RelativeLayout relativeLayout, @NonNull AppCompatImageButton appCompatImageButton, @NonNull TextView textView, @NonNull LinearLayout linearLayout3, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull RecyclerView recyclerView2, @NonNull LinearLayout linearLayout4, @NonNull TextView textView4, @NonNull RecyclerView recyclerView3, @NonNull FragmentContainerView fragmentContainerView, @NonNull LinearLayout linearLayout5, @NonNull WidgetChatInputGuardBinding widgetChatInputGuardBinding, @NonNull WidgetChatInputCommunicationDisabledGuardBinding widgetChatInputCommunicationDisabledGuardBinding, @NonNull WidgetChatInputMemberVerificationGuardBinding widgetChatInputMemberVerificationGuardBinding) {
+    public WidgetChatInputBinding(@NonNull LinearLayout linearLayout, @NonNull WidgetChatInputApplicationCommandsBinding widgetChatInputApplicationCommandsBinding, @NonNull RecyclerView recyclerView, @NonNull LinearLayout linearLayout2, @NonNull RelativeLayout relativeLayout, @NonNull AppCompatImageButton appCompatImageButton, @NonNull TextView textView, @NonNull LinearLayout linearLayout3, @NonNull ImageView imageView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull RecyclerView recyclerView2, @NonNull LinearLayout linearLayout4, @NonNull TextView textView4, @NonNull RecyclerView recyclerView3, @NonNull FragmentContainerView fragmentContainerView, @NonNull LinearLayout linearLayout5, @NonNull u4 u4Var, @NonNull t4 t4Var, @NonNull v4 v4Var) {
         this.a = linearLayout;
         this.f2303b = widgetChatInputApplicationCommandsBinding;
         this.c = recyclerView;
@@ -97,9 +97,9 @@ public final class WidgetChatInputBinding implements ViewBinding {
         this.o = recyclerView3;
         this.p = fragmentContainerView;
         this.q = linearLayout5;
-        this.r = widgetChatInputGuardBinding;
-        this.f2304s = widgetChatInputCommunicationDisabledGuardBinding;
-        this.t = widgetChatInputMemberVerificationGuardBinding;
+        this.r = u4Var;
+        this.f2304s = t4Var;
+        this.t = v4Var;
     }
 
     @Override // androidx.viewbinding.ViewBinding

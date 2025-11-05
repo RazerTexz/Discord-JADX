@@ -1,7 +1,7 @@
 package com.discord.api.message.reaction;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: MessageReactionUpdate.kt */
 /* loaded from: classes.dex */
@@ -12,7 +12,7 @@ public final /* data */ class MessageReactionUpdate {
     private final long userId;
 
     public MessageReactionUpdate(long j, long j2, long j3, MessageReactionEmoji messageReactionEmoji) {
-        Intrinsics3.checkNotNullParameter(messageReactionEmoji, "emoji");
+        m.checkNotNullParameter(messageReactionEmoji, "emoji");
         this.userId = j;
         this.channelId = j2;
         this.messageId = j3;
@@ -47,7 +47,7 @@ public final /* data */ class MessageReactionUpdate {
             return false;
         }
         MessageReactionUpdate messageReactionUpdate = (MessageReactionUpdate) other;
-        return this.userId == messageReactionUpdate.userId && this.channelId == messageReactionUpdate.channelId && this.messageId == messageReactionUpdate.messageId && Intrinsics3.areEqual(this.emoji, messageReactionUpdate.emoji);
+        return this.userId == messageReactionUpdate.userId && this.channelId == messageReactionUpdate.channelId && this.messageId == messageReactionUpdate.messageId && m.areEqual(this.emoji, messageReactionUpdate.emoji);
     }
 
     public int hashCode() {
@@ -61,7 +61,7 @@ public final /* data */ class MessageReactionUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MessageReactionUpdate(userId=");
+        StringBuilder sbU = a.U("MessageReactionUpdate(userId=");
         sbU.append(this.userId);
         sbU.append(", channelId=");
         sbU.append(this.channelId);

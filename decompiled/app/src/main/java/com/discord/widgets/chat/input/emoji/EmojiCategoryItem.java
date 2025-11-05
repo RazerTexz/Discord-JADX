@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.input.emoji;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.emoji.EmojiCategory;
 import com.discord.models.guild.Guild;
 import com.discord.utilities.recycler.DiffKeyProvider;
-import d0.z.d.Intrinsics3;
-import kotlin.Tuples2;
+import d0.z.d.m;
+import kotlin.Pair;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: EmojiCategoryItem.kt */
@@ -16,7 +16,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
     public static final Companion INSTANCE = new Companion(null);
     public static final int TYPE_GUILD = 1;
     public static final int TYPE_STANDARD = 0;
-    private final Tuples2<Integer, Integer> categoryRange;
+    private final Pair<Integer, Integer> categoryRange;
     private final boolean isSelected;
     private final String key;
     private final long stableId;
@@ -27,12 +27,12 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
 
         public final long mapEmojiCategoryToItemId(EmojiCategory emojiCategory) {
-            Intrinsics3.checkNotNullParameter(emojiCategory, "emojiCategory");
+            m.checkNotNullParameter(emojiCategory, "emojiCategory");
             return emojiCategory.name().hashCode();
         }
 
         public final long mapGuildToItemId(Guild guild) {
-            Intrinsics3.checkNotNullParameter(guild, "guild");
+            m.checkNotNullParameter(guild, "guild");
             return guild.getId();
         }
 
@@ -43,32 +43,32 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
 
     /* compiled from: EmojiCategoryItem.kt */
     public static final /* data */ class GuildItem extends EmojiCategoryItem {
-        private final Tuples2<Integer, Integer> categoryRange;
+        private final Pair<Integer, Integer> categoryRange;
         private final Guild guild;
         private final boolean isSelected;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public GuildItem(Guild guild, Tuples2<Integer, Integer> tuples2, boolean z2) {
-            super(EmojiCategoryItem.INSTANCE.mapGuildToItemId(guild), tuples2, z2, null);
-            Intrinsics3.checkNotNullParameter(guild, "guild");
-            Intrinsics3.checkNotNullParameter(tuples2, "categoryRange");
+        public GuildItem(Guild guild, Pair<Integer, Integer> pair, boolean z2) {
+            super(EmojiCategoryItem.INSTANCE.mapGuildToItemId(guild), pair, z2, null);
+            m.checkNotNullParameter(guild, "guild");
+            m.checkNotNullParameter(pair, "categoryRange");
             this.guild = guild;
-            this.categoryRange = tuples2;
+            this.categoryRange = pair;
             this.isSelected = z2;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ GuildItem copy$default(GuildItem guildItem, Guild guild, Tuples2 tuples2, boolean z2, int i, Object obj) {
+        public static /* synthetic */ GuildItem copy$default(GuildItem guildItem, Guild guild, Pair pair, boolean z2, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = guildItem.guild;
             }
             if ((i & 2) != 0) {
-                tuples2 = guildItem.getCategoryRange();
+                pair = guildItem.getCategoryRange();
             }
             if ((i & 4) != 0) {
                 z2 = guildItem.getIsSelected();
             }
-            return guildItem.copy(guild, tuples2, z2);
+            return guildItem.copy(guild, pair, z2);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -76,7 +76,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
             return this.guild;
         }
 
-        public final Tuples2<Integer, Integer> component2() {
+        public final Pair<Integer, Integer> component2() {
             return getCategoryRange();
         }
 
@@ -84,9 +84,9 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
             return getIsSelected();
         }
 
-        public final GuildItem copy(Guild guild, Tuples2<Integer, Integer> categoryRange, boolean isSelected) {
-            Intrinsics3.checkNotNullParameter(guild, "guild");
-            Intrinsics3.checkNotNullParameter(categoryRange, "categoryRange");
+        public final GuildItem copy(Guild guild, Pair<Integer, Integer> categoryRange, boolean isSelected) {
+            m.checkNotNullParameter(guild, "guild");
+            m.checkNotNullParameter(categoryRange, "categoryRange");
             return new GuildItem(guild, categoryRange, isSelected);
         }
 
@@ -98,11 +98,11 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
                 return false;
             }
             GuildItem guildItem = (GuildItem) other;
-            return Intrinsics3.areEqual(this.guild, guildItem.guild) && Intrinsics3.areEqual(getCategoryRange(), guildItem.getCategoryRange()) && getIsSelected() == guildItem.getIsSelected();
+            return m.areEqual(this.guild, guildItem.guild) && m.areEqual(getCategoryRange(), guildItem.getCategoryRange()) && getIsSelected() == guildItem.getIsSelected();
         }
 
         @Override // com.discord.widgets.chat.input.emoji.EmojiCategoryItem
-        public Tuples2<Integer, Integer> getCategoryRange() {
+        public Pair<Integer, Integer> getCategoryRange() {
             return this.categoryRange;
         }
 
@@ -117,7 +117,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
-            Tuples2<Integer, Integer> categoryRange = getCategoryRange();
+            Pair<Integer, Integer> categoryRange = getCategoryRange();
             int iHashCode2 = (iHashCode + (categoryRange != null ? categoryRange.hashCode() : 0)) * 31;
             boolean isSelected = getIsSelected();
             ?? r1 = isSelected;
@@ -134,7 +134,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("GuildItem(guild=");
+            StringBuilder sbU = a.U("GuildItem(guild=");
             sbU.append(this.guild);
             sbU.append(", categoryRange=");
             sbU.append(getCategoryRange());
@@ -147,32 +147,32 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
 
     /* compiled from: EmojiCategoryItem.kt */
     public static final /* data */ class StandardItem extends EmojiCategoryItem {
-        private final Tuples2<Integer, Integer> categoryRange;
+        private final Pair<Integer, Integer> categoryRange;
         private final EmojiCategory emojiCategory;
         private final boolean isSelected;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public StandardItem(EmojiCategory emojiCategory, Tuples2<Integer, Integer> tuples2, boolean z2) {
-            super(EmojiCategoryItem.INSTANCE.mapEmojiCategoryToItemId(emojiCategory), tuples2, z2, null);
-            Intrinsics3.checkNotNullParameter(emojiCategory, "emojiCategory");
-            Intrinsics3.checkNotNullParameter(tuples2, "categoryRange");
+        public StandardItem(EmojiCategory emojiCategory, Pair<Integer, Integer> pair, boolean z2) {
+            super(EmojiCategoryItem.INSTANCE.mapEmojiCategoryToItemId(emojiCategory), pair, z2, null);
+            m.checkNotNullParameter(emojiCategory, "emojiCategory");
+            m.checkNotNullParameter(pair, "categoryRange");
             this.emojiCategory = emojiCategory;
-            this.categoryRange = tuples2;
+            this.categoryRange = pair;
             this.isSelected = z2;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ StandardItem copy$default(StandardItem standardItem, EmojiCategory emojiCategory, Tuples2 tuples2, boolean z2, int i, Object obj) {
+        public static /* synthetic */ StandardItem copy$default(StandardItem standardItem, EmojiCategory emojiCategory, Pair pair, boolean z2, int i, Object obj) {
             if ((i & 1) != 0) {
                 emojiCategory = standardItem.emojiCategory;
             }
             if ((i & 2) != 0) {
-                tuples2 = standardItem.getCategoryRange();
+                pair = standardItem.getCategoryRange();
             }
             if ((i & 4) != 0) {
                 z2 = standardItem.getIsSelected();
             }
-            return standardItem.copy(emojiCategory, tuples2, z2);
+            return standardItem.copy(emojiCategory, pair, z2);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -180,7 +180,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
             return this.emojiCategory;
         }
 
-        public final Tuples2<Integer, Integer> component2() {
+        public final Pair<Integer, Integer> component2() {
             return getCategoryRange();
         }
 
@@ -188,9 +188,9 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
             return getIsSelected();
         }
 
-        public final StandardItem copy(EmojiCategory emojiCategory, Tuples2<Integer, Integer> categoryRange, boolean isSelected) {
-            Intrinsics3.checkNotNullParameter(emojiCategory, "emojiCategory");
-            Intrinsics3.checkNotNullParameter(categoryRange, "categoryRange");
+        public final StandardItem copy(EmojiCategory emojiCategory, Pair<Integer, Integer> categoryRange, boolean isSelected) {
+            m.checkNotNullParameter(emojiCategory, "emojiCategory");
+            m.checkNotNullParameter(categoryRange, "categoryRange");
             return new StandardItem(emojiCategory, categoryRange, isSelected);
         }
 
@@ -202,11 +202,11 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
                 return false;
             }
             StandardItem standardItem = (StandardItem) other;
-            return Intrinsics3.areEqual(this.emojiCategory, standardItem.emojiCategory) && Intrinsics3.areEqual(getCategoryRange(), standardItem.getCategoryRange()) && getIsSelected() == standardItem.getIsSelected();
+            return m.areEqual(this.emojiCategory, standardItem.emojiCategory) && m.areEqual(getCategoryRange(), standardItem.getCategoryRange()) && getIsSelected() == standardItem.getIsSelected();
         }
 
         @Override // com.discord.widgets.chat.input.emoji.EmojiCategoryItem
-        public Tuples2<Integer, Integer> getCategoryRange() {
+        public Pair<Integer, Integer> getCategoryRange() {
             return this.categoryRange;
         }
 
@@ -221,7 +221,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         public int hashCode() {
             EmojiCategory emojiCategory = this.emojiCategory;
             int iHashCode = (emojiCategory != null ? emojiCategory.hashCode() : 0) * 31;
-            Tuples2<Integer, Integer> categoryRange = getCategoryRange();
+            Pair<Integer, Integer> categoryRange = getCategoryRange();
             int iHashCode2 = (iHashCode + (categoryRange != null ? categoryRange.hashCode() : 0)) * 31;
             boolean isSelected = getIsSelected();
             ?? r1 = isSelected;
@@ -238,7 +238,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StandardItem(emojiCategory=");
+            StringBuilder sbU = a.U("StandardItem(emojiCategory=");
             sbU.append(this.emojiCategory);
             sbU.append(", categoryRange=");
             sbU.append(getCategoryRange());
@@ -249,9 +249,9 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
     }
 
-    private EmojiCategoryItem(long j, Tuples2<Integer, Integer> tuples2, boolean z2) {
+    private EmojiCategoryItem(long j, Pair<Integer, Integer> pair, boolean z2) {
         this.stableId = j;
-        this.categoryRange = tuples2;
+        this.categoryRange = pair;
         this.isSelected = z2;
         this.key = String.valueOf(j);
     }
@@ -260,7 +260,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         return (this instanceof StandardItem) && ((StandardItem) this).getEmojiCategory().containsOnlyUnicode;
     }
 
-    public Tuples2<Integer, Integer> getCategoryRange() {
+    public Pair<Integer, Integer> getCategoryRange() {
         return this.categoryRange;
     }
 
@@ -278,7 +278,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         return this.isSelected;
     }
 
-    public /* synthetic */ EmojiCategoryItem(long j, Tuples2 tuples2, boolean z2, DefaultConstructorMarker defaultConstructorMarker) {
-        this(j, tuples2, z2);
+    public /* synthetic */ EmojiCategoryItem(long j, Pair pair, boolean z2, DefaultConstructorMarker defaultConstructorMarker) {
+        this(j, pair, z2);
     }
 }

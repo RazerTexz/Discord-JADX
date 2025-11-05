@@ -3,14 +3,14 @@ package com.discord.widgets.channels.list;
 import android.view.View;
 import com.discord.stores.StoreStream;
 import com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetChannelsListItemChannelActions.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$7 extends Lambda implements Function1<View, Unit> {
+public final class WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$7 extends o implements Function1<View, Unit> {
     public final /* synthetic */ WidgetChannelsListItemChannelActions.Model $this_configureUI$inlined;
     public final /* synthetic */ WidgetChannelsListItemChannelActions this$0;
 
@@ -29,7 +29,7 @@ public final class WidgetChannelsListItemChannelActions$configureUI$$inlined$app
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "it");
+        m.checkNotNullParameter(view, "it");
         StoreStream.INSTANCE.getMessageAck().ack(this.$this_configureUI$inlined.getChannel().getId(), false, true);
     }
 }

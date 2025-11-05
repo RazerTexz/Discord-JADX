@@ -6,28 +6,25 @@ import androidx.annotation.ColorInt;
 import androidx.core.app.NotificationCompat;
 import androidx.core.graphics.ColorUtils;
 import androidx.exifinterface.media.ExifInterface;
-import b.a.g.ColorCutQuantizer;
-import b.a.g.ColorHistogram;
-import b.a.g.Swatch;
-import b.d.b.a.outline;
+import b.a.g.a;
+import b.a.g.d;
+import b.d.b.a.a;
 import b.i.a.f.e.o.f;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.Result3;
-import d0.Tuples;
-import d0.t.CollectionsJVM;
-import d0.t.Maps6;
-import d0.w.h.Intrinsics2;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.w.i.a.boxing;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
+import d0.l;
+import d0.o;
+import d0.t.h0;
+import d0.w.h.c;
+import d0.w.i.a.b;
+import d0.w.i.a.e;
+import d0.w.i.a.k;
+import d0.z.d.m;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
@@ -36,9 +33,9 @@ import kotlinx.coroutines.CoroutineDispatcher;
 import kotlinx.coroutines.CoroutineScope;
 import rx.Observable;
 import rx.subjects.BehaviorSubject;
-import s.a.CoroutineScope2;
-import s.a.Dispatchers;
-import s.a.a.MainDispatchers;
+import s.a.a.n;
+import s.a.k0;
+import s.a.x0;
 
 /* compiled from: RepresentativeColors.kt */
 /* loaded from: classes2.dex */
@@ -61,7 +58,7 @@ public final class RepresentativeColors<T> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Failure(Exception exc) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(exc, "exception");
+                m.checkNotNullParameter(exc, "exception");
                 this.exception = exc;
             }
 
@@ -78,13 +75,13 @@ public final class RepresentativeColors<T> {
             }
 
             public final Failure copy(Exception exception) {
-                Intrinsics3.checkNotNullParameter(exception, "exception");
+                m.checkNotNullParameter(exception, "exception");
                 return new Failure(exception);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Failure) && Intrinsics3.areEqual(this.exception, ((Failure) other).exception);
+                    return (other instanceof Failure) && m.areEqual(this.exception, ((Failure) other).exception);
                 }
                 return true;
             }
@@ -102,7 +99,7 @@ public final class RepresentativeColors<T> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Failure(exception=");
+                StringBuilder sbU = a.U("Failure(exception=");
                 sbU.append(this.exception);
                 sbU.append(")");
                 return sbU.toString();
@@ -150,7 +147,7 @@ public final class RepresentativeColors<T> {
             }
 
             public String toString() {
-                return outline.B(outline.U("Success(color="), this.color, ")");
+                return a.B(a.U("Success(color="), this.color, ")");
             }
         }
 
@@ -163,9 +160,9 @@ public final class RepresentativeColors<T> {
     }
 
     /* compiled from: RepresentativeColors.kt */
-    @DebugMetadata(c = "com.discord.utilities.colors.RepresentativeColors$getRepresentativeColorAsync$2", f = "RepresentativeColors.kt", l = {}, m = "invokeSuspend")
+    @e(c = "com.discord.utilities.colors.RepresentativeColors$getRepresentativeColorAsync$2", f = "RepresentativeColors.kt", l = {}, m = "invokeSuspend")
     /* renamed from: com.discord.utilities.colors.RepresentativeColors$getRepresentativeColorAsync$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super RepresentativeColorResult>, Object> {
+    public static final class AnonymousClass2 extends k implements Function2<CoroutineScope, Continuation<? super RepresentativeColorResult>, Object> {
         public final /* synthetic */ Bitmap $bitmap;
         public int label;
 
@@ -175,9 +172,9 @@ public final class RepresentativeColors<T> {
             this.$bitmap = bitmap;
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass2(this.$bitmap, continuation);
         }
 
@@ -186,21 +183,21 @@ public final class RepresentativeColors<T> {
             return ((AnonymousClass2) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
-            Intrinsics2.getCOROUTINE_SUSPENDED();
+            c.getCOROUTINE_SUSPENDED();
             if (this.label != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            Result3.throwOnFailure(obj);
+            l.throwOnFailure(obj);
             return RepresentativeColors.access$getRepresentativeColor(RepresentativeColors.this, this.$bitmap);
         }
     }
 
     /* compiled from: RepresentativeColors.kt */
-    @DebugMetadata(c = "com.discord.utilities.colors.RepresentativeColors$handleBitmap$1", f = "RepresentativeColors.kt", l = {59}, m = "invokeSuspend")
+    @e(c = "com.discord.utilities.colors.RepresentativeColors$handleBitmap$1", f = "RepresentativeColors.kt", l = {59}, m = "invokeSuspend")
     /* renamed from: com.discord.utilities.colors.RepresentativeColors$handleBitmap$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+    public static final class AnonymousClass1 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Bitmap $bitmap;
         public final /* synthetic */ Object $id;
         public final /* synthetic */ String $url;
@@ -214,9 +211,9 @@ public final class RepresentativeColors<T> {
             this.$url = str;
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-            Intrinsics3.checkNotNullParameter(continuation, "completion");
+            m.checkNotNullParameter(continuation, "completion");
             return new AnonymousClass1(this.$id, this.$bitmap, this.$url, continuation);
         }
 
@@ -225,26 +222,26 @@ public final class RepresentativeColors<T> {
             return ((AnonymousClass1) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
         }
 
-        @Override // d0.w.i.a.ContinuationImpl
+        @Override // d0.w.i.a.a
         public final Object invokeSuspend(Object obj) {
             int iAccess$getBLURPLE$cp;
             int iAccess$getBLURPLE$cp2;
-            Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+            Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
             int i = this.label;
             if (i == 0) {
-                Result3.throwOnFailure(obj);
+                l.throwOnFailure(obj);
                 if (RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this).containsKey(this.$id)) {
                     return Unit.a;
                 }
                 if (this.$bitmap.isRecycled()) {
                     iAccess$getBLURPLE$cp = RepresentativeColors.access$getBLURPLE$cp();
-                    RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this).put(this.$id, boxing.boxInt(iAccess$getBLURPLE$cp));
+                    RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this).put(this.$id, b.boxInt(iAccess$getBLURPLE$cp));
                     RepresentativeColors.access$getRepresentativeColorsSubject$p(RepresentativeColors.this).onNext(RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this));
                     return Unit.a;
                 }
                 Bitmap bitmapCopy = this.$bitmap.copy(Bitmap.Config.ARGB_8888, false);
                 RepresentativeColors representativeColors = RepresentativeColors.this;
-                Intrinsics3.checkNotNullExpressionValue(bitmapCopy, "copiedBitmap");
+                m.checkNotNullExpressionValue(bitmapCopy, "copiedBitmap");
                 this.label = 1;
                 obj = representativeColors.getRepresentativeColorAsync(bitmapCopy, this);
                 if (obj == coroutine_suspended) {
@@ -254,7 +251,7 @@ public final class RepresentativeColors<T> {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                Result3.throwOnFailure(obj);
+                l.throwOnFailure(obj);
             }
             RepresentativeColorResult representativeColorResult = (RepresentativeColorResult) obj;
             if (representativeColorResult instanceof RepresentativeColorResult.Success) {
@@ -268,19 +265,19 @@ public final class RepresentativeColors<T> {
             if (representativeColorResult instanceof RepresentativeColorResult.Failure) {
                 AppLog appLog = AppLog.g;
                 Exception exception = ((RepresentativeColorResult.Failure) representativeColorResult).getException();
-                Tuples2[] tuples2Arr = new Tuples2[4];
-                tuples2Arr[0] = Tuples.to(ModelAuditLogEntry.CHANGE_KEY_ID, String.valueOf(this.$id));
-                tuples2Arr[1] = Tuples.to("bitmapWidth", String.valueOf(this.$bitmap.getWidth()));
-                tuples2Arr[2] = Tuples.to("bitmapHeight", String.valueOf(this.$bitmap.getHeight()));
+                Pair[] pairArr = new Pair[4];
+                pairArr[0] = o.to(ModelAuditLogEntry.CHANGE_KEY_ID, String.valueOf(this.$id));
+                pairArr[1] = o.to("bitmapWidth", String.valueOf(this.$bitmap.getWidth()));
+                pairArr[2] = o.to("bitmapHeight", String.valueOf(this.$bitmap.getHeight()));
                 String str = this.$url;
                 if (str == null) {
                     str = "not provided";
                 }
-                tuples2Arr[3] = Tuples.to("url", str);
-                appLog.e("Failed to get representative color for entity", exception, Maps6.mapOf(tuples2Arr));
+                pairArr[3] = o.to("url", str);
+                appLog.e("Failed to get representative color for entity", exception, h0.mapOf(pairArr));
             }
             iAccess$getBLURPLE$cp = iAccess$getBLURPLE$cp2;
-            RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this).put(this.$id, boxing.boxInt(iAccess$getBLURPLE$cp));
+            RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this).put(this.$id, b.boxInt(iAccess$getBLURPLE$cp));
             RepresentativeColors.access$getRepresentativeColorsSubject$p(RepresentativeColors.this).onNext(RepresentativeColors.access$getRepresentativeColors$p(RepresentativeColors.this));
             return Unit.a;
         }
@@ -288,14 +285,14 @@ public final class RepresentativeColors<T> {
 
     /* compiled from: RepresentativeColors.kt */
     /* renamed from: com.discord.utilities.colors.RepresentativeColors$observeRepresentativeColor$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<T, ? extends Integer>, Integer> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<Map<T, ? extends Integer>, Integer> {
         public final /* synthetic */ Object $id;
 
         public AnonymousClass1(Object obj) {
             this.$id = obj;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Integer call(Object obj) {
             return call((Map) obj);
         }
@@ -329,15 +326,15 @@ public final class RepresentativeColors<T> {
     }
 
     private final List<Integer> getPrimaryColorsForBitmap(Bitmap bitmap) {
-        ColorCutQuantizer.b bVar = ColorCutQuantizer.a;
-        Intrinsics3.checkNotNullParameter(bitmap, "bitmap");
+        a.b bVar = b.a.g.a.a;
+        m.checkNotNullParameter(bitmap, "bitmap");
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
         int[] iArr = new int[width * height];
         bitmap.getPixels(iArr, 0, width, 0, 0, width, height);
-        List<Swatch> list = new ColorCutQuantizer(new ColorHistogram(iArr), 2, null).e;
+        List<d> list = new b.a.g.a(new b.a.g.b(iArr), 2, null).e;
         if (!list.isEmpty()) {
-            return CollectionsJVM.listOf(Integer.valueOf(list.get(0).d));
+            return d0.t.m.listOf(Integer.valueOf(list.get(0).d));
         }
         throw new NoSwatchesFoundException();
     }
@@ -373,19 +370,19 @@ public final class RepresentativeColors<T> {
     }
 
     public final Object getRepresentativeColorAsync(Bitmap bitmap, Continuation<? super RepresentativeColorResult> continuation) {
-        return f.C1(Dispatchers.a, new AnonymousClass2(bitmap, null), continuation);
+        return f.C1(k0.a, new AnonymousClass2(bitmap, null), continuation);
     }
 
     public final void handleBitmap(T id2, Bitmap bitmap, String url) {
-        Intrinsics3.checkNotNullParameter(bitmap, "bitmap");
-        CoroutineScope2 coroutineScope2 = CoroutineScope2.j;
-        CoroutineDispatcher coroutineDispatcher = Dispatchers.a;
-        f.H0(coroutineScope2, MainDispatchers.f3830b, null, new AnonymousClass1(id2, bitmap, url, null), 2, null);
+        m.checkNotNullParameter(bitmap, "bitmap");
+        x0 x0Var = x0.j;
+        CoroutineDispatcher coroutineDispatcher = k0.a;
+        f.H0(x0Var, n.f3830b, null, new AnonymousClass1(id2, bitmap, url, null), 2, null);
     }
 
     public final Observable<Integer> observeRepresentativeColor(T id2) {
         Observable<Integer> observableR = this.representativeColorsSubject.G(new AnonymousClass1(id2)).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "representativeColorsSubj…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "representativeColorsSubj…  .distinctUntilChanged()");
         return observableR;
     }
 }

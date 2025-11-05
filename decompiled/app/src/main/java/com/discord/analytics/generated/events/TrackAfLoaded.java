@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackAfLoaded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAfLoaded implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
+public final /* data */ class TrackAfLoaded implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence loadId = null;
@@ -54,7 +54,7 @@ public final /* data */ class TrackAfLoaded implements AnalyticsSchema, TrackBas
             return false;
         }
         TrackAfLoaded trackAfLoaded = (TrackAfLoaded) other;
-        return Intrinsics3.areEqual(this.loadId, trackAfLoaded.loadId) && Intrinsics3.areEqual(this.gameIds, trackAfLoaded.gameIds) && Intrinsics3.areEqual(this.numCards, trackAfLoaded.numCards) && Intrinsics3.areEqual(this.numCardsVisible, trackAfLoaded.numCardsVisible) && Intrinsics3.areEqual(this.numCardsGameNews, trackAfLoaded.numCardsGameNews) && Intrinsics3.areEqual(this.numCardsGamePlayable, trackAfLoaded.numCardsGamePlayable) && Intrinsics3.areEqual(this.numGameParties, trackAfLoaded.numGameParties) && Intrinsics3.areEqual(this.numGamePartiesVoice, trackAfLoaded.numGamePartiesVoice) && Intrinsics3.areEqual(this.numGamePartiesSolo, trackAfLoaded.numGamePartiesSolo) && Intrinsics3.areEqual(this.numGamePartiesRecentlyPlayed, trackAfLoaded.numGamePartiesRecentlyPlayed) && Intrinsics3.areEqual(this.numGamePartiesRichPresence, trackAfLoaded.numGamePartiesRichPresence) && Intrinsics3.areEqual(this.numGamePartiesCollapsed, trackAfLoaded.numGamePartiesCollapsed) && Intrinsics3.areEqual(this.numSoloCollapsed, trackAfLoaded.numSoloCollapsed) && Intrinsics3.areEqual(this.numRecentlyPlayedCollapsed, trackAfLoaded.numRecentlyPlayedCollapsed) && Intrinsics3.areEqual(this.numUsersSubscribed, trackAfLoaded.numUsersSubscribed) && Intrinsics3.areEqual(this.numLauncherApplications, trackAfLoaded.numLauncherApplications) && Intrinsics3.areEqual(this.windowWidth, trackAfLoaded.windowWidth) && Intrinsics3.areEqual(this.windowHeight, trackAfLoaded.windowHeight) && Intrinsics3.areEqual(this.feedLayout, trackAfLoaded.feedLayout) && Intrinsics3.areEqual(this.subscribedGames, trackAfLoaded.subscribedGames) && Intrinsics3.areEqual(this.numItemsNowPlaying, trackAfLoaded.numItemsNowPlaying) && Intrinsics3.areEqual(this.numItemsRecentlyPlayed, trackAfLoaded.numItemsRecentlyPlayed) && Intrinsics3.areEqual(this.newsIdsViewed, trackAfLoaded.newsIdsViewed) && Intrinsics3.areEqual(this.guildIdsViewed, trackAfLoaded.guildIdsViewed);
+        return m.areEqual(this.loadId, trackAfLoaded.loadId) && m.areEqual(this.gameIds, trackAfLoaded.gameIds) && m.areEqual(this.numCards, trackAfLoaded.numCards) && m.areEqual(this.numCardsVisible, trackAfLoaded.numCardsVisible) && m.areEqual(this.numCardsGameNews, trackAfLoaded.numCardsGameNews) && m.areEqual(this.numCardsGamePlayable, trackAfLoaded.numCardsGamePlayable) && m.areEqual(this.numGameParties, trackAfLoaded.numGameParties) && m.areEqual(this.numGamePartiesVoice, trackAfLoaded.numGamePartiesVoice) && m.areEqual(this.numGamePartiesSolo, trackAfLoaded.numGamePartiesSolo) && m.areEqual(this.numGamePartiesRecentlyPlayed, trackAfLoaded.numGamePartiesRecentlyPlayed) && m.areEqual(this.numGamePartiesRichPresence, trackAfLoaded.numGamePartiesRichPresence) && m.areEqual(this.numGamePartiesCollapsed, trackAfLoaded.numGamePartiesCollapsed) && m.areEqual(this.numSoloCollapsed, trackAfLoaded.numSoloCollapsed) && m.areEqual(this.numRecentlyPlayedCollapsed, trackAfLoaded.numRecentlyPlayedCollapsed) && m.areEqual(this.numUsersSubscribed, trackAfLoaded.numUsersSubscribed) && m.areEqual(this.numLauncherApplications, trackAfLoaded.numLauncherApplications) && m.areEqual(this.windowWidth, trackAfLoaded.windowWidth) && m.areEqual(this.windowHeight, trackAfLoaded.windowHeight) && m.areEqual(this.feedLayout, trackAfLoaded.feedLayout) && m.areEqual(this.subscribedGames, trackAfLoaded.subscribedGames) && m.areEqual(this.numItemsNowPlaying, trackAfLoaded.numItemsNowPlaying) && m.areEqual(this.numItemsRecentlyPlayed, trackAfLoaded.numItemsRecentlyPlayed) && m.areEqual(this.newsIdsViewed, trackAfLoaded.newsIdsViewed) && m.areEqual(this.guildIdsViewed, trackAfLoaded.guildIdsViewed);
     }
 
     public int hashCode() {
@@ -109,7 +109,7 @@ public final /* data */ class TrackAfLoaded implements AnalyticsSchema, TrackBas
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAfLoaded(loadId=");
+        StringBuilder sbU = a.U("TrackAfLoaded(loadId=");
         sbU.append(this.loadId);
         sbU.append(", gameIds=");
         sbU.append(this.gameIds);
@@ -156,6 +156,6 @@ public final /* data */ class TrackAfLoaded implements AnalyticsSchema, TrackBas
         sbU.append(", newsIdsViewed=");
         sbU.append(this.newsIdsViewed);
         sbU.append(", guildIdsViewed=");
-        return outline.L(sbU, this.guildIdsViewed, ")");
+        return a.L(sbU, this.guildIdsViewed, ")");
     }
 }

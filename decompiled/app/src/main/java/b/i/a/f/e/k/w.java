@@ -3,7 +3,6 @@ package b.i.a.f.e.k;
 import android.accounts.Account;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.common.internal.zas;
 
@@ -12,7 +11,7 @@ import com.google.android.gms.common.internal.zas;
 public final class w implements Parcelable.Creator<zas> {
     @Override // android.os.Parcelable.Creator
     public final zas createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         int iG1 = 0;
         Account account = null;
         GoogleSignInAccount googleSignInAccount = null;
@@ -21,18 +20,18 @@ public final class w implements Parcelable.Creator<zas> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                account = (Account) AnimatableValueParser.Q(parcel, i, Account.CREATOR);
+                account = (Account) b.c.a.a0.d.Q(parcel, i, Account.CREATOR);
             } else if (c == 3) {
-                iG12 = AnimatableValueParser.G1(parcel, i);
+                iG12 = b.c.a.a0.d.G1(parcel, i);
             } else if (c != 4) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                googleSignInAccount = (GoogleSignInAccount) AnimatableValueParser.Q(parcel, i, GoogleSignInAccount.CREATOR);
+                googleSignInAccount = (GoogleSignInAccount) b.c.a.a0.d.Q(parcel, i, GoogleSignInAccount.CREATOR);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zas(iG1, account, iG12, googleSignInAccount);
     }
 

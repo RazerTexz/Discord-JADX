@@ -4,8 +4,8 @@ import com.franmontiel.persistentcookiejar.cache.CookieCache;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.CookiePersistor;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
-import f0.Cookie;
-import f0.HttpUrl;
+import f0.n;
+import f0.w;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,31 +23,31 @@ public class PersistentCookieJar implements ClearableCookieJar {
         ((SetCookieCache) cookieCache).addAll(((SharedPrefsCookiePersistor) cookiePersistor).c());
     }
 
-    @Override // f0.CookieJar2
-    public synchronized void a(HttpUrl httpUrl, List<Cookie> list) {
+    @Override // f0.p
+    public synchronized void a(w wVar, List<n> list) {
         this.f2909b.addAll(list);
         CookiePersistor cookiePersistor = this.c;
         ArrayList arrayList = new ArrayList();
-        for (Cookie cookie : list) {
-            if (cookie.m) {
-                arrayList.add(cookie);
+        for (n nVar : list) {
+            if (nVar.m) {
+                arrayList.add(nVar);
             }
         }
         cookiePersistor.a(arrayList);
     }
 
-    @Override // f0.CookieJar2
-    public synchronized List<Cookie> b(HttpUrl httpUrl) {
+    @Override // f0.p
+    public synchronized List<n> b(w wVar) {
         ArrayList arrayList;
         ArrayList arrayList2 = new ArrayList();
         arrayList = new ArrayList();
-        Iterator<Cookie> it = this.f2909b.iterator();
+        Iterator<n> it = this.f2909b.iterator();
         while (it.hasNext()) {
-            Cookie next = it.next();
+            n next = it.next();
             if (next.h < System.currentTimeMillis()) {
                 arrayList2.add(next);
                 it.remove();
-            } else if (next.a(httpUrl)) {
+            } else if (next.a(wVar)) {
                 arrayList.add(next);
             }
         }

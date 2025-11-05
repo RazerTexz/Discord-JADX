@@ -14,10 +14,10 @@ import com.discord.utilities.images.MGImages;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.widgets.guilds.invite.InviteSuggestionItemV2;
-import com.discord.widgets.user.UserNameFormatter;
+import com.discord.widgets.user.UserNameFormatterKt;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -31,7 +31,7 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public EmptySearchResultsViewHolder(InviteSuggestionsAdapter inviteSuggestionsAdapter) {
             super(R.layout.guild_invite_empty_search_results_item, inviteSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(inviteSuggestionsAdapter, "adapter");
+            m.checkNotNullParameter(inviteSuggestionsAdapter, "adapter");
         }
     }
 
@@ -42,9 +42,9 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public InviteSuggestionViewHolder(InviteSuggestionsAdapter inviteSuggestionsAdapter) {
             super(R.layout.widget_guild_invite_share_item, inviteSuggestionsAdapter);
-            Intrinsics3.checkNotNullParameter(inviteSuggestionsAdapter, "adapter");
+            m.checkNotNullParameter(inviteSuggestionsAdapter, "adapter");
             WidgetGuildInviteShareItemBinding widgetGuildInviteShareItemBindingA = WidgetGuildInviteShareItemBinding.a(this.itemView);
-            Intrinsics3.checkNotNullExpressionValue(widgetGuildInviteShareItemBindingA, "WidgetGuildInviteShareItemBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(widgetGuildInviteShareItemBindingA, "WidgetGuildInviteShareItemBinding.bind(itemView)");
             this.binding = widgetGuildInviteShareItemBindingA;
         }
 
@@ -54,20 +54,20 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
 
         private final void configureItemForChannel(Channel channel) {
             SimpleDraweeView simpleDraweeView = this.binding.f2421b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.itemIconIv");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.itemIconIv");
             IconUtils.setIcon$default(simpleDraweeView, channel, 0, (MGImages.ChangeDetector) null, 12, (Object) null);
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemNameTv");
+            m.checkNotNullExpressionValue(textView, "binding.itemNameTv");
             textView.setText(ChannelUtils.c(channel));
         }
 
         private final void configureItemForUser(User user) {
             SimpleDraweeView simpleDraweeView = this.binding.f2421b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.itemIconIv");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.itemIconIv");
             IconUtils.setIcon$default(simpleDraweeView, user, 0, null, null, null, 60, null);
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.itemNameTv");
-            textView.setText(UserNameFormatter.getSpannableForUserNameWithDiscrim(user, null, ((InviteSuggestionsAdapter) this.adapter).getContext(), R.attr.colorHeaderPrimary, R.attr.font_primary_semibold, R.integer.uikit_textsize_large_sp, R.attr.colorTextMuted, R.attr.font_primary_normal, R.integer.uikit_textsize_large_sp));
+            m.checkNotNullExpressionValue(textView, "binding.itemNameTv");
+            textView.setText(UserNameFormatterKt.getSpannableForUserNameWithDiscrim(user, null, ((InviteSuggestionsAdapter) this.adapter).getContext(), R.attr.colorHeaderPrimary, R.attr.font_primary_semibold, R.integer.uikit_textsize_large_sp, R.attr.colorTextMuted, R.attr.font_primary_normal, R.integer.uikit_textsize_large_sp));
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -77,7 +77,7 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, InviteSuggestionItemV2 data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             boolean z2 = data instanceof InviteSuggestionItemV2.ChannelItem;
             if (z2) {
@@ -93,12 +93,12 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
             }
             if (z2 || (data instanceof InviteSuggestionItemV2.UserItem)) {
                 MaterialButton materialButton = this.binding.e;
-                Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.itemSent");
+                m.checkNotNullExpressionValue(materialButton, "binding.itemSent");
                 materialButton.setVisibility(data.hasSentInvite() ? 0 : 8);
                 MaterialButton materialButton2 = this.binding.c;
-                Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.itemInviteBtn");
+                m.checkNotNullExpressionValue(materialButton2, "binding.itemInviteBtn");
                 materialButton2.setVisibility(data.hasSentInvite() ^ true ? 0 : 8);
-                this.binding.c.setOnClickListener(new InviteSuggestionsAdapter2(this, data));
+                this.binding.c.setOnClickListener(new InviteSuggestionsAdapter$InviteSuggestionViewHolder$onConfigure$1(this, data));
             }
         }
     }
@@ -106,8 +106,8 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public InviteSuggestionsAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        this.onClick = InviteSuggestionsAdapter3.INSTANCE;
+        m.checkNotNullParameter(recyclerView, "recycler");
+        this.onClick = InviteSuggestionsAdapter$onClick$1.INSTANCE;
     }
 
     public final Function1<InviteSuggestionItemV2, Unit> getOnClick() {
@@ -120,13 +120,13 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
     }
 
     public final void setOnClick(Function1<? super InviteSuggestionItemV2, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onClick = function1;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<InviteSuggestionsAdapter, InviteSuggestionItemV2> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 1) {
             return new EmptySearchResultsViewHolder(this);
         }

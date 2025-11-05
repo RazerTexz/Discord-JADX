@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackAfCard;
-import com.discord.analytics.generated.traits.TrackAfCard2;
+import com.discord.analytics.generated.traits.TrackAfCardReceiver;
 import com.discord.analytics.generated.traits.TrackAfGame;
-import com.discord.analytics.generated.traits.TrackAfGame2;
+import com.discord.analytics.generated.traits.TrackAfGameReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackApplicationOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationOpened implements AnalyticsSchema, TrackBase2, TrackAfCard2, TrackAfGame2, TrackLocationMetadata2 {
+public final /* data */ class TrackApplicationOpened implements AnalyticsSchema, TrackBaseReceiver, TrackAfCardReceiver, TrackAfGameReceiver, TrackLocationMetadataReceiver {
     private TrackAfCard trackAfCard;
     private TrackAfGame trackAfGame;
     private TrackBase trackBase;
@@ -46,7 +46,7 @@ public final /* data */ class TrackApplicationOpened implements AnalyticsSchema,
             return false;
         }
         TrackApplicationOpened trackApplicationOpened = (TrackApplicationOpened) other;
-        return Intrinsics3.areEqual(this.type, trackApplicationOpened.type) && Intrinsics3.areEqual(this.source, trackApplicationOpened.source) && Intrinsics3.areEqual(this.applicationId, trackApplicationOpened.applicationId) && Intrinsics3.areEqual(this.applicationName, trackApplicationOpened.applicationName) && Intrinsics3.areEqual(this.partyId, trackApplicationOpened.partyId) && Intrinsics3.areEqual(this.otherUserId, trackApplicationOpened.otherUserId) && Intrinsics3.areEqual(this.messageId, trackApplicationOpened.messageId) && Intrinsics3.areEqual(this.numLauncherApplications, trackApplicationOpened.numLauncherApplications) && Intrinsics3.areEqual(this.distributor, trackApplicationOpened.distributor) && Intrinsics3.areEqual(this.listSort, trackApplicationOpened.listSort) && Intrinsics3.areEqual(this.listIndex, trackApplicationOpened.listIndex);
+        return m.areEqual(this.type, trackApplicationOpened.type) && m.areEqual(this.source, trackApplicationOpened.source) && m.areEqual(this.applicationId, trackApplicationOpened.applicationId) && m.areEqual(this.applicationName, trackApplicationOpened.applicationName) && m.areEqual(this.partyId, trackApplicationOpened.partyId) && m.areEqual(this.otherUserId, trackApplicationOpened.otherUserId) && m.areEqual(this.messageId, trackApplicationOpened.messageId) && m.areEqual(this.numLauncherApplications, trackApplicationOpened.numLauncherApplications) && m.areEqual(this.distributor, trackApplicationOpened.distributor) && m.areEqual(this.listSort, trackApplicationOpened.listSort) && m.areEqual(this.listIndex, trackApplicationOpened.listIndex);
     }
 
     public int hashCode() {
@@ -75,7 +75,7 @@ public final /* data */ class TrackApplicationOpened implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackApplicationOpened(type=");
+        StringBuilder sbU = a.U("TrackApplicationOpened(type=");
         sbU.append(this.type);
         sbU.append(", source=");
         sbU.append(this.source);
@@ -96,6 +96,6 @@ public final /* data */ class TrackApplicationOpened implements AnalyticsSchema,
         sbU.append(", listSort=");
         sbU.append(this.listSort);
         sbU.append(", listIndex=");
-        return outline.G(sbU, this.listIndex, ")");
+        return a.G(sbU, this.listIndex, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkingSystemMetrics.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkingSystemMetrics implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackNetworkingSystemMetrics implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long applicationId = null;
     private final Long peerId = null;
@@ -56,7 +56,7 @@ public final /* data */ class TrackNetworkingSystemMetrics implements AnalyticsS
             return false;
         }
         TrackNetworkingSystemMetrics trackNetworkingSystemMetrics = (TrackNetworkingSystemMetrics) other;
-        return Intrinsics3.areEqual(this.applicationId, trackNetworkingSystemMetrics.applicationId) && Intrinsics3.areEqual(this.peerId, trackNetworkingSystemMetrics.peerId) && Intrinsics3.areEqual(this.intervalNs, trackNetworkingSystemMetrics.intervalNs) && Intrinsics3.areEqual(this.messagesSent, trackNetworkingSystemMetrics.messagesSent) && Intrinsics3.areEqual(this.messagesDropped, trackNetworkingSystemMetrics.messagesDropped) && Intrinsics3.areEqual(this.messagesReceived, trackNetworkingSystemMetrics.messagesReceived) && Intrinsics3.areEqual(this.dataReceivedBytesAvg, trackNetworkingSystemMetrics.dataReceivedBytesAvg) && Intrinsics3.areEqual(this.dataReceivedBytesMax, trackNetworkingSystemMetrics.dataReceivedBytesMax) && Intrinsics3.areEqual(this.dataReceivedBytesP95, trackNetworkingSystemMetrics.dataReceivedBytesP95) && Intrinsics3.areEqual(this.dataSentBytesAvg, trackNetworkingSystemMetrics.dataSentBytesAvg) && Intrinsics3.areEqual(this.dataSentBytesMax, trackNetworkingSystemMetrics.dataSentBytesMax) && Intrinsics3.areEqual(this.dataSentBytesP95, trackNetworkingSystemMetrics.dataSentBytesP95) && Intrinsics3.areEqual(this.dataSentPerPollAvg, trackNetworkingSystemMetrics.dataSentPerPollAvg) && Intrinsics3.areEqual(this.dataSentPerPollMax, trackNetworkingSystemMetrics.dataSentPerPollMax) && Intrinsics3.areEqual(this.dataSentPerPollP95, trackNetworkingSystemMetrics.dataSentPerPollP95) && Intrinsics3.areEqual(this.dataReceivedPerPollAvg, trackNetworkingSystemMetrics.dataReceivedPerPollAvg) && Intrinsics3.areEqual(this.dataReceivedPerPollMax, trackNetworkingSystemMetrics.dataReceivedPerPollMax) && Intrinsics3.areEqual(this.dataReceivedPerPollP95, trackNetworkingSystemMetrics.dataReceivedPerPollP95) && Intrinsics3.areEqual(this.pingsSent, trackNetworkingSystemMetrics.pingsSent) && Intrinsics3.areEqual(this.pongsReceived, trackNetworkingSystemMetrics.pongsReceived) && Intrinsics3.areEqual(this.dataSent, trackNetworkingSystemMetrics.dataSent) && Intrinsics3.areEqual(this.dataReceived, trackNetworkingSystemMetrics.dataReceived) && Intrinsics3.areEqual(this.routeChanges, trackNetworkingSystemMetrics.routeChanges) && Intrinsics3.areEqual(this.pingRttAvg, trackNetworkingSystemMetrics.pingRttAvg) && Intrinsics3.areEqual(this.pingRttMax, trackNetworkingSystemMetrics.pingRttMax) && Intrinsics3.areEqual(this.pingRttP95, trackNetworkingSystemMetrics.pingRttP95) && Intrinsics3.areEqual(this.pingRttStddev, trackNetworkingSystemMetrics.pingRttStddev) && Intrinsics3.areEqual(this.pollCalls, trackNetworkingSystemMetrics.pollCalls) && Intrinsics3.areEqual(this.flushCalls, trackNetworkingSystemMetrics.flushCalls) && Intrinsics3.areEqual(this.peerCount, trackNetworkingSystemMetrics.peerCount);
+        return m.areEqual(this.applicationId, trackNetworkingSystemMetrics.applicationId) && m.areEqual(this.peerId, trackNetworkingSystemMetrics.peerId) && m.areEqual(this.intervalNs, trackNetworkingSystemMetrics.intervalNs) && m.areEqual(this.messagesSent, trackNetworkingSystemMetrics.messagesSent) && m.areEqual(this.messagesDropped, trackNetworkingSystemMetrics.messagesDropped) && m.areEqual(this.messagesReceived, trackNetworkingSystemMetrics.messagesReceived) && m.areEqual(this.dataReceivedBytesAvg, trackNetworkingSystemMetrics.dataReceivedBytesAvg) && m.areEqual(this.dataReceivedBytesMax, trackNetworkingSystemMetrics.dataReceivedBytesMax) && m.areEqual(this.dataReceivedBytesP95, trackNetworkingSystemMetrics.dataReceivedBytesP95) && m.areEqual(this.dataSentBytesAvg, trackNetworkingSystemMetrics.dataSentBytesAvg) && m.areEqual(this.dataSentBytesMax, trackNetworkingSystemMetrics.dataSentBytesMax) && m.areEqual(this.dataSentBytesP95, trackNetworkingSystemMetrics.dataSentBytesP95) && m.areEqual(this.dataSentPerPollAvg, trackNetworkingSystemMetrics.dataSentPerPollAvg) && m.areEqual(this.dataSentPerPollMax, trackNetworkingSystemMetrics.dataSentPerPollMax) && m.areEqual(this.dataSentPerPollP95, trackNetworkingSystemMetrics.dataSentPerPollP95) && m.areEqual(this.dataReceivedPerPollAvg, trackNetworkingSystemMetrics.dataReceivedPerPollAvg) && m.areEqual(this.dataReceivedPerPollMax, trackNetworkingSystemMetrics.dataReceivedPerPollMax) && m.areEqual(this.dataReceivedPerPollP95, trackNetworkingSystemMetrics.dataReceivedPerPollP95) && m.areEqual(this.pingsSent, trackNetworkingSystemMetrics.pingsSent) && m.areEqual(this.pongsReceived, trackNetworkingSystemMetrics.pongsReceived) && m.areEqual(this.dataSent, trackNetworkingSystemMetrics.dataSent) && m.areEqual(this.dataReceived, trackNetworkingSystemMetrics.dataReceived) && m.areEqual(this.routeChanges, trackNetworkingSystemMetrics.routeChanges) && m.areEqual(this.pingRttAvg, trackNetworkingSystemMetrics.pingRttAvg) && m.areEqual(this.pingRttMax, trackNetworkingSystemMetrics.pingRttMax) && m.areEqual(this.pingRttP95, trackNetworkingSystemMetrics.pingRttP95) && m.areEqual(this.pingRttStddev, trackNetworkingSystemMetrics.pingRttStddev) && m.areEqual(this.pollCalls, trackNetworkingSystemMetrics.pollCalls) && m.areEqual(this.flushCalls, trackNetworkingSystemMetrics.flushCalls) && m.areEqual(this.peerCount, trackNetworkingSystemMetrics.peerCount);
     }
 
     public int hashCode() {
@@ -123,7 +123,7 @@ public final /* data */ class TrackNetworkingSystemMetrics implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkingSystemMetrics(applicationId=");
+        StringBuilder sbU = a.U("TrackNetworkingSystemMetrics(applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", peerId=");
         sbU.append(this.peerId);
@@ -182,6 +182,6 @@ public final /* data */ class TrackNetworkingSystemMetrics implements AnalyticsS
         sbU.append(", flushCalls=");
         sbU.append(this.flushCalls);
         sbU.append(", peerCount=");
-        return outline.G(sbU, this.peerCount, ")");
+        return a.G(sbU, this.peerCount, ")");
     }
 }

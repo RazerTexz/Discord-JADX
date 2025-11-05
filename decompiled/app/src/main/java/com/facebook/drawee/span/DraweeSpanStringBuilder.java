@@ -7,9 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
 import android.text.SpannableStringBuilder;
 import android.view.View;
-import b.f.g.b.DraweeEventTracker;
-import b.f.g.c.BaseControllerListener;
-import b.f.g.i.DraweeSpan;
+import b.f.g.b.c;
 import com.facebook.drawee.controller.AbstractDraweeController;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.interfaces.DraweeHierarchy;
@@ -23,7 +21,7 @@ import java.util.Set;
 /* loaded from: classes.dex */
 public class DraweeSpanStringBuilder extends SpannableStringBuilder {
     public static final /* synthetic */ int j = 0;
-    public final Set<DraweeSpan> k = new HashSet();
+    public final Set<b.f.g.i.a> k = new HashSet();
     public final b l = new b(null);
     public View m;
 
@@ -64,20 +62,20 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
         }
     }
 
-    public class c extends BaseControllerListener<ImageInfo> {
-        public final DraweeSpan a;
+    public class c extends b.f.g.c.c<ImageInfo> {
+        public final b.f.g.i.a a;
 
         /* renamed from: b, reason: collision with root package name */
         public final boolean f2891b;
         public final int c;
 
-        public c(DraweeSpan draweeSpan, boolean z2, int i) {
-            this.a = draweeSpan;
+        public c(b.f.g.i.a aVar, boolean z2, int i) {
+            this.a = aVar;
             this.f2891b = z2;
             this.c = i;
         }
 
-        @Override // b.f.g.c.BaseControllerListener, com.facebook.drawee.controller.ControllerListener
+        @Override // b.f.g.c.c, com.facebook.drawee.controller.ControllerListener
         public void onFinalImageSet(String str, Object obj, Animatable animatable) {
             ImageInfo imageInfo = (ImageInfo) obj;
             if (!this.f2891b || imageInfo == null || this.a.p.d() == null) {
@@ -113,10 +111,10 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
             this.m = null;
         }
         this.m = view;
-        Iterator<DraweeSpan> it = this.k.iterator();
+        Iterator<b.f.g.i.a> it = this.k.iterator();
         while (it.hasNext()) {
             DraweeHolder draweeHolder = it.next().p;
-            draweeHolder.f.a(DraweeEventTracker.a.ON_HOLDER_ATTACH);
+            draweeHolder.f.a(c.a.ON_HOLDER_ATTACH);
             draweeHolder.f2893b = true;
             draweeHolder.b();
         }
@@ -126,10 +124,10 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
         if (view == this.m) {
             this.m = null;
         }
-        Iterator<DraweeSpan> it = this.k.iterator();
+        Iterator<b.f.g.i.a> it = this.k.iterator();
         while (it.hasNext()) {
             DraweeHolder draweeHolder = it.next().p;
-            draweeHolder.f.a(DraweeEventTracker.a.ON_HOLDER_DETACH);
+            draweeHolder.f.a(c.a.ON_HOLDER_DETACH);
             draweeHolder.f2893b = false;
             draweeHolder.b();
         }
@@ -148,12 +146,12 @@ public class DraweeSpanStringBuilder extends SpannableStringBuilder {
             }
             drawableD.setCallback(this.l);
         }
-        DraweeSpan draweeSpan = new DraweeSpan(draweeHolder, i5);
+        b.f.g.i.a aVar = new b.f.g.i.a(draweeHolder, i5);
         DraweeController draweeController2 = draweeHolder.e;
         if (draweeController2 instanceof AbstractDraweeController) {
-            ((AbstractDraweeController) draweeController2).f(new c(draweeSpan, z2, i4));
+            ((AbstractDraweeController) draweeController2).f(new c(aVar, z2, i4));
         }
-        this.k.add(draweeSpan);
-        setSpan(draweeSpan, i, i2 + 1, 33);
+        this.k.add(aVar);
+        setSpan(aVar, i, i2 + 1, 33);
     }
 }

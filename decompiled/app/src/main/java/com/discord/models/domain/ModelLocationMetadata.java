@@ -1,7 +1,7 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: ModelLocationMetadata.kt */
 /* loaded from: classes.dex */
@@ -46,7 +46,7 @@ public final /* data */ class ModelLocationMetadata {
             return false;
         }
         ModelLocationMetadata modelLocationMetadata = (ModelLocationMetadata) other;
-        return this.consentRequired == modelLocationMetadata.consentRequired && Intrinsics3.areEqual(this.countryCode, modelLocationMetadata.countryCode);
+        return this.consentRequired == modelLocationMetadata.consentRequired && m.areEqual(this.countryCode, modelLocationMetadata.countryCode);
     }
 
     public final boolean getConsentRequired() {
@@ -73,9 +73,9 @@ public final /* data */ class ModelLocationMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelLocationMetadata(consentRequired=");
+        StringBuilder sbU = a.U("ModelLocationMetadata(consentRequired=");
         sbU.append(this.consentRequired);
         sbU.append(", countryCode=");
-        return outline.J(sbU, this.countryCode, ")");
+        return a.J(sbU, this.countryCode, ")");
     }
 }

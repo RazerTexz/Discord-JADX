@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackInfraApiHttpP95latency.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInfraApiHttpP95latency implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackInfraApiHttpP95latency implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Float p95Latency = null;
     private final transient String analyticsSchemaTypeName = "infra_api_http_p95latency";
@@ -21,7 +21,7 @@ public final /* data */ class TrackInfraApiHttpP95latency implements AnalyticsSc
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackInfraApiHttpP95latency) && Intrinsics3.areEqual(this.p95Latency, ((TrackInfraApiHttpP95latency) other).p95Latency);
+            return (other instanceof TrackInfraApiHttpP95latency) && m.areEqual(this.p95Latency, ((TrackInfraApiHttpP95latency) other).p95Latency);
         }
         return true;
     }
@@ -35,7 +35,7 @@ public final /* data */ class TrackInfraApiHttpP95latency implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackInfraApiHttpP95latency(p95Latency=");
+        StringBuilder sbU = a.U("TrackInfraApiHttpP95latency(p95Latency=");
         sbU.append(this.p95Latency);
         sbU.append(")");
         return sbU.toString();

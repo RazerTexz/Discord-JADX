@@ -1,10 +1,10 @@
 package com.discord.widgets.chat.input.autocomplete;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.emoji.Emoji;
-import com.discord.widgets.chat.input.MentionUtils;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import com.discord.widgets.chat.input.MentionUtilsKt;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,15 +20,15 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public EmojiAutocompletable(Emoji emoji, boolean z2) {
         super(null);
-        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        m.checkNotNullParameter(emoji, "emoji");
         this.emoji = emoji;
         this.animationsEnabled = z2;
         List<String> names = emoji.getNames();
-        Intrinsics3.checkNotNullExpressionValue(names, "emoji.names");
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(names, 10));
+        m.checkNotNullExpressionValue(names, "emoji.names");
+        ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(names, 10));
         Iterator<T> it = names.iterator();
         while (it.hasNext()) {
-            arrayList.add(MentionUtils.EMOJIS_AND_STICKERS_CHAR + ((String) it.next()) + MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+            arrayList.add(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + ((String) it.next()) + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
         }
         this.textMatchers = arrayList;
     }
@@ -54,7 +54,7 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
     }
 
     public final EmojiAutocompletable copy(Emoji emoji, boolean animationsEnabled) {
-        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        m.checkNotNullParameter(emoji, "emoji");
         return new EmojiAutocompletable(emoji, animationsEnabled);
     }
 
@@ -66,7 +66,7 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
             return false;
         }
         EmojiAutocompletable emojiAutocompletable = (EmojiAutocompletable) other;
-        return Intrinsics3.areEqual(this.emoji, emojiAutocompletable.emoji) && this.animationsEnabled == emojiAutocompletable.animationsEnabled;
+        return m.areEqual(this.emoji, emojiAutocompletable.emoji) && this.animationsEnabled == emojiAutocompletable.animationsEnabled;
     }
 
     public final boolean getAnimationsEnabled() {
@@ -93,7 +93,7 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable
     public String getInputReplacement() {
         String messageContentReplacement = this.emoji.getMessageContentReplacement();
-        Intrinsics3.checkNotNullExpressionValue(messageContentReplacement, "emoji.messageContentReplacement");
+        m.checkNotNullExpressionValue(messageContentReplacement, "emoji.messageContentReplacement");
         return messageContentReplacement;
     }
 
@@ -131,9 +131,9 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmojiAutocompletable(emoji=");
+        StringBuilder sbU = a.U("EmojiAutocompletable(emoji=");
         sbU.append(this.emoji);
         sbU.append(", animationsEnabled=");
-        return outline.O(sbU, this.animationsEnabled, ")");
+        return a.O(sbU, this.animationsEnabled, ")");
     }
 }

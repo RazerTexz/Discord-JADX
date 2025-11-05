@@ -2,7 +2,7 @@ package com.discord.widgets.forums;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.stores.StoreChannelsSelected;
@@ -13,12 +13,12 @@ import com.discord.stores.StoreStream;
 import com.discord.stores.StoreThreadsActive;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.f0._Sequences2;
-import d0.t.Maps6;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.f0.q;
+import d0.t.h0;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
@@ -51,9 +51,9 @@ public final class ForumPostReadStateManager {
         private final Set<Long> threadSyncedGuilds;
 
         public ManagerInitializeState(Map<Long, StoreMessageAck.Ack> map, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Set<Long> set) {
-            Intrinsics3.checkNotNullParameter(map, "messageAcks");
-            Intrinsics3.checkNotNullParameter(resolvedSelectedChannel, "resolvedSelectedChannel");
-            Intrinsics3.checkNotNullParameter(set, "threadSyncedGuilds");
+            m.checkNotNullParameter(map, "messageAcks");
+            m.checkNotNullParameter(resolvedSelectedChannel, "resolvedSelectedChannel");
+            m.checkNotNullParameter(set, "threadSyncedGuilds");
             this.messageAcks = map;
             this.resolvedSelectedChannel = resolvedSelectedChannel;
             this.threadSyncedGuilds = set;
@@ -87,9 +87,9 @@ public final class ForumPostReadStateManager {
         }
 
         public final ManagerInitializeState copy(Map<Long, StoreMessageAck.Ack> messageAcks, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Set<Long> threadSyncedGuilds) {
-            Intrinsics3.checkNotNullParameter(messageAcks, "messageAcks");
-            Intrinsics3.checkNotNullParameter(resolvedSelectedChannel, "resolvedSelectedChannel");
-            Intrinsics3.checkNotNullParameter(threadSyncedGuilds, "threadSyncedGuilds");
+            m.checkNotNullParameter(messageAcks, "messageAcks");
+            m.checkNotNullParameter(resolvedSelectedChannel, "resolvedSelectedChannel");
+            m.checkNotNullParameter(threadSyncedGuilds, "threadSyncedGuilds");
             return new ManagerInitializeState(messageAcks, resolvedSelectedChannel, threadSyncedGuilds);
         }
 
@@ -101,7 +101,7 @@ public final class ForumPostReadStateManager {
                 return false;
             }
             ManagerInitializeState managerInitializeState = (ManagerInitializeState) other;
-            return Intrinsics3.areEqual(this.messageAcks, managerInitializeState.messageAcks) && Intrinsics3.areEqual(this.resolvedSelectedChannel, managerInitializeState.resolvedSelectedChannel) && Intrinsics3.areEqual(this.threadSyncedGuilds, managerInitializeState.threadSyncedGuilds);
+            return m.areEqual(this.messageAcks, managerInitializeState.messageAcks) && m.areEqual(this.resolvedSelectedChannel, managerInitializeState.resolvedSelectedChannel) && m.areEqual(this.threadSyncedGuilds, managerInitializeState.threadSyncedGuilds);
         }
 
         public final Map<Long, StoreMessageAck.Ack> getMessageAcks() {
@@ -126,12 +126,12 @@ public final class ForumPostReadStateManager {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ManagerInitializeState(messageAcks=");
+            StringBuilder sbU = a.U("ManagerInitializeState(messageAcks=");
             sbU.append(this.messageAcks);
             sbU.append(", resolvedSelectedChannel=");
             sbU.append(this.resolvedSelectedChannel);
             sbU.append(", threadSyncedGuilds=");
-            return outline.N(sbU, this.threadSyncedGuilds, ")");
+            return a.N(sbU, this.threadSyncedGuilds, ")");
         }
     }
 
@@ -147,16 +147,16 @@ public final class ForumPostReadStateManager {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final ManagerInitializeState call2(Map<Long, StoreMessageAck.Ack> map, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Set<Long> set) {
-            Intrinsics3.checkNotNullExpressionValue(map, "messageAcks");
-            Intrinsics3.checkNotNullExpressionValue(resolvedSelectedChannel, "resolvedSelectedChannel");
-            Intrinsics3.checkNotNullExpressionValue(set, "threadSyncedGuilds");
+            m.checkNotNullExpressionValue(map, "messageAcks");
+            m.checkNotNullExpressionValue(resolvedSelectedChannel, "resolvedSelectedChannel");
+            m.checkNotNullExpressionValue(set, "threadSyncedGuilds");
             return new ManagerInitializeState(map, resolvedSelectedChannel, set);
         }
     }
 
     /* compiled from: ForumPostReadStateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<Subscription, Unit> {
         public AnonymousClass2(ForumPostReadStateManager forumPostReadStateManager) {
             super(1, forumPostReadStateManager, ForumPostReadStateManager.class, "handleSubscription", "handleSubscription(Lrx/Subscription;)V", 0);
         }
@@ -169,14 +169,14 @@ public final class ForumPostReadStateManager {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "p1");
+            m.checkNotNullParameter(subscription, "p1");
             ForumPostReadStateManager.access$handleSubscription((ForumPostReadStateManager) this.receiver, subscription);
         }
     }
 
     /* compiled from: ForumPostReadStateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<ManagerInitializeState, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<ManagerInitializeState, Unit> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
         public AnonymousClass3() {
@@ -222,13 +222,13 @@ public final class ForumPostReadStateManager {
 
         /* compiled from: ForumPostReadStateManager.kt */
         /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$observeForumPostReadStates$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02881 extends Lambda implements Function1<Long, ForumPostReadState> {
+        public static final class C04081 extends o implements Function1<Long, ForumPostReadState> {
             public final /* synthetic */ StoreMessageAck.Ack $forumChannelAck;
             public final /* synthetic */ Set $persistedThreadIds;
             public final /* synthetic */ Set $unreadChannelIds;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C02881(StoreMessageAck.Ack ack, Set set, Set set2) {
+            public C04081(StoreMessageAck.Ack ack, Set set, Set set2) {
                 super(1);
                 this.$forumChannelAck = ack;
                 this.$persistedThreadIds = set;
@@ -265,7 +265,7 @@ public final class ForumPostReadStateManager {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, ForumPostReadState> call2(Map<Long, Channel> map, Set<Long> set, Set<Long> set2, StoreMessageAck.Ack ack) {
-            Sequence map2 = _Sequences2.map(_Collections.asSequence(map.keySet()), new C02881(ack, set, set2));
+            Sequence map2 = q.map(u.asSequence(map.keySet()), new C04081(ack, set, set2));
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             for (Object obj : map2) {
                 linkedHashMap.put(Long.valueOf(((ForumPostReadState) obj).getChannelId()), obj);
@@ -276,9 +276,9 @@ public final class ForumPostReadStateManager {
 
     static {
         BehaviorSubject<StoreMessageAck.Ack> behaviorSubjectK0 = BehaviorSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectK0, "BehaviorSubject.create()");
+        m.checkNotNullExpressionValue(behaviorSubjectK0, "BehaviorSubject.create()");
         forumChannelAckBeforeChannelSelect = behaviorSubjectK0;
-        internalMessageAcks = Maps6.emptyMap();
+        internalMessageAcks = h0.emptyMap();
         internalThreadSyncedGuilds = new LinkedHashSet();
     }
 
@@ -356,24 +356,24 @@ public final class ForumPostReadStateManager {
     }
 
     public final void initialize(StoreMessageAck storeMessageAck, StoreChannelsSelected storeChannelsSelected, StoreThreadsActive storeThreadsActive) {
-        Intrinsics3.checkNotNullParameter(storeMessageAck, "storeMessageAck");
-        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        Intrinsics3.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
+        m.checkNotNullParameter(storeMessageAck, "storeMessageAck");
+        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        m.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
         Subscription subscription = forumChannelAckSubscription;
         if (subscription != null) {
             subscription.unsubscribe();
         }
         Observable observableI = Observable.i(storeMessageAck.observeAll(), storeChannelsSelected.observeResolvedSelectedChannel(), storeThreadsActive.observeThreadSyncedGuilds(), AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…threadSyncedGuilds)\n    }");
+        m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…threadSyncedGuilds)\n    }");
         ObservableExtensionsKt.appSubscribe$default(observableI, ForumPostReadStateManager.class, (Context) null, new AnonymousClass2(this), (Function1) null, (Function0) null, (Function0) null, AnonymousClass3.INSTANCE, 58, (Object) null);
     }
 
     public final Observable<Map<Long, ForumPostReadState>> observeForumPostReadStates(long guildId, long channelId, StoreReadStates storeReadStates, StoreThreadsActive storeThreadsActive, StoreForumPostReadStates storeForumPostReadStates) {
-        Intrinsics3.checkNotNullParameter(storeReadStates, "storeReadStates");
-        Intrinsics3.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
-        Intrinsics3.checkNotNullParameter(storeForumPostReadStates, "storeForumPostReadStates");
+        m.checkNotNullParameter(storeReadStates, "storeReadStates");
+        m.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
+        m.checkNotNullParameter(storeForumPostReadStates, "storeForumPostReadStates");
         Observable<Map<Long, ForumPostReadState>> observableH = Observable.h(storeThreadsActive.observeActiveThreadsForChannel(guildId, Long.valueOf(channelId)), storeForumPostReadStates.observeThreadIdsWithPersistedReadStates(), storeReadStates.getUnreadChannelIds(), observeForumChannelAckBeforeChannelSelect(), AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableH, "Observable.combineLatest…By { it.channelId }\n    }");
+        m.checkNotNullExpressionValue(observableH, "Observable.combineLatest…By { it.channelId }\n    }");
         return observableH;
     }
 }

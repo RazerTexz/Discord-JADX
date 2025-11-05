@@ -6,8 +6,8 @@ import android.text.format.DateUtils;
 import android.view.View;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.sticker.Sticker;
 import com.discord.app.AppLog;
@@ -16,11 +16,11 @@ import com.discord.stores.StoreStream;
 import com.discord.utilities.SnowflakeUtils;
 import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.utilities.logging.Logger;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +35,7 @@ public final class AuditLogUtils {
     public static final AuditLogUtils INSTANCE = new AuditLogUtils();
 
     /* renamed from: ALL_ACTION_TYPES$delegate, reason: from kotlin metadata */
-    private static final Lazy ALL_ACTION_TYPES = LazyJVM.lazy(AuditLogUtils2.INSTANCE);
+    private static final Lazy ALL_ACTION_TYPES = g.lazy(AuditLogUtils$ALL_ACTION_TYPES$2.INSTANCE);
 
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -119,8 +119,8 @@ public final class AuditLogUtils {
                         if (it.hasNext()) {
                             Object next = it.next();
                             ModelAuditLogEntry.Change change2 = (ModelAuditLogEntry.Change) next;
-                            Intrinsics3.checkNotNullExpressionValue(change2, "it");
-                            if (Intrinsics3.areEqual(change2.getKey(), "type")) {
+                            m.checkNotNullExpressionValue(change2, "it");
+                            if (m.areEqual(change2.getKey(), "type")) {
                                 change = next;
                             }
                         }
@@ -148,8 +148,8 @@ public final class AuditLogUtils {
                                 if (it2.hasNext()) {
                                     Object next2 = it2.next();
                                     ModelAuditLogEntry.Change change3 = (ModelAuditLogEntry.Change) next2;
-                                    Intrinsics3.checkNotNullExpressionValue(change3, "it");
-                                    if (Intrinsics3.areEqual(change3.getKey(), "type")) {
+                                    m.checkNotNullExpressionValue(change3, "it");
+                                    if (m.areEqual(change3.getKey(), "type")) {
                                         change = next2;
                                     }
                                 }
@@ -247,7 +247,7 @@ public final class AuditLogUtils {
                                                                                         return R.string.guild_settings_audit_log_scheduled_event_delete;
                                                                                     default:
                                                                                         AppLog appLog = AppLog.g;
-                                                                                        StringBuilder sbU = outline.U("Unknown audit log action type: ");
+                                                                                        StringBuilder sbU = a.U("Unknown audit log action type: ");
                                                                                         sbU.append(auditLogEntry.getActionTypeId());
                                                                                         Logger.e$default(appLog, sbU.toString(), null, null, 6, null);
                                                                                         return R.string.guild_settings_audit_log_unknown_action;
@@ -285,7 +285,7 @@ public final class AuditLogUtils {
             if (targetType != null) {
                 int iOrdinal = targetType.ordinal();
                 if (iOrdinal == 3) {
-                    StringBuilder sbU = outline.U(channelPrefix);
+                    StringBuilder sbU = a.U(channelPrefix);
                     sbU.append(getTargetValue(auditLogEntry, ModelAuditLogEntry.CHANGE_KEY_NAME));
                     targetValue = sbU.toString();
                 } else if (iOrdinal == 10) {
@@ -327,8 +327,8 @@ public final class AuditLogUtils {
             }
             next = it.next();
             ModelAuditLogEntry.Change change = (ModelAuditLogEntry.Change) next;
-            Intrinsics3.checkNotNullExpressionValue(change, "it");
-            if (Intrinsics3.areEqual(change.getKey(), str)) {
+            m.checkNotNullExpressionValue(change, "it");
+            if (m.areEqual(change.getKey(), str)) {
                 break;
             }
         }
@@ -344,9 +344,9 @@ public final class AuditLogUtils {
         long jCurrentTimeMillis = clock.currentTimeMillis() - timestamp;
         CharSequence relativeTimeSpanString = DateUtils.getRelativeTimeSpanString(timestamp, clock.currentTimeMillis(), 86400000L, 131092);
         if (TimeUnit.MILLISECONDS.toDays(jCurrentTimeMillis) < 7) {
-            return FormatUtils.h(context, R.string.guild_settings_audit_log_time_at_android, new Object[]{relativeTimeSpanString, DateUtils.formatDateTime(context, timestamp, 1)}, null, 4);
+            return b.h(context, R.string.guild_settings_audit_log_time_at_android, new Object[]{relativeTimeSpanString, DateUtils.formatDateTime(context, timestamp, 1)}, null, 4);
         }
-        Intrinsics3.checkNotNullExpressionValue(relativeTimeSpanString, "timeString");
+        m.checkNotNullExpressionValue(relativeTimeSpanString, "timeString");
         return relativeTimeSpanString;
     }
 
@@ -517,25 +517,25 @@ public final class AuditLogUtils {
         CharSequence charSequenceValueOf4;
         String strValueOf;
         Object next;
-        Intrinsics3.checkNotNullParameter(auditLogEntry, "auditLogEntry");
-        Intrinsics3.checkNotNullParameter(username, "username");
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(targets, "targets");
-        Intrinsics3.checkNotNullParameter(prefix, "prefix");
+        m.checkNotNullParameter(auditLogEntry, "auditLogEntry");
+        m.checkNotNullParameter(username, "username");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(targets, "targets");
+        m.checkNotNullParameter(prefix, "prefix");
         int actionTypeId = auditLogEntry.getActionTypeId();
         if (actionTypeId == 21) {
             int entryTitle = getEntryTitle(auditLogEntry);
             Object[] objArr = new Object[2];
             objArr[0] = username;
             Resources resources = context.getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "context.resources");
+            m.checkNotNullExpressionValue(resources, "context.resources");
             ModelAuditLogEntry.Options options = auditLogEntry.getOptions();
             int membersRemoved = options != null ? options.getMembersRemoved() : 0;
             Object[] objArr2 = new Object[1];
             ModelAuditLogEntry.Options options2 = auditLogEntry.getOptions();
             objArr2[0] = Integer.valueOf(options2 != null ? options2.getMembersRemoved() : 0);
-            objArr[1] = StringResourceUtils.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_member_prune_count, membersRemoved, objArr2);
-            return FormatUtils.h(context, entryTitle, objArr, null, 4);
+            objArr[1] = StringResourceUtilsKt.getQuantityString(resources, context, R.plurals.guild_settings_audit_log_member_prune_count, membersRemoved, objArr2);
+            return b.h(context, entryTitle, objArr, null, 4);
         }
         if (actionTypeId == 42) {
             int entryTitle2 = getEntryTitle(auditLogEntry);
@@ -544,15 +544,15 @@ public final class AuditLogUtils {
             List<ModelAuditLogEntry.Change> changes = auditLogEntry.getChanges();
             if (changes != null) {
                 for (ModelAuditLogEntry.Change change : changes) {
-                    Intrinsics3.checkNotNullExpressionValue(change, "it");
-                    if (Intrinsics3.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_CODE)) {
+                    m.checkNotNullExpressionValue(change, "it");
+                    if (m.areEqual(change.getKey(), ModelAuditLogEntry.CHANGE_KEY_CODE)) {
                         oldValue = change != null ? change.getOldValue() : null;
                     }
                 }
                 throw new NoSuchElementException("Collection contains no element matching the predicate.");
             }
             objArr3[1] = String.valueOf(oldValue);
-            return FormatUtils.h(context, entryTitle2, objArr3, null, 4);
+            return b.h(context, entryTitle2, objArr3, null, 4);
         }
         if (actionTypeId == 26) {
             ModelAuditLogEntry.Options options3 = auditLogEntry.getOptions();
@@ -565,13 +565,13 @@ public final class AuditLogUtils {
             Object[] objArr5 = new Object[1];
             ModelAuditLogEntry.Options options5 = auditLogEntry.getOptions();
             objArr5[0] = Integer.valueOf(options5 != null ? options5.getCount() : 0);
-            objArr4[1] = StringResourceUtils.getI18nPluralString(context, R.plurals.guild_settings_audit_log_member_move_count, count, objArr5);
+            objArr4[1] = StringResourceUtilsKt.getI18nPluralString(context, R.plurals.guild_settings_audit_log_member_move_count, count, objArr5);
             Map<Long, CharSequence> map = targets.get(ModelAuditLogEntry.TargetType.CHANNEL);
             if (map == null || (charSequenceValueOf = map.get(lValueOf)) == null) {
                 charSequenceValueOf = lValueOf != null ? String.valueOf(lValueOf.longValue()) : null;
             }
             objArr4[2] = charSequenceValueOf;
-            return FormatUtils.h(context, entryTitle3, objArr4, null, 4);
+            return b.h(context, entryTitle3, objArr4, null, 4);
         }
         if (actionTypeId == 27) {
             int entryTitle4 = getEntryTitle(auditLogEntry);
@@ -582,8 +582,8 @@ public final class AuditLogUtils {
             Object[] objArr7 = new Object[1];
             ModelAuditLogEntry.Options options7 = auditLogEntry.getOptions();
             objArr7[0] = Integer.valueOf(options7 != null ? options7.getCount() : 0);
-            objArr6[1] = StringResourceUtils.getI18nPluralString(context, R.plurals.guild_settings_audit_log_member_disconnect_count, count2, objArr7);
-            return FormatUtils.h(context, entryTitle4, objArr6, null, 4);
+            objArr6[1] = StringResourceUtilsKt.getI18nPluralString(context, R.plurals.guild_settings_audit_log_member_disconnect_count, count2, objArr7);
+            return b.h(context, entryTitle4, objArr6, null, 4);
         }
         switch (actionTypeId) {
             case 60:
@@ -595,15 +595,15 @@ public final class AuditLogUtils {
                 List<ModelAuditLogEntry.Change> changes2 = auditLogEntry.getChanges();
                 if (changes2 != null) {
                     for (ModelAuditLogEntry.Change change2 : changes2) {
-                        Intrinsics3.checkNotNullExpressionValue(change2, "it");
-                        if (Intrinsics3.areEqual(change2.getKey(), ModelAuditLogEntry.CHANGE_KEY_NAME)) {
+                        m.checkNotNullExpressionValue(change2, "it");
+                        if (m.areEqual(change2.getKey(), ModelAuditLogEntry.CHANGE_KEY_NAME)) {
                             value = change2 != null ? change2.getValue() : null;
                         }
                     }
                     throw new NoSuchElementException("Collection contains no element matching the predicate.");
                 }
                 objArr8[1] = String.valueOf(value);
-                return FormatUtils.h(context, entryTitle5, objArr8, null, 4);
+                return b.h(context, entryTitle5, objArr8, null, 4);
             default:
                 switch (actionTypeId) {
                     case 72:
@@ -617,14 +617,14 @@ public final class AuditLogUtils {
                         Object[] objArr10 = new Object[1];
                         ModelAuditLogEntry.Options options10 = auditLogEntry.getOptions();
                         objArr10[0] = Integer.valueOf(options10 != null ? options10.getCount() : 0);
-                        objArr9[1] = StringResourceUtils.getI18nPluralString(context, R.plurals.guild_settings_audit_log_message_delete_count, count3, objArr10);
+                        objArr9[1] = StringResourceUtilsKt.getI18nPluralString(context, R.plurals.guild_settings_audit_log_message_delete_count, count3, objArr10);
                         objArr9[2] = getTargetText(auditLogEntry, targets, prefix);
                         Map<Long, CharSequence> map2 = targets.get(ModelAuditLogEntry.TargetType.CHANNEL);
                         if (map2 == null || (charSequenceValueOf2 = map2.get(lValueOf2)) == null) {
                             charSequenceValueOf2 = lValueOf2 != null ? String.valueOf(lValueOf2.longValue()) : null;
                         }
                         objArr9[3] = charSequenceValueOf2;
-                        return FormatUtils.h(context, entryTitle6, objArr9, null, 4);
+                        return b.h(context, entryTitle6, objArr9, null, 4);
                     case 73:
                         int entryTitle7 = getEntryTitle(auditLogEntry);
                         Object[] objArr11 = new Object[3];
@@ -634,9 +634,9 @@ public final class AuditLogUtils {
                         Object[] objArr12 = new Object[1];
                         ModelAuditLogEntry.Options options12 = auditLogEntry.getOptions();
                         objArr12[0] = Integer.valueOf(options12 != null ? options12.getCount() : 0);
-                        objArr11[1] = StringResourceUtils.getI18nPluralString(context, R.plurals.guild_settings_audit_log_message_bulk_delete_count, count4, objArr12);
+                        objArr11[1] = StringResourceUtilsKt.getI18nPluralString(context, R.plurals.guild_settings_audit_log_message_bulk_delete_count, count4, objArr12);
                         objArr11[2] = getTargetText(auditLogEntry, targets, prefix);
-                        return FormatUtils.h(context, entryTitle7, objArr11, null, 4);
+                        return b.h(context, entryTitle7, objArr11, null, 4);
                     case 74:
                     case 75:
                         ModelAuditLogEntry.Options options13 = auditLogEntry.getOptions();
@@ -650,7 +650,7 @@ public final class AuditLogUtils {
                             charSequenceValueOf3 = lValueOf3 != null ? String.valueOf(lValueOf3.longValue()) : null;
                         }
                         objArr13[2] = charSequenceValueOf3;
-                        return FormatUtils.h(context, entryTitle8, objArr13, null, 4);
+                        return b.h(context, entryTitle8, objArr13, null, 4);
                     default:
                         switch (actionTypeId) {
                             case 83:
@@ -662,7 +662,7 @@ public final class AuditLogUtils {
                                 if (map4 == null || (charSequenceValueOf4 = map4.get(lValueOf4)) == null) {
                                     charSequenceValueOf4 = lValueOf4 != null ? String.valueOf(lValueOf4.longValue()) : null;
                                 }
-                                return auditLogEntry.getUserId() == 0 ? FormatUtils.h(context, getEntryTitle(auditLogEntry), new Object[]{charSequenceValueOf4}, null, 4) : FormatUtils.h(context, getEntryTitle(auditLogEntry), new Object[]{username, charSequenceValueOf4}, null, 4);
+                                return auditLogEntry.getUserId() == 0 ? b.h(context, getEntryTitle(auditLogEntry), new Object[]{charSequenceValueOf4}, null, 4) : b.h(context, getEntryTitle(auditLogEntry), new Object[]{username, charSequenceValueOf4}, null, 4);
                             default:
                                 switch (actionTypeId) {
                                     case 90:
@@ -680,8 +680,8 @@ public final class AuditLogUtils {
                                                     if (it.hasNext()) {
                                                         next = it.next();
                                                         ModelAuditLogEntry.Change change3 = (ModelAuditLogEntry.Change) next;
-                                                        Intrinsics3.checkNotNullExpressionValue(change3, "it");
-                                                        if (Intrinsics3.areEqual(change3.getKey(), ModelAuditLogEntry.CHANGE_KEY_NAME)) {
+                                                        m.checkNotNullExpressionValue(change3, "it");
+                                                        if (m.areEqual(change3.getKey(), ModelAuditLogEntry.CHANGE_KEY_NAME)) {
                                                         }
                                                     } else {
                                                         next = null;
@@ -693,9 +693,9 @@ public final class AuditLogUtils {
                                             }
                                         }
                                         objArr14[1] = strValueOf;
-                                        return FormatUtils.h(context, entryTitle9, objArr14, null, 4);
+                                        return b.h(context, entryTitle9, objArr14, null, 4);
                                     default:
-                                        return FormatUtils.h(context, getEntryTitle(auditLogEntry), new Object[]{username, getTargetText(auditLogEntry, targets, prefix)}, null, 4);
+                                        return b.h(context, getEntryTitle(auditLogEntry), new Object[]{username, getTargetText(auditLogEntry, targets, prefix)}, null, 4);
                                 }
                         }
                 }
@@ -704,9 +704,9 @@ public final class AuditLogUtils {
 
     @DrawableRes
     public final int getTargetTypeImage(View view, int actionTypeId) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         ModelAuditLogEntry.TargetType targetType = ModelAuditLogEntry.getTargetType(actionTypeId);
-        Intrinsics3.checkNotNullExpressionValue(targetType, "ModelAuditLogEntry.getTargetType(actionTypeId)");
+        m.checkNotNullExpressionValue(targetType, "ModelAuditLogEntry.getTargetType(actionTypeId)");
         if (actionTypeId == 72) {
             return DrawableCompat.getThemedDrawableRes(view, R.attr.ic_audit_message, 0);
         }
@@ -746,13 +746,13 @@ public final class AuditLogUtils {
     }
 
     public final long getTimestampStart(ModelAuditLogEntry modelAuditLogEntry) {
-        Intrinsics3.checkNotNullParameter(modelAuditLogEntry, "$this$getTimestampStart");
+        m.checkNotNullParameter(modelAuditLogEntry, "$this$getTimestampStart");
         return (modelAuditLogEntry.getId() >>> 22) + SnowflakeUtils.DISCORD_EPOCH;
     }
 
     public final CharSequence getTimestampString(ModelAuditLogEntry auditLogEntry, Context context) {
-        Intrinsics3.checkNotNullParameter(auditLogEntry, "auditLogEntry");
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(auditLogEntry, "auditLogEntry");
+        m.checkNotNullParameter(context, "context");
         if (auditLogEntry.getTimestampEnd() == null) {
             return getTimestampText(getTimestampStart(auditLogEntry), context);
         }
@@ -761,7 +761,7 @@ public final class AuditLogUtils {
         if (timestampEnd == null) {
             timestampEnd = 0L;
         }
-        Intrinsics3.checkNotNullExpressionValue(timestampEnd, "auditLogEntry.timestampEnd ?: 0L");
+        m.checkNotNullExpressionValue(timestampEnd, "auditLogEntry.timestampEnd ?: 0L");
         return timestampText + " - " + getTimestampText(timestampEnd.longValue(), context);
     }
 }

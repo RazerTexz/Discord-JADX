@@ -1,14 +1,14 @@
 package com.discord.gateway;
 
 import com.discord.gateway.GatewaySocket;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: GatewaySocket.kt */
 /* loaded from: classes.dex */
-public final class GatewaySocket$handleWebSocketMessage$incomingParser$1 extends Lambda implements Function1<String, Unit> {
+public final class GatewaySocket$handleWebSocketMessage$incomingParser$1 extends o implements Function1<String, Unit> {
     public final /* synthetic */ GatewaySocket this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -25,7 +25,7 @@ public final class GatewaySocket$handleWebSocketMessage$incomingParser$1 extends
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
-        Intrinsics3.checkNotNullParameter(str, "it");
+        m.checkNotNullParameter(str, "it");
         GatewaySocket.Companion.log$default(GatewaySocket.INSTANCE, GatewaySocket.access$getLogger$p(this.this$0), str, false, 2, null);
     }
 }

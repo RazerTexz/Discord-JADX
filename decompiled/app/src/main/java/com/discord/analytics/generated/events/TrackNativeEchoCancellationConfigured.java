@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNativeEchoCancellationConfigured.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNativeEchoCancellationConfigured implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackNativeEchoCancellationConfigured implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean builtinAecSupportedJava = null;
     private final Boolean builtinAecSupportedNative = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackNativeEchoCancellationConfigured implements A
             return false;
         }
         TrackNativeEchoCancellationConfigured trackNativeEchoCancellationConfigured = (TrackNativeEchoCancellationConfigured) other;
-        return Intrinsics3.areEqual(this.builtinAecSupportedJava, trackNativeEchoCancellationConfigured.builtinAecSupportedJava) && Intrinsics3.areEqual(this.builtinAecSupportedNative, trackNativeEchoCancellationConfigured.builtinAecSupportedNative) && Intrinsics3.areEqual(this.builtinAecRequested, trackNativeEchoCancellationConfigured.builtinAecRequested) && Intrinsics3.areEqual(this.builtinAecEnabled, trackNativeEchoCancellationConfigured.builtinAecEnabled) && Intrinsics3.areEqual(this.aecEnabledInSettings, trackNativeEchoCancellationConfigured.aecEnabledInSettings) && Intrinsics3.areEqual(this.aecEnabledInNativeConfig, trackNativeEchoCancellationConfigured.aecEnabledInNativeConfig) && Intrinsics3.areEqual(this.aecMobileMode, trackNativeEchoCancellationConfigured.aecMobileMode) && Intrinsics3.areEqual(this.aecEnabledByDefault, trackNativeEchoCancellationConfigured.aecEnabledByDefault) && Intrinsics3.areEqual(this.aecMobileModeByDefault, trackNativeEchoCancellationConfigured.aecMobileModeByDefault);
+        return m.areEqual(this.builtinAecSupportedJava, trackNativeEchoCancellationConfigured.builtinAecSupportedJava) && m.areEqual(this.builtinAecSupportedNative, trackNativeEchoCancellationConfigured.builtinAecSupportedNative) && m.areEqual(this.builtinAecRequested, trackNativeEchoCancellationConfigured.builtinAecRequested) && m.areEqual(this.builtinAecEnabled, trackNativeEchoCancellationConfigured.builtinAecEnabled) && m.areEqual(this.aecEnabledInSettings, trackNativeEchoCancellationConfigured.aecEnabledInSettings) && m.areEqual(this.aecEnabledInNativeConfig, trackNativeEchoCancellationConfigured.aecEnabledInNativeConfig) && m.areEqual(this.aecMobileMode, trackNativeEchoCancellationConfigured.aecMobileMode) && m.areEqual(this.aecEnabledByDefault, trackNativeEchoCancellationConfigured.aecEnabledByDefault) && m.areEqual(this.aecMobileModeByDefault, trackNativeEchoCancellationConfigured.aecMobileModeByDefault);
     }
 
     public int hashCode() {
@@ -60,7 +60,7 @@ public final /* data */ class TrackNativeEchoCancellationConfigured implements A
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNativeEchoCancellationConfigured(builtinAecSupportedJava=");
+        StringBuilder sbU = a.U("TrackNativeEchoCancellationConfigured(builtinAecSupportedJava=");
         sbU.append(this.builtinAecSupportedJava);
         sbU.append(", builtinAecSupportedNative=");
         sbU.append(this.builtinAecSupportedNative);
@@ -77,6 +77,6 @@ public final /* data */ class TrackNativeEchoCancellationConfigured implements A
         sbU.append(", aecEnabledByDefault=");
         sbU.append(this.aecEnabledByDefault);
         sbU.append(", aecMobileModeByDefault=");
-        return outline.D(sbU, this.aecMobileModeByDefault, ")");
+        return a.D(sbU, this.aecMobileModeByDefault, ")");
     }
 }

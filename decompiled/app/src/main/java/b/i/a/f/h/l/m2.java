@@ -1,7 +1,6 @@
 package b.i.a.f.h.l;
 
 import android.util.Log;
-import b.d.b.a.outline;
 
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
 /* loaded from: classes3.dex */
@@ -23,7 +22,7 @@ public final class m2 extends l2<Long> {
         }
         String strC = c();
         String strValueOf = String.valueOf(obj);
-        Log.e("PhenotypeFlag", outline.l(strValueOf.length() + outline.b(strC, 25), "Invalid long value for ", strC, ": ", strValueOf));
+        Log.e("PhenotypeFlag", b.d.b.a.a.l(strValueOf.length() + b.d.b.a.a.b(strC, 25), "Invalid long value for ", strC, ": ", strValueOf));
         return null;
     }
 }

@@ -1,9 +1,9 @@
 package com.discord.api.thread;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ThreadMemberUpdate.kt */
 /* loaded from: classes.dex */
@@ -49,7 +49,7 @@ public final /* data */ class ThreadMemberUpdate {
             return false;
         }
         ThreadMemberUpdate threadMemberUpdate = (ThreadMemberUpdate) other;
-        return this.id == threadMemberUpdate.id && this.guildId == threadMemberUpdate.guildId && this.userId == threadMemberUpdate.userId && this.flags == threadMemberUpdate.flags && Intrinsics3.areEqual(this.joinTimestamp, threadMemberUpdate.joinTimestamp) && this.muted == threadMemberUpdate.muted && Intrinsics3.areEqual(this.muteConfig, threadMemberUpdate.muteConfig);
+        return this.id == threadMemberUpdate.id && this.guildId == threadMemberUpdate.guildId && this.userId == threadMemberUpdate.userId && this.flags == threadMemberUpdate.flags && m.areEqual(this.joinTimestamp, threadMemberUpdate.joinTimestamp) && this.muted == threadMemberUpdate.muted && m.areEqual(this.muteConfig, threadMemberUpdate.muteConfig);
     }
 
     /* renamed from: f, reason: from getter */
@@ -82,7 +82,7 @@ public final /* data */ class ThreadMemberUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ThreadMemberUpdate(id=");
+        StringBuilder sbU = a.U("ThreadMemberUpdate(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);

@@ -1,13 +1,13 @@
 package kotlin.reflect.jvm.internal.impl.protobuf;
 
-import d0.e0.p.d.m0.i.MessageLite;
+import d0.e0.p.d.m0.i.n;
 import java.util.List;
 
 /* loaded from: classes3.dex */
 public class UninitializedMessageException extends RuntimeException {
     private final List<String> missingFields;
 
-    public UninitializedMessageException(MessageLite messageLite) {
+    public UninitializedMessageException(n nVar) {
         super("Message was missing required fields.  (Lite runtime could not determine which fields were missing).");
         this.missingFields = null;
     }

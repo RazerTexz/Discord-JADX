@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.Insets;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public final class WindowInsetsAnimationControllerCompat {
@@ -133,7 +133,7 @@ public final class WindowInsetsAnimationControllerCompat {
             this.mImpl = new Impl();
             return;
         }
-        StringBuilder sbU = outline.U("On API 30+, the constructor taking a ");
+        StringBuilder sbU = a.U("On API 30+, the constructor taking a ");
         sbU.append(WindowInsetsAnimationController.class.getSimpleName());
         sbU.append(" as parameter");
         throw new UnsupportedOperationException(sbU.toString());

@@ -1,7 +1,7 @@
 package com.discord.utilities;
 
-import d0.g0.StringNumberConversions;
-import d0.z.d.Intrinsics3;
+import d0.g0.s;
+import d0.z.d.m;
 
 /* compiled from: SnowflakeUtils.kt */
 /* loaded from: classes2.dex */
@@ -33,8 +33,8 @@ public final class SnowflakeUtils {
     }
 
     public final Long toSnowflake(String str) {
-        Intrinsics3.checkNotNullParameter(str, "$this$toSnowflake");
-        Long longOrNull = StringNumberConversions.toLongOrNull(str);
+        m.checkNotNullParameter(str, "$this$toSnowflake");
+        Long longOrNull = s.toLongOrNull(str);
         if (longOrNull != null) {
             if (longOrNull.longValue() > DISCORD_EPOCH) {
                 return longOrNull;

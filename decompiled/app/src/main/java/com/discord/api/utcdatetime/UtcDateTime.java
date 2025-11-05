@@ -1,7 +1,7 @@
 package com.discord.api.utcdatetime;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: UtcDateTime.kt */
 /* loaded from: classes.dex */
@@ -25,7 +25,7 @@ public final /* data */ class UtcDateTime implements Comparable<UtcDateTime> {
     }
 
     public int f(UtcDateTime other) {
-        Intrinsics3.checkNotNullParameter(other, "other");
+        m.checkNotNullParameter(other, "other");
         return (this.dateTimeMillis > other.dateTimeMillis ? 1 : (this.dateTimeMillis == other.dateTimeMillis ? 0 : -1));
     }
 
@@ -40,6 +40,6 @@ public final /* data */ class UtcDateTime implements Comparable<UtcDateTime> {
     }
 
     public String toString() {
-        return outline.C(outline.U("UtcDateTime(dateTimeMillis="), this.dateTimeMillis, ")");
+        return a.C(a.U("UtcDateTime(dateTimeMillis="), this.dateTimeMillis, ")");
     }
 }

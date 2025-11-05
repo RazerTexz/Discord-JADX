@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackOpenPopout.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackLocationMetadata2, TrackOverlayClientMetadata2 {
+public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackLocationMetadataReceiver, TrackOverlayClientMetadataReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackLocationMetadata trackLocationMetadata;
@@ -61,7 +61,7 @@ public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackB
             return false;
         }
         TrackOpenPopout trackOpenPopout = (TrackOpenPopout) other;
-        return Intrinsics3.areEqual(this.source, trackOpenPopout.source) && Intrinsics3.areEqual(this.type, trackOpenPopout.type) && Intrinsics3.areEqual(this.otherUserId, trackOpenPopout.otherUserId) && Intrinsics3.areEqual(this.applicationId, trackOpenPopout.applicationId) && Intrinsics3.areEqual(this.applicationName, trackOpenPopout.applicationName) && Intrinsics3.areEqual(this.gameId, trackOpenPopout.gameId) && Intrinsics3.areEqual(this.isFriend, trackOpenPopout.isFriend) && Intrinsics3.areEqual(this.hasImages, trackOpenPopout.hasImages) && Intrinsics3.areEqual(this.partyMax, trackOpenPopout.partyMax) && Intrinsics3.areEqual(this.partyId, trackOpenPopout.partyId) && Intrinsics3.areEqual(this.partyPlatform, trackOpenPopout.partyPlatform) && Intrinsics3.areEqual(this.gameName, trackOpenPopout.gameName) && Intrinsics3.areEqual(this.gamePlatform, trackOpenPopout.gamePlatform) && Intrinsics3.areEqual(this.skuId, trackOpenPopout.skuId) && Intrinsics3.areEqual(this.profileUserStatus, trackOpenPopout.profileUserStatus) && Intrinsics3.areEqual(this.isStreaming, trackOpenPopout.isStreaming) && Intrinsics3.areEqual(this.hasCustomStatus, trackOpenPopout.hasCustomStatus) && Intrinsics3.areEqual(this.guildId, trackOpenPopout.guildId) && Intrinsics3.areEqual(this.emojiId, trackOpenPopout.emojiId) && Intrinsics3.areEqual(this.stickerId, trackOpenPopout.stickerId) && Intrinsics3.areEqual(this.stickerPackId, trackOpenPopout.stickerPackId) && Intrinsics3.areEqual(this.profileHasNitroCustomization, trackOpenPopout.profileHasNitroCustomization) && Intrinsics3.areEqual(this.hasNickname, trackOpenPopout.hasNickname) && Intrinsics3.areEqual(this.hasGuildMemberAvatar, trackOpenPopout.hasGuildMemberAvatar) && Intrinsics3.areEqual(this.hasGuildMemberBanner, trackOpenPopout.hasGuildMemberBanner) && Intrinsics3.areEqual(this.hasGuildMemberBio, trackOpenPopout.hasGuildMemberBio);
+        return m.areEqual(this.source, trackOpenPopout.source) && m.areEqual(this.type, trackOpenPopout.type) && m.areEqual(this.otherUserId, trackOpenPopout.otherUserId) && m.areEqual(this.applicationId, trackOpenPopout.applicationId) && m.areEqual(this.applicationName, trackOpenPopout.applicationName) && m.areEqual(this.gameId, trackOpenPopout.gameId) && m.areEqual(this.isFriend, trackOpenPopout.isFriend) && m.areEqual(this.hasImages, trackOpenPopout.hasImages) && m.areEqual(this.partyMax, trackOpenPopout.partyMax) && m.areEqual(this.partyId, trackOpenPopout.partyId) && m.areEqual(this.partyPlatform, trackOpenPopout.partyPlatform) && m.areEqual(this.gameName, trackOpenPopout.gameName) && m.areEqual(this.gamePlatform, trackOpenPopout.gamePlatform) && m.areEqual(this.skuId, trackOpenPopout.skuId) && m.areEqual(this.profileUserStatus, trackOpenPopout.profileUserStatus) && m.areEqual(this.isStreaming, trackOpenPopout.isStreaming) && m.areEqual(this.hasCustomStatus, trackOpenPopout.hasCustomStatus) && m.areEqual(this.guildId, trackOpenPopout.guildId) && m.areEqual(this.emojiId, trackOpenPopout.emojiId) && m.areEqual(this.stickerId, trackOpenPopout.stickerId) && m.areEqual(this.stickerPackId, trackOpenPopout.stickerPackId) && m.areEqual(this.profileHasNitroCustomization, trackOpenPopout.profileHasNitroCustomization) && m.areEqual(this.hasNickname, trackOpenPopout.hasNickname) && m.areEqual(this.hasGuildMemberAvatar, trackOpenPopout.hasGuildMemberAvatar) && m.areEqual(this.hasGuildMemberBanner, trackOpenPopout.hasGuildMemberBanner) && m.areEqual(this.hasGuildMemberBio, trackOpenPopout.hasGuildMemberBio);
     }
 
     public int hashCode() {
@@ -120,7 +120,7 @@ public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackOpenPopout(source=");
+        StringBuilder sbU = a.U("TrackOpenPopout(source=");
         sbU.append(this.source);
         sbU.append(", type=");
         sbU.append(this.type);
@@ -171,6 +171,6 @@ public final /* data */ class TrackOpenPopout implements AnalyticsSchema, TrackB
         sbU.append(", hasGuildMemberBanner=");
         sbU.append(this.hasGuildMemberBanner);
         sbU.append(", hasGuildMemberBio=");
-        return outline.D(sbU, this.hasGuildMemberBio, ")");
+        return a.D(sbU, this.hasGuildMemberBio, ")");
     }
 }

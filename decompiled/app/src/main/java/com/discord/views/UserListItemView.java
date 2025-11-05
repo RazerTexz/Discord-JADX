@@ -5,10 +5,10 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import b.a.i.ViewUserListItemBinding;
+import b.a.i.d4;
 import com.discord.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: UserListItemView.kt */
 /* loaded from: classes2.dex */
@@ -16,12 +16,12 @@ public final class UserListItemView extends RelativeLayout {
     public static final /* synthetic */ int j = 0;
 
     /* renamed from: k, reason: from kotlin metadata */
-    public final ViewUserListItemBinding binding;
+    public final d4 binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserListItemView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(R.layout.view_user_list_item, this);
         int i = R.id.user_list_item_avatar;
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(R.id.user_list_item_avatar);
@@ -35,9 +35,9 @@ public final class UserListItemView extends RelativeLayout {
                     i = R.id.user_list_item_status;
                     StatusView statusView = (StatusView) findViewById(R.id.user_list_item_status);
                     if (statusView != null) {
-                        ViewUserListItemBinding viewUserListItemBinding = new ViewUserListItemBinding(this, simpleDraweeView, textView, textView2, statusView);
-                        Intrinsics3.checkNotNullExpressionValue(viewUserListItemBinding, "ViewUserListItemBinding.…ater.from(context), this)");
-                        this.binding = viewUserListItemBinding;
+                        d4 d4Var = new d4(this, simpleDraweeView, textView, textView2, statusView);
+                        m.checkNotNullExpressionValue(d4Var, "ViewUserListItemBinding.…ater.from(context), this)");
+                        this.binding = d4Var;
                         setClickable(true);
                         return;
                     }

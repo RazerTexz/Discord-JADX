@@ -1,13 +1,13 @@
 package com.fasterxml.jackson.core;
 
-import b.g.a.b.JsonLocation;
+import b.g.a.b.e;
 
 /* loaded from: classes3.dex */
 public class JsonProcessingException extends JacksonException {
     private static final long serialVersionUID = 123;
-    public JsonLocation _location;
+    public e _location;
 
-    public JsonProcessingException(String str, JsonLocation jsonLocation) {
+    public JsonProcessingException(String str, e eVar) {
         super(str, null);
         this._location = null;
     }
@@ -30,9 +30,9 @@ public class JsonProcessingException extends JacksonException {
         if (message == null) {
             message = "N/A";
         }
-        JsonLocation jsonLocation = this._location;
+        e eVar = this._location;
         String strA = a();
-        if (jsonLocation == null && strA == null) {
+        if (eVar == null && strA == null) {
             return message;
         }
         StringBuilder sb = new StringBuilder(100);
@@ -40,10 +40,10 @@ public class JsonProcessingException extends JacksonException {
         if (strA != null) {
             sb.append(strA);
         }
-        if (jsonLocation != null) {
+        if (eVar != null) {
             sb.append('\n');
             sb.append(" at ");
-            sb.append(jsonLocation.toString());
+            sb.append(eVar.toString());
         }
         return sb.toString();
     }

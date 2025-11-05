@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPinMessage.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Long channelId = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackB
             return false;
         }
         TrackPinMessage trackPinMessage = (TrackPinMessage) other;
-        return Intrinsics3.areEqual(this.guildId, trackPinMessage.guildId) && Intrinsics3.areEqual(this.channelId, trackPinMessage.channelId) && Intrinsics3.areEqual(this.authorId, trackPinMessage.authorId) && Intrinsics3.areEqual(this.pinned, trackPinMessage.pinned);
+        return m.areEqual(this.guildId, trackPinMessage.guildId) && m.areEqual(this.channelId, trackPinMessage.channelId) && m.areEqual(this.authorId, trackPinMessage.authorId) && m.areEqual(this.pinned, trackPinMessage.pinned);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackPinMessage implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPinMessage(guildId=");
+        StringBuilder sbU = a.U("TrackPinMessage(guildId=");
         sbU.append(this.guildId);
         sbU.append(", channelId=");
         sbU.append(this.channelId);
         sbU.append(", authorId=");
         sbU.append(this.authorId);
         sbU.append(", pinned=");
-        return outline.D(sbU, this.pinned, ")");
+        return a.D(sbU, this.pinned, ")");
     }
 }

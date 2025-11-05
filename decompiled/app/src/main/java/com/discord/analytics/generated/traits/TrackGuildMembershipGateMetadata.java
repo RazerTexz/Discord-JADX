@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackGuildMembershipGateMetadata.kt */
@@ -18,7 +18,7 @@ public final /* data */ class TrackGuildMembershipGateMetadata {
             return false;
         }
         TrackGuildMembershipGateMetadata trackGuildMembershipGateMetadata = (TrackGuildMembershipGateMetadata) other;
-        return Intrinsics3.areEqual(this.previewEnabled, trackGuildMembershipGateMetadata.previewEnabled) && Intrinsics3.areEqual(this.requirements, trackGuildMembershipGateMetadata.requirements);
+        return m.areEqual(this.previewEnabled, trackGuildMembershipGateMetadata.previewEnabled) && m.areEqual(this.requirements, trackGuildMembershipGateMetadata.requirements);
     }
 
     public int hashCode() {
@@ -29,9 +29,9 @@ public final /* data */ class TrackGuildMembershipGateMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildMembershipGateMetadata(previewEnabled=");
+        StringBuilder sbU = a.U("TrackGuildMembershipGateMetadata(previewEnabled=");
         sbU.append(this.previewEnabled);
         sbU.append(", requirements=");
-        return outline.L(sbU, this.requirements, ")");
+        return a.L(sbU, this.requirements, ")");
     }
 }

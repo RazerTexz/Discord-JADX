@@ -2,7 +2,7 @@ package androidx.work;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.List;
 
 /* loaded from: classes.dex */
@@ -14,7 +14,7 @@ public abstract class InputMerger {
         try {
             return (InputMerger) Class.forName(str).newInstance();
         } catch (Exception e) {
-            Logger.get().error(TAG, outline.w("Trouble instantiating + ", str), e);
+            Logger.get().error(TAG, a.w("Trouble instantiating + ", str), e);
             return null;
         }
     }

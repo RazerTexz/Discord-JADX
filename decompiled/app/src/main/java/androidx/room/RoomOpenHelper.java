@@ -9,7 +9,7 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SimpleSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Iterator;
 import java.util.List;
 
@@ -92,7 +92,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
                 updateIdentity(supportSQLiteDatabase);
                 return;
             } else {
-                StringBuilder sbU = outline.U("Pre-packaged database has an invalid schema: ");
+                StringBuilder sbU = a.U("Pre-packaged database has an invalid schema: ");
                 sbU.append(validationResultOnValidateSchema.expectedFoundMsg);
                 throw new IllegalStateException(sbU.toString());
             }
@@ -161,7 +161,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
         if (!zHasEmptySchema) {
             ValidationResult validationResultOnValidateSchema = this.mDelegate.onValidateSchema(supportSQLiteDatabase);
             if (!validationResultOnValidateSchema.isValid) {
-                StringBuilder sbU = outline.U("Pre-packaged database has an invalid schema: ");
+                StringBuilder sbU = a.U("Pre-packaged database has an invalid schema: ");
                 sbU.append(validationResultOnValidateSchema.expectedFoundMsg);
                 throw new IllegalStateException(sbU.toString());
             }
@@ -198,7 +198,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
             }
             ValidationResult validationResultOnValidateSchema = this.mDelegate.onValidateSchema(supportSQLiteDatabase);
             if (!validationResultOnValidateSchema.isValid) {
-                StringBuilder sbU = outline.U("Migration didn't properly handle: ");
+                StringBuilder sbU = a.U("Migration didn't properly handle: ");
                 sbU.append(validationResultOnValidateSchema.expectedFoundMsg);
                 throw new IllegalStateException(sbU.toString());
             }

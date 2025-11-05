@@ -17,9 +17,9 @@ import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ColorCompat.kt */
 /* loaded from: classes2.dex */
@@ -75,7 +75,7 @@ public final class ColorCompat {
     }
 
     public static final void setStatusBarColor(Fragment fragment, @ColorInt int color, boolean forceDarkUi) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         setStatusBarColor(fragment.getActivity(), color, forceDarkUi);
     }
 
@@ -87,12 +87,12 @@ public final class ColorCompat {
     }
 
     public static final void setStatusBarColorResourceId(Fragment fragment, @ColorRes int colorResourceId) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         setStatusBarColorResourceId(fragment.getActivity(), colorResourceId);
     }
 
     public static final void setStatusBarTranslucent(Fragment fragment) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         setStatusBarTranslucent(fragment.getActivity());
     }
 
@@ -101,7 +101,7 @@ public final class ColorCompat {
     }
 
     public final String getColorHexFromColorInt(@ColorInt int colorInt) {
-        return outline.P(new Object[]{Integer.valueOf(colorInt & ViewCompat.MEASURED_SIZE_MASK)}, 1, "#%06X", "java.lang.String.format(format, *args)");
+        return a.P(new Object[]{Integer.valueOf(colorInt & ViewCompat.MEASURED_SIZE_MASK)}, 1, "#%06X", "java.lang.String.format(format, *args)");
     }
 
     public final int removeAlphaComponent(@ColorInt int colorInt) {
@@ -110,7 +110,7 @@ public final class ColorCompat {
 
     @ColorInt
     public static final int getColor(View view, @ColorRes int colorResourceId) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         return getColor(view.getContext(), colorResourceId);
     }
 
@@ -135,7 +135,7 @@ public final class ColorCompat {
 
     @ColorInt
     public static final int getColor(Fragment fragment, @ColorRes int colorResourceId) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         return getColor(fragment.getContext(), colorResourceId);
     }
 
@@ -175,13 +175,13 @@ public final class ColorCompat {
 
     @ColorInt
     public static final int getThemedColor(View view, @AttrRes int attributeResourceId) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         return getThemedColor(view.getContext(), attributeResourceId);
     }
 
     @ColorInt
     public static final int getThemedColor(Fragment fragment, @AttrRes int attributeResourceId) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         return getThemedColor(fragment.getContext(), attributeResourceId);
     }
 }

@@ -20,7 +20,7 @@ import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.R;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -703,14 +703,14 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
             if (f == f2) {
                 this.mX = this.mViewHolder.itemView.getTranslationX();
             } else {
-                this.mX = outline.a(f2, f, this.mFraction, f);
+                this.mX = a.a(f2, f, this.mFraction, f);
             }
             float f3 = this.mStartDy;
             float f4 = this.mTargetY;
             if (f3 == f4) {
                 this.mY = this.mViewHolder.itemView.getTranslationY();
             } else {
-                this.mY = outline.a(f4, f3, this.mFraction, f3);
+                this.mY = a.a(f4, f3, this.mFraction, f3);
             }
         }
     }

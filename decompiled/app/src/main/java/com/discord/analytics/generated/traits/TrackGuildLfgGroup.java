@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildLfgGroup.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,7 @@ public final /* data */ class TrackGuildLfgGroup {
             return false;
         }
         TrackGuildLfgGroup trackGuildLfgGroup = (TrackGuildLfgGroup) other;
-        return Intrinsics3.areEqual(this.lfgGroupChannelId, trackGuildLfgGroup.lfgGroupChannelId) && Intrinsics3.areEqual(this.lfgGroupOwnerId, trackGuildLfgGroup.lfgGroupOwnerId) && Intrinsics3.areEqual(this.lfgDirectoryChannelId, trackGuildLfgGroup.lfgDirectoryChannelId) && Intrinsics3.areEqual(this.lfgDirectoryGuildId, trackGuildLfgGroup.lfgDirectoryGuildId) && Intrinsics3.areEqual(this.lfgDirectoryGuildName, trackGuildLfgGroup.lfgDirectoryGuildName) && Intrinsics3.areEqual(this.lfgGroupMaxSize, trackGuildLfgGroup.lfgGroupMaxSize) && Intrinsics3.areEqual(this.lfgGroupCurrentSize, trackGuildLfgGroup.lfgGroupCurrentSize) && Intrinsics3.areEqual(this.lfgGroupDescription, trackGuildLfgGroup.lfgGroupDescription);
+        return m.areEqual(this.lfgGroupChannelId, trackGuildLfgGroup.lfgGroupChannelId) && m.areEqual(this.lfgGroupOwnerId, trackGuildLfgGroup.lfgGroupOwnerId) && m.areEqual(this.lfgDirectoryChannelId, trackGuildLfgGroup.lfgDirectoryChannelId) && m.areEqual(this.lfgDirectoryGuildId, trackGuildLfgGroup.lfgDirectoryGuildId) && m.areEqual(this.lfgDirectoryGuildName, trackGuildLfgGroup.lfgDirectoryGuildName) && m.areEqual(this.lfgGroupMaxSize, trackGuildLfgGroup.lfgGroupMaxSize) && m.areEqual(this.lfgGroupCurrentSize, trackGuildLfgGroup.lfgGroupCurrentSize) && m.areEqual(this.lfgGroupDescription, trackGuildLfgGroup.lfgGroupDescription);
     }
 
     public int hashCode() {
@@ -46,7 +46,7 @@ public final /* data */ class TrackGuildLfgGroup {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildLfgGroup(lfgGroupChannelId=");
+        StringBuilder sbU = a.U("TrackGuildLfgGroup(lfgGroupChannelId=");
         sbU.append(this.lfgGroupChannelId);
         sbU.append(", lfgGroupOwnerId=");
         sbU.append(this.lfgGroupOwnerId);
@@ -61,6 +61,6 @@ public final /* data */ class TrackGuildLfgGroup {
         sbU.append(", lfgGroupCurrentSize=");
         sbU.append(this.lfgGroupCurrentSize);
         sbU.append(", lfgGroupDescription=");
-        return outline.E(sbU, this.lfgGroupDescription, ")");
+        return a.E(sbU, this.lfgGroupDescription, ")");
     }
 }

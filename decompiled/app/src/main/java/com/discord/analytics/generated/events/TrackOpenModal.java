@@ -1,22 +1,22 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackOpenModal.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOpenModal implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackGuild2, TrackLocationMetadata2, TrackSourceMetadata2 {
+public final /* data */ class TrackOpenModal implements AnalyticsSchema, TrackBaseReceiver, TrackChannelReceiver, TrackGuildReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Long applicationId;
     private final CharSequence applicationName;
@@ -101,13 +101,13 @@ public final /* data */ class TrackOpenModal implements AnalyticsSchema, TrackBa
         this.analyticsSchemaTypeName = "open_modal";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -126,7 +126,7 @@ public final /* data */ class TrackOpenModal implements AnalyticsSchema, TrackBa
             return false;
         }
         TrackOpenModal trackOpenModal = (TrackOpenModal) other;
-        return Intrinsics3.areEqual(this.source, trackOpenModal.source) && Intrinsics3.areEqual(this.type, trackOpenModal.type) && Intrinsics3.areEqual(this.otherUserId, trackOpenModal.otherUserId) && Intrinsics3.areEqual(this.applicationId, trackOpenModal.applicationId) && Intrinsics3.areEqual(this.applicationName, trackOpenModal.applicationName) && Intrinsics3.areEqual(this.isFriend, trackOpenModal.isFriend) && Intrinsics3.areEqual(this.hasImages, trackOpenModal.hasImages) && Intrinsics3.areEqual(this.partyMax, trackOpenModal.partyMax) && Intrinsics3.areEqual(this.partyId, trackOpenModal.partyId) && Intrinsics3.areEqual(this.partyPlatform, trackOpenModal.partyPlatform) && Intrinsics3.areEqual(this.gameId, trackOpenModal.gameId) && Intrinsics3.areEqual(this.gameName, trackOpenModal.gameName) && Intrinsics3.areEqual(this.gamePlatform, trackOpenModal.gamePlatform) && Intrinsics3.areEqual(this.skuId, trackOpenModal.skuId) && Intrinsics3.areEqual(this.deviceName, trackOpenModal.deviceName) && Intrinsics3.areEqual(this.profileUserStatus, trackOpenModal.profileUserStatus) && Intrinsics3.areEqual(this.loadId, trackOpenModal.loadId) && Intrinsics3.areEqual(this.numGuildPermissions, trackOpenModal.numGuildPermissions) && Intrinsics3.areEqual(this.messageContentLength, trackOpenModal.messageContentLength) && Intrinsics3.areEqual(this.promotionId, trackOpenModal.promotionId) && Intrinsics3.areEqual(this.profileHasNitroCustomization, trackOpenModal.profileHasNitroCustomization) && Intrinsics3.areEqual(this.guildEventsCount, trackOpenModal.guildEventsCount) && Intrinsics3.areEqual(this.isAdminUser, trackOpenModal.isAdminUser);
+        return m.areEqual(this.source, trackOpenModal.source) && m.areEqual(this.type, trackOpenModal.type) && m.areEqual(this.otherUserId, trackOpenModal.otherUserId) && m.areEqual(this.applicationId, trackOpenModal.applicationId) && m.areEqual(this.applicationName, trackOpenModal.applicationName) && m.areEqual(this.isFriend, trackOpenModal.isFriend) && m.areEqual(this.hasImages, trackOpenModal.hasImages) && m.areEqual(this.partyMax, trackOpenModal.partyMax) && m.areEqual(this.partyId, trackOpenModal.partyId) && m.areEqual(this.partyPlatform, trackOpenModal.partyPlatform) && m.areEqual(this.gameId, trackOpenModal.gameId) && m.areEqual(this.gameName, trackOpenModal.gameName) && m.areEqual(this.gamePlatform, trackOpenModal.gamePlatform) && m.areEqual(this.skuId, trackOpenModal.skuId) && m.areEqual(this.deviceName, trackOpenModal.deviceName) && m.areEqual(this.profileUserStatus, trackOpenModal.profileUserStatus) && m.areEqual(this.loadId, trackOpenModal.loadId) && m.areEqual(this.numGuildPermissions, trackOpenModal.numGuildPermissions) && m.areEqual(this.messageContentLength, trackOpenModal.messageContentLength) && m.areEqual(this.promotionId, trackOpenModal.promotionId) && m.areEqual(this.profileHasNitroCustomization, trackOpenModal.profileHasNitroCustomization) && m.areEqual(this.guildEventsCount, trackOpenModal.guildEventsCount) && m.areEqual(this.isAdminUser, trackOpenModal.isAdminUser);
     }
 
     public int hashCode() {
@@ -179,7 +179,7 @@ public final /* data */ class TrackOpenModal implements AnalyticsSchema, TrackBa
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackOpenModal(source=");
+        StringBuilder sbU = a.U("TrackOpenModal(source=");
         sbU.append(this.source);
         sbU.append(", type=");
         sbU.append(this.type);
@@ -224,6 +224,6 @@ public final /* data */ class TrackOpenModal implements AnalyticsSchema, TrackBa
         sbU.append(", guildEventsCount=");
         sbU.append(this.guildEventsCount);
         sbU.append(", isAdminUser=");
-        return outline.D(sbU, this.isAdminUser, ")");
+        return a.D(sbU, this.isAdminUser, ")");
     }
 }

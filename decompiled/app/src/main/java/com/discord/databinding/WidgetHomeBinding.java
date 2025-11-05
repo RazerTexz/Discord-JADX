@@ -5,10 +5,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.WidgetHomePanelCenterBinding;
-import b.a.i.WidgetHomePanelLeftBinding;
-import b.a.i.WidgetHomePanelLoadingBinding;
-import b.a.i.WidgetHomePanelRightBinding;
+import b.a.i.i5;
+import b.a.i.l5;
+import b.a.i.m5;
+import b.a.i.n5;
 import com.discord.widgets.home.HomePanelsLayout;
 
 /* loaded from: classes.dex */
@@ -19,19 +19,19 @@ public final class WidgetHomeBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final WidgetHomePanelLoadingBinding f2465b;
+    public final m5 f2465b;
 
     @NonNull
     public final HomePanelsLayout c;
 
     @NonNull
-    public final WidgetHomePanelCenterBinding d;
+    public final i5 d;
 
     @NonNull
-    public final WidgetHomePanelLeftBinding e;
+    public final l5 e;
 
     @NonNull
-    public final WidgetHomePanelRightBinding f;
+    public final n5 f;
 
     @NonNull
     public final ImageView g;
@@ -39,13 +39,13 @@ public final class WidgetHomeBinding implements ViewBinding {
     @NonNull
     public final FrameLayout h;
 
-    public WidgetHomeBinding(@NonNull FrameLayout frameLayout, @NonNull WidgetHomePanelLoadingBinding widgetHomePanelLoadingBinding, @NonNull HomePanelsLayout homePanelsLayout, @NonNull WidgetHomePanelCenterBinding widgetHomePanelCenterBinding, @NonNull WidgetHomePanelLeftBinding widgetHomePanelLeftBinding, @NonNull WidgetHomePanelRightBinding widgetHomePanelRightBinding, @NonNull ImageView imageView, @NonNull FrameLayout frameLayout2) {
+    public WidgetHomeBinding(@NonNull FrameLayout frameLayout, @NonNull m5 m5Var, @NonNull HomePanelsLayout homePanelsLayout, @NonNull i5 i5Var, @NonNull l5 l5Var, @NonNull n5 n5Var, @NonNull ImageView imageView, @NonNull FrameLayout frameLayout2) {
         this.a = frameLayout;
-        this.f2465b = widgetHomePanelLoadingBinding;
+        this.f2465b = m5Var;
         this.c = homePanelsLayout;
-        this.d = widgetHomePanelCenterBinding;
-        this.e = widgetHomePanelLeftBinding;
-        this.f = widgetHomePanelRightBinding;
+        this.d = i5Var;
+        this.e = l5Var;
+        this.f = n5Var;
         this.g = imageView;
         this.h = frameLayout2;
     }

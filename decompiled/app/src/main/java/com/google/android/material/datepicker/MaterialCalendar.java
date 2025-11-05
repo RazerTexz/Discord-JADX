@@ -24,18 +24,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import b.i.a.g.d.CalendarStyle;
-import b.i.a.g.d.DaysOfWeekAdapter;
-import b.i.a.g.d.PickerFragment;
-import b.i.a.g.d.SmoothCalendarLayoutManager;
-import b.i.a.g.d.UtcDates;
 import com.google.android.material.R;
 import com.google.android.material.button.MaterialButton;
 import java.util.Calendar;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes3.dex */
-public final class MaterialCalendar<S> extends PickerFragment<S> {
+public final class MaterialCalendar<S> extends b.i.a.g.d.i<S> {
     private static final String CALENDAR_CONSTRAINTS_KEY = "CALENDAR_CONSTRAINTS_KEY";
     private static final String CURRENT_MONTH_KEY = "CURRENT_MONTH_KEY";
     private static final String GRID_SELECTOR_KEY = "GRID_SELECTOR_KEY";
@@ -45,7 +40,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
     @Nullable
     private CalendarConstraints calendarConstraints;
     private k calendarSelector;
-    private CalendarStyle calendarStyle;
+    private b.i.a.g.d.b calendarStyle;
 
     @Nullable
     private Month current;
@@ -96,7 +91,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    public class c extends SmoothCalendarLayoutManager {
+    public class c extends b.i.a.g.d.j {
         public final /* synthetic */ int j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -123,10 +118,10 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
     }
 
     public class e extends RecyclerView.ItemDecoration {
-        public final Calendar a = UtcDates.i();
+        public final Calendar a = b.i.a.g.d.l.i();
 
         /* renamed from: b, reason: collision with root package name */
-        public final Calendar f3034b = UtcDates.i();
+        public final Calendar f3034b = b.i.a.g.d.l.i();
 
         public e() {
         }
@@ -266,7 +261,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         return materialCalendar.yearSelector;
     }
 
-    public static /* synthetic */ CalendarStyle access$400(MaterialCalendar materialCalendar) {
+    public static /* synthetic */ b.i.a.g.d.b access$400(MaterialCalendar materialCalendar) {
         return materialCalendar.calendarStyle;
     }
 
@@ -323,7 +318,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         this.recyclerView.post(new a(i2));
     }
 
-    @Override // b.i.a.g.d.PickerFragment
+    @Override // b.i.a.g.d.i
     public boolean addOnSelectionChangedListener(@NonNull OnSelectionChangedListener<S> onSelectionChangedListener) {
         return super.addOnSelectionChangedListener(onSelectionChangedListener);
     }
@@ -333,7 +328,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         return this.calendarConstraints;
     }
 
-    public CalendarStyle getCalendarStyle() {
+    public b.i.a.g.d.b getCalendarStyle() {
         return this.calendarStyle;
     }
 
@@ -342,7 +337,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         return this.current;
     }
 
-    @Override // b.i.a.g.d.PickerFragment
+    @Override // b.i.a.g.d.i
     @Nullable
     public DateSelector<S> getDateSelector() {
         return this.dateSelector;
@@ -371,7 +366,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         int i2;
         int i3;
         ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(getContext(), this.themeResId);
-        this.calendarStyle = new CalendarStyle(contextThemeWrapper);
+        this.calendarStyle = new b.i.a.g.d.b(contextThemeWrapper);
         LayoutInflater layoutInflaterCloneInContext = layoutInflater.cloneInContext(contextThemeWrapper);
         Month start = this.calendarConstraints.getStart();
         if (MaterialDatePicker.isFullscreen(contextThemeWrapper)) {
@@ -384,7 +379,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         View viewInflate = layoutInflaterCloneInContext.inflate(i2, viewGroup, false);
         GridView gridView = (GridView) viewInflate.findViewById(R.id.mtrl_calendar_days_of_week);
         ViewCompat.setAccessibilityDelegate(gridView, new b(this));
-        gridView.setAdapter((ListAdapter) new DaysOfWeekAdapter());
+        gridView.setAdapter((ListAdapter) new b.i.a.g.d.e());
         gridView.setNumColumns(start.m);
         gridView.setEnabled(false);
         this.recyclerView = (RecyclerView) viewInflate.findViewById(R.id.mtrl_calendar_months);

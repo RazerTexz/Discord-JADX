@@ -2,8 +2,8 @@ package com.discord.widgets.channels.threads.browser;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.role.GuildRole;
@@ -26,15 +26,15 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView;
 import com.discord.widgets.channels.threads.browser.WidgetThreadBrowserAdapter;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import kotlin.Tuples3;
+import kotlin.Triple;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -43,7 +43,7 @@ import rx.Observable;
 
 /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewState> {
+public final class WidgetThreadBrowserActiveViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -60,7 +60,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
 
     /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
     /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -73,7 +73,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             WidgetThreadBrowserActiveViewModel.access$handleStoreState(WidgetThreadBrowserActiveViewModel.this, storeState);
         }
     }
@@ -88,8 +88,8 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
 
         private final Observable<StoreState> observeStoreState(long guildId, long channelId, StoreUser storeUser, StoreThreadsActive storeThreadsActive, StoreThreadsActiveJoined storeThreadsActiveJoined, StoreThreadMessages storeThreadMessages, StoreGuilds storeGuilds, StoreChannels storeChannels, StorePermissions storePermissions) {
-            Observable<StoreState> observableY = Observable.j(storeThreadsActiveJoined.observeActiveJoinedThreadsForChannel(guildId, channelId).G(WidgetThreadBrowserActiveViewModel2.INSTANCE), storeThreadsActive.observeActiveThreadsForChannel(guildId, Long.valueOf(channelId)), WidgetThreadBrowserActiveViewModel3.INSTANCE).Y(new WidgetThreadBrowserActiveViewModel4(storeUser, storeThreadMessages, storeGuilds, guildId, storeChannels, storePermissions, channelId));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "Observable.combineLatest…            }\n          }");
+            Observable<StoreState> observableY = Observable.j(storeThreadsActiveJoined.observeActiveJoinedThreadsForChannel(guildId, channelId).G(WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$1.INSTANCE), storeThreadsActive.observeActiveThreadsForChannel(guildId, Long.valueOf(channelId)), WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$2.INSTANCE).Y(new WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$3(storeUser, storeThreadMessages, storeGuilds, guildId, storeChannels, storePermissions, channelId));
+            m.checkNotNullExpressionValue(observableY, "Observable.combineLatest…            }\n          }");
             return observableY;
         }
 
@@ -115,15 +115,15 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(MeUser meUser, Map<Long, Channel> map, Map<Long, Channel> map2, Map<Long, StoreThreadMessages.ThreadState> map3, Map<Long, GuildMember> map4, Map<Long, ? extends User> map5, Map<Long, GuildRole> map6, Map<Long, String> map7, Long l, Map<Long, Integer> map8, Channel channel, Guild guild) {
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            Intrinsics3.checkNotNullParameter(map, "activeJoinedThreads");
-            Intrinsics3.checkNotNullParameter(map2, "activeThreads");
-            Intrinsics3.checkNotNullParameter(map3, "threadStates");
-            Intrinsics3.checkNotNullParameter(map4, "guildMembers");
-            Intrinsics3.checkNotNullParameter(map5, "users");
-            Intrinsics3.checkNotNullParameter(map6, "guildRoles");
-            Intrinsics3.checkNotNullParameter(map7, "channelNames");
-            Intrinsics3.checkNotNullParameter(map8, "blockedUsers");
+            m.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(map, "activeJoinedThreads");
+            m.checkNotNullParameter(map2, "activeThreads");
+            m.checkNotNullParameter(map3, "threadStates");
+            m.checkNotNullParameter(map4, "guildMembers");
+            m.checkNotNullParameter(map5, "users");
+            m.checkNotNullParameter(map6, "guildRoles");
+            m.checkNotNullParameter(map7, "channelNames");
+            m.checkNotNullParameter(map8, "blockedUsers");
             this.meUser = meUser;
             this.activeJoinedThreads = map;
             this.activeThreads = map2;
@@ -195,15 +195,15 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
 
         public final StoreState copy(MeUser meUser, Map<Long, Channel> activeJoinedThreads, Map<Long, Channel> activeThreads, Map<Long, StoreThreadMessages.ThreadState> threadStates, Map<Long, GuildMember> guildMembers, Map<Long, ? extends User> users, Map<Long, GuildRole> guildRoles, Map<Long, String> channelNames, Long permissions, Map<Long, Integer> blockedUsers, Channel channel, Guild guild) {
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            Intrinsics3.checkNotNullParameter(activeJoinedThreads, "activeJoinedThreads");
-            Intrinsics3.checkNotNullParameter(activeThreads, "activeThreads");
-            Intrinsics3.checkNotNullParameter(threadStates, "threadStates");
-            Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
-            Intrinsics3.checkNotNullParameter(users, "users");
-            Intrinsics3.checkNotNullParameter(guildRoles, "guildRoles");
-            Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
-            Intrinsics3.checkNotNullParameter(blockedUsers, "blockedUsers");
+            m.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(activeJoinedThreads, "activeJoinedThreads");
+            m.checkNotNullParameter(activeThreads, "activeThreads");
+            m.checkNotNullParameter(threadStates, "threadStates");
+            m.checkNotNullParameter(guildMembers, "guildMembers");
+            m.checkNotNullParameter(users, "users");
+            m.checkNotNullParameter(guildRoles, "guildRoles");
+            m.checkNotNullParameter(channelNames, "channelNames");
+            m.checkNotNullParameter(blockedUsers, "blockedUsers");
             return new StoreState(meUser, activeJoinedThreads, activeThreads, threadStates, guildMembers, users, guildRoles, channelNames, permissions, blockedUsers, channel, guild);
         }
 
@@ -215,7 +215,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.meUser, storeState.meUser) && Intrinsics3.areEqual(this.activeJoinedThreads, storeState.activeJoinedThreads) && Intrinsics3.areEqual(this.activeThreads, storeState.activeThreads) && Intrinsics3.areEqual(this.threadStates, storeState.threadStates) && Intrinsics3.areEqual(this.guildMembers, storeState.guildMembers) && Intrinsics3.areEqual(this.users, storeState.users) && Intrinsics3.areEqual(this.guildRoles, storeState.guildRoles) && Intrinsics3.areEqual(this.channelNames, storeState.channelNames) && Intrinsics3.areEqual(this.permissions, storeState.permissions) && Intrinsics3.areEqual(this.blockedUsers, storeState.blockedUsers) && Intrinsics3.areEqual(this.channel, storeState.channel) && Intrinsics3.areEqual(this.guild, storeState.guild);
+            return m.areEqual(this.meUser, storeState.meUser) && m.areEqual(this.activeJoinedThreads, storeState.activeJoinedThreads) && m.areEqual(this.activeThreads, storeState.activeThreads) && m.areEqual(this.threadStates, storeState.threadStates) && m.areEqual(this.guildMembers, storeState.guildMembers) && m.areEqual(this.users, storeState.users) && m.areEqual(this.guildRoles, storeState.guildRoles) && m.areEqual(this.channelNames, storeState.channelNames) && m.areEqual(this.permissions, storeState.permissions) && m.areEqual(this.blockedUsers, storeState.blockedUsers) && m.areEqual(this.channel, storeState.channel) && m.areEqual(this.guild, storeState.guild);
         }
 
         public final Map<Long, Channel> getActiveJoinedThreads() {
@@ -294,7 +294,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(meUser=");
+            StringBuilder sbU = a.U("StoreState(meUser=");
             sbU.append(this.meUser);
             sbU.append(", activeJoinedThreads=");
             sbU.append(this.activeJoinedThreads);
@@ -330,7 +330,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(List<? extends WidgetThreadBrowserAdapter.Item> list, boolean z2) {
-            Intrinsics3.checkNotNullParameter(list, "listItems");
+            m.checkNotNullParameter(list, "listItems");
             this.listItems = list;
             this.canCreateThread = z2;
         }
@@ -356,7 +356,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
 
         public final ViewState copy(List<? extends WidgetThreadBrowserAdapter.Item> listItems, boolean canCreateThread) {
-            Intrinsics3.checkNotNullParameter(listItems, "listItems");
+            m.checkNotNullParameter(listItems, "listItems");
             return new ViewState(listItems, canCreateThread);
         }
 
@@ -368,7 +368,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.listItems, viewState.listItems) && this.canCreateThread == viewState.canCreateThread;
+            return m.areEqual(this.listItems, viewState.listItems) && this.canCreateThread == viewState.canCreateThread;
         }
 
         public final boolean getCanCreateThread() {
@@ -392,10 +392,10 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(listItems=");
+            StringBuilder sbU = a.U("ViewState(listItems=");
             sbU.append(this.listItems);
             sbU.append(", canCreateThread=");
-            return outline.O(sbU, this.canCreateThread, ")");
+            return a.O(sbU, this.canCreateThread, ")");
         }
     }
 
@@ -426,7 +426,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         ArrayList arrayList = new ArrayList();
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         boolean z2 = true;
-        List listListOf = Collections2.listOf((Object[]) new Tuples3[]{new Tuples3("joined", Integer.valueOf(R.string.thread_browser_joined_header), storeState.getActiveJoinedThreads()), new Tuples3("other", Integer.valueOf(R.string.thread_browser_other_header), storeState.getActiveThreads())});
+        List listListOf = n.listOf((Object[]) new Triple[]{new Triple("joined", Integer.valueOf(R.string.thread_browser_joined_header), storeState.getActiveJoinedThreads()), new Triple("other", Integer.valueOf(R.string.thread_browser_other_header), storeState.getActiveThreads())});
         Channel channel = storeState.getChannel();
         Message message = null;
         if (channel != null && channel.getType() == 15) {
@@ -434,10 +434,10 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
         Iterator it3 = listListOf.iterator();
         while (it3.hasNext()) {
-            Tuples3 tuples3 = (Tuples3) it3.next();
-            String str = (String) tuples3.component1();
-            int iIntValue = ((Number) tuples3.component2()).intValue();
-            Map map = (Map) tuples3.component3();
+            Triple triple = (Triple) it3.next();
+            String str = (String) triple.component1();
+            int iIntValue = ((Number) triple.component2()).intValue();
+            Map map = (Map) triple.component3();
             if (map.isEmpty()) {
                 i = 0;
             } else {
@@ -496,15 +496,15 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetThreadBrowserActiveViewModel(long j, long j2, StoreUser storeUser, StoreGuildMemberRequester storeGuildMemberRequester, StoreThreadsActive storeThreadsActive, StoreThreadsActiveJoined storeThreadsActiveJoined, StoreThreadMessages storeThreadMessages, StoreGuilds storeGuilds, StoreChannels storeChannels, StorePermissions storePermissions, Observable<StoreState> observable) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(storeGuildMemberRequester, "storeGuildMemberRequester");
-        Intrinsics3.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
-        Intrinsics3.checkNotNullParameter(storeThreadsActiveJoined, "storeThreadsActiveJoined");
-        Intrinsics3.checkNotNullParameter(storeThreadMessages, "storeThreadMessages");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(storeGuildMemberRequester, "storeGuildMemberRequester");
+        m.checkNotNullParameter(storeThreadsActive, "storeThreadsActive");
+        m.checkNotNullParameter(storeThreadsActiveJoined, "storeThreadsActiveJoined");
+        m.checkNotNullParameter(storeThreadMessages, "storeThreadMessages");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(storePermissions, "storePermissions");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.guildId = j;
         this.channelId = j2;
         this.storeUser = storeUser;

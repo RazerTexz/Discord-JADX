@@ -8,7 +8,7 @@ import com.discord.R;
 import com.discord.simpleast.core.node.Node;
 import com.discord.utilities.spans.VerticalPaddingSpan;
 import com.discord.utilities.textprocessing.node.BasicRenderContext;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -29,8 +29,8 @@ public final class HeaderNode<T extends BasicRenderContext> extends Node<T> {
     }
 
     public void render(SpannableStringBuilder builder, T renderContext) {
-        Intrinsics3.checkNotNullParameter(builder, "builder");
-        Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
+        m.checkNotNullParameter(builder, "builder");
+        m.checkNotNullParameter(renderContext, "renderContext");
         Context context = renderContext.getContext();
         int length = builder.length();
         Collection<Node<T>> children = getChildren();

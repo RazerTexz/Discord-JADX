@@ -3,9 +3,9 @@ package com.discord.stores;
 import androidx.core.app.NotificationCompat;
 import com.discord.models.domain.ModelCall;
 import com.discord.stores.updates.ObservationDeck;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.HashSet;
 import java.util.Set;
 import kotlin.Unit;
@@ -23,24 +23,24 @@ public final class StoreCallsIncoming extends StoreV2 {
 
     /* compiled from: StoreCallsIncoming.kt */
     /* renamed from: com.discord.stores.StoreCallsIncoming$observeHasIncoming$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Set<? extends Long>, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<Set<? extends Long>, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(Set<? extends Long> set) {
             return call2((Set<Long>) set);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set) {
-            Intrinsics3.checkNotNullExpressionValue(set, "incomingCalls");
+            m.checkNotNullExpressionValue(set, "incomingCalls");
             return Boolean.valueOf(!set.isEmpty());
         }
     }
 
     /* compiled from: StoreCallsIncoming.kt */
     /* renamed from: com.discord.stores.StoreCallsIncoming$observeIncoming$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Set<? extends Long>> {
+    public static final class AnonymousClass1 extends o implements Function0<Set<? extends Long>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -59,7 +59,7 @@ public final class StoreCallsIncoming extends StoreV2 {
 
     /* compiled from: StoreCallsIncoming.kt */
     /* renamed from: com.discord.stores.StoreCallsIncoming$removeIncomingCall$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -81,9 +81,9 @@ public final class StoreCallsIncoming extends StoreV2 {
     }
 
     public StoreCallsIncoming(Dispatcher dispatcher, ObservationDeck observationDeck, StoreUser storeUser) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(storeUser, "userStore");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeUser, "userStore");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.userStore = storeUser;
@@ -95,7 +95,7 @@ public final class StoreCallsIncoming extends StoreV2 {
         storeCallsIncoming.clearIncomingCall(j);
     }
 
-    @Store3
+    @StoreThread
     private final void clearIncomingCall(long channelId) {
         if (this.incomingCalls.contains(Long.valueOf(channelId))) {
             this.incomingCalls.remove(Long.valueOf(channelId));
@@ -107,9 +107,9 @@ public final class StoreCallsIncoming extends StoreV2 {
         return this.incomingCallSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleCallCreateOrUpdate(ModelCall call) {
-        Intrinsics3.checkNotNullParameter(call, NotificationCompat.CATEGORY_CALL);
+        m.checkNotNullParameter(call, NotificationCompat.CATEGORY_CALL);
         long channelId = call.getChannelId();
         if (!call.getRinging().contains(Long.valueOf(this.userStore.getMeSnapshot().getId()))) {
             clearIncomingCall(channelId);
@@ -122,26 +122,26 @@ public final class StoreCallsIncoming extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleCallDelete(ModelCall callDelete) {
-        Intrinsics3.checkNotNullParameter(callDelete, "callDelete");
+        m.checkNotNullParameter(callDelete, "callDelete");
         clearIncomingCall(callDelete.getChannelId());
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceChannelSelected(long channelId) {
         clearIncomingCall(channelId);
     }
 
     public final Observable<Boolean> observeHasIncoming() {
         Observable<Boolean> observableR = observeIncoming().G(AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observeIncoming()\n      …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observeIncoming()\n      …  .distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<Set<Long>> observeIncoming() {
         Observable<Set<Long>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
         return observableR;
     }
 

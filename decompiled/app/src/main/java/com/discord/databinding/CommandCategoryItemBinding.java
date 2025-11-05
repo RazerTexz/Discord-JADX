@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ExpressionPickerCategorySelectionOverlineViewBinding;
+import b.a.i.n;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 /* loaded from: classes.dex */
@@ -18,12 +18,12 @@ public final class CommandCategoryItemBinding implements ViewBinding {
     public final SimpleDraweeView f2090b;
 
     @NonNull
-    public final ExpressionPickerCategorySelectionOverlineViewBinding c;
+    public final n c;
 
-    public CommandCategoryItemBinding(@NonNull FrameLayout frameLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull ExpressionPickerCategorySelectionOverlineViewBinding expressionPickerCategorySelectionOverlineViewBinding) {
+    public CommandCategoryItemBinding(@NonNull FrameLayout frameLayout, @NonNull SimpleDraweeView simpleDraweeView, @NonNull n nVar) {
         this.a = frameLayout;
         this.f2090b = simpleDraweeView;
-        this.c = expressionPickerCategorySelectionOverlineViewBinding;
+        this.c = nVar;
     }
 
     @Override // androidx.viewbinding.ViewBinding

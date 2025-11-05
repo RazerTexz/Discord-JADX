@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackDeleteSticker.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDeleteSticker implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackDeleteSticker implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long id = null;
     private final Long guildId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackDeleteSticker implements AnalyticsSchema, Tra
             return false;
         }
         TrackDeleteSticker trackDeleteSticker = (TrackDeleteSticker) other;
-        return Intrinsics3.areEqual(this.id, trackDeleteSticker.id) && Intrinsics3.areEqual(this.guildId, trackDeleteSticker.guildId) && Intrinsics3.areEqual(this.formatType, trackDeleteSticker.formatType) && Intrinsics3.areEqual(this.isAdmin, trackDeleteSticker.isAdmin);
+        return m.areEqual(this.id, trackDeleteSticker.id) && m.areEqual(this.guildId, trackDeleteSticker.guildId) && m.areEqual(this.formatType, trackDeleteSticker.formatType) && m.areEqual(this.isAdmin, trackDeleteSticker.isAdmin);
     }
 
     public int hashCode() {
@@ -46,13 +46,13 @@ public final /* data */ class TrackDeleteSticker implements AnalyticsSchema, Tra
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDeleteSticker(id=");
+        StringBuilder sbU = a.U("TrackDeleteSticker(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", formatType=");
         sbU.append(this.formatType);
         sbU.append(", isAdmin=");
-        return outline.D(sbU, this.isAdmin, ")");
+        return a.D(sbU, this.isAdmin, ")");
     }
 }

@@ -3,12 +3,12 @@ package com.discord.stores;
 import android.content.Context;
 import com.discord.models.domain.ModelLibraryApplication;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -29,12 +29,12 @@ public final class StoreLibrary extends StoreV2 {
 
     /* compiled from: StoreLibrary.kt */
     /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
 
         /* compiled from: StoreLibrary.kt */
         /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01451 extends Lambda implements Function0<Unit> {
-            public C01451() {
+        public static final class C02651 extends o implements Function0<Unit> {
+            public C02651() {
                 super(0);
             }
 
@@ -63,18 +63,18 @@ public final class StoreLibrary extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
-            StoreLibrary.this.getDispatcher().schedule(new C01451());
+            m.checkNotNullParameter(error, "it");
+            StoreLibrary.this.getDispatcher().schedule(new C02651());
         }
     }
 
     /* compiled from: StoreLibrary.kt */
     /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<List<? extends ModelLibraryApplication>, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<List<? extends ModelLibraryApplication>, Unit> {
 
         /* compiled from: StoreLibrary.kt */
         /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ List $libraryApps;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -113,14 +113,14 @@ public final class StoreLibrary extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelLibraryApplication> list) {
-            Intrinsics3.checkNotNullParameter(list, "libraryApps");
+            m.checkNotNullParameter(list, "libraryApps");
             StoreLibrary.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
     /* compiled from: StoreLibrary.kt */
     /* renamed from: com.discord.stores.StoreLibrary$observeApplications$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends ModelLibraryApplication>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends ModelLibraryApplication>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -138,7 +138,7 @@ public final class StoreLibrary extends StoreV2 {
     }
 
     public /* synthetic */ StoreLibrary(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ Map access$getLibraryApplicationSnapshot$p(StoreLibrary storeLibrary) {
@@ -174,14 +174,14 @@ public final class StoreLibrary extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         this.libraryApplicationSnapshot = new HashMap(this.libraryApplications);
     }
 
     public StoreLibrary(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.libraryApplications = new LinkedHashMap();

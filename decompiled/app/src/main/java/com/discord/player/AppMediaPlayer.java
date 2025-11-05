@@ -4,53 +4,49 @@ import android.media.AudioTrack;
 import android.net.Uri;
 import android.view.Surface;
 import androidx.annotation.MainThread;
-import b.a.p.AppMediaPlayer2;
-import b.a.p.AppMediaPlayer3;
-import b.a.p.AppMediaPlayer4;
-import b.a.p.AppMediaPlayer5;
-import b.a.p.AppMediaPlayer6;
-import b.a.p.AppMediaPlayer7;
-import b.a.p.RxPlayerEventListener;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import b.i.a.c.AudioFocusManager;
-import b.i.a.c.BasePlayer;
-import b.i.a.c.Bundleable;
-import b.i.a.c.ExoPlayer2;
-import b.i.a.c.ExoPlayerImpl;
-import b.i.a.c.ExoPlayerImplInternal2;
-import b.i.a.c.MediaItem2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.MediaSourceList;
-import b.i.a.c.PlaybackInfo;
-import b.i.a.c.Player2;
-import b.i.a.c.PlaylistTimeline;
-import b.i.a.c.SimpleExoPlayer;
-import b.i.a.c.StreamVolumeManager;
-import b.i.a.c.WakeLockManager;
-import b.i.a.c.WifiLockManager;
-import b.i.a.c.a3.MediaSource2;
-import b.i.a.c.a3.ProgressiveMediaSource;
-import b.i.a.c.a3.ShuffleOrder;
+import b.a.p.a;
+import b.a.p.b;
+import b.a.p.c;
+import b.a.p.d;
+import b.a.p.e;
+import b.a.p.f;
+import b.a.p.k;
+import b.i.a.c.a3.a0;
+import b.i.a.c.a3.f0;
 import b.i.a.c.a3.j;
-import b.i.a.c.e3.DataSource3;
-import b.i.a.c.e3.DefaultLoadErrorHandlingPolicy;
-import b.i.a.c.f3.HandlerWrapper;
-import b.i.a.c.f3.Log2;
-import b.i.a.c.f3.SystemHandlerWrapper;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.s2.AnalyticsCollector;
-import b.i.a.c.s2.p;
-import b.i.a.c.w2.DefaultDrmSessionManagerProvider;
-import b.i.a.c.w2.DrmSessionManager2;
-import b.i.a.c.x2.DefaultExtractorsFactory;
-import b.i.b.b.ImmutableList2;
-import b.i.b.b.RegularImmutableList;
+import b.i.a.c.a3.k0;
+import b.i.a.c.c2;
+import b.i.a.c.e1;
+import b.i.a.c.e3.l;
+import b.i.a.c.e3.s;
+import b.i.a.c.f1;
+import b.i.a.c.f3.b0;
+import b.i.a.c.f3.e0;
+import b.i.a.c.f3.o;
+import b.i.a.c.f3.q;
+import b.i.a.c.h1;
+import b.i.a.c.k2;
+import b.i.a.c.m2;
+import b.i.a.c.o1;
+import b.i.a.c.p1;
+import b.i.a.c.q2;
+import b.i.a.c.r2;
+import b.i.a.c.s2.g1;
+import b.i.a.c.t0;
+import b.i.a.c.u0;
+import b.i.a.c.u1;
+import b.i.a.c.w0;
+import b.i.a.c.w1;
+import b.i.a.c.w2.r;
+import b.i.a.c.w2.u;
+import b.i.a.c.y1;
+import b.i.b.b.h0;
+import b.i.b.b.p;
 import com.discord.utilities.logging.Logger;
 import com.google.android.exoplayer2.IllegalSeekPositionException;
 import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -83,13 +79,13 @@ public final class AppMediaPlayer {
     public MediaSource mediaSource;
 
     /* renamed from: f, reason: from kotlin metadata */
-    public final ExoPlayer2 exoPlayer;
+    public final e1 exoPlayer;
 
     /* renamed from: g, reason: from kotlin metadata */
-    public final RxPlayerEventListener rxPlayerEventListener;
+    public final k rxPlayerEventListener;
 
     /* renamed from: h, reason: from kotlin metadata */
-    public final DataSource3.a dataSourceFactory;
+    public final l.a dataSourceFactory;
 
     /* renamed from: i, reason: from kotlin metadata */
     public final Scheduler timerScheduler;
@@ -139,7 +135,7 @@ public final class AppMediaPlayer {
             }
 
             public String toString() {
-                return outline.C(outline.U("CurrentPositionUpdate(positionMs="), this.a, ")");
+                return b.d.b.a.a.C(b.d.b.a.a.U("CurrentPositionUpdate(positionMs="), this.a, ")");
             }
         }
 
@@ -177,36 +173,36 @@ public final class AppMediaPlayer {
         }
     }
 
-    public AppMediaPlayer(ExoPlayer2 exoPlayer2, RxPlayerEventListener rxPlayerEventListener, DataSource3.a aVar, Scheduler scheduler, Logger logger) {
-        Intrinsics3.checkNotNullParameter(exoPlayer2, "exoPlayer");
-        Intrinsics3.checkNotNullParameter(rxPlayerEventListener, "rxPlayerEventListener");
-        Intrinsics3.checkNotNullParameter(aVar, "dataSourceFactory");
-        Intrinsics3.checkNotNullParameter(scheduler, "timerScheduler");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        this.exoPlayer = exoPlayer2;
-        this.rxPlayerEventListener = rxPlayerEventListener;
+    public AppMediaPlayer(e1 e1Var, k kVar, l.a aVar, Scheduler scheduler, Logger logger) {
+        m.checkNotNullParameter(e1Var, "exoPlayer");
+        m.checkNotNullParameter(kVar, "rxPlayerEventListener");
+        m.checkNotNullParameter(aVar, "dataSourceFactory");
+        m.checkNotNullParameter(scheduler, "timerScheduler");
+        m.checkNotNullParameter(logger, "logger");
+        this.exoPlayer = e1Var;
+        this.rxPlayerEventListener = kVar;
         this.dataSourceFactory = aVar;
         this.timerScheduler = scheduler;
         this.logger = logger;
         PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.eventSubject = publishSubjectK0;
         CompositeSubscription compositeSubscription = new CompositeSubscription();
         this.compositeSubscription = compositeSubscription;
-        BehaviorSubject<Float> behaviorSubjectL0 = BehaviorSubject.l0(Float.valueOf(((SimpleExoPlayer) exoPlayer2).B));
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(exoPlayer.volume)");
+        BehaviorSubject<Float> behaviorSubjectL0 = BehaviorSubject.l0(Float.valueOf(((k2) e1Var).B));
+        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(exoPlayer.volume)");
         this.volumeSubject = behaviorSubjectL0;
-        PublishSubject<RxPlayerEventListener.c> publishSubject = rxPlayerEventListener.j;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "playerStateChangeSubject");
-        compositeSubscription.a(publishSubject.K().W(new AppMediaPlayer6(this), new AppMediaPlayer7(this)));
-        PublishSubject<RxPlayerEventListener.a> publishSubject2 = rxPlayerEventListener.k;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject2, "isPlayingChangeSubject");
-        compositeSubscription.a(publishSubject2.L().W(new AppMediaPlayer2(this), new AppMediaPlayer3(this)));
+        PublishSubject<k.c> publishSubject = kVar.j;
+        m.checkNotNullExpressionValue(publishSubject, "playerStateChangeSubject");
+        compositeSubscription.a(publishSubject.K().W(new e(this), new f(this)));
+        PublishSubject<k.a> publishSubject2 = kVar.k;
+        m.checkNotNullExpressionValue(publishSubject2, "isPlayingChangeSubject");
+        compositeSubscription.a(publishSubject2.L().W(new a(this), new b(this)));
         MediaSource mediaSource = this.mediaSource;
         String str = (mediaSource == null || (str = mediaSource.featureTag) == null) ? "" : str;
-        PublishSubject<RxPlayerEventListener.b> publishSubject3 = rxPlayerEventListener.l;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject3, "playerErrorSubject");
-        compositeSubscription.a(publishSubject3.K().W(new AppMediaPlayer4(this, str), new AppMediaPlayer5(this)));
+        PublishSubject<k.b> publishSubject3 = kVar.l;
+        m.checkNotNullExpressionValue(publishSubject3, "playerErrorSubject");
+        compositeSubscription.a(publishSubject3.K().W(new c(this, str), new d(this)));
     }
 
     public static /* synthetic */ void b(AppMediaPlayer appMediaPlayer, MediaSource mediaSource, boolean z2, boolean z3, long j, PlayerView playerView, PlayerControlView playerControlView, int i) {
@@ -217,159 +213,159 @@ public final class AppMediaPlayer {
     /* JADX WARN: Multi-variable type inference failed */
     @MainThread
     public final void a(MediaSource mediaSource, boolean autoPlayWhenReady, boolean loopMedia, long initialSeekPositionMs, PlayerView playerView, PlayerControlView playerControlView) {
-        DrmSessionManager2 drmSessionManager2;
-        Intrinsics3.checkNotNullParameter(mediaSource, "mediaSource");
-        Intrinsics3.checkNotNullParameter(playerView, "playerView");
+        u uVar;
+        m.checkNotNullParameter(mediaSource, "mediaSource");
+        m.checkNotNullParameter(playerView, "playerView");
         this.mediaSource = mediaSource;
-        SimpleExoPlayer simpleExoPlayer = (SimpleExoPlayer) this.exoPlayer;
-        simpleExoPlayer.n0();
-        simpleExoPlayer.w = 1;
+        k2 k2Var = (k2) this.exoPlayer;
+        k2Var.n0();
+        k2Var.w = 1;
         int i = 4;
-        simpleExoPlayer.j0(2, 4, 1);
+        k2Var.j0(2, 4, 1);
         playerView.setPlayer(this.exoPlayer);
         if (playerControlView != null) {
             playerControlView.setPlayer(this.exoPlayer);
         }
-        DataSource3.a aVar = this.dataSourceFactory;
-        j jVar = new j(new DefaultExtractorsFactory());
-        DefaultDrmSessionManagerProvider defaultDrmSessionManagerProvider = new DefaultDrmSessionManagerProvider();
-        DefaultLoadErrorHandlingPolicy defaultLoadErrorHandlingPolicy = new DefaultLoadErrorHandlingPolicy();
+        l.a aVar = this.dataSourceFactory;
+        j jVar = new j(new b.i.a.c.x2.f());
+        r rVar = new r();
+        s sVar = new s();
         Uri uri = mediaSource.progressiveMediaUri;
-        Bundleable.a<MediaItem2> aVar2 = MediaItem2.j;
-        MediaItem2.d.a aVar3 = new MediaItem2.d.a();
-        MediaItem2.f.a aVar4 = new MediaItem2.f.a(null);
+        w0.a<o1> aVar2 = o1.j;
+        o1.d.a aVar3 = new o1.d.a();
+        o1.f.a aVar4 = new o1.f.a(null);
         List listEmptyList = Collections.emptyList();
-        ImmutableList2<Object> immutableList2 = RegularImmutableList.l;
-        MediaItem2.g.a aVar5 = new MediaItem2.g.a();
-        AnimatableValueParser.D(aVar4.f1037b == null || aVar4.a != null);
-        MediaItem2.i iVar = uri != null ? new MediaItem2.i(uri, null, aVar4.a != null ? new MediaItem2.f(aVar4, null) : null, null, listEmptyList, null, immutableList2, null, null) : null;
-        MediaItem2 mediaItem2 = new MediaItem2("", aVar3.a(), iVar, new MediaItem2.g(aVar5, null), MediaMetadata.j, null);
+        p<Object> pVar = h0.l;
+        o1.g.a aVar5 = new o1.g.a();
+        b.c.a.a0.d.D(aVar4.f1037b == null || aVar4.a != null);
+        o1.i iVar = uri != null ? new o1.i(uri, null, aVar4.a != null ? new o1.f(aVar4, null) : null, null, listEmptyList, null, pVar, null, null) : null;
+        o1 o1Var = new o1("", aVar3.a(), iVar, new o1.g(aVar5, null), p1.j, null);
         Objects.requireNonNull(iVar);
-        MediaItem2.f fVar = iVar.c;
-        if (fVar == null || Util2.a < 18) {
-            drmSessionManager2 = DrmSessionManager2.a;
+        o1.f fVar = iVar.c;
+        if (fVar == null || e0.a < 18) {
+            uVar = u.a;
         } else {
-            synchronized (defaultDrmSessionManagerProvider.a) {
-                if (!Util2.a(fVar, defaultDrmSessionManagerProvider.f1155b)) {
-                    defaultDrmSessionManagerProvider.f1155b = fVar;
-                    defaultDrmSessionManagerProvider.c = defaultDrmSessionManagerProvider.a(fVar);
+            synchronized (rVar.a) {
+                if (!e0.a(fVar, rVar.f1155b)) {
+                    rVar.f1155b = fVar;
+                    rVar.c = rVar.a(fVar);
                 }
-                drmSessionManager2 = defaultDrmSessionManagerProvider.c;
-                Objects.requireNonNull(drmSessionManager2);
+                uVar = rVar.c;
+                Objects.requireNonNull(uVar);
             }
         }
-        ProgressiveMediaSource progressiveMediaSource = new ProgressiveMediaSource(mediaItem2, aVar, jVar, drmSessionManager2, defaultLoadErrorHandlingPolicy, 1048576, null);
-        Intrinsics3.checkNotNullExpressionValue(progressiveMediaSource, "ProgressiveMediaSource.F…rce.progressiveMediaUri))");
-        SimpleExoPlayer simpleExoPlayer2 = (SimpleExoPlayer) this.exoPlayer;
-        simpleExoPlayer2.n0();
-        ExoPlayerImpl exoPlayerImpl = simpleExoPlayer2.e;
-        Objects.requireNonNull(exoPlayerImpl);
-        List listSingletonList = Collections.singletonList(progressiveMediaSource);
-        exoPlayerImpl.h0();
-        exoPlayerImpl.T();
-        exoPlayerImpl.f960x++;
-        if (!exoPlayerImpl.m.isEmpty()) {
-            exoPlayerImpl.p0(0, exoPlayerImpl.m.size());
+        f0 f0Var = new f0(o1Var, aVar, jVar, uVar, sVar, 1048576, null);
+        m.checkNotNullExpressionValue(f0Var, "ProgressiveMediaSource.F…rce.progressiveMediaUri))");
+        k2 k2Var2 = (k2) this.exoPlayer;
+        k2Var2.n0();
+        f1 f1Var = k2Var2.e;
+        Objects.requireNonNull(f1Var);
+        List listSingletonList = Collections.singletonList(f0Var);
+        f1Var.h0();
+        f1Var.T();
+        f1Var.f960x++;
+        if (!f1Var.m.isEmpty()) {
+            f1Var.p0(0, f1Var.m.size());
         }
         ArrayList arrayList = new ArrayList();
         for (int i2 = 0; i2 < listSingletonList.size(); i2++) {
-            MediaSourceList.c cVar = new MediaSourceList.c((MediaSource2) listSingletonList.get(i2), exoPlayerImpl.n);
+            u1.c cVar = new u1.c((a0) listSingletonList.get(i2), f1Var.n);
             arrayList.add(cVar);
-            exoPlayerImpl.m.add(i2 + 0, new ExoPlayerImpl.a(cVar.f1139b, cVar.a.n));
+            f1Var.m.add(i2 + 0, new f1.a(cVar.f1139b, cVar.a.n));
         }
-        ShuffleOrder shuffleOrderF = exoPlayerImpl.B.f(0, arrayList.size());
-        exoPlayerImpl.B = shuffleOrderF;
-        PlaylistTimeline playlistTimeline = new PlaylistTimeline(exoPlayerImpl.m, shuffleOrderF);
-        if (!playlistTimeline.q() && -1 >= playlistTimeline.n) {
-            throw new IllegalSeekPositionException(playlistTimeline, -1, -9223372036854775807L);
+        k0 k0VarF = f1Var.B.f(0, arrayList.size());
+        f1Var.B = k0VarF;
+        c2 c2Var = new c2(f1Var.m, k0VarF);
+        if (!c2Var.q() && -1 >= c2Var.n) {
+            throw new IllegalSeekPositionException(c2Var, -1, -9223372036854775807L);
         }
-        int iA = playlistTimeline.a(exoPlayerImpl.w);
-        PlaybackInfo playbackInfoL0 = exoPlayerImpl.l0(exoPlayerImpl.F, playlistTimeline, exoPlayerImpl.i0(playlistTimeline, iA, -9223372036854775807L));
-        int i3 = playbackInfoL0.f;
+        int iA = c2Var.a(f1Var.w);
+        w1 w1VarL0 = f1Var.l0(f1Var.F, c2Var, f1Var.i0(c2Var, iA, -9223372036854775807L));
+        int i3 = w1VarL0.f;
         if (iA == -1 || i3 == 1) {
             i = i3;
-        } else if (!playlistTimeline.q() && iA < playlistTimeline.n) {
+        } else if (!c2Var.q() && iA < c2Var.n) {
             i = 2;
         }
-        PlaybackInfo playbackInfoF = playbackInfoL0.f(i);
-        ((SystemHandlerWrapper.b) exoPlayerImpl.i.q.i(17, new ExoPlayerImplInternal2.a(arrayList, exoPlayerImpl.B, iA, Util2.B(-9223372036854775807L), null))).b();
-        exoPlayerImpl.s0(playbackInfoF, 0, 1, false, (exoPlayerImpl.F.c.a.equals(playbackInfoF.c.a) || exoPlayerImpl.F.f1146b.q()) ? false : true, 4, exoPlayerImpl.g0(playbackInfoF), -1);
-        ((SimpleExoPlayer) this.exoPlayer).a();
+        w1 w1VarF = w1VarL0.f(i);
+        ((b0.b) f1Var.i.q.i(17, new h1.a(arrayList, f1Var.B, iA, e0.B(-9223372036854775807L), null))).b();
+        f1Var.s0(w1VarF, 0, 1, false, (f1Var.F.c.a.equals(w1VarF.c.a) || f1Var.F.f1146b.q()) ? false : true, 4, f1Var.g0(w1VarF), -1);
+        ((k2) this.exoPlayer).a();
         if (autoPlayWhenReady) {
-            ((SimpleExoPlayer) this.exoPlayer).u(true);
+            ((k2) this.exoPlayer).u(true);
         }
         if (initialSeekPositionMs > 0) {
-            BasePlayer basePlayer = (BasePlayer) this.exoPlayer;
-            basePlayer.h(basePlayer.C(), initialSeekPositionMs);
+            u0 u0Var = (u0) this.exoPlayer;
+            u0Var.h(u0Var.C(), initialSeekPositionMs);
         }
-        SimpleExoPlayer simpleExoPlayer3 = (SimpleExoPlayer) this.exoPlayer;
-        simpleExoPlayer3.n0();
-        simpleExoPlayer3.e.E(loopMedia ? 1 : 0);
+        k2 k2Var3 = (k2) this.exoPlayer;
+        k2Var3.n0();
+        k2Var3.e.E(loopMedia ? 1 : 0);
     }
 
     @MainThread
     public final void c() {
         AudioTrack audioTrack;
-        ((SimpleExoPlayer) this.exoPlayer).u(false);
+        ((k2) this.exoPlayer).u(false);
         Subscription subscription = this.positionPollingSubscription;
         if (subscription != null) {
             subscription.unsubscribe();
         }
         this.compositeSubscription.unsubscribe();
-        SimpleExoPlayer simpleExoPlayer = (SimpleExoPlayer) this.exoPlayer;
-        simpleExoPlayer.n0();
-        if (Util2.a < 21 && (audioTrack = simpleExoPlayer.p) != null) {
+        k2 k2Var = (k2) this.exoPlayer;
+        k2Var.n0();
+        if (e0.a < 21 && (audioTrack = k2Var.p) != null) {
             audioTrack.release();
-            simpleExoPlayer.p = null;
+            k2Var.p = null;
         }
-        simpleExoPlayer.j.a(false);
-        StreamVolumeManager streamVolumeManager = simpleExoPlayer.l;
-        StreamVolumeManager.c cVar = streamVolumeManager.e;
+        k2Var.j.a(false);
+        m2 m2Var = k2Var.l;
+        m2.c cVar = m2Var.e;
         if (cVar != null) {
             try {
-                streamVolumeManager.a.unregisterReceiver(cVar);
+                m2Var.a.unregisterReceiver(cVar);
             } catch (RuntimeException e) {
-                Log2.c("StreamVolumeManager", "Error unregistering stream volume receiver", e);
+                q.c("StreamVolumeManager", "Error unregistering stream volume receiver", e);
             }
-            streamVolumeManager.e = null;
+            m2Var.e = null;
         }
-        WakeLockManager wakeLockManager = simpleExoPlayer.m;
-        wakeLockManager.d = false;
-        wakeLockManager.a();
-        WifiLockManager wifiLockManager = simpleExoPlayer.n;
-        wifiLockManager.d = false;
-        wifiLockManager.a();
-        AudioFocusManager audioFocusManager = simpleExoPlayer.k;
-        audioFocusManager.c = null;
-        audioFocusManager.a();
-        simpleExoPlayer.e.n0();
-        AnalyticsCollector analyticsCollector = simpleExoPlayer.i;
-        HandlerWrapper handlerWrapper = analyticsCollector.q;
-        AnimatableValueParser.H(handlerWrapper);
-        handlerWrapper.b(new p(analyticsCollector));
-        simpleExoPlayer.i0();
-        Surface surface = simpleExoPlayer.r;
+        q2 q2Var = k2Var.m;
+        q2Var.d = false;
+        q2Var.a();
+        r2 r2Var = k2Var.n;
+        r2Var.d = false;
+        r2Var.a();
+        t0 t0Var = k2Var.k;
+        t0Var.c = null;
+        t0Var.a();
+        k2Var.e.n0();
+        g1 g1Var = k2Var.i;
+        o oVar = g1Var.q;
+        b.c.a.a0.d.H(oVar);
+        oVar.b(new b.i.a.c.s2.p(g1Var));
+        k2Var.i0();
+        Surface surface = k2Var.r;
         if (surface != null) {
             surface.release();
-            simpleExoPlayer.r = null;
+            k2Var.r = null;
         }
-        if (simpleExoPlayer.G) {
+        if (k2Var.G) {
             Objects.requireNonNull(null);
             throw null;
         }
-        simpleExoPlayer.D = Collections.emptyList();
+        k2Var.D = Collections.emptyList();
     }
 
     @MainThread
     public final void d(float volume) {
-        SimpleExoPlayer simpleExoPlayer = (SimpleExoPlayer) this.exoPlayer;
-        simpleExoPlayer.n0();
-        float fG = Util2.g(volume, 0.0f, 1.0f);
-        if (simpleExoPlayer.B != fG) {
-            simpleExoPlayer.B = fG;
-            simpleExoPlayer.j0(1, 2, Float.valueOf(simpleExoPlayer.k.g * fG));
-            simpleExoPlayer.i.w(fG);
-            Iterator<Player2.e> it = simpleExoPlayer.h.iterator();
+        k2 k2Var = (k2) this.exoPlayer;
+        k2Var.n0();
+        float fG = e0.g(volume, 0.0f, 1.0f);
+        if (k2Var.B != fG) {
+            k2Var.B = fG;
+            k2Var.j0(1, 2, Float.valueOf(k2Var.k.g * fG));
+            k2Var.i.w(fG);
+            Iterator<y1.e> it = k2Var.h.iterator();
             while (it.hasNext()) {
                 it.next().w(fG);
             }

@@ -1,11 +1,11 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.embed.MessageEmbed;
 import com.discord.models.message.Message;
 import com.discord.stores.StoreMessageState;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: EmbedEntry.kt */
 /* loaded from: classes2.dex */
@@ -23,8 +23,8 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
     private final int type;
 
     public EmbedEntry(int i, long j, Message message, StoreMessageState.State state, MessageEmbed messageEmbed, boolean z2, boolean z3, boolean z4, boolean z5) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(messageEmbed, "embed");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(messageEmbed, "embed");
         this.embedIndex = i;
         this.guildId = j;
         this.message = message;
@@ -91,8 +91,8 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
     }
 
     public final EmbedEntry copy(int embedIndex, long guildId, Message message, StoreMessageState.State messageState, MessageEmbed embed, boolean isBlockedExpanded, boolean allowAnimatedEmojis, boolean autoPlayGifs, boolean isThreadStarterMessage) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(embed, "embed");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(embed, "embed");
         return new EmbedEntry(embedIndex, guildId, message, messageState, embed, isBlockedExpanded, allowAnimatedEmojis, autoPlayGifs, isThreadStarterMessage);
     }
 
@@ -104,7 +104,7 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
             return false;
         }
         EmbedEntry embedEntry = (EmbedEntry) other;
-        return this.embedIndex == embedEntry.embedIndex && this.guildId == embedEntry.guildId && Intrinsics3.areEqual(this.message, embedEntry.message) && Intrinsics3.areEqual(this.messageState, embedEntry.messageState) && Intrinsics3.areEqual(this.embed, embedEntry.embed) && this.isBlockedExpanded == embedEntry.isBlockedExpanded && this.allowAnimatedEmojis == embedEntry.allowAnimatedEmojis && this.autoPlayGifs == embedEntry.autoPlayGifs && this.isThreadStarterMessage == embedEntry.isThreadStarterMessage;
+        return this.embedIndex == embedEntry.embedIndex && this.guildId == embedEntry.guildId && m.areEqual(this.message, embedEntry.message) && m.areEqual(this.messageState, embedEntry.messageState) && m.areEqual(this.embed, embedEntry.embed) && this.isBlockedExpanded == embedEntry.isBlockedExpanded && this.allowAnimatedEmojis == embedEntry.allowAnimatedEmojis && this.autoPlayGifs == embedEntry.autoPlayGifs && this.isThreadStarterMessage == embedEntry.isThreadStarterMessage;
     }
 
     public final boolean getAllowAnimatedEmojis() {
@@ -190,7 +190,7 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmbedEntry(embedIndex=");
+        StringBuilder sbU = a.U("EmbedEntry(embedIndex=");
         sbU.append(this.embedIndex);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -207,6 +207,6 @@ public final /* data */ class EmbedEntry extends ChatListEntry {
         sbU.append(", autoPlayGifs=");
         sbU.append(this.autoPlayGifs);
         sbU.append(", isThreadStarterMessage=");
-        return outline.O(sbU, this.isThreadStarterMessage, ")");
+        return a.O(sbU, this.isThreadStarterMessage, ")");
     }
 }

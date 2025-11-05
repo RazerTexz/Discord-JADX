@@ -8,29 +8,29 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetPruneUsersBinding;
-import com.discord.utilities.KotlinExtensions;
+import com.discord.utilities.KotlinExtensionsKt;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
 import com.discord.widgets.user.WidgetPruneUsersViewModel;
 import com.google.android.material.button.MaterialButton;
-import d0.LazyJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -54,7 +54,7 @@ public final class WidgetPruneUsers extends AppDialog {
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetPruneUsers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPruneUsersBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetPruneUsers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPruneUsersBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -65,7 +65,7 @@ public final class WidgetPruneUsers extends AppDialog {
         }
 
         public final void create(long guildId, FragmentManager fragmentManager) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetPruneUsers widgetPruneUsers = new WidgetPruneUsers();
             Bundle bundle = new Bundle();
             bundle.putLong(WidgetPruneUsers.ARG_GUILD_ID, guildId);
@@ -92,7 +92,7 @@ public final class WidgetPruneUsers extends AppDialog {
 
     /* compiled from: WidgetPruneUsers.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<Context, Integer, CharSequence> {
+    public static final class AnonymousClass1 extends o implements Function2<Context, Integer, CharSequence> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -105,8 +105,8 @@ public final class WidgetPruneUsers extends AppDialog {
         }
 
         public final CharSequence invoke(Context context, int i) {
-            Intrinsics3.checkNotNullParameter(context, "$this$formatLastSeenDays");
-            return FormatUtils.h(context, R.string.last_seen, new Object[]{StringResourceUtils.getI18nPluralString(context, R.plurals.last_seen_days, i, Integer.valueOf(i))}, null, 4);
+            m.checkNotNullParameter(context, "$this$formatLastSeenDays");
+            return b.h(context, R.string.last_seen, new Object[]{StringResourceUtilsKt.getI18nPluralString(context, R.plurals.last_seen_days, i, Integer.valueOf(i))}, null, 4);
         }
     }
 
@@ -136,7 +136,7 @@ public final class WidgetPruneUsers extends AppDialog {
 
     /* compiled from: WidgetPruneUsers.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<WidgetPruneUsersViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<WidgetPruneUsersViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetPruneUsers widgetPruneUsers) {
             super(1, widgetPruneUsers, WidgetPruneUsers.class, "updateUI", "updateUI(Lcom/discord/widgets/user/WidgetPruneUsersViewModel$ViewState;)V", 0);
         }
@@ -149,14 +149,14 @@ public final class WidgetPruneUsers extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetPruneUsersViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetPruneUsers.access$updateUI((WidgetPruneUsers) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetPruneUsers.kt */
     /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<WidgetPruneUsersViewModel.Event, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<WidgetPruneUsersViewModel.Event, Unit> {
         public AnonymousClass2(WidgetPruneUsers widgetPruneUsers) {
             super(1, widgetPruneUsers, WidgetPruneUsers.class, "handleEvent", "handleEvent(Lcom/discord/widgets/user/WidgetPruneUsersViewModel$Event;)V", 0);
         }
@@ -169,18 +169,18 @@ public final class WidgetPruneUsers extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetPruneUsersViewModel.Event event) throws Throwable {
-            Intrinsics3.checkNotNullParameter(event, "p1");
+            m.checkNotNullParameter(event, "p1");
             WidgetPruneUsers.access$handleEvent((WidgetPruneUsers) this.receiver, event);
         }
     }
 
     public WidgetPruneUsers() {
         super(R.layout.widget_prune_users);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetPruneUsers2.INSTANCE, null, 2, null);
-        this.radioManager = LazyJVM.lazy(new WidgetPruneUsers5(this));
-        WidgetPruneUsers6 widgetPruneUsers6 = new WidgetPruneUsers6(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetPruneUsersViewModel.class), new WidgetPruneUsers$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetPruneUsers6));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetPruneUsers$binding$2.INSTANCE, null, 2, null);
+        this.radioManager = g.lazy(new WidgetPruneUsers$radioManager$2(this));
+        WidgetPruneUsers$viewModel$2 widgetPruneUsers$viewModel$2 = new WidgetPruneUsers$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetPruneUsersViewModel.class), new WidgetPruneUsers$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetPruneUsers$viewModel$2));
     }
 
     public static final /* synthetic */ Bundle access$getArgumentsOrDefault$p(WidgetPruneUsers widgetPruneUsers) {
@@ -231,7 +231,7 @@ public final class WidgetPruneUsers extends AppDialog {
             Error.handle(((WidgetPruneUsersViewModel.Event.RestClientFailed) event).getThrowable(), "restClient", null, getContext());
             unit = Unit.a;
         }
-        KotlinExtensions.getExhaustive(unit);
+        KotlinExtensionsKt.getExhaustive(unit);
     }
 
     private final void updateUI(WidgetPruneUsersViewModel.ViewState state) {
@@ -239,13 +239,13 @@ public final class WidgetPruneUsers extends AppDialog {
         CheckedSetting checkedSetting;
         if (state instanceof WidgetPruneUsersViewModel.ViewState.Loading) {
             StringBuilder sb = new StringBuilder();
-            sb.append(FormatUtils.k(this, R.string.prune_members, new Object[0], null, 4));
+            sb.append(b.k(this, R.string.prune_members, new Object[0], null, 4));
             sb.append(" - ");
             WidgetPruneUsersViewModel.ViewState.Loading loading = (WidgetPruneUsersViewModel.ViewState.Loading) state;
             sb.append(loading.getGuildName());
             String string = sb.toString();
             TextView textView = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.pruneUserHeader");
+            m.checkNotNullExpressionValue(textView, "binding.pruneUserHeader");
             textView.setText(string);
             int iOrdinal = loading.getWhichPruneDays().ordinal();
             if (iOrdinal == 0) {
@@ -257,34 +257,34 @@ public final class WidgetPruneUsers extends AppDialog {
                 checkedSetting = getBinding().g;
             }
             RadioManager radioManager = getRadioManager();
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "button");
+            m.checkNotNullExpressionValue(checkedSetting, "button");
             radioManager.a(checkedSetting);
             ProgressBar progressBar = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.pruneUsersLoadingProgressbar");
+            m.checkNotNullExpressionValue(progressBar, "binding.pruneUsersLoadingProgressbar");
             progressBar.setVisibility(0);
             TextView textView2 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.pruneUsersEstimateText");
+            m.checkNotNullExpressionValue(textView2, "binding.pruneUsersEstimateText");
             textView2.setVisibility(8);
             MaterialButton materialButton = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.pruneUserPrune");
+            m.checkNotNullExpressionValue(materialButton, "binding.pruneUserPrune");
             ViewExtensions.disable(materialButton);
             unit = Unit.a;
         } else if (state instanceof WidgetPruneUsersViewModel.ViewState.Loaded) {
             ProgressBar progressBar2 = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(progressBar2, "binding.pruneUsersLoadingProgressbar");
+            m.checkNotNullExpressionValue(progressBar2, "binding.pruneUsersLoadingProgressbar");
             progressBar2.setVisibility(8);
             Context contextRequireContext = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetPruneUsersViewModel.ViewState.Loaded loaded = (WidgetPruneUsersViewModel.ViewState.Loaded) state;
-            CharSequence i18nPluralString = StringResourceUtils.getI18nPluralString(contextRequireContext, R.plurals.form_help_last_seen_1_members, loaded.getPruneCount(), Integer.valueOf(loaded.getPruneCount()));
+            CharSequence i18nPluralString = StringResourceUtilsKt.getI18nPluralString(contextRequireContext, R.plurals.form_help_last_seen_1_members, loaded.getPruneCount(), Integer.valueOf(loaded.getPruneCount()));
             Context contextRequireContext2 = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
-            CharSequence i18nPluralString2 = StringResourceUtils.getI18nPluralString(contextRequireContext2, R.plurals.form_help_last_seen_1_days, loaded.getPruneDays().getCount(), Integer.valueOf(loaded.getPruneDays().getCount()));
+            m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+            CharSequence i18nPluralString2 = StringResourceUtilsKt.getI18nPluralString(contextRequireContext2, R.plurals.form_help_last_seen_1_days, loaded.getPruneDays().getCount(), Integer.valueOf(loaded.getPruneDays().getCount()));
             TextView textView3 = getBinding().e;
-            FormatUtils.n(textView3, R.string.form_help_last_seen_1, new Object[]{i18nPluralString, i18nPluralString2}, null, 4);
+            b.n(textView3, R.string.form_help_last_seen_1, new Object[]{i18nPluralString, i18nPluralString2}, null, 4);
             textView3.setVisibility(0);
             MaterialButton materialButton2 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.pruneUserPrune");
+            m.checkNotNullExpressionValue(materialButton2, "binding.pruneUserPrune");
             materialButton2.setEnabled(loaded.getPruneButtonEnabled());
             unit = Unit.a;
         } else {
@@ -296,35 +296,35 @@ public final class WidgetPruneUsers extends AppDialog {
                 unit = Unit.a;
             } else {
                 ProgressBar progressBar3 = getBinding().h;
-                Intrinsics3.checkNotNullExpressionValue(progressBar3, "binding.pruneUsersLoadingProgressbar");
+                m.checkNotNullExpressionValue(progressBar3, "binding.pruneUsersLoadingProgressbar");
                 progressBar3.setVisibility(8);
                 TextView textView4 = getBinding().e;
-                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.pruneUsersEstimateText");
+                m.checkNotNullExpressionValue(textView4, "binding.pruneUsersEstimateText");
                 textView4.setVisibility(8);
                 MaterialButton materialButton3 = getBinding().d;
-                Intrinsics3.checkNotNullExpressionValue(materialButton3, "binding.pruneUserPrune");
+                m.checkNotNullExpressionValue(materialButton3, "binding.pruneUserPrune");
                 ViewExtensions.disable(materialButton3);
                 unit = Unit.a;
             }
         }
-        KotlinExtensions.getExhaustive(unit);
+        KotlinExtensionsKt.getExhaustive(unit);
     }
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
         CheckedSetting checkedSetting = getBinding().f;
         Context context = checkedSetting.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         checkedSetting.setText(anonymousClass1.invoke(context, 7));
-        checkedSetting.e(new WidgetPruneUsers3(this));
+        checkedSetting.e(new WidgetPruneUsers$onViewBound$$inlined$apply$lambda$1(this));
         CheckedSetting checkedSetting2 = getBinding().g;
         Context context2 = checkedSetting2.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context2, "context");
+        m.checkNotNullExpressionValue(context2, "context");
         checkedSetting2.setText(anonymousClass1.invoke(context2, 30));
-        checkedSetting2.e(new WidgetPruneUsers4(this));
+        checkedSetting2.e(new WidgetPruneUsers$onViewBound$$inlined$apply$lambda$2(this));
         getBinding().f2514b.setOnClickListener(new AnonymousClass4());
         getBinding().d.setOnClickListener(new AnonymousClass5());
     }
@@ -333,7 +333,7 @@ public final class WidgetPruneUsers extends AppDialog {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<WidgetPruneUsersViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "viewModel.observeViewSta…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "viewModel.observeViewSta…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetPruneUsers.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetPruneUsers.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
     }

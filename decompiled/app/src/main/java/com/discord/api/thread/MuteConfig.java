@@ -1,7 +1,7 @@
 package com.discord.api.thread;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: MuteConfig.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final /* data */ class MuteConfig {
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof MuteConfig) && Intrinsics3.areEqual(this.endTime, ((MuteConfig) other).endTime);
+            return (other instanceof MuteConfig) && m.areEqual(this.endTime, ((MuteConfig) other).endTime);
         }
         return true;
     }
@@ -29,6 +29,6 @@ public final /* data */ class MuteConfig {
     }
 
     public String toString() {
-        return outline.J(outline.U("MuteConfig(endTime="), this.endTime, ")");
+        return a.J(a.U("MuteConfig(endTime="), this.endTime, ")");
     }
 }

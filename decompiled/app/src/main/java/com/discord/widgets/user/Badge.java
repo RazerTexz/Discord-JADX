@@ -4,14 +4,14 @@ import android.content.Context;
 import androidx.annotation.DrawableRes;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentManager;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.user.UserProfile;
 import com.discord.models.user.User;
-import com.discord.utilities.user.UserProfileUtils;
+import com.discord.utilities.user.UserProfileUtilsKt;
 import com.discord.utilities.user.UserUtils;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Unit;
@@ -45,9 +45,9 @@ public final /* data */ class Badge {
         }
 
         public final List<Badge> getBadgesForUser(User user, UserProfile profile, boolean isMeUserPremium, boolean isMeUserVerified, Context context) {
-            Intrinsics3.checkNotNullParameter(user, "user");
-            Intrinsics3.checkNotNullParameter(profile, "profile");
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(profile, "profile");
+            m.checkNotNullParameter(context, "context");
             ArrayList arrayList = new ArrayList(8);
             UserUtils userUtils = UserUtils.INSTANCE;
             if (userUtils.isStaff(user)) {
@@ -63,13 +63,13 @@ public final /* data */ class Badge {
                 arrayList.add(new Badge(R.drawable.ic_profile_badge_hypesquad_32dp, context.getString(R.string.hypesquad_badge_tooltip), null, false, null, 28, null));
             }
             if (userUtils.isHypesquadHouse1(user)) {
-                arrayList.add(new Badge(R.drawable.ic_hypesquad_house1_32dp, context.getString(R.string.hypesquad_house_1), FormatUtils.h(context, R.string.hypesquad_online_badge_tooltip, new Object[]{FormatUtils.h(context, R.string.hypesquad_house_1, new Object[0], null, 4)}, null, 4), false, null, 24, null));
+                arrayList.add(new Badge(R.drawable.ic_hypesquad_house1_32dp, context.getString(R.string.hypesquad_house_1), b.h(context, R.string.hypesquad_online_badge_tooltip, new Object[]{b.h(context, R.string.hypesquad_house_1, new Object[0], null, 4)}, null, 4), false, null, 24, null));
             }
             if (userUtils.isHypesquadHouse2(user)) {
-                arrayList.add(new Badge(R.drawable.ic_hypesquad_house2_32dp, FormatUtils.h(context, R.string.hypesquad_house_2, new Object[0], null, 4), FormatUtils.h(context, R.string.hypesquad_online_badge_tooltip, new Object[]{context.getString(R.string.hypesquad_house_2)}, null, 4), false, null, 24, null));
+                arrayList.add(new Badge(R.drawable.ic_hypesquad_house2_32dp, b.h(context, R.string.hypesquad_house_2, new Object[0], null, 4), b.h(context, R.string.hypesquad_online_badge_tooltip, new Object[]{context.getString(R.string.hypesquad_house_2)}, null, 4), false, null, 24, null));
             }
             if (userUtils.isHypesquadHouse3(user)) {
-                arrayList.add(new Badge(R.drawable.ic_hypesquad_house3_32dp, context.getString(R.string.hypesquad_house_3), FormatUtils.h(context, R.string.hypesquad_online_badge_tooltip, new Object[]{FormatUtils.h(context, R.string.hypesquad_house_3, new Object[0], null, 4)}, null, 4), false, null, 24, null));
+                arrayList.add(new Badge(R.drawable.ic_hypesquad_house3_32dp, context.getString(R.string.hypesquad_house_3), b.h(context, R.string.hypesquad_online_badge_tooltip, new Object[]{b.h(context, R.string.hypesquad_house_3, new Object[0], null, 4)}, null, 4), false, null, 24, null));
             }
             if (userUtils.isBugHunterLevel1(user)) {
                 arrayList.add(new Badge(R.drawable.ic_profile_badge_bughunter_level_1_32dp, context.getString(R.string.bug_hunter_badge_tooltip), null, false, null, 28, null));
@@ -83,21 +83,21 @@ public final /* data */ class Badge {
             if (userUtils.isPremiumEarlySupporter(user)) {
                 arrayList.add(new Badge(R.drawable.ic_profile_badge_premium_early_supporter_32dp, context.getString(R.string.early_supporter_tooltip), null, !isMeUserPremium && isMeUserVerified, "PREMIUM_EARLY_SUPPORTER", 4, null));
             }
-            if (UserProfileUtils.isPremium(profile)) {
-                arrayList.add(new Badge(R.drawable.ic_profile_badge_nitro_32dp, context.getString(R.string.premium_title), FormatUtils.h(context, R.string.premium_badge_tooltip, new Object[]{UserProfileUtils.getPremiumSince(profile, context)}, null, 4), !isMeUserPremium && isMeUserVerified, "PREMIUM"));
+            if (UserProfileUtilsKt.isPremium(profile)) {
+                arrayList.add(new Badge(R.drawable.ic_profile_badge_nitro_32dp, context.getString(R.string.premium_title), b.h(context, R.string.premium_badge_tooltip, new Object[]{UserProfileUtilsKt.getPremiumSince(profile, context)}, null, 4), !isMeUserPremium && isMeUserVerified, "PREMIUM"));
             }
-            if (UserProfileUtils.isGuildBooster(profile)) {
-                Integer guildBoostMonthsSubscribed = UserProfileUtils.getGuildBoostMonthsSubscribed(profile);
+            if (UserProfileUtilsKt.isGuildBooster(profile)) {
+                Integer guildBoostMonthsSubscribed = UserProfileUtilsKt.getGuildBoostMonthsSubscribed(profile);
                 int iIntValue = guildBoostMonthsSubscribed != null ? guildBoostMonthsSubscribed.intValue() : 0;
-                arrayList.add(new Badge(iIntValue >= 24 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl9_32dp : iIntValue >= 18 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl8_32dp : iIntValue >= 15 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl7_32dp : iIntValue >= 12 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl6_32dp : iIntValue >= 9 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl5_32dp : iIntValue >= 6 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl4_32dp : iIntValue >= 3 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl3_32dp : iIntValue >= 2 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl2_32dp : R.drawable.ic_profile_badge_premium_guild_subscription_lvl1_32dp, context.getString(R.string.premium_title), FormatUtils.h(context, R.string.premium_guild_subscription_tooltip, new Object[]{UserProfileUtils.getBoostingSince(profile, context)}, null, 4), !isMeUserPremium && isMeUserVerified, "PREMIUM_GUILD"));
+                arrayList.add(new Badge(iIntValue >= 24 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl9_32dp : iIntValue >= 18 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl8_32dp : iIntValue >= 15 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl7_32dp : iIntValue >= 12 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl6_32dp : iIntValue >= 9 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl5_32dp : iIntValue >= 6 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl4_32dp : iIntValue >= 3 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl3_32dp : iIntValue >= 2 ? R.drawable.ic_profile_badge_premium_guild_subscription_lvl2_32dp : R.drawable.ic_profile_badge_premium_guild_subscription_lvl1_32dp, context.getString(R.string.premium_title), b.h(context, R.string.premium_guild_subscription_tooltip, new Object[]{UserProfileUtilsKt.getBoostingSince(profile, context)}, null, 4), !isMeUserPremium && isMeUserVerified, "PREMIUM_GUILD"));
             }
             return arrayList;
         }
 
         public final Function1<Badge, Unit> onBadgeClick(FragmentManager fragmentManager, Context context) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(context, "context");
-            return new Badge2(fragmentManager, context);
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(context, "context");
+            return new Badge$Companion$onBadgeClick$1(fragmentManager, context);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -180,7 +180,7 @@ public final /* data */ class Badge {
             return false;
         }
         Badge badge = (Badge) other;
-        return this.icon == badge.icon && Intrinsics3.areEqual(this.text, badge.text) && Intrinsics3.areEqual(this.tooltip, badge.tooltip) && this.showPremiumUpSell == badge.showPremiumUpSell && Intrinsics3.areEqual(this.objectType, badge.objectType);
+        return this.icon == badge.icon && m.areEqual(this.text, badge.text) && m.areEqual(this.tooltip, badge.tooltip) && this.showPremiumUpSell == badge.showPremiumUpSell && m.areEqual(this.objectType, badge.objectType);
     }
 
     public final int getIcon() {
@@ -221,7 +221,7 @@ public final /* data */ class Badge {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Badge(icon=");
+        StringBuilder sbU = a.U("Badge(icon=");
         sbU.append(this.icon);
         sbU.append(", text=");
         sbU.append(this.text);
@@ -230,7 +230,7 @@ public final /* data */ class Badge {
         sbU.append(", showPremiumUpSell=");
         sbU.append(this.showPremiumUpSell);
         sbU.append(", objectType=");
-        return outline.J(sbU, this.objectType, ")");
+        return a.J(sbU, this.objectType, ")");
     }
 
     public /* synthetic */ Badge(int i, CharSequence charSequence, CharSequence charSequence2, boolean z2, String str, int i2, DefaultConstructorMarker defaultConstructorMarker) {

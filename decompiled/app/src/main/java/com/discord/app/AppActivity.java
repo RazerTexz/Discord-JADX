@@ -25,11 +25,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.PreferenceManager;
-import b.a.d.AppActivity3;
-import b.a.d.AppEventHandlerActivity;
-import b.a.d.AppPermissions;
-import b.a.d.AppScreen;
-import b.a.d.AppScreen2;
+import b.a.d.h;
+import b.a.d.i;
+import b.a.d.j;
 import com.discord.R;
 import com.discord.app.AppTransitionActivity;
 import com.discord.models.domain.ModelUserSettings;
@@ -56,13 +54,9 @@ import com.discord.widgets.tabs.WidgetTabsHost;
 import com.discord.widgets.voice.call.WidgetVoiceCallIncoming;
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreen;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.LazyJVM;
-import d0.a0.MathJVM;
-import d0.e0.KClass;
-import d0.z.JvmClassMapping;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
@@ -80,7 +74,7 @@ import rx.subjects.Subject;
 
 /* compiled from: AppActivity.kt */
 /* loaded from: classes.dex */
-public class AppActivity extends AppEventHandlerActivity implements AppComponent {
+public class AppActivity extends b.a.d.d implements AppComponent {
     public static boolean m;
     public static final Intent n = new Intent();
     public static boolean o = true;
@@ -110,16 +104,16 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     public Intent mostRecentIntent;
 
     /* renamed from: x, reason: collision with root package name and from kotlin metadata */
-    public final AppPermissions2 appPermissions;
+    public final AppPermissionsRequests appPermissions;
 
     /* compiled from: AppActivity.kt */
     public static final class AppAction extends AppActivity {
 
         /* renamed from: y, reason: collision with root package name and from kotlin metadata */
-        public final Lazy screen = LazyJVM.lazy(new a());
+        public final Lazy screen = d0.g.lazy(new a());
 
         /* compiled from: AppActivity.kt */
-        public static final class a extends Lambda implements Function0<Class<? extends AppFragment>> {
+        public static final class a extends o implements Function0<Class<? extends AppFragment>> {
             public a() {
                 super(0);
             }
@@ -175,7 +169,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     }
 
     /* compiled from: AppActivity.kt */
-    public static final class b extends Lambda implements Function0<Unit> {
+    public static final class b extends o implements Function0<Unit> {
         public static final b j = new b();
 
         public b() {
@@ -201,10 +195,10 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
                 ShareUtils.INSTANCE.updateDirectShareTargets(applicationProvider.get());
                 GooglePlayBillingManager.INSTANCE.init(applicationProvider.get());
                 AppLog appLog = AppLog.g;
-                Intrinsics3.checkNotNullParameter(appLog, "logger");
+                m.checkNotNullParameter(appLog, "logger");
                 Application application = applicationProvider.get();
                 SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationProvider.get());
-                Intrinsics3.checkNotNullExpressionValue(defaultSharedPreferences, "PreferenceManager.getDef…pplicationProvider.get())");
+                m.checkNotNullExpressionValue(defaultSharedPreferences, "PreferenceManager.getDef…pplicationProvider.get())");
                 ScreenshotDetector.a = new ScreenshotDetector(application, appLog, defaultSharedPreferences);
                 BugReportManager.INSTANCE.init();
             }
@@ -212,7 +206,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     }
 
     /* compiled from: AppActivity.kt */
-    public static final class c extends Lambda implements Function1<StoreUserSettingsSystem.Settings, Unit> {
+    public static final class c extends o implements Function1<StoreUserSettingsSystem.Settings, Unit> {
         public c() {
             super(1);
         }
@@ -225,21 +219,21 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         public Unit invoke(StoreUserSettingsSystem.Settings settings) {
             boolean z2;
             StoreUserSettingsSystem.Settings settings2 = settings;
-            Intrinsics3.checkNotNullParameter(settings2, "it");
+            m.checkNotNullParameter(settings2, "it");
             AppActivity appActivity = AppActivity.this;
             boolean z3 = AppActivity.m;
             Objects.requireNonNull(appActivity);
             Locale localeObject = ModelUserSettings.getLocaleObject(settings2.getLocale());
-            Intrinsics3.checkNotNullExpressionValue(localeObject, "ModelUserSettings.getLocaleObject(model.locale)");
+            m.checkNotNullExpressionValue(localeObject, "ModelUserSettings.getLocaleObject(model.locale)");
             if (!appActivity.f(localeObject)) {
                 String theme = settings2.getTheme();
-                AppActivity3 appActivity3 = new AppActivity3(appActivity);
-                appActivity3.this$0.getTheme().resolveAttribute(R.attr.theme_name, new TypedValue(), true);
-                if (!(!Intrinsics3.areEqual(r5.string, theme))) {
+                b.a.d.c cVar = new b.a.d.c(appActivity);
+                cVar.this$0.getTheme().resolveAttribute(R.attr.theme_name, new TypedValue(), true);
+                if (!(!m.areEqual(r5.string, theme))) {
                     int fontScale = settings2.getFontScale();
                     FontUtils fontUtils = FontUtils.INSTANCE;
                     ContentResolver contentResolver = appActivity.getContentResolver();
-                    Intrinsics3.checkNotNullExpressionValue(contentResolver, "contentResolver");
+                    m.checkNotNullExpressionValue(contentResolver, "contentResolver");
                     if (!((fontScale == -1 && appActivity.originalFontScale != fontUtils.getSystemFontScaleInt(contentResolver)) || !(fontScale == -1 || appActivity.originalFontScale == fontScale))) {
                         z2 = false;
                     }
@@ -258,7 +252,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     }
 
     /* compiled from: AppActivity.kt */
-    public static final class d extends Lambda implements Function1<ScreenshotDetector.Screenshot, Unit> {
+    public static final class d extends o implements Function1<ScreenshotDetector.Screenshot, Unit> {
         public d() {
             super(1);
         }
@@ -266,14 +260,14 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         @Override // kotlin.jvm.functions.Function1
         public Unit invoke(ScreenshotDetector.Screenshot screenshot) {
             ScreenshotDetector.Screenshot screenshot2 = screenshot;
-            Intrinsics3.checkNotNullParameter(screenshot2, "screenshot");
+            m.checkNotNullParameter(screenshot2, "screenshot");
             BugReportManager.INSTANCE.get().onScreenshot(AppActivity.this, screenshot2);
             return Unit.a;
         }
     }
 
     /* compiled from: AppActivity.kt */
-    public static final class e extends Lambda implements Function0<Class<? extends AppComponent>> {
+    public static final class e extends o implements Function0<Class<? extends AppComponent>> {
         public e() {
             super(0);
         }
@@ -327,13 +321,13 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
 
     public AppActivity() {
         PublishSubject publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.unsubscribeSignal = publishSubjectK0;
-        this.screen = LazyJVM.lazy(new e());
+        this.screen = d0.g.lazy(new e());
         this.mostRecentIntent = n;
-        int i = AppPermissions2.a;
-        Intrinsics3.checkNotNullParameter(this, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-        this.appPermissions = new AppPermissions(this);
+        int i = AppPermissionsRequests.a;
+        m.checkNotNullParameter(this, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        this.appPermissions = new h(this);
     }
 
     public static void i(AppActivity appActivity, boolean z2, int i, Object obj) {
@@ -347,7 +341,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
                 appActivity.overridePendingTransition(transition.getAnimations().c, transition.getAnimations().d);
                 appActivity.getIntent().putExtra("transition", transition);
             }
-            AppScreen2.d(appActivity, appActivity.d(), appActivity.getIntent());
+            j.d(appActivity, appActivity.d(), appActivity.getIntent());
         }
     }
 
@@ -356,9 +350,9 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         if (overrideConfiguration != null) {
             int i = overrideConfiguration.uiMode;
             Context baseContext = getBaseContext();
-            Intrinsics3.checkNotNullExpressionValue(baseContext, "baseContext");
+            m.checkNotNullExpressionValue(baseContext, "baseContext");
             Resources resources = baseContext.getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "baseContext.resources");
+            m.checkNotNullExpressionValue(resources, "baseContext.resources");
             overrideConfiguration.setTo(resources.getConfiguration());
             overrideConfiguration.uiMode = i;
         }
@@ -373,37 +367,37 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
         if (!o) {
             Resources resources = newBase.getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "oldContext.resources");
+            m.checkNotNullExpressionValue(resources, "oldContext.resources");
             Configuration configuration = resources.getConfiguration();
             float targetFontScaleFloat = FontUtils.INSTANCE.getTargetFontScaleFloat(newBase);
             configuration.fontScale = targetFontScaleFloat;
-            this.originalFontScale = MathJVM.roundToInt(targetFontScaleFloat * 100.0f);
+            this.originalFontScale = d0.a0.a.roundToInt(targetFontScaleFloat * 100.0f);
             newBase = newBase.createConfigurationContext(configuration);
-            Intrinsics3.checkNotNullExpressionValue(newBase, "oldContext.createConfigurationContext(config)");
+            m.checkNotNullExpressionValue(newBase, "oldContext.createConfigurationContext(config)");
         }
         super.attachBaseContext(newBase);
     }
 
     public final void b(String localeString, boolean refreshIfChanged) {
         Locale localeObject = ModelUserSettings.getLocaleObject(localeString);
-        Intrinsics3.checkNotNullExpressionValue(localeObject, "locale");
+        m.checkNotNullExpressionValue(localeObject, "locale");
         if (f(localeObject)) {
             Locale.setDefault(localeObject);
             if (Build.VERSION.SDK_INT >= 24) {
                 Resources resources = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                m.checkNotNullExpressionValue(resources, "resources");
                 resources.getConfiguration().setLocale(localeObject);
             } else {
                 Resources resources2 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
+                m.checkNotNullExpressionValue(resources2, "resources");
                 resources2.getConfiguration().locale = localeObject;
             }
             Resources resources3 = getResources();
             Resources resources4 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources4, "resources");
+            m.checkNotNullExpressionValue(resources4, "resources");
             Configuration configuration = resources4.getConfiguration();
             Resources resources5 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources5, "resources");
+            m.checkNotNullExpressionValue(resources5, "resources");
             resources3.updateConfiguration(configuration, resources5.getDisplayMetrics());
             if (refreshIfChanged) {
                 i(this, false, 1, null);
@@ -434,25 +428,25 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     public final boolean f(Locale locale) {
         if (Build.VERSION.SDK_INT >= 24) {
             Resources resources = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+            m.checkNotNullExpressionValue(resources, "resources");
             Configuration configuration = resources.getConfiguration();
-            Intrinsics3.checkNotNullExpressionValue(configuration, "resources.configuration");
+            m.checkNotNullExpressionValue(configuration, "resources.configuration");
             LocaleList locales = configuration.getLocales();
-            Intrinsics3.checkNotNullExpressionValue(locales, "resources.configuration.locales");
+            m.checkNotNullExpressionValue(locales, "resources.configuration.locales");
             if (!locales.isEmpty()) {
                 Resources resources2 = getResources();
-                Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-                Intrinsics3.checkNotNullExpressionValue(resources2.getConfiguration(), "resources.configuration");
-                if (!(!Intrinsics3.areEqual(r0.getLocales().get(0), locale))) {
+                m.checkNotNullExpressionValue(resources2, "resources");
+                m.checkNotNullExpressionValue(resources2.getConfiguration(), "resources.configuration");
+                if (!(!m.areEqual(r0.getLocales().get(0), locale))) {
                     return false;
                 }
             }
         } else {
             Resources resources3 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources3, "resources");
+            m.checkNotNullExpressionValue(resources3, "resources");
             if (resources3.getConfiguration().locale != null) {
-                Intrinsics3.checkNotNullExpressionValue(getResources(), "resources");
-                if (!(!Intrinsics3.areEqual(r0.getConfiguration().locale, locale))) {
+                m.checkNotNullExpressionValue(getResources(), "resources");
+                if (!(!m.areEqual(r0.getConfiguration().locale, locale))) {
                     return false;
                 }
             }
@@ -460,14 +454,14 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return true;
     }
 
-    public final boolean g(List<? extends KClass<? extends AppComponent>> screens) {
-        Intrinsics3.checkNotNullParameter(screens, "screens");
+    public final boolean g(List<? extends d0.e0.c<? extends AppComponent>> screens) {
+        m.checkNotNullParameter(screens, "screens");
         if ((screens instanceof Collection) && screens.isEmpty()) {
             return false;
         }
         Iterator<T> it = screens.iterator();
         while (it.hasNext()) {
-            if (Intrinsics3.areEqual(JvmClassMapping.getJavaClass((KClass) it.next()), d())) {
+            if (m.areEqual(d0.z.a.getJavaClass((d0.e0.c) it.next()), d())) {
                 return true;
             }
         }
@@ -479,9 +473,9 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return this.unsubscribeSignal;
     }
 
-    public final boolean h(KClass<? extends AppComponent> screen) {
-        Intrinsics3.checkNotNullParameter(screen, "screen");
-        return Intrinsics3.areEqual(JvmClassMapping.getJavaClass(screen), d());
+    public final boolean h(d0.e0.c<? extends AppComponent> screen) {
+        m.checkNotNullParameter(screen, "screen");
+        return m.areEqual(d0.z.a.getJavaClass(screen), d());
     }
 
     public final void hideKeyboard(View view) {
@@ -489,15 +483,15 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     }
 
     public final void j(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        if (h(Reflection2.getOrCreateKotlinClass(WidgetTabsHost.class))) {
+        m.checkNotNullParameter(context, "context");
+        if (h(a0.getOrCreateKotlinClass(WidgetTabsHost.class))) {
             return;
         }
-        List<KClass<? extends AppFragment>> list = AppScreen2.a;
-        Intrinsics3.checkNotNullParameter(context, "context");
+        List<d0.e0.c<? extends AppFragment>> list = j.a;
+        m.checkNotNullParameter(context, "context");
         Intent intent = new Intent();
         intent.addFlags(67108864);
-        AppScreen2.c(context, false, intent, 2);
+        j.c(context, false, intent, 2);
     }
 
     public final Toolbar k(boolean showHomeAsUp, @DrawableRes Integer iconRes, @StringRes Integer iconAccessibilityLabel) {
@@ -586,24 +580,24 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
             StoreStream.Companion companion = StoreStream.INSTANCE;
             String theme = companion.getUserSettingsSystem().getTheme();
             int i = 2131951650;
-            if (Intrinsics3.areEqual(theme, ModelUserSettings.THEME_LIGHT)) {
+            if (m.areEqual(theme, ModelUserSettings.THEME_LIGHT)) {
                 i = 2131951657;
-            } else if (!Intrinsics3.areEqual(theme, ModelUserSettings.THEME_DARK) && Intrinsics3.areEqual(theme, ModelUserSettings.THEME_PURE_EVIL)) {
+            } else if (!m.areEqual(theme, ModelUserSettings.THEME_DARK) && m.areEqual(theme, ModelUserSettings.THEME_PURE_EVIL)) {
                 i = 2131951652;
             }
             setTheme(i);
             b(companion.getUserSettingsSystem().getLocale(), false);
             aVar.invoke2();
             aVar2.invoke2();
-            if (h(Reflection2.getOrCreateKotlinClass(WidgetTabsHost.class)) && companion.getTabsNavigation().getSelectedTab() == NavigationTab.HOME) {
+            if (h(a0.getOrCreateKotlinClass(WidgetTabsHost.class)) && companion.getTabsNavigation().getSelectedTab() == NavigationTab.HOME) {
                 return;
             }
             companion.getAnalytics().appUiViewed(d());
         } catch (Exception e2) {
-            if (!h(Reflection2.getOrCreateKotlinClass(WidgetFatalCrash.class))) {
+            if (!h(a0.getOrCreateKotlinClass(WidgetFatalCrash.class))) {
                 WidgetFatalCrash.Companion companion2 = WidgetFatalCrash.INSTANCE;
                 String name = d().getName();
-                Intrinsics3.checkNotNullExpressionValue(name, "screen.name");
+                m.checkNotNullExpressionValue(name, "screen.name");
                 companion2.launch(this, e2, name);
             }
             finish();
@@ -640,18 +634,18 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
     @Override // com.discord.app.AppTransitionActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     public void onResume() {
         super.onResume();
-        AppScreen2 appScreen2 = AppScreen2.g;
-        Intrinsics3.checkNotNullParameter(this, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        j jVar = j.g;
+        m.checkNotNullParameter(this, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         boolean booleanExtra = c().getBooleanExtra("INTENT_RECREATE", false);
         if (booleanExtra) {
             c().removeExtra("INTENT_RECREATE");
-            new Handler(Looper.getMainLooper()).post(new AppScreen(this));
+            new Handler(Looper.getMainLooper()).post(new i(this));
         }
         if (booleanExtra) {
             return;
         }
         StoreStream.Companion companion = StoreStream.INSTANCE;
-        if ((!Intrinsics3.areEqual(companion.getUserSettingsSystem().getLocale(), this.originalLocale)) && (!Intrinsics3.areEqual(this.originalLocale, ""))) {
+        if ((!m.areEqual(companion.getUserSettingsSystem().getLocale(), this.originalLocale)) && (!m.areEqual(this.originalLocale, ""))) {
             i(this, false, 1, null);
             return;
         }
@@ -659,19 +653,19 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(companion.getUserSettingsSystem().observeSettings(true), this, null, 2, null), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new c(), 62, (Object) null);
         ScreenshotDetector screenshotDetector = ScreenshotDetector.a;
         if (screenshotDetector == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("screenshotDetector");
+            m.throwUninitializedPropertyAccessException("screenshotDetector");
         }
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(screenshotDetector.publishSubject, this, null, 2, null), getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new d(), 62, (Object) null);
     }
 
     public final void showKeyboard(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         m(true, view);
     }
 
     /* compiled from: kotlin-style lambda group */
     /* loaded from: classes2.dex */
-    public static final class a extends Lambda implements Function0<Unit> {
+    public static final class a extends o implements Function0<Unit> {
         public final /* synthetic */ int j;
         public final /* synthetic */ Object k;
 
@@ -724,17 +718,17 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
             if (AccessibilityUtils.INSTANCE.isReducedMotionEnabled()) {
                 transition = AppTransitionActivity.Transition.TYPE_FADE_FAST;
             } else if (transition == null) {
-                AppScreen2 appScreen2 = AppScreen2.g;
-                transition = appActivity3.g(AppScreen2.d) ? AppTransitionActivity.Transition.TYPE_SLIDE_HORIZONTAL : null;
+                j jVar = j.g;
+                transition = appActivity3.g(j.d) ? AppTransitionActivity.Transition.TYPE_SLIDE_HORIZONTAL : null;
             }
             appActivity3.k = transition != null ? transition.getAnimations() : null;
             if (((AppActivity) this.k).getSupportFragmentManager().findFragmentByTag(((AppActivity) this.k).d().getName()) != null) {
                 return;
             }
-            AppScreen2 appScreen22 = AppScreen2.g;
+            j jVar2 = j.g;
             FragmentManager supportFragmentManager = ((AppActivity) this.k).getSupportFragmentManager();
             AppActivity appActivity4 = (AppActivity) this.k;
-            AppScreen2.g(appScreen22, supportFragmentManager, appActivity4, appActivity4.d(), 0, false, null, null, 120);
+            j.g(jVar2, supportFragmentManager, appActivity4, appActivity4.d(), 0, false, null, null, 120);
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkMetadata.kt */
 /* loaded from: classes.dex */
@@ -32,7 +32,7 @@ public final /* data */ class TrackNetworkMetadata {
             return false;
         }
         TrackNetworkMetadata trackNetworkMetadata = (TrackNetworkMetadata) other;
-        return Intrinsics3.areEqual(this.url, trackNetworkMetadata.url) && Intrinsics3.areEqual(this.requestMethod, trackNetworkMetadata.requestMethod) && Intrinsics3.areEqual(this.statusCode, trackNetworkMetadata.statusCode) && Intrinsics3.areEqual(this.errorCode, trackNetworkMetadata.errorCode) && Intrinsics3.areEqual(this.errorMessage, trackNetworkMetadata.errorMessage);
+        return m.areEqual(this.url, trackNetworkMetadata.url) && m.areEqual(this.requestMethod, trackNetworkMetadata.requestMethod) && m.areEqual(this.statusCode, trackNetworkMetadata.statusCode) && m.areEqual(this.errorCode, trackNetworkMetadata.errorCode) && m.areEqual(this.errorMessage, trackNetworkMetadata.errorMessage);
     }
 
     public int hashCode() {
@@ -49,7 +49,7 @@ public final /* data */ class TrackNetworkMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkMetadata(url=");
+        StringBuilder sbU = a.U("TrackNetworkMetadata(url=");
         sbU.append(this.url);
         sbU.append(", requestMethod=");
         sbU.append(this.requestMethod);
@@ -58,7 +58,7 @@ public final /* data */ class TrackNetworkMetadata {
         sbU.append(", errorCode=");
         sbU.append(this.errorCode);
         sbU.append(", errorMessage=");
-        return outline.E(sbU, this.errorMessage, ")");
+        return a.E(sbU, this.errorMessage, ")");
     }
 
     public TrackNetworkMetadata(CharSequence charSequence, CharSequence charSequence2, Long l, Long l2, CharSequence charSequence3, int i) {

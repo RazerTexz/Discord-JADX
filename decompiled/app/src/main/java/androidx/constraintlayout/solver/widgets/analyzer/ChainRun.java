@@ -3,7 +3,7 @@ package androidx.constraintlayout.solver.widgets.analyzer;
 import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -180,13 +180,13 @@ public class ChainRun extends WidgetRun {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ChainRun ");
+        StringBuilder sbU = a.U("ChainRun ");
         sbU.append(this.orientation == 0 ? "horizontal : " : "vertical : ");
         String string = sbU.toString();
         Iterator<WidgetRun> it = this.widgets.iterator();
         while (it.hasNext()) {
             WidgetRun next = it.next();
-            string = outline.w(outline.w(string, "<") + next, "> ");
+            string = a.w(a.w(string, "<") + next, "> ");
         }
         return string;
     }

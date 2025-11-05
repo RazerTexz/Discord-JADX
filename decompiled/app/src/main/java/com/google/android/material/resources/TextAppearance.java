@@ -15,7 +15,6 @@ import androidx.annotation.StyleRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.outline;
 import com.google.android.material.R;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
@@ -182,7 +181,7 @@ public class TextAppearance {
                 }
             } catch (Resources.NotFoundException | UnsupportedOperationException unused) {
             } catch (Exception e) {
-                StringBuilder sbU = outline.U("Error loading font ");
+                StringBuilder sbU = b.d.b.a.a.U("Error loading font ");
                 sbU.append(this.fontFamily);
                 Log.d(TAG, sbU.toString(), e);
             }
@@ -212,7 +211,7 @@ public class TextAppearance {
             this.fontResolved = true;
             textAppearanceFontCallback.onFontRetrievalFailed(1);
         } catch (Exception e) {
-            StringBuilder sbU = outline.U("Error loading font ");
+            StringBuilder sbU = b.d.b.a.a.U("Error loading font ");
             sbU.append(this.fontFamily);
             Log.d(TAG, sbU.toString(), e);
             this.fontResolved = true;

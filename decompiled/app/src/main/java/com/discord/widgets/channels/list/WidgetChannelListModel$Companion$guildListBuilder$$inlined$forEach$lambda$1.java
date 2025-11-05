@@ -5,11 +5,11 @@ import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
 import com.discord.api.permission.PermissionOverwrite;
 import com.discord.stores.StoreStream;
-import com.discord.utilities.PermissionOverwriteUtils;
+import com.discord.utilities.PermissionOverwriteUtilsKt;
 import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -21,7 +21,7 @@ import kotlin.jvm.functions.Function3;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1 extends Lambda implements Function3<Channel, Boolean, Boolean, WidgetChannelListModel.Companion.TextLikeChannelData> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1 extends o implements Function3<Channel, Boolean, Boolean, WidgetChannelListModel.Companion.TextLikeChannelData> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;
@@ -52,7 +52,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
 
     /* compiled from: WidgetChannelListModel.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public final /* synthetic */ Boolean $isParentMuted;
         public final /* synthetic */ Channel $textChannel;
 
@@ -78,13 +78,13 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
             Channel channel2 = WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$selectedChannel$inlined;
             boolean z2 = (channel2 != null && (id2 > channel2.getId() ? 1 : (id2 == channel2.getId() ? 0 : -1)) == 0) || WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$areAnyChildThreadsSelected$5$inlined.invoke(channel.getId());
             boolean zContains = WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$collapsedCategories$inlined.contains(Long.valueOf(channel.getParentId()));
-            return WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$hiddenChannelsIds$inlined.contains(Long.valueOf(this.$textChannel.getParentId())) || (!z2 && !WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$isThreadUnread$3$inlined.invoke2(this.$textChannel) && (zContains || Intrinsics3.areEqual(this.$isParentMuted, Boolean.TRUE)));
+            return WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$hiddenChannelsIds$inlined.contains(Long.valueOf(this.$textChannel.getParentId())) || (!z2 && !WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1.this.$isThreadUnread$3$inlined.invoke2(this.$textChannel) && (zContains || m.areEqual(this.$isParentMuted, Boolean.TRUE)));
         }
     }
 
     /* compiled from: WidgetChannelListModel.kt */
     /* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass2 extends o implements Function0<Boolean> {
         public final /* synthetic */ boolean $channelSelected;
         public final /* synthetic */ boolean $isMuted;
         public final /* synthetic */ int $mentionCount;
@@ -174,7 +174,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
     public final WidgetChannelListModel.Companion.TextLikeChannelData invoke(Channel channel, boolean z2, Boolean bool) {
         boolean z3;
         Object next;
-        Intrinsics3.checkNotNullParameter(channel, "textChannel");
+        m.checkNotNullParameter(channel, "textChannel");
         long id2 = channel.getId();
         Channel channel2 = this.$selectedChannel$inlined;
         boolean z4 = channel2 != null && id2 == channel2.getId();
@@ -195,7 +195,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$fo
                 }
             }
             PermissionOverwrite permissionOverwrite = (PermissionOverwrite) next;
-            z3 = permissionOverwrite != null && PermissionOverwriteUtils.denies(permissionOverwrite, Permission.VIEW_CHANNEL);
+            z3 = permissionOverwrite != null && PermissionOverwriteUtilsKt.denies(permissionOverwrite, Permission.VIEW_CHANNEL);
         }
         return new WidgetChannelListModel.Companion.TextLikeChannelData(z4, iIntValue, zContains, z3, ChannelUtils.H(channel) ? new AnonymousClass1(channel, bool).invoke2() : new AnonymousClass2(iIntValue, channel, z4, z2, zContains, id2).invoke2());
     }

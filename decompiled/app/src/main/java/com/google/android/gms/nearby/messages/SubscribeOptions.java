@@ -1,7 +1,7 @@
 package com.google.android.gms.nearby.messages;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import b.i.a.f.j.b.d;
 
 /* loaded from: classes3.dex */
@@ -28,7 +28,7 @@ public final class SubscribeOptions {
     public final String toString() {
         String strValueOf = String.valueOf(this.a);
         String strValueOf2 = String.valueOf(this.f3019b);
-        StringBuilder sbS = outline.S(strValueOf2.length() + strValueOf.length() + 36, "SubscribeOptions{strategy=", strValueOf, ", filter=", strValueOf2);
+        StringBuilder sbS = a.S(strValueOf2.length() + strValueOf.length() + 36, "SubscribeOptions{strategy=", strValueOf, ", filter=", strValueOf2);
         sbS.append('}');
         return sbS.toString();
     }

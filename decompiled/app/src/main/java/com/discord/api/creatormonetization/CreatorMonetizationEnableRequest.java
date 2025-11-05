@@ -1,8 +1,8 @@
 package com.discord.api.creatormonetization;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: CreatorMonetizationEnableRequest.kt */
 /* loaded from: classes.dex */
@@ -35,7 +35,7 @@ public final /* data */ class CreatorMonetizationEnableRequest {
             return false;
         }
         CreatorMonetizationEnableRequest creatorMonetizationEnableRequest = (CreatorMonetizationEnableRequest) other;
-        return this.id == creatorMonetizationEnableRequest.id && Intrinsics3.areEqual(this.state, creatorMonetizationEnableRequest.state);
+        return this.id == creatorMonetizationEnableRequest.id && m.areEqual(this.state, creatorMonetizationEnableRequest.state);
     }
 
     public int hashCode() {
@@ -46,7 +46,7 @@ public final /* data */ class CreatorMonetizationEnableRequest {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("CreatorMonetizationEnableRequest(id=");
+        StringBuilder sbU = a.U("CreatorMonetizationEnableRequest(id=");
         sbU.append(this.id);
         sbU.append(", state=");
         sbU.append(this.state);

@@ -1,6 +1,6 @@
 package com.google.gson;
 
-import b.i.d.JsonPrimitive;
+import b.i.d.k;
 import com.google.gson.internal.bind.TypeAdapters;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
@@ -19,9 +19,9 @@ public abstract class JsonElement {
         throw new IllegalStateException("Not a JSON Object: " + this);
     }
 
-    public JsonPrimitive e() {
-        if (this instanceof JsonPrimitive) {
-            return (JsonPrimitive) this;
+    public k e() {
+        if (this instanceof k) {
+            return (k) this;
         }
         throw new IllegalStateException("Not a JSON Primitive: " + this);
     }

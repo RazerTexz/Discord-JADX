@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackAfCustomizationSaved.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackAfCustomizationSaved implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackAfCustomizationSaved implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final Long addedMemberCount = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackAfCustomizationSaved implements AnalyticsSche
             return false;
         }
         TrackAfCustomizationSaved trackAfCustomizationSaved = (TrackAfCustomizationSaved) other;
-        return Intrinsics3.areEqual(this.loadId, trackAfCustomizationSaved.loadId) && Intrinsics3.areEqual(this.addedMemberCount, trackAfCustomizationSaved.addedMemberCount) && Intrinsics3.areEqual(this.removedMemberCount, trackAfCustomizationSaved.removedMemberCount) && Intrinsics3.areEqual(this.selectedFriendCount, trackAfCustomizationSaved.selectedFriendCount) && Intrinsics3.areEqual(this.selectedTotalCount, trackAfCustomizationSaved.selectedTotalCount) && Intrinsics3.areEqual(this.selectedSuggestedCount, trackAfCustomizationSaved.selectedSuggestedCount);
+        return m.areEqual(this.loadId, trackAfCustomizationSaved.loadId) && m.areEqual(this.addedMemberCount, trackAfCustomizationSaved.addedMemberCount) && m.areEqual(this.removedMemberCount, trackAfCustomizationSaved.removedMemberCount) && m.areEqual(this.selectedFriendCount, trackAfCustomizationSaved.selectedFriendCount) && m.areEqual(this.selectedTotalCount, trackAfCustomizationSaved.selectedTotalCount) && m.areEqual(this.selectedSuggestedCount, trackAfCustomizationSaved.selectedSuggestedCount);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackAfCustomizationSaved implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackAfCustomizationSaved(loadId=");
+        StringBuilder sbU = a.U("TrackAfCustomizationSaved(loadId=");
         sbU.append(this.loadId);
         sbU.append(", addedMemberCount=");
         sbU.append(this.addedMemberCount);
@@ -62,6 +62,6 @@ public final /* data */ class TrackAfCustomizationSaved implements AnalyticsSche
         sbU.append(", selectedTotalCount=");
         sbU.append(this.selectedTotalCount);
         sbU.append(", selectedSuggestedCount=");
-        return outline.G(sbU, this.selectedSuggestedCount, ")");
+        return a.G(sbU, this.selectedSuggestedCount, ")");
     }
 }

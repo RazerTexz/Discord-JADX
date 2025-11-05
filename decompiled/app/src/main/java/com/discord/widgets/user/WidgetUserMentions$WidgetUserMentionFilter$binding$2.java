@@ -5,13 +5,13 @@ import androidx.core.widget.NestedScrollView;
 import com.discord.R;
 import com.discord.databinding.WidgetUserMentionsFilterBinding;
 import com.discord.views.CheckedSetting;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
-public final /* synthetic */ class WidgetUserMentions$WidgetUserMentionFilter$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetUserMentionsFilterBinding> {
+public final /* synthetic */ class WidgetUserMentions$WidgetUserMentionFilter$binding$2 extends k implements Function1<View, WidgetUserMentionsFilterBinding> {
     public static final WidgetUserMentions$WidgetUserMentionFilter$binding$2 INSTANCE = new WidgetUserMentions$WidgetUserMentionFilter$binding$2();
 
     public WidgetUserMentions$WidgetUserMentionFilter$binding$2() {
@@ -20,7 +20,7 @@ public final /* synthetic */ class WidgetUserMentions$WidgetUserMentionFilter$bi
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetUserMentionsFilterBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.user_mentions_filter_include_everyone;
         CheckedSetting checkedSetting = (CheckedSetting) view.findViewById(R.id.user_mentions_filter_include_everyone);
         if (checkedSetting != null) {

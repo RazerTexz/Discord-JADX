@@ -1,7 +1,6 @@
 package b.i.a.f.i.b;
 
 import androidx.collection.ArrayMap;
-import b.d.b.a.outline;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -67,7 +66,7 @@ public final class fa extends ea {
             if (l0Var == null) {
                 string = "null";
             } else {
-                StringBuilder sbU = outline.U("\nevent_filter {\n");
+                StringBuilder sbU = b.d.b.a.a.U("\nevent_filter {\n");
                 if (l0Var.x()) {
                     q9.L(sbU, 0, "filter_id", Integer.valueOf(l0Var.y()));
                 }

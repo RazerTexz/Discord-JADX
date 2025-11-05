@@ -6,7 +6,7 @@ import com.discord.utilities.channel.GuildChannelsInfo;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.widgets.channels.list.WidgetChannelListModel;
 import com.discord.widgets.channels.list.items.ChannelListItemTextChannel;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -16,7 +16,7 @@ import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetChannelListModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3 extends Lambda implements Function0<ChannelListItemTextChannel> {
+public final class WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3 extends o implements Function0<ChannelListItemTextChannel> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
     public final /* synthetic */ boolean $canSeeGuildRoleSubscriptions$inlined;

@@ -5,13 +5,13 @@ import android.app.job.JobService;
 import android.util.Base64;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
-import b.i.a.b.j.AutoValue_TransportContext;
-import b.i.a.b.j.TransportContext;
-import b.i.a.b.j.TransportRuntime;
-import b.i.a.b.j.t.h.JobInfoSchedulerService2;
-import b.i.a.b.j.t.h.Uploader;
-import b.i.a.b.j.t.h.Uploader6;
-import b.i.a.b.j.w.PriorityMapping;
+import b.i.a.b.j.b;
+import b.i.a.b.j.i;
+import b.i.a.b.j.n;
+import b.i.a.b.j.t.h.e;
+import b.i.a.b.j.t.h.g;
+import b.i.a.b.j.t.h.l;
+import b.i.a.b.j.w.a;
 
 @RequiresApi(api = 21)
 /* loaded from: classes3.dex */
@@ -24,15 +24,15 @@ public class JobInfoSchedulerService extends JobService {
         String string2 = jobParameters.getExtras().getString(NotificationCompat.MessagingStyle.Message.KEY_EXTRAS_BUNDLE);
         int i = jobParameters.getExtras().getInt("priority");
         int i2 = jobParameters.getExtras().getInt("attemptNumber");
-        TransportRuntime.b(getApplicationContext());
-        TransportContext.a aVarA = TransportContext.a();
+        n.b(getApplicationContext());
+        i.a aVarA = i.a();
         aVarA.b(string);
-        aVarA.c(PriorityMapping.b(i));
+        aVarA.c(a.b(i));
         if (string2 != null) {
-            ((AutoValue_TransportContext.b) aVarA).f764b = Base64.decode(string2, 0);
+            ((b.C0087b) aVarA).f764b = Base64.decode(string2, 0);
         }
-        Uploader6 uploader6 = TransportRuntime.a().e;
-        uploader6.e.execute(new Uploader(uploader6, aVarA.a(), i2, new JobInfoSchedulerService2(this, jobParameters)));
+        l lVar = n.a().e;
+        lVar.e.execute(new g(lVar, aVarA.a(), i2, new e(this, jobParameters)));
         return true;
     }
 

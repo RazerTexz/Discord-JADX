@@ -11,6 +11,6 @@ public final /* synthetic */ class f implements MediaCodecUtil.f {
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.f
     public final int a(Object obj) {
         Pattern pattern = MediaCodecUtil.a;
-        return ((MediaCodecInfo) obj).a.startsWith("OMX.google") ? 1 : 0;
+        return ((u) obj).a.startsWith("OMX.google") ? 1 : 0;
     }
 }

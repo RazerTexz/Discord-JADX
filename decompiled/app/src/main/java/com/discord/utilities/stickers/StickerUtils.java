@@ -2,8 +2,8 @@ package com.discord.utilities.stickers;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -26,33 +26,31 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStickers;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
-import com.discord.utilities.billing.PremiumUtils2;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.file.DownloadUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.premium.PremiumUtils;
-import com.discord.utilities.premium.PremiumUtils3;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.premium.PremiumUtilsKt;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.search.SearchUtils;
-import com.discord.utilities.string.StringUtils2;
+import com.discord.utilities.string.StringUtilsKt;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.time.TimeUtils;
 import com.discord.utilities.user.UserUtils;
-import d0.LazyJVM;
-import d0.g0.Strings4;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.Sets5;
-import d0.t.SetsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.g;
+import d0.g0.t;
+import d0.g0.w;
+import d0.t.m0;
+import d0.t.n;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.l.e.k;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -82,7 +80,7 @@ public final class StickerUtils {
     public static final StickerUtils INSTANCE = new StickerUtils();
 
     /* renamed from: DEFAULT_STICKER_SIZE_PX$delegate, reason: from kotlin metadata */
-    private static final Lazy DEFAULT_STICKER_SIZE_PX = LazyJVM.lazy(StickerUtils2.INSTANCE);
+    private static final Lazy DEFAULT_STICKER_SIZE_PX = g.lazy(StickerUtils$DEFAULT_STICKER_SIZE_PX$2.INSTANCE);
 
     /* compiled from: StickerUtils.kt */
     public enum StickerSendability {
@@ -130,7 +128,7 @@ public final class StickerUtils {
 
     /* compiled from: StickerUtils.kt */
     /* renamed from: com.discord.utilities.stickers.StickerUtils$getStickerPackPremiumPriceLabel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -147,14 +145,14 @@ public final class StickerUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.strikethroughColor = Integer.valueOf(ColorCompat.getColor(this.$context, R.color.white));
         }
     }
 
     /* compiled from: StickerUtils.kt */
     /* renamed from: com.discord.utilities.stickers.StickerUtils$getStickerPackPremiumPriceLabel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -171,7 +169,7 @@ public final class StickerUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.strikethroughColor = Integer.valueOf(ColorCompat.getColor(this.$context, R.color.white));
         }
     }
@@ -266,8 +264,8 @@ public final class StickerUtils {
     }
 
     public final Observable<DownloadUtils.DownloadState> fetchSticker(Context context, BaseSticker sticker) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(sticker, "sticker");
         File file = new File(context.getCacheDir(), "stickers");
         if (!file.exists()) {
             file.mkdir();
@@ -277,9 +275,9 @@ public final class StickerUtils {
         if (!file2.exists()) {
             return DownloadUtils.downloadFile(context, getCDNAssetUrl$default(this, sticker, null, false, 6, null), str, file);
         }
-        ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(new DownloadUtils.DownloadState.Completed(file2));
-        Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(Download…oadState.Completed(file))");
-        return scalarSynchronousObservable;
+        k kVar = new k(new DownloadUtils.DownloadState.Completed(file2));
+        m.checkNotNullExpressionValue(kVar, "Observable.just(Download…oadState.Completed(file))");
+        return kVar;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:40:0x00cd  */
@@ -291,10 +289,10 @@ public final class StickerUtils {
     public final Set<Sticker> findStickerMatches(String searchText, List<Sticker> stickers, boolean allowPartialMatches) {
         boolean z2;
         boolean z3;
-        Intrinsics3.checkNotNullParameter(searchText, "searchText");
-        Intrinsics3.checkNotNullParameter(stickers, "stickers");
+        m.checkNotNullParameter(searchText, "searchText");
+        m.checkNotNullParameter(stickers, "stickers");
         if (searchText.length() == 0) {
-            return Sets5.emptySet();
+            return n0.emptySet();
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         LinkedHashSet linkedHashSet2 = new LinkedHashSet();
@@ -303,16 +301,16 @@ public final class StickerUtils {
         LinkedHashSet linkedHashSet5 = new LinkedHashSet();
         Set<String> queriesFromSearchText = SearchUtils.INSTANCE.getQueriesFromSearchText(searchText);
         if (queriesFromSearchText.size() > 5) {
-            return Sets5.emptySet();
+            return n0.emptySet();
         }
         for (String str : queriesFromSearchText) {
             for (Sticker sticker : stickers) {
-                if (StringsJVM.equals(sticker.getName(), str, true)) {
+                if (t.equals(sticker.getName(), str, true)) {
                     linkedHashSet2.add(sticker);
-                } else if (allowPartialMatches && StringsJVM.startsWith(sticker.getName(), str, true)) {
+                } else if (allowPartialMatches && t.startsWith(sticker.getName(), str, true)) {
                     linkedHashSet3.add(sticker);
                 } else if (sticker.getType() == StickerType.GUILD) {
-                    List listSplit$default = Strings4.split$default((CharSequence) sticker.getName(), new String[]{" "}, false, 0, 6, (Object) null);
+                    List listSplit$default = w.split$default((CharSequence) sticker.getName(), new String[]{" "}, false, 0, 6, (Object) null);
                     if ((listSplit$default instanceof Collection) && listSplit$default.isEmpty()) {
                         z2 = false;
                         if (z2) {
@@ -320,7 +318,7 @@ public final class StickerUtils {
                     } else {
                         Iterator it = listSplit$default.iterator();
                         while (it.hasNext()) {
-                            if (StringsJVM.equals((String) it.next(), str, true)) {
+                            if (t.equals((String) it.next(), str, true)) {
                                 z2 = true;
                                 break;
                             }
@@ -331,26 +329,26 @@ public final class StickerUtils {
                         }
                     }
                 }
-                List<String> listSplit$default2 = Strings4.split$default((CharSequence) sticker.getTags(), new String[]{","}, false, 0, 6, (Object) null);
-                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listSplit$default2, 10));
+                List<String> listSplit$default2 = w.split$default((CharSequence) sticker.getTags(), new String[]{","}, false, 0, 6, (Object) null);
+                ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listSplit$default2, 10));
                 for (String str2 : listSplit$default2) {
                     Objects.requireNonNull(str2, "null cannot be cast to non-null type kotlin.CharSequence");
-                    arrayList.add(Strings4.trim(str2).toString());
+                    arrayList.add(w.trim(str2).toString());
                 }
                 ArrayList<String> arrayList2 = new ArrayList();
                 for (Object obj : arrayList) {
-                    if (!StringsJVM.isBlank((String) obj)) {
+                    if (!t.isBlank((String) obj)) {
                         arrayList2.add(obj);
                     }
                 }
-                String strReplace$default = StringsJVM.replace$default(str, ":", "", false, 4, (Object) null);
+                String strReplace$default = t.replace$default(str, ":", "", false, 4, (Object) null);
                 for (String str3 : arrayList2) {
-                    if (StringsJVM.equals(str3, strReplace$default, true)) {
+                    if (t.equals(str3, strReplace$default, true)) {
                         linkedHashSet4.add(sticker);
-                    } else if (allowPartialMatches && StringsJVM.startsWith(str3, strReplace$default, true)) {
+                    } else if (allowPartialMatches && t.startsWith(str3, strReplace$default, true)) {
                         linkedHashSet5.add(sticker);
                     } else if (sticker.getType() == StickerType.GUILD) {
-                        List listSplit$default3 = Strings4.split$default((CharSequence) sticker.getTags(), new String[]{"_"}, false, 0, 6, (Object) null);
+                        List listSplit$default3 = w.split$default((CharSequence) sticker.getTags(), new String[]{"_"}, false, 0, 6, (Object) null);
                         if ((listSplit$default3 instanceof Collection) && listSplit$default3.isEmpty()) {
                             z3 = false;
                             if (!z3) {
@@ -358,7 +356,7 @@ public final class StickerUtils {
                         } else {
                             Iterator it2 = listSplit$default3.iterator();
                             while (it2.hasNext()) {
-                                if (StringsJVM.equals((String) it2.next(), str, true)) {
+                                if (t.equals((String) it2.next(), str, true)) {
                                     z3 = true;
                                     break;
                                 }
@@ -381,14 +379,14 @@ public final class StickerUtils {
 
     public final String getBannerCDNAssetUrl(ModelStickerPack stickerPack, Integer size) {
         String string;
-        Intrinsics3.checkNotNullParameter(stickerPack, "stickerPack");
+        m.checkNotNullParameter(stickerPack, "stickerPack");
         StringBuilder sb = new StringBuilder();
         sb.append("https://cdn.discordapp.com/app-assets/710982414301790216/store/");
         sb.append(stickerPack.getBannerAssetId());
         sb.append('.');
-        sb.append(StringUtils2.getSTATIC_IMAGE_EXTENSION());
+        sb.append(StringUtilsKt.getSTATIC_IMAGE_EXTENSION());
         if (size != null) {
-            StringBuilder sbU = outline.U("?size=");
+            StringBuilder sbU = a.U("?size=");
             sbU.append(IconUtils.getMediaProxySize(size.intValue()));
             string = sbU.toString();
         } else {
@@ -399,25 +397,25 @@ public final class StickerUtils {
     }
 
     public final String getCDNAssetUrl(BaseSticker sticker, Integer size, boolean passthrough) {
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(sticker, "sticker");
         int iOrdinal = sticker.getFormatType().ordinal();
         String string = "";
         if (iOrdinal != 1 && iOrdinal != 2) {
             if (iOrdinal != 3) {
                 return "";
             }
-            StringBuilder sbU = outline.U("https://discord.com/stickers/");
+            StringBuilder sbU = a.U("https://discord.com/stickers/");
             sbU.append(sticker.getId());
             sbU.append(sticker.b());
             return sbU.toString();
         }
-        StringBuilder sbU2 = outline.U("https://media.discordapp.net/stickers/");
+        StringBuilder sbU2 = a.U("https://media.discordapp.net/stickers/");
         sbU2.append(sticker.getId());
         sbU2.append(sticker.b());
         sbU2.append("?passthrough=");
         sbU2.append(passthrough);
         if (size != null) {
-            StringBuilder sbU3 = outline.U("&size=");
+            StringBuilder sbU3 = a.U("&size=");
             sbU3.append(IconUtils.getMediaProxySize(size.intValue()));
             string = sbU3.toString();
         }
@@ -433,28 +431,28 @@ public final class StickerUtils {
         StoreStream.Companion companion = StoreStream.INSTANCE;
         Sticker sticker = companion.getStickers().getStickers().get(Long.valueOf(stickerId));
         if (sticker != null) {
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(sticker);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(fullStandardSticker)");
-            return scalarSynchronousObservable;
+            k kVar = new k(sticker);
+            m.checkNotNullExpressionValue(kVar, "Observable.just(fullStandardSticker)");
+            return kVar;
         }
         Sticker guildSticker = companion.getGuildStickers().getGuildSticker(stickerId);
         if (guildSticker != null) {
-            ScalarSynchronousObservable scalarSynchronousObservable2 = new ScalarSynchronousObservable(guildSticker);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable2, "Observable.just(fullGuildSticker)");
-            return scalarSynchronousObservable2;
+            k kVar2 = new k(guildSticker);
+            m.checkNotNullExpressionValue(kVar2, "Observable.just(fullGuildSticker)");
+            return kVar2;
         }
         if (fetchIfMissing) {
             Observable<Sticker> observableU = ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getSticker(stickerId), false, 1, null).u(AnonymousClass1.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableU, "RestAPI\n        .api\n   …fetchedSticker)\n        }");
+            m.checkNotNullExpressionValue(observableU, "RestAPI\n        .api\n   …fetchedSticker)\n        }");
             return observableU;
         }
-        ScalarSynchronousObservable scalarSynchronousObservable3 = new ScalarSynchronousObservable(null);
-        Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable3, "Observable.just(null)");
-        return scalarSynchronousObservable3;
+        k kVar3 = new k(null);
+        m.checkNotNullExpressionValue(kVar3, "Observable.just(null)");
+        return kVar3;
     }
 
     public final CharSequence getLimitedTimeLeftString(Context context, ModelStickerPackStoreListing stickerPackStoreListing) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         if ((stickerPackStoreListing != null ? stickerPackStoreListing.getUnpublishedAt() : null) == null) {
             return "";
         }
@@ -462,53 +460,53 @@ public final class StickerUtils {
         TimeUtils timeUtils = TimeUtils.INSTANCE;
         int daysFromMillis = timeUtils.getDaysFromMillis(unpublishedAtDate);
         if (daysFromMillis > 0) {
-            return StringResourceUtils.getI18nPluralString(context, R.plurals.duration_days_days, daysFromMillis, Integer.valueOf(daysFromMillis));
+            return StringResourceUtilsKt.getI18nPluralString(context, R.plurals.duration_days_days, daysFromMillis, Integer.valueOf(daysFromMillis));
         }
         int hoursFromMillis = timeUtils.getHoursFromMillis(unpublishedAtDate);
         long j = unpublishedAtDate - (hoursFromMillis * 3600000);
         int minutesFromMillis = timeUtils.getMinutesFromMillis(j);
         int secondsFromMillis = timeUtils.getSecondsFromMillis(j - (minutesFromMillis * 60000));
-        return (hoursFromMillis < 0 || minutesFromMillis < 0 || secondsFromMillis < 0) ? FormatUtils.h(context, R.string.sticker_picker_pack_expiring_soon, new Object[0], null, 4) : FormatUtils.h(context, R.string.duration_hours_minutes_seconds, new Object[]{outline.P(new Object[]{Integer.valueOf(hoursFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)"), outline.P(new Object[]{Integer.valueOf(minutesFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)"), outline.P(new Object[]{Integer.valueOf(secondsFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)")}, null, 4);
+        return (hoursFromMillis < 0 || minutesFromMillis < 0 || secondsFromMillis < 0) ? b.h(context, R.string.sticker_picker_pack_expiring_soon, new Object[0], null, 4) : b.h(context, R.string.duration_hours_minutes_seconds, new Object[]{a.P(new Object[]{Integer.valueOf(hoursFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)"), a.P(new Object[]{Integer.valueOf(minutesFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)"), a.P(new Object[]{Integer.valueOf(secondsFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)")}, null, 4);
     }
 
     public final CharSequence getStickerPackPremiumPriceLabel(Context context, ModelStickerPack stickerPack, PremiumTier currentPremiumTier, boolean isPackEnabled) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(stickerPack, "stickerPack");
-        Intrinsics3.checkNotNullParameter(currentPremiumTier, "currentPremiumTier");
-        if (isPackEnabled && !PremiumUtils3.grantsAccessToPremiumStickers(currentPremiumTier)) {
-            return FormatUtils.h(context, R.string.sticker_pack_premium_cta, new Object[0], null, 4);
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(stickerPack, "stickerPack");
+        m.checkNotNullParameter(currentPremiumTier, "currentPremiumTier");
+        if (isPackEnabled && !PremiumUtilsKt.grantsAccessToPremiumStickers(currentPremiumTier)) {
+            return b.h(context, R.string.sticker_pack_premium_cta, new Object[0], null, 4);
         }
         PremiumTier premiumTier = PremiumTier.PREMIUM_GUILD_SUBSCRIPTION_ONLY;
         if (currentPremiumTier != premiumTier) {
             Integer stickerPackPriceForPremiumTier = getStickerPackPriceForPremiumTier(stickerPack, premiumTier);
             Integer stickerPackPriceForPremiumTier2 = getStickerPackPriceForPremiumTier(stickerPack, currentPremiumTier);
-            if (stickerPackPriceForPremiumTier != null && stickerPackPriceForPremiumTier2 != null && (!Intrinsics3.areEqual(stickerPackPriceForPremiumTier, stickerPackPriceForPremiumTier2))) {
-                CharSequence formattedPriceUsd = PremiumUtils2.getFormattedPriceUsd(stickerPackPriceForPremiumTier.intValue(), context);
-                return stickerPackPriceForPremiumTier2.intValue() == 0 ? FormatUtils.b(context, R.string.sticker_picker_discounted_free_android, new Object[]{formattedPriceUsd}, new AnonymousClass1(context)) : FormatUtils.b(context, R.string.sticker_picker_discounted_price_android, new Object[]{PremiumUtils2.getFormattedPriceUsd(stickerPackPriceForPremiumTier2.intValue(), context), formattedPriceUsd}, new AnonymousClass2(context));
+            if (stickerPackPriceForPremiumTier != null && stickerPackPriceForPremiumTier2 != null && (!m.areEqual(stickerPackPriceForPremiumTier, stickerPackPriceForPremiumTier2))) {
+                CharSequence formattedPriceUsd = com.discord.utilities.billing.PremiumUtilsKt.getFormattedPriceUsd(stickerPackPriceForPremiumTier.intValue(), context);
+                return stickerPackPriceForPremiumTier2.intValue() == 0 ? b.b(context, R.string.sticker_picker_discounted_free_android, new Object[]{formattedPriceUsd}, new AnonymousClass1(context)) : b.b(context, R.string.sticker_picker_discounted_price_android, new Object[]{com.discord.utilities.billing.PremiumUtilsKt.getFormattedPriceUsd(stickerPackPriceForPremiumTier2.intValue(), context), formattedPriceUsd}, new AnonymousClass2(context));
             }
         }
         if (isStickerPackFreeForPremiumTier(stickerPack, currentPremiumTier)) {
-            return FormatUtils.h(context, R.string.sticker_pack_price_free, new Object[0], null, 4);
+            return b.h(context, R.string.sticker_pack_price_free, new Object[0], null, 4);
         }
         PremiumTier premiumTier2 = PremiumTier.TIER_1;
         if (isStickerPackFreeForPremiumTier(stickerPack, premiumTier2) && !PremiumUtils.INSTANCE.isPremiumTierAtLeast(currentPremiumTier, premiumTier2)) {
-            return FormatUtils.h(context, R.string.sticker_pack_price_free_with_premium_tier_1, new Object[0], null, 4);
+            return b.h(context, R.string.sticker_pack_price_free_with_premium_tier_1, new Object[0], null, 4);
         }
         PremiumTier premiumTier3 = PremiumTier.TIER_2;
         if (isStickerPackFreeForPremiumTier(stickerPack, premiumTier3) && !PremiumUtils.INSTANCE.isPremiumTierAtLeast(currentPremiumTier, premiumTier3)) {
-            return FormatUtils.h(context, R.string.sticker_pack_price_free_with_premium_tier_2, new Object[0], null, 4);
+            return b.h(context, R.string.sticker_pack_price_free_with_premium_tier_2, new Object[0], null, 4);
         }
         PremiumTier premiumTier4 = PremiumTier.TIER_0;
         if (isStickerPackFreeForPremiumTier(stickerPack, premiumTier4) && !PremiumUtils.INSTANCE.isPremiumTierAtLeast(currentPremiumTier, premiumTier4) && currentPremiumTier != premiumTier2) {
-            return FormatUtils.h(context, R.string.sticker_pack_price_free_with_premium_tier_2, new Object[0], null, 4);
+            return b.h(context, R.string.sticker_pack_price_free_with_premium_tier_2, new Object[0], null, 4);
         }
-        CharSequence formattedPriceUsd2 = PremiumUtils2.getFormattedPriceUsd(getStickerPackPrice(premiumTier3), context);
-        return PremiumUtils3.grantsAccessToPremiumStickers(currentPremiumTier) ? formattedPriceUsd2 : FormatUtils.h(context, R.string.sticker_picker_price_with_premium_tier_2, new Object[]{formattedPriceUsd2}, null, 4);
+        CharSequence formattedPriceUsd2 = com.discord.utilities.billing.PremiumUtilsKt.getFormattedPriceUsd(getStickerPackPrice(premiumTier3), context);
+        return PremiumUtilsKt.grantsAccessToPremiumStickers(currentPremiumTier) ? formattedPriceUsd2 : b.h(context, R.string.sticker_picker_price_with_premium_tier_2, new Object[]{formattedPriceUsd2}, null, 4);
     }
 
     public final StickerSendability getStickerSendability(Sticker sticker, User meUser, Channel currentChannel, Long currentChannelPermissions) {
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
-        Intrinsics3.checkNotNullParameter(meUser, "meUser");
+        m.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(meUser, "meUser");
         boolean canUsePremiumStickers = UserUtils.INSTANCE.getCanUsePremiumStickers(meUser);
         if (sticker.getType() == StickerType.STANDARD) {
             return canUsePremiumStickers ? StickerSendability.SENDABLE : StickerSendability.SENDABLE_WITH_PREMIUM;
@@ -516,35 +514,35 @@ public final class StickerUtils {
         if (sticker.getType() != StickerType.GUILD) {
             return StickerSendability.NONSENDABLE;
         }
-        if (Intrinsics3.areEqual(sticker.getAvailable(), Boolean.FALSE)) {
+        if (m.areEqual(sticker.getAvailable(), Boolean.FALSE)) {
             return StickerSendability.SENDABLE_WITH_PREMIUM_GUILD;
         }
-        return Intrinsics3.areEqual(sticker.getGuildId(), currentChannel != null ? Long.valueOf(currentChannel.getGuildId()) : null) ? StickerSendability.SENDABLE : (currentChannel == null || ChannelUtils.B(currentChannel) || PermissionUtils.can(Permission.USE_EXTERNAL_STICKERS, currentChannelPermissions)) ? canUsePremiumStickers ? StickerSendability.SENDABLE : StickerSendability.SENDABLE_WITH_PREMIUM : StickerSendability.NONSENDABLE;
+        return m.areEqual(sticker.getGuildId(), currentChannel != null ? Long.valueOf(currentChannel.getGuildId()) : null) ? StickerSendability.SENDABLE : (currentChannel == null || ChannelUtils.B(currentChannel) || PermissionUtils.can(Permission.USE_EXTERNAL_STICKERS, currentChannelPermissions)) ? canUsePremiumStickers ? StickerSendability.SENDABLE : StickerSendability.SENDABLE_WITH_PREMIUM : StickerSendability.NONSENDABLE;
     }
 
     public final List<Sticker> getStickersForAutocomplete(StoreUser storeUser, StoreGuilds storeGuilds, StoreStickers storeStickers, StoreGuildSelected storeGuildSelected, StoreGuildStickers storeGuildStickers) {
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(storeStickers, "storeStickers");
-        Intrinsics3.checkNotNullParameter(storeGuildSelected, "storeGuildSelected");
-        Intrinsics3.checkNotNullParameter(storeGuildStickers, "storeGuildStickers");
+        m.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeStickers, "storeStickers");
+        m.checkNotNullParameter(storeGuildSelected, "storeGuildSelected");
+        m.checkNotNullParameter(storeGuildStickers, "storeGuildStickers");
         boolean canUsePremiumStickers = UserUtils.INSTANCE.getCanUsePremiumStickers(storeUser.getMeSnapshot());
-        List<Sticker> enabledStickers = canUsePremiumStickers ? storeStickers.getEnabledStickers() : Collections2.emptyList();
-        Set<Long> setKeySet = canUsePremiumStickers ? storeGuilds.getGuilds().keySet() : SetsJVM.setOf(Long.valueOf(storeGuildSelected.getSelectedGuildId()));
+        List<Sticker> enabledStickers = canUsePremiumStickers ? storeStickers.getEnabledStickers() : n.emptyList();
+        Set<Long> setKeySet = canUsePremiumStickers ? storeGuilds.getGuilds().keySet() : m0.setOf(Long.valueOf(storeGuildSelected.getSelectedGuildId()));
         List<Sticker> allGuildStickersFlattened = storeGuildStickers.getAllGuildStickersFlattened();
         ArrayList arrayList = new ArrayList();
         for (Object obj : allGuildStickersFlattened) {
-            if (_Collections.contains(setKeySet, ((Sticker) obj).getGuildId())) {
+            if (u.contains(setKeySet, ((Sticker) obj).getGuildId())) {
                 arrayList.add(obj);
             }
         }
-        return _Collections.plus((Collection) enabledStickers, (Iterable) arrayList);
+        return u.plus((Collection) enabledStickers, (Iterable) arrayList);
     }
 
     public final boolean isStickerPackFreeForPremiumTier(ModelStickerPack stickerPack, PremiumTier premiumTier) {
-        Intrinsics3.checkNotNullParameter(stickerPack, "stickerPack");
-        Intrinsics3.checkNotNullParameter(premiumTier, "premiumTier");
-        boolean z2 = PremiumUtils3.grantsAccessToPremiumStickers(premiumTier) && stickerPack.isPremiumPack();
+        m.checkNotNullParameter(stickerPack, "stickerPack");
+        m.checkNotNullParameter(premiumTier, "premiumTier");
+        boolean z2 = PremiumUtilsKt.grantsAccessToPremiumStickers(premiumTier) && stickerPack.isPremiumPack();
         Integer stickerPackPriceForPremiumTier = getStickerPackPriceForPremiumTier(stickerPack, premiumTier);
         return z2 || (stickerPackPriceForPremiumTier != null && stickerPackPriceForPremiumTier.intValue() == 0);
     }
@@ -555,14 +553,14 @@ public final class StickerUtils {
         }
         try {
             JSONObject jSONObject = new JSONObject(data).getJSONArray("stickers").getJSONObject(0);
-            Intrinsics3.checkNotNullExpressionValue(jSONObject, "JSONObject(data).getJSON…ickers\").getJSONObject(0)");
+            m.checkNotNullExpressionValue(jSONObject, "JSONObject(data).getJSON…ickers\").getJSONObject(0)");
             try {
                 long j = Long.parseLong(jSONObject.get(ModelAuditLogEntry.CHANGE_KEY_ID).toString());
                 Long lValueOf = Long.valueOf(Long.parseLong(jSONObject.get("pack_id").toString()));
                 String string = jSONObject.getString(ModelAuditLogEntry.CHANGE_KEY_NAME);
-                Intrinsics3.checkNotNullExpressionValue(string, "jsonSticker.getString(\"name\")");
+                m.checkNotNullExpressionValue(string, "jsonSticker.getString(\"name\")");
                 String string2 = jSONObject.getString(ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
-                Intrinsics3.checkNotNullExpressionValue(string2, "jsonSticker.getString(\"description\")");
+                m.checkNotNullExpressionValue(string2, "jsonSticker.getString(\"description\")");
                 return new Sticker(j, lValueOf, Long.valueOf(Long.parseLong(jSONObject.get(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID).toString())), string, string2, StickerFormatType.INSTANCE.a(Integer.parseInt(jSONObject.get(ModelAuditLogEntry.CHANGE_KEY_FORMAT_TYPE).toString())), jSONObject.has(ModelAuditLogEntry.CHANGE_KEY_TAGS) ? jSONObject.get(ModelAuditLogEntry.CHANGE_KEY_TAGS).toString() : "", StickerType.INSTANCE.a(Integer.parseInt(jSONObject.get("type").toString())), null, 256);
             } catch (JSONException e) {
                 Logger.e$default(AppLog.g, "Error parsing sticker from notification", e, null, 4, null);

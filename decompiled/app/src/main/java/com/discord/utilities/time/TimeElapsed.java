@@ -1,7 +1,7 @@
 package com.discord.utilities.time;
 
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -17,10 +17,10 @@ public final class TimeElapsed {
     private final long startTime;
 
     public TimeElapsed(Clock clock, long j) {
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(clock, "clock");
         this.startTime = j;
-        this.milliseconds = LazyJVM.lazy(new TimeElapsed2(this, clock));
-        this.seconds = LazyJVM.lazy(new TimeElapsed3(this));
+        this.milliseconds = g.lazy(new TimeElapsed$milliseconds$2(this, clock));
+        this.seconds = g.lazy(new TimeElapsed$seconds$2(this));
     }
 
     public static final /* synthetic */ long access$getStartTime$p(TimeElapsed timeElapsed) {

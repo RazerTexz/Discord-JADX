@@ -10,7 +10,7 @@ import com.discord.models.user.MeUser;
 import com.discord.utilities.mg_recycler.SingleTypePayload;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.widgets.channels.WidgetCreateChannel;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import rx.functions.Func6;
@@ -30,7 +30,7 @@ public final class WidgetCreateChannel$Model$Companion$get$1<T1, T2, T3, T4, T5,
         if (guild == null || l == null || list == null) {
             return null;
         }
-        Intrinsics3.checkNotNullExpressionValue(bool, "canCreateForumChannels");
+        m.checkNotNullExpressionValue(bool, "canCreateForumChannels");
         boolean zBooleanValue = bool.booleanValue();
         boolean zCanAndIsElevated = PermissionUtils.canAndIsElevated(16L, Long.valueOf(l2 != null ? l2.longValue() : l.longValue()), meUser.getMfaEnabled(), guild.getMfaLevel());
         boolean zContains = guild.getFeatures().contains(GuildFeature.COMMUNITY);

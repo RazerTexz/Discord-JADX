@@ -11,18 +11,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.databinding.TabsHostBottomNavigationViewBinding;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompat2;
+import com.discord.utilities.color.ColorCompatKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.user.UserAvatarPresenceView;
 import com.discord.views.user.UserAvatarPresenceViewController;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Map;
@@ -196,7 +195,7 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
 
     /* compiled from: TabsHostBottomNavigationView.kt */
     /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$9, reason: invalid class name */
-    public static final class AnonymousClass9 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass9 extends o implements Function1<View, Unit> {
         public final /* synthetic */ Function0 $onSettingsLongPress;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -213,7 +212,7 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             this.$onSettingsLongPress.invoke();
         }
     }
@@ -221,9 +220,9 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public TabsHostBottomNavigationView(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         TabsHostBottomNavigationViewBinding tabsHostBottomNavigationViewBindingA = TabsHostBottomNavigationViewBinding.a(LayoutInflater.from(getContext()), this, true);
-        Intrinsics3.checkNotNullExpressionValue(tabsHostBottomNavigationViewBindingA, "TabsHostBottomNavigation…rom(context), this, true)");
+        m.checkNotNullExpressionValue(tabsHostBottomNavigationViewBindingA, "TabsHostBottomNavigation…rom(context), this, true)");
         this.binding = tabsHostBottomNavigationViewBindingA;
         this.heightChangedListeners = new LinkedHashSet();
     }
@@ -231,22 +230,22 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
     private final void initialize() {
         int i;
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         if (resources.getConfiguration().orientation == 1) {
             Resources resources2 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
+            m.checkNotNullExpressionValue(resources2, "resources");
             i = resources2.getDisplayMetrics().widthPixels;
         } else {
             Resources resources3 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources3, "resources");
+            m.checkNotNullExpressionValue(resources3, "resources");
             i = resources3.getDisplayMetrics().heightPixels;
         }
         LinearLayout linearLayout = this.binding.l;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.tabsHostBottomNavTabsContainer");
+        m.checkNotNullExpressionValue(linearLayout, "binding.tabsHostBottomNavTabsContainer");
         ViewGroup.LayoutParams layoutParams = linearLayout.getLayoutParams();
         layoutParams.width = i;
         LinearLayout linearLayout2 = this.binding.l;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.tabsHostBottomNavTabsContainer");
+        m.checkNotNullExpressionValue(linearLayout2, "binding.tabsHostBottomNavTabsContainer");
         linearLayout2.setLayoutParams(layoutParams);
         ImageView imageView = this.binding.e;
         NavigationTab navigationTab = NavigationTab.HOME;
@@ -256,43 +255,43 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         NavigationTab navigationTab3 = NavigationTab.SEARCH;
         ImageView imageView4 = this.binding.h;
         NavigationTab navigationTab4 = NavigationTab.MENTIONS;
-        this.tintableIconToNavigationTabMap = Maps6.mapOf(Tuples.to(imageView, navigationTab), Tuples.to(imageView2, navigationTab2), Tuples.to(imageView3, navigationTab3), Tuples.to(imageView4, navigationTab4));
+        this.tintableIconToNavigationTabMap = h0.mapOf(d0.o.to(imageView, navigationTab), d0.o.to(imageView2, navigationTab2), d0.o.to(imageView3, navigationTab3), d0.o.to(imageView4, navigationTab4));
         UserAvatarPresenceView userAvatarPresenceView = this.binding.m;
         NavigationTab navigationTab5 = NavigationTab.SETTINGS;
-        this.iconToNavigationTabMap = Maps6.mapOf(Tuples.to(this.binding.e, navigationTab), Tuples.to(this.binding.f2157b, navigationTab2), Tuples.to(this.binding.j, navigationTab3), Tuples.to(this.binding.h, navigationTab4), Tuples.to(userAvatarPresenceView, navigationTab5));
-        this.navigationTabToViewMap = Maps6.mapOf(Tuples.to(navigationTab, this.binding.f), Tuples.to(navigationTab2, this.binding.c), Tuples.to(navigationTab3, this.binding.k), Tuples.to(navigationTab4, this.binding.i), Tuples.to(navigationTab5, this.binding.n));
+        this.iconToNavigationTabMap = h0.mapOf(d0.o.to(this.binding.e, navigationTab), d0.o.to(this.binding.f2157b, navigationTab2), d0.o.to(this.binding.j, navigationTab3), d0.o.to(this.binding.h, navigationTab4), d0.o.to(userAvatarPresenceView, navigationTab5));
+        this.navigationTabToViewMap = h0.mapOf(d0.o.to(navigationTab, this.binding.f), d0.o.to(navigationTab2, this.binding.c), d0.o.to(navigationTab3, this.binding.k), d0.o.to(navigationTab4, this.binding.i), d0.o.to(navigationTab5, this.binding.n));
         UserAvatarPresenceView userAvatarPresenceView2 = this.binding.m;
-        Intrinsics3.checkNotNullExpressionValue(userAvatarPresenceView2, "binding.tabsHostBottomNavUserAvatarPresenceView");
+        m.checkNotNullExpressionValue(userAvatarPresenceView2, "binding.tabsHostBottomNavUserAvatarPresenceView");
         this.userAvatarPresenceViewController = new UserAvatarPresenceViewController(userAvatarPresenceView2, null, null, null, 14);
     }
 
     private final void updateNotificationBadges(int homeNotificationsCount, int friendsNotificationsCount) {
         TextView textView = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.tabsHostBottomNavHomeNotificationsBadge");
+        m.checkNotNullExpressionValue(textView, "binding.tabsHostBottomNavHomeNotificationsBadge");
         textView.setText(String.valueOf(homeNotificationsCount));
         TextView textView2 = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.tabsHostBottomNavHomeNotificationsBadge");
+        m.checkNotNullExpressionValue(textView2, "binding.tabsHostBottomNavHomeNotificationsBadge");
         textView2.setVisibility(homeNotificationsCount > 0 ? 0 : 8);
         TextView textView3 = this.binding.g;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.tabsHostBottomNavHomeNotificationsBadge");
+        m.checkNotNullExpressionValue(textView3, "binding.tabsHostBottomNavHomeNotificationsBadge");
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-        textView3.setContentDescription(FormatUtils.i(resources, R.string.mentions_count, new Object[]{String.valueOf(homeNotificationsCount)}, null, 4));
+        m.checkNotNullExpressionValue(resources, "resources");
+        textView3.setContentDescription(b.i(resources, R.string.mentions_count, new Object[]{String.valueOf(homeNotificationsCount)}, null, 4));
         TextView textView4 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.tabsHostBottomNavFriendsNotificationsBadge");
+        m.checkNotNullExpressionValue(textView4, "binding.tabsHostBottomNavFriendsNotificationsBadge");
         textView4.setText(String.valueOf(friendsNotificationsCount));
         TextView textView5 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView5, "binding.tabsHostBottomNavFriendsNotificationsBadge");
+        m.checkNotNullExpressionValue(textView5, "binding.tabsHostBottomNavFriendsNotificationsBadge");
         textView5.setVisibility(friendsNotificationsCount > 0 ? 0 : 8);
         TextView textView6 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView6, "binding.tabsHostBottomNavFriendsNotificationsBadge");
+        m.checkNotNullExpressionValue(textView6, "binding.tabsHostBottomNavFriendsNotificationsBadge");
         Resources resources2 = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-        textView6.setContentDescription(FormatUtils.i(resources2, R.string.incoming_friend_requests_count, new Object[]{String.valueOf(friendsNotificationsCount)}, null, 4));
+        m.checkNotNullExpressionValue(resources2, "resources");
+        textView6.setContentDescription(b.i(resources2, R.string.incoming_friend_requests_count, new Object[]{String.valueOf(friendsNotificationsCount)}, null, 4));
     }
 
     public final void addHeightChangedListener(HeightChangedListener heightChangedListener) {
-        Intrinsics3.checkNotNullParameter(heightChangedListener, "heightChangedListener");
+        m.checkNotNullParameter(heightChangedListener, "heightChangedListener");
         this.heightChangedListeners.add(heightChangedListener);
     }
 
@@ -306,42 +305,42 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
     }
 
     public final void updateView(NavigationTab selectedTab, Function1<? super NavigationTab, Unit> onTabSelected, boolean buttonsEnabled, long myUserId, Set<? extends NavigationTab> visibleTabs, int homeNotificationsCount, int friendsNotificationsCount, Function0<Unit> onSearchClick, Function0<Unit> onSettingsLongPress, Function0<Unit> onMentionsLongPress) {
-        Intrinsics3.checkNotNullParameter(selectedTab, "selectedTab");
-        Intrinsics3.checkNotNullParameter(onTabSelected, "onTabSelected");
-        Intrinsics3.checkNotNullParameter(visibleTabs, "visibleTabs");
-        Intrinsics3.checkNotNullParameter(onSearchClick, "onSearchClick");
-        Intrinsics3.checkNotNullParameter(onSettingsLongPress, "onSettingsLongPress");
-        Intrinsics3.checkNotNullParameter(onMentionsLongPress, "onMentionsLongPress");
+        m.checkNotNullParameter(selectedTab, "selectedTab");
+        m.checkNotNullParameter(onTabSelected, "onTabSelected");
+        m.checkNotNullParameter(visibleTabs, "visibleTabs");
+        m.checkNotNullParameter(onSearchClick, "onSearchClick");
+        m.checkNotNullParameter(onSettingsLongPress, "onSettingsLongPress");
+        m.checkNotNullParameter(onMentionsLongPress, "onMentionsLongPress");
         LinearLayout linearLayout = this.binding.l;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.tabsHostBottomNavTabsContainer");
+        m.checkNotNullExpressionValue(linearLayout, "binding.tabsHostBottomNavTabsContainer");
         linearLayout.setWeightSum(visibleTabs.size());
         ConstraintLayout constraintLayout = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.tabsHostBottomNavHomeItem");
+        m.checkNotNullExpressionValue(constraintLayout, "binding.tabsHostBottomNavHomeItem");
         constraintLayout.setVisibility(visibleTabs.contains(NavigationTab.HOME) ? 0 : 8);
         ConstraintLayout constraintLayout2 = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout2, "binding.tabsHostBottomNavFriendsItem");
+        m.checkNotNullExpressionValue(constraintLayout2, "binding.tabsHostBottomNavFriendsItem");
         constraintLayout2.setVisibility(visibleTabs.contains(NavigationTab.FRIENDS) ? 0 : 8);
         FrameLayout frameLayout = this.binding.k;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.tabsHostBottomNavSearchItem");
+        m.checkNotNullExpressionValue(frameLayout, "binding.tabsHostBottomNavSearchItem");
         frameLayout.setVisibility(visibleTabs.contains(NavigationTab.SEARCH) ? 0 : 8);
         FrameLayout frameLayout2 = this.binding.i;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout2, "binding.tabsHostBottomNavMentionsItem");
+        m.checkNotNullExpressionValue(frameLayout2, "binding.tabsHostBottomNavMentionsItem");
         frameLayout2.setVisibility(visibleTabs.contains(NavigationTab.MENTIONS) ? 0 : 8);
         FrameLayout frameLayout3 = this.binding.n;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout3, "binding.tabsHostBottomNavUserSettingsItem");
+        m.checkNotNullExpressionValue(frameLayout3, "binding.tabsHostBottomNavUserSettingsItem");
         frameLayout3.setVisibility(visibleTabs.contains(NavigationTab.SETTINGS) ? 0 : 8);
         Map<ImageView, ? extends NavigationTab> map = this.tintableIconToNavigationTabMap;
         if (map == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("tintableIconToNavigationTabMap");
+            m.throwUninitializedPropertyAccessException("tintableIconToNavigationTabMap");
         }
         Iterator<T> it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
-            ColorCompat2.tintWithColor((ImageView) entry.getKey(), ColorCompat.getThemedColor(getContext(), ((NavigationTab) entry.getValue()) == selectedTab ? R.attr.colorTabsIconActive : R.attr.colorInteractiveNormal));
+            ColorCompatKt.tintWithColor((ImageView) entry.getKey(), ColorCompat.getThemedColor(getContext(), ((NavigationTab) entry.getValue()) == selectedTab ? R.attr.colorTabsIconActive : R.attr.colorInteractiveNormal));
         }
         Map<View, ? extends NavigationTab> map2 = this.iconToNavigationTabMap;
         if (map2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("iconToNavigationTabMap");
+            m.throwUninitializedPropertyAccessException("iconToNavigationTabMap");
         }
         Iterator<T> it2 = map2.entrySet().iterator();
         while (it2.hasNext()) {
@@ -350,7 +349,7 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
         Map<NavigationTab, ? extends View> map3 = this.navigationTabToViewMap;
         if (map3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("navigationTabToViewMap");
+            m.throwUninitializedPropertyAccessException("navigationTabToViewMap");
         }
         Iterator<T> it3 = map3.entrySet().iterator();
         while (it3.hasNext()) {
@@ -359,7 +358,7 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
         UserAvatarPresenceViewController userAvatarPresenceViewController = this.userAvatarPresenceViewController;
         if (userAvatarPresenceViewController == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("userAvatarPresenceViewController");
+            m.throwUninitializedPropertyAccessException("userAvatarPresenceViewController");
         }
         long j = userAvatarPresenceViewController.userId;
         userAvatarPresenceViewController.userId = myUserId;
@@ -383,16 +382,16 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         this.binding.i.setOnClickListener(new AnonymousClass7(onTabSelected));
         this.binding.n.setOnClickListener(new AnonymousClass8(onTabSelected));
         FrameLayout frameLayout4 = this.binding.n;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout4, "binding.tabsHostBottomNavUserSettingsItem");
+        m.checkNotNullExpressionValue(frameLayout4, "binding.tabsHostBottomNavUserSettingsItem");
         ViewExtensions.setOnLongClickListenerConsumeClick(frameLayout4, new AnonymousClass9(onSettingsLongPress));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public TabsHostBottomNavigationView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         TabsHostBottomNavigationViewBinding tabsHostBottomNavigationViewBindingA = TabsHostBottomNavigationViewBinding.a(LayoutInflater.from(getContext()), this, true);
-        Intrinsics3.checkNotNullExpressionValue(tabsHostBottomNavigationViewBindingA, "TabsHostBottomNavigation…rom(context), this, true)");
+        m.checkNotNullExpressionValue(tabsHostBottomNavigationViewBindingA, "TabsHostBottomNavigation…rom(context), this, true)");
         this.binding = tabsHostBottomNavigationViewBindingA;
         this.heightChangedListeners = new LinkedHashSet();
         initialize();
@@ -405,9 +404,9 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public TabsHostBottomNavigationView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         TabsHostBottomNavigationViewBinding tabsHostBottomNavigationViewBindingA = TabsHostBottomNavigationViewBinding.a(LayoutInflater.from(getContext()), this, true);
-        Intrinsics3.checkNotNullExpressionValue(tabsHostBottomNavigationViewBindingA, "TabsHostBottomNavigation…rom(context), this, true)");
+        m.checkNotNullExpressionValue(tabsHostBottomNavigationViewBindingA, "TabsHostBottomNavigation…rom(context), this, true)");
         this.binding = tabsHostBottomNavigationViewBindingA;
         this.heightChangedListeners = new LinkedHashSet();
         initialize();

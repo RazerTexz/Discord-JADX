@@ -5,17 +5,17 @@ import android.content.Intent;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.a.d.AppScreen2;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetFriendsAddBinding;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.simple_pager.SimplePager;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
@@ -23,7 +23,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetFriendsAdd.kt */
 /* loaded from: classes2.dex */
 public final class WidgetFriendsAdd extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetFriendsAdd.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsAddBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetFriendsAdd.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsAddBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -48,12 +48,12 @@ public final class WidgetFriendsAdd extends AppFragment {
         }
 
         public final void show(Context context, String query, String source) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(source, "source");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(source, "source");
             AnalyticsTracker.openModal$default("Add Friend Modal", source, null, 4, null);
             Intent intent = new Intent();
             intent.putExtra("android.intent.extra.TEXT", query);
-            AppScreen2.d(context, WidgetFriendsAdd.class, intent);
+            j.d(context, WidgetFriendsAdd.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -63,7 +63,7 @@ public final class WidgetFriendsAdd extends AppFragment {
 
     /* compiled from: WidgetFriendsAdd.kt */
     /* renamed from: com.discord.widgets.friends.WidgetFriendsAdd$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Fragment> {
+    public static final class AnonymousClass1 extends o implements Function0<Fragment> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -84,7 +84,7 @@ public final class WidgetFriendsAdd extends AppFragment {
 
     /* compiled from: WidgetFriendsAdd.kt */
     /* renamed from: com.discord.widgets.friends.WidgetFriendsAdd$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Fragment> {
+    public static final class AnonymousClass2 extends o implements Function0<Fragment> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -105,7 +105,7 @@ public final class WidgetFriendsAdd extends AppFragment {
 
     public WidgetFriendsAdd() {
         super(R.layout.widget_friends_add);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetFriendsAdd2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetFriendsAdd$binding$2.INSTANCE, null, 2, null);
     }
 
     private final WidgetFriendsAddBinding getBinding() {
@@ -122,18 +122,18 @@ public final class WidgetFriendsAdd extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         setActionBarTitle(R.string.friends_section_add_friend);
         SimplePager simplePager = getBinding().f2390b;
-        Intrinsics3.checkNotNullExpressionValue(simplePager, "binding.addFriendViewPager");
+        m.checkNotNullExpressionValue(simplePager, "binding.addFriendViewPager");
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         String string = getString(R.string.username);
-        Intrinsics3.checkNotNullExpressionValue(string, "getString(R.string.username)");
+        m.checkNotNullExpressionValue(string, "getString(R.string.username)");
         String string2 = getString(R.string.nearby_scan);
-        Intrinsics3.checkNotNullExpressionValue(string2, "getString(R.string.nearby_scan)");
+        m.checkNotNullExpressionValue(string2, "getString(R.string.nearby_scan)");
         simplePager.setAdapter(new SimplePager.Adapter(parentFragmentManager, new SimplePager.Adapter.Item(string, AnonymousClass1.INSTANCE), new SimplePager.Adapter.Item(string2, AnonymousClass2.INSTANCE)));
     }
 }

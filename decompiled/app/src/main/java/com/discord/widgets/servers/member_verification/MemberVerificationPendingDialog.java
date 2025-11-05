@@ -9,10 +9,9 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetMemberVerificationPendingDialogBinding;
@@ -22,15 +21,14 @@ import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.home.WidgetHome;
 import com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel;
 import com.google.android.material.button.MaterialButton;
-import d0.t.CollectionsJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.t.m;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -43,7 +41,7 @@ import rx.Observable;
 /* compiled from: MemberVerificationPendingDialog.kt */
 /* loaded from: classes2.dex */
 public final class MemberVerificationPendingDialog extends AppDialog {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(MemberVerificationPendingDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMemberVerificationPendingDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(MemberVerificationPendingDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMemberVerificationPendingDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -77,12 +75,12 @@ public final class MemberVerificationPendingDialog extends AppDialog {
 
         public final void enqueue(long guildId, MemberVerificationPendingViewModel.DialogState dialogState) {
             StoreNotices notices = StoreStream.INSTANCE.getNotices();
-            String strT = outline.t("MEMBERVERIFICATION-", guildId);
-            notices.requestToShow(new StoreNotices.Notice(strT, null, 0L, 0, false, CollectionsJVM.listOf(Reflection2.getOrCreateKotlinClass(WidgetHome.class)), 0L, false, 0L, new MemberVerificationPendingDialog2(guildId, dialogState, notices, strT), 150, null));
+            String strT = a.t("MEMBERVERIFICATION-", guildId);
+            notices.requestToShow(new StoreNotices.Notice(strT, null, 0L, 0, false, m.listOf(a0.getOrCreateKotlinClass(WidgetHome.class)), 0L, false, 0L, new MemberVerificationPendingDialog$Companion$enqueue$memberVerificationPendingDialogNotice$1(guildId, dialogState, notices, strT), 150, null));
         }
 
         public final void show(FragmentManager supportFragmentManager, long guildId, MemberVerificationPendingViewModel.DialogState dialogState) {
-            Intrinsics3.checkNotNullParameter(supportFragmentManager, "supportFragmentManager");
+            d0.z.d.m.checkNotNullParameter(supportFragmentManager, "supportFragmentManager");
             MemberVerificationPendingDialog memberVerificationPendingDialog = new MemberVerificationPendingDialog();
             Bundle bundle = new Bundle();
             bundle.putLong("INTENT_EXTRA_GUILD_ID", guildId);
@@ -152,7 +150,7 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             Context contextRequireContext = MemberVerificationPendingDialog.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            d0.z.d.m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             UriHandler.directToPlayStore$default(contextRequireContext, null, null, 6, null);
         }
     }
@@ -265,7 +263,7 @@ public final class MemberVerificationPendingDialog extends AppDialog {
 
     /* compiled from: MemberVerificationPendingDialog.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<MemberVerificationPendingViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<MemberVerificationPendingViewModel.ViewState, Unit> {
         public AnonymousClass1(MemberVerificationPendingDialog memberVerificationPendingDialog) {
             super(1, memberVerificationPendingDialog, MemberVerificationPendingDialog.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/member_verification/MemberVerificationPendingViewModel$ViewState;)V", 0);
         }
@@ -278,14 +276,14 @@ public final class MemberVerificationPendingDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MemberVerificationPendingViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            d0.z.d.m.checkNotNullParameter(viewState, "p1");
             MemberVerificationPendingDialog.access$configureUI((MemberVerificationPendingDialog) this.receiver, viewState);
         }
     }
 
     /* compiled from: MemberVerificationPendingDialog.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<MemberVerificationPendingViewModel.Event, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<MemberVerificationPendingViewModel.Event, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -298,19 +296,19 @@ public final class MemberVerificationPendingDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MemberVerificationPendingViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "event");
+            d0.z.d.m.checkNotNullParameter(event, "event");
             if (!(event instanceof MemberVerificationPendingViewModel.Event.Success) && (event instanceof MemberVerificationPendingViewModel.Event.Error)) {
-                AppToast.i(MemberVerificationPendingDialog.this, R.string.guild_settings_public_update_failed, 0, 4);
+                b.a.d.m.i(MemberVerificationPendingDialog.this, R.string.guild_settings_public_update_failed, 0, 4);
             }
         }
     }
 
     public MemberVerificationPendingDialog() {
         super(R.layout.widget_member_verification_pending_dialog);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, MemberVerificationPendingDialog3.INSTANCE, null, 2, null);
-        MemberVerificationPendingDialog4 memberVerificationPendingDialog4 = new MemberVerificationPendingDialog4(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(MemberVerificationPendingViewModel.class), new MemberVerificationPendingDialog$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(memberVerificationPendingDialog4));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, MemberVerificationPendingDialog$binding$2.INSTANCE, null, 2, null);
+        MemberVerificationPendingDialog$viewModel$2 memberVerificationPendingDialog$viewModel$2 = new MemberVerificationPendingDialog$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(MemberVerificationPendingViewModel.class), new MemberVerificationPendingDialog$appViewModels$$inlined$viewModels$1(g0Var), new i0(memberVerificationPendingDialog$viewModel$2));
     }
 
     public static final /* synthetic */ void access$configureUI(MemberVerificationPendingDialog memberVerificationPendingDialog, MemberVerificationPendingViewModel.ViewState viewState) {
@@ -323,30 +321,30 @@ public final class MemberVerificationPendingDialog extends AppDialog {
 
     private final void configureLoadedUI(MemberVerificationPendingViewModel.ViewState.Loaded viewState) {
         ImageView imageView = getBinding().f2492b;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.memberVerificationPendingImg");
+        d0.z.d.m.checkNotNullExpressionValue(imageView, "binding.memberVerificationPendingImg");
         imageView.setVisibility(viewState.getShowPendingImage() ? 0 : 8);
         TextView textView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.memberVerificationTertiaryBtn");
+        d0.z.d.m.checkNotNullExpressionValue(textView, "binding.memberVerificationTertiaryBtn");
         textView.setVisibility(viewState.getShowTertiaryButton() ? 0 : 8);
         int iOrdinal = viewState.getDialogState().ordinal();
         int color = (iOrdinal == 2 || iOrdinal == 4) ? ColorCompat.getColor(getContext(), R.color.status_red_500) : ColorCompat.getThemedColor(getContext(), R.attr.color_brand_500);
         MaterialButton materialButton = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.memberVerificationPrimaryBtn");
+        d0.z.d.m.checkNotNullExpressionValue(materialButton, "binding.memberVerificationPrimaryBtn");
         materialButton.setBackgroundTintList(ColorStateList.valueOf(color));
         int iOrdinal2 = viewState.getDialogState().ordinal();
         if (iOrdinal2 == 0) {
             getBinding().f2492b.setImageResource(R.drawable.ic_community_update);
             TextView textView2 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.pendingDialogTitle");
+            d0.z.d.m.checkNotNullExpressionValue(textView2, "binding.pendingDialogTitle");
             textView2.setText(getString(R.string.member_verification_warning_update_modal_title));
             TextView textView3 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.pendingDialogDesc");
+            d0.z.d.m.checkNotNullExpressionValue(textView3, "binding.pendingDialogDesc");
             textView3.setText(getString(R.string.member_verification_warning_update_modal_desc));
             MaterialButton materialButton2 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.memberVerificationPrimaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton2, "binding.memberVerificationPrimaryBtn");
             materialButton2.setText(getString(R.string.member_verification_warning_update));
             MaterialButton materialButton3 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton3, "binding.memberVerificationSecondaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton3, "binding.memberVerificationSecondaryBtn");
             materialButton3.setText(getString(R.string.cancel));
             getBinding().c.setOnClickListener(new AnonymousClass11());
             getBinding().d.setOnClickListener(new AnonymousClass12());
@@ -355,52 +353,52 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         if (iOrdinal2 == 1) {
             getBinding().f2492b.setImageResource(R.drawable.ic_member_verification_pending);
             TextView textView4 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.pendingDialogTitle");
+            d0.z.d.m.checkNotNullExpressionValue(textView4, "binding.pendingDialogTitle");
             textView4.setText(getString(R.string.member_verification_pending_application_modal_title));
             TextView textView5 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView5, "binding.pendingDialogDesc");
+            d0.z.d.m.checkNotNullExpressionValue(textView5, "binding.pendingDialogDesc");
             textView5.setText(getString(R.string.member_verification_pending_application_modal_desc));
             MaterialButton materialButton4 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(materialButton4, "binding.memberVerificationPrimaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton4, "binding.memberVerificationPrimaryBtn");
             materialButton4.setText(getString(R.string.got_it));
             getBinding().c.setOnClickListener(new AnonymousClass1());
             if (viewState.isPreviewEnabled()) {
                 MaterialButton materialButton5 = getBinding().d;
-                Intrinsics3.checkNotNullExpressionValue(materialButton5, "binding.memberVerificationSecondaryBtn");
+                d0.z.d.m.checkNotNullExpressionValue(materialButton5, "binding.memberVerificationSecondaryBtn");
                 materialButton5.setVisibility(8);
                 TextView textView6 = getBinding().e;
-                Intrinsics3.checkNotNullExpressionValue(textView6, "binding.memberVerificationTertiaryBtn");
+                d0.z.d.m.checkNotNullExpressionValue(textView6, "binding.memberVerificationTertiaryBtn");
                 textView6.setVisibility(8);
                 return;
             }
             MaterialButton materialButton6 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton6, "binding.memberVerificationSecondaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton6, "binding.memberVerificationSecondaryBtn");
             materialButton6.setVisibility(0);
             MaterialButton materialButton7 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton7, "binding.memberVerificationSecondaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton7, "binding.memberVerificationSecondaryBtn");
             materialButton7.setText(getString(R.string.member_verification_cancel_application));
             getBinding().d.setOnClickListener(new AnonymousClass2());
             TextView textView7 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView7, "binding.memberVerificationTertiaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(textView7, "binding.memberVerificationTertiaryBtn");
             textView7.setVisibility(0);
             TextView textView8 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView8, "binding.memberVerificationTertiaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(textView8, "binding.memberVerificationTertiaryBtn");
             textView8.setText(getString(R.string.leave_server));
             getBinding().e.setOnClickListener(new AnonymousClass3());
             return;
         }
         if (iOrdinal2 == 2) {
             TextView textView9 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textView9, "binding.pendingDialogTitle");
+            d0.z.d.m.checkNotNullExpressionValue(textView9, "binding.pendingDialogTitle");
             textView9.setText(getString(R.string.member_verification_pending_application_cancel_modal_title));
             TextView textView10 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView10, "binding.pendingDialogDesc");
+            d0.z.d.m.checkNotNullExpressionValue(textView10, "binding.pendingDialogDesc");
             textView10.setText(getString(R.string.member_verification_pending_application_leave_server_modal_desc));
             MaterialButton materialButton8 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(materialButton8, "binding.memberVerificationPrimaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton8, "binding.memberVerificationPrimaryBtn");
             materialButton8.setText(getString(R.string.member_verification_pending_application_modal_cancel));
             MaterialButton materialButton9 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton9, "binding.memberVerificationSecondaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton9, "binding.memberVerificationSecondaryBtn");
             materialButton9.setText(getString(R.string.member_verification_pending_application_modal_dismiss));
             getBinding().c.setOnClickListener(new AnonymousClass4());
             getBinding().d.setOnClickListener(new AnonymousClass5());
@@ -411,38 +409,38 @@ public final class MemberVerificationPendingDialog extends AppDialog {
                 return;
             }
             TextView textView11 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textView11, "binding.pendingDialogTitle");
+            d0.z.d.m.checkNotNullExpressionValue(textView11, "binding.pendingDialogTitle");
             textView11.setText(getString(R.string.member_verification_pending_application_leave_server_modal_title));
             TextView textView12 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textView12, "binding.pendingDialogDesc");
+            d0.z.d.m.checkNotNullExpressionValue(textView12, "binding.pendingDialogDesc");
             textView12.setText(getString(R.string.member_verification_pending_application_leave_server_modal_desc));
             MaterialButton materialButton10 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(materialButton10, "binding.memberVerificationPrimaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton10, "binding.memberVerificationPrimaryBtn");
             materialButton10.setText(getString(R.string.member_verification_pending_application_modal_leave));
             MaterialButton materialButton11 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialButton11, "binding.memberVerificationSecondaryBtn");
+            d0.z.d.m.checkNotNullExpressionValue(materialButton11, "binding.memberVerificationSecondaryBtn");
             materialButton11.setText(getString(R.string.member_verification_pending_application_modal_dismiss));
             getBinding().c.setOnClickListener(new AnonymousClass9(viewState));
             getBinding().d.setOnClickListener(new AnonymousClass10());
             return;
         }
         TextView textView13 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView13, "binding.pendingDialogTitle");
+        d0.z.d.m.checkNotNullExpressionValue(textView13, "binding.pendingDialogTitle");
         textView13.setText(getString(R.string.member_verification_application_rejected_title));
         if (viewState.getRejectionReason() != null) {
             String rejectionReason = viewState.getRejectionReason();
             if (!(rejectionReason == null || rejectionReason.length() == 0)) {
                 String str = getString(R.string.member_verification_application_rejected_reason) + " " + viewState.getRejectionReason();
                 TextView textView14 = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(textView14, "binding.pendingDialogDesc");
+                d0.z.d.m.checkNotNullExpressionValue(textView14, "binding.pendingDialogDesc");
                 textView14.setText(str);
             }
         }
         MaterialButton materialButton12 = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(materialButton12, "binding.memberVerificationPrimaryBtn");
+        d0.z.d.m.checkNotNullExpressionValue(materialButton12, "binding.memberVerificationPrimaryBtn");
         materialButton12.setText(getString(R.string.okay));
         MaterialButton materialButton13 = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(materialButton13, "binding.memberVerificationSecondaryBtn");
+        d0.z.d.m.checkNotNullExpressionValue(materialButton13, "binding.memberVerificationSecondaryBtn");
         materialButton13.setText(getString(R.string.member_verification_application_reapply));
         getBinding().c.setOnClickListener(new AnonymousClass7());
         getBinding().d.setOnClickListener(new AnonymousClass8());
@@ -471,7 +469,7 @@ public final class MemberVerificationPendingDialog extends AppDialog {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<MemberVerificationPendingViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
+        d0.z.d.m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), MemberVerificationPendingDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), MemberVerificationPendingDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }

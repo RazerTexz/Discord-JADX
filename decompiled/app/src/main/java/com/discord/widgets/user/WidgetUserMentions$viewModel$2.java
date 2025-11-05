@@ -1,11 +1,11 @@
 package com.discord.widgets.user;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetUserMentions.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserMentions$viewModel$2 extends Lambda implements Function0<WidgetUserMentionsViewModel> {
+public final class WidgetUserMentions$viewModel$2 extends o implements Function0<WidgetUserMentionsViewModel> {
     public static final WidgetUserMentions$viewModel$2 INSTANCE = new WidgetUserMentions$viewModel$2();
 
     public WidgetUserMentions$viewModel$2() {

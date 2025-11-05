@@ -4,16 +4,16 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.databinding.WidgetAnnouncementGuildProfileSheetBinding;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
@@ -21,7 +21,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetPublicAnnouncementProfileSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetPublicAnnouncementProfileSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetPublicAnnouncementProfileSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAnnouncementGuildProfileSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetPublicAnnouncementProfileSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAnnouncementGuildProfileSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -35,7 +35,7 @@ public final class WidgetPublicAnnouncementProfileSheet extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             new WidgetPublicAnnouncementProfileSheet().show(fragmentManager, WidgetPublicAnnouncementProfileSheet.class.getName());
         }
 
@@ -46,7 +46,7 @@ public final class WidgetPublicAnnouncementProfileSheet extends AppBottomSheet {
 
     public WidgetPublicAnnouncementProfileSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetPublicAnnouncementProfileSheet2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetPublicAnnouncementProfileSheet$binding$2.INSTANCE, null, 2, null);
     }
 
     private final WidgetAnnouncementGuildProfileSheetBinding getBinding() {
@@ -64,10 +64,10 @@ public final class WidgetPublicAnnouncementProfileSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         SimpleDraweeView simpleDraweeView = getBinding().f2225b;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.announcementGuildAvatar");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.announcementGuildAvatar");
         IconUtils.setIcon$default(simpleDraweeView, "asset://asset/images/system_user_avatar.png", R.dimen.avatar_size_xxlarge, (Function1) null, (MGImages.ChangeDetector) null, 24, (Object) null);
     }
 }

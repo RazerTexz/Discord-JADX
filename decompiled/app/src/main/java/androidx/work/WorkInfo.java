@@ -3,7 +3,7 @@ package androidx.work;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -100,7 +100,7 @@ public final class WorkInfo {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("WorkInfo{mId='");
+        StringBuilder sbU = a.U("WorkInfo{mId='");
         sbU.append(this.mId);
         sbU.append('\'');
         sbU.append(", mState=");

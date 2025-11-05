@@ -4,7 +4,6 @@ import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.model.Attachment;
 import com.lytefast.flexinput.utils.SelectionCoordinator;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
-import d0.z.d.Intrinsics3;
 
 /* compiled from: FlexInputFragment.kt */
 /* loaded from: classes3.dex */
@@ -18,7 +17,7 @@ public final class m implements SelectionCoordinator.ItemSelectionListener<Attac
     @Override // com.lytefast.flexinput.utils.SelectionCoordinator.ItemSelectionListener
     public void onItemSelected(Attachment<? extends Object> attachment) {
         Attachment<? extends Object> attachment2 = attachment;
-        Intrinsics3.checkNotNullParameter(attachment2, "item");
+        d0.z.d.m.checkNotNullParameter(attachment2, "item");
         FlexInputViewModel flexInputViewModel = this.a.viewModel;
         if (flexInputViewModel == null || !flexInputViewModel.isSingleSelectMode()) {
             FlexInputFragment flexInputFragment = this.a;
@@ -41,7 +40,7 @@ public final class m implements SelectionCoordinator.ItemSelectionListener<Attac
 
     @Override // com.lytefast.flexinput.utils.SelectionCoordinator.ItemSelectionListener
     public void onItemUnselected(Attachment<? extends Object> attachment) {
-        Intrinsics3.checkNotNullParameter(attachment, "item");
+        d0.z.d.m.checkNotNullParameter(attachment, "item");
         FlexInputFragment flexInputFragment = this.a;
         FlexInputViewModel flexInputViewModel = flexInputFragment.viewModel;
         if (flexInputViewModel != null) {

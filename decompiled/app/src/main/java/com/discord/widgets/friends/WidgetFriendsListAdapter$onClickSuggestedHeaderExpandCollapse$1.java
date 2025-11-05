@@ -1,12 +1,12 @@
 package com.discord.widgets.friends;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetFriendsListAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetFriendsListAdapter$onClickSuggestedHeaderExpandCollapse$1 extends Lambda implements Function0<Unit> {
+public final class WidgetFriendsListAdapter$onClickSuggestedHeaderExpandCollapse$1 extends o implements Function0<Unit> {
     public static final WidgetFriendsListAdapter$onClickSuggestedHeaderExpandCollapse$1 INSTANCE = new WidgetFriendsListAdapter$onClickSuggestedHeaderExpandCollapse$1();
 
     public WidgetFriendsListAdapter$onClickSuggestedHeaderExpandCollapse$1() {

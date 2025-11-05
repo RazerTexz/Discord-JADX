@@ -1,8 +1,8 @@
 package com.discord.api.application;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: Team.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class Team {
             return false;
         }
         Team team = (Team) other;
-        return this.id == team.id && Intrinsics3.areEqual(this.icon, team.icon) && Intrinsics3.areEqual(this.name, team.name) && this.ownerUserId == team.ownerUserId;
+        return this.id == team.id && m.areEqual(this.icon, team.icon) && m.areEqual(this.name, team.name) && this.ownerUserId == team.ownerUserId;
     }
 
     public int hashCode() {
@@ -35,13 +35,13 @@ public final /* data */ class Team {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Team(id=");
+        StringBuilder sbU = a.U("Team(id=");
         sbU.append(this.id);
         sbU.append(", icon=");
         sbU.append(this.icon);
         sbU.append(", name=");
         sbU.append(this.name);
         sbU.append(", ownerUserId=");
-        return outline.C(sbU, this.ownerUserId, ")");
+        return a.C(sbU, this.ownerUserId, ")");
     }
 }

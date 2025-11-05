@@ -2,7 +2,6 @@ package b.i.a.f.i.b;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.measurement.internal.zzn;
 import java.util.ArrayList;
 
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 public final class z9 implements Parcelable.Creator<zzn> {
     @Override // android.os.Parcelable.Creator
     public final zzn createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         long jH1 = 0;
         long jH12 = 0;
         long jH13 = 0;
@@ -39,67 +38,67 @@ public final class z9 implements Parcelable.Creator<zzn> {
             int i = parcel.readInt();
             switch ((char) i) {
                 case 2:
-                    strR = AnimatableValueParser.R(parcel, i);
+                    strR = b.c.a.a0.d.R(parcel, i);
                     break;
                 case 3:
-                    strR2 = AnimatableValueParser.R(parcel, i);
+                    strR2 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case 4:
-                    strR3 = AnimatableValueParser.R(parcel, i);
+                    strR3 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case 5:
-                    strR4 = AnimatableValueParser.R(parcel, i);
+                    strR4 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case 6:
-                    jH1 = AnimatableValueParser.H1(parcel, i);
+                    jH1 = b.c.a.a0.d.H1(parcel, i);
                     break;
                 case 7:
-                    jH12 = AnimatableValueParser.H1(parcel, i);
+                    jH12 = b.c.a.a0.d.H1(parcel, i);
                     break;
                 case '\b':
-                    strR5 = AnimatableValueParser.R(parcel, i);
+                    strR5 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case '\t':
-                    zE1 = AnimatableValueParser.E1(parcel, i);
+                    zE1 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case '\n':
-                    zE12 = AnimatableValueParser.E1(parcel, i);
+                    zE12 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case 11:
-                    jH16 = AnimatableValueParser.H1(parcel, i);
+                    jH16 = b.c.a.a0.d.H1(parcel, i);
                     break;
                 case '\f':
-                    strR6 = AnimatableValueParser.R(parcel, i);
+                    strR6 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case '\r':
-                    jH13 = AnimatableValueParser.H1(parcel, i);
+                    jH13 = b.c.a.a0.d.H1(parcel, i);
                     break;
                 case 14:
-                    jH14 = AnimatableValueParser.H1(parcel, i);
+                    jH14 = b.c.a.a0.d.H1(parcel, i);
                     break;
                 case 15:
-                    iG1 = AnimatableValueParser.G1(parcel, i);
+                    iG1 = b.c.a.a0.d.G1(parcel, i);
                     break;
                 case 16:
-                    zE13 = AnimatableValueParser.E1(parcel, i);
+                    zE13 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case 17:
-                    zE14 = AnimatableValueParser.E1(parcel, i);
+                    zE14 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case 18:
-                    zE15 = AnimatableValueParser.E1(parcel, i);
+                    zE15 = b.c.a.a0.d.E1(parcel, i);
                     break;
                 case 19:
-                    strR7 = AnimatableValueParser.R(parcel, i);
+                    strR7 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case 20:
                 default:
-                    AnimatableValueParser.d2(parcel, i);
+                    b.c.a.a0.d.d2(parcel, i);
                     break;
                 case 21:
-                    int iM1 = AnimatableValueParser.M1(parcel, i);
+                    int iM1 = b.c.a.a0.d.M1(parcel, i);
                     if (iM1 != 0) {
-                        AnimatableValueParser.z2(parcel, i, iM1, 4);
+                        b.c.a.a0.d.z2(parcel, i, iM1, 4);
                         boolValueOf = Boolean.valueOf(parcel.readInt() != 0);
                         break;
                     } else {
@@ -107,20 +106,20 @@ public final class z9 implements Parcelable.Creator<zzn> {
                         break;
                     }
                 case 22:
-                    jH15 = AnimatableValueParser.H1(parcel, i);
+                    jH15 = b.c.a.a0.d.H1(parcel, i);
                     break;
                 case 23:
-                    arrayListT = AnimatableValueParser.T(parcel, i);
+                    arrayListT = b.c.a.a0.d.T(parcel, i);
                     break;
                 case 24:
-                    strR8 = AnimatableValueParser.R(parcel, i);
+                    strR8 = b.c.a.a0.d.R(parcel, i);
                     break;
                 case 25:
-                    strR9 = AnimatableValueParser.R(parcel, i);
+                    strR9 = b.c.a.a0.d.R(parcel, i);
                     break;
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zzn(strR, strR2, strR3, strR4, jH1, jH12, strR5, zE1, zE12, jH16, strR6, jH13, jH14, iG1, zE13, zE14, zE15, strR7, boolValueOf, jH15, arrayListT, strR8, strR9);
     }
 

@@ -9,7 +9,7 @@ import android.text.TextPaint;
 import android.text.style.CharacterStyle;
 import android.text.style.UpdateAppearance;
 import android.widget.TextView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TextViewFadeHelper.kt */
 /* loaded from: classes2.dex */
@@ -36,7 +36,7 @@ public final class TextViewFadeHelper {
     }
 
     public TextViewFadeHelper(TextView textView) {
-        Intrinsics3.checkNotNullParameter(textView, "textView");
+        m.checkNotNullParameter(textView, "textView");
         this.textView = textView;
         this.span = new LinearGradientSpan();
     }
@@ -70,7 +70,7 @@ public final class TextViewFadeHelper {
                     int lineEnd = layout.getLineEnd(i);
                     float lineWidth = layout.getLineWidth(i);
                     if (z2) {
-                        if (spanStart == lineStart && spanEnd == lineEnd && Intrinsics3.areEqual(this.lineWidth, lineWidth)) {
+                        if (spanStart == lineStart && spanEnd == lineEnd && m.areEqual(this.lineWidth, lineWidth)) {
                             return;
                         } else {
                             spannable.removeSpan(this.span);
@@ -98,7 +98,7 @@ public final class TextViewFadeHelper {
 
     public final TextView registerFadeHelper() {
         TextView textView = this.textView;
-        textView.addOnAttachStateChangeListener(new TextViewFadeHelper4(textView, new TextViewFadeHelper2(this), new TextViewFadeHelper3(this)));
+        textView.addOnAttachStateChangeListener(new TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$3(textView, new TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$1(this), new TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$2(this)));
         return textView;
     }
 

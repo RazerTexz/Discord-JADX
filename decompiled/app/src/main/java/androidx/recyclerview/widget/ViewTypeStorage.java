@@ -3,7 +3,7 @@ package androidx.recyclerview.widget;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 import androidx.annotation.NonNull;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +34,7 @@ public interface ViewTypeStorage {
                 if (iIndexOfKey >= 0) {
                     return this.mGlobalToLocalMapping.valueAt(iIndexOfKey);
                 }
-                StringBuilder sbV = outline.V("requested global type ", i, " does not belong to the adapter:");
+                StringBuilder sbV = a.V("requested global type ", i, " does not belong to the adapter:");
                 sbV.append(this.mWrapper.adapter);
                 throw new IllegalStateException(sbV.toString());
             }
@@ -65,7 +65,7 @@ public interface ViewTypeStorage {
             if (nestedAdapterWrapper != null) {
                 return nestedAdapterWrapper;
             }
-            throw new IllegalArgumentException(outline.q("Cannot find the wrapper for global view type ", i));
+            throw new IllegalArgumentException(a.q("Cannot find the wrapper for global view type ", i));
         }
 
         public int obtainViewType(NestedAdapterWrapper nestedAdapterWrapper) {
@@ -129,7 +129,7 @@ public interface ViewTypeStorage {
         public NestedAdapterWrapper getWrapperForGlobalType(int i) {
             List<NestedAdapterWrapper> list = this.mGlobalTypeToWrapper.get(i);
             if (list == null || list.isEmpty()) {
-                throw new IllegalArgumentException(outline.q("Cannot find the wrapper for global view type ", i));
+                throw new IllegalArgumentException(a.q("Cannot find the wrapper for global view type ", i));
             }
             return list.get(0);
         }

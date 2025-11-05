@@ -1,8 +1,8 @@
 package com.discord.api.user;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildmember.GuildMember;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TypingUser.kt */
 /* loaded from: classes.dex */
@@ -40,7 +40,7 @@ public final /* data */ class TypingUser {
             return false;
         }
         TypingUser typingUser = (TypingUser) other;
-        return this.userId == typingUser.userId && this.guildId == typingUser.guildId && this.channelId == typingUser.channelId && Intrinsics3.areEqual(this.member, typingUser.member);
+        return this.userId == typingUser.userId && this.guildId == typingUser.guildId && this.channelId == typingUser.channelId && m.areEqual(this.member, typingUser.member);
     }
 
     public int hashCode() {
@@ -54,7 +54,7 @@ public final /* data */ class TypingUser {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TypingUser(userId=");
+        StringBuilder sbU = a.U("TypingUser(userId=");
         sbU.append(this.userId);
         sbU.append(", guildId=");
         sbU.append(this.guildId);

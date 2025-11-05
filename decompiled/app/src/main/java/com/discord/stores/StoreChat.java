@@ -3,16 +3,16 @@ package com.discord.stores;
 import a0.a.a.b;
 import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.message.Message;
 import com.discord.models.user.User;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Unit;
@@ -38,8 +38,8 @@ public final class StoreChat extends StoreV2 {
         private final Message message;
 
         public EditingMessage(Message message, CharSequence charSequence) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(charSequence, "content");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(charSequence, "content");
             this.message = message;
             this.content = charSequence;
         }
@@ -65,8 +65,8 @@ public final class StoreChat extends StoreV2 {
         }
 
         public final EditingMessage copy(Message message, CharSequence content) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(content, "content");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(content, "content");
             return new EditingMessage(message, content);
         }
 
@@ -78,7 +78,7 @@ public final class StoreChat extends StoreV2 {
                 return false;
             }
             EditingMessage editingMessage = (EditingMessage) other;
-            return Intrinsics3.areEqual(this.message, editingMessage.message) && Intrinsics3.areEqual(this.content, editingMessage.content);
+            return m.areEqual(this.message, editingMessage.message) && m.areEqual(this.content, editingMessage.content);
         }
 
         public final CharSequence getContent() {
@@ -97,10 +97,10 @@ public final class StoreChat extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("EditingMessage(message=");
+            StringBuilder sbU = a.U("EditingMessage(message=");
             sbU.append(this.message);
             sbU.append(", content=");
-            return outline.E(sbU, this.content, ")");
+            return a.E(sbU, this.content, ")");
         }
     }
 
@@ -114,7 +114,7 @@ public final class StoreChat extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public AppendChatText(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 this.text = str;
             }
 
@@ -131,13 +131,13 @@ public final class StoreChat extends StoreV2 {
             }
 
             public final AppendChatText copy(String text) {
-                Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 return new AppendChatText(text);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof AppendChatText) && Intrinsics3.areEqual(this.text, ((AppendChatText) other).text);
+                    return (other instanceof AppendChatText) && m.areEqual(this.text, ((AppendChatText) other).text);
                 }
                 return true;
             }
@@ -155,7 +155,7 @@ public final class StoreChat extends StoreV2 {
             }
 
             public String toString() {
-                return outline.J(outline.U("AppendChatText(text="), this.text, ")");
+                return a.J(a.U("AppendChatText(text="), this.text, ")");
             }
         }
 
@@ -166,7 +166,7 @@ public final class StoreChat extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public ReplaceChatText(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 this.text = str;
             }
 
@@ -183,13 +183,13 @@ public final class StoreChat extends StoreV2 {
             }
 
             public final ReplaceChatText copy(String text) {
-                Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+                m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
                 return new ReplaceChatText(text);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof ReplaceChatText) && Intrinsics3.areEqual(this.text, ((ReplaceChatText) other).text);
+                    return (other instanceof ReplaceChatText) && m.areEqual(this.text, ((ReplaceChatText) other).text);
                 }
                 return true;
             }
@@ -207,7 +207,7 @@ public final class StoreChat extends StoreV2 {
             }
 
             public String toString() {
-                return outline.J(outline.U("ReplaceChatText(text="), this.text, ")");
+                return a.J(a.U("ReplaceChatText(text="), this.text, ")");
             }
         }
 
@@ -221,7 +221,7 @@ public final class StoreChat extends StoreV2 {
 
     /* compiled from: StoreChat.kt */
     /* renamed from: com.discord.stores.StoreChat$observeEditingMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<EditingMessage> {
+    public static final class AnonymousClass1 extends o implements Function0<EditingMessage> {
         public AnonymousClass1() {
             super(0);
         }
@@ -240,7 +240,7 @@ public final class StoreChat extends StoreV2 {
 
     /* compiled from: StoreChat.kt */
     /* renamed from: com.discord.stores.StoreChat$observeExpandedBlockedMessageIds$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<List<? extends Long>> {
+    public static final class AnonymousClass1 extends o implements Function0<List<? extends Long>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -259,7 +259,7 @@ public final class StoreChat extends StoreV2 {
 
     /* compiled from: StoreChat.kt */
     /* renamed from: com.discord.stores.StoreChat$observeInteractionState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<InteractionState> {
+    public static final class AnonymousClass1 extends o implements Function0<InteractionState> {
         public AnonymousClass1() {
             super(0);
         }
@@ -278,7 +278,7 @@ public final class StoreChat extends StoreV2 {
 
     /* compiled from: StoreChat.kt */
     /* renamed from: com.discord.stores.StoreChat$setEditingMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ EditingMessage $editingMessage;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -302,7 +302,7 @@ public final class StoreChat extends StoreV2 {
 
     /* compiled from: StoreChat.kt */
     /* renamed from: com.discord.stores.StoreChat$setInteractionState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ InteractionState $interactionState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -326,7 +326,7 @@ public final class StoreChat extends StoreV2 {
 
     /* compiled from: StoreChat.kt */
     /* renamed from: com.discord.stores.StoreChat$toggleBlockedMessageGroup$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $messageId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -353,7 +353,7 @@ public final class StoreChat extends StoreV2 {
     }
 
     public /* synthetic */ StoreChat(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ EditingMessage access$getEditingMessage$p(StoreChat storeChat) {
@@ -382,7 +382,7 @@ public final class StoreChat extends StoreV2 {
                 return;
             }
             StoreGatewayConnection.requestGuildMembers$default(StoreStream.INSTANCE.getGatewaySocket(), guildId, user.getUsername(), null, null, 12, null);
-            StringBuilder sbU = outline.U("@");
+            StringBuilder sbU = a.U("@");
             sbU.append(user.getUsername());
             sbU.append(UserUtils.INSTANCE.getDiscriminatorWithPadding(user));
             String string = sbU.toString();
@@ -404,32 +404,32 @@ public final class StoreChat extends StoreV2 {
 
     public final Observable<EditingMessage> observeEditingMessage() {
         Observable<EditingMessage> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     public final Observable<List<Long>> observeExpandedBlockedMessageIds() {
         Observable<List<Long>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR… }.distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<InteractionState> observeInteractionState() {
         Observable observableG = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
         Observable<InteractionState> observableR = observableG.r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final void replaceChatText(String text) {
-        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         this.eventSubject.k.onNext(new Event.ReplaceChatText(text + ' '));
     }
 
@@ -438,7 +438,7 @@ public final class StoreChat extends StoreV2 {
     }
 
     public final void setInteractionState(InteractionState interactionState) {
-        Intrinsics3.checkNotNullParameter(interactionState, "interactionState");
+        m.checkNotNullParameter(interactionState, "interactionState");
         this.dispatcher.schedule(new AnonymousClass1(interactionState));
     }
 
@@ -453,12 +453,12 @@ public final class StoreChat extends StoreV2 {
     }
 
     public StoreChat(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.expandedBlockedMessageGroups = new ArrayList();
-        this.expandedBlockedMessageGroupsSnapshot = Collections2.emptyList();
+        this.expandedBlockedMessageGroupsSnapshot = n.emptyList();
         this.eventSubject = PublishSubject.k0();
     }
 
@@ -620,14 +620,14 @@ public final class StoreChat extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("InteractionState(channelId=");
+            StringBuilder sbU = a.U("InteractionState(channelId=");
             sbU.append(this.channelId);
             sbU.append(", lastMessageId=");
             sbU.append(this.lastMessageId);
             sbU.append(", isTouchedSinceLastJump=");
             sbU.append(this.isTouchedSinceLastJump);
             sbU.append(", scrollState=");
-            return outline.B(sbU, this.scrollState, ")");
+            return a.B(sbU, this.scrollState, ")");
         }
 
         public InteractionState(long j, long j2, boolean z2, LinearLayoutManager linearLayoutManager) {

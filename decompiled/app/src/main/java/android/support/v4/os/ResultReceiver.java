@@ -9,14 +9,14 @@ import android.os.Parcelable;
 import android.os.RemoteException;
 import androidx.annotation.RestrictTo;
 import java.util.Objects;
-import x.a.b.c.IResultReceiver;
+import x.a.b.c.a;
 
 @SuppressLint({"BanParcelableUsage"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
 public class ResultReceiver implements Parcelable {
     public static final Parcelable.Creator<ResultReceiver> CREATOR = new a();
-    public IResultReceiver j;
+    public x.a.b.c.a j;
 
     public class a implements Parcelable.Creator<ResultReceiver> {
         @Override // android.os.Parcelable.Creator
@@ -30,11 +30,11 @@ public class ResultReceiver implements Parcelable {
         }
     }
 
-    public class b extends IResultReceiver.a {
+    public class b extends a.AbstractBinderC0661a {
         public b() {
         }
 
-        @Override // x.a.b.c.IResultReceiver
+        @Override // x.a.b.c.a
         public void r0(int i, Bundle bundle) {
             Objects.requireNonNull(ResultReceiver.this);
             ResultReceiver.this.a(i, bundle);
@@ -42,26 +42,26 @@ public class ResultReceiver implements Parcelable {
     }
 
     public ResultReceiver(Parcel parcel) {
-        IResultReceiver c0444a;
+        x.a.b.c.a c0662a;
         IBinder strongBinder = parcel.readStrongBinder();
-        int i = IResultReceiver.a.a;
+        int i = a.AbstractBinderC0661a.a;
         if (strongBinder == null) {
-            c0444a = null;
+            c0662a = null;
         } else {
             IInterface iInterfaceQueryLocalInterface = strongBinder.queryLocalInterface("android.support.v4.os.IResultReceiver");
-            c0444a = (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof IResultReceiver)) ? new IResultReceiver.a.C0444a(strongBinder) : (IResultReceiver) iInterfaceQueryLocalInterface;
+            c0662a = (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof x.a.b.c.a)) ? new a.AbstractBinderC0661a.C0662a(strongBinder) : (x.a.b.c.a) iInterfaceQueryLocalInterface;
         }
-        this.j = c0444a;
+        this.j = c0662a;
     }
 
     public void a(int i, Bundle bundle) {
     }
 
     public void b(int i, Bundle bundle) {
-        IResultReceiver iResultReceiver = this.j;
-        if (iResultReceiver != null) {
+        x.a.b.c.a aVar = this.j;
+        if (aVar != null) {
             try {
-                iResultReceiver.r0(i, bundle);
+                aVar.r0(i, bundle);
             } catch (RemoteException unused) {
             }
         }

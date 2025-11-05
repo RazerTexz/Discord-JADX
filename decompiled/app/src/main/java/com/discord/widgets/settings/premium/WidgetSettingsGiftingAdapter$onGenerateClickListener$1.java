@@ -1,12 +1,12 @@
 package com.discord.widgets.settings.premium;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
 /* compiled from: WidgetSettingsGiftingAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetSettingsGiftingAdapter$onGenerateClickListener$1 extends Lambda implements Function2<Long, Long, Unit> {
+public final class WidgetSettingsGiftingAdapter$onGenerateClickListener$1 extends o implements Function2<Long, Long, Unit> {
     public static final WidgetSettingsGiftingAdapter$onGenerateClickListener$1 INSTANCE = new WidgetSettingsGiftingAdapter$onGenerateClickListener$1();
 
     public WidgetSettingsGiftingAdapter$onGenerateClickListener$1() {

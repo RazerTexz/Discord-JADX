@@ -3,7 +3,6 @@ package b.i.c.w;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
-import b.d.b.a.outline;
 import com.esotericsoftware.kryo.io.Util;
 import java.io.IOException;
 import java.io.InputStream;
@@ -84,7 +83,7 @@ public final /* synthetic */ class n implements Callable {
             Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrA, 0, bArrA.length);
             if (bitmapDecodeByteArray == null) {
                 String strValueOf3 = String.valueOf(oVar.j);
-                throw new IOException(outline.j(strValueOf3.length() + 24, "Failed to decode image: ", strValueOf3));
+                throw new IOException(b.d.b.a.a.j(strValueOf3.length() + 24, "Failed to decode image: ", strValueOf3));
             }
             if (Log.isLoggable("FirebaseMessaging", 3)) {
                 String strValueOf4 = String.valueOf(oVar.j);

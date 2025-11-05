@@ -7,8 +7,8 @@ import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.stores.Dispatcher;
+import com.discord.stores.SelectedChannelAnalyticsLocation;
 import com.discord.stores.StoreChannels;
-import com.discord.stores.StoreChannelsSelected3;
 import com.discord.stores.StoreNavigation;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
@@ -19,10 +19,10 @@ import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.list.TextInVoiceFeatureFlag;
 import com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
+import j0.l.e.k;
 import java.lang.ref.WeakReference;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -49,15 +49,15 @@ public final class ChannelSelector {
         public final ChannelSelector getInstance() {
             ChannelSelector channelSelectorAccess$getINSTANCE$cp = ChannelSelector.access$getINSTANCE$cp();
             if (channelSelectorAccess$getINSTANCE$cp == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("INSTANCE");
+                m.throwUninitializedPropertyAccessException("INSTANCE");
             }
             return channelSelectorAccess$getINSTANCE$cp;
         }
 
         public final void init(StoreStream stream, Dispatcher dispatcher, ObservationDeck observationDeck) {
-            Intrinsics3.checkNotNullParameter(stream, "stream");
-            Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-            Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+            m.checkNotNullParameter(stream, "stream");
+            m.checkNotNullParameter(dispatcher, "dispatcher");
+            m.checkNotNullParameter(observationDeck, "observationDeck");
             ChannelSelector.access$setINSTANCE$cp(new ChannelSelector(stream, dispatcher, observationDeck));
         }
 
@@ -68,7 +68,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$dismissCreateThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -87,7 +87,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Channel> {
+    public static final class AnonymousClass1 extends o implements Function0<Channel> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
 
@@ -114,7 +114,7 @@ public final class ChannelSelector {
             if (context != null) {
                 AccessibilityUtils accessibilityUtils = AccessibilityUtils.INSTANCE;
                 String string = context.getString(R.string.inaccessible_channel_link_title);
-                Intrinsics3.checkNotNullExpressionValue(string, "context.getString(R.stri…sible_channel_link_title)");
+                m.checkNotNullExpressionValue(string, "context.getString(R.stri…sible_channel_link_title)");
                 accessibilityUtils.sendAnnouncement(context, string);
             }
             return null;
@@ -123,10 +123,10 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Channel, Boolean> {
+    public static final class AnonymousClass2<T, R> implements b<Channel, Boolean> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(Channel channel) {
             return call2(channel);
         }
@@ -139,7 +139,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Channel, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -158,7 +158,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetDirectMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ Context $context;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -175,24 +175,24 @@ public final class ChannelSelector {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             ChannelSelector.this.findAndSet(this.$context, channel.getId());
         }
     }
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
 
         /* compiled from: ChannelSelector.kt */
         /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetThread$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02111 extends Lambda implements Function0<Unit> {
+        public static final class C03311 extends o implements Function0<Unit> {
             public final /* synthetic */ Channel $channel;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C02111(Channel channel) {
+            public C03311(Channel channel) {
                 super(0);
                 this.$channel = channel;
             }
@@ -224,27 +224,27 @@ public final class ChannelSelector {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            ChannelSelector.this.getDispatcher().schedule(new C02111(channel));
+            m.checkNotNullParameter(channel, "channel");
+            ChannelSelector.this.getDispatcher().schedule(new C03311(channel));
             ChannelSelector.this.findAndSet(this.$context, this.$channelId);
         }
     }
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$gotoChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
-        public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation;
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
+        public final /* synthetic */ SelectedChannelAnalyticsLocation $analyticsLocation;
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Long $peekParent;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2, Long l, StoreChannelsSelected3 storeChannelsSelected3) {
+        public AnonymousClass1(long j, long j2, Long l, SelectedChannelAnalyticsLocation selectedChannelAnalyticsLocation) {
             super(0);
             this.$guildId = j;
             this.$channelId = j2;
             this.$peekParent = l;
-            this.$analyticsLocation = storeChannelsSelected3;
+            this.$analyticsLocation = selectedChannelAnalyticsLocation;
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -262,7 +262,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$openCreateThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Long $parentMessageId;
@@ -293,7 +293,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$previewVoiceChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Channel> {
+    public static final class AnonymousClass1 extends o implements Function0<Channel> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -320,7 +320,7 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$previewVoiceChannel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ WeakReference $fragmentManagerRef;
 
@@ -341,7 +341,7 @@ public final class ChannelSelector {
         public final void invoke2(Channel channel) {
             FragmentManager fragmentManager = (FragmentManager) this.$fragmentManagerRef.get();
             if (fragmentManager != null) {
-                Intrinsics3.checkNotNullExpressionValue(fragmentManager, "fragmentManagerRef.get() ?: return@appSubscribe");
+                m.checkNotNullExpressionValue(fragmentManager, "fragmentManagerRef.get() ?: return@appSubscribe");
                 StoreStream.INSTANCE.getGuildSelected().set(channel.getGuildId());
                 WidgetVoiceBottomSheet.INSTANCE.show(fragmentManager, this.$channelId, true, WidgetVoiceBottomSheet.FeatureContext.HOME);
             }
@@ -350,19 +350,19 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$selectChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1 {
-        public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation;
+    public static final class AnonymousClass1 extends o implements Function1 {
+        public final /* synthetic */ SelectedChannelAnalyticsLocation $analyticsLocation;
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Long $peekParent;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(long j, long j2, Long l, StoreChannelsSelected3 storeChannelsSelected3) {
+        public AnonymousClass1(long j, long j2, Long l, SelectedChannelAnalyticsLocation selectedChannelAnalyticsLocation) {
             super(1);
             this.$guildId = j;
             this.$channelId = j2;
             this.$peekParent = l;
-            this.$analyticsLocation = storeChannelsSelected3;
+            this.$analyticsLocation = selectedChannelAnalyticsLocation;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -378,19 +378,19 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$selectChannel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
-        public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation;
+    public static final class AnonymousClass2 extends o implements Function1<Channel, Unit> {
+        public final /* synthetic */ SelectedChannelAnalyticsLocation $analyticsLocation;
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Long $peekParent;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass2(long j, long j2, Long l, StoreChannelsSelected3 storeChannelsSelected3) {
+        public AnonymousClass2(long j, long j2, Long l, SelectedChannelAnalyticsLocation selectedChannelAnalyticsLocation) {
             super(1);
             this.$guildId = j;
             this.$channelId = j2;
             this.$peekParent = l;
-            this.$analyticsLocation = storeChannelsSelected3;
+            this.$analyticsLocation = selectedChannelAnalyticsLocation;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -408,9 +408,9 @@ public final class ChannelSelector {
         public final void invoke2(Channel channel) {
             boolean z2;
             if (!TextInVoiceFeatureFlag.INSTANCE.getINSTANCE().isEnabled(Long.valueOf(channel.getGuildId()))) {
-                Intrinsics3.checkNotNullExpressionValue(channel, "channel");
+                m.checkNotNullExpressionValue(channel, "channel");
                 if (!ChannelUtils.J(channel)) {
-                    Intrinsics3.checkNotNullExpressionValue(channel, "channel");
+                    m.checkNotNullExpressionValue(channel, "channel");
                     z2 = ChannelUtils.D(channel);
                 }
             }
@@ -423,11 +423,11 @@ public final class ChannelSelector {
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$selectPreviousChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Long, Observable<? extends Channel>> {
+    public static final class AnonymousClass1<T, R> implements b<Long, Observable<? extends Channel>> {
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Channel> call(Long l) {
             return call2(l);
         }
@@ -435,14 +435,14 @@ public final class ChannelSelector {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Long l) {
             StoreChannels channels = ChannelSelector.this.getStream().getChannels();
-            Intrinsics3.checkNotNullExpressionValue(l, "previousChannelId");
+            m.checkNotNullExpressionValue(l, "previousChannelId");
             return channels.observeChannel(l.longValue());
         }
     }
 
     /* compiled from: ChannelSelector.kt */
     /* renamed from: com.discord.utilities.channel.ChannelSelector$selectPreviousChannel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -468,9 +468,9 @@ public final class ChannelSelector {
     }
 
     public ChannelSelector(StoreStream storeStream, Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.stream = storeStream;
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
@@ -480,8 +480,8 @@ public final class ChannelSelector {
         return INSTANCE;
     }
 
-    public static final /* synthetic */ void access$gotoChannel(ChannelSelector channelSelector, long j, long j2, Long l, StoreChannelsSelected3 storeChannelsSelected3) {
-        channelSelector.gotoChannel(j, j2, l, storeChannelsSelected3);
+    public static final /* synthetic */ void access$gotoChannel(ChannelSelector channelSelector, long j, long j2, Long l, SelectedChannelAnalyticsLocation selectedChannelAnalyticsLocation) {
+        channelSelector.gotoChannel(j, j2, l, selectedChannelAnalyticsLocation);
     }
 
     public static final /* synthetic */ void access$setINSTANCE$cp(ChannelSelector channelSelector) {
@@ -499,7 +499,7 @@ public final class ChannelSelector {
         return INSTANCE.getInstance();
     }
 
-    private final void gotoChannel(long guildId, long channelId, Long peekParent, StoreChannelsSelected3 analyticsLocation) {
+    private final void gotoChannel(long guildId, long channelId, Long peekParent, SelectedChannelAnalyticsLocation analyticsLocation) {
         this.dispatcher.schedule(new AnonymousClass1(guildId, channelId, peekParent, analyticsLocation));
     }
 
@@ -510,14 +510,14 @@ public final class ChannelSelector {
         channelSelector.openCreateThread(j, j2, l, str);
     }
 
-    public static /* synthetic */ void selectChannel$default(ChannelSelector channelSelector, Channel channel, Long l, StoreChannelsSelected3 storeChannelsSelected3, int i, Object obj) {
+    public static /* synthetic */ void selectChannel$default(ChannelSelector channelSelector, Channel channel, Long l, SelectedChannelAnalyticsLocation selectedChannelAnalyticsLocation, int i, Object obj) {
         if ((i & 2) != 0) {
             l = null;
         }
         if ((i & 4) != 0) {
-            storeChannelsSelected3 = null;
+            selectedChannelAnalyticsLocation = null;
         }
-        channelSelector.selectChannel(channel, l, storeChannelsSelected3);
+        channelSelector.selectChannel(channel, l, selectedChannelAnalyticsLocation);
     }
 
     public final void dismissCreateThread() {
@@ -529,12 +529,12 @@ public final class ChannelSelector {
             return;
         }
         Observable observableY = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this.stream.getChannels(), this.stream.getPermissions()}, false, null, null, new AnonymousClass1(channelId, context), 14, null).y(AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableY, "observationDeck\n        …   .filter { it != null }");
+        m.checkNotNullExpressionValue(observableY, "observationDeck\n        …   .filter { it != null }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableY, 0L, true, 1, null)), ChannelSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
     }
 
     public final void findAndSetDirectMessage(Context context, long userId) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         if (userId <= 0) {
             return;
         }
@@ -562,14 +562,14 @@ public final class ChannelSelector {
     }
 
     public final void previewVoiceChannel(FragmentManager fragmentManager, long channelId) {
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
         WeakReference weakReference = new WeakReference(fragmentManager);
         Observable observableG = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this.stream.getChannels(), this.stream.getPermissions()}, false, null, null, new AnonymousClass1(channelId), 14, null).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+        m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableG, 0L, false, 3, null)), ChannelSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(weakReference, channelId), 62, (Object) null);
     }
 
-    public final void selectChannel(Channel channel, Long peekParent, StoreChannelsSelected3 analyticsLocation) {
+    public final void selectChannel(Channel channel, Long peekParent, SelectedChannelAnalyticsLocation analyticsLocation) {
         if (channel != null) {
             selectChannel(channel.getGuildId(), channel.getId(), peekParent, analyticsLocation);
         }
@@ -577,23 +577,23 @@ public final class ChannelSelector {
 
     public final void selectPreviousChannel(long guildId) {
         Observable<R> observableY = this.stream.getChannelsSelected().observePreviousId().Y(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableY, "stream.channelsSelected.…nnel(previousChannelId) }");
+        m.checkNotNullExpressionValue(observableY, "stream.channelsSelected.…nnel(previousChannelId) }");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableY, 0L, false, 3, null), ChannelSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(guildId), 62, (Object) null);
     }
 
-    public static /* synthetic */ void selectChannel$default(ChannelSelector channelSelector, long j, long j2, Long l, StoreChannelsSelected3 storeChannelsSelected3, int i, Object obj) {
-        channelSelector.selectChannel(j, j2, (i & 4) != 0 ? null : l, (i & 8) != 0 ? null : storeChannelsSelected3);
+    public static /* synthetic */ void selectChannel$default(ChannelSelector channelSelector, long j, long j2, Long l, SelectedChannelAnalyticsLocation selectedChannelAnalyticsLocation, int i, Object obj) {
+        channelSelector.selectChannel(j, j2, (i & 4) != 0 ? null : l, (i & 8) != 0 ? null : selectedChannelAnalyticsLocation);
     }
 
-    public final void selectChannel(long guildId, long channelId, Long peekParent, StoreChannelsSelected3 analyticsLocation) {
+    public final void selectChannel(long guildId, long channelId, Long peekParent, SelectedChannelAnalyticsLocation analyticsLocation) {
         StoreNavigation.setNavigationPanelAction$default(this.stream.getNavigation(), StoreNavigation.PanelAction.CLOSE, null, 2, null);
         if (guildId == 0 || channelId == 0) {
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(null)");
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(scalarSynchronousObservable), ChannelSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(guildId, channelId, peekParent, analyticsLocation), 62, (Object) null);
+            k kVar = new k(null);
+            m.checkNotNullExpressionValue(kVar, "Observable.just(null)");
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(kVar), ChannelSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(guildId, channelId, peekParent, analyticsLocation), 62, (Object) null);
         } else {
             Observable<R> observableG = this.stream.getChannels().observeChannel(channelId).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+            m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableG, 0L, false, 3, null), ChannelSelector.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(guildId, channelId, peekParent, analyticsLocation), 62, (Object) null);
         }
     }

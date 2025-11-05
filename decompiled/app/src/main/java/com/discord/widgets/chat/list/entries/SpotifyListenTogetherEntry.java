@@ -2,9 +2,9 @@ package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
 import androidx.appcompat.widget.ActivityChooserModel;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.activity.MessageActivity;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: SpotifyListenTogetherEntry.kt */
 /* loaded from: classes2.dex */
@@ -16,12 +16,12 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
     private final long userId;
 
     public SpotifyListenTogetherEntry(long j, long j2, MessageActivity messageActivity) {
-        Intrinsics3.checkNotNullParameter(messageActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        m.checkNotNullParameter(messageActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         this.userId = j;
         this.messageId = j2;
         this.activity = messageActivity;
         this.type = 23;
-        this.key = outline.t("23 -- ", j2);
+        this.key = a.t("23 -- ", j2);
     }
 
     public static /* synthetic */ SpotifyListenTogetherEntry copy$default(SpotifyListenTogetherEntry spotifyListenTogetherEntry, long j, long j2, MessageActivity messageActivity, int i, Object obj) {
@@ -55,7 +55,7 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
     }
 
     public final SpotifyListenTogetherEntry copy(long userId, long messageId, MessageActivity activity) {
-        Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         return new SpotifyListenTogetherEntry(userId, messageId, activity);
     }
 
@@ -67,7 +67,7 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
             return false;
         }
         SpotifyListenTogetherEntry spotifyListenTogetherEntry = (SpotifyListenTogetherEntry) other;
-        return this.userId == spotifyListenTogetherEntry.userId && this.messageId == spotifyListenTogetherEntry.messageId && Intrinsics3.areEqual(this.activity, spotifyListenTogetherEntry.activity);
+        return this.userId == spotifyListenTogetherEntry.userId && this.messageId == spotifyListenTogetherEntry.messageId && m.areEqual(this.activity, spotifyListenTogetherEntry.activity);
     }
 
     public final MessageActivity getActivity() {
@@ -99,7 +99,7 @@ public final /* data */ class SpotifyListenTogetherEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("SpotifyListenTogetherEntry(userId=");
+        StringBuilder sbU = a.U("SpotifyListenTogetherEntry(userId=");
         sbU.append(this.userId);
         sbU.append(", messageId=");
         sbU.append(this.messageId);

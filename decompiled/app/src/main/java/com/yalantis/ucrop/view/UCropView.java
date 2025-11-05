@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
-import b.q.a.l.UCropView2;
-import b.q.a.l.UCropView3;
+import b.q.a.l.d;
+import b.q.a.l.e;
 import com.yalantis.ucrop.R;
 import java.util.Objects;
 
@@ -58,8 +58,8 @@ public class UCropView extends FrameLayout {
             gestureCropImageView.A = fAbs / fAbs2;
         }
         typedArrayObtainStyledAttributes.recycle();
-        this.j.setCropBoundsChangeListener(new UCropView2(this));
-        overlayView.setOverlayViewChangeListener(new UCropView3(this));
+        this.j.setCropBoundsChangeListener(new d(this));
+        overlayView.setOverlayViewChangeListener(new e(this));
     }
 
     @NonNull

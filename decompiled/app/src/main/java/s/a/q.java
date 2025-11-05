@@ -1,19 +1,19 @@
 package s.a;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import kotlin.Unit;
 
 /* compiled from: JobSupport.kt */
 /* loaded from: classes3.dex */
-public final class q extends e1<h1> implements Job4 {
-    public final Job6 n;
+public final class q extends e1<h1> implements p {
+    public final r n;
 
-    public q(h1 h1Var, Job6 job6) {
+    public q(h1 h1Var, r rVar) {
         super(h1Var);
-        this.n = job6;
+        this.n = rVar;
     }
 
-    @Override // s.a.Job4
+    @Override // s.a.p
     public boolean h(Throwable th) {
         return ((h1) this.m).E(th);
     }
@@ -24,14 +24,14 @@ public final class q extends e1<h1> implements Job4 {
         return Unit.a;
     }
 
-    @Override // s.a.CompletionHandler2
+    @Override // s.a.y
     public void q(Throwable th) {
-        this.n.s((Job5) this.m);
+        this.n.s((q1) this.m);
     }
 
-    @Override // s.a.a.LockFreeLinkedList3
+    @Override // s.a.a.k
     public String toString() {
-        StringBuilder sbU = outline.U("ChildHandle[");
+        StringBuilder sbU = a.U("ChildHandle[");
         sbU.append(this.n);
         sbU.append(']');
         return sbU.toString();

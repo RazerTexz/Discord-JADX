@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStreamReportProblem.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStreamReportProblem implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackStreamReportProblem implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence reason = null;
     private final Long streamerUserId = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackStreamReportProblem implements AnalyticsSchem
             return false;
         }
         TrackStreamReportProblem trackStreamReportProblem = (TrackStreamReportProblem) other;
-        return Intrinsics3.areEqual(this.reason, trackStreamReportProblem.reason) && Intrinsics3.areEqual(this.streamerUserId, trackStreamReportProblem.streamerUserId) && Intrinsics3.areEqual(this.streamChannelId, trackStreamReportProblem.streamChannelId) && Intrinsics3.areEqual(this.guildId, trackStreamReportProblem.guildId) && Intrinsics3.areEqual(this.applicationName, trackStreamReportProblem.applicationName) && Intrinsics3.areEqual(this.applicationId, trackStreamReportProblem.applicationId) && Intrinsics3.areEqual(this.mediaSessionId, trackStreamReportProblem.mediaSessionId) && Intrinsics3.areEqual(this.rtcConnectionId, trackStreamReportProblem.rtcConnectionId) && Intrinsics3.areEqual(this.rating, trackStreamReportProblem.rating) && Intrinsics3.areEqual(this.feedback, trackStreamReportProblem.feedback);
+        return m.areEqual(this.reason, trackStreamReportProblem.reason) && m.areEqual(this.streamerUserId, trackStreamReportProblem.streamerUserId) && m.areEqual(this.streamChannelId, trackStreamReportProblem.streamChannelId) && m.areEqual(this.guildId, trackStreamReportProblem.guildId) && m.areEqual(this.applicationName, trackStreamReportProblem.applicationName) && m.areEqual(this.applicationId, trackStreamReportProblem.applicationId) && m.areEqual(this.mediaSessionId, trackStreamReportProblem.mediaSessionId) && m.areEqual(this.rtcConnectionId, trackStreamReportProblem.rtcConnectionId) && m.areEqual(this.rating, trackStreamReportProblem.rating) && m.areEqual(this.feedback, trackStreamReportProblem.feedback);
     }
 
     public int hashCode() {
@@ -64,7 +64,7 @@ public final /* data */ class TrackStreamReportProblem implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStreamReportProblem(reason=");
+        StringBuilder sbU = a.U("TrackStreamReportProblem(reason=");
         sbU.append(this.reason);
         sbU.append(", streamerUserId=");
         sbU.append(this.streamerUserId);
@@ -83,6 +83,6 @@ public final /* data */ class TrackStreamReportProblem implements AnalyticsSchem
         sbU.append(", rating=");
         sbU.append(this.rating);
         sbU.append(", feedback=");
-        return outline.E(sbU, this.feedback, ")");
+        return a.E(sbU, this.feedback, ")");
     }
 }

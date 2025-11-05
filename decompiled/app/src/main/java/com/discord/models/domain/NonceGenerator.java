@@ -3,7 +3,7 @@ package com.discord.models.domain;
 import com.discord.utilities.SnowflakeUtils;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: NonceGenerator.kt */
@@ -28,7 +28,7 @@ public final class NonceGenerator {
 
         public final synchronized long computeNonce(Clock clock) {
             long jCurrentTimeMillis;
-            Intrinsics3.checkNotNullParameter(clock, "clock");
+            m.checkNotNullParameter(clock, "clock");
             jCurrentTimeMillis = ((clock.currentTimeMillis() + 1471228928) - SnowflakeUtils.DISCORD_EPOCH) << 22;
             if (jCurrentTimeMillis <= NonceGenerator.access$getPreviousNonce$cp()) {
                 jCurrentTimeMillis = NonceGenerator.access$getPreviousNonce$cp() + 1;

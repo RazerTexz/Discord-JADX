@@ -2,7 +2,7 @@ package com.google.android.gms.measurement.internal;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.i.b.s9;
 import b.i.a.f.i.b.u9;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -41,11 +41,11 @@ public final class zzku extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
+        d.t2(parcel, 2, this.k, false);
         long j = this.l;
         parcel.writeInt(524291);
         parcel.writeLong(j);
@@ -54,18 +54,18 @@ public final class zzku extends AbstractSafeParcelable {
             parcel.writeInt(524292);
             parcel.writeLong(l.longValue());
         }
-        AnimatableValueParser.t2(parcel, 6, this.n, false);
-        AnimatableValueParser.t2(parcel, 7, this.o, false);
+        d.t2(parcel, 6, this.n, false);
+        d.t2(parcel, 7, this.o, false);
         Double d = this.p;
         if (d != null) {
             parcel.writeInt(524296);
             parcel.writeDouble(d.doubleValue());
         }
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 
     public zzku(String str, long j, Object obj, String str2) {
-        AnimatableValueParser.w(str);
+        d.w(str);
         this.j = 2;
         this.k = str;
         this.l = j;

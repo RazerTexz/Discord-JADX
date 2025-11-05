@@ -1,11 +1,11 @@
 package okhttp3;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.d0._Ranges;
-import d0.g0.StringsJVM;
-import d0.t._Arrays;
-import d0.z.d.Intrinsics3;
+import d0.d0.f;
+import d0.g0.t;
+import d0.t.k;
+import d0.z.d.m;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -13,7 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import kotlin.TypeCastException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
-import kotlin.ranges.Progressions2;
+import kotlin.ranges.IntProgression;
 
 /* compiled from: MediaType.kt */
 /* loaded from: classes3.dex */
@@ -42,37 +42,37 @@ public final class MediaType {
     /* renamed from: okhttp3.MediaType$a, reason: from kotlin metadata */
     public static final class Companion {
         public static final MediaType a(String str) {
-            Intrinsics3.checkParameterIsNotNull(str, "$this$toMediaType");
+            m.checkParameterIsNotNull(str, "$this$toMediaType");
             Matcher matcher = MediaType.a.matcher(str);
             if (!matcher.lookingAt()) {
                 throw new IllegalArgumentException(("No subtype found for: \"" + str + '\"').toString());
             }
             String strGroup = matcher.group(1);
-            Intrinsics3.checkExpressionValueIsNotNull(strGroup, "typeSubtype.group(1)");
+            m.checkExpressionValueIsNotNull(strGroup, "typeSubtype.group(1)");
             Locale locale = Locale.US;
-            Intrinsics3.checkExpressionValueIsNotNull(locale, "Locale.US");
+            m.checkExpressionValueIsNotNull(locale, "Locale.US");
             if (strGroup == null) {
                 throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
             String lowerCase = strGroup.toLowerCase(locale);
-            Intrinsics3.checkExpressionValueIsNotNull(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
+            m.checkExpressionValueIsNotNull(lowerCase, "(this as java.lang.String).toLowerCase(locale)");
             String strGroup2 = matcher.group(2);
-            Intrinsics3.checkExpressionValueIsNotNull(strGroup2, "typeSubtype.group(2)");
-            Intrinsics3.checkExpressionValueIsNotNull(locale, "Locale.US");
+            m.checkExpressionValueIsNotNull(strGroup2, "typeSubtype.group(2)");
+            m.checkExpressionValueIsNotNull(locale, "Locale.US");
             if (strGroup2 == null) {
                 throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
             String lowerCase2 = strGroup2.toLowerCase(locale);
-            Intrinsics3.checkExpressionValueIsNotNull(lowerCase2, "(this as java.lang.String).toLowerCase(locale)");
+            m.checkExpressionValueIsNotNull(lowerCase2, "(this as java.lang.String).toLowerCase(locale)");
             ArrayList arrayList = new ArrayList();
             Matcher matcher2 = MediaType.f3808b.matcher(str);
             int iEnd = matcher.end();
             while (iEnd < str.length()) {
                 matcher2.region(iEnd, str.length());
                 if (!matcher2.lookingAt()) {
-                    StringBuilder sbU = outline.U("Parameter is not formatted correctly: \"");
+                    StringBuilder sbU = a.U("Parameter is not formatted correctly: \"");
                     String strSubstring = str.substring(iEnd);
-                    Intrinsics3.checkExpressionValueIsNotNull(strSubstring, "(this as java.lang.String).substring(startIndex)");
+                    m.checkExpressionValueIsNotNull(strSubstring, "(this as java.lang.String).substring(startIndex)");
                     sbU.append(strSubstring);
                     sbU.append("\" for: \"");
                     sbU.append(str);
@@ -86,9 +86,9 @@ public final class MediaType {
                     String strGroup4 = matcher2.group(2);
                     if (strGroup4 == null) {
                         strGroup4 = matcher2.group(3);
-                    } else if (StringsJVM.startsWith$default(strGroup4, "'", false, 2, null) && StringsJVM.endsWith$default(strGroup4, "'", false, 2, null) && strGroup4.length() > 2) {
+                    } else if (t.startsWith$default(strGroup4, "'", false, 2, null) && t.endsWith$default(strGroup4, "'", false, 2, null) && strGroup4.length() > 2) {
                         strGroup4 = strGroup4.substring(1, strGroup4.length() - 1);
-                        Intrinsics3.checkExpressionValueIsNotNull(strGroup4, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+                        m.checkExpressionValueIsNotNull(strGroup4, "(this as java.lang.Strin…ing(startIndex, endIndex)");
                     }
                     arrayList.add(strGroup3);
                     arrayList.add(strGroup4);
@@ -103,7 +103,7 @@ public final class MediaType {
         }
 
         public static final MediaType b(String str) {
-            Intrinsics3.checkParameterIsNotNull(str, "$this$toMediaTypeOrNull");
+            m.checkParameterIsNotNull(str, "$this$toMediaTypeOrNull");
             try {
                 return a(str);
             } catch (IllegalArgumentException unused) {
@@ -125,16 +125,16 @@ public final class MediaType {
 
     public final Charset a(Charset defaultValue) {
         String str;
-        Intrinsics3.checkParameterIsNotNull("charset", ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Progressions2 progressions2Step = _Ranges.step(_Arrays.getIndices(this.parameterNamesAndValues), 2);
-        int first = progressions2Step.getFirst();
-        int last = progressions2Step.getLast();
-        int step = progressions2Step.getStep();
+        m.checkParameterIsNotNull("charset", ModelAuditLogEntry.CHANGE_KEY_NAME);
+        IntProgression intProgressionStep = f.step(k.getIndices(this.parameterNamesAndValues), 2);
+        int first = intProgressionStep.getFirst();
+        int last = intProgressionStep.getLast();
+        int step = intProgressionStep.getStep();
         if (step < 0 ? first < last : first > last) {
             str = null;
             break;
         }
-        while (!StringsJVM.equals(this.parameterNamesAndValues[first], "charset", true)) {
+        while (!t.equals(this.parameterNamesAndValues[first], "charset", true)) {
             if (first == last) {
                 str = null;
                 break;
@@ -153,7 +153,7 @@ public final class MediaType {
     }
 
     public boolean equals(Object other) {
-        return (other instanceof MediaType) && Intrinsics3.areEqual(((MediaType) other).mediaType, this.mediaType);
+        return (other instanceof MediaType) && m.areEqual(((MediaType) other).mediaType, this.mediaType);
     }
 
     public int hashCode() {

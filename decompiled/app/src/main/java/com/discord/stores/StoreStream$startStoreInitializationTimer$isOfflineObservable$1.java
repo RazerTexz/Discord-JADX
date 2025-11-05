@@ -1,14 +1,14 @@
 package com.discord.stores;
 
 import androidx.core.app.NotificationCompat;
-import j0.k.Func1;
+import j0.k.b;
 
 /* compiled from: StoreStream.kt */
 /* loaded from: classes2.dex */
-public final class StoreStream$startStoreInitializationTimer$isOfflineObservable$1<T, R> implements Func1<Boolean, Boolean> {
+public final class StoreStream$startStoreInitializationTimer$isOfflineObservable$1<T, R> implements b<Boolean, Boolean> {
     public static final StoreStream$startStoreInitializationTimer$isOfflineObservable$1 INSTANCE = new StoreStream$startStoreInitializationTimer$isOfflineObservable$1();
 
-    @Override // j0.k.Func1
+    @Override // j0.k.b
     public /* bridge */ /* synthetic */ Boolean call(Boolean bool) {
         return call2(bool);
     }

@@ -1,8 +1,8 @@
 package com.discord.api.emoji;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: GuildEmoji.kt */
@@ -17,7 +17,7 @@ public final /* data */ class GuildEmoji {
     private final List<Long> roles;
 
     public GuildEmoji(long j, String str, List<Long> list, boolean z2, boolean z3, boolean z4, Boolean bool) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.id = j;
         this.name = str;
         this.roles = list;
@@ -60,7 +60,7 @@ public final /* data */ class GuildEmoji {
             return false;
         }
         GuildEmoji guildEmoji = (GuildEmoji) other;
-        return this.id == guildEmoji.id && Intrinsics3.areEqual(this.name, guildEmoji.name) && Intrinsics3.areEqual(this.roles, guildEmoji.roles) && this.requireColons == guildEmoji.requireColons && this.managed == guildEmoji.managed && this.animated == guildEmoji.animated && Intrinsics3.areEqual(this.available, guildEmoji.available);
+        return this.id == guildEmoji.id && m.areEqual(this.name, guildEmoji.name) && m.areEqual(this.roles, guildEmoji.roles) && this.requireColons == guildEmoji.requireColons && this.managed == guildEmoji.managed && this.animated == guildEmoji.animated && m.areEqual(this.available, guildEmoji.available);
     }
 
     /* renamed from: f, reason: from getter */
@@ -99,7 +99,7 @@ public final /* data */ class GuildEmoji {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildEmoji(id=");
+        StringBuilder sbU = a.U("GuildEmoji(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -112,6 +112,6 @@ public final /* data */ class GuildEmoji {
         sbU.append(", animated=");
         sbU.append(this.animated);
         sbU.append(", available=");
-        return outline.D(sbU, this.available, ")");
+        return a.D(sbU, this.available, ")");
     }
 }

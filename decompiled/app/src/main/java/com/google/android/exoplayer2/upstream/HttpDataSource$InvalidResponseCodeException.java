@@ -1,8 +1,8 @@
 package com.google.android.exoplayer2.upstream;
 
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.e3.DataSpec;
+import b.d.b.a.a;
+import b.i.a.c.e3.n;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -16,8 +16,8 @@ public final class HttpDataSource$InvalidResponseCodeException extends HttpDataS
     @Nullable
     public final String responseMessage;
 
-    public HttpDataSource$InvalidResponseCodeException(int i, @Nullable String str, @Nullable IOException iOException, Map<String, List<String>> map, DataSpec dataSpec, byte[] bArr) {
-        super(outline.g(26, "Response code: ", i), iOException, dataSpec, 2004, 1);
+    public HttpDataSource$InvalidResponseCodeException(int i, @Nullable String str, @Nullable IOException iOException, Map<String, List<String>> map, n nVar, byte[] bArr) {
+        super(a.g(26, "Response code: ", i), iOException, nVar, 2004, 1);
         this.responseCode = i;
         this.responseMessage = str;
         this.headerFields = map;

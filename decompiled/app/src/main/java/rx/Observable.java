@@ -1,70 +1,54 @@
 package rx;
 
-import b.d.b.a.outline;
-import j0.k.Actions2;
-import j0.k.Func1;
+import j0.k.a;
 import j0.k.d;
 import j0.k.e;
-import j0.k.f;
 import j0.k.g;
 import j0.k.h;
 import j0.k.i;
 import j0.k.j;
-import j0.l.a.EmptyObservableHolder;
-import j0.l.a.OnSubscribeCombineLatest;
-import j0.l.a.OnSubscribeConcatMap2;
-import j0.l.a.OnSubscribeCreate;
-import j0.l.a.OnSubscribeDoOnEach;
-import j0.l.a.OnSubscribeFilter;
-import j0.l.a.OnSubscribeFromArray;
-import j0.l.a.OnSubscribeFromCallable;
-import j0.l.a.OnSubscribeFromIterable;
-import j0.l.a.OnSubscribeLift;
-import j0.l.a.OnSubscribeMap;
-import j0.l.a.OnSubscribeRedo6;
-import j0.l.a.OnSubscribeThrow;
-import j0.l.a.OnSubscribeTimeoutTimedWithFallback;
-import j0.l.a.OnSubscribeTimerOnce2;
-import j0.l.a.OnSubscribeTimerPeriodically2;
-import j0.l.a.OnSubscribeToMap;
-import j0.l.a.OperatorBufferWithTime2;
-import j0.l.a.OperatorDebounceWithTime2;
-import j0.l.a.OperatorDelay2;
-import j0.l.a.OperatorDistinctUntilChanged2;
-import j0.l.a.OperatorDoOnSubscribe;
-import j0.l.a.OperatorDoOnUnsubscribe;
-import j0.l.a.OperatorMerge;
-import j0.l.a.OperatorObserveOn2;
-import j0.l.a.OperatorOnBackpressureBuffer;
-import j0.l.a.OperatorOnBackpressureLatest;
-import j0.l.a.OperatorOnErrorResumeNextViaFunction;
-import j0.l.a.OperatorOnErrorResumeNextViaFunction4;
-import j0.l.a.OperatorReplay;
-import j0.l.a.OperatorReplay2;
-import j0.l.a.OperatorReplay3;
-import j0.l.a.OperatorSampleWithTime;
-import j0.l.a.OperatorScan;
-import j0.l.a.OperatorSingle;
-import j0.l.a.OperatorSkip2;
-import j0.l.a.OperatorSubscribeOn;
-import j0.l.a.OperatorSwitch2;
-import j0.l.a.OperatorTake2;
-import j0.l.a.OperatorTakeUntil3;
-import j0.l.a.OperatorTakeUntilPredicate2;
-import j0.l.a.OperatorToObservableList2;
-import j0.l.a.OperatorZip;
-import j0.l.c.TrampolineScheduler;
-import j0.l.e.ActionObserver;
-import j0.l.e.ActionSubscriber;
-import j0.l.e.InternalObservableUtils;
-import j0.l.e.RxRingBuffer;
-import j0.l.e.ScalarSynchronousObservable;
-import j0.l.e.UtilityFunctions;
-import j0.m.ConnectableObservable;
-import j0.n.SafeSubscriber;
+import j0.l.a.a1;
+import j0.l.a.b1;
+import j0.l.a.c1;
+import j0.l.a.c2;
+import j0.l.a.f;
+import j0.l.a.f0;
+import j0.l.a.f1;
+import j0.l.a.f2;
+import j0.l.a.g0;
+import j0.l.a.h2;
+import j0.l.a.i0;
+import j0.l.a.j1;
+import j0.l.a.k0;
+import j0.l.a.k1;
+import j0.l.a.l0;
+import j0.l.a.l1;
+import j0.l.a.n0;
+import j0.l.a.n1;
+import j0.l.a.n2;
+import j0.l.a.o;
+import j0.l.a.o1;
+import j0.l.a.p;
+import j0.l.a.q;
+import j0.l.a.q0;
+import j0.l.a.q2;
+import j0.l.a.r;
+import j0.l.a.r1;
+import j0.l.a.s;
+import j0.l.a.s0;
+import j0.l.a.t1;
+import j0.l.a.u0;
+import j0.l.a.v0;
+import j0.l.a.w0;
+import j0.l.a.x0;
+import j0.l.a.x1;
+import j0.l.a.y;
+import j0.l.a.y1;
+import j0.l.a.z0;
+import j0.l.e.e;
+import j0.l.e.k;
+import j0.l.e.m;
 import j0.o.l;
-import j0.p.Schedulers2;
-import j0.r.Subscriptions;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -93,10 +77,10 @@ public class Observable<T> {
     public interface a<T> extends Action1<Subscriber<? super T>> {
     }
 
-    public interface b<R, T> extends Func1<Subscriber<? super R>, Subscriber<? super T>> {
+    public interface b<R, T> extends j0.k.b<Subscriber<? super R>, Subscriber<? super T>> {
     }
 
-    public interface c<T, R> extends Func1<Observable<T>, Observable<R>> {
+    public interface c<T, R> extends j0.k.b<Observable<T>, Observable<R>> {
     }
 
     public Observable(a<T> aVar) {
@@ -104,31 +88,31 @@ public class Observable<T> {
     }
 
     public static <T> Observable<T> B(Iterable<? extends T> iterable) {
-        return h0(new OnSubscribeFromIterable(iterable));
+        return h0(new q(iterable));
     }
 
     public static <T> Observable<T> C(T[] tArr) {
         int length = tArr.length;
-        return length == 0 ? (Observable<T>) EmptyObservableHolder.k : length == 1 ? new ScalarSynchronousObservable(tArr[0]) : h0(new OnSubscribeFromArray(tArr));
+        return length == 0 ? (Observable<T>) j0.l.a.c.k : length == 1 ? new k(tArr[0]) : h0(new o(tArr));
     }
 
     public static <T> Observable<T> D(Callable<? extends T> callable) {
-        return h0(new OnSubscribeFromCallable(callable));
+        return h0(new p(callable));
     }
 
     public static Observable<Long> E(long j, long j2, TimeUnit timeUnit) {
-        return F(j, j2, timeUnit, Schedulers2.a());
+        return F(j, j2, timeUnit, j0.p.a.a());
     }
 
     public static Observable<Long> F(long j, long j2, TimeUnit timeUnit, Scheduler scheduler) {
-        return h0(new OnSubscribeTimerPeriodically2(j, j2, timeUnit, scheduler));
+        return h0(new k0(j, j2, timeUnit, scheduler));
     }
 
     public static <T> Observable<T> H(Observable<? extends Observable<? extends T>> observable) {
-        if (observable.getClass() == ScalarSynchronousObservable.class) {
-            return ((ScalarSynchronousObservable) observable).k0(UtilityFunctions.a.INSTANCE);
+        if (observable.getClass() == k.class) {
+            return ((k) observable).k0(m.a.INSTANCE);
         }
-        return h0(new OnSubscribeLift(observable.j, OperatorMerge.b.a));
+        return h0(new r(observable.j, x0.b.a));
     }
 
     public static <T> Observable<T> I(Observable<? extends T> observable, Observable<? extends T> observable2) {
@@ -136,7 +120,7 @@ public class Observable<T> {
     }
 
     public static <T, R> Observable<R> b(List<? extends Observable<? extends T>> list, FuncN<? extends R> funcN) {
-        return h0(new OnSubscribeCombineLatest(list, funcN));
+        return h0(new f(list, funcN));
     }
 
     public static <T1, T2, T3, T4, T5, T6, T7, T8, T9, R> Observable<R> c(Observable<? extends T1> observable, Observable<? extends T2> observable2, Observable<? extends T3> observable3, Observable<? extends T4> observable4, Observable<? extends T5> observable5, Observable<? extends T6> observable6, Observable<? extends T7> observable7, Observable<? extends T8> observable8, Observable<? extends T9> observable9, Func9<? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? super T7, ? super T8, ? super T9, ? extends R> func9) {
@@ -148,7 +132,7 @@ public class Observable<T> {
     }
 
     public static Observable<Long> d0(long j, TimeUnit timeUnit) {
-        return e0(j, timeUnit, Schedulers2.a());
+        return e0(j, timeUnit, j0.p.a.a());
     }
 
     public static <T1, T2, T3, T4, T5, T6, T7, R> Observable<R> e(Observable<? extends T1> observable, Observable<? extends T2> observable2, Observable<? extends T3> observable3, Observable<? extends T4> observable4, Observable<? extends T5> observable5, Observable<? extends T6> observable6, Observable<? extends T7> observable7, Func7<? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? super T7, ? extends R> func7) {
@@ -156,7 +140,7 @@ public class Observable<T> {
     }
 
     public static Observable<Long> e0(long j, TimeUnit timeUnit, Scheduler scheduler) {
-        return h0(new OnSubscribeTimerOnce2(j, timeUnit, scheduler));
+        return h0(new i0(j, timeUnit, scheduler));
     }
 
     public static <T1, T2, T3, T4, T5, T6, R> Observable<R> f(Observable<? extends T1> observable, Observable<? extends T2> observable2, Observable<? extends T3> observable3, Observable<? extends T4> observable4, Observable<? extends T5> observable5, Observable<? extends T6> observable6, Func6<? super T1, ? super T2, ? super T3, ? super T4, ? super T5, ? super T6, ? extends R> func6) {
@@ -168,7 +152,7 @@ public class Observable<T> {
     }
 
     public static <T1, T2, T3, T4, R> Observable<R> h(Observable<? extends T1> observable, Observable<? extends T2> observable2, Observable<? extends T3> observable3, Observable<? extends T4> observable4, Func4<? super T1, ? super T2, ? super T3, ? super T4, ? extends R> func4) {
-        return b(Arrays.asList(observable, observable2, observable3, observable4), new f(func4));
+        return b(Arrays.asList(observable, observable2, observable3, observable4), new j0.k.f(func4));
     }
 
     public static <T> Observable<T> h0(a<T> aVar) {
@@ -184,89 +168,89 @@ public class Observable<T> {
     }
 
     public static <T1, T2, R> Observable<R> j0(Observable<? extends T1> observable, Observable<? extends T2> observable2, Func2<? super T1, ? super T2, ? extends R> func2) {
-        return h0(new OnSubscribeLift(new ScalarSynchronousObservable(new Observable[]{observable, observable2}).j, new OperatorZip(func2)));
+        return h0(new r(new k(new Observable[]{observable, observable2}).j, new q2(func2)));
     }
 
     public static <T> Observable<T> l(Iterable<? extends Observable<? extends T>> iterable) {
-        return h0(new OnSubscribeFromIterable(iterable)).n(UtilityFunctions.a.INSTANCE);
+        return h0(new q(iterable)).n(m.a.INSTANCE);
     }
 
     public static <T> Observable<T> m(Observable<? extends T> observable, Observable<? extends T> observable2) {
-        return C(new Object[]{observable, observable2}).n(UtilityFunctions.a.INSTANCE);
+        return C(new Object[]{observable, observable2}).n(m.a.INSTANCE);
     }
 
     public static <T> Observable<T> o(Action1<Emitter<T>> action1, Emitter.BackpressureMode backpressureMode) {
-        return h0(new OnSubscribeCreate(action1, backpressureMode));
+        return h0(new j0.l.a.i(action1, backpressureMode));
     }
 
     public static <T> Observable<T> x(Throwable th) {
-        return h0(new OnSubscribeThrow(th));
+        return h0(new f0(th));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final <R> Observable<R> A(Func1<? super T, ? extends Observable<? extends R>> func1) {
-        return getClass() == ScalarSynchronousObservable.class ? ((ScalarSynchronousObservable) this).k0(func1) : H(G(func1));
+    public final <R> Observable<R> A(j0.k.b<? super T, ? extends Observable<? extends R>> bVar) {
+        return getClass() == k.class ? ((k) this).k0(bVar) : H(G(bVar));
     }
 
-    public final <R> Observable<R> G(Func1<? super T, ? extends R> func1) {
-        return h0(new OnSubscribeMap(this, func1));
+    public final <R> Observable<R> G(j0.k.b<? super T, ? extends R> bVar) {
+        return h0(new s(this, bVar));
     }
 
     public final Observable<T> J(Scheduler scheduler) {
-        int i = RxRingBuffer.j;
-        if (this instanceof ScalarSynchronousObservable) {
-            return ((ScalarSynchronousObservable) this).l0(scheduler);
+        int i = j0.l.e.i.j;
+        if (this instanceof k) {
+            return ((k) this).l0(scheduler);
         }
-        return h0(new OnSubscribeLift(this.j, new OperatorObserveOn2(scheduler, false, i)));
+        return h0(new r(this.j, new z0(scheduler, false, i)));
     }
 
     public final Observable<T> K() {
-        return h0(new OnSubscribeLift(this.j, OperatorOnBackpressureBuffer.b.a));
+        return h0(new r(this.j, a1.b.a));
     }
 
     public final Observable<T> L() {
-        return h0(new OnSubscribeLift(this.j, OperatorOnBackpressureLatest.a.a));
+        return h0(new r(this.j, b1.a.a));
     }
 
-    public final Observable<T> M(Func1<? super Throwable, ? extends T> func1) {
-        return h0(new OnSubscribeLift(this.j, new OperatorOnErrorResumeNextViaFunction4(new OperatorOnErrorResumeNextViaFunction(func1))));
+    public final Observable<T> M(j0.k.b<? super Throwable, ? extends T> bVar) {
+        return h0(new r(this.j, new f1(new c1(bVar))));
     }
 
-    public final ConnectableObservable<T> N(int i) {
+    public final j0.m.b<T> N(int i) {
         if (i == Integer.MAX_VALUE) {
-            Func0 func0 = OperatorReplay.k;
+            Func0 func0 = j1.k;
             AtomicReference atomicReference = new AtomicReference();
-            return new OperatorReplay(new OperatorReplay3(atomicReference, func0), this, atomicReference, func0);
+            return new j1(new l1(atomicReference, func0), this, atomicReference, func0);
         }
-        OperatorReplay2 operatorReplay2 = new OperatorReplay2(i);
+        k1 k1Var = new k1(i);
         AtomicReference atomicReference2 = new AtomicReference();
-        return new OperatorReplay(new OperatorReplay3(atomicReference2, operatorReplay2), this, atomicReference2, operatorReplay2);
+        return new j1(new l1(atomicReference2, k1Var), this, atomicReference2, k1Var);
     }
 
-    public final Observable<T> O(Func1<? super Observable<? extends Throwable>, ? extends Observable<?>> func1) {
-        InternalObservableUtils.d dVar = new InternalObservableUtils.d(func1);
-        AtomicReference<Schedulers2> atomicReference = Schedulers2.a;
-        return h0(new OnSubscribeRedo6(this, dVar, true, false, TrampolineScheduler.a));
+    public final Observable<T> O(j0.k.b<? super Observable<? extends Throwable>, ? extends Observable<?>> bVar) {
+        e.d dVar = new e.d(bVar);
+        AtomicReference<j0.p.a> atomicReference = j0.p.a.a;
+        return h0(new y(this, dVar, true, false, j0.l.c.m.a));
     }
 
     public final Observable<T> P(long j, TimeUnit timeUnit) {
-        return h0(new OnSubscribeLift(this.j, new OperatorSampleWithTime(j, timeUnit, Schedulers2.a())));
+        return h0(new r(this.j, new n1(j, timeUnit, j0.p.a.a())));
     }
 
     public final <R> Observable<R> Q(R r, Func2<R, ? super T, R> func2) {
-        return h0(new OnSubscribeLift(this.j, new OperatorScan(r, func2)));
+        return h0(new r(this.j, new o1(r, func2)));
     }
 
     public final Observable<T> R() {
-        return h0(new OnSubscribeLift(this.j, OperatorSingle.a.a));
+        return h0(new r(this.j, r1.a.a));
     }
 
     public final Observable<T> S(int i) {
-        return h0(new OnSubscribeLift(this.j, new OperatorSkip2(i)));
+        return h0(new r(this.j, new t1(i)));
     }
 
     public final Observable<T> T(T t) {
-        return m(new ScalarSynchronousObservable(t), this);
+        return m(new k(t), this);
     }
 
     public final Subscription U(Subscriber<? super T> subscriber) {
@@ -277,8 +261,8 @@ public class Observable<T> {
             throw new IllegalStateException("onSubscribe function can not be null.");
         }
         subscriber.onStart();
-        if (!(subscriber instanceof SafeSubscriber)) {
-            subscriber = new SafeSubscriber(subscriber);
+        if (!(subscriber instanceof j0.n.b)) {
+            subscriber = new j0.n.b(subscriber);
         }
         try {
             a aVarCall = this.j;
@@ -287,8 +271,8 @@ public class Observable<T> {
                 aVarCall = func2.call(this, aVarCall);
             }
             aVarCall.call(subscriber);
-            Func1<Subscription, Subscription> func1 = l.g;
-            return func1 != null ? func1.call(subscriber) : subscriber;
+            j0.k.b<Subscription, Subscription> bVar = l.g;
+            return bVar != null ? bVar.call(subscriber) : subscriber;
         } catch (Throwable th) {
             b.i.a.f.e.o.f.o1(th);
             if (subscriber.isUnsubscribed()) {
@@ -298,7 +282,7 @@ public class Observable<T> {
                     subscriber.onError(l.c(th));
                 } catch (Throwable th2) {
                     b.i.a.f.e.o.f.o1(th2);
-                    StringBuilder sbU = outline.U("Error occurred attempting to subscribe [");
+                    StringBuilder sbU = b.d.b.a.a.U("Error occurred attempting to subscribe [");
                     sbU.append(th.getMessage());
                     sbU.append("] and then again while trying to pass to onError.");
                     OnErrorFailedException onErrorFailedException = new OnErrorFailedException(sbU.toString(), th2);
@@ -306,12 +290,12 @@ public class Observable<T> {
                     throw onErrorFailedException;
                 }
             }
-            return Subscriptions.a;
+            return j0.r.c.a;
         }
     }
 
     public final Subscription V(Action1<? super T> action1) {
-        return U(new ActionSubscriber(action1, InternalObservableUtils.l, Actions2.a));
+        return U(new j0.l.e.b(action1, j0.l.e.e.l, j0.k.a.a));
     }
 
     public final Subscription W(Action1<? super T> action1, Action1<Throwable> action12) {
@@ -319,47 +303,47 @@ public class Observable<T> {
             throw new IllegalArgumentException("onNext can not be null");
         }
         if (action12 != null) {
-            return U(new ActionSubscriber(action1, action12, Actions2.a));
+            return U(new j0.l.e.b(action1, action12, j0.k.a.a));
         }
         throw new IllegalArgumentException("onError can not be null");
     }
 
     public final Observable<T> X(Scheduler scheduler) {
-        return this instanceof ScalarSynchronousObservable ? ((ScalarSynchronousObservable) this).l0(scheduler) : h0(new OperatorSubscribeOn(this, scheduler, !(this.j instanceof OnSubscribeCreate)));
+        return this instanceof k ? ((k) this).l0(scheduler) : h0(new x1(this, scheduler, !(this.j instanceof j0.l.a.i)));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final <R> Observable<R> Y(Func1<? super T, ? extends Observable<? extends R>> func1) {
-        Observable<R> observableG = G(func1);
-        return h0(new OnSubscribeLift(observableG.j, OperatorSwitch2.a.a));
+    public final <R> Observable<R> Y(j0.k.b<? super T, ? extends Observable<? extends R>> bVar) {
+        Observable<R> observableG = G(bVar);
+        return h0(new r(observableG.j, y1.a.a));
     }
 
     public final Observable<T> Z(int i) {
-        return h0(new OnSubscribeLift(this.j, new OperatorTake2(i)));
+        return h0(new r(this.j, new c2(i)));
     }
 
     public final Observable<List<T>> a(long j, TimeUnit timeUnit) {
-        return h0(new OnSubscribeLift(this.j, new OperatorBufferWithTime2(j, j, timeUnit, Integer.MAX_VALUE, Schedulers2.a())));
+        return h0(new r(this.j, new n0(j, j, timeUnit, Integer.MAX_VALUE, j0.p.a.a())));
     }
 
     public final <E> Observable<T> a0(Observable<? extends E> observable) {
-        return h0(new OnSubscribeLift(this.j, new OperatorTakeUntil3(observable)));
+        return h0(new r(this.j, new f2(observable)));
     }
 
-    public final Observable<T> b0(Func1<? super T, Boolean> func1) {
-        return h0(new OnSubscribeLift(this.j, new OperatorTakeUntilPredicate2(func1)));
+    public final Observable<T> b0(j0.k.b<? super T, Boolean> bVar) {
+        return h0(new r(this.j, new h2(bVar)));
     }
 
     public final Observable<T> c0(long j, TimeUnit timeUnit) {
-        return h0(new OnSubscribeTimeoutTimedWithFallback(this, j, timeUnit, Schedulers2.a(), null));
+        return h0(new g0(this, j, timeUnit, j0.p.a.a(), null));
     }
 
     public final Observable<List<T>> f0() {
-        return h0(new OnSubscribeLift(this.j, OperatorToObservableList2.a.a));
+        return h0(new r(this.j, n2.a.a));
     }
 
-    public final <K, V> Observable<Map<K, V>> g0(Func1<? super T, ? extends K> func1, Func1<? super T, ? extends V> func12) {
-        return h0(new OnSubscribeToMap(this, func1, func12));
+    public final <K, V> Observable<Map<K, V>> g0(j0.k.b<? super T, ? extends K> bVar, j0.k.b<? super T, ? extends V> bVar2) {
+        return h0(new l0(this, bVar, bVar2));
     }
 
     public final Subscription i0(Subscriber<? super T> subscriber) {
@@ -371,16 +355,16 @@ public class Observable<T> {
                 aVarCall = func2.call(this, aVarCall);
             }
             aVarCall.call(subscriber);
-            Func1<Subscription, Subscription> func1 = l.g;
-            return func1 != null ? func1.call(subscriber) : subscriber;
+            j0.k.b<Subscription, Subscription> bVar = l.g;
+            return bVar != null ? bVar.call(subscriber) : subscriber;
         } catch (Throwable th) {
             b.i.a.f.e.o.f.o1(th);
             try {
                 subscriber.onError(l.c(th));
-                return Subscriptions.a;
+                return j0.r.c.a;
             } catch (Throwable th2) {
                 b.i.a.f.e.o.f.o1(th2);
-                StringBuilder sbU = outline.U("Error occurred attempting to subscribe [");
+                StringBuilder sbU = b.d.b.a.a.U("Error occurred attempting to subscribe [");
                 sbU.append(th.getMessage());
                 sbU.append("] and then again while trying to pass to onError.");
                 OnErrorFailedException onErrorFailedException = new OnErrorFailedException(sbU.toString(), th2);
@@ -394,46 +378,46 @@ public class Observable<T> {
         return (Observable) cVar.call(this);
     }
 
-    public final <R> Observable<R> n(Func1<? super T, ? extends Observable<? extends R>> func1) {
-        return this instanceof ScalarSynchronousObservable ? ((ScalarSynchronousObservable) this).k0(func1) : h0(new OnSubscribeConcatMap2(this, func1, 2, 0));
+    public final <R> Observable<R> n(j0.k.b<? super T, ? extends Observable<? extends R>> bVar) {
+        return this instanceof k ? ((k) this).k0(bVar) : h0(new j0.l.a.h(this, bVar, 2, 0));
     }
 
     public final Observable<T> p(long j, TimeUnit timeUnit) {
-        return h0(new OnSubscribeLift(this.j, new OperatorDebounceWithTime2(j, timeUnit, Schedulers2.a())));
+        return h0(new r(this.j, new q0(j, timeUnit, j0.p.a.a())));
     }
 
     public final Observable<T> q(long j, TimeUnit timeUnit) {
-        return h0(new OnSubscribeLift(this.j, new OperatorDelay2(j, timeUnit, Schedulers2.a())));
+        return h0(new r(this.j, new s0(j, timeUnit, j0.p.a.a())));
     }
 
     public final Observable<T> r() {
-        return h0(new OnSubscribeLift(this.j, OperatorDistinctUntilChanged2.a.a));
+        return h0(new r(this.j, u0.a.a));
     }
 
     public final Observable<T> s(Func2<? super T, ? super T, Boolean> func2) {
-        return h0(new OnSubscribeLift(this.j, new OperatorDistinctUntilChanged2(func2)));
+        return h0(new r(this.j, new u0(func2)));
     }
 
     public final Observable<T> t(Action1<? super Throwable> action1) {
-        Actions2.a aVar = Actions2.a;
-        return h0(new OnSubscribeDoOnEach(this, new ActionObserver(aVar, action1, aVar)));
+        a.C0620a c0620a = j0.k.a.a;
+        return h0(new j0.l.a.k(this, new j0.l.e.a(c0620a, action1, c0620a)));
     }
 
     public final Observable<T> u(Action1<? super T> action1) {
-        Actions2.a aVar = Actions2.a;
-        return h0(new OnSubscribeDoOnEach(this, new ActionObserver(action1, aVar, aVar)));
+        a.C0620a c0620a = j0.k.a.a;
+        return h0(new j0.l.a.k(this, new j0.l.e.a(action1, c0620a, c0620a)));
     }
 
     public final Observable<T> v(Action0 action0) {
-        return h0(new OnSubscribeLift(this.j, new OperatorDoOnSubscribe(action0)));
+        return h0(new r(this.j, new v0(action0)));
     }
 
     public final Observable<T> w(Action0 action0) {
-        return h0(new OnSubscribeLift(this.j, new OperatorDoOnUnsubscribe(action0)));
+        return h0(new r(this.j, new w0(action0)));
     }
 
-    public final Observable<T> y(Func1<? super T, Boolean> func1) {
-        return h0(new OnSubscribeFilter(this, func1));
+    public final Observable<T> y(j0.k.b<? super T, Boolean> bVar) {
+        return h0(new j0.l.a.l(this, bVar));
     }
 
     public final Observable<T> z() {

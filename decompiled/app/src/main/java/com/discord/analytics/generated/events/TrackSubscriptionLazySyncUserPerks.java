@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSubscriptionLazySyncUserPerks.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSubscriptionLazySyncUserPerks implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSubscriptionLazySyncUserPerks implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long subscriptionId = null;
     private final Long subscriptionPlanId = null;
@@ -38,7 +38,7 @@ public final /* data */ class TrackSubscriptionLazySyncUserPerks implements Anal
             return false;
         }
         TrackSubscriptionLazySyncUserPerks trackSubscriptionLazySyncUserPerks = (TrackSubscriptionLazySyncUserPerks) other;
-        return Intrinsics3.areEqual(this.subscriptionId, trackSubscriptionLazySyncUserPerks.subscriptionId) && Intrinsics3.areEqual(this.subscriptionPlanId, trackSubscriptionLazySyncUserPerks.subscriptionPlanId) && Intrinsics3.areEqual(this.paymentGateway, trackSubscriptionLazySyncUserPerks.paymentGateway) && Intrinsics3.areEqual(this.paymentGatewayPlanId, trackSubscriptionLazySyncUserPerks.paymentGatewayPlanId) && Intrinsics3.areEqual(this.currentPeriodStart, trackSubscriptionLazySyncUserPerks.currentPeriodStart) && Intrinsics3.areEqual(this.currentPeriodEnd, trackSubscriptionLazySyncUserPerks.currentPeriodEnd) && Intrinsics3.areEqual(this.premiumTypeMismatch, trackSubscriptionLazySyncUserPerks.premiumTypeMismatch) && Intrinsics3.areEqual(this.premiumUntilMismatch, trackSubscriptionLazySyncUserPerks.premiumUntilMismatch) && Intrinsics3.areEqual(this.originalPremiumType, trackSubscriptionLazySyncUserPerks.originalPremiumType) && Intrinsics3.areEqual(this.originalPremiumUntil, trackSubscriptionLazySyncUserPerks.originalPremiumUntil) && Intrinsics3.areEqual(this.newPremiumType, trackSubscriptionLazySyncUserPerks.newPremiumType) && Intrinsics3.areEqual(this.newPremiumUntil, trackSubscriptionLazySyncUserPerks.newPremiumUntil);
+        return m.areEqual(this.subscriptionId, trackSubscriptionLazySyncUserPerks.subscriptionId) && m.areEqual(this.subscriptionPlanId, trackSubscriptionLazySyncUserPerks.subscriptionPlanId) && m.areEqual(this.paymentGateway, trackSubscriptionLazySyncUserPerks.paymentGateway) && m.areEqual(this.paymentGatewayPlanId, trackSubscriptionLazySyncUserPerks.paymentGatewayPlanId) && m.areEqual(this.currentPeriodStart, trackSubscriptionLazySyncUserPerks.currentPeriodStart) && m.areEqual(this.currentPeriodEnd, trackSubscriptionLazySyncUserPerks.currentPeriodEnd) && m.areEqual(this.premiumTypeMismatch, trackSubscriptionLazySyncUserPerks.premiumTypeMismatch) && m.areEqual(this.premiumUntilMismatch, trackSubscriptionLazySyncUserPerks.premiumUntilMismatch) && m.areEqual(this.originalPremiumType, trackSubscriptionLazySyncUserPerks.originalPremiumType) && m.areEqual(this.originalPremiumUntil, trackSubscriptionLazySyncUserPerks.originalPremiumUntil) && m.areEqual(this.newPremiumType, trackSubscriptionLazySyncUserPerks.newPremiumType) && m.areEqual(this.newPremiumUntil, trackSubscriptionLazySyncUserPerks.newPremiumUntil);
     }
 
     public int hashCode() {
@@ -69,7 +69,7 @@ public final /* data */ class TrackSubscriptionLazySyncUserPerks implements Anal
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSubscriptionLazySyncUserPerks(subscriptionId=");
+        StringBuilder sbU = a.U("TrackSubscriptionLazySyncUserPerks(subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", subscriptionPlanId=");
         sbU.append(this.subscriptionPlanId);
@@ -92,6 +92,6 @@ public final /* data */ class TrackSubscriptionLazySyncUserPerks implements Anal
         sbU.append(", newPremiumType=");
         sbU.append(this.newPremiumType);
         sbU.append(", newPremiumUntil=");
-        return outline.G(sbU, this.newPremiumUntil, ")");
+        return a.G(sbU, this.newPremiumUntil, ")");
     }
 }

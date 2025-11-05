@@ -4,7 +4,7 @@ import a0.a.a.b;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentActivity;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelPayload;
@@ -16,11 +16,10 @@ import com.discord.utilities.error.Error;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.chat.input.MentionUtils;
-import com.discord.widgets.guilds.join.GuildJoinHelper;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import com.discord.widgets.chat.input.MentionUtilsKt;
+import com.discord.widgets.guilds.join.GuildJoinHelperKt;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -132,10 +131,10 @@ public final class StoreLurking {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("LurkContext(guildId=");
+            StringBuilder sbU = a.U("LurkContext(guildId=");
             sbU.append(this.guildId);
             sbU.append(", shouldNavigate=");
-            return outline.O(sbU, this.shouldNavigate, ")");
+            return a.O(sbU, this.shouldNavigate, ")");
         }
     }
 
@@ -181,7 +180,7 @@ public final class StoreLurking {
                 return false;
             }
             LurkRequest lurkRequest = (LurkRequest) other;
-            return this.guildId == lurkRequest.guildId && Intrinsics3.areEqual(this.channelId, lurkRequest.channelId);
+            return this.guildId == lurkRequest.guildId && m.areEqual(this.channelId, lurkRequest.channelId);
         }
 
         public final Long getChannelId() {
@@ -199,10 +198,10 @@ public final class StoreLurking {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("LurkRequest(guildId=");
+            StringBuilder sbU = a.U("LurkRequest(guildId=");
             sbU.append(this.guildId);
             sbU.append(", channelId=");
-            return outline.G(sbU, this.channelId, ")");
+            return a.G(sbU, this.channelId, ")");
         }
 
         public /* synthetic */ LurkRequest(long j, Long l, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -212,10 +211,10 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$getLurkingGuildIds$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<Long, LurkContext>, Set<? extends Long>> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<Map<Long, LurkContext>, Set<? extends Long>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Set<? extends Long> call(Map<Long, LurkContext> map) {
             return call2(map);
         }
@@ -242,7 +241,7 @@ public final class StoreLurking {
                 Companion companion = StoreLurking.INSTANCE;
                 zAccess$isLurking = guild.getJoinedAt() != null;
                 long id2 = guild.getId();
-                Intrinsics3.checkNotNullExpressionValue(set, "lurkingGuildIds");
+                m.checkNotNullExpressionValue(set, "lurkingGuildIds");
                 zAccess$isLurking = Companion.access$isLurking(companion, zAccess$isLurking, id2, set);
             }
             return Boolean.valueOf(zAccess$isLurking);
@@ -251,7 +250,7 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$postJoinGuildAsMember$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<com.discord.api.guild.Guild, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -266,13 +265,13 @@ public final class StoreLurking {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
-            Intrinsics3.checkNotNullParameter(guild, "it");
+            m.checkNotNullParameter(guild, "it");
         }
     }
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -292,7 +291,7 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -312,7 +311,7 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -329,14 +328,14 @@ public final class StoreLurking {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             this.$onFailure.invoke();
         }
     }
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -359,7 +358,7 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurking$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function3<Guild, Long, Boolean, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -373,13 +372,13 @@ public final class StoreLurking {
         }
 
         public final void invoke(Guild guild, Long l, boolean z2) {
-            Intrinsics3.checkNotNullParameter(guild, "<anonymous parameter 0>");
+            m.checkNotNullParameter(guild, "<anonymous parameter 0>");
         }
     }
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurking$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -399,7 +398,7 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurking$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ boolean $navigateToGuild;
@@ -430,21 +429,21 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreLurking.kt */
         /* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01461 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
+        public static final class C02661 extends o implements Function3<Guild, Long, Boolean, Unit> {
 
             /* compiled from: StoreLurking.kt */
             /* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01471 extends Lambda implements Function1<FragmentActivity, Boolean> {
-                public static final C01471 INSTANCE = new C01471();
+            public static final class C02671 extends o implements Function1<FragmentActivity, Boolean> {
+                public static final C02671 INSTANCE = new C02671();
 
-                public C01471() {
+                public C02671() {
                     super(1);
                 }
 
@@ -455,13 +454,13 @@ public final class StoreLurking {
 
                 /* renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final boolean invoke2(FragmentActivity fragmentActivity) {
-                    Intrinsics3.checkNotNullParameter(fragmentActivity, "it");
+                    m.checkNotNullParameter(fragmentActivity, "it");
                     StoreNavigation.setNavigationPanelAction$default(StoreStream.INSTANCE.getNavigation(), StoreNavigation.PanelAction.OPEN, null, 2, null);
                     return true;
                 }
             }
 
-            public C01461() {
+            public C02661() {
                 super(3);
             }
 
@@ -472,21 +471,21 @@ public final class StoreLurking {
             }
 
             public final void invoke(Guild guild, Long l, boolean z2) {
-                Intrinsics3.checkNotNullParameter(guild, "guild");
-                StoreLurking2 storeLurking2 = new StoreLurking2(this, l);
+                m.checkNotNullParameter(guild, "guild");
+                StoreLurking$startLurkingAndNavigate$1$1$jumpToDestination$1 storeLurking$startLurkingAndNavigate$1$1$jumpToDestination$1 = new StoreLurking$startLurkingAndNavigate$1$1$jumpToDestination$1(this, l);
                 if (z2) {
-                    storeLurking2.invoke();
+                    storeLurking$startLurkingAndNavigate$1$1$jumpToDestination$1.invoke();
                     return;
                 }
                 if (z2) {
                     return;
                 }
-                storeLurking2.invoke();
+                storeLurking$startLurkingAndNavigate$1$1$jumpToDestination$1.invoke();
                 StoreLurking.access$getStream$p(StoreLurking.this).handleGuildJoined(AnonymousClass1.this.$guildId, guild.getWelcomeScreen());
                 StoreNavigation navigation = StoreStream.INSTANCE.getNavigation();
-                StringBuilder sbU = outline.U("LURK:");
+                StringBuilder sbU = a.U("LURK:");
                 sbU.append(AnonymousClass1.this.$guildId);
-                navigation.launchNotice(sbU.toString(), C01471.INSTANCE);
+                navigation.launchNotice(sbU.toString(), C02671.INSTANCE);
             }
         }
 
@@ -507,12 +506,12 @@ public final class StoreLurking {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreLurking.access$getSessionId$p(StoreLurking.this) != null) {
-                StoreLurking.startLurkingInternal$default(StoreLurking.this, this.$guildId, this.$channelId, false, new C01461(), null, this.$context, 20, null);
+                StoreLurking.startLurkingInternal$default(StoreLurking.this, this.$guildId, this.$channelId, false, new C02661(), null, this.$context, 20, null);
                 return;
             }
-            StringBuilder sbU = outline.U("Queue lurk request: ");
+            StringBuilder sbU = a.U("Queue lurk request: ");
             sbU.append(this.$guildId);
-            sbU.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
+            sbU.append(MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR);
             sbU.append(this.$channelId);
             AppLog.i(sbU.toString());
             StoreLurking.access$setLurkRequest$p(StoreLurking.this, new LurkRequest(this.$guildId, this.$channelId));
@@ -521,7 +520,7 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
+    public static final class AnonymousClass1 extends o implements Function3<Guild, Long, Boolean, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -535,13 +534,13 @@ public final class StoreLurking {
         }
 
         public final void invoke(Guild guild, Long l, boolean z2) {
-            Intrinsics3.checkNotNullParameter(guild, "<anonymous parameter 0>");
+            m.checkNotNullParameter(guild, "<anonymous parameter 0>");
         }
     }
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -561,12 +560,12 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreLurking.kt */
         /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -598,7 +597,7 @@ public final class StoreLurking {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             error.setShowErrorToasts(StoreLurking.this.isLurking$app_productionGoogleRelease(this.$guildId));
             StoreLurking.access$getDispatcher$p(StoreLurking.this).schedule(new AnonymousClass1());
         }
@@ -606,14 +605,14 @@ public final class StoreLurking {
 
     /* compiled from: StoreLurking.kt */
     /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<com.discord.api.guild.Guild, Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Function3 $onGuildLurked;
 
         /* compiled from: StoreLurking.kt */
         /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ com.discord.api.guild.Guild $it;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -654,15 +653,15 @@ public final class StoreLurking {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
-            Intrinsics3.checkNotNullParameter(guild, "it");
+            m.checkNotNullParameter(guild, "it");
             StoreLurking.access$getDispatcher$p(StoreLurking.this).schedule(new AnonymousClass1(guild));
         }
     }
 
     public StoreLurking(StoreStream storeStream, StoreGuilds storeGuilds, Dispatcher dispatcher) {
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "guildsStore");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(storeGuilds, "guildsStore");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
         this.stream = storeStream;
         this.guildsStore = storeGuilds;
         this.dispatcher = dispatcher;
@@ -736,10 +735,10 @@ public final class StoreLurking {
         storeLurking.startLurkingAndNavigate(j, l, context);
     }
 
-    @Store3
+    @StoreThread
     private final void startLurkingInternal(long guildId, Long channelId, boolean navigateToGuild, Function3<? super Guild, ? super Long, ? super Boolean, Unit> onGuildLurked, Function0<Unit> onErrorLurking, Context context) {
         if (this.sessionId == null) {
-            Logger.w$default(AppLog.g, "Cannot lurk " + guildId + MentionUtils.EMOJIS_AND_STICKERS_CHAR + channelId + " with no session", null, 2, null);
+            Logger.w$default(AppLog.g, "Cannot lurk " + guildId + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + channelId + " with no session", null, 2, null);
             onErrorLurking.invoke();
             return;
         }
@@ -754,7 +753,7 @@ public final class StoreLurking {
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(ObservableExtensionsKt.restSubscribeOn$default(RestAPIInterface.DefaultImpls.joinGuild$default(RestAPI.INSTANCE.getApi(), guildId, true, this.sessionId, null, new RestAPIParams.InviteCode(null, null), null, 32, null), false, 1, null)), StoreLurking.class, context, (Function1) null, new AnonymousClass3(guildId), (Function0) null, (Function0) null, new AnonymousClass4(guildId, onGuildLurked, channelId), 52, (Object) null);
             return;
         }
-        Logger.w$default(AppLog.g, "Invalid ids for lurking " + guildId + MentionUtils.EMOJIS_AND_STICKERS_CHAR + channelId, null, 2, null);
+        Logger.w$default(AppLog.g, "Invalid ids for lurking " + guildId + MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR + channelId, null, 2, null);
         onErrorLurking.invoke();
     }
 
@@ -762,7 +761,7 @@ public final class StoreLurking {
         storeLurking.startLurkingInternal(j, l, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? AnonymousClass1.INSTANCE : function3, (i & 16) != 0 ? AnonymousClass2.INSTANCE : function0, (i & 32) != 0 ? null : context);
     }
 
-    @Store3
+    @StoreThread
     private final void stopLurkingInternal(long guildId) {
         if (this.lurkedGuilds.remove(Long.valueOf(guildId)) != null) {
             this.lurkedGuildsSubject.onNext(this.lurkedGuilds);
@@ -771,7 +770,7 @@ public final class StoreLurking {
 
     public final Observable<Set<Long>> getLurkingGuildIds() {
         Observable observableG = this.lurkedGuildsSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "lurkedGuildsSubject.map { it.keys }");
+        m.checkNotNullExpressionValue(observableG, "lurkedGuildsSubject.map { it.keys }");
         return observableG;
     }
 
@@ -779,9 +778,9 @@ public final class StoreLurking {
         return this.lurkedGuilds.keySet();
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionOpen$app_productionGoogleRelease(ModelPayload payload) {
-        Intrinsics3.checkNotNullParameter(payload, "payload");
+        m.checkNotNullParameter(payload, "payload");
         this.sessionId = payload.getSessionId();
         LurkRequest lurkRequest = this.lurkRequest;
         if (lurkRequest != null) {
@@ -791,10 +790,10 @@ public final class StoreLurking {
         this.lurkRequest = null;
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildAdd$app_productionGoogleRelease(com.discord.api.guild.Guild guild) {
         LurkContext lurkContext;
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         if (this.lurkedGuilds.keySet().contains(Long.valueOf(guild.getId()))) {
             if (guild.getJoinedAt() == null && (lurkContext = this.lurkedGuilds.get(Long.valueOf(guild.getId()))) != null && lurkContext.getShouldNavigate()) {
                 this.stream.getGuildSelected().handleGuildSelected(guild.getId());
@@ -804,13 +803,13 @@ public final class StoreLurking {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildRemove$app_productionGoogleRelease(com.discord.api.guild.Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         stopLurkingInternal(guild.getId());
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildSelected$app_productionGoogleRelease(long guildId) {
         LurkRequest lurkRequest = this.lurkRequest;
         if ((lurkRequest == null || guildId != lurkRequest.getGuildId()) && this.sessionId != null) {
@@ -819,7 +818,7 @@ public final class StoreLurking {
         removeOldLurkingGuilds(guildId);
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceChannelSelected$app_productionGoogleRelease(long channelId) {
         Channel channel = this.stream.getChannels().getChannel(channelId);
         Set<Long> setKeySet = this.lurkedGuilds.keySet();
@@ -838,21 +837,21 @@ public final class StoreLurking {
         }
     }
 
-    @Store3
+    @StoreThread
     public final boolean isLurking$app_productionGoogleRelease(Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         return Companion.access$isLurking(INSTANCE, guild.getJoinedAt() != null, guild.getId(), this.lurkedGuilds.keySet());
     }
 
     public final Observable<Boolean> isLurkingObs(long guildId) {
         Observable<Boolean> observableR = Observable.j(getLurkingGuildIds(), this.stream.getGuilds().observeGuild(guildId), AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Observable\n          .co…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "Observable\n          .co…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final void postJoinGuildAsMember(long guildId, Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        GuildJoinHelper.joinGuild$default(context, guildId, false, this.sessionId, null, null, StoreLurking.class, null, null, null, AnonymousClass1.INSTANCE, 944, null);
+        m.checkNotNullParameter(context, "context");
+        GuildJoinHelperKt.joinGuild$default(context, guildId, false, this.sessionId, null, null, StoreLurking.class, null, null, null, AnonymousClass1.INSTANCE, 944, null);
     }
 
     public final void removeOldLurkingGuilds(long currentlyLurkedGuildId) {
@@ -881,8 +880,8 @@ public final class StoreLurking {
     }
 
     public final void startLurking(long guildId, Long channelId, boolean navigateToGuild, Function3<? super Guild, ? super Long, ? super Boolean, Unit> onGuildLurked, Function0<Unit> onErrorLurking) {
-        Intrinsics3.checkNotNullParameter(onGuildLurked, "onGuildLurked");
-        Intrinsics3.checkNotNullParameter(onErrorLurking, "onErrorLurking");
+        m.checkNotNullParameter(onGuildLurked, "onGuildLurked");
+        m.checkNotNullParameter(onErrorLurking, "onErrorLurking");
         this.dispatcher.schedule(new AnonymousClass3(guildId, channelId, navigateToGuild, onGuildLurked, onErrorLurking));
     }
 
@@ -891,18 +890,18 @@ public final class StoreLurking {
     }
 
     public final void stopLurking(long guildId, Function0<Unit> onSuccess, Function0<Unit> onFailure) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
-        Intrinsics3.checkNotNullParameter(onFailure, "onFailure");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onFailure, "onFailure");
         postLeaveGuild(guildId, onSuccess, onFailure);
     }
 
-    @Store3
+    @StoreThread
     public final boolean isLurking$app_productionGoogleRelease(com.discord.api.guild.Guild guild) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(guild, "guild");
         return Companion.access$isLurking(INSTANCE, guild.getJoinedAt() != null, guild.getId(), this.lurkedGuilds.keySet());
     }
 
-    @Store3
+    @StoreThread
     public final boolean isLurking$app_productionGoogleRelease(long guildId) {
         return Companion.access$isLurking(INSTANCE, false, guildId, this.lurkedGuilds.keySet());
     }

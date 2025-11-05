@@ -1,15 +1,15 @@
 package com.discord.widgets.botuikit;
 
 import android.os.Bundle;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.app.AppFragment;
 import com.discord.widgets.botuikit.ModalComponent;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: ArgUtils.kt */
 /* loaded from: classes2.dex */
-public final class ModalComponent$$special$$inlined$args$1 extends Lambda implements Function0<ModalComponent.Options> {
+public final class ModalComponent$$special$$inlined$args$1 extends o implements Function0<ModalComponent.Options> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppFragment $this_args;
 
@@ -35,9 +35,9 @@ public final class ModalComponent$$special$$inlined$args$1 extends Lambda implem
         if (parcelableExtra != null) {
             return parcelableExtra;
         }
-        StringBuilder sbU = outline.U("Missing args for class type ");
-        outline.l0(ModalComponent.Options.class, sbU, " + key ");
-        throw new IllegalStateException(outline.H(sbU, this.$argsKey, '!'));
+        StringBuilder sbU = a.U("Missing args for class type ");
+        a.l0(ModalComponent.Options.class, sbU, " + key ");
+        throw new IllegalStateException(a.H(sbU, this.$argsKey, '!'));
     }
 
     /* JADX WARN: Type inference failed for: r0v0, types: [android.os.Parcelable, com.discord.widgets.botuikit.ModalComponent$Options] */

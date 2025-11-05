@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackGiftCodeMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackGiftCodeMetadata {
             return false;
         }
         TrackGiftCodeMetadata trackGiftCodeMetadata = (TrackGiftCodeMetadata) other;
-        return Intrinsics3.areEqual(this.giftCode, trackGiftCodeMetadata.giftCode) && Intrinsics3.areEqual(this.giftCodeSkuId, trackGiftCodeMetadata.giftCodeSkuId) && Intrinsics3.areEqual(this.giftCodeMaxUses, trackGiftCodeMetadata.giftCodeMaxUses) && Intrinsics3.areEqual(this.giftCodeMaxAge, trackGiftCodeMetadata.giftCodeMaxAge) && Intrinsics3.areEqual(this.giftCodeSubscriptionPlanId, trackGiftCodeMetadata.giftCodeSubscriptionPlanId);
+        return m.areEqual(this.giftCode, trackGiftCodeMetadata.giftCode) && m.areEqual(this.giftCodeSkuId, trackGiftCodeMetadata.giftCodeSkuId) && m.areEqual(this.giftCodeMaxUses, trackGiftCodeMetadata.giftCodeMaxUses) && m.areEqual(this.giftCodeMaxAge, trackGiftCodeMetadata.giftCodeMaxAge) && m.areEqual(this.giftCodeSubscriptionPlanId, trackGiftCodeMetadata.giftCodeSubscriptionPlanId);
     }
 
     public int hashCode() {
@@ -37,7 +37,7 @@ public final /* data */ class TrackGiftCodeMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGiftCodeMetadata(giftCode=");
+        StringBuilder sbU = a.U("TrackGiftCodeMetadata(giftCode=");
         sbU.append(this.giftCode);
         sbU.append(", giftCodeSkuId=");
         sbU.append(this.giftCodeSkuId);
@@ -46,6 +46,6 @@ public final /* data */ class TrackGiftCodeMetadata {
         sbU.append(", giftCodeMaxAge=");
         sbU.append(this.giftCodeMaxAge);
         sbU.append(", giftCodeSubscriptionPlanId=");
-        return outline.G(sbU, this.giftCodeSubscriptionPlanId, ")");
+        return a.G(sbU, this.giftCodeSubscriptionPlanId, ")");
     }
 }

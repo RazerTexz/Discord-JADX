@@ -1,14 +1,14 @@
 package com.discord.widgets.voice.sheet;
 
 import android.view.View;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: CallParticipantsAdapter.kt */
 /* loaded from: classes.dex */
-public final class CallParticipantsAdapter$onInviteFriendsClicked$1 extends Lambda implements Function1<View, Unit> {
+public final class CallParticipantsAdapter$onInviteFriendsClicked$1 extends o implements Function1<View, Unit> {
     public static final CallParticipantsAdapter$onInviteFriendsClicked$1 INSTANCE = new CallParticipantsAdapter$onInviteFriendsClicked$1();
 
     public CallParticipantsAdapter$onInviteFriendsClicked$1() {
@@ -23,6 +23,6 @@ public final class CallParticipantsAdapter$onInviteFriendsClicked$1 extends Lamb
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "it");
+        m.checkNotNullParameter(view, "it");
     }
 }

@@ -6,15 +6,15 @@ import com.discord.models.member.GuildMember;
 import com.discord.stores.StoreEmojiGuild;
 import com.discord.stores.StoreGuilds;
 import com.discord.widgets.servers.WidgetServerSettingsEmojis;
-import d0.t.Maps6;
-import d0.z.d.Lambda;
+import d0.t.h0;
+import d0.z.d.o;
 import java.util.List;
 import java.util.Map;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetServerSettingsEmojis.kt */
 /* loaded from: classes2.dex */
-public final class WidgetServerSettingsEmojis$Model$Companion$getGuildEmojis$1 extends Lambda implements Function0<WidgetServerSettingsEmojis.Model> {
+public final class WidgetServerSettingsEmojis$Model$Companion$getGuildEmojis$1 extends o implements Function0<WidgetServerSettingsEmojis.Model> {
     public final /* synthetic */ Guild $guild;
     public final /* synthetic */ StoreGuilds $storeGuild;
     public final /* synthetic */ StoreEmojiGuild $storeGuildEmoji;
@@ -39,7 +39,7 @@ public final class WidgetServerSettingsEmojis$Model$Companion$getGuildEmojis$1 e
         List<ModelEmojiGuild> guildEmoji = this.$storeGuildEmoji.getGuildEmoji(id2);
         Map<Long, GuildMember> mapEmptyMap = this.$storeGuild.getMembers().get(Long.valueOf(id2));
         if (mapEmptyMap == null) {
-            mapEmptyMap = Maps6.emptyMap();
+            mapEmptyMap = h0.emptyMap();
         }
         return WidgetServerSettingsEmojis.Model.Companion.access$create(WidgetServerSettingsEmojis.Model.INSTANCE, this.$guild, guildEmoji, mapEmptyMap);
     }

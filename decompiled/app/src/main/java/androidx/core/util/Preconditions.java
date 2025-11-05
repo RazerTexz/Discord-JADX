@@ -5,7 +5,7 @@ import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -43,7 +43,7 @@ public final class Preconditions {
         if ((i & i2) == i) {
             return i;
         }
-        StringBuilder sbU = outline.U("Requested flags 0x");
+        StringBuilder sbU = a.U("Requested flags 0x");
         sbU.append(Integer.toHexString(i));
         sbU.append(", but only 0x");
         sbU.append(Integer.toHexString(i2));

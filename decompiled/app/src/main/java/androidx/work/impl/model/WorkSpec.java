@@ -16,7 +16,7 @@ import androidx.work.Data;
 import androidx.work.Logger;
 import androidx.work.WorkInfo;
 import androidx.work.WorkRequest;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -277,7 +277,7 @@ public final class WorkSpec {
     }
 
     public int hashCode() {
-        int iM = outline.m(this.workerClassName, (this.state.hashCode() + (this.f38id.hashCode() * 31)) * 31, 31);
+        int iM = a.m(this.workerClassName, (this.state.hashCode() + (this.f38id.hashCode() * 31)) * 31, 31);
         String str = this.inputMergerClassName;
         int iHashCode = (this.output.hashCode() + ((this.input.hashCode() + ((iM + (str != null ? str.hashCode() : 0)) * 31)) * 31)) * 31;
         long j = this.initialDelay;
@@ -326,7 +326,7 @@ public final class WorkSpec {
 
     @NonNull
     public String toString() {
-        return outline.J(outline.U("{WorkSpec: "), this.f38id, "}");
+        return a.J(a.U("{WorkSpec: "), this.f38id, "}");
     }
 
     public void setPeriodic(long j, long j2) {

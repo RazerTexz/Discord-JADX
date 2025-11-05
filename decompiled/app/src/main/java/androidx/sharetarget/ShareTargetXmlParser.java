@@ -10,7 +10,7 @@ import android.util.Log;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.WorkerThread;
 import androidx.sharetarget.ShareTargetCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -60,7 +60,7 @@ public class ShareTargetXmlParser {
         if (xmlResourceParserLoadXmlMetaData != null) {
             return xmlResourceParserLoadXmlMetaData;
         }
-        StringBuilder sbU = outline.U("Failed to open android.app.shortcuts meta-data resource of ");
+        StringBuilder sbU = a.U("Failed to open android.app.shortcuts meta-data resource of ");
         sbU.append(activityInfo.name);
         throw new IllegalArgumentException(sbU.toString());
     }

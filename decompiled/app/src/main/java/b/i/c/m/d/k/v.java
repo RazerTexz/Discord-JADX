@@ -1,9 +1,6 @@
 package b.i.c.m.d.k;
 
 import b.i.c.m.d.k.x;
-import b.i.c.m.d.p.ByteString2;
-import b.i.c.m.d.p.CodedOutputStream2;
-import b.i.c.m.d.p.SessionProtobufHelper;
 
 /* compiled from: CrashlyticsController.java */
 /* loaded from: classes3.dex */
@@ -27,33 +24,33 @@ public class v implements x.g {
     }
 
     @Override // b.i.c.m.d.k.x.g
-    public void a(CodedOutputStream2 codedOutputStream2) throws Exception {
+    public void a(b.i.c.m.d.p.c cVar) throws Exception {
         String str = this.a;
         String str2 = this.f1697b;
         String str3 = this.c;
         String str4 = this.d;
         int i = this.e;
         String str5 = this.f.f1702y;
-        ByteString2 byteString2 = SessionProtobufHelper.a;
-        ByteString2 byteString2A = ByteString2.a(str);
-        ByteString2 byteString2A2 = ByteString2.a(str2);
-        ByteString2 byteString2A3 = ByteString2.a(str3);
-        ByteString2 byteString2A4 = ByteString2.a(str4);
-        ByteString2 byteString2A5 = str5 != null ? ByteString2.a(str5) : null;
-        codedOutputStream2.r(7, 2);
-        int iB = CodedOutputStream2.b(6, byteString2A4) + CodedOutputStream2.b(3, byteString2A3) + CodedOutputStream2.b(2, byteString2A2) + CodedOutputStream2.b(1, byteString2A) + 0;
-        if (byteString2A5 != null) {
-            iB = CodedOutputStream2.b(9, byteString2A5) + CodedOutputStream2.b(8, SessionProtobufHelper.f1740b) + iB;
+        b.i.c.m.d.p.a aVar = b.i.c.m.d.p.d.a;
+        b.i.c.m.d.p.a aVarA = b.i.c.m.d.p.a.a(str);
+        b.i.c.m.d.p.a aVarA2 = b.i.c.m.d.p.a.a(str2);
+        b.i.c.m.d.p.a aVarA3 = b.i.c.m.d.p.a.a(str3);
+        b.i.c.m.d.p.a aVarA4 = b.i.c.m.d.p.a.a(str4);
+        b.i.c.m.d.p.a aVarA5 = str5 != null ? b.i.c.m.d.p.a.a(str5) : null;
+        cVar.r(7, 2);
+        int iB = b.i.c.m.d.p.c.b(6, aVarA4) + b.i.c.m.d.p.c.b(3, aVarA3) + b.i.c.m.d.p.c.b(2, aVarA2) + b.i.c.m.d.p.c.b(1, aVarA) + 0;
+        if (aVarA5 != null) {
+            iB = b.i.c.m.d.p.c.b(9, aVarA5) + b.i.c.m.d.p.c.b(8, b.i.c.m.d.p.d.f1740b) + iB;
         }
-        codedOutputStream2.o(CodedOutputStream2.c(10, i) + iB);
-        codedOutputStream2.l(1, byteString2A);
-        codedOutputStream2.l(2, byteString2A2);
-        codedOutputStream2.l(3, byteString2A3);
-        codedOutputStream2.l(6, byteString2A4);
-        if (byteString2A5 != null) {
-            codedOutputStream2.l(8, SessionProtobufHelper.f1740b);
-            codedOutputStream2.l(9, byteString2A5);
+        cVar.o(b.i.c.m.d.p.c.c(10, i) + iB);
+        cVar.l(1, aVarA);
+        cVar.l(2, aVarA2);
+        cVar.l(3, aVarA3);
+        cVar.l(6, aVarA4);
+        if (aVarA5 != null) {
+            cVar.l(8, b.i.c.m.d.p.d.f1740b);
+            cVar.l(9, aVarA5);
         }
-        codedOutputStream2.m(10, i);
+        cVar.m(10, i);
     }
 }

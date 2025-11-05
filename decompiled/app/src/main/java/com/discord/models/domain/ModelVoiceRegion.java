@@ -1,6 +1,6 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
 import java.io.IOException;
 
@@ -118,7 +118,7 @@ public class ModelVoiceRegion implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelVoiceRegion(id=");
+        StringBuilder sbU = a.U("ModelVoiceRegion(id=");
         sbU.append(getId());
         sbU.append(", name=");
         sbU.append(getName());

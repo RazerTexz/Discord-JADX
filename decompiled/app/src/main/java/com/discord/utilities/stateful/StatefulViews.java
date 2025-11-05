@@ -15,15 +15,14 @@ import com.discord.app.AppFragment;
 import com.discord.databinding.ViewDialogConfirmationBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.view.extensions.ViewExtensions;
-import com.discord.utilities.view.text.TextWatcher4;
+import com.discord.utilities.view.text.TextWatcherKt;
 import com.discord.views.CheckedSetting;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.g0.StringsJVM;
-import d0.t.Iterables2;
-import d0.t._Arrays;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.t.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -51,8 +50,8 @@ public final class StatefulViews {
         private final Function0<Boolean> hasAnythingChanged;
 
         public FragmentOnBackPressedHandler(Activity activity, Function0<Boolean> function0) {
-            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-            Intrinsics3.checkNotNullParameter(function0, "hasAnythingChanged");
+            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            m.checkNotNullParameter(function0, "hasAnythingChanged");
             this.activity = activity;
             this.hasAnythingChanged = function0;
             this.discardConfirmed = new AtomicBoolean(false);
@@ -75,14 +74,14 @@ public final class StatefulViews {
                 return false;
             }
             ViewDialogConfirmationBinding viewDialogConfirmationBindingB = ViewDialogConfirmationBinding.b(LayoutInflater.from(this.activity));
-            Intrinsics3.checkNotNullExpressionValue(viewDialogConfirmationBindingB, "ViewDialogConfirmationBi…tInflater.from(activity))");
+            m.checkNotNullExpressionValue(viewDialogConfirmationBindingB, "ViewDialogConfirmationBi…tInflater.from(activity))");
             AlertDialog alertDialogCreate = new AlertDialog.Builder(this.activity).setView(viewDialogConfirmationBindingB.a).create();
-            Intrinsics3.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(acti…logBinding.root).create()");
+            m.checkNotNullExpressionValue(alertDialogCreate, "AlertDialog.Builder(acti…logBinding.root).create()");
             viewDialogConfirmationBindingB.d.setText(R.string.discard_changes);
             viewDialogConfirmationBindingB.e.setText(R.string.discard_changes_description);
-            viewDialogConfirmationBindingB.f2185b.setOnClickListener(new StatefulViews2(alertDialogCreate));
+            viewDialogConfirmationBindingB.f2185b.setOnClickListener(new StatefulViews$FragmentOnBackPressedHandler$onBackPressed$1(alertDialogCreate));
             viewDialogConfirmationBindingB.c.setText(R.string.okay);
-            viewDialogConfirmationBindingB.c.setOnClickListener(new StatefulViews3(this, alertDialogCreate));
+            viewDialogConfirmationBindingB.c.setOnClickListener(new StatefulViews$FragmentOnBackPressedHandler$onBackPressed$2(this, alertDialogCreate));
             alertDialogCreate.show();
             return true;
         }
@@ -90,7 +89,7 @@ public final class StatefulViews {
 
     /* compiled from: StatefulViews.kt */
     /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -105,7 +104,7 @@ public final class StatefulViews {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "$this$smartHide");
+            m.checkNotNullParameter(view, "$this$smartHide");
             if (view instanceof FloatingActionButton) {
                 ((FloatingActionButton) view).hide();
             } else {
@@ -116,7 +115,7 @@ public final class StatefulViews {
 
     /* compiled from: StatefulViews.kt */
     /* renamed from: com.discord.utilities.stateful.StatefulViews$configureSaveActionView$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<View, Unit> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
         public AnonymousClass2() {
@@ -131,7 +130,7 @@ public final class StatefulViews {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "$this$smartShow");
+            m.checkNotNullParameter(view, "$this$smartShow");
             if (view instanceof FloatingActionButton) {
                 ((FloatingActionButton) view).show();
             } else {
@@ -162,7 +161,7 @@ public final class StatefulViews {
     }
 
     public StatefulViews(List<Integer> list) {
-        Intrinsics3.checkNotNullParameter(list, "ids");
+        m.checkNotNullParameter(list, "ids");
         this.ids = list;
         this.viewValues = new HashMap<>();
         this.viewValuesEdited = new HashMap<>();
@@ -200,7 +199,7 @@ public final class StatefulViews {
                     if (string instanceof SpannableStringBuilder) {
                         string = string.toString();
                     }
-                    z2 = Intrinsics3.areEqual(string, this.viewValues.get(Integer.valueOf(iIntValue)) instanceof SpannableStringBuilder ? String.valueOf(this.viewValues.get(Integer.valueOf(iIntValue))) : this.viewValues.get(Integer.valueOf(iIntValue))) ^ true;
+                    z2 = m.areEqual(string, this.viewValues.get(Integer.valueOf(iIntValue)) instanceof SpannableStringBuilder ? String.valueOf(this.viewValues.get(Integer.valueOf(iIntValue))) : this.viewValues.get(Integer.valueOf(iIntValue))) ^ true;
                 }
                 if (z2) {
                     return true;
@@ -226,7 +225,7 @@ public final class StatefulViews {
                         obj = null;
                     }
                     String str = (String) obj;
-                    z2 = str != null && StringsJVM.isBlank(str);
+                    z2 = str != null && t.isBlank(str);
                 }
                 if (z2) {
                     return true;
@@ -237,7 +236,7 @@ public final class StatefulViews {
     }
 
     public final void addOptionalFields(View... views) {
-        Intrinsics3.checkNotNullParameter(views, "views");
+        m.checkNotNullParameter(views, "views");
         for (View view : views) {
             this.requiredFieldIds.put(Integer.valueOf(view.getId()), Boolean.FALSE);
         }
@@ -275,7 +274,7 @@ public final class StatefulViews {
 
     public final boolean hasChanged(int viewId) {
         if (this.viewValuesEdited.containsKey(Integer.valueOf(viewId))) {
-            return !Intrinsics3.areEqual(this.viewValuesEdited.get(Integer.valueOf(viewId)), this.viewValues.get(Integer.valueOf(viewId)));
+            return !m.areEqual(this.viewValuesEdited.get(Integer.valueOf(viewId)), this.viewValues.get(Integer.valueOf(viewId)));
         }
         return false;
     }
@@ -285,8 +284,8 @@ public final class StatefulViews {
     }
 
     public final void setupTextWatcherWithSaveAction(AppFragment fragment, View saveAction, View... views) {
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
-        Intrinsics3.checkNotNullParameter(views, "views");
+        m.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(views, "views");
         for (View view : views) {
             HashMap<Integer, Boolean> map = this.requiredFieldIds;
             Integer numValueOf = Integer.valueOf(view.getId());
@@ -294,30 +293,30 @@ public final class StatefulViews {
             if (bool == null) {
                 bool = Boolean.TRUE;
             }
-            Intrinsics3.checkNotNullExpressionValue(bool, "requiredFieldIds[view.id] ?: true");
+            m.checkNotNullExpressionValue(bool, "requiredFieldIds[view.id] ?: true");
             map.put(numValueOf, bool);
-            StatefulViews4 statefulViews4 = new StatefulViews4(view, this, saveAction, fragment);
-            StatefulViews5 statefulViews5 = new StatefulViews5(view, this, saveAction, fragment);
+            StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1 statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1 = new StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1(view, this, saveAction, fragment);
+            StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2 statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2 = new StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2(view, this, saveAction, fragment);
             if (view instanceof TextView) {
-                TextWatcher4.addBindedTextWatcher((TextView) view, fragment, statefulViews4);
+                TextWatcherKt.addBindedTextWatcher((TextView) view, fragment, statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1);
             } else if (view instanceof TextInputLayout) {
-                ViewExtensions.addBindedTextWatcher((TextInputLayout) view, fragment, statefulViews4);
+                ViewExtensions.addBindedTextWatcher((TextInputLayout) view, fragment, statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1);
             } else {
                 if (!(view instanceof CheckedSetting)) {
                     throw new UnsupportedOperationException(view + " must support using `TextWatcher`.");
                 }
-                ((CheckedSetting) view).setOnCheckedListener(new StatefulViews6(statefulViews5));
+                ((CheckedSetting) view).setOnCheckedListener(new StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$3(statefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$2));
             }
         }
     }
 
     public final void setupUnsavedChangesConfirmation(AppFragment fragment) {
         FragmentOnBackPressedHandler fragmentOnBackPressedHandler;
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(fragment, "fragment");
         FragmentActivity activity = fragment.getActivity();
         if (activity != null) {
-            Intrinsics3.checkNotNullExpressionValue(activity, "it");
-            fragmentOnBackPressedHandler = new FragmentOnBackPressedHandler(activity, new StatefulViews7(this));
+            m.checkNotNullExpressionValue(activity, "it");
+            fragmentOnBackPressedHandler = new FragmentOnBackPressedHandler(activity, new StatefulViews$setupUnsavedChangesConfirmation$$inlined$let$lambda$1(this));
         } else {
             fragmentOnBackPressedHandler = null;
         }
@@ -327,18 +326,18 @@ public final class StatefulViews {
     public final <T> T get(int id2, T defaultValue) {
         this.viewValues.put(Integer.valueOf(id2), defaultValue);
         T t = (T) get(id2);
-        return (!Intrinsics3.areEqual(this.requiredFieldIds.get(Integer.valueOf(id2)), Boolean.FALSE) && t == null) ? defaultValue : t;
+        return (!m.areEqual(this.requiredFieldIds.get(Integer.valueOf(id2)), Boolean.FALSE) && t == null) ? defaultValue : t;
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public StatefulViews(int... iArr) {
-        this(_Arrays.toList(iArr));
-        Intrinsics3.checkNotNullParameter(iArr, "ids");
+        this(k.toList(iArr));
+        m.checkNotNullParameter(iArr, "ids");
     }
 
     public StatefulViews(Collection<? extends View> collection) {
-        Intrinsics3.checkNotNullParameter(collection, "views");
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(collection, 10));
+        m.checkNotNullParameter(collection, "views");
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(collection, 10));
         Iterator<T> it = collection.iterator();
         while (it.hasNext()) {
             arrayList.add(Integer.valueOf(((View) it.next()).getId()));

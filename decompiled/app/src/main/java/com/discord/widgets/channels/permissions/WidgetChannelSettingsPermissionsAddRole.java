@@ -5,13 +5,13 @@ import android.content.Intent;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
+import b.a.d.j;
 import b.a.d.n;
 import b.a.d.o;
 import b.a.z.a.a.p;
 import b.a.z.a.a.q;
 import b.a.z.a.a.u;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -24,7 +24,7 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.channels.SimpleRolesAdapter;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import rx.Observable;
 
@@ -107,12 +107,12 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("WidgetChannelSettingsPermissionsAddRole.Model(channel=");
+            StringBuilder sbU = a.U("WidgetChannelSettingsPermissionsAddRole.Model(channel=");
             sbU.append(this.channel);
             sbU.append(", roleItems=");
             sbU.append(this.roleItems);
             sbU.append(", canManage=");
-            return outline.O(sbU, this.canManage, ")");
+            return a.O(sbU, this.canManage, ")");
         }
     }
 
@@ -137,7 +137,7 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
     public static void create(Context context, long j) {
         Intent intent = new Intent();
         intent.putExtra(INTENT_EXTRA_CHANNEL_ID, j);
-        AppScreen2.d(context, WidgetChannelSettingsPermissionsAddRole.class, intent);
+        j.d(context, WidgetChannelSettingsPermissionsAddRole.class, intent);
     }
 
     public static /* synthetic */ void g(WidgetChannelSettingsPermissionsAddRole widgetChannelSettingsPermissionsAddRole, Model model) {
@@ -156,8 +156,8 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<Model> observable = Model.get(getMostRecentIntent().getLongExtra(INTENT_EXTRA_CHANNEL_ID, -1L));
-        Intrinsics3.checkNotNullParameter(this, "appComponent");
-        Intrinsics3.checkNotNullExpressionValue(observable, "it");
+        m.checkNotNullParameter(this, "appComponent");
+        m.checkNotNullExpressionValue(observable, "it");
         ObservableExtensionsKt.ui(observable, this, null).k(o.e(new p(this), getClass()));
     }
 }

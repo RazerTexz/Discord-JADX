@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackGuild.kt */
 /* loaded from: classes.dex */
@@ -55,7 +55,7 @@ public final /* data */ class TrackGuild {
             return false;
         }
         TrackGuild trackGuild = (TrackGuild) other;
-        return Intrinsics3.areEqual(this.guildId, trackGuild.guildId) && Intrinsics3.areEqual(this.guildSizeTotal, trackGuild.guildSizeTotal) && Intrinsics3.areEqual(this.guildMemberNumRoles, trackGuild.guildMemberNumRoles) && Intrinsics3.areEqual(this.guildMemberPerms, trackGuild.guildMemberPerms) && Intrinsics3.areEqual(this.guildNumChannels, trackGuild.guildNumChannels) && Intrinsics3.areEqual(this.guildNumTextChannels, trackGuild.guildNumTextChannels) && Intrinsics3.areEqual(this.guildNumVoiceChannels, trackGuild.guildNumVoiceChannels) && Intrinsics3.areEqual(this.guildNumRoles, trackGuild.guildNumRoles) && Intrinsics3.areEqual(this.guildIsVip, trackGuild.guildIsVip) && Intrinsics3.areEqual(this.isMember, trackGuild.isMember) && Intrinsics3.areEqual(this.numVoiceChannelsActive, trackGuild.numVoiceChannelsActive) && Intrinsics3.areEqual(this.isOwner, trackGuild.isOwner);
+        return m.areEqual(this.guildId, trackGuild.guildId) && m.areEqual(this.guildSizeTotal, trackGuild.guildSizeTotal) && m.areEqual(this.guildMemberNumRoles, trackGuild.guildMemberNumRoles) && m.areEqual(this.guildMemberPerms, trackGuild.guildMemberPerms) && m.areEqual(this.guildNumChannels, trackGuild.guildNumChannels) && m.areEqual(this.guildNumTextChannels, trackGuild.guildNumTextChannels) && m.areEqual(this.guildNumVoiceChannels, trackGuild.guildNumVoiceChannels) && m.areEqual(this.guildNumRoles, trackGuild.guildNumRoles) && m.areEqual(this.guildIsVip, trackGuild.guildIsVip) && m.areEqual(this.isMember, trackGuild.isMember) && m.areEqual(this.numVoiceChannelsActive, trackGuild.numVoiceChannelsActive) && m.areEqual(this.isOwner, trackGuild.isOwner);
     }
 
     public int hashCode() {
@@ -86,7 +86,7 @@ public final /* data */ class TrackGuild {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuild(guildId=");
+        StringBuilder sbU = a.U("TrackGuild(guildId=");
         sbU.append(this.guildId);
         sbU.append(", guildSizeTotal=");
         sbU.append(this.guildSizeTotal);
@@ -109,7 +109,7 @@ public final /* data */ class TrackGuild {
         sbU.append(", numVoiceChannelsActive=");
         sbU.append(this.numVoiceChannelsActive);
         sbU.append(", isOwner=");
-        return outline.D(sbU, this.isOwner, ")");
+        return a.D(sbU, this.isOwner, ")");
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLeaveVoiceChannel.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLeaveVoiceChannel implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackLeaveVoiceChannel implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -51,7 +51,7 @@ public final /* data */ class TrackLeaveVoiceChannel implements AnalyticsSchema,
             return false;
         }
         TrackLeaveVoiceChannel trackLeaveVoiceChannel = (TrackLeaveVoiceChannel) other;
-        return Intrinsics3.areEqual(this.channelId, trackLeaveVoiceChannel.channelId) && Intrinsics3.areEqual(this.channelType, trackLeaveVoiceChannel.channelType) && Intrinsics3.areEqual(this.channelBitrate, trackLeaveVoiceChannel.channelBitrate) && Intrinsics3.areEqual(this.guildId, trackLeaveVoiceChannel.guildId) && Intrinsics3.areEqual(this.nonce, trackLeaveVoiceChannel.nonce) && Intrinsics3.areEqual(this.rtcConnectionId, trackLeaveVoiceChannel.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackLeaveVoiceChannel.mediaSessionId) && Intrinsics3.areEqual(this.duration, trackLeaveVoiceChannel.duration) && Intrinsics3.areEqual(this.voiceStateCount, trackLeaveVoiceChannel.voiceStateCount) && Intrinsics3.areEqual(this.videoStreamCount, trackLeaveVoiceChannel.videoStreamCount) && Intrinsics3.areEqual(this.videoEnabled, trackLeaveVoiceChannel.videoEnabled) && Intrinsics3.areEqual(this.gameName, trackLeaveVoiceChannel.gameName) && Intrinsics3.areEqual(this.gamePlatform, trackLeaveVoiceChannel.gamePlatform) && Intrinsics3.areEqual(this.gameId, trackLeaveVoiceChannel.gameId) && Intrinsics3.areEqual(this.maxVoiceStateCount, trackLeaveVoiceChannel.maxVoiceStateCount) && Intrinsics3.areEqual(this.totalVoiceStateCount, trackLeaveVoiceChannel.totalVoiceStateCount) && Intrinsics3.areEqual(this.maxSpeakerCount, trackLeaveVoiceChannel.maxSpeakerCount) && Intrinsics3.areEqual(this.totalSpeakerCount, trackLeaveVoiceChannel.totalSpeakerCount) && Intrinsics3.areEqual(this.maxListenerCount, trackLeaveVoiceChannel.maxListenerCount) && Intrinsics3.areEqual(this.totalListenerCount, trackLeaveVoiceChannel.totalListenerCount) && Intrinsics3.areEqual(this.stageInstanceId, trackLeaveVoiceChannel.stageInstanceId) && Intrinsics3.areEqual(this.guildScheduledEventId, trackLeaveVoiceChannel.guildScheduledEventId) && Intrinsics3.areEqual(this.viewModeGridDurationMs, trackLeaveVoiceChannel.viewModeGridDurationMs) && Intrinsics3.areEqual(this.viewModeFocusDurationMs, trackLeaveVoiceChannel.viewModeFocusDurationMs) && Intrinsics3.areEqual(this.viewModeToggleCount, trackLeaveVoiceChannel.viewModeToggleCount);
+        return m.areEqual(this.channelId, trackLeaveVoiceChannel.channelId) && m.areEqual(this.channelType, trackLeaveVoiceChannel.channelType) && m.areEqual(this.channelBitrate, trackLeaveVoiceChannel.channelBitrate) && m.areEqual(this.guildId, trackLeaveVoiceChannel.guildId) && m.areEqual(this.nonce, trackLeaveVoiceChannel.nonce) && m.areEqual(this.rtcConnectionId, trackLeaveVoiceChannel.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackLeaveVoiceChannel.mediaSessionId) && m.areEqual(this.duration, trackLeaveVoiceChannel.duration) && m.areEqual(this.voiceStateCount, trackLeaveVoiceChannel.voiceStateCount) && m.areEqual(this.videoStreamCount, trackLeaveVoiceChannel.videoStreamCount) && m.areEqual(this.videoEnabled, trackLeaveVoiceChannel.videoEnabled) && m.areEqual(this.gameName, trackLeaveVoiceChannel.gameName) && m.areEqual(this.gamePlatform, trackLeaveVoiceChannel.gamePlatform) && m.areEqual(this.gameId, trackLeaveVoiceChannel.gameId) && m.areEqual(this.maxVoiceStateCount, trackLeaveVoiceChannel.maxVoiceStateCount) && m.areEqual(this.totalVoiceStateCount, trackLeaveVoiceChannel.totalVoiceStateCount) && m.areEqual(this.maxSpeakerCount, trackLeaveVoiceChannel.maxSpeakerCount) && m.areEqual(this.totalSpeakerCount, trackLeaveVoiceChannel.totalSpeakerCount) && m.areEqual(this.maxListenerCount, trackLeaveVoiceChannel.maxListenerCount) && m.areEqual(this.totalListenerCount, trackLeaveVoiceChannel.totalListenerCount) && m.areEqual(this.stageInstanceId, trackLeaveVoiceChannel.stageInstanceId) && m.areEqual(this.guildScheduledEventId, trackLeaveVoiceChannel.guildScheduledEventId) && m.areEqual(this.viewModeGridDurationMs, trackLeaveVoiceChannel.viewModeGridDurationMs) && m.areEqual(this.viewModeFocusDurationMs, trackLeaveVoiceChannel.viewModeFocusDurationMs) && m.areEqual(this.viewModeToggleCount, trackLeaveVoiceChannel.viewModeToggleCount);
     }
 
     public int hashCode() {
@@ -108,7 +108,7 @@ public final /* data */ class TrackLeaveVoiceChannel implements AnalyticsSchema,
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLeaveVoiceChannel(channelId=");
+        StringBuilder sbU = a.U("TrackLeaveVoiceChannel(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -157,6 +157,6 @@ public final /* data */ class TrackLeaveVoiceChannel implements AnalyticsSchema,
         sbU.append(", viewModeFocusDurationMs=");
         sbU.append(this.viewModeFocusDurationMs);
         sbU.append(", viewModeToggleCount=");
-        return outline.G(sbU, this.viewModeToggleCount, ")");
+        return a.G(sbU, this.viewModeToggleCount, ")");
     }
 }

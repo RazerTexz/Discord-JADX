@@ -6,11 +6,11 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.recycler.SelfHealingLinearLayoutManager;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.subscriptions.CompositeSubscription;
 
@@ -29,7 +29,7 @@ public abstract class MGRecyclerAdapter<D> extends RecyclerView.Adapter<MGRecycl
         }
 
         public final <D, T extends MGRecyclerAdapter<D>> T configure(T adapter) {
-            Intrinsics3.checkNotNullParameter(adapter, "adapter");
+            m.checkNotNullParameter(adapter, "adapter");
             try {
                 RecyclerView recycler = adapter.getRecycler();
                 RecyclerView.LayoutManager layoutManager = adapter.getRecycler().getLayoutManager();
@@ -63,7 +63,7 @@ public abstract class MGRecyclerAdapter<D> extends RecyclerView.Adapter<MGRecycl
     }
 
     public MGRecyclerAdapter(RecyclerView recyclerView) {
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(recyclerView, "recycler");
         this.recycler = recyclerView;
         this.cellSubscriptions = new CompositeSubscription();
     }
@@ -82,7 +82,7 @@ public abstract class MGRecyclerAdapter<D> extends RecyclerView.Adapter<MGRecycl
 
     public final Context getContext() {
         Context context = getRecycler().getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "recycler.context");
+        m.checkNotNullExpressionValue(context, "recycler.context");
         return context;
     }
 
@@ -95,7 +95,7 @@ public abstract class MGRecyclerAdapter<D> extends RecyclerView.Adapter<MGRecycl
     @SuppressLint({"StringFormatMatches"})
     public final IllegalArgumentException invalidViewTypeException(int viewType) {
         Context context = getRecycler().getContext();
-        return new IllegalArgumentException(String.valueOf(context != null ? FormatUtils.h(context, R.string.android_unknown_view_holder, new Object[]{Integer.valueOf(viewType)}, null, 4) : null));
+        return new IllegalArgumentException(String.valueOf(context != null ? b.h(context, R.string.android_unknown_view_holder, new Object[]{Integer.valueOf(viewType)}, null, 4) : null));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -104,12 +104,12 @@ public abstract class MGRecyclerAdapter<D> extends RecyclerView.Adapter<MGRecycl
     }
 
     public void setRecycler(RecyclerView recyclerView) {
-        Intrinsics3.checkNotNullParameter(recyclerView, "<set-?>");
+        m.checkNotNullParameter(recyclerView, "<set-?>");
         this.recycler = recyclerView;
     }
 
     public void onBindViewHolder(MGRecyclerViewHolder<?, D> holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         holder.onBindViewHolder(position);
     }
 }

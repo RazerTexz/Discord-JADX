@@ -1,7 +1,7 @@
 package com.discord.widgets.settings.connections;
 
 import android.view.View;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.utilities.platform.Platform;
 import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.settings.connections.WidgetSettingsUserConnections;
@@ -21,6 +21,6 @@ public final class WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        UriHandler.handle$default(UriHandler.INSTANCE, outline.x(view, "view", "view.context"), this.$platform.getProfileUrl(this.$data$inlined.getConnectedAccount().getConnection()), false, false, null, 28, null);
+        UriHandler.handle$default(UriHandler.INSTANCE, a.x(view, "view", "view.context"), this.$platform.getProfileUrl(this.$data$inlined.getConnectedAccount().getConnection()), false, false, null, 28, null);
     }
 }

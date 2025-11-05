@@ -1,10 +1,10 @@
 package com.facebook.common.references;
 
 import android.graphics.Bitmap;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.e.FLog;
-import b.f.d.h.HasBitmap;
-import b.f.d.h.ResourceReleaser;
+import b.c.a.a0.d;
+import b.f.d.e.a;
+import b.f.d.h.c;
+import b.f.d.h.f;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public class SharedReference<T> {
     /* renamed from: b, reason: collision with root package name */
     public T f2884b;
     public int c;
-    public final ResourceReleaser<T> d;
+    public final f<T> d;
 
     public static class NullReferenceException extends RuntimeException {
         public NullReferenceException() {
@@ -24,13 +24,13 @@ public class SharedReference<T> {
         }
     }
 
-    public SharedReference(T t, ResourceReleaser<T> resourceReleaser) {
+    public SharedReference(T t, f<T> fVar) {
         Objects.requireNonNull(t);
         this.f2884b = t;
-        Objects.requireNonNull(resourceReleaser);
-        this.d = resourceReleaser;
+        Objects.requireNonNull(fVar);
+        this.d = fVar;
         this.c = 1;
-        if ((CloseableReference.k == 3) && ((t instanceof Bitmap) || (t instanceof HasBitmap))) {
+        if ((CloseableReference.k == 3) && ((t instanceof Bitmap) || (t instanceof c))) {
             return;
         }
         Map<Object, Integer> map = a;
@@ -49,7 +49,7 @@ public class SharedReference<T> {
         T t;
         synchronized (this) {
             b();
-            AnimatableValueParser.i(Boolean.valueOf(this.c > 0));
+            d.i(Boolean.valueOf(this.c > 0));
             i = this.c - 1;
             this.c = i;
         }
@@ -64,7 +64,7 @@ public class SharedReference<T> {
                 synchronized (map) {
                     Integer num = map.get(t);
                     if (num == null) {
-                        FLog.p("SharedReference", "No entry in sLiveObjects for value of type %s", t.getClass());
+                        a.p("SharedReference", "No entry in sLiveObjects for value of type %s", t.getClass());
                     } else if (num.intValue() == 1) {
                         map.remove(t);
                     } else {

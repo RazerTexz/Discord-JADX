@@ -6,17 +6,17 @@ import android.view.View;
 import android.widget.TableLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.WidgetServerSettingsChannelsSortFabMenuBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.utilities.views.FloatingButtonMenuInitializer;
 import com.discord.widgets.channels.WidgetCreateChannel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import d0.Tuples;
-import d0.t.Maps6;
-import d0.z.d.Intrinsics3;
+import d0.o;
+import d0.t.h0;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
 import rx.functions.Action0;
@@ -24,7 +24,7 @@ import rx.functions.Action0;
 /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
 /* loaded from: classes2.dex */
 public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetServerSettingsChannelsFabMenuFragment.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsSortFabMenuBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetServerSettingsChannelsFabMenuFragment.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsSortFabMenuBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -41,8 +41,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
 
         public final void show(long guildId, FragmentManager fragmentManager, Action0 dismissHandler) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(dismissHandler, "dismissHandler");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(dismissHandler, "dismissHandler");
             WidgetServerSettingsChannelsFabMenuFragment widgetServerSettingsChannelsFabMenuFragment = new WidgetServerSettingsChannelsFabMenuFragment();
             Bundle bundle = new Bundle();
             bundle.putLong("INTENT_EXTRA_GUILD_ID", guildId);
@@ -100,7 +100,7 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         public final void onClick(View view) {
             WidgetCreateChannel.Companion companion = WidgetCreateChannel.INSTANCE;
             Context contextRequireContext = WidgetServerSettingsChannelsFabMenuFragment.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetCreateChannel.Companion.show$default(companion, contextRequireContext, this.$guildId, 4, null, 8, null);
         }
     }
@@ -118,7 +118,7 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         public final void onClick(View view) {
             WidgetCreateChannel.Companion companion = WidgetCreateChannel.INSTANCE;
             Context contextRequireContext = WidgetServerSettingsChannelsFabMenuFragment.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetCreateChannel.Companion.show$default(companion, contextRequireContext, this.$guildId, 2, null, 8, null);
         }
     }
@@ -136,7 +136,7 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         public final void onClick(View view) {
             WidgetCreateChannel.Companion companion = WidgetCreateChannel.INSTANCE;
             Context contextRequireContext = WidgetServerSettingsChannelsFabMenuFragment.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             WidgetCreateChannel.Companion.show$default(companion, contextRequireContext, this.$guildId, 0, null, 8, null);
         }
     }
@@ -165,7 +165,7 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
 
     public WidgetServerSettingsChannelsFabMenuFragment() {
         super(R.layout.widget_server_settings_channels_sort_fab_menu);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetServerSettingsChannelsFabMenuFragment2.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetServerSettingsChannelsFabMenuFragment$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$dismiss(WidgetServerSettingsChannelsFabMenuFragment widgetServerSettingsChannelsFabMenuFragment) {
@@ -210,17 +210,17 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
     public void onResume() {
         super.onResume();
         WidgetServerSettingsChannelsSortFabMenuBinding binding = getBinding();
-        Intrinsics3.checkNotNullExpressionValue(binding, "binding");
+        m.checkNotNullExpressionValue(binding, "binding");
         binding.a.setOnClickListener(new AnonymousClass1());
         Bundle arguments = getArguments();
         long j = arguments != null ? arguments.getLong("INTENT_EXTRA_GUILD_ID", 0L) : 0L;
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-        FloatingButtonMenuInitializer floatingButtonMenuInitializer = new FloatingButtonMenuInitializer(contextRequireContext, Maps6.mapOf(Tuples.to(Integer.valueOf(R.id.fab_menu_add_category), createListener(new AnonymousClass2(j))), Tuples.to(Integer.valueOf(R.id.fab_menu_add_voice), createListener(new AnonymousClass3(j))), Tuples.to(Integer.valueOf(R.id.fab_menu_add_text), createListener(new AnonymousClass4(j))), Tuples.to(Integer.valueOf(R.id.fab_menu_main), createListener(AnonymousClass5.INSTANCE))));
+        m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        FloatingButtonMenuInitializer floatingButtonMenuInitializer = new FloatingButtonMenuInitializer(contextRequireContext, h0.mapOf(o.to(Integer.valueOf(R.id.fab_menu_add_category), createListener(new AnonymousClass2(j))), o.to(Integer.valueOf(R.id.fab_menu_add_voice), createListener(new AnonymousClass3(j))), o.to(Integer.valueOf(R.id.fab_menu_add_text), createListener(new AnonymousClass4(j))), o.to(Integer.valueOf(R.id.fab_menu_main), createListener(AnonymousClass5.INSTANCE))));
         TableLayout tableLayout = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(tableLayout, "binding.fabMenuTable");
+        m.checkNotNullExpressionValue(tableLayout, "binding.fabMenuTable");
         FloatingActionButton floatingActionButton = getBinding().f2552b;
-        Intrinsics3.checkNotNullExpressionValue(floatingActionButton, "binding.fabMenuMainFab");
+        m.checkNotNullExpressionValue(floatingActionButton, "binding.fabMenuMainFab");
         floatingButtonMenuInitializer.initialize(tableLayout, floatingActionButton, new AnonymousClass6());
     }
 }

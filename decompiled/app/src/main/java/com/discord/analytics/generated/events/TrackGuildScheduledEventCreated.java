@@ -1,22 +1,22 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.analytics.generated.traits.TrackGuildScheduledEvent;
-import com.discord.analytics.generated.traits.TrackGuildScheduledEvent2;
+import com.discord.analytics.generated.traits.TrackGuildScheduledEventReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackGuildScheduledEventCreated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildScheduledEventCreated implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2, TrackGuildScheduledEvent2 {
+public final /* data */ class TrackGuildScheduledEventCreated implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver, TrackGuildScheduledEventReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -35,13 +35,13 @@ public final /* data */ class TrackGuildScheduledEventCreated implements Analyti
     private final Long updaterId = null;
     private final transient String analyticsSchemaTypeName = "guild_scheduled_event_created";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -60,7 +60,7 @@ public final /* data */ class TrackGuildScheduledEventCreated implements Analyti
             return false;
         }
         TrackGuildScheduledEventCreated trackGuildScheduledEventCreated = (TrackGuildScheduledEventCreated) other;
-        return Intrinsics3.areEqual(this.guildScheduledEventId, trackGuildScheduledEventCreated.guildScheduledEventId) && Intrinsics3.areEqual(this.name, trackGuildScheduledEventCreated.name) && Intrinsics3.areEqual(this.startTime, trackGuildScheduledEventCreated.startTime) && Intrinsics3.areEqual(this.endTime, trackGuildScheduledEventCreated.endTime) && Intrinsics3.areEqual(this.skuIds, trackGuildScheduledEventCreated.skuIds) && Intrinsics3.areEqual(this.guildScheduledEventStatus, trackGuildScheduledEventCreated.guildScheduledEventStatus) && Intrinsics3.areEqual(this.privacyLevel, trackGuildScheduledEventCreated.privacyLevel) && Intrinsics3.areEqual(this.guildScheduledEventEntityType, trackGuildScheduledEventCreated.guildScheduledEventEntityType) && Intrinsics3.areEqual(this.guildScheduledEventExternalLocation, trackGuildScheduledEventCreated.guildScheduledEventExternalLocation) && Intrinsics3.areEqual(this.guildScheduledEventInterestedCount, trackGuildScheduledEventCreated.guildScheduledEventInterestedCount) && Intrinsics3.areEqual(this.description, trackGuildScheduledEventCreated.description) && Intrinsics3.areEqual(this.updaterId, trackGuildScheduledEventCreated.updaterId);
+        return m.areEqual(this.guildScheduledEventId, trackGuildScheduledEventCreated.guildScheduledEventId) && m.areEqual(this.name, trackGuildScheduledEventCreated.name) && m.areEqual(this.startTime, trackGuildScheduledEventCreated.startTime) && m.areEqual(this.endTime, trackGuildScheduledEventCreated.endTime) && m.areEqual(this.skuIds, trackGuildScheduledEventCreated.skuIds) && m.areEqual(this.guildScheduledEventStatus, trackGuildScheduledEventCreated.guildScheduledEventStatus) && m.areEqual(this.privacyLevel, trackGuildScheduledEventCreated.privacyLevel) && m.areEqual(this.guildScheduledEventEntityType, trackGuildScheduledEventCreated.guildScheduledEventEntityType) && m.areEqual(this.guildScheduledEventExternalLocation, trackGuildScheduledEventCreated.guildScheduledEventExternalLocation) && m.areEqual(this.guildScheduledEventInterestedCount, trackGuildScheduledEventCreated.guildScheduledEventInterestedCount) && m.areEqual(this.description, trackGuildScheduledEventCreated.description) && m.areEqual(this.updaterId, trackGuildScheduledEventCreated.updaterId);
     }
 
     public int hashCode() {
@@ -91,7 +91,7 @@ public final /* data */ class TrackGuildScheduledEventCreated implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildScheduledEventCreated(guildScheduledEventId=");
+        StringBuilder sbU = a.U("TrackGuildScheduledEventCreated(guildScheduledEventId=");
         sbU.append(this.guildScheduledEventId);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -114,6 +114,6 @@ public final /* data */ class TrackGuildScheduledEventCreated implements Analyti
         sbU.append(", description=");
         sbU.append(this.description);
         sbU.append(", updaterId=");
-        return outline.G(sbU, this.updaterId, ")");
+        return a.G(sbU, this.updaterId, ")");
     }
 }

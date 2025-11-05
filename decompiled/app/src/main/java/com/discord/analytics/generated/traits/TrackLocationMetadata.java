@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackLocationMetadata.kt */
 /* loaded from: classes.dex */
@@ -20,7 +20,7 @@ public final /* data */ class TrackLocationMetadata {
             return false;
         }
         TrackLocationMetadata trackLocationMetadata = (TrackLocationMetadata) other;
-        return Intrinsics3.areEqual(this.locationPage, trackLocationMetadata.locationPage) && Intrinsics3.areEqual(this.locationSection, trackLocationMetadata.locationSection) && Intrinsics3.areEqual(this.locationObject, trackLocationMetadata.locationObject) && Intrinsics3.areEqual(this.locationObjectType, trackLocationMetadata.locationObjectType) && Intrinsics3.areEqual(this.locationPromotionId, trackLocationMetadata.locationPromotionId);
+        return m.areEqual(this.locationPage, trackLocationMetadata.locationPage) && m.areEqual(this.locationSection, trackLocationMetadata.locationSection) && m.areEqual(this.locationObject, trackLocationMetadata.locationObject) && m.areEqual(this.locationObjectType, trackLocationMetadata.locationObjectType) && m.areEqual(this.locationPromotionId, trackLocationMetadata.locationPromotionId);
     }
 
     public int hashCode() {
@@ -37,7 +37,7 @@ public final /* data */ class TrackLocationMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLocationMetadata(locationPage=");
+        StringBuilder sbU = a.U("TrackLocationMetadata(locationPage=");
         sbU.append(this.locationPage);
         sbU.append(", locationSection=");
         sbU.append(this.locationSection);
@@ -46,6 +46,6 @@ public final /* data */ class TrackLocationMetadata {
         sbU.append(", locationObjectType=");
         sbU.append(this.locationObjectType);
         sbU.append(", locationPromotionId=");
-        return outline.G(sbU, this.locationPromotionId, ")");
+        return a.G(sbU, this.locationPromotionId, ")");
     }
 }

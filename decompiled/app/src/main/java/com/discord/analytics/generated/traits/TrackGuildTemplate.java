@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackGuildTemplate.kt */
 /* loaded from: classes.dex */
@@ -19,7 +19,7 @@ public final /* data */ class TrackGuildTemplate {
             return false;
         }
         TrackGuildTemplate trackGuildTemplate = (TrackGuildTemplate) other;
-        return Intrinsics3.areEqual(this.guildTemplateCode, trackGuildTemplate.guildTemplateCode) && Intrinsics3.areEqual(this.guildTemplateName, trackGuildTemplate.guildTemplateName) && Intrinsics3.areEqual(this.guildTemplateDescription, trackGuildTemplate.guildTemplateDescription) && Intrinsics3.areEqual(this.guildTemplateGuildId, trackGuildTemplate.guildTemplateGuildId);
+        return m.areEqual(this.guildTemplateCode, trackGuildTemplate.guildTemplateCode) && m.areEqual(this.guildTemplateName, trackGuildTemplate.guildTemplateName) && m.areEqual(this.guildTemplateDescription, trackGuildTemplate.guildTemplateDescription) && m.areEqual(this.guildTemplateGuildId, trackGuildTemplate.guildTemplateGuildId);
     }
 
     public int hashCode() {
@@ -34,13 +34,13 @@ public final /* data */ class TrackGuildTemplate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildTemplate(guildTemplateCode=");
+        StringBuilder sbU = a.U("TrackGuildTemplate(guildTemplateCode=");
         sbU.append(this.guildTemplateCode);
         sbU.append(", guildTemplateName=");
         sbU.append(this.guildTemplateName);
         sbU.append(", guildTemplateDescription=");
         sbU.append(this.guildTemplateDescription);
         sbU.append(", guildTemplateGuildId=");
-        return outline.G(sbU, this.guildTemplateGuildId, ")");
+        return a.G(sbU, this.guildTemplateGuildId, ")");
     }
 }

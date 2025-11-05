@@ -1,6 +1,6 @@
 package b.i.a.c.d3;
 
-import b.i.a.c.d3.SpannedToHtmlConverter;
+import b.i.a.c.d3.m;
 import java.util.Comparator;
 
 /* compiled from: lambda */
@@ -10,8 +10,8 @@ public final /* synthetic */ class e implements Comparator {
 
     @Override // java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        SpannedToHtmlConverter.c cVar = (SpannedToHtmlConverter.c) obj;
-        SpannedToHtmlConverter.c cVar2 = (SpannedToHtmlConverter.c) obj2;
+        m.c cVar = (m.c) obj;
+        m.c cVar2 = (m.c) obj2;
         int iCompare = Integer.compare(cVar2.f916b, cVar.f916b);
         if (iCompare != 0) {
             return iCompare;

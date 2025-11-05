@@ -7,8 +7,7 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import b.i.a.f.c.a.f.d;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.gms.common.api.Scope;
@@ -100,7 +99,7 @@ public class GoogleSignInAccount extends AbstractSafeParcelable implements Refle
             lValueOf = Long.valueOf(System.currentTimeMillis() / 1000);
         }
         long jLongValue = lValueOf.longValue();
-        AnimatableValueParser.w(string);
+        b.c.a.a0.d.w(string);
         GoogleSignInAccount googleSignInAccount = new GoogleSignInAccount(3, strOptString2, strOptString3, strOptString4, strOptString5, uri, null, jLongValue, string, new ArrayList(hashSet), strOptString6, strOptString7);
         googleSignInAccount.p = jSONObject.has("serverAuthCode") ? jSONObject.optString("serverAuthCode") : null;
         return googleSignInAccount;
@@ -121,7 +120,7 @@ public class GoogleSignInAccount extends AbstractSafeParcelable implements Refle
     }
 
     public int hashCode() {
-        return w0().hashCode() + outline.m(this.r, 527, 31);
+        return w0().hashCode() + a.m(this.r, 527, 31);
     }
 
     @NonNull
@@ -133,23 +132,23 @@ public class GoogleSignInAccount extends AbstractSafeParcelable implements Refle
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = b.c.a.a0.d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        AnimatableValueParser.t2(parcel, 2, this.k, false);
-        AnimatableValueParser.t2(parcel, 3, this.l, false);
-        AnimatableValueParser.t2(parcel, 4, this.m, false);
-        AnimatableValueParser.t2(parcel, 5, this.n, false);
-        AnimatableValueParser.s2(parcel, 6, this.o, i, false);
-        AnimatableValueParser.t2(parcel, 7, this.p, false);
+        b.c.a.a0.d.t2(parcel, 2, this.k, false);
+        b.c.a.a0.d.t2(parcel, 3, this.l, false);
+        b.c.a.a0.d.t2(parcel, 4, this.m, false);
+        b.c.a.a0.d.t2(parcel, 5, this.n, false);
+        b.c.a.a0.d.s2(parcel, 6, this.o, i, false);
+        b.c.a.a0.d.t2(parcel, 7, this.p, false);
         long j = this.q;
         parcel.writeInt(524296);
         parcel.writeLong(j);
-        AnimatableValueParser.t2(parcel, 9, this.r, false);
-        AnimatableValueParser.w2(parcel, 10, this.f2996s, false);
-        AnimatableValueParser.t2(parcel, 11, this.t, false);
-        AnimatableValueParser.t2(parcel, 12, this.u, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        b.c.a.a0.d.t2(parcel, 9, this.r, false);
+        b.c.a.a0.d.w2(parcel, 10, this.f2996s, false);
+        b.c.a.a0.d.t2(parcel, 11, this.t, false);
+        b.c.a.a0.d.t2(parcel, 12, this.u, false);
+        b.c.a.a0.d.A2(parcel, iY2);
     }
 }

@@ -1,7 +1,7 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
-import b.e.b.FieldAccess2;
+import b.d.b.a.a;
+import b.e.b.c;
 import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
@@ -13,9 +13,9 @@ public class AsmCacheFields {
     public static final class AsmBooleanField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.u(obj2, i, fieldAccess2.c(obj, i));
+            cVar.u(obj2, i, cVar.c(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -32,9 +32,9 @@ public class AsmCacheFields {
     public static final class AsmByteField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.v(obj2, i, fieldAccess2.d(obj, i));
+            cVar.v(obj2, i, cVar.d(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -54,9 +54,9 @@ public class AsmCacheFields {
     public static final class AsmCharField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.w(obj2, i, fieldAccess2.e(obj, i));
+            cVar.w(obj2, i, cVar.e(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -73,9 +73,9 @@ public class AsmCacheFields {
     public static final class AsmDoubleField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.x(obj2, i, fieldAccess2.f(obj, i));
+            cVar.x(obj2, i, cVar.f(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -92,9 +92,9 @@ public class AsmCacheFields {
     public static final class AsmFloatField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.y(obj2, i, fieldAccess2.g(obj, i));
+            cVar.y(obj2, i, cVar.g(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -111,9 +111,9 @@ public class AsmCacheFields {
     public static final class AsmIntField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.z(obj2, i, fieldAccess2.i(obj, i));
+            cVar.z(obj2, i, cVar.i(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -138,9 +138,9 @@ public class AsmCacheFields {
     public static final class AsmLongField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.A(obj2, i, fieldAccess2.j(obj, i));
+            cVar.A(obj2, i, cVar.j(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -174,20 +174,20 @@ public class AsmCacheFields {
                 if (i == -1) {
                     throw new KryoException("Unknown acess index");
                 }
-                FieldAccess2 fieldAccess2 = this.access;
-                fieldAccess2.t(obj2, i, this.kryo.copy(fieldAccess2.b(obj, i)));
+                c cVar = this.access;
+                cVar.t(obj2, i, this.kryo.copy(cVar.b(obj, i)));
             } catch (KryoException e) {
                 StringBuilder sb = new StringBuilder();
                 sb.append(this);
                 sb.append(" (");
-                outline.m0(this.type, sb, ")", e);
+                a.m0(this.type, sb, ")", e);
                 throw e;
             } catch (RuntimeException e2) {
                 KryoException kryoException = new KryoException(e2);
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(this);
                 sb2.append(" (");
-                outline.m0(this.type, sb2, ")", kryoException);
+                a.m0(this.type, sb2, ")", kryoException);
                 throw kryoException;
             }
         }
@@ -214,9 +214,9 @@ public class AsmCacheFields {
     public static final class AsmShortField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.B(obj2, i, fieldAccess2.k(obj, i));
+            cVar.B(obj2, i, cVar.k(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
@@ -233,9 +233,9 @@ public class AsmCacheFields {
     public static final class AsmStringField extends AsmCachedField {
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField
         public void copy(Object obj, Object obj2) {
-            FieldAccess2 fieldAccess2 = this.access;
+            c cVar = this.access;
             int i = this.accessIndex;
-            fieldAccess2.t(obj2, i, fieldAccess2.l(obj, i));
+            cVar.t(obj2, i, cVar.l(obj, i));
         }
 
         @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedField

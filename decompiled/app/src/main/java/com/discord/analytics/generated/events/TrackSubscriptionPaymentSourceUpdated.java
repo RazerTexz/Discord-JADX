@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSubscriptionPaymentSourceUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSubscriptionPaymentSourceUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSubscriptionPaymentSourceUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long subscriptionId = null;
     private final Long subscriptionType = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackSubscriptionPaymentSourceUpdated implements A
             return false;
         }
         TrackSubscriptionPaymentSourceUpdated trackSubscriptionPaymentSourceUpdated = (TrackSubscriptionPaymentSourceUpdated) other;
-        return Intrinsics3.areEqual(this.subscriptionId, trackSubscriptionPaymentSourceUpdated.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackSubscriptionPaymentSourceUpdated.subscriptionType) && Intrinsics3.areEqual(this.paymentGatewayPlanId, trackSubscriptionPaymentSourceUpdated.paymentGatewayPlanId) && Intrinsics3.areEqual(this.planId, trackSubscriptionPaymentSourceUpdated.planId) && Intrinsics3.areEqual(this.paymentGateway, trackSubscriptionPaymentSourceUpdated.paymentGateway) && Intrinsics3.areEqual(this.previousPaymentSourceId, trackSubscriptionPaymentSourceUpdated.previousPaymentSourceId) && Intrinsics3.areEqual(this.previousPaymentSourceGateway, trackSubscriptionPaymentSourceUpdated.previousPaymentSourceGateway) && Intrinsics3.areEqual(this.previousPaymentSourceCountry, trackSubscriptionPaymentSourceUpdated.previousPaymentSourceCountry) && Intrinsics3.areEqual(this.paymentSourceId, trackSubscriptionPaymentSourceUpdated.paymentSourceId) && Intrinsics3.areEqual(this.paymentSourceGateway, trackSubscriptionPaymentSourceUpdated.paymentSourceGateway) && Intrinsics3.areEqual(this.paymentSourceCountry, trackSubscriptionPaymentSourceUpdated.paymentSourceCountry) && Intrinsics3.areEqual(this.currentPeriodStart, trackSubscriptionPaymentSourceUpdated.currentPeriodStart) && Intrinsics3.areEqual(this.currentPeriodEnd, trackSubscriptionPaymentSourceUpdated.currentPeriodEnd);
+        return m.areEqual(this.subscriptionId, trackSubscriptionPaymentSourceUpdated.subscriptionId) && m.areEqual(this.subscriptionType, trackSubscriptionPaymentSourceUpdated.subscriptionType) && m.areEqual(this.paymentGatewayPlanId, trackSubscriptionPaymentSourceUpdated.paymentGatewayPlanId) && m.areEqual(this.planId, trackSubscriptionPaymentSourceUpdated.planId) && m.areEqual(this.paymentGateway, trackSubscriptionPaymentSourceUpdated.paymentGateway) && m.areEqual(this.previousPaymentSourceId, trackSubscriptionPaymentSourceUpdated.previousPaymentSourceId) && m.areEqual(this.previousPaymentSourceGateway, trackSubscriptionPaymentSourceUpdated.previousPaymentSourceGateway) && m.areEqual(this.previousPaymentSourceCountry, trackSubscriptionPaymentSourceUpdated.previousPaymentSourceCountry) && m.areEqual(this.paymentSourceId, trackSubscriptionPaymentSourceUpdated.paymentSourceId) && m.areEqual(this.paymentSourceGateway, trackSubscriptionPaymentSourceUpdated.paymentSourceGateway) && m.areEqual(this.paymentSourceCountry, trackSubscriptionPaymentSourceUpdated.paymentSourceCountry) && m.areEqual(this.currentPeriodStart, trackSubscriptionPaymentSourceUpdated.currentPeriodStart) && m.areEqual(this.currentPeriodEnd, trackSubscriptionPaymentSourceUpdated.currentPeriodEnd);
     }
 
     public int hashCode() {
@@ -72,7 +72,7 @@ public final /* data */ class TrackSubscriptionPaymentSourceUpdated implements A
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSubscriptionPaymentSourceUpdated(subscriptionId=");
+        StringBuilder sbU = a.U("TrackSubscriptionPaymentSourceUpdated(subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", subscriptionType=");
         sbU.append(this.subscriptionType);
@@ -97,6 +97,6 @@ public final /* data */ class TrackSubscriptionPaymentSourceUpdated implements A
         sbU.append(", currentPeriodStart=");
         sbU.append(this.currentPeriodStart);
         sbU.append(", currentPeriodEnd=");
-        return outline.G(sbU, this.currentPeriodEnd, ")");
+        return a.G(sbU, this.currentPeriodEnd, ")");
     }
 }

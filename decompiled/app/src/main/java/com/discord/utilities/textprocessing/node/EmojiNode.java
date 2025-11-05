@@ -5,12 +5,9 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.text.SpannableStringBuilder;
 import androidx.exifinterface.media.ExifInterface;
-import b.a.t.b.a.TextNode;
-import b.d.b.a.outline;
-import b.f.g.a.a.Fresco;
-import b.f.g.a.a.PipelineDraweeControllerBuilder;
+import b.a.t.b.a.a;
+import b.f.g.a.a.d;
 import b.f.g.e.v;
-import b.f.g.f.GenericDraweeHierarchyBuilder;
 import com.discord.R;
 import com.discord.api.activity.ActivityEmoji;
 import com.discord.api.message.reaction.MessageReactionEmoji;
@@ -31,7 +28,7 @@ import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.facebook.drawee.controller.AbstractDraweeController;
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.functions.Function3;
@@ -39,7 +36,7 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: EmojiNode.kt */
 /* loaded from: classes2.dex */
-public final class EmojiNode<T extends RenderContext> extends TextNode<T> implements Spoilerable {
+public final class EmojiNode<T extends RenderContext> extends a<T> implements Spoilerable {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -72,18 +69,18 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
 
         public final <T extends RenderContext> EmojiNode<T> from(ModelEmojiCustom customEmoji, int sizePx) {
-            Intrinsics3.checkNotNullParameter(customEmoji, "customEmoji");
+            m.checkNotNullParameter(customEmoji, "customEmoji");
             String name = customEmoji.getName();
-            Intrinsics3.checkNotNullExpressionValue(name, "customEmoji.name");
+            m.checkNotNullExpressionValue(name, "customEmoji.name");
             return from(name, customEmoji.getId(), customEmoji.isAnimated(), sizePx, generateEmojiIdAndType(customEmoji));
         }
 
         public final EmojiIdAndType.Custom generateEmojiIdAndType(ModelEmojiCustom modelEmojiCustom) {
-            Intrinsics3.checkNotNullParameter(modelEmojiCustom, "$this$generateEmojiIdAndType");
+            m.checkNotNullParameter(modelEmojiCustom, "$this$generateEmojiIdAndType");
             long id2 = modelEmojiCustom.getId();
             boolean zIsAnimated = modelEmojiCustom.isAnimated();
             String name = modelEmojiCustom.getName();
-            Intrinsics3.checkNotNullExpressionValue(name, "this.name");
+            m.checkNotNullExpressionValue(name, "this.name");
             return new EmojiIdAndType.Custom(id2, zIsAnimated, name);
         }
 
@@ -95,7 +92,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             String str;
             EmojiIdAndType unicode;
             String name;
-            Intrinsics3.checkNotNullParameter(simpleDraweeSpanTextView, "$this$renderEmoji");
+            m.checkNotNullParameter(simpleDraweeSpanTextView, "$this$renderEmoji");
             str = "";
             if (messageReactionEmoji == null || !messageReactionEmoji.e()) {
                 if (messageReactionEmoji != null && (name = messageReactionEmoji.getName()) != null) {
@@ -115,7 +112,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             if (emojiNodeFrom == null) {
                 simpleDraweeSpanTextView.setText(messageReactionEmoji != null ? messageReactionEmoji.getName() : null);
             } else {
-                emojiNodeFrom.render((SpannableStringBuilder) draweeSpanStringBuilder, (DraweeSpanStringBuilder) new EmojiNode4(simpleDraweeSpanTextView, z2));
+                emojiNodeFrom.render((SpannableStringBuilder) draweeSpanStringBuilder, (DraweeSpanStringBuilder) new EmojiNode$Companion$renderEmoji$1(simpleDraweeSpanTextView, z2));
                 simpleDraweeSpanTextView.setDraweeSpanStringBuilder(draweeSpanStringBuilder);
             }
         }
@@ -132,9 +129,9 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
 
         public final EmojiIdAndType.Unicode generateEmojiIdAndType(ModelEmojiUnicode modelEmojiUnicode) {
-            Intrinsics3.checkNotNullParameter(modelEmojiUnicode, "$this$generateEmojiIdAndType");
+            m.checkNotNullParameter(modelEmojiUnicode, "$this$generateEmojiIdAndType");
             String firstName = modelEmojiUnicode.getFirstName();
-            Intrinsics3.checkNotNullExpressionValue(firstName, "this.firstName");
+            m.checkNotNullExpressionValue(firstName, "this.firstName");
             return new EmojiIdAndType.Unicode(firstName);
         }
 
@@ -147,7 +144,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
 
         public final EmojiIdAndType generateEmojiIdAndType(MessageReactionEmoji messageReactionEmoji) {
             EmojiIdAndType unicode;
-            Intrinsics3.checkNotNullParameter(messageReactionEmoji, "$this$generateEmojiIdAndType");
+            m.checkNotNullParameter(messageReactionEmoji, "$this$generateEmojiIdAndType");
             if (messageReactionEmoji.e()) {
                 String id2 = messageReactionEmoji.getId();
                 long j = id2 != null ? Long.parseLong(id2) : 0L;
@@ -162,19 +159,19 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
 
         public final <T extends RenderContext> EmojiNode<T> from(ModelEmojiUnicode unicodeEmoji, int sizePx) {
-            Intrinsics3.checkNotNullParameter(unicodeEmoji, "unicodeEmoji");
+            m.checkNotNullParameter(unicodeEmoji, "unicodeEmoji");
             String codePoints = unicodeEmoji.getCodePoints();
             String firstName = unicodeEmoji.getFirstName();
-            Intrinsics3.checkNotNullExpressionValue(firstName, "unicodeEmoji.firstName");
-            return new EmojiNode<>(firstName, new EmojiNode2(codePoints), generateEmojiIdAndType(unicodeEmoji), sizePx, sizePx);
+            m.checkNotNullExpressionValue(firstName, "unicodeEmoji.firstName");
+            return new EmojiNode<>(firstName, new EmojiNode$Companion$from$1(codePoints), generateEmojiIdAndType(unicodeEmoji), sizePx, sizePx);
         }
 
         public final EmojiIdAndType generateEmojiIdAndType(ActivityEmoji activityEmoji) throws NumberFormatException {
             EmojiIdAndType unicode;
-            Intrinsics3.checkNotNullParameter(activityEmoji, "$this$generateEmojiIdAndType");
+            m.checkNotNullParameter(activityEmoji, "$this$generateEmojiIdAndType");
             if (activityEmoji.getId() != null) {
                 String id2 = activityEmoji.getId();
-                Intrinsics3.checkNotNull(id2);
+                m.checkNotNull(id2);
                 long j = Long.parseLong(id2);
                 boolean animated = activityEmoji.getAnimated();
                 String name = activityEmoji.getName();
@@ -187,7 +184,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
 
         public final <T extends RenderContext> EmojiNode<T> from(int sizePx, EmojiIdAndType emojiIdAndType) {
-            Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
+            m.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
             if (emojiIdAndType instanceof EmojiIdAndType.Unicode) {
                 ModelEmojiUnicode modelEmojiUnicode = StoreStream.INSTANCE.getEmojis().getUnicodeEmojiSurrogateMap().get(((EmojiIdAndType.Unicode) emojiIdAndType).getName());
                 if (modelEmojiUnicode != null) {
@@ -203,7 +200,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         }
 
         private final <T extends RenderContext> EmojiNode<T> from(String emojiName, long emojiId, boolean isAnimated, int sizePx, EmojiIdAndType emojiIdAndType) {
-            return new EmojiNode<>(emojiName, new EmojiNode3(emojiId, isAnimated), emojiIdAndType, sizePx, sizePx);
+            return new EmojiNode<>(emojiName, new EmojiNode$Companion$from$3(emojiId, isAnimated), emojiIdAndType, sizePx, sizePx);
         }
     }
 
@@ -219,7 +216,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Custom(long j, boolean z2, String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 this.id = j;
                 this.isAnimated = z2;
                 this.name = str;
@@ -254,7 +251,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             }
 
             public final Custom copy(long id2, boolean isAnimated, String name) {
-                Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 return new Custom(id2, isAnimated, name);
             }
 
@@ -266,7 +263,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
                     return false;
                 }
                 Custom custom = (Custom) other;
-                return this.id == custom.id && this.isAnimated == custom.isAnimated && Intrinsics3.areEqual(this.name, custom.name);
+                return this.id == custom.id && this.isAnimated == custom.isAnimated && m.areEqual(this.name, custom.name);
             }
 
             public final long getId() {
@@ -295,12 +292,12 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Custom(id=");
+                StringBuilder sbU = b.d.b.a.a.U("Custom(id=");
                 sbU.append(this.id);
                 sbU.append(", isAnimated=");
                 sbU.append(this.isAnimated);
                 sbU.append(", name=");
-                return outline.J(sbU, this.name, ")");
+                return b.d.b.a.a.J(sbU, this.name, ")");
             }
         }
 
@@ -311,7 +308,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Unicode(String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 this.name = str;
             }
 
@@ -328,13 +325,13 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             }
 
             public final Unicode copy(String name) {
-                Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 return new Unicode(name);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Unicode) && Intrinsics3.areEqual(this.name, ((Unicode) other).name);
+                    return (other instanceof Unicode) && m.areEqual(this.name, ((Unicode) other).name);
                 }
                 return true;
             }
@@ -352,7 +349,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
             }
 
             public String toString() {
-                return outline.J(outline.U("Unicode(name="), this.name, ")");
+                return b.d.b.a.a.J(b.d.b.a.a.U("Unicode(name="), this.name, ")");
             }
         }
 
@@ -370,7 +367,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         /* compiled from: EmojiNode.kt */
         public static final class DefaultImpls {
             public static void onEmojiClicked(RenderContext renderContext, EmojiIdAndType emojiIdAndType) {
-                Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
+                m.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
             }
         }
 
@@ -413,7 +410,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
     public boolean equals(Object other) {
         if (other instanceof EmojiNode) {
             EmojiNode emojiNode = (EmojiNode) other;
-            if (Intrinsics3.areEqual(emojiNode.getContent(), getContent()) && emojiNode.width == this.width && emojiNode.height == this.height && emojiNode.isJumbo == this.isJumbo) {
+            if (m.areEqual(emojiNode.getContent(), getContent()) && emojiNode.width == this.width && emojiNode.height == this.height && emojiNode.isJumbo == this.isJumbo) {
                 return true;
             }
         }
@@ -431,7 +428,7 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         return this.isRevealed;
     }
 
-    @Override // b.a.t.b.a.TextNode, com.discord.simpleast.core.node.Node
+    @Override // b.a.t.b.a.a, com.discord.simpleast.core.node.Node
     public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) {
         render(spannableStringBuilder, (SpannableStringBuilder) obj);
     }
@@ -447,8 +444,8 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
 
     /* JADX WARN: Type inference failed for: r1v9, types: [REQUEST, com.facebook.imagepipeline.request.ImageRequest] */
     public void render(SpannableStringBuilder builder, T renderContext) {
-        Intrinsics3.checkNotNullParameter(builder, "builder");
-        Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
+        m.checkNotNullParameter(builder, "builder");
+        m.checkNotNullParameter(renderContext, "renderContext");
         Context context = renderContext.getContext();
         int length = builder.length();
         builder.append((CharSequence) getContent());
@@ -465,30 +462,30 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
         int i4 = i3;
         int i5 = z2 ? 1 : 2;
         ?? A = MGImages.getImageRequest(this.urlProvider.invoke(Boolean.valueOf(renderContext.getIsAnimationEnabled()), Integer.valueOf(IconUtils.getMediaProxySize(i2)), renderContext.getContext()), 0, 0, true).a();
-        PipelineDraweeControllerBuilder pipelineDraweeControllerBuilderA = Fresco.a();
-        pipelineDraweeControllerBuilderA.h = A;
-        pipelineDraweeControllerBuilderA.m = getIsRevealed();
-        AbstractDraweeController abstractDraweeControllerA = pipelineDraweeControllerBuilderA.a();
-        GenericDraweeHierarchyBuilder genericDraweeHierarchyBuilder = new GenericDraweeHierarchyBuilder(context.getResources());
-        genericDraweeHierarchyBuilder.f = new ColorDrawable(0);
+        d dVarA = b.f.g.a.a.b.a();
+        dVarA.h = A;
+        dVarA.m = getIsRevealed();
+        AbstractDraweeController abstractDraweeControllerA = dVarA.a();
+        b.f.g.f.a aVar = new b.f.g.f.a(context.getResources());
+        aVar.f = new ColorDrawable(0);
         ScalingUtils$ScaleType scalingUtils$ScaleType = ScalingUtils$ScaleType.a;
-        genericDraweeHierarchyBuilder.n = v.l;
+        aVar.n = v.l;
         if (!getIsRevealed()) {
             SpoilerNode.RenderContext renderContext2 = (SpoilerNode.RenderContext) (!(renderContext instanceof SpoilerNode.RenderContext) ? null : renderContext);
-            genericDraweeHierarchyBuilder.b(new ColorDrawable(renderContext2 != null ? renderContext2.getSpoilerColorRes() : ColorCompat.getThemedColor(context, R.attr.theme_chat_spoiler_bg)));
+            aVar.b(new ColorDrawable(renderContext2 != null ? renderContext2.getSpoilerColorRes() : ColorCompat.getThemedColor(context, R.attr.theme_chat_spoiler_bg)));
         }
         int length2 = builder.length() - 1;
-        ((DraweeSpanStringBuilder) builder).c(context, genericDraweeHierarchyBuilder.a(), abstractDraweeControllerA, length, length2, i2, i4, false, i5);
+        ((DraweeSpanStringBuilder) builder).c(context, aVar.a(), abstractDraweeControllerA, length, length2, i2, i4, false, i5);
         if (getContent().length() == 0) {
             return;
         }
-        ClickableSpan clickableSpan = new ClickableSpan(Integer.valueOf(ColorCompat.getThemedColor(context, R.attr.color_brand)), false, null, new EmojiNode5(this, renderContext), 4, null);
+        ClickableSpan clickableSpan = new ClickableSpan(Integer.valueOf(ColorCompat.getThemedColor(context, R.attr.color_brand)), false, null, new EmojiNode$render$clickableSpan$1(this, renderContext), 4, null);
         if (length <= length2) {
             builder.setSpan(clickableSpan, length, length2 + 1, 33);
             return;
         }
         AppLog appLog = AppLog.g;
-        StringBuilder sbU = outline.U("Span content: ");
+        StringBuilder sbU = b.d.b.a.a.U("Span content: ");
         sbU.append(getContent());
         sbU.append('.');
         Logger.e$default(appLog, "Unable to render emoji tappable span.", new Exception(sbU.toString()), null, 4, null);
@@ -498,9 +495,9 @@ public final class EmojiNode<T extends RenderContext> extends TextNode<T> implem
     /* JADX WARN: Multi-variable type inference failed */
     public EmojiNode(String str, Function3<? super Boolean, ? super Integer, ? super Context, String> function3, EmojiIdAndType emojiIdAndType, int i, int i2) {
         super(str);
-        Intrinsics3.checkNotNullParameter(str, "emojiName");
-        Intrinsics3.checkNotNullParameter(function3, "urlProvider");
-        Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
+        m.checkNotNullParameter(str, "emojiName");
+        m.checkNotNullParameter(function3, "urlProvider");
+        m.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
         this.urlProvider = function3;
         this.emojiIdAndType = emojiIdAndType;
         this.width = i;

@@ -10,38 +10,38 @@ import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
-import b.i.a.g.g.CircularDrawingDelegate;
-import b.i.a.g.g.CircularIndeterminateAnimatorDelegate3;
-import b.i.a.g.g.DrawableWithAnimatedVisibilityChange;
-import b.i.a.g.g.DrawingDelegate;
-import b.i.a.g.g.IndeterminateAnimatorDelegate;
-import b.i.a.g.g.LinearDrawingDelegate;
-import b.i.a.g.g.LinearIndeterminateContiguousAnimatorDelegate2;
-import b.i.a.g.g.LinearIndeterminateDisjointAnimatorDelegate2;
+import b.i.a.g.g.a;
+import b.i.a.g.g.d;
+import b.i.a.g.g.e;
+import b.i.a.g.g.f;
+import b.i.a.g.g.g;
+import b.i.a.g.g.h;
+import b.i.a.g.g.j;
+import b.i.a.g.g.l;
 import com.google.android.material.progressindicator.BaseProgressIndicatorSpec;
 
 /* loaded from: classes3.dex */
-public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec> extends DrawableWithAnimatedVisibilityChange {
-    private IndeterminateAnimatorDelegate<ObjectAnimator> animatorDelegate;
-    private DrawingDelegate<S> drawingDelegate;
+public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec> extends e {
+    private g<ObjectAnimator> animatorDelegate;
+    private f<S> drawingDelegate;
 
-    public IndeterminateDrawable(@NonNull Context context, @NonNull BaseProgressIndicatorSpec baseProgressIndicatorSpec, @NonNull DrawingDelegate<S> drawingDelegate, @NonNull IndeterminateAnimatorDelegate<ObjectAnimator> indeterminateAnimatorDelegate) {
+    public IndeterminateDrawable(@NonNull Context context, @NonNull BaseProgressIndicatorSpec baseProgressIndicatorSpec, @NonNull f<S> fVar, @NonNull g<ObjectAnimator> gVar) {
         super(context, baseProgressIndicatorSpec);
-        setDrawingDelegate(drawingDelegate);
-        setAnimatorDelegate(indeterminateAnimatorDelegate);
+        setDrawingDelegate(fVar);
+        setAnimatorDelegate(gVar);
     }
 
     @NonNull
     public static IndeterminateDrawable<CircularProgressIndicatorSpec> createCircularDrawable(@NonNull Context context, @NonNull CircularProgressIndicatorSpec circularProgressIndicatorSpec) {
-        return new IndeterminateDrawable<>(context, circularProgressIndicatorSpec, new CircularDrawingDelegate(circularProgressIndicatorSpec), new CircularIndeterminateAnimatorDelegate3(circularProgressIndicatorSpec));
+        return new IndeterminateDrawable<>(context, circularProgressIndicatorSpec, new a(circularProgressIndicatorSpec), new d(circularProgressIndicatorSpec));
     }
 
     @NonNull
     public static IndeterminateDrawable<LinearProgressIndicatorSpec> createLinearDrawable(@NonNull Context context, @NonNull LinearProgressIndicatorSpec linearProgressIndicatorSpec) {
-        return new IndeterminateDrawable<>(context, linearProgressIndicatorSpec, new LinearDrawingDelegate(linearProgressIndicatorSpec), linearProgressIndicatorSpec.indeterminateAnimationType == 0 ? new LinearIndeterminateContiguousAnimatorDelegate2(linearProgressIndicatorSpec) : new LinearIndeterminateDisjointAnimatorDelegate2(context, linearProgressIndicatorSpec));
+        return new IndeterminateDrawable<>(context, linearProgressIndicatorSpec, new h(linearProgressIndicatorSpec), linearProgressIndicatorSpec.indeterminateAnimationType == 0 ? new j(linearProgressIndicatorSpec) : new l(context, linearProgressIndicatorSpec));
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, androidx.vectordrawable.graphics.drawable.Animatable2Compat
+    @Override // b.i.a.g.g.e, androidx.vectordrawable.graphics.drawable.Animatable2Compat
     public /* bridge */ /* synthetic */ void clearAnimationCallbacks() {
         super.clearAnimationCallbacks();
     }
@@ -53,40 +53,40 @@ public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec> ex
             return;
         }
         canvas.save();
-        DrawingDelegate<S> drawingDelegate = this.drawingDelegate;
+        f<S> fVar = this.drawingDelegate;
         float growFraction = getGrowFraction();
-        drawingDelegate.a.validateSpec();
-        drawingDelegate.a(canvas, growFraction);
+        fVar.a.validateSpec();
+        fVar.a(canvas, growFraction);
         this.drawingDelegate.c(canvas, this.paint);
         int i = 0;
         while (true) {
-            IndeterminateAnimatorDelegate<ObjectAnimator> indeterminateAnimatorDelegate = this.animatorDelegate;
-            int[] iArr = indeterminateAnimatorDelegate.c;
+            g<ObjectAnimator> gVar = this.animatorDelegate;
+            int[] iArr = gVar.c;
             if (i >= iArr.length) {
                 canvas.restore();
                 return;
             }
-            DrawingDelegate<S> drawingDelegate2 = this.drawingDelegate;
+            f<S> fVar2 = this.drawingDelegate;
             Paint paint = this.paint;
-            float[] fArr = indeterminateAnimatorDelegate.f1623b;
+            float[] fArr = gVar.f1623b;
             int i2 = i * 2;
-            drawingDelegate2.b(canvas, paint, fArr[i2], fArr[i2 + 1], iArr[i]);
+            fVar2.b(canvas, paint, fArr[i2], fArr[i2 + 1], iArr[i]);
             i++;
         }
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Drawable
     public /* bridge */ /* synthetic */ int getAlpha() {
         return super.getAlpha();
     }
 
     @NonNull
-    public IndeterminateAnimatorDelegate<ObjectAnimator> getAnimatorDelegate() {
+    public g<ObjectAnimator> getAnimatorDelegate() {
         return this.animatorDelegate;
     }
 
     @NonNull
-    public DrawingDelegate<S> getDrawingDelegate() {
+    public f<S> getDrawingDelegate() {
         return this.drawingDelegate;
     }
 
@@ -100,62 +100,62 @@ public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec> ex
         return this.drawingDelegate.e();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Drawable
     public /* bridge */ /* synthetic */ int getOpacity() {
         return super.getOpacity();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange
+    @Override // b.i.a.g.g.e
     public /* bridge */ /* synthetic */ boolean hideNow() {
         return super.hideNow();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange
+    @Override // b.i.a.g.g.e
     public /* bridge */ /* synthetic */ boolean isHiding() {
         return super.isHiding();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Animatable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Animatable
     public /* bridge */ /* synthetic */ boolean isRunning() {
         return super.isRunning();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange
+    @Override // b.i.a.g.g.e
     public /* bridge */ /* synthetic */ boolean isShowing() {
         return super.isShowing();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, androidx.vectordrawable.graphics.drawable.Animatable2Compat
+    @Override // b.i.a.g.g.e, androidx.vectordrawable.graphics.drawable.Animatable2Compat
     public /* bridge */ /* synthetic */ void registerAnimationCallback(@NonNull Animatable2Compat.AnimationCallback animationCallback) {
         super.registerAnimationCallback(animationCallback);
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Drawable
     public /* bridge */ /* synthetic */ void setAlpha(int i) {
         super.setAlpha(i);
     }
 
-    public void setAnimatorDelegate(@NonNull IndeterminateAnimatorDelegate<ObjectAnimator> indeterminateAnimatorDelegate) {
-        this.animatorDelegate = indeterminateAnimatorDelegate;
-        indeterminateAnimatorDelegate.a = this;
+    public void setAnimatorDelegate(@NonNull g<ObjectAnimator> gVar) {
+        this.animatorDelegate = gVar;
+        gVar.a = this;
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Drawable
     public /* bridge */ /* synthetic */ void setColorFilter(@Nullable ColorFilter colorFilter) {
         super.setColorFilter(colorFilter);
     }
 
-    public void setDrawingDelegate(@NonNull DrawingDelegate<S> drawingDelegate) {
-        this.drawingDelegate = drawingDelegate;
-        drawingDelegate.f1622b = this;
+    public void setDrawingDelegate(@NonNull f<S> fVar) {
+        this.drawingDelegate = fVar;
+        fVar.f1622b = this;
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Drawable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Drawable
     public /* bridge */ /* synthetic */ boolean setVisible(boolean z2, boolean z3) {
         return super.setVisible(z2, z3);
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange
+    @Override // b.i.a.g.g.e
     public boolean setVisibleInternal(boolean z2, boolean z3, boolean z4) {
         boolean visibleInternal = super.setVisibleInternal(z2, z3, z4);
         if (!isRunning()) {
@@ -168,22 +168,22 @@ public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec> ex
         return visibleInternal;
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Animatable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Animatable
     public /* bridge */ /* synthetic */ void start() {
         super.start();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, android.graphics.drawable.Animatable
+    @Override // b.i.a.g.g.e, android.graphics.drawable.Animatable
     public /* bridge */ /* synthetic */ void stop() {
         super.stop();
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange, androidx.vectordrawable.graphics.drawable.Animatable2Compat
+    @Override // b.i.a.g.g.e, androidx.vectordrawable.graphics.drawable.Animatable2Compat
     public /* bridge */ /* synthetic */ boolean unregisterAnimationCallback(@NonNull Animatable2Compat.AnimationCallback animationCallback) {
         return super.unregisterAnimationCallback(animationCallback);
     }
 
-    @Override // b.i.a.g.g.DrawableWithAnimatedVisibilityChange
+    @Override // b.i.a.g.g.e
     public /* bridge */ /* synthetic */ boolean setVisible(boolean z2, boolean z3, boolean z4) {
         return super.setVisible(z2, z3, z4);
     }

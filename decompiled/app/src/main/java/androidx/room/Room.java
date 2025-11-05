@@ -3,7 +3,7 @@ package androidx.room;
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.room.RoomDatabase;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class Room {
@@ -40,18 +40,18 @@ public class Room {
             }
             return (T) Class.forName(str2).newInstance();
         } catch (ClassNotFoundException unused) {
-            StringBuilder sbU = outline.U("cannot find implementation for ");
+            StringBuilder sbU = a.U("cannot find implementation for ");
             sbU.append(cls.getCanonicalName());
             sbU.append(". ");
             sbU.append(str3);
             sbU.append(" does not exist");
             throw new RuntimeException(sbU.toString());
         } catch (IllegalAccessException unused2) {
-            StringBuilder sbU2 = outline.U("Cannot access the constructor");
+            StringBuilder sbU2 = a.U("Cannot access the constructor");
             sbU2.append(cls.getCanonicalName());
             throw new RuntimeException(sbU2.toString());
         } catch (InstantiationException unused3) {
-            StringBuilder sbU3 = outline.U("Failed to create an instance of ");
+            StringBuilder sbU3 = a.U("Failed to create an instance of ");
             sbU3.append(cls.getCanonicalName());
             throw new RuntimeException(sbU3.toString());
         }

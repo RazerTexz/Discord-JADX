@@ -1,8 +1,8 @@
 package com.discord.api.role;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.nullserializable.NullSerializable;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 
 /* compiled from: GuildRoleTags.kt */
@@ -32,7 +32,7 @@ public final /* data */ class GuildRoleTags implements Serializable {
             return false;
         }
         GuildRoleTags guildRoleTags = (GuildRoleTags) other;
-        return Intrinsics3.areEqual(this.premiumSubscriber, guildRoleTags.premiumSubscriber) && Intrinsics3.areEqual(this.botId, guildRoleTags.botId) && Intrinsics3.areEqual(this.integrationId, guildRoleTags.integrationId) && Intrinsics3.areEqual(this.skuId, guildRoleTags.skuId) && Intrinsics3.areEqual(this.subscriptionListingId, guildRoleTags.subscriptionListingId) && Intrinsics3.areEqual(this.purchasableOrHasSubscribers, guildRoleTags.purchasableOrHasSubscribers);
+        return m.areEqual(this.premiumSubscriber, guildRoleTags.premiumSubscriber) && m.areEqual(this.botId, guildRoleTags.botId) && m.areEqual(this.integrationId, guildRoleTags.integrationId) && m.areEqual(this.skuId, guildRoleTags.skuId) && m.areEqual(this.subscriptionListingId, guildRoleTags.subscriptionListingId) && m.areEqual(this.purchasableOrHasSubscribers, guildRoleTags.purchasableOrHasSubscribers);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class GuildRoleTags implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleTags(premiumSubscriber=");
+        StringBuilder sbU = a.U("GuildRoleTags(premiumSubscriber=");
         sbU.append(this.premiumSubscriber);
         sbU.append(", botId=");
         sbU.append(this.botId);

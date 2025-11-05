@@ -3,6 +3,7 @@ package com.discord.widgets.guildscheduledevent;
 import a0.a.a.b;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -16,11 +17,10 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppScreen2;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.app.AppFragment;
@@ -33,19 +33,19 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.dimen.DimenUtils;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventLocationInfo;
 import com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel;
 import com.google.android.material.button.MaterialButton;
-import d0.LazyJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.Serializable;
 import java.util.Objects;
 import kotlin.Lazy;
@@ -60,7 +60,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
 /* loaded from: classes2.dex */
 public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetPreviewGuildScheduledEvent.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPreviewGuildScheduledEventBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetPreviewGuildScheduledEvent.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPreviewGuildScheduledEventBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -93,7 +93,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
             private final long guildScheduledEventId;
 
             public ExistingEventData(long j, Action action) {
-                Intrinsics3.checkNotNullParameter(action, "action");
+                m.checkNotNullParameter(action, "action");
                 this.guildScheduledEventId = j;
                 this.action = action;
             }
@@ -119,7 +119,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
             }
 
             public final ExistingEventData copy(long guildScheduledEventId, Action action) {
-                Intrinsics3.checkNotNullParameter(action, "action");
+                m.checkNotNullParameter(action, "action");
                 return new ExistingEventData(guildScheduledEventId, action);
             }
 
@@ -131,7 +131,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                     return false;
                 }
                 ExistingEventData existingEventData = (ExistingEventData) other;
-                return this.guildScheduledEventId == existingEventData.guildScheduledEventId && Intrinsics3.areEqual(this.action, existingEventData.action);
+                return this.guildScheduledEventId == existingEventData.guildScheduledEventId && m.areEqual(this.action, existingEventData.action);
             }
 
             public final Action getAction() {
@@ -149,7 +149,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("ExistingEventData(guildScheduledEventId=");
+                StringBuilder sbU = a.U("ExistingEventData(guildScheduledEventId=");
                 sbU.append(this.guildScheduledEventId);
                 sbU.append(", action=");
                 sbU.append(this.action);
@@ -174,16 +174,16 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         }
 
         public final ActivityResultLauncher<Intent> createJoinOnStartActivityRegistration(Fragment fragment, Function0<Unit> onEventStarted) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(onEventStarted, "onEventStarted");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetPreviewGuildScheduledEvent2(fragment, onEventStarted));
-            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…entStarted)\n      }\n    }");
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(onEventStarted, "onEventStarted");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetPreviewGuildScheduledEvent$Companion$createJoinOnStartActivityRegistration$1(fragment, onEventStarted));
+            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…entStarted)\n      }\n    }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
         public final void launch(Context context, GuildScheduledEventModel eventModel, ExistingEventData existingEventData, ActivityResultLauncher<Intent> launcher, boolean fromSettings) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(eventModel, "eventModel");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(eventModel, "eventModel");
             Intent intent = new Intent();
             intent.putExtra(WidgetPreviewGuildScheduledEvent.EXTRA_EVENT_MODEL, eventModel);
             if (existingEventData != null) {
@@ -193,17 +193,17 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                 intent.putExtra("transition", AppTransitionActivity.Transition.TYPE_SLIDE_HORIZONTAL);
             }
             if (launcher != null) {
-                AppScreen2.g.f(context, launcher, WidgetPreviewGuildScheduledEvent.class, intent);
+                j.g.f(context, launcher, WidgetPreviewGuildScheduledEvent.class, intent);
             } else {
-                AppScreen2.d(context, WidgetPreviewGuildScheduledEvent.class, intent);
+                j.d(context, WidgetPreviewGuildScheduledEvent.class, intent);
             }
         }
 
         public final ActivityResultLauncher<Intent> registerForResult(Fragment fragment, Function3<? super Long, ? super Long, ? super Boolean, Unit> onEventCreated, Function0<Unit> onQuit) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(onEventCreated, "onEventCreated");
-            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetPreviewGuildScheduledEvent3(onEventCreated, onQuit));
-            Intrinsics3.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(onEventCreated, "onEventCreated");
+            ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = fragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new WidgetPreviewGuildScheduledEvent$Companion$registerForResult$1(onEventCreated, onQuit));
+            m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "fragment.registerForActi…  }\n          }\n        }");
             return activityResultLauncherRegisterForActivityResult;
         }
 
@@ -226,20 +226,20 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
     /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
     /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<PreviewGuildScheduledEventViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<PreviewGuildScheduledEventViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent) {
             super(1, widgetPreviewGuildScheduledEvent, WidgetPreviewGuildScheduledEvent.class, "configureUi", "configureUi(Lcom/discord/widgets/guildscheduledevent/PreviewGuildScheduledEventViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(PreviewGuildScheduledEventViewModel.ViewState viewState) {
+        public /* bridge */ /* synthetic */ Unit invoke(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
             invoke2(viewState);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(PreviewGuildScheduledEventViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+        public final void invoke2(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
+            m.checkNotNullParameter(viewState, "p1");
             WidgetPreviewGuildScheduledEvent.access$configureUi((WidgetPreviewGuildScheduledEvent) this.receiver, viewState);
         }
     }
@@ -281,7 +281,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
         /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
         /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$onViewBound$3$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Long, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
             public AnonymousClass2() {
                 super(1);
             }
@@ -320,21 +320,21 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         public final void onClick(View view) {
             PreviewGuildScheduledEventViewModel previewGuildScheduledEventViewModelAccess$getViewModel$p = WidgetPreviewGuildScheduledEvent.access$getViewModel$p(WidgetPreviewGuildScheduledEvent.this);
             CheckedSetting checkedSetting = WidgetPreviewGuildScheduledEvent.access$getBinding$p(WidgetPreviewGuildScheduledEvent.this).d;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "checkedSetting");
+            m.checkNotNullExpressionValue(checkedSetting, "checkedSetting");
             previewGuildScheduledEventViewModelAccess$getViewModel$p.onBottomButtonClicked(WidgetPreviewGuildScheduledEvent.this.requireContext(), (checkedSetting.getVisibility() == 0) && checkedSetting.isChecked(), new AnonymousClass2());
         }
     }
 
     public WidgetPreviewGuildScheduledEvent() {
         super(R.layout.widget_preview_guild_scheduled_event);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetPreviewGuildScheduledEvent4.INSTANCE, null, 2, null);
-        this.eventModel = LazyJVM.lazy(new WidgetPreviewGuildScheduledEvent5(this));
-        WidgetPreviewGuildScheduledEvent6 widgetPreviewGuildScheduledEvent6 = new WidgetPreviewGuildScheduledEvent6(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(PreviewGuildScheduledEventViewModel.class), new WidgetPreviewGuildScheduledEvent$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetPreviewGuildScheduledEvent6));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetPreviewGuildScheduledEvent$binding$2.INSTANCE, null, 2, null);
+        this.eventModel = g.lazy(new WidgetPreviewGuildScheduledEvent$eventModel$2(this));
+        WidgetPreviewGuildScheduledEvent$viewModel$2 widgetPreviewGuildScheduledEvent$viewModel$2 = new WidgetPreviewGuildScheduledEvent$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(PreviewGuildScheduledEventViewModel.class), new WidgetPreviewGuildScheduledEvent$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetPreviewGuildScheduledEvent$viewModel$2));
     }
 
-    public static final /* synthetic */ void access$configureUi(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent, PreviewGuildScheduledEventViewModel.ViewState viewState) {
+    public static final /* synthetic */ void access$configureUi(WidgetPreviewGuildScheduledEvent widgetPreviewGuildScheduledEvent, PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
         widgetPreviewGuildScheduledEvent.configureUi(viewState);
     }
 
@@ -352,7 +352,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
     private final void configureTextForCreation(PreviewGuildScheduledEventViewModel.ViewState.Initialized viewState) {
         TextView textView = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.confirmGuildScheduledEventSubtitle");
+        m.checkNotNullExpressionValue(textView, "binding.confirmGuildScheduledEventSubtitle");
         textView.setVisibility(8);
         TextView textView2 = getBinding().g;
         ViewGroup.LayoutParams layoutParams = textView2.getLayoutParams();
@@ -360,21 +360,21 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
         marginLayoutParams.setMargins(DimenUtils.dpToPixels(16), DimenUtils.dpToPixels(24), DimenUtils.dpToPixels(16), 0);
         textView2.setLayoutParams(marginLayoutParams);
-        textView2.setText(FormatUtils.j(textView2, R.string.guild_event_preview_title, new Object[0], null, 4));
+        textView2.setText(b.a.k.b.j(textView2, R.string.guild_event_preview_title, new Object[0], null, 4));
         TextView textView3 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.createEventSubtitle");
+        m.checkNotNullExpressionValue(textView3, "binding.createEventSubtitle");
         textView3.setVisibility(0);
         GuildScheduledEventLocationInfo locationInfo = viewState.getLocationInfo();
         if (locationInfo instanceof GuildScheduledEventLocationInfo.ChannelLocation) {
             String locationName = viewState.getLocationInfo().getLocationName();
             TextView textView4 = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.createEventSubtitle");
-            FormatUtils.m(textView4, R.string.guild_event_preview_body, new Object[0], new AnonymousClass2(locationName, viewState));
+            m.checkNotNullExpressionValue(textView4, "binding.createEventSubtitle");
+            b.a.k.b.m(textView4, R.string.guild_event_preview_body, new Object[0], new AnonymousClass2(locationName, viewState));
             return;
         }
         if (locationInfo instanceof GuildScheduledEventLocationInfo.ExternalLocation) {
             TextView textView5 = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(textView5, "binding.createEventSubtitle");
+            m.checkNotNullExpressionValue(textView5, "binding.createEventSubtitle");
             textView5.setText(getString(R.string.guild_event_preview_external_event_body));
         }
     }
@@ -385,11 +385,11 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
         textView.setText(getString(R.string.start_event_confirmation_no_hook));
         getBinding().g.setText(viewState.getEventModel().getName());
         TextView textView2 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.createEventSubtitle");
+        m.checkNotNullExpressionValue(textView2, "binding.createEventSubtitle");
         textView2.setVisibility(8);
     }
 
-    private final void configureUi(PreviewGuildScheduledEventViewModel.ViewState viewState) {
+    private final void configureUi(PreviewGuildScheduledEventViewModel.ViewState viewState) throws Resources.NotFoundException {
         int i;
         if (viewState instanceof PreviewGuildScheduledEventViewModel.ViewState.Invalid) {
             FragmentActivity activity = getActivity();
@@ -407,7 +407,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
             }
             GuildScheduledEventLocationInfo.ChannelLocation channelLocation = (GuildScheduledEventLocationInfo.ChannelLocation) locationInfo;
             Channel channel = channelLocation != null ? channelLocation.getChannel() : null;
-            UserGuildMember creatorUserGuildMember$default = GuildScheduledEventUtilities5.getCreatorUserGuildMember$default(initialized.getEventModel(), (StoreGuilds) null, (StoreUser) null, 3, (Object) null);
+            UserGuildMember creatorUserGuildMember$default = GuildScheduledEventUtilitiesKt.getCreatorUserGuildMember$default(initialized.getEventModel(), (StoreGuilds) null, (StoreUser) null, 3, (Object) null);
             GuildScheduledEventItemView guildScheduledEventItemView = getBinding().e;
             GuildScheduledEventModel eventModel = initialized.getEventModel();
             if (creatorUserGuildMember$default == null) {
@@ -418,7 +418,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
             materialButton.setEnabled(!initialized.getRequestProcessing());
             materialButton.setBackgroundTintList(ContextCompat.getColorStateList(materialButton.getContext(), initialized.getIsStartingEvent() ? R.color.uikit_btn_bg_color_selector_green : R.color.uikit_btn_bg_color_selector_brand));
             Context context = materialButton.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            m.checkNotNullExpressionValue(context, "context");
             Companion.Action existingEventAction = initialized.getExistingEventAction();
             if (existingEventAction == null) {
                 i = R.string.schedule_event;
@@ -433,12 +433,12 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                     i = R.string.start_event;
                 }
             }
-            materialButton.setText(FormatUtils.h(context, i, new Object[0], null, 4));
+            materialButton.setText(b.a.k.b.h(context, i, new Object[0], null, 4));
             ImageView imageView = getBinding().f2512b;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.backButton");
+            m.checkNotNullExpressionValue(imageView, "binding.backButton");
             imageView.setVisibility(initialized.getIsStartingEvent() ^ true ? 0 : 8);
             TextView textView = getBinding().j;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.stepText");
+            m.checkNotNullExpressionValue(textView, "binding.stepText");
             textView.setVisibility(initialized.getIsStartingEvent() ^ true ? 0 : 8);
             if (initialized.getIsStartingEvent()) {
                 configureTextForStart(initialized);
@@ -446,7 +446,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
                 configureTextForCreation(initialized);
             }
             CheckedSetting checkedSetting = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.confirmGuildScheduledEventNotify");
+            m.checkNotNullExpressionValue(checkedSetting, "binding.confirmGuildScheduledEventNotify");
             checkedSetting.setVisibility(initialized.getCanNotifyEveryone() ? 0 : 8);
         }
     }
@@ -471,11 +471,11 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         TextView textView = getBinding().j;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.stepText");
-        FormatUtils.n(textView, R.string.guild_event_step_label, new Object[]{3, 3}, null, 4);
+        m.checkNotNullExpressionValue(textView, "binding.stepText");
+        b.a.k.b.n(textView, R.string.guild_event_step_label, new Object[]{3, 3}, null, 4);
         getBinding().f2512b.setOnClickListener(new AnonymousClass1());
         getBinding().c.setOnClickListener(new AnonymousClass2());
         getBinding().i.setOnClickListener(new AnonymousClass3());
@@ -483,13 +483,13 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
     /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
     /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$configureTextForCreation$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $channelName;
         public final /* synthetic */ PreviewGuildScheduledEventViewModel.ViewState.Initialized $viewState;
 
         /* compiled from: WidgetPreviewGuildScheduledEvent.kt */
         /* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$configureTextForCreation$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -502,15 +502,15 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
-                StringBuilder sbU = outline.U(". ");
+                m.checkNotNullParameter(hook, "$receiver");
+                StringBuilder sbU = a.U(". ");
                 sbU.append(AnonymousClass2.this.$channelName);
                 SpannableString spannableString = new SpannableString(sbU.toString());
                 int iDpToPixels = DimenUtils.dpToPixels(20);
                 Drawable drawable = ContextCompat.getDrawable(WidgetPreviewGuildScheduledEvent.this.requireContext(), AnonymousClass2.this.$viewState.getLocationInfo().getLocationIcon());
-                Intrinsics3.checkNotNull(drawable);
+                m.checkNotNull(drawable);
                 drawable.setBounds(0, 0, iDpToPixels, iDpToPixels);
-                Intrinsics3.checkNotNullExpressionValue(drawable, "ContextCompat.getDrawabl…ze)\n                    }");
+                m.checkNotNullExpressionValue(drawable, "ContextCompat.getDrawabl…ze)\n                    }");
                 spannableString.setSpan(new ImageSpan(drawable), 0, 1, 17);
                 hook.replacementText = spannableString;
             }
@@ -525,7 +525,7 @@ public final class WidgetPreviewGuildScheduledEvent extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("channelName", this.$channelName);
             renderContext.a("channelHook", new AnonymousClass1());
         }

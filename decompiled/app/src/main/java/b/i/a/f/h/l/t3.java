@@ -1,6 +1,5 @@
 package b.i.a.f.h.l;
 
-import b.d.b.a.outline;
 import java.io.IOException;
 import java.io.Serializable;
 import java.nio.charset.Charset;
@@ -30,9 +29,9 @@ public abstract class t3 implements Serializable, Iterable<Byte> {
         }
         if (i >= 0) {
             if (i2 < i) {
-                throw new IndexOutOfBoundsException(outline.h(66, "Beginning index larger than ending index: ", i, ", ", i2));
+                throw new IndexOutOfBoundsException(b.d.b.a.a.h(66, "Beginning index larger than ending index: ", i, ", ", i2));
             }
-            throw new IndexOutOfBoundsException(outline.h(37, "End index: ", i2, " >= ", i3));
+            throw new IndexOutOfBoundsException(b.d.b.a.a.h(37, "End index: ", i2, " >= ", i3));
         }
         StringBuilder sb = new StringBuilder(32);
         sb.append("Beginning index: ");

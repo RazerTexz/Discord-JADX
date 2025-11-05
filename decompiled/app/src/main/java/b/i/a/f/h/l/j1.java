@@ -1,6 +1,6 @@
 package b.i.a.f.h.l;
 
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
 /* loaded from: classes3.dex */
@@ -25,6 +25,6 @@ public enum j1 implements y4 {
 
     @Override // java.lang.Enum
     public final String toString() {
-        return "<" + j1.class.getName() + MentionUtils.MENTIONS_CHAR + Integer.toHexString(System.identityHashCode(this)) + " number=" + this.zzh + " name=" + name() + '>';
+        return "<" + j1.class.getName() + MentionUtilsKt.MENTIONS_CHAR + Integer.toHexString(System.identityHashCode(this)) + " number=" + this.zzh + " name=" + name() + '>';
     }
 }

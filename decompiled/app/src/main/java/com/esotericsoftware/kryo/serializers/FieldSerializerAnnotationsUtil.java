@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.factories.ReflectionSerializerFactory;
 import com.esotericsoftware.kryo.serializers.CollectionSerializer;
@@ -28,7 +28,7 @@ public final class FieldSerializerAnnotationsUtil {
             }
             if (field.isAnnotationPresent(CollectionSerializer.BindCollection.class)) {
                 if (fields[i].serializer != null) {
-                    StringBuilder sbU = outline.U("CollectionSerialier.Bind cannot be used with field ");
+                    StringBuilder sbU = a.U("CollectionSerialier.Bind cannot be used with field ");
                     sbU.append(fields[i].getField().getDeclaringClass().getName());
                     sbU.append(".");
                     sbU.append(fields[i].getField().getName());
@@ -37,7 +37,7 @@ public final class FieldSerializerAnnotationsUtil {
                 }
                 CollectionSerializer.BindCollection bindCollection = (CollectionSerializer.BindCollection) field.getAnnotation(CollectionSerializer.BindCollection.class);
                 if (!Collection.class.isAssignableFrom(fields[i].field.getType())) {
-                    StringBuilder sbU2 = outline.U("CollectionSerialier.Bind should be used only with fields implementing java.util.Collection, but field ");
+                    StringBuilder sbU2 = a.U("CollectionSerialier.Bind should be used only with fields implementing java.util.Collection, but field ");
                     sbU2.append(fields[i].getField().getDeclaringClass().getName());
                     sbU2.append(".");
                     sbU2.append(fields[i].getField().getName());
@@ -61,7 +61,7 @@ public final class FieldSerializerAnnotationsUtil {
             }
             if (field.isAnnotationPresent(MapSerializer.BindMap.class)) {
                 if (fields[i].serializer != null) {
-                    StringBuilder sbU3 = outline.U("MapSerialier.Bind cannot be used with field ");
+                    StringBuilder sbU3 = a.U("MapSerialier.Bind cannot be used with field ");
                     sbU3.append(fields[i].getField().getDeclaringClass().getName());
                     sbU3.append(".");
                     sbU3.append(fields[i].getField().getName());
@@ -70,7 +70,7 @@ public final class FieldSerializerAnnotationsUtil {
                 }
                 MapSerializer.BindMap bindMap = (MapSerializer.BindMap) field.getAnnotation(MapSerializer.BindMap.class);
                 if (!Map.class.isAssignableFrom(fields[i].field.getType())) {
-                    StringBuilder sbU4 = outline.U("MapSerialier.Bind should be used only with fields implementing java.util.Map, but field ");
+                    StringBuilder sbU4 = a.U("MapSerialier.Bind should be used only with fields implementing java.util.Map, but field ");
                     sbU4.append(fields[i].getField().getDeclaringClass().getName());
                     sbU4.append(".");
                     sbU4.append(fields[i].getField().getName());

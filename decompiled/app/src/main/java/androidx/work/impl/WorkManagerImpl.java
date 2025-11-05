@@ -39,7 +39,7 @@ import androidx.work.impl.utils.StopWorkRunnable;
 import androidx.work.impl.utils.futures.SettableFuture;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 import androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -261,7 +261,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public ListenableFuture8<Long> getLastCancelAllTimeMillis() {
+    public a<Long> getLastCancelAllTimeMillis() {
         SettableFuture settableFutureCreate = SettableFuture.create();
         this.mWorkTaskExecutor.executeOnBackgroundThread(new AnonymousClass1(settableFutureCreate, this.mPreferenceUtils));
         return settableFutureCreate;
@@ -299,7 +299,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public ListenableFuture8<WorkInfo> getWorkInfoById(@NonNull UUID uuid) {
+    public a<WorkInfo> getWorkInfoById(@NonNull UUID uuid) {
         StatusRunnable<WorkInfo> statusRunnableForUUID = StatusRunnable.forUUID(this, uuid);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForUUID);
         return statusRunnableForUUID.getFuture();
@@ -313,7 +313,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public ListenableFuture8<List<WorkInfo>> getWorkInfos(@NonNull WorkQuery workQuery) {
+    public a<List<WorkInfo>> getWorkInfos(@NonNull WorkQuery workQuery) {
         StatusRunnable<List<WorkInfo>> statusRunnableForWorkQuerySpec = StatusRunnable.forWorkQuerySpec(this, workQuery);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForWorkQuerySpec);
         return statusRunnableForWorkQuerySpec.getFuture();
@@ -325,7 +325,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public ListenableFuture8<List<WorkInfo>> getWorkInfosByTag(@NonNull String str) {
+    public a<List<WorkInfo>> getWorkInfosByTag(@NonNull String str) {
         StatusRunnable<List<WorkInfo>> statusRunnableForTag = StatusRunnable.forTag(this, str);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForTag);
         return statusRunnableForTag.getFuture();
@@ -339,7 +339,7 @@ public class WorkManagerImpl extends WorkManager {
 
     @Override // androidx.work.WorkManager
     @NonNull
-    public ListenableFuture8<List<WorkInfo>> getWorkInfosForUniqueWork(@NonNull String str) {
+    public a<List<WorkInfo>> getWorkInfosForUniqueWork(@NonNull String str) {
         StatusRunnable<List<WorkInfo>> statusRunnableForUniqueWork = StatusRunnable.forUniqueWork(this, str);
         this.mWorkTaskExecutor.getBackgroundExecutor().execute(statusRunnableForUniqueWork);
         return statusRunnableForUniqueWork.getFuture();

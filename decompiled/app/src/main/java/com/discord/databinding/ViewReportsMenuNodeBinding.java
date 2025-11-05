@@ -11,9 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ViewMobileReportBlockUserBinding;
-import b.a.i.ViewMobileReportsChannelPreviewBinding;
-import b.a.i.WidgetChatListAdapterItemSingleLineMessagePreviewBinding;
+import b.a.i.o2;
+import b.a.i.p2;
+import b.a.i.z4;
 import com.discord.R;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.widgets.mobile_reports.MobileReportsBottomButton;
@@ -30,19 +30,19 @@ public final class ViewReportsMenuNodeBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final ViewMobileReportsChannelPreviewBinding f2206b;
+    public final p2 f2206b;
 
     @NonNull
-    public final ViewMobileReportsChannelPreviewBinding c;
+    public final p2 c;
 
     @NonNull
-    public final WidgetChatListAdapterItemSingleLineMessagePreviewBinding d;
+    public final z4 d;
 
     @NonNull
     public final LinearLayout e;
 
     @NonNull
-    public final ViewMobileReportBlockUserBinding f;
+    public final o2 f;
 
     @NonNull
     public final MobileReportsBottomButton g;
@@ -77,13 +77,13 @@ public final class ViewReportsMenuNodeBinding implements ViewBinding {
     @NonNull
     public final ImageView q;
 
-    public ViewReportsMenuNodeBinding(@NonNull ConstraintLayout constraintLayout, @NonNull ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBinding, @NonNull ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBinding2, @NonNull WidgetChatListAdapterItemSingleLineMessagePreviewBinding widgetChatListAdapterItemSingleLineMessagePreviewBinding, @NonNull LinearLayout linearLayout, @NonNull ViewMobileReportBlockUserBinding viewMobileReportBlockUserBinding, @NonNull MobileReportsBottomButton mobileReportsBottomButton, @NonNull MobileReportsBreadcrumbs mobileReportsBreadcrumbs, @NonNull MaterialCardView materialCardView, @NonNull LinearLayout linearLayout2, @NonNull MaterialCardView materialCardView2, @NonNull TextView textView, @NonNull TextView textView2, @NonNull MaterialCardView materialCardView3, @NonNull TextView textView3, @NonNull MaterialCardView materialCardView4, @NonNull LinkifiedTextView linkifiedTextView, @NonNull ImageView imageView) {
+    public ViewReportsMenuNodeBinding(@NonNull ConstraintLayout constraintLayout, @NonNull p2 p2Var, @NonNull p2 p2Var2, @NonNull z4 z4Var, @NonNull LinearLayout linearLayout, @NonNull o2 o2Var, @NonNull MobileReportsBottomButton mobileReportsBottomButton, @NonNull MobileReportsBreadcrumbs mobileReportsBreadcrumbs, @NonNull MaterialCardView materialCardView, @NonNull LinearLayout linearLayout2, @NonNull MaterialCardView materialCardView2, @NonNull TextView textView, @NonNull TextView textView2, @NonNull MaterialCardView materialCardView3, @NonNull TextView textView3, @NonNull MaterialCardView materialCardView4, @NonNull LinkifiedTextView linkifiedTextView, @NonNull ImageView imageView) {
         this.a = constraintLayout;
-        this.f2206b = viewMobileReportsChannelPreviewBinding;
-        this.c = viewMobileReportsChannelPreviewBinding2;
-        this.d = widgetChatListAdapterItemSingleLineMessagePreviewBinding;
+        this.f2206b = p2Var;
+        this.c = p2Var2;
+        this.d = z4Var;
         this.e = linearLayout;
-        this.f = viewMobileReportBlockUserBinding;
+        this.f = o2Var;
         this.g = mobileReportsBottomButton;
         this.h = mobileReportsBreadcrumbs;
         this.i = materialCardView;
@@ -106,10 +106,10 @@ public final class ViewReportsMenuNodeBinding implements ViewBinding {
         View viewFindViewById = viewInflate.findViewById(R.id.mobile_reports_channel_preview);
         int i = R.id.mobile_reports_node_header;
         if (viewFindViewById != null) {
-            ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBindingA = ViewMobileReportsChannelPreviewBinding.a(viewFindViewById);
+            p2 p2VarA = p2.a(viewFindViewById);
             View viewFindViewById2 = viewInflate.findViewById(R.id.mobile_reports_directory_channel_preview);
             if (viewFindViewById2 != null) {
-                ViewMobileReportsChannelPreviewBinding viewMobileReportsChannelPreviewBindingA2 = ViewMobileReportsChannelPreviewBinding.a(viewFindViewById2);
+                p2 p2VarA2 = p2.a(viewFindViewById2);
                 View viewFindViewById3 = viewInflate.findViewById(R.id.mobile_reports_message_preview);
                 if (viewFindViewById3 != null) {
                     int i2 = R.id.chat_list_adapter_item_chat_attachment_icon;
@@ -133,7 +133,7 @@ public final class ViewReportsMenuNodeBinding implements ViewBinding {
                                             i2 = R.id.report_message_top_guideline;
                                             Guideline guideline3 = (Guideline) viewFindViewById3.findViewById(R.id.report_message_top_guideline);
                                             if (guideline3 != null) {
-                                                WidgetChatListAdapterItemSingleLineMessagePreviewBinding widgetChatListAdapterItemSingleLineMessagePreviewBinding = new WidgetChatListAdapterItemSingleLineMessagePreviewBinding((ConstraintLayout) viewFindViewById3, imageView, linkifiedTextView, simpleDraweeView, textView, guideline, guideline2, guideline3);
+                                                z4 z4Var = new z4((ConstraintLayout) viewFindViewById3, imageView, linkifiedTextView, simpleDraweeView, textView, guideline, guideline2, guideline3);
                                                 LinearLayout linearLayout = (LinearLayout) viewInflate.findViewById(R.id.mobile_reports_multiselect);
                                                 if (linearLayout != null) {
                                                     View viewFindViewById4 = viewInflate.findViewById(R.id.mobile_reports_node_block_user);
@@ -153,7 +153,7 @@ public final class ViewReportsMenuNodeBinding implements ViewBinding {
                                                                         i3 = R.id.mobile_reports_block_user_name;
                                                                         TextView textView4 = (TextView) viewFindViewById4.findViewById(R.id.mobile_reports_block_user_name);
                                                                         if (textView4 != null) {
-                                                                            ViewMobileReportBlockUserBinding viewMobileReportBlockUserBinding = new ViewMobileReportBlockUserBinding((LinearLayout) viewFindViewById4, simpleDraweeView2, materialButton, textView2, textView3, textView4);
+                                                                            o2 o2Var = new o2((LinearLayout) viewFindViewById4, simpleDraweeView2, materialButton, textView2, textView3, textView4);
                                                                             MobileReportsBottomButton mobileReportsBottomButton = (MobileReportsBottomButton) viewInflate.findViewById(R.id.mobile_reports_node_bottom_button);
                                                                             if (mobileReportsBottomButton != null) {
                                                                                 MobileReportsBreadcrumbs mobileReportsBreadcrumbs = (MobileReportsBreadcrumbs) viewInflate.findViewById(R.id.mobile_reports_node_breadcrumbs);
@@ -180,7 +180,7 @@ public final class ViewReportsMenuNodeBinding implements ViewBinding {
                                                                                                                     if (linkifiedTextView2 != null) {
                                                                                                                         ImageView imageView2 = (ImageView) viewInflate.findViewById(R.id.mobile_reports_node_success_shield);
                                                                                                                         if (imageView2 != null) {
-                                                                                                                            return new ViewReportsMenuNodeBinding((ConstraintLayout) viewInflate, viewMobileReportsChannelPreviewBindingA, viewMobileReportsChannelPreviewBindingA2, widgetChatListAdapterItemSingleLineMessagePreviewBinding, linearLayout, viewMobileReportBlockUserBinding, mobileReportsBottomButton, mobileReportsBreadcrumbs, materialCardView, linearLayout2, materialCardView2, textView5, textView6, materialCardView3, textView7, materialCardView4, linkifiedTextView2, imageView2);
+                                                                                                                            return new ViewReportsMenuNodeBinding((ConstraintLayout) viewInflate, p2VarA, p2VarA2, z4Var, linearLayout, o2Var, mobileReportsBottomButton, mobileReportsBreadcrumbs, materialCardView, linearLayout2, materialCardView2, textView5, textView6, materialCardView3, textView7, materialCardView4, linkifiedTextView2, imageView2);
                                                                                                                         }
                                                                                                                         i = R.id.mobile_reports_node_success_shield;
                                                                                                                     }

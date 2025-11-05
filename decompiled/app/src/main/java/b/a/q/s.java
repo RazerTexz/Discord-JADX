@@ -1,13 +1,6 @@
 package b.a.q;
 
-import b.a.q.n0.RtcControlSocket;
-import b.d.b.a.outline;
 import com.discord.rtcconnection.RtcConnection;
-import d0.Tuples;
-import d0.g0.StringsJVM;
-import d0.t.MapsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
 import java.net.URI;
 import javax.net.ssl.SSLSocketFactory;
 import kotlin.Unit;
@@ -15,7 +8,7 @@ import kotlin.jvm.functions.Function0;
 
 /* compiled from: RtcConnection.kt */
 /* loaded from: classes.dex */
-public final class s extends Lambda implements Function0<Unit> {
+public final class s extends d0.z.d.o implements Function0<Unit> {
     public final /* synthetic */ t this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -34,18 +27,18 @@ public final class s extends Lambda implements Function0<Unit> {
         rtcConnection.reconnectBackoff.succeed();
         String str3 = sSLSocketFactory != null ? "wss" : "ws";
         if (str == null || str.length() == 0) {
-            RtcControlSocket rtcControlSocket = rtcConnection.socket;
-            if (rtcControlSocket != null) {
-                rtcControlSocket.c();
+            b.a.q.n0.a aVar = rtcConnection.socket;
+            if (aVar != null) {
+                aVar.c();
             }
             rtcConnection.u(RtcConnection.State.b.a);
         } else {
-            String strReplace$default = StringsJVM.replace$default(str, ".gg", ".media", false, 4, (Object) null);
-            String strY = outline.y(str3, "://", strReplace$default);
-            String strReplace$default2 = StringsJVM.replace$default(strY, ":80", ":443", false, 4, (Object) null);
-            RtcControlSocket rtcControlSocket2 = rtcConnection.socket;
-            if (rtcControlSocket2 != null) {
-                rtcControlSocket2.c();
+            String strReplace$default = d0.g0.t.replace$default(str, ".gg", ".media", false, 4, (Object) null);
+            String strY = b.d.b.a.a.y(str3, "://", strReplace$default);
+            String strReplace$default2 = d0.g0.t.replace$default(strY, ":80", ":443", false, 4, (Object) null);
+            b.a.q.n0.a aVar2 = rtcConnection.socket;
+            if (aVar2 != null) {
+                aVar2.c();
             }
             if (rtcConnection.destroyed) {
                 RtcConnection.j(rtcConnection, false, "Connect called on destroyed instance.", null, false, 4);
@@ -58,14 +51,14 @@ public final class s extends Lambda implements Function0<Unit> {
                     rtcConnection.hostname = uri.getHost();
                     rtcConnection.port = Integer.valueOf(uri.getPort());
                 } catch (Exception e) {
-                    rtcConnection.logger.e(rtcConnection.loggingTag, "Failed to parse RTC endpoint", e, MapsJVM.mapOf(Tuples.to("endpoint", strReplace$default)));
+                    rtcConnection.logger.e(rtcConnection.loggingTag, "Failed to parse RTC endpoint", e, d0.t.g0.mapOf(d0.o.to("endpoint", strReplace$default)));
                 }
-                RtcControlSocket rtcControlSocket3 = new RtcControlSocket(strReplace$default2, str2, sSLSocketFactory, rtcConnection.logger, rtcConnection.mediaEngine.c(), rtcConnection.clock, rtcConnection.loggingTag);
+                b.a.q.n0.a aVar3 = new b.a.q.n0.a(strReplace$default2, str2, sSLSocketFactory, rtcConnection.logger, rtcConnection.mediaEngine.c(), rtcConnection.clock, rtcConnection.loggingTag);
                 h0 h0Var = rtcConnection.socketListener;
-                Intrinsics3.checkNotNullParameter(h0Var, "listener");
-                rtcControlSocket3.q.add(h0Var);
-                rtcControlSocket3.d();
-                rtcConnection.socket = rtcControlSocket3;
+                d0.z.d.m.checkNotNullParameter(h0Var, "listener");
+                aVar3.q.add(h0Var);
+                aVar3.d();
+                rtcConnection.socket = aVar3;
             }
         }
         return Unit.a;

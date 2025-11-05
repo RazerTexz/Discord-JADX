@@ -1,6 +1,6 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.TypeAdapterFactory2;
+import b.i.d.o;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
@@ -17,14 +17,14 @@ import java.util.Date;
 
 /* loaded from: classes3.dex */
 public final class TimeTypeAdapter extends TypeAdapter<Time> {
-    public static final TypeAdapterFactory2 a = new AnonymousClass1();
+    public static final o a = new AnonymousClass1();
 
     /* renamed from: b, reason: collision with root package name */
     public final DateFormat f3125b = new SimpleDateFormat("hh:mm:ss a");
 
     /* renamed from: com.google.gson.internal.bind.TimeTypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements TypeAdapterFactory2 {
-        @Override // b.i.d.TypeAdapterFactory2
+    public class AnonymousClass1 implements o {
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() == Time.class) {
                 return new TimeTypeAdapter();

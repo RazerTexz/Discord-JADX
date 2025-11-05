@@ -8,8 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.role.GuildRole;
 import com.discord.databinding.WidgetServerSettingsHelpItemBinding;
@@ -23,8 +22,8 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.widgets.roles.RoleIconView;
-import d0.d0._Ranges;
-import d0.z.d.Intrinsics3;
+import d0.d0.f;
+import d0.z.d.m;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -98,7 +97,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
 
         public String toString() {
-            return outline.C(outline.U("HelpItem(guildId="), this.guildId, ")");
+            return a.C(a.U("HelpItem(guildId="), this.guildId, ")");
         }
     }
 
@@ -109,12 +108,12 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RoleListHelpItem(WidgetServerSettingsRolesAdapter widgetServerSettingsRolesAdapter) {
             super(R.layout.widget_server_settings_help_item, widgetServerSettingsRolesAdapter);
-            Intrinsics3.checkNotNullParameter(widgetServerSettingsRolesAdapter, "adapter");
+            m.checkNotNullParameter(widgetServerSettingsRolesAdapter, "adapter");
             View view = this.itemView;
             Objects.requireNonNull(view, "rootView");
             LinkifiedTextView linkifiedTextView = (LinkifiedTextView) view;
             WidgetServerSettingsHelpItemBinding widgetServerSettingsHelpItemBinding = new WidgetServerSettingsHelpItemBinding(linkifiedTextView, linkifiedTextView);
-            Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsHelpItemBinding, "WidgetServerSettingsHelpItemBinding.bind(itemView)");
+            m.checkNotNullExpressionValue(widgetServerSettingsHelpItemBinding, "WidgetServerSettingsHelpItemBinding.bind(itemView)");
             this.binding = widgetServerSettingsHelpItemBinding;
         }
 
@@ -135,11 +134,11 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, DragAndDropAdapter.Payload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             LinkifiedTextView linkifiedTextView = this.binding.f2572b;
-            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.serverSettingsHelpItem");
-            FormatUtils.m(linkifiedTextView, R.string.help_roles_description, new Object[0], new WidgetServerSettingsRolesAdapter2(data));
+            m.checkNotNullExpressionValue(linkifiedTextView, "binding.serverSettingsHelpItem");
+            b.a.k.b.m(linkifiedTextView, R.string.help_roles_description, new Object[0], new WidgetServerSettingsRolesAdapter$RoleListHelpItem$onConfigure$1(data));
         }
     }
 
@@ -151,7 +150,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RoleListItem(WidgetServerSettingsRolesAdapter widgetServerSettingsRolesAdapter) {
             super(R.layout.widget_server_settings_role_item, widgetServerSettingsRolesAdapter);
-            Intrinsics3.checkNotNullParameter(widgetServerSettingsRolesAdapter, "adapter");
+            m.checkNotNullParameter(widgetServerSettingsRolesAdapter, "adapter");
             View view = this.itemView;
             int i = R.id.server_settings_role_item_bottom_divider;
             View viewFindViewById = view.findViewById(R.id.server_settings_role_item_bottom_divider);
@@ -172,7 +171,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
                                 RoleIconView roleIconView = (RoleIconView) view.findViewById(R.id.server_settings_role_item_role_icon);
                                 if (roleIconView != null) {
                                     WidgetServerSettingsRoleItemBinding widgetServerSettingsRoleItemBinding = new WidgetServerSettingsRoleItemBinding((RelativeLayout) view, viewFindViewById, viewFindViewById2, viewFindViewById3, imageView, textView, roleIconView);
-                                    Intrinsics3.checkNotNullExpressionValue(widgetServerSettingsRoleItemBinding, "WidgetServerSettingsRoleItemBinding.bind(itemView)");
+                                    m.checkNotNullExpressionValue(widgetServerSettingsRoleItemBinding, "WidgetServerSettingsRoleItemBinding.bind(itemView)");
                                     this.binding = widgetServerSettingsRoleItemBinding;
                                     return;
                                 }
@@ -202,44 +201,44 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         @Override // com.discord.utilities.mg_recycler.DragAndDropHelper.DraggableViewHolder
         public void onDragStateChanged(boolean dragging) {
             View view = this.binding.f2583b;
-            Intrinsics3.checkNotNullExpressionValue(view, "binding.serverSettingsRoleItemDragOverlay");
+            m.checkNotNullExpressionValue(view, "binding.serverSettingsRoleItemDragOverlay");
             view.setVisibility(dragging ? 0 : 8);
         }
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, DragAndDropAdapter.Payload data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             RoleItem roleItem = (RoleItem) data;
             this.canDrag = roleItem.canReorder();
             TextView textView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.serverSettingsRoleItemName");
+            m.checkNotNullExpressionValue(textView, "binding.serverSettingsRoleItemName");
             textView.setText(roleItem.getRole().getName());
             TextView textView2 = this.binding.d;
             GuildRole role = roleItem.getRole();
             RelativeLayout relativeLayout = this.binding.a;
-            Intrinsics3.checkNotNullExpressionValue(relativeLayout, "binding.root");
+            m.checkNotNullExpressionValue(relativeLayout, "binding.root");
             Context context = relativeLayout.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "binding.root.context");
+            m.checkNotNullExpressionValue(context, "binding.root.context");
             textView2.setTextColor(RoleUtils.getRoleColor$default(role, context, null, 2, null));
-            this.binding.a.setOnClickListener(new WidgetServerSettingsRolesAdapter3(this, roleItem));
+            this.binding.a.setOnClickListener(new WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$1(this, roleItem));
             if (roleItem.getEveryoneRole()) {
                 RelativeLayout relativeLayout2 = this.binding.a;
-                Intrinsics3.checkNotNullExpressionValue(relativeLayout2, "binding.root");
-                ViewExtensions.setOnLongClickListenerConsumeClick(relativeLayout2, WidgetServerSettingsRolesAdapter4.INSTANCE);
+                m.checkNotNullExpressionValue(relativeLayout2, "binding.root");
+                ViewExtensions.setOnLongClickListenerConsumeClick(relativeLayout2, WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$2.INSTANCE);
             } else if (!roleItem.getUserAbleToManageRoles()) {
                 RelativeLayout relativeLayout3 = this.binding.a;
-                Intrinsics3.checkNotNullExpressionValue(relativeLayout3, "binding.root");
-                ViewExtensions.setOnLongClickListenerConsumeClick(relativeLayout3, WidgetServerSettingsRolesAdapter5.INSTANCE);
+                m.checkNotNullExpressionValue(relativeLayout3, "binding.root");
+                ViewExtensions.setOnLongClickListenerConsumeClick(relativeLayout3, WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$3.INSTANCE);
             } else if (roleItem.getElevated()) {
                 this.binding.a.setOnLongClickListener(null);
             } else {
                 RelativeLayout relativeLayout4 = this.binding.a;
-                Intrinsics3.checkNotNullExpressionValue(relativeLayout4, "binding.root");
-                ViewExtensions.setOnLongClickListenerConsumeClick(relativeLayout4, WidgetServerSettingsRolesAdapter6.INSTANCE);
+                m.checkNotNullExpressionValue(relativeLayout4, "binding.root");
+                ViewExtensions.setOnLongClickListenerConsumeClick(relativeLayout4, WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$4.INSTANCE);
             }
             ImageView imageView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.serverSettingsRoleItemLockIndicator");
+            m.checkNotNullExpressionValue(imageView, "binding.serverSettingsRoleItemLockIndicator");
             imageView.setVisibility(roleItem.getLocked() ? 0 : 8);
             this.binding.e.setRole(roleItem.getRole(), Long.valueOf(roleItem.getGuildId()));
         }
@@ -248,9 +247,9 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetServerSettingsRolesAdapter(RecyclerView recyclerView) {
         super(recyclerView);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        this.roleSelectedListener = WidgetServerSettingsRolesAdapter8.INSTANCE;
-        this.roleDropListener = WidgetServerSettingsRolesAdapter7.INSTANCE;
+        m.checkNotNullParameter(recyclerView, "recycler");
+        this.roleSelectedListener = WidgetServerSettingsRolesAdapter$roleSelectedListener$1.INSTANCE;
+        this.roleDropListener = WidgetServerSettingsRolesAdapter$roleDropListener$1.INSTANCE;
     }
 
     public static final /* synthetic */ Function1 access$getRoleSelectedListener$p(WidgetServerSettingsRolesAdapter widgetServerSettingsRolesAdapter) {
@@ -282,9 +281,9 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
     }
 
     public final void configure(List<? extends DragAndDropAdapter.Payload> roles, Function1<? super GuildRole, Unit> roleSelectedListener, Function1<? super Map<String, Integer>, Unit> roleDropListener) {
-        Intrinsics3.checkNotNullParameter(roles, "roles");
-        Intrinsics3.checkNotNullParameter(roleSelectedListener, "roleSelectedListener");
-        Intrinsics3.checkNotNullParameter(roleDropListener, "roleDropListener");
+        m.checkNotNullParameter(roles, "roles");
+        m.checkNotNullParameter(roleSelectedListener, "roleSelectedListener");
+        m.checkNotNullParameter(roleDropListener, "roleDropListener");
         this.roleSelectedListener = roleSelectedListener;
         this.roleDropListener = roleDropListener;
         setData(roles);
@@ -292,8 +291,8 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
 
     @Override // com.discord.utilities.mg_recycler.DragAndDropHelper.Adapter
     public boolean isValidMove(int fromPosition, int toPosition) {
-        int iCoerceAtMost = _Ranges.coerceAtMost(fromPosition, toPosition);
-        int iCoerceAtLeast = _Ranges.coerceAtLeast(fromPosition, toPosition);
+        int iCoerceAtMost = f.coerceAtMost(fromPosition, toPosition);
+        int iCoerceAtLeast = f.coerceAtLeast(fromPosition, toPosition);
         if (iCoerceAtMost <= iCoerceAtLeast) {
             while (true) {
                 DragAndDropAdapter.Payload payload = getDataCopy().get(iCoerceAtMost);
@@ -316,13 +315,13 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
 
     @Override // com.discord.utilities.mg_recycler.DragAndDropAdapter
     public void onNewPositions(Map<String, Integer> newPositions) {
-        Intrinsics3.checkNotNullParameter(newPositions, "newPositions");
+        m.checkNotNullParameter(newPositions, "newPositions");
         this.roleDropListener.invoke(newPositions);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<?, DragAndDropAdapter.Payload> onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new RoleListHelpItem(this);
         }
@@ -344,7 +343,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         private final boolean userAbleToManageRoles;
 
         public RoleItem(GuildRole guildRole, boolean z2, boolean z3, boolean z4, boolean z5, long j) {
-            Intrinsics3.checkNotNullParameter(guildRole, "role");
+            m.checkNotNullParameter(guildRole, "role");
             this.role = guildRole;
             this.everyoneRole = z2;
             this.locked = z3;
@@ -416,7 +415,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
 
         public final RoleItem copy(GuildRole role, boolean everyoneRole, boolean locked, boolean userAbleToManageRoles, boolean elevated, long guildId) {
-            Intrinsics3.checkNotNullParameter(role, "role");
+            m.checkNotNullParameter(role, "role");
             return new RoleItem(role, everyoneRole, locked, userAbleToManageRoles, elevated, guildId);
         }
 
@@ -428,7 +427,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
                 return false;
             }
             RoleItem roleItem = (RoleItem) other;
-            return Intrinsics3.areEqual(this.role, roleItem.role) && this.everyoneRole == roleItem.everyoneRole && this.locked == roleItem.locked && this.userAbleToManageRoles == roleItem.userAbleToManageRoles && this.elevated == roleItem.elevated && this.guildId == roleItem.guildId;
+            return m.areEqual(this.role, roleItem.role) && this.everyoneRole == roleItem.everyoneRole && this.locked == roleItem.locked && this.userAbleToManageRoles == roleItem.userAbleToManageRoles && this.elevated == roleItem.elevated && this.guildId == roleItem.guildId;
         }
 
         public final boolean getElevated() {
@@ -497,7 +496,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("RoleItem(role=");
+            StringBuilder sbU = a.U("RoleItem(role=");
             sbU.append(this.role);
             sbU.append(", everyoneRole=");
             sbU.append(this.everyoneRole);
@@ -508,7 +507,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
             sbU.append(", elevated=");
             sbU.append(this.elevated);
             sbU.append(", guildId=");
-            return outline.C(sbU, this.guildId, ")");
+            return a.C(sbU, this.guildId, ")");
         }
 
         public /* synthetic */ RoleItem(GuildRole guildRole, boolean z2, boolean z3, boolean z4, boolean z5, long j, int i, DefaultConstructorMarker defaultConstructorMarker) {

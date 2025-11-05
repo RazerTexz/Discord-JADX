@@ -1,8 +1,8 @@
 package co.discord.media_engine;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class StatsCodec {
     private final String name;
 
     public StatsCodec(int i, String str) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.id = i;
         this.name = str;
     }
@@ -37,7 +37,7 @@ public final /* data */ class StatsCodec {
     }
 
     public final StatsCodec copy(int id2, String name) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new StatsCodec(id2, name);
     }
 
@@ -49,7 +49,7 @@ public final /* data */ class StatsCodec {
             return false;
         }
         StatsCodec statsCodec = (StatsCodec) other;
-        return this.id == statsCodec.id && Intrinsics3.areEqual(this.name, statsCodec.name);
+        return this.id == statsCodec.id && m.areEqual(this.name, statsCodec.name);
     }
 
     public final int getId() {
@@ -67,9 +67,9 @@ public final /* data */ class StatsCodec {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StatsCodec(id=");
+        StringBuilder sbU = a.U("StatsCodec(id=");
         sbU.append(this.id);
         sbU.append(", name=");
-        return outline.J(sbU, this.name, ")");
+        return a.J(sbU, this.name, ")");
     }
 }

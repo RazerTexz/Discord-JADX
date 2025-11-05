@@ -5,13 +5,13 @@ import com.discord.models.domain.ModelUserSettings;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.models.user.MeUser;
 import com.discord.widgets.settings.WidgetSettingsPrivacy;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function7;
 
 /* compiled from: WidgetSettingsPrivacy.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetSettingsPrivacy$Model$Companion$get$2 extends FunctionReferenceImpl implements Function7<MeUser, Integer, Boolean, ModelUserSettings.FriendSourceFlags, ConnectedAccount, Experiment, Integer, WidgetSettingsPrivacy.LocalState> {
+public final /* synthetic */ class WidgetSettingsPrivacy$Model$Companion$get$2 extends k implements Function7<MeUser, Integer, Boolean, ModelUserSettings.FriendSourceFlags, ConnectedAccount, Experiment, Integer, WidgetSettingsPrivacy.LocalState> {
     public static final WidgetSettingsPrivacy$Model$Companion$get$2 INSTANCE = new WidgetSettingsPrivacy$Model$Companion$get$2();
 
     public WidgetSettingsPrivacy$Model$Companion$get$2() {
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetSettingsPrivacy$Model$Companion$get$2 e
     }
 
     public final WidgetSettingsPrivacy.LocalState invoke(MeUser meUser, int i, boolean z2, ModelUserSettings.FriendSourceFlags friendSourceFlags, ConnectedAccount connectedAccount, Experiment experiment, int i2) {
-        Intrinsics3.checkNotNullParameter(meUser, "p1");
+        m.checkNotNullParameter(meUser, "p1");
         return new WidgetSettingsPrivacy.LocalState(meUser, i, z2, friendSourceFlags, connectedAccount, experiment, i2);
     }
 }

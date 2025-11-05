@@ -1,7 +1,6 @@
 package b.a.q;
 
 import com.discord.rtcconnection.RtcConnection;
-import d0.z.d.Lambda;
 import java.util.concurrent.TimeUnit;
 import javax.net.ssl.SSLSocketFactory;
 import kotlin.Unit;
@@ -9,7 +8,7 @@ import kotlin.jvm.functions.Function0;
 
 /* compiled from: RtcConnection.kt */
 /* loaded from: classes.dex */
-public final class w extends Lambda implements Function0<Unit> {
+public final class w extends d0.z.d.o implements Function0<Unit> {
     public final /* synthetic */ String $endpoint;
     public final /* synthetic */ SSLSocketFactory $sslSocketFactory;
     public final /* synthetic */ String $token;

@@ -11,7 +11,7 @@ import android.view.animation.Interpolator;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.graphics.PathParser;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import org.xmlpull.v1.XmlPullParser;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -73,7 +73,7 @@ public class PathInterpolatorCompat implements Interpolator {
                 return;
             }
         }
-        StringBuilder sbU = outline.U("The Path must start at (0,0) and end at (1,1) start: ");
+        StringBuilder sbU = a.U("The Path must start at (0,0) and end at (1,1) start: ");
         sbU.append(this.mX[0]);
         sbU.append(",");
         sbU.append(this.mY[0]);
@@ -97,7 +97,7 @@ public class PathInterpolatorCompat implements Interpolator {
             String namedString = TypedArrayUtils.getNamedString(typedArray, xmlPullParser, "pathData", 4);
             Path pathCreatePathFromPathData = PathParser.createPathFromPathData(namedString);
             if (pathCreatePathFromPathData == null) {
-                throw new InflateException(outline.w("The path is null, which is created from ", namedString));
+                throw new InflateException(a.w("The path is null, which is created from ", namedString));
             }
             initPath(pathCreatePathFromPathData);
             return;
@@ -147,7 +147,7 @@ public class PathInterpolatorCompat implements Interpolator {
         float f3 = (f - fArr[i]) / f2;
         float[] fArr2 = this.mY;
         float f4 = fArr2[i];
-        return outline.a(fArr2[length], f4, f3, f4);
+        return a.a(fArr2[length], f4, f3, f4);
     }
 
     public PathInterpolatorCompat(Resources resources, Resources.Theme theme, AttributeSet attributeSet, XmlPullParser xmlPullParser) {

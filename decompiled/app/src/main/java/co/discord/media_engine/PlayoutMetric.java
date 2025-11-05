@@ -1,7 +1,6 @@
 package co.discord.media_engine;
 
 import a0.a.a.a;
-import b.d.b.a.outline;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -100,7 +99,7 @@ public final /* data */ class PlayoutMetric {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("PlayoutMetric(last=");
+        StringBuilder sbU = b.d.b.a.a.U("PlayoutMetric(last=");
         sbU.append(this.last);
         sbU.append(", mean=");
         sbU.append(this.mean);

@@ -3,11 +3,9 @@ package com.google.android.exoplayer2.metadata.flac;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.z2.Metadata2;
+import b.i.a.c.f3.e0;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 
 /* loaded from: classes3.dex */
@@ -50,11 +48,11 @@ public final class VorbisComment implements Metadata.Entry {
     }
 
     public int hashCode() {
-        return this.k.hashCode() + outline.m(this.j, 527, 31);
+        return this.k.hashCode() + b.d.b.a.a.m(this.j, 527, 31);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public void n(MediaMetadata.b bVar) {
+    public void n(p1.b bVar) {
         String str = this.j;
         str.hashCode();
         switch (str) {
@@ -78,13 +76,13 @@ public final class VorbisComment implements Metadata.Entry {
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     public /* synthetic */ byte[] o0() {
-        return Metadata2.a(this);
+        return b.i.a.c.z2.a.a(this);
     }
 
     public String toString() {
         String str = this.j;
         String str2 = this.k;
-        return outline.l(outline.b(str2, outline.b(str, 5)), "VC: ", str, "=", str2);
+        return b.d.b.a.a.l(b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 5)), "VC: ", str, "=", str2);
     }
 
     @Override // android.os.Parcelable
@@ -94,13 +92,13 @@ public final class VorbisComment implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ Format2 y() {
-        return Metadata2.b(this);
+    public /* synthetic */ j1 y() {
+        return b.i.a.c.z2.a.b(this);
     }
 
     public VorbisComment(Parcel parcel) {
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         this.j = string;
         this.k = parcel.readString();
     }

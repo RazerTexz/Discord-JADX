@@ -1,10 +1,10 @@
 package com.discord.models.sticker.dto;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.sticker.Sticker;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelSku;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -22,8 +22,8 @@ public final /* data */ class ModelStickerPack {
     private final ModelStickerPackStoreListing storeListing;
 
     public ModelStickerPack(long j, List<Sticker> list, String str, ModelStickerPackStoreListing modelStickerPackStoreListing, long j2, Long l, String str2, Long l2) {
-        Intrinsics3.checkNotNullParameter(list, "stickers");
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(list, "stickers");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.id = j;
         this.stickers = list;
         this.name = str;
@@ -83,8 +83,8 @@ public final /* data */ class ModelStickerPack {
     }
 
     public final ModelStickerPack copy(long id2, List<Sticker> stickers, String name, ModelStickerPackStoreListing storeListing, long skuId, Long coverStickerId, String description, Long bannerAssetId) {
-        Intrinsics3.checkNotNullParameter(stickers, "stickers");
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(stickers, "stickers");
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new ModelStickerPack(id2, stickers, name, storeListing, skuId, coverStickerId, description, bannerAssetId);
     }
 
@@ -96,7 +96,7 @@ public final /* data */ class ModelStickerPack {
             return false;
         }
         ModelStickerPack modelStickerPack = (ModelStickerPack) other;
-        return this.id == modelStickerPack.id && Intrinsics3.areEqual(this.stickers, modelStickerPack.stickers) && Intrinsics3.areEqual(this.name, modelStickerPack.name) && Intrinsics3.areEqual(this.storeListing, modelStickerPack.storeListing) && this.skuId == modelStickerPack.skuId && Intrinsics3.areEqual(this.coverStickerId, modelStickerPack.coverStickerId) && Intrinsics3.areEqual(this.description, modelStickerPack.description) && Intrinsics3.areEqual(this.bannerAssetId, modelStickerPack.bannerAssetId);
+        return this.id == modelStickerPack.id && m.areEqual(this.stickers, modelStickerPack.stickers) && m.areEqual(this.name, modelStickerPack.name) && m.areEqual(this.storeListing, modelStickerPack.storeListing) && this.skuId == modelStickerPack.skuId && m.areEqual(this.coverStickerId, modelStickerPack.coverStickerId) && m.areEqual(this.description, modelStickerPack.description) && m.areEqual(this.bannerAssetId, modelStickerPack.bannerAssetId);
     }
 
     public final Long getBannerAssetId() {
@@ -198,7 +198,7 @@ public final /* data */ class ModelStickerPack {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelStickerPack(id=");
+        StringBuilder sbU = a.U("ModelStickerPack(id=");
         sbU.append(this.id);
         sbU.append(", stickers=");
         sbU.append(this.stickers);
@@ -213,6 +213,6 @@ public final /* data */ class ModelStickerPack {
         sbU.append(", description=");
         sbU.append(this.description);
         sbU.append(", bannerAssetId=");
-        return outline.G(sbU, this.bannerAssetId, ")");
+        return a.G(sbU, this.bannerAssetId, ")");
     }
 }

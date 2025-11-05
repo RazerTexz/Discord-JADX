@@ -1,8 +1,8 @@
 package com.discord.models.domain.spotify;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ModelSpotifyTrack.kt */
@@ -16,9 +16,9 @@ public final /* data */ class ModelSpotifyTrack {
     private final String name;
 
     public ModelSpotifyTrack(String str, String str2, long j, ModelSpotifyAlbum modelSpotifyAlbum, List<ModelSpotifyArtist> list, boolean z2) {
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
-        Intrinsics3.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(list, "artists");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(str2, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(list, "artists");
         this.id = str;
         this.name = str2;
         this.durationMs = j;
@@ -83,9 +83,9 @@ public final /* data */ class ModelSpotifyTrack {
     }
 
     public final ModelSpotifyTrack copy(String id2, String name, long durationMs, ModelSpotifyAlbum album, List<ModelSpotifyArtist> artists, boolean isLocal) {
-        Intrinsics3.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
-        Intrinsics3.checkNotNullParameter(artists, "artists");
+        m.checkNotNullParameter(id2, ModelAuditLogEntry.CHANGE_KEY_ID);
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(artists, "artists");
         return new ModelSpotifyTrack(id2, name, durationMs, album, artists, isLocal);
     }
 
@@ -97,7 +97,7 @@ public final /* data */ class ModelSpotifyTrack {
             return false;
         }
         ModelSpotifyTrack modelSpotifyTrack = (ModelSpotifyTrack) other;
-        return Intrinsics3.areEqual(this.id, modelSpotifyTrack.id) && Intrinsics3.areEqual(this.name, modelSpotifyTrack.name) && this.durationMs == modelSpotifyTrack.durationMs && Intrinsics3.areEqual(this.album, modelSpotifyTrack.album) && Intrinsics3.areEqual(this.artists, modelSpotifyTrack.artists) && this.isLocal == modelSpotifyTrack.isLocal;
+        return m.areEqual(this.id, modelSpotifyTrack.id) && m.areEqual(this.name, modelSpotifyTrack.name) && this.durationMs == modelSpotifyTrack.durationMs && m.areEqual(this.album, modelSpotifyTrack.album) && m.areEqual(this.artists, modelSpotifyTrack.artists) && this.isLocal == modelSpotifyTrack.isLocal;
     }
 
     public final ModelSpotifyAlbum getAlbum() {
@@ -145,7 +145,7 @@ public final /* data */ class ModelSpotifyTrack {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelSpotifyTrack(id=");
+        StringBuilder sbU = a.U("ModelSpotifyTrack(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -156,6 +156,6 @@ public final /* data */ class ModelSpotifyTrack {
         sbU.append(", artists=");
         sbU.append(this.artists);
         sbU.append(", isLocal=");
-        return outline.O(sbU, this.isLocal, ")");
+        return a.O(sbU, this.isLocal, ")");
     }
 }

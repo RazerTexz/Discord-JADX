@@ -14,7 +14,7 @@ import androidx.annotation.RestrictTo;
 import androidx.core.graphics.Insets;
 import androidx.core.util.ObjectsCompat;
 import androidx.core.util.Preconditions;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Constructor;
@@ -51,7 +51,7 @@ public class WindowInsetsCompat {
                 declaredField3.setAccessible(true);
                 sReflectionSucceeded = true;
             } catch (ReflectiveOperationException e) {
-                StringBuilder sbU = outline.U("Failed to get visible insets from AttachInfo ");
+                StringBuilder sbU = a.U("Failed to get visible insets from AttachInfo ");
                 sbU.append(e.getMessage());
                 Log.w(WindowInsetsCompat.TAG, sbU.toString(), e);
             }
@@ -76,7 +76,7 @@ public class WindowInsetsCompat {
                         }
                     }
                 } catch (IllegalAccessException e) {
-                    StringBuilder sbU = outline.U("Failed to get insets from AttachInfo. ");
+                    StringBuilder sbU = a.U("Failed to get insets from AttachInfo. ");
                     sbU.append(e.getMessage());
                     Log.w(WindowInsetsCompat.TAG, sbU.toString(), e);
                 }
@@ -362,7 +362,7 @@ public class WindowInsetsCompat {
                     }
                     return null;
                 } catch (ReflectiveOperationException e) {
-                    StringBuilder sbU = outline.U("Failed to get visible insets. (Reflection error). ");
+                    StringBuilder sbU = a.U("Failed to get visible insets. (Reflection error). ");
                     sbU.append(e.getMessage());
                     Log.e(WindowInsetsCompat.TAG, sbU.toString(), e);
                 }
@@ -382,7 +382,7 @@ public class WindowInsetsCompat {
                 sVisibleInsetsField.setAccessible(true);
                 sAttachInfoField.setAccessible(true);
             } catch (ReflectiveOperationException e) {
-                StringBuilder sbU = outline.U("Failed to get visible insets. (Reflection error). ");
+                StringBuilder sbU = a.U("Failed to get visible insets. (Reflection error). ");
                 sbU.append(e.getMessage());
                 Log.e(WindowInsetsCompat.TAG, sbU.toString(), e);
             }
@@ -700,7 +700,7 @@ public class WindowInsetsCompat {
             if (i == 256) {
                 return 8;
             }
-            throw new IllegalArgumentException(outline.q("type needs to be >= FIRST and <= LAST, type=", i));
+            throw new IllegalArgumentException(a.q("type needs to be >= FIRST and <= LAST, type=", i));
         }
 
         public static int mandatorySystemGestures() {

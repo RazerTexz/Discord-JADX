@@ -1,7 +1,7 @@
 package com.discord.api.guildhash;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: GuildHashes.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class GuildHashes {
             return false;
         }
         GuildHashes guildHashes = (GuildHashes) other;
-        return Intrinsics3.areEqual(this.metadata, guildHashes.metadata) && Intrinsics3.areEqual(this.channels, guildHashes.channels) && Intrinsics3.areEqual(this.roles, guildHashes.roles) && this.version == guildHashes.version;
+        return m.areEqual(this.metadata, guildHashes.metadata) && m.areEqual(this.channels, guildHashes.channels) && m.areEqual(this.roles, guildHashes.roles) && this.version == guildHashes.version;
     }
 
     public int hashCode() {
@@ -52,13 +52,13 @@ public final /* data */ class GuildHashes {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildHashes(metadata=");
+        StringBuilder sbU = a.U("GuildHashes(metadata=");
         sbU.append(this.metadata);
         sbU.append(", channels=");
         sbU.append(this.channels);
         sbU.append(", roles=");
         sbU.append(this.roles);
         sbU.append(", version=");
-        return outline.B(sbU, this.version, ")");
+        return a.B(sbU, this.version, ")");
     }
 }

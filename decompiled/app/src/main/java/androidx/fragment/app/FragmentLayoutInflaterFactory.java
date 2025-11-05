@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class FragmentLayoutInflaterFactory implements LayoutInflater.Factory2 {
@@ -94,7 +94,7 @@ public class FragmentLayoutInflaterFactory implements LayoutInflater.Factory2 {
         fragmentStateManagerCreateOrGetFragmentStateManager.ensureInflatedView();
         View view2 = fragmentFindFragmentById.mView;
         if (view2 == null) {
-            throw new IllegalStateException(outline.y("Fragment ", attributeValue, " did not create a view."));
+            throw new IllegalStateException(a.y("Fragment ", attributeValue, " did not create a view."));
         }
         if (resourceId != 0) {
             view2.setId(resourceId);

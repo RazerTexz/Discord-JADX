@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackJoinCall.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackJoinCall implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackJoinCall implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long channelType = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackJoinCall implements AnalyticsSchema, TrackBas
             return false;
         }
         TrackJoinCall trackJoinCall = (TrackJoinCall) other;
-        return Intrinsics3.areEqual(this.channelId, trackJoinCall.channelId) && Intrinsics3.areEqual(this.channelType, trackJoinCall.channelType) && Intrinsics3.areEqual(this.messageId, trackJoinCall.messageId) && Intrinsics3.areEqual(this.recipientIds, trackJoinCall.recipientIds) && Intrinsics3.areEqual(this.participantIds, trackJoinCall.participantIds);
+        return m.areEqual(this.channelId, trackJoinCall.channelId) && m.areEqual(this.channelType, trackJoinCall.channelType) && m.areEqual(this.messageId, trackJoinCall.messageId) && m.areEqual(this.recipientIds, trackJoinCall.recipientIds) && m.areEqual(this.participantIds, trackJoinCall.participantIds);
     }
 
     public int hashCode() {
@@ -49,7 +49,7 @@ public final /* data */ class TrackJoinCall implements AnalyticsSchema, TrackBas
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackJoinCall(channelId=");
+        StringBuilder sbU = a.U("TrackJoinCall(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -58,6 +58,6 @@ public final /* data */ class TrackJoinCall implements AnalyticsSchema, TrackBas
         sbU.append(", recipientIds=");
         sbU.append(this.recipientIds);
         sbU.append(", participantIds=");
-        return outline.L(sbU, this.participantIds, ")");
+        return a.L(sbU, this.participantIds, ")");
     }
 }

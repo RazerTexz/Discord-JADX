@@ -5,7 +5,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.ViewUserStatusPresenceBinding;
+import b.a.i.e4;
 import com.discord.widgets.user.profile.UserStatusPresenceCustomView;
 
 /* loaded from: classes.dex */
@@ -19,24 +19,24 @@ public final class WidgetUserStatusUpdateBinding implements ViewBinding {
     public final UserStatusPresenceCustomView f2698b;
 
     @NonNull
-    public final ViewUserStatusPresenceBinding c;
+    public final e4 c;
 
     @NonNull
-    public final ViewUserStatusPresenceBinding d;
+    public final e4 d;
 
     @NonNull
-    public final ViewUserStatusPresenceBinding e;
+    public final e4 e;
 
     @NonNull
-    public final ViewUserStatusPresenceBinding f;
+    public final e4 f;
 
-    public WidgetUserStatusUpdateBinding(@NonNull NestedScrollView nestedScrollView, @NonNull TextView textView, @NonNull UserStatusPresenceCustomView userStatusPresenceCustomView, @NonNull ViewUserStatusPresenceBinding viewUserStatusPresenceBinding, @NonNull ViewUserStatusPresenceBinding viewUserStatusPresenceBinding2, @NonNull ViewUserStatusPresenceBinding viewUserStatusPresenceBinding3, @NonNull ViewUserStatusPresenceBinding viewUserStatusPresenceBinding4) {
+    public WidgetUserStatusUpdateBinding(@NonNull NestedScrollView nestedScrollView, @NonNull TextView textView, @NonNull UserStatusPresenceCustomView userStatusPresenceCustomView, @NonNull e4 e4Var, @NonNull e4 e4Var2, @NonNull e4 e4Var3, @NonNull e4 e4Var4) {
         this.a = nestedScrollView;
         this.f2698b = userStatusPresenceCustomView;
-        this.c = viewUserStatusPresenceBinding;
-        this.d = viewUserStatusPresenceBinding2;
-        this.e = viewUserStatusPresenceBinding3;
-        this.f = viewUserStatusPresenceBinding4;
+        this.c = e4Var;
+        this.d = e4Var2;
+        this.e = e4Var3;
+        this.f = e4Var4;
     }
 
     @Override // androidx.viewbinding.ViewBinding

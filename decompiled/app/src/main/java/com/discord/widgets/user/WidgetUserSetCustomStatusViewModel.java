@@ -2,8 +2,8 @@ package com.discord.widgets.user;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.models.domain.ModelCustomStatusSetting;
 import com.discord.models.domain.ModelUserSettings;
@@ -22,9 +22,9 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import com.discord.utilities.time.TimeUtils;
-import d0.g0.Strings4;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.w;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Calendar;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
@@ -37,7 +37,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
 /* loaded from: classes.dex */
-public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewState> {
+public final class WidgetUserSetCustomStatusViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -48,7 +48,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
 
     /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -61,7 +61,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             WidgetUserSetCustomStatusViewModel.access$handleStoreState(WidgetUserSetCustomStatusViewModel.this, storeState);
         }
     }
@@ -76,8 +76,8 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
 
         private final Observable<StoreState> observeStoreState(StoreUserSettings storeUserSettings, StoreEmoji storeEmoji) {
-            Observable<StoreState> observableZ = Observable.j(storeUserSettings.observeCustomStatus(), storeEmoji.getEmojiSet(StoreEmoji.EmojiContext.Global.INSTANCE, false, false), WidgetUserSetCustomStatusViewModel2.INSTANCE).Z(1);
-            Intrinsics3.checkNotNullExpressionValue(observableZ, "Observable.combineLatest…        )\n      }.take(1)");
+            Observable<StoreState> observableZ = Observable.j(storeUserSettings.observeCustomStatus(), storeEmoji.getEmojiSet(StoreEmoji.EmojiContext.Global.INSTANCE, false, false), WidgetUserSetCustomStatusViewModel$Companion$observeStoreState$1.INSTANCE).Z(1);
+            m.checkNotNullExpressionValue(observableZ, "Observable.combineLatest…        )\n      }.take(1)");
             return observableZ;
         }
 
@@ -134,7 +134,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                return outline.B(outline.U("SetStatusFailure(failureMessageStringRes="), this.failureMessageStringRes, ")");
+                return a.B(a.U("SetStatusFailure(failureMessageStringRes="), this.failureMessageStringRes, ")");
             }
         }
 
@@ -179,7 +179,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                return outline.B(outline.U("SetStatusSuccess(successMessageStringRes="), this.successMessageStringRes, ")");
+                return a.B(a.U("SetStatusSuccess(successMessageStringRes="), this.successMessageStringRes, ")");
             }
         }
 
@@ -207,8 +207,8 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
 
         public FormState(Emoji emoji, String str, Expiration expiration) {
-            Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-            Intrinsics3.checkNotNullParameter(expiration, "expiration");
+            m.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+            m.checkNotNullParameter(expiration, "expiration");
             this.emoji = emoji;
             this.text = str;
             this.expiration = expiration;
@@ -243,8 +243,8 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
 
         public final FormState copy(Emoji emoji, String text, Expiration expiration) {
-            Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
-            Intrinsics3.checkNotNullParameter(expiration, "expiration");
+            m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+            m.checkNotNullParameter(expiration, "expiration");
             return new FormState(emoji, text, expiration);
         }
 
@@ -256,7 +256,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
                 return false;
             }
             FormState formState = (FormState) other;
-            return Intrinsics3.areEqual(this.emoji, formState.emoji) && Intrinsics3.areEqual(this.text, formState.text) && Intrinsics3.areEqual(this.expiration, formState.expiration);
+            return m.areEqual(this.emoji, formState.emoji) && m.areEqual(this.text, formState.text) && m.areEqual(this.expiration, formState.expiration);
         }
 
         public final Emoji getEmoji() {
@@ -281,7 +281,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("FormState(emoji=");
+            StringBuilder sbU = a.U("FormState(emoji=");
             sbU.append(this.emoji);
             sbU.append(", text=");
             sbU.append(this.text);
@@ -298,8 +298,8 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         private final EmojiSet emojiSet;
 
         public StoreState(ModelCustomStatusSetting modelCustomStatusSetting, EmojiSet emojiSet) {
-            Intrinsics3.checkNotNullParameter(modelCustomStatusSetting, "customStatusSetting");
-            Intrinsics3.checkNotNullParameter(emojiSet, "emojiSet");
+            m.checkNotNullParameter(modelCustomStatusSetting, "customStatusSetting");
+            m.checkNotNullParameter(emojiSet, "emojiSet");
             this.customStatusSetting = modelCustomStatusSetting;
             this.emojiSet = emojiSet;
         }
@@ -325,8 +325,8 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
 
         public final StoreState copy(ModelCustomStatusSetting customStatusSetting, EmojiSet emojiSet) {
-            Intrinsics3.checkNotNullParameter(customStatusSetting, "customStatusSetting");
-            Intrinsics3.checkNotNullParameter(emojiSet, "emojiSet");
+            m.checkNotNullParameter(customStatusSetting, "customStatusSetting");
+            m.checkNotNullParameter(emojiSet, "emojiSet");
             return new StoreState(customStatusSetting, emojiSet);
         }
 
@@ -338,7 +338,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.customStatusSetting, storeState.customStatusSetting) && Intrinsics3.areEqual(this.emojiSet, storeState.emojiSet);
+            return m.areEqual(this.customStatusSetting, storeState.customStatusSetting) && m.areEqual(this.emojiSet, storeState.emojiSet);
         }
 
         public final ModelCustomStatusSetting getCustomStatusSetting() {
@@ -357,7 +357,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(customStatusSetting=");
+            StringBuilder sbU = a.U("StoreState(customStatusSetting=");
             sbU.append(this.customStatusSetting);
             sbU.append(", emojiSet=");
             sbU.append(this.emojiSet);
@@ -376,7 +376,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(FormState formState) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(formState, "formState");
+                m.checkNotNullParameter(formState, "formState");
                 this.formState = formState;
             }
 
@@ -393,13 +393,13 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             }
 
             public final Loaded copy(FormState formState) {
-                Intrinsics3.checkNotNullParameter(formState, "formState");
+                m.checkNotNullParameter(formState, "formState");
                 return new Loaded(formState);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.formState, ((Loaded) other).formState);
+                    return (other instanceof Loaded) && m.areEqual(this.formState, ((Loaded) other).formState);
                 }
                 return true;
             }
@@ -426,7 +426,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(formState=");
+                StringBuilder sbU = a.U("Loaded(formState=");
                 sbU.append(this.formState);
                 sbU.append(")");
                 return sbU.toString();
@@ -467,7 +467,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
 
     /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$saveStatus$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserSettings, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelUserSettings, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -480,14 +480,14 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
-            Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
+            m.checkNotNullParameter(modelUserSettings, "it");
             WidgetUserSetCustomStatusViewModel.access$emitSetStatusSuccessEvent(WidgetUserSetCustomStatusViewModel.this);
         }
     }
 
     /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
     /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$saveStatus$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -500,7 +500,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetUserSetCustomStatusViewModel.access$emitSetStatusFailureEvent(WidgetUserSetCustomStatusViewModel.this);
         }
     }
@@ -637,7 +637,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -652,7 +652,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             FormState formState = loaded.getFormState();
             String text = formState.getText();
             Objects.requireNonNull(text, "null cannot be cast to non-null type kotlin.CharSequence");
-            String string = Strings4.trim(text).toString();
+            String string = w.trim(text).toString();
             if (!(string.length() > 0)) {
                 string = null;
             }
@@ -681,7 +681,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
     }
 
     public final void setExpiration(FormState.Expiration expiration) {
-        Intrinsics3.checkNotNullParameter(expiration, "expiration");
+        m.checkNotNullParameter(expiration, "expiration");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -693,7 +693,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
     }
 
     public final void setStatusEmoji(Emoji emoji) {
-        Intrinsics3.checkNotNullParameter(emoji, "emoji");
+        m.checkNotNullParameter(emoji, "emoji");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -705,7 +705,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
     }
 
     public final void setStatusText(String text) {
-        Intrinsics3.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
+        m.checkNotNullParameter(text, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -719,9 +719,9 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetUserSetCustomStatusViewModel(StoreUserSettings storeUserSettings, Clock clock, Observable<StoreState> observable) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.storeUserSettings = storeUserSettings;
         this.clock = clock;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), WidgetUserSetCustomStatusViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);

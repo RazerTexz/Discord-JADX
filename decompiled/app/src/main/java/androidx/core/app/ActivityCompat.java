@@ -27,7 +27,7 @@ import androidx.core.app.SharedElementCallback;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.LocusIdCompat;
 import androidx.core.view.DragAndDropPermissionsCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -227,7 +227,7 @@ public class ActivityCompat extends ContextCompat {
         if (permissionCompatDelegate == null || !permissionCompatDelegate.requestPermissions(activity, strArr, i)) {
             for (String str : strArr) {
                 if (TextUtils.isEmpty(str)) {
-                    throw new IllegalArgumentException(outline.J(outline.U("Permission request for permissions "), Arrays.toString(strArr), " must not contain null or empty values"));
+                    throw new IllegalArgumentException(a.J(a.U("Permission request for permissions "), Arrays.toString(strArr), " must not contain null or empty values"));
                 }
             }
             if (Build.VERSION.SDK_INT >= 23) {

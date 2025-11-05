@@ -9,7 +9,7 @@ import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.spans.QuoteSpan;
 import com.discord.utilities.textprocessing.node.BasicRenderContext;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -60,8 +60,8 @@ public final class BlockQuoteNode<T extends BasicRenderContext> extends Node<T> 
     }
 
     public void render(SpannableStringBuilder builder, T renderContext) {
-        Intrinsics3.checkNotNullParameter(builder, "builder");
-        Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
+        m.checkNotNullParameter(builder, "builder");
+        m.checkNotNullParameter(renderContext, "renderContext");
         builder.append('\n');
         int iDpToPixels = DimenUtils.dpToPixels(8);
         builder.setSpan(new AbsoluteSizeSpan(iDpToPixels), builder.length() - 1, builder.length(), 33);

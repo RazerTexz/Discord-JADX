@@ -4,8 +4,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.StringRes;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.WidgetChatListAdapterItemPrivateChannelStartBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -13,14 +13,14 @@ import com.discord.models.guild.Guild;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.views.PileView;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.StartOfPrivateChatEntry;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.g0.StringsJVM;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import d0.g0.t;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
@@ -33,7 +33,7 @@ public final class WidgetChatListAdapterItemPrivateChannelStart extends WidgetCh
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemPrivateChannelStart(WidgetChatListAdapter widgetChatListAdapter) {
         super(R.layout.widget_chat_list_adapter_item_private_channel_start, widgetChatListAdapter);
-        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
         int i = R.id.chat_list_adapter_item_private_channel_start_header;
         TextView textView = (TextView) view.findViewById(R.id.chat_list_adapter_item_private_channel_start_header);
@@ -54,7 +54,7 @@ public final class WidgetChatListAdapterItemPrivateChannelStart extends WidgetCh
                             TextView textView3 = (TextView) view.findViewById(R.id.private_channel_start_text);
                             if (textView3 != null) {
                                 WidgetChatListAdapterItemPrivateChannelStartBinding widgetChatListAdapterItemPrivateChannelStartBinding = new WidgetChatListAdapterItemPrivateChannelStartBinding((LinearLayout) view, textView, pileView, linearLayout, textView2, simpleDraweeView, textView3);
-                                Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemPrivateChannelStartBinding, "WidgetChatListAdapterIte…artBinding.bind(itemView)");
+                                m.checkNotNullExpressionValue(widgetChatListAdapterItemPrivateChannelStartBinding, "WidgetChatListAdapterIte…artBinding.bind(itemView)");
                                 this.binding = widgetChatListAdapterItemPrivateChannelStartBinding;
                                 return;
                             }
@@ -80,7 +80,7 @@ public final class WidgetChatListAdapterItemPrivateChannelStart extends WidgetCh
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
         CharSequence charSequenceJ;
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         StartOfPrivateChatEntry startOfPrivateChatEntry = (StartOfPrivateChatEntry) data;
         String strComponent2 = startOfPrivateChatEntry.getChannelName();
@@ -88,50 +88,50 @@ public final class WidgetChatListAdapterItemPrivateChannelStart extends WidgetCh
         String strComponent4 = startOfPrivateChatEntry.getChannelIcon();
         boolean zComponent5 = startOfPrivateChatEntry.getIsSystemDM();
         List<Guild> listComponent6 = startOfPrivateChatEntry.component6();
-        if (!(!StringsJVM.isBlank(strComponent2))) {
+        if (!(!t.isBlank(strComponent2))) {
             TextView textView = this.binding.f2328b;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterI…PrivateChannelStartHeader");
+            m.checkNotNullExpressionValue(textView, "binding.chatListAdapterI…PrivateChannelStartHeader");
             strComponent2 = textView.getContext().getString(R.string.unnamed);
-            Intrinsics3.checkNotNullExpressionValue(strComponent2, "binding.chatListAdapterI…tString(R.string.unnamed)");
+            m.checkNotNullExpressionValue(strComponent2, "binding.chatListAdapterI…tString(R.string.unnamed)");
         }
         TextView textView2 = this.binding.f2328b;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.chatListAdapterI…PrivateChannelStartHeader");
+        m.checkNotNullExpressionValue(textView2, "binding.chatListAdapterI…PrivateChannelStartHeader");
         textView2.setText(strComponent2);
         if (strComponent4 != null) {
             SimpleDraweeView simpleDraweeView = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.privateChannelStartImage");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.privateChannelStartImage");
             IconUtils.setIcon$default(simpleDraweeView, strComponent4, R.dimen.avatar_size_xxlarge, (Function1) null, (MGImages.ChangeDetector) null, 24, (Object) null);
         } else {
             SimpleDraweeView simpleDraweeView2 = this.binding.f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.privateChannelStartImage");
+            m.checkNotNullExpressionValue(simpleDraweeView2, "binding.privateChannelStartImage");
             IconUtils.setIcon$default(simpleDraweeView2, IconUtils.DEFAULT_ICON, R.dimen.avatar_size_xxlarge, (Function1) null, (MGImages.ChangeDetector) null, 24, (Object) null);
         }
         if (zComponent5) {
             this.binding.g.setText(R.string.system_dm_empty_message);
         } else {
             TextView textView3 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.privateChannelStartText");
-            FormatUtils.n(textView3, getStartResId(iComponent3), new Object[]{strComponent2}, null, 4);
+            m.checkNotNullExpressionValue(textView3, "binding.privateChannelStartText");
+            b.n(textView3, getStartResId(iComponent3), new Object[]{strComponent2}, null, 4);
         }
         boolean z2 = !zComponent5 && iComponent3 == 1;
         LinearLayout linearLayout = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.mutualGuilds");
+        m.checkNotNullExpressionValue(linearLayout, "binding.mutualGuilds");
         linearLayout.setVisibility(z2 ? 0 : 8);
         if (z2) {
             PileView pileView = this.binding.c;
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listComponent6, 10));
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(listComponent6, 10));
             for (Guild guild : listComponent6) {
-                arrayList.add(new PileView.c(new WidgetChatListAdapterItemPrivateChannelStart2(IconUtils.getForGuild$default(guild, null, false, Integer.valueOf(DimenUtils.dpToPixels(24)), 2, null)), new WidgetChatListAdapterItemPrivateChannelStart3(guild)));
+                arrayList.add(new PileView.c(new WidgetChatListAdapterItemPrivateChannelStart$onConfigure$1$1(IconUtils.getForGuild$default(guild, null, false, Integer.valueOf(DimenUtils.dpToPixels(24)), 2, null)), new WidgetChatListAdapterItemPrivateChannelStart$onConfigure$1$2(guild)));
             }
             pileView.setItems(arrayList);
             TextView textView4 = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.mutualGuildsText");
+            m.checkNotNullExpressionValue(textView4, "binding.mutualGuildsText");
             if (!listComponent6.isEmpty()) {
-                charSequenceJ = StringResourceUtils.getI18nPluralString(outline.I(this.binding.e, "binding.mutualGuildsText", "binding.mutualGuildsText.context"), R.plurals.user_profile_mutual_guilds_count, listComponent6.size(), Integer.valueOf(listComponent6.size()));
+                charSequenceJ = StringResourceUtilsKt.getI18nPluralString(a.I(this.binding.e, "binding.mutualGuildsText", "binding.mutualGuildsText.context"), R.plurals.user_profile_mutual_guilds_count, listComponent6.size(), Integer.valueOf(listComponent6.size()));
             } else {
                 TextView textView5 = this.binding.e;
-                Intrinsics3.checkNotNullExpressionValue(textView5, "binding.mutualGuildsText");
-                charSequenceJ = FormatUtils.j(textView5, R.string.no_mutual_guilds, new Object[0], null, 4);
+                m.checkNotNullExpressionValue(textView5, "binding.mutualGuildsText");
+                charSequenceJ = b.j(textView5, R.string.no_mutual_guilds, new Object[0], null, 4);
             }
             textView4.setText(charSequenceJ);
         }

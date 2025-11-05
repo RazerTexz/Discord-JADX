@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.util.ObjectsCompat;
-import b.i.a.g.d.UtcDates;
+import b.i.a.g.d.l;
 import java.util.Arrays;
 
 /* loaded from: classes3.dex */
@@ -159,8 +159,8 @@ public final class CalendarConstraints implements Parcelable {
         private Long openAt;
         private long start;
         private DateValidator validator;
-        public static final long DEFAULT_START = UtcDates.a(Month.g(1900, 0).o);
-        public static final long DEFAULT_END = UtcDates.a(Month.g(2100, 11).o);
+        public static final long DEFAULT_START = l.a(Month.g(1900, 0).o);
+        public static final long DEFAULT_END = l.a(Month.g(2100, 11).o);
 
         public Builder() {
             this.start = DEFAULT_START;

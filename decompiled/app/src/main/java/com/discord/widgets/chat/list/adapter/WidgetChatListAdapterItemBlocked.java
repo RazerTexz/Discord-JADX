@@ -5,16 +5,16 @@ import android.content.res.Resources;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.WidgetChatListAdapterItemBlockedBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.message.Message;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.widgets.chat.list.entries.BlockedMessagesEntry;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetChatListAdapterItemBlocked.kt */
 /* loaded from: classes2.dex */
@@ -39,14 +39,14 @@ public final class WidgetChatListAdapterItemBlocked extends WidgetChatListItem {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChatListAdapterItemBlocked(WidgetChatListAdapter widgetChatListAdapter) {
         super(R.layout.widget_chat_list_adapter_item_blocked, widgetChatListAdapter);
-        Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
+        m.checkNotNullParameter(widgetChatListAdapter, "adapter");
         View view = this.itemView;
         TextView textView = (TextView) view.findViewById(R.id.chat_list_adapter_item_blocked);
         if (textView == null) {
             throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(R.id.chat_list_adapter_item_blocked)));
         }
         WidgetChatListAdapterItemBlockedBinding widgetChatListAdapterItemBlockedBinding = new WidgetChatListAdapterItemBlockedBinding((RelativeLayout) view, textView);
-        Intrinsics3.checkNotNullExpressionValue(widgetChatListAdapterItemBlockedBinding, "WidgetChatListAdapterIte…kedBinding.bind(itemView)");
+        m.checkNotNullExpressionValue(widgetChatListAdapterItemBlockedBinding, "WidgetChatListAdapterIte…kedBinding.bind(itemView)");
         this.binding = widgetChatListAdapterItemBlockedBinding;
     }
 
@@ -55,7 +55,7 @@ public final class WidgetChatListAdapterItemBlocked extends WidgetChatListItem {
     }
 
     private final CharSequence getBlockedText(Resources resources, Context context, int i) {
-        return FormatUtils.i(resources, R.string.blocked_messages, new Object[]{StringResourceUtils.getI18nPluralString(context, R.plurals.blocked_messages_count, i, Integer.valueOf(i))}, null, 4);
+        return b.i(resources, R.string.blocked_messages, new Object[]{StringResourceUtilsKt.getI18nPluralString(context, R.plurals.blocked_messages_count, i, Integer.valueOf(i))}, null, 4);
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
@@ -66,18 +66,18 @@ public final class WidgetChatListAdapterItemBlocked extends WidgetChatListItem {
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
     public void onConfigure(int position, ChatListEntry data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         BlockedMessagesEntry blockedMessagesEntry = (BlockedMessagesEntry) data;
         Message messageComponent1 = blockedMessagesEntry.getMessage();
         int iComponent2 = blockedMessagesEntry.getBlockedCount();
         TextView textView = this.binding.f2312b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemBlocked");
+        m.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemBlocked");
         View view = this.itemView;
-        Intrinsics3.checkNotNullExpressionValue(view, "itemView");
+        m.checkNotNullExpressionValue(view, "itemView");
         Resources resources = view.getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "itemView.resources");
-        textView.setText(getBlockedText(resources, outline.x(this.itemView, "itemView", "itemView.context"), iComponent2));
+        m.checkNotNullExpressionValue(resources, "itemView.resources");
+        textView.setText(getBlockedText(resources, a.x(this.itemView, "itemView", "itemView.context"), iComponent2));
         this.binding.a.setOnClickListener(new AnonymousClass1(messageComponent1));
     }
 }

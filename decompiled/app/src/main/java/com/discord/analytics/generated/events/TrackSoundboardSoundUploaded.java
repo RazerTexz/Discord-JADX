@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSoundboardSoundUploaded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSoundboardSoundUploaded implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSoundboardSoundUploaded implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final Boolean success = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackSoundboardSoundUploaded implements AnalyticsS
             return false;
         }
         TrackSoundboardSoundUploaded trackSoundboardSoundUploaded = (TrackSoundboardSoundUploaded) other;
-        return Intrinsics3.areEqual(this.guildId, trackSoundboardSoundUploaded.guildId) && Intrinsics3.areEqual(this.success, trackSoundboardSoundUploaded.success) && Intrinsics3.areEqual(this.reasonCode, trackSoundboardSoundUploaded.reasonCode) && Intrinsics3.areEqual(this.reasonMessage, trackSoundboardSoundUploaded.reasonMessage) && Intrinsics3.areEqual(this.mimeType, trackSoundboardSoundUploaded.mimeType) && Intrinsics3.areEqual(this.durationS, trackSoundboardSoundUploaded.durationS);
+        return m.areEqual(this.guildId, trackSoundboardSoundUploaded.guildId) && m.areEqual(this.success, trackSoundboardSoundUploaded.success) && m.areEqual(this.reasonCode, trackSoundboardSoundUploaded.reasonCode) && m.areEqual(this.reasonMessage, trackSoundboardSoundUploaded.reasonMessage) && m.areEqual(this.mimeType, trackSoundboardSoundUploaded.mimeType) && m.areEqual(this.durationS, trackSoundboardSoundUploaded.durationS);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackSoundboardSoundUploaded implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSoundboardSoundUploaded(guildId=");
+        StringBuilder sbU = a.U("TrackSoundboardSoundUploaded(guildId=");
         sbU.append(this.guildId);
         sbU.append(", success=");
         sbU.append(this.success);

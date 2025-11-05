@@ -3,7 +3,7 @@ package androidx.constraintlayout.solver.state;
 import androidx.constraintlayout.solver.state.State;
 import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 
 /* loaded from: classes.dex */
@@ -133,7 +133,7 @@ public class ConstraintReference implements Reference {
 
         @Override // java.lang.Throwable
         public String toString() {
-            StringBuilder sbU = outline.U("IncorrectConstraintException: ");
+            StringBuilder sbU = a.U("IncorrectConstraintException: ");
             sbU.append(this.mErrors.toString());
             return sbU.toString();
         }

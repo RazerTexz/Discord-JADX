@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalActionPoker.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalActionPoker implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalActionPoker implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence actionName = null;
@@ -45,7 +45,7 @@ public final /* data */ class TrackActivityInternalActionPoker implements Analyt
             return false;
         }
         TrackActivityInternalActionPoker trackActivityInternalActionPoker = (TrackActivityInternalActionPoker) other;
-        return Intrinsics3.areEqual(this.actionName, trackActivityInternalActionPoker.actionName) && Intrinsics3.areEqual(this.numBots, trackActivityInternalActionPoker.numBots) && Intrinsics3.areEqual(this.numPlayers, trackActivityInternalActionPoker.numPlayers) && Intrinsics3.areEqual(this.numSpectators, trackActivityInternalActionPoker.numSpectators) && Intrinsics3.areEqual(this.phase, trackActivityInternalActionPoker.phase) && Intrinsics3.areEqual(this.turnDurationS, trackActivityInternalActionPoker.turnDurationS) && Intrinsics3.areEqual(this.betAction, trackActivityInternalActionPoker.betAction) && Intrinsics3.areEqual(this.betAmount, trackActivityInternalActionPoker.betAmount) && Intrinsics3.areEqual(this.winnings, trackActivityInternalActionPoker.winnings) && Intrinsics3.areEqual(this.startingWallet, trackActivityInternalActionPoker.startingWallet) && Intrinsics3.areEqual(this.currentWallet, trackActivityInternalActionPoker.currentWallet) && Intrinsics3.areEqual(this.potSize, trackActivityInternalActionPoker.potSize) && Intrinsics3.areEqual(this.tableRank, trackActivityInternalActionPoker.tableRank) && Intrinsics3.areEqual(this.cosmeticType, trackActivityInternalActionPoker.cosmeticType) && Intrinsics3.areEqual(this.cosmeticId, trackActivityInternalActionPoker.cosmeticId) && Intrinsics3.areEqual(this.cosmeticLocked, trackActivityInternalActionPoker.cosmeticLocked);
+        return m.areEqual(this.actionName, trackActivityInternalActionPoker.actionName) && m.areEqual(this.numBots, trackActivityInternalActionPoker.numBots) && m.areEqual(this.numPlayers, trackActivityInternalActionPoker.numPlayers) && m.areEqual(this.numSpectators, trackActivityInternalActionPoker.numSpectators) && m.areEqual(this.phase, trackActivityInternalActionPoker.phase) && m.areEqual(this.turnDurationS, trackActivityInternalActionPoker.turnDurationS) && m.areEqual(this.betAction, trackActivityInternalActionPoker.betAction) && m.areEqual(this.betAmount, trackActivityInternalActionPoker.betAmount) && m.areEqual(this.winnings, trackActivityInternalActionPoker.winnings) && m.areEqual(this.startingWallet, trackActivityInternalActionPoker.startingWallet) && m.areEqual(this.currentWallet, trackActivityInternalActionPoker.currentWallet) && m.areEqual(this.potSize, trackActivityInternalActionPoker.potSize) && m.areEqual(this.tableRank, trackActivityInternalActionPoker.tableRank) && m.areEqual(this.cosmeticType, trackActivityInternalActionPoker.cosmeticType) && m.areEqual(this.cosmeticId, trackActivityInternalActionPoker.cosmeticId) && m.areEqual(this.cosmeticLocked, trackActivityInternalActionPoker.cosmeticLocked);
     }
 
     public int hashCode() {
@@ -84,7 +84,7 @@ public final /* data */ class TrackActivityInternalActionPoker implements Analyt
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalActionPoker(actionName=");
+        StringBuilder sbU = a.U("TrackActivityInternalActionPoker(actionName=");
         sbU.append(this.actionName);
         sbU.append(", numBots=");
         sbU.append(this.numBots);
@@ -115,6 +115,6 @@ public final /* data */ class TrackActivityInternalActionPoker implements Analyt
         sbU.append(", cosmeticId=");
         sbU.append(this.cosmeticId);
         sbU.append(", cosmeticLocked=");
-        return outline.D(sbU, this.cosmeticLocked, ")");
+        return a.D(sbU, this.cosmeticLocked, ")");
     }
 }

@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackCreateInstantInvite.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean temporary = null;
     private final Long maxUses = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchem
             return false;
         }
         TrackCreateInstantInvite trackCreateInstantInvite = (TrackCreateInstantInvite) other;
-        return Intrinsics3.areEqual(this.temporary, trackCreateInstantInvite.temporary) && Intrinsics3.areEqual(this.maxUses, trackCreateInstantInvite.maxUses) && Intrinsics3.areEqual(this.maxAge, trackCreateInstantInvite.maxAge) && Intrinsics3.areEqual(this.regenerate, trackCreateInstantInvite.regenerate) && Intrinsics3.areEqual(this.unique, trackCreateInstantInvite.unique) && Intrinsics3.areEqual(this.code, trackCreateInstantInvite.code) && Intrinsics3.areEqual(this.guildId, trackCreateInstantInvite.guildId) && Intrinsics3.areEqual(this.channelId, trackCreateInstantInvite.channelId) && Intrinsics3.areEqual(this.channelType, trackCreateInstantInvite.channelType) && Intrinsics3.areEqual(this.inviteType, trackCreateInstantInvite.inviteType);
+        return m.areEqual(this.temporary, trackCreateInstantInvite.temporary) && m.areEqual(this.maxUses, trackCreateInstantInvite.maxUses) && m.areEqual(this.maxAge, trackCreateInstantInvite.maxAge) && m.areEqual(this.regenerate, trackCreateInstantInvite.regenerate) && m.areEqual(this.unique, trackCreateInstantInvite.unique) && m.areEqual(this.code, trackCreateInstantInvite.code) && m.areEqual(this.guildId, trackCreateInstantInvite.guildId) && m.areEqual(this.channelId, trackCreateInstantInvite.channelId) && m.areEqual(this.channelType, trackCreateInstantInvite.channelType) && m.areEqual(this.inviteType, trackCreateInstantInvite.inviteType);
     }
 
     public int hashCode() {
@@ -64,7 +64,7 @@ public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackCreateInstantInvite(temporary=");
+        StringBuilder sbU = a.U("TrackCreateInstantInvite(temporary=");
         sbU.append(this.temporary);
         sbU.append(", maxUses=");
         sbU.append(this.maxUses);
@@ -83,6 +83,6 @@ public final /* data */ class TrackCreateInstantInvite implements AnalyticsSchem
         sbU.append(", channelType=");
         sbU.append(this.channelType);
         sbU.append(", inviteType=");
-        return outline.G(sbU, this.inviteType, ")");
+        return a.G(sbU, this.inviteType, ")");
     }
 }

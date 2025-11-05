@@ -2,8 +2,8 @@ package com.discord.widgets.emoji;
 
 import android.content.Context;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.models.domain.emoji.ModelEmojiUnicode;
 import com.discord.models.guild.Guild;
@@ -15,14 +15,14 @@ import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreMediaFavorites;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
-import com.discord.utilities.KotlinExtensions;
+import com.discord.utilities.KotlinExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.textprocessing.node.EmojiNode;
-import com.discord.widgets.guilds.join.GuildJoinHelper;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import com.discord.widgets.guilds.join.GuildJoinHelperKt;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.l.e.k;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.Unit;
@@ -33,7 +33,7 @@ import rx.Observable;
 
 /* compiled from: EmojiSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
+public final class EmojiSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -49,7 +49,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: EmojiSheetViewModel.kt */
     /* renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -63,7 +63,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             EmojiSheetViewModel emojiSheetViewModel = EmojiSheetViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "it");
+            m.checkNotNullExpressionValue(storeState, "it");
             EmojiSheetViewModel.access$handleStoreState(emojiSheetViewModel, storeState);
         }
     }
@@ -84,7 +84,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 public Known(Guild guild, boolean z2, boolean z3, Integer num) {
                     super(null);
-                    Intrinsics3.checkNotNullParameter(guild, "guild");
+                    m.checkNotNullParameter(guild, "guild");
                     this.guild = guild;
                     this.isPublic = z2;
                     this.isUserInGuild = z3;
@@ -126,7 +126,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 }
 
                 public final Known copy(Guild guild, boolean isPublic, boolean isUserInGuild, Integer approximateOnline) {
-                    Intrinsics3.checkNotNullParameter(guild, "guild");
+                    m.checkNotNullParameter(guild, "guild");
                     return new Known(guild, isPublic, isUserInGuild, approximateOnline);
                 }
 
@@ -138,7 +138,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                         return false;
                     }
                     Known known = (Known) other;
-                    return Intrinsics3.areEqual(this.guild, known.guild) && getIsPublic() == known.getIsPublic() && getIsUserInGuild() == known.getIsUserInGuild() && Intrinsics3.areEqual(this.approximateOnline, known.approximateOnline);
+                    return m.areEqual(this.guild, known.guild) && getIsPublic() == known.getIsPublic() && getIsUserInGuild() == known.getIsUserInGuild() && m.areEqual(this.approximateOnline, known.approximateOnline);
                 }
 
                 public final Integer getApproximateOnline() {
@@ -184,14 +184,14 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 }
 
                 public String toString() {
-                    StringBuilder sbU = outline.U("Known(guild=");
+                    StringBuilder sbU = a.U("Known(guild=");
                     sbU.append(this.guild);
                     sbU.append(", isPublic=");
                     sbU.append(getIsPublic());
                     sbU.append(", isUserInGuild=");
                     sbU.append(getIsUserInGuild());
                     sbU.append(", approximateOnline=");
-                    return outline.F(sbU, this.approximateOnline, ")");
+                    return a.F(sbU, this.approximateOnline, ")");
                 }
             }
 
@@ -245,18 +245,18 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
             EmojiNode.EmojiIdAndType.Custom custom = (EmojiNode.EmojiIdAndType.Custom) emojiIdAndType;
             if (custom != null) {
-                Observable<CustomEmojGuildInfo> observableA = Observable.D(new EmojiSheetViewModel2(storeEmojiCustom, custom, storeGuilds)).A(new EmojiSheetViewModel3(restAPI, custom));
-                Intrinsics3.checkNotNullExpressionValue(observableA, "Observable.fromCallable …      }\n        }\n      }");
+                Observable<CustomEmojGuildInfo> observableA = Observable.D(new EmojiSheetViewModel$Companion$getGuildForCustomEmoji$1(storeEmojiCustom, custom, storeGuilds)).A(new EmojiSheetViewModel$Companion$getGuildForCustomEmoji$2(restAPI, custom));
+                m.checkNotNullExpressionValue(observableA, "Observable.fromCallable …      }\n        }\n      }");
                 return observableA;
             }
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(null)");
-            return scalarSynchronousObservable;
+            k kVar = new k(null);
+            m.checkNotNullExpressionValue(kVar, "Observable.just(null)");
+            return kVar;
         }
 
         private final Observable<StoreState> observeStoreState(RestAPI restAPI, EmojiNode.EmojiIdAndType emojiIdAndType, StoreUser storeUsers, StoreGuilds storeGuilds, StoreEmojiCustom storeEmojiCustom, StoreChannelsSelected storeChannelsSelected, StoreMediaFavorites storeMediaFavorites) {
-            Observable<StoreState> observableG = Observable.g(getGuildForCustomEmoji(restAPI, emojiIdAndType, storeGuilds, storeEmojiCustom), StoreUser.observeMe$default(storeUsers, false, 1, null), storeGuilds.observeGuilds(), storeChannelsSelected.observeSelectedChannel(), storeMediaFavorites.observeFavorites(StoreMediaFavorites.Favorite.INSTANCE.getEmojiTypes()), new EmojiSheetViewModel4(emojiIdAndType));
-            Intrinsics3.checkNotNullExpressionValue(observableG, "Observable.combineLatest…es,\n          )\n        }");
+            Observable<StoreState> observableG = Observable.g(getGuildForCustomEmoji(restAPI, emojiIdAndType, storeGuilds, storeEmojiCustom), StoreUser.observeMe$default(storeUsers, false, 1, null), storeGuilds.observeGuilds(), storeChannelsSelected.observeSelectedChannel(), storeMediaFavorites.observeFavorites(StoreMediaFavorites.Favorite.INSTANCE.getEmojiTypes()), new EmojiSheetViewModel$Companion$observeStoreState$1(emojiIdAndType));
+            m.checkNotNullExpressionValue(observableG, "Observable.combineLatest…es,\n          )\n        }");
             return observableG;
         }
 
@@ -276,9 +276,9 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
 
         /* JADX WARN: Multi-variable type inference failed */
         public StoreState(Companion.CustomEmojGuildInfo customEmojGuildInfo, EmojiNode.EmojiIdAndType emojiIdAndType, boolean z2, Set<Long> set, Channel channel, Set<? extends StoreMediaFavorites.Favorite> set2) {
-            Intrinsics3.checkNotNullParameter(emojiIdAndType, "emoji");
-            Intrinsics3.checkNotNullParameter(set, "joinedGuildIds");
-            Intrinsics3.checkNotNullParameter(set2, "favorites");
+            m.checkNotNullParameter(emojiIdAndType, "emoji");
+            m.checkNotNullParameter(set, "joinedGuildIds");
+            m.checkNotNullParameter(set2, "favorites");
             this.customEmojiGuildInfo = customEmojGuildInfo;
             this.emoji = emojiIdAndType;
             this.meUserIsPremium = z2;
@@ -342,9 +342,9 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(Companion.CustomEmojGuildInfo customEmojiGuildInfo, EmojiNode.EmojiIdAndType emoji, boolean meUserIsPremium, Set<Long> joinedGuildIds, Channel currentChannel, Set<? extends StoreMediaFavorites.Favorite> favorites) {
-            Intrinsics3.checkNotNullParameter(emoji, "emoji");
-            Intrinsics3.checkNotNullParameter(joinedGuildIds, "joinedGuildIds");
-            Intrinsics3.checkNotNullParameter(favorites, "favorites");
+            m.checkNotNullParameter(emoji, "emoji");
+            m.checkNotNullParameter(joinedGuildIds, "joinedGuildIds");
+            m.checkNotNullParameter(favorites, "favorites");
             return new StoreState(customEmojiGuildInfo, emoji, meUserIsPremium, joinedGuildIds, currentChannel, favorites);
         }
 
@@ -356,7 +356,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.customEmojiGuildInfo, storeState.customEmojiGuildInfo) && Intrinsics3.areEqual(this.emoji, storeState.emoji) && this.meUserIsPremium == storeState.meUserIsPremium && Intrinsics3.areEqual(this.joinedGuildIds, storeState.joinedGuildIds) && Intrinsics3.areEqual(this.currentChannel, storeState.currentChannel) && Intrinsics3.areEqual(this.favorites, storeState.favorites);
+            return m.areEqual(this.customEmojiGuildInfo, storeState.customEmojiGuildInfo) && m.areEqual(this.emoji, storeState.emoji) && this.meUserIsPremium == storeState.meUserIsPremium && m.areEqual(this.joinedGuildIds, storeState.joinedGuildIds) && m.areEqual(this.currentChannel, storeState.currentChannel) && m.areEqual(this.favorites, storeState.favorites);
         }
 
         public final Channel getCurrentChannel() {
@@ -404,7 +404,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(customEmojiGuildInfo=");
+            StringBuilder sbU = a.U("StoreState(customEmojiGuildInfo=");
             sbU.append(this.customEmojiGuildInfo);
             sbU.append(", emoji=");
             sbU.append(this.emoji);
@@ -415,7 +415,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             sbU.append(", currentChannel=");
             sbU.append(this.currentChannel);
             sbU.append(", favorites=");
-            return outline.N(sbU, this.favorites, ")");
+            return a.N(sbU, this.favorites, ")");
         }
     }
 
@@ -443,8 +443,8 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public EmojiCustom(EmojiNode.EmojiIdAndType.Custom custom, Companion.CustomEmojGuildInfo customEmojGuildInfo, boolean z2, boolean z3, boolean z4, boolean z5) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(custom, "emojiCustom");
-                Intrinsics3.checkNotNullParameter(customEmojGuildInfo, "emojiGuildInfo");
+                m.checkNotNullParameter(custom, "emojiCustom");
+                m.checkNotNullParameter(customEmojGuildInfo, "emojiGuildInfo");
                 this.emojiCustom = custom;
                 this.emojiGuildInfo = customEmojGuildInfo;
                 this.isUserPremium = z2;
@@ -510,8 +510,8 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
 
             public final EmojiCustom copy(EmojiNode.EmojiIdAndType.Custom emojiCustom, Companion.CustomEmojGuildInfo emojiGuildInfo, boolean isUserPremium, boolean isCurrentGuild, boolean canFavorite, boolean isFavorite) {
-                Intrinsics3.checkNotNullParameter(emojiCustom, "emojiCustom");
-                Intrinsics3.checkNotNullParameter(emojiGuildInfo, "emojiGuildInfo");
+                m.checkNotNullParameter(emojiCustom, "emojiCustom");
+                m.checkNotNullParameter(emojiGuildInfo, "emojiGuildInfo");
                 return new EmojiCustom(emojiCustom, emojiGuildInfo, isUserPremium, isCurrentGuild, canFavorite, isFavorite);
             }
 
@@ -523,7 +523,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 EmojiCustom emojiCustom = (EmojiCustom) other;
-                return Intrinsics3.areEqual(this.emojiCustom, emojiCustom.emojiCustom) && Intrinsics3.areEqual(this.emojiGuildInfo, emojiCustom.emojiGuildInfo) && this.isUserPremium == emojiCustom.isUserPremium && this.isCurrentGuild == emojiCustom.isCurrentGuild && this.canFavorite == emojiCustom.canFavorite && this.isFavorite == emojiCustom.isFavorite;
+                return m.areEqual(this.emojiCustom, emojiCustom.emojiCustom) && m.areEqual(this.emojiGuildInfo, emojiCustom.emojiGuildInfo) && this.isUserPremium == emojiCustom.isUserPremium && this.isCurrentGuild == emojiCustom.isCurrentGuild && this.canFavorite == emojiCustom.canFavorite && this.isFavorite == emojiCustom.isFavorite;
             }
 
             public final boolean getCanFavorite() {
@@ -579,7 +579,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("EmojiCustom(emojiCustom=");
+                StringBuilder sbU = a.U("EmojiCustom(emojiCustom=");
                 sbU.append(this.emojiCustom);
                 sbU.append(", emojiGuildInfo=");
                 sbU.append(this.emojiGuildInfo);
@@ -590,7 +590,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 sbU.append(", canFavorite=");
                 sbU.append(this.canFavorite);
                 sbU.append(", isFavorite=");
-                return outline.O(sbU, this.isFavorite, ")");
+                return a.O(sbU, this.isFavorite, ")");
             }
         }
 
@@ -603,7 +603,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public EmojiUnicode(ModelEmojiUnicode modelEmojiUnicode, boolean z2, boolean z3) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelEmojiUnicode, "emojiUnicode");
+                m.checkNotNullParameter(modelEmojiUnicode, "emojiUnicode");
                 this.emojiUnicode = modelEmojiUnicode;
                 this.canFavorite = z2;
                 this.isFavorite = z3;
@@ -638,7 +638,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
 
             public final EmojiUnicode copy(ModelEmojiUnicode emojiUnicode, boolean canFavorite, boolean isFavorite) {
-                Intrinsics3.checkNotNullParameter(emojiUnicode, "emojiUnicode");
+                m.checkNotNullParameter(emojiUnicode, "emojiUnicode");
                 return new EmojiUnicode(emojiUnicode, canFavorite, isFavorite);
             }
 
@@ -650,7 +650,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 EmojiUnicode emojiUnicode = (EmojiUnicode) other;
-                return Intrinsics3.areEqual(this.emojiUnicode, emojiUnicode.emojiUnicode) && this.canFavorite == emojiUnicode.canFavorite && this.isFavorite == emojiUnicode.isFavorite;
+                return m.areEqual(this.emojiUnicode, emojiUnicode.emojiUnicode) && this.canFavorite == emojiUnicode.canFavorite && this.isFavorite == emojiUnicode.isFavorite;
             }
 
             public final boolean getCanFavorite() {
@@ -680,12 +680,12 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("EmojiUnicode(emojiUnicode=");
+                StringBuilder sbU = a.U("EmojiUnicode(emojiUnicode=");
                 sbU.append(this.emojiUnicode);
                 sbU.append(", canFavorite=");
                 sbU.append(this.canFavorite);
                 sbU.append(", isFavorite=");
-                return outline.O(sbU, this.isFavorite, ")");
+                return a.O(sbU, this.isFavorite, ")");
             }
         }
 
@@ -717,7 +717,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: EmojiSheetViewModel.kt */
     /* renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$joinGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<com.discord.api.guild.Guild, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -730,7 +730,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
-            Intrinsics3.checkNotNullParameter(guild, "it");
+            m.checkNotNullParameter(guild, "it");
             EmojiSheetViewModel.access$updateViewState(EmojiSheetViewModel.this, ViewState.Dismiss.INSTANCE);
         }
     }
@@ -761,7 +761,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         Objects.requireNonNull(emoji, "null cannot be cast to non-null type com.discord.utilities.textprocessing.node.EmojiNode.EmojiIdAndType.Custom");
         EmojiNode.EmojiIdAndType.Custom custom = (EmojiNode.EmojiIdAndType.Custom) emoji;
         Companion.CustomEmojGuildInfo customEmojiGuildInfo = storeState.getCustomEmojiGuildInfo();
-        Intrinsics3.checkNotNull(customEmojiGuildInfo);
+        m.checkNotNull(customEmojiGuildInfo);
         boolean z2 = !customEmojiGuildInfo.getIsPublic();
         boolean isUserInGuild = customEmojiGuildInfo.getIsUserInGuild();
         boolean meUserIsPremium = storeState.getMeUserIsPremium();
@@ -789,7 +789,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         Objects.requireNonNull(emoji, "null cannot be cast to non-null type com.discord.utilities.textprocessing.node.EmojiNode.EmojiIdAndType.Custom");
         EmojiNode.EmojiIdAndType.Custom custom = (EmojiNode.EmojiIdAndType.Custom) emoji;
         Companion.CustomEmojGuildInfo customEmojiGuildInfo = storeState.getCustomEmojiGuildInfo();
-        Intrinsics3.checkNotNull(customEmojiGuildInfo);
+        m.checkNotNull(customEmojiGuildInfo);
         boolean zContains = storeState.getFavorites().contains(new StoreMediaFavorites.Favorite.FavCustomEmoji(custom));
         boolean isUserInGuild = customEmojiGuildInfo.getIsUserInGuild();
         Channel currentChannel = storeState.getCurrentChannel();
@@ -828,11 +828,11 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
     }
 
     public final void joinGuild(Guild guild, Fragment fragment) {
-        Intrinsics3.checkNotNullParameter(guild, "guild");
-        Intrinsics3.checkNotNullParameter(fragment, "fragment");
+        m.checkNotNullParameter(guild, "guild");
+        m.checkNotNullParameter(fragment, "fragment");
         Context contextRequireContext = fragment.requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "fragment.requireContext()");
-        GuildJoinHelper.joinGuild$default(contextRequireContext, guild.getId(), false, null, null, null, EmojiSheetViewModel.class, null, null, null, new AnonymousClass1(), 952, null);
+        m.checkNotNullExpressionValue(contextRequireContext, "fragment.requireContext()");
+        GuildJoinHelperKt.joinGuild$default(contextRequireContext, guild.getId(), false, null, null, null, EmojiSheetViewModel.class, null, null, null, new AnonymousClass1(), 952, null);
     }
 
     public final void setFavorite(boolean favorite) {
@@ -846,7 +846,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             } else {
                 favUnicodeEmoji = new StoreMediaFavorites.Favorite.FavUnicodeEmoji(((ViewState.EmojiUnicode) viewState).getEmojiUnicode());
             }
-            Object exhaustive = KotlinExtensions.getExhaustive(favUnicodeEmoji);
+            Object exhaustive = KotlinExtensionsKt.getExhaustive(favUnicodeEmoji);
             if (favorite) {
                 this.storeMediaFavorites.addFavorite((StoreMediaFavorites.Favorite) exhaustive);
             } else {
@@ -858,16 +858,16 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public EmojiSheetViewModel(EmojiNode.EmojiIdAndType emojiIdAndType, RestAPI restAPI, StoreEmoji storeEmoji, StoreEmojiCustom storeEmojiCustom, StoreAnalytics storeAnalytics, StoreUser storeUser, StoreGuilds storeGuilds, StoreChannelsSelected storeChannelsSelected, StoreMediaFavorites storeMediaFavorites, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        Intrinsics3.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(storeEmoji, "storeEmoji");
-        Intrinsics3.checkNotNullParameter(storeEmojiCustom, "storeEmojiCustom");
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUsers");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
-        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        Intrinsics3.checkNotNullParameter(storeMediaFavorites, "storeMediaFavorites");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(emojiIdAndType, "emojiIdAndType");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(storeEmoji, "storeEmoji");
+        m.checkNotNullParameter(storeEmojiCustom, "storeEmojiCustom");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(storeUser, "storeUsers");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        m.checkNotNullParameter(storeMediaFavorites, "storeMediaFavorites");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.emojiIdAndType = emojiIdAndType;
         this.restAPI = restAPI;
         this.storeEmoji = storeEmoji;
@@ -878,7 +878,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         this.storeChannelsSelected = storeChannelsSelected;
         this.storeMediaFavorites = storeMediaFavorites;
         Observable observableR = ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(observableR, EmojiSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 }

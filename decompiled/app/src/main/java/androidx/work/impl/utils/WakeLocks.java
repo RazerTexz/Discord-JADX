@@ -5,7 +5,7 @@ import android.os.PowerManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.work.Logger;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.WeakHashMap;
 
@@ -33,7 +33,7 @@ public class WakeLocks {
 
     public static PowerManager.WakeLock newWakeLock(@NonNull Context context, @NonNull String str) {
         PowerManager powerManager = (PowerManager) context.getApplicationContext().getSystemService("power");
-        String strW = outline.w("WorkManager: ", str);
+        String strW = a.w("WorkManager: ", str);
         PowerManager.WakeLock wakeLockNewWakeLock = powerManager.newWakeLock(1, strW);
         WeakHashMap<PowerManager.WakeLock, String> weakHashMap = sWakeLocks;
         synchronized (weakHashMap) {

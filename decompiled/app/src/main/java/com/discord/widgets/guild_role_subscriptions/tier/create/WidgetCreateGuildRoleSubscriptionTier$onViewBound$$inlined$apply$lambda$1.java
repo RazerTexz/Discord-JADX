@@ -1,13 +1,13 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
 /* loaded from: classes2.dex */
-public final class WidgetCreateGuildRoleSubscriptionTier$onViewBound$$inlined$apply$lambda$1 extends Lambda implements Function0<Unit> {
+public final class WidgetCreateGuildRoleSubscriptionTier$onViewBound$$inlined$apply$lambda$1 extends o implements Function0<Unit> {
     public final /* synthetic */ List $steps$inlined;
     public final /* synthetic */ WidgetCreateGuildRoleSubscriptionTier this$0;
 

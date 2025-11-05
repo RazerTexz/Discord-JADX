@@ -2,10 +2,10 @@ package com.discord.utilities.frecency;
 
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.utilities.time.ClockFactory;
-import d0.t.Collections2;
-import d0.t._Collections;
+import d0.t.n;
+import d0.t.u;
 import d0.u.a;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public abstract class FrecencyTracker<T> {
     private final int minScoreThreshold;
     private final HashMap<T, List<Long>> history = new HashMap<>();
     private transient boolean dirty = true;
-    private transient List<? extends T> sortedKeys = Collections2.emptyList();
+    private transient List<? extends T> sortedKeys = n.emptyList();
 
     /* compiled from: FrecencyTracker.kt */
     /* renamed from: com.discord.utilities.frecency.FrecencyTracker$computeScores$1, reason: invalid class name */
@@ -37,13 +37,13 @@ public abstract class FrecencyTracker<T> {
             int iCompareValues;
             Integer num = (Integer) this.$scores.get(t);
             Integer num2 = (Integer) this.$scores.get(t2);
-            if (!Intrinsics3.areEqual(num, num2)) {
+            if (!m.areEqual(num, num2)) {
                 iCompareValues = a.compareValues(num, num2);
             } else {
                 List list = (List) FrecencyTracker.access$getHistory$p(FrecencyTracker.this).get(t);
-                Long l = list != null ? (Long) _Collections.last(list) : null;
+                Long l = list != null ? (Long) u.last(list) : null;
                 List list2 = (List) FrecencyTracker.access$getHistory$p(FrecencyTracker.this).get(t2);
-                iCompareValues = a.compareValues(l, list2 != null ? (Long) _Collections.last(list2) : null);
+                iCompareValues = a.compareValues(l, list2 != null ? (Long) u.last(list2) : null);
             }
             return iCompareValues * (-1);
         }
@@ -72,8 +72,8 @@ public abstract class FrecencyTracker<T> {
             }
         }
         Set setKeySet = map.keySet();
-        Intrinsics3.checkNotNullExpressionValue(setKeySet, "scores.keys");
-        this.sortedKeys = _Collections.sortedWith(setKeySet, new AnonymousClass1(map));
+        m.checkNotNullExpressionValue(setKeySet, "scores.keys");
+        this.sortedKeys = u.sortedWith(setKeySet, new AnonymousClass1(map));
         this.dirty = false;
     }
 
@@ -122,9 +122,9 @@ public abstract class FrecencyTracker<T> {
     public final synchronized void track(T key, long now) {
         List<Long> listEmptyList = this.history.get(key);
         if (listEmptyList == null) {
-            listEmptyList = Collections2.emptyList();
+            listEmptyList = n.emptyList();
         }
-        this.history.put(key, _Collections.takeLast(_Collections.plus((Collection<? extends Long>) listEmptyList, Long.valueOf(now)), this.maxSamples));
+        this.history.put(key, u.takeLast(u.plus((Collection<? extends Long>) listEmptyList, Long.valueOf(now)), this.maxSamples));
         this.dirty = true;
     }
 }

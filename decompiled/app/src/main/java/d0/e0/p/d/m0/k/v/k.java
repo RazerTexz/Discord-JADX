@@ -1,10 +1,7 @@
 package d0.e0.p.d.m0.k.v;
 
-import d0.e0.p.d.m0.c.ModuleDescriptor2;
-import d0.e0.p.d.m0.n.ErrorUtils;
-import d0.e0.p.d.m0.n.KotlinType;
-import d0.e0.p.d.m0.n.KotlinType4;
-import d0.z.d.Intrinsics3;
+import d0.e0.p.d.m0.n.c0;
+import d0.e0.p.d.m0.n.j0;
 import kotlin.Unit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -21,7 +18,7 @@ public abstract class k extends g<Unit> {
         }
 
         public final k create(String str) {
-            Intrinsics3.checkNotNullParameter(str, "message");
+            d0.z.d.m.checkNotNullParameter(str, "message");
             return new b(str);
         }
     }
@@ -31,13 +28,13 @@ public abstract class k extends g<Unit> {
         public final String c;
 
         public b(String str) {
-            Intrinsics3.checkNotNullParameter(str, "message");
+            d0.z.d.m.checkNotNullParameter(str, "message");
             this.c = str;
         }
 
         @Override // d0.e0.p.d.m0.k.v.g
-        public /* bridge */ /* synthetic */ KotlinType getType(ModuleDescriptor2 moduleDescriptor2) {
-            return getType(moduleDescriptor2);
+        public /* bridge */ /* synthetic */ c0 getType(d0.e0.p.d.m0.c.c0 c0Var) {
+            return getType(c0Var);
         }
 
         @Override // d0.e0.p.d.m0.k.v.g
@@ -46,11 +43,11 @@ public abstract class k extends g<Unit> {
         }
 
         @Override // d0.e0.p.d.m0.k.v.g
-        public KotlinType4 getType(ModuleDescriptor2 moduleDescriptor2) {
-            Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
-            KotlinType4 kotlinType4CreateErrorType = ErrorUtils.createErrorType(this.c);
-            Intrinsics3.checkNotNullExpressionValue(kotlinType4CreateErrorType, "createErrorType(message)");
-            return kotlinType4CreateErrorType;
+        public j0 getType(d0.e0.p.d.m0.c.c0 c0Var) {
+            d0.z.d.m.checkNotNullParameter(c0Var, "module");
+            j0 j0VarCreateErrorType = d0.e0.p.d.m0.n.t.createErrorType(this.c);
+            d0.z.d.m.checkNotNullExpressionValue(j0VarCreateErrorType, "createErrorType(message)");
+            return j0VarCreateErrorType;
         }
     }
 

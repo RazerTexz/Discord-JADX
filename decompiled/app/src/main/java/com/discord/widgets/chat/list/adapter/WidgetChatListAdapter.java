@@ -24,7 +24,7 @@ import com.discord.api.message.reaction.MessageReaction;
 import com.discord.api.sticker.BaseSticker;
 import com.discord.api.sticker.Sticker;
 import com.discord.app.AppFragment;
-import com.discord.app.AppPermissions2;
+import com.discord.app.AppPermissionsRequests;
 import com.discord.models.guild.Guild;
 import com.discord.models.message.Message;
 import com.discord.restapi.RestAPIParams;
@@ -33,7 +33,7 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import com.discord.utilities.views.ViewCoroutineScope;
+import com.discord.utilities.views.ViewCoroutineScopeKt;
 import com.discord.widgets.botuikit.ComponentProvider;
 import com.discord.widgets.chat.input.AppFlexInputViewModel;
 import com.discord.widgets.chat.list.FragmentLifecycleListener;
@@ -43,16 +43,15 @@ import com.discord.widgets.chat.list.entries.MessageEntry;
 import com.discord.widgets.chat.list.entries.NewMessagesEntry;
 import com.discord.widgets.chat.list.model.WidgetChatListModel;
 import com.discord.widgets.guild_automod.WidgetReportIssueWithAutoMod;
-import d0.Result3;
-import d0.d0._Ranges;
-import d0.t.Collections2;
-import d0.t.Maps6;
-import d0.t.Sets5;
-import d0.w.h.Intrinsics2;
-import d0.w.i.a.ContinuationImpl6;
-import d0.w.i.a.DebugMetadata;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.l;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.n0;
+import d0.w.h.c;
+import d0.w.i.a.e;
+import d0.w.i.a.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.List;
@@ -76,7 +75,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     public static final Companion INSTANCE = new Companion(null);
     private static final int NEW_MESSAGES_MAX_SCROLLBACK_COUNT = 30;
     private static final int NEW_MESSAGES_MIN_SCROLLBACK_COUNT = 10;
-    private final AppPermissions2 appPermissionsRequests;
+    private final AppPermissionsRequests appPermissionsRequests;
     private final ComponentProvider botUiComponentProvider;
     private final Clock clock;
     private Data data;
@@ -148,9 +147,9 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         private final long newMessagesMarkerMessageId;
         private final long oldestMessageId;
         private final long userId;
-        private final Map<Long, String> channelNames = Maps6.emptyMap();
-        private final List<ChatListEntry> list = Collections2.emptyList();
-        private final Set<Long> myRoleIds = Sets5.emptySet();
+        private final Map<Long, String> channelNames = h0.emptyMap();
+        private final List<ChatListEntry> list = n.emptyList();
+        private final Set<Long> myRoleIds = n0.emptySet();
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
         public long getChannelId() {
@@ -210,83 +209,83 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         /* compiled from: WidgetChatListAdapter.kt */
         public static final class DefaultImpls {
             public static void onBotUiComponentClicked(EventHandler eventHandler, long j, Long l, long j2, long j3, Long l2, int i, RestAPIParams.ComponentInteractionData componentInteractionData) {
-                Intrinsics3.checkNotNullParameter(componentInteractionData, "componentSendData");
+                m.checkNotNullParameter(componentInteractionData, "componentSendData");
             }
 
             public static void onCallMessageClicked(EventHandler eventHandler, long j, WidgetChatListAdapterItemCallMessage.CallStatus callStatus) {
-                Intrinsics3.checkNotNullParameter(callStatus, "callStatus");
+                m.checkNotNullParameter(callStatus, "callStatus");
             }
 
             public static void onCommandClicked(EventHandler eventHandler, long j, Long l, long j2, long j3, long j4, long j5, String str) {
             }
 
             public static void onDismissClicked(EventHandler eventHandler, Message message) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onDismissLocalMessageClicked(EventHandler eventHandler, Message message) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onInteractionStateUpdated(EventHandler eventHandler, StoreChat.InteractionState interactionState) {
-                Intrinsics3.checkNotNullParameter(interactionState, "interactionState");
+                m.checkNotNullParameter(interactionState, "interactionState");
             }
 
             public static void onListClicked(EventHandler eventHandler) {
             }
 
             public static void onMessageAuthorAvatarClicked(EventHandler eventHandler, Message message, long j) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onMessageAuthorLongClicked(EventHandler eventHandler, Message message, Long l) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onMessageAuthorNameClicked(EventHandler eventHandler, Message message, long j) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onMessageBlockedGroupClicked(EventHandler eventHandler, Message message) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onMessageClicked(EventHandler eventHandler, Message message, boolean z2) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onMessageLongClicked(EventHandler eventHandler, Message message, CharSequence charSequence, boolean z2) {
-                Intrinsics3.checkNotNullParameter(message, "message");
-                Intrinsics3.checkNotNullParameter(charSequence, "formattedMessage");
+                m.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(charSequence, "formattedMessage");
             }
 
             public static void onOldestMessageId(EventHandler eventHandler, long j, long j2) {
             }
 
             public static void onOpenPinsClicked(EventHandler eventHandler, Message message) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
             }
 
             public static void onQuickAddReactionClicked(EventHandler eventHandler, long j, long j2, long j3, long j4) {
             }
 
             public static boolean onQuickDownloadClicked(EventHandler eventHandler, Uri uri, String str) {
-                Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-                Intrinsics3.checkNotNullParameter(str, "fileName");
+                m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+                m.checkNotNullParameter(str, "fileName");
                 return false;
             }
 
             public static void onReactionClicked(EventHandler eventHandler, long j, long j2, long j3, long j4, MessageReaction messageReaction, boolean z2) {
-                Intrinsics3.checkNotNullParameter(messageReaction, "reaction");
+                m.checkNotNullParameter(messageReaction, "reaction");
             }
 
             public static void onReactionLongClicked(EventHandler eventHandler, long j, long j2, long j3, MessageReaction messageReaction) {
-                Intrinsics3.checkNotNullParameter(messageReaction, "reaction");
+                m.checkNotNullParameter(messageReaction, "reaction");
             }
 
             public static void onReportIssueWithAutoMod(EventHandler eventHandler, Context context, Message message) {
-                Intrinsics3.checkNotNullParameter(context, "context");
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(message, "message");
                 WidgetReportIssueWithAutoMod.INSTANCE.launch(context, message.getChannelId(), message.getId());
             }
 
@@ -294,42 +293,42 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
             }
 
             public static void onSendGreetMessageClicked(EventHandler eventHandler, long j, int i, Sticker sticker) {
-                Intrinsics3.checkNotNullParameter(sticker, "sticker");
+                m.checkNotNullParameter(sticker, "sticker");
             }
 
             public static void onShareButtonClick(EventHandler eventHandler, GuildScheduledEvent guildScheduledEvent, WeakReference<Context> weakReference, WeakReference<AppFragment> weakReference2) {
-                Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildEvent");
-                Intrinsics3.checkNotNullParameter(weakReference, "weakContext");
-                Intrinsics3.checkNotNullParameter(weakReference2, "weakFragment");
+                m.checkNotNullParameter(guildScheduledEvent, "guildEvent");
+                m.checkNotNullParameter(weakReference, "weakContext");
+                m.checkNotNullParameter(weakReference2, "weakFragment");
             }
 
             public static void onStickerClicked(EventHandler eventHandler, Message message, BaseSticker baseSticker) {
-                Intrinsics3.checkNotNullParameter(message, "message");
-                Intrinsics3.checkNotNullParameter(baseSticker, "sticker");
+                m.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(baseSticker, "sticker");
             }
 
             public static void onSystemMessageCtaClicked(EventHandler eventHandler, Message message, Channel channel, BaseSticker baseSticker) {
-                Intrinsics3.checkNotNullParameter(message, "message");
-                Intrinsics3.checkNotNullParameter(channel, "channel");
-                Intrinsics3.checkNotNullParameter(baseSticker, "sticker");
+                m.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(baseSticker, "sticker");
             }
 
             public static void onThreadClicked(EventHandler eventHandler, Channel channel) {
-                Intrinsics3.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(channel, "channel");
             }
 
             public static void onThreadLongClicked(EventHandler eventHandler, Channel channel) {
-                Intrinsics3.checkNotNullParameter(channel, "channel");
+                m.checkNotNullParameter(channel, "channel");
             }
 
             public static void onUrlLongClicked(EventHandler eventHandler, String str) {
-                Intrinsics3.checkNotNullParameter(str, "url");
+                m.checkNotNullParameter(str, "url");
             }
 
             public static void onUserActivityAction(EventHandler eventHandler, long j, long j2, long j3, MessageActivityType messageActivityType, Activity activity, Application application) {
-                Intrinsics3.checkNotNullParameter(messageActivityType, "messageActivityType");
-                Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-                Intrinsics3.checkNotNullParameter(application, "application");
+                m.checkNotNullParameter(messageActivityType, "messageActivityType");
+                m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+                m.checkNotNullParameter(application, "application");
             }
 
             public static void onUserMentionClicked(EventHandler eventHandler, long j, long j2, long j3) {
@@ -407,7 +406,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
         public void onScrollStateChanged(RecyclerView recyclerView, int scrollState) {
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            m.checkNotNullParameter(recyclerView, "recyclerView");
             super.onScrollStateChanged(recyclerView, scrollState);
             if (this.scrollState == scrollState && WidgetChatListAdapter.this.getData().getChannelId() == this.channelId) {
                 return;
@@ -423,7 +422,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         private final GestureDetector tapGestureDetector;
 
         public HandlerOfTouches() {
-            this.tapGestureDetector = new GestureDetector(WidgetChatListAdapter.this.getContext(), new WidgetChatListAdapter2(this));
+            this.tapGestureDetector = new GestureDetector(WidgetChatListAdapter.this.getContext(), new WidgetChatListAdapter$HandlerOfTouches$tapGestureDetector$1(this));
         }
 
         @Override // android.view.View.OnTouchListener
@@ -451,7 +450,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
                 boolean z2 = this.channelId != 0;
                 this.channelId = WidgetChatListAdapter.this.getData().getChannelId();
                 if (z2) {
-                    WidgetChatListAdapter.this.scrollToMessageId(0L, WidgetChatListAdapter3.INSTANCE);
+                    WidgetChatListAdapter.this.scrollToMessageId(0L, WidgetChatListAdapter$HandlerOfUpdates$run$1.INSTANCE);
                 }
                 WidgetChatListAdapter.access$setTouchedSinceLastJump$p(WidgetChatListAdapter.this, false);
             }
@@ -471,8 +470,8 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         private final Function0<Unit> onCompleted;
 
         public ScrollToWithHighlight(WidgetChatListAdapter widgetChatListAdapter, long j, Function0<Unit> function0) {
-            Intrinsics3.checkNotNullParameter(widgetChatListAdapter, "adapter");
-            Intrinsics3.checkNotNullParameter(function0, "onCompleted");
+            m.checkNotNullParameter(widgetChatListAdapter, "adapter");
+            m.checkNotNullParameter(function0, "onCompleted");
             this.adapter = widgetChatListAdapter;
             this.messageId = j;
             this.onCompleted = function0;
@@ -485,9 +484,9 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
             Objects.requireNonNull(background, "null cannot be cast to non-null type android.graphics.drawable.TransitionDrawable");
             TransitionDrawable transitionDrawable = (TransitionDrawable) background;
             transitionDrawable.startTransition(500);
-            CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(view);
+            CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(view);
             if (coroutineScope != null) {
-                f.H0(coroutineScope, null, null, new WidgetChatListAdapter4(transitionDrawable, null), 3, null);
+                f.H0(coroutineScope, null, null, new WidgetChatListAdapter$ScrollToWithHighlight$animateHighlight$1(transitionDrawable, null), 3, null);
             }
         }
 
@@ -526,9 +525,9 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
                 i++;
             }
             if (iAccess$findBestNewMessagesPosition < 0 && z2) {
-                iAccess$findBestNewMessagesPosition = Companion.access$findBestNewMessagesPosition(WidgetChatListAdapter.INSTANCE, Collections2.getLastIndex(list));
+                iAccess$findBestNewMessagesPosition = Companion.access$findBestNewMessagesPosition(WidgetChatListAdapter.INSTANCE, n.getLastIndex(list));
             }
-            Iterator<Integer> it2 = _Ranges.downTo(iAccess$findBestNewMessagesPosition, 0).iterator();
+            Iterator<Integer> it2 = d0.d0.f.downTo(iAccess$findBestNewMessagesPosition, 0).iterator();
             while (true) {
                 if (!it2.hasNext()) {
                     break;
@@ -551,9 +550,9 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
                 return;
             }
             this.attempts = i + 1;
-            CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(this.adapter.getRecycler());
+            CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(this.adapter.getRecycler());
             if (coroutineScope != null) {
-                f.H0(coroutineScope, null, null, new WidgetChatListAdapter5(this, null), 3, null);
+                f.H0(coroutineScope, null, null, new WidgetChatListAdapter$ScrollToWithHighlight$scheduleRetry$1(this, null), 3, null);
             }
         }
 
@@ -609,7 +608,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
 
     /* compiled from: WidgetChatListAdapter.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$disposeHandlers$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<List<? extends ChatListEntry>, List<? extends ChatListEntry>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function2<List<? extends ChatListEntry>, List<? extends ChatListEntry>, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -624,14 +623,14 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ChatListEntry> list, List<? extends ChatListEntry> list2) {
-            Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
-            Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");
+            m.checkNotNullParameter(list, "<anonymous parameter 0>");
+            m.checkNotNullParameter(list2, "<anonymous parameter 1>");
         }
     }
 
     /* compiled from: WidgetChatListAdapter.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$scrollToMessageId$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Action0 $onCompleted;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -656,35 +655,35 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
 
     /* compiled from: WidgetChatListAdapter.kt */
     /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<List<? extends ChatListEntry>, List<? extends ChatListEntry>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function2<List<? extends ChatListEntry>, List<? extends ChatListEntry>, Unit> {
 
         /* compiled from: WidgetChatListAdapter.kt */
-        @DebugMetadata(c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1$1", f = "WidgetChatListAdapter.kt", l = {118}, m = "invokeSuspend")
+        @e(c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1$1", f = "WidgetChatListAdapter.kt", l = {118}, m = "invokeSuspend")
         /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02651 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+        public static final class C03851 extends k implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
-            public C02651(Continuation continuation) {
+            public C03851(Continuation continuation) {
                 super(2, continuation);
             }
 
-            @Override // d0.w.i.a.ContinuationImpl
+            @Override // d0.w.i.a.a
             public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
-                Intrinsics3.checkNotNullParameter(continuation, "completion");
-                return AnonymousClass1.this.new C02651(continuation);
+                m.checkNotNullParameter(continuation, "completion");
+                return AnonymousClass1.this.new C03851(continuation);
             }
 
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(CoroutineScope coroutineScope, Continuation<? super Unit> continuation) {
-                return ((C02651) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
+                return ((C03851) create(coroutineScope, continuation)).invokeSuspend(Unit.a);
             }
 
-            @Override // d0.w.i.a.ContinuationImpl
+            @Override // d0.w.i.a.a
             public final Object invokeSuspend(Object obj) {
-                Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
+                Object coroutine_suspended = c.getCOROUTINE_SUSPENDED();
                 int i = this.label;
                 if (i == 0) {
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                     this.label = 1;
                     if (f.P(250L, this) == coroutine_suspended) {
                         return coroutine_suspended;
@@ -693,7 +692,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
                     if (i != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    Result3.throwOnFailure(obj);
+                    l.throwOnFailure(obj);
                 }
                 WidgetChatListAdapter.access$getHandlerOfUpdates$p(WidgetChatListAdapter.this).run();
                 return Unit.a;
@@ -712,31 +711,31 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ChatListEntry> list, List<? extends ChatListEntry> list2) {
-            Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
-            Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");
+            m.checkNotNullParameter(list, "<anonymous parameter 0>");
+            m.checkNotNullParameter(list2, "<anonymous parameter 1>");
             Job jobAccess$getLastUpdateJob$p = WidgetChatListAdapter.access$getLastUpdateJob$p(WidgetChatListAdapter.this);
             if (jobAccess$getLastUpdateJob$p != null) {
                 f.t(jobAccess$getLastUpdateJob$p, null, 1, null);
             }
             WidgetChatListAdapter widgetChatListAdapter = WidgetChatListAdapter.this;
-            CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(widgetChatListAdapter.getRecycler());
-            WidgetChatListAdapter.access$setLastUpdateJob$p(widgetChatListAdapter, coroutineScope != null ? f.H0(coroutineScope, null, null, new C02651(null), 3, null) : null);
+            CoroutineScope coroutineScope = ViewCoroutineScopeKt.getCoroutineScope(widgetChatListAdapter.getRecycler());
+            WidgetChatListAdapter.access$setLastUpdateJob$p(widgetChatListAdapter, coroutineScope != null ? f.H0(coroutineScope, null, null, new C03851(null), 3, null) : null);
             WidgetChatListAdapter.this.getRecycler().setOnTouchListener(WidgetChatListAdapter.access$getHandlerOfTouches$p(WidgetChatListAdapter.this));
             WidgetChatListAdapter.this.getRecycler().removeOnScrollListener(WidgetChatListAdapter.access$getHandlerOfScrolls$p(WidgetChatListAdapter.this));
             WidgetChatListAdapter.this.getRecycler().addOnScrollListener(WidgetChatListAdapter.access$getHandlerOfScrolls$p(WidgetChatListAdapter.this));
         }
     }
 
-    public WidgetChatListAdapter(RecyclerView recyclerView, AppPermissions2 appPermissions2, FragmentManager fragmentManager, EventHandler eventHandler) {
-        this(recyclerView, appPermissions2, fragmentManager, eventHandler, null, null, 48, null);
+    public WidgetChatListAdapter(RecyclerView recyclerView, AppPermissionsRequests appPermissionsRequests, FragmentManager fragmentManager, EventHandler eventHandler) {
+        this(recyclerView, appPermissionsRequests, fragmentManager, eventHandler, null, null, 48, null);
     }
 
-    public WidgetChatListAdapter(RecyclerView recyclerView, AppPermissions2 appPermissions2, FragmentManager fragmentManager, EventHandler eventHandler, AppFlexInputViewModel appFlexInputViewModel) {
-        this(recyclerView, appPermissions2, fragmentManager, eventHandler, appFlexInputViewModel, null, 32, null);
+    public WidgetChatListAdapter(RecyclerView recyclerView, AppPermissionsRequests appPermissionsRequests, FragmentManager fragmentManager, EventHandler eventHandler, AppFlexInputViewModel appFlexInputViewModel) {
+        this(recyclerView, appPermissionsRequests, fragmentManager, eventHandler, appFlexInputViewModel, null, 32, null);
     }
 
-    public /* synthetic */ WidgetChatListAdapter(RecyclerView recyclerView, AppPermissions2 appPermissions2, FragmentManager fragmentManager, EventHandler eventHandler, AppFlexInputViewModel appFlexInputViewModel, Clock clock, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(recyclerView, appPermissions2, fragmentManager, eventHandler, (i & 16) != 0 ? null : appFlexInputViewModel, (i & 32) != 0 ? ClockFactory.get() : clock);
+    public /* synthetic */ WidgetChatListAdapter(RecyclerView recyclerView, AppPermissionsRequests appPermissionsRequests, FragmentManager fragmentManager, EventHandler eventHandler, AppFlexInputViewModel appFlexInputViewModel, Clock clock, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this(recyclerView, appPermissionsRequests, fragmentManager, eventHandler, (i & 16) != 0 ? null : appFlexInputViewModel, (i & 32) != 0 ? ClockFactory.get() : clock);
     }
 
     public static final /* synthetic */ HandlerOfScrolls access$getHandlerOfScrolls$p(WidgetChatListAdapter widgetChatListAdapter) {
@@ -799,7 +798,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         this.eventHandler.onInteractionStateUpdated(new StoreChat.InteractionState(this.data.getChannelId(), 0L, this.isTouchedSinceLastJump, (LinearLayoutManager) null));
     }
 
-    public final AppPermissions2 getAppPermissionsRequests() {
+    public final AppPermissionsRequests getAppPermissionsRequests() {
         return this.appPermissionsRequests;
     }
 
@@ -840,7 +839,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     }
 
     public final void onBotUiComponentClicked(long applicationId, long messageId, Long messageFlags, int componentIndex, RestAPIParams.ComponentInteractionData componentSendData) {
-        Intrinsics3.checkNotNullParameter(componentSendData, "componentSendData");
+        m.checkNotNullParameter(componentSendData, "componentSendData");
         EventHandler eventHandler = this.eventHandler;
         Guild guild = this.data.getGuild();
         eventHandler.onBotUiComponentClicked(applicationId, guild != null ? Long.valueOf(guild.getId()) : null, this.data.getChannelId(), messageId, messageFlags, componentIndex, componentSendData);
@@ -866,12 +865,12 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     }
 
     public final void onReactionClicked(long messageId, MessageReaction reaction, boolean canAddReactions) {
-        Intrinsics3.checkNotNullParameter(reaction, "reaction");
+        m.checkNotNullParameter(reaction, "reaction");
         this.eventHandler.onReactionClicked(this.data.getGuildId(), this.data.getUserId(), this.data.getChannelId(), messageId, reaction, canAddReactions);
     }
 
     public final void onReactionLongClicked(long messageId, MessageReaction reaction) {
-        Intrinsics3.checkNotNullParameter(reaction, "reaction");
+        m.checkNotNullParameter(reaction, "reaction");
         this.eventHandler.onReactionLongClicked(this.data.getGuildId(), this.data.getChannelId(), messageId, reaction);
     }
 
@@ -890,37 +889,37 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     }
 
     public final void onShareButtonClick(GuildScheduledEvent guildEvent, WeakReference<Context> weakContext, WeakReference<AppFragment> weakFragment) {
-        Intrinsics3.checkNotNullParameter(guildEvent, "guildEvent");
-        Intrinsics3.checkNotNullParameter(weakContext, "weakContext");
-        Intrinsics3.checkNotNullParameter(weakFragment, "weakFragment");
+        m.checkNotNullParameter(guildEvent, "guildEvent");
+        m.checkNotNullParameter(weakContext, "weakContext");
+        m.checkNotNullParameter(weakFragment, "weakFragment");
         this.eventHandler.onShareButtonClick(guildEvent, weakContext, weakFragment);
     }
 
     public final void onStickerClicked(Message message, BaseSticker sticker) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(sticker, "sticker");
         this.eventHandler.onStickerClicked(message, sticker);
     }
 
     public final void onThreadClicked(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         this.eventHandler.onThreadClicked(channel);
     }
 
     public final void onThreadLongClicked(Channel channel) {
-        Intrinsics3.checkNotNullParameter(channel, "channel");
+        m.checkNotNullParameter(channel, "channel");
         this.eventHandler.onThreadLongClicked(channel);
     }
 
     public final void onUserActivityAction(long authorId, long messageId, MessageActivityType messageActivityType, Activity activity, Application application) {
-        Intrinsics3.checkNotNullParameter(messageActivityType, "messageActivityType");
-        Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-        Intrinsics3.checkNotNullParameter(application, "application");
+        m.checkNotNullParameter(messageActivityType, "messageActivityType");
+        m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+        m.checkNotNullParameter(application, "application");
         this.eventHandler.onUserActivityAction(authorId, this.data.getChannelId(), messageId, messageActivityType, activity, application);
     }
 
     public final void scrollToMessageId(long messageId, Action0 onCompleted) {
-        Intrinsics3.checkNotNullParameter(onCompleted, "onCompleted");
+        m.checkNotNullParameter(onCompleted, "onCompleted");
         ScrollToWithHighlight scrollToWithHighlight = this.scrollToWithHighlight;
         if (scrollToWithHighlight != null && scrollToWithHighlight.getMessageId() > 0 && messageId <= 0) {
             onCompleted.call();
@@ -935,13 +934,13 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     }
 
     public final void setData(Data data) {
-        Intrinsics3.checkNotNullParameter(data, "value");
+        m.checkNotNullParameter(data, "value");
         this.data = data;
         setData(data.getList());
     }
 
     public final void setFragmentManager(FragmentManager fragmentManager) {
-        Intrinsics3.checkNotNullParameter(fragmentManager, "<set-?>");
+        m.checkNotNullParameter(fragmentManager, "<set-?>");
         this.fragmentManager = fragmentManager;
     }
 
@@ -954,20 +953,20 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public WidgetChatListAdapter(RecyclerView recyclerView, AppPermissions2 appPermissions2, FragmentManager fragmentManager, EventHandler eventHandler, AppFlexInputViewModel appFlexInputViewModel, Clock clock) {
+    public WidgetChatListAdapter(RecyclerView recyclerView, AppPermissionsRequests appPermissionsRequests, FragmentManager fragmentManager, EventHandler eventHandler, AppFlexInputViewModel appFlexInputViewModel, Clock clock) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
-        Intrinsics3.checkNotNullParameter(appPermissions2, "appPermissionsRequests");
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-        Intrinsics3.checkNotNullParameter(eventHandler, "eventHandler");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        this.appPermissionsRequests = appPermissions2;
+        m.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(appPermissionsRequests, "appPermissionsRequests");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(eventHandler, "eventHandler");
+        m.checkNotNullParameter(clock, "clock");
+        this.appPermissionsRequests = appPermissionsRequests;
         this.fragmentManager = fragmentManager;
         this.eventHandler = eventHandler;
         this.flexInputViewModel = appFlexInputViewModel;
         this.clock = clock;
         Context context = recyclerView.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "recycler.context");
+        m.checkNotNullExpressionValue(context, "recycler.context");
         this.botUiComponentProvider = new ComponentProvider(context);
         this.data = new EmptyData();
         this.mentionMeMessageLevelHighlighting = true;
@@ -979,7 +978,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MGRecyclerViewHolder<WidgetChatListAdapter, ChatListEntry> onCreateViewHolder(ViewGroup parent, int viewType) {
         MGRecyclerViewHolder<WidgetChatListAdapter, ChatListEntry> widgetChatListAdapterItemGuildWelcome;
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         switch (viewType) {
             case 0:
             case 32:

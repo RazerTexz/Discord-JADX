@@ -10,7 +10,7 @@ public final class a {
     public static final a.g<l> a;
 
     /* renamed from: b, reason: collision with root package name */
-    public static final a.AbstractC0035a<l, a.d.c> f1588b;
+    public static final a.AbstractC0112a<l, a.d.c> f1588b;
 
     @Deprecated
     public static final b.i.a.f.e.h.a<a.d.c> c;

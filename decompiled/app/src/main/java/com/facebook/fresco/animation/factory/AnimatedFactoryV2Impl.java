@@ -2,29 +2,14 @@ package com.facebook.fresco.animation.factory;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import b.f.d.b.DefaultSerialExecutorService;
-import b.f.d.b.SerialExecutorService;
-import b.f.d.b.UiThreadImmediateExecutorService;
-import b.f.d.d.DoNotStrip;
-import b.f.d.d.Suppliers2;
-import b.f.h.a.d.AnimatedFactoryV2Impl2;
-import b.f.h.a.d.AnimatedFactoryV2Impl3;
-import b.f.h.a.d.AnimatedFactoryV2Impl4;
-import b.f.h.a.d.AnimatedFactoryV2Impl5;
-import b.f.h.a.d.ExperimentalBitmapAnimationDrawableFactory;
-import b.f.j.a.b.AnimatedFactory;
-import b.f.j.a.b.AnimatedImageFactory;
-import b.f.j.a.b.AnimatedImageFactoryImpl;
-import b.f.j.a.c.AnimatedDrawableBackendProvider;
-import b.f.j.a.d.AnimatedDrawableUtil;
-import b.f.j.c.CountingMemoryCache;
-import b.f.j.d.ImageDecodeOptions;
-import b.f.j.e.ExecutorSupplier;
-import b.f.j.h.ImageDecoder2;
-import b.f.j.i.DrawableFactory;
-import b.f.j.j.CloseableImage;
-import b.f.j.j.EncodedImage2;
-import b.f.j.j.QualityInfo;
+import b.f.d.b.f;
+import b.f.d.b.g;
+import b.f.d.d.c;
+import b.f.d.d.l;
+import b.f.j.a.b.d;
+import b.f.j.c.m;
+import b.f.j.e.e;
+import b.f.j.j.i;
 import com.facebook.cache.common.CacheKey;
 import com.facebook.common.internal.Supplier;
 import com.facebook.common.memory.PooledByteBuffer;
@@ -34,116 +19,116 @@ import com.facebook.imagepipeline.bitmaps.PlatformBitmapFactory;
 import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 
-@DoNotStrip
+@c
 /* loaded from: classes.dex */
-public class AnimatedFactoryV2Impl implements AnimatedFactory {
+public class AnimatedFactoryV2Impl implements b.f.j.a.b.a {
     public final PlatformBitmapFactory a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final ExecutorSupplier f2894b;
-    public final CountingMemoryCache<CacheKey, CloseableImage> c;
+    public final e f2894b;
+    public final m<CacheKey, b.f.j.j.c> c;
     public final boolean d;
-    public AnimatedImageFactory e;
-    public AnimatedDrawableBackendProvider f;
-    public AnimatedDrawableUtil g;
-    public DrawableFactory h;
-    public SerialExecutorService i;
+    public d e;
+    public b.f.j.a.c.b f;
+    public b.f.j.a.d.a g;
+    public b.f.j.i.a h;
+    public f i;
 
-    public class a implements ImageDecoder2 {
+    public class a implements b.f.j.h.b {
         public a() {
         }
 
-        @Override // b.f.j.h.ImageDecoder2
-        public CloseableImage a(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo, ImageDecodeOptions imageDecodeOptions) {
+        @Override // b.f.j.h.b
+        public b.f.j.j.c a(b.f.j.j.e eVar, int i, i iVar, b.f.j.d.b bVar) {
             AnimatedFactoryV2Impl animatedFactoryV2Impl = AnimatedFactoryV2Impl.this;
             if (animatedFactoryV2Impl.e == null) {
-                animatedFactoryV2Impl.e = new AnimatedImageFactoryImpl(new AnimatedFactoryV2Impl5(animatedFactoryV2Impl), animatedFactoryV2Impl.a);
+                animatedFactoryV2Impl.e = new b.f.j.a.b.e(new b.f.h.a.d.d(animatedFactoryV2Impl), animatedFactoryV2Impl.a);
             }
-            AnimatedImageFactory animatedImageFactory = animatedFactoryV2Impl.e;
-            Bitmap.Config config = imageDecodeOptions.e;
-            AnimatedImageFactoryImpl animatedImageFactoryImpl = (AnimatedImageFactoryImpl) animatedImageFactory;
-            Objects.requireNonNull(animatedImageFactoryImpl);
-            if (AnimatedImageFactoryImpl.a == null) {
+            d dVar = animatedFactoryV2Impl.e;
+            Bitmap.Config config = bVar.e;
+            b.f.j.a.b.e eVar2 = (b.f.j.a.b.e) dVar;
+            Objects.requireNonNull(eVar2);
+            if (b.f.j.a.b.e.a == null) {
                 throw new UnsupportedOperationException("To encode animated gif please add the dependency to the animated-gif module");
             }
-            CloseableReference<PooledByteBuffer> closeableReferenceC = encodedImage2.c();
+            CloseableReference<PooledByteBuffer> closeableReferenceC = eVar.c();
             Objects.requireNonNull(closeableReferenceC);
             try {
                 PooledByteBuffer pooledByteBufferU = closeableReferenceC.u();
-                return animatedImageFactoryImpl.a(imageDecodeOptions, pooledByteBufferU.getByteBuffer() != null ? AnimatedImageFactoryImpl.a.c(pooledByteBufferU.getByteBuffer(), imageDecodeOptions) : AnimatedImageFactoryImpl.a.h(pooledByteBufferU.k(), pooledByteBufferU.size(), imageDecodeOptions), config);
+                return eVar2.a(bVar, pooledByteBufferU.getByteBuffer() != null ? b.f.j.a.b.e.a.c(pooledByteBufferU.getByteBuffer(), bVar) : b.f.j.a.b.e.a.h(pooledByteBufferU.k(), pooledByteBufferU.size(), bVar), config);
             } finally {
                 closeableReferenceC.close();
             }
         }
     }
 
-    public class b implements ImageDecoder2 {
+    public class b implements b.f.j.h.b {
         public b() {
         }
 
-        @Override // b.f.j.h.ImageDecoder2
-        public CloseableImage a(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo, ImageDecodeOptions imageDecodeOptions) {
+        @Override // b.f.j.h.b
+        public b.f.j.j.c a(b.f.j.j.e eVar, int i, i iVar, b.f.j.d.b bVar) {
             AnimatedFactoryV2Impl animatedFactoryV2Impl = AnimatedFactoryV2Impl.this;
             if (animatedFactoryV2Impl.e == null) {
-                animatedFactoryV2Impl.e = new AnimatedImageFactoryImpl(new AnimatedFactoryV2Impl5(animatedFactoryV2Impl), animatedFactoryV2Impl.a);
+                animatedFactoryV2Impl.e = new b.f.j.a.b.e(new b.f.h.a.d.d(animatedFactoryV2Impl), animatedFactoryV2Impl.a);
             }
-            AnimatedImageFactory animatedImageFactory = animatedFactoryV2Impl.e;
-            Bitmap.Config config = imageDecodeOptions.e;
-            AnimatedImageFactoryImpl animatedImageFactoryImpl = (AnimatedImageFactoryImpl) animatedImageFactory;
-            Objects.requireNonNull(animatedImageFactoryImpl);
-            if (AnimatedImageFactoryImpl.f547b == null) {
+            d dVar = animatedFactoryV2Impl.e;
+            Bitmap.Config config = bVar.e;
+            b.f.j.a.b.e eVar2 = (b.f.j.a.b.e) dVar;
+            Objects.requireNonNull(eVar2);
+            if (b.f.j.a.b.e.f547b == null) {
                 throw new UnsupportedOperationException("To encode animated webp please add the dependency to the animated-webp module");
             }
-            CloseableReference<PooledByteBuffer> closeableReferenceC = encodedImage2.c();
+            CloseableReference<PooledByteBuffer> closeableReferenceC = eVar.c();
             Objects.requireNonNull(closeableReferenceC);
             try {
                 PooledByteBuffer pooledByteBufferU = closeableReferenceC.u();
-                return animatedImageFactoryImpl.a(imageDecodeOptions, pooledByteBufferU.getByteBuffer() != null ? AnimatedImageFactoryImpl.f547b.c(pooledByteBufferU.getByteBuffer(), imageDecodeOptions) : AnimatedImageFactoryImpl.f547b.h(pooledByteBufferU.k(), pooledByteBufferU.size(), imageDecodeOptions), config);
+                return eVar2.a(bVar, pooledByteBufferU.getByteBuffer() != null ? b.f.j.a.b.e.f547b.c(pooledByteBufferU.getByteBuffer(), bVar) : b.f.j.a.b.e.f547b.h(pooledByteBufferU.k(), pooledByteBufferU.size(), bVar), config);
             } finally {
                 closeableReferenceC.close();
             }
         }
     }
 
-    @DoNotStrip
-    public AnimatedFactoryV2Impl(PlatformBitmapFactory platformBitmapFactory, ExecutorSupplier executorSupplier, CountingMemoryCache<CacheKey, CloseableImage> countingMemoryCache, boolean z2, SerialExecutorService serialExecutorService) {
+    @c
+    public AnimatedFactoryV2Impl(PlatformBitmapFactory platformBitmapFactory, e eVar, m<CacheKey, b.f.j.j.c> mVar, boolean z2, f fVar) {
         this.a = platformBitmapFactory;
-        this.f2894b = executorSupplier;
-        this.c = countingMemoryCache;
+        this.f2894b = eVar;
+        this.c = mVar;
         this.d = z2;
-        this.i = serialExecutorService;
+        this.i = fVar;
     }
 
-    @Override // b.f.j.a.b.AnimatedFactory
-    public DrawableFactory a(Context context) {
+    @Override // b.f.j.a.b.a
+    public b.f.j.i.a a(Context context) {
         if (this.h == null) {
-            AnimatedFactoryV2Impl2 animatedFactoryV2Impl2 = new AnimatedFactoryV2Impl2(this);
-            ExecutorService defaultSerialExecutorService = this.i;
-            if (defaultSerialExecutorService == null) {
-                defaultSerialExecutorService = new DefaultSerialExecutorService(this.f2894b.a());
+            b.f.h.a.d.a aVar = new b.f.h.a.d.a(this);
+            ExecutorService cVar = this.i;
+            if (cVar == null) {
+                cVar = new b.f.d.b.c(this.f2894b.a());
             }
-            ExecutorService executorService = defaultSerialExecutorService;
-            AnimatedFactoryV2Impl3 animatedFactoryV2Impl3 = new AnimatedFactoryV2Impl3(this);
-            Supplier<Boolean> supplier = Suppliers2.a;
+            ExecutorService executorService = cVar;
+            b.f.h.a.d.b bVar = new b.f.h.a.d.b(this);
+            Supplier<Boolean> supplier = l.a;
             if (this.f == null) {
-                this.f = new AnimatedFactoryV2Impl4(this);
+                this.f = new b.f.h.a.d.c(this);
             }
-            AnimatedDrawableBackendProvider animatedDrawableBackendProvider = this.f;
-            if (UiThreadImmediateExecutorService.k == null) {
-                UiThreadImmediateExecutorService.k = new UiThreadImmediateExecutorService();
+            b.f.j.a.c.b bVar2 = this.f;
+            if (g.k == null) {
+                g.k = new g();
             }
-            this.h = new ExperimentalBitmapAnimationDrawableFactory(animatedDrawableBackendProvider, UiThreadImmediateExecutorService.k, executorService, RealtimeSinceBootClock.get(), this.a, this.c, animatedFactoryV2Impl2, animatedFactoryV2Impl3, supplier);
+            this.h = new b.f.h.a.d.e(bVar2, g.k, executorService, RealtimeSinceBootClock.get(), this.a, this.c, aVar, bVar, supplier);
         }
         return this.h;
     }
 
-    @Override // b.f.j.a.b.AnimatedFactory
-    public ImageDecoder2 b() {
+    @Override // b.f.j.a.b.a
+    public b.f.j.h.b b() {
         return new a();
     }
 
-    @Override // b.f.j.a.b.AnimatedFactory
-    public ImageDecoder2 c() {
+    @Override // b.f.j.a.b.a
+    public b.f.j.h.b c() {
         return new b();
     }
 }

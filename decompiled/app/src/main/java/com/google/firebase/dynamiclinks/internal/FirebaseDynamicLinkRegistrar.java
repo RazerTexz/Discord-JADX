@@ -1,10 +1,10 @@
 package com.google.firebase.dynamiclinks.internal;
 
 import androidx.annotation.Keep;
-import b.i.c.FirebaseApp2;
-import b.i.c.l.Component4;
-import b.i.c.l.ComponentRegistrar;
-import b.i.c.l.Dependency2;
+import b.i.c.c;
+import b.i.c.l.d;
+import b.i.c.l.g;
+import b.i.c.l.o;
 import b.i.c.o.a;
 import b.i.c.o.b.f;
 import java.util.Arrays;
@@ -13,13 +13,13 @@ import java.util.List;
 /* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
 @Keep
 /* loaded from: classes3.dex */
-public final class FirebaseDynamicLinkRegistrar implements ComponentRegistrar {
-    @Override // b.i.c.l.ComponentRegistrar
+public final class FirebaseDynamicLinkRegistrar implements g {
+    @Override // b.i.c.l.g
     @Keep
-    public final List<Component4<?>> getComponents() {
-        Component4.b bVarA = Component4.a(a.class);
-        bVarA.a(new Dependency2(FirebaseApp2.class, 1, 0));
-        bVarA.a(new Dependency2(b.i.c.j.a.a.class, 0, 0));
+    public final List<d<?>> getComponents() {
+        d.b bVarA = d.a(a.class);
+        bVarA.a(new o(c.class, 1, 0));
+        bVarA.a(new o(b.i.c.j.a.a.class, 0, 0));
         bVarA.c(f.a);
         return Arrays.asList(bVarA.b());
     }

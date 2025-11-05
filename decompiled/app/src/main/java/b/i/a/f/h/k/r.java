@@ -2,7 +2,6 @@ package b.i.a.f.h.k;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.internal.icing.zzo;
 import com.google.android.gms.internal.icing.zzw;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 public final class r implements Parcelable.Creator<zzo> {
     @Override // android.os.Parcelable.Creator
     public final zzo createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         Status status = null;
         ArrayList arrayListV = null;
         String[] strArrS = null;
@@ -21,16 +20,16 @@ public final class r implements Parcelable.Creator<zzo> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                status = (Status) AnimatableValueParser.Q(parcel, i, Status.CREATOR);
+                status = (Status) b.c.a.a0.d.Q(parcel, i, Status.CREATOR);
             } else if (c == 2) {
-                arrayListV = AnimatableValueParser.V(parcel, i, zzw.CREATOR);
+                arrayListV = b.c.a.a0.d.V(parcel, i, zzw.CREATOR);
             } else if (c != 3) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                strArrS = AnimatableValueParser.S(parcel, i);
+                strArrS = b.c.a.a0.d.S(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new zzo(status, arrayListV, strArrS);
     }
 

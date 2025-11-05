@@ -3,9 +3,9 @@ package com.discord.widgets.settings.premium;
 import android.content.Context;
 import android.text.TextUtils;
 import androidx.annotation.StringRes;
-import b.a.d.AppViewModel;
+import b.a.d.d0;
 import b.d.a.a.c;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.SkuDetails;
@@ -13,8 +13,8 @@ import com.discord.R;
 import com.discord.api.premium.SubscriptionInterval;
 import com.discord.app.AppLog;
 import com.discord.models.domain.ModelSubscription;
+import com.discord.stores.PendingDowngrade;
 import com.discord.stores.StoreGooglePlayPurchases;
-import com.discord.stores.StoreGooglePlayPurchases2;
 import com.discord.stores.StoreGooglePlaySkuDetails;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreSubscriptions;
@@ -22,19 +22,18 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.billing.GooglePlayBillingManager;
 import com.discord.utilities.billing.GooglePlaySku;
-import com.discord.utilities.billing.GooglePlaySku2;
+import com.discord.utilities.billing.GooglePlaySkuKt;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.premium.PremiumUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.settings.premium.WidgetChoosePlan;
 import com.discord.widgets.settings.premium.WidgetChoosePlanAdapter;
-import d0.t.Collections2;
-import d0.t.CollectionsJVM;
-import d0.t.Iterables2;
-import d0.t._Collections;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.t.o;
+import d0.t.u;
+import d0.z.d.k;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -51,7 +50,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: ChoosePlanViewModel.kt */
 /* loaded from: classes2.dex */
-public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
+public final class ChoosePlanViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -62,7 +61,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: ChoosePlanViewModel.kt */
     /* renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<StoreState, Unit> {
         public AnonymousClass1(ChoosePlanViewModel choosePlanViewModel) {
             super(1, choosePlanViewModel, ChoosePlanViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/settings/premium/ChoosePlanViewModel$StoreState;)V", 0);
         }
@@ -75,14 +74,14 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "p1");
+            m.checkNotNullParameter(storeState, "p1");
             ChoosePlanViewModel.access$handleStoreState((ChoosePlanViewModel) this.receiver, storeState);
         }
     }
 
     /* compiled from: ChoosePlanViewModel.kt */
     /* renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<StoreGooglePlayPurchases.Event, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<StoreGooglePlayPurchases.Event, Unit> {
         public AnonymousClass2(ChoosePlanViewModel choosePlanViewModel) {
             super(1, choosePlanViewModel, ChoosePlanViewModel.class, "handleEvent", "handleEvent(Lcom/discord/stores/StoreGooglePlayPurchases$Event;)V", 0);
         }
@@ -95,7 +94,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreGooglePlayPurchases.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "p1");
+            m.checkNotNullParameter(event, "p1");
             ChoosePlanViewModel.access$handleEvent((ChoosePlanViewModel) this.receiver, event);
         }
     }
@@ -115,13 +114,13 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             Observable<StoreGooglePlayPurchases.State> observableObserveState2 = companion.getGooglePlayPurchases().observeState();
             Observable<StoreGooglePlayPurchases.QueryState> observableObserveQueryState = companion.getGooglePlayPurchases().observeQueryState();
             Observable<StoreSubscriptions.SubscriptionsState> observableObserveSubscriptions = companion.getSubscriptions().observeSubscriptions();
-            ChoosePlanViewModel2 choosePlanViewModel2 = ChoosePlanViewModel2.INSTANCE;
-            Object choosePlanViewModel3 = choosePlanViewModel2;
-            if (choosePlanViewModel2 != null) {
-                choosePlanViewModel3 = new ChoosePlanViewModel3(choosePlanViewModel2);
+            ChoosePlanViewModel$Companion$observeStores$1 choosePlanViewModel$Companion$observeStores$1 = ChoosePlanViewModel$Companion$observeStores$1.INSTANCE;
+            Object choosePlanViewModel$sam$rx_functions_Func4$0 = choosePlanViewModel$Companion$observeStores$1;
+            if (choosePlanViewModel$Companion$observeStores$1 != null) {
+                choosePlanViewModel$sam$rx_functions_Func4$0 = new ChoosePlanViewModel$sam$rx_functions_Func4$0(choosePlanViewModel$Companion$observeStores$1);
             }
-            Observable<StoreState> observableH = Observable.h(observableObserveState, observableObserveState2, observableObserveQueryState, observableObserveSubscriptions, (Func4) choosePlanViewModel3);
-            Intrinsics3.checkNotNullExpressionValue(observableH, "Observable.combineLatest…     ::StoreState\n      )");
+            Observable<StoreState> observableH = Observable.h(observableObserveState, observableObserveState2, observableObserveQueryState, observableObserveSubscriptions, (Func4) choosePlanViewModel$sam$rx_functions_Func4$0);
+            m.checkNotNullExpressionValue(observableH, "Observable.combineLatest…     ::StoreState\n      )");
             return observableH;
         }
 
@@ -141,8 +140,8 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public CompleteSkuPurchase(String str, String str2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "skuName");
-                Intrinsics3.checkNotNullParameter(str2, "planName");
+                m.checkNotNullParameter(str, "skuName");
+                m.checkNotNullParameter(str2, "planName");
                 this.skuName = str;
                 this.planName = str2;
             }
@@ -168,8 +167,8 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public final CompleteSkuPurchase copy(String skuName, String planName) {
-                Intrinsics3.checkNotNullParameter(skuName, "skuName");
-                Intrinsics3.checkNotNullParameter(planName, "planName");
+                m.checkNotNullParameter(skuName, "skuName");
+                m.checkNotNullParameter(planName, "planName");
                 return new CompleteSkuPurchase(skuName, planName);
             }
 
@@ -181,7 +180,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 CompleteSkuPurchase completeSkuPurchase = (CompleteSkuPurchase) other;
-                return Intrinsics3.areEqual(this.skuName, completeSkuPurchase.skuName) && Intrinsics3.areEqual(this.planName, completeSkuPurchase.planName);
+                return m.areEqual(this.skuName, completeSkuPurchase.skuName) && m.areEqual(this.planName, completeSkuPurchase.planName);
             }
 
             public final String getPlanName() {
@@ -200,10 +199,10 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("CompleteSkuPurchase(skuName=");
+                StringBuilder sbU = a.U("CompleteSkuPurchase(skuName=");
                 sbU.append(this.skuName);
                 sbU.append(", planName=");
-                return outline.J(sbU, this.planName, ")");
+                return a.J(sbU, this.planName, ")");
             }
         }
 
@@ -248,7 +247,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                return outline.B(outline.U("ErrorSkuPurchase(message="), this.message, ")");
+                return a.B(a.U("ErrorSkuPurchase(message="), this.message, ")");
             }
         }
 
@@ -259,7 +258,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public StartSkuPurchase(BillingFlowParams billingFlowParams) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(billingFlowParams, "billingParams");
+                m.checkNotNullParameter(billingFlowParams, "billingParams");
                 this.billingParams = billingFlowParams;
             }
 
@@ -276,13 +275,13 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public final StartSkuPurchase copy(BillingFlowParams billingParams) {
-                Intrinsics3.checkNotNullParameter(billingParams, "billingParams");
+                m.checkNotNullParameter(billingParams, "billingParams");
                 return new StartSkuPurchase(billingParams);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof StartSkuPurchase) && Intrinsics3.areEqual(this.billingParams, ((StartSkuPurchase) other).billingParams);
+                    return (other instanceof StartSkuPurchase) && m.areEqual(this.billingParams, ((StartSkuPurchase) other).billingParams);
                 }
                 return true;
             }
@@ -300,7 +299,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("StartSkuPurchase(billingParams=");
+                StringBuilder sbU = a.U("StartSkuPurchase(billingParams=");
                 sbU.append(this.billingParams);
                 sbU.append(")");
                 return sbU.toString();
@@ -323,10 +322,10 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         private final StoreSubscriptions.SubscriptionsState subscriptionsState;
 
         public StoreState(StoreGooglePlaySkuDetails.State state, StoreGooglePlayPurchases.State state2, StoreGooglePlayPurchases.QueryState queryState, StoreSubscriptions.SubscriptionsState subscriptionsState) {
-            Intrinsics3.checkNotNullParameter(state, "skuDetailsState");
-            Intrinsics3.checkNotNullParameter(state2, "purchasesState");
-            Intrinsics3.checkNotNullParameter(queryState, "purchasesQueryState");
-            Intrinsics3.checkNotNullParameter(subscriptionsState, "subscriptionsState");
+            m.checkNotNullParameter(state, "skuDetailsState");
+            m.checkNotNullParameter(state2, "purchasesState");
+            m.checkNotNullParameter(queryState, "purchasesQueryState");
+            m.checkNotNullParameter(subscriptionsState, "subscriptionsState");
             this.skuDetailsState = state;
             this.purchasesState = state2;
             this.purchasesQueryState = queryState;
@@ -370,10 +369,10 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(StoreGooglePlaySkuDetails.State skuDetailsState, StoreGooglePlayPurchases.State purchasesState, StoreGooglePlayPurchases.QueryState purchasesQueryState, StoreSubscriptions.SubscriptionsState subscriptionsState) {
-            Intrinsics3.checkNotNullParameter(skuDetailsState, "skuDetailsState");
-            Intrinsics3.checkNotNullParameter(purchasesState, "purchasesState");
-            Intrinsics3.checkNotNullParameter(purchasesQueryState, "purchasesQueryState");
-            Intrinsics3.checkNotNullParameter(subscriptionsState, "subscriptionsState");
+            m.checkNotNullParameter(skuDetailsState, "skuDetailsState");
+            m.checkNotNullParameter(purchasesState, "purchasesState");
+            m.checkNotNullParameter(purchasesQueryState, "purchasesQueryState");
+            m.checkNotNullParameter(subscriptionsState, "subscriptionsState");
             return new StoreState(skuDetailsState, purchasesState, purchasesQueryState, subscriptionsState);
         }
 
@@ -385,7 +384,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.skuDetailsState, storeState.skuDetailsState) && Intrinsics3.areEqual(this.purchasesState, storeState.purchasesState) && Intrinsics3.areEqual(this.purchasesQueryState, storeState.purchasesQueryState) && Intrinsics3.areEqual(this.subscriptionsState, storeState.subscriptionsState);
+            return m.areEqual(this.skuDetailsState, storeState.skuDetailsState) && m.areEqual(this.purchasesState, storeState.purchasesState) && m.areEqual(this.purchasesQueryState, storeState.purchasesQueryState) && m.areEqual(this.subscriptionsState, storeState.subscriptionsState);
         }
 
         public final StoreGooglePlayPurchases.QueryState getPurchasesQueryState() {
@@ -416,7 +415,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(skuDetailsState=");
+            StringBuilder sbU = a.U("StoreState(skuDetailsState=");
             sbU.append(this.skuDetailsState);
             sbU.append(", purchasesState=");
             sbU.append(this.purchasesState);
@@ -445,11 +444,11 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(StoreGooglePlayPurchases.QueryState queryState, List<? extends WidgetChoosePlanAdapter.Item> list, Map<String, ? extends SkuDetails> map, List<? extends Purchase> list2, List<ModelSubscription> list3, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(queryState, "purchasesQueryState");
-                Intrinsics3.checkNotNullParameter(list, "items");
-                Intrinsics3.checkNotNullParameter(map, "skuDetails");
-                Intrinsics3.checkNotNullParameter(list2, "purchases");
-                Intrinsics3.checkNotNullParameter(list3, "subscriptions");
+                m.checkNotNullParameter(queryState, "purchasesQueryState");
+                m.checkNotNullParameter(list, "items");
+                m.checkNotNullParameter(map, "skuDetails");
+                m.checkNotNullParameter(list2, "purchases");
+                m.checkNotNullParameter(list3, "subscriptions");
                 this.purchasesQueryState = queryState;
                 this.items = list;
                 this.skuDetails = map;
@@ -511,11 +510,11 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loaded copy(StoreGooglePlayPurchases.QueryState purchasesQueryState, List<? extends WidgetChoosePlanAdapter.Item> items, Map<String, ? extends SkuDetails> skuDetails, List<? extends Purchase> purchases, List<ModelSubscription> subscriptions, boolean isEmpty) {
-                Intrinsics3.checkNotNullParameter(purchasesQueryState, "purchasesQueryState");
-                Intrinsics3.checkNotNullParameter(items, "items");
-                Intrinsics3.checkNotNullParameter(skuDetails, "skuDetails");
-                Intrinsics3.checkNotNullParameter(purchases, "purchases");
-                Intrinsics3.checkNotNullParameter(subscriptions, "subscriptions");
+                m.checkNotNullParameter(purchasesQueryState, "purchasesQueryState");
+                m.checkNotNullParameter(items, "items");
+                m.checkNotNullParameter(skuDetails, "skuDetails");
+                m.checkNotNullParameter(purchases, "purchases");
+                m.checkNotNullParameter(subscriptions, "subscriptions");
                 return new Loaded(purchasesQueryState, items, skuDetails, purchases, subscriptions, isEmpty);
             }
 
@@ -527,7 +526,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.purchasesQueryState, loaded.purchasesQueryState) && Intrinsics3.areEqual(this.items, loaded.items) && Intrinsics3.areEqual(this.skuDetails, loaded.skuDetails) && Intrinsics3.areEqual(this.purchases, loaded.purchases) && Intrinsics3.areEqual(this.subscriptions, loaded.subscriptions) && this.isEmpty == loaded.isEmpty;
+                return m.areEqual(this.purchasesQueryState, loaded.purchasesQueryState) && m.areEqual(this.items, loaded.items) && m.areEqual(this.skuDetails, loaded.skuDetails) && m.areEqual(this.purchases, loaded.purchases) && m.areEqual(this.subscriptions, loaded.subscriptions) && this.isEmpty == loaded.isEmpty;
             }
 
             public final List<WidgetChoosePlanAdapter.Item> getItems() {
@@ -575,7 +574,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(purchasesQueryState=");
+                StringBuilder sbU = a.U("Loaded(purchasesQueryState=");
                 sbU.append(this.purchasesQueryState);
                 sbU.append(", items=");
                 sbU.append(this.items);
@@ -586,7 +585,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 sbU.append(", subscriptions=");
                 sbU.append(this.subscriptions);
                 sbU.append(", isEmpty=");
-                return outline.O(sbU, this.isEmpty, ")");
+                return a.O(sbU, this.isEmpty, ")");
             }
         }
 
@@ -651,11 +650,11 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         GooglePlaySku googlePlaySkuFromSkuName;
         String str = this.oldSkuName;
         if (str == null || (googlePlaySkuFromSkuName = (companion = GooglePlaySku.INSTANCE).fromSkuName(str)) == null) {
-            return Collections2.emptyList();
+            return n.emptyList();
         }
         SkuDetails skuDetails = skuDetailsMap.get(this.oldSkuName);
         if (skuDetails == null) {
-            return Collections2.emptyList();
+            return n.emptyList();
         }
         GooglePlaySku upgrade = googlePlaySkuFromSkuName.getUpgrade();
         GooglePlaySku upgrade2 = googlePlaySkuFromSkuName.getUpgrade();
@@ -668,7 +667,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         } else if (downgrade != null && skuDetails3 != null) {
             googlePlaySku = downgrade;
         }
-        return Collections2.listOf((Object[]) new WidgetChoosePlanAdapter.Item[]{new WidgetChoosePlanAdapter.Item.Header(R.string.billing_switch_plan_current_plan), new WidgetChoosePlanAdapter.Item.Plan(googlePlaySkuFromSkuName, skuDetails, googlePlaySku, this.oldSkuName, skuDetails2, true), new WidgetChoosePlanAdapter.Item.Divider()});
+        return n.listOf((Object[]) new WidgetChoosePlanAdapter.Item[]{new WidgetChoosePlanAdapter.Item.Header(R.string.billing_switch_plan_current_plan), new WidgetChoosePlanAdapter.Item.Plan(googlePlaySkuFromSkuName, skuDetails, googlePlaySku, this.oldSkuName, skuDetails2, true), new WidgetChoosePlanAdapter.Item.Divider()});
     }
 
     private final List<WidgetChoosePlanAdapter.Item> getGuildBoostPlans(Map<String, ? extends SkuDetails> skuDetailsMap, SubscriptionInterval skuInterval) {
@@ -707,7 +706,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             ArrayList arrayList = new ArrayList();
             for (int i = 0; i < 19; i++) {
                 GooglePlaySku googlePlaySku = googlePlaySkuArrValues[i];
-                if (googlePlaySku.getInterval() == skuInterval && GooglePlaySku2.isTier2(googlePlaySku)) {
+                if (googlePlaySku.getInterval() == skuInterval && GooglePlaySkuKt.isTier2(googlePlaySku)) {
                     arrayList.add(googlePlaySku);
                 }
             }
@@ -718,7 +717,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             ArrayList arrayList2 = new ArrayList();
             for (int i2 = 0; i2 < 19; i2++) {
                 GooglePlaySku googlePlaySku2 = googlePlaySkuArrValues2[i2];
-                if (googlePlaySku2.getInterval() == skuInterval && GooglePlaySku2.isTier1(googlePlaySku2)) {
+                if (googlePlaySku2.getInterval() == skuInterval && GooglePlaySkuKt.isTier1(googlePlaySku2)) {
                     arrayList2.add(googlePlaySku2);
                 }
             }
@@ -755,10 +754,10 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         }
         GooglePlaySku upgrade = sku.getUpgrade();
         SkuDetails skuDetails2 = skuDetailsMap.get(upgrade != null ? upgrade.getSkuName() : null);
-        boolean zAreEqual = Intrinsics3.areEqual(this.oldSkuName, sku.getSkuName());
+        boolean zAreEqual = m.areEqual(this.oldSkuName, sku.getSkuName());
         String str = this.oldSkuName;
         GooglePlaySku upgrade2 = sku.getUpgrade();
-        boolean z2 = Intrinsics3.areEqual(str, upgrade2 != null ? upgrade2.getSkuName() : null) && sku.getType() != GooglePlaySku.Type.PREMIUM_GUILD;
+        boolean z2 = m.areEqual(str, upgrade2 != null ? upgrade2.getSkuName() : null) && sku.getType() != GooglePlaySku.Type.PREMIUM_GUILD;
         if (this.oldSkuName == null || !(zAreEqual || z2)) {
             return new WidgetChoosePlanAdapter.Item.Plan(sku, skuDetails, sku, this.oldSkuName, skuDetails2, false, 32, null);
         }
@@ -766,12 +765,12 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
     }
 
     private final List<WidgetChoosePlanAdapter.Item> getPlansWithHeaders(List<? extends GooglePlaySku> skus, Map<String, ? extends SkuDetails> skuDetailsMap) {
-        List<GooglePlaySku.Section> listListOf = Collections2.listOf((Object[]) new GooglePlaySku.Section[]{GooglePlaySku.Section.PREMIUM, GooglePlaySku.Section.PREMIUM_AND_PREMIUM_GUILD, GooglePlaySku.Section.PREMIUM_GUILD});
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listListOf, 10));
+        List<GooglePlaySku.Section> listListOf = n.listOf((Object[]) new GooglePlaySku.Section[]{GooglePlaySku.Section.PREMIUM, GooglePlaySku.Section.PREMIUM_AND_PREMIUM_GUILD, GooglePlaySku.Section.PREMIUM_GUILD});
+        ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(listListOf, 10));
         for (GooglePlaySku.Section section : listListOf) {
             ArrayList arrayList2 = new ArrayList();
             for (Object obj : skus) {
-                if (GooglePlaySku2.getSection((GooglePlaySku) obj) == section) {
+                if (GooglePlaySkuKt.getSection((GooglePlaySku) obj) == section) {
                     arrayList2.add(obj);
                 }
             }
@@ -783,9 +782,9 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 arrayList3.add(obj2);
             }
         }
-        ArrayList arrayList4 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList3, 10));
+        ArrayList arrayList4 = new ArrayList(o.collectionSizeOrDefault(arrayList3, 10));
         for (List list : arrayList3) {
-            List listListOf2 = CollectionsJVM.listOf(getHeaderForSkuSection(GooglePlaySku2.getSection((GooglePlaySku) _Collections.first(list))));
+            List listListOf2 = d0.t.m.listOf(getHeaderForSkuSection(GooglePlaySkuKt.getSection((GooglePlaySku) u.first(list))));
             ArrayList arrayList5 = new ArrayList();
             Iterator it = list.iterator();
             while (it.hasNext()) {
@@ -794,9 +793,9 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                     arrayList5.add(planForSku);
                 }
             }
-            arrayList4.add(_Collections.plus((Collection) listListOf2, (Iterable) arrayList5));
+            arrayList4.add(u.plus((Collection) listListOf2, (Iterable) arrayList5));
         }
-        return Iterables2.flatten(arrayList4);
+        return o.flatten(arrayList4);
     }
 
     private final int getProrationMode(SkuDetails oldSkuDetails, SkuDetails newSkuDetails) {
@@ -817,7 +816,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 if (skuDetails == null || (strA = skuDetails.a()) == null) {
                     return;
                 }
-                Intrinsics3.checkNotNullExpressionValue(strA, "loadedViewState.skuDetai…e]?.description ?: return");
+                m.checkNotNullExpressionValue(strA, "loadedViewState.skuDetai…e]?.description ?: return");
                 AnalyticsTracker.paymentFlowCompleted$default(AnalyticsTracker.INSTANCE, this.locationTrait, Traits.Subscription.INSTANCE.withGatewayPlanId(purchaseQuerySuccess.getNewSkuName()), null, null, null, 28, null);
                 this.eventSubject.k.onNext(new Event.CompleteSkuPurchase(purchaseQuerySuccess.getNewSkuName(), strA));
                 return;
@@ -826,7 +825,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 StoreGooglePlayPurchases.Event.PurchaseQueryFailure purchaseQueryFailure = (StoreGooglePlayPurchases.Event.PurchaseQueryFailure) event;
                 AnalyticsTracker.paymentFlowFailed$default(AnalyticsTracker.INSTANCE, this.locationTrait, Traits.Subscription.INSTANCE.withGatewayPlanId(purchaseQueryFailure.getNewSkuName()), null, null, 12, null);
                 AppLog appLog = AppLog.g;
-                StringBuilder sbU = outline.U("Purchase query failure. ");
+                StringBuilder sbU = a.U("Purchase query failure. ");
                 sbU.append(purchaseQueryFailure.getNewSkuName());
                 Logger.e$default(appLog, sbU.toString(), new Exception(), null, 4, null);
                 this.eventSubject.k.onNext(new Event.ErrorSkuPurchase(R.string.billing_error_purchase));
@@ -839,7 +838,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         if ((storeState.getPurchasesState() instanceof StoreGooglePlayPurchases.State.Loaded) && (storeState.getSkuDetailsState() instanceof StoreGooglePlaySkuDetails.State.Loaded) && (storeState.getSubscriptionsState() instanceof StoreSubscriptions.SubscriptionsState.Loaded)) {
             List<WidgetChoosePlanAdapter.Item> currentPlanItems = getCurrentPlanItems(((StoreGooglePlaySkuDetails.State.Loaded) storeState.getSkuDetailsState()).getSkuDetails());
             List itemsForViewType$default = getItemsForViewType$default(this, this.viewType, ((StoreGooglePlaySkuDetails.State.Loaded) storeState.getSkuDetailsState()).getSkuDetails(), null, 4, null);
-            loaded = new ViewState.Loaded(storeState.getPurchasesQueryState(), _Collections.filterNotNull(_Collections.plus((Collection) currentPlanItems, (Iterable) itemsForViewType$default)), ((StoreGooglePlaySkuDetails.State.Loaded) storeState.getSkuDetailsState()).getSkuDetails(), ((StoreGooglePlayPurchases.State.Loaded) storeState.getPurchasesState()).getPurchases(), ((StoreSubscriptions.SubscriptionsState.Loaded) storeState.getSubscriptionsState()).getSubscriptions(), itemsForViewType$default.isEmpty());
+            loaded = new ViewState.Loaded(storeState.getPurchasesQueryState(), u.filterNotNull(u.plus((Collection) currentPlanItems, (Iterable) itemsForViewType$default)), ((StoreGooglePlaySkuDetails.State.Loaded) storeState.getSkuDetailsState()).getSkuDetails(), ((StoreGooglePlayPurchases.State.Loaded) storeState.getPurchasesState()).getPurchases(), ((StoreSubscriptions.SubscriptionsState.Loaded) storeState.getSubscriptionsState()).getSubscriptions(), itemsForViewType$default.isEmpty());
         } else {
             loaded = ViewState.Loading.INSTANCE;
         }
@@ -847,9 +846,9 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
     }
 
     public final void buy(GooglePlaySku sku, String oldSkuName, Traits.Location locationTrait, String fromStep) {
-        Intrinsics3.checkNotNullParameter(sku, "sku");
-        Intrinsics3.checkNotNullParameter(locationTrait, "locationTrait");
-        Intrinsics3.checkNotNullParameter(fromStep, "fromStep");
+        m.checkNotNullParameter(sku, "sku");
+        m.checkNotNullParameter(locationTrait, "locationTrait");
+        m.checkNotNullParameter(fromStep, "fromStep");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -881,14 +880,14 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             ArrayList<SkuDetails> arrayList = new ArrayList<>();
             arrayList.add(skuDetails2);
             aVar.d = arrayList;
-            Intrinsics3.checkNotNullExpressionValue(aVar, "BillingFlowParams.newBui…SkuDetails(newSkuDetails)");
-            if (oldSkuName != null && skuDetails3 != null && (!Intrinsics3.areEqual(sku.getSkuName(), oldSkuName))) {
+            m.checkNotNullExpressionValue(aVar, "BillingFlowParams.newBui…SkuDetails(newSkuDetails)");
+            if (oldSkuName != null && skuDetails3 != null && (!m.areEqual(sku.getSkuName(), oldSkuName))) {
                 PremiumUtils premiumUtils = PremiumUtils.INSTANCE;
                 Purchase purchaseFindPurchaseForSkuName = premiumUtils.findPurchaseForSkuName(loaded.getPurchases(), oldSkuName);
                 if (purchaseFindPurchaseForSkuName == null) {
                     AnalyticsTracker.paymentFlowFailed$default(AnalyticsTracker.INSTANCE, locationTrait, subscriptionWithGatewayPlanId, null, null, 12, null);
                     AppLog appLog2 = AppLog.g;
-                    StringBuilder sbY = outline.Y("Subscription without matching purchase. oldSkuName: ", oldSkuName, "; skuName: ");
+                    StringBuilder sbY = a.Y("Subscription without matching purchase. oldSkuName: ", oldSkuName, "; skuName: ");
                     sbY.append(sku.getSkuName());
                     Logger.e$default(appLog2, sbY.toString(), new Exception(), null, 4, null);
                     this.eventSubject.k.onNext(new Event.ErrorSkuPurchase(R.string.billing_error_purchase));
@@ -896,7 +895,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 }
                 int prorationMode = getProrationMode(skuDetails3, skuDetails2);
                 c cVar = new c();
-                Intrinsics3.checkNotNullExpressionValue(cVar, "BillingFlowParams.Subscr…UpdateParams.newBuilder()");
+                m.checkNotNullExpressionValue(cVar, "BillingFlowParams.Subscr…UpdateParams.newBuilder()");
                 String strA = purchaseFindPurchaseForSkuName.a();
                 cVar.a = strA;
                 cVar.f449b = prorationMode;
@@ -913,7 +912,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                     if (id2 == null) {
                         AnalyticsTracker.paymentFlowFailed$default(AnalyticsTracker.INSTANCE, locationTrait, subscriptionWithGatewayPlanId, null, null, 12, null);
                         AppLog appLog3 = AppLog.g;
-                        StringBuilder sbY2 = outline.Y("No premium subscription for downgrade found. oldSkuName: ", oldSkuName, "; skuName: ");
+                        StringBuilder sbY2 = a.Y("No premium subscription for downgrade found. oldSkuName: ", oldSkuName, "; skuName: ");
                         sbY2.append(sku.getSkuName());
                         Logger.e$default(appLog3, sbY2.toString(), new Exception(), null, 4, null);
                         this.eventSubject.k.onNext(new Event.ErrorSkuPurchase(R.string.billing_error_purchase));
@@ -921,8 +920,8 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                     }
                     StoreGooglePlayPurchases googlePlayPurchases = StoreStream.INSTANCE.getGooglePlayPurchases();
                     String strA2 = purchaseFindPurchaseForSkuName.a();
-                    Intrinsics3.checkNotNullExpressionValue(strA2, "purchase.purchaseToken");
-                    googlePlayPurchases.updatePendingDowngrade(new StoreGooglePlayPurchases2(strA2, id2, sku.getSkuName()));
+                    m.checkNotNullExpressionValue(strA2, "purchase.purchaseToken");
+                    googlePlayPurchases.updatePendingDowngrade(new PendingDowngrade(strA2, id2, sku.getSkuName()));
                 }
             }
             String obfuscatedUserId = UserUtils.INSTANCE.getObfuscatedUserId(Long.valueOf(StoreStream.INSTANCE.getUsers().getMe().getId()));
@@ -932,22 +931,22 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             AnalyticsTracker.paymentFlowStep$default(AnalyticsTracker.INSTANCE, locationTrait, subscriptionWithGatewayPlanId, "external_payment", fromStep, null, null, 48, null);
             PublishSubject<Event> publishSubject = this.eventSubject;
             BillingFlowParams billingFlowParamsA = aVar.a();
-            Intrinsics3.checkNotNullExpressionValue(billingFlowParamsA, "builder.build()");
+            m.checkNotNullExpressionValue(billingFlowParamsA, "builder.build()");
             publishSubject.k.onNext(new Event.StartSkuPurchase(billingFlowParamsA));
         }
     }
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChoosePlanViewModel(WidgetChoosePlan.ViewType viewType, String str, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        Intrinsics3.checkNotNullParameter(viewType, "viewType");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(viewType, "viewType");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.viewType = viewType;
         this.oldSkuName = str;
         this.eventSubject = PublishSubject.k0();

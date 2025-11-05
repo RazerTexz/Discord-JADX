@@ -18,13 +18,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import b.a.d.AppHelpDesk;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
@@ -40,26 +39,24 @@ import com.discord.utilities.billing.GooglePlayBillingManager;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.premium.GuildBoostUtils;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.simple_pager.SimplePager;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.servers.WidgetServerSettingsChannels;
 import com.discord.widgets.servers.guildboost.GuildBoostViewModel;
 import com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost;
 import com.discord.widgets.settings.premium.WidgetChoosePlan;
 import com.discord.widgets.settings.premium.WidgetSettingsPremium;
-import d0.LazyJVM;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.MapsJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.t.n;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Lazy;
@@ -74,7 +71,7 @@ import rx.functions.Action2;
 /* compiled from: WidgetGuildBoost.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildBoost extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildBoost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerBoostStatusBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildBoost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerBoostStatusBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -103,10 +100,10 @@ public final class WidgetGuildBoost extends AppFragment {
         }
 
         public final void create(Context context, long guildId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intentPutExtra = new Intent().putExtra(WidgetGuildBoost.INTENT_EXTRA_GUILD_ID, guildId);
-            Intrinsics3.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(INTENT_EXTRA_GUILD_ID, guildId)");
-            AppScreen2.d(context, WidgetGuildBoost.class, intentPutExtra);
+            m.checkNotNullExpressionValue(intentPutExtra, "Intent().putExtra(INTENT_EXTRA_GUILD_ID, guildId)");
+            j.d(context, WidgetGuildBoost.class, intentPutExtra);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -125,7 +122,7 @@ public final class WidgetGuildBoost extends AppFragment {
         }
 
         public final void configureViews(ViewPager viewPager) {
-            Intrinsics3.checkNotNullParameter(viewPager, "viewPager");
+            m.checkNotNullParameter(viewPager, "viewPager");
             int childCount = viewPager.getChildCount();
             if (childCount <= 0) {
                 return;
@@ -134,7 +131,7 @@ public final class WidgetGuildBoost extends AppFragment {
             while (true) {
                 int i2 = i + 1;
                 View childAt = viewPager.getChildAt(i);
-                Intrinsics3.checkNotNullExpressionValue(childAt, "getChildAt(index)");
+                m.checkNotNullExpressionValue(childAt, "getChildAt(index)");
                 Object tag = childAt.getTag();
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type kotlin.Int");
                 ((GuildBoostPerkView) childAt).configure(((Integer) tag).intValue(), this.premiumTier, this.guildId);
@@ -148,8 +145,8 @@ public final class WidgetGuildBoost extends AppFragment {
 
         @Override // androidx.viewpager.widget.PagerAdapter
         public void destroyItem(ViewGroup container, int position, Object view) {
-            Intrinsics3.checkNotNullParameter(container, "container");
-            Intrinsics3.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(container, "container");
+            m.checkNotNullParameter(view, "view");
             container.removeView((View) view);
         }
 
@@ -177,9 +174,9 @@ public final class WidgetGuildBoost extends AppFragment {
 
         @Override // androidx.viewpager.widget.PagerAdapter
         public boolean isViewFromObject(View view, Object any) {
-            Intrinsics3.checkNotNullParameter(view, "view");
-            Intrinsics3.checkNotNullParameter(any, "any");
-            return Intrinsics3.areEqual(view, any);
+            m.checkNotNullParameter(view, "view");
+            m.checkNotNullParameter(any, "any");
+            return m.areEqual(view, any);
         }
 
         public final void setGuildId(long j) {
@@ -196,10 +193,10 @@ public final class WidgetGuildBoost extends AppFragment {
 
         @Override // androidx.viewpager.widget.PagerAdapter
         public View instantiateItem(ViewGroup container, int position) {
-            Intrinsics3.checkNotNullParameter(container, "container");
+            m.checkNotNullParameter(container, "container");
             int i = position + 1;
             Context context = container.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "container.context");
+            m.checkNotNullExpressionValue(context, "container.context");
             GuildBoostPerkView guildBoostPerkView = new GuildBoostPerkView(context, null, 0, 6, null);
             guildBoostPerkView.configure(i, this.premiumTier, this.guildId);
             guildBoostPerkView.setTag(Integer.valueOf(i));
@@ -222,7 +219,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
     /* compiled from: WidgetGuildBoost.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$configureUI$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -241,7 +238,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
     /* compiled from: WidgetGuildBoost.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$handleEvent$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -254,7 +251,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             WidgetSettingsPremium.Companion.launch$default(WidgetSettingsPremium.INSTANCE, WidgetGuildBoost.this.requireContext(), null, null, 6, null);
         }
     }
@@ -291,24 +288,24 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
-            Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
+            m.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != R.id.menu_premium_guild) {
                 return;
             }
             WidgetSettingsGuildBoost.Companion companion = WidgetSettingsGuildBoost.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(context, "context");
+            m.checkNotNullExpressionValue(context, "context");
             companion.launch(context);
         }
     }
 
     /* compiled from: WidgetGuildBoost.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<RenderContext, Unit> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
         /* compiled from: WidgetGuildBoost.kt */
         /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$3$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -323,10 +320,10 @@ public final class WidgetGuildBoost extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                Intrinsics3.checkNotNullParameter(view, "view");
+                m.checkNotNullParameter(view, "view");
                 WidgetSettingsGuildBoost.Companion companion = WidgetSettingsGuildBoost.INSTANCE;
                 Context context = view.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+                m.checkNotNullExpressionValue(context, "view.context");
                 companion.launch(context);
             }
         }
@@ -343,18 +340,18 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.b("learnMore", AnonymousClass1.INSTANCE);
         }
     }
 
     /* compiled from: WidgetGuildBoost.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<RenderContext, Unit> {
 
         /* compiled from: WidgetGuildBoost.kt */
         /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -369,10 +366,10 @@ public final class WidgetGuildBoost extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                Intrinsics3.checkNotNullParameter(view, "view");
+                m.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
                 Context context = view.getContext();
-                Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+                m.checkNotNullExpressionValue(context, "view.context");
                 WidgetSettingsPremium.Companion.launch$default(companion, context, null, null, 6, null);
             }
         }
@@ -389,7 +386,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.boldColor = Integer.valueOf(ColorCompat.getColor(WidgetGuildBoost.this.requireContext(), R.color.status_green_600));
             renderContext.b("onLearnMore", AnonymousClass1.INSTANCE);
             renderContext.a("protipHook", AnonymousClass2.INSTANCE);
@@ -397,7 +394,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* compiled from: WidgetGuildBoost.kt */
         /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4$2, reason: invalid class name */
-        public static final class AnonymousClass2 extends Lambda implements Function1<Hook, Unit> {
+        public static final class AnonymousClass2 extends o implements Function1<Hook, Unit> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
             public AnonymousClass2() {
@@ -406,7 +403,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
+                m.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new StyleSpan(1));
                 hook.styles.add(new ForegroundColorSpan(-65536));
             }
@@ -445,7 +442,7 @@ public final class WidgetGuildBoost extends AppFragment {
 
     /* compiled from: WidgetGuildBoost.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<GuildBoostViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<GuildBoostViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetGuildBoost widgetGuildBoost) {
             super(1, widgetGuildBoost, WidgetGuildBoost.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/guildboost/GuildBoostViewModel$ViewState;)V", 0);
         }
@@ -458,14 +455,14 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetGuildBoost.access$configureUI((WidgetGuildBoost) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetGuildBoost.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBoundOrOnResume$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<GuildBoostViewModel.Event, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<GuildBoostViewModel.Event, Unit> {
         public AnonymousClass2(WidgetGuildBoost widgetGuildBoost) {
             super(1, widgetGuildBoost, WidgetGuildBoost.class, "handleEvent", "handleEvent(Lcom/discord/widgets/servers/guildboost/GuildBoostViewModel$Event;)V", 0);
         }
@@ -478,19 +475,19 @@ public final class WidgetGuildBoost extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostViewModel.Event event) {
-            Intrinsics3.checkNotNullParameter(event, "p1");
+            m.checkNotNullParameter(event, "p1");
             WidgetGuildBoost.access$handleEvent((WidgetGuildBoost) this.receiver, event);
         }
     }
 
     public WidgetGuildBoost() {
         super(R.layout.widget_server_boost_status);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildBoost2.INSTANCE, null, 2, null);
-        WidgetGuildBoost5 widgetGuildBoost5 = new WidgetGuildBoost5(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildBoostViewModel.class), new WidgetGuildBoost$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildBoost5));
-        this.choosePlanLauncher = WidgetChoosePlan.INSTANCE.registerForResult(this, new WidgetGuildBoost3(this));
-        this.guildId = LazyJVM.lazy(new WidgetGuildBoost4(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildBoost$binding$2.INSTANCE, null, 2, null);
+        WidgetGuildBoost$viewModel$2 widgetGuildBoost$viewModel$2 = new WidgetGuildBoost$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildBoostViewModel.class), new WidgetGuildBoost$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildBoost$viewModel$2));
+        this.choosePlanLauncher = WidgetChoosePlan.INSTANCE.registerForResult(this, new WidgetGuildBoost$choosePlanLauncher$1(this));
+        this.guildId = g.lazy(new WidgetGuildBoost$guildId$2(this));
     }
 
     public static final /* synthetic */ void access$configureLevelBubbles(WidgetGuildBoost widgetGuildBoost, int i) {
@@ -522,7 +519,7 @@ public final class WidgetGuildBoost extends AppFragment {
         while (i <= 3) {
             List<? extends ImageView> list = this.levelBackgrounds;
             if (list == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("levelBackgrounds");
+                m.throwUninitializedPropertyAccessException("levelBackgrounds");
             }
             ImageView imageView = list.get(i);
             ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
@@ -531,7 +528,7 @@ public final class WidgetGuildBoost extends AppFragment {
             imageView.setLayoutParams(layoutParams);
             List<? extends TextView> list2 = this.levelText;
             if (list2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("levelText");
+                m.throwUninitializedPropertyAccessException("levelText");
             }
             TextView textView = list2.get(i);
             if (textView != null) {
@@ -543,22 +540,22 @@ public final class WidgetGuildBoost extends AppFragment {
 
     private final void configureProgressBar(long guildId, int premiumTier, int subscriptionCount) {
         ProgressBar progressBar = getBinding().l.f222b;
-        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.progress.boostBarProgressBar");
+        m.checkNotNullExpressionValue(progressBar, "binding.progress.boostBarProgressBar");
         progressBar.setProgress(GuildBoostUtils.calculateTotalProgress$default(GuildBoostUtils.INSTANCE, guildId, premiumTier, subscriptionCount, null, null, 24, null));
         ProgressBar progressBar2 = getBinding().l.f222b;
-        Intrinsics3.checkNotNullExpressionValue(progressBar2, "binding.progress.boostBarProgressBar");
+        m.checkNotNullExpressionValue(progressBar2, "binding.progress.boostBarProgressBar");
         progressBar2.setContentDescription(getString(premiumTier != 0 ? premiumTier != 1 ? premiumTier != 2 ? premiumTier != 3 ? 0 : R.string.premium_guild_tier_3 : R.string.premium_guild_tier_2 : R.string.premium_guild_tier_1 : R.string.premium_guild_header_badge_no_tier));
         ImageView imageView = getBinding().l.c;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.progress.boostBarTier0Iv");
+        m.checkNotNullExpressionValue(imageView, "binding.progress.boostBarTier0Iv");
         imageView.setEnabled(subscriptionCount > 0);
         ImageView imageView2 = getBinding().l.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.progress.boostBarTier1Iv");
+        m.checkNotNullExpressionValue(imageView2, "binding.progress.boostBarTier1Iv");
         imageView2.setEnabled(premiumTier >= 1);
         ImageView imageView3 = getBinding().l.f;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.progress.boostBarTier2Iv");
+        m.checkNotNullExpressionValue(imageView3, "binding.progress.boostBarTier2Iv");
         imageView3.setEnabled(premiumTier >= 2);
         ImageView imageView4 = getBinding().l.h;
-        Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.progress.boostBarTier3Iv");
+        m.checkNotNullExpressionValue(imageView4, "binding.progress.boostBarTier3Iv");
         imageView4.setEnabled(premiumTier >= 3);
     }
 
@@ -570,20 +567,20 @@ public final class WidgetGuildBoost extends AppFragment {
     private final void configureUI(GuildBoostViewModel.ViewState viewState) {
         if (viewState instanceof GuildBoostViewModel.ViewState.Loading) {
             AppViewFlipper appViewFlipper = getBinding().f2535b;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.boostStatusFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper, "binding.boostStatusFlipper");
             appViewFlipper.setDisplayedChild(0);
             return;
         }
         if (viewState instanceof GuildBoostViewModel.ViewState.Failure) {
             AppViewFlipper appViewFlipper2 = getBinding().f2535b;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.boostStatusFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper2, "binding.boostStatusFlipper");
             appViewFlipper2.setDisplayedChild(1);
             getBinding().h.setOnClickListener(new AnonymousClass1());
             return;
         }
         if (viewState instanceof GuildBoostViewModel.ViewState.Loaded) {
             AppViewFlipper appViewFlipper3 = getBinding().f2535b;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper3, "binding.boostStatusFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper3, "binding.boostStatusFlipper");
             appViewFlipper3.setDisplayedChild(2);
         }
         GuildBoostViewModel.ViewState.Loaded loaded = (GuildBoostViewModel.ViewState.Loaded) viewState;
@@ -595,29 +592,29 @@ public final class WidgetGuildBoost extends AppFragment {
         getBinding().e.a(loaded.getMeUser().getPremiumTier(), new AnonymousClass2());
         getBinding().f.a(loaded.getMeUser().getPremiumTier(), false);
         TextView textView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.boostStatusNumBoosts");
+        m.checkNotNullExpressionValue(textView, "binding.boostStatusNumBoosts");
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-        textView.setText(StringResourceUtils.getQuantityString(resources, requireContext(), R.plurals.premium_guild_perks_modal_header_subscription_count_subscriptions, premiumSubscriptionCount, Integer.valueOf(premiumSubscriptionCount)));
+        m.checkNotNullExpressionValue(resources, "resources");
+        textView.setText(StringResourceUtilsKt.getQuantityString(resources, requireContext(), R.plurals.premium_guild_perks_modal_header_subscription_count_subscriptions, premiumSubscriptionCount, Integer.valueOf(premiumSubscriptionCount)));
     }
 
     private final void configureViewpager(int premiumTier, int subscriptionCount) {
         PerksPagerAdapter perksPagerAdapter = this.pagerAdapter;
         if (perksPagerAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("pagerAdapter");
+            m.throwUninitializedPropertyAccessException("pagerAdapter");
         }
         perksPagerAdapter.setPremiumTier(premiumTier);
         PerksPagerAdapter perksPagerAdapter2 = this.pagerAdapter;
         if (perksPagerAdapter2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("pagerAdapter");
+            m.throwUninitializedPropertyAccessException("pagerAdapter");
         }
         perksPagerAdapter2.setSubscriptionCount(subscriptionCount);
         PerksPagerAdapter perksPagerAdapter3 = this.pagerAdapter;
         if (perksPagerAdapter3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("pagerAdapter");
+            m.throwUninitializedPropertyAccessException("pagerAdapter");
         }
         SimplePager simplePager = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(simplePager, "binding.boostStatusViewpager");
+        m.checkNotNullExpressionValue(simplePager, "binding.boostStatusViewpager");
         perksPagerAdapter3.configureViews(simplePager);
         if (this.wasPagerPageSet) {
             return;
@@ -666,58 +663,58 @@ public final class WidgetGuildBoost extends AppFragment {
             AnalyticsTracker.INSTANCE.openModal(Traits.Location.Section.ANDROID_CANNOT_MANAGE_SUBSCRIPTION, new Traits.Location(Traits.Location.Page.BOOST_MARKETING, Traits.Location.Section.HEADER, Traits.Location.Obj.BUTTON_CTA, Traits.Location.ObjType.BUY, null, 16, null));
             WidgetNoticeDialog.Companion companion = WidgetNoticeDialog.INSTANCE;
             FragmentManager parentFragmentManager = getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, getString(R.string.premium_guild_subscription_out_of_slots_title), FormatUtils.k(this, R.string.premium_guild_subscription_out_of_slots_purchase_on_desktop, new Object[]{AppHelpDesk.a.a(360055386693L, null)}, null, 4), getString(R.string.premium_guild_subscription_header_subscribe_tooltip_close), null, null, null, null, null, null, null, null, 0, null, 16368, null);
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, getString(R.string.premium_guild_subscription_out_of_slots_title), b.k(this, R.string.premium_guild_subscription_out_of_slots_purchase_on_desktop, new Object[]{f.a.a(360055386693L, null)}, null, 4), getString(R.string.premium_guild_subscription_header_subscribe_tooltip_close), null, null, null, null, null, null, null, null, 0, null, 16368, null);
             return;
         }
         if (event instanceof GuildBoostViewModel.Event.UnacknowledgedPurchase) {
-            AppToast.i(this, R.string.billing_error_purchase, 0, 4);
+            b.a.d.m.i(this, R.string.billing_error_purchase, 0, 4);
             GooglePlayBillingManager.INSTANCE.queryPurchases();
         } else if (event instanceof GuildBoostViewModel.Event.ShowBlockedPlanSwitchAlertDialog) {
             WidgetNoticeDialog.Companion companion2 = WidgetNoticeDialog.INSTANCE;
             FragmentManager parentFragmentManager2 = getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+            m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
             GuildBoostViewModel.Event.ShowBlockedPlanSwitchAlertDialog showBlockedPlanSwitchAlertDialog = (GuildBoostViewModel.Event.ShowBlockedPlanSwitchAlertDialog) event;
             String string = getString(showBlockedPlanSwitchAlertDialog.getHeaderStringRes());
             String string2 = getString(showBlockedPlanSwitchAlertDialog.getBodyStringRes());
-            Intrinsics3.checkNotNullExpressionValue(string2, "getString(event.bodyStringRes)");
-            WidgetNoticeDialog.Companion.show$default(companion2, parentFragmentManager2, string, string2, getString(R.string.billing_manage_subscription), getString(R.string.cancel), MapsJVM.mapOf(Tuples.to(Integer.valueOf(R.id.notice_ok), new AnonymousClass1())), null, null, null, null, null, null, 0, null, 16320, null);
+            m.checkNotNullExpressionValue(string2, "getString(event.bodyStringRes)");
+            WidgetNoticeDialog.Companion.show$default(companion2, parentFragmentManager2, string, string2, getString(R.string.billing_manage_subscription), getString(R.string.cancel), d0.t.g0.mapOf(d0.o.to(Integer.valueOf(R.id.notice_ok), new AnonymousClass1())), null, null, null, null, null, null, 0, null, 16320, null);
         }
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         this.pagerAdapter = new PerksPagerAdapter(getGuildId());
         getBinding().k.setWrapHeight(true);
         SimplePager simplePager = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(simplePager, "binding.boostStatusViewpager");
+        m.checkNotNullExpressionValue(simplePager, "binding.boostStatusViewpager");
         PerksPagerAdapter perksPagerAdapter = this.pagerAdapter;
         if (perksPagerAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("pagerAdapter");
+            m.throwUninitializedPropertyAccessException("pagerAdapter");
         }
         simplePager.setAdapter(perksPagerAdapter);
         getBinding().k.addOnPageChangeListener(new AnonymousClass1());
         AppFragment.setActionBarOptionsMenu$default(this, R.menu.menu_premium_guild, AnonymousClass2.INSTANCE, null, 4, null);
         LinkifiedTextView linkifiedTextView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.boostStatusLearnMore");
-        FormatUtils.m(linkifiedTextView, R.string.premium_guild_perks_modal_blurb_mobile_learn_more, new Object[]{"learnMode"}, AnonymousClass3.INSTANCE);
-        CharSequence i18nPluralString = StringResourceUtils.getI18nPluralString(requireContext(), R.plurals.premium_guild_perks_modal_protip_mobile_numFreeGuildSubscriptions, 2, 2);
+        m.checkNotNullExpressionValue(linkifiedTextView, "binding.boostStatusLearnMore");
+        b.m(linkifiedTextView, R.string.premium_guild_perks_modal_blurb_mobile_learn_more, new Object[]{"learnMode"}, AnonymousClass3.INSTANCE);
+        CharSequence i18nPluralString = StringResourceUtilsKt.getI18nPluralString(requireContext(), R.plurals.premium_guild_perks_modal_protip_mobile_numFreeGuildSubscriptions, 2, 2);
         LinkifiedTextView linkifiedTextView2 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView2, "binding.boostStatusProtip");
-        FormatUtils.m(linkifiedTextView2, R.string.premium_guild_perks_modal_protip, new Object[]{i18nPluralString}, new AnonymousClass4());
+        m.checkNotNullExpressionValue(linkifiedTextView2, "binding.boostStatusProtip");
+        b.m(linkifiedTextView2, R.string.premium_guild_perks_modal_protip, new Object[]{i18nPluralString}, new AnonymousClass4());
         ImageView imageView = getBinding().l.c;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.progress.boostBarTier0Iv");
+        m.checkNotNullExpressionValue(imageView, "binding.progress.boostBarTier0Iv");
         ImageView imageView2 = getBinding().l.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.progress.boostBarTier1Iv");
+        m.checkNotNullExpressionValue(imageView2, "binding.progress.boostBarTier1Iv");
         ImageView imageView3 = getBinding().l.f;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.progress.boostBarTier2Iv");
+        m.checkNotNullExpressionValue(imageView3, "binding.progress.boostBarTier2Iv");
         ImageView imageView4 = getBinding().l.h;
-        Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.progress.boostBarTier3Iv");
-        this.levelBackgrounds = Collections2.listOf((Object[]) new ImageView[]{imageView, imageView2, imageView3, imageView4});
-        this.levelText = Collections2.listOf((Object[]) new TextView[]{null, getBinding().l.e, getBinding().l.g, getBinding().l.i});
+        m.checkNotNullExpressionValue(imageView4, "binding.progress.boostBarTier3Iv");
+        this.levelBackgrounds = n.listOf((Object[]) new ImageView[]{imageView, imageView2, imageView3, imageView4});
+        this.levelText = n.listOf((Object[]) new TextView[]{null, getBinding().l.e, getBinding().l.g, getBinding().l.i});
         getBinding().i.setOnClickListener(new AnonymousClass5());
         getBinding().j.setOnClickListener(new AnonymousClass6());
         fetchData();
@@ -731,7 +728,7 @@ public final class WidgetGuildBoost extends AppFragment {
             appActivity.finish();
         }
         Observable<GuildBoostViewModel.ViewState> observableR = getViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "viewModel\n        .obser…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetGuildBoost.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(this), 62, (Object) null);
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().observeEvents(), this, null, 2, null), WidgetGuildBoost.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
     }

@@ -3,10 +3,10 @@ package b.i.a.c;
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class p0 implements Runnable {
-    public final /* synthetic */ StreamVolumeManager j;
+    public final /* synthetic */ m2 j;
 
-    public /* synthetic */ p0(StreamVolumeManager streamVolumeManager) {
-        this.j = streamVolumeManager;
+    public /* synthetic */ p0(m2 m2Var) {
+        this.j = m2Var;
     }
 
     @Override // java.lang.Runnable

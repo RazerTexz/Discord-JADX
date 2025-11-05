@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo.util;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Arrays;
 
 /* loaded from: classes.dex */
@@ -213,7 +213,7 @@ public class IntArray {
         if (i + i2 <= intArray.size) {
             addAll(intArray.items, i, i2);
         } else {
-            StringBuilder sbW = outline.W("offset + length must be <= size: ", i, " + ", i2, " <= ");
+            StringBuilder sbW = a.W("offset + length must be <= size: ", i, " + ", i2, " <= ");
             sbW.append(intArray.size);
             throw new IllegalArgumentException(sbW.toString());
         }

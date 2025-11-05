@@ -1,9 +1,8 @@
 package d0.e0.p.d.m0.o;
 
-import b.d.b.a.outline;
-import d0.e0.p.d.m0.c.FunctionDescriptor;
+import d0.e0.p.d.m0.c.x;
 import d0.e0.p.d.m0.o.b;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: modifierChecks.kt */
@@ -19,16 +18,16 @@ public abstract class l implements d0.e0.p.d.m0.o.b {
 
         /* JADX WARN: Illegal instructions before constructor call */
         public a(int i) {
-            StringBuilder sbV = outline.V("must have at least ", i, " value parameter");
+            StringBuilder sbV = b.d.b.a.a.V("must have at least ", i, " value parameter");
             sbV.append(i > 1 ? "s" : "");
             super(sbV.toString(), null);
             this.f3557b = i;
         }
 
         @Override // d0.e0.p.d.m0.o.b
-        public boolean check(FunctionDescriptor functionDescriptor) {
-            Intrinsics3.checkNotNullParameter(functionDescriptor, "functionDescriptor");
-            return functionDescriptor.getValueParameters().size() >= this.f3557b;
+        public boolean check(x xVar) {
+            m.checkNotNullParameter(xVar, "functionDescriptor");
+            return xVar.getValueParameters().size() >= this.f3557b;
         }
     }
 
@@ -39,14 +38,14 @@ public abstract class l implements d0.e0.p.d.m0.o.b {
         public final int f3558b;
 
         public b(int i) {
-            super(outline.r("must have exactly ", i, " value parameters"), null);
+            super(b.d.b.a.a.r("must have exactly ", i, " value parameters"), null);
             this.f3558b = i;
         }
 
         @Override // d0.e0.p.d.m0.o.b
-        public boolean check(FunctionDescriptor functionDescriptor) {
-            Intrinsics3.checkNotNullParameter(functionDescriptor, "functionDescriptor");
-            return functionDescriptor.getValueParameters().size() == this.f3558b;
+        public boolean check(x xVar) {
+            m.checkNotNullParameter(xVar, "functionDescriptor");
+            return xVar.getValueParameters().size() == this.f3558b;
         }
     }
 
@@ -61,9 +60,9 @@ public abstract class l implements d0.e0.p.d.m0.o.b {
         }
 
         @Override // d0.e0.p.d.m0.o.b
-        public boolean check(FunctionDescriptor functionDescriptor) {
-            Intrinsics3.checkNotNullParameter(functionDescriptor, "functionDescriptor");
-            return functionDescriptor.getValueParameters().isEmpty();
+        public boolean check(x xVar) {
+            m.checkNotNullParameter(xVar, "functionDescriptor");
+            return xVar.getValueParameters().isEmpty();
         }
     }
 
@@ -78,9 +77,9 @@ public abstract class l implements d0.e0.p.d.m0.o.b {
         }
 
         @Override // d0.e0.p.d.m0.o.b
-        public boolean check(FunctionDescriptor functionDescriptor) {
-            Intrinsics3.checkNotNullParameter(functionDescriptor, "functionDescriptor");
-            return functionDescriptor.getValueParameters().size() == 1;
+        public boolean check(x xVar) {
+            m.checkNotNullParameter(xVar, "functionDescriptor");
+            return xVar.getValueParameters().size() == 1;
         }
     }
 
@@ -94,7 +93,7 @@ public abstract class l implements d0.e0.p.d.m0.o.b {
     }
 
     @Override // d0.e0.p.d.m0.o.b
-    public String invoke(FunctionDescriptor functionDescriptor) {
-        return b.a.invoke(this, functionDescriptor);
+    public String invoke(x xVar) {
+        return b.a.invoke(this, xVar);
     }
 }

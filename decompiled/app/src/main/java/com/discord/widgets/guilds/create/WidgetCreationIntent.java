@@ -6,24 +6,24 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppScreen2;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
-import com.discord.app.AppLogger2;
+import com.discord.app.LoggingConfig;
 import com.discord.databinding.WidgetCreationIntentBinding;
 import com.discord.i18n.RenderContext;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.guilds.create.WidgetGuildCreate;
 import com.discord.widgets.nux.GuildTemplateAnalytics;
 import com.google.android.material.card.MaterialCardView;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -33,7 +33,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetCreationIntent.kt */
 /* loaded from: classes2.dex */
 public final class WidgetCreationIntent extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetCreationIntent.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreationIntentBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetCreationIntent.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreationIntentBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -44,7 +44,7 @@ public final class WidgetCreationIntent extends AppFragment {
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
-    private final AppLogger2 loggingConfig;
+    private final LoggingConfig loggingConfig;
 
     /* compiled from: WidgetCreationIntent.kt */
     public static final class Companion {
@@ -52,10 +52,10 @@ public final class WidgetCreationIntent extends AppFragment {
         }
 
         public final void show(AppFragment fragment, CreateGuildTrigger trigger, WidgetGuildCreate.Options createGuildOptions) {
-            Intrinsics3.checkNotNullParameter(fragment, "fragment");
-            Intrinsics3.checkNotNullParameter(trigger, "trigger");
-            Intrinsics3.checkNotNullParameter(createGuildOptions, "createGuildOptions");
-            AppScreen2.g(AppScreen2.g, fragment.getParentFragmentManager(), fragment.requireContext(), WidgetCreationIntent.class, 0, true, null, new WidgetCreationIntent2(trigger, createGuildOptions), 40);
+            m.checkNotNullParameter(fragment, "fragment");
+            m.checkNotNullParameter(trigger, "trigger");
+            m.checkNotNullParameter(createGuildOptions, "createGuildOptions");
+            j.g(j.g, fragment.getParentFragmentManager(), fragment.requireContext(), WidgetCreationIntent.class, 0, true, null, new CreationIntentArgs(trigger, createGuildOptions), 40);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -89,12 +89,12 @@ public final class WidgetCreationIntent extends AppFragment {
 
     /* compiled from: WidgetCreationIntent.kt */
     /* renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
 
         /* compiled from: WidgetCreationIntent.kt */
         /* renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$onViewBound$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02921 extends Lambda implements Function1<View, Unit> {
-            public C02921() {
+        public static final class C04121 extends o implements Function1<View, Unit> {
+            public C04121() {
                 super(1);
             }
 
@@ -106,7 +106,7 @@ public final class WidgetCreationIntent extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
-                Intrinsics3.checkNotNullParameter(view, "it");
+                m.checkNotNullParameter(view, "it");
                 WidgetCreationIntent.access$onSelectionPressed(WidgetCreationIntent.this, null);
             }
         }
@@ -123,8 +123,8 @@ public final class WidgetCreationIntent extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
-            renderContext.b("onSkip", new C02921());
+            m.checkNotNullParameter(renderContext, "$receiver");
+            renderContext.b("onSkip", new C04121());
         }
     }
 
@@ -138,9 +138,9 @@ public final class WidgetCreationIntent extends AppFragment {
 
     public WidgetCreationIntent(@LayoutRes int i) {
         super(i);
-        this.args = LazyJVM.lazy(new WidgetCreationIntent$$special$$inlined$args$1(this, "intent_args_key"));
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetCreationIntent3.INSTANCE, null, 2, null);
-        this.loggingConfig = new AppLogger2(false, null, WidgetCreationIntent4.INSTANCE, 3);
+        this.args = g.lazy(new WidgetCreationIntent$$special$$inlined$args$1(this, "intent_args_key"));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetCreationIntent$binding$2.INSTANCE, null, 2, null);
+        this.loggingConfig = new LoggingConfig(false, null, WidgetCreationIntent$loggingConfig$1.INSTANCE, 3);
     }
 
     public static final /* synthetic */ void access$onSelectionPressed(WidgetCreationIntent widgetCreationIntent, Boolean bool) {
@@ -173,45 +173,45 @@ public final class WidgetCreationIntent extends AppFragment {
         WidgetGuildCreate.INSTANCE.showFragment(this, getArgs().getCreateGuildOptions());
     }
 
-    public final WidgetCreationIntent2 getArgs() {
-        return (WidgetCreationIntent2) this.args.getValue();
+    public final CreationIntentArgs getArgs() {
+        return (CreationIntentArgs) this.args.getValue();
     }
 
     @Override // com.discord.app.AppFragment, com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
+    public LoggingConfig getLoggingConfig() {
         return this.loggingConfig;
     }
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         if (IS_FRIENDS_FIRST) {
             MaterialCardView materialCardView = getBinding().f2360b;
-            Intrinsics3.checkNotNullExpressionValue(materialCardView, "binding.creationIntentFirstOption");
+            m.checkNotNullExpressionValue(materialCardView, "binding.creationIntentFirstOption");
             TextView textView = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.creationIntentFirstOptionText");
+            m.checkNotNullExpressionValue(textView, "binding.creationIntentFirstOptionText");
             configureFriendsButton(materialCardView, textView);
             MaterialCardView materialCardView2 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialCardView2, "binding.creationIntentSecondOption");
+            m.checkNotNullExpressionValue(materialCardView2, "binding.creationIntentSecondOption");
             TextView textView2 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.creationIntentSecondOptionText");
+            m.checkNotNullExpressionValue(textView2, "binding.creationIntentSecondOptionText");
             configureCommunityButton(materialCardView2, textView2);
         } else {
             MaterialCardView materialCardView3 = getBinding().f2360b;
-            Intrinsics3.checkNotNullExpressionValue(materialCardView3, "binding.creationIntentFirstOption");
+            m.checkNotNullExpressionValue(materialCardView3, "binding.creationIntentFirstOption");
             TextView textView3 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.creationIntentFirstOptionText");
+            m.checkNotNullExpressionValue(textView3, "binding.creationIntentFirstOptionText");
             configureCommunityButton(materialCardView3, textView3);
             MaterialCardView materialCardView4 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(materialCardView4, "binding.creationIntentSecondOption");
+            m.checkNotNullExpressionValue(materialCardView4, "binding.creationIntentSecondOption");
             TextView textView4 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.creationIntentSecondOptionText");
+            m.checkNotNullExpressionValue(textView4, "binding.creationIntentSecondOptionText");
             configureFriendsButton(materialCardView4, textView4);
         }
         LinkifiedTextView linkifiedTextView = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.creationIntentSkipText");
-        FormatUtils.m(linkifiedTextView, R.string.creation_intent_skip, new Object[0], new AnonymousClass1());
+        m.checkNotNullExpressionValue(linkifiedTextView, "binding.creationIntentSkipText");
+        b.m(linkifiedTextView, R.string.creation_intent_skip, new Object[0], new AnonymousClass1());
     }
 
     public /* synthetic */ WidgetCreationIntent(int i, int i2, DefaultConstructorMarker defaultConstructorMarker) {

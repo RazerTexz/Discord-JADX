@@ -2,10 +2,10 @@ package com.discord.models.experiments.dto;
 
 import com.discord.models.domain.Model;
 import com.discord.models.experiments.dto.GuildExperimentBucketDto;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import kotlin.ranges.Ranges2;
+import kotlin.ranges.IntRange;
 
 /* compiled from: GuildExperimentDto.kt */
 /* loaded from: classes.dex */
@@ -15,18 +15,18 @@ public final class GuildExperimentBucketDto$Parser$parse$2 implements Runnable {
 
     /* compiled from: GuildExperimentDto.kt */
     /* renamed from: com.discord.models.experiments.dto.GuildExperimentBucketDto$Parser$parse$2$1, reason: invalid class name */
-    public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<Ranges2> {
+    public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<IntRange> {
         public AnonymousClass1() {
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
-        public /* bridge */ /* synthetic */ Ranges2 get() {
+        public /* bridge */ /* synthetic */ IntRange get() {
             return get2();
         }
 
         @Override // com.discord.models.domain.Model.JsonReader.ItemFactory
         /* renamed from: get, reason: avoid collision after fix types in other method */
-        public final Ranges2 get2() {
+        public final IntRange get2() {
             return GuildExperimentBucketDto.Parser.access$parsePosition(GuildExperimentBucketDto.Parser.INSTANCE, GuildExperimentBucketDto$Parser$parse$2.this.$reader);
         }
     }
@@ -41,7 +41,7 @@ public final class GuildExperimentBucketDto$Parser$parse$2 implements Runnable {
     public final void run() throws IOException {
         Ref$ObjectRef ref$ObjectRef = this.$positions;
         ?? NextList = this.$reader.nextList(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(NextList, "reader.nextList { parsePosition(reader) }");
+        m.checkNotNullExpressionValue(NextList, "reader.nextList { parsePosition(reader) }");
         ref$ObjectRef.element = NextList;
     }
 }

@@ -4,7 +4,7 @@ import androidx.exifinterface.media.ExifInterface;
 import b.i.a.f.e.o.f;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -19,8 +19,8 @@ public final class BatchManager {
     private final CoroutineScope scope;
 
     public BatchManager(CoroutineDispatcher coroutineDispatcher, Clock clock) {
-        Intrinsics3.checkNotNullParameter(coroutineDispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(coroutineDispatcher, "dispatcher");
+        m.checkNotNullParameter(clock, "clock");
         this.clock = clock;
         this.scope = f.c(coroutineDispatcher);
         this.batches = new LinkedHashMap();
@@ -38,7 +38,7 @@ public final class BatchManager {
     }
 
     public final <T> Batched<T> createBatched(String type, long debounceDelayMs, long maxDebounceDelayMs) {
-        Intrinsics3.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(type, "type");
         Batched<T> batched = new Batched<>(type, debounceDelayMs, maxDebounceDelayMs, this.scope, this.clock);
         this.batches.put(type, batched);
         return batched;
@@ -52,7 +52,7 @@ public final class BatchManager {
         for (Map.Entry<String, Batched<?>> entry : this.batches.entrySet()) {
             String key = entry.getKey();
             Batched<?> value = entry.getValue();
-            if (!Intrinsics3.areEqual(key, incomingType)) {
+            if (!m.areEqual(key, incomingType)) {
                 value.flush();
             }
         }

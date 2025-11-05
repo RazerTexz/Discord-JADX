@@ -7,12 +7,12 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.R;
-import com.discord.api.bugreport.BugReportConfig2;
+import com.discord.api.bugreport.Feature;
 import com.discord.databinding.WidgetBugReportFeatureHeaderListItemBinding;
 import com.discord.databinding.WidgetBugReportFeatureListItemBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,39 +27,39 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
     private static final int ITEM_TYPE_FEATURE = 0;
     private static final int ITEM_TYPE_HEADER = 1;
     private List<? extends BugReportFeatureItem> data;
-    private final Function1<BugReportConfig2, Unit> onClickListener;
+    private final Function1<Feature, Unit> onClickListener;
 
     /* compiled from: WidgetBugReport.kt */
     public static abstract class BugReportFeatureItem {
 
         /* compiled from: WidgetBugReport.kt */
         public static final class FeatureItem extends BugReportFeatureItem {
-            private final BugReportConfig2 feature;
+            private final Feature feature;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public FeatureItem(BugReportConfig2 bugReportConfig2) {
+            public FeatureItem(Feature feature) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(bugReportConfig2, "feature");
-                this.feature = bugReportConfig2;
+                m.checkNotNullParameter(feature, "feature");
+                this.feature = feature;
             }
 
-            public final BugReportConfig2 getFeature() {
+            public final Feature getFeature() {
                 return this.feature;
             }
         }
 
         /* compiled from: WidgetBugReport.kt */
         public static final class HeaderItem extends BugReportFeatureItem {
-            private final BugReportConfig2 header;
+            private final Feature header;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public HeaderItem(BugReportConfig2 bugReportConfig2) {
+            public HeaderItem(Feature feature) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(bugReportConfig2, "header");
-                this.header = bugReportConfig2;
+                m.checkNotNullParameter(feature, "header");
+                this.header = feature;
             }
 
-            public final BugReportConfig2 getHeader() {
+            public final Feature getHeader() {
                 return this.header;
             }
         }
@@ -73,10 +73,10 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public BugReportFeatureAdapter(Function1<? super BugReportConfig2, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "onClickListener");
+    public BugReportFeatureAdapter(Function1<? super Feature, Unit> function1) {
+        m.checkNotNullParameter(function1, "onClickListener");
         this.onClickListener = function1;
-        this.data = Collections2.emptyList();
+        this.data = n.emptyList();
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -96,13 +96,13 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
         throw new NoWhenBranchMatchedException();
     }
 
-    public final Function1<BugReportConfig2, Unit> getOnClickListener() {
+    public final Function1<Feature, Unit> getOnClickListener() {
         return this.onClickListener;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         if (holder instanceof BugReportFeatureViewHolder) {
             BugReportFeatureItem bugReportFeatureItem = this.data.get(position);
             Objects.requireNonNull(bugReportFeatureItem, "null cannot be cast to non-null type com.discord.widgets.bugreports.BugReportFeatureAdapter.BugReportFeatureItem.FeatureItem");
@@ -121,7 +121,7 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             View viewInflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.widget_bug_report_feature_list_item, parent, false);
             int i = R.id.feature_list_item_feature;
@@ -131,7 +131,7 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
                 TextView textView2 = (TextView) viewInflate.findViewById(R.id.feature_list_item_squad);
                 if (textView2 != null) {
                     WidgetBugReportFeatureListItemBinding widgetBugReportFeatureListItemBinding = new WidgetBugReportFeatureListItemBinding((ConstraintLayout) viewInflate, textView, textView2);
-                    Intrinsics3.checkNotNullExpressionValue(widgetBugReportFeatureListItemBinding, "WidgetBugReportFeatureLi….context), parent, false)");
+                    m.checkNotNullExpressionValue(widgetBugReportFeatureListItemBinding, "WidgetBugReportFeatureLi….context), parent, false)");
                     return new BugReportFeatureViewHolder(widgetBugReportFeatureListItemBinding, this.onClickListener);
                 }
             }
@@ -148,23 +148,23 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
             TextView textView3 = (TextView) viewInflate2.findViewById(R.id.header);
             if (textView3 != null) {
                 WidgetBugReportFeatureHeaderListItemBinding widgetBugReportFeatureHeaderListItemBinding = new WidgetBugReportFeatureHeaderListItemBinding((ConstraintLayout) viewInflate2, viewFindViewById, textView3);
-                Intrinsics3.checkNotNullExpressionValue(widgetBugReportFeatureHeaderListItemBinding, "WidgetBugReportFeatureHe….context), parent, false)");
+                m.checkNotNullExpressionValue(widgetBugReportFeatureHeaderListItemBinding, "WidgetBugReportFeatureHe….context), parent, false)");
                 return new BugReportFeatureHeaderViewHolder(widgetBugReportFeatureHeaderListItemBinding, this.onClickListener);
             }
         }
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate2.getResources().getResourceName(i2)));
     }
 
-    public final void setData(List<BugReportConfig2> data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+    public final void setData(List<Feature> data) {
+        m.checkNotNullParameter(data, "data");
         ArrayList arrayList = new ArrayList();
         String squad = null;
-        for (BugReportConfig2 bugReportConfig2 : data) {
-            if (!Intrinsics3.areEqual(bugReportConfig2.getSquad(), squad)) {
-                arrayList.add(new BugReportFeatureItem.HeaderItem(new BugReportConfig2(bugReportConfig2.getSquad(), bugReportConfig2.getSquad(), bugReportConfig2.getAsanaInboxId())));
-                squad = bugReportConfig2.getSquad();
+        for (Feature feature : data) {
+            if (!m.areEqual(feature.getSquad(), squad)) {
+                arrayList.add(new BugReportFeatureItem.HeaderItem(new Feature(feature.getSquad(), feature.getSquad(), feature.getAsanaInboxId())));
+                squad = feature.getSquad();
             }
-            arrayList.add(new BugReportFeatureItem.FeatureItem(bugReportConfig2));
+            arrayList.add(new BugReportFeatureItem.FeatureItem(feature));
         }
         this.data = arrayList;
         notifyDataSetChanged();

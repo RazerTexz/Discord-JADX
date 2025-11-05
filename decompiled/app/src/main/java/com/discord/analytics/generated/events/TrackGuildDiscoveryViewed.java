@@ -1,17 +1,17 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackGuildDiscoveryViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGuildDiscoveryViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
+public final /* data */ class TrackGuildDiscoveryViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence loadId = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackGuildDiscoveryViewed implements AnalyticsSche
             return false;
         }
         TrackGuildDiscoveryViewed trackGuildDiscoveryViewed = (TrackGuildDiscoveryViewed) other;
-        return Intrinsics3.areEqual(this.loadId, trackGuildDiscoveryViewed.loadId) && Intrinsics3.areEqual(this.numGuilds, trackGuildDiscoveryViewed.numGuilds) && Intrinsics3.areEqual(this.numGuildsRecommended, trackGuildDiscoveryViewed.numGuildsRecommended) && Intrinsics3.areEqual(this.numGuildsPopular, trackGuildDiscoveryViewed.numGuildsPopular) && Intrinsics3.areEqual(this.recommendedGuildIds, trackGuildDiscoveryViewed.recommendedGuildIds) && Intrinsics3.areEqual(this.categoryId, trackGuildDiscoveryViewed.categoryId) && Intrinsics3.areEqual(this.recommendationsSource, trackGuildDiscoveryViewed.recommendationsSource);
+        return m.areEqual(this.loadId, trackGuildDiscoveryViewed.loadId) && m.areEqual(this.numGuilds, trackGuildDiscoveryViewed.numGuilds) && m.areEqual(this.numGuildsRecommended, trackGuildDiscoveryViewed.numGuildsRecommended) && m.areEqual(this.numGuildsPopular, trackGuildDiscoveryViewed.numGuildsPopular) && m.areEqual(this.recommendedGuildIds, trackGuildDiscoveryViewed.recommendedGuildIds) && m.areEqual(this.categoryId, trackGuildDiscoveryViewed.categoryId) && m.areEqual(this.recommendationsSource, trackGuildDiscoveryViewed.recommendationsSource);
     }
 
     public int hashCode() {
@@ -58,7 +58,7 @@ public final /* data */ class TrackGuildDiscoveryViewed implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGuildDiscoveryViewed(loadId=");
+        StringBuilder sbU = a.U("TrackGuildDiscoveryViewed(loadId=");
         sbU.append(this.loadId);
         sbU.append(", numGuilds=");
         sbU.append(this.numGuilds);
@@ -71,6 +71,6 @@ public final /* data */ class TrackGuildDiscoveryViewed implements AnalyticsSche
         sbU.append(", categoryId=");
         sbU.append(this.categoryId);
         sbU.append(", recommendationsSource=");
-        return outline.E(sbU, this.recommendationsSource, ")");
+        return a.E(sbU, this.recommendationsSource, ")");
     }
 }

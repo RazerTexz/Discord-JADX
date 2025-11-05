@@ -3,8 +3,8 @@ package com.discord.models.experiments.dto;
 import com.discord.api.guild.GuildHubType;
 import com.discord.models.deserialization.gson.InboundGatewayGsonParser;
 import com.discord.models.domain.Model;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.t.u;
+import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.Ref$ObjectRef;
@@ -58,8 +58,8 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
             GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1 guildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1 = GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1.this;
             Ref$ObjectRef ref$ObjectRef = guildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1.$hubTypes;
             List listNextList = guildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1.$reader.nextList(new AnonymousClass1());
-            Intrinsics3.checkNotNullExpressionValue(listNextList, "reader.nextList {\n      …ass.java)\n              }");
-            ref$ObjectRef.element = _Collections.toSet(listNextList);
+            m.checkNotNullExpressionValue(listNextList, "reader.nextList {\n      …ass.java)\n              }");
+            ref$ObjectRef.element = u.toSet(listNextList);
         }
     }
 

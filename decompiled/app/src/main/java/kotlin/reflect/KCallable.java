@@ -2,26 +2,26 @@ package kotlin.reflect;
 
 import androidx.core.app.NotificationCompat;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.e0.KAnnotatedElement;
-import d0.e0.KParameter;
-import d0.e0.KTypeParameter;
+import d0.e0.b;
+import d0.e0.f;
+import d0.e0.h;
 import java.util.List;
 import java.util.Map;
 
 /* compiled from: KCallable.kt */
 /* loaded from: classes3.dex */
-public interface KCallable<R> extends KAnnotatedElement {
+public interface KCallable<R> extends b {
     R call(Object... args);
 
-    R callBy(Map<KParameter, ? extends Object> args);
+    R callBy(Map<f, ? extends Object> args);
 
     String getName();
 
-    List<KParameter> getParameters();
+    List<f> getParameters();
 
     KType getReturnType();
 
-    List<KTypeParameter> getTypeParameters();
+    List<h> getTypeParameters();
 
     KVisibility getVisibility();
 

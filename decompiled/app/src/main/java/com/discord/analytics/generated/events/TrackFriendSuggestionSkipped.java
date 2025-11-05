@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackFriendSuggestionSkipped.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long suggestedUserId = null;
     private final CharSequence platformType = null;
@@ -37,7 +37,7 @@ public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsS
             return false;
         }
         TrackFriendSuggestionSkipped trackFriendSuggestionSkipped = (TrackFriendSuggestionSkipped) other;
-        return Intrinsics3.areEqual(this.suggestedUserId, trackFriendSuggestionSkipped.suggestedUserId) && Intrinsics3.areEqual(this.platformType, trackFriendSuggestionSkipped.platformType) && Intrinsics3.areEqual(this.isNonMutual, trackFriendSuggestionSkipped.isNonMutual) && Intrinsics3.areEqual(this.isReverseSuggestion, trackFriendSuggestionSkipped.isReverseSuggestion) && Intrinsics3.areEqual(this.existingRelationshipType, trackFriendSuggestionSkipped.existingRelationshipType) && Intrinsics3.areEqual(this.userAllowedInSuggestions, trackFriendSuggestionSkipped.userAllowedInSuggestions) && Intrinsics3.areEqual(this.userConsents, trackFriendSuggestionSkipped.userConsents) && Intrinsics3.areEqual(this.userIsDiscoverable, trackFriendSuggestionSkipped.userIsDiscoverable) && Intrinsics3.areEqual(this.otherUserAllowedInSuggestions, trackFriendSuggestionSkipped.otherUserAllowedInSuggestions) && Intrinsics3.areEqual(this.otherUserConsents, trackFriendSuggestionSkipped.otherUserConsents) && Intrinsics3.areEqual(this.otherUserDiscoverable, trackFriendSuggestionSkipped.otherUserDiscoverable);
+        return m.areEqual(this.suggestedUserId, trackFriendSuggestionSkipped.suggestedUserId) && m.areEqual(this.platformType, trackFriendSuggestionSkipped.platformType) && m.areEqual(this.isNonMutual, trackFriendSuggestionSkipped.isNonMutual) && m.areEqual(this.isReverseSuggestion, trackFriendSuggestionSkipped.isReverseSuggestion) && m.areEqual(this.existingRelationshipType, trackFriendSuggestionSkipped.existingRelationshipType) && m.areEqual(this.userAllowedInSuggestions, trackFriendSuggestionSkipped.userAllowedInSuggestions) && m.areEqual(this.userConsents, trackFriendSuggestionSkipped.userConsents) && m.areEqual(this.userIsDiscoverable, trackFriendSuggestionSkipped.userIsDiscoverable) && m.areEqual(this.otherUserAllowedInSuggestions, trackFriendSuggestionSkipped.otherUserAllowedInSuggestions) && m.areEqual(this.otherUserConsents, trackFriendSuggestionSkipped.otherUserConsents) && m.areEqual(this.otherUserDiscoverable, trackFriendSuggestionSkipped.otherUserDiscoverable);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackFriendSuggestionSkipped(suggestedUserId=");
+        StringBuilder sbU = a.U("TrackFriendSuggestionSkipped(suggestedUserId=");
         sbU.append(this.suggestedUserId);
         sbU.append(", platformType=");
         sbU.append(this.platformType);
@@ -87,6 +87,6 @@ public final /* data */ class TrackFriendSuggestionSkipped implements AnalyticsS
         sbU.append(", otherUserConsents=");
         sbU.append(this.otherUserConsents);
         sbU.append(", otherUserDiscoverable=");
-        return outline.D(sbU, this.otherUserDiscoverable, ")");
+        return a.D(sbU, this.otherUserDiscoverable, ")");
     }
 }

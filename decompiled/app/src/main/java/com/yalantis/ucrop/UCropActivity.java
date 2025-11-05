@@ -33,20 +33,11 @@ import androidx.core.content.ContextCompat;
 import androidx.transition.AutoTransition;
 import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
-import b.i.a.f.e.o.f;
-import b.q.a.UCropActivity2;
-import b.q.a.UCropActivity3;
-import b.q.a.UCropActivity4;
-import b.q.a.UCropActivity5;
-import b.q.a.UCropActivity6;
-import b.q.a.UCropActivity7;
-import b.q.a.i.CropParameters;
-import b.q.a.i.ImageState;
-import b.q.a.j.BitmapCropTask;
-import b.q.a.j.BitmapLoadTask;
-import b.q.a.k.SelectedStateListDrawable;
-import b.q.a.l.TransformImageView;
-import b.q.a.l.TransformImageView2;
+import b.q.a.d;
+import b.q.a.e;
+import b.q.a.f;
+import b.q.a.g;
+import b.q.a.l.c;
 import com.yalantis.ucrop.model.AspectRatio;
 import com.yalantis.ucrop.view.GestureCropImageView;
 import com.yalantis.ucrop.view.OverlayView;
@@ -103,10 +94,10 @@ public class UCropActivity extends AppCompatActivity {
     public Bitmap.CompressFormat J = j;
     public int K = 90;
     public int[] L = {1, 2, 3};
-    public TransformImageView2.a M = new a();
+    public c.a M = new a();
     public final View.OnClickListener N = new b();
 
-    public class a implements TransformImageView2.a {
+    public class a implements c.a {
         public a() {
         }
 
@@ -288,14 +279,14 @@ public class UCropActivity extends AppCompatActivity {
             this.E.get(intExtra).setSelected(true);
             Iterator<ViewGroup> it2 = this.E.iterator();
             while (it2.hasNext()) {
-                it2.next().setOnClickListener(new UCropActivity2(this));
+                it2.next().setOnClickListener(new b.q.a.b(this));
             }
             this.F = (TextView) findViewById(R.d.text_view_rotate);
             int i4 = R.d.rotate_scroll_wheel;
-            ((HorizontalProgressWheelView) findViewById(i4)).setScrollingListener(new UCropActivity3(this));
+            ((HorizontalProgressWheelView) findViewById(i4)).setScrollingListener(new b.q.a.c(this));
             ((HorizontalProgressWheelView) findViewById(i4)).setMiddleLineColor(this.n);
-            findViewById(R.d.wrapper_reset_rotate).setOnClickListener(new UCropActivity4(this));
-            findViewById(R.d.wrapper_rotate_by_angle).setOnClickListener(new UCropActivity5(this));
+            findViewById(R.d.wrapper_reset_rotate).setOnClickListener(new d(this));
+            findViewById(R.d.wrapper_rotate_by_angle).setOnClickListener(new e(this));
             int i5 = this.n;
             TextView textView2 = this.F;
             if (textView2 != null) {
@@ -303,7 +294,7 @@ public class UCropActivity extends AppCompatActivity {
             }
             this.G = (TextView) findViewById(R.d.text_view_scale);
             int i6 = R.d.scale_scroll_wheel;
-            ((HorizontalProgressWheelView) findViewById(i6)).setScrollingListener(new UCropActivity6(this));
+            ((HorizontalProgressWheelView) findViewById(i6)).setScrollingListener(new f(this));
             ((HorizontalProgressWheelView) findViewById(i6)).setMiddleLineColor(this.n);
             int i7 = this.n;
             TextView textView3 = this.G;
@@ -313,9 +304,9 @@ public class UCropActivity extends AppCompatActivity {
             ImageView imageView = (ImageView) findViewById(R.d.image_view_state_scale);
             ImageView imageView2 = (ImageView) findViewById(R.d.image_view_state_rotate);
             ImageView imageView3 = (ImageView) findViewById(R.d.image_view_state_aspect_ratio);
-            imageView.setImageDrawable(new SelectedStateListDrawable(imageView.getDrawable(), this.n));
-            imageView2.setImageDrawable(new SelectedStateListDrawable(imageView2.getDrawable(), this.n));
-            imageView3.setImageDrawable(new SelectedStateListDrawable(imageView3.getDrawable(), this.n));
+            imageView.setImageDrawable(new b.q.a.k.d(imageView.getDrawable(), this.n));
+            imageView2.setImageDrawable(new b.q.a.k.d(imageView2.getDrawable(), this.n));
+            imageView3.setImageDrawable(new b.q.a.k.d(imageView3.getDrawable(), this.n));
         }
         Uri uri = (Uri) intent.getParcelableExtra("com.yalantis.ucrop.InputUri");
         Uri uri2 = (Uri) intent.getParcelableExtra("com.yalantis.ucrop.OutputUri");
@@ -372,7 +363,7 @@ public class UCropActivity extends AppCompatActivity {
             try {
                 GestureCropImageView gestureCropImageView = this.w;
                 int maxBitmapSize = gestureCropImageView.getMaxBitmapSize();
-                new BitmapLoadTask(gestureCropImageView.getContext(), uri, uri2, maxBitmapSize, maxBitmapSize, new TransformImageView(gestureCropImageView)).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+                new b.q.a.j.b(gestureCropImageView.getContext(), uri, uri2, maxBitmapSize, maxBitmapSize, new b.q.a.l.b(gestureCropImageView)).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
             } catch (Exception e) {
                 b(e);
                 finish();
@@ -435,10 +426,10 @@ public class UCropActivity extends AppCompatActivity {
         GestureCropImageView gestureCropImageView = this.w;
         Bitmap.CompressFormat compressFormat = this.J;
         int i = this.K;
-        UCropActivity7 uCropActivity7 = new UCropActivity7(this);
+        g gVar = new g(this);
         gestureCropImageView.i();
         gestureCropImageView.setImageToWrapCropBounds(false);
-        new BitmapCropTask(gestureCropImageView.getContext(), gestureCropImageView.getViewBitmap(), new ImageState(gestureCropImageView.f1987y, f.y1(gestureCropImageView.j), gestureCropImageView.getCurrentScale(), gestureCropImageView.getCurrentAngle()), new CropParameters(gestureCropImageView.H, gestureCropImageView.I, compressFormat, i, gestureCropImageView.getImageInputPath(), gestureCropImageView.getImageOutputPath(), gestureCropImageView.getExifInfo()), uCropActivity7).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+        new b.q.a.j.a(gestureCropImageView.getContext(), gestureCropImageView.getViewBitmap(), new b.q.a.i.c(gestureCropImageView.f1987y, b.i.a.f.e.o.f.y1(gestureCropImageView.j), gestureCropImageView.getCurrentScale(), gestureCropImageView.getCurrentAngle()), new b.q.a.i.a(gestureCropImageView.H, gestureCropImageView.I, compressFormat, i, gestureCropImageView.getImageInputPath(), gestureCropImageView.getImageOutputPath(), gestureCropImageView.getExifInfo()), gVar).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
         return true;
     }
 

@@ -2,8 +2,8 @@ package com.discord.widgets.guild_role_subscriptions.setup;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.guildrolesubscription.GuildRoleSubscriptionTierListing;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.stores.StoreGuildRoleSubscriptions;
@@ -14,9 +14,9 @@ import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils;
 import com.discord.widgets.guild_role_subscriptions.tier.model.GuildRoleSubscriptionTier;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -27,7 +27,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<ViewState> {
+public final class GuildRoleSubscriptionPlanSetupViewModel extends d0<ViewState> {
     private static final int DETAILS_STEP = 1;
     private static final int FORMAT_TYPE_STEP = 0;
     private static final int TIER_CHANNEL_BENEFITS_STEP = 3;
@@ -49,7 +49,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SubmitFailure(Error error) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(error, "error");
+                m.checkNotNullParameter(error, "error");
                 this.error = error;
             }
 
@@ -66,13 +66,13 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             }
 
             public final SubmitFailure copy(Error error) {
-                Intrinsics3.checkNotNullParameter(error, "error");
+                m.checkNotNullParameter(error, "error");
                 return new SubmitFailure(error);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof SubmitFailure) && Intrinsics3.areEqual(this.error, ((SubmitFailure) other).error);
+                    return (other instanceof SubmitFailure) && m.areEqual(this.error, ((SubmitFailure) other).error);
                 }
                 return true;
             }
@@ -90,7 +90,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SubmitFailure(error=");
+                StringBuilder sbU = a.U("SubmitFailure(error=");
                 sbU.append(this.error);
                 sbU.append(")");
                 return sbU.toString();
@@ -129,7 +129,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
 
         public ViewState(int i, boolean z2, boolean z3, String str, String str2, Boolean bool, GuildRoleSubscriptionTier guildRoleSubscriptionTier) {
-            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+            m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
             this.currentStep = i;
             this.isSubmitting = z2;
             this.canProceedToNextStep = z3;
@@ -205,7 +205,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
 
         public final ViewState copy(int currentStep, boolean isSubmitting, boolean canProceedToNextStep, String coverImage, String planDescription, Boolean isFullServerGating, GuildRoleSubscriptionTier guildRoleSubscriptionTier) {
-            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+            m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
             return new ViewState(currentStep, isSubmitting, canProceedToNextStep, coverImage, planDescription, isFullServerGating, guildRoleSubscriptionTier);
         }
 
@@ -217,7 +217,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return this.currentStep == viewState.currentStep && this.isSubmitting == viewState.isSubmitting && this.canProceedToNextStep == viewState.canProceedToNextStep && Intrinsics3.areEqual(this.coverImage, viewState.coverImage) && Intrinsics3.areEqual(this.planDescription, viewState.planDescription) && Intrinsics3.areEqual(this.isFullServerGating, viewState.isFullServerGating) && Intrinsics3.areEqual(this.guildRoleSubscriptionTier, viewState.guildRoleSubscriptionTier);
+            return this.currentStep == viewState.currentStep && this.isSubmitting == viewState.isSubmitting && this.canProceedToNextStep == viewState.canProceedToNextStep && m.areEqual(this.coverImage, viewState.coverImage) && m.areEqual(this.planDescription, viewState.planDescription) && m.areEqual(this.isFullServerGating, viewState.isFullServerGating) && m.areEqual(this.guildRoleSubscriptionTier, viewState.guildRoleSubscriptionTier);
         }
 
         public final boolean getCanProceedToNextStep() {
@@ -270,7 +270,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(currentStep=");
+            StringBuilder sbU = a.U("ViewState(currentStep=");
             sbU.append(this.currentStep);
             sbU.append(", isSubmitting=");
             sbU.append(this.isSubmitting);
@@ -295,7 +295,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
 
     /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
     /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionPlanSetupViewModel$submit$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<GuildRoleSubscriptionTierListing, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<GuildRoleSubscriptionTierListing, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -308,7 +308,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
-            Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTierListing, "it");
+            m.checkNotNullParameter(guildRoleSubscriptionTierListing, "it");
             GuildRoleSubscriptionPlanSetupViewModel guildRoleSubscriptionPlanSetupViewModel = GuildRoleSubscriptionPlanSetupViewModel.this;
             guildRoleSubscriptionPlanSetupViewModel.updateViewState2(ViewState.copy$default(GuildRoleSubscriptionPlanSetupViewModel.access$requireViewState(guildRoleSubscriptionPlanSetupViewModel), 0, false, false, null, null, null, null, Opcodes.LUSHR, null));
             GuildRoleSubscriptionPlanSetupViewModel.access$emitEvent(GuildRoleSubscriptionPlanSetupViewModel.this, Event.SubmitSuccess.INSTANCE);
@@ -317,7 +317,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
 
     /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
     /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionPlanSetupViewModel$submit$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -330,7 +330,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             GuildRoleSubscriptionPlanSetupViewModel guildRoleSubscriptionPlanSetupViewModel = GuildRoleSubscriptionPlanSetupViewModel.this;
             guildRoleSubscriptionPlanSetupViewModel.updateViewState2(ViewState.copy$default(GuildRoleSubscriptionPlanSetupViewModel.access$requireViewState(guildRoleSubscriptionPlanSetupViewModel), 0, false, false, null, null, null, null, Opcodes.LUSHR, null));
             GuildRoleSubscriptionPlanSetupViewModel.access$emitEvent(GuildRoleSubscriptionPlanSetupViewModel.this, new Event.SubmitFailure(error));
@@ -355,20 +355,20 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         if (currentStep != 0) {
             if (currentStep == 1) {
                 String coverImage = viewState.getCoverImage();
-                if (coverImage == null || StringsJVM.isBlank(coverImage)) {
+                if (coverImage == null || t.isBlank(coverImage)) {
                     return false;
                 }
                 String planDescription = viewState.getPlanDescription();
-                if (planDescription == null || StringsJVM.isBlank(planDescription)) {
+                if (planDescription == null || t.isBlank(planDescription)) {
                     return false;
                 }
             } else if (currentStep == 2) {
                 String name = guildRoleSubscriptionTier.getName();
-                if ((name == null || StringsJVM.isBlank(name)) || guildRoleSubscriptionTier.getPriceTier() == null) {
+                if ((name == null || t.isBlank(name)) || guildRoleSubscriptionTier.getPriceTier() == null) {
                     return false;
                 }
                 String image = guildRoleSubscriptionTier.getImage();
-                if (image == null || StringsJVM.isBlank(image)) {
+                if (image == null || t.isBlank(image)) {
                     return false;
                 }
             } else if (currentStep != 3 && currentStep != 4 && (currentStep != 5 || guildRoleSubscriptionTier.getMemberColor() == null)) {
@@ -394,7 +394,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -403,7 +403,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
     }
 
     public final void onTierUpdated(GuildRoleSubscriptionTier guildRoleSubscriptionTier) {
-        Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
+        m.checkNotNullParameter(guildRoleSubscriptionTier, "guildRoleSubscriptionTier");
         updateViewState2(ViewState.copy$default(requireViewState(), 0, false, false, null, null, null, guildRoleSubscriptionTier, 63, null));
     }
 
@@ -411,29 +411,29 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         ViewState viewStateRequireViewState = requireViewState();
         GuildRoleSubscriptionTier guildRoleSubscriptionTier = viewStateRequireViewState.getGuildRoleSubscriptionTier();
         String name = guildRoleSubscriptionTier.getName();
-        if ((name == null || StringsJVM.isBlank(name)) || guildRoleSubscriptionTier.getPriceTier() == null || guildRoleSubscriptionTier.getMemberColor() == null) {
+        if ((name == null || t.isBlank(name)) || guildRoleSubscriptionTier.getPriceTier() == null || guildRoleSubscriptionTier.getMemberColor() == null) {
             return;
         }
         updateViewState2(ViewState.copy$default(viewStateRequireViewState, 0, true, false, null, null, null, null, Opcodes.LUSHR, null));
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(GuildRoleSubscriptionUtils.INSTANCE.createGuildRoleSubscriptionGroupListing(this.restApi, this.storeGuildRoleSubscriptions, this.guildId, viewStateRequireViewState.getCoverImage(), viewStateRequireViewState.getPlanDescription(), viewStateRequireViewState.isFullServerGating(), guildRoleSubscriptionTier.getName(), guildRoleSubscriptionTier.getDescription(), guildRoleSubscriptionTier.getPriceTier().intValue(), guildRoleSubscriptionTier.getImage(), ColorCompat.INSTANCE.removeAlphaComponent(guildRoleSubscriptionTier.getMemberColor().intValue()), guildRoleSubscriptionTier.getMemberIcon(), guildRoleSubscriptionTier.canAccessAllChannelsOrDefault(viewStateRequireViewState.isFullServerGating()), guildRoleSubscriptionTier.getChannelBenefits(), guildRoleSubscriptionTier.getIntangibleBenefits()), this, null, 2, null), GuildRoleSubscriptionPlanSetupViewModel.class, (Context) null, (Function1) null, new AnonymousClass2(), (Function0) null, (Function0) null, new AnonymousClass1(), 54, (Object) null);
     }
 
-    @Override // b.a.d.AppViewModel
+    @Override // b.a.d.d0
     public /* bridge */ /* synthetic */ void updateViewState(ViewState viewState) {
         updateViewState2(viewState);
     }
 
     /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(viewState, "viewState");
         super.updateViewState((GuildRoleSubscriptionPlanSetupViewModel) ViewState.copy$default(viewState, 0, false, computeCanProceedToNextStep(viewState), null, null, null, null, 123, null));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildRoleSubscriptionPlanSetupViewModel(long j, RestAPI restAPI, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions) {
         super(new ViewState(0, false, false, null, null, null, null, Opcodes.LAND, null));
-        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
-        Intrinsics3.checkNotNullParameter(storeGuildRoleSubscriptions, "storeGuildRoleSubscriptions");
+        m.checkNotNullParameter(restAPI, "restApi");
+        m.checkNotNullParameter(storeGuildRoleSubscriptions, "storeGuildRoleSubscriptions");
         this.guildId = j;
         this.restApi = restAPI;
         this.storeGuildRoleSubscriptions = storeGuildRoleSubscriptions;

@@ -4,7 +4,6 @@ import android.app.PendingIntent;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
-import b.d.b.a.outline;
 import b.i.a.f.e.k.b;
 import com.google.android.gms.common.ConnectionResult;
 import java.util.Objects;
@@ -108,7 +107,7 @@ public final class h0 extends b.i.a.f.h.g.d {
             return;
         }
         if (!a(message)) {
-            Log.wtf("GmsClient", outline.g(45, "Don't know how to handle message: ", message.what), new Exception());
+            Log.wtf("GmsClient", b.d.b.a.a.g(45, "Don't know how to handle message: ", message.what), new Exception());
             return;
         }
         i0 i0Var4 = (i0) message.obj;

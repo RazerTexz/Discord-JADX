@@ -1,9 +1,9 @@
 package com.discord.api.message.embed;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import org.webrtc.MediaStreamTrack;
 
@@ -56,7 +56,7 @@ public final /* data */ class MessageEmbed {
             return false;
         }
         MessageEmbed messageEmbed = (MessageEmbed) other;
-        return Intrinsics3.areEqual(this.title, messageEmbed.title) && Intrinsics3.areEqual(this.type, messageEmbed.type) && Intrinsics3.areEqual(this.description, messageEmbed.description) && Intrinsics3.areEqual(this.url, messageEmbed.url) && Intrinsics3.areEqual(this.timestamp, messageEmbed.timestamp) && Intrinsics3.areEqual(this.color, messageEmbed.color) && Intrinsics3.areEqual(this.footer, messageEmbed.footer) && Intrinsics3.areEqual(this.image, messageEmbed.image) && Intrinsics3.areEqual(this.thumbnail, messageEmbed.thumbnail) && Intrinsics3.areEqual(this.video, messageEmbed.video) && Intrinsics3.areEqual(this.provider, messageEmbed.provider) && Intrinsics3.areEqual(this.author, messageEmbed.author) && Intrinsics3.areEqual(this.fields, messageEmbed.fields);
+        return m.areEqual(this.title, messageEmbed.title) && m.areEqual(this.type, messageEmbed.type) && m.areEqual(this.description, messageEmbed.description) && m.areEqual(this.url, messageEmbed.url) && m.areEqual(this.timestamp, messageEmbed.timestamp) && m.areEqual(this.color, messageEmbed.color) && m.areEqual(this.footer, messageEmbed.footer) && m.areEqual(this.image, messageEmbed.image) && m.areEqual(this.thumbnail, messageEmbed.thumbnail) && m.areEqual(this.video, messageEmbed.video) && m.areEqual(this.provider, messageEmbed.provider) && m.areEqual(this.author, messageEmbed.author) && m.areEqual(this.fields, messageEmbed.fields);
     }
 
     /* renamed from: f, reason: from getter */
@@ -129,7 +129,7 @@ public final /* data */ class MessageEmbed {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MessageEmbed(title=");
+        StringBuilder sbU = a.U("MessageEmbed(title=");
         sbU.append(this.title);
         sbU.append(", type=");
         sbU.append(this.type);
@@ -154,6 +154,6 @@ public final /* data */ class MessageEmbed {
         sbU.append(", author=");
         sbU.append(this.author);
         sbU.append(", fields=");
-        return outline.L(sbU, this.fields, ")");
+        return a.L(sbU, this.fields, ")");
     }
 }

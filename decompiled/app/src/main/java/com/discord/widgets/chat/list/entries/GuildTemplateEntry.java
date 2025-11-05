@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: GuildTemplateEntry.kt */
 /* loaded from: classes2.dex */
@@ -14,7 +14,7 @@ public final /* data */ class GuildTemplateEntry extends ChatListEntry {
     private final long userId;
 
     public GuildTemplateEntry(long j, long j2, String str) {
-        Intrinsics3.checkNotNullParameter(str, "guildTemplateCode");
+        m.checkNotNullParameter(str, "guildTemplateCode");
         this.userId = j;
         this.messageId = j2;
         this.guildTemplateCode = str;
@@ -53,7 +53,7 @@ public final /* data */ class GuildTemplateEntry extends ChatListEntry {
     }
 
     public final GuildTemplateEntry copy(long userId, long messageId, String guildTemplateCode) {
-        Intrinsics3.checkNotNullParameter(guildTemplateCode, "guildTemplateCode");
+        m.checkNotNullParameter(guildTemplateCode, "guildTemplateCode");
         return new GuildTemplateEntry(userId, messageId, guildTemplateCode);
     }
 
@@ -65,7 +65,7 @@ public final /* data */ class GuildTemplateEntry extends ChatListEntry {
             return false;
         }
         GuildTemplateEntry guildTemplateEntry = (GuildTemplateEntry) other;
-        return this.userId == guildTemplateEntry.userId && this.messageId == guildTemplateEntry.messageId && Intrinsics3.areEqual(this.guildTemplateCode, guildTemplateEntry.guildTemplateCode);
+        return this.userId == guildTemplateEntry.userId && this.messageId == guildTemplateEntry.messageId && m.areEqual(this.guildTemplateCode, guildTemplateEntry.guildTemplateCode);
     }
 
     public final String getGuildTemplateCode() {
@@ -97,11 +97,11 @@ public final /* data */ class GuildTemplateEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildTemplateEntry(userId=");
+        StringBuilder sbU = a.U("GuildTemplateEntry(userId=");
         sbU.append(this.userId);
         sbU.append(", messageId=");
         sbU.append(this.messageId);
         sbU.append(", guildTemplateCode=");
-        return outline.J(sbU, this.guildTemplateCode, ")");
+        return a.J(sbU, this.guildTemplateCode, ")");
     }
 }

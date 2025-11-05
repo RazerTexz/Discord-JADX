@@ -66,12 +66,12 @@ public class SpiLoadUtil {
 
         /* renamed from: lombok.core.SpiLoadUtil$1$1, reason: invalid class name and collision with other inner class name */
         /* loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1$1.SCL.lombok */
-        class C04341 implements Iterator<C> {
+        class C06411 implements Iterator<C> {
             private final /* synthetic */ Iterator val$names;
             private final /* synthetic */ Class val$target;
             private final /* synthetic */ ClassLoader val$fLoader;
 
-            C04341(Iterator it, Class cls, ClassLoader classLoader) {
+            C06411(Iterator it, Class cls, ClassLoader classLoader) {
                 this.val$names = it;
                 this.val$target = cls;
                 this.val$fLoader = classLoader;
@@ -109,7 +109,7 @@ public class SpiLoadUtil {
 
         @Override // java.lang.Iterable
         public Iterator<C> iterator() {
-            return new C04341(this.val$names, this.val$target, this.val$fLoader);
+            return new C06411(this.val$names, this.val$target, this.val$fLoader);
         }
     }
 

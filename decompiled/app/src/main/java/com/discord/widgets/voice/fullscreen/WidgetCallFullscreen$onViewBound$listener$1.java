@@ -1,12 +1,12 @@
 package com.discord.widgets.voice.fullscreen;
 
-import d0.z.d.FunctionReferenceImpl;
+import d0.z.d.k;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetCallFullscreen.kt */
 /* loaded from: classes.dex */
-public final /* synthetic */ class WidgetCallFullscreen$onViewBound$listener$1 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
+public final /* synthetic */ class WidgetCallFullscreen$onViewBound$listener$1 extends k implements Function1<Boolean, Unit> {
     public WidgetCallFullscreen$onViewBound$listener$1(WidgetCallFullscreenViewModel widgetCallFullscreenViewModel) {
         super(1, widgetCallFullscreenViewModel, WidgetCallFullscreenViewModel.class, "onPushToTalkPressed", "onPushToTalkPressed(Z)V", 0);
     }

@@ -7,18 +7,13 @@ import android.os.StrictMode;
 import android.os.Trace;
 import android.text.TextUtils;
 import android.util.Log;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import b.f.m.ApkSoSource;
-import b.f.m.ApplicationSoSource;
-import b.f.m.DirectorySoSource;
-import b.f.m.DoNotOptimize;
-import b.f.m.ExoSoSource;
-import b.f.m.NativeLoaderToSoLoaderDelegate;
-import b.f.m.SoFileLoader;
-import b.f.m.SoSource;
-import b.f.m.UnpackingSoSource;
-import b.f.m.n.NativeLoader;
+import b.f.m.c;
+import b.f.m.d;
+import b.f.m.e;
+import b.f.m.j;
+import b.f.m.k;
+import b.f.m.l;
+import b.f.m.m;
 import com.adjust.sdk.Constants;
 import dalvik.system.BaseDexClassLoader;
 import java.io.File;
@@ -44,20 +39,20 @@ import org.objectweb.asm.Opcodes;
 public class SoLoader {
 
     /* renamed from: b, reason: collision with root package name */
-    public static SoFileLoader f2906b;
-    public static UnpackingSoSource[] f;
-    public static ApplicationSoSource g;
+    public static k f2906b;
+    public static m[] f;
+    public static b.f.m.b g;
     public static int k;
     public static boolean l;
     public static final ReentrantReadWriteLock c = new ReentrantReadWriteLock();
-    public static SoSource[] d = null;
+    public static l[] d = null;
     public static volatile int e = 0;
     public static final HashSet<String> h = new HashSet<>();
     public static final Map<String, Object> i = new HashMap();
     public static final Set<String> j = Collections.newSetFromMap(new ConcurrentHashMap());
     public static final boolean a = true;
 
-    @DoNotOptimize
+    @d
     @TargetApi(14)
     public static class Api14Utils {
         private Api14Utils() {
@@ -72,14 +67,14 @@ public class SoLoader {
                     throw new RuntimeException("Cannot call getLdLibraryPath", e);
                 }
             }
-            StringBuilder sbU = outline.U("ClassLoader ");
+            StringBuilder sbU = b.d.b.a.a.U("ClassLoader ");
             sbU.append(classLoader.getClass().getName());
             sbU.append(" should be of type BaseDexClassLoader");
             throw new IllegalStateException(sbU.toString());
         }
     }
 
-    public static class a implements SoFileLoader {
+    public static class a implements k {
         public final /* synthetic */ boolean a;
 
         /* renamed from: b, reason: collision with root package name */
@@ -181,7 +176,7 @@ public class SoLoader {
                         }
                     }
                     if (str2 != null) {
-                        StringBuilder sbY = outline.Y("Error when loading lib: ", str2, " lib hash: ");
+                        StringBuilder sbY = b.d.b.a.a.Y("Error when loading lib: ", str2, " lib hash: ");
                         sbY.append(a(str));
                         sbY.append(" search path is ");
                         sbY.append(str3);
@@ -190,7 +185,7 @@ public class SoLoader {
                 } catch (Throwable th4) {
                     th = th4;
                     if (0 != 0) {
-                        StringBuilder sbY2 = outline.Y("Error when loading lib: ", null, " lib hash: ");
+                        StringBuilder sbY2 = b.d.b.a.a.Y("Error when loading lib: ", null, " lib hash: ");
                         sbY2.append(aVar.a(str));
                         sbY2.append(" search path is ");
                         sbY2.append(str3);
@@ -220,8 +215,8 @@ public class SoLoader {
     public static final class b extends UnsatisfiedLinkError {
         /* JADX WARN: Illegal instructions before constructor call */
         public b(Throwable th, String str) {
-            StringBuilder sbU = outline.U("APK was built for a different platform. Supported ABIs: ");
-            sbU.append(Arrays.toString(AnimatableValueParser.C0()));
+            StringBuilder sbU = b.d.b.a.a.U("APK was built for a different platform. Supported ABIs: ");
+            sbU.append(Arrays.toString(b.c.a.a0.d.C0()));
             sbU.append(" error: ");
             sbU.append(str);
             super(sbU.toString());
@@ -315,7 +310,7 @@ public class SoLoader {
      */
     /* JADX WARN: Code restructure failed: missing block: B:54:0x00ac, code lost:
     
-        r11 = b.d.b.a.outline.X("couldn't find DSO to load: ", r11);
+        r11 = b.d.b.a.a.X("couldn't find DSO to load: ", r11);
         r12.readLock().lock();
      */
     /* JADX WARN: Code restructure failed: missing block: B:56:0x00bc, code lost:
@@ -340,7 +335,7 @@ public class SoLoader {
      */
     /* JADX WARN: Code restructure failed: missing block: B:60:0x00dd, code lost:
     
-        r12 = b.f.m.ApplicationSoSource.d(r12.e());
+        r12 = b.f.m.b.d(r12.e());
         r11.append("\n\tNative lib dir: ");
         r11.append(r12.getAbsolutePath());
         r11.append("\n");
@@ -411,9 +406,9 @@ public class SoLoader {
                 while (true) {
                     if (iA == 0) {
                         try {
-                            SoSource[] soSourceArr = d;
-                            if (i4 < soSourceArr.length) {
-                                iA = soSourceArr[i4].a(str, i2, threadPolicy);
+                            l[] lVarArr = d;
+                            if (i4 < lVarArr.length) {
+                                iA = lVarArr[i4].a(str, i2, threadPolicy);
                                 if (iA == 3 && f != null) {
                                     break;
                                 } else {
@@ -435,7 +430,7 @@ public class SoLoader {
                 }
                 if (iA != 0) {
                 }
-                StringBuilder sbX = outline.X("couldn't find DSO to load: ", str);
+                StringBuilder sbX = b.d.b.a.a.X("couldn't find DSO to load: ", str);
                 String message = th.getMessage();
                 if (message == null) {
                 }
@@ -455,11 +450,11 @@ public class SoLoader {
         }
     }
 
-    public static synchronized void b(SoFileLoader soFileLoader) {
+    public static synchronized void b(k kVar) {
         Method declaredMethod;
         String strJoin;
-        if (soFileLoader != null) {
-            f2906b = soFileLoader;
+        if (kVar != null) {
+            f2906b = kVar;
             return;
         }
         Runtime runtime = Runtime.getRuntime();
@@ -516,18 +511,18 @@ public class SoLoader {
                 }
                 for (String str2 : str.split(":")) {
                     Log.d("SoLoader", "adding system library source: " + str2);
-                    arrayList.add(new DirectorySoSource(new File(str2), 2));
+                    arrayList.add(new c(new File(str2), 2));
                 }
                 if (context != null) {
                     if ((i2 & 1) != 0) {
                         f = null;
                         Log.d("SoLoader", "adding exo package source: lib-main");
-                        arrayList.add(0, new ExoSoSource(context, "lib-main"));
+                        arrayList.add(0, new e(context, "lib-main"));
                     } else {
                         if (l) {
                             i3 = 0;
                         } else {
-                            g = new ApplicationSoSource(context, 0);
+                            g = new b.f.m.b(context, 0);
                             Log.d("SoLoader", "adding application source: " + g.toString());
                             arrayList.add(0, g);
                             i3 = 1;
@@ -537,9 +532,9 @@ public class SoLoader {
                         } else {
                             File file = new File(context.getApplicationInfo().sourceDir);
                             ArrayList arrayList2 = new ArrayList();
-                            ApkSoSource apkSoSource = new ApkSoSource(context, file, "lib-main", i3);
-                            arrayList2.add(apkSoSource);
-                            Log.d("SoLoader", "adding backup source from : " + apkSoSource.toString());
+                            b.f.m.a aVar = new b.f.m.a(context, file, "lib-main", i3);
+                            arrayList2.add(aVar);
+                            Log.d("SoLoader", "adding backup source from : " + aVar.toString());
                             if (context.getApplicationInfo().splitSourceDirs != null) {
                                 Log.d("SoLoader", "adding backup sources from split apks");
                                 String[] strArr = context.getApplicationInfo().splitSourceDirs;
@@ -551,35 +546,35 @@ public class SoLoader {
                                     StringBuilder sb = new StringBuilder();
                                     sb.append("lib-");
                                     sb.append(i5);
-                                    ApkSoSource apkSoSource2 = new ApkSoSource(context, file2, sb.toString(), i3);
-                                    Log.d("SoLoader", "adding backup source: " + apkSoSource2.toString());
-                                    arrayList2.add(apkSoSource2);
+                                    b.f.m.a aVar2 = new b.f.m.a(context, file2, sb.toString(), i3);
+                                    Log.d("SoLoader", "adding backup source: " + aVar2.toString());
+                                    arrayList2.add(aVar2);
                                     i4++;
                                     i5++;
                                 }
                             }
-                            f = (UnpackingSoSource[]) arrayList2.toArray(new UnpackingSoSource[arrayList2.size()]);
+                            f = (m[]) arrayList2.toArray(new m[arrayList2.size()]);
                             arrayList.addAll(0, arrayList2);
                         }
                     }
                 }
-                SoSource[] soSourceArr = (SoSource[]) arrayList.toArray(new SoSource[arrayList.size()]);
+                l[] lVarArr = (l[]) arrayList.toArray(new l[arrayList.size()]);
                 ReentrantReadWriteLock reentrantReadWriteLock = c;
                 reentrantReadWriteLock.writeLock().lock();
                 try {
                     int i6 = (k & 2) != 0 ? 1 : 0;
                     reentrantReadWriteLock.writeLock().unlock();
-                    int length2 = soSourceArr.length;
+                    int length2 = lVarArr.length;
                     while (true) {
                         int i7 = length2 - 1;
                         if (length2 <= 0) {
                             break;
                         }
-                        Log.d("SoLoader", "Preparing SO source: " + soSourceArr[i7]);
-                        soSourceArr[i7].b(i6);
+                        Log.d("SoLoader", "Preparing SO source: " + lVarArr[i7]);
+                        lVarArr[i7].b(i6);
                         length2 = i7;
                     }
-                    d = soSourceArr;
+                    d = lVarArr;
                     e++;
                     Log.d("SoLoader", "init finish: " + d.length + " SO sources prepared");
                 } finally {
@@ -659,7 +654,7 @@ public class SoLoader {
                                         try {
                                             try {
                                                 Log.d("SoLoader", "About to merge: " + str2 + " / " + str);
-                                                AnimatableValueParser.Q0(str2);
+                                                b.c.a.a0.d.Q0(str2);
                                                 throw null;
                                             } catch (UnsatisfiedLinkError e2) {
                                                 throw new RuntimeException("Failed to call JNI_OnLoad from '" + str2 + "', which has been merged into '" + str + "'.  See comment for details.", e2);
@@ -706,6 +701,6 @@ public class SoLoader {
         l = z2;
         b(null);
         c(context, i2);
-        NativeLoader.a(new NativeLoaderToSoLoaderDelegate());
+        b.f.m.n.a.a(new j());
     }
 }

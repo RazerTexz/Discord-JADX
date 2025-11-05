@@ -1,7 +1,5 @@
 package b.i.a.f.i.b;
 
-import b.c.a.a0.AnimatableValueParser;
-
 /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
 /* loaded from: classes3.dex */
 public final class y0 implements Runnable {
@@ -21,7 +19,7 @@ public final class y0 implements Runnable {
         String str = this.j;
         long j = this.k;
         aVar.b();
-        AnimatableValueParser.w(str);
+        b.c.a.a0.d.w(str);
         if (aVar.c.isEmpty()) {
             aVar.d = j;
         }

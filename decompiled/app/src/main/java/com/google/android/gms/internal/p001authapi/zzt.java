@@ -2,7 +2,7 @@ package com.google.android.gms.internal.p001authapi;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.h.c.p;
 import com.google.android.gms.auth.api.credentials.Credential;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -19,8 +19,8 @@ public final class zzt extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.s2(parcel, 1, this.j, i, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        int iY2 = d.y2(parcel, 20293);
+        d.s2(parcel, 1, this.j, i, false);
+        d.A2(parcel, iY2);
     }
 }

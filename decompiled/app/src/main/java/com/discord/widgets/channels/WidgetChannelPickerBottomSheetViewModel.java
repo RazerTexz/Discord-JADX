@@ -1,20 +1,20 @@
 package com.discord.widgets.channels;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.stores.StoreChannels;
 import com.discord.stores.StoreStream;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import com.discord.widgets.channels.WidgetChannelPickerAdapter;
-import d0.g0.Strings4;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.widgets.channels.ChannelPickerAdapterItem;
+import d0.g0.t;
+import d0.g0.w;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
@@ -26,7 +26,7 @@ import rx.Observable;
 
 /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<ViewState> {
+public final class WidgetChannelPickerBottomSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -38,7 +38,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
 
     /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
     /* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -52,7 +52,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetChannelPickerBottomSheetViewModel widgetChannelPickerBottomSheetViewModel = WidgetChannelPickerBottomSheetViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            m.checkNotNullExpressionValue(storeState, "storeState");
             WidgetChannelPickerBottomSheetViewModel.access$handleStoreState(widgetChannelPickerBottomSheetViewModel, storeState);
         }
     }
@@ -67,7 +67,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
         }
 
         private final Observable<StoreState> observeStoreState(long guildId, ObservationDeck observationDeck, StoreChannels storeChannels, boolean hideAnnouncementChannels) {
-            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{storeChannels}, false, null, null, new WidgetChannelPickerBottomSheetViewModel2(storeChannels, guildId, hideAnnouncementChannels), 14, null);
+            return ObservationDeck.connectRx$default(observationDeck, new ObservationDeck.UpdateSource[]{storeChannels}, false, null, null, new WidgetChannelPickerBottomSheetViewModel$Companion$observeStoreState$1(storeChannels, guildId, hideAnnouncementChannels), 14, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -94,7 +94,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(List<Channel> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "channels");
+                m.checkNotNullParameter(list, "channels");
                 this.channels = list;
             }
 
@@ -111,13 +111,13 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             }
 
             public final Loaded copy(List<Channel> channels) {
-                Intrinsics3.checkNotNullParameter(channels, "channels");
+                m.checkNotNullParameter(channels, "channels");
                 return new Loaded(channels);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.channels, ((Loaded) other).channels);
+                    return (other instanceof Loaded) && m.areEqual(this.channels, ((Loaded) other).channels);
                 }
                 return true;
             }
@@ -135,7 +135,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             }
 
             public String toString() {
-                return outline.L(outline.U("Loaded(channels="), this.channels, ")");
+                return a.L(a.U("Loaded(channels="), this.channels, ")");
             }
         }
 
@@ -152,13 +152,13 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
 
         /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
-            private final List<WidgetChannelPickerAdapter> adapterItems;
+            private final List<ChannelPickerAdapterItem> adapterItems;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
-            public Loaded(List<? extends WidgetChannelPickerAdapter> list) {
+            public Loaded(List<? extends ChannelPickerAdapterItem> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "adapterItems");
+                m.checkNotNullParameter(list, "adapterItems");
                 this.adapterItems = list;
             }
 
@@ -170,28 +170,28 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
                 return loaded.copy(list);
             }
 
-            public final List<WidgetChannelPickerAdapter> component1() {
+            public final List<ChannelPickerAdapterItem> component1() {
                 return this.adapterItems;
             }
 
-            public final Loaded copy(List<? extends WidgetChannelPickerAdapter> adapterItems) {
-                Intrinsics3.checkNotNullParameter(adapterItems, "adapterItems");
+            public final Loaded copy(List<? extends ChannelPickerAdapterItem> adapterItems) {
+                m.checkNotNullParameter(adapterItems, "adapterItems");
                 return new Loaded(adapterItems);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.adapterItems, ((Loaded) other).adapterItems);
+                    return (other instanceof Loaded) && m.areEqual(this.adapterItems, ((Loaded) other).adapterItems);
                 }
                 return true;
             }
 
-            public final List<WidgetChannelPickerAdapter> getAdapterItems() {
+            public final List<ChannelPickerAdapterItem> getAdapterItems() {
                 return this.adapterItems;
             }
 
             public int hashCode() {
-                List<WidgetChannelPickerAdapter> list = this.adapterItems;
+                List<ChannelPickerAdapterItem> list = this.adapterItems;
                 if (list != null) {
                     return list.hashCode();
                 }
@@ -199,7 +199,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             }
 
             public String toString() {
-                return outline.L(outline.U("Loaded(adapterItems="), this.adapterItems, ")");
+                return a.L(a.U("Loaded(adapterItems="), this.adapterItems, ")");
             }
         }
 
@@ -222,7 +222,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
 
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ WidgetChannelPickerBottomSheetViewModel(long j, long j2, boolean z2, ObservationDeck observationDeck, StoreChannels storeChannels, Observable observable, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        ObservationDeck observationDeck2 = (i & 8) != 0 ? ObservationDeck4.get() : observationDeck;
+        ObservationDeck observationDeck2 = (i & 8) != 0 ? ObservationDeckProvider.get() : observationDeck;
         StoreChannels channels = (i & 16) != 0 ? StoreStream.INSTANCE.getChannels() : storeChannels;
         this(j, j2, z2, observationDeck2, channels, (i & 32) != 0 ? Companion.access$observeStoreState(INSTANCE, j, observationDeck2, channels, z2) : observable);
     }
@@ -231,12 +231,12 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
         widgetChannelPickerBottomSheetViewModel.handleStoreState(storeState);
     }
 
-    private final List<WidgetChannelPickerAdapter> buildChannelItemList(List<Channel> channels) {
+    private final List<ChannelPickerAdapterItem> buildChannelItemList(List<Channel> channels) {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(WidgetChannelPickerAdapter.CreateChannelItem.INSTANCE);
+        arrayList.add(ChannelPickerAdapterItem.CreateChannelItem.INSTANCE);
         for (Channel channel : channels) {
-            if (StringsJVM.isBlank(this.searchQuery) || Strings4.contains$default((CharSequence) ChannelUtils.c(channel), (CharSequence) this.searchQuery, false, 2, (Object) null)) {
-                arrayList.add(new WidgetChannelPickerAdapter.ChannelItem(channel, channel.getId() == this.selectedChannelId));
+            if (t.isBlank(this.searchQuery) || w.contains$default((CharSequence) ChannelUtils.c(channel), (CharSequence) this.searchQuery, false, 2, (Object) null)) {
+                arrayList.add(new ChannelPickerAdapterItem.ChannelItem(channel, channel.getId() == this.selectedChannelId));
             }
         }
         return arrayList;
@@ -258,8 +258,8 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
     }
 
     public final void updateSearchQuery(String query) {
-        Intrinsics3.checkNotNullParameter(query, "query");
-        if (Intrinsics3.areEqual(query, this.searchQuery)) {
+        m.checkNotNullParameter(query, "query");
+        if (m.areEqual(query, this.searchQuery)) {
             return;
         }
         this.searchQuery = query;
@@ -272,15 +272,15 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetChannelPickerBottomSheetViewModel(long j, long j2, boolean z2, ObservationDeck observationDeck, StoreChannels storeChannels, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.guildId = j;
         this.selectedChannelId = j2;
         this.hideAnnouncementChannels = z2;
         this.searchQuery = "";
         Observable<StoreState> observableR = observable.r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "storeStateObservable\n   …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetChannelPickerBottomSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSentMissedMessageEmail.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSentMissedMessageEmail implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSentMissedMessageEmail implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence trackingPixelUuid = null;
     private final CharSequence subjectClassification = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackSentMissedMessageEmail implements AnalyticsSc
             return false;
         }
         TrackSentMissedMessageEmail trackSentMissedMessageEmail = (TrackSentMissedMessageEmail) other;
-        return Intrinsics3.areEqual(this.trackingPixelUuid, trackSentMissedMessageEmail.trackingPixelUuid) && Intrinsics3.areEqual(this.subjectClassification, trackSentMissedMessageEmail.subjectClassification) && Intrinsics3.areEqual(this.totalGuildsMissed, trackSentMissedMessageEmail.totalGuildsMissed) && Intrinsics3.areEqual(this.totalChannelsMissed, trackSentMissedMessageEmail.totalChannelsMissed) && Intrinsics3.areEqual(this.totalDmsMissed, trackSentMissedMessageEmail.totalDmsMissed) && Intrinsics3.areEqual(this.totalApproximateMessagesMissed, trackSentMissedMessageEmail.totalApproximateMessagesMissed) && Intrinsics3.areEqual(this.lastAckAt, trackSentMissedMessageEmail.lastAckAt) && Intrinsics3.areEqual(this.didSend, trackSentMissedMessageEmail.didSend);
+        return m.areEqual(this.trackingPixelUuid, trackSentMissedMessageEmail.trackingPixelUuid) && m.areEqual(this.subjectClassification, trackSentMissedMessageEmail.subjectClassification) && m.areEqual(this.totalGuildsMissed, trackSentMissedMessageEmail.totalGuildsMissed) && m.areEqual(this.totalChannelsMissed, trackSentMissedMessageEmail.totalChannelsMissed) && m.areEqual(this.totalDmsMissed, trackSentMissedMessageEmail.totalDmsMissed) && m.areEqual(this.totalApproximateMessagesMissed, trackSentMissedMessageEmail.totalApproximateMessagesMissed) && m.areEqual(this.lastAckAt, trackSentMissedMessageEmail.lastAckAt) && m.areEqual(this.didSend, trackSentMissedMessageEmail.didSend);
     }
 
     public int hashCode() {
@@ -57,7 +57,7 @@ public final /* data */ class TrackSentMissedMessageEmail implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSentMissedMessageEmail(trackingPixelUuid=");
+        StringBuilder sbU = a.U("TrackSentMissedMessageEmail(trackingPixelUuid=");
         sbU.append(this.trackingPixelUuid);
         sbU.append(", subjectClassification=");
         sbU.append(this.subjectClassification);
@@ -72,6 +72,6 @@ public final /* data */ class TrackSentMissedMessageEmail implements AnalyticsSc
         sbU.append(", lastAckAt=");
         sbU.append(this.lastAckAt);
         sbU.append(", didSend=");
-        return outline.D(sbU, this.didSend, ")");
+        return a.D(sbU, this.didSend, ")");
     }
 }

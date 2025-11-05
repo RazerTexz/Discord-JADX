@@ -4,7 +4,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Group;
-import b.a.i.LayoutIconUploaderBinding;
+import b.a.i.r0;
 import com.discord.databinding.WidgetGuildCloneBinding;
 import com.discord.databinding.WidgetGuildCreateBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
@@ -12,7 +12,7 @@ import com.discord.views.LoadingButton;
 import com.discord.views.ScreenTitleView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildCreateCloneViews.kt */
 /* loaded from: classes2.dex */
@@ -29,12 +29,12 @@ public interface GuildCreateCloneViews {
         }
 
         public final GuildCreateCloneViews from(WidgetGuildCreateBinding binding) {
-            Intrinsics3.checkNotNullParameter(binding, "binding");
+            m.checkNotNullParameter(binding, "binding");
             return new GuildCreateViews(binding);
         }
 
         public final GuildCreateCloneViews from(WidgetGuildCloneBinding binding) {
-            Intrinsics3.checkNotNullParameter(binding, "binding");
+            m.checkNotNullParameter(binding, "binding");
             return new GuildCloneViews(binding);
         }
     }
@@ -50,26 +50,26 @@ public interface GuildCreateCloneViews {
         private final ScreenTitleView screenTitleView;
 
         public GuildCloneViews(WidgetGuildCloneBinding widgetGuildCloneBinding) {
-            Intrinsics3.checkNotNullParameter(widgetGuildCloneBinding, "binding");
+            m.checkNotNullParameter(widgetGuildCloneBinding, "binding");
             LoadingButton loadingButton = widgetGuildCloneBinding.f2410b;
-            Intrinsics3.checkNotNullExpressionValue(loadingButton, "binding.guildCreateButton");
+            m.checkNotNullExpressionValue(loadingButton, "binding.guildCreateButton");
             this.guildCreateButton = loadingButton;
             TextInputLayout textInputLayout = widgetGuildCloneBinding.f;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.guildCreateName");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.guildCreateName");
             this.guildCreateName = textInputLayout;
             SimpleDraweeView simpleDraweeView = widgetGuildCloneBinding.e.f190b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.guildCreateIconUploader.iconUploaderImage");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.guildCreateIconUploader.iconUploaderImage");
             this.iconUploaderImage = simpleDraweeView;
             Group group = widgetGuildCloneBinding.e.c;
-            Intrinsics3.checkNotNullExpressionValue(group, "binding.guildCreateIconUploader.placeholderGroup");
+            m.checkNotNullExpressionValue(group, "binding.guildCreateIconUploader.placeholderGroup");
             this.iconUploaderPlaceholderGroup = group;
-            LayoutIconUploaderBinding layoutIconUploaderBinding = widgetGuildCloneBinding.e;
-            Intrinsics3.checkNotNullExpressionValue(layoutIconUploaderBinding, "binding.guildCreateIconUploader");
-            ConstraintLayout constraintLayout = layoutIconUploaderBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.guildCreateIconUploader.root");
+            r0 r0Var = widgetGuildCloneBinding.e;
+            m.checkNotNullExpressionValue(r0Var, "binding.guildCreateIconUploader");
+            ConstraintLayout constraintLayout = r0Var.a;
+            m.checkNotNullExpressionValue(constraintLayout, "binding.guildCreateIconUploader.root");
             this.guildCreateIconUploader = constraintLayout;
             LinkifiedTextView linkifiedTextView = widgetGuildCloneBinding.d;
-            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.guildCreateGuidelines");
+            m.checkNotNullExpressionValue(linkifiedTextView, "binding.guildCreateGuidelines");
             this.guidelinesTextView = linkifiedTextView;
         }
 
@@ -120,29 +120,29 @@ public interface GuildCreateCloneViews {
         private final ScreenTitleView screenTitleView;
 
         public GuildCreateViews(WidgetGuildCreateBinding widgetGuildCreateBinding) {
-            Intrinsics3.checkNotNullParameter(widgetGuildCreateBinding, "binding");
+            m.checkNotNullParameter(widgetGuildCreateBinding, "binding");
             LoadingButton loadingButton = widgetGuildCreateBinding.f2412b;
-            Intrinsics3.checkNotNullExpressionValue(loadingButton, "binding.guildCreateButton");
+            m.checkNotNullExpressionValue(loadingButton, "binding.guildCreateButton");
             this.guildCreateButton = loadingButton;
             TextInputLayout textInputLayout = widgetGuildCreateBinding.e;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.guildCreateName");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.guildCreateName");
             this.guildCreateName = textInputLayout;
             SimpleDraweeView simpleDraweeView = widgetGuildCreateBinding.d.f190b;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.guildCreateIconUploader.iconUploaderImage");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.guildCreateIconUploader.iconUploaderImage");
             this.iconUploaderImage = simpleDraweeView;
             Group group = widgetGuildCreateBinding.d.c;
-            Intrinsics3.checkNotNullExpressionValue(group, "binding.guildCreateIconUploader.placeholderGroup");
+            m.checkNotNullExpressionValue(group, "binding.guildCreateIconUploader.placeholderGroup");
             this.iconUploaderPlaceholderGroup = group;
-            LayoutIconUploaderBinding layoutIconUploaderBinding = widgetGuildCreateBinding.d;
-            Intrinsics3.checkNotNullExpressionValue(layoutIconUploaderBinding, "binding.guildCreateIconUploader");
-            ConstraintLayout constraintLayout = layoutIconUploaderBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.guildCreateIconUploader.root");
+            r0 r0Var = widgetGuildCreateBinding.d;
+            m.checkNotNullExpressionValue(r0Var, "binding.guildCreateIconUploader");
+            ConstraintLayout constraintLayout = r0Var.a;
+            m.checkNotNullExpressionValue(constraintLayout, "binding.guildCreateIconUploader.root");
             this.guildCreateIconUploader = constraintLayout;
             LinkifiedTextView linkifiedTextView = widgetGuildCreateBinding.c;
-            Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.guildCreateGuidelines");
+            m.checkNotNullExpressionValue(linkifiedTextView, "binding.guildCreateGuidelines");
             this.guidelinesTextView = linkifiedTextView;
             ScreenTitleView screenTitleView = widgetGuildCreateBinding.f;
-            Intrinsics3.checkNotNullExpressionValue(screenTitleView, "binding.guildCreateScreenTitle");
+            m.checkNotNullExpressionValue(screenTitleView, "binding.guildCreateScreenTitle");
             this.screenTitleView = screenTitleView;
         }
 

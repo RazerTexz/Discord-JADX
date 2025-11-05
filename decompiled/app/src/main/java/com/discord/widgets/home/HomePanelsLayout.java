@@ -3,7 +3,7 @@ package com.discord.widgets.home;
 import android.content.Context;
 import android.util.AttributeSet;
 import com.discord.panels.OverlappingPanelsLayout;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: HomePanelsLayout.kt */
@@ -12,13 +12,13 @@ public final class HomePanelsLayout extends OverlappingPanelsLayout implements P
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HomePanelsLayout(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HomePanelsLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
     }
 
     public /* synthetic */ HomePanelsLayout(Context context, AttributeSet attributeSet, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -28,7 +28,7 @@ public final class HomePanelsLayout extends OverlappingPanelsLayout implements P
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HomePanelsLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
     }
 
     public /* synthetic */ HomePanelsLayout(Context context, AttributeSet attributeSet, int i, int i2, DefaultConstructorMarker defaultConstructorMarker) {

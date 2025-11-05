@@ -1,7 +1,7 @@
 package com.discord.api.auth;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: RegisterResponse.kt */
 /* loaded from: classes.dex */
@@ -15,7 +15,7 @@ public final /* data */ class RegisterResponse {
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof RegisterResponse) && Intrinsics3.areEqual(this.token, ((RegisterResponse) other).token);
+            return (other instanceof RegisterResponse) && m.areEqual(this.token, ((RegisterResponse) other).token);
         }
         return true;
     }
@@ -29,6 +29,6 @@ public final /* data */ class RegisterResponse {
     }
 
     public String toString() {
-        return outline.J(outline.U("RegisterResponse(token="), this.token, ")");
+        return a.J(a.U("RegisterResponse(token="), this.token, ")");
     }
 }

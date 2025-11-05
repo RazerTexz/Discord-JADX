@@ -2,7 +2,7 @@ package com.discord.models.experiments.dto;
 
 import com.discord.models.domain.Model;
 import com.discord.models.experiments.dto.GuildExperimentOverridesDto;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
@@ -40,7 +40,7 @@ public final class GuildExperimentDto$Parser$parse$5 implements Runnable {
     public final void run() throws IOException {
         Ref$ObjectRef ref$ObjectRef = this.$overrides;
         ?? NextList = this.$jsonReader.nextList(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(NextList, "jsonReader.nextList { Gu…arser.parse(jsonReader) }");
+        m.checkNotNullExpressionValue(NextList, "jsonReader.nextList { Gu…arser.parse(jsonReader) }");
         ref$ObjectRef.element = NextList;
     }
 }

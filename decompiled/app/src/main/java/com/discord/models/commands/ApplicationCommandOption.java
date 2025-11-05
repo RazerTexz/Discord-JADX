@@ -1,11 +1,11 @@
 package com.discord.models.commands;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.commands.ApplicationCommandType;
 import com.discord.api.commands.CommandChoice;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -26,8 +26,8 @@ public final /* data */ class ApplicationCommandOption {
     private final ApplicationCommandType type;
 
     public ApplicationCommandOption(ApplicationCommandType applicationCommandType, String str, String str2, Integer num, boolean z2, boolean z3, List<Integer> list, List<CommandChoice> list2, List<ApplicationCommandOption> list3, boolean z4, Number number, Number number2) {
-        Intrinsics3.checkNotNullParameter(applicationCommandType, "type");
-        Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(applicationCommandType, "type");
+        m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         this.type = applicationCommandType;
         this.name = str;
         this.description = str2;
@@ -104,8 +104,8 @@ public final /* data */ class ApplicationCommandOption {
     }
 
     public final ApplicationCommandOption copy(ApplicationCommandType type, String name, String description, Integer descriptionRes, boolean required, boolean z2, List<Integer> channelTypes, List<CommandChoice> choices, List<ApplicationCommandOption> options, boolean autocomplete, Number minValue, Number maxValue) {
-        Intrinsics3.checkNotNullParameter(type, "type");
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new ApplicationCommandOption(type, name, description, descriptionRes, required, z2, channelTypes, choices, options, autocomplete, minValue, maxValue);
     }
 
@@ -117,7 +117,7 @@ public final /* data */ class ApplicationCommandOption {
             return false;
         }
         ApplicationCommandOption applicationCommandOption = (ApplicationCommandOption) other;
-        return Intrinsics3.areEqual(this.type, applicationCommandOption.type) && Intrinsics3.areEqual(this.name, applicationCommandOption.name) && Intrinsics3.areEqual(this.description, applicationCommandOption.description) && Intrinsics3.areEqual(this.descriptionRes, applicationCommandOption.descriptionRes) && this.required == applicationCommandOption.required && this.default == applicationCommandOption.default && Intrinsics3.areEqual(this.channelTypes, applicationCommandOption.channelTypes) && Intrinsics3.areEqual(this.choices, applicationCommandOption.choices) && Intrinsics3.areEqual(this.options, applicationCommandOption.options) && this.autocomplete == applicationCommandOption.autocomplete && Intrinsics3.areEqual(this.minValue, applicationCommandOption.minValue) && Intrinsics3.areEqual(this.maxValue, applicationCommandOption.maxValue);
+        return m.areEqual(this.type, applicationCommandOption.type) && m.areEqual(this.name, applicationCommandOption.name) && m.areEqual(this.description, applicationCommandOption.description) && m.areEqual(this.descriptionRes, applicationCommandOption.descriptionRes) && this.required == applicationCommandOption.required && this.default == applicationCommandOption.default && m.areEqual(this.channelTypes, applicationCommandOption.channelTypes) && m.areEqual(this.choices, applicationCommandOption.choices) && m.areEqual(this.options, applicationCommandOption.options) && this.autocomplete == applicationCommandOption.autocomplete && m.areEqual(this.minValue, applicationCommandOption.minValue) && m.areEqual(this.maxValue, applicationCommandOption.maxValue);
     }
 
     public final boolean getAutocomplete() {
@@ -205,7 +205,7 @@ public final /* data */ class ApplicationCommandOption {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ApplicationCommandOption(type=");
+        StringBuilder sbU = a.U("ApplicationCommandOption(type=");
         sbU.append(this.type);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -234,6 +234,6 @@ public final /* data */ class ApplicationCommandOption {
     }
 
     public /* synthetic */ ApplicationCommandOption(ApplicationCommandType applicationCommandType, String str, String str2, Integer num, boolean z2, boolean z3, List list, List list2, List list3, boolean z4, Number number, Number number2, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(applicationCommandType, str, (i & 4) != 0 ? null : str2, (i & 8) != 0 ? null : num, z2, z3, (i & 64) != 0 ? Collections2.emptyList() : list, (i & 128) != 0 ? null : list2, (i & 256) != 0 ? null : list3, (i & 512) != 0 ? false : z4, (i & 1024) != 0 ? null : number, (i & 2048) != 0 ? null : number2);
+        this(applicationCommandType, str, (i & 4) != 0 ? null : str2, (i & 8) != 0 ? null : num, z2, z3, (i & 64) != 0 ? n.emptyList() : list, (i & 128) != 0 ? null : list2, (i & 256) != 0 ? null : list3, (i & 512) != 0 ? false : z4, (i & 1024) != 0 ? null : number, (i & 2048) != 0 ? null : number2);
     }
 }

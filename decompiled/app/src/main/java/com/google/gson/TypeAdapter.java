@@ -1,7 +1,7 @@
 package com.google.gson;
 
-import b.i.d.q.x.JsonTreeReader;
-import b.i.d.q.x.JsonTreeWriter;
+import b.i.d.q.x.a;
+import b.i.d.q.x.b;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
@@ -44,7 +44,7 @@ public abstract class TypeAdapter<T> {
 
     public final T fromJsonTree(JsonElement jsonElement) {
         try {
-            return read(new JsonTreeReader(jsonElement));
+            return read(new a(jsonElement));
         } catch (IOException e) {
             throw new JsonIOException(e);
         }
@@ -62,9 +62,9 @@ public abstract class TypeAdapter<T> {
 
     public final JsonElement toJsonTree(T t) {
         try {
-            JsonTreeWriter jsonTreeWriter = new JsonTreeWriter();
-            write(jsonTreeWriter, t);
-            return jsonTreeWriter.L();
+            b bVar = new b();
+            write(bVar, t);
+            return bVar.L();
         } catch (IOException e) {
             throw new JsonIOException(e);
         }

@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 
 /* loaded from: classes.dex */
@@ -207,7 +207,7 @@ public final class FragmentContainerView extends FrameLayout {
             return;
         }
         if (id2 <= 0) {
-            throw new IllegalStateException(outline.y("FragmentContainerView must have an android:id to add Fragment ", classAttribute, string != null ? outline.w(" with tag ", string) : ""));
+            throw new IllegalStateException(a.y("FragmentContainerView must have an android:id to add Fragment ", classAttribute, string != null ? a.w(" with tag ", string) : ""));
         }
         Fragment fragmentInstantiate = fragmentManager.getFragmentFactory().instantiate(context.getClassLoader(), classAttribute);
         fragmentInstantiate.onInflate(context, attributeSet, (Bundle) null);

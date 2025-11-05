@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.IntegrationSyncSettingsBinding;
+import b.a.i.d0;
 import com.discord.utilities.dimmer.DimmerView;
 import com.discord.views.CheckedSetting;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -63,9 +63,9 @@ public final class WidgetServerSettingsEditIntegrationBinding implements ViewBin
     public final FloatingActionButton o;
 
     @NonNull
-    public final IntegrationSyncSettingsBinding p;
+    public final d0 p;
 
-    public WidgetServerSettingsEditIntegrationBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull DimmerView dimmerView, @NonNull LinearLayout linearLayout, @NonNull CheckedSetting checkedSetting, @NonNull CheckedSetting checkedSetting2, @NonNull CheckedSetting checkedSetting3, @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3, @NonNull CheckedSetting checkedSetting4, @NonNull CheckedSetting checkedSetting5, @NonNull CheckedSetting checkedSetting6, @NonNull CheckedSetting checkedSetting7, @NonNull CheckedSetting checkedSetting8, @NonNull ImageView imageView, @NonNull TextView textView, @NonNull LinearLayout linearLayout4, @NonNull TextView textView2, @NonNull FloatingActionButton floatingActionButton, @NonNull NestedScrollView nestedScrollView, @NonNull LinearLayout linearLayout5, @NonNull LinearLayout linearLayout6, @NonNull IntegrationSyncSettingsBinding integrationSyncSettingsBinding) {
+    public WidgetServerSettingsEditIntegrationBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull DimmerView dimmerView, @NonNull LinearLayout linearLayout, @NonNull CheckedSetting checkedSetting, @NonNull CheckedSetting checkedSetting2, @NonNull CheckedSetting checkedSetting3, @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3, @NonNull CheckedSetting checkedSetting4, @NonNull CheckedSetting checkedSetting5, @NonNull CheckedSetting checkedSetting6, @NonNull CheckedSetting checkedSetting7, @NonNull CheckedSetting checkedSetting8, @NonNull ImageView imageView, @NonNull TextView textView, @NonNull LinearLayout linearLayout4, @NonNull TextView textView2, @NonNull FloatingActionButton floatingActionButton, @NonNull NestedScrollView nestedScrollView, @NonNull LinearLayout linearLayout5, @NonNull LinearLayout linearLayout6, @NonNull d0 d0Var) {
         this.a = coordinatorLayout;
         this.f2560b = dimmerView;
         this.c = linearLayout;
@@ -81,7 +81,7 @@ public final class WidgetServerSettingsEditIntegrationBinding implements ViewBin
         this.m = textView;
         this.n = textView2;
         this.o = floatingActionButton;
-        this.p = integrationSyncSettingsBinding;
+        this.p = d0Var;
     }
 
     @Override // androidx.viewbinding.ViewBinding

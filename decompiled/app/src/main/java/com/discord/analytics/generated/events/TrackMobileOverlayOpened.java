@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackMobileOverlayOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
+public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver, TrackChannelReceiver {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
     private TrackGuild trackGuild;
@@ -21,13 +21,13 @@ public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchem
     private final Boolean previewEnabled = null;
     private final transient String analyticsSchemaTypeName = "mobile_overlay_opened";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -46,7 +46,7 @@ public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchem
             return false;
         }
         TrackMobileOverlayOpened trackMobileOverlayOpened = (TrackMobileOverlayOpened) other;
-        return Intrinsics3.areEqual(this.type, trackMobileOverlayOpened.type) && Intrinsics3.areEqual(this.rtcConnectionId, trackMobileOverlayOpened.rtcConnectionId) && Intrinsics3.areEqual(this.previewEnabled, trackMobileOverlayOpened.previewEnabled);
+        return m.areEqual(this.type, trackMobileOverlayOpened.type) && m.areEqual(this.rtcConnectionId, trackMobileOverlayOpened.rtcConnectionId) && m.areEqual(this.previewEnabled, trackMobileOverlayOpened.previewEnabled);
     }
 
     public int hashCode() {
@@ -59,11 +59,11 @@ public final /* data */ class TrackMobileOverlayOpened implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackMobileOverlayOpened(type=");
+        StringBuilder sbU = a.U("TrackMobileOverlayOpened(type=");
         sbU.append(this.type);
         sbU.append(", rtcConnectionId=");
         sbU.append(this.rtcConnectionId);
         sbU.append(", previewEnabled=");
-        return outline.D(sbU, this.previewEnabled, ")");
+        return a.D(sbU, this.previewEnabled, ")");
     }
 }

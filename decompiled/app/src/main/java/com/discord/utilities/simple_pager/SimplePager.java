@@ -12,9 +12,9 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.material.tabs.TabLayout;
-import d0.t._ArraysJvm;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.t.j;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -38,8 +38,8 @@ public final class SimplePager extends ViewPager {
 
             /* JADX WARN: Multi-variable type inference failed */
             public Item(String str, Function0<? extends Fragment> function0) {
-                Intrinsics3.checkNotNullParameter(str, "title");
-                Intrinsics3.checkNotNullParameter(function0, "creator");
+                m.checkNotNullParameter(str, "title");
+                m.checkNotNullParameter(function0, "creator");
                 this.title = str;
                 this.creator = function0;
             }
@@ -57,9 +57,9 @@ public final class SimplePager extends ViewPager {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Adapter(FragmentManager fragmentManager, Item... itemArr) {
             super(fragmentManager, 1);
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fm");
-            Intrinsics3.checkNotNullParameter(itemArr, "items");
-            this.items = _ArraysJvm.asList(itemArr);
+            m.checkNotNullParameter(fragmentManager, "fm");
+            m.checkNotNullParameter(itemArr, "items");
+            this.items = j.asList(itemArr);
         }
 
         @Override // androidx.viewpager.widget.PagerAdapter
@@ -71,7 +71,7 @@ public final class SimplePager extends ViewPager {
         public Fragment getItem(int position) {
             Function0<Fragment> creator$utils_release;
             Fragment fragmentInvoke;
-            Item item = (Item) _Collections.getOrNull(this.items, position);
+            Item item = (Item) u.getOrNull(this.items, position);
             if (item != null && (creator$utils_release = item.getCreator$utils_release()) != null && (fragmentInvoke = creator$utils_release.invoke()) != null) {
                 return fragmentInvoke;
             }
@@ -81,7 +81,7 @@ public final class SimplePager extends ViewPager {
         @Override // androidx.viewpager.widget.PagerAdapter
         public CharSequence getPageTitle(int position) {
             String title;
-            Item item = (Item) _Collections.getOrNull(this.items, position);
+            Item item = (Item) u.getOrNull(this.items, position);
             return (item == null || (title = item.getTitle()) == null) ? super.getPageTitle(position) : title;
         }
     }
@@ -119,7 +119,7 @@ public final class SimplePager extends ViewPager {
 
     @Override // androidx.viewpager.widget.ViewPager, android.view.ViewGroup
     public boolean onInterceptTouchEvent(MotionEvent event) {
-        Intrinsics3.checkNotNullParameter(event, "event");
+        m.checkNotNullParameter(event, "event");
         return this.isScrollingEnabled && super.onInterceptTouchEvent(event);
     }
 
@@ -134,7 +134,7 @@ public final class SimplePager extends ViewPager {
         for (int i2 = 0; i2 < childCount; i2++) {
             View childAt = getChildAt(i2);
             childAt.measure(widthMeasureSpec, View.MeasureSpec.makeMeasureSpec(0, 0));
-            Intrinsics3.checkNotNullExpressionValue(childAt, "child");
+            m.checkNotNullExpressionValue(childAt, "child");
             int measuredHeight = childAt.getMeasuredHeight();
             if (measuredHeight > i) {
                 i = measuredHeight;
@@ -148,7 +148,7 @@ public final class SimplePager extends ViewPager {
 
     @Override // androidx.viewpager.widget.ViewPager, android.view.View
     public boolean onTouchEvent(MotionEvent event) {
-        Intrinsics3.checkNotNullParameter(event, "event");
+        m.checkNotNullParameter(event, "event");
         return this.isScrollingEnabled && super.onTouchEvent(event);
     }
 
@@ -193,7 +193,7 @@ public final class SimplePager extends ViewPager {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public SimplePager(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         this.preserveSelectedPage = true;
         this.keepAllPagesLoaded = true;
         this.isScrollingEnabled = true;

@@ -2,14 +2,14 @@ package com.discord.api.channel;
 
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildhash.GuildHashes;
 import com.discord.api.permission.PermissionOverwrite;
 import com.discord.api.thread.ThreadMember;
 import com.discord.api.thread.ThreadMetadata;
 import com.discord.api.user.User;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import java.util.Objects;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -203,7 +203,7 @@ public final /* data */ class Channel {
             return false;
         }
         Channel channel = (Channel) other;
-        return Intrinsics3.areEqual(this.topic, channel.topic) && this.type == channel.type && this.guildId == channel.guildId && Intrinsics3.areEqual(this.name, channel.name) && this.lastMessageId == channel.lastMessageId && this.id == channel.id && this.ownerId == channel.ownerId && Intrinsics3.areEqual(this.recipientIds, channel.recipientIds) && Intrinsics3.areEqual(this.recipients, channel.recipients) && this.position == channel.position && Intrinsics3.areEqual(this.permissionOverwrites, channel.permissionOverwrites) && this.userLimit == channel.userLimit && this.bitrate == channel.bitrate && Intrinsics3.areEqual(this.icon, channel.icon) && this.originChannelId == channel.originChannelId && this.applicationId == channel.applicationId && Intrinsics3.areEqual(this.nicks, channel.nicks) && this.nsfw == channel.nsfw && this.parentId == channel.parentId && Intrinsics3.areEqual(this.memberListId, channel.memberListId) && this.rateLimitPerUser == channel.rateLimitPerUser && Intrinsics3.areEqual(this.defaultAutoArchiveDuration, channel.defaultAutoArchiveDuration) && Intrinsics3.areEqual(this.rtcRegion, channel.rtcRegion) && Intrinsics3.areEqual(this.flags, channel.flags) && Intrinsics3.areEqual(this.guildHashes, channel.guildHashes) && Intrinsics3.areEqual(this.availableTags, channel.availableTags) && Intrinsics3.areEqual(this.appliedTags, channel.appliedTags) && Intrinsics3.areEqual(this.threadMetadata, channel.threadMetadata) && Intrinsics3.areEqual(this.messageCount, channel.messageCount) && Intrinsics3.areEqual(this.memberCount, channel.memberCount) && Intrinsics3.areEqual(this.memberIdsPreview, channel.memberIdsPreview) && Intrinsics3.areEqual(this.member, channel.member);
+        return m.areEqual(this.topic, channel.topic) && this.type == channel.type && this.guildId == channel.guildId && m.areEqual(this.name, channel.name) && this.lastMessageId == channel.lastMessageId && this.id == channel.id && this.ownerId == channel.ownerId && m.areEqual(this.recipientIds, channel.recipientIds) && m.areEqual(this.recipients, channel.recipients) && this.position == channel.position && m.areEqual(this.permissionOverwrites, channel.permissionOverwrites) && this.userLimit == channel.userLimit && this.bitrate == channel.bitrate && m.areEqual(this.icon, channel.icon) && this.originChannelId == channel.originChannelId && this.applicationId == channel.applicationId && m.areEqual(this.nicks, channel.nicks) && this.nsfw == channel.nsfw && this.parentId == channel.parentId && m.areEqual(this.memberListId, channel.memberListId) && this.rateLimitPerUser == channel.rateLimitPerUser && m.areEqual(this.defaultAutoArchiveDuration, channel.defaultAutoArchiveDuration) && m.areEqual(this.rtcRegion, channel.rtcRegion) && m.areEqual(this.flags, channel.flags) && m.areEqual(this.guildHashes, channel.guildHashes) && m.areEqual(this.availableTags, channel.availableTags) && m.areEqual(this.appliedTags, channel.appliedTags) && m.areEqual(this.threadMetadata, channel.threadMetadata) && m.areEqual(this.messageCount, channel.messageCount) && m.areEqual(this.memberCount, channel.memberCount) && m.areEqual(this.memberIdsPreview, channel.memberIdsPreview) && m.areEqual(this.member, channel.member);
     }
 
     /* renamed from: f, reason: from getter */
@@ -343,7 +343,7 @@ public final /* data */ class Channel {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Channel(topic=");
+        StringBuilder sbU = a.U("Channel(topic=");
         sbU.append(this.topic);
         sbU.append(", type=");
         sbU.append(this.type);

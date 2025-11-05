@@ -4,8 +4,8 @@ import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
 import androidx.annotation.StringRes;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.android.billingclient.api.Purchase;
 import com.discord.R;
 import com.discord.models.domain.ModelAppliedGuildBoost;
@@ -22,9 +22,9 @@ import com.discord.utilities.billing.GooglePlayBillingManager;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -40,7 +40,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: GuildBoostViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildBoostViewModel extends AppViewModel<ViewState> {
+public final class GuildBoostViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -52,7 +52,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: GuildBoostViewModel.kt */
     /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -65,7 +65,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             GuildBoostViewModel.access$handleStoreState(GuildBoostViewModel.this, storeState);
         }
     }
@@ -88,12 +88,12 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             Observable observableObserveMe$default = StoreUser.observeMe$default(companion.getUsers(), false, 1, null);
             Observable<Guild> observableObserveGuild = companion.getGuilds().observeGuild(guildId);
             Observable<StoreGooglePlayPurchases.State> observableObserveState = companion.getGooglePlayPurchases().observeState();
-            GuildBoostViewModel2 guildBoostViewModel3 = GuildBoostViewModel2.INSTANCE;
-            if (guildBoostViewModel3 != null) {
-                guildBoostViewModel3 = new GuildBoostViewModel3(guildBoostViewModel3);
+            GuildBoostViewModel$Companion$observeStores$1 guildBoostViewModel$sam$rx_functions_Func5$0 = GuildBoostViewModel$Companion$observeStores$1.INSTANCE;
+            if (guildBoostViewModel$sam$rx_functions_Func5$0 != null) {
+                guildBoostViewModel$sam$rx_functions_Func5$0 = new GuildBoostViewModel$sam$rx_functions_Func5$0(guildBoostViewModel$sam$rx_functions_Func5$0);
             }
-            Observable<StoreState> observableG = Observable.g(observableObserveGuildBoostState$default, observableObserveSubscriptions, observableObserveMe$default, observableObserveGuild, observableObserveState, (Func5) guildBoostViewModel3);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "Observable.combineLatest…     ::StoreState\n      )");
+            Observable<StoreState> observableG = Observable.g(observableObserveGuildBoostState$default, observableObserveSubscriptions, observableObserveMe$default, observableObserveGuild, observableObserveState, (Func5) guildBoostViewModel$sam$rx_functions_Func5$0);
+            m.checkNotNullExpressionValue(observableG, "Observable.combineLatest…     ::StoreState\n      )");
             return observableG;
         }
 
@@ -144,7 +144,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
 
             public final LaunchPurchaseSubscription copy(String section, long guildId, String oldSkuName) {
-                Intrinsics3.checkNotNullParameter(section, "section");
+                m.checkNotNullParameter(section, "section");
                 return new LaunchPurchaseSubscription(section, guildId, oldSkuName);
             }
 
@@ -156,7 +156,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 LaunchPurchaseSubscription launchPurchaseSubscription = (LaunchPurchaseSubscription) other;
-                return Intrinsics3.areEqual(this.section, launchPurchaseSubscription.section) && this.guildId == launchPurchaseSubscription.guildId && Intrinsics3.areEqual(this.oldSkuName, launchPurchaseSubscription.oldSkuName);
+                return m.areEqual(this.section, launchPurchaseSubscription.section) && this.guildId == launchPurchaseSubscription.guildId && m.areEqual(this.oldSkuName, launchPurchaseSubscription.oldSkuName);
             }
 
             public final long getGuildId() {
@@ -179,18 +179,18 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("LaunchPurchaseSubscription(section=");
+                StringBuilder sbU = a.U("LaunchPurchaseSubscription(section=");
                 sbU.append(this.section);
                 sbU.append(", guildId=");
                 sbU.append(this.guildId);
                 sbU.append(", oldSkuName=");
-                return outline.J(sbU, this.oldSkuName, ")");
+                return a.J(sbU, this.oldSkuName, ")");
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public LaunchPurchaseSubscription(String str, long j, String str2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(str, "section");
+                m.checkNotNullParameter(str, "section");
                 this.section = str;
                 this.guildId = j;
                 this.oldSkuName = str2;
@@ -256,10 +256,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("LaunchSubscriptionConfirmation(guildId=");
+                StringBuilder sbU = a.U("LaunchSubscriptionConfirmation(guildId=");
                 sbU.append(this.guildId);
                 sbU.append(", slotId=");
-                return outline.C(sbU, this.slotId, ")");
+                return a.C(sbU, this.slotId, ")");
             }
         }
 
@@ -322,10 +322,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("ShowBlockedPlanSwitchAlertDialog(headerStringRes=");
+                StringBuilder sbU = a.U("ShowBlockedPlanSwitchAlertDialog(headerStringRes=");
                 sbU.append(this.headerStringRes);
                 sbU.append(", bodyStringRes=");
-                return outline.B(sbU, this.bodyStringRes, ")");
+                return a.B(sbU, this.bodyStringRes, ")");
             }
         }
 
@@ -364,10 +364,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
         private final StoreSubscriptions.SubscriptionsState subscriptionState;
 
         public StoreState(StoreGuildBoost.State state, StoreSubscriptions.SubscriptionsState subscriptionsState, MeUser meUser, Guild guild, StoreGooglePlayPurchases.State state2) {
-            Intrinsics3.checkNotNullParameter(state, "guildBoostState");
-            Intrinsics3.checkNotNullParameter(subscriptionsState, "subscriptionState");
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            Intrinsics3.checkNotNullParameter(state2, "purchasesState");
+            m.checkNotNullParameter(state, "guildBoostState");
+            m.checkNotNullParameter(subscriptionsState, "subscriptionState");
+            m.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(state2, "purchasesState");
             this.guildBoostState = state;
             this.subscriptionState = subscriptionsState;
             this.meUser = meUser;
@@ -423,10 +423,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(StoreGuildBoost.State guildBoostState, StoreSubscriptions.SubscriptionsState subscriptionState, MeUser meUser, Guild guild, StoreGooglePlayPurchases.State purchasesState) {
-            Intrinsics3.checkNotNullParameter(guildBoostState, "guildBoostState");
-            Intrinsics3.checkNotNullParameter(subscriptionState, "subscriptionState");
-            Intrinsics3.checkNotNullParameter(meUser, "meUser");
-            Intrinsics3.checkNotNullParameter(purchasesState, "purchasesState");
+            m.checkNotNullParameter(guildBoostState, "guildBoostState");
+            m.checkNotNullParameter(subscriptionState, "subscriptionState");
+            m.checkNotNullParameter(meUser, "meUser");
+            m.checkNotNullParameter(purchasesState, "purchasesState");
             return new StoreState(guildBoostState, subscriptionState, meUser, guild, purchasesState);
         }
 
@@ -438,7 +438,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.guildBoostState, storeState.guildBoostState) && Intrinsics3.areEqual(this.subscriptionState, storeState.subscriptionState) && Intrinsics3.areEqual(this.meUser, storeState.meUser) && Intrinsics3.areEqual(this.guild, storeState.guild) && Intrinsics3.areEqual(this.purchasesState, storeState.purchasesState);
+            return m.areEqual(this.guildBoostState, storeState.guildBoostState) && m.areEqual(this.subscriptionState, storeState.subscriptionState) && m.areEqual(this.meUser, storeState.meUser) && m.areEqual(this.guild, storeState.guild) && m.areEqual(this.purchasesState, storeState.purchasesState);
         }
 
         public final Guild getGuild() {
@@ -475,7 +475,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(guildBoostState=");
+            StringBuilder sbU = a.U("StoreState(guildBoostState=");
             sbU.append(this.guildBoostState);
             sbU.append(", subscriptionState=");
             sbU.append(this.subscriptionState);
@@ -514,10 +514,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: Multi-variable type inference failed */
             public Loaded(Map<Long, ModelGuildBoostSlot> map, ModelSubscription modelSubscription, List<? extends Purchase> list, MeUser meUser, Guild guild) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(map, "boostSlotMap");
-                Intrinsics3.checkNotNullParameter(list, "purchases");
-                Intrinsics3.checkNotNullParameter(meUser, "meUser");
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(map, "boostSlotMap");
+                m.checkNotNullParameter(list, "purchases");
+                m.checkNotNullParameter(meUser, "meUser");
+                m.checkNotNullParameter(guild, "guild");
                 this.boostSlotMap = map;
                 this.premiumSubscription = modelSubscription;
                 this.purchases = list;
@@ -571,10 +571,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
 
             public final Loaded copy(Map<Long, ModelGuildBoostSlot> boostSlotMap, ModelSubscription premiumSubscription, List<? extends Purchase> purchases, MeUser meUser, Guild guild) {
-                Intrinsics3.checkNotNullParameter(boostSlotMap, "boostSlotMap");
-                Intrinsics3.checkNotNullParameter(purchases, "purchases");
-                Intrinsics3.checkNotNullParameter(meUser, "meUser");
-                Intrinsics3.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(boostSlotMap, "boostSlotMap");
+                m.checkNotNullParameter(purchases, "purchases");
+                m.checkNotNullParameter(meUser, "meUser");
+                m.checkNotNullParameter(guild, "guild");
                 return new Loaded(boostSlotMap, premiumSubscription, purchases, meUser, guild);
             }
 
@@ -586,7 +586,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.boostSlotMap, loaded.boostSlotMap) && Intrinsics3.areEqual(this.premiumSubscription, loaded.premiumSubscription) && Intrinsics3.areEqual(this.purchases, loaded.purchases) && Intrinsics3.areEqual(this.meUser, loaded.meUser) && Intrinsics3.areEqual(this.guild, loaded.guild);
+                return m.areEqual(this.boostSlotMap, loaded.boostSlotMap) && m.areEqual(this.premiumSubscription, loaded.premiumSubscription) && m.areEqual(this.purchases, loaded.purchases) && m.areEqual(this.meUser, loaded.meUser) && m.areEqual(this.guild, loaded.guild);
             }
 
             public final Map<Long, ModelGuildBoostSlot> getBoostSlotMap() {
@@ -623,7 +623,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(boostSlotMap=");
+                StringBuilder sbU = a.U("Loaded(boostSlotMap=");
                 sbU.append(this.boostSlotMap);
                 sbU.append(", premiumSubscription=");
                 sbU.append(this.premiumSubscription);
@@ -691,7 +691,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -703,7 +703,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
     @MainThread
     public final void subscribeClicked(String section) {
         boolean z2;
-        Intrinsics3.checkNotNullParameter(section, "section");
+        m.checkNotNullParameter(section, "section");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -731,7 +731,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 }
             }
             if (!linkedHashMap.isEmpty()) {
-                this.eventSubject.k.onNext(new Event.LaunchSubscriptionConfirmation(loaded.getGuild().getId(), ((ModelGuildBoostSlot) _Collections.first(linkedHashMap.values())).getId()));
+                this.eventSubject.k.onNext(new Event.LaunchSubscriptionConfirmation(loaded.getGuild().getId(), ((ModelGuildBoostSlot) u.first(linkedHashMap.values())).getId()));
                 return;
             }
             ModelSubscription premiumSubscription = loaded.getPremiumSubscription();
@@ -777,10 +777,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildBoostViewModel(long j, StoreGuildBoost storeGuildBoost, StoreSubscriptions storeSubscriptions, Clock clock, Observable<StoreState> observable) {
         super(ViewState.Loading.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
-        Intrinsics3.checkNotNullParameter(storeSubscriptions, "storeSubscriptions");
-        Intrinsics3.checkNotNullParameter(clock, "clock");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(storeGuildBoost, "storeGuildBoost");
+        m.checkNotNullParameter(storeSubscriptions, "storeSubscriptions");
+        m.checkNotNullParameter(clock, "clock");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.guildId = j;
         this.storeGuildBoost = storeGuildBoost;
         this.storeSubscriptions = storeSubscriptions;

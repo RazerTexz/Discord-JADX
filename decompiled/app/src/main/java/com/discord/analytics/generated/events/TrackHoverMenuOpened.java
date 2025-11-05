@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackHoverMenuOpened.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
+public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private final CharSequence loadId = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, T
             return false;
         }
         TrackHoverMenuOpened trackHoverMenuOpened = (TrackHoverMenuOpened) other;
-        return Intrinsics3.areEqual(this.loadId, trackHoverMenuOpened.loadId) && Intrinsics3.areEqual(this.numUsers, trackHoverMenuOpened.numUsers);
+        return m.areEqual(this.loadId, trackHoverMenuOpened.loadId) && m.areEqual(this.numUsers, trackHoverMenuOpened.numUsers);
     }
 
     public int hashCode() {
@@ -42,9 +42,9 @@ public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackHoverMenuOpened(loadId=");
+        StringBuilder sbU = a.U("TrackHoverMenuOpened(loadId=");
         sbU.append(this.loadId);
         sbU.append(", numUsers=");
-        return outline.G(sbU, this.numUsers, ")");
+        return a.G(sbU, this.numUsers, ")");
     }
 }

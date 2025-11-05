@@ -1,7 +1,7 @@
 package com.discord.widgets.voice.feedback;
 
-import b.a.d.AppViewModel;
-import d0.z.d.Intrinsics3;
+import b.a.d.d0;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import rx.Observable;
@@ -9,7 +9,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: IssueDetailsFormViewModel.kt */
 /* loaded from: classes.dex */
-public final class IssueDetailsFormViewModel extends AppViewModel<Unit> {
+public final class IssueDetailsFormViewModel extends d0<Unit> {
     private final PublishSubject<Event> eventSubject;
     private final FeedbackSubmitter feedbackSubmitter;
     private final PendingFeedback pendingFeedback;
@@ -43,7 +43,7 @@ public final class IssueDetailsFormViewModel extends AppViewModel<Unit> {
         return this.eventSubject;
     }
 
-    @Override // b.a.d.AppViewModel, androidx.view.ViewModel
+    @Override // b.a.d.d0, androidx.view.ViewModel
     public void onCleared() {
         super.onCleared();
         submitForm(null);
@@ -62,12 +62,12 @@ public final class IssueDetailsFormViewModel extends AppViewModel<Unit> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public IssueDetailsFormViewModel(PendingFeedback pendingFeedback, FeedbackSubmitter feedbackSubmitter) {
         super(Unit.a);
-        Intrinsics3.checkNotNullParameter(pendingFeedback, "pendingFeedback");
-        Intrinsics3.checkNotNullParameter(feedbackSubmitter, "feedbackSubmitter");
+        m.checkNotNullParameter(pendingFeedback, "pendingFeedback");
+        m.checkNotNullParameter(feedbackSubmitter, "feedbackSubmitter");
         this.pendingFeedback = pendingFeedback;
         this.feedbackSubmitter = feedbackSubmitter;
         PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.eventSubject = publishSubjectK0;
     }
 }

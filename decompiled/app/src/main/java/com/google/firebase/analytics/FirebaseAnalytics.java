@@ -14,7 +14,6 @@ import b.i.a.f.h.l.g;
 import b.i.a.f.h.l.m;
 import b.i.a.f.i.b.b7;
 import b.i.c.j.b;
-import b.i.c.u.FirebaseInstallations4;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -59,7 +58,7 @@ public final class FirebaseAnalytics {
     @Keep
     public final String getFirebaseInstanceId() {
         try {
-            return (String) f.k(FirebaseInstallations4.f().getId(), 30000L, TimeUnit.MILLISECONDS);
+            return (String) f.k(b.i.c.u.f.f().getId(), 30000L, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
         } catch (ExecutionException e2) {

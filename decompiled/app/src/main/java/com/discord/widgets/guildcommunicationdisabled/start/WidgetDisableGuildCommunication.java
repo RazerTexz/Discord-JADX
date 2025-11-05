@@ -7,13 +7,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppHelpDesk;
-import b.a.d.AppScreen2;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppActivity;
 import com.discord.app.AppFragment;
@@ -25,15 +24,15 @@ import com.discord.utilities.uri.UriHandler;
 import com.discord.utilities.user.UserUtils;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.CheckedSetting;
 import com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.LazyJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.lang.ref.WeakReference;
 import kotlin.Lazy;
 import kotlin.Unit;
@@ -45,7 +44,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetDisableGuildCommunication.kt */
 /* loaded from: classes2.dex */
 public final class WidgetDisableGuildCommunication extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetDisableGuildCommunication.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDisableGuildCommunicationBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetDisableGuildCommunication.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDisableGuildCommunicationBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -70,11 +69,11 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
         }
 
         public final void launch(long userId, long guildId, Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra("INTENT_EXTRA_GUILD_ID", guildId);
             intent.putExtra(WidgetDisableGuildCommunication.INTENT_EXTRA_USER_ID, userId);
-            AppScreen2.d(context, WidgetDisableGuildCommunication.class, intent);
+            j.d(context, WidgetDisableGuildCommunication.class, intent);
             AnalyticsTracker.INSTANCE.viewedDisableCommunicationModal(guildId, userId);
         }
 
@@ -86,10 +85,10 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
     /* compiled from: WidgetDisableGuildCommunication.kt */
     /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$configureDurationOption$1, reason: invalid class name */
     public static final class AnonymousClass1 implements View.OnClickListener {
-        public final /* synthetic */ GuildCommunicationDisabledDateUtils2 $settingValue;
+        public final /* synthetic */ TimeDurationDisabledCommunication $settingValue;
 
-        public AnonymousClass1(GuildCommunicationDisabledDateUtils2 guildCommunicationDisabledDateUtils2) {
-            this.$settingValue = guildCommunicationDisabledDateUtils2;
+        public AnonymousClass1(TimeDurationDisabledCommunication timeDurationDisabledCommunication) {
+            this.$settingValue = timeDurationDisabledCommunication;
         }
 
         @Override // android.view.View.OnClickListener
@@ -108,7 +107,7 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            UriHandler.handle$default(UriHandler.INSTANCE, outline.I(WidgetDisableGuildCommunication.access$getBinding$p(WidgetDisableGuildCommunication.this).c, "binding.disableGuildCommunicationBody", "binding.disableGuildCommunicationBody.context"), AppHelpDesk.a.a(4413305239191L, null), false, false, null, 28, null);
+            UriHandler.handle$default(UriHandler.INSTANCE, a.I(WidgetDisableGuildCommunication.access$getBinding$p(WidgetDisableGuildCommunication.this).c, "binding.disableGuildCommunicationBody", "binding.disableGuildCommunicationBody.context"), f.a.a(4413305239191L, null), false, false, null, 28, null);
         }
     }
 
@@ -119,7 +118,7 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
 
         /* compiled from: WidgetDisableGuildCommunication.kt */
         /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$configureUI$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -140,11 +139,11 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
                     User user = ((DisableGuildCommunicationViewModel.ViewState.Valid) AnonymousClass2.this.$viewState).getUser();
                     objArr[0] = user != null ? UserUtils.getUserNameWithDiscriminator$default(UserUtils.INSTANCE, user, null, null, 3, null) : null;
                     objArr[1] = GuildCommunicationDisabledDateUtils.INSTANCE.getFriendlyDurationString(WidgetDisableGuildCommunication.this.getContext(), ((DisableGuildCommunicationViewModel.ViewState.Valid) AnonymousClass2.this.$viewState).getSelectedDurationOption());
-                    charSequenceH = FormatUtils.h(context2, R.string.disable_guild_communication_confirmed, objArr, null, 4);
+                    charSequenceH = b.h(context2, R.string.disable_guild_communication_confirmed, objArr, null, 4);
                 } else {
                     charSequenceH = null;
                 }
-                AppToast.h(context, charSequenceH, 0, null, 12);
+                b.a.d.m.h(context, charSequenceH, 0, null, 12);
                 AppActivity appActivity = WidgetDisableGuildCommunication.this.getAppActivity();
                 if (appActivity != null) {
                     appActivity.finish();
@@ -161,14 +160,14 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
             WeakReference<Context> weakReference = new WeakReference<>(WidgetDisableGuildCommunication.this.requireContext());
             DisableGuildCommunicationViewModel disableGuildCommunicationViewModelAccess$getViewModel$p = WidgetDisableGuildCommunication.access$getViewModel$p(WidgetDisableGuildCommunication.this);
             TextInputLayout textInputLayout = WidgetDisableGuildCommunication.access$getBinding$p(WidgetDisableGuildCommunication.this).d;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.disableGuildCommunicationReason");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.disableGuildCommunicationReason");
             disableGuildCommunicationViewModelAccess$getViewModel$p.onDisableCommunicationConfirm(weakReference, ViewExtensions.getTextOrEmpty(textInputLayout), new AnonymousClass1());
         }
     }
 
     /* compiled from: WidgetDisableGuildCommunication.kt */
     /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$onResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<DisableGuildCommunicationViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<DisableGuildCommunicationViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetDisableGuildCommunication widgetDisableGuildCommunication) {
             super(1, widgetDisableGuildCommunication, WidgetDisableGuildCommunication.class, "configureUI", "configureUI(Lcom/discord/widgets/guildcommunicationdisabled/start/DisableGuildCommunicationViewModel$ViewState;)V", 0);
         }
@@ -181,19 +180,19 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DisableGuildCommunicationViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            m.checkNotNullParameter(viewState, "p1");
             WidgetDisableGuildCommunication.access$configureUI((WidgetDisableGuildCommunication) this.receiver, viewState);
         }
     }
 
     public WidgetDisableGuildCommunication() {
         super(R.layout.widget_disable_guild_communication);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetDisableGuildCommunication2.INSTANCE, null, 2, null);
-        this.userId = LazyJVM.lazy(new WidgetDisableGuildCommunication5(this));
-        this.guildId = LazyJVM.lazy(new WidgetDisableGuildCommunication4(this));
-        WidgetDisableGuildCommunication6 widgetDisableGuildCommunication6 = new WidgetDisableGuildCommunication6(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(DisableGuildCommunicationViewModel.class), new WidgetDisableGuildCommunication$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetDisableGuildCommunication6));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetDisableGuildCommunication$binding$2.INSTANCE, null, 2, null);
+        this.userId = g.lazy(new WidgetDisableGuildCommunication$userId$2(this));
+        this.guildId = g.lazy(new WidgetDisableGuildCommunication$guildId$2(this));
+        WidgetDisableGuildCommunication$viewModel$2 widgetDisableGuildCommunication$viewModel$2 = new WidgetDisableGuildCommunication$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(DisableGuildCommunicationViewModel.class), new WidgetDisableGuildCommunication$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetDisableGuildCommunication$viewModel$2));
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetDisableGuildCommunication widgetDisableGuildCommunication, DisableGuildCommunicationViewModel.ViewState viewState) {
@@ -216,7 +215,7 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
         return widgetDisableGuildCommunication.getViewModel();
     }
 
-    private final void configureDurationOption(DisableGuildCommunicationViewModel.ViewState.Valid viewState, CheckedSetting setting, GuildCommunicationDisabledDateUtils2 settingValue) {
+    private final void configureDurationOption(DisableGuildCommunicationViewModel.ViewState.Valid viewState, CheckedSetting setting, TimeDurationDisabledCommunication settingValue) {
         setting.setChecked(viewState.getSelectedDurationOption() == settingValue);
         setting.setText(GuildCommunicationDisabledDateUtils.INSTANCE.getFriendlyDurationString(getContext(), settingValue));
         setting.e(new AnonymousClass1(settingValue));
@@ -226,39 +225,39 @@ public final class WidgetDisableGuildCommunication extends AppFragment {
         if (viewState instanceof DisableGuildCommunicationViewModel.ViewState.Valid) {
             DisableGuildCommunicationViewModel.ViewState.Valid valid = (DisableGuildCommunicationViewModel.ViewState.Valid) viewState;
             CheckedSetting checkedSetting = getBinding().k;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.timeUnit60Seconds");
-            configureDurationOption(valid, checkedSetting, GuildCommunicationDisabledDateUtils2.SECONDS_60);
+            m.checkNotNullExpressionValue(checkedSetting, "binding.timeUnit60Seconds");
+            configureDurationOption(valid, checkedSetting, TimeDurationDisabledCommunication.SECONDS_60);
             CheckedSetting checkedSetting2 = getBinding().j;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting2, "binding.timeUnit5Minutes");
-            configureDurationOption(valid, checkedSetting2, GuildCommunicationDisabledDateUtils2.MINUTES_5);
+            m.checkNotNullExpressionValue(checkedSetting2, "binding.timeUnit5Minutes");
+            configureDurationOption(valid, checkedSetting2, TimeDurationDisabledCommunication.MINUTES_5);
             CheckedSetting checkedSetting3 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting3, "binding.timeUnit10Minutes");
-            configureDurationOption(valid, checkedSetting3, GuildCommunicationDisabledDateUtils2.MINUTES_10);
+            m.checkNotNullExpressionValue(checkedSetting3, "binding.timeUnit10Minutes");
+            configureDurationOption(valid, checkedSetting3, TimeDurationDisabledCommunication.MINUTES_10);
             CheckedSetting checkedSetting4 = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting4, "binding.timeUnit1Hour");
-            configureDurationOption(valid, checkedSetting4, GuildCommunicationDisabledDateUtils2.HOUR_1);
+            m.checkNotNullExpressionValue(checkedSetting4, "binding.timeUnit1Hour");
+            configureDurationOption(valid, checkedSetting4, TimeDurationDisabledCommunication.HOUR_1);
             CheckedSetting checkedSetting5 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting5, "binding.timeUnit1Day");
-            configureDurationOption(valid, checkedSetting5, GuildCommunicationDisabledDateUtils2.DAY_1);
+            m.checkNotNullExpressionValue(checkedSetting5, "binding.timeUnit1Day");
+            configureDurationOption(valid, checkedSetting5, TimeDurationDisabledCommunication.DAY_1);
             CheckedSetting checkedSetting6 = getBinding().i;
-            Intrinsics3.checkNotNullExpressionValue(checkedSetting6, "binding.timeUnit1Week");
-            configureDurationOption(valid, checkedSetting6, GuildCommunicationDisabledDateUtils2.WEEK_1);
+            m.checkNotNullExpressionValue(checkedSetting6, "binding.timeUnit1Week");
+            configureDurationOption(valid, checkedSetting6, TimeDurationDisabledCommunication.WEEK_1);
             Context context = getContext();
-            CharSequence charSequenceH = context != null ? FormatUtils.h(context, R.string.disable_guild_communication_body_header, new Object[]{AppHelpDesk.a.a(4413305239191L, null)}, null, 4) : null;
+            CharSequence charSequenceH = context != null ? b.h(context, R.string.disable_guild_communication_body_header, new Object[]{f.a.a(4413305239191L, null)}, null, 4) : null;
             TextView textView = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.disableGuildCommunicationBody");
+            m.checkNotNullExpressionValue(textView, "binding.disableGuildCommunicationBody");
             textView.setText(charSequenceH);
             getBinding().c.setOnClickListener(new AnonymousClass1());
             TextView textView2 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.disableGuildCommunicationSubtitle");
+            m.checkNotNullExpressionValue(textView2, "binding.disableGuildCommunicationSubtitle");
             User user = valid.getUser();
-            FormatUtils.o(textView2, user != null ? UserUtils.getUserNameWithDiscriminator$default(UserUtils.INSTANCE, user, null, null, 3, null) : null, new Object[0], null, 4);
+            b.o(textView2, user != null ? UserUtils.getUserNameWithDiscriminator$default(UserUtils.INSTANCE, user, null, null, 3, null) : null, new Object[0], null, 4);
             getBinding().f2367b.setOnClickListener(new AnonymousClass2(viewState));
             TextInputLayout textInputLayout = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.disableGuildCommunicationReason");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.disableGuildCommunicationReason");
             EditText editText = textInputLayout.getEditText();
             if (editText != null) {
-                editText.setOnFocusChangeListener(new WidgetDisableGuildCommunication3(this));
+                editText.setOnFocusChangeListener(new WidgetDisableGuildCommunication$configureUI$$inlined$apply$lambda$1(this));
             }
         }
     }

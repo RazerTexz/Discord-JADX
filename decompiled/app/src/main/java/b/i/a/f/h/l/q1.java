@@ -1,7 +1,7 @@
 package b.i.a.f.h.l;
 
 import b.i.a.f.h.l.u4;
-import com.discord.widgets.chat.input.MentionUtils;
+import com.discord.widgets.chat.input.MentionUtilsKt;
 
 /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
 /* loaded from: classes3.dex */
@@ -38,7 +38,7 @@ public final class q1 extends u4<q1, b> implements d6 {
 
         @Override // java.lang.Enum
         public final String toString() {
-            return "<" + a.class.getName() + MentionUtils.MENTIONS_CHAR + Integer.toHexString(System.identityHashCode(this)) + " number=" + this.zzg + " name=" + name() + '>';
+            return "<" + a.class.getName() + MentionUtilsKt.MENTIONS_CHAR + Integer.toHexString(System.identityHashCode(this)) + " number=" + this.zzg + " name=" + name() + '>';
         }
     }
 

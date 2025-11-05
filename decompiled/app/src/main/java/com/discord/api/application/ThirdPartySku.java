@@ -1,8 +1,8 @@
 package com.discord.api.application;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ThirdPartySku.kt */
 /* loaded from: classes.dex */
@@ -29,7 +29,7 @@ public final /* data */ class ThirdPartySku {
             return false;
         }
         ThirdPartySku thirdPartySku = (ThirdPartySku) other;
-        return Intrinsics3.areEqual(this.id, thirdPartySku.id) && Intrinsics3.areEqual(this.sku, thirdPartySku.sku) && Intrinsics3.areEqual(this.distributor, thirdPartySku.distributor);
+        return m.areEqual(this.id, thirdPartySku.id) && m.areEqual(this.sku, thirdPartySku.sku) && m.areEqual(this.distributor, thirdPartySku.distributor);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class ThirdPartySku {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ThirdPartySku(id=");
+        StringBuilder sbU = a.U("ThirdPartySku(id=");
         sbU.append(this.id);
         sbU.append(", sku=");
         sbU.append(this.sku);
         sbU.append(", distributor=");
-        return outline.J(sbU, this.distributor, ")");
+        return a.J(sbU, this.distributor, ")");
     }
 }

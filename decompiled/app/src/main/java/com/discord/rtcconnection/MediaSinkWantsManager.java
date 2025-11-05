@@ -1,22 +1,17 @@
 package com.discord.rtcconnection;
 
-import b.a.q.MediaEngineExecutorService;
-import b.a.q.MediaSinkWantsLadder3;
-import b.a.q.MediaSinkWantsManager3;
-import b.a.q.MediaSinkWantsManager8;
-import b.a.q.m0.Codec2;
-import b.d.b.a.outline;
+import b.a.q.e;
+import b.a.q.h;
 import co.discord.media_engine.StreamParameters;
 import com.discord.rtcconnection.KrispOveruseDetector;
 import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
 import com.discord.utilities.logging.Logger;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.g0;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -42,11 +37,11 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
     public final Set<Long> c;
     public MediaEngineConnection d;
     public Long e;
-    public final BehaviorSubject<Map<String, MediaSinkWantsManager9>> f;
-    public Map<String, ? extends MediaSinkWantsManager9> g;
+    public final BehaviorSubject<Map<String, EncodeQuality>> f;
+    public Map<String, ? extends EncodeQuality> g;
     public final long h;
-    public final MediaEngineExecutorService i;
-    public final MediaSinkWantsLadder3 j;
+    public final b.a.q.c i;
+    public final e j;
     public final Logger k;
     public final a l;
 
@@ -87,15 +82,15 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
 
     /* compiled from: MediaSinkWantsManager.kt */
     public static final class b {
-        public final MediaSinkWantsManager9 a;
+        public final EncodeQuality a;
 
         /* renamed from: b, reason: collision with root package name */
         public final long f2772b;
         public final VideoMetadata c;
 
-        public b(MediaSinkWantsManager9 mediaSinkWantsManager9, long j, VideoMetadata videoMetadata) {
-            Intrinsics3.checkNotNullParameter(mediaSinkWantsManager9, "encodeQuality");
-            this.a = mediaSinkWantsManager9;
+        public b(EncodeQuality encodeQuality, long j, VideoMetadata videoMetadata) {
+            m.checkNotNullParameter(encodeQuality, "encodeQuality");
+            this.a = encodeQuality;
             this.f2772b = j;
             this.c = videoMetadata;
         }
@@ -108,18 +103,18 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                 return false;
             }
             b bVar = (b) obj;
-            return Intrinsics3.areEqual(this.a, bVar.a) && this.f2772b == bVar.f2772b && Intrinsics3.areEqual(this.c, bVar.c);
+            return m.areEqual(this.a, bVar.a) && this.f2772b == bVar.f2772b && m.areEqual(this.c, bVar.c);
         }
 
         public int hashCode() {
-            MediaSinkWantsManager9 mediaSinkWantsManager9 = this.a;
-            int iA = (a0.a.a.b.a(this.f2772b) + ((mediaSinkWantsManager9 != null ? mediaSinkWantsManager9.hashCode() : 0) * 31)) * 31;
+            EncodeQuality encodeQuality = this.a;
+            int iA = (a0.a.a.b.a(this.f2772b) + ((encodeQuality != null ? encodeQuality.hashCode() : 0) * 31)) * 31;
             VideoMetadata videoMetadata = this.c;
             return iA + (videoMetadata != null ? videoMetadata.hashCode() : 0);
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("VideoStreamDescriptor(encodeQuality=");
+            StringBuilder sbU = b.d.b.a.a.U("VideoStreamDescriptor(encodeQuality=");
             sbU.append(this.a);
             sbU.append(", ssrc=");
             sbU.append(this.f2772b);
@@ -131,7 +126,7 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
     }
 
     /* compiled from: MediaSinkWantsManager.kt */
-    public static final class c extends Lambda implements Function0<Unit> {
+    public static final class c extends o implements Function0<Unit> {
         public final /* synthetic */ Long $ssrc;
         public final /* synthetic */ long $userId;
 
@@ -154,26 +149,26 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
         }
     }
 
-    public MediaSinkWantsManager(long j, MediaEngineExecutorService mediaEngineExecutorService, MediaSinkWantsLadder3 mediaSinkWantsLadder3, Logger logger, a aVar) {
-        Intrinsics3.checkNotNullParameter(mediaEngineExecutorService, "mediaEngineThreadExecutor");
-        Intrinsics3.checkNotNullParameter(mediaSinkWantsLadder3, "ladder");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        Intrinsics3.checkNotNullParameter(aVar, "listener");
+    public MediaSinkWantsManager(long j, b.a.q.c cVar, e eVar, Logger logger, a aVar) {
+        m.checkNotNullParameter(cVar, "mediaEngineThreadExecutor");
+        m.checkNotNullParameter(eVar, "ladder");
+        m.checkNotNullParameter(logger, "logger");
+        m.checkNotNullParameter(aVar, "listener");
         this.h = j;
-        this.i = mediaEngineExecutorService;
-        this.j = mediaSinkWantsLadder3;
+        this.i = cVar;
+        this.j = eVar;
         this.k = logger;
         this.l = aVar;
         this.a = new LinkedHashMap();
         this.f2771b = new LinkedHashMap();
         new LinkedHashMap();
         this.c = new LinkedHashSet();
-        this.f = BehaviorSubject.l0(MapsJVM.mapOf(Tuples.to("any", MediaSinkWantsManager9.Hundred)));
-        this.g = Maps6.emptyMap();
+        this.f = BehaviorSubject.l0(g0.mapOf(d0.o.to("any", EncodeQuality.Hundred)));
+        this.g = h0.emptyMap();
     }
 
     public static /* synthetic */ void e(MediaSinkWantsManager mediaSinkWantsManager, List list, int i) {
-        mediaSinkWantsManager.d((i & 1) != 0 ? Collections2.emptyList() : null);
+        mediaSinkWantsManager.d((i & 1) != 0 ? n.emptyList() : null);
     }
 
     public final void a(String str) {
@@ -181,8 +176,8 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
     }
 
     public final Future<?> b(Function0<Unit> function0) {
-        MediaEngineExecutorService mediaEngineExecutorService = this.i;
-        return mediaEngineExecutorService.l.submit(new MediaSinkWantsManager8(function0));
+        b.a.q.c cVar = this.i;
+        return cVar.l.submit(new b.a.q.m(function0));
     }
 
     public final Future<?> c(long j, Long l) {
@@ -196,14 +191,14 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
     */
     public final void d(List<String> list) {
         int i;
-        MediaSinkWantsLadder3.c cVarPrevious;
-        MediaSinkWantsManager9 mediaSinkWantsManager9;
+        e.c cVarPrevious;
+        EncodeQuality encodeQuality;
         Iterator<Map.Entry<Long, List<b>>> it;
         long j;
-        MediaSinkWantsManager9 mediaSinkWantsManager92;
+        EncodeQuality encodeQuality2;
         MediaEngineConnection mediaEngineConnection = this.d;
         if (mediaEngineConnection != null) {
-            MediaSinkWantsLadder3 mediaSinkWantsLadder3 = this.j;
+            e eVar = this.j;
             int i2 = 1;
             if (mediaEngineConnection != null) {
                 Set<Long> set = this.c;
@@ -214,21 +209,21 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                     i = 0;
                     while (it2.hasNext()) {
                         if ((!mediaEngineConnection.g(((Number) it2.next()).longValue())) && (i = i + 1) < 0) {
-                            Collections2.throwCountOverflow();
+                            n.throwCountOverflow();
                         }
                     }
                 }
             }
-            Objects.requireNonNull(mediaSinkWantsLadder3);
+            Objects.requireNonNull(eVar);
             if (i < 0) {
-                mediaSinkWantsManager9 = MediaSinkWantsManager9.Hundred;
+                encodeQuality = EncodeQuality.Hundred;
             } else {
-                List<MediaSinkWantsLadder3.c> list2 = mediaSinkWantsLadder3.d;
-                ListIterator<MediaSinkWantsLadder3.c> listIterator = list2.listIterator(list2.size());
+                List<e.c> list2 = eVar.d;
+                ListIterator<e.c> listIterator = list2.listIterator(list2.size());
                 while (true) {
                     if (listIterator.hasPrevious()) {
                         cVarPrevious = listIterator.previous();
-                        if (cVarPrevious.f259b * i <= mediaSinkWantsLadder3.f257b) {
+                        if (cVarPrevious.f259b * i <= eVar.f257b) {
                             break;
                         }
                     } else {
@@ -236,19 +231,19 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                         break;
                     }
                 }
-                MediaSinkWantsLadder3.c cVar = cVarPrevious;
+                e.c cVar = cVarPrevious;
                 if (cVar == null) {
-                    cVar = (MediaSinkWantsLadder3.c) _Collections.first((List) mediaSinkWantsLadder3.d);
+                    cVar = (e.c) u.first((List) eVar.d);
                 }
-                mediaSinkWantsManager9 = cVar.c;
+                encodeQuality = cVar.c;
             }
-            Map<String, MediaSinkWantsManager9> mapMutableMapOf = Maps6.mutableMapOf(Tuples.to("any", mediaSinkWantsManager9));
+            Map<String, EncodeQuality> mapMutableMapOf = h0.mutableMapOf(d0.o.to("any", encodeQuality));
             Iterator<Map.Entry<Long, List<b>>> it3 = this.f2771b.entrySet().iterator();
             while (it3.hasNext()) {
                 Map.Entry<Long, List<b>> next = it3.next();
                 long jLongValue = next.getKey().longValue();
                 List<b> value = next.getValue();
-                b bVar = (b) _Collections.firstOrNull((List) value);
+                b bVar = (b) u.firstOrNull((List) value);
                 if (bVar != null) {
                     Long l = this.e;
                     if (l != null) {
@@ -256,8 +251,8 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                         if (l != null && l.longValue() == j2) {
                             if (value.size() > 1) {
                                 for (b bVar2 : value) {
-                                    if (bVar2.a == MediaSinkWantsManager9.Hundred) {
-                                        mapMutableMapOf.put(String.valueOf(bVar2.f2772b), MediaSinkWantsManager9.Zero);
+                                    if (bVar2.a == EncodeQuality.Hundred) {
+                                        mapMutableMapOf.put(String.valueOf(bVar2.f2772b), EncodeQuality.Zero);
                                     } else {
                                         bVar = bVar2;
                                     }
@@ -267,19 +262,19 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                             Long l2 = this.e;
                             if (l2 != null && jLongValue == l2.longValue()) {
                                 for (b bVar3 : value) {
-                                    MediaSinkWantsManager9 mediaSinkWantsManager93 = bVar3.a;
-                                    MediaSinkWantsManager9 mediaSinkWantsManager94 = MediaSinkWantsManager9.Hundred;
-                                    if (mediaSinkWantsManager93 == mediaSinkWantsManager94) {
-                                        mapMutableMapOf.put(String.valueOf(bVar3.f2772b), mediaSinkWantsManager94);
+                                    EncodeQuality encodeQuality3 = bVar3.a;
+                                    EncodeQuality encodeQuality4 = EncodeQuality.Hundred;
+                                    if (encodeQuality3 == encodeQuality4) {
+                                        mapMutableMapOf.put(String.valueOf(bVar3.f2772b), encodeQuality4);
                                         bVar = bVar3;
                                     } else {
-                                        mapMutableMapOf.put(String.valueOf(bVar3.f2772b), MediaSinkWantsManager9.Zero);
+                                        mapMutableMapOf.put(String.valueOf(bVar3.f2772b), EncodeQuality.Zero);
                                     }
                                 }
                             } else {
                                 for (b bVar4 : value) {
-                                    if (bVar4.a == MediaSinkWantsManager9.Hundred) {
-                                        mapMutableMapOf.put(String.valueOf(bVar4.f2772b), MediaSinkWantsManager9.Zero);
+                                    if (bVar4.a == EncodeQuality.Hundred) {
+                                        mapMutableMapOf.put(String.valueOf(bVar4.f2772b), EncodeQuality.Zero);
                                     } else {
                                         bVar = bVar4;
                                     }
@@ -287,14 +282,14 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                             }
                         } else {
                             Long l3 = this.e;
-                            if (l3 != null && jLongValue == l3.longValue() && mediaSinkWantsManager9 != (mediaSinkWantsManager92 = MediaSinkWantsManager9.Hundred)) {
-                                mapMutableMapOf.put(String.valueOf(bVar.f2772b), mediaSinkWantsManager92);
+                            if (l3 != null && jLongValue == l3.longValue() && encodeQuality != (encodeQuality2 = EncodeQuality.Hundred)) {
+                                mapMutableMapOf.put(String.valueOf(bVar.f2772b), encodeQuality2);
                             }
                         }
                         if (mediaEngineConnection.g(jLongValue) || mediaEngineConnection.p(jLongValue)) {
                             Iterator<b> it4 = value.iterator();
                             while (it4.hasNext()) {
-                                mapMutableMapOf.put(String.valueOf(it4.next().f2772b), MediaSinkWantsManager9.Zero);
+                                mapMutableMapOf.put(String.valueOf(it4.next().f2772b), EncodeQuality.Zero);
                             }
                         }
                         if (list.contains(String.valueOf(jLongValue))) {
@@ -312,12 +307,12 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                             it = it3;
                             j = jLongValue;
                         }
-                        MediaSinkWantsManager9 mediaSinkWantsManager95 = this.g.get(String.valueOf(bVar.f2772b));
-                        MediaSinkWantsManager9 mediaSinkWantsManager96 = MediaSinkWantsManager9.Zero;
-                        if (mediaSinkWantsManager95 == mediaSinkWantsManager96 && mapMutableMapOf.get(String.valueOf(bVar.f2772b)) != mediaSinkWantsManager96) {
+                        EncodeQuality encodeQuality5 = this.g.get(String.valueOf(bVar.f2772b));
+                        EncodeQuality encodeQuality6 = EncodeQuality.Zero;
+                        if (encodeQuality5 == encodeQuality6 && mapMutableMapOf.get(String.valueOf(bVar.f2772b)) != encodeQuality6) {
                             mediaEngineConnection.i(j, false);
                         }
-                        if (mediaSinkWantsManager95 != mediaSinkWantsManager96 && mapMutableMapOf.get(String.valueOf(bVar.f2772b)) == mediaSinkWantsManager96) {
+                        if (encodeQuality5 != encodeQuality6 && mapMutableMapOf.get(String.valueOf(bVar.f2772b)) == encodeQuality6) {
                             mediaEngineConnection.i(j, true);
                         }
                         it3 = it;
@@ -329,7 +324,7 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
                 long jLongValue2 = entry.getKey().longValue();
                 long jLongValue3 = entry.getValue().longValue();
                 if (mediaEngineConnection.u(jLongValue2)) {
-                    mapMutableMapOf.put(String.valueOf(jLongValue3), MediaSinkWantsManager9.Zero);
+                    mapMutableMapOf.put(String.valueOf(jLongValue3), EncodeQuality.Zero);
                 }
             }
             this.g = mapMutableMapOf;
@@ -338,43 +333,43 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
-    public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<Codec2> list) {
-        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-        Intrinsics3.checkNotNullParameter(transportInfo, "transportInfo");
-        Intrinsics3.checkNotNullParameter(list, "supportedVideoCodecs");
+    public void onConnected(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.TransportInfo transportInfo, List<b.a.q.m0.a> list) {
+        m.checkNotNullParameter(mediaEngineConnection, "connection");
+        m.checkNotNullParameter(transportInfo, "transportInfo");
+        m.checkNotNullParameter(list, "supportedVideoCodecs");
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onConnectionStateChange(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.ConnectionState connectionState) {
-        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-        Intrinsics3.checkNotNullParameter(connectionState, "connectionState");
+        m.checkNotNullParameter(mediaEngineConnection, "connection");
+        m.checkNotNullParameter(connectionState, "connectionState");
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onDestroy(MediaEngineConnection mediaEngineConnection) {
-        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
+        m.checkNotNullParameter(mediaEngineConnection, "connection");
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onError(MediaEngineConnection mediaEngineConnection, MediaEngineConnection.FailedConnectionException failedConnectionException) {
-        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-        Intrinsics3.checkNotNullParameter(failedConnectionException, "exception");
+        m.checkNotNullParameter(mediaEngineConnection, "connection");
+        m.checkNotNullParameter(failedConnectionException, "exception");
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onKrispStatus(MediaEngineConnection mediaEngineConnection, KrispOveruseDetector.Status status) {
-        Intrinsics3.checkNotNullParameter(mediaEngineConnection, "connection");
-        Intrinsics3.checkNotNullParameter(status, "status");
+        m.checkNotNullParameter(mediaEngineConnection, "connection");
+        m.checkNotNullParameter(status, "status");
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onLocalMute(long j, boolean z2) {
-        b(new MediaSinkWantsManager3(this));
+        b(new h(this));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onLocalVideoOffScreen(long j, boolean z2) {
-        b(new MediaSinkWantsManager3(this));
+        b(new h(this));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
@@ -391,6 +386,6 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.d {
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.d
     public void onVideo(long j, Integer num, int i, int i2, int i3, StreamParameters[] streamParametersArr) {
-        Intrinsics3.checkNotNullParameter(streamParametersArr, "streams");
+        m.checkNotNullParameter(streamParametersArr, "streams");
     }
 }

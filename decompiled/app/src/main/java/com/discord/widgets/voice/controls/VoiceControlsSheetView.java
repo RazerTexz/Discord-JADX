@@ -17,12 +17,12 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.databinding.VoiceControlsSheetViewBinding;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompat2;
+import com.discord.utilities.color.ColorCompatKt;
 import com.discord.utilities.display.DisplayUtils;
 import com.discord.utilities.press.OnPressListener;
 import com.discord.utilities.view.extensions.ViewExtensions;
@@ -31,8 +31,8 @@ import com.discord.views.calls.VolumeSliderView;
 import com.discord.widgets.stage.StageRoles;
 import com.discord.widgets.voice.model.CallModel;
 import com.google.android.material.textview.MaterialTextView;
-import d0.a0.MathJVM;
-import d0.z.d.Intrinsics3;
+import d0.a0.a;
+import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -153,15 +153,15 @@ public final class VoiceControlsSheetView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public VoiceControlsSheetView(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         VoiceControlsSheetViewBinding voiceControlsSheetViewBindingA = VoiceControlsSheetViewBinding.a(LayoutInflater.from(getContext()), this);
-        Intrinsics3.checkNotNullExpressionValue(voiceControlsSheetViewBindingA, "VoiceControlsSheetViewBi…ater.from(context), this)");
+        m.checkNotNullExpressionValue(voiceControlsSheetViewBindingA, "VoiceControlsSheetViewBi…ater.from(context), this)");
         this.binding = voiceControlsSheetViewBindingA;
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         this.isGestureNavigationEnabled = DisplayUtils.isGestureNavigationEnabled(resources);
         CardView cardView = voiceControlsSheetViewBindingA.r;
-        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
+        m.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
         cardView.setVisibility(this.isGestureNavigationEnabled ? 0 : 4);
     }
 
@@ -169,15 +169,15 @@ public final class VoiceControlsSheetView extends LinearLayout {
         this.binding.h.setOnClickListener(new AnonymousClass1(onInviteClick));
         this.binding.i.setOnClickListener(new AnonymousClass2(onInviteClick));
         ImageView imageView = this.binding.h;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.inviteButton");
+        m.checkNotNullExpressionValue(imageView, "binding.inviteButton");
         imageView.setVisibility(callModel.canInvite() && showInTopRow ? 0 : 8);
         TextView textView = this.binding.i;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.inviteSecondaryButton");
+        m.checkNotNullExpressionValue(textView, "binding.inviteSecondaryButton");
         textView.setVisibility(callModel.canInvite() && !showInTopRow ? 0 : 8);
         ImageView imageView2 = this.binding.h;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.inviteButton");
+        m.checkNotNullExpressionValue(imageView2, "binding.inviteButton");
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         imageView2.setBackgroundTintList(ColorStateList.valueOf(getDefaultButtonBackgroundTint(context, false)));
     }
 
@@ -186,65 +186,65 @@ public final class VoiceControlsSheetView extends LinearLayout {
         ImageView imageView = this.binding.j;
         imageView.setVisibility((stageRoles == null || !StageRoles.m33isSpeakerimpl(stageRoles.m35unboximpl()) || StageRoles.m32isModeratorimpl(stageRoles.m35unboximpl())) ? false : true ? 0 : 8);
         ImageView imageView2 = this.binding.j;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.moveToAudienceButton");
+        m.checkNotNullExpressionValue(imageView2, "binding.moveToAudienceButton");
         imageView2.setBackgroundTintList(ColorStateList.valueOf(ColorCompat.getColor(imageView.getContext(), R.color.white_alpha_24)));
-        imageView.setOnClickListener(new VoiceControlsSheetView2(this, stageRoles, onMoveToAudienceClick));
+        imageView.setOnClickListener(new VoiceControlsSheetView$configureMoveToAudienceButton$$inlined$apply$lambda$1(this, stageRoles, onMoveToAudienceClick));
     }
 
     /* renamed from: configureMuteButton-P2fzehM, reason: not valid java name */
     private final void m62configureMuteButtonP2fzehM(CallModel model, StageRoles stageRoles, Function0<Unit> onMuteClick) {
         if (stageRoles != null && !StageRoles.m33isSpeakerimpl(stageRoles.m35unboximpl())) {
             ImageView imageView = this.binding.k;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.muteButton");
+            m.checkNotNullExpressionValue(imageView, "binding.muteButton");
             imageView.setVisibility(8);
             return;
         }
         ImageView imageView2 = this.binding.k;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.muteButton");
+        m.checkNotNullExpressionValue(imageView2, "binding.muteButton");
         imageView2.setVisibility(0);
         boolean zIsMeMutedByAnySource = model.isMeMutedByAnySource();
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         int defaultButtonBackgroundTint = getDefaultButtonBackgroundTint(context, zIsMeMutedByAnySource);
         ImageView imageView3 = this.binding.k;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.muteButton");
+        m.checkNotNullExpressionValue(imageView3, "binding.muteButton");
         imageView3.setBackgroundTintList(ColorStateList.valueOf(defaultButtonBackgroundTint));
         this.binding.k.setImageResource(zIsMeMutedByAnySource ? R.drawable.ic_mic_mute_red_strike_24dp : R.drawable.ic_mic_white_24dp);
-        this.binding.k.setOnClickListener(new VoiceControlsSheetView3(onMuteClick));
+        this.binding.k.setOnClickListener(new VoiceControlsSheetView$configureMuteButton$1(onMuteClick));
         ImageView imageView4 = this.binding.k;
-        Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.muteButton");
+        m.checkNotNullExpressionValue(imageView4, "binding.muteButton");
         Context context2 = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context2, "context");
-        imageView4.setContentDescription(FormatUtils.h(context2, zIsMeMutedByAnySource ? R.string.unmute : R.string.mute, new Object[0], null, 4));
+        m.checkNotNullExpressionValue(context2, "context");
+        imageView4.setContentDescription(b.h(context2, zIsMeMutedByAnySource ? R.string.unmute : R.string.mute, new Object[0], null, 4));
     }
 
     private final void configureOutputSelectors(VoiceControlsOutputSelectorState outputSelectorState, Function0<Unit> onAudioOutputClick, boolean showInTopRow) {
         FrameLayout frameLayout = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(frameLayout, "binding.audioOutputContainer");
+        m.checkNotNullExpressionValue(frameLayout, "binding.audioOutputContainer");
         frameLayout.setVisibility(showInTopRow ? 0 : 8);
         this.binding.f2217b.setImageDrawable(ContextCompat.getDrawable(getContext(), outputSelectorState.getAudioOutputIconRes()));
         ImageView imageView = this.binding.f2217b;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.audioOutputButton");
+        m.checkNotNullExpressionValue(imageView, "binding.audioOutputButton");
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         imageView.setBackgroundTintList(ColorStateList.valueOf(getDefaultButtonBackgroundTint(context, outputSelectorState.getIsButtonActive())));
         TextView textView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.audioOutputSecondaryButton");
+        m.checkNotNullExpressionValue(textView, "binding.audioOutputSecondaryButton");
         textView.setVisibility(showInTopRow ^ true ? 0 : 8);
         TextView textView2 = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.audioOutputSecondaryButton");
+        m.checkNotNullExpressionValue(textView2, "binding.audioOutputSecondaryButton");
         ViewExtensions.setCompoundDrawableWithIntrinsicBounds$default(textView2, outputSelectorState.getAudioOutputIconRes(), 0, 0, 0, 14, null);
         Context context2 = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context2, "context");
+        m.checkNotNullExpressionValue(context2, "context");
         int defaultButtonIconTint = getDefaultButtonIconTint(context2, outputSelectorState.getIsButtonActive());
         ImageView imageView2 = this.binding.f2217b;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.audioOutputButton");
-        ColorCompat2.tintWithColor(imageView2, defaultButtonIconTint);
+        m.checkNotNullExpressionValue(imageView2, "binding.audioOutputButton");
+        ColorCompatKt.tintWithColor(imageView2, defaultButtonIconTint);
         ImageView imageView3 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.audioOutputMore");
-        ColorCompat2.tintWithColor(imageView3, defaultButtonIconTint);
+        m.checkNotNullExpressionValue(imageView3, "binding.audioOutputMore");
+        ColorCompatKt.tintWithColor(imageView3, defaultButtonIconTint);
         ImageView imageView4 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(imageView4, "binding.audioOutputMore");
+        m.checkNotNullExpressionValue(imageView4, "binding.audioOutputMore");
         imageView4.setVisibility(outputSelectorState.getShowMoreOptions() ? 0 : 8);
         this.binding.f2217b.setOnClickListener(new AnonymousClass1(onAudioOutputClick));
         this.binding.e.setOnClickListener(new AnonymousClass2(onAudioOutputClick));
@@ -254,7 +254,7 @@ public final class VoiceControlsSheetView extends LinearLayout {
     private final void m63configureRaiseHandButtonfw_bWyM(CallModel model, StageRoles stageRoles, int requestingToSpeakCount, boolean isUpdatingRequestToSpeak, Function0<Unit> onRaiseHandClick) {
         if (stageRoles == null || !(StageRoles.m32isModeratorimpl(stageRoles.m35unboximpl()) || StageRoles.m30isAudienceimpl(stageRoles.m35unboximpl()))) {
             NumericBadgingView numericBadgingView = this.binding.n;
-            Intrinsics3.checkNotNullExpressionValue(numericBadgingView, "binding.raiseHandBadge");
+            m.checkNotNullExpressionValue(numericBadgingView, "binding.raiseHandBadge");
             numericBadgingView.setVisibility(8);
             return;
         }
@@ -279,14 +279,14 @@ public final class VoiceControlsSheetView extends LinearLayout {
             z2 = true;
         }
         Context context = imageView.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         int defaultButtonBackgroundTint = getDefaultButtonBackgroundTint(context, z2);
         Context context2 = imageView.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context2, "context");
+        m.checkNotNullExpressionValue(context2, "context");
         int defaultButtonIconTint = getDefaultButtonIconTint(context2, z2);
         imageView.setBackgroundTintList(ColorStateList.valueOf(defaultButtonBackgroundTint));
-        ColorCompat2.tintWithColor(imageView, defaultButtonIconTint);
-        imageView.setOnClickListener(new VoiceControlsSheetView4(this, stageRoles, model, isUpdatingRequestToSpeak, onRaiseHandClick));
+        ColorCompatKt.tintWithColor(imageView, defaultButtonIconTint);
+        imageView.setOnClickListener(new VoiceControlsSheetView$configureRaiseHandButton$$inlined$apply$lambda$1(this, stageRoles, model, isUpdatingRequestToSpeak, onRaiseHandClick));
     }
 
     private final void configureScreenshareButtons(CallModel model, Function0<Unit> onScreenshareClick, boolean showInTopRow) {
@@ -294,42 +294,42 @@ public final class VoiceControlsSheetView extends LinearLayout {
         boolean zIsStreaming = model.isStreaming();
         int i = zIsStreaming ? R.string.stop_streaming : R.string.mobile_stream_screen_share;
         ImageView imageView = this.binding.p;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.screenShareButton");
+        m.checkNotNullExpressionValue(imageView, "binding.screenShareButton");
         imageView.setVisibility(z2 && showInTopRow ? 0 : 8);
         int i2 = zIsStreaming ? R.drawable.ic_mobile_screenshare_end_24dp : R.drawable.ic_mobile_screenshare_24dp;
         int i3 = zIsStreaming ? ViewCompat.MEASURED_STATE_MASK : -1;
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         int defaultButtonBackgroundTint = getDefaultButtonBackgroundTint(context, zIsStreaming);
         this.binding.p.setImageResource(i2);
         ImageView imageView2 = this.binding.p;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.screenShareButton");
+        m.checkNotNullExpressionValue(imageView2, "binding.screenShareButton");
         imageView2.setBackgroundTintList(ColorStateList.valueOf(defaultButtonBackgroundTint));
         ImageView imageView3 = this.binding.p;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.screenShareButton");
+        m.checkNotNullExpressionValue(imageView3, "binding.screenShareButton");
         imageView3.setImageTintList(ColorStateList.valueOf(i3));
         this.binding.p.setOnClickListener(new AnonymousClass1(onScreenshareClick));
         TextView textView = this.binding.q;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.screenShareSecondaryButton");
+        m.checkNotNullExpressionValue(textView, "binding.screenShareSecondaryButton");
         textView.setVisibility(z2 && !showInTopRow ? 0 : 8);
         this.binding.q.setOnClickListener(new AnonymousClass2(onScreenshareClick));
         TextView textView2 = this.binding.q;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.screenShareSecondaryButton");
+        m.checkNotNullExpressionValue(textView2, "binding.screenShareSecondaryButton");
         ViewExtensions.setCompoundDrawableWithIntrinsicBounds$default(textView2, i2, 0, 0, 0, 14, null);
         this.binding.q.setText(i);
     }
 
     private final void configureStreamVolume(boolean showStreamVolume, float perceptualStreamVolume, Function2<? super Float, ? super Boolean, Unit> onStreamVolumeChange) {
         TextView textView = this.binding.u;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.streamVolumeLabel");
+        m.checkNotNullExpressionValue(textView, "binding.streamVolumeLabel");
         textView.setVisibility(showStreamVolume ? 0 : 8);
         VolumeSliderView volumeSliderView = this.binding.v;
-        Intrinsics3.checkNotNullExpressionValue(volumeSliderView, "binding.streamVolumeSlider");
+        m.checkNotNullExpressionValue(volumeSliderView, "binding.streamVolumeSlider");
         volumeSliderView.setVisibility(showStreamVolume ? 0 : 8);
         VolumeSliderView volumeSliderView2 = this.binding.v;
-        int iRoundToInt = MathJVM.roundToInt(perceptualStreamVolume);
+        int iRoundToInt = a.roundToInt(perceptualStreamVolume);
         SeekBar seekBar = volumeSliderView2.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(seekBar, "binding.volumeSliderSeekBar");
+        m.checkNotNullExpressionValue(seekBar, "binding.volumeSliderSeekBar");
         seekBar.setProgress(iRoundToInt);
         this.binding.v.setOnVolumeChange(onStreamVolumeChange);
     }
@@ -338,17 +338,17 @@ public final class VoiceControlsSheetView extends LinearLayout {
         boolean z2 = model.getSelectedVideoDevice() != null;
         boolean z3 = !model.getVideoDevices().isEmpty();
         ImageView imageView = this.binding.w;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.videoButton");
+        m.checkNotNullExpressionValue(imageView, "binding.videoButton");
         imageView.setVisibility(z3 && isVideoEnabledForCall ? 0 : 8);
         int i = z2 ? ViewCompat.MEASURED_STATE_MASK : -1;
         ImageView imageView2 = this.binding.w;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.videoButton");
+        m.checkNotNullExpressionValue(imageView2, "binding.videoButton");
         imageView2.setImageTintList(ColorStateList.valueOf(i));
         Context context = getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
+        m.checkNotNullExpressionValue(context, "context");
         int defaultButtonBackgroundTint = getDefaultButtonBackgroundTint(context, z2);
         ImageView imageView3 = this.binding.w;
-        Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.videoButton");
+        m.checkNotNullExpressionValue(imageView3, "binding.videoButton");
         imageView3.setBackgroundTintList(ColorStateList.valueOf(defaultButtonBackgroundTint));
         this.binding.w.setOnClickListener(new AnonymousClass1(onVideoClick));
     }
@@ -375,55 +375,55 @@ public final class VoiceControlsSheetView extends LinearLayout {
     /* renamed from: configureUI-3jxq49Y, reason: not valid java name */
     public final void m64configureUI3jxq49Y(CallModel model, VoiceControlsOutputSelectorState outputSelectorState, boolean isVideoEnabledForCall, boolean isPttEnabled, boolean isDeafened, boolean startedAsVideo, boolean showStopWatching, boolean showDisconnect, Function0<Unit> onStopWatchingClick, Function0<Unit> onDisconnectClick, Function0<Unit> onAudioOutputClick, Function0<Unit> onVideoClick, Function0<Unit> onMuteClick, Function0<Unit> onInviteClick, Function0<Unit> onScreenshareClick, boolean showStreamVolume, float perceptualStreamVolume, Function2<? super Float, ? super Boolean, Unit> onStreamVolumeChange, Function0<Unit> onDeafenPressed, int requestingToSpeakCount, Function0<Unit> onRaiseHandClick, Function0<Unit> onMoveToAudienceClick, boolean isUpdatingRequestToSpeak, StageRoles stageRoles) {
         int i;
-        Intrinsics3.checkNotNullParameter(model, "model");
-        Intrinsics3.checkNotNullParameter(outputSelectorState, "outputSelectorState");
-        Intrinsics3.checkNotNullParameter(onStopWatchingClick, "onStopWatchingClick");
-        Intrinsics3.checkNotNullParameter(onDisconnectClick, "onDisconnectClick");
-        Intrinsics3.checkNotNullParameter(onAudioOutputClick, "onAudioOutputClick");
-        Intrinsics3.checkNotNullParameter(onVideoClick, "onVideoClick");
-        Intrinsics3.checkNotNullParameter(onMuteClick, "onMuteClick");
-        Intrinsics3.checkNotNullParameter(onInviteClick, "onInviteClick");
-        Intrinsics3.checkNotNullParameter(onScreenshareClick, "onScreenshareClick");
-        Intrinsics3.checkNotNullParameter(onStreamVolumeChange, "onStreamVolumeChange");
-        Intrinsics3.checkNotNullParameter(onDeafenPressed, "onDeafenPressed");
-        Intrinsics3.checkNotNullParameter(onRaiseHandClick, "onRaiseHandClick");
-        Intrinsics3.checkNotNullParameter(onMoveToAudienceClick, "onMoveToAudienceClick");
+        m.checkNotNullParameter(model, "model");
+        m.checkNotNullParameter(outputSelectorState, "outputSelectorState");
+        m.checkNotNullParameter(onStopWatchingClick, "onStopWatchingClick");
+        m.checkNotNullParameter(onDisconnectClick, "onDisconnectClick");
+        m.checkNotNullParameter(onAudioOutputClick, "onAudioOutputClick");
+        m.checkNotNullParameter(onVideoClick, "onVideoClick");
+        m.checkNotNullParameter(onMuteClick, "onMuteClick");
+        m.checkNotNullParameter(onInviteClick, "onInviteClick");
+        m.checkNotNullParameter(onScreenshareClick, "onScreenshareClick");
+        m.checkNotNullParameter(onStreamVolumeChange, "onStreamVolumeChange");
+        m.checkNotNullParameter(onDeafenPressed, "onDeafenPressed");
+        m.checkNotNullParameter(onRaiseHandClick, "onRaiseHandClick");
+        m.checkNotNullParameter(onMoveToAudienceClick, "onMoveToAudienceClick");
         ImageView imageView = this.binding.t;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.stopWatchingButton");
+        m.checkNotNullExpressionValue(imageView, "binding.stopWatchingButton");
         imageView.setVisibility(showStopWatching ? 0 : 8);
-        this.binding.t.setOnClickListener(new VoiceControlsSheetView7(onStopWatchingClick));
+        this.binding.t.setOnClickListener(new VoiceControlsSheetView$configureUI$1(onStopWatchingClick));
         if (stageRoles == null || StageRoles.m33isSpeakerimpl(stageRoles.m35unboximpl())) {
             MaterialTextView materialTextView = this.binding.f2218s;
-            Intrinsics3.checkNotNullExpressionValue(materialTextView, "binding.stageDisconnectButtonLarge");
+            m.checkNotNullExpressionValue(materialTextView, "binding.stageDisconnectButtonLarge");
             i = 8;
             materialTextView.setVisibility(8);
             ImageView imageView2 = this.binding.g;
             imageView2.setImageResource(stageRoles == null ? R.drawable.ic_call_disconnect_24dp : R.drawable.ic_stage_leave_20dp);
             imageView2.setVisibility(showDisconnect ? 0 : 8);
-            imageView2.setOnClickListener(new VoiceControlsSheetView6(stageRoles, showDisconnect, onDisconnectClick));
-            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.disconnectButton…sconnectClick() }\n      }");
+            imageView2.setOnClickListener(new VoiceControlsSheetView$configureUI$$inlined$apply$lambda$2(stageRoles, showDisconnect, onDisconnectClick));
+            m.checkNotNullExpressionValue(imageView2, "binding.disconnectButton…sconnectClick() }\n      }");
         } else {
             ImageView imageView3 = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(imageView3, "binding.disconnectButton");
+            m.checkNotNullExpressionValue(imageView3, "binding.disconnectButton");
             imageView3.setVisibility(8);
             MaterialTextView materialTextView2 = this.binding.f2218s;
             materialTextView2.setVisibility(showDisconnect ? 0 : 8);
-            materialTextView2.setOnClickListener(new VoiceControlsSheetView5(showDisconnect, onDisconnectClick));
-            Intrinsics3.checkNotNullExpressionValue(materialTextView2, "binding.stageDisconnectB…Click()\n        }\n      }");
+            materialTextView2.setOnClickListener(new VoiceControlsSheetView$configureUI$$inlined$apply$lambda$1(showDisconnect, onDisconnectClick));
+            m.checkNotNullExpressionValue(materialTextView2, "binding.stageDisconnectB…Click()\n        }\n      }");
             i = 8;
         }
         Button button = this.binding.m;
-        Intrinsics3.checkNotNullExpressionValue(button, "binding.pushToTalkButton");
+        m.checkNotNullExpressionValue(button, "binding.pushToTalkButton");
         if ((stageRoles == null || StageRoles.m33isSpeakerimpl(stageRoles.m35unboximpl())) && isPttEnabled) {
             i = 0;
         }
         button.setVisibility(i);
         TextView textView = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.deafenSecondaryButton");
-        FormatUtils.n(textView, isDeafened ? R.string.undeafen : R.string.deafen, new Object[0], null, 4);
-        this.binding.f.setOnClickListener(new VoiceControlsSheetView8(onDeafenPressed));
+        m.checkNotNullExpressionValue(textView, "binding.deafenSecondaryButton");
+        b.n(textView, isDeafened ? R.string.undeafen : R.string.deafen, new Object[0], null, 4);
+        this.binding.f.setOnClickListener(new VoiceControlsSheetView$configureUI$4(onDeafenPressed));
         TextView textView2 = this.binding.f;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.deafenSecondaryButton");
+        m.checkNotNullExpressionValue(textView2, "binding.deafenSecondaryButton");
         textView2.setActivated(isDeafened);
         m61configureMoveToAudienceButtonyox5PQY(stageRoles, onMoveToAudienceClick);
         m63configureRaiseHandButtonfw_bWyM(model, stageRoles, requestingToSpeakCount, isUpdatingRequestToSpeak, onRaiseHandClick);
@@ -437,13 +437,13 @@ public final class VoiceControlsSheetView extends LinearLayout {
 
     public final int getPeekHeight() {
         LinearLayout linearLayout = this.binding.l;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.peekContainer");
+        m.checkNotNullExpressionValue(linearLayout, "binding.peekContainer");
         return linearLayout.getMeasuredHeight();
     }
 
     public final void handleSheetState(int bottomSheetState) {
         CardView cardView = this.binding.r;
-        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
+        m.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
         cardView.setVisibility((bottomSheetState != 4 || this.isGestureNavigationEnabled) ? 0 : 4);
     }
 
@@ -452,14 +452,14 @@ public final class VoiceControlsSheetView extends LinearLayout {
         int i;
         super.onAttachedToWindow();
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         if (resources.getConfiguration().orientation == 1) {
             Resources resources2 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
+            m.checkNotNullExpressionValue(resources2, "resources");
             i = resources2.getDisplayMetrics().widthPixels;
         } else {
             Resources resources3 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources3, "resources");
+            m.checkNotNullExpressionValue(resources3, "resources");
             i = resources3.getDisplayMetrics().heightPixels;
         }
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
@@ -468,22 +468,22 @@ public final class VoiceControlsSheetView extends LinearLayout {
     }
 
     public final void setOnPTTListener(OnPressListener listener) {
-        Intrinsics3.checkNotNullParameter(listener, "listener");
+        m.checkNotNullParameter(listener, "listener");
         this.binding.m.setOnTouchListener(listener);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public VoiceControlsSheetView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         VoiceControlsSheetViewBinding voiceControlsSheetViewBindingA = VoiceControlsSheetViewBinding.a(LayoutInflater.from(getContext()), this);
-        Intrinsics3.checkNotNullExpressionValue(voiceControlsSheetViewBindingA, "VoiceControlsSheetViewBi…ater.from(context), this)");
+        m.checkNotNullExpressionValue(voiceControlsSheetViewBindingA, "VoiceControlsSheetViewBi…ater.from(context), this)");
         this.binding = voiceControlsSheetViewBindingA;
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         this.isGestureNavigationEnabled = DisplayUtils.isGestureNavigationEnabled(resources);
         CardView cardView = voiceControlsSheetViewBindingA.r;
-        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
+        m.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
         cardView.setVisibility(this.isGestureNavigationEnabled ? 0 : 4);
     }
 
@@ -494,15 +494,15 @@ public final class VoiceControlsSheetView extends LinearLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public VoiceControlsSheetView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         VoiceControlsSheetViewBinding voiceControlsSheetViewBindingA = VoiceControlsSheetViewBinding.a(LayoutInflater.from(getContext()), this);
-        Intrinsics3.checkNotNullExpressionValue(voiceControlsSheetViewBindingA, "VoiceControlsSheetViewBi…ater.from(context), this)");
+        m.checkNotNullExpressionValue(voiceControlsSheetViewBindingA, "VoiceControlsSheetViewBi…ater.from(context), this)");
         this.binding = voiceControlsSheetViewBindingA;
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+        m.checkNotNullExpressionValue(resources, "resources");
         this.isGestureNavigationEnabled = DisplayUtils.isGestureNavigationEnabled(resources);
         CardView cardView = voiceControlsSheetViewBindingA.r;
-        Intrinsics3.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
+        m.checkNotNullExpressionValue(cardView, "binding.secondaryActionsCard");
         cardView.setVisibility(this.isGestureNavigationEnabled ? 0 : 4);
     }
 

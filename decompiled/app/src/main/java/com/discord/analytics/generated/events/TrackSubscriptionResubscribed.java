@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSubscriptionResubscribed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSubscriptionResubscribed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSubscriptionResubscribed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long subscriptionId = null;
     private final Long subscriptionType = null;
@@ -36,7 +36,7 @@ public final /* data */ class TrackSubscriptionResubscribed implements Analytics
             return false;
         }
         TrackSubscriptionResubscribed trackSubscriptionResubscribed = (TrackSubscriptionResubscribed) other;
-        return Intrinsics3.areEqual(this.subscriptionId, trackSubscriptionResubscribed.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackSubscriptionResubscribed.subscriptionType) && Intrinsics3.areEqual(this.paymentGatewayPlanId, trackSubscriptionResubscribed.paymentGatewayPlanId) && Intrinsics3.areEqual(this.planId, trackSubscriptionResubscribed.planId) && Intrinsics3.areEqual(this.paymentGateway, trackSubscriptionResubscribed.paymentGateway) && Intrinsics3.areEqual(this.createdAt, trackSubscriptionResubscribed.createdAt) && Intrinsics3.areEqual(this.currentPeriodStart, trackSubscriptionResubscribed.currentPeriodStart) && Intrinsics3.areEqual(this.currentPeriodEnd, trackSubscriptionResubscribed.currentPeriodEnd) && Intrinsics3.areEqual(this.trialId, trackSubscriptionResubscribed.trialId) && Intrinsics3.areEqual(this.trialEndsAt, trackSubscriptionResubscribed.trialEndsAt);
+        return m.areEqual(this.subscriptionId, trackSubscriptionResubscribed.subscriptionId) && m.areEqual(this.subscriptionType, trackSubscriptionResubscribed.subscriptionType) && m.areEqual(this.paymentGatewayPlanId, trackSubscriptionResubscribed.paymentGatewayPlanId) && m.areEqual(this.planId, trackSubscriptionResubscribed.planId) && m.areEqual(this.paymentGateway, trackSubscriptionResubscribed.paymentGateway) && m.areEqual(this.createdAt, trackSubscriptionResubscribed.createdAt) && m.areEqual(this.currentPeriodStart, trackSubscriptionResubscribed.currentPeriodStart) && m.areEqual(this.currentPeriodEnd, trackSubscriptionResubscribed.currentPeriodEnd) && m.areEqual(this.trialId, trackSubscriptionResubscribed.trialId) && m.areEqual(this.trialEndsAt, trackSubscriptionResubscribed.trialEndsAt);
     }
 
     public int hashCode() {
@@ -63,7 +63,7 @@ public final /* data */ class TrackSubscriptionResubscribed implements Analytics
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSubscriptionResubscribed(subscriptionId=");
+        StringBuilder sbU = a.U("TrackSubscriptionResubscribed(subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", subscriptionType=");
         sbU.append(this.subscriptionType);
@@ -82,6 +82,6 @@ public final /* data */ class TrackSubscriptionResubscribed implements Analytics
         sbU.append(", trialId=");
         sbU.append(this.trialId);
         sbU.append(", trialEndsAt=");
-        return outline.G(sbU, this.trialEndsAt, ")");
+        return a.G(sbU, this.trialEndsAt, ")");
     }
 }

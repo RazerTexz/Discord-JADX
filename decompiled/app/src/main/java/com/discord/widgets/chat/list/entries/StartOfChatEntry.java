@@ -1,10 +1,10 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.ForumTag;
 import com.discord.models.member.GuildMember;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: StartOfChatEntry.kt */
@@ -28,8 +28,8 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
     private final int type;
 
     public StartOfChatEntry(long j, String str, boolean z2, boolean z3, boolean z4, boolean z5, Integer num, GuildMember guildMember, String str2, boolean z6, boolean z7, boolean z8, List<ForumTag> list, List<Long> list2) {
-        Intrinsics3.checkNotNullParameter(str, "channelName");
-        Intrinsics3.checkNotNullParameter(str2, "threadCreatorName");
+        m.checkNotNullParameter(str, "channelName");
+        m.checkNotNullParameter(str2, "threadCreatorName");
         this.channelId = j;
         this.channelName = str;
         this.canReadMessageHistory = z2;
@@ -124,8 +124,8 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
     }
 
     public final StartOfChatEntry copy(long channelId, String channelName, boolean canReadMessageHistory, boolean canManageChannel, boolean canManageThread, boolean isThread, Integer threadAutoArchiveDuration, GuildMember threadCreatorMember, String threadCreatorName, boolean isTextInVoice, boolean isGuildForumPost, boolean canAccessRedesignedForumChannels, List<ForumTag> availableTags, List<Long> appliedTags) {
-        Intrinsics3.checkNotNullParameter(channelName, "channelName");
-        Intrinsics3.checkNotNullParameter(threadCreatorName, "threadCreatorName");
+        m.checkNotNullParameter(channelName, "channelName");
+        m.checkNotNullParameter(threadCreatorName, "threadCreatorName");
         return new StartOfChatEntry(channelId, channelName, canReadMessageHistory, canManageChannel, canManageThread, isThread, threadAutoArchiveDuration, threadCreatorMember, threadCreatorName, isTextInVoice, isGuildForumPost, canAccessRedesignedForumChannels, availableTags, appliedTags);
     }
 
@@ -137,7 +137,7 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
             return false;
         }
         StartOfChatEntry startOfChatEntry = (StartOfChatEntry) other;
-        return this.channelId == startOfChatEntry.channelId && Intrinsics3.areEqual(this.channelName, startOfChatEntry.channelName) && this.canReadMessageHistory == startOfChatEntry.canReadMessageHistory && this.canManageChannel == startOfChatEntry.canManageChannel && this.canManageThread == startOfChatEntry.canManageThread && this.isThread == startOfChatEntry.isThread && Intrinsics3.areEqual(this.threadAutoArchiveDuration, startOfChatEntry.threadAutoArchiveDuration) && Intrinsics3.areEqual(this.threadCreatorMember, startOfChatEntry.threadCreatorMember) && Intrinsics3.areEqual(this.threadCreatorName, startOfChatEntry.threadCreatorName) && this.isTextInVoice == startOfChatEntry.isTextInVoice && this.isGuildForumPost == startOfChatEntry.isGuildForumPost && this.canAccessRedesignedForumChannels == startOfChatEntry.canAccessRedesignedForumChannels && Intrinsics3.areEqual(this.availableTags, startOfChatEntry.availableTags) && Intrinsics3.areEqual(this.appliedTags, startOfChatEntry.appliedTags);
+        return this.channelId == startOfChatEntry.channelId && m.areEqual(this.channelName, startOfChatEntry.channelName) && this.canReadMessageHistory == startOfChatEntry.canReadMessageHistory && this.canManageChannel == startOfChatEntry.canManageChannel && this.canManageThread == startOfChatEntry.canManageThread && this.isThread == startOfChatEntry.isThread && m.areEqual(this.threadAutoArchiveDuration, startOfChatEntry.threadAutoArchiveDuration) && m.areEqual(this.threadCreatorMember, startOfChatEntry.threadCreatorMember) && m.areEqual(this.threadCreatorName, startOfChatEntry.threadCreatorName) && this.isTextInVoice == startOfChatEntry.isTextInVoice && this.isGuildForumPost == startOfChatEntry.isGuildForumPost && this.canAccessRedesignedForumChannels == startOfChatEntry.canAccessRedesignedForumChannels && m.areEqual(this.availableTags, startOfChatEntry.availableTags) && m.areEqual(this.appliedTags, startOfChatEntry.appliedTags);
     }
 
     public final List<Long> getAppliedTags() {
@@ -262,7 +262,7 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StartOfChatEntry(channelId=");
+        StringBuilder sbU = a.U("StartOfChatEntry(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelName=");
         sbU.append(this.channelName);
@@ -289,6 +289,6 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
         sbU.append(", availableTags=");
         sbU.append(this.availableTags);
         sbU.append(", appliedTags=");
-        return outline.L(sbU, this.appliedTags, ")");
+        return a.L(sbU, this.appliedTags, ")");
     }
 }

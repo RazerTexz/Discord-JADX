@@ -2,16 +2,16 @@ package com.discord.widgets.servers.member_verification;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.guildjoinrequest.ApplicationStatus;
 import com.discord.models.domain.ModelMemberVerificationFormResponse;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -21,7 +21,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: MemberVerificationPendingViewModel.kt */
 /* loaded from: classes2.dex */
-public final class MemberVerificationPendingViewModel extends AppViewModel<ViewState> {
+public final class MemberVerificationPendingViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -32,7 +32,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -45,7 +45,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             MemberVerificationPendingViewModel.access$handleStoreState(MemberVerificationPendingViewModel.this, storeState);
         }
     }
@@ -61,8 +61,8 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
         private final Observable<StoreState> observeStores(long guildId) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<StoreState> observableI = Observable.i(companion.getMemberVerificationForms().observeMemberVerificationFormData(guildId), companion.getGuilds().observeGuild(guildId), companion.getGuildJoinRequests().observeGuildJoinRequest(guildId), MemberVerificationPendingViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest…Reason,\n        )\n      }");
+            Observable<StoreState> observableI = Observable.i(companion.getMemberVerificationForms().observeMemberVerificationFormData(guildId), companion.getGuilds().observeGuild(guildId), companion.getGuildJoinRequests().observeGuildJoinRequest(guildId), MemberVerificationPendingViewModel$Companion$observeStores$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableI, "Observable.combineLatest…Reason,\n        )\n      }");
             return observableI;
         }
 
@@ -117,7 +117,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
         private final String rejectionReason;
 
         public StoreState(boolean z2, boolean z3, ApplicationStatus applicationStatus, String str) {
-            Intrinsics3.checkNotNullParameter(applicationStatus, "applicationStatus");
+            m.checkNotNullParameter(applicationStatus, "applicationStatus");
             this.isFormOutdated = z2;
             this.isPreviewEnabled = z3;
             this.applicationStatus = applicationStatus;
@@ -161,7 +161,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
         }
 
         public final StoreState copy(boolean isFormOutdated, boolean isPreviewEnabled, ApplicationStatus applicationStatus, String rejectionReason) {
-            Intrinsics3.checkNotNullParameter(applicationStatus, "applicationStatus");
+            m.checkNotNullParameter(applicationStatus, "applicationStatus");
             return new StoreState(isFormOutdated, isPreviewEnabled, applicationStatus, rejectionReason);
         }
 
@@ -173,7 +173,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return this.isFormOutdated == storeState.isFormOutdated && this.isPreviewEnabled == storeState.isPreviewEnabled && Intrinsics3.areEqual(this.applicationStatus, storeState.applicationStatus) && Intrinsics3.areEqual(this.rejectionReason, storeState.rejectionReason);
+            return this.isFormOutdated == storeState.isFormOutdated && this.isPreviewEnabled == storeState.isPreviewEnabled && m.areEqual(this.applicationStatus, storeState.applicationStatus) && m.areEqual(this.rejectionReason, storeState.rejectionReason);
         }
 
         public final ApplicationStatus getApplicationStatus() {
@@ -212,14 +212,14 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(isFormOutdated=");
+            StringBuilder sbU = a.U("StoreState(isFormOutdated=");
             sbU.append(this.isFormOutdated);
             sbU.append(", isPreviewEnabled=");
             sbU.append(this.isPreviewEnabled);
             sbU.append(", applicationStatus=");
             sbU.append(this.applicationStatus);
             sbU.append(", rejectionReason=");
-            return outline.J(sbU, this.rejectionReason, ")");
+            return a.J(sbU, this.rejectionReason, ")");
         }
     }
 
@@ -237,7 +237,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(DialogState dialogState, boolean z2, boolean z3, boolean z4, String str) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(dialogState, "dialogState");
+                m.checkNotNullParameter(dialogState, "dialogState");
                 this.dialogState = dialogState;
                 this.showPendingImage = z2;
                 this.showTertiaryButton = z3;
@@ -293,7 +293,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
             }
 
             public final Loaded copy(DialogState dialogState, boolean showPendingImage, boolean showTertiaryButton, boolean isPreviewEnabled, String rejectionReason) {
-                Intrinsics3.checkNotNullParameter(dialogState, "dialogState");
+                m.checkNotNullParameter(dialogState, "dialogState");
                 return new Loaded(dialogState, showPendingImage, showTertiaryButton, isPreviewEnabled, rejectionReason);
             }
 
@@ -305,7 +305,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.dialogState, loaded.dialogState) && this.showPendingImage == loaded.showPendingImage && this.showTertiaryButton == loaded.showTertiaryButton && this.isPreviewEnabled == loaded.isPreviewEnabled && Intrinsics3.areEqual(this.rejectionReason, loaded.rejectionReason);
+                return m.areEqual(this.dialogState, loaded.dialogState) && this.showPendingImage == loaded.showPendingImage && this.showTertiaryButton == loaded.showTertiaryButton && this.isPreviewEnabled == loaded.isPreviewEnabled && m.areEqual(this.rejectionReason, loaded.rejectionReason);
             }
 
             public final DialogState getDialogState() {
@@ -351,7 +351,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(dialogState=");
+                StringBuilder sbU = a.U("Loaded(dialogState=");
                 sbU.append(this.dialogState);
                 sbU.append(", showPendingImage=");
                 sbU.append(this.showPendingImage);
@@ -360,7 +360,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
                 sbU.append(", isPreviewEnabled=");
                 sbU.append(this.isPreviewEnabled);
                 sbU.append(", rejectionReason=");
-                return outline.J(sbU, this.rejectionReason, ")");
+                return a.J(sbU, this.rejectionReason, ")");
             }
         }
 
@@ -386,7 +386,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$deleteGuildJoinRequest$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -399,7 +399,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = MemberVerificationPendingViewModel.access$getEventSubject$p(MemberVerificationPendingViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(Event.Error.INSTANCE);
         }
@@ -407,7 +407,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$deleteGuildJoinRequest$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<ModelMemberVerificationFormResponse, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<ModelMemberVerificationFormResponse, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -426,7 +426,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$leaveGuild$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -439,7 +439,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = MemberVerificationPendingViewModel.access$getEventSubject$p(MemberVerificationPendingViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(Event.Error.INSTANCE);
         }
@@ -447,7 +447,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$leaveGuild$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Void, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -467,7 +467,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$resetGuildJoinRequest$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Error, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -480,7 +480,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = MemberVerificationPendingViewModel.access$getEventSubject$p(MemberVerificationPendingViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(Event.Error.INSTANCE);
         }
@@ -488,7 +488,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
     /* compiled from: MemberVerificationPendingViewModel.kt */
     /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$resetGuildJoinRequest$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<ModelMemberVerificationFormResponse, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<ModelMemberVerificationFormResponse, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -501,7 +501,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelMemberVerificationFormResponse modelMemberVerificationFormResponse) {
-            Intrinsics3.checkNotNullParameter(modelMemberVerificationFormResponse, "it");
+            m.checkNotNullParameter(modelMemberVerificationFormResponse, "it");
             MemberVerificationPendingViewModel.access$onResetSuccess(MemberVerificationPendingViewModel.this);
         }
     }
@@ -559,7 +559,7 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
     }
 
     public final void updateDialogState(DialogState dialogState) {
-        Intrinsics3.checkNotNullParameter(dialogState, "dialogState");
+        m.checkNotNullParameter(dialogState, "dialogState");
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -574,13 +574,13 @@ public final class MemberVerificationPendingViewModel extends AppViewModel<ViewS
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MemberVerificationPendingViewModel(long j, DialogState dialogState, RestAPI restAPI, Observable<StoreState> observable) {
         super(null);
-        Intrinsics3.checkNotNullParameter(restAPI, "restAPI");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(restAPI, "restAPI");
+        m.checkNotNullParameter(observable, "storeObservable");
         this.guildId = j;
         this.dialogState = dialogState;
         this.restAPI = restAPI;
         PublishSubject<Event> publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.eventSubject = publishSubjectK0;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), MemberVerificationPendingViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }

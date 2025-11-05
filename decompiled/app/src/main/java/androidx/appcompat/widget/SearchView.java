@@ -48,7 +48,7 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.ViewCompat;
 import androidx.cursoradapter.widget.CursorAdapter;
 import androidx.customview.view.AbsSavedState;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.lang.reflect.Method;
 import java.util.WeakHashMap;
@@ -399,10 +399,10 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("SearchView.SavedState{");
+            StringBuilder sbU = a.U("SearchView.SavedState{");
             sbU.append(Integer.toHexString(System.identityHashCode(this)));
             sbU.append(" isIconified=");
-            return outline.O(sbU, this.isIconified, "}");
+            return a.O(sbU, this.isIconified, "}");
         }
 
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable

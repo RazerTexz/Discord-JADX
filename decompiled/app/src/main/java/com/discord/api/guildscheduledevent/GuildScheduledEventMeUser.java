@@ -1,8 +1,8 @@
 package com.discord.api.guildscheduledevent;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildScheduledEventMeUser.kt */
 /* loaded from: classes.dex */
@@ -25,7 +25,7 @@ public final /* data */ class GuildScheduledEventMeUser {
             return false;
         }
         GuildScheduledEventMeUser guildScheduledEventMeUser = (GuildScheduledEventMeUser) other;
-        return this.userId == guildScheduledEventMeUser.userId && this.guildScheduledEventId == guildScheduledEventMeUser.guildScheduledEventId && Intrinsics3.areEqual(this.user, guildScheduledEventMeUser.user) && Intrinsics3.areEqual(this.guildScheduledEvent, guildScheduledEventMeUser.guildScheduledEvent);
+        return this.userId == guildScheduledEventMeUser.userId && this.guildScheduledEventId == guildScheduledEventMeUser.guildScheduledEventId && m.areEqual(this.user, guildScheduledEventMeUser.user) && m.areEqual(this.guildScheduledEvent, guildScheduledEventMeUser.guildScheduledEvent);
     }
 
     public int hashCode() {
@@ -39,7 +39,7 @@ public final /* data */ class GuildScheduledEventMeUser {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildScheduledEventMeUser(userId=");
+        StringBuilder sbU = a.U("GuildScheduledEventMeUser(userId=");
         sbU.append(this.userId);
         sbU.append(", guildScheduledEventId=");
         sbU.append(this.guildScheduledEventId);

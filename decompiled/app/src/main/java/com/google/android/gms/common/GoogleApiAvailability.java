@@ -25,8 +25,7 @@ import androidx.collection.SimpleArrayMap;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
 import b.i.a.f.e.b;
 import b.i.a.f.e.c;
 import b.i.a.f.e.e;
@@ -64,7 +63,7 @@ public class GoogleApiAvailability extends c {
         public final void handleMessage(Message message) throws Resources.NotFoundException {
             int i = message.what;
             if (i != 1) {
-                outline.g0(50, "Don't know how to handle this message: ", i, "GoogleApiAvailability");
+                b.d.b.a.a.g0(50, "Don't know how to handle this message: ", i, "GoogleApiAvailability");
                 return;
             }
             int iC = GoogleApiAvailability.this.c(this.a);
@@ -108,7 +107,7 @@ public class GoogleApiAvailability extends c {
         if (activity instanceof FragmentActivity) {
             FragmentManager supportFragmentManager = ((FragmentActivity) activity).getSupportFragmentManager();
             g gVar = new g();
-            AnimatableValueParser.z(dialog, "Cannot display null dialog");
+            d.z(dialog, "Cannot display null dialog");
             dialog.setOnCancelListener(null);
             dialog.setOnDismissListener(null);
             gVar.j = dialog;
@@ -120,7 +119,7 @@ public class GoogleApiAvailability extends c {
         }
         android.app.FragmentManager fragmentManager = activity.getFragmentManager();
         b bVar = new b();
-        AnimatableValueParser.z(dialog, "Cannot display null dialog");
+        d.z(dialog, "Cannot display null dialog");
         dialog.setOnCancelListener(null);
         dialog.setOnDismissListener(null);
         bVar.j = dialog;
@@ -154,7 +153,7 @@ public class GoogleApiAvailability extends c {
     @MainThread
     public Task<Void> e(Activity activity) throws PackageManager.NameNotFoundException {
         int i = e;
-        AnimatableValueParser.u("makeGooglePlayServicesAvailable must be called from the main thread");
+        d.u("makeGooglePlayServicesAvailable must be called from the main thread");
         int iB = super.b(activity, i);
         if (iB == 0) {
             return f.Z(null);
@@ -202,10 +201,10 @@ public class GoogleApiAvailability extends c {
         Resources resources = context.getResources();
         NotificationManager notificationManager = (NotificationManager) context.getSystemService("notification");
         NotificationCompat.Builder style = new NotificationCompat.Builder(context).setLocalOnly(true).setAutoCancel(true).setContentTitle(strB).setStyle(new NotificationCompat.BigTextStyle().bigText(strC));
-        if (AnimatableValueParser.Z0(context)) {
-            AnimatableValueParser.F(true);
+        if (d.Z0(context)) {
+            d.F(true);
             style.setSmallIcon(context.getApplicationInfo().icon).setPriority(2);
-            if (AnimatableValueParser.a1(context)) {
+            if (d.a1(context)) {
                 style.addAction(com.google.android.gms.base.R.a.common_full_open_on_phone, resources.getString(com.google.android.gms.base.R.b.common_open_on_phone), pendingIntent);
             } else {
                 style.setContentIntent(pendingIntent);
@@ -214,7 +213,7 @@ public class GoogleApiAvailability extends c {
             style.setSmallIcon(android.R.drawable.stat_sys_warning).setTicker(resources.getString(com.google.android.gms.base.R.b.common_google_play_services_notification_ticker)).setWhen(System.currentTimeMillis()).setContentIntent(pendingIntent).setContentText(strC);
         }
         if (f.A0()) {
-            AnimatableValueParser.F(f.A0());
+            d.F(f.A0());
             synchronized (c) {
             }
             NotificationChannel notificationChannel = notificationManager.getNotificationChannel("com.google.android.gms.availability");

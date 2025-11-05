@@ -1,12 +1,12 @@
 package com.discord.widgets.chat.list.entries;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.role.GuildRole;
 import com.discord.models.member.GuildMember;
 import com.discord.models.message.Message;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Map;
 
 /* compiled from: ThreadEmbedEntry.kt */
@@ -25,9 +25,9 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
     private final int type;
 
     public ThreadEmbedEntry(long j, Channel channel, int i, Message message, Map<Long, GuildRole> map, Map<Long, String> map2, boolean z2, GuildMember guildMember, Message message2) {
-        Intrinsics3.checkNotNullParameter(channel, "thread");
-        Intrinsics3.checkNotNullParameter(map2, "nickOrUsernames");
-        Intrinsics3.checkNotNullParameter(message2, "parentMessage");
+        m.checkNotNullParameter(channel, "thread");
+        m.checkNotNullParameter(map2, "nickOrUsernames");
+        m.checkNotNullParameter(message2, "parentMessage");
         this.messageId = j;
         this.thread = channel;
         this.threadMessageCount = i;
@@ -38,7 +38,7 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
         this.mostRecentMessageGuildMember = guildMember;
         this.parentMessage = message2;
         this.type = 35;
-        this.key = outline.t("35 -- ", j);
+        this.key = a.t("35 -- ", j);
     }
 
     public static /* synthetic */ ThreadEmbedEntry copy$default(ThreadEmbedEntry threadEmbedEntry, long j, Channel channel, int i, Message message, Map map, Map map2, boolean z2, GuildMember guildMember, Message message2, int i2, Object obj) {
@@ -89,9 +89,9 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
     }
 
     public final ThreadEmbedEntry copy(long messageId, Channel thread, int threadMessageCount, Message mostRecentMessage, Map<Long, GuildRole> roleMentions, Map<Long, String> nickOrUsernames, boolean animateEmojis, GuildMember mostRecentMessageGuildMember, Message parentMessage) {
-        Intrinsics3.checkNotNullParameter(thread, "thread");
-        Intrinsics3.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
-        Intrinsics3.checkNotNullParameter(parentMessage, "parentMessage");
+        m.checkNotNullParameter(thread, "thread");
+        m.checkNotNullParameter(nickOrUsernames, "nickOrUsernames");
+        m.checkNotNullParameter(parentMessage, "parentMessage");
         return new ThreadEmbedEntry(messageId, thread, threadMessageCount, mostRecentMessage, roleMentions, nickOrUsernames, animateEmojis, mostRecentMessageGuildMember, parentMessage);
     }
 
@@ -103,7 +103,7 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
             return false;
         }
         ThreadEmbedEntry threadEmbedEntry = (ThreadEmbedEntry) other;
-        return this.messageId == threadEmbedEntry.messageId && Intrinsics3.areEqual(this.thread, threadEmbedEntry.thread) && this.threadMessageCount == threadEmbedEntry.threadMessageCount && Intrinsics3.areEqual(this.mostRecentMessage, threadEmbedEntry.mostRecentMessage) && Intrinsics3.areEqual(this.roleMentions, threadEmbedEntry.roleMentions) && Intrinsics3.areEqual(this.nickOrUsernames, threadEmbedEntry.nickOrUsernames) && this.animateEmojis == threadEmbedEntry.animateEmojis && Intrinsics3.areEqual(this.mostRecentMessageGuildMember, threadEmbedEntry.mostRecentMessageGuildMember) && Intrinsics3.areEqual(this.parentMessage, threadEmbedEntry.parentMessage);
+        return this.messageId == threadEmbedEntry.messageId && m.areEqual(this.thread, threadEmbedEntry.thread) && this.threadMessageCount == threadEmbedEntry.threadMessageCount && m.areEqual(this.mostRecentMessage, threadEmbedEntry.mostRecentMessage) && m.areEqual(this.roleMentions, threadEmbedEntry.roleMentions) && m.areEqual(this.nickOrUsernames, threadEmbedEntry.nickOrUsernames) && this.animateEmojis == threadEmbedEntry.animateEmojis && m.areEqual(this.mostRecentMessageGuildMember, threadEmbedEntry.mostRecentMessageGuildMember) && m.areEqual(this.parentMessage, threadEmbedEntry.parentMessage);
     }
 
     public final boolean getAnimateEmojis() {
@@ -176,7 +176,7 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ThreadEmbedEntry(messageId=");
+        StringBuilder sbU = a.U("ThreadEmbedEntry(messageId=");
         sbU.append(this.messageId);
         sbU.append(", thread=");
         sbU.append(this.thread);

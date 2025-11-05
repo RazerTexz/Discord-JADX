@@ -7,8 +7,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.LayoutVoiceBottomSheetEmptyBinding;
-import b.a.i.LayoutVoiceBottomSheetHeaderBinding;
+import b.a.i.t0;
+import b.a.i.u0;
 import com.discord.widgets.voice.controls.AnchoredVoiceControlsView;
 import com.google.android.material.button.MaterialButton;
 
@@ -20,10 +20,10 @@ public final class WidgetVoiceBottomSheetBinding implements ViewBinding {
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final LayoutVoiceBottomSheetEmptyBinding f2699b;
+    public final t0 f2699b;
 
     @NonNull
-    public final LayoutVoiceBottomSheetHeaderBinding c;
+    public final u0 c;
 
     @NonNull
     public final MaterialButton d;
@@ -43,10 +43,10 @@ public final class WidgetVoiceBottomSheetBinding implements ViewBinding {
     @NonNull
     public final CoordinatorLayout i;
 
-    public WidgetVoiceBottomSheetBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LayoutVoiceBottomSheetEmptyBinding layoutVoiceBottomSheetEmptyBinding, @NonNull LayoutVoiceBottomSheetHeaderBinding layoutVoiceBottomSheetHeaderBinding, @NonNull ConstraintLayout constraintLayout, @NonNull MaterialButton materialButton, @NonNull RelativeLayout relativeLayout, @NonNull AnchoredVoiceControlsView anchoredVoiceControlsView, @NonNull MaterialButton materialButton2, @NonNull RecyclerView recyclerView, @NonNull CoordinatorLayout coordinatorLayout2) {
+    public WidgetVoiceBottomSheetBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull t0 t0Var, @NonNull u0 u0Var, @NonNull ConstraintLayout constraintLayout, @NonNull MaterialButton materialButton, @NonNull RelativeLayout relativeLayout, @NonNull AnchoredVoiceControlsView anchoredVoiceControlsView, @NonNull MaterialButton materialButton2, @NonNull RecyclerView recyclerView, @NonNull CoordinatorLayout coordinatorLayout2) {
         this.a = coordinatorLayout;
-        this.f2699b = layoutVoiceBottomSheetEmptyBinding;
-        this.c = layoutVoiceBottomSheetHeaderBinding;
+        this.f2699b = t0Var;
+        this.c = u0Var;
         this.d = materialButton;
         this.e = relativeLayout;
         this.f = anchoredVoiceControlsView;

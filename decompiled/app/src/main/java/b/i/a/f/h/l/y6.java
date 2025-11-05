@@ -1,6 +1,5 @@
 package b.i.a.f.h.l;
 
-import b.d.b.a.outline;
 import java.util.Map;
 
 /* JADX INFO: Add missing generic type declarations: [V, K] */
@@ -78,7 +77,7 @@ public final class y6<K, V> implements Comparable<y6>, Map.Entry<K, V> {
     public final String toString() {
         String strValueOf = String.valueOf(this.j);
         String strValueOf2 = String.valueOf(this.k);
-        return outline.k(strValueOf2.length() + strValueOf.length() + 1, strValueOf, "=", strValueOf2);
+        return b.d.b.a.a.k(strValueOf2.length() + strValueOf.length() + 1, strValueOf, "=", strValueOf2);
     }
 
     /* JADX WARN: Multi-variable type inference failed */

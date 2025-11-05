@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.discord.R;
 import com.discord.api.sticker.Sticker;
 import com.discord.widgets.chat.input.expression.WidgetExpressionPickerSheet;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.Serializable;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -35,7 +35,7 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
         }
 
         public final WidgetStickerPickerSheet show(FragmentManager fragmentManager, StickerPickerListener stickerPickerListener, Long initialStickerPackId, String searchText, Function0<Unit> onCancel) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             System.gc();
             Bundle bundle = new Bundle();
             if (initialStickerPackId != null) {
@@ -66,7 +66,7 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
         public final void run() {
             ViewGroup.LayoutParams layoutParams = WidgetStickerPickerSheet.access$getContainer$p(WidgetStickerPickerSheet.this).getLayoutParams();
             if (layoutParams != null) {
-                Intrinsics3.checkNotNullExpressionValue(WidgetStickerPickerSheet.this.getResources(), "resources");
+                m.checkNotNullExpressionValue(WidgetStickerPickerSheet.this.getResources(), "resources");
                 layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
             }
         }
@@ -75,7 +75,7 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
     public static final /* synthetic */ View access$getContainer$p(WidgetStickerPickerSheet widgetStickerPickerSheet) {
         View view = widgetStickerPickerSheet.container;
         if (view == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("container");
+            m.throwUninitializedPropertyAccessException("container");
         }
         return view;
     }
@@ -91,29 +91,29 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
 
     @Override // com.discord.widgets.chat.input.expression.WidgetExpressionPickerSheet, androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnCancelListener
     public void onCancel(DialogInterface dialog) {
-        Intrinsics3.checkNotNullParameter(dialog, "dialog");
+        m.checkNotNullParameter(dialog, "dialog");
         super.onCancel(dialog);
         WidgetStickerPicker widgetStickerPicker = this.stickerPickerFragment;
         if (widgetStickerPicker == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         widgetStickerPicker.clearSearchInput();
     }
 
     @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnDismissListener
     public void onDismiss(DialogInterface dialog) {
-        Intrinsics3.checkNotNullParameter(dialog, "dialog");
+        m.checkNotNullParameter(dialog, "dialog");
         super.onDismiss(dialog);
         WidgetStickerPicker widgetStickerPicker = this.stickerPickerFragment;
         if (widgetStickerPicker == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         widgetStickerPicker.selectCategoryById(-1L);
     }
 
     @Override // com.discord.widgets.chat.input.sticker.StickerPickerListener
     public void onStickerPicked(Sticker sticker) {
-        Intrinsics3.checkNotNullParameter(sticker, "sticker");
+        m.checkNotNullParameter(sticker, "sticker");
         StickerPickerListener stickerPickerListener = this.stickerPickerListenerDelegate;
         if (stickerPickerListener != null) {
             stickerPickerListener.onStickerPicked(sticker);
@@ -123,7 +123,7 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
 
     @Override // com.discord.widgets.chat.input.expression.WidgetExpressionPickerSheet, com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         this.container = view;
         Bundle arguments = getArguments();
@@ -135,11 +135,11 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
         WidgetStickerPicker widgetStickerPicker = new WidgetStickerPicker();
         this.stickerPickerFragment = widgetStickerPicker;
         if (widgetStickerPicker == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         Bundle bundle = new Bundle();
         bundle.putSerializable("MODE", StickerPickerMode.BOTTOM_SHEET);
-        bundle.putSerializable(WidgetStickerPicker.VIEW_TYPE, WidgetStickerPackStoreSheet2.STICKER_SEARCH_VIEW_ALL);
+        bundle.putSerializable(WidgetStickerPicker.VIEW_TYPE, StickerPackStoreSheetViewType.STICKER_SEARCH_VIEW_ALL);
         bundle.putString("com.discord.intent.extra.EXTRA_TEXT", string);
         if (lValueOf != null) {
             bundle.putLong("com.discord.intent.EXTRA_STICKER_PACK_ID", lValueOf.longValue());
@@ -150,17 +150,17 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
         widgetStickerPicker.setArguments(bundle);
         WidgetStickerPicker widgetStickerPicker2 = this.stickerPickerFragment;
         if (widgetStickerPicker2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         widgetStickerPicker2.setListener(this);
         FragmentTransaction fragmentTransactionBeginTransaction = getChildFragmentManager().beginTransaction();
         WidgetStickerPicker widgetStickerPicker3 = this.stickerPickerFragment;
         if (widgetStickerPicker3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         WidgetStickerPicker widgetStickerPicker4 = this.stickerPickerFragment;
         if (widgetStickerPicker4 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         fragmentTransactionBeginTransaction.replace(R.id.sticker_sheet_sticker_picker_content, widgetStickerPicker3, widgetStickerPicker4.getClass().getSimpleName()).runOnCommit(new AnonymousClass2()).commit();
     }
@@ -168,7 +168,7 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
     public final void scrollToPack(Long packId) {
         WidgetStickerPicker widgetStickerPicker = this.stickerPickerFragment;
         if (widgetStickerPicker == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickerPickerFragment");
+            m.throwUninitializedPropertyAccessException("stickerPickerFragment");
         }
         widgetStickerPicker.scrollToPack(packId);
     }

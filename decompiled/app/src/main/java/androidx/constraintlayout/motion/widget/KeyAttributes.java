@@ -8,7 +8,7 @@ import android.util.SparseIntArray;
 import androidx.constraintlayout.motion.widget.SplineSet;
 import androidx.constraintlayout.widget.ConstraintAttribute;
 import androidx.constraintlayout.widget.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -97,7 +97,7 @@ public class KeyAttributes extends Key {
                     case 3:
                     case 11:
                     default:
-                        StringBuilder sbU = outline.U("unused attribute 0x");
+                        StringBuilder sbU = a.U("unused attribute 0x");
                         sbU.append(Integer.toHexString(index));
                         sbU.append("   ");
                         sbU.append(mAttrMap.get(index));
@@ -636,7 +636,7 @@ public class KeyAttributes extends Key {
         if (this.mCustomConstraints.size() > 0) {
             Iterator<String> it = this.mCustomConstraints.keySet().iterator();
             while (it.hasNext()) {
-                map.put(outline.w("CUSTOM,", it.next()), Integer.valueOf(this.mCurveFit));
+                map.put(a.w("CUSTOM,", it.next()), Integer.valueOf(this.mCurveFit));
             }
         }
     }

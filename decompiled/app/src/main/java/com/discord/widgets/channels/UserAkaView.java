@@ -12,9 +12,9 @@ import com.discord.databinding.UserAkaViewBinding;
 import com.discord.models.member.GuildMember;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.views.PileView;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -45,7 +45,7 @@ public final class UserAkaView extends ConstraintLayout {
     }
 
     public final void configure(List<GuildMember> guildMembers) throws Resources.NotFoundException {
-        Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+        m.checkNotNullParameter(guildMembers, "guildMembers");
         this.guildMembers = guildMembers;
         float dimension = getResources().getDimension(R.dimen.aka_avatar_width);
         ArrayList arrayList = new ArrayList();
@@ -62,14 +62,14 @@ public final class UserAkaView extends ConstraintLayout {
                 arrayList2.add(forGuildMember$default);
             }
         }
-        ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList2, 10));
+        ArrayList arrayList3 = new ArrayList(o.collectionSizeOrDefault(arrayList2, 10));
         Iterator it2 = arrayList2.iterator();
         while (it2.hasNext()) {
-            arrayList3.add(new PileView.c(new UserAkaView2((String) it2.next()), null));
+            arrayList3.add(new PileView.c(new UserAkaView$configure$1$1((String) it2.next()), null));
         }
         this.pileItems = arrayList3;
         this.binding.c.setItems(arrayList3);
-        Intrinsics3.checkNotNullExpressionValue(OneShotPreDrawListener.add(this, new UserAkaView$configure$$inlined$doOnPreDraw$1(this, this, guildMembers)), "View.doOnPreDraw(\n    crossinline action: (view: View) -> Unit\n): OneShotPreDrawListener = OneShotPreDrawListener.add(this) { action(this) }");
+        m.checkNotNullExpressionValue(OneShotPreDrawListener.add(this, new UserAkaView$configure$$inlined$doOnPreDraw$1(this, this, guildMembers)), "View.doOnPreDraw(\n    crossinline action: (view: View) -> Unit\n): OneShotPreDrawListener = OneShotPreDrawListener.add(this) { action(this) }");
     }
 
     public final List<GuildMember> getGuildMembers() {
@@ -85,21 +85,21 @@ public final class UserAkaView extends ConstraintLayout {
     }
 
     public final void setGuildMembers(List<GuildMember> list) {
-        Intrinsics3.checkNotNullParameter(list, "<set-?>");
+        m.checkNotNullParameter(list, "<set-?>");
         this.guildMembers = list;
     }
 
     public final void setPileItems(List<PileView.c> list) {
-        Intrinsics3.checkNotNullParameter(list, "<set-?>");
+        m.checkNotNullParameter(list, "<set-?>");
         this.pileItems = list;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public UserAkaView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        this.guildMembers = Collections2.emptyList();
-        this.pileItems = Collections2.emptyList();
+        m.checkNotNullParameter(context, "context");
+        this.guildMembers = n.emptyList();
+        this.pileItems = n.emptyList();
         this.nicknameStringBuilder = new StringBuilder();
         LayoutInflater.from(context).inflate(R.layout.user_aka_view, this);
         int i2 = R.id.aka_text;
@@ -115,7 +115,7 @@ public final class UserAkaView extends ConstraintLayout {
                     TextView textView3 = (TextView) findViewById(R.id.space_for_measuring);
                     if (textView3 != null) {
                         UserAkaViewBinding userAkaViewBinding = new UserAkaViewBinding(this, textView, pileView, textView2, textView3);
-                        Intrinsics3.checkNotNullExpressionValue(userAkaViewBinding, "UserAkaViewBinding.infla…ater.from(context), this)");
+                        m.checkNotNullExpressionValue(userAkaViewBinding, "UserAkaViewBinding.infla…ater.from(context), this)");
                         this.binding = userAkaViewBinding;
                         return;
                     }

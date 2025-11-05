@@ -1,17 +1,15 @@
 package b.i.c.j.a;
 
-import b.i.c.q.Event3;
-import b.i.c.q.EventHandler2;
 import java.util.Objects;
 
 /* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class d implements EventHandler2 {
-    public static final EventHandler2 a = new d();
+public final /* synthetic */ class d implements b.i.c.q.b {
+    public static final b.i.c.q.b a = new d();
 
-    @Override // b.i.c.q.EventHandler2
-    public final void a(Event3 event3) {
-        Objects.requireNonNull(event3);
+    @Override // b.i.c.q.b
+    public final void a(b.i.c.q.a aVar) {
+        Objects.requireNonNull(aVar);
         Objects.requireNonNull(null);
         throw null;
     }

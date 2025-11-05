@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGooglePlaySubscriptionNotificationReceived.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGooglePlaySubscriptionNotificationReceived implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackGooglePlaySubscriptionNotificationReceived implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long subscriptionId = null;
     private final Long subscriptionType = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackGooglePlaySubscriptionNotificationReceived im
             return false;
         }
         TrackGooglePlaySubscriptionNotificationReceived trackGooglePlaySubscriptionNotificationReceived = (TrackGooglePlaySubscriptionNotificationReceived) other;
-        return Intrinsics3.areEqual(this.subscriptionId, trackGooglePlaySubscriptionNotificationReceived.subscriptionId) && Intrinsics3.areEqual(this.subscriptionType, trackGooglePlaySubscriptionNotificationReceived.subscriptionType) && Intrinsics3.areEqual(this.paymentGateway, trackGooglePlaySubscriptionNotificationReceived.paymentGateway) && Intrinsics3.areEqual(this.paymentGatewayPlanId, trackGooglePlaySubscriptionNotificationReceived.paymentGatewayPlanId) && Intrinsics3.areEqual(this.messageId, trackGooglePlaySubscriptionNotificationReceived.messageId) && Intrinsics3.areEqual(this.version, trackGooglePlaySubscriptionNotificationReceived.version) && Intrinsics3.areEqual(this.packageName, trackGooglePlaySubscriptionNotificationReceived.packageName) && Intrinsics3.areEqual(this.eventTime, trackGooglePlaySubscriptionNotificationReceived.eventTime) && Intrinsics3.areEqual(this.notificationVersion, trackGooglePlaySubscriptionNotificationReceived.notificationVersion) && Intrinsics3.areEqual(this.notificationType, trackGooglePlaySubscriptionNotificationReceived.notificationType) && Intrinsics3.areEqual(this.purchaseToken, trackGooglePlaySubscriptionNotificationReceived.purchaseToken) && Intrinsics3.areEqual(this.subscriptionSkuId, trackGooglePlaySubscriptionNotificationReceived.subscriptionSkuId) && Intrinsics3.areEqual(this.orderId, trackGooglePlaySubscriptionNotificationReceived.orderId);
+        return m.areEqual(this.subscriptionId, trackGooglePlaySubscriptionNotificationReceived.subscriptionId) && m.areEqual(this.subscriptionType, trackGooglePlaySubscriptionNotificationReceived.subscriptionType) && m.areEqual(this.paymentGateway, trackGooglePlaySubscriptionNotificationReceived.paymentGateway) && m.areEqual(this.paymentGatewayPlanId, trackGooglePlaySubscriptionNotificationReceived.paymentGatewayPlanId) && m.areEqual(this.messageId, trackGooglePlaySubscriptionNotificationReceived.messageId) && m.areEqual(this.version, trackGooglePlaySubscriptionNotificationReceived.version) && m.areEqual(this.packageName, trackGooglePlaySubscriptionNotificationReceived.packageName) && m.areEqual(this.eventTime, trackGooglePlaySubscriptionNotificationReceived.eventTime) && m.areEqual(this.notificationVersion, trackGooglePlaySubscriptionNotificationReceived.notificationVersion) && m.areEqual(this.notificationType, trackGooglePlaySubscriptionNotificationReceived.notificationType) && m.areEqual(this.purchaseToken, trackGooglePlaySubscriptionNotificationReceived.purchaseToken) && m.areEqual(this.subscriptionSkuId, trackGooglePlaySubscriptionNotificationReceived.subscriptionSkuId) && m.areEqual(this.orderId, trackGooglePlaySubscriptionNotificationReceived.orderId);
     }
 
     public int hashCode() {
@@ -72,7 +72,7 @@ public final /* data */ class TrackGooglePlaySubscriptionNotificationReceived im
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackGooglePlaySubscriptionNotificationReceived(subscriptionId=");
+        StringBuilder sbU = a.U("TrackGooglePlaySubscriptionNotificationReceived(subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", subscriptionType=");
         sbU.append(this.subscriptionType);
@@ -97,6 +97,6 @@ public final /* data */ class TrackGooglePlaySubscriptionNotificationReceived im
         sbU.append(", subscriptionSkuId=");
         sbU.append(this.subscriptionSkuId);
         sbU.append(", orderId=");
-        return outline.E(sbU, this.orderId, ")");
+        return a.E(sbU, this.orderId, ")");
     }
 }

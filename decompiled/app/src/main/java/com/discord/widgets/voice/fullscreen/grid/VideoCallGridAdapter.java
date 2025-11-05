@@ -9,8 +9,8 @@ import androidx.core.view.DisplayCutoutCompat;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.i.VideoCallGridItemBinding;
-import b.d.b.a.outline;
+import b.a.i.w1;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.databinding.VideoCallGridItemEmbeddedActivityBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
@@ -19,8 +19,8 @@ import com.discord.views.calls.VideoCallParticipantView;
 import com.discord.widgets.voice.fullscreen.CallParticipant;
 import com.discord.widgets.voice.fullscreen.grid.VideoCallGridViewHolder;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -134,14 +134,14 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("CallUiInsets(top=");
+            StringBuilder sbU = a.U("CallUiInsets(top=");
             sbU.append(this.top);
             sbU.append(", bottom=");
             sbU.append(this.bottom);
             sbU.append(", left=");
             sbU.append(this.left);
             sbU.append(", right=");
-            return outline.B(sbU, this.right, ")");
+            return a.B(sbU, this.right, ")");
         }
     }
 
@@ -170,12 +170,12 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
         public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-            return Intrinsics3.areEqual((CallParticipant) this.$oldData.get(oldItemPosition), (CallParticipant) this.$newData.get(newItemPosition));
+            return m.areEqual((CallParticipant) this.$oldData.get(oldItemPosition), (CallParticipant) this.$newData.get(newItemPosition));
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
         public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-            return Intrinsics3.areEqual(((CallParticipant) this.$oldData.get(oldItemPosition)).getId(), ((CallParticipant) this.$newData.get(newItemPosition)).getId());
+            return m.areEqual(((CallParticipant) this.$oldData.get(oldItemPosition)).getId(), ((CallParticipant) this.$newData.get(newItemPosition)).getId());
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
@@ -191,20 +191,20 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
 
     /* JADX WARN: Multi-variable type inference failed */
     public VideoCallGridAdapter(Function1<? super CallParticipant, Unit> function1, Function1<? super CallParticipant, Unit> function12, Function1<? super String, Unit> function13, Function2<? super VideoCallParticipantView.StreamResolution, ? super VideoCallParticipantView.StreamFps, Unit> function2, Function2<? super VideoCallParticipantView.StreamResolution, ? super VideoCallParticipantView.StreamFps, Unit> function22, int i) {
-        Intrinsics3.checkNotNullParameter(function1, "onParticipantTapped");
-        Intrinsics3.checkNotNullParameter(function12, "onParticipantLongClicked");
-        Intrinsics3.checkNotNullParameter(function13, "onWatchStreamClicked");
-        Intrinsics3.checkNotNullParameter(function2, "onStreamQualityIndicatorShown");
-        Intrinsics3.checkNotNullParameter(function22, "onStreamQualityIndicatorClick");
+        m.checkNotNullParameter(function1, "onParticipantTapped");
+        m.checkNotNullParameter(function12, "onParticipantLongClicked");
+        m.checkNotNullParameter(function13, "onWatchStreamClicked");
+        m.checkNotNullParameter(function2, "onStreamQualityIndicatorShown");
+        m.checkNotNullParameter(function22, "onStreamQualityIndicatorClick");
         this.onParticipantTapped = function1;
         this.onParticipantLongClicked = function12;
         this.onWatchStreamClicked = function13;
         this.onStreamQualityIndicatorShown = function2;
         this.onStreamQualityIndicatorClick = function22;
         this.spanCount = i;
-        this.data = Collections2.emptyList();
+        this.data = n.emptyList();
         this.callUiInsets = new CallUiInsets(0, 0, 0, 0);
-        this.spanSizeLookup = new VideoCallGridAdapter2(this);
+        this.spanSizeLookup = new VideoCallGridAdapter$spanSizeLookup$1(this);
     }
 
     public static final /* synthetic */ List access$getData$p(VideoCallGridAdapter videoCallGridAdapter) {
@@ -276,9 +276,9 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
     }
 
     public final void setData(List<? extends CallParticipant> data) {
-        Intrinsics3.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(data, "data");
         DiffUtil.DiffResult diffResultCalculateDiff = DiffUtil.calculateDiff(getDiffUtilCallback(this.data, data), true);
-        Intrinsics3.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(g…a, newData = data), true)");
+        m.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(g…a, newData = data), true)");
         this.data = data;
         diffResultCalculateDiff.dispatchUpdatesTo(this);
         int i = 0;
@@ -286,7 +286,7 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
             Iterator<T> it = data.iterator();
             while (it.hasNext()) {
                 if ((((CallParticipant) it.next()) instanceof CallParticipant.EmbeddedActivityParticipant) && (i = i + 1) < 0) {
-                    Collections2.throwCountOverflow();
+                    n.throwCountOverflow();
                 }
             }
         }
@@ -308,7 +308,7 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
     }
 
     public void onBindViewHolder(VideoCallGridViewHolder holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         if (!(holder instanceof VideoCallGridViewHolder.UserOrStream)) {
             if (holder instanceof VideoCallGridViewHolder.EmbeddedActivity) {
                 CallParticipant callParticipant = this.data.get(position);
@@ -326,18 +326,18 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public VideoCallGridViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
         if (viewType == 0) {
             View viewInflate = layoutInflaterFrom.inflate(R.layout.video_call_grid_item, parent, false);
             Objects.requireNonNull(viewInflate, "rootView");
             VideoCallParticipantView videoCallParticipantView = (VideoCallParticipantView) viewInflate;
-            Intrinsics3.checkNotNullExpressionValue(new VideoCallGridItemBinding(videoCallParticipantView), "VideoCallGridItemBinding…rent, false\n            )");
-            Intrinsics3.checkNotNullExpressionValue(videoCallParticipantView, "VideoCallGridItemBinding… false\n            ).root");
+            m.checkNotNullExpressionValue(new w1(videoCallParticipantView), "VideoCallGridItemBinding…rent, false\n            )");
+            m.checkNotNullExpressionValue(videoCallParticipantView, "VideoCallGridItemBinding… false\n            ).root");
             return new VideoCallGridViewHolder.UserOrStream(videoCallParticipantView);
         }
         if (viewType != 1) {
-            throw new IllegalStateException(outline.q("invalid view type: ", viewType));
+            throw new IllegalStateException(a.q("invalid view type: ", viewType));
         }
         View viewInflate2 = layoutInflaterFrom.inflate(R.layout.video_call_grid_item_embedded_activity, parent, false);
         int i = R.id.activity_participant_avatars;
@@ -356,7 +356,7 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
                         View viewFindViewById = viewInflate2.findViewById(R.id.app_background_overlay);
                         if (viewFindViewById != null) {
                             VideoCallGridItemEmbeddedActivityBinding videoCallGridItemEmbeddedActivityBinding = new VideoCallGridItemEmbeddedActivityBinding((FrameLayout) viewInflate2, pileView, textView, textView2, simpleDraweeView, viewFindViewById);
-                            Intrinsics3.checkNotNullExpressionValue(videoCallGridItemEmbeddedActivityBinding, "VideoCallGridItemEmbedde…tInflater, parent, false)");
+                            m.checkNotNullExpressionValue(videoCallGridItemEmbeddedActivityBinding, "VideoCallGridItemEmbedde…tInflater, parent, false)");
                             return new VideoCallGridViewHolder.EmbeddedActivity(videoCallGridItemEmbeddedActivityBinding);
                         }
                     }

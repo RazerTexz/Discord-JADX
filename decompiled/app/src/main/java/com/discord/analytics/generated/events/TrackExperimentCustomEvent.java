@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackExperimentCustomEvent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackExperimentCustomEvent implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackExperimentCustomEvent implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence experimentName = null;
     private final Long experimentBucket = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackExperimentCustomEvent implements AnalyticsSch
             return false;
         }
         TrackExperimentCustomEvent trackExperimentCustomEvent = (TrackExperimentCustomEvent) other;
-        return Intrinsics3.areEqual(this.experimentName, trackExperimentCustomEvent.experimentName) && Intrinsics3.areEqual(this.experimentBucket, trackExperimentCustomEvent.experimentBucket) && Intrinsics3.areEqual(this.eventName, trackExperimentCustomEvent.eventName);
+        return m.areEqual(this.experimentName, trackExperimentCustomEvent.experimentName) && m.areEqual(this.experimentBucket, trackExperimentCustomEvent.experimentBucket) && m.areEqual(this.eventName, trackExperimentCustomEvent.eventName);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackExperimentCustomEvent implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackExperimentCustomEvent(experimentName=");
+        StringBuilder sbU = a.U("TrackExperimentCustomEvent(experimentName=");
         sbU.append(this.experimentName);
         sbU.append(", experimentBucket=");
         sbU.append(this.experimentBucket);
         sbU.append(", eventName=");
-        return outline.E(sbU, this.eventName, ")");
+        return a.E(sbU, this.eventName, ")");
     }
 }

@@ -1,6 +1,6 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: ModelUserAffinity.kt */
 /* loaded from: classes.dex */
@@ -62,7 +62,7 @@ public final /* data */ class ModelUserAffinity {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelUserAffinity(userId=");
+        StringBuilder sbU = a.U("ModelUserAffinity(userId=");
         sbU.append(this.userId);
         sbU.append(", affinity=");
         sbU.append(this.affinity);

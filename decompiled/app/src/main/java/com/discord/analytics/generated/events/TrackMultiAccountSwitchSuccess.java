@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackMultiAccountSwitchSuccess.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackMultiAccountSwitchSuccess implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackMultiAccountSwitchSuccess implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long fromUserId = null;
     private final List<Long> linkedUserIds = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackMultiAccountSwitchSuccess implements Analytic
             return false;
         }
         TrackMultiAccountSwitchSuccess trackMultiAccountSwitchSuccess = (TrackMultiAccountSwitchSuccess) other;
-        return Intrinsics3.areEqual(this.fromUserId, trackMultiAccountSwitchSuccess.fromUserId) && Intrinsics3.areEqual(this.linkedUserIds, trackMultiAccountSwitchSuccess.linkedUserIds);
+        return m.areEqual(this.fromUserId, trackMultiAccountSwitchSuccess.fromUserId) && m.areEqual(this.linkedUserIds, trackMultiAccountSwitchSuccess.linkedUserIds);
     }
 
     public int hashCode() {
@@ -40,9 +40,9 @@ public final /* data */ class TrackMultiAccountSwitchSuccess implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackMultiAccountSwitchSuccess(fromUserId=");
+        StringBuilder sbU = a.U("TrackMultiAccountSwitchSuccess(fromUserId=");
         sbU.append(this.fromUserId);
         sbU.append(", linkedUserIds=");
-        return outline.L(sbU, this.linkedUserIds, ")");
+        return a.L(sbU, this.linkedUserIds, ")");
     }
 }

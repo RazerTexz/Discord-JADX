@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import androidx.annotation.WorkerThread;
 import androidx.collection.ArrayMap;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.h.l.g1;
 import b.i.a.f.h.l.l0;
 import java.io.IOException;
@@ -135,7 +134,7 @@ public final class ba extends i9 {
         ArrayMap arrayMap3;
         Cursor cursor2;
         Cursor cursorQuery2;
-        AnimatableValueParser.w(str);
+        b.c.a.a0.d.w(str);
         Objects.requireNonNull(list, "null reference");
         Objects.requireNonNull(list2, "null reference");
         this.d = str;
@@ -163,7 +162,7 @@ public final class ba extends i9 {
             String str6 = this.d;
             gVarQ2.n();
             gVarQ2.b();
-            AnimatableValueParser.w(str6);
+            b.c.a.a0.d.w(str6);
             ContentValues contentValues = new ContentValues();
             ?? r5 = "current_session_count";
             contentValues.put("current_session_count", (Integer) 0);
@@ -186,7 +185,7 @@ public final class ba extends i9 {
             g gVarQ3 = q();
             String str7 = this.d;
             Objects.requireNonNull(gVarQ3);
-            AnimatableValueParser.w(str7);
+            b.c.a.a0.d.w(str7);
             ?? arrayMap4 = new ArrayMap();
             try {
                 try {
@@ -207,7 +206,7 @@ public final class ba extends i9 {
                         str2 = this.d;
                         gVarQ.n();
                         gVarQ.b();
-                        AnimatableValueParser.w(str2);
+                        b.c.a.a0.d.w(str2);
                         try {
                             cursorQuery = gVarQ.t().query("audience_filter_values", new String[]{"audience_id", "current_results"}, "app_id=?", new String[]{str2}, null, null, null);
                             try {
@@ -322,7 +321,7 @@ public final class ba extends i9 {
         str2 = this.d;
         gVarQ.n();
         gVarQ.b();
-        AnimatableValueParser.w(str2);
+        b.c.a.a0.d.w(str2);
         try {
             cursorQuery = gVarQ.t().query("audience_filter_values", new String[]{"audience_id", "current_results"}, "app_id=?", new String[]{str2}, null, null, null);
         } catch (SQLiteException e6) {
@@ -395,7 +394,7 @@ public final class ba extends i9 {
             HashSet hashSet = new HashSet(map2.keySet());
             if (z2) {
                 String str9 = this.d;
-                AnimatableValueParser.w(str9);
+                b.c.a.a0.d.w(str9);
                 ArrayMap arrayMap6 = new ArrayMap();
                 if (map2.isEmpty()) {
                     str5 = "audience_id";
@@ -403,7 +402,7 @@ public final class ba extends i9 {
                     g gVarQ4 = q();
                     gVarQ4.n();
                     gVarQ4.b();
-                    AnimatableValueParser.w(str9);
+                    b.c.a.a0.d.w(str9);
                     Map arrayMap7 = new ArrayMap();
                     SQLiteDatabase sQLiteDatabaseT2 = gVarQ4.t();
                     try {
@@ -780,7 +779,7 @@ public final class ba extends i9 {
             b.i.a.f.h.l.g1 g1VarA = y0VarA.A();
             gVarQ6.n();
             gVarQ6.b();
-            AnimatableValueParser.w(str11);
+            b.c.a.a0.d.w(str11);
             Objects.requireNonNull(g1VarA, "null reference");
             byte[] bArrD = g1VarA.d();
             ContentValues contentValues2 = new ContentValues();

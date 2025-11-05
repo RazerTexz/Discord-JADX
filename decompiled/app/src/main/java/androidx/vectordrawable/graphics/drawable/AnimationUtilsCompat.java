@@ -16,7 +16,7 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.IOException;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -67,7 +67,7 @@ public class AnimationUtilsCompat {
                         linearInterpolator = new BounceInterpolator();
                     } else {
                         if (!name.equals("pathInterpolator")) {
-                            StringBuilder sbU = outline.U("Unknown interpolator name: ");
+                            StringBuilder sbU = a.U("Unknown interpolator name: ");
                             sbU.append(xmlPullParser.getName());
                             throw new RuntimeException(sbU.toString());
                         }

@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.e.k.o0;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 
@@ -36,8 +36,8 @@ public class ConnectionTelemetryConfiguration extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@RecentlyNonNull Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.s2(parcel, 1, this.j, i, false);
+        int iY2 = d.y2(parcel, 20293);
+        d.s2(parcel, 1, this.j, i, false);
         boolean z2 = this.k;
         parcel.writeInt(262146);
         parcel.writeInt(z2 ? 1 : 0);
@@ -46,19 +46,19 @@ public class ConnectionTelemetryConfiguration extends AbstractSafeParcelable {
         parcel.writeInt(z3 ? 1 : 0);
         int[] iArr = this.m;
         if (iArr != null) {
-            int iY22 = AnimatableValueParser.y2(parcel, 4);
+            int iY22 = d.y2(parcel, 4);
             parcel.writeIntArray(iArr);
-            AnimatableValueParser.A2(parcel, iY22);
+            d.A2(parcel, iY22);
         }
         int i2 = this.n;
         parcel.writeInt(262149);
         parcel.writeInt(i2);
         int[] iArr2 = this.o;
         if (iArr2 != null) {
-            int iY23 = AnimatableValueParser.y2(parcel, 6);
+            int iY23 = d.y2(parcel, 6);
             parcel.writeIntArray(iArr2);
-            AnimatableValueParser.A2(parcel, iY23);
+            d.A2(parcel, iY23);
         }
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

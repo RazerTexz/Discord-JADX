@@ -1,8 +1,8 @@
 package com.discord.api.thread;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ThreadMembersUpdate.kt */
@@ -41,7 +41,7 @@ public final /* data */ class ThreadMembersUpdate {
             return false;
         }
         ThreadMembersUpdate threadMembersUpdate = (ThreadMembersUpdate) other;
-        return this.id == threadMembersUpdate.id && this.guildId == threadMembersUpdate.guildId && this.memberCount == threadMembersUpdate.memberCount && Intrinsics3.areEqual(this.removedMemberIds, threadMembersUpdate.removedMemberIds) && Intrinsics3.areEqual(this.memberIdsPreview, threadMembersUpdate.memberIdsPreview) && Intrinsics3.areEqual(this.addedMembers, threadMembersUpdate.addedMembers);
+        return this.id == threadMembersUpdate.id && this.guildId == threadMembersUpdate.guildId && this.memberCount == threadMembersUpdate.memberCount && m.areEqual(this.removedMemberIds, threadMembersUpdate.removedMemberIds) && m.areEqual(this.memberIdsPreview, threadMembersUpdate.memberIdsPreview) && m.areEqual(this.addedMembers, threadMembersUpdate.addedMembers);
     }
 
     public int hashCode() {
@@ -57,7 +57,7 @@ public final /* data */ class ThreadMembersUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ThreadMembersUpdate(id=");
+        StringBuilder sbU = a.U("ThreadMembersUpdate(id=");
         sbU.append(this.id);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -68,6 +68,6 @@ public final /* data */ class ThreadMembersUpdate {
         sbU.append(", memberIdsPreview=");
         sbU.append(this.memberIdsPreview);
         sbU.append(", addedMembers=");
-        return outline.L(sbU, this.addedMembers, ")");
+        return a.L(sbU, this.addedMembers, ")");
     }
 }

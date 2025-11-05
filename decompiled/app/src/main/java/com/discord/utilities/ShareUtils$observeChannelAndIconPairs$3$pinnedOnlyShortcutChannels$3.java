@@ -1,12 +1,12 @@
 package com.discord.utilities;
 
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: ShareUtils.kt */
 /* loaded from: classes2.dex */
-public final class ShareUtils$observeChannelAndIconPairs$3$pinnedOnlyShortcutChannels$3 extends Lambda implements Function1<Long, Boolean> {
+public final class ShareUtils$observeChannelAndIconPairs$3$pinnedOnlyShortcutChannels$3 extends o implements Function1<Long, Boolean> {
     public final /* synthetic */ Set $directShareChannelIds;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

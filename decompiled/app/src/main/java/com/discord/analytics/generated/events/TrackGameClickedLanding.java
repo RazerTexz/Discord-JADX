@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackGameClickedLanding.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackGameClickedLanding implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackGameClickedLanding implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence game = null;
     private final transient String analyticsSchemaTypeName = "game_clicked_landing";
@@ -21,7 +21,7 @@ public final /* data */ class TrackGameClickedLanding implements AnalyticsSchema
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackGameClickedLanding) && Intrinsics3.areEqual(this.game, ((TrackGameClickedLanding) other).game);
+            return (other instanceof TrackGameClickedLanding) && m.areEqual(this.game, ((TrackGameClickedLanding) other).game);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackGameClickedLanding implements AnalyticsSchema
     }
 
     public String toString() {
-        return outline.E(outline.U("TrackGameClickedLanding(game="), this.game, ")");
+        return a.E(a.U("TrackGameClickedLanding(game="), this.game, ")");
     }
 }

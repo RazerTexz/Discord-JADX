@@ -22,7 +22,7 @@ import android.widget.Toast;
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
 import b.i.a.f.e.o.f;
-import b.k.a.a.AlphaPatternDrawable;
+import b.k.a.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.google.android.material.badge.BadgeDrawable;
 import java.util.Locale;
@@ -197,9 +197,9 @@ public class ColorPanelView extends View {
             }
             Rect rect3 = this.o;
             this.p = new Rect(rect3.left + 0, rect3.top + 0, rect3.right + 0, rect3.bottom + 0);
-            AlphaPatternDrawable alphaPatternDrawable = new AlphaPatternDrawable(f.S(getContext(), 4.0f));
-            this.j = alphaPatternDrawable;
-            alphaPatternDrawable.setBounds(Math.round(this.p.left), Math.round(this.p.top), Math.round(this.p.right), Math.round(this.p.bottom));
+            a aVar = new a(f.S(getContext(), 4.0f));
+            this.j = aVar;
+            aVar.setBounds(Math.round(this.p.left), Math.round(this.p.top), Math.round(this.p.right), Math.round(this.p.bottom));
         }
     }
 

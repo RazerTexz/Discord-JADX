@@ -15,9 +15,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 import java.util.NoSuchElementException;
-import x.a.a.ICustomTabsCallback;
-import x.a.a.ICustomTabsService;
-import y.a.a.a;
+import x.a.a.a;
+import x.a.a.b;
 
 /* loaded from: classes.dex */
 public abstract class CustomTabsService extends Service {
@@ -37,10 +36,10 @@ public abstract class CustomTabsService extends Service {
     public static final int RESULT_SUCCESS = 0;
     public static final String TRUSTED_WEB_ACTIVITY_CATEGORY = "androidx.browser.trusted.category.TrustedWebActivities";
     public final SimpleArrayMap<IBinder, IBinder.DeathRecipient> mDeathRecipientMap = new SimpleArrayMap<>();
-    private ICustomTabsService.a mBinder = new AnonymousClass1();
+    private b.a mBinder = new AnonymousClass1();
 
     /* renamed from: androidx.browser.customtabs.CustomTabsService$1, reason: invalid class name */
-    public class AnonymousClass1 extends ICustomTabsService.a {
+    public class AnonymousClass1 extends b.a {
         public AnonymousClass1() {
         }
 
@@ -54,13 +53,13 @@ public abstract class CustomTabsService extends Service {
             return pendingIntent;
         }
 
-        private boolean newSessionInternal(@NonNull ICustomTabsCallback iCustomTabsCallback, @Nullable PendingIntent pendingIntent) {
-            CustomTabsSessionToken customTabsSessionToken = new CustomTabsSessionToken(iCustomTabsCallback, pendingIntent);
+        private boolean newSessionInternal(@NonNull a aVar, @Nullable PendingIntent pendingIntent) {
+            CustomTabsSessionToken customTabsSessionToken = new CustomTabsSessionToken(aVar, pendingIntent);
             try {
-                a aVar = new a(this, customTabsSessionToken);
+                y.a.a.a aVar2 = new y.a.a.a(this, customTabsSessionToken);
                 synchronized (CustomTabsService.this.mDeathRecipientMap) {
-                    iCustomTabsCallback.asBinder().linkToDeath(aVar, 0);
-                    CustomTabsService.this.mDeathRecipientMap.put(iCustomTabsCallback.asBinder(), aVar);
+                    aVar.asBinder().linkToDeath(aVar2, 0);
+                    CustomTabsService.this.mDeathRecipientMap.put(aVar.asBinder(), aVar2);
                 }
                 return CustomTabsService.this.newSession(customTabsSessionToken);
             } catch (RemoteException unused) {
@@ -68,57 +67,57 @@ public abstract class CustomTabsService extends Service {
             }
         }
 
-        @Override // x.a.a.ICustomTabsService
+        @Override // x.a.a.b
         public Bundle extraCommand(@NonNull String str, @Nullable Bundle bundle) {
             return CustomTabsService.this.extraCommand(str, bundle);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean mayLaunchUrl(@Nullable ICustomTabsCallback iCustomTabsCallback, @Nullable Uri uri, @Nullable Bundle bundle, @Nullable List<Bundle> list) {
-            return CustomTabsService.this.mayLaunchUrl(new CustomTabsSessionToken(iCustomTabsCallback, getSessionIdFromBundle(bundle)), uri, bundle, list);
+        @Override // x.a.a.b
+        public boolean mayLaunchUrl(@Nullable a aVar, @Nullable Uri uri, @Nullable Bundle bundle, @Nullable List<Bundle> list) {
+            return CustomTabsService.this.mayLaunchUrl(new CustomTabsSessionToken(aVar, getSessionIdFromBundle(bundle)), uri, bundle, list);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean newSession(@NonNull ICustomTabsCallback iCustomTabsCallback) {
-            return newSessionInternal(iCustomTabsCallback, null);
+        @Override // x.a.a.b
+        public boolean newSession(@NonNull a aVar) {
+            return newSessionInternal(aVar, null);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean newSessionWithExtras(@NonNull ICustomTabsCallback iCustomTabsCallback, @Nullable Bundle bundle) {
-            return newSessionInternal(iCustomTabsCallback, getSessionIdFromBundle(bundle));
+        @Override // x.a.a.b
+        public boolean newSessionWithExtras(@NonNull a aVar, @Nullable Bundle bundle) {
+            return newSessionInternal(aVar, getSessionIdFromBundle(bundle));
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public int postMessage(@NonNull ICustomTabsCallback iCustomTabsCallback, @NonNull String str, @Nullable Bundle bundle) {
-            return CustomTabsService.this.postMessage(new CustomTabsSessionToken(iCustomTabsCallback, getSessionIdFromBundle(bundle)), str, bundle);
+        @Override // x.a.a.b
+        public int postMessage(@NonNull a aVar, @NonNull String str, @Nullable Bundle bundle) {
+            return CustomTabsService.this.postMessage(new CustomTabsSessionToken(aVar, getSessionIdFromBundle(bundle)), str, bundle);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean receiveFile(@NonNull ICustomTabsCallback iCustomTabsCallback, @NonNull Uri uri, int i, @Nullable Bundle bundle) {
-            return CustomTabsService.this.receiveFile(new CustomTabsSessionToken(iCustomTabsCallback, getSessionIdFromBundle(bundle)), uri, i, bundle);
+        @Override // x.a.a.b
+        public boolean receiveFile(@NonNull a aVar, @NonNull Uri uri, int i, @Nullable Bundle bundle) {
+            return CustomTabsService.this.receiveFile(new CustomTabsSessionToken(aVar, getSessionIdFromBundle(bundle)), uri, i, bundle);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean requestPostMessageChannel(@NonNull ICustomTabsCallback iCustomTabsCallback, @NonNull Uri uri) {
-            return CustomTabsService.this.requestPostMessageChannel(new CustomTabsSessionToken(iCustomTabsCallback, null), uri);
+        @Override // x.a.a.b
+        public boolean requestPostMessageChannel(@NonNull a aVar, @NonNull Uri uri) {
+            return CustomTabsService.this.requestPostMessageChannel(new CustomTabsSessionToken(aVar, null), uri);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean requestPostMessageChannelWithExtras(@NonNull ICustomTabsCallback iCustomTabsCallback, @NonNull Uri uri, @NonNull Bundle bundle) {
-            return CustomTabsService.this.requestPostMessageChannel(new CustomTabsSessionToken(iCustomTabsCallback, getSessionIdFromBundle(bundle)), uri);
+        @Override // x.a.a.b
+        public boolean requestPostMessageChannelWithExtras(@NonNull a aVar, @NonNull Uri uri, @NonNull Bundle bundle) {
+            return CustomTabsService.this.requestPostMessageChannel(new CustomTabsSessionToken(aVar, getSessionIdFromBundle(bundle)), uri);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean updateVisuals(@NonNull ICustomTabsCallback iCustomTabsCallback, @Nullable Bundle bundle) {
-            return CustomTabsService.this.updateVisuals(new CustomTabsSessionToken(iCustomTabsCallback, getSessionIdFromBundle(bundle)), bundle);
+        @Override // x.a.a.b
+        public boolean updateVisuals(@NonNull a aVar, @Nullable Bundle bundle) {
+            return CustomTabsService.this.updateVisuals(new CustomTabsSessionToken(aVar, getSessionIdFromBundle(bundle)), bundle);
         }
 
-        @Override // x.a.a.ICustomTabsService
-        public boolean validateRelationship(@NonNull ICustomTabsCallback iCustomTabsCallback, int i, @NonNull Uri uri, @Nullable Bundle bundle) {
-            return CustomTabsService.this.validateRelationship(new CustomTabsSessionToken(iCustomTabsCallback, getSessionIdFromBundle(bundle)), i, uri, bundle);
+        @Override // x.a.a.b
+        public boolean validateRelationship(@NonNull a aVar, int i, @NonNull Uri uri, @Nullable Bundle bundle) {
+            return CustomTabsService.this.validateRelationship(new CustomTabsSessionToken(aVar, getSessionIdFromBundle(bundle)), i, uri, bundle);
         }
 
-        @Override // x.a.a.ICustomTabsService
+        @Override // x.a.a.b
         public boolean warmup(long j) {
             return CustomTabsService.this.warmup(j);
         }

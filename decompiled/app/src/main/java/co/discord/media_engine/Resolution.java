@@ -1,6 +1,6 @@
 package co.discord.media_engine;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -61,9 +61,9 @@ public final /* data */ class Resolution {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Resolution(width=");
+        StringBuilder sbU = a.U("Resolution(width=");
         sbU.append(this.width);
         sbU.append(", height=");
-        return outline.B(sbU, this.height, ")");
+        return a.B(sbU, this.height, ")");
     }
 }

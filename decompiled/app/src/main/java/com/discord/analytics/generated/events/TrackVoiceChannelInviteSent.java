@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackVoiceChannelInviteSent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVoiceChannelInviteSent implements AnalyticsSchema, TrackBase2, TrackGuild2 {
+public final /* data */ class TrackVoiceChannelInviteSent implements AnalyticsSchema, TrackBaseReceiver, TrackGuildReceiver {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
     private final Long recipientId = null;
@@ -19,13 +19,13 @@ public final /* data */ class TrackVoiceChannelInviteSent implements AnalyticsSc
     private final CharSequence entryPoint = null;
     private final transient String analyticsSchemaTypeName = "voice_channel_invite_sent";
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -44,7 +44,7 @@ public final /* data */ class TrackVoiceChannelInviteSent implements AnalyticsSc
             return false;
         }
         TrackVoiceChannelInviteSent trackVoiceChannelInviteSent = (TrackVoiceChannelInviteSent) other;
-        return Intrinsics3.areEqual(this.recipientId, trackVoiceChannelInviteSent.recipientId) && Intrinsics3.areEqual(this.inviteGuildId, trackVoiceChannelInviteSent.inviteGuildId) && Intrinsics3.areEqual(this.inviteChannelId, trackVoiceChannelInviteSent.inviteChannelId) && Intrinsics3.areEqual(this.entryPoint, trackVoiceChannelInviteSent.entryPoint);
+        return m.areEqual(this.recipientId, trackVoiceChannelInviteSent.recipientId) && m.areEqual(this.inviteGuildId, trackVoiceChannelInviteSent.inviteGuildId) && m.areEqual(this.inviteChannelId, trackVoiceChannelInviteSent.inviteChannelId) && m.areEqual(this.entryPoint, trackVoiceChannelInviteSent.entryPoint);
     }
 
     public int hashCode() {
@@ -59,13 +59,13 @@ public final /* data */ class TrackVoiceChannelInviteSent implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVoiceChannelInviteSent(recipientId=");
+        StringBuilder sbU = a.U("TrackVoiceChannelInviteSent(recipientId=");
         sbU.append(this.recipientId);
         sbU.append(", inviteGuildId=");
         sbU.append(this.inviteGuildId);
         sbU.append(", inviteChannelId=");
         sbU.append(this.inviteChannelId);
         sbU.append(", entryPoint=");
-        return outline.E(sbU, this.entryPoint, ")");
+        return a.E(sbU, this.entryPoint, ")");
     }
 }

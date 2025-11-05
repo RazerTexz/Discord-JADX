@@ -8,24 +8,14 @@ import android.net.Uri;
 import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.d.ImmutableMap;
-import b.f.d.d.Objects2;
-import b.f.d.e.FLog;
-import b.f.e.AbstractDataSource3;
-import b.f.e.BaseDataSubscriber;
-import b.f.g.b.DeferredReleaser;
-import b.f.g.b.DeferredReleaserConcurrentImpl;
-import b.f.g.b.DraweeEventTracker;
-import b.f.g.b.RetryManager;
-import b.f.g.c.BaseControllerListener;
-import b.f.g.c.ForwardingControllerListener;
-import b.f.g.e.ScaleTypeDrawable;
-import b.f.g.g.GestureDetector;
-import b.f.g.h.SettableDraweeHierarchy;
-import b.f.h.b.a.ControllerListener2;
-import b.f.h.b.a.ForwardingControllerListener2;
-import b.f.j.r.FrescoSystrace;
+import b.f.d.d.f;
+import b.f.d.d.i;
+import b.f.g.b.a;
+import b.f.g.b.c;
+import b.f.g.b.d;
+import b.f.g.e.p;
+import b.f.g.g.a;
+import b.f.h.b.a.b;
 import com.facebook.datasource.DataSource;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.interfaces.DraweeController;
@@ -35,20 +25,20 @@ import java.util.Objects;
 import java.util.concurrent.Executor;
 
 /* loaded from: classes.dex */
-public abstract class AbstractDraweeController<T, INFO> implements DraweeController, DeferredReleaser.a, GestureDetector.a {
-    public static final Map<String, Object> a = ImmutableMap.of("component_tag", "drawee");
+public abstract class AbstractDraweeController<T, INFO> implements DraweeController, a.InterfaceC0068a, a.InterfaceC0069a {
+    public static final Map<String, Object> a = f.of("component_tag", "drawee");
 
     /* renamed from: b, reason: collision with root package name */
-    public static final Map<String, Object> f2885b = ImmutableMap.of("origin", "memory_bitmap", "origin_sub", "shortcut");
+    public static final Map<String, Object> f2885b = f.of("origin", "memory_bitmap", "origin_sub", "shortcut");
     public static final Class<?> c = AbstractDraweeController.class;
-    public final DraweeEventTracker d;
-    public final DeferredReleaser e;
+    public final c d;
+    public final b.f.g.b.a e;
     public final Executor f;
-    public RetryManager g;
-    public GestureDetector h;
+    public d g;
+    public b.f.g.g.a h;
     public ControllerListener<INFO> i;
-    public ForwardingControllerListener2<INFO> j;
-    public SettableDraweeHierarchy k;
+    public b.f.h.b.a.c<INFO> j;
+    public b.f.g.h.a k;
     public Drawable l;
     public String m;
     public Object n;
@@ -64,7 +54,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     public boolean v;
     public Drawable w;
 
-    public class a extends BaseDataSubscriber<T> {
+    public class a extends b.f.e.d<T> {
         public final /* synthetic */ String a;
 
         /* renamed from: b, reason: collision with root package name */
@@ -75,7 +65,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
             this.f2887b = z2;
         }
 
-        @Override // b.f.e.BaseDataSubscriber
+        @Override // b.f.e.d
         public void onFailureImpl(DataSource<T> dataSource) {
             AbstractDraweeController abstractDraweeController = AbstractDraweeController.this;
             String str = this.a;
@@ -84,7 +74,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
             abstractDraweeController.u(str, dataSource, thD, true);
         }
 
-        @Override // b.f.e.BaseDataSubscriber
+        @Override // b.f.e.d
         public void onNewResultImpl(DataSource<T> dataSource) {
             boolean zC = dataSource.c();
             boolean zE = dataSource.e();
@@ -107,17 +97,17 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
             }
         }
 
-        @Override // b.f.e.BaseDataSubscriber, b.f.e.DataSubscriber
+        @Override // b.f.e.d, b.f.e.f
         public void onProgressUpdate(DataSource<T> dataSource) {
-            AbstractDataSource3 abstractDataSource3 = (AbstractDataSource3) dataSource;
-            boolean zC = abstractDataSource3.c();
-            float progress = abstractDataSource3.getProgress();
+            b.f.e.c cVar = (b.f.e.c) dataSource;
+            boolean zC = cVar.c();
+            float progress = cVar.getProgress();
             AbstractDraweeController abstractDraweeController = AbstractDraweeController.this;
             String str = this.a;
             Map<String, Object> map = AbstractDraweeController.a;
-            if (!abstractDraweeController.o(str, abstractDataSource3)) {
+            if (!abstractDraweeController.o(str, cVar)) {
                 abstractDraweeController.p("ignore_old_datasource @ onProgress", null);
-                abstractDataSource3.close();
+                cVar.close();
             } else {
                 if (zC) {
                     return;
@@ -127,14 +117,14 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    public static class b<INFO> extends ForwardingControllerListener<INFO> {
+    public static class b<INFO> extends b.f.g.c.d<INFO> {
     }
 
-    public AbstractDraweeController(DeferredReleaser deferredReleaser, Executor executor, String str, Object obj) {
-        this.d = DraweeEventTracker.f494b ? new DraweeEventTracker() : DraweeEventTracker.a;
-        this.j = new ForwardingControllerListener2<>();
+    public AbstractDraweeController(b.f.g.b.a aVar, Executor executor, String str, Object obj) {
+        this.d = c.f494b ? new c() : c.a;
+        this.j = new b.f.h.b.a.c<>();
         this.v = true;
-        this.e = deferredReleaser;
+        this.e = aVar;
         this.f = executor;
         n(null, null);
     }
@@ -169,9 +159,9 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     public final boolean D() {
-        RetryManager retryManager;
-        if (this.q && (retryManager = this.g) != null) {
-            if (retryManager.a && retryManager.c < retryManager.f499b) {
+        d dVar;
+        if (this.q && (dVar = this.g) != null) {
+            if (dVar.a && dVar.c < dVar.f499b) {
                 return true;
             }
         }
@@ -179,59 +169,59 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     public void E() {
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
         T tH = h();
         if (tH != null) {
-            FrescoSystrace.b();
+            b.f.j.r.b.b();
             this.t = null;
             this.p = true;
             this.q = false;
-            this.d.a(DraweeEventTracker.a.ON_SUBMIT_CACHE_HIT);
+            this.d.a(c.a.ON_SUBMIT_CACHE_HIT);
             B(this.t, l(tH));
             v(this.m, tH);
             w(this.m, this.t, tH, 1.0f, true, true, true);
-            FrescoSystrace.b();
-            FrescoSystrace.b();
+            b.f.j.r.b.b();
+            b.f.j.r.b.b();
             return;
         }
-        this.d.a(DraweeEventTracker.a.ON_DATASOURCE_SUBMIT);
+        this.d.a(c.a.ON_DATASOURCE_SUBMIT);
         this.k.d(0.0f, true);
         this.p = true;
         this.q = false;
         DataSource<T> dataSourceJ = j();
         this.t = dataSourceJ;
         B(dataSourceJ, null);
-        if (FLog.h(2)) {
-            FLog.j(c, "controller %x %s: submitRequest: dataSource: %x", Integer.valueOf(System.identityHashCode(this)), this.m, Integer.valueOf(System.identityHashCode(this.t)));
+        if (b.f.d.e.a.h(2)) {
+            b.f.d.e.a.j(c, "controller %x %s: submitRequest: dataSource: %x", Integer.valueOf(System.identityHashCode(this)), this.m, Integer.valueOf(System.identityHashCode(this.t)));
         }
         this.t.f(new a(this.m, this.t.b()), this.f);
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
     public void a() {
-        FrescoSystrace.b();
-        if (FLog.h(2)) {
+        b.f.j.r.b.b();
+        if (b.f.d.e.a.h(2)) {
             System.identityHashCode(this);
         }
-        this.d.a(DraweeEventTracker.a.ON_DETACH_CONTROLLER);
+        this.d.a(c.a.ON_DETACH_CONTROLLER);
         this.o = false;
-        DeferredReleaserConcurrentImpl deferredReleaserConcurrentImpl = (DeferredReleaserConcurrentImpl) this.e;
-        Objects.requireNonNull(deferredReleaserConcurrentImpl);
+        b.f.g.b.b bVar = (b.f.g.b.b) this.e;
+        Objects.requireNonNull(bVar);
         if (Looper.getMainLooper().getThread() == Thread.currentThread()) {
-            synchronized (deferredReleaserConcurrentImpl.f493b) {
-                if (!deferredReleaserConcurrentImpl.d.contains(this)) {
-                    deferredReleaserConcurrentImpl.d.add(this);
-                    boolean z2 = deferredReleaserConcurrentImpl.d.size() == 1;
+            synchronized (bVar.f493b) {
+                if (!bVar.d.contains(this)) {
+                    bVar.d.add(this);
+                    boolean z2 = bVar.d.size() == 1;
                     if (z2) {
-                        deferredReleaserConcurrentImpl.c.post(deferredReleaserConcurrentImpl.f);
+                        bVar.c.post(bVar.f);
                     }
                 }
             }
         } else {
             release();
         }
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
@@ -250,40 +240,40 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
 
     @Override // com.facebook.drawee.interfaces.DraweeController
     public void d() {
-        FrescoSystrace.b();
-        if (FLog.h(2)) {
-            FLog.j(c, "controller %x %s: onAttach: %s", Integer.valueOf(System.identityHashCode(this)), this.m, this.p ? "request already submitted" : "request needs submit");
+        b.f.j.r.b.b();
+        if (b.f.d.e.a.h(2)) {
+            b.f.d.e.a.j(c, "controller %x %s: onAttach: %s", Integer.valueOf(System.identityHashCode(this)), this.m, this.p ? "request already submitted" : "request needs submit");
         }
-        this.d.a(DraweeEventTracker.a.ON_ATTACH_CONTROLLER);
+        this.d.a(c.a.ON_ATTACH_CONTROLLER);
         Objects.requireNonNull(this.k);
         this.e.a(this);
         this.o = true;
         if (!this.p) {
             E();
         }
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
     public void e(DraweeHierarchy draweeHierarchy) {
-        if (FLog.h(2)) {
-            FLog.j(c, "controller %x %s: setHierarchy: %s", Integer.valueOf(System.identityHashCode(this)), this.m, draweeHierarchy);
+        if (b.f.d.e.a.h(2)) {
+            b.f.d.e.a.j(c, "controller %x %s: setHierarchy: %s", Integer.valueOf(System.identityHashCode(this)), this.m, draweeHierarchy);
         }
-        this.d.a(draweeHierarchy != null ? DraweeEventTracker.a.ON_SET_HIERARCHY : DraweeEventTracker.a.ON_CLEAR_HIERARCHY);
+        this.d.a(draweeHierarchy != null ? c.a.ON_SET_HIERARCHY : c.a.ON_CLEAR_HIERARCHY);
         if (this.p) {
             this.e.a(this);
             release();
         }
-        SettableDraweeHierarchy settableDraweeHierarchy = this.k;
-        if (settableDraweeHierarchy != null) {
-            settableDraweeHierarchy.a(null);
+        b.f.g.h.a aVar = this.k;
+        if (aVar != null) {
+            aVar.a(null);
             this.k = null;
         }
         if (draweeHierarchy != null) {
-            AnimatableValueParser.i(Boolean.valueOf(draweeHierarchy instanceof SettableDraweeHierarchy));
-            SettableDraweeHierarchy settableDraweeHierarchy2 = (SettableDraweeHierarchy) draweeHierarchy;
-            this.k = settableDraweeHierarchy2;
-            settableDraweeHierarchy2.a(this.l);
+            b.c.a.a0.d.i(Boolean.valueOf(draweeHierarchy instanceof b.f.g.h.a));
+            b.f.g.h.a aVar2 = (b.f.g.h.a) draweeHierarchy;
+            this.k = aVar2;
+            aVar2.a(this.l);
         }
     }
 
@@ -299,11 +289,11 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
             this.i = controllerListener;
             return;
         }
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
         b bVar = new b();
         bVar.a(controllerListener2);
         bVar.a(controllerListener);
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
         this.i = bVar;
     }
 
@@ -315,7 +305,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
 
     public ControllerListener<INFO> i() {
         ControllerListener<INFO> controllerListener = this.i;
-        return controllerListener == null ? BaseControllerListener.getNoOpListener() : controllerListener;
+        return controllerListener == null ? b.f.g.c.c.getNoOpListener() : controllerListener;
     }
 
     public abstract DataSource<T> j();
@@ -331,27 +321,27 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     public final synchronized void n(String str, Object obj) {
-        DeferredReleaser deferredReleaser;
-        FrescoSystrace.b();
-        this.d.a(DraweeEventTracker.a.ON_INIT_CONTROLLER);
-        if (!this.v && (deferredReleaser = this.e) != null) {
-            deferredReleaser.a(this);
+        b.f.g.b.a aVar;
+        b.f.j.r.b.b();
+        this.d.a(c.a.ON_INIT_CONTROLLER);
+        if (!this.v && (aVar = this.e) != null) {
+            aVar.a(this);
         }
         this.o = false;
         y();
         this.r = false;
-        RetryManager retryManager = this.g;
-        if (retryManager != null) {
-            retryManager.a = false;
-            retryManager.f499b = 4;
-            retryManager.c = 0;
+        d dVar = this.g;
+        if (dVar != null) {
+            dVar.a = false;
+            dVar.f499b = 4;
+            dVar.c = 0;
         }
-        GestureDetector gestureDetector = this.h;
-        if (gestureDetector != null) {
-            gestureDetector.a = null;
-            gestureDetector.c = false;
-            gestureDetector.d = false;
-            gestureDetector.a = this;
+        b.f.g.g.a aVar2 = this.h;
+        if (aVar2 != null) {
+            aVar2.a = null;
+            aVar2.c = false;
+            aVar2.d = false;
+            aVar2.a = this;
         }
         ControllerListener<INFO> controllerListener = this.i;
         if (controllerListener instanceof b) {
@@ -362,19 +352,19 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         } else {
             this.i = null;
         }
-        SettableDraweeHierarchy settableDraweeHierarchy = this.k;
-        if (settableDraweeHierarchy != null) {
-            settableDraweeHierarchy.reset();
+        b.f.g.h.a aVar3 = this.k;
+        if (aVar3 != null) {
+            aVar3.reset();
             this.k.a(null);
             this.k = null;
         }
         this.l = null;
-        if (FLog.h(2)) {
-            FLog.j(c, "controller %x %s -> %s: initialize", Integer.valueOf(System.identityHashCode(this)), this.m, str);
+        if (b.f.d.e.a.h(2)) {
+            b.f.d.e.a.j(c, "controller %x %s -> %s: initialize", Integer.valueOf(System.identityHashCode(this)), this.m, str);
         }
         this.m = str;
         this.n = obj;
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
     }
 
     public final boolean o(String str, DataSource<T> dataSource) {
@@ -386,34 +376,34 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
 
     @Override // com.facebook.drawee.interfaces.DraweeController
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        GestureDetector.a aVar;
-        boolean zH = FLog.h(2);
+        a.InterfaceC0069a interfaceC0069a;
+        boolean zH = b.f.d.e.a.h(2);
         if (zH) {
-            FLog.j(c, "controller %x %s: onTouchEvent %s", Integer.valueOf(System.identityHashCode(this)), this.m, motionEvent);
+            b.f.d.e.a.j(c, "controller %x %s: onTouchEvent %s", Integer.valueOf(System.identityHashCode(this)), this.m, motionEvent);
         }
-        GestureDetector gestureDetector = this.h;
-        if (gestureDetector == null) {
+        b.f.g.g.a aVar = this.h;
+        if (aVar == null) {
             return false;
         }
-        if (!gestureDetector.c && !D()) {
+        if (!aVar.c && !D()) {
             return false;
         }
-        GestureDetector gestureDetector2 = this.h;
-        Objects.requireNonNull(gestureDetector2);
+        b.f.g.g.a aVar2 = this.h;
+        Objects.requireNonNull(aVar2);
         int action = motionEvent.getAction();
         if (action == 0) {
-            gestureDetector2.c = true;
-            gestureDetector2.d = true;
-            gestureDetector2.e = motionEvent.getEventTime();
-            gestureDetector2.f = motionEvent.getX();
-            gestureDetector2.g = motionEvent.getY();
+            aVar2.c = true;
+            aVar2.d = true;
+            aVar2.e = motionEvent.getEventTime();
+            aVar2.f = motionEvent.getX();
+            aVar2.g = motionEvent.getY();
         } else if (action == 1) {
-            gestureDetector2.c = false;
-            if (Math.abs(motionEvent.getX() - gestureDetector2.f) > gestureDetector2.f524b || Math.abs(motionEvent.getY() - gestureDetector2.g) > gestureDetector2.f524b) {
-                gestureDetector2.d = false;
+            aVar2.c = false;
+            if (Math.abs(motionEvent.getX() - aVar2.f) > aVar2.f524b || Math.abs(motionEvent.getY() - aVar2.g) > aVar2.f524b) {
+                aVar2.d = false;
             }
-            if (gestureDetector2.d && motionEvent.getEventTime() - gestureDetector2.e <= ViewConfiguration.getLongPressTimeout() && (aVar = gestureDetector2.a) != null) {
-                AbstractDraweeController abstractDraweeController = (AbstractDraweeController) aVar;
+            if (aVar2.d && motionEvent.getEventTime() - aVar2.e <= ViewConfiguration.getLongPressTimeout() && (interfaceC0069a = aVar2.a) != null) {
+                AbstractDraweeController abstractDraweeController = (AbstractDraweeController) interfaceC0069a;
                 if (zH) {
                     System.identityHashCode(abstractDraweeController);
                 }
@@ -423,26 +413,26 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
                     abstractDraweeController.E();
                 }
             }
-            gestureDetector2.d = false;
+            aVar2.d = false;
         } else if (action != 2) {
             if (action == 3) {
-                gestureDetector2.c = false;
-                gestureDetector2.d = false;
+                aVar2.c = false;
+                aVar2.d = false;
             }
-        } else if (Math.abs(motionEvent.getX() - gestureDetector2.f) > gestureDetector2.f524b || Math.abs(motionEvent.getY() - gestureDetector2.g) > gestureDetector2.f524b) {
-            gestureDetector2.d = false;
+        } else if (Math.abs(motionEvent.getX() - aVar2.f) > aVar2.f524b || Math.abs(motionEvent.getY() - aVar2.g) > aVar2.f524b) {
+            aVar2.d = false;
         }
         return true;
     }
 
     public final void p(String str, Throwable th) {
-        if (FLog.h(2)) {
+        if (b.f.d.e.a.h(2)) {
             System.identityHashCode(this);
         }
     }
 
     public final void q(String str, T t) {
-        if (FLog.h(2)) {
+        if (b.f.d.e.a.h(2)) {
             System.identityHashCode(this);
             if (t != null) {
                 t.getClass().getSimpleName();
@@ -451,93 +441,93 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    public final ControllerListener2.a r(DataSource<T> dataSource, INFO info, Uri uri) {
+    public final b.a r(DataSource<T> dataSource, INFO info, Uri uri) {
         return s(dataSource == null ? null : dataSource.a(), t(info), uri);
     }
 
-    @Override // b.f.g.b.DeferredReleaser.a
+    @Override // b.f.g.b.a.InterfaceC0068a
     public void release() {
-        this.d.a(DraweeEventTracker.a.ON_RELEASE_CONTROLLER);
-        RetryManager retryManager = this.g;
-        if (retryManager != null) {
-            retryManager.c = 0;
+        this.d.a(c.a.ON_RELEASE_CONTROLLER);
+        d dVar = this.g;
+        if (dVar != null) {
+            dVar.c = 0;
         }
-        GestureDetector gestureDetector = this.h;
-        if (gestureDetector != null) {
-            gestureDetector.c = false;
-            gestureDetector.d = false;
+        b.f.g.g.a aVar = this.h;
+        if (aVar != null) {
+            aVar.c = false;
+            aVar.d = false;
         }
-        SettableDraweeHierarchy settableDraweeHierarchy = this.k;
-        if (settableDraweeHierarchy != null) {
-            settableDraweeHierarchy.reset();
+        b.f.g.h.a aVar2 = this.k;
+        if (aVar2 != null) {
+            aVar2.reset();
         }
         y();
     }
 
-    public final ControllerListener2.a s(Map<String, Object> map, Map<String, Object> map2, Uri uri) {
-        SettableDraweeHierarchy settableDraweeHierarchy = this.k;
-        if (settableDraweeHierarchy instanceof GenericDraweeHierarchy) {
-            GenericDraweeHierarchy genericDraweeHierarchy = (GenericDraweeHierarchy) settableDraweeHierarchy;
-            String.valueOf(!(genericDraweeHierarchy.k(2) instanceof ScaleTypeDrawable) ? null : genericDraweeHierarchy.l(2).n);
-            if (genericDraweeHierarchy.k(2) instanceof ScaleTypeDrawable) {
+    public final b.a s(Map<String, Object> map, Map<String, Object> map2, Uri uri) {
+        b.f.g.h.a aVar = this.k;
+        if (aVar instanceof GenericDraweeHierarchy) {
+            GenericDraweeHierarchy genericDraweeHierarchy = (GenericDraweeHierarchy) aVar;
+            String.valueOf(!(genericDraweeHierarchy.k(2) instanceof p) ? null : genericDraweeHierarchy.l(2).n);
+            if (genericDraweeHierarchy.k(2) instanceof p) {
                 PointF pointF = genericDraweeHierarchy.l(2).p;
             }
         }
         Map<String, Object> map3 = a;
         Map<String, Object> map4 = f2885b;
-        SettableDraweeHierarchy settableDraweeHierarchy2 = this.k;
-        Rect bounds = settableDraweeHierarchy2 != null ? settableDraweeHierarchy2.getBounds() : null;
+        b.f.g.h.a aVar2 = this.k;
+        Rect bounds = aVar2 != null ? aVar2.getBounds() : null;
         Object obj = this.n;
-        ControllerListener2.a aVar = new ControllerListener2.a();
+        b.a aVar3 = new b.a();
         if (bounds != null) {
             bounds.width();
             bounds.height();
         }
-        aVar.e = obj;
-        aVar.c = map;
-        aVar.d = map2;
-        aVar.f538b = map4;
-        aVar.a = map3;
-        return aVar;
+        aVar3.e = obj;
+        aVar3.c = map;
+        aVar3.d = map2;
+        aVar3.f538b = map4;
+        aVar3.a = map3;
+        return aVar3;
     }
 
     public abstract Map<String, Object> t(INFO info);
 
     public String toString() {
-        Objects2 objects2H2 = AnimatableValueParser.h2(this);
-        objects2H2.b("isAttached", this.o);
-        objects2H2.b("isRequestSubmitted", this.p);
-        objects2H2.b("hasFetchFailed", this.q);
-        objects2H2.a("fetchedImage", k(this.u));
-        objects2H2.c("events", this.d.toString());
-        return objects2H2.toString();
+        i iVarH2 = b.c.a.a0.d.h2(this);
+        iVarH2.b("isAttached", this.o);
+        iVarH2.b("isRequestSubmitted", this.p);
+        iVarH2.b("hasFetchFailed", this.q);
+        iVarH2.a("fetchedImage", k(this.u));
+        iVarH2.c("events", this.d.toString());
+        return iVarH2.toString();
     }
 
     public final void u(String str, DataSource<T> dataSource, Throwable th, boolean z2) {
         Drawable drawable;
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
         if (!o(str, dataSource)) {
             p("ignore_old_datasource @ onFailure", th);
             dataSource.close();
-            FrescoSystrace.b();
+            b.f.j.r.b.b();
             return;
         }
-        this.d.a(z2 ? DraweeEventTracker.a.ON_DATASOURCE_FAILURE : DraweeEventTracker.a.ON_DATASOURCE_FAILURE_INT);
+        this.d.a(z2 ? c.a.ON_DATASOURCE_FAILURE : c.a.ON_DATASOURCE_FAILURE_INT);
         if (z2) {
             p("final_failed @ onFailure", th);
             this.t = null;
             this.q = true;
-            SettableDraweeHierarchy settableDraweeHierarchy = this.k;
-            if (settableDraweeHierarchy != null) {
+            b.f.g.h.a aVar = this.k;
+            if (aVar != null) {
                 if (this.r && (drawable = this.w) != null) {
-                    settableDraweeHierarchy.f(drawable, 1.0f, true);
+                    aVar.f(drawable, 1.0f, true);
                 } else if (D()) {
-                    settableDraweeHierarchy.b(th);
+                    aVar.b(th);
                 } else {
-                    settableDraweeHierarchy.c(th);
+                    aVar.c(th);
                 }
             }
-            ControllerListener2.a aVarR = r(dataSource, null, null);
+            b.a aVarR = r(dataSource, null, null);
             i().onFailure(this.m, th);
             this.j.b(this.m, th, aVarR);
         } else {
@@ -545,7 +535,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
             i().onIntermediateImageFailed(this.m, th);
             Objects.requireNonNull(this.j);
         }
-        FrescoSystrace.b();
+        b.f.j.r.b.b();
     }
 
     public void v(String str, T t) {
@@ -553,15 +543,15 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
 
     public final void w(String str, DataSource<T> dataSource, T t, float f, boolean z2, boolean z3, boolean z4) {
         try {
-            FrescoSystrace.b();
+            b.f.j.r.b.b();
             if (!o(str, dataSource)) {
                 q("ignore_old_datasource @ onNewResult", t);
                 z(t);
                 dataSource.close();
-                FrescoSystrace.b();
+                b.f.j.r.b.b();
                 return;
             }
-            this.d.a(z2 ? DraweeEventTracker.a.ON_DATASOURCE_RESULT : DraweeEventTracker.a.ON_DATASOURCE_RESULT_INT);
+            this.d.a(z2 ? c.a.ON_DATASOURCE_RESULT : c.a.ON_DATASOURCE_RESULT_INT);
             try {
                 Drawable drawableG = g(t);
                 T t2 = this.u;
@@ -591,7 +581,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
                         q("release_previous_result @ onNewResult", t2);
                         z(t2);
                     }
-                    FrescoSystrace.b();
+                    b.f.j.r.b.b();
                 } catch (Throwable th) {
                     if (drawable != null && drawable != drawableG) {
                         x(drawable);
@@ -606,10 +596,10 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
                 q("drawable_failed @ onNewResult", t);
                 z(t);
                 u(str, dataSource, e, z2);
-                FrescoSystrace.b();
+                b.f.j.r.b.b();
             }
         } catch (Throwable th2) {
-            FrescoSystrace.b();
+            b.f.j.r.b.b();
             throw th2;
         }
     }

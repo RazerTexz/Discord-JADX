@@ -2,16 +2,16 @@ package com.discord.stores;
 
 import androidx.annotation.VisibleForTesting;
 import com.discord.utilities.lazy.subscriptions.GuildSubscriptionsManager;
-import d0.d0._Ranges;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.d0.f;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
-import kotlin.ranges.Progressions2;
-import kotlin.ranges.Ranges2;
+import kotlin.ranges.IntProgression;
+import kotlin.ranges.IntRange;
 
 /* compiled from: StoreGuildSubscriptions.kt */
 /* loaded from: classes2.dex */
@@ -29,27 +29,27 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         private RangeComputer() {
         }
 
-        public static /* synthetic */ List computeRanges$default(RangeComputer rangeComputer, Ranges2 ranges2, int i, int i2, Object obj) {
+        public static /* synthetic */ List computeRanges$default(RangeComputer rangeComputer, IntRange intRange, int i, int i2, Object obj) {
             if ((i2 & 2) != 0) {
                 i = 100;
             }
-            return rangeComputer.computeRanges(ranges2, i);
+            return rangeComputer.computeRanges(intRange, i);
         }
 
-        public final List<Ranges2> computeRanges(Ranges2 range, int chunkSize) {
-            Intrinsics3.checkNotNullParameter(range, "range");
+        public final List<IntRange> computeRanges(IntRange range, int chunkSize) {
+            m.checkNotNullParameter(range, "range");
             ArrayList arrayList = new ArrayList(3);
-            int iInvoke = StoreGuildSubscriptions2.INSTANCE.invoke(range.getFirst(), chunkSize);
+            int iInvoke = StoreGuildSubscriptions$RangeComputer$computeRanges$1.INSTANCE.invoke(range.getFirst(), chunkSize);
             if (iInvoke > 0) {
-                arrayList.add(_Ranges.until(0, chunkSize));
+                arrayList.add(f.until(0, chunkSize));
             }
-            Progressions2 progressions2Step = _Ranges.step(_Ranges.until(iInvoke, range.getLast()), chunkSize);
-            int first = progressions2Step.getFirst();
-            int last = progressions2Step.getLast();
-            int step = progressions2Step.getStep();
+            IntProgression intProgressionStep = f.step(f.until(iInvoke, range.getLast()), chunkSize);
+            int first = intProgressionStep.getFirst();
+            int last = intProgressionStep.getLast();
+            int step = intProgressionStep.getStep();
             if (step < 0 ? first >= last : first <= last) {
                 while (true) {
-                    arrayList.add(_Ranges.until(first, first + chunkSize));
+                    arrayList.add(f.until(first, first + chunkSize));
                     if (first == last) {
                         break;
                     }
@@ -62,15 +62,15 @@ public final class StoreGuildSubscriptions extends StoreV2 {
 
     /* compiled from: StoreGuildSubscriptions.kt */
     /* renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeChannelRange$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
-        public final /* synthetic */ Ranges2 $range;
+        public final /* synthetic */ IntRange $range;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AnonymousClass1(Ranges2 ranges2, long j, long j2) {
+        public AnonymousClass1(IntRange intRange, long j, long j2) {
             super(0);
-            this.$range = ranges2;
+            this.$range = intRange;
             this.$guildId = j;
             this.$channelId = j2;
         }
@@ -90,7 +90,7 @@ public final class StoreGuildSubscriptions extends StoreV2 {
 
     /* compiled from: StoreGuildSubscriptions.kt */
     /* renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeThread$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
 
@@ -116,7 +116,7 @@ public final class StoreGuildSubscriptions extends StoreV2 {
 
     /* compiled from: StoreGuildSubscriptions.kt */
     /* renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeUser$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
 
@@ -141,7 +141,7 @@ public final class StoreGuildSubscriptions extends StoreV2 {
 
     /* compiled from: StoreGuildSubscriptions.kt */
     /* renamed from: com.discord.stores.StoreGuildSubscriptions$unsubscribeUser$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
 
@@ -165,11 +165,11 @@ public final class StoreGuildSubscriptions extends StoreV2 {
     }
 
     public StoreGuildSubscriptions(StoreStream storeStream, Dispatcher dispatcher) {
-        Intrinsics3.checkNotNullParameter(storeStream, "storeStream");
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeStream, "storeStream");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
         this.storeStream = storeStream;
         this.dispatcher = dispatcher;
-        this.subscriptionsManager = new GuildSubscriptionsManager(new StoreGuildSubscriptions3(this));
+        this.subscriptionsManager = new GuildSubscriptionsManager(new StoreGuildSubscriptions$subscriptionsManager$1(this));
     }
 
     public static final /* synthetic */ StoreStream access$getStoreStream$p(StoreGuildSubscriptions storeGuildSubscriptions) {
@@ -180,10 +180,10 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         return storeGuildSubscriptions.subscriptionsManager;
     }
 
-    @Store3
+    @StoreThread
     public final void handleConnectionReady(boolean isConnectionReady) {
         if (!isConnectionReady) {
-            this.subscriptionsManager.retainAll(Collections2.listOf((Object[]) new Long[]{Long.valueOf(this.storeStream.getGuildSelected().getSelectedGuildId()), Long.valueOf(this.storeStream.getRtcConnection().getConnectedGuildId())}));
+            this.subscriptionsManager.retainAll(n.listOf((Object[]) new Long[]{Long.valueOf(this.storeStream.getGuildSelected().getSelectedGuildId()), Long.valueOf(this.storeStream.getRtcConnection().getConnectedGuildId())}));
             markChanged();
             return;
         }
@@ -195,13 +195,13 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildRemove(long guildId) {
         this.subscriptionsManager.remove(guildId);
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleGuildSelect(long guildId) {
         if (guildId <= 0) {
             return;
@@ -212,13 +212,13 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handlePreLogout() {
         this.subscriptionsManager.reset();
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleSubscribeMember(long guildId, long userId) {
         if (guildId <= 0) {
             return;
@@ -227,7 +227,7 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void handleUnsubscribeMember(long guildId, long userId) {
         if (guildId <= 0) {
             return;
@@ -242,8 +242,8 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         this.subscriptionsManager.flush();
     }
 
-    public final void subscribeChannelRange(long guildId, long channelId, Ranges2 range) {
-        Intrinsics3.checkNotNullParameter(range, "range");
+    public final void subscribeChannelRange(long guildId, long channelId, IntRange range) {
+        m.checkNotNullParameter(range, "range");
         if (guildId <= 0 || channelId <= 0) {
             return;
         }

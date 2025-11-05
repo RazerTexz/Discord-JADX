@@ -1,18 +1,17 @@
 package b.i.a.c;
 
-import b.c.a.a0.AnimatableValueParser;
-import b.i.a.c.ExoPlayerImplInternal2;
+import b.i.a.c.h1;
 import java.util.Arrays;
 import java.util.List;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class c0 implements Runnable {
-    public final /* synthetic */ ExoPlayerImpl j;
-    public final /* synthetic */ ExoPlayerImplInternal2.d k;
+    public final /* synthetic */ f1 j;
+    public final /* synthetic */ h1.d k;
 
-    public /* synthetic */ c0(ExoPlayerImpl exoPlayerImpl, ExoPlayerImplInternal2.d dVar) {
-        this.j = exoPlayerImpl;
+    public /* synthetic */ c0(f1 f1Var, h1.d dVar) {
+        this.j = f1Var;
         this.k = dVar;
     }
 
@@ -21,42 +20,42 @@ public final /* synthetic */ class c0 implements Runnable {
         long j;
         boolean z2;
         long jM0;
-        ExoPlayerImpl exoPlayerImpl = this.j;
-        ExoPlayerImplInternal2.d dVar = this.k;
-        int i = exoPlayerImpl.f960x - dVar.c;
-        exoPlayerImpl.f960x = i;
+        f1 f1Var = this.j;
+        h1.d dVar = this.k;
+        int i = f1Var.f960x - dVar.c;
+        f1Var.f960x = i;
         boolean z3 = true;
         if (dVar.d) {
-            exoPlayerImpl.f961y = dVar.e;
-            exoPlayerImpl.f962z = true;
+            f1Var.f961y = dVar.e;
+            f1Var.f962z = true;
         }
         if (dVar.f) {
-            exoPlayerImpl.A = dVar.g;
+            f1Var.A = dVar.g;
         }
         if (i == 0) {
-            Timeline timeline = dVar.f1012b.f1146b;
-            if (!exoPlayerImpl.F.f1146b.q() && timeline.q()) {
-                exoPlayerImpl.G = -1;
-                exoPlayerImpl.H = 0L;
+            o2 o2Var = dVar.f1012b.f1146b;
+            if (!f1Var.F.f1146b.q() && o2Var.q()) {
+                f1Var.G = -1;
+                f1Var.H = 0L;
             }
-            if (!timeline.q()) {
-                List listAsList = Arrays.asList(((PlaylistTimeline) timeline).r);
-                AnimatableValueParser.D(listAsList.size() == exoPlayerImpl.m.size());
+            if (!o2Var.q()) {
+                List listAsList = Arrays.asList(((c2) o2Var).r);
+                b.c.a.a0.d.D(listAsList.size() == f1Var.m.size());
                 for (int i2 = 0; i2 < listAsList.size(); i2++) {
-                    exoPlayerImpl.m.get(i2).f963b = (Timeline) listAsList.get(i2);
+                    f1Var.m.get(i2).f963b = (o2) listAsList.get(i2);
                 }
             }
             long j2 = -9223372036854775807L;
-            if (exoPlayerImpl.f962z) {
-                if (dVar.f1012b.c.equals(exoPlayerImpl.F.c) && dVar.f1012b.e == exoPlayerImpl.F.t) {
+            if (f1Var.f962z) {
+                if (dVar.f1012b.c.equals(f1Var.F.c) && dVar.f1012b.e == f1Var.F.t) {
                     z3 = false;
                 }
                 if (z3) {
-                    if (timeline.q() || dVar.f1012b.c.a()) {
+                    if (o2Var.q() || dVar.f1012b.c.a()) {
                         jM0 = dVar.f1012b.e;
                     } else {
-                        PlaybackInfo playbackInfo = dVar.f1012b;
-                        jM0 = exoPlayerImpl.m0(timeline, playbackInfo.c, playbackInfo.e);
+                        w1 w1Var = dVar.f1012b;
+                        jM0 = f1Var.m0(o2Var, w1Var.c, w1Var.e);
                     }
                     j2 = jM0;
                 }
@@ -66,8 +65,8 @@ public final /* synthetic */ class c0 implements Runnable {
                 j = -9223372036854775807L;
                 z2 = false;
             }
-            exoPlayerImpl.f962z = false;
-            exoPlayerImpl.s0(dVar.f1012b, 1, exoPlayerImpl.A, false, z2, exoPlayerImpl.f961y, j, -1);
+            f1Var.f962z = false;
+            f1Var.s0(dVar.f1012b, 1, f1Var.A, false, z2, f1Var.f961y, j, -1);
         }
     }
 }

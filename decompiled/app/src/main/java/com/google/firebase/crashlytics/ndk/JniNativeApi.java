@@ -7,16 +7,16 @@ import android.content.res.AssetManager;
 import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
-import b.d.b.a.outline;
-import b.i.c.m.d.Logger3;
-import b.i.c.m.e.NativeApi;
+import b.d.b.a.a;
+import b.i.c.m.d.b;
+import b.i.c.m.e.d;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
 /* loaded from: classes3.dex */
-public class JniNativeApi implements NativeApi {
+public class JniNativeApi implements d {
     public static final boolean a;
 
     /* renamed from: b, reason: collision with root package name */
@@ -28,10 +28,10 @@ public class JniNativeApi implements NativeApi {
             System.loadLibrary("crashlytics");
             z2 = true;
         } catch (UnsatisfiedLinkError e) {
-            Logger3 logger3 = Logger3.a;
-            StringBuilder sbU = outline.U("libcrashlytics could not be loaded. This APK may not have been compiled for this device's architecture. NDK crashes will not be reported to Crashlytics:\n");
+            b bVar = b.a;
+            StringBuilder sbU = a.U("libcrashlytics could not be loaded. This APK may not have been compiled for this device's architecture. NDK crashes will not be reported to Crashlytics:\n");
             sbU.append(e.getLocalizedMessage());
-            logger3.d(sbU.toString());
+            bVar.d(sbU.toString());
             z2 = false;
         }
         a = z2;
@@ -78,7 +78,7 @@ public class JniNativeApi implements NativeApi {
             String[] strArr3 = {TextUtils.join(str4, arrayList), TextUtils.join(str4, arrayList2)};
             return a && nativeInit(new String[]{strArr3[0], strArr3[1], str}, assetManager);
         } catch (PackageManager.NameNotFoundException e) {
-            if (Logger3.a.a(6)) {
+            if (b.a.a(6)) {
                 Log.e("FirebaseCrashlytics", "Unable to compose package paths", e);
             }
             throw new RuntimeException(e);

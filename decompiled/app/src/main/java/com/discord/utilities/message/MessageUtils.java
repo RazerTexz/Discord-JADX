@@ -1,7 +1,7 @@
 package com.discord.utilities.message;
 
 import android.content.Context;
-import b.a.k.FormatUtils;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelRecipientNick;
@@ -14,11 +14,11 @@ import com.discord.i18n.RenderContext;
 import com.discord.models.member.GuildMember;
 import com.discord.models.message.Message;
 import com.discord.models.user.CoreUser;
-import com.discord.utilities.context.ContextExtensions;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.context.ContextExtensionsKt;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.time.TimeUtils;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class MessageUtils {
 
     /* compiled from: MessageUtils.kt */
     /* renamed from: com.discord.utilities.message.MessageUtils$getSystemMessageRoleSubscriptionPurchase$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RenderContext, Unit> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -53,7 +53,7 @@ public final class MessageUtils {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            m.checkNotNullParameter(renderContext, "$receiver");
         }
     }
 
@@ -62,7 +62,7 @@ public final class MessageUtils {
         StickerFormatType stickerFormatType2 = StickerFormatType.APNG;
         WELCOME_STICKERS = new StickerPartial[]{new StickerPartial(749054660769218631L, stickerFormatType, "Wumpus waves hello"), new StickerPartial(751606379340365864L, stickerFormatType, "Nelly peeks around a wall and waves hello"), new StickerPartial(754108890559283200L, stickerFormatType, "Clyde cheerfully waving"), new StickerPartial(781291131828699156L, stickerFormatType2, "Choco waves in greeting"), new StickerPartial(816087792291282944L, stickerFormatType, "Doggo spins and greets you"), new StickerPartial(819128604311027752L, stickerFormatType, "Peach raising her arms in distress")};
         ROLE_SUBSCRIPTION_PURCHASE_STICKERS = new StickerPartial[]{new StickerPartial(781323471249604648L, stickerFormatType2, "Cheerful Choco jumps out of gift box"), new StickerPartial(781324642736144424L, stickerFormatType2, "Cheerful Choco preens against window"), new StickerPartial(781323769960202280L, stickerFormatType2, "Cheerful Choco sparkles"), new StickerPartial(781324722394103808L, stickerFormatType2, "Cheerful Choco cheers"), new StickerPartial(813951723822645278L, stickerFormatType2, "Cheerful Choco gives thumbs up")};
-        SORT_BY_IDS_COMPARATOR = MessageUtils2.INSTANCE;
+        SORT_BY_IDS_COMPARATOR = MessageUtils$SORT_BY_IDS_COMPARATOR$1.INSTANCE;
     }
 
     private MessageUtils() {
@@ -78,8 +78,8 @@ public final class MessageUtils {
     }
 
     public static final Map<Long, String> getNickOrUsernames(Message message, Channel channel, Map<Long, GuildMember> guildMembers, List<ChannelRecipientNick> nicks) {
-        Intrinsics3.checkNotNullParameter(message, "message");
-        Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+        m.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(guildMembers, "guildMembers");
         List<User> mentions = message.getMentions();
         HashMap map = new HashMap((mentions != null ? mentions.size() : 0) + 1);
         List<User> mentions2 = message.getMentions();
@@ -131,22 +131,22 @@ public final class MessageUtils {
     }
 
     public final CharSequence getSystemMessageRoleSubscriptionPurchase(Context context, String str, String str2, RoleSubscriptionData roleSubscriptionData, Function1<? super RenderContext, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(context, "$this$getSystemMessageRoleSubscriptionPurchase");
-        Intrinsics3.checkNotNullParameter(function1, "initializer");
-        if ((!Intrinsics3.areEqual(ContextExtensions.getLocaleOrNull(context) != null ? r0.getLanguage() : null, new Locale("en").getLanguage())) || roleSubscriptionData == null) {
-            return FormatUtils.h(context, R.string.reply_quote_message_not_loaded, new Object[0], null, 4);
+        m.checkNotNullParameter(context, "$this$getSystemMessageRoleSubscriptionPurchase");
+        m.checkNotNullParameter(function1, "initializer");
+        if ((!m.areEqual(ContextExtensionsKt.getLocaleOrNull(context) != null ? r0.getLanguage() : null, new Locale("en").getLanguage())) || roleSubscriptionData == null) {
+            return b.h(context, R.string.reply_quote_message_not_loaded, new Object[0], null, 4);
         }
         String tierName = roleSubscriptionData.getTierName();
         if (roleSubscriptionData.getTotalMonthsSubscribed() > 0) {
-            return FormatUtils.b(context, roleSubscriptionData.getIsRenewal() ? R.string.system_message_role_subscription_renew_with_duration_mobile : R.string.system_message_role_subscription_join_with_duration_mobile, new Object[]{str2, tierName, str, StringResourceUtils.getI18nPluralString(context, R.plurals.system_message_role_subscription_join_with_duration_mobile_months, roleSubscriptionData.getTotalMonthsSubscribed(), Integer.valueOf(roleSubscriptionData.getTotalMonthsSubscribed()))}, function1);
+            return b.b(context, roleSubscriptionData.getIsRenewal() ? R.string.system_message_role_subscription_renew_with_duration_mobile : R.string.system_message_role_subscription_join_with_duration_mobile, new Object[]{str2, tierName, str, StringResourceUtilsKt.getI18nPluralString(context, R.plurals.system_message_role_subscription_join_with_duration_mobile_months, roleSubscriptionData.getTotalMonthsSubscribed(), Integer.valueOf(roleSubscriptionData.getTotalMonthsSubscribed()))}, function1);
         }
-        return FormatUtils.b(context, roleSubscriptionData.getIsRenewal() ? R.string.system_message_role_subscription_renew_mobile : R.string.system_message_role_subscription_join_mobile, new Object[]{str2, tierName, str}, function1);
+        return b.b(context, roleSubscriptionData.getIsRenewal() ? R.string.system_message_role_subscription_renew_mobile : R.string.system_message_role_subscription_join_mobile, new Object[]{str2, tierName, str}, function1);
     }
 
     public final int getSystemMessageUserJoin(Context context, long messageId) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Locale localeOrNull = ContextExtensions.getLocaleOrNull(context);
-        return WELCOME_MESSAGES[(int) (Intrinsics3.areEqual(localeOrNull != null ? localeOrNull.getLanguage() : null, new Locale("en").getLanguage()) ^ true ? 0L : TimeUtils.parseSnowflake(Long.valueOf(messageId)) % WELCOME_MESSAGES.length)];
+        m.checkNotNullParameter(context, "context");
+        Locale localeOrNull = ContextExtensionsKt.getLocaleOrNull(context);
+        return WELCOME_MESSAGES[(int) (m.areEqual(localeOrNull != null ? localeOrNull.getLanguage() : null, new Locale("en").getLanguage()) ^ true ? 0L : TimeUtils.parseSnowflake(Long.valueOf(messageId)) % WELCOME_MESSAGES.length)];
     }
 
     public final StickerPartial getWelcomeSticker(long meUserId, long messageId) {

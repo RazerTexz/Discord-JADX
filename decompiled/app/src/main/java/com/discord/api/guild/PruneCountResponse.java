@@ -1,6 +1,6 @@
 package com.discord.api.guild;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: PruneCountResponse.kt */
 /* loaded from: classes.dex */
@@ -24,6 +24,6 @@ public final /* data */ class PruneCountResponse {
     }
 
     public String toString() {
-        return outline.B(outline.U("PruneCountResponse(pruned="), this.pruned, ")");
+        return a.B(a.U("PruneCountResponse(pruned="), this.pruned, ")");
     }
 }

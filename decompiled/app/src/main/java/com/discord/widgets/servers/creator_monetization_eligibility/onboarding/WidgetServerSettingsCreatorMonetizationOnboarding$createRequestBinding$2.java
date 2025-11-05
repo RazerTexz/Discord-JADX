@@ -11,12 +11,12 @@ import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
 import com.discord.widgets.servers.creator_monetization_eligibility.EligibilityChecklistView;
 import com.google.android.material.button.MaterialButton;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
 /* loaded from: classes2.dex */
-public final class WidgetServerSettingsCreatorMonetizationOnboarding$createRequestBinding$2 extends Lambda implements Function0<WidgetServerSettingsCreatorMonetizationOnboardingCreateRequestBinding> {
+public final class WidgetServerSettingsCreatorMonetizationOnboarding$createRequestBinding$2 extends o implements Function0<WidgetServerSettingsCreatorMonetizationOnboardingCreateRequestBinding> {
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

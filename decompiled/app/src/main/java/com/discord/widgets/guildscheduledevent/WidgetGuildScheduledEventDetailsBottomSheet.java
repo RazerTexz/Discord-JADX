@@ -16,12 +16,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.k.b;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.channel.Channel;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
@@ -35,18 +34,18 @@ import com.discord.stores.StoreNotices;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.directories.DirectoryUtils;
-import com.discord.utilities.extensions.SimpleDraweeViewExtensions;
+import com.discord.utilities.extensions.SimpleDraweeViewExtensionsKt;
 import com.discord.utilities.font.FontUtils;
-import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
+import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.resources.StringResourceUtils;
+import com.discord.utilities.resources.StringResourceUtilsKt;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.spans.TypefaceSpanCompat;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.segmentedcontrol.CardSegment;
 import com.discord.views.segmentedcontrol.SegmentedControlContainer;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsViewModel;
@@ -59,12 +58,11 @@ import com.discord.widgets.home.WidgetHome;
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
 import com.discord.widgets.voice.VoiceUtils;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.LazyJVM;
-import d0.t.CollectionsJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.t.m;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.o;
 import java.lang.ref.WeakReference;
 import kotlin.Lazy;
 import kotlin.Unit;
@@ -76,7 +74,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottomSheet {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildScheduledEventDetailsBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventDetailsBottomSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildScheduledEventDetailsBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventDetailsBottomSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -105,31 +103,31 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
         public final void enqueue(long guildScheduledEventId) {
             StoreNotices notices = StoreStream.INSTANCE.getNotices();
-            String strT = outline.t("EVENTDETAILS-", guildScheduledEventId);
-            notices.requestToShow(new StoreNotices.Notice(strT, null, 0L, 0, false, CollectionsJVM.listOf(Reflection2.getOrCreateKotlinClass(WidgetHome.class)), 0L, false, 0L, new WidgetGuildScheduledEventDetailsBottomSheet4(guildScheduledEventId, notices, strT), 150, null));
+            String strT = a.t("EVENTDETAILS-", guildScheduledEventId);
+            notices.requestToShow(new StoreNotices.Notice(strT, null, 0L, 0, false, m.listOf(a0.getOrCreateKotlinClass(WidgetHome.class)), 0L, false, 0L, new WidgetGuildScheduledEventDetailsBottomSheet$Companion$enqueue$guildScheduledEventDetailsNotice$1(guildScheduledEventId, notices, strT), 150, null));
         }
 
         public final void handleInvalidEvent(Context context) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            AppToast.g(context, R.string.inaccessible_channel_link_title, 0, null, 12);
+            d0.z.d.m.checkNotNullParameter(context, "context");
+            b.a.d.m.g(context, R.string.inaccessible_channel_link_title, 0, null, 12);
         }
 
-        public final void show(FragmentManager fragmentManager, WidgetGuildScheduledEventDetailsBottomSheet2 args) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(args, "args");
+        public final void show(FragmentManager fragmentManager, GuildScheduledEventDetailsArgs args) {
+            d0.z.d.m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            d0.z.d.m.checkNotNullParameter(args, "args");
             WidgetGuildScheduledEventDetailsBottomSheet widgetGuildScheduledEventDetailsBottomSheet = new WidgetGuildScheduledEventDetailsBottomSheet();
-            widgetGuildScheduledEventDetailsBottomSheet.setArguments(AnimatableValueParser.e2(args));
+            widgetGuildScheduledEventDetailsBottomSheet.setArguments(d.e2(args));
             widgetGuildScheduledEventDetailsBottomSheet.show(fragmentManager, WidgetGuildScheduledEventDetailsBottomSheet.class.getName());
         }
 
         public final void showForDirectory(FragmentManager fragmentManager, long guildScheduledEventId, long hubGuildId, long directoryChannelId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            show(fragmentManager, new WidgetGuildScheduledEventDetailsBottomSheet2(guildScheduledEventId, Long.valueOf(hubGuildId), Long.valueOf(directoryChannelId), WidgetGuildScheduledEventDetailsBottomSheet3.Directory));
+            d0.z.d.m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            show(fragmentManager, new GuildScheduledEventDetailsArgs(guildScheduledEventId, Long.valueOf(hubGuildId), Long.valueOf(directoryChannelId), GuildScheduledEventDetailsSource.Directory));
         }
 
         public final void showForGuild(FragmentManager fragmentManager, long guildScheduledEventId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            show(fragmentManager, new WidgetGuildScheduledEventDetailsBottomSheet2(guildScheduledEventId, null, null, null, 14, null));
+            d0.z.d.m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            show(fragmentManager, new GuildScheduledEventDetailsArgs(guildScheduledEventId, null, null, null, 14, null));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -141,19 +139,19 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
-            GuildScheduledEventDetailsViewModel2.values();
+            EventDetailsRsvpUsersFetchState.values();
             int[] iArr = new int[4];
             $EnumSwitchMapping$0 = iArr;
-            iArr[GuildScheduledEventDetailsViewModel2.LOADING.ordinal()] = 1;
-            iArr[GuildScheduledEventDetailsViewModel2.EMPTY.ordinal()] = 2;
-            iArr[GuildScheduledEventDetailsViewModel2.ERROR.ordinal()] = 3;
-            iArr[GuildScheduledEventDetailsViewModel2.SUCCESS.ordinal()] = 4;
+            iArr[EventDetailsRsvpUsersFetchState.LOADING.ordinal()] = 1;
+            iArr[EventDetailsRsvpUsersFetchState.EMPTY.ordinal()] = 2;
+            iArr[EventDetailsRsvpUsersFetchState.ERROR.ordinal()] = 3;
+            iArr[EventDetailsRsvpUsersFetchState.SUCCESS.ordinal()] = 4;
         }
     }
 
     /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureSegmentControl$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Integer, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -171,12 +169,12 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
     /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<RenderContext, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<RenderContext, Unit> {
         public final /* synthetic */ UserGuildMember $creator;
 
         /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
         /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$4$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
+        public static final class AnonymousClass1 extends o implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
@@ -189,12 +187,12 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
-                Intrinsics3.checkNotNullParameter(hook, "$receiver");
+                d0.z.d.m.checkNotNullParameter(hook, "$receiver");
                 hook.replacementText = AnonymousClass4.this.$creator.getNickOrUserName();
                 Context context = WidgetGuildScheduledEventDetailsBottomSheet.this.getContext();
                 if (context != null) {
                     FontUtils fontUtils = FontUtils.INSTANCE;
-                    Intrinsics3.checkNotNullExpressionValue(context, "ctx");
+                    d0.z.d.m.checkNotNullExpressionValue(context, "ctx");
                     Typeface themedFont = fontUtils.getThemedFont(context, R.attr.font_primary_semibold);
                     if (themedFont != null) {
                         hook.styles.add(new TypefaceSpanCompat(themedFont));
@@ -218,7 +216,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
-            Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+            d0.z.d.m.checkNotNullParameter(renderContext, "$receiver");
             renderContext.a("usernameHook", new AnonymousClass1());
         }
     }
@@ -243,8 +241,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
         /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
         /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C02951 extends Lambda implements Function0<Unit> {
-            public C02951() {
+        public static final class C04151 extends o implements Function0<Unit> {
+            public C04151() {
                 super(0);
             }
 
@@ -273,7 +271,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
             Long guildId = WidgetGuildScheduledEventDetailsBottomSheet.access$getArgs$p(WidgetGuildScheduledEventDetailsBottomSheet.this).getGuildId();
             long jLongValue = guildId != null ? guildId.longValue() : 0L;
             Long channelId = WidgetGuildScheduledEventDetailsBottomSheet.access$getArgs$p(WidgetGuildScheduledEventDetailsBottomSheet.this).getChannelId();
-            directoryUtils.maybeJoinAndGoToGuild(widgetGuildScheduledEventDetailsBottomSheet, guildScheduledEvent, zIsInGuild, jLongValue, channelId != null ? channelId.longValue() : 0L, !this.$this_getButtonConfiguration.isRsvped() && GuildScheduledEventUtilities5.canRsvp(this.$this_getButtonConfiguration.getGuildScheduledEvent()), new C02951());
+            directoryUtils.maybeJoinAndGoToGuild(widgetGuildScheduledEventDetailsBottomSheet, guildScheduledEvent, zIsInGuild, jLongValue, channelId != null ? channelId.longValue() : 0L, !this.$this_getButtonConfiguration.isRsvped() && GuildScheduledEventUtilitiesKt.canRsvp(this.$this_getButtonConfiguration.getGuildScheduledEvent()), new C04151());
         }
     }
 
@@ -283,7 +281,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
         /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
         /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$10$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -307,7 +305,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         public final void onClick(View view) {
             GuildScheduledEventDetailsViewModel guildScheduledEventDetailsViewModelAccess$getViewModel$p = WidgetGuildScheduledEventDetailsBottomSheet.access$getViewModel$p(WidgetGuildScheduledEventDetailsBottomSheet.this);
             Context contextRequireContext = WidgetGuildScheduledEventDetailsBottomSheet.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            d0.z.d.m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             guildScheduledEventDetailsViewModelAccess$getViewModel$p.endEventClicked(contextRequireContext, new AnonymousClass1());
         }
     }
@@ -347,7 +345,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
             WidgetGuildScheduledEventDetailsBottomSheet.this.dismiss();
             WidgetGuildScheduledEventDetailsExtrasBottomSheet.Companion companion = WidgetGuildScheduledEventDetailsExtrasBottomSheet.INSTANCE;
             FragmentManager parentFragmentManager = WidgetGuildScheduledEventDetailsBottomSheet.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            d0.z.d.m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, WidgetGuildScheduledEventDetailsBottomSheet.access$getArgs$p(WidgetGuildScheduledEventDetailsBottomSheet.this));
         }
     }
@@ -365,8 +363,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         public final void onClick(View view) {
             WidgetPreviewGuildScheduledEvent.Companion companion = WidgetPreviewGuildScheduledEvent.INSTANCE;
             Context contextRequireContext = WidgetGuildScheduledEventDetailsBottomSheet.this.requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-            WidgetPreviewGuildScheduledEvent.Companion.launch$default(companion, contextRequireContext, GuildScheduledEventModel2.toModel(this.$this_getButtonConfiguration.getGuildScheduledEvent()), new WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData(this.$this_getButtonConfiguration.getGuildScheduledEvent().getId(), WidgetPreviewGuildScheduledEvent.Companion.Action.START_EVENT), WidgetGuildScheduledEventDetailsBottomSheet.access$getPreviewLauncher$p(WidgetGuildScheduledEventDetailsBottomSheet.this), false, 16, null);
+            d0.z.d.m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            WidgetPreviewGuildScheduledEvent.Companion.launch$default(companion, contextRequireContext, GuildScheduledEventModelKt.toModel(this.$this_getButtonConfiguration.getGuildScheduledEvent()), new WidgetPreviewGuildScheduledEvent.Companion.ExistingEventData(this.$this_getButtonConfiguration.getGuildScheduledEvent().getId(), WidgetPreviewGuildScheduledEvent.Companion.Action.START_EVENT), WidgetGuildScheduledEventDetailsBottomSheet.access$getPreviewLauncher$p(WidgetGuildScheduledEventDetailsBottomSheet.this), false, 16, null);
         }
     }
 
@@ -405,7 +403,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
             WidgetGuildScheduledEventDetailsBottomSheet.this.dismiss();
             WidgetGuildScheduledEventDetailsExtrasBottomSheet.Companion companion = WidgetGuildScheduledEventDetailsExtrasBottomSheet.INSTANCE;
             FragmentManager parentFragmentManager = WidgetGuildScheduledEventDetailsBottomSheet.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            d0.z.d.m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             companion.show(parentFragmentManager, WidgetGuildScheduledEventDetailsBottomSheet.access$getArgs$p(WidgetGuildScheduledEventDetailsBottomSheet.this));
         }
     }
@@ -431,7 +429,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
     /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$onResume$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<GuildScheduledEventDetailsViewModel.ViewState, Unit> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<GuildScheduledEventDetailsViewModel.ViewState, Unit> {
         public AnonymousClass1(WidgetGuildScheduledEventDetailsBottomSheet widgetGuildScheduledEventDetailsBottomSheet) {
             super(1, widgetGuildScheduledEventDetailsBottomSheet, WidgetGuildScheduledEventDetailsBottomSheet.class, "configureUi", "configureUi(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventDetailsViewModel$ViewState;)V", 0);
         }
@@ -444,14 +442,14 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventDetailsViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "p1");
+            d0.z.d.m.checkNotNullParameter(viewState, "p1");
             WidgetGuildScheduledEventDetailsBottomSheet.access$configureUi((WidgetGuildScheduledEventDetailsBottomSheet) this.receiver, viewState);
         }
     }
 
     /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Long, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -465,28 +463,28 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         public final void invoke(long j) {
             WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;
             FragmentManager parentFragmentManager = WidgetGuildScheduledEventDetailsBottomSheet.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            d0.z.d.m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             WidgetUserSheet.Companion.show$default(companion, j, null, parentFragmentManager, null, null, null, null, 122, null);
         }
     }
 
     public WidgetGuildScheduledEventDetailsBottomSheet() {
         super(false, 1, null);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildScheduledEventDetailsBottomSheet5.INSTANCE, null, 2, null);
-        this.descriptionParser = LazyJVM.lazy(new WidgetGuildScheduledEventDetailsBottomSheet6(this));
-        this.locationParser = LazyJVM.lazy(WidgetGuildScheduledEventDetailsBottomSheet7.INSTANCE);
-        this.args = LazyJVM.lazy(new WidgetGuildScheduledEventDetailsBottomSheet$$special$$inlined$args$1(this, "intent_args_key"));
-        WidgetGuildScheduledEventDetailsBottomSheet9 widgetGuildScheduledEventDetailsBottomSheet9 = new WidgetGuildScheduledEventDetailsBottomSheet9(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GuildScheduledEventDetailsViewModel.class), new WidgetGuildScheduledEventDetailsBottomSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGuildScheduledEventDetailsBottomSheet9));
-        this.previewLauncher = WidgetPreviewGuildScheduledEvent.INSTANCE.createJoinOnStartActivityRegistration(this, new WidgetGuildScheduledEventDetailsBottomSheet8(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildScheduledEventDetailsBottomSheet$binding$2.INSTANCE, null, 2, null);
+        this.descriptionParser = g.lazy(new WidgetGuildScheduledEventDetailsBottomSheet$descriptionParser$2(this));
+        this.locationParser = g.lazy(WidgetGuildScheduledEventDetailsBottomSheet$locationParser$2.INSTANCE);
+        this.args = g.lazy(new WidgetGuildScheduledEventDetailsBottomSheet$$special$$inlined$args$1(this, "intent_args_key"));
+        WidgetGuildScheduledEventDetailsBottomSheet$viewModel$2 widgetGuildScheduledEventDetailsBottomSheet$viewModel$2 = new WidgetGuildScheduledEventDetailsBottomSheet$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GuildScheduledEventDetailsViewModel.class), new WidgetGuildScheduledEventDetailsBottomSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGuildScheduledEventDetailsBottomSheet$viewModel$2));
+        this.previewLauncher = WidgetPreviewGuildScheduledEvent.INSTANCE.createJoinOnStartActivityRegistration(this, new WidgetGuildScheduledEventDetailsBottomSheet$previewLauncher$1(this));
     }
 
     public static final /* synthetic */ void access$configureUi(WidgetGuildScheduledEventDetailsBottomSheet widgetGuildScheduledEventDetailsBottomSheet, GuildScheduledEventDetailsViewModel.ViewState viewState) {
         widgetGuildScheduledEventDetailsBottomSheet.configureUi(viewState);
     }
 
-    public static final /* synthetic */ WidgetGuildScheduledEventDetailsBottomSheet2 access$getArgs$p(WidgetGuildScheduledEventDetailsBottomSheet widgetGuildScheduledEventDetailsBottomSheet) {
+    public static final /* synthetic */ GuildScheduledEventDetailsArgs access$getArgs$p(WidgetGuildScheduledEventDetailsBottomSheet widgetGuildScheduledEventDetailsBottomSheet) {
         return widgetGuildScheduledEventDetailsBottomSheet.getArgs();
     }
 
@@ -498,30 +496,30 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         return widgetGuildScheduledEventDetailsBottomSheet.getViewModel();
     }
 
-    private final void configureForRsvpUsersFetchState(GuildScheduledEventDetailsViewModel2 rsvpUsersFetchState) {
+    private final void configureForRsvpUsersFetchState(EventDetailsRsvpUsersFetchState rsvpUsersFetchState) {
         ProgressBar progressBar = getBinding().f2444s;
-        Intrinsics3.checkNotNullExpressionValue(progressBar, "binding.loadingIndicator");
+        d0.z.d.m.checkNotNullExpressionValue(progressBar, "binding.loadingIndicator");
         progressBar.setVisibility(8);
         ConstraintLayout constraintLayout = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.guildScheduledEventEmptyOrErrorContainer");
+        d0.z.d.m.checkNotNullExpressionValue(constraintLayout, "binding.guildScheduledEventEmptyOrErrorContainer");
         constraintLayout.setVisibility(8);
         RecyclerView recyclerView = getBinding().r;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.guildScheduledEventRsvpListRecyclerView");
+        d0.z.d.m.checkNotNullExpressionValue(recyclerView, "binding.guildScheduledEventRsvpListRecyclerView");
         recyclerView.setVisibility(8);
         int iOrdinal = rsvpUsersFetchState.ordinal();
         if (iOrdinal == 0) {
             ProgressBar progressBar2 = getBinding().f2444s;
-            Intrinsics3.checkNotNullExpressionValue(progressBar2, "binding.loadingIndicator");
+            d0.z.d.m.checkNotNullExpressionValue(progressBar2, "binding.loadingIndicator");
             progressBar2.setVisibility(0);
             return;
         }
         if (iOrdinal == 1) {
             ConstraintLayout constraintLayout2 = getBinding().n;
-            Intrinsics3.checkNotNullExpressionValue(constraintLayout2, "binding.guildScheduledEventEmptyOrErrorContainer");
+            d0.z.d.m.checkNotNullExpressionValue(constraintLayout2, "binding.guildScheduledEventEmptyOrErrorContainer");
             constraintLayout2.setVisibility(0);
             TextView textView = getBinding().o;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildScheduledEventEmptyOrErrorTitle");
-            FormatUtils.n(textView, R.string.guild_event_details_user_list_fetch_error, new Object[0], null, 4);
+            d0.z.d.m.checkNotNullExpressionValue(textView, "binding.guildScheduledEventEmptyOrErrorTitle");
+            b.n(textView, R.string.guild_event_details_user_list_fetch_error, new Object[0], null, 4);
             return;
         }
         if (iOrdinal != 2) {
@@ -529,34 +527,34 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
                 return;
             }
             RecyclerView recyclerView2 = getBinding().r;
-            Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.guildScheduledEventRsvpListRecyclerView");
+            d0.z.d.m.checkNotNullExpressionValue(recyclerView2, "binding.guildScheduledEventRsvpListRecyclerView");
             recyclerView2.setVisibility(0);
             return;
         }
         ConstraintLayout constraintLayout3 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout3, "binding.guildScheduledEventEmptyOrErrorContainer");
+        d0.z.d.m.checkNotNullExpressionValue(constraintLayout3, "binding.guildScheduledEventEmptyOrErrorContainer");
         constraintLayout3.setVisibility(0);
         TextView textView2 = getBinding().o;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildScheduledEventEmptyOrErrorTitle");
-        FormatUtils.n(textView2, R.string.guild_event_details_user_list_empty_title, new Object[0], null, 4);
+        d0.z.d.m.checkNotNullExpressionValue(textView2, "binding.guildScheduledEventEmptyOrErrorTitle");
+        b.n(textView2, R.string.guild_event_details_user_list_empty_title, new Object[0], null, 4);
     }
 
-    private final void configureForSection(GuildScheduledEventDetailsViewModel3 section, GuildScheduledEventDetailsViewModel2 rsvpUsersFetchState) {
-        GuildScheduledEventDetailsViewModel3 guildScheduledEventDetailsViewModel3 = GuildScheduledEventDetailsViewModel3.RSVP_LIST;
-        if (section == guildScheduledEventDetailsViewModel3) {
+    private final void configureForSection(EventDetailsSection section, EventDetailsRsvpUsersFetchState rsvpUsersFetchState) {
+        EventDetailsSection eventDetailsSection = EventDetailsSection.RSVP_LIST;
+        if (section == eventDetailsSection) {
             configureForRsvpUsersFetchState(rsvpUsersFetchState);
         }
         ConstraintLayout constraintLayout = getBinding().p;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.guildScheduledEventInfoContainer");
-        constraintLayout.setVisibility(section == GuildScheduledEventDetailsViewModel3.EVENT_INFO ? 0 : 8);
+        d0.z.d.m.checkNotNullExpressionValue(constraintLayout, "binding.guildScheduledEventInfoContainer");
+        constraintLayout.setVisibility(section == EventDetailsSection.EVENT_INFO ? 0 : 8);
         ConstraintLayout constraintLayout2 = getBinding().q;
-        Intrinsics3.checkNotNullExpressionValue(constraintLayout2, "binding.guildScheduledEventRsvpListContainer");
-        constraintLayout2.setVisibility(section == guildScheduledEventDetailsViewModel3 ? 0 : 8);
+        d0.z.d.m.checkNotNullExpressionValue(constraintLayout2, "binding.guildScheduledEventRsvpListContainer");
+        constraintLayout2.setVisibility(section == eventDetailsSection ? 0 : 8);
     }
 
     private final void configureSegmentControl(int segmentIndex, boolean hide) {
         SegmentedControlContainer segmentedControlContainer = getBinding().t;
-        Intrinsics3.checkNotNullExpressionValue(segmentedControlContainer, "binding.segmentedControl");
+        d0.z.d.m.checkNotNullExpressionValue(segmentedControlContainer, "binding.segmentedControl");
         segmentedControlContainer.setVisibility(hide ^ true ? 0 : 8);
         if (hide) {
             return;
@@ -566,12 +564,12 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         getBinding().t.setSelectedIndex(segmentIndex);
         CardSegment cardSegment = getBinding().u;
         Context contextRequireContext = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
-        cardSegment.setText(FormatUtils.h(contextRequireContext, R.string.guild_event_details_info_tab_title, new Object[0], null, 4));
+        d0.z.d.m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+        cardSegment.setText(b.h(contextRequireContext, R.string.guild_event_details_info_tab_title, new Object[0], null, 4));
         CardSegment cardSegment2 = getBinding().v;
         Context contextRequireContext2 = requireContext();
-        Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
-        cardSegment2.setText(FormatUtils.h(contextRequireContext2, R.string.indicate_rsvp, new Object[0], null, 4));
+        d0.z.d.m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+        cardSegment2.setText(b.h(contextRequireContext2, R.string.indicate_rsvp, new Object[0], null, 4));
     }
 
     private final void configureUi(GuildScheduledEventDetailsViewModel.ViewState viewState) {
@@ -585,90 +583,90 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         configureForSection(initialized.getSection(), initialized.getRsvpUsersFetchState());
         getBinding().g.configure(initialized.getGuildScheduledEvent(), false);
         TextView textView = getBinding().m;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.guildScheduledEventDetailsTitleText");
+        d0.z.d.m.checkNotNullExpressionValue(textView, "binding.guildScheduledEventDetailsTitleText");
         textView.setText(initialized.getGuildScheduledEvent().getName());
         SimpleDraweeView simpleDraweeView = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.guildScheduledEventDetailsGuildIcon");
+        d0.z.d.m.checkNotNullExpressionValue(simpleDraweeView, "binding.guildScheduledEventDetailsGuildIcon");
         IconUtils.setIcon$default((ImageView) simpleDraweeView, initialized.getGuild(), 0, (MGImages.ChangeDetector) null, false, 28, (Object) null);
         TextView textView2 = getBinding().j;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.guildScheduledEventDetailsGuildName");
+        d0.z.d.m.checkNotNullExpressionValue(textView2, "binding.guildScheduledEventDetailsGuildName");
         textView2.setText(initialized.getGuild().getName());
         GuildScheduledEventLocationInfo locationInfo = initialized.getLocationInfo();
         if (locationInfo != null) {
             getBinding().c.setImageResource(locationInfo.getLocationIcon());
         }
         ImageView imageView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.guildScheduledEventDetailsChannelIcon");
+        d0.z.d.m.checkNotNullExpressionValue(imageView, "binding.guildScheduledEventDetailsChannelIcon");
         imageView.setVisibility(initialized.getLocationInfo() != null ? 0 : 8);
         LinkifiedTextView linkifiedTextView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(linkifiedTextView, "binding.guildScheduledEventDetailsChannelName");
+        d0.z.d.m.checkNotNullExpressionValue(linkifiedTextView, "binding.guildScheduledEventDetailsChannelName");
         GuildScheduledEventLocationInfo locationInfo2 = initialized.getLocationInfo();
         CharSequence charSequenceH = null;
         if (locationInfo2 != null) {
             GuildScheduledEventExternalLocationParser locationParser = getLocationParser();
             Context contextRequireContext = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
+            d0.z.d.m.checkNotNullExpressionValue(contextRequireContext, "requireContext()");
             textFromLocation = locationParser.getTextFromLocation(contextRequireContext, locationInfo2);
         } else {
             textFromLocation = null;
         }
         ViewExtensions.setTextAndVisibilityBy(linkifiedTextView, textFromLocation);
         ImageView imageView2 = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.guildScheduledEventDetailsRsvpIcon");
+        d0.z.d.m.checkNotNullExpressionValue(imageView2, "binding.guildScheduledEventDetailsRsvpIcon");
         imageView2.setVisibility(initialized.getGuildScheduledEvent().getUserCount() != null ? 0 : 8);
         TextView textView3 = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.guildScheduledEventDetailsRsvpCount");
+        d0.z.d.m.checkNotNullExpressionValue(textView3, "binding.guildScheduledEventDetailsRsvpCount");
         Integer userCount = initialized.getGuildScheduledEvent().getUserCount();
         if (userCount != null) {
             int iIntValue = userCount.intValue();
             Context contextRequireContext2 = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
+            d0.z.d.m.checkNotNullExpressionValue(contextRequireContext2, "requireContext()");
             Context contextRequireContext3 = requireContext();
-            Intrinsics3.checkNotNullExpressionValue(contextRequireContext3, "requireContext()");
-            charSequenceH = FormatUtils.h(contextRequireContext2, R.string.guild_event_interested_count, new Object[]{StringResourceUtils.getI18nPluralString(contextRequireContext3, R.plurals.guild_event_interested_count_count, iIntValue, Integer.valueOf(iIntValue))}, null, 4);
+            d0.z.d.m.checkNotNullExpressionValue(contextRequireContext3, "requireContext()");
+            charSequenceH = b.h(contextRequireContext2, R.string.guild_event_interested_count, new Object[]{StringResourceUtilsKt.getI18nPluralString(contextRequireContext3, R.plurals.guild_event_interested_count_count, iIntValue, Integer.valueOf(iIntValue))}, null, 4);
         }
         ViewExtensions.setTextAndVisibilityBy(textView3, charSequenceH);
         UserGuildMember creator = initialized.getCreator();
         if (creator != null) {
             TextView textView4 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.guildScheduledEventDetailsCreatedBy");
+            d0.z.d.m.checkNotNullExpressionValue(textView4, "binding.guildScheduledEventDetailsCreatedBy");
             textView4.setVisibility(0);
             SimpleDraweeView simpleDraweeView2 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.guildScheduledEventDetailsCreatorAvatar");
+            d0.z.d.m.checkNotNullExpressionValue(simpleDraweeView2, "binding.guildScheduledEventDetailsCreatorAvatar");
             simpleDraweeView2.setVisibility(0);
             TextView textView5 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView5, "binding.guildScheduledEventDetailsCreatedBy");
-            FormatUtils.m(textView5, R.string.guild_event_created_by_hook, new Object[]{creator.getNickOrUserName()}, new AnonymousClass4(creator));
+            d0.z.d.m.checkNotNullExpressionValue(textView5, "binding.guildScheduledEventDetailsCreatedBy");
+            b.m(textView5, R.string.guild_event_created_by_hook, new Object[]{creator.getNickOrUserName()}, new AnonymousClass4(creator));
             SimpleDraweeView simpleDraweeView3 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.guildScheduledEventDetailsCreatorAvatar");
-            SimpleDraweeViewExtensions.configureCreator(simpleDraweeView3, creator);
+            d0.z.d.m.checkNotNullExpressionValue(simpleDraweeView3, "binding.guildScheduledEventDetailsCreatorAvatar");
+            SimpleDraweeViewExtensionsKt.configureCreator(simpleDraweeView3, creator);
         } else {
             TextView textView6 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textView6, "binding.guildScheduledEventDetailsCreatedBy");
+            d0.z.d.m.checkNotNullExpressionValue(textView6, "binding.guildScheduledEventDetailsCreatedBy");
             textView6.setVisibility(8);
             SimpleDraweeView simpleDraweeView4 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView4, "binding.guildScheduledEventDetailsCreatorAvatar");
+            d0.z.d.m.checkNotNullExpressionValue(simpleDraweeView4, "binding.guildScheduledEventDetailsCreatorAvatar");
             simpleDraweeView4.setVisibility(8);
         }
         getDescriptionParser().configureDescription(initialized.getGuildScheduledEvent().getDescription(), initialized.getGuildScheduledEvent().getGuildId());
         GuildScheduledEventBottomButtonView guildScheduledEventBottomButtonView = getBinding().f2443b;
-        Intrinsics3.checkNotNullExpressionValue(guildScheduledEventBottomButtonView, "binding.guildScheduledEventDetailsButtonView");
+        d0.z.d.m.checkNotNullExpressionValue(guildScheduledEventBottomButtonView, "binding.guildScheduledEventDetailsButtonView");
         guildScheduledEventBottomButtonView.setVisibility(0);
         getBinding().f2443b.configureForDetails(getButtonConfiguration(initialized));
         getBinding().j.setOnClickListener(new AnonymousClass5());
         GuildScheduledEventRsvpUserListAdapter guildScheduledEventRsvpUserListAdapter = this.adapter;
         if (guildScheduledEventRsvpUserListAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            d0.z.d.m.throwUninitializedPropertyAccessException("adapter");
         }
         guildScheduledEventRsvpUserListAdapter.setData(initialized.getRsvpUsers());
     }
 
-    private final WidgetGuildScheduledEventDetailsBottomSheet2 getArgs() {
-        return (WidgetGuildScheduledEventDetailsBottomSheet2) this.args.getValue();
+    private final GuildScheduledEventDetailsArgs getArgs() {
+        return (GuildScheduledEventDetailsArgs) this.args.getValue();
     }
 
     private final ButtonConfiguration getButtonConfiguration(GuildScheduledEventDetailsViewModel.ViewState.Initialized initialized) {
-        if (getArgs().getSource() == WidgetGuildScheduledEventDetailsBottomSheet3.Directory) {
+        if (getArgs().getSource() == GuildScheduledEventDetailsSource.Directory) {
             return new DirectoryButtonConfiguration(initialized.getGuildScheduledEvent(), initialized.isInGuild(), initialized.isRsvped(), true, new AnonymousClass1(initialized), new AnonymousClass2(), new AnonymousClass3(), new AnonymousClass4());
         }
         GuildScheduledEvent guildScheduledEvent = initialized.getGuildScheduledEvent();
@@ -710,15 +708,15 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        d0.z.d.m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = getBinding().r;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.guildScheduledEventRsvpListRecyclerView");
+        d0.z.d.m.checkNotNullExpressionValue(recyclerView, "binding.guildScheduledEventRsvpListRecyclerView");
         this.adapter = new GuildScheduledEventRsvpUserListAdapter(recyclerView, new AnonymousClass1());
         RecyclerView recyclerView2 = getBinding().r;
         GuildScheduledEventRsvpUserListAdapter guildScheduledEventRsvpUserListAdapter = this.adapter;
         if (guildScheduledEventRsvpUserListAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("adapter");
+            d0.z.d.m.throwUninitializedPropertyAccessException("adapter");
         }
         recyclerView2.setAdapter(guildScheduledEventRsvpUserListAdapter);
         recyclerView2.setLayoutManager(new LinearLayoutManager(recyclerView2.getContext()));

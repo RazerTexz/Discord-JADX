@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events.activity_internal;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackActivityInternalMetadata;
-import com.discord.analytics.generated.traits.TrackActivityInternalMetadata2;
+import com.discord.analytics.generated.traits.TrackActivityInternalMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalSketchHeadsAction.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivityInternalSketchHeadsAction implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
+public final /* data */ class TrackActivityInternalSketchHeadsAction implements AnalyticsSchema, TrackBaseReceiver, TrackActivityInternalMetadataReceiver {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
     private final CharSequence actionName = null;
@@ -39,7 +39,7 @@ public final /* data */ class TrackActivityInternalSketchHeadsAction implements 
             return false;
         }
         TrackActivityInternalSketchHeadsAction trackActivityInternalSketchHeadsAction = (TrackActivityInternalSketchHeadsAction) other;
-        return Intrinsics3.areEqual(this.actionName, trackActivityInternalSketchHeadsAction.actionName) && Intrinsics3.areEqual(this.mode, trackActivityInternalSketchHeadsAction.mode) && Intrinsics3.areEqual(this.phase, trackActivityInternalSketchHeadsAction.phase) && Intrinsics3.areEqual(this.theme, trackActivityInternalSketchHeadsAction.theme) && Intrinsics3.areEqual(this.numRounds, trackActivityInternalSketchHeadsAction.numRounds) && Intrinsics3.areEqual(this.roundLengthMs, trackActivityInternalSketchHeadsAction.roundLengthMs) && Intrinsics3.areEqual(this.numPlayers, trackActivityInternalSketchHeadsAction.numPlayers) && Intrinsics3.areEqual(this.numDrawers, trackActivityInternalSketchHeadsAction.numDrawers) && Intrinsics3.areEqual(this.numGuessers, trackActivityInternalSketchHeadsAction.numGuessers) && Intrinsics3.areEqual(this.numSpectators, trackActivityInternalSketchHeadsAction.numSpectators);
+        return m.areEqual(this.actionName, trackActivityInternalSketchHeadsAction.actionName) && m.areEqual(this.mode, trackActivityInternalSketchHeadsAction.mode) && m.areEqual(this.phase, trackActivityInternalSketchHeadsAction.phase) && m.areEqual(this.theme, trackActivityInternalSketchHeadsAction.theme) && m.areEqual(this.numRounds, trackActivityInternalSketchHeadsAction.numRounds) && m.areEqual(this.roundLengthMs, trackActivityInternalSketchHeadsAction.roundLengthMs) && m.areEqual(this.numPlayers, trackActivityInternalSketchHeadsAction.numPlayers) && m.areEqual(this.numDrawers, trackActivityInternalSketchHeadsAction.numDrawers) && m.areEqual(this.numGuessers, trackActivityInternalSketchHeadsAction.numGuessers) && m.areEqual(this.numSpectators, trackActivityInternalSketchHeadsAction.numSpectators);
     }
 
     public int hashCode() {
@@ -66,7 +66,7 @@ public final /* data */ class TrackActivityInternalSketchHeadsAction implements 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalSketchHeadsAction(actionName=");
+        StringBuilder sbU = a.U("TrackActivityInternalSketchHeadsAction(actionName=");
         sbU.append(this.actionName);
         sbU.append(", mode=");
         sbU.append(this.mode);
@@ -85,6 +85,6 @@ public final /* data */ class TrackActivityInternalSketchHeadsAction implements 
         sbU.append(", numGuessers=");
         sbU.append(this.numGuessers);
         sbU.append(", numSpectators=");
-        return outline.G(sbU, this.numSpectators, ")");
+        return a.G(sbU, this.numSpectators, ")");
     }
 }

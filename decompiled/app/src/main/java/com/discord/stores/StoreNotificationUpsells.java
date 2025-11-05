@@ -1,9 +1,9 @@
 package com.discord.stores;
 
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.stores.updates.ObservationDeckProvider;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -17,7 +17,7 @@ public final class StoreNotificationUpsells extends StoreV2 {
 
     /* compiled from: StoreNotificationUpsells.kt */
     /* renamed from: com.discord.stores.StoreNotificationUpsells$dismissPushNotificationsUpsell$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -36,7 +36,7 @@ public final class StoreNotificationUpsells extends StoreV2 {
 
     /* compiled from: StoreNotificationUpsells.kt */
     /* renamed from: com.discord.stores.StoreNotificationUpsells$observePushNotificationUpsellDismissed$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public AnonymousClass1() {
             super(0);
         }
@@ -53,7 +53,7 @@ public final class StoreNotificationUpsells extends StoreV2 {
     }
 
     public /* synthetic */ StoreNotificationUpsells(Dispatcher dispatcher, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public final void dismissPushNotificationsUpsell() {
@@ -67,13 +67,13 @@ public final class StoreNotificationUpsells extends StoreV2 {
 
     public final Observable<Boolean> observePushNotificationUpsellDismissed() {
         Observable<Boolean> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
         return observableR;
     }
 
     public StoreNotificationUpsells(Dispatcher dispatcher, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
     }

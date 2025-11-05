@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetGifPickerBinding;
@@ -19,11 +19,11 @@ import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.recycler.GridColumnSpaceItemDecoration;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.chat.input.gifpicker.GifPickerViewModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -33,7 +33,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetGifPicker.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGifPicker extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGifPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifPickerBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGifPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifPickerBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -45,7 +45,7 @@ public final class WidgetGifPicker extends AppFragment {
 
     /* compiled from: WidgetGifPicker.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<GifPickerViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<GifPickerViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -58,7 +58,7 @@ public final class WidgetGifPicker extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifPickerViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "viewState");
+            m.checkNotNullParameter(viewState, "viewState");
             WidgetGifPicker.access$handleViewState(WidgetGifPicker.this, viewState);
         }
     }
@@ -70,8 +70,8 @@ public final class WidgetGifPicker extends AppFragment {
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            Intrinsics3.checkNotNullExpressionValue(view, "view");
-            Intrinsics3.checkNotNullExpressionValue(windowInsetsCompat, "insets");
+            m.checkNotNullExpressionValue(view, "view");
+            m.checkNotNullExpressionValue(windowInsetsCompat, "insets");
             view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), windowInsetsCompat.getSystemWindowInsetBottom());
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
@@ -84,8 +84,8 @@ public final class WidgetGifPicker extends AppFragment {
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener
         public final WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat windowInsetsCompat) {
-            Intrinsics3.checkNotNullExpressionValue(view, "view");
-            Intrinsics3.checkNotNullExpressionValue(windowInsetsCompat, "insets");
+            m.checkNotNullExpressionValue(view, "view");
+            m.checkNotNullExpressionValue(windowInsetsCompat, "insets");
             view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(), windowInsetsCompat.getSystemWindowInsetBottom());
             return windowInsetsCompat.consumeSystemWindowInsets();
         }
@@ -107,10 +107,10 @@ public final class WidgetGifPicker extends AppFragment {
 
     public WidgetGifPicker() {
         super(R.layout.widget_gif_picker);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGifPicker2.INSTANCE, null, 2, null);
-        WidgetGifPicker3 widgetGifPicker3 = WidgetGifPicker3.INSTANCE;
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GifPickerViewModel.class), new WidgetGifPicker$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGifPicker3));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGifPicker$binding$2.INSTANCE, null, 2, null);
+        WidgetGifPicker$viewModel$2 widgetGifPicker$viewModel$2 = WidgetGifPicker$viewModel$2.INSTANCE;
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GifPickerViewModel.class), new WidgetGifPicker$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGifPicker$viewModel$2));
     }
 
     public static final /* synthetic */ WidgetGifPickerBinding access$getBinding$p(WidgetGifPicker widgetGifPicker) {
@@ -131,31 +131,31 @@ public final class WidgetGifPicker extends AppFragment {
 
     private final void handleViewState(GifPickerViewModel.ViewState viewState) {
         RecyclerView recyclerView = getBinding().f2401b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.gifPickerCategoryRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.gifPickerCategoryRecycler");
         recyclerView.setVisibility(viewState.getIsLoaded() ? 0 : 8);
         GifLoadingView gifLoadingView = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(gifLoadingView, "binding.gifPickerLoadingView");
+        m.checkNotNullExpressionValue(gifLoadingView, "binding.gifPickerLoadingView");
         gifLoadingView.setVisibility(viewState.getIsLoaded() ^ true ? 0 : 8);
         GifCategoryAdapter gifCategoryAdapter = this.categoryAdapter;
         if (gifCategoryAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
+            m.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         gifCategoryAdapter.setItems(viewState.getGifCategoryItems());
     }
 
     private final void setUpCategoryRecycler() {
         RecyclerView recyclerView = getBinding().f2401b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.gifPickerCategoryRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.gifPickerCategoryRecycler");
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         RecyclerView recyclerView2 = getBinding().f2401b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.gifPickerCategoryRecycler");
+        m.checkNotNullExpressionValue(recyclerView2, "binding.gifPickerCategoryRecycler");
         recyclerView2.setItemAnimator(null);
         this.categoryAdapter = new GifCategoryAdapter(this, this.onSelectGifCategory, null, 4, null);
         RecyclerView recyclerView3 = getBinding().f2401b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.gifPickerCategoryRecycler");
+        m.checkNotNullExpressionValue(recyclerView3, "binding.gifPickerCategoryRecycler");
         GifCategoryAdapter gifCategoryAdapter = this.categoryAdapter;
         if (gifCategoryAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
+            m.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         recyclerView3.setAdapter(gifCategoryAdapter);
         getBinding().f2401b.addItemDecoration(new GridColumnSpaceItemDecoration(DimenUtils.dpToPixels(8), 2));
@@ -169,7 +169,7 @@ public final class WidgetGifPicker extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setUpCategoryRecycler();
         setWindowInsetsListeners();
@@ -185,7 +185,7 @@ public final class WidgetGifPicker extends AppFragment {
     public final void scrollToTop() {
         GifCategoryAdapter gifCategoryAdapter = this.categoryAdapter;
         if (gifCategoryAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("categoryAdapter");
+            m.throwUninitializedPropertyAccessException("categoryAdapter");
         }
         if (gifCategoryAdapter.getPageSize() > 0) {
             getBinding().f2401b.scrollToPosition(0);
@@ -193,7 +193,7 @@ public final class WidgetGifPicker extends AppFragment {
     }
 
     public final void setOnSelectGifCategory(Function1<? super GifCategoryItem, Unit> onGifCategorySelected) {
-        Intrinsics3.checkNotNullParameter(onGifCategorySelected, "onGifCategorySelected");
+        m.checkNotNullParameter(onGifCategorySelected, "onGifCategorySelected");
         this.onSelectGifCategory = onGifCategorySelected;
     }
 }

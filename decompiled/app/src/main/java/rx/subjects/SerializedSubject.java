@@ -1,12 +1,12 @@
 package rx.subjects;
 
-import j0.n.SerializedObserver;
+import j0.n.c;
 import rx.Observable;
 import rx.Subscriber;
 
 /* loaded from: classes3.dex */
 public class SerializedSubject<T, R> extends Subject<T, R> {
-    public final SerializedObserver<T> k;
+    public final c<T> k;
 
     public class a implements Observable.a<R> {
         public final /* synthetic */ Subject j;
@@ -23,20 +23,20 @@ public class SerializedSubject<T, R> extends Subject<T, R> {
 
     public SerializedSubject(Subject<T, R> subject) {
         super(new a(subject));
-        this.k = new SerializedObserver<>(subject);
+        this.k = new c<>(subject);
     }
 
-    @Override // j0.Observer2
+    @Override // j0.g
     public void onCompleted() {
         this.k.onCompleted();
     }
 
-    @Override // j0.Observer2
+    @Override // j0.g
     public void onError(Throwable th) {
         this.k.onError(th);
     }
 
-    @Override // j0.Observer2
+    @Override // j0.g
     public void onNext(T t) {
         this.k.onNext(t);
     }

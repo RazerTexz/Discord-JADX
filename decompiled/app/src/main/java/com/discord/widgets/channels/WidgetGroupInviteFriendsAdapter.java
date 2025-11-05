@@ -20,7 +20,7 @@ import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.discord.views.StatusView;
 import com.discord.widgets.channels.WidgetGroupInviteFriends;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
@@ -38,7 +38,7 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public WidgetGroupInviteFriendsListItem(WidgetGroupInviteFriendsAdapter widgetGroupInviteFriendsAdapter, WidgetGroupInviteFriendsAdapter widgetGroupInviteFriendsAdapter2) {
             super(R.layout.widget_group_invite_friends_item, widgetGroupInviteFriendsAdapter2);
-            Intrinsics3.checkNotNullParameter(widgetGroupInviteFriendsAdapter2, "adapter");
+            m.checkNotNullParameter(widgetGroupInviteFriendsAdapter2, "adapter");
             this.this$0 = widgetGroupInviteFriendsAdapter;
             View view = this.itemView;
             int i = R.id.friend_container;
@@ -63,7 +63,7 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
                                     CheckBox checkBox = (CheckBox) view.findViewById(R.id.user_selected_checkbox);
                                     if (checkBox != null) {
                                         WidgetGroupInviteFriendsItemBinding widgetGroupInviteFriendsItemBinding = new WidgetGroupInviteFriendsItemBinding((LinearLayout) view, relativeLayout, simpleDraweeView, relativeLayout2, simpleDraweeSpanTextView, textView, statusView, checkBox);
-                                        Intrinsics3.checkNotNullExpressionValue(widgetGroupInviteFriendsItemBinding, "WidgetGroupInviteFriendsItemBinding.bind(itemView)");
+                                        m.checkNotNullExpressionValue(widgetGroupInviteFriendsItemBinding, "WidgetGroupInviteFriendsItemBinding.bind(itemView)");
                                         this.binding = widgetGroupInviteFriendsItemBinding;
                                         return;
                                     }
@@ -87,24 +87,24 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGroupInviteFriends.Model.FriendItem data) {
-            Intrinsics3.checkNotNullParameter(data, "data");
+            m.checkNotNullParameter(data, "data");
             super.onConfigure(position, (int) data);
             TextView textView = this.binding.e;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.friendsListItemName");
+            m.checkNotNullExpressionValue(textView, "binding.friendsListItemName");
             User user = data.getUser();
             textView.setText(user != null ? user.getUsername() : null);
             this.binding.f.setPresence(data.getPresence());
             CheckBox checkBox = this.binding.g;
-            Intrinsics3.checkNotNullExpressionValue(checkBox, "binding.userSelectedCheckbox");
+            m.checkNotNullExpressionValue(checkBox, "binding.userSelectedCheckbox");
             checkBox.setChecked(data.isSelected());
-            this.binding.f2407b.setOnClickListener(new WidgetGroupInviteFriendsAdapter2(this, data));
+            this.binding.f2407b.setOnClickListener(new WidgetGroupInviteFriendsAdapter$WidgetGroupInviteFriendsListItem$onConfigure$1(this, data));
             Presence presence = data.getPresence();
             boolean zIsApplicationStreaming = data.isApplicationStreaming();
             SimpleDraweeSpanTextView simpleDraweeSpanTextView = this.binding.d;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.friendsListItemGame");
+            m.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.friendsListItemGame");
             PresenceUtils.setPresenceText$default(presence, zIsApplicationStreaming, simpleDraweeSpanTextView, true, false, 16, null);
             SimpleDraweeView simpleDraweeView = this.binding.c;
-            Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.friendsListItemAvatar");
+            m.checkNotNullExpressionValue(simpleDraweeView, "binding.friendsListItemAvatar");
             IconUtils.setIcon$default(simpleDraweeView, data.getUser(), R.dimen.avatar_size_standard, null, null, null, 56, null);
         }
     }
@@ -112,7 +112,7 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGroupInviteFriendsAdapter(RecyclerView recyclerView) {
         super(recyclerView, false, 2, null);
-        Intrinsics3.checkNotNullParameter(recyclerView, "recycler");
+        m.checkNotNullParameter(recyclerView, "recycler");
     }
 
     public static final /* synthetic */ Function2 access$getListener$p(WidgetGroupInviteFriendsAdapter widgetGroupInviteFriendsAdapter) {
@@ -129,15 +129,15 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
     }
 
     public final void setData(List<WidgetGroupInviteFriends.Model.FriendItem> data, Function2<? super User, ? super Boolean, Unit> friendChosenListener) {
-        Intrinsics3.checkNotNullParameter(data, "data");
-        Intrinsics3.checkNotNullParameter(friendChosenListener, "friendChosenListener");
+        m.checkNotNullParameter(data, "data");
+        m.checkNotNullParameter(friendChosenListener, "friendChosenListener");
         super.setData(data);
         this.listener = friendChosenListener;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public WidgetGroupInviteFriendsListItem onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         if (viewType == 0) {
             return new WidgetGroupInviteFriendsListItem(this, this);
         }

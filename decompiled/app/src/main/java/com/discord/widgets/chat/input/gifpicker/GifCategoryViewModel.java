@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.input.gifpicker;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.models.gifpicker.dto.ModelGif;
 import com.discord.stores.StoreAnalytics;
 import com.discord.stores.StoreGifPicker;
@@ -13,10 +13,9 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.chat.MessageManager;
 import com.discord.widgets.chat.input.gifpicker.GifAdapterItem;
 import com.discord.widgets.chat.input.gifpicker.GifCategoryItem;
-import d0.LazyJVM;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -30,7 +29,7 @@ import rx.Observable;
 
 /* compiled from: GifCategoryViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GifCategoryViewModel extends AppViewModel<ViewState> {
+public final class GifCategoryViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -41,7 +40,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: GifCategoryViewModel.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.GifCategoryViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -54,7 +53,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             GifCategoryViewModel.access$handleStoreState(GifCategoryViewModel.this, storeState);
         }
     }
@@ -78,8 +77,8 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
                 }
                 observableObserveTrendingCategoryGifs = storeGifPicker.observeTrendingCategoryGifs();
             }
-            Observable observableG = observableObserveTrendingCategoryGifs.G(GifCategoryViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "gifsObservable.map { gifs -> StoreState(gifs) }");
+            Observable observableG = observableObserveTrendingCategoryGifs.G(GifCategoryViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableG, "gifsObservable.map { gifs -> StoreState(gifs) }");
             return observableG;
         }
 
@@ -93,7 +92,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         private final List<ModelGif> gifs;
 
         public StoreState(List<ModelGif> list) {
-            Intrinsics3.checkNotNullParameter(list, "gifs");
+            m.checkNotNullParameter(list, "gifs");
             this.gifs = list;
         }
 
@@ -110,13 +109,13 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(List<ModelGif> gifs) {
-            Intrinsics3.checkNotNullParameter(gifs, "gifs");
+            m.checkNotNullParameter(gifs, "gifs");
             return new StoreState(gifs);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof StoreState) && Intrinsics3.areEqual(this.gifs, ((StoreState) other).gifs);
+                return (other instanceof StoreState) && m.areEqual(this.gifs, ((StoreState) other).gifs);
             }
             return true;
         }
@@ -134,7 +133,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            return outline.L(outline.U("StoreState(gifs="), this.gifs, ")");
+            return a.L(a.U("StoreState(gifs="), this.gifs, ")");
         }
     }
 
@@ -146,9 +145,9 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         private final List<GifAdapterItem.GifItem> gifItems;
 
         public ViewState(List<GifAdapterItem.GifItem> list) {
-            Intrinsics3.checkNotNullParameter(list, "gifItems");
+            m.checkNotNullParameter(list, "gifItems");
             this.gifItems = list;
-            this.gifCount = LazyJVM.lazy(new GifCategoryViewModel3(this));
+            this.gifCount = g.lazy(new GifCategoryViewModel$ViewState$gifCount$2(this));
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -167,13 +166,13 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         }
 
         public final ViewState copy(List<GifAdapterItem.GifItem> gifItems) {
-            Intrinsics3.checkNotNullParameter(gifItems, "gifItems");
+            m.checkNotNullParameter(gifItems, "gifItems");
             return new ViewState(gifItems);
         }
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof ViewState) && Intrinsics3.areEqual(this.gifItems, ((ViewState) other).gifItems);
+                return (other instanceof ViewState) && m.areEqual(this.gifItems, ((ViewState) other).gifItems);
             }
             return true;
         }
@@ -195,7 +194,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            return outline.L(outline.U("ViewState(gifItems="), this.gifItems, ")");
+            return a.L(a.U("ViewState(gifItems="), this.gifItems, ")");
         }
     }
 
@@ -212,7 +211,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
 
     private final void handleStoreState(StoreState storeState) {
         List<ModelGif> gifs = storeState.getGifs();
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(gifs, 10));
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(gifs, 10));
         Iterator<T> it = gifs.iterator();
         while (it.hasNext()) {
             arrayList.add(new GifAdapterItem.GifItem((ModelGif) it.next(), null, 2, null));
@@ -223,7 +222,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
     }
 
     public final void selectGif(GifAdapterItem.GifItem gifItem) {
-        Intrinsics3.checkNotNullParameter(gifItem, "gifItem");
+        m.checkNotNullParameter(gifItem, "gifItem");
         ViewState viewState = getViewState();
         if (viewState != null) {
             StoreAnalytics.trackSearchResultSelected$default(this.storeAnalytics, SearchType.GIF, viewState.getGifCount(), null, new Traits.Source(null, null, Traits.Source.Obj.GIF_PICKER, null, null, 27, null), 4, null);
@@ -234,12 +233,12 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GifCategoryViewModel(Context context, GifCategoryItem gifCategoryItem, MessageManager messageManager, StoreGifPicker storeGifPicker, StoreAnalytics storeAnalytics, Observable<StoreState> observable) {
         super(null);
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(gifCategoryItem, "gifCategoryItem");
-        Intrinsics3.checkNotNullParameter(messageManager, "messageManager");
-        Intrinsics3.checkNotNullParameter(storeGifPicker, "storeGifPicker");
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(gifCategoryItem, "gifCategoryItem");
+        m.checkNotNullParameter(messageManager, "messageManager");
+        m.checkNotNullParameter(storeGifPicker, "storeGifPicker");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.gifCategoryItem = gifCategoryItem;
         this.messageManager = messageManager;
         this.storeGifPicker = storeGifPicker;

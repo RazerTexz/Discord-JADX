@@ -3,8 +3,8 @@ package com.discord.widgets.guilds.invite;
 import a0.a.a.b;
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.BuildConfig;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -23,27 +23,24 @@ import com.discord.stores.StoreStageInstances;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.utilities.error.Error;
-import com.discord.utilities.guilds.GuildUtils;
+import com.discord.utilities.guilds.GuildUtilsKt;
 import com.discord.utilities.logging.Logger;
-import com.discord.utilities.messagesend.MessageQueue4;
+import com.discord.utilities.messagesend.MessageResult;
 import com.discord.utilities.recycler.DiffKeyProvider;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.guilds.invite.GuildInvite;
 import com.discord.widgets.guilds.invite.InviteSuggestion;
 import com.discord.widgets.guilds.invite.InviteSuggestionItemV2;
-import d0.Tuples;
-import d0.g0.Strings4;
-import d0.g0.StringsJVM;
-import d0.t.CollectionsJVM;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.t._Sets;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.g0.w;
+import d0.t.g0;
+import d0.t.h0;
+import d0.t.n0;
+import d0.t.o0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -61,7 +58,7 @@ import rx.subjects.BehaviorSubject;
 
 /* compiled from: GuildInviteShareSheetViewModel.kt */
 /* loaded from: classes2.dex */
-public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState> {
+public final class GuildInviteShareSheetViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -82,7 +79,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
     /* compiled from: GuildInviteShareSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -95,14 +92,14 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             GuildInviteShareSheetViewModel.access$handleStoreState(GuildInviteShareSheetViewModel.this, storeState);
         }
     }
 
     /* compiled from: GuildInviteShareSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<String, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -116,7 +113,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             GuildInviteShareSheetViewModel guildInviteShareSheetViewModel = GuildInviteShareSheetViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(str, "searchQuery");
+            m.checkNotNullExpressionValue(str, "searchQuery");
             GuildInviteShareSheetViewModel.access$updateSearchQuery(guildInviteShareSheetViewModel, str);
         }
     }
@@ -131,8 +128,8 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
 
         private final Observable<StoreState> observeStoreState(long guildId, InviteSuggestionsManager inviteSuggestionsManager, StoreInviteSettings storeInviteSettings, StoreUser storeUser, StoreChannels storeChannels, StoreGuilds storeGuilds, StoreStageInstances storeStageInstances) {
-            Observable<StoreState> observableE = Observable.e(storeInviteSettings.getInviteSettings(), storeInviteSettings.getInvitableChannels(guildId), StoreUser.observeMe$default(storeUser, false, 1, null), storeChannels.observeDMs(), storeGuilds.observeGuild(guildId), inviteSuggestionsManager.observeInviteSuggestions(), storeStageInstances.observeStageInstancesForGuild(guildId), GuildInviteShareSheetViewModel2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableE, "Observable.combineLatest…      )\n        }\n      }");
+            Observable<StoreState> observableE = Observable.e(storeInviteSettings.getInviteSettings(), storeInviteSettings.getInvitableChannels(guildId), StoreUser.observeMe$default(storeUser, false, 1, null), storeChannels.observeDMs(), storeGuilds.observeGuild(guildId), inviteSuggestionsManager.observeInviteSuggestions(), storeStageInstances.observeStageInstancesForGuild(guildId), GuildInviteShareSheetViewModel$Companion$observeStoreState$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableE, "Observable.combineLatest…      )\n        }\n      }");
             return observableE;
         }
 
@@ -167,13 +164,13 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             /* JADX WARN: Multi-variable type inference failed */
             public Valid(ModelInvite.Settings settings, Map<Long, Channel> map, MeUser meUser, List<Channel> list, Guild guild, List<? extends InviteSuggestion> list2, Map<Long, StageInstance> map2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(settings, "inviteSettings");
-                Intrinsics3.checkNotNullParameter(map, "invitableChannels");
-                Intrinsics3.checkNotNullParameter(meUser, "me");
-                Intrinsics3.checkNotNullParameter(list, "dms");
-                Intrinsics3.checkNotNullParameter(guild, "guild");
-                Intrinsics3.checkNotNullParameter(list2, "inviteSuggestions");
-                Intrinsics3.checkNotNullParameter(map2, "guildStageInstances");
+                m.checkNotNullParameter(settings, "inviteSettings");
+                m.checkNotNullParameter(map, "invitableChannels");
+                m.checkNotNullParameter(meUser, "me");
+                m.checkNotNullParameter(list, "dms");
+                m.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(list2, "inviteSuggestions");
+                m.checkNotNullParameter(map2, "guildStageInstances");
                 this.inviteSettings = settings;
                 this.invitableChannels = map;
                 this.me = meUser;
@@ -245,13 +242,13 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             }
 
             public final Valid copy(ModelInvite.Settings inviteSettings, Map<Long, Channel> invitableChannels, MeUser me2, List<Channel> dms, Guild guild, List<? extends InviteSuggestion> inviteSuggestions, Map<Long, StageInstance> guildStageInstances) {
-                Intrinsics3.checkNotNullParameter(inviteSettings, "inviteSettings");
-                Intrinsics3.checkNotNullParameter(invitableChannels, "invitableChannels");
-                Intrinsics3.checkNotNullParameter(me2, "me");
-                Intrinsics3.checkNotNullParameter(dms, "dms");
-                Intrinsics3.checkNotNullParameter(guild, "guild");
-                Intrinsics3.checkNotNullParameter(inviteSuggestions, "inviteSuggestions");
-                Intrinsics3.checkNotNullParameter(guildStageInstances, "guildStageInstances");
+                m.checkNotNullParameter(inviteSettings, "inviteSettings");
+                m.checkNotNullParameter(invitableChannels, "invitableChannels");
+                m.checkNotNullParameter(me2, "me");
+                m.checkNotNullParameter(dms, "dms");
+                m.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(inviteSuggestions, "inviteSuggestions");
+                m.checkNotNullParameter(guildStageInstances, "guildStageInstances");
                 return new Valid(inviteSettings, invitableChannels, me2, dms, guild, inviteSuggestions, guildStageInstances);
             }
 
@@ -263,7 +260,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.inviteSettings, valid.inviteSettings) && Intrinsics3.areEqual(this.invitableChannels, valid.invitableChannels) && Intrinsics3.areEqual(this.me, valid.me) && Intrinsics3.areEqual(this.dms, valid.dms) && Intrinsics3.areEqual(this.guild, valid.guild) && Intrinsics3.areEqual(this.inviteSuggestions, valid.inviteSuggestions) && Intrinsics3.areEqual(this.guildStageInstances, valid.guildStageInstances);
+                return m.areEqual(this.inviteSettings, valid.inviteSettings) && m.areEqual(this.invitableChannels, valid.invitableChannels) && m.areEqual(this.me, valid.me) && m.areEqual(this.dms, valid.dms) && m.areEqual(this.guild, valid.guild) && m.areEqual(this.inviteSuggestions, valid.inviteSuggestions) && m.areEqual(this.guildStageInstances, valid.guildStageInstances);
             }
 
             public final List<Channel> getDms() {
@@ -312,7 +309,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(inviteSettings=");
+                StringBuilder sbU = a.U("Valid(inviteSettings=");
                 sbU.append(this.inviteSettings);
                 sbU.append(", invitableChannels=");
                 sbU.append(this.invitableChannels);
@@ -325,7 +322,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 sbU.append(", inviteSuggestions=");
                 sbU.append(this.inviteSuggestions);
                 sbU.append(", guildStageInstances=");
-                return outline.M(sbU, this.guildStageInstances, ")");
+                return a.M(sbU, this.guildStageInstances, ")");
             }
         }
 
@@ -339,7 +336,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
     /* compiled from: GuildInviteShareSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$generateInviteForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelInvite, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelInvite, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -352,14 +349,14 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
-            Intrinsics3.checkNotNullParameter(modelInvite, "invite");
+            m.checkNotNullParameter(modelInvite, "invite");
             GuildInviteShareSheetViewModel.access$handleInviteCreationSuccess(GuildInviteShareSheetViewModel.this, modelInvite);
         }
     }
 
     /* compiled from: GuildInviteShareSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$generateInviteForChannel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -372,14 +369,14 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             GuildInviteShareSheetViewModel.access$handleInviteCreationFailure(GuildInviteShareSheetViewModel.this);
         }
     }
 
     /* compiled from: GuildInviteShareSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$sendInviteToChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<MessageQueue4, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<MessageResult, Unit> {
         public final /* synthetic */ GuildInvite $invite;
         public final /* synthetic */ String $inviteLink;
         public final /* synthetic */ ViewState $viewState;
@@ -393,30 +390,30 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(MessageQueue4 messageQueue4) {
-            invoke2(messageQueue4);
+        public /* bridge */ /* synthetic */ Unit invoke(MessageResult messageResult) {
+            invoke2(messageResult);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(MessageQueue4 messageQueue4) {
-            Intrinsics3.checkNotNullParameter(messageQueue4, "result");
-            if (messageQueue4 instanceof MessageQueue4.Success) {
-                MessageQueue4.Success success = (MessageQueue4.Success) messageQueue4;
+        public final void invoke2(MessageResult messageResult) {
+            m.checkNotNullParameter(messageResult, "result");
+            if (messageResult instanceof MessageResult.Success) {
+                MessageResult.Success success = (MessageResult.Success) messageResult;
                 GuildInviteShareSheetViewModel.access$getStoreAnalytics$p(GuildInviteShareSheetViewModel.this).inviteSent(this.$invite, this.$viewState.getChannel(), success.getMessage(), "Guild Create Invite Suggestion");
                 Map<String, Set<Long>> sentInvites = this.$viewState.getSentInvites();
                 Set<Long> setEmptySet = sentInvites.get(this.$inviteLink);
                 if (setEmptySet == null) {
-                    setEmptySet = Sets5.emptySet();
+                    setEmptySet = n0.emptySet();
                 }
-                GuildInviteShareSheetViewModel.access$updateSentInvites(GuildInviteShareSheetViewModel.this, Maps6.plus(sentInvites, MapsJVM.mapOf(Tuples.to(this.$inviteLink, _Sets.plus(setEmptySet, Long.valueOf(success.getMessage().getChannelId()))))));
+                GuildInviteShareSheetViewModel.access$updateSentInvites(GuildInviteShareSheetViewModel.this, h0.plus(sentInvites, g0.mapOf(d0.o.to(this.$inviteLink, o0.plus(setEmptySet, Long.valueOf(success.getMessage().getChannelId()))))));
             }
         }
     }
 
     /* compiled from: GuildInviteShareSheetViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$sendInviteToUser$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Channel, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -429,7 +426,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             GuildInviteShareSheetViewModel.access$sendInviteToChannel(GuildInviteShareSheetViewModel.this, channel.getId());
         }
     }
@@ -493,21 +490,21 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
         Set<Long> setEmptySet = sentInvites.get(link);
         if (setEmptySet == null) {
-            setEmptySet = Sets5.emptySet();
+            setEmptySet = n0.emptySet();
         }
         Set<Long> set = setEmptySet;
         List<InviteSuggestion> inviteSuggestions = storeState.getInviteSuggestions();
-        if (!StringsJVM.isBlank(searchQuery)) {
+        if (!t.isBlank(searchQuery)) {
             ArrayList arrayList2 = new ArrayList();
             for (Object obj : inviteSuggestions) {
                 InviteSuggestion inviteSuggestion = (InviteSuggestion) obj;
                 if (inviteSuggestion instanceof InviteSuggestion.ChannelItem) {
-                    zContains = Strings4.contains((CharSequence) ChannelUtils.c(((InviteSuggestion.ChannelItem) inviteSuggestion).getChannel()), (CharSequence) searchQuery, true);
+                    zContains = w.contains((CharSequence) ChannelUtils.c(((InviteSuggestion.ChannelItem) inviteSuggestion).getChannel()), (CharSequence) searchQuery, true);
                 } else {
                     if (!(inviteSuggestion instanceof InviteSuggestion.UserSuggestion)) {
                         throw new NoWhenBranchMatchedException();
                     }
-                    zContains = Strings4.contains((CharSequence) ((InviteSuggestion.UserSuggestion) inviteSuggestion).getUser().getUsername(), (CharSequence) searchQuery, true);
+                    zContains = w.contains((CharSequence) ((InviteSuggestion.UserSuggestion) inviteSuggestion).getUser().getUsername(), (CharSequence) searchQuery, true);
                 }
                 if (zContains) {
                     arrayList2.add(obj);
@@ -516,7 +513,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             inviteSuggestions = arrayList2;
         }
         List<Channel> dms = storeState.getDms();
-        ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(dms, 10));
+        ArrayList arrayList3 = new ArrayList(d0.t.o.collectionSizeOrDefault(dms, 10));
         Iterator it = dms.iterator();
         while (true) {
             if (!it.hasNext()) {
@@ -527,11 +524,11 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             if (userA != null) {
                 lValueOf = Long.valueOf(userA.getId());
             }
-            arrayList3.add(Tuples.to(lValueOf, Long.valueOf(channel.getId())));
+            arrayList3.add(d0.o.to(lValueOf, Long.valueOf(channel.getId())));
         }
-        Map map = Maps6.toMap(arrayList3);
-        if ((!inviteSuggestions.isEmpty()) || StringsJVM.isBlank(searchQuery)) {
-            arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(inviteSuggestions, 10));
+        Map map = h0.toMap(arrayList3);
+        if ((!inviteSuggestions.isEmpty()) || t.isBlank(searchQuery)) {
+            arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(inviteSuggestions, 10));
             for (InviteSuggestion inviteSuggestion2 : inviteSuggestions) {
                 if (inviteSuggestion2 instanceof InviteSuggestion.ChannelItem) {
                     InviteSuggestion.ChannelItem channelItem = (InviteSuggestion.ChannelItem) inviteSuggestion2;
@@ -541,12 +538,12 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                         throw new NoWhenBranchMatchedException();
                     }
                     InviteSuggestion.UserSuggestion userSuggestion = (InviteSuggestion.UserSuggestion) inviteSuggestion2;
-                    userItem = new InviteSuggestionItemV2.UserItem(userSuggestion.getUser(), _Collections.contains(set, map.get(Long.valueOf(userSuggestion.getUser().getId()))), searchQuery);
+                    userItem = new InviteSuggestionItemV2.UserItem(userSuggestion.getUser(), u.contains(set, map.get(Long.valueOf(userSuggestion.getUser().getId()))), searchQuery);
                 }
                 arrayList.add(userItem);
             }
         } else {
-            arrayList = CollectionsJVM.listOf(InviteSuggestionItemV2.SearchNoResultsItem.INSTANCE);
+            arrayList = d0.t.m.listOf(InviteSuggestionItemV2.SearchNoResultsItem.INSTANCE);
         }
         return new ViewState(generatedInvite, storeState.getInviteSettings(), arrayList, storeState.getInvitableChannels().get(generatedInvite != null ? generatedInvite.getChannelId() : null), searchQuery, sentInvites, generatedInvite != null ? !generatedInvite.isStaticInvite() : true, storeState.getGuild().getId());
     }
@@ -567,9 +564,9 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         if (valid == null || (vanityUrlCode = (guild = valid.getGuild()).getVanityUrlCode()) == null) {
             return;
         }
-        ModelInvite modelInviteCreateForStaticUrl = ModelInvite.createForStaticUrl(vanityUrlCode, GuildUtils.createApiGuild(guild));
+        ModelInvite modelInviteCreateForStaticUrl = ModelInvite.createForStaticUrl(vanityUrlCode, GuildUtilsKt.createApiGuild(guild));
         GuildInvite.Companion companion = GuildInvite.INSTANCE;
-        Intrinsics3.checkNotNullExpressionValue(modelInviteCreateForStaticUrl, "vanityUrlInvite");
+        m.checkNotNullExpressionValue(modelInviteCreateForStaticUrl, "vanityUrlInvite");
         GuildInvite guildInviteCreateFromModelInvite = companion.createFromModelInvite(modelInviteCreateForStaticUrl);
         this.invite = guildInviteCreateFromModelInvite;
         updateViewState2(createViewState(this.searchQuery, this.sentInvites, valid, guildInviteCreateFromModelInvite));
@@ -596,9 +593,9 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
     */
     private final void handleStoreState(StoreState storeState) {
         StoreState storeState2 = this.currentStoreState;
-        if (Intrinsics3.areEqual(storeState, StoreState.Invalid.INSTANCE)) {
+        if (m.areEqual(storeState, StoreState.Invalid.INSTANCE)) {
             Logger logger = this.logger;
-            StringBuilder sbU = outline.U("invalid StoreState in ");
+            StringBuilder sbU = a.U("invalid StoreState in ");
             sbU.append(GuildInviteShareSheetViewModel.class.getSimpleName());
             Logger.e$default(logger, sbU.toString(), null, null, 6, null);
             return;
@@ -619,17 +616,17 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                         z2 = false;
                     }
                     if (!z2 && z3) {
-                        ModelInvite modelInviteCreateForStaticUrl = ModelInvite.createForStaticUrl(vanityUrlCode, GuildUtils.createApiGuild(guild));
+                        ModelInvite modelInviteCreateForStaticUrl = ModelInvite.createForStaticUrl(vanityUrlCode, GuildUtilsKt.createApiGuild(guild));
                         GuildInvite.Companion companion = GuildInvite.INSTANCE;
-                        Intrinsics3.checkNotNullExpressionValue(modelInviteCreateForStaticUrl, "vanityUrlInvite");
+                        m.checkNotNullExpressionValue(modelInviteCreateForStaticUrl, "vanityUrlInvite");
                         this.invite = companion.createFromModelInvite(modelInviteCreateForStaticUrl);
                     }
                 } else if (channel == null && targetChannel != null) {
                     generateInviteForChannel(targetChannel.getId());
                 } else if (inviteCode != null) {
-                    ModelInvite modelInviteCreateForStaticUrl2 = ModelInvite.createForStaticUrl(inviteCode, GuildUtils.createApiGuild(guild));
+                    ModelInvite modelInviteCreateForStaticUrl2 = ModelInvite.createForStaticUrl(inviteCode, GuildUtilsKt.createApiGuild(guild));
                     GuildInvite.Companion companion2 = GuildInvite.INSTANCE;
-                    Intrinsics3.checkNotNullExpressionValue(modelInviteCreateForStaticUrl2, "stageInstanceInvite");
+                    m.checkNotNullExpressionValue(modelInviteCreateForStaticUrl2, "stageInstanceInvite");
                     this.invite = companion2.createFromModelInvite(modelInviteCreateForStaticUrl2);
                 }
             }
@@ -666,7 +663,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             storeState = null;
         }
         StoreState.Valid valid = (StoreState.Valid) storeState;
-        if (valid == null || Intrinsics3.areEqual(searchQuery, this.searchQuery)) {
+        if (valid == null || m.areEqual(searchQuery, this.searchQuery)) {
             return;
         }
         this.searchQuery = searchQuery;
@@ -691,13 +688,13 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
     }
 
     public final void onSearchTextChanged(String searchQuery) {
-        Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
+        m.checkNotNullParameter(searchQuery, "searchQuery");
         this.searchQuerySubject.onNext(searchQuery);
     }
 
     @MainThread
     public final void sendInvite(InviteSuggestionItemV2 item) {
-        Intrinsics3.checkNotNullParameter(item, "item");
+        m.checkNotNullParameter(item, "item");
         if (item instanceof InviteSuggestionItemV2.ChannelItem) {
             sendInviteToChannel(((InviteSuggestionItemV2.ChannelItem) item).getChannel().getId());
         } else if (item instanceof InviteSuggestionItemV2.UserItem) {
@@ -707,7 +704,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
     @MainThread
     public final void updateInvite(GuildInvite invite) {
-        Intrinsics3.checkNotNullParameter(invite, "invite");
+        m.checkNotNullParameter(invite, "invite");
         this.invite = invite;
         ViewState viewState = getViewState();
         if (viewState != null) {
@@ -722,7 +719,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    @Override // b.a.d.AppViewModel
+    @Override // b.a.d.d0
     public /* bridge */ /* synthetic */ void updateViewState(ViewState viewState) {
         updateViewState2(viewState);
     }
@@ -730,7 +727,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
     @MainThread
     /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
-        Intrinsics3.checkNotNullParameter(viewState, "viewState");
+        m.checkNotNullParameter(viewState, "viewState");
         super.updateViewState((GuildInviteShareSheetViewModel) viewState);
         if (!viewState.getHasSearchResults() || this.hasTrackedSuggestionsViewed) {
             return;
@@ -744,7 +741,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 arrayList.add(obj);
             }
         }
-        ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+        ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
             arrayList2.add(((InviteSuggestionItemV2.ChannelItem) it.next()).getChannel());
@@ -755,7 +752,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 arrayList3.add(obj2);
             }
         }
-        ArrayList arrayList4 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList3, 10));
+        ArrayList arrayList4 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList3, 10));
         Iterator it2 = arrayList3.iterator();
         while (it2.hasNext()) {
             arrayList4.add(((InviteSuggestionItemV2.UserItem) it2.next()).getUser());
@@ -779,9 +776,9 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
 
         /* JADX WARN: Multi-variable type inference failed */
         public ViewState(GuildInvite guildInvite, ModelInvite.Settings settings, List<? extends InviteSuggestionItemV2> list, Channel channel, String str, Map<String, ? extends Set<Long>> map, boolean z2, long j) {
-            Intrinsics3.checkNotNullParameter(list, "inviteSuggestionItems");
-            Intrinsics3.checkNotNullParameter(str, "searchQuery");
-            Intrinsics3.checkNotNullParameter(map, "sentInvites");
+            m.checkNotNullParameter(list, "inviteSuggestionItems");
+            m.checkNotNullParameter(str, "searchQuery");
+            m.checkNotNullParameter(map, "sentInvites");
             this.invite = guildInvite;
             this.inviteSettings = settings;
             this.inviteSuggestionItems = list;
@@ -837,9 +834,9 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
 
         public final ViewState copy(GuildInvite invite, ModelInvite.Settings inviteSettings, List<? extends InviteSuggestionItemV2> inviteSuggestionItems, Channel channel, String searchQuery, Map<String, ? extends Set<Long>> sentInvites, boolean showInviteSettings, long guildId) {
-            Intrinsics3.checkNotNullParameter(inviteSuggestionItems, "inviteSuggestionItems");
-            Intrinsics3.checkNotNullParameter(searchQuery, "searchQuery");
-            Intrinsics3.checkNotNullParameter(sentInvites, "sentInvites");
+            m.checkNotNullParameter(inviteSuggestionItems, "inviteSuggestionItems");
+            m.checkNotNullParameter(searchQuery, "searchQuery");
+            m.checkNotNullParameter(sentInvites, "sentInvites");
             return new ViewState(invite, inviteSettings, inviteSuggestionItems, channel, searchQuery, sentInvites, showInviteSettings, guildId);
         }
 
@@ -851,7 +848,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 return false;
             }
             ViewState viewState = (ViewState) other;
-            return Intrinsics3.areEqual(this.invite, viewState.invite) && Intrinsics3.areEqual(this.inviteSettings, viewState.inviteSettings) && Intrinsics3.areEqual(this.inviteSuggestionItems, viewState.inviteSuggestionItems) && Intrinsics3.areEqual(this.channel, viewState.channel) && Intrinsics3.areEqual(this.searchQuery, viewState.searchQuery) && Intrinsics3.areEqual(this.sentInvites, viewState.sentInvites) && this.showInviteSettings == viewState.showInviteSettings && this.guildId == viewState.guildId;
+            return m.areEqual(this.invite, viewState.invite) && m.areEqual(this.inviteSettings, viewState.inviteSettings) && m.areEqual(this.inviteSuggestionItems, viewState.inviteSuggestionItems) && m.areEqual(this.channel, viewState.channel) && m.areEqual(this.searchQuery, viewState.searchQuery) && m.areEqual(this.sentInvites, viewState.sentInvites) && this.showInviteSettings == viewState.showInviteSettings && this.guildId == viewState.guildId;
         }
 
         public final Channel getChannel() {
@@ -917,7 +914,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ViewState(invite=");
+            StringBuilder sbU = a.U("ViewState(invite=");
             sbU.append(this.invite);
             sbU.append(", inviteSettings=");
             sbU.append(this.inviteSettings);
@@ -932,7 +929,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             sbU.append(", showInviteSettings=");
             sbU.append(this.showInviteSettings);
             sbU.append(", guildId=");
-            return outline.C(sbU, this.guildId, ")");
+            return a.C(sbU, this.guildId, ")");
         }
 
         public /* synthetic */ ViewState(GuildInvite guildInvite, ModelInvite.Settings settings, List list, Channel channel, String str, Map map, boolean z2, long j, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -943,12 +940,12 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildInviteShareSheetViewModel(Long l, long j, StoreInviteSettings storeInviteSettings, StoreAnalytics storeAnalytics, StoreMessages storeMessages, TargetChannelSelector targetChannelSelector, Logger logger, Observable<StoreState> observable) {
         super(null, 1, null);
-        Intrinsics3.checkNotNullParameter(storeInviteSettings, "storeInviteSettings");
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(storeMessages, "storeMessages");
-        Intrinsics3.checkNotNullParameter(targetChannelSelector, "targetChannelSelector");
-        Intrinsics3.checkNotNullParameter(logger, "logger");
-        Intrinsics3.checkNotNullParameter(observable, "storeStateObservable");
+        m.checkNotNullParameter(storeInviteSettings, "storeInviteSettings");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(storeMessages, "storeMessages");
+        m.checkNotNullParameter(targetChannelSelector, "targetChannelSelector");
+        m.checkNotNullParameter(logger, "logger");
+        m.checkNotNullParameter(observable, "storeStateObservable");
         this.channelId = l;
         this.guildId = j;
         this.storeInviteSettings = storeInviteSettings;
@@ -957,13 +954,13 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         this.targetChannelSelector = targetChannelSelector;
         this.logger = logger;
         BehaviorSubject<String> behaviorSubjectL0 = BehaviorSubject.l0("");
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(\"\")");
+        m.checkNotNullExpressionValue(behaviorSubjectL0, "BehaviorSubject.create(\"\")");
         this.searchQuerySubject = behaviorSubjectL0;
         this.searchQuery = "";
-        this.sentInvites = Maps6.emptyMap();
+        this.sentInvites = h0.emptyMap();
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observable), this, null, 2, null), GuildInviteShareSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         Observable<String> observableP = this.searchQuerySubject.p(250L, TimeUnit.MILLISECONDS);
-        Intrinsics3.checkNotNullExpressionValue(observableP, "searchQuerySubject\n     …0, TimeUnit.MILLISECONDS)");
+        m.checkNotNullExpressionValue(observableP, "searchQuerySubject\n     …0, TimeUnit.MILLISECONDS)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableP, this, null, 2, null), GuildInviteShareSheetViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }
 }

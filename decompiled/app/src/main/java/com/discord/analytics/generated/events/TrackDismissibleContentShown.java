@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackDismissibleContentShown.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackDismissibleContentShown implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackDismissibleContentShown implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence type = null;
     private final Long contentCount = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackDismissibleContentShown implements AnalyticsS
             return false;
         }
         TrackDismissibleContentShown trackDismissibleContentShown = (TrackDismissibleContentShown) other;
-        return Intrinsics3.areEqual(this.type, trackDismissibleContentShown.type) && Intrinsics3.areEqual(this.contentCount, trackDismissibleContentShown.contentCount) && Intrinsics3.areEqual(this.groupName, trackDismissibleContentShown.groupName) && Intrinsics3.areEqual(this.bypassFatigue, trackDismissibleContentShown.bypassFatigue);
+        return m.areEqual(this.type, trackDismissibleContentShown.type) && m.areEqual(this.contentCount, trackDismissibleContentShown.contentCount) && m.areEqual(this.groupName, trackDismissibleContentShown.groupName) && m.areEqual(this.bypassFatigue, trackDismissibleContentShown.bypassFatigue);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackDismissibleContentShown implements AnalyticsS
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackDismissibleContentShown(type=");
+        StringBuilder sbU = a.U("TrackDismissibleContentShown(type=");
         sbU.append(this.type);
         sbU.append(", contentCount=");
         sbU.append(this.contentCount);
         sbU.append(", groupName=");
         sbU.append(this.groupName);
         sbU.append(", bypassFatigue=");
-        return outline.D(sbU, this.bypassFatigue, ")");
+        return a.D(sbU, this.bypassFatigue, ")");
     }
 }

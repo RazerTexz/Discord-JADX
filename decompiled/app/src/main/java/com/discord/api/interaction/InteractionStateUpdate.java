@@ -1,8 +1,8 @@
 package com.discord.api.interaction;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: InteractionStateUpdate.kt */
 /* loaded from: classes.dex */
@@ -11,7 +11,7 @@ public final /* data */ class InteractionStateUpdate {
     private final String nonce;
 
     public InteractionStateUpdate(Long l, String str) {
-        Intrinsics3.checkNotNullParameter(str, "nonce");
+        m.checkNotNullParameter(str, "nonce");
         this.id = l;
         this.nonce = str;
     }
@@ -34,7 +34,7 @@ public final /* data */ class InteractionStateUpdate {
             return false;
         }
         InteractionStateUpdate interactionStateUpdate = (InteractionStateUpdate) other;
-        return Intrinsics3.areEqual(this.id, interactionStateUpdate.id) && Intrinsics3.areEqual(this.nonce, interactionStateUpdate.nonce);
+        return m.areEqual(this.id, interactionStateUpdate.id) && m.areEqual(this.nonce, interactionStateUpdate.nonce);
     }
 
     public int hashCode() {
@@ -45,9 +45,9 @@ public final /* data */ class InteractionStateUpdate {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InteractionStateUpdate(id=");
+        StringBuilder sbU = a.U("InteractionStateUpdate(id=");
         sbU.append(this.id);
         sbU.append(", nonce=");
-        return outline.J(sbU, this.nonce, ")");
+        return a.J(sbU, this.nonce, ")");
     }
 }

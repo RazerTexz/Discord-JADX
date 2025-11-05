@@ -1,7 +1,7 @@
 package com.discord.widgets.stage.model;
 
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.role.GuildRole;
 import com.discord.api.stageinstance.StageInstance;
@@ -15,13 +15,13 @@ import com.discord.stores.StoreVoiceParticipants;
 import com.discord.utilities.guilds.RoleUtils;
 import com.discord.widgets.stage.StageRoles;
 import com.discord.widgets.voice.fullscreen.stage.StageCallItem;
-import d0.d0._Ranges;
-import d0.f0._Sequences2;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.MapsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.d0.f;
+import d0.f0.q;
+import d0.t.g0;
+import d0.t.n;
+import d0.t.o;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -41,7 +41,7 @@ public final /* data */ class StageCallModel {
     private final List<StageCallItem.AudienceItem> audience;
     private final Guild guild;
     private final boolean isLurking;
-    private final List<StageCallModel5> mediaParticipants;
+    private final List<StageMediaParticipant> mediaParticipants;
     private final int myStageRoles;
     private final int numBlockedUsers;
     private final int numSpeakers;
@@ -72,11 +72,11 @@ public final /* data */ class StageCallModel {
             ArrayList arrayList2 = new ArrayList();
             ArrayList arrayList3 = new ArrayList();
             ArrayList arrayList4 = new ArrayList();
-            LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(arrayList, 10)), 16));
+            LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(o.collectionSizeOrDefault(arrayList, 10)), 16));
             for (Object obj2 : arrayList) {
                 linkedHashMap.put(Long.valueOf(((StoreVoiceParticipants.VoiceUser) obj2).getUser().getId()), obj2);
             }
-            LinkedHashMap linkedHashMap2 = new LinkedHashMap(MapsJVM.mapCapacity(linkedHashMap.size()));
+            LinkedHashMap linkedHashMap2 = new LinkedHashMap(g0.mapCapacity(linkedHashMap.size()));
             for (Map.Entry entry : linkedHashMap.entrySet()) {
                 Object key = entry.getKey();
                 StageRoles stageRolesM17getUserRolesuOBN1zc = stagesStore.m17getUserRolesuOBN1zc(((Number) entry.getKey()).longValue(), channel.getId());
@@ -90,7 +90,7 @@ public final /* data */ class StageCallModel {
                 int i4 = 0;
                 while (it.hasNext()) {
                     if (StageRoles.m33isSpeakerimpl(((StageRoles) it.next()).m35unboximpl()) && (i4 = i4 + 1) < 0) {
-                        Collections2.throwCountOverflow();
+                        n.throwCountOverflow();
                     }
                 }
                 i = i4;
@@ -102,19 +102,19 @@ public final /* data */ class StageCallModel {
                 for (StoreVoiceParticipants.VoiceUser voiceUser : arrayList) {
                     StageRoles stageRolesM17getUserRolesuOBN1zc2 = stagesStore.m17getUserRolesuOBN1zc(voiceUser.getUser().getId(), channel.getId());
                     if ((StageRoles.m33isSpeakerimpl(stageRolesM17getUserRolesuOBN1zc2 != null ? stageRolesM17getUserRolesuOBN1zc2.m35unboximpl() : StageRoles.INSTANCE.m37getAUDIENCE1LxfuJo()) && ((voiceState = voiceUser.getVoiceState()) == null || !voiceState.getSelfVideo())) && (i5 = i5 + 1) < 0) {
-                        Collections2.throwCountOverflow();
+                        n.throwCountOverflow();
                     }
                 }
                 i2 = i5;
             }
-            int iCoerceAtMost = _Ranges.coerceAtMost(i2, 3);
+            int iCoerceAtMost = f.coerceAtMost(i2, 3);
             int i6 = 0;
             int i7 = 0;
             for (StoreVoiceParticipants.VoiceUser voiceUser2 : arrayList) {
                 VoiceState voiceState2 = voiceUser2.getVoiceState();
                 if (voiceState2 != null) {
-                    Intrinsics3.checkNotNullParameter(voiceState2, "$this$hasUnackedRequestToSpeak");
-                    if (AnimatableValueParser.y0(voiceState2) == StageRequestToSpeakState.REQUESTED_TO_SPEAK) {
+                    m.checkNotNullParameter(voiceState2, "$this$hasUnackedRequestToSpeak");
+                    if (d.y0(voiceState2) == StageRequestToSpeakState.REQUESTED_TO_SPEAK) {
                         i6++;
                     }
                 }
@@ -130,18 +130,18 @@ public final /* data */ class StageCallModel {
                 } else {
                     if (voiceUser2.getStreamContext() != null) {
                         StageCallItem.MediaType mediaType = StageCallItem.MediaType.STREAM;
-                        StringBuilder sbU = outline.U("STREAM-");
+                        StringBuilder sbU = a.U("STREAM-");
                         sbU.append(voiceUser2.getUser().getId());
-                        arrayList2.add(new StageCallModel5(sbU.toString(), voiceUser2, channel, false, zContains, mediaType));
+                        arrayList2.add(new StageMediaParticipant(sbU.toString(), voiceUser2, channel, false, zContains, mediaType));
                     }
                     VoiceState voiceState3 = voiceUser2.getVoiceState();
                     if (voiceState3 != null && voiceState3.getSelfVideo()) {
                         StageRoles stageRoles2 = (StageRoles) linkedHashMap2.get(Long.valueOf(voiceUser2.getUser().getId()));
                         boolean z3 = stageRoles2 != null && StageRoles.m32isModeratorimpl(stageRoles2.m35unboximpl());
                         StageCallItem.MediaType mediaType2 = StageCallItem.MediaType.USER;
-                        StringBuilder sbU2 = outline.U("USER-");
+                        StringBuilder sbU2 = a.U("USER-");
                         sbU2.append(voiceUser2.getUser().getId());
-                        arrayList2.add(new StageCallModel5(sbU2.toString(), voiceUser2, channel, z3, zContains, mediaType2));
+                        arrayList2.add(new StageMediaParticipant(sbU2.toString(), voiceUser2, channel, z3, zContains, mediaType2));
                     } else {
                         StageRoles stageRoles3 = (StageRoles) linkedHashMap2.get(Long.valueOf(voiceUser2.getUser().getId()));
                         if (stageRoles3 == null || !StageRoles.m32isModeratorimpl(stageRoles3.m35unboximpl())) {
@@ -167,7 +167,7 @@ public final /* data */ class StageCallModel {
                 i7 = i9;
             }
             StageRoles stageRolesM15getMyRolesvisDeB4 = stagesStore.m15getMyRolesvisDeB4(channel.getId());
-            return new StageCallModel(stageRolesM15getMyRolesvisDeB4 != null ? stageRolesM15getMyRolesvisDeB4.m35unboximpl() : StageRoles.INSTANCE.m37getAUDIENCE1LxfuJo(), arrayList3, arrayList2, _Collections.sorted(arrayList4), _Sequences2.toList(_Sequences2.map(_Sequences2.filter(_Collections.asSequence(arrayList3), StageCallModel2.INSTANCE), StageCallModel3.INSTANCE)), i6, stageInstance, i7, guild, isLurking, i, null);
+            return new StageCallModel(stageRolesM15getMyRolesvisDeB4 != null ? stageRolesM15getMyRolesvisDeB4.m35unboximpl() : StageRoles.INSTANCE.m37getAUDIENCE1LxfuJo(), arrayList3, arrayList2, u.sorted(arrayList4), q.toList(q.map(q.filter(u.asSequence(arrayList3), StageCallModel$Companion$create$2.INSTANCE), StageCallModel$Companion$create$3.INSTANCE)), i6, stageInstance, i7, guild, isLurking, i, null);
         }
 
         public static /* synthetic */ StageCallModel create$default(Companion companion, Channel channel, Map map, Map map2, Guild guild, Map map3, Set set, StageInstance stageInstance, boolean z2, StoreStageChannels storeStageChannels, int i, Object obj) {
@@ -175,8 +175,8 @@ public final /* data */ class StageCallModel {
         }
 
         public final Observable<StageCallModel> observeStageCallModel(long channelId) {
-            Observable observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(new StageCallModel4(channelId));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n          .g…            }\n          }");
+            Observable observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(new StageCallModel$Companion$observeStageCallModel$1(channelId));
+            m.checkNotNullExpressionValue(observableY, "StoreStream\n          .g…            }\n          }");
             return observableY;
         }
 
@@ -185,7 +185,7 @@ public final /* data */ class StageCallModel {
         }
     }
 
-    private StageCallModel(int i, List<StageCallItem.SpeakerItem> list, List<StageCallModel5> list2, List<StageCallItem.AudienceItem> list3, List<StoreVoiceParticipants.VoiceUser> list4, int i2, StageInstance stageInstance, int i3, Guild guild, boolean z2, int i4) {
+    private StageCallModel(int i, List<StageCallItem.SpeakerItem> list, List<StageMediaParticipant> list2, List<StageCallItem.AudienceItem> list3, List<StoreVoiceParticipants.VoiceUser> list4, int i2, StageInstance stageInstance, int i3, Guild guild, boolean z2, int i4) {
         this.myStageRoles = i;
         this.speakerItems = list;
         this.mediaParticipants = list2;
@@ -223,7 +223,7 @@ public final /* data */ class StageCallModel {
         return this.speakerItems;
     }
 
-    public final List<StageCallModel5> component3() {
+    public final List<StageMediaParticipant> component3() {
         return this.mediaParticipants;
     }
 
@@ -256,11 +256,11 @@ public final /* data */ class StageCallModel {
     }
 
     /* renamed from: copy-YvLQhEs, reason: not valid java name */
-    public final StageCallModel m41copyYvLQhEs(int myStageRoles, List<StageCallItem.SpeakerItem> speakerItems, List<StageCallModel5> mediaParticipants, List<StageCallItem.AudienceItem> audience, List<StoreVoiceParticipants.VoiceUser> speakingVoiceUsers, int requestingToSpeakCount, StageInstance stageInstance, int numBlockedUsers, Guild guild, boolean isLurking, int numSpeakers) {
-        Intrinsics3.checkNotNullParameter(speakerItems, "speakerItems");
-        Intrinsics3.checkNotNullParameter(mediaParticipants, "mediaParticipants");
-        Intrinsics3.checkNotNullParameter(audience, "audience");
-        Intrinsics3.checkNotNullParameter(speakingVoiceUsers, "speakingVoiceUsers");
+    public final StageCallModel m41copyYvLQhEs(int myStageRoles, List<StageCallItem.SpeakerItem> speakerItems, List<StageMediaParticipant> mediaParticipants, List<StageCallItem.AudienceItem> audience, List<StoreVoiceParticipants.VoiceUser> speakingVoiceUsers, int requestingToSpeakCount, StageInstance stageInstance, int numBlockedUsers, Guild guild, boolean isLurking, int numSpeakers) {
+        m.checkNotNullParameter(speakerItems, "speakerItems");
+        m.checkNotNullParameter(mediaParticipants, "mediaParticipants");
+        m.checkNotNullParameter(audience, "audience");
+        m.checkNotNullParameter(speakingVoiceUsers, "speakingVoiceUsers");
         return new StageCallModel(myStageRoles, speakerItems, mediaParticipants, audience, speakingVoiceUsers, requestingToSpeakCount, stageInstance, numBlockedUsers, guild, isLurking, numSpeakers);
     }
 
@@ -272,7 +272,7 @@ public final /* data */ class StageCallModel {
             return false;
         }
         StageCallModel stageCallModel = (StageCallModel) other;
-        return this.myStageRoles == stageCallModel.myStageRoles && Intrinsics3.areEqual(this.speakerItems, stageCallModel.speakerItems) && Intrinsics3.areEqual(this.mediaParticipants, stageCallModel.mediaParticipants) && Intrinsics3.areEqual(this.audience, stageCallModel.audience) && Intrinsics3.areEqual(this.speakingVoiceUsers, stageCallModel.speakingVoiceUsers) && this.requestingToSpeakCount == stageCallModel.requestingToSpeakCount && Intrinsics3.areEqual(this.stageInstance, stageCallModel.stageInstance) && this.numBlockedUsers == stageCallModel.numBlockedUsers && Intrinsics3.areEqual(this.guild, stageCallModel.guild) && this.isLurking == stageCallModel.isLurking && this.numSpeakers == stageCallModel.numSpeakers;
+        return this.myStageRoles == stageCallModel.myStageRoles && m.areEqual(this.speakerItems, stageCallModel.speakerItems) && m.areEqual(this.mediaParticipants, stageCallModel.mediaParticipants) && m.areEqual(this.audience, stageCallModel.audience) && m.areEqual(this.speakingVoiceUsers, stageCallModel.speakingVoiceUsers) && this.requestingToSpeakCount == stageCallModel.requestingToSpeakCount && m.areEqual(this.stageInstance, stageCallModel.stageInstance) && this.numBlockedUsers == stageCallModel.numBlockedUsers && m.areEqual(this.guild, stageCallModel.guild) && this.isLurking == stageCallModel.isLurking && this.numSpeakers == stageCallModel.numSpeakers;
     }
 
     public final List<StageCallItem.AudienceItem> getAudience() {
@@ -283,7 +283,7 @@ public final /* data */ class StageCallModel {
         return this.guild;
     }
 
-    public final List<StageCallModel5> getMediaParticipants() {
+    public final List<StageMediaParticipant> getMediaParticipants() {
         return this.mediaParticipants;
     }
 
@@ -321,7 +321,7 @@ public final /* data */ class StageCallModel {
         int i = this.myStageRoles * 31;
         List<StageCallItem.SpeakerItem> list = this.speakerItems;
         int iHashCode = (i + (list != null ? list.hashCode() : 0)) * 31;
-        List<StageCallModel5> list2 = this.mediaParticipants;
+        List<StageMediaParticipant> list2 = this.mediaParticipants;
         int iHashCode2 = (iHashCode + (list2 != null ? list2.hashCode() : 0)) * 31;
         List<StageCallItem.AudienceItem> list3 = this.audience;
         int iHashCode3 = (iHashCode2 + (list3 != null ? list3.hashCode() : 0)) * 31;
@@ -344,7 +344,7 @@ public final /* data */ class StageCallModel {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("StageCallModel(myStageRoles=");
+        StringBuilder sbU = a.U("StageCallModel(myStageRoles=");
         sbU.append(StageRoles.m34toStringimpl(this.myStageRoles));
         sbU.append(", speakerItems=");
         sbU.append(this.speakerItems);
@@ -365,7 +365,7 @@ public final /* data */ class StageCallModel {
         sbU.append(", isLurking=");
         sbU.append(this.isLurking);
         sbU.append(", numSpeakers=");
-        return outline.B(sbU, this.numSpeakers, ")");
+        return a.B(sbU, this.numSpeakers, ")");
     }
 
     public /* synthetic */ StageCallModel(int i, List list, List list2, List list3, List list4, int i2, StageInstance stageInstance, int i3, Guild guild, boolean z2, int i4, DefaultConstructorMarker defaultConstructorMarker) {

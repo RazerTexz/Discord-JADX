@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackApplicationCommandLoadTiming.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackApplicationCommandLoadTiming implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackApplicationCommandLoadTiming implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long durationMs = null;
     private final CharSequence method = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackApplicationCommandLoadTiming implements Analy
             return false;
         }
         TrackApplicationCommandLoadTiming trackApplicationCommandLoadTiming = (TrackApplicationCommandLoadTiming) other;
-        return Intrinsics3.areEqual(this.durationMs, trackApplicationCommandLoadTiming.durationMs) && Intrinsics3.areEqual(this.method, trackApplicationCommandLoadTiming.method) && Intrinsics3.areEqual(this.area, trackApplicationCommandLoadTiming.area);
+        return m.areEqual(this.durationMs, trackApplicationCommandLoadTiming.durationMs) && m.areEqual(this.method, trackApplicationCommandLoadTiming.method) && m.areEqual(this.area, trackApplicationCommandLoadTiming.area);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackApplicationCommandLoadTiming implements Analy
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackApplicationCommandLoadTiming(durationMs=");
+        StringBuilder sbU = a.U("TrackApplicationCommandLoadTiming(durationMs=");
         sbU.append(this.durationMs);
         sbU.append(", method=");
         sbU.append(this.method);
         sbU.append(", area=");
-        return outline.E(sbU, this.area, ")");
+        return a.E(sbU, this.area, ")");
     }
 }

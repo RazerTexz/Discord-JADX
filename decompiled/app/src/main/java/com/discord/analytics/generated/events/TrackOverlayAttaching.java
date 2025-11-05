@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackOverlayAttaching.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence directxVersion = null;
     private final CharSequence gameName = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, 
             return false;
         }
         TrackOverlayAttaching trackOverlayAttaching = (TrackOverlayAttaching) other;
-        return Intrinsics3.areEqual(this.directxVersion, trackOverlayAttaching.directxVersion) && Intrinsics3.areEqual(this.gameName, trackOverlayAttaching.gameName) && Intrinsics3.areEqual(this.gpuInfo, trackOverlayAttaching.gpuInfo) && Intrinsics3.areEqual(this.osName, trackOverlayAttaching.osName) && Intrinsics3.areEqual(this.overlaySession, trackOverlayAttaching.overlaySession) && Intrinsics3.areEqual(this.module, trackOverlayAttaching.module);
+        return m.areEqual(this.directxVersion, trackOverlayAttaching.directxVersion) && m.areEqual(this.gameName, trackOverlayAttaching.gameName) && m.areEqual(this.gpuInfo, trackOverlayAttaching.gpuInfo) && m.areEqual(this.osName, trackOverlayAttaching.osName) && m.areEqual(this.overlaySession, trackOverlayAttaching.overlaySession) && m.areEqual(this.module, trackOverlayAttaching.module);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackOverlayAttaching(directxVersion=");
+        StringBuilder sbU = a.U("TrackOverlayAttaching(directxVersion=");
         sbU.append(this.directxVersion);
         sbU.append(", gameName=");
         sbU.append(this.gameName);
@@ -62,6 +62,6 @@ public final /* data */ class TrackOverlayAttaching implements AnalyticsSchema, 
         sbU.append(", overlaySession=");
         sbU.append(this.overlaySession);
         sbU.append(", module=");
-        return outline.E(sbU, this.module, ")");
+        return a.E(sbU, this.module, ")");
     }
 }

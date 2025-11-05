@@ -1,7 +1,5 @@
 package b.i.d.q;
 
-import b.i.d.InstanceCreator;
-import b.i.d.q.y.ReflectionAccessor;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.ParameterizedType;
@@ -19,25 +17,25 @@ import java.util.concurrent.ConcurrentNavigableMap;
 /* compiled from: ConstructorConstructor.java */
 /* loaded from: classes3.dex */
 public final class g {
-    public final Map<Type, InstanceCreator<?>> a;
+    public final Map<Type, b.i.d.f<?>> a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final ReflectionAccessor f1808b = ReflectionAccessor.a;
+    public final b.i.d.q.y.b f1808b = b.i.d.q.y.b.a;
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: ConstructorConstructor.java */
-    public class a<T> implements ObjectConstructor<T> {
-        public final /* synthetic */ InstanceCreator a;
+    public class a<T> implements r<T> {
+        public final /* synthetic */ b.i.d.f a;
 
         /* renamed from: b, reason: collision with root package name */
         public final /* synthetic */ Type f1809b;
 
-        public a(g gVar, InstanceCreator instanceCreator, Type type) {
-            this.a = instanceCreator;
+        public a(g gVar, b.i.d.f fVar, Type type) {
+            this.a = fVar;
             this.f1809b = type;
         }
 
-        @Override // b.i.d.q.ObjectConstructor
+        @Override // b.i.d.q.r
         public T a() {
             return (T) this.a.a(this.f1809b);
         }
@@ -45,40 +43,40 @@ public final class g {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: ConstructorConstructor.java */
-    public class b<T> implements ObjectConstructor<T> {
-        public final /* synthetic */ InstanceCreator a;
+    public class b<T> implements r<T> {
+        public final /* synthetic */ b.i.d.f a;
 
         /* renamed from: b, reason: collision with root package name */
         public final /* synthetic */ Type f1810b;
 
-        public b(g gVar, InstanceCreator instanceCreator, Type type) {
-            this.a = instanceCreator;
+        public b(g gVar, b.i.d.f fVar, Type type) {
+            this.a = fVar;
             this.f1810b = type;
         }
 
-        @Override // b.i.d.q.ObjectConstructor
+        @Override // b.i.d.q.r
         public T a() {
             return (T) this.a.a(this.f1810b);
         }
     }
 
-    public g(Map<Type, InstanceCreator<?>> map) {
+    public g(Map<Type, b.i.d.f<?>> map) {
         this.a = map;
     }
 
-    public <T> ObjectConstructor<T> a(TypeToken<T> typeToken) throws SecurityException {
+    public <T> r<T> a(TypeToken<T> typeToken) throws SecurityException {
         h hVar;
         Type type = typeToken.getType();
         Class<? super T> rawType = typeToken.getRawType();
-        InstanceCreator<?> instanceCreator = this.a.get(type);
-        if (instanceCreator != null) {
-            return new a(this, instanceCreator, type);
+        b.i.d.f<?> fVar = this.a.get(type);
+        if (fVar != null) {
+            return new a(this, fVar, type);
         }
-        InstanceCreator<?> instanceCreator2 = this.a.get(rawType);
-        if (instanceCreator2 != null) {
-            return new b(this, instanceCreator2, type);
+        b.i.d.f<?> fVar2 = this.a.get(rawType);
+        if (fVar2 != null) {
+            return new b(this, fVar2, type);
         }
-        ObjectConstructor<T> nVar = null;
+        r<T> nVar = null;
         try {
             Constructor<? super T> declaredConstructor = rawType.getDeclaredConstructor(new Class[0]);
             if (!declaredConstructor.isAccessible()) {

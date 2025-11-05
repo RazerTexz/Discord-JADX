@@ -1,9 +1,9 @@
 package com.discord.models.experiments.dto;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.Ref$IntRef;
@@ -24,18 +24,18 @@ public final /* data */ class GuildExperimentOverridesDto {
 
         /* JADX WARN: Type inference failed for: r2v0, types: [T, java.util.List] */
         public final GuildExperimentOverridesDto parse(Model.JsonReader reader) throws IOException {
-            Intrinsics3.checkNotNullParameter(reader, "reader");
+            m.checkNotNullParameter(reader, "reader");
             Ref$IntRef ref$IntRef = new Ref$IntRef();
             ref$IntRef.element = -1;
             Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
-            ref$ObjectRef.element = Collections2.emptyList();
+            ref$ObjectRef.element = n.emptyList();
             reader.nextObject(new GuildExperimentOverridesDto$Parser$parse$1(ref$IntRef, reader, ref$ObjectRef));
             return new GuildExperimentOverridesDto(ref$IntRef.element, (List) ref$ObjectRef.element);
         }
     }
 
     public GuildExperimentOverridesDto(int i, List<Long> list) {
-        Intrinsics3.checkNotNullParameter(list, "guilds");
+        m.checkNotNullParameter(list, "guilds");
         this.bucket = i;
         this.guilds = list;
     }
@@ -61,7 +61,7 @@ public final /* data */ class GuildExperimentOverridesDto {
     }
 
     public final GuildExperimentOverridesDto copy(int bucket, List<Long> guilds) {
-        Intrinsics3.checkNotNullParameter(guilds, "guilds");
+        m.checkNotNullParameter(guilds, "guilds");
         return new GuildExperimentOverridesDto(bucket, guilds);
     }
 
@@ -73,7 +73,7 @@ public final /* data */ class GuildExperimentOverridesDto {
             return false;
         }
         GuildExperimentOverridesDto guildExperimentOverridesDto = (GuildExperimentOverridesDto) other;
-        return this.bucket == guildExperimentOverridesDto.bucket && Intrinsics3.areEqual(this.guilds, guildExperimentOverridesDto.guilds);
+        return this.bucket == guildExperimentOverridesDto.bucket && m.areEqual(this.guilds, guildExperimentOverridesDto.guilds);
     }
 
     public final int getBucket() {
@@ -91,9 +91,9 @@ public final /* data */ class GuildExperimentOverridesDto {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildExperimentOverridesDto(bucket=");
+        StringBuilder sbU = a.U("GuildExperimentOverridesDto(bucket=");
         sbU.append(this.bucket);
         sbU.append(", guilds=");
-        return outline.L(sbU, this.guilds, ")");
+        return a.L(sbU, this.guilds, ")");
     }
 }

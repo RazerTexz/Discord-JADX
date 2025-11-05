@@ -1,12 +1,12 @@
 package com.discord.models.user;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.premium.PremiumTier;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.nullserializable.NullSerializable;
-import d0.g0.StringNumberConversions;
-import d0.z.d.Intrinsics3;
+import d0.g0.s;
+import d0.z.d.m;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -47,8 +47,8 @@ public final /* data */ class CoreUser implements User {
             String str;
             NullSerializable<String> nullSerializableC;
             String strA;
-            Intrinsics3.checkNotNullParameter(oldUser, "oldUser");
-            Intrinsics3.checkNotNullParameter(newUser, "newUser");
+            m.checkNotNullParameter(oldUser, "oldUser");
+            m.checkNotNullParameter(newUser, "newUser");
             long id2 = newUser.getId();
             String username = newUser.getUsername();
             NullSerializable<String> nullSerializableA = newUser.a();
@@ -77,7 +77,7 @@ public final /* data */ class CoreUser implements User {
             boolean zBooleanValue = bot != null ? bot.booleanValue() : oldUser.getIsBot();
             Boolean system = newUser.getSystem();
             boolean zBooleanValue2 = system != null ? system.booleanValue() : oldUser.getIsSystemUser();
-            Integer intOrNull = StringNumberConversions.toIntOrNull(newUser.getDiscriminator());
+            Integer intOrNull = s.toIntOrNull(newUser.getDiscriminator());
             int iIntValue = intOrNull != null ? intOrNull.intValue() : oldUser.getDiscriminator();
             PremiumTier premiumType = newUser.getPremiumType();
             if (premiumType == null) {
@@ -124,8 +124,8 @@ public final /* data */ class CoreUser implements User {
     }
 
     public CoreUser(long j, String str, String str2, String str3, boolean z2, boolean z3, int i, PremiumTier premiumTier, int i2, int i3, String str4, String str5) {
-        Intrinsics3.checkNotNullParameter(str, "username");
-        Intrinsics3.checkNotNullParameter(premiumTier, "premiumTier");
+        m.checkNotNullParameter(str, "username");
+        m.checkNotNullParameter(premiumTier, "premiumTier");
         this.id = j;
         this.username = str;
         this.avatar = str2;
@@ -193,8 +193,8 @@ public final /* data */ class CoreUser implements User {
     }
 
     public final CoreUser copy(long id2, String username, String avatar, String banner, boolean isBot, boolean isSystemUser, int discriminator, PremiumTier premiumTier, int flags, int publicFlags, String bio, String bannerColor) {
-        Intrinsics3.checkNotNullParameter(username, "username");
-        Intrinsics3.checkNotNullParameter(premiumTier, "premiumTier");
+        m.checkNotNullParameter(username, "username");
+        m.checkNotNullParameter(premiumTier, "premiumTier");
         return new CoreUser(id2, username, avatar, banner, isBot, isSystemUser, discriminator, premiumTier, flags, publicFlags, bio, bannerColor);
     }
 
@@ -206,7 +206,7 @@ public final /* data */ class CoreUser implements User {
             return false;
         }
         CoreUser coreUser = (CoreUser) other;
-        return getId() == coreUser.getId() && Intrinsics3.areEqual(getUsername(), coreUser.getUsername()) && Intrinsics3.areEqual(getAvatar(), coreUser.getAvatar()) && Intrinsics3.areEqual(getBanner(), coreUser.getBanner()) && getIsBot() == coreUser.getIsBot() && getIsSystemUser() == coreUser.getIsSystemUser() && getDiscriminator() == coreUser.getDiscriminator() && Intrinsics3.areEqual(getPremiumTier(), coreUser.getPremiumTier()) && getFlags() == coreUser.getFlags() && getPublicFlags() == coreUser.getPublicFlags() && Intrinsics3.areEqual(getBio(), coreUser.getBio()) && Intrinsics3.areEqual(getBannerColor(), coreUser.getBannerColor());
+        return getId() == coreUser.getId() && m.areEqual(getUsername(), coreUser.getUsername()) && m.areEqual(getAvatar(), coreUser.getAvatar()) && m.areEqual(getBanner(), coreUser.getBanner()) && getIsBot() == coreUser.getIsBot() && getIsSystemUser() == coreUser.getIsSystemUser() && getDiscriminator() == coreUser.getDiscriminator() && m.areEqual(getPremiumTier(), coreUser.getPremiumTier()) && getFlags() == coreUser.getFlags() && getPublicFlags() == coreUser.getPublicFlags() && m.areEqual(getBio(), coreUser.getBio()) && m.areEqual(getBannerColor(), coreUser.getBannerColor());
     }
 
     @Override // com.discord.models.user.User
@@ -296,7 +296,7 @@ public final /* data */ class CoreUser implements User {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("CoreUser(id=");
+        StringBuilder sbU = a.U("CoreUser(id=");
         sbU.append(getId());
         sbU.append(", username=");
         sbU.append(getUsername());
@@ -330,7 +330,7 @@ public final /* data */ class CoreUser implements User {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public CoreUser(com.discord.api.user.User user) {
-        Intrinsics3.checkNotNullParameter(user, "user");
+        m.checkNotNullParameter(user, "user");
         long id2 = user.getId();
         String username = user.getUsername();
         NullSerializable<String> nullSerializableA = user.a();
@@ -341,7 +341,7 @@ public final /* data */ class CoreUser implements User {
         boolean zBooleanValue = bot != null ? bot.booleanValue() : false;
         Boolean system = user.getSystem();
         boolean zBooleanValue2 = system != null ? system.booleanValue() : false;
-        Integer intOrNull = StringNumberConversions.toIntOrNull(user.getDiscriminator());
+        Integer intOrNull = s.toIntOrNull(user.getDiscriminator());
         int iIntValue = intOrNull != null ? intOrNull.intValue() : 0;
         PremiumTier premiumType = user.getPremiumType();
         premiumType = premiumType == null ? PremiumTier.NONE : premiumType;

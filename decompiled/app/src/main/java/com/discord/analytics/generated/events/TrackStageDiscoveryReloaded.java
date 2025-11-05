@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStageDiscoveryReloaded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final CharSequence stageInstanceRecommendations = null;
@@ -31,7 +31,7 @@ public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSc
             return false;
         }
         TrackStageDiscoveryReloaded trackStageDiscoveryReloaded = (TrackStageDiscoveryReloaded) other;
-        return Intrinsics3.areEqual(this.loadId, trackStageDiscoveryReloaded.loadId) && Intrinsics3.areEqual(this.stageInstanceRecommendations, trackStageDiscoveryReloaded.stageInstanceRecommendations) && Intrinsics3.areEqual(this.lastVisibleIndexAtLoad, trackStageDiscoveryReloaded.lastVisibleIndexAtLoad) && Intrinsics3.areEqual(this.lastVisibleIndex, trackStageDiscoveryReloaded.lastVisibleIndex) && Intrinsics3.areEqual(this.hasScrolled, trackStageDiscoveryReloaded.hasScrolled);
+        return m.areEqual(this.loadId, trackStageDiscoveryReloaded.loadId) && m.areEqual(this.stageInstanceRecommendations, trackStageDiscoveryReloaded.stageInstanceRecommendations) && m.areEqual(this.lastVisibleIndexAtLoad, trackStageDiscoveryReloaded.lastVisibleIndexAtLoad) && m.areEqual(this.lastVisibleIndex, trackStageDiscoveryReloaded.lastVisibleIndex) && m.areEqual(this.hasScrolled, trackStageDiscoveryReloaded.hasScrolled);
     }
 
     public int hashCode() {
@@ -48,7 +48,7 @@ public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSc
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStageDiscoveryReloaded(loadId=");
+        StringBuilder sbU = a.U("TrackStageDiscoveryReloaded(loadId=");
         sbU.append(this.loadId);
         sbU.append(", stageInstanceRecommendations=");
         sbU.append(this.stageInstanceRecommendations);
@@ -57,6 +57,6 @@ public final /* data */ class TrackStageDiscoveryReloaded implements AnalyticsSc
         sbU.append(", lastVisibleIndex=");
         sbU.append(this.lastVisibleIndex);
         sbU.append(", hasScrolled=");
-        return outline.D(sbU, this.hasScrolled, ")");
+        return a.D(sbU, this.hasScrolled, ")");
     }
 }

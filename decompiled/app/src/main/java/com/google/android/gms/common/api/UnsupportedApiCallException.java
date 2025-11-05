@@ -1,7 +1,7 @@
 package com.google.android.gms.common.api;
 
 import androidx.annotation.RecentlyNonNull;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.google.android.gms.common.Feature;
 
 /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
@@ -17,6 +17,6 @@ public final class UnsupportedApiCallException extends UnsupportedOperationExcep
     @RecentlyNonNull
     public String getMessage() {
         String strValueOf = String.valueOf(this.zza);
-        return outline.J(new StringBuilder(strValueOf.length() + 8), "Missing ", strValueOf);
+        return a.J(new StringBuilder(strValueOf.length() + 8), "Missing ", strValueOf);
     }
 }

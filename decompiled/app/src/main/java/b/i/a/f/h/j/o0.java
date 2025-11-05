@@ -5,8 +5,6 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
 import com.adjust.sdk.Constants;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -172,8 +170,8 @@ public final class o0 extends e {
             Objects.requireNonNull((b.i.a.f.e.o.c) this.j.d);
             S(sb, "qt", String.valueOf(System.currentTimeMillis() - j0Var.d));
             if (z2) {
-                AnimatableValueParser.w("_s");
-                AnimatableValueParser.o(true, "Short param name required");
+                b.c.a.a0.d.w("_s");
+                b.c.a.a0.d.o(true, "Short param name required");
                 String str = j0Var.a.get("_s");
                 if (str == null) {
                     str = "0";
@@ -323,11 +321,11 @@ public final class o0 extends e {
                             if (j0Var.f) {
                                 String strD = z.d();
                                 String strF = z.f();
-                                strL = outline.l(strR.length() + outline.b(strF, outline.b(strD, 1)), strD, strF, "?", strR);
+                                strL = b.d.b.a.a.l(strR.length() + b.d.b.a.a.b(strF, b.d.b.a.a.b(strD, 1)), strD, strF, "?", strR);
                             } else {
                                 String strE = z.e();
                                 String strF2 = z.f();
-                                strL = outline.l(strR.length() + outline.b(strF2, outline.b(strE, 1)), strE, strF2, "?", strR);
+                                strL = b.d.b.a.a.l(strR.length() + b.d.b.a.a.b(strF2, b.d.b.a.a.b(strE, 1)), strE, strF2, "?", strR);
                             }
                             try {
                                 url2 = new URL(strL);
@@ -444,7 +442,7 @@ public final class o0 extends e {
                 }
                 return arrayList;
             }
-            AnimatableValueParser.l(!list.isEmpty());
+            b.c.a.a0.d.l(!list.isEmpty());
             a(2, "Uploading batched hits. compression, count", Boolean.valueOf(z5), Integer.valueOf(list.size()), null);
             ?? byteArrayOutputStream = new ByteArrayOutputStream();
             ArrayList arrayList2 = new ArrayList();

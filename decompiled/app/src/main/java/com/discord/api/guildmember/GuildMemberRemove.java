@@ -1,8 +1,8 @@
 package com.discord.api.guildmember;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.user.User;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: GuildMemberRemove.kt */
 /* loaded from: classes.dex */
@@ -28,7 +28,7 @@ public final /* data */ class GuildMemberRemove {
             return false;
         }
         GuildMemberRemove guildMemberRemove = (GuildMemberRemove) other;
-        return this.guildId == guildMemberRemove.guildId && Intrinsics3.areEqual(this.user, guildMemberRemove.user);
+        return this.guildId == guildMemberRemove.guildId && m.areEqual(this.user, guildMemberRemove.user);
     }
 
     public int hashCode() {
@@ -39,7 +39,7 @@ public final /* data */ class GuildMemberRemove {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildMemberRemove(guildId=");
+        StringBuilder sbU = a.U("GuildMemberRemove(guildId=");
         sbU.append(this.guildId);
         sbU.append(", user=");
         sbU.append(this.user);

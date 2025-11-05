@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackInfraApiHttpRequest.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInfraApiHttpRequest implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackInfraApiHttpRequest implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long statusCode = null;
     private final Long count = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackInfraApiHttpRequest implements AnalyticsSchem
             return false;
         }
         TrackInfraApiHttpRequest trackInfraApiHttpRequest = (TrackInfraApiHttpRequest) other;
-        return Intrinsics3.areEqual(this.statusCode, trackInfraApiHttpRequest.statusCode) && Intrinsics3.areEqual(this.count, trackInfraApiHttpRequest.count);
+        return m.areEqual(this.statusCode, trackInfraApiHttpRequest.statusCode) && m.areEqual(this.count, trackInfraApiHttpRequest.count);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackInfraApiHttpRequest implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackInfraApiHttpRequest(statusCode=");
+        StringBuilder sbU = a.U("TrackInfraApiHttpRequest(statusCode=");
         sbU.append(this.statusCode);
         sbU.append(", count=");
-        return outline.G(sbU, this.count, ")");
+        return a.G(sbU, this.count, ")");
     }
 }

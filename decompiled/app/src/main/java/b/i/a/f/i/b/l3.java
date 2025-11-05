@@ -3,7 +3,6 @@ package b.i.a.f.i.b;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.RemoteException;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.measurement.internal.zzaq;
 import com.google.android.gms.measurement.internal.zzku;
 import com.google.android.gms.measurement.internal.zzn;
@@ -55,7 +54,7 @@ public abstract class l3 extends b.i.a.f.h.l.s0 implements i3 {
                 parcel.readString();
                 z4 z4Var3 = (z4) this;
                 Objects.requireNonNull(zzaqVar, "null reference");
-                AnimatableValueParser.w(string);
+                b.c.a.a0.d.w(string);
                 z4Var3.t0(string, true);
                 z4Var3.i(new m5(z4Var3, zzaqVar, string));
                 parcel2.writeNoException();

@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events;
 
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackMarketingSite;
-import com.discord.analytics.generated.traits.TrackMarketingSite2;
+import com.discord.analytics.generated.traits.TrackMarketingSiteReceiver;
 import com.discord.api.science.AnalyticsSchema;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackFriendRequestFailed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
+public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchema, TrackBaseReceiver, TrackMarketingSiteReceiver {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
     private final Long discriminator = null;
@@ -41,7 +41,7 @@ public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchem
             return false;
         }
         TrackFriendRequestFailed trackFriendRequestFailed = (TrackFriendRequestFailed) other;
-        return Intrinsics3.areEqual(this.discriminator, trackFriendRequestFailed.discriminator) && Intrinsics3.areEqual(this.email, trackFriendRequestFailed.email) && Intrinsics3.areEqual(this.reason, trackFriendRequestFailed.reason) && Intrinsics3.areEqual(this.username, trackFriendRequestFailed.username) && Intrinsics3.areEqual(this.discrimLen, trackFriendRequestFailed.discrimLen) && Intrinsics3.areEqual(this.usernameLen, trackFriendRequestFailed.usernameLen) && Intrinsics3.areEqual(this.isEmailLike, trackFriendRequestFailed.isEmailLike) && Intrinsics3.areEqual(this.isInviteLike, trackFriendRequestFailed.isInviteLike) && Intrinsics3.areEqual(this.isNumOnly, trackFriendRequestFailed.isNumOnly) && Intrinsics3.areEqual(this.query, trackFriendRequestFailed.query);
+        return m.areEqual(this.discriminator, trackFriendRequestFailed.discriminator) && m.areEqual(this.email, trackFriendRequestFailed.email) && m.areEqual(this.reason, trackFriendRequestFailed.reason) && m.areEqual(this.username, trackFriendRequestFailed.username) && m.areEqual(this.discrimLen, trackFriendRequestFailed.discrimLen) && m.areEqual(this.usernameLen, trackFriendRequestFailed.usernameLen) && m.areEqual(this.isEmailLike, trackFriendRequestFailed.isEmailLike) && m.areEqual(this.isInviteLike, trackFriendRequestFailed.isInviteLike) && m.areEqual(this.isNumOnly, trackFriendRequestFailed.isNumOnly) && m.areEqual(this.query, trackFriendRequestFailed.query);
     }
 
     public int hashCode() {
@@ -68,7 +68,7 @@ public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackFriendRequestFailed(discriminator=");
+        StringBuilder sbU = a.U("TrackFriendRequestFailed(discriminator=");
         sbU.append(this.discriminator);
         sbU.append(", email=");
         sbU.append(this.email);
@@ -87,6 +87,6 @@ public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchem
         sbU.append(", isNumOnly=");
         sbU.append(this.isNumOnly);
         sbU.append(", query=");
-        return outline.E(sbU, this.query, ")");
+        return a.E(sbU, this.query, ")");
     }
 }

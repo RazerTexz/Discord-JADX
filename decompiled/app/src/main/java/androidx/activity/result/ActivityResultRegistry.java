@@ -12,7 +12,7 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.view.Lifecycle;
 import androidx.view.LifecycleEventObserver;
 import androidx.view.LifecycleOwner;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -264,13 +264,13 @@ public abstract class ActivityResultRegistry {
         }
         this.mKeyToCallback.remove(str);
         if (this.mParsedPendingResults.containsKey(str)) {
-            StringBuilder sbY = outline.Y("Dropping pending result for request ", str, ": ");
+            StringBuilder sbY = a.Y("Dropping pending result for request ", str, ": ");
             sbY.append(this.mParsedPendingResults.get(str));
             Log.w(LOG_TAG, sbY.toString());
             this.mParsedPendingResults.remove(str);
         }
         if (this.mPendingResults.containsKey(str)) {
-            StringBuilder sbY2 = outline.Y("Dropping pending result for request ", str, ": ");
+            StringBuilder sbY2 = a.Y("Dropping pending result for request ", str, ": ");
             sbY2.append(this.mPendingResults.getParcelable(str));
             Log.w(LOG_TAG, sbY2.toString());
             this.mPendingResults.remove(str);

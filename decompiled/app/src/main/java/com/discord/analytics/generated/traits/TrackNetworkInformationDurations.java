@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkInformationDurations.kt */
 /* loaded from: classes.dex */
@@ -26,7 +26,7 @@ public final /* data */ class TrackNetworkInformationDurations {
             return false;
         }
         TrackNetworkInformationDurations trackNetworkInformationDurations = (TrackNetworkInformationDurations) other;
-        return Intrinsics3.areEqual(this.durationConnectionTypeWifi, trackNetworkInformationDurations.durationConnectionTypeWifi) && Intrinsics3.areEqual(this.durationConnectionTypeCellular, trackNetworkInformationDurations.durationConnectionTypeCellular) && Intrinsics3.areEqual(this.durationConnectionTypeEthernet, trackNetworkInformationDurations.durationConnectionTypeEthernet) && Intrinsics3.areEqual(this.durationConnectionTypeBluetooth, trackNetworkInformationDurations.durationConnectionTypeBluetooth) && Intrinsics3.areEqual(this.durationConnectionTypeOther, trackNetworkInformationDurations.durationConnectionTypeOther) && Intrinsics3.areEqual(this.durationConnectionTypeUnknown, trackNetworkInformationDurations.durationConnectionTypeUnknown) && Intrinsics3.areEqual(this.durationConnectionTypeNone, trackNetworkInformationDurations.durationConnectionTypeNone) && Intrinsics3.areEqual(this.durationEffectiveConnectionSpeed2g, trackNetworkInformationDurations.durationEffectiveConnectionSpeed2g) && Intrinsics3.areEqual(this.durationEffectiveConnectionSpeed3g, trackNetworkInformationDurations.durationEffectiveConnectionSpeed3g) && Intrinsics3.areEqual(this.durationEffectiveConnectionSpeed4g, trackNetworkInformationDurations.durationEffectiveConnectionSpeed4g) && Intrinsics3.areEqual(this.durationEffectiveConnectionSpeedUnknown, trackNetworkInformationDurations.durationEffectiveConnectionSpeedUnknown);
+        return m.areEqual(this.durationConnectionTypeWifi, trackNetworkInformationDurations.durationConnectionTypeWifi) && m.areEqual(this.durationConnectionTypeCellular, trackNetworkInformationDurations.durationConnectionTypeCellular) && m.areEqual(this.durationConnectionTypeEthernet, trackNetworkInformationDurations.durationConnectionTypeEthernet) && m.areEqual(this.durationConnectionTypeBluetooth, trackNetworkInformationDurations.durationConnectionTypeBluetooth) && m.areEqual(this.durationConnectionTypeOther, trackNetworkInformationDurations.durationConnectionTypeOther) && m.areEqual(this.durationConnectionTypeUnknown, trackNetworkInformationDurations.durationConnectionTypeUnknown) && m.areEqual(this.durationConnectionTypeNone, trackNetworkInformationDurations.durationConnectionTypeNone) && m.areEqual(this.durationEffectiveConnectionSpeed2g, trackNetworkInformationDurations.durationEffectiveConnectionSpeed2g) && m.areEqual(this.durationEffectiveConnectionSpeed3g, trackNetworkInformationDurations.durationEffectiveConnectionSpeed3g) && m.areEqual(this.durationEffectiveConnectionSpeed4g, trackNetworkInformationDurations.durationEffectiveConnectionSpeed4g) && m.areEqual(this.durationEffectiveConnectionSpeedUnknown, trackNetworkInformationDurations.durationEffectiveConnectionSpeedUnknown);
     }
 
     public int hashCode() {
@@ -55,7 +55,7 @@ public final /* data */ class TrackNetworkInformationDurations {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkInformationDurations(durationConnectionTypeWifi=");
+        StringBuilder sbU = a.U("TrackNetworkInformationDurations(durationConnectionTypeWifi=");
         sbU.append(this.durationConnectionTypeWifi);
         sbU.append(", durationConnectionTypeCellular=");
         sbU.append(this.durationConnectionTypeCellular);
@@ -76,6 +76,6 @@ public final /* data */ class TrackNetworkInformationDurations {
         sbU.append(", durationEffectiveConnectionSpeed4g=");
         sbU.append(this.durationEffectiveConnectionSpeed4g);
         sbU.append(", durationEffectiveConnectionSpeedUnknown=");
-        return outline.G(sbU, this.durationEffectiveConnectionSpeedUnknown, ")");
+        return a.G(sbU, this.durationEffectiveConnectionSpeedUnknown, ")");
     }
 }

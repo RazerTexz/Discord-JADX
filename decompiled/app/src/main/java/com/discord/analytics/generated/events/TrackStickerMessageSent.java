@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackStickerMessageSent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStickerMessageSent implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackStickerMessageSent implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long messageId = null;
     private final Long channelId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackStickerMessageSent implements AnalyticsSchema
             return false;
         }
         TrackStickerMessageSent trackStickerMessageSent = (TrackStickerMessageSent) other;
-        return Intrinsics3.areEqual(this.messageId, trackStickerMessageSent.messageId) && Intrinsics3.areEqual(this.channelId, trackStickerMessageSent.channelId) && Intrinsics3.areEqual(this.channelType, trackStickerMessageSent.channelType) && Intrinsics3.areEqual(this.guildId, trackStickerMessageSent.guildId) && Intrinsics3.areEqual(this.stickerIds, trackStickerMessageSent.stickerIds);
+        return m.areEqual(this.messageId, trackStickerMessageSent.messageId) && m.areEqual(this.channelId, trackStickerMessageSent.channelId) && m.areEqual(this.channelType, trackStickerMessageSent.channelType) && m.areEqual(this.guildId, trackStickerMessageSent.guildId) && m.areEqual(this.stickerIds, trackStickerMessageSent.stickerIds);
     }
 
     public int hashCode() {
@@ -49,7 +49,7 @@ public final /* data */ class TrackStickerMessageSent implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackStickerMessageSent(messageId=");
+        StringBuilder sbU = a.U("TrackStickerMessageSent(messageId=");
         sbU.append(this.messageId);
         sbU.append(", channelId=");
         sbU.append(this.channelId);
@@ -58,6 +58,6 @@ public final /* data */ class TrackStickerMessageSent implements AnalyticsSchema
         sbU.append(", guildId=");
         sbU.append(this.guildId);
         sbU.append(", stickerIds=");
-        return outline.L(sbU, this.stickerIds, ")");
+        return a.L(sbU, this.stickerIds, ")");
     }
 }

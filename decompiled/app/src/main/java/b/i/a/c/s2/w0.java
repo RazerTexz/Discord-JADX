@@ -1,26 +1,25 @@
 package b.i.a.c.s2;
 
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
-import b.i.a.c.v2.DecoderCounters;
+import b.i.a.c.f3.p;
+import b.i.a.c.s2.h1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class w0 implements ListenerSet.a {
-    public final /* synthetic */ AnalyticsListener.a a;
+public final /* synthetic */ class w0 implements p.a {
+    public final /* synthetic */ h1.a a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final /* synthetic */ DecoderCounters f1108b;
+    public final /* synthetic */ b.i.a.c.v2.e f1108b;
 
-    public /* synthetic */ w0(AnalyticsListener.a aVar, DecoderCounters decoderCounters) {
+    public /* synthetic */ w0(h1.a aVar, b.i.a.c.v2.e eVar) {
         this.a = aVar;
-        this.f1108b = decoderCounters;
+        this.f1108b = eVar;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        AnalyticsListener analyticsListener = (AnalyticsListener) obj;
-        analyticsListener.d();
-        analyticsListener.g();
+        h1 h1Var = (h1) obj;
+        h1Var.d();
+        h1Var.g();
     }
 }

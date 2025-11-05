@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackActivitySessionLeft.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackActivitySessionLeft implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackActivitySessionLeft implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long guildId = null;
@@ -32,7 +32,7 @@ public final /* data */ class TrackActivitySessionLeft implements AnalyticsSchem
             return false;
         }
         TrackActivitySessionLeft trackActivitySessionLeft = (TrackActivitySessionLeft) other;
-        return Intrinsics3.areEqual(this.channelId, trackActivitySessionLeft.channelId) && Intrinsics3.areEqual(this.guildId, trackActivitySessionLeft.guildId) && Intrinsics3.areEqual(this.mediaSessionId, trackActivitySessionLeft.mediaSessionId) && Intrinsics3.areEqual(this.activitySessionId, trackActivitySessionLeft.activitySessionId) && Intrinsics3.areEqual(this.applicationId, trackActivitySessionLeft.applicationId) && Intrinsics3.areEqual(this.durationMs, trackActivitySessionLeft.durationMs);
+        return m.areEqual(this.channelId, trackActivitySessionLeft.channelId) && m.areEqual(this.guildId, trackActivitySessionLeft.guildId) && m.areEqual(this.mediaSessionId, trackActivitySessionLeft.mediaSessionId) && m.areEqual(this.activitySessionId, trackActivitySessionLeft.activitySessionId) && m.areEqual(this.applicationId, trackActivitySessionLeft.applicationId) && m.areEqual(this.durationMs, trackActivitySessionLeft.durationMs);
     }
 
     public int hashCode() {
@@ -51,7 +51,7 @@ public final /* data */ class TrackActivitySessionLeft implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivitySessionLeft(channelId=");
+        StringBuilder sbU = a.U("TrackActivitySessionLeft(channelId=");
         sbU.append(this.channelId);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -62,6 +62,6 @@ public final /* data */ class TrackActivitySessionLeft implements AnalyticsSchem
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
         sbU.append(", durationMs=");
-        return outline.G(sbU, this.durationMs, ")");
+        return a.G(sbU, this.durationMs, ")");
     }
 }

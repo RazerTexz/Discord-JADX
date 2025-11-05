@@ -1,15 +1,15 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackSystemMessageAgeRestrictedSent.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSystemMessageAgeRestrictedSent implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSystemMessageAgeRestrictedSent implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final List<Long> guildIds = null;
     private final CharSequence messageType = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackSystemMessageAgeRestrictedSent implements Ana
             return false;
         }
         TrackSystemMessageAgeRestrictedSent trackSystemMessageAgeRestrictedSent = (TrackSystemMessageAgeRestrictedSent) other;
-        return Intrinsics3.areEqual(this.guildIds, trackSystemMessageAgeRestrictedSent.guildIds) && Intrinsics3.areEqual(this.messageType, trackSystemMessageAgeRestrictedSent.messageType);
+        return m.areEqual(this.guildIds, trackSystemMessageAgeRestrictedSent.guildIds) && m.areEqual(this.messageType, trackSystemMessageAgeRestrictedSent.messageType);
     }
 
     public int hashCode() {
@@ -40,9 +40,9 @@ public final /* data */ class TrackSystemMessageAgeRestrictedSent implements Ana
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSystemMessageAgeRestrictedSent(guildIds=");
+        StringBuilder sbU = a.U("TrackSystemMessageAgeRestrictedSent(guildIds=");
         sbU.append(this.guildIds);
         sbU.append(", messageType=");
-        return outline.E(sbU, this.messageType, ")");
+        return a.E(sbU, this.messageType, ")");
     }
 }

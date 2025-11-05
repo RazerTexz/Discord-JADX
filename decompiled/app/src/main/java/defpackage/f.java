@@ -2,9 +2,9 @@ package defpackage;
 
 import android.content.Context;
 import android.view.View;
-import b.a.d.AppToast;
-import b.a.y.OverlayMenuView4;
-import b.a.y.OverlayMenuView5;
+import b.a.d.m;
+import b.a.y.s;
+import b.a.y.t;
 import com.discord.R;
 import com.discord.app.AppActivity;
 import com.discord.stores.StoreInviteSettings;
@@ -49,9 +49,9 @@ public final class f implements View.OnClickListener {
         int i3 = OverlayMenuView.j;
         Objects.requireNonNull(overlayMenuView2);
         if (lValueOf2 != null) {
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreInviteSettings.generateInvite$default(StoreStream.INSTANCE.getInviteSettings(), lValueOf2.longValue(), null, 2, null), overlayMenuView2, null, 2, null), OverlayMenuView.class, (Context) null, (Function1) null, new OverlayMenuView4(overlayMenuView2), (Function0) null, (Function0) null, new OverlayMenuView5(overlayMenuView2), 54, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(StoreInviteSettings.generateInvite$default(StoreStream.INSTANCE.getInviteSettings(), lValueOf2.longValue(), null, 2, null), overlayMenuView2, null, 2, null), OverlayMenuView.class, (Context) null, (Function1) null, new s(overlayMenuView2), (Function0) null, (Function0) null, new t(overlayMenuView2), 54, (Object) null);
         } else {
-            AppToast.g(overlayMenuView2.getContext(), R.string.instant_invite_failed_to_generate, 0, null, 12);
+            m.g(overlayMenuView2.getContext(), R.string.instant_invite_failed_to_generate, 0, null, 12);
         }
     }
 }

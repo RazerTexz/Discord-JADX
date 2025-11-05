@@ -1,6 +1,6 @@
 package org.webrtc;
 
-import h0.c.VideoEncoder2;
+import h0.c.r0;
 import org.webrtc.VideoEncoder;
 
 /* loaded from: classes3.dex */
@@ -20,7 +20,7 @@ public abstract class WrappedNativeVideoEncoder implements VideoEncoder {
 
     @Override // org.webrtc.VideoEncoder
     public /* synthetic */ VideoEncoder.ResolutionBitrateLimits[] getResolutionBitrateLimits() {
-        return VideoEncoder2.b(this);
+        return r0.b(this);
     }
 
     @Override // org.webrtc.VideoEncoder

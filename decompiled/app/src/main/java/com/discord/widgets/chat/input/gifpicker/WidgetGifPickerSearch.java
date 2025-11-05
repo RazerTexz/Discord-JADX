@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.d.b.a.outline;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.app.AppViewFlipper;
@@ -16,16 +16,16 @@ import com.discord.databinding.WidgetGifPickerSearchBinding;
 import com.discord.utilities.dimen.DimenUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.views.SearchInputView;
 import com.discord.widgets.chat.input.gifpicker.GifAdapter;
 import com.discord.widgets.chat.input.gifpicker.GifAdapterItem;
 import com.discord.widgets.chat.input.gifpicker.GifSearchViewModel;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
-import defpackage.GifStaggeredGridItemDecoration;
+import d0.z.d.a0;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
+import defpackage.u;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -36,7 +36,7 @@ import rx.Observable;
 /* compiled from: WidgetGifPickerSearch.kt */
 /* loaded from: classes2.dex */
 public final class WidgetGifPickerSearch extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGifPickerSearch.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifPickerSearchBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGifPickerSearch.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifPickerSearchBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -48,7 +48,7 @@ public final class WidgetGifPickerSearch extends AppFragment {
 
     /* compiled from: WidgetGifPickerSearch.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<GifSearchViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<GifSearchViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -62,14 +62,14 @@ public final class WidgetGifPickerSearch extends AppFragment {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifSearchViewModel.ViewState viewState) {
             WidgetGifPickerSearch widgetGifPickerSearch = WidgetGifPickerSearch.this;
-            Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
+            m.checkNotNullExpressionValue(viewState, "viewState");
             WidgetGifPickerSearch.access$handleViewState(widgetGifPickerSearch, viewState);
         }
     }
 
     /* compiled from: WidgetGifPickerSearch.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setUpGifRecycler$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<GifAdapterItem.GifItem, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<GifAdapterItem.GifItem, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -82,7 +82,7 @@ public final class WidgetGifPickerSearch extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifAdapterItem.GifItem gifItem) {
-            Intrinsics3.checkNotNullParameter(gifItem, "gifItem");
+            m.checkNotNullParameter(gifItem, "gifItem");
             WidgetGifPickerSearch.access$getGifPickerViewModel$p(WidgetGifPickerSearch.this).selectGif(gifItem);
             Function0 function0Access$getOnGifSelected$p = WidgetGifPickerSearch.access$getOnGifSelected$p(WidgetGifPickerSearch.this);
             if (function0Access$getOnGifSelected$p != null) {
@@ -92,7 +92,7 @@ public final class WidgetGifPickerSearch extends AppFragment {
 
     /* compiled from: WidgetGifPickerSearch.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setUpGifRecycler$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<String, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends k implements Function1<String, Unit> {
         public AnonymousClass2(SearchInputView searchInputView) {
             super(1, searchInputView, SearchInputView.class, "setText", "setText(Ljava/lang/String;)V", 0);
         }
@@ -105,14 +105,14 @@ public final class WidgetGifPickerSearch extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "p1");
+            m.checkNotNullParameter(str, "p1");
             ((SearchInputView) this.receiver).setText(str);
         }
     }
 
     /* compiled from: WidgetGifPickerSearch.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setupSearchBar$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -125,17 +125,17 @@ public final class WidgetGifPickerSearch extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "searchQuery");
+            m.checkNotNullParameter(str, "searchQuery");
             WidgetGifPickerSearch.access$getGifPickerViewModel$p(WidgetGifPickerSearch.this).setSearchText(str);
         }
     }
 
     public WidgetGifPickerSearch() {
         super(R.layout.widget_gif_picker_search);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGifPickerSearch2.INSTANCE, null, 2, null);
-        WidgetGifPickerSearch3 widgetGifPickerSearch3 = new WidgetGifPickerSearch3(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.gifPickerViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(GifSearchViewModel.class), new WidgetGifPickerSearch$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetGifPickerSearch3));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGifPickerSearch$binding$2.INSTANCE, null, 2, null);
+        WidgetGifPickerSearch$gifPickerViewModel$2 widgetGifPickerSearch$gifPickerViewModel$2 = new WidgetGifPickerSearch$gifPickerViewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.gifPickerViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(GifSearchViewModel.class), new WidgetGifPickerSearch$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetGifPickerSearch$gifPickerViewModel$2));
     }
 
     public static final /* synthetic */ GifSearchViewModel access$getGifPickerViewModel$p(WidgetGifPickerSearch widgetGifPickerSearch) {
@@ -166,47 +166,47 @@ public final class WidgetGifPickerSearch extends AppFragment {
         if (viewState instanceof GifSearchViewModel.ViewState.Loaded) {
             GifAdapter gifAdapter = this.gifAdapter;
             if (gifAdapter == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("gifAdapter");
+                m.throwUninitializedPropertyAccessException("gifAdapter");
             }
             gifAdapter.setItems(((GifSearchViewModel.ViewState.Loaded) viewState).getAdapterItems());
             AppViewFlipper appViewFlipper = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.gifSearchViewFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper, "binding.gifSearchViewFlipper");
             appViewFlipper.setDisplayedChild(0);
             return;
         }
-        if (Intrinsics3.areEqual(viewState, GifSearchViewModel.ViewState.LoadingSearchResults.INSTANCE)) {
+        if (m.areEqual(viewState, GifSearchViewModel.ViewState.LoadingSearchResults.INSTANCE)) {
             GifAdapter gifAdapter2 = this.gifAdapter;
             if (gifAdapter2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("gifAdapter");
+                m.throwUninitializedPropertyAccessException("gifAdapter");
             }
             gifAdapter2.clearItems();
             AppViewFlipper appViewFlipper2 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(appViewFlipper2, "binding.gifSearchViewFlipper");
+            m.checkNotNullExpressionValue(appViewFlipper2, "binding.gifSearchViewFlipper");
             appViewFlipper2.setDisplayedChild(1);
         }
     }
 
     private final void setUpGifRecycler(int categoryColumnsCount) {
         RecyclerView recyclerView = getBinding().f2402b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.gifSearchGifRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.gifSearchGifRecycler");
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(categoryColumnsCount, 1));
         RecyclerView recyclerView2 = getBinding().f2402b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView2, "binding.gifSearchGifRecycler");
+        m.checkNotNullExpressionValue(recyclerView2, "binding.gifSearchGifRecycler");
         recyclerView2.setItemAnimator(null);
         int iDpToPixels = DimenUtils.dpToPixels(8);
         AnonymousClass1 anonymousClass1 = new AnonymousClass1();
         GifAdapter.Companion companion = GifAdapter.INSTANCE;
         RecyclerView recyclerView3 = getBinding().f2402b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView3, "binding.gifSearchGifRecycler");
+        m.checkNotNullExpressionValue(recyclerView3, "binding.gifSearchGifRecycler");
         this.gifAdapter = new GifAdapter(this, anonymousClass1, companion.calculateColumnWidth(recyclerView3, categoryColumnsCount, iDpToPixels), new AnonymousClass2(getBinding().e), null, 16, null);
         RecyclerView recyclerView4 = getBinding().f2402b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView4, "binding.gifSearchGifRecycler");
+        m.checkNotNullExpressionValue(recyclerView4, "binding.gifSearchGifRecycler");
         GifAdapter gifAdapter = this.gifAdapter;
         if (gifAdapter == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("gifAdapter");
+            m.throwUninitializedPropertyAccessException("gifAdapter");
         }
         recyclerView4.setAdapter(gifAdapter);
-        getBinding().f2402b.addItemDecoration(new GifStaggeredGridItemDecoration(iDpToPixels, categoryColumnsCount));
+        getBinding().f2402b.addItemDecoration(new u(iDpToPixels, categoryColumnsCount));
     }
 
     private final void setupSearchBar() {
@@ -219,11 +219,11 @@ public final class WidgetGifPickerSearch extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         GifAdapter.Companion companion = GifAdapter.INSTANCE;
         RecyclerView recyclerView = getBinding().f2402b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.gifSearchGifRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.gifSearchGifRecycler");
         int iCalculateColumnCount = companion.calculateColumnCount(recyclerView);
         setUpGifRecycler(iCalculateColumnCount);
         setupSearchBar();
@@ -235,12 +235,12 @@ public final class WidgetGifPickerSearch extends AppFragment {
         super.onViewBoundOrOnResume();
         getBinding().e.binding.c.requestFocus();
         Observable<GifSearchViewModel.ViewState> observableR = getGifPickerViewModel().observeViewState().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "gifPickerViewModel\n     …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "gifPickerViewModel\n     …  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableR, this, null, 2, null), WidgetGifPickerSearch.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
     public final void setOnGifSelected(Function0<Unit> onSelected) {
-        Intrinsics3.checkNotNullParameter(onSelected, "onSelected");
+        m.checkNotNullParameter(onSelected, "onSelected");
         this.onGifSelected = onSelected;
     }
 }

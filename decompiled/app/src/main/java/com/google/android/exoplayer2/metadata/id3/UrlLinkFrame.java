@@ -3,8 +3,7 @@ package com.google.android.exoplayer2.metadata.id3;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import b.i.a.c.f3.Util2;
+import b.i.a.c.f3.e0;
 
 /* loaded from: classes3.dex */
 public final class UrlLinkFrame extends Id3Frame {
@@ -40,11 +39,11 @@ public final class UrlLinkFrame extends Id3Frame {
             return false;
         }
         UrlLinkFrame urlLinkFrame = (UrlLinkFrame) obj;
-        return this.j.equals(urlLinkFrame.j) && Util2.a(this.k, urlLinkFrame.k) && Util2.a(this.l, urlLinkFrame.l);
+        return this.j.equals(urlLinkFrame.j) && e0.a(this.k, urlLinkFrame.k) && e0.a(this.l, urlLinkFrame.l);
     }
 
     public int hashCode() {
-        int iM = outline.m(this.j, 527, 31);
+        int iM = b.d.b.a.a.m(this.j, 527, 31);
         String str = this.k;
         int iHashCode = (iM + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.l;
@@ -55,7 +54,7 @@ public final class UrlLinkFrame extends Id3Frame {
     public String toString() {
         String str = this.j;
         String str2 = this.l;
-        return outline.k(outline.b(str2, outline.b(str, 6)), str, ": url=", str2);
+        return b.d.b.a.a.k(b.d.b.a.a.b(str2, b.d.b.a.a.b(str, 6)), str, ": url=", str2);
     }
 
     @Override // android.os.Parcelable
@@ -68,7 +67,7 @@ public final class UrlLinkFrame extends Id3Frame {
     /* JADX WARN: Illegal instructions before constructor call */
     public UrlLinkFrame(Parcel parcel) {
         String string = parcel.readString();
-        int i = Util2.a;
+        int i = e0.a;
         super(string);
         this.k = parcel.readString();
         this.l = parcel.readString();

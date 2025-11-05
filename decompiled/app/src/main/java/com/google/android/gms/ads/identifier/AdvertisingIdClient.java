@@ -10,7 +10,6 @@ import android.os.RemoteException;
 import android.os.SystemClock;
 import android.util.Log;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.e.c;
 import b.i.a.f.h.a.b;
 import b.i.a.f.h.a.d;
@@ -204,7 +203,7 @@ public class AdvertisingIdClient {
     }
 
     public final void a() {
-        AnimatableValueParser.x("Calling this from your main thread can lead to deadlock");
+        b.c.a.a0.d.x("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
             if (this.f == null || this.a == null) {
                 return;
@@ -224,7 +223,7 @@ public class AdvertisingIdClient {
 
     public Info b() throws IOException {
         Info info;
-        AnimatableValueParser.x("Calling this from your main thread can lead to deadlock");
+        b.c.a.a0.d.x("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
             if (this.c) {
                 Objects.requireNonNull(this.a, "null reference");
@@ -276,7 +275,7 @@ public class AdvertisingIdClient {
     }
 
     public final void f(boolean z2) throws GooglePlayServicesRepairableException, IllegalStateException, GooglePlayServicesNotAvailableException, IOException {
-        AnimatableValueParser.x("Calling this from your main thread can lead to deadlock");
+        b.c.a.a0.d.x("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
             if (this.c) {
                 a();

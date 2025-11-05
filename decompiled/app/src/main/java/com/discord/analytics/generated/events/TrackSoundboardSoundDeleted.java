@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackSoundboardSoundDeleted.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSoundboardSoundDeleted implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackSoundboardSoundDeleted implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final transient String analyticsSchemaTypeName = "soundboard_sound_deleted";
@@ -21,7 +21,7 @@ public final /* data */ class TrackSoundboardSoundDeleted implements AnalyticsSc
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackSoundboardSoundDeleted) && Intrinsics3.areEqual(this.guildId, ((TrackSoundboardSoundDeleted) other).guildId);
+            return (other instanceof TrackSoundboardSoundDeleted) && m.areEqual(this.guildId, ((TrackSoundboardSoundDeleted) other).guildId);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackSoundboardSoundDeleted implements AnalyticsSc
     }
 
     public String toString() {
-        return outline.G(outline.U("TrackSoundboardSoundDeleted(guildId="), this.guildId, ")");
+        return a.G(a.U("TrackSoundboardSoundDeleted(guildId="), this.guildId, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackInitialCacheLoaded.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackInitialCacheLoaded implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackInitialCacheLoaded implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence loadId = null;
     private final transient String analyticsSchemaTypeName = "initial_cache_loaded";
@@ -21,7 +21,7 @@ public final /* data */ class TrackInitialCacheLoaded implements AnalyticsSchema
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackInitialCacheLoaded) && Intrinsics3.areEqual(this.loadId, ((TrackInitialCacheLoaded) other).loadId);
+            return (other instanceof TrackInitialCacheLoaded) && m.areEqual(this.loadId, ((TrackInitialCacheLoaded) other).loadId);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackInitialCacheLoaded implements AnalyticsSchema
     }
 
     public String toString() {
-        return outline.E(outline.U("TrackInitialCacheLoaded(loadId="), this.loadId, ")");
+        return a.E(a.U("TrackInitialCacheLoaded(loadId="), this.loadId, ")");
     }
 }

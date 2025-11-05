@@ -1,8 +1,8 @@
 package com.discord.api.connectedaccounts;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ConnectedAccount.kt */
@@ -21,7 +21,7 @@ public final /* data */ class ConnectedAccount {
     private final int visibility;
 
     public ConnectedAccount() {
-        outline.q0("", ModelAuditLogEntry.CHANGE_KEY_ID, "", ModelAuditLogEntry.CHANGE_KEY_NAME, "", "type");
+        a.q0("", ModelAuditLogEntry.CHANGE_KEY_ID, "", ModelAuditLogEntry.CHANGE_KEY_NAME, "", "type");
         this.id = "";
         this.name = "";
         this.visibility = 0;
@@ -65,7 +65,7 @@ public final /* data */ class ConnectedAccount {
             return false;
         }
         ConnectedAccount connectedAccount = (ConnectedAccount) other;
-        return Intrinsics3.areEqual(this.id, connectedAccount.id) && Intrinsics3.areEqual(this.name, connectedAccount.name) && this.visibility == connectedAccount.visibility && this.friendSync == connectedAccount.friendSync && this.showActivity == connectedAccount.showActivity && this.revoked == connectedAccount.revoked && this.verified == connectedAccount.verified && Intrinsics3.areEqual(this.integrations, connectedAccount.integrations) && Intrinsics3.areEqual(this.type, connectedAccount.type);
+        return m.areEqual(this.id, connectedAccount.id) && m.areEqual(this.name, connectedAccount.name) && this.visibility == connectedAccount.visibility && this.friendSync == connectedAccount.friendSync && this.showActivity == connectedAccount.showActivity && this.revoked == connectedAccount.revoked && this.verified == connectedAccount.verified && m.areEqual(this.integrations, connectedAccount.integrations) && m.areEqual(this.type, connectedAccount.type);
     }
 
     /* renamed from: f, reason: from getter */
@@ -121,7 +121,7 @@ public final /* data */ class ConnectedAccount {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ConnectedAccount(id=");
+        StringBuilder sbU = a.U("ConnectedAccount(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);
@@ -138,6 +138,6 @@ public final /* data */ class ConnectedAccount {
         sbU.append(", integrations=");
         sbU.append(this.integrations);
         sbU.append(", type=");
-        return outline.J(sbU, this.type, ")");
+        return a.J(sbU, this.type, ")");
     }
 }

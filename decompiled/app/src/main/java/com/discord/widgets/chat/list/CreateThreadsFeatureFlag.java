@@ -6,9 +6,9 @@ import com.discord.models.guild.Guild;
 import com.discord.stores.StoreExperiments;
 import com.discord.stores.StoreGuilds;
 import com.discord.stores.StoreStream;
-import d0.LazyJVM;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.g;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -20,7 +20,7 @@ public final class CreateThreadsFeatureFlag {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    private static final Lazy INSTANCE$delegate = LazyJVM.lazy(CreateThreadsFeatureFlag2.INSTANCE);
+    private static final Lazy INSTANCE$delegate = g.lazy(CreateThreadsFeatureFlag$Companion$INSTANCE$2.INSTANCE);
     private final StoreExperiments storeExperiments;
     private final StoreGuilds storeGuilds;
 
@@ -52,7 +52,7 @@ public final class CreateThreadsFeatureFlag {
 
     /* compiled from: CreateThreadsFeatureFlag.kt */
     /* renamed from: com.discord.widgets.chat.list.CreateThreadsFeatureFlag$observeEnabled$1, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function3<Experiment, Experiment, Guild, Boolean> {
+    public static final /* synthetic */ class AnonymousClass1 extends k implements Function3<Experiment, Experiment, Guild, Boolean> {
         public AnonymousClass1(Companion companion) {
             super(3, companion, Companion.class, "computeIsEnabled", "computeIsEnabled(Lcom/discord/models/experiments/domain/Experiment;Lcom/discord/models/experiments/domain/Experiment;Lcom/discord/models/guild/Guild;)Z", 0);
         }
@@ -73,8 +73,8 @@ public final class CreateThreadsFeatureFlag {
     }
 
     public CreateThreadsFeatureFlag(StoreExperiments storeExperiments, StoreGuilds storeGuilds) {
-        Intrinsics3.checkNotNullParameter(storeExperiments, "storeExperiments");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "storeGuilds");
+        m.checkNotNullParameter(storeExperiments, "storeExperiments");
+        m.checkNotNullParameter(storeGuilds, "storeGuilds");
         this.storeExperiments = storeExperiments;
         this.storeGuilds = storeGuilds;
     }
@@ -88,8 +88,8 @@ public final class CreateThreadsFeatureFlag {
     }
 
     public final Observable<Boolean> observeEnabled(long guildId) {
-        Observable<Boolean> observableI = Observable.i(this.storeExperiments.observeGuildExperiment("2020-09_threads", guildId, true), this.storeExperiments.observeGuildExperiment("2021-06_threads_rollout", guildId, false), this.storeGuilds.observeGuild(guildId), new CreateThreadsFeatureFlag3(new AnonymousClass1(INSTANCE)));
-        Intrinsics3.checkNotNullExpressionValue(observableI, "Observable.combineLatest… ::computeIsEnabled\n    )");
+        Observable<Boolean> observableI = Observable.i(this.storeExperiments.observeGuildExperiment("2020-09_threads", guildId, true), this.storeExperiments.observeGuildExperiment("2021-06_threads_rollout", guildId, false), this.storeGuilds.observeGuild(guildId), new CreateThreadsFeatureFlag$sam$rx_functions_Func3$0(new AnonymousClass1(INSTANCE)));
+        m.checkNotNullExpressionValue(observableI, "Observable.combineLatest… ::computeIsEnabled\n    )");
         return observableI;
     }
 

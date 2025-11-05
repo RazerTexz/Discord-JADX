@@ -1,21 +1,20 @@
 package com.discord.stores;
 
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.MessageReference;
 import com.discord.models.domain.ModelMessageDelete;
 import com.discord.models.message.Message;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
-import d0.d0._Ranges;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.MapsJVM;
-import d0.t.Sets5;
-import d0.t.SetsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import com.discord.stores.updates.ObservationDeckProvider;
+import d0.d0.f;
+import d0.t.g0;
+import d0.t.h0;
+import d0.t.m0;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -31,7 +30,7 @@ import rx.Observable;
 /* compiled from: StoreMessageReplies.kt */
 /* loaded from: classes2.dex */
 public final class StoreMessageReplies extends StoreV2 {
-    private static final Map<Long, MessageState> NO_RESULTS = Maps6.emptyMap();
+    private static final Map<Long, MessageState> NO_RESULTS = h0.emptyMap();
     private final HashMap<Long, Set<Long>> channelMap;
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -103,7 +102,7 @@ public final class StoreMessageReplies extends StoreV2 {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(Message message) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
                 this.message = message;
             }
 
@@ -120,13 +119,13 @@ public final class StoreMessageReplies extends StoreV2 {
             }
 
             public final Loaded copy(Message message) {
-                Intrinsics3.checkNotNullParameter(message, "message");
+                m.checkNotNullParameter(message, "message");
                 return new Loaded(message);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Loaded) && Intrinsics3.areEqual(this.message, ((Loaded) other).message);
+                    return (other instanceof Loaded) && m.areEqual(this.message, ((Loaded) other).message);
                 }
                 return true;
             }
@@ -144,7 +143,7 @@ public final class StoreMessageReplies extends StoreV2 {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(message=");
+                StringBuilder sbU = a.U("Loaded(message=");
                 sbU.append(this.message);
                 sbU.append(")");
                 return sbU.toString();
@@ -170,7 +169,7 @@ public final class StoreMessageReplies extends StoreV2 {
 
     /* compiled from: StoreMessageReplies.kt */
     /* renamed from: com.discord.stores.StoreMessageReplies$observeMessageReferencesForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends MessageState>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends MessageState>> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -192,14 +191,14 @@ public final class StoreMessageReplies extends StoreV2 {
     }
 
     public /* synthetic */ StoreMessageReplies(Dispatcher dispatcher, StoreMessages storeMessages, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, storeMessages, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, storeMessages, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ Map access$getCachedChannelMessages(StoreMessageReplies storeMessageReplies, long j) {
         return storeMessageReplies.getCachedChannelMessages(j);
     }
 
-    @Store3
+    @StoreThread
     private final boolean deleteMessage(long messageId, long channelId) {
         if (!this.repliedMessagesCache.containsKey(Long.valueOf(messageId))) {
             return false;
@@ -213,7 +212,7 @@ public final class StoreMessageReplies extends StoreV2 {
         return map != null ? map : NO_RESULTS;
     }
 
-    @Store3
+    @StoreThread
     private final boolean processMessage(com.discord.api.message.Message message) {
         return processMessage(new Message(message));
     }
@@ -230,16 +229,16 @@ public final class StoreMessageReplies extends StoreV2 {
         this.repliedMessagesCacheSnapshot = new HashMap(this.repliedMessagesCache);
     }
 
-    @Store3
+    @StoreThread
     private final void snapShotChannelMessages() {
         HashMap<Long, Set<Long>> map = this.channelMap;
-        LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(map.size()));
+        LinkedHashMap linkedHashMap = new LinkedHashMap(g0.mapCapacity(map.size()));
         Iterator<T> it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
             Object key = entry.getKey();
             Set set = (Set) entry.getValue();
-            LinkedHashMap linkedHashMap2 = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(set, 10)), 16));
+            LinkedHashMap linkedHashMap2 = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(set, 10)), 16));
             for (Object obj : set) {
                 Object obj2 = (MessageState) this.repliedMessagesCache.get(Long.valueOf(((Number) obj).longValue()));
                 if (obj2 == null) {
@@ -252,27 +251,27 @@ public final class StoreMessageReplies extends StoreV2 {
         this.repliedChannelMessagesCacheSnapshot = linkedHashMap;
     }
 
-    @Store3
+    @StoreThread
     private final void updateCache(long messageId, long channelId, MessageState messageState) {
         this.repliedMessagesCache.put(Long.valueOf(messageId), messageState);
         HashMap<Long, Set<Long>> map = this.channelMap;
         Long lValueOf = Long.valueOf(channelId);
-        Set of = SetsJVM.setOf(Long.valueOf(messageId));
+        Set of = m0.setOf(Long.valueOf(messageId));
         Set<Long> setEmptySet = this.channelMap.get(Long.valueOf(channelId));
         if (setEmptySet == null) {
-            setEmptySet = Sets5.emptySet();
+            setEmptySet = n0.emptySet();
         }
-        map.put(lValueOf, _Collections.union(of, setEmptySet));
+        map.put(lValueOf, u.union(of, setEmptySet));
     }
 
     public final Map<Long, MessageState> getAllMessageReferences() {
         return this.repliedMessagesCacheSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleLoadMessages(Collection<Message> messages) {
-        Intrinsics3.checkNotNullParameter(messages, "messages");
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(messages, 10));
+        m.checkNotNullParameter(messages, "messages");
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(messages, 10));
         Iterator<T> it = messages.iterator();
         while (it.hasNext()) {
             arrayList.add(Boolean.valueOf(processMessage((Message) it.next())));
@@ -282,23 +281,23 @@ public final class StoreMessageReplies extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageCreate(com.discord.api.message.Message message) {
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         if (processMessage(message)) {
             markChanged();
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageDelete(ModelMessageDelete messageDeleteBulk) {
         boolean z2;
-        Intrinsics3.checkNotNullParameter(messageDeleteBulk, "messageDeleteBulk");
+        m.checkNotNullParameter(messageDeleteBulk, "messageDeleteBulk");
         List<Long> messageIds = messageDeleteBulk.getMessageIds();
-        Intrinsics3.checkNotNullExpressionValue(messageIds, "messageDeleteBulk.messageIds");
+        m.checkNotNullExpressionValue(messageIds, "messageDeleteBulk.messageIds");
         loop0: while (true) {
             for (Long l : messageIds) {
-                Intrinsics3.checkNotNullExpressionValue(l, "messageId");
+                m.checkNotNullExpressionValue(l, "messageId");
                 z2 = deleteMessage(l.longValue(), messageDeleteBulk.getChannelId()) || z2;
             }
         }
@@ -307,10 +306,10 @@ public final class StoreMessageReplies extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleMessageUpdate(com.discord.api.message.Message message) {
         MessageState messageState;
-        Intrinsics3.checkNotNullParameter(message, "message");
+        m.checkNotNullParameter(message, "message");
         if (this.repliedMessagesCache.containsKey(Long.valueOf(message.getId())) && (messageState = this.repliedMessagesCache.get(Long.valueOf(message.getId()))) != null && (messageState instanceof MessageState.Loaded)) {
             Message messageMerge = ((MessageState.Loaded) messageState).getMessage().merge(message);
             updateCache(messageMerge.getId(), messageMerge.getChannelId(), new MessageState.Loaded(messageMerge));
@@ -320,7 +319,7 @@ public final class StoreMessageReplies extends StoreV2 {
 
     public final Observable<Map<Long, MessageState>> observeMessageReferencesForChannel(long channelId) {
         Observable<Map<Long, MessageState>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -332,19 +331,19 @@ public final class StoreMessageReplies extends StoreV2 {
     }
 
     public StoreMessageReplies(Dispatcher dispatcher, StoreMessages storeMessages, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeMessages, "storeMessages");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeMessages, "storeMessages");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.storeMessages = storeMessages;
         this.observationDeck = observationDeck;
         this.repliedMessagesCache = new MessageCache<>();
         this.channelMap = new HashMap<>();
-        this.repliedChannelMessagesCacheSnapshot = Maps6.emptyMap();
-        this.repliedMessagesCacheSnapshot = Maps6.emptyMap();
+        this.repliedChannelMessagesCacheSnapshot = h0.emptyMap();
+        this.repliedMessagesCacheSnapshot = h0.emptyMap();
     }
 
-    @Store3
+    @StoreThread
     private final boolean processMessage(Message message) {
         boolean z2;
         MessageReference messageReference;

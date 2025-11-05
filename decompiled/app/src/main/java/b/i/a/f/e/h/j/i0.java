@@ -1,7 +1,6 @@
 package b.i.a.f.e.h.j;
 
 import android.util.Log;
-import b.d.b.a.outline;
 import b.i.a.f.e.h.j.g;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Scope;
@@ -33,7 +32,7 @@ public final class i0 implements Runnable {
             ConnectionResult connectionResult2 = zauVar.l;
             if (!connectionResult2.x0()) {
                 String strValueOf = String.valueOf(connectionResult2);
-                Log.wtf("SignInCoordinator", outline.j(strValueOf.length() + 48, "Sign-in succeeded with resolve account failure: ", strValueOf), new Exception());
+                Log.wtf("SignInCoordinator", b.d.b.a.a.j(strValueOf.length() + 48, "Sign-in succeeded with resolve account failure: ", strValueOf), new Exception());
                 ((g.b) g0Var.h).b(connectionResult2);
                 g0Var.g.h();
                 return;

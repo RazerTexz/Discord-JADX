@@ -11,8 +11,8 @@ import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.activity.Activity;
 import com.discord.api.application.Application;
@@ -28,23 +28,23 @@ import com.discord.databinding.WidgetChannelPinnedMessagesBinding;
 import com.discord.models.guild.Guild;
 import com.discord.models.message.Message;
 import com.discord.restapi.RestAPIParams;
-import com.discord.stores.StoreChannelsSelected3;
+import com.discord.stores.SelectedChannelAnalyticsLocation;
 import com.discord.stores.StoreChat;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.channel.ChannelSelector;
 import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.chat.WidgetUrlActions;
 import com.discord.widgets.chat.list.ThreadSpineItemDecoration;
 import com.discord.widgets.chat.list.actions.WidgetChatListActions;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapter;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.l.e.k;
 import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.Map;
@@ -59,7 +59,7 @@ import rx.Observable;
 /* compiled from: WidgetChannelPinnedMessages.kt */
 /* loaded from: classes2.dex */
 public final class WidgetChannelPinnedMessages extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetChannelPinnedMessages.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelPinnedMessagesBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetChannelPinnedMessages.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelPinnedMessagesBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -76,9 +76,9 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         private final FragmentManager fragmentManager;
 
         public ChannelPinnedMessagesAdapterEventHandler(Context context, FragmentManager fragmentManager, ChannelSelector channelSelector) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(channelSelector, "channelSelector");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(channelSelector, "channelSelector");
             this.context = context;
             this.fragmentManager = fragmentManager;
             this.channelSelector = channelSelector;
@@ -86,13 +86,13 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onBotUiComponentClicked(long j, Long l, long j2, long j3, Long l2, int i, RestAPIParams.ComponentInteractionData componentInteractionData) {
-            Intrinsics3.checkNotNullParameter(componentInteractionData, "componentSendData");
+            m.checkNotNullParameter(componentInteractionData, "componentSendData");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onBotUiComponentClicked(this, j, l, j2, j3, l2, i, componentInteractionData);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onCallMessageClicked(long j, WidgetChatListAdapterItemCallMessage.CallStatus callStatus) {
-            Intrinsics3.checkNotNullParameter(callStatus, "callStatus");
+            m.checkNotNullParameter(callStatus, "callStatus");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onCallMessageClicked(this, j, callStatus);
         }
 
@@ -103,19 +103,19 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onDismissClicked(Message message) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onDismissClicked(this, message);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onDismissLocalMessageClicked(Message message) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onDismissLocalMessageClicked(this, message);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onInteractionStateUpdated(StoreChat.InteractionState interactionState) {
-            Intrinsics3.checkNotNullParameter(interactionState, "interactionState");
+            m.checkNotNullParameter(interactionState, "interactionState");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onInteractionStateUpdated(this, interactionState);
         }
 
@@ -126,39 +126,39 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onMessageAuthorAvatarClicked(Message message, long j) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onMessageAuthorAvatarClicked(this, message, j);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onMessageAuthorLongClicked(Message message, Long l) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onMessageAuthorLongClicked(this, message, l);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onMessageAuthorNameClicked(Message message, long j) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onMessageAuthorNameClicked(this, message, j);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onMessageBlockedGroupClicked(Message message) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onMessageBlockedGroupClicked(this, message);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onMessageClicked(Message message, boolean isThreadStarterMessage) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             StoreStream.INSTANCE.getMessagesLoader().jumpToMessage(message.getChannelId(), message.getId());
-            AppScreen2.c(this.context, false, null, 6);
+            j.c(this.context, false, null, 6);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onMessageLongClicked(Message message, CharSequence formattedMessage, boolean isThreadStarterMessage) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(formattedMessage, "formattedMessage");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(formattedMessage, "formattedMessage");
             WidgetChatListActions.INSTANCE.showForPin(this.fragmentManager, message.getChannelId(), message.getId(), formattedMessage);
         }
 
@@ -169,7 +169,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onOpenPinsClicked(Message message) {
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onOpenPinsClicked(this, message);
         }
 
@@ -180,27 +180,27 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public boolean onQuickDownloadClicked(Uri uri, String str) {
-            Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-            Intrinsics3.checkNotNullParameter(str, "fileName");
+            m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            m.checkNotNullParameter(str, "fileName");
             return WidgetChatListAdapter.EventHandler.DefaultImpls.onQuickDownloadClicked(this, uri, str);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onReactionClicked(long j, long j2, long j3, long j4, MessageReaction messageReaction, boolean z2) {
-            Intrinsics3.checkNotNullParameter(messageReaction, "reaction");
+            m.checkNotNullParameter(messageReaction, "reaction");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onReactionClicked(this, j, j2, j3, j4, messageReaction, z2);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onReactionLongClicked(long j, long j2, long j3, MessageReaction messageReaction) {
-            Intrinsics3.checkNotNullParameter(messageReaction, "reaction");
+            m.checkNotNullParameter(messageReaction, "reaction");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onReactionLongClicked(this, j, j2, j3, messageReaction);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onReportIssueWithAutoMod(Context context, Message message) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(message, "message");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onReportIssueWithAutoMod(this, context, message);
         }
 
@@ -211,57 +211,57 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onSendGreetMessageClicked(long j, int i, Sticker sticker) {
-            Intrinsics3.checkNotNullParameter(sticker, "sticker");
+            m.checkNotNullParameter(sticker, "sticker");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onSendGreetMessageClicked(this, j, i, sticker);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onShareButtonClick(GuildScheduledEvent guildScheduledEvent, WeakReference<Context> weakReference, WeakReference<AppFragment> weakReference2) {
-            Intrinsics3.checkNotNullParameter(guildScheduledEvent, "guildEvent");
-            Intrinsics3.checkNotNullParameter(weakReference, "weakContext");
-            Intrinsics3.checkNotNullParameter(weakReference2, "weakFragment");
+            m.checkNotNullParameter(guildScheduledEvent, "guildEvent");
+            m.checkNotNullParameter(weakReference, "weakContext");
+            m.checkNotNullParameter(weakReference2, "weakFragment");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onShareButtonClick(this, guildScheduledEvent, weakReference, weakReference2);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onStickerClicked(Message message, BaseSticker sticker) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(sticker, "sticker");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(sticker, "sticker");
             StoreStream.INSTANCE.getMessagesLoader().jumpToMessage(message.getChannelId(), message.getId());
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onSystemMessageCtaClicked(Message message, Channel channel, BaseSticker baseSticker) {
-            Intrinsics3.checkNotNullParameter(message, "message");
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            Intrinsics3.checkNotNullParameter(baseSticker, "sticker");
+            m.checkNotNullParameter(message, "message");
+            m.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(baseSticker, "sticker");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onSystemMessageCtaClicked(this, message, channel, baseSticker);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onThreadClicked(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            ChannelSelector.selectChannel$default(this.channelSelector, channel, null, StoreChannelsSelected3.EMBED, 2, null);
-            AppScreen2.c(this.context, false, null, 6);
+            m.checkNotNullParameter(channel, "channel");
+            ChannelSelector.selectChannel$default(this.channelSelector, channel, null, SelectedChannelAnalyticsLocation.EMBED, 2, null);
+            j.c(this.context, false, null, 6);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onThreadLongClicked(Channel channel) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channel, "channel");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onThreadLongClicked(this, channel);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onUrlLongClicked(String url) {
-            Intrinsics3.checkNotNullParameter(url, "url");
+            m.checkNotNullParameter(url, "url");
             WidgetUrlActions.INSTANCE.launch(this.fragmentManager, url);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.EventHandler
         public void onUserActivityAction(long j, long j2, long j3, MessageActivityType messageActivityType, Activity activity, Application application) {
-            Intrinsics3.checkNotNullParameter(messageActivityType, "messageActivityType");
-            Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
-            Intrinsics3.checkNotNullParameter(application, "application");
+            m.checkNotNullParameter(messageActivityType, "messageActivityType");
+            m.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
+            m.checkNotNullParameter(application, "application");
             WidgetChatListAdapter.EventHandler.DefaultImpls.onUserActivityAction(this, j, j2, j3, messageActivityType, activity, application);
         }
 
@@ -277,10 +277,10 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         }
 
         public final void show(Context context, long channelId) {
-            Intrinsics3.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(context, "context");
             Intent intent = new Intent();
             intent.putExtra(WidgetChannelPinnedMessages.INTENT_EXTRA_CHANNEL_ID, channelId);
-            AppScreen2.d(context, WidgetChannelPinnedMessages.class, intent);
+            j.d(context, WidgetChannelPinnedMessages.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -311,17 +311,17 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
             }
 
             public final Observable<Model> get(Context context, long channelId) {
-                Intrinsics3.checkNotNullParameter(context, "context");
+                m.checkNotNullParameter(context, "context");
                 StoreStream.Companion companion = StoreStream.INSTANCE;
                 Channel channelFindChannelById = companion.getChannels().findChannelById(channelId);
                 if (channelFindChannelById != null) {
-                    Observable observableY = companion.getPinnedMessages().observeForChannel(channelId).Y(new WidgetChannelPinnedMessages2(channelFindChannelById, context));
-                    Intrinsics3.checkNotNullExpressionValue(observableY, "getPinnedMessages().obse…              }\n        }");
+                    Observable observableY = companion.getPinnedMessages().observeForChannel(channelId).Y(new WidgetChannelPinnedMessages$Model$Companion$get$1(channelFindChannelById, context));
+                    m.checkNotNullExpressionValue(observableY, "getPinnedMessages().obse…              }\n        }");
                     return observableY;
                 }
-                ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
-                Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(null)");
-                return scalarSynchronousObservable;
+                k kVar = new k(null);
+                m.checkNotNullExpressionValue(kVar, "Observable.just(null)");
+                return kVar;
             }
 
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -331,10 +331,10 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
         /* JADX WARN: Multi-variable type inference failed */
         public Model(Channel channel, Guild guild, long j, Map<Long, String> map, List<? extends ChatListEntry> list, Set<Long> set, long j2, long j3, long j4, long j5, boolean z2) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            Intrinsics3.checkNotNullParameter(map, "channelNames");
-            Intrinsics3.checkNotNullParameter(list, "list");
-            Intrinsics3.checkNotNullParameter(set, "myRoleIds");
+            m.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(map, "channelNames");
+            m.checkNotNullParameter(list, "list");
+            m.checkNotNullParameter(set, "myRoleIds");
             this.channel = channel;
             this.guild = guild;
             this.userId = j;
@@ -398,10 +398,10 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         }
 
         public final Model copy(Channel channel, Guild guild, long userId, Map<Long, String> channelNames, List<? extends ChatListEntry> list, Set<Long> myRoleIds, long channelId, long guildId, long oldestMessageId, long newMessagesMarkerMessageId, boolean isSpoilerClickAllowed) {
-            Intrinsics3.checkNotNullParameter(channel, "channel");
-            Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
-            Intrinsics3.checkNotNullParameter(list, "list");
-            Intrinsics3.checkNotNullParameter(myRoleIds, "myRoleIds");
+            m.checkNotNullParameter(channel, "channel");
+            m.checkNotNullParameter(channelNames, "channelNames");
+            m.checkNotNullParameter(list, "list");
+            m.checkNotNullParameter(myRoleIds, "myRoleIds");
             return new Model(channel, guild, userId, channelNames, list, myRoleIds, channelId, guildId, oldestMessageId, newMessagesMarkerMessageId, isSpoilerClickAllowed);
         }
 
@@ -413,7 +413,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
                 return false;
             }
             Model model = (Model) other;
-            return Intrinsics3.areEqual(this.channel, model.channel) && Intrinsics3.areEqual(getGuild(), model.getGuild()) && getUserId() == model.getUserId() && Intrinsics3.areEqual(getChannelNames(), model.getChannelNames()) && Intrinsics3.areEqual(getList(), model.getList()) && Intrinsics3.areEqual(getMyRoleIds(), model.getMyRoleIds()) && getChannelId() == model.getChannelId() && getGuildId() == model.getGuildId() && getOldestMessageId() == model.getOldestMessageId() && getNewMessagesMarkerMessageId() == model.getNewMessagesMarkerMessageId() && getIsSpoilerClickAllowed() == model.getIsSpoilerClickAllowed();
+            return m.areEqual(this.channel, model.channel) && m.areEqual(getGuild(), model.getGuild()) && getUserId() == model.getUserId() && m.areEqual(getChannelNames(), model.getChannelNames()) && m.areEqual(getList(), model.getList()) && m.areEqual(getMyRoleIds(), model.getMyRoleIds()) && getChannelId() == model.getChannelId() && getGuildId() == model.getGuildId() && getOldestMessageId() == model.getOldestMessageId() && getNewMessagesMarkerMessageId() == model.getNewMessagesMarkerMessageId() && getIsSpoilerClickAllowed() == model.getIsSpoilerClickAllowed();
         }
 
         public final Channel getChannel() {
@@ -491,7 +491,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Model(channel=");
+            StringBuilder sbU = a.U("Model(channel=");
             sbU.append(this.channel);
             sbU.append(", guild=");
             sbU.append(getGuild());
@@ -524,7 +524,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
     /* compiled from: WidgetChannelPinnedMessages.kt */
     /* renamed from: com.discord.widgets.chat.pins.WidgetChannelPinnedMessages$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Model, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Model, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -543,7 +543,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
     public WidgetChannelPinnedMessages() {
         super(R.layout.widget_channel_pinned_messages);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelPinnedMessages3.INSTANCE, null, 2, null);
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetChannelPinnedMessages$binding$2.INSTANCE, null, 2, null);
     }
 
     public static final /* synthetic */ void access$configureUI(WidgetChannelPinnedMessages widgetChannelPinnedMessages, Model model) {
@@ -590,18 +590,18 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         AppFragment.setActionBarDisplayHomeAsUpEnabled$default(this, false, 1, null);
         setActionBarTitle(R.string.pinned_messages);
         MGRecyclerAdapter.Companion companion = MGRecyclerAdapter.INSTANCE;
         RecyclerView recyclerView = getBinding().f2265b;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.channelPinnedMessagesRecycler");
+        m.checkNotNullExpressionValue(recyclerView, "binding.channelPinnedMessagesRecycler");
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         Context contextRequireContext = requireContext();
         FragmentManager parentFragmentManager2 = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager2, "parentFragmentManager");
         WidgetChatListAdapter widgetChatListAdapter = (WidgetChatListAdapter) companion.configure(new WidgetChatListAdapter(recyclerView, this, parentFragmentManager, new ChannelPinnedMessagesAdapterEventHandler(contextRequireContext, parentFragmentManager2, ChannelSelector.INSTANCE.getInstance()), null, null, 48, null));
         addThreadSpineItemDecoration(widgetChatListAdapter);
         this.adapter = widgetChatListAdapter;
@@ -611,7 +611,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
     public void onViewBoundOrOnResume() {
         super.onViewBoundOrOnResume();
         Observable<Model> observableR = Model.INSTANCE.get(requireContext(), getMostRecentIntent().getLongExtra(INTENT_EXTRA_CHANNEL_ID, 0L)).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "Model\n        .get(requi…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "Model\n        .get(requi…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(observableR), this, null, 2, null), WidgetChannelPinnedMessages.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         WidgetChatListAdapter widgetChatListAdapter = this.adapter;
         if (widgetChatListAdapter != null) {

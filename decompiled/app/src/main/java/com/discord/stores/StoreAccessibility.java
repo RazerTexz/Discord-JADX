@@ -2,15 +2,15 @@ package com.discord.stores;
 
 import android.content.Context;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.accessibility.AccessibilityFeatureFlags;
 import com.discord.utilities.accessibility.AccessibilityMonitor;
-import com.discord.utilities.accessibility.AccessibilityMonitor4;
+import com.discord.utilities.accessibility.AccessibilityState;
 import com.discord.utilities.analytics.AnalyticSuperProperties;
 import com.discord.utilities.persister.Persister;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.EnumSet;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -34,17 +34,17 @@ public final class StoreAccessibility extends StoreV2 {
 
     /* compiled from: StoreAccessibility.kt */
     /* renamed from: com.discord.stores.StoreAccessibility$init$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<AccessibilityMonitor4, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<AccessibilityState, Unit> {
 
         /* compiled from: StoreAccessibility.kt */
         /* renamed from: com.discord.stores.StoreAccessibility$init$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C00731 extends Lambda implements Function0<Unit> {
-            public final /* synthetic */ AccessibilityMonitor4 $it;
+        public static final class C01931 extends o implements Function0<Unit> {
+            public final /* synthetic */ AccessibilityState $it;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C00731(AccessibilityMonitor4 accessibilityMonitor4) {
+            public C01931(AccessibilityState accessibilityState) {
                 super(0);
-                this.$it = accessibilityMonitor4;
+                this.$it = accessibilityState;
             }
 
             @Override // kotlin.jvm.functions.Function0
@@ -64,21 +64,21 @@ public final class StoreAccessibility extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(AccessibilityMonitor4 accessibilityMonitor4) {
-            invoke2(accessibilityMonitor4);
+        public /* bridge */ /* synthetic */ Unit invoke(AccessibilityState accessibilityState) {
+            invoke2(accessibilityState);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(AccessibilityMonitor4 accessibilityMonitor4) {
-            Intrinsics3.checkNotNullParameter(accessibilityMonitor4, "it");
-            StoreAccessibility.access$getDispatcher$p(StoreAccessibility.this).schedule(new C00731(accessibilityMonitor4));
+        public final void invoke2(AccessibilityState accessibilityState) {
+            m.checkNotNullParameter(accessibilityState, "it");
+            StoreAccessibility.access$getDispatcher$p(StoreAccessibility.this).schedule(new C01931(accessibilityState));
         }
     }
 
     /* compiled from: StoreAccessibility.kt */
     /* renamed from: com.discord.stores.StoreAccessibility$observeAccessibilityFeatures$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<EnumSet<AccessibilityFeatureFlags>> {
+    public static final class AnonymousClass1 extends o implements Function0<EnumSet<AccessibilityFeatureFlags>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -97,7 +97,7 @@ public final class StoreAccessibility extends StoreV2 {
 
     /* compiled from: StoreAccessibility.kt */
     /* renamed from: com.discord.stores.StoreAccessibility$observeReducedMotionEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public AnonymousClass1() {
             super(0);
         }
@@ -115,7 +115,7 @@ public final class StoreAccessibility extends StoreV2 {
 
     /* compiled from: StoreAccessibility.kt */
     /* renamed from: com.discord.stores.StoreAccessibility$observeScreenreaderEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass1 extends o implements Function0<Boolean> {
         public AnonymousClass1() {
             super(0);
         }
@@ -133,7 +133,7 @@ public final class StoreAccessibility extends StoreV2 {
 
     /* compiled from: StoreAccessibility.kt */
     /* renamed from: com.discord.stores.StoreAccessibility$setReducedMotionEnabled$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ boolean $enabled;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -156,7 +156,7 @@ public final class StoreAccessibility extends StoreV2 {
     }
 
     public /* synthetic */ StoreAccessibility(Dispatcher dispatcher, ObservationDeck observationDeck, AccessibilityMonitor accessibilityMonitor, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, (i & 2) != 0 ? ObservationDeck4.get() : observationDeck, (i & 4) != 0 ? AccessibilityMonitor.INSTANCE.getINSTANCE() : accessibilityMonitor);
+        this(dispatcher, (i & 2) != 0 ? ObservationDeckProvider.get() : observationDeck, (i & 4) != 0 ? AccessibilityMonitor.INSTANCE.getINSTANCE() : accessibilityMonitor);
     }
 
     public static final /* synthetic */ Dispatcher access$getDispatcher$p(StoreAccessibility storeAccessibility) {
@@ -171,12 +171,12 @@ public final class StoreAccessibility extends StoreV2 {
         storeAccessibility.reducedMotionEnabled = z2;
     }
 
-    public static final /* synthetic */ void access$updateMonitoredAccessibilityState(StoreAccessibility storeAccessibility, AccessibilityMonitor4 accessibilityMonitor4) {
-        storeAccessibility.updateMonitoredAccessibilityState(accessibilityMonitor4);
+    public static final /* synthetic */ void access$updateMonitoredAccessibilityState(StoreAccessibility storeAccessibility, AccessibilityState accessibilityState) {
+        storeAccessibility.updateMonitoredAccessibilityState(accessibilityState);
     }
 
-    @Store3
-    private final void updateMonitoredAccessibilityState(AccessibilityMonitor4 state) {
+    @StoreThread
+    private final void updateMonitoredAccessibilityState(AccessibilityState state) {
         this.accessibilityFeatures = EnumSet.copyOf((EnumSet) state.getFeatures());
         markChanged();
     }
@@ -187,7 +187,7 @@ public final class StoreAccessibility extends StoreV2 {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         this.reducedMotionEnabled = this.reducedMotionCache.get().booleanValue();
         ObservableExtensionsKt.appSubscribe$default(this.accessibilityMonitor.observeAccessibilityState(), StoreAccessibility.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
@@ -218,7 +218,7 @@ public final class StoreAccessibility extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         EnumSet<AccessibilityFeatureFlags> enumSetCopyOf = EnumSet.copyOf((EnumSet) this.accessibilityFeatures);
@@ -236,19 +236,19 @@ public final class StoreAccessibility extends StoreV2 {
         if (this.fontScaledDown) {
             enumSetCopyOf.add(AccessibilityFeatureFlags.CHAT_FONT_SCALE_DECREASED);
         }
-        Intrinsics3.checkNotNullExpressionValue(enumSetCopyOf, "features");
+        m.checkNotNullExpressionValue(enumSetCopyOf, "features");
         this.accessibilityFeaturesSnapshot = enumSetCopyOf;
         AnalyticSuperProperties.INSTANCE.setAccessibilityProperties(isScreenreaderEnabled(), getAccessibilityFeatures());
         this.reducedMotionCache.set(Boolean.valueOf(this.reducedMotionEnabled), true);
     }
 
-    @Store3
+    @StoreThread
     public final void updateDetectionAllowed(boolean allowed) {
         this.isDetectionAllowed = allowed;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     public final void updateFontScale(int scale) {
         if (scale == 100 || scale == -1) {
             this.fontScaledUp = false;
@@ -264,9 +264,9 @@ public final class StoreAccessibility extends StoreV2 {
     }
 
     public StoreAccessibility(Dispatcher dispatcher, ObservationDeck observationDeck, AccessibilityMonitor accessibilityMonitor) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(accessibilityMonitor, "accessibilityMonitor");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(accessibilityMonitor, "accessibilityMonitor");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.accessibilityMonitor = accessibilityMonitor;
@@ -274,7 +274,7 @@ public final class StoreAccessibility extends StoreV2 {
         this.accessibilityFeatures = EnumSet.of(accessibilityFeatureFlags);
         this.reducedMotionCache = new Persister<>("CACHE_KEY_ACCESSIBILITY_REDUCED_MOTION_ENABLED", Boolean.FALSE);
         EnumSet<AccessibilityFeatureFlags> enumSetOf = EnumSet.of(accessibilityFeatureFlags);
-        Intrinsics3.checkNotNullExpressionValue(enumSetOf, "EnumSet.of(AccessibilityFeatureFlags.NONE)");
+        m.checkNotNullExpressionValue(enumSetOf, "EnumSet.of(AccessibilityFeatureFlags.NONE)");
         this.accessibilityFeaturesSnapshot = enumSetOf;
     }
 }

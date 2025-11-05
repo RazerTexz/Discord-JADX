@@ -1,6 +1,6 @@
 package com.hcaptcha.sdk;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Objects;
 
 /* loaded from: classes3.dex */
@@ -31,6 +31,6 @@ public class HCaptchaTokenResponse {
     }
 
     public String toString() {
-        return outline.J(outline.U("HCaptchaTokenResponse(tokenResult="), this.a, ")");
+        return a.J(a.U("HCaptchaTokenResponse(tokenResult="), this.a, ")");
     }
 }

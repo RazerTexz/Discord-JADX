@@ -1,21 +1,21 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackChannel;
-import com.discord.analytics.generated.traits.TrackChannel2;
+import com.discord.analytics.generated.traits.TrackChannelReceiver;
 import com.discord.analytics.generated.traits.TrackGuild;
-import com.discord.analytics.generated.traits.TrackGuild2;
+import com.discord.analytics.generated.traits.TrackGuildReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: TrackSearchResultViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackSearchResultViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackGuild2, TrackChannel2 {
+public final /* data */ class TrackSearchResultViewed implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackGuildReceiver, TrackChannelReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Long categoryId;
     private final List<Long> guildIds;
@@ -46,13 +46,13 @@ public final /* data */ class TrackSearchResultViewed implements AnalyticsSchema
     private TrackGuild trackGuild;
     private TrackLocationMetadata trackLocationMetadata;
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     /* renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackGuild2
+    @Override // com.discord.analytics.generated.traits.TrackGuildReceiver
     public void c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
@@ -71,7 +71,7 @@ public final /* data */ class TrackSearchResultViewed implements AnalyticsSchema
             return false;
         }
         TrackSearchResultViewed trackSearchResultViewed = (TrackSearchResultViewed) other;
-        return Intrinsics3.areEqual(this.searchType, trackSearchResultViewed.searchType) && Intrinsics3.areEqual(this.loadId, trackSearchResultViewed.loadId) && Intrinsics3.areEqual(this.loadDurationMs, trackSearchResultViewed.loadDurationMs) && Intrinsics3.areEqual(this.searchId, trackSearchResultViewed.searchId) && Intrinsics3.areEqual(this.prevSearchId, trackSearchResultViewed.prevSearchId) && Intrinsics3.areEqual(this.isError, trackSearchResultViewed.isError) && Intrinsics3.areEqual(this.limit, trackSearchResultViewed.limit) && Intrinsics3.areEqual(this.offset, trackSearchResultViewed.offset) && Intrinsics3.areEqual(this.page, trackSearchResultViewed.page) && Intrinsics3.areEqual(this.totalResults, trackSearchResultViewed.totalResults) && Intrinsics3.areEqual(this.pageResults, trackSearchResultViewed.pageResults) && Intrinsics3.areEqual(this.isIndexing, trackSearchResultViewed.isIndexing) && Intrinsics3.areEqual(this.pageNumMessages, trackSearchResultViewed.pageNumMessages) && Intrinsics3.areEqual(this.pageNumLinks, trackSearchResultViewed.pageNumLinks) && Intrinsics3.areEqual(this.pageNumEmbeds, trackSearchResultViewed.pageNumEmbeds) && Intrinsics3.areEqual(this.pageNumAttach, trackSearchResultViewed.pageNumAttach) && this.modifiers == trackSearchResultViewed.modifiers && Intrinsics3.areEqual(this.numModifiers, trackSearchResultViewed.numModifiers) && Intrinsics3.areEqual(this.query, trackSearchResultViewed.query) && Intrinsics3.areEqual(this.guildIds, trackSearchResultViewed.guildIds) && Intrinsics3.areEqual(this.categoryId, trackSearchResultViewed.categoryId) && Intrinsics3.areEqual(this.previewEnabled, trackSearchResultViewed.previewEnabled) && Intrinsics3.areEqual(this.numResultsLocked, trackSearchResultViewed.numResultsLocked) && Intrinsics3.areEqual(this.isSuggestion, trackSearchResultViewed.isSuggestion);
+        return m.areEqual(this.searchType, trackSearchResultViewed.searchType) && m.areEqual(this.loadId, trackSearchResultViewed.loadId) && m.areEqual(this.loadDurationMs, trackSearchResultViewed.loadDurationMs) && m.areEqual(this.searchId, trackSearchResultViewed.searchId) && m.areEqual(this.prevSearchId, trackSearchResultViewed.prevSearchId) && m.areEqual(this.isError, trackSearchResultViewed.isError) && m.areEqual(this.limit, trackSearchResultViewed.limit) && m.areEqual(this.offset, trackSearchResultViewed.offset) && m.areEqual(this.page, trackSearchResultViewed.page) && m.areEqual(this.totalResults, trackSearchResultViewed.totalResults) && m.areEqual(this.pageResults, trackSearchResultViewed.pageResults) && m.areEqual(this.isIndexing, trackSearchResultViewed.isIndexing) && m.areEqual(this.pageNumMessages, trackSearchResultViewed.pageNumMessages) && m.areEqual(this.pageNumLinks, trackSearchResultViewed.pageNumLinks) && m.areEqual(this.pageNumEmbeds, trackSearchResultViewed.pageNumEmbeds) && m.areEqual(this.pageNumAttach, trackSearchResultViewed.pageNumAttach) && this.modifiers == trackSearchResultViewed.modifiers && m.areEqual(this.numModifiers, trackSearchResultViewed.numModifiers) && m.areEqual(this.query, trackSearchResultViewed.query) && m.areEqual(this.guildIds, trackSearchResultViewed.guildIds) && m.areEqual(this.categoryId, trackSearchResultViewed.categoryId) && m.areEqual(this.previewEnabled, trackSearchResultViewed.previewEnabled) && m.areEqual(this.numResultsLocked, trackSearchResultViewed.numResultsLocked) && m.areEqual(this.isSuggestion, trackSearchResultViewed.isSuggestion);
     }
 
     public int hashCode() {
@@ -126,7 +126,7 @@ public final /* data */ class TrackSearchResultViewed implements AnalyticsSchema
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackSearchResultViewed(searchType=");
+        StringBuilder sbU = a.U("TrackSearchResultViewed(searchType=");
         sbU.append(this.searchType);
         sbU.append(", loadId=");
         sbU.append(this.loadId);
@@ -173,6 +173,6 @@ public final /* data */ class TrackSearchResultViewed implements AnalyticsSchema
         sbU.append(", numResultsLocked=");
         sbU.append(this.numResultsLocked);
         sbU.append(", isSuggestion=");
-        return outline.D(sbU, this.isSuggestion, ")");
+        return a.D(sbU, this.isSuggestion, ")");
     }
 }

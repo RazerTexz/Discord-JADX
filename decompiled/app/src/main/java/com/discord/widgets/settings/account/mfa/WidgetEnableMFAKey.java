@@ -10,18 +10,17 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates2;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsEnableMfaKeyBinding;
 import com.discord.utilities.auth.AuthUtils;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Reflection2;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.a0;
+import d0.z.d.m;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.reflect.KProperty;
@@ -29,7 +28,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetEnableMFAKey.kt */
 /* loaded from: classes2.dex */
 public final class WidgetEnableMFAKey extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetEnableMFAKey.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaKeyBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetEnableMFAKey.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaKeyBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -72,9 +71,9 @@ public final class WidgetEnableMFAKey extends AppFragment {
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
             WidgetEnableMFAKey widgetEnableMFAKey = WidgetEnableMFAKey.this;
-            Intrinsics3.checkNotNullExpressionValue(view, "it");
+            m.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "it.context");
+            m.checkNotNullExpressionValue(context, "it.context");
             WidgetEnableMFAKey.access$copyCodeToClipboard(widgetEnableMFAKey, context);
         }
     }
@@ -90,7 +89,7 @@ public final class WidgetEnableMFAKey extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            Intrinsics3.checkNotNullExpressionValue(view, "it");
+            m.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
             Intent launchIntentForPackage = this.$pm.getLaunchIntentForPackage(AuthUtils.AUTHY_PACKAGE);
             if (launchIntentForPackage != null) {
@@ -110,7 +109,7 @@ public final class WidgetEnableMFAKey extends AppFragment {
 
         @Override // android.view.View.OnClickListener
         public final void onClick(View view) {
-            Intrinsics3.checkNotNullExpressionValue(view, "it");
+            m.checkNotNullExpressionValue(view, "it");
             Context context = view.getContext();
             Intent launchIntentForPackage = this.$pm.getLaunchIntentForPackage(AuthUtils.GOOGLE_AUTHENTICATOR_PACKAGE);
             if (launchIntentForPackage != null) {
@@ -121,8 +120,8 @@ public final class WidgetEnableMFAKey extends AppFragment {
 
     public WidgetEnableMFAKey() {
         super(R.layout.widget_settings_enable_mfa_key);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetEnableMFAKey2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetEnableMFAViewModel.class), new WidgetEnableMFAKey$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(WidgetEnableMFAKey3.INSTANCE));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetEnableMFAKey$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetEnableMFAViewModel.class), new WidgetEnableMFAKey$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetEnableMFAKey$viewModel$2.INSTANCE));
     }
 
     public static final /* synthetic */ void access$copyCodeToClipboard(WidgetEnableMFAKey widgetEnableMFAKey, Context context) {
@@ -132,14 +131,14 @@ public final class WidgetEnableMFAKey extends AppFragment {
     private final void copyCodeToClipboard(Context context) {
         AuthUtils authUtils = AuthUtils.INSTANCE;
         TextView textView = getBinding().f2618b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.enableMfaKeyCode");
+        m.checkNotNullExpressionValue(textView, "binding.enableMfaKeyCode");
         String strEncodeTotpSecret = authUtils.encodeTotpSecret(textView.getText().toString());
         ClipboardManager clipboardManager = (ClipboardManager) context.getSystemService("clipboard");
         ClipData clipDataNewPlainText = ClipData.newPlainText("two fa code", strEncodeTotpSecret);
         if (clipboardManager != null) {
             clipboardManager.setPrimaryClip(clipDataNewPlainText);
         }
-        AppToast.g(context, R.string.copied_text, 0, null, 12);
+        b.a.d.m.g(context, R.string.copied_text, 0, null, 12);
     }
 
     private final WidgetSettingsEnableMfaKeyBinding getBinding() {
@@ -159,19 +158,19 @@ public final class WidgetEnableMFAKey extends AppFragment {
         Companion companion = INSTANCE;
         if (Companion.access$isPackageInstalled(companion, AuthUtils.AUTHY_PACKAGE, packageManager)) {
             TextView textView = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.enableMfaKeyLaunchAuthy");
-            textView.setText(FormatUtils.k(this, R.string.launch_app, new Object[]{FormatUtils.k(this, R.string.two_fa_app_name_authy, new Object[0], null, 4)}, null, 4));
+            m.checkNotNullExpressionValue(textView, "binding.enableMfaKeyLaunchAuthy");
+            textView.setText(b.k(this, R.string.launch_app, new Object[]{b.k(this, R.string.two_fa_app_name_authy, new Object[0], null, 4)}, null, 4));
             TextView textView2 = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(textView2, "binding.enableMfaKeyLaunchAuthy");
+            m.checkNotNullExpressionValue(textView2, "binding.enableMfaKeyLaunchAuthy");
             textView2.setVisibility(0);
             getBinding().c.setOnClickListener(new AnonymousClass1(packageManager));
         }
         if (Companion.access$isPackageInstalled(companion, AuthUtils.GOOGLE_AUTHENTICATOR_PACKAGE, packageManager)) {
             TextView textView3 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView3, "binding.enableMfaKeyLaunchGoogleAuth");
-            textView3.setText(FormatUtils.k(this, R.string.launch_app, new Object[]{FormatUtils.k(this, R.string.two_fa_app_name_google_authenticator, new Object[0], null, 4)}, null, 4));
+            m.checkNotNullExpressionValue(textView3, "binding.enableMfaKeyLaunchGoogleAuth");
+            textView3.setText(b.k(this, R.string.launch_app, new Object[]{b.k(this, R.string.two_fa_app_name_google_authenticator, new Object[0], null, 4)}, null, 4));
             TextView textView4 = getBinding().d;
-            Intrinsics3.checkNotNullExpressionValue(textView4, "binding.enableMfaKeyLaunchGoogleAuth");
+            m.checkNotNullExpressionValue(textView4, "binding.enableMfaKeyLaunchGoogleAuth");
             textView4.setVisibility(0);
             getBinding().d.setOnClickListener(new AnonymousClass2(packageManager));
         }
@@ -179,10 +178,10 @@ public final class WidgetEnableMFAKey extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         TextView textView = getBinding().f2618b;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.enableMfaKeyCode");
+        m.checkNotNullExpressionValue(textView, "binding.enableMfaKeyCode");
         textView.setText(getViewModel().getTotpSecret());
         getBinding().f2618b.setOnClickListener(new AnonymousClass1());
         showLaunchTexts();

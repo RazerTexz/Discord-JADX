@@ -2,8 +2,8 @@ package com.discord.stores;
 
 import com.discord.stores.StoreRtcConnection;
 import com.discord.stores.updates.ObservationDeck;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,7 +19,7 @@ public final class StoreVoiceSpeaking extends StoreV2 {
 
     /* compiled from: StoreVoiceSpeaking.kt */
     /* renamed from: com.discord.stores.StoreVoiceSpeaking$observeSpeakingUsers$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Set<? extends Long>> {
+    public static final class AnonymousClass1 extends o implements Function0<Set<? extends Long>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -37,7 +37,7 @@ public final class StoreVoiceSpeaking extends StoreV2 {
     }
 
     public StoreVoiceSpeaking(ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.observationDeck = observationDeck;
         this.speakingUsers = new HashSet<>();
         this.speakingUsersSnapshot = new HashSet();
@@ -47,9 +47,9 @@ public final class StoreVoiceSpeaking extends StoreV2 {
         return this.speakingUsersSnapshot;
     }
 
-    @Store3
+    @StoreThread
     public final void handleSpeakingUpdates(List<StoreRtcConnection.SpeakingUserUpdate> speakingList) {
-        Intrinsics3.checkNotNullParameter(speakingList, "speakingList");
+        m.checkNotNullParameter(speakingList, "speakingList");
         boolean z2 = false;
         for (StoreRtcConnection.SpeakingUserUpdate speakingUserUpdate : speakingList) {
             long userId = speakingUserUpdate.getUserId();
@@ -63,7 +63,7 @@ public final class StoreVoiceSpeaking extends StoreV2 {
         }
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceChannelSelected(long voiceChannelId) {
         if (voiceChannelId > 0) {
             return;
@@ -74,7 +74,7 @@ public final class StoreVoiceSpeaking extends StoreV2 {
 
     public final Observable<Set<Long>> observeSpeakingUsers() {
         Observable<Set<Long>> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck\n        …  .distinctUntilChanged()");
         return observableR;
     }
 

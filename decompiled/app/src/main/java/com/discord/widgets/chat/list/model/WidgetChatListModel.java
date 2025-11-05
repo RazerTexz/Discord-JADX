@@ -1,7 +1,7 @@
 package com.discord.widgets.chat.list.model;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.sticker.Sticker;
@@ -17,8 +17,8 @@ import com.discord.widgets.chat.list.adapter.WidgetChatListAdapter;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.StickerGreetCompactEntry;
 import com.discord.widgets.chat.list.entries.StickerGreetEntry;
-import d0.z.d.Intrinsics3;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.z.d.m;
+import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -65,8 +65,8 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
             }
 
             public final Observable<ChatListState> get(long channelId) {
-                Observable observableY = StoreStream.INSTANCE.getMessages().observeIsDetached(channelId).Y(new WidgetChatListModel2(channelId));
-                Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …        }\n              }");
+                Observable observableY = StoreStream.INSTANCE.getMessages().observeIsDetached(channelId).Y(new WidgetChatListModel$ChatListState$Companion$get$1(channelId));
+                m.checkNotNullExpressionValue(observableY, "StoreStream\n            …        }\n              }");
                 return observableY;
             }
 
@@ -101,8 +101,8 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
             Observable<WidgetChatListModelTop> observable = WidgetChatListModelTop.INSTANCE.get(channel);
             Observable<WidgetChatListModelMessages> observable2 = WidgetChatListModelMessages.INSTANCE.get(channel);
             StoreStream.Companion companion = StoreStream.INSTANCE;
-            Observable<WidgetChatListModel> observableC = Observable.c(observable, observable2, observeIsLoadingMessages(companion.getMessagesLoader(), channel.getId()), companion.getChannels().observeNames(), companion.getUsers().observeMeId(), companion.getGuilds().observeComputed(channel.getGuildId()), companion.getGuilds().observeGuild(channel.getGuildId()), companion.getUserRelationships().observe(), ChatListState.INSTANCE.get(channel.getId()), new WidgetChatListModel4(channel));
-            Intrinsics3.checkNotNullExpressionValue(observableC, "Observable\n            .…          )\n            }");
+            Observable<WidgetChatListModel> observableC = Observable.c(observable, observable2, observeIsLoadingMessages(companion.getMessagesLoader(), channel.getId()), companion.getChannels().observeNames(), companion.getUsers().observeMeId(), companion.getGuilds().observeComputed(channel.getGuildId()), companion.getGuilds().observeGuild(channel.getGuildId()), companion.getUserRelationships().observe(), ChatListState.INSTANCE.get(channel.getId()), new WidgetChatListModel$Companion$getChannel$1(channel));
+            m.checkNotNullExpressionValue(observableC, "Observable\n            .…          )\n            }");
             return observableC;
         }
 
@@ -143,24 +143,24 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
             if (parentMessageId != null) {
                 Observable<Message> observableObserveMessagesForChannel = companion.getMessages().observeMessagesForChannel(parentChannel.getId(), parentMessageId.longValue());
                 Observable<List<ChatListEntry>> singleMessage = WidgetChatListModelMessages.INSTANCE.getSingleMessage(parentChannel, parentMessageId.longValue());
-                WidgetChatListModel5 widgetChatListModel5 = WidgetChatListModel5.INSTANCE;
-                Object widgetChatListModel8 = widgetChatListModel5;
-                if (widgetChatListModel5 != null) {
-                    widgetChatListModel8 = new WidgetChatListModel8(widgetChatListModel5);
+                WidgetChatListModel$Companion$getThreadDraft$1 widgetChatListModel$Companion$getThreadDraft$1 = WidgetChatListModel$Companion$getThreadDraft$1.INSTANCE;
+                Object widgetChatListModel$sam$rx_functions_Func2$0 = widgetChatListModel$Companion$getThreadDraft$1;
+                if (widgetChatListModel$Companion$getThreadDraft$1 != null) {
+                    widgetChatListModel$sam$rx_functions_Func2$0 = new WidgetChatListModel$sam$rx_functions_Func2$0(widgetChatListModel$Companion$getThreadDraft$1);
                 }
-                observableJ = Observable.j(observableObserveMessagesForChannel, singleMessage, (Func2) widgetChatListModel8);
+                observableJ = Observable.j(observableObserveMessagesForChannel, singleMessage, (Func2) widgetChatListModel$sam$rx_functions_Func2$0);
             } else {
-                ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(null);
-                ScalarSynchronousObservable scalarSynchronousObservable2 = new ScalarSynchronousObservable(new ArrayList());
-                WidgetChatListModel6 widgetChatListModel6 = WidgetChatListModel6.INSTANCE;
-                Object widgetChatListModel82 = widgetChatListModel6;
-                if (widgetChatListModel6 != null) {
-                    widgetChatListModel82 = new WidgetChatListModel8(widgetChatListModel6);
+                k kVar = new k(null);
+                k kVar2 = new k(new ArrayList());
+                WidgetChatListModel$Companion$getThreadDraft$2 widgetChatListModel$Companion$getThreadDraft$2 = WidgetChatListModel$Companion$getThreadDraft$2.INSTANCE;
+                Object widgetChatListModel$sam$rx_functions_Func2$02 = widgetChatListModel$Companion$getThreadDraft$2;
+                if (widgetChatListModel$Companion$getThreadDraft$2 != null) {
+                    widgetChatListModel$sam$rx_functions_Func2$02 = new WidgetChatListModel$sam$rx_functions_Func2$0(widgetChatListModel$Companion$getThreadDraft$2);
                 }
-                observableJ = Observable.j(scalarSynchronousObservable, scalarSynchronousObservable2, (Func2) widgetChatListModel82);
+                observableJ = Observable.j(kVar, kVar2, (Func2) widgetChatListModel$sam$rx_functions_Func2$02);
             }
-            Observable<WidgetChatListModel> observableE = Observable.e(observableObserveNames, observableObserveMeId, observableObserveComputed, observableObserveGuild, observableObserveDraftState, observableObservePermissionsForChannel, observableJ, new WidgetChatListModel7(parentChannel, parentMessageId, guildId));
-            Intrinsics3.checkNotNullExpressionValue(observableE, "Observable\n          .co…            )\n          }");
+            Observable<WidgetChatListModel> observableE = Observable.e(observableObserveNames, observableObserveMeId, observableObserveComputed, observableObserveGuild, observableObserveDraftState, observableObservePermissionsForChannel, observableJ, new WidgetChatListModel$Companion$getThreadDraft$3(parentChannel, parentMessageId, guildId));
+            m.checkNotNullExpressionValue(observableE, "Observable\n          .co…            )\n          }");
             return observableE;
         }
 
@@ -180,8 +180,8 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
         }
 
         public final Observable<WidgetChatListModel> get() {
-            Observable observableY = StoreStream.INSTANCE.getChannelsSelected().observeResolvedSelectedChannel().Y(WidgetChatListModel3.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n          .g…            }\n          }");
+            Observable observableY = StoreStream.INSTANCE.getChannelsSelected().observeResolvedSelectedChannel().Y(WidgetChatListModel$Companion$get$1.INSTANCE);
+            m.checkNotNullExpressionValue(observableY, "StoreStream\n          .g…            }\n          }");
             return observableY;
         }
 
@@ -192,9 +192,9 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
 
     /* JADX WARN: Multi-variable type inference failed */
     public WidgetChatListModel(long j, long j2, Guild guild, long j3, Map<Long, String> map, long j4, List<? extends ChatListEntry> list, Set<Long> set, long j5, long j6, boolean z2) {
-        Intrinsics3.checkNotNullParameter(map, "channelNames");
-        Intrinsics3.checkNotNullParameter(list, "list");
-        Intrinsics3.checkNotNullParameter(set, "myRoleIds");
+        m.checkNotNullParameter(map, "channelNames");
+        m.checkNotNullParameter(list, "list");
+        m.checkNotNullParameter(set, "myRoleIds");
         this.userId = j;
         this.channelId = j2;
         this.guild = guild;
@@ -260,9 +260,9 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
     }
 
     public final WidgetChatListModel copy(long userId, long channelId, Guild guild, long guildId, Map<Long, String> channelNames, long oldestMessageId, List<? extends ChatListEntry> list, Set<Long> myRoleIds, long newMessagesMarkerMessageId, long newestKnownMessageId, boolean isLoadingMessages) {
-        Intrinsics3.checkNotNullParameter(channelNames, "channelNames");
-        Intrinsics3.checkNotNullParameter(list, "list");
-        Intrinsics3.checkNotNullParameter(myRoleIds, "myRoleIds");
+        m.checkNotNullParameter(channelNames, "channelNames");
+        m.checkNotNullParameter(list, "list");
+        m.checkNotNullParameter(myRoleIds, "myRoleIds");
         return new WidgetChatListModel(userId, channelId, guild, guildId, channelNames, oldestMessageId, list, myRoleIds, newMessagesMarkerMessageId, newestKnownMessageId, isLoadingMessages);
     }
 
@@ -274,7 +274,7 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
             return false;
         }
         WidgetChatListModel widgetChatListModel = (WidgetChatListModel) other;
-        return getUserId() == widgetChatListModel.getUserId() && getChannelId() == widgetChatListModel.getChannelId() && Intrinsics3.areEqual(getGuild(), widgetChatListModel.getGuild()) && getGuildId() == widgetChatListModel.getGuildId() && Intrinsics3.areEqual(getChannelNames(), widgetChatListModel.getChannelNames()) && getOldestMessageId() == widgetChatListModel.getOldestMessageId() && Intrinsics3.areEqual(getList(), widgetChatListModel.getList()) && Intrinsics3.areEqual(getMyRoleIds(), widgetChatListModel.getMyRoleIds()) && getNewMessagesMarkerMessageId() == widgetChatListModel.getNewMessagesMarkerMessageId() && this.newestKnownMessageId == widgetChatListModel.newestKnownMessageId && this.isLoadingMessages == widgetChatListModel.isLoadingMessages;
+        return getUserId() == widgetChatListModel.getUserId() && getChannelId() == widgetChatListModel.getChannelId() && m.areEqual(getGuild(), widgetChatListModel.getGuild()) && getGuildId() == widgetChatListModel.getGuildId() && m.areEqual(getChannelNames(), widgetChatListModel.getChannelNames()) && getOldestMessageId() == widgetChatListModel.getOldestMessageId() && m.areEqual(getList(), widgetChatListModel.getList()) && m.areEqual(getMyRoleIds(), widgetChatListModel.getMyRoleIds()) && getNewMessagesMarkerMessageId() == widgetChatListModel.getNewMessagesMarkerMessageId() && this.newestKnownMessageId == widgetChatListModel.newestKnownMessageId && this.isLoadingMessages == widgetChatListModel.isLoadingMessages;
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
@@ -356,7 +356,7 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("WidgetChatListModel(userId=");
+        StringBuilder sbU = a.U("WidgetChatListModel(userId=");
         sbU.append(getUserId());
         sbU.append(", channelId=");
         sbU.append(getChannelId());
@@ -377,7 +377,7 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
         sbU.append(", newestKnownMessageId=");
         sbU.append(this.newestKnownMessageId);
         sbU.append(", isLoadingMessages=");
-        return outline.O(sbU, this.isLoadingMessages, ")");
+        return a.O(sbU, this.isLoadingMessages, ")");
     }
 
     public /* synthetic */ WidgetChatListModel(long j, long j2, Guild guild, long j3, Map map, long j4, List list, Set set, long j5, long j6, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {

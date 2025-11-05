@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.Px;
 import androidx.annotation.RestrictTo;
 import androidx.core.view.ViewCompat;
-import b.d.b.a.outline;
 import com.google.android.material.R;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -90,7 +89,7 @@ public final class SlideDistanceProvider implements VisibilityAnimatorProvider {
         if (i == 8388613) {
             return createTranslationXAnimator(view2, isRtl(view) ? translationX - i2 : i2 + translationX, translationX, translationX);
         }
-        throw new IllegalArgumentException(outline.q("Invalid slide direction: ", i));
+        throw new IllegalArgumentException(b.d.b.a.a.q("Invalid slide direction: ", i));
     }
 
     private static Animator createTranslationDisappearAnimator(View view, View view2, int i, @Px int i2) {
@@ -114,7 +113,7 @@ public final class SlideDistanceProvider implements VisibilityAnimatorProvider {
         if (i == 8388613) {
             return createTranslationXAnimator(view2, translationX, isRtl(view) ? i2 + translationX : translationX - i2, translationX);
         }
-        throw new IllegalArgumentException(outline.q("Invalid slide direction: ", i));
+        throw new IllegalArgumentException(b.d.b.a.a.q("Invalid slide direction: ", i));
     }
 
     private static Animator createTranslationXAnimator(View view, float f, float f2, float f3) {

@@ -7,16 +7,16 @@ import android.text.TextUtils;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.d.AppViewModelDelegates2;
-import b.d.b.a.outline;
+import b.a.d.f0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetSettingsEnableMfaInputBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -25,7 +25,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: WidgetEnableMFAInput.kt */
 /* loaded from: classes2.dex */
 public final class WidgetEnableMFAInput extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetEnableMFAInput.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaInputBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetEnableMFAInput.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaInputBinding;", 0)};
 
     /* renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
@@ -35,7 +35,7 @@ public final class WidgetEnableMFAInput extends AppFragment {
 
     /* compiled from: WidgetEnableMFAInput.kt */
     /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAInput$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<String, Unit> {
         public final /* synthetic */ View $view;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -52,18 +52,18 @@ public final class WidgetEnableMFAInput extends AppFragment {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
-            Intrinsics3.checkNotNullParameter(str, "verificationCode");
+            m.checkNotNullParameter(str, "verificationCode");
             WidgetEnableMFAViewModel widgetEnableMFAViewModelAccess$getViewModel$p = WidgetEnableMFAInput.access$getViewModel$p(WidgetEnableMFAInput.this);
             Context context = this.$view.getContext();
-            Intrinsics3.checkNotNullExpressionValue(context, "view.context");
+            m.checkNotNullExpressionValue(context, "view.context");
             widgetEnableMFAViewModelAccess$getViewModel$p.enableMFA(context, str);
         }
     }
 
     public WidgetEnableMFAInput() {
         super(R.layout.widget_settings_enable_mfa_input);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetEnableMFAInput2.INSTANCE, null, 2, null);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetEnableMFAViewModel.class), new WidgetEnableMFAInput$appActivityViewModels$$inlined$activityViewModels$1(this), new AppViewModelDelegates2(WidgetEnableMFAInput3.INSTANCE));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetEnableMFAInput$binding$2.INSTANCE, null, 2, null);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(WidgetEnableMFAViewModel.class), new WidgetEnableMFAInput$appActivityViewModels$$inlined$activityViewModels$1(this), new f0(WidgetEnableMFAInput$viewModel$2.INSTANCE));
     }
 
     public static final /* synthetic */ WidgetEnableMFAViewModel access$getViewModel$p(WidgetEnableMFAInput widgetEnableMFAInput) {
@@ -80,7 +80,7 @@ public final class WidgetEnableMFAInput extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         getBinding().f2617b.setOnCodeEntered(new AnonymousClass1(view));
     }
@@ -93,7 +93,7 @@ public final class WidgetEnableMFAInput extends AppFragment {
         if (!menuVisible || (context = getContext()) == null) {
             return;
         }
-        Intrinsics3.checkNotNullExpressionValue(context, "context ?: return");
+        m.checkNotNullExpressionValue(context, "context ?: return");
         Object systemService = context.getSystemService("clipboard");
         if (!(systemService instanceof ClipboardManager)) {
             systemService = null;
@@ -102,10 +102,10 @@ public final class WidgetEnableMFAInput extends AppFragment {
         if (clipboardManager == null || (primaryClip = clipboardManager.getPrimaryClip()) == null) {
             return;
         }
-        Intrinsics3.checkNotNullExpressionValue(primaryClip, "clipboard.primaryClip ?: return");
+        m.checkNotNullExpressionValue(primaryClip, "clipboard.primaryClip ?: return");
         if (primaryClip.getItemCount() > 0) {
             ClipData.Item itemAt = primaryClip.getItemAt(0);
-            Intrinsics3.checkNotNullExpressionValue(itemAt, "clipData.getItemAt(0)");
+            m.checkNotNullExpressionValue(itemAt, "clipData.getItemAt(0)");
             CharSequence text = itemAt.getText();
             if (text != null && text.length() == 6 && TextUtils.isDigitsOnly(text)) {
                 getBinding().f2617b.setCode(text);

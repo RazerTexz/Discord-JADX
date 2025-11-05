@@ -17,7 +17,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import b.i.a.g.f.ViewOverlayApi182;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes3.dex */
@@ -154,7 +153,7 @@ public class ViewUtils {
         if (view == null) {
             return null;
         }
-        return new ViewOverlayApi182(view);
+        return new b.i.a.g.f.b(view);
     }
 
     public static float getParentAbsoluteElevation(@NonNull View view) {

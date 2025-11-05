@@ -7,8 +7,8 @@ import android.util.Log;
 import android.util.SparseArray;
 import androidx.annotation.Nullable;
 import androidx.collection.ArraySet;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import b.i.a.f.h.m.e;
 import b.i.a.f.j.b.e.k0;
 import com.esotericsoftware.kryo.Kryo;
@@ -64,7 +64,7 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
             return false;
         }
         Update update = (Update) obj;
-        return this.k == update.k && AnimatableValueParser.h0(this.l, update.l) && AnimatableValueParser.h0(this.m, update.m) && AnimatableValueParser.h0(this.n, update.n) && AnimatableValueParser.h0(this.o, update.o) && Arrays.equals(this.p, update.p);
+        return this.k == update.k && d.h0(this.l, update.l) && d.h0(this.m, update.m) && d.h0(this.n, update.n) && d.h0(this.o, update.o) && Arrays.equals(this.p, update.p);
     }
 
     public int hashCode() {
@@ -163,9 +163,9 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
                                             String strValueOf6 = String.valueOf(Arrays.toString(bArr));
                                             Log.w("BleRecord", strValueOf6.length() == 0 ? "Unable to parse scan record: ".concat(strValueOf6) : new String("Unable to parse scan record: "), e);
                                             String strValueOf7 = String.valueOf(eVar);
-                                            StringBuilder sbS = outline.S(strValueOf7.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
-                                            outline.s0(sbS, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
-                                            outline.s0(sbS, ", device=", str, ", bleRecord=", strValueOf7);
+                                            StringBuilder sbS = a.S(strValueOf7.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
+                                            a.s0(sbS, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
+                                            a.s0(sbS, ", device=", str, ", bleRecord=", strValueOf7);
                                             sbS.append("}");
                                             return sbS.toString();
                                         }
@@ -191,9 +191,9 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
                 String strValueOf62 = String.valueOf(Arrays.toString(bArr));
                 Log.w("BleRecord", strValueOf62.length() == 0 ? "Unable to parse scan record: ".concat(strValueOf62) : new String("Unable to parse scan record: "), e);
                 String strValueOf72 = String.valueOf(eVar);
-                StringBuilder sbS2 = outline.S(strValueOf72.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
-                outline.s0(sbS2, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
-                outline.s0(sbS2, ", device=", str, ", bleRecord=", strValueOf72);
+                StringBuilder sbS2 = a.S(strValueOf72.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
+                a.s0(sbS2, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
+                a.s0(sbS2, ", device=", str, ", bleRecord=", strValueOf72);
                 sbS2.append("}");
                 return sbS2.toString();
             }
@@ -201,9 +201,9 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
             bArr = bArr2;
         }
         String strValueOf722 = String.valueOf(eVar);
-        StringBuilder sbS22 = outline.S(strValueOf722.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
-        outline.s0(sbS22, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
-        outline.s0(sbS22, ", device=", str, ", bleRecord=", strValueOf722);
+        StringBuilder sbS22 = a.S(strValueOf722.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
+        a.s0(sbS22, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
+        a.s0(sbS22, ", device=", str, ", bleRecord=", strValueOf722);
         sbS22.append("}");
         return sbS22.toString();
     }
@@ -214,18 +214,18 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
         int i3 = this.k;
         parcel.writeInt(262146);
         parcel.writeInt(i3);
-        AnimatableValueParser.s2(parcel, 3, this.l, i, false);
-        AnimatableValueParser.s2(parcel, 4, this.m, i, false);
-        AnimatableValueParser.s2(parcel, 5, this.n, i, false);
-        AnimatableValueParser.s2(parcel, 6, this.o, i, false);
-        AnimatableValueParser.q2(parcel, 7, this.p, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.s2(parcel, 3, this.l, i, false);
+        d.s2(parcel, 4, this.m, i, false);
+        d.s2(parcel, 5, this.n, i, false);
+        d.s2(parcel, 6, this.o, i, false);
+        d.q2(parcel, 7, this.p, false);
+        d.A2(parcel, iY2);
     }
 }

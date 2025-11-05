@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackStageDiscoveryStartStageClicked.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackStageDiscoveryStartStageClicked implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackStageDiscoveryStartStageClicked implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean canStartStage = null;
     private final transient String analyticsSchemaTypeName = "stage_discovery_start_stage_clicked";
@@ -21,7 +21,7 @@ public final /* data */ class TrackStageDiscoveryStartStageClicked implements An
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof TrackStageDiscoveryStartStageClicked) && Intrinsics3.areEqual(this.canStartStage, ((TrackStageDiscoveryStartStageClicked) other).canStartStage);
+            return (other instanceof TrackStageDiscoveryStartStageClicked) && m.areEqual(this.canStartStage, ((TrackStageDiscoveryStartStageClicked) other).canStartStage);
         }
         return true;
     }
@@ -35,6 +35,6 @@ public final /* data */ class TrackStageDiscoveryStartStageClicked implements An
     }
 
     public String toString() {
-        return outline.D(outline.U("TrackStageDiscoveryStartStageClicked(canStartStage="), this.canStartStage, ")");
+        return a.D(a.U("TrackStageDiscoveryStartStageClicked(canStartStage="), this.canStartStage, ")");
     }
 }

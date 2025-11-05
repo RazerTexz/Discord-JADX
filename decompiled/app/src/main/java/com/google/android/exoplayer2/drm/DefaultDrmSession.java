@@ -13,28 +13,20 @@ import androidx.annotation.GuardedBy;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
-import b.c.a.a0.AnimatableValueParser;
-import b.i.a.c.C;
-import b.i.a.c.a3.LoadEventInfo;
-import b.i.a.c.e3.DefaultLoadErrorHandlingPolicy;
-import b.i.a.c.e3.LoadErrorHandlingPolicy;
-import b.i.a.c.f3.Consumer3;
-import b.i.a.c.f3.CopyOnWriteMultiset;
-import b.i.a.c.f3.Log2;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.v2.CryptoConfig;
-import b.i.a.c.w2.DrmSessionEventListener;
-import b.i.a.c.w2.DrmUtil;
-import b.i.a.c.w2.DrmUtil2;
-import b.i.a.c.w2.DrmUtil3;
-import b.i.a.c.w2.ExoMediaDrm;
-import b.i.a.c.w2.HttpMediaDrmCallback;
-import b.i.a.c.w2.MediaDrmCallback;
+import b.i.a.c.a3.t;
+import b.i.a.c.e3.w;
+import b.i.a.c.f3.k;
+import b.i.a.c.f3.l;
+import b.i.a.c.f3.q;
+import b.i.a.c.w2.a0;
+import b.i.a.c.w2.d0;
+import b.i.a.c.w2.e0;
 import b.i.a.c.w2.f;
-import b.i.a.c.w2.p;
-import b.i.a.c.w2.q;
-import b.i.b.b.AbstractIndexedListIterator;
-import b.i.b.b.ImmutableList2;
+import b.i.a.c.w2.s;
+import b.i.a.c.w2.v;
+import b.i.a.c.w2.x;
+import b.i.a.c.x0;
+import b.i.b.b.p;
 import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.google.android.exoplayer2.ParserException;
 import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
@@ -66,16 +58,16 @@ public class DefaultDrmSession implements DrmSession {
     public final List<DrmInitData.SchemeData> a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final ExoMediaDrm f2925b;
+    public final a0 f2925b;
     public final a c;
     public final b d;
     public final int e;
     public final boolean f;
     public final boolean g;
     public final HashMap<String, String> h;
-    public final CopyOnWriteMultiset<DrmSessionEventListener.a> i;
-    public final LoadErrorHandlingPolicy j;
-    public final MediaDrmCallback k;
+    public final l<s.a> i;
+    public final w j;
+    public final e0 k;
     public final UUID l;
     public final e m;
     public int n;
@@ -88,7 +80,7 @@ public class DefaultDrmSession implements DrmSession {
     public c q;
 
     @Nullable
-    public CryptoConfig r;
+    public b.i.a.c.v2.b r;
 
     /* renamed from: s, reason: collision with root package name */
     @Nullable
@@ -99,10 +91,10 @@ public class DefaultDrmSession implements DrmSession {
     public byte[] u;
 
     @Nullable
-    public ExoMediaDrm.a v;
+    public a0.a v;
 
     @Nullable
-    public ExoMediaDrm.d w;
+    public a0.d w;
 
     public static final class UnexpectedDrmSessionException extends IOException {
         public UnexpectedDrmSessionException(@Nullable Throwable th) {
@@ -127,7 +119,7 @@ public class DefaultDrmSession implements DrmSession {
         }
 
         public void a(int i, Object obj, boolean z2) {
-            obtainMessage(i, new d(LoadEventInfo.a.getAndIncrement(), z2, SystemClock.elapsedRealtime(), obj)).sendToTarget();
+            obtainMessage(i, new d(t.a.getAndIncrement(), z2, SystemClock.elapsedRealtime(), obj)).sendToTarget();
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -150,24 +142,24 @@ public class DefaultDrmSession implements DrmSession {
                 int i = message.what;
                 if (i == 0) {
                     DefaultDrmSession defaultDrmSession = DefaultDrmSession.this;
-                    excC = ((HttpMediaDrmCallback) defaultDrmSession.k).c(defaultDrmSession.l, (ExoMediaDrm.d) dVar.d);
+                    excC = ((d0) defaultDrmSession.k).c(defaultDrmSession.l, (a0.d) dVar.d);
                 } else {
                     if (i != 1) {
                         throw new RuntimeException();
                     }
                     DefaultDrmSession defaultDrmSession2 = DefaultDrmSession.this;
-                    excC = ((HttpMediaDrmCallback) defaultDrmSession2.k).a(defaultDrmSession2.l, (ExoMediaDrm.a) dVar.d);
+                    excC = ((d0) defaultDrmSession2.k).a(defaultDrmSession2.l, (a0.a) dVar.d);
                 }
             } catch (MediaDrmCallbackException e) {
                 d dVar2 = (d) message.obj;
                 if (dVar2.f2928b) {
                     int i2 = dVar2.e + 1;
                     dVar2.e = i2;
-                    if (i2 <= ((DefaultLoadErrorHandlingPolicy) DefaultDrmSession.this.j).a(3)) {
+                    if (i2 <= ((b.i.a.c.e3.s) DefaultDrmSession.this.j).a(3)) {
                         SystemClock.elapsedRealtime();
                         SystemClock.elapsedRealtime();
                         Throwable unexpectedDrmSessionException = e.getCause() instanceof IOException ? (IOException) e.getCause() : new UnexpectedDrmSessionException(e.getCause());
-                        LoadErrorHandlingPolicy loadErrorHandlingPolicy = DefaultDrmSession.this.j;
+                        w wVar = DefaultDrmSession.this.j;
                         int i3 = dVar2.e;
                         if ((unexpectedDrmSessionException instanceof ParserException) || (unexpectedDrmSessionException instanceof FileNotFoundException) || (unexpectedDrmSessionException instanceof HttpDataSource$CleartextNotPermittedException) || (unexpectedDrmSessionException instanceof Loader.UnexpectedLoaderException)) {
                             jMin = -9223372036854775807L;
@@ -214,12 +206,12 @@ public class DefaultDrmSession implements DrmSession {
                     }
                 }
             } catch (Exception e2) {
-                Log2.c("DefaultDrmSession", "Key/provisioning request produced an unexpected exception. Not retrying.", e2);
+                q.c("DefaultDrmSession", "Key/provisioning request produced an unexpected exception. Not retrying.", e2);
                 excC = e2;
             }
-            LoadErrorHandlingPolicy loadErrorHandlingPolicy2 = DefaultDrmSession.this.j;
+            w wVar2 = DefaultDrmSession.this.j;
             long j = dVar.a;
-            Objects.requireNonNull(loadErrorHandlingPolicy2);
+            Objects.requireNonNull(wVar2);
             synchronized (this) {
                 if (!this.a) {
                     DefaultDrmSession.this.m.obtainMessage(message.what, Pair.create(dVar.d, excC)).sendToTarget();
@@ -270,11 +262,11 @@ public class DefaultDrmSession implements DrmSession {
                             defaultDrmSession.f2925b.j((byte[]) obj2);
                             DefaultDrmSessionManager.e eVar = (DefaultDrmSessionManager.e) defaultDrmSession.c;
                             eVar.f2933b = null;
-                            ImmutableList2 immutableList2N = ImmutableList2.n(eVar.a);
+                            p pVarN = p.n(eVar.a);
                             eVar.a.clear();
-                            AbstractIndexedListIterator abstractIndexedListIteratorP = immutableList2N.p();
-                            while (abstractIndexedListIteratorP.hasNext()) {
-                                DefaultDrmSession defaultDrmSession2 = (DefaultDrmSession) abstractIndexedListIteratorP.next();
+                            b.i.b.b.a aVarP = pVarN.p();
+                            while (aVarP.hasNext()) {
+                                DefaultDrmSession defaultDrmSession2 = (DefaultDrmSession) aVarP.next();
                                 if (defaultDrmSession2.m()) {
                                     defaultDrmSession2.i(true);
                                 }
@@ -302,10 +294,10 @@ public class DefaultDrmSession implements DrmSession {
                 try {
                     byte[] bArr = (byte[]) obj2;
                     if (defaultDrmSession3.e == 3) {
-                        ExoMediaDrm exoMediaDrm = defaultDrmSession3.f2925b;
+                        a0 a0Var = defaultDrmSession3.f2925b;
                         byte[] bArr2 = defaultDrmSession3.u;
-                        int i2 = Util2.a;
-                        exoMediaDrm.i(bArr2, bArr);
+                        int i2 = b.i.a.c.f3.e0.a;
+                        a0Var.i(bArr2, bArr);
                         defaultDrmSession3.h(b.i.a.c.w2.a.a);
                         return;
                     }
@@ -315,7 +307,7 @@ public class DefaultDrmSession implements DrmSession {
                         defaultDrmSession3.u = bArrI;
                     }
                     defaultDrmSession3.n = 4;
-                    defaultDrmSession3.h(p.a);
+                    defaultDrmSession3.h(b.i.a.c.w2.p.a);
                 } catch (Exception e2) {
                     defaultDrmSession3.l(e2, true);
                 }
@@ -323,14 +315,14 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    public DefaultDrmSession(UUID uuid, ExoMediaDrm exoMediaDrm, a aVar, b bVar, @Nullable List<DrmInitData.SchemeData> list, int i, boolean z2, boolean z3, @Nullable byte[] bArr, HashMap<String, String> map, MediaDrmCallback mediaDrmCallback, Looper looper, LoadErrorHandlingPolicy loadErrorHandlingPolicy) {
+    public DefaultDrmSession(UUID uuid, a0 a0Var, a aVar, b bVar, @Nullable List<DrmInitData.SchemeData> list, int i, boolean z2, boolean z3, @Nullable byte[] bArr, HashMap<String, String> map, e0 e0Var, Looper looper, w wVar) {
         if (i == 1 || i == 3) {
             Objects.requireNonNull(bArr);
         }
         this.l = uuid;
         this.c = aVar;
         this.d = bVar;
-        this.f2925b = exoMediaDrm;
+        this.f2925b = a0Var;
         this.e = i;
         this.f = z2;
         this.g = z3;
@@ -342,15 +334,15 @@ public class DefaultDrmSession implements DrmSession {
             this.a = Collections.unmodifiableList(list);
         }
         this.h = map;
-        this.k = mediaDrmCallback;
-        this.i = new CopyOnWriteMultiset<>();
-        this.j = loadErrorHandlingPolicy;
+        this.k = e0Var;
+        this.i = new l<>();
+        this.j = wVar;
         this.n = 2;
         this.m = new e(looper);
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    public void a(@Nullable DrmSessionEventListener.a aVar) {
+    public void a(@Nullable s.a aVar) {
         int i = this.o;
         if (i < 0) {
             StringBuilder sb = new StringBuilder(51);
@@ -360,24 +352,24 @@ public class DefaultDrmSession implements DrmSession {
             this.o = 0;
         }
         if (aVar != null) {
-            CopyOnWriteMultiset<DrmSessionEventListener.a> copyOnWriteMultiset = this.i;
-            synchronized (copyOnWriteMultiset.j) {
-                ArrayList arrayList = new ArrayList(copyOnWriteMultiset.m);
+            l<s.a> lVar = this.i;
+            synchronized (lVar.j) {
+                ArrayList arrayList = new ArrayList(lVar.m);
                 arrayList.add(aVar);
-                copyOnWriteMultiset.m = Collections.unmodifiableList(arrayList);
-                Integer num = copyOnWriteMultiset.k.get(aVar);
+                lVar.m = Collections.unmodifiableList(arrayList);
+                Integer num = lVar.k.get(aVar);
                 if (num == null) {
-                    HashSet hashSet = new HashSet(copyOnWriteMultiset.l);
+                    HashSet hashSet = new HashSet(lVar.l);
                     hashSet.add(aVar);
-                    copyOnWriteMultiset.l = Collections.unmodifiableSet(hashSet);
+                    lVar.l = Collections.unmodifiableSet(hashSet);
                 }
-                copyOnWriteMultiset.k.put(aVar, Integer.valueOf(num != null ? num.intValue() + 1 : 1));
+                lVar.k.put(aVar, Integer.valueOf(num != null ? num.intValue() + 1 : 1));
             }
         }
         int i2 = this.o + 1;
         this.o = i2;
         if (i2 == 1) {
-            AnimatableValueParser.D(this.n == 2);
+            b.c.a.a0.d.D(this.n == 2);
             HandlerThread handlerThread = new HandlerThread("ExoPlayer:DrmRequestHandler");
             this.p = handlerThread;
             handlerThread.start();
@@ -403,7 +395,7 @@ public class DefaultDrmSession implements DrmSession {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void b(@Nullable DrmSessionEventListener.a aVar) {
+    public void b(@Nullable s.a aVar) {
         int i = this.o;
         if (i <= 0) {
             Log.e("DefaultDrmSession", "release() called on a session that's already fully released.");
@@ -414,7 +406,7 @@ public class DefaultDrmSession implements DrmSession {
         if (i2 == 0) {
             this.n = 0;
             e eVar = this.m;
-            int i3 = Util2.a;
+            int i3 = b.i.a.c.f3.e0.a;
             eVar.removeCallbacksAndMessages(null);
             c cVar = this.q;
             synchronized (cVar) {
@@ -435,20 +427,20 @@ public class DefaultDrmSession implements DrmSession {
             }
         }
         if (aVar != null) {
-            CopyOnWriteMultiset<DrmSessionEventListener.a> copyOnWriteMultiset = this.i;
-            synchronized (copyOnWriteMultiset.j) {
-                Integer num = copyOnWriteMultiset.k.get(aVar);
+            l<s.a> lVar = this.i;
+            synchronized (lVar.j) {
+                Integer num = lVar.k.get(aVar);
                 if (num != null) {
-                    ArrayList arrayList = new ArrayList(copyOnWriteMultiset.m);
+                    ArrayList arrayList = new ArrayList(lVar.m);
                     arrayList.remove(aVar);
-                    copyOnWriteMultiset.m = Collections.unmodifiableList(arrayList);
+                    lVar.m = Collections.unmodifiableList(arrayList);
                     if (num.intValue() == 1) {
-                        copyOnWriteMultiset.k.remove(aVar);
-                        HashSet hashSet = new HashSet(copyOnWriteMultiset.l);
+                        lVar.k.remove(aVar);
+                        HashSet hashSet = new HashSet(lVar.l);
                         hashSet.remove(aVar);
-                        copyOnWriteMultiset.l = Collections.unmodifiableSet(hashSet);
+                        lVar.l = Collections.unmodifiableSet(hashSet);
                     } else {
-                        copyOnWriteMultiset.k.put(aVar, Integer.valueOf(num.intValue() - 1));
+                        lVar.k.put(aVar, Integer.valueOf(num.intValue() - 1));
                     }
                 }
             }
@@ -509,10 +501,10 @@ public class DefaultDrmSession implements DrmSession {
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
     public boolean e(String str) {
-        ExoMediaDrm exoMediaDrm = this.f2925b;
+        a0 a0Var = this.f2925b;
         byte[] bArr = this.t;
-        AnimatableValueParser.H(bArr);
-        return exoMediaDrm.e(bArr, str);
+        b.c.a.a0.d.H(bArr);
+        return a0Var.e(bArr, str);
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
@@ -526,7 +518,7 @@ public class DefaultDrmSession implements DrmSession {
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
     @Nullable
-    public final CryptoConfig g() {
+    public final b.i.a.c.v2.b g() {
         return this.r;
     }
 
@@ -535,15 +527,15 @@ public class DefaultDrmSession implements DrmSession {
         return this.n;
     }
 
-    public final void h(Consumer3<DrmSessionEventListener.a> consumer3) {
-        Set<DrmSessionEventListener.a> set;
-        CopyOnWriteMultiset<DrmSessionEventListener.a> copyOnWriteMultiset = this.i;
-        synchronized (copyOnWriteMultiset.j) {
-            set = copyOnWriteMultiset.l;
+    public final void h(k<s.a> kVar) {
+        Set<s.a> set;
+        l<s.a> lVar = this.i;
+        synchronized (lVar.j) {
+            set = lVar.l;
         }
-        Iterator<DrmSessionEventListener.a> it = set.iterator();
+        Iterator<s.a> it = set.iterator();
         while (it.hasNext()) {
-            consumer3.accept(it.next());
+            kVar.accept(it.next());
         }
     }
 
@@ -556,7 +548,7 @@ public class DefaultDrmSession implements DrmSession {
             return;
         }
         byte[] bArr = this.t;
-        int i = Util2.a;
+        int i = b.i.a.c.f3.e0.a;
         int i2 = this.e;
         boolean z3 = false;
         if (i2 != 0 && i2 != 1) {
@@ -600,7 +592,7 @@ public class DefaultDrmSession implements DrmSession {
                 return;
             }
         }
-        if (C.d.equals(this.l)) {
+        if (x0.d.equals(this.l)) {
             Map<String, String> mapP = p();
             if (mapP == null) {
                 pair = null;
@@ -632,7 +624,7 @@ public class DefaultDrmSession implements DrmSession {
                 return;
             } else {
                 this.n = 4;
-                h(q.a);
+                h(b.i.a.c.w2.q.a);
                 return;
             }
         }
@@ -655,13 +647,13 @@ public class DefaultDrmSession implements DrmSession {
     */
     public final void k(Exception exc, int i) {
         int iB;
-        int i2 = Util2.a;
-        if (i2 >= 21 && DrmUtil2.a(exc)) {
-            iB = DrmUtil2.b(exc);
-        } else if (i2 < 23 || !DrmUtil3.a(exc)) {
-            if (i2 >= 18 && DrmUtil.b(exc)) {
+        int i2 = b.i.a.c.f3.e0.a;
+        if (i2 >= 21 && b.i.a.c.w2.w.a(exc)) {
+            iB = b.i.a.c.w2.w.b(exc);
+        } else if (i2 < 23 || !x.a(exc)) {
+            if (i2 >= 18 && v.b(exc)) {
                 iB = 6002;
-            } else if (i2 >= 18 && DrmUtil.a(exc)) {
+            } else if (i2 >= 18 && v.a(exc)) {
                 iB = 6007;
             } else if (exc instanceof UnsupportedDrmException) {
                 iB = 6001;
@@ -681,7 +673,7 @@ public class DefaultDrmSession implements DrmSession {
             }
         }
         this.f2926s = new DrmSession.DrmSessionException(exc, iB);
-        Log2.b("DefaultDrmSession", "DRM session error", exc);
+        q.b("DefaultDrmSession", "DRM session error", exc);
         h(new b.i.a.c.w2.b(exc));
         if (this.n != 4) {
             this.n = 1;
@@ -732,10 +724,10 @@ public class DefaultDrmSession implements DrmSession {
 
     public final void n(byte[] bArr, int i, boolean z2) {
         try {
-            ExoMediaDrm.a aVarK = this.f2925b.k(bArr, this.a, i, this.h);
+            a0.a aVarK = this.f2925b.k(bArr, this.a, i, this.h);
             this.v = aVarK;
             c cVar = this.q;
-            int i2 = Util2.a;
+            int i2 = b.i.a.c.f3.e0.a;
             Objects.requireNonNull(aVarK);
             cVar.a(1, aVarK, z2);
         } catch (Exception e2) {
@@ -744,10 +736,10 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     public void o() {
-        ExoMediaDrm.d dVarB = this.f2925b.b();
+        a0.d dVarB = this.f2925b.b();
         this.w = dVarB;
         c cVar = this.q;
-        int i = Util2.a;
+        int i = b.i.a.c.f3.e0.a;
         Objects.requireNonNull(dVarB);
         cVar.a(0, dVarB, true);
     }

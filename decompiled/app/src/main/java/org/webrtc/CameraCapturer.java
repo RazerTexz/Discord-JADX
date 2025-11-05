@@ -5,8 +5,8 @@ import android.media.MediaRecorder;
 import android.os.Handler;
 import android.os.Looper;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
-import h0.c.CameraVideoCapturer2;
+import b.d.b.a.a;
+import h0.c.m0;
 import java.util.Arrays;
 import java.util.List;
 import org.webrtc.CameraSession;
@@ -324,7 +324,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
             throw new RuntimeException("No cameras attached.");
         }
         if (!listAsList.contains(this.cameraName)) {
-            throw new IllegalArgumentException(outline.J(outline.U("Camera name "), this.cameraName, " does not match any known camera device."));
+            throw new IllegalArgumentException(a.J(a.U("Camera name "), this.cameraName, " does not match any known camera device."));
         }
     }
 
@@ -492,7 +492,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
     private void switchCameraInternal(@Nullable CameraVideoCapturer.CameraSwitchHandler cameraSwitchHandler, String str) {
         Logging.d(TAG, "switchCamera internal");
         if (!Arrays.asList(this.cameraEnumerator.getDeviceNames()).contains(str)) {
-            reportCameraSwitchError(outline.w("Attempted to switch to unknown camera device ", str), cameraSwitchHandler);
+            reportCameraSwitchError(a.w("Attempted to switch to unknown camera device ", str), cameraSwitchHandler);
             return;
         }
         synchronized (this.stateLock) {
@@ -527,12 +527,12 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
 
     @Override // org.webrtc.CameraVideoCapturer
     public /* synthetic */ void addMediaRecorderToCamera(MediaRecorder mediaRecorder, CameraVideoCapturer.MediaRecorderHandler mediaRecorderHandler) {
-        CameraVideoCapturer2.a(this, mediaRecorder, mediaRecorderHandler);
+        m0.a(this, mediaRecorder, mediaRecorderHandler);
     }
 
     @Override // org.webrtc.VideoCapturer
     public void changeCaptureFormat(int i, int i2, int i3) {
-        StringBuilder sbW = outline.W("changeCaptureFormat: ", i, "x", i2, "@");
+        StringBuilder sbW = a.W("changeCaptureFormat: ", i, "x", i2, "@");
         sbW.append(i3);
         Logging.d(TAG, sbW.toString());
         synchronized (this.stateLock) {
@@ -586,12 +586,12 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
 
     @Override // org.webrtc.CameraVideoCapturer
     public /* synthetic */ void removeMediaRecorderFromCamera(CameraVideoCapturer.MediaRecorderHandler mediaRecorderHandler) {
-        CameraVideoCapturer2.b(this, mediaRecorderHandler);
+        m0.b(this, mediaRecorderHandler);
     }
 
     @Override // org.webrtc.VideoCapturer
     public void startCapture(int i, int i2, int i3) {
-        StringBuilder sbW = outline.W("startCapture: ", i, "x", i2, "@");
+        StringBuilder sbW = a.W("startCapture: ", i, "x", i2, "@");
         sbW.append(i3);
         Logging.d(TAG, sbW.toString());
         if (this.applicationContext == null) {

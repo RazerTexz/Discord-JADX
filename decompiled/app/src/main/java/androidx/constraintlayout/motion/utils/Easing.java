@@ -1,7 +1,7 @@
 package androidx.constraintlayout.motion.utils;
 
 import android.util.Log;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.utils.RegistrationSteps;
 import java.util.Arrays;
 
@@ -37,7 +37,7 @@ public class Easing {
             case "standard":
                 return new CubicEasing(STANDARD);
             default:
-                StringBuilder sbU = outline.U("transitionEasing syntax error syntax:transitionEasing=\"cubic(1.0,0.5,0.0,0.6)\" or ");
+                StringBuilder sbU = a.U("transitionEasing syntax error syntax:transitionEasing=\"cubic(1.0,0.5,0.0,0.6)\" or ");
                 sbU.append(Arrays.toString(NAMED_EASING));
                 Log.e("ConstraintSet", sbU.toString());
                 return sDefault;

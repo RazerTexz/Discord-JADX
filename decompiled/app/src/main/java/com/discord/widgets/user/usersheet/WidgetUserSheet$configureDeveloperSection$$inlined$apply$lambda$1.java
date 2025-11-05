@@ -3,9 +3,8 @@ package com.discord.widgets.user.usersheet;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
-import b.a.d.AppToast;
 import com.discord.widgets.user.usersheet.WidgetUserSheetViewModel;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: WidgetUserSheet.kt */
 /* loaded from: classes.dex */
@@ -23,8 +22,8 @@ public final class WidgetUserSheet$configureDeveloperSection$$inlined$apply$lamb
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         Context context = this.$this_apply.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context, "context");
-        AppToast.c(context, String.valueOf(this.$viewState$inlined.getUser().getId()), 0, 4);
+        m.checkNotNullExpressionValue(context, "context");
+        b.a.d.m.c(context, String.valueOf(this.$viewState$inlined.getUser().getId()), 0, 4);
         this.this$0.dismiss();
     }
 }

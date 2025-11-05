@@ -2,33 +2,33 @@ package b.i.a.c.f3;
 
 import android.os.Handler;
 import android.os.Message;
-import b.i.a.c.f3.FlagSet;
-import b.i.a.c.f3.ListenerSet;
+import b.i.a.c.f3.n;
+import b.i.a.c.f3.p;
 import java.util.Iterator;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
 public final /* synthetic */ class b implements Handler.Callback {
-    public final /* synthetic */ ListenerSet j;
+    public final /* synthetic */ p j;
 
-    public /* synthetic */ b(ListenerSet listenerSet) {
-        this.j = listenerSet;
+    public /* synthetic */ b(p pVar) {
+        this.j = pVar;
     }
 
     @Override // android.os.Handler.Callback
     public final boolean handleMessage(Message message) {
-        ListenerSet listenerSet = this.j;
-        Iterator it = listenerSet.d.iterator();
+        p pVar = this.j;
+        Iterator it = pVar.d.iterator();
         while (it.hasNext()) {
-            ListenerSet.c cVar = (ListenerSet.c) it.next();
-            ListenerSet.b<T> bVar = listenerSet.c;
+            p.c cVar = (p.c) it.next();
+            p.b<T> bVar = pVar.c;
             if (!cVar.d && cVar.c) {
-                FlagSet flagSetB = cVar.f974b.b();
-                cVar.f974b = new FlagSet.b();
+                n nVarB = cVar.f974b.b();
+                cVar.f974b = new n.b();
                 cVar.c = false;
-                bVar.a(cVar.a, flagSetB);
+                bVar.a(cVar.a, nVarB);
             }
-            if (listenerSet.f973b.e(0)) {
+            if (pVar.f973b.e(0)) {
                 return true;
             }
         }

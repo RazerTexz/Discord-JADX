@@ -1,10 +1,10 @@
 package com.discord.stores;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.commands.ApplicationCommand;
 import com.discord.stores.LoadState;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -29,7 +29,7 @@ public final /* data */ class DiscoverCommands {
         }
 
         public final DiscoverCommands getDefaultModelDiscoveryCommands() {
-            return new DiscoverCommands(Collections2.emptyList(), 0, 0, false, false, 0, null, null, 128, null);
+            return new DiscoverCommands(n.emptyList(), 0, 0, false, false, 0, null, null, 128, null);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -39,8 +39,8 @@ public final /* data */ class DiscoverCommands {
 
     /* JADX WARN: Multi-variable type inference failed */
     public DiscoverCommands(List<? extends ApplicationCommand> list, int i, int i2, boolean z2, boolean z3, int i3, Long l, LoadState loadState) {
-        Intrinsics3.checkNotNullParameter(list, "commands");
-        Intrinsics3.checkNotNullParameter(loadState, "loadState");
+        m.checkNotNullParameter(list, "commands");
+        m.checkNotNullParameter(loadState, "loadState");
         this.commands = list;
         this.currentStartOffset = i;
         this.currentEndOffset = i2;
@@ -95,8 +95,8 @@ public final /* data */ class DiscoverCommands {
     }
 
     public final DiscoverCommands copy(List<? extends ApplicationCommand> commands, int currentStartOffset, int currentEndOffset, boolean hasMoreBefore, boolean hasMoreAfter, int jumpedSequenceId, Long jumpedApplicationId, LoadState loadState) {
-        Intrinsics3.checkNotNullParameter(commands, "commands");
-        Intrinsics3.checkNotNullParameter(loadState, "loadState");
+        m.checkNotNullParameter(commands, "commands");
+        m.checkNotNullParameter(loadState, "loadState");
         return new DiscoverCommands(commands, currentStartOffset, currentEndOffset, hasMoreBefore, hasMoreAfter, jumpedSequenceId, jumpedApplicationId, loadState);
     }
 
@@ -108,7 +108,7 @@ public final /* data */ class DiscoverCommands {
             return false;
         }
         DiscoverCommands discoverCommands = (DiscoverCommands) other;
-        return Intrinsics3.areEqual(this.commands, discoverCommands.commands) && this.currentStartOffset == discoverCommands.currentStartOffset && this.currentEndOffset == discoverCommands.currentEndOffset && this.hasMoreBefore == discoverCommands.hasMoreBefore && this.hasMoreAfter == discoverCommands.hasMoreAfter && this.jumpedSequenceId == discoverCommands.jumpedSequenceId && Intrinsics3.areEqual(this.jumpedApplicationId, discoverCommands.jumpedApplicationId) && Intrinsics3.areEqual(this.loadState, discoverCommands.loadState);
+        return m.areEqual(this.commands, discoverCommands.commands) && this.currentStartOffset == discoverCommands.currentStartOffset && this.currentEndOffset == discoverCommands.currentEndOffset && this.hasMoreBefore == discoverCommands.hasMoreBefore && this.hasMoreAfter == discoverCommands.hasMoreAfter && this.jumpedSequenceId == discoverCommands.jumpedSequenceId && m.areEqual(this.jumpedApplicationId, discoverCommands.jumpedApplicationId) && m.areEqual(this.loadState, discoverCommands.loadState);
     }
 
     public final List<ApplicationCommand> getCommands() {
@@ -162,7 +162,7 @@ public final /* data */ class DiscoverCommands {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("DiscoverCommands(commands=");
+        StringBuilder sbU = a.U("DiscoverCommands(commands=");
         sbU.append(this.commands);
         sbU.append(", currentStartOffset=");
         sbU.append(this.currentStartOffset);

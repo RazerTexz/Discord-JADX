@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackQuickswitcherClosed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackQuickswitcherClosed implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackQuickswitcherClosed implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long currentChannelId = null;
     private final Long currentChannelType = null;
@@ -50,7 +50,7 @@ public final /* data */ class TrackQuickswitcherClosed implements AnalyticsSchem
             return false;
         }
         TrackQuickswitcherClosed trackQuickswitcherClosed = (TrackQuickswitcherClosed) other;
-        return Intrinsics3.areEqual(this.currentChannelId, trackQuickswitcherClosed.currentChannelId) && Intrinsics3.areEqual(this.currentChannelType, trackQuickswitcherClosed.currentChannelType) && Intrinsics3.areEqual(this.currentGuildId, trackQuickswitcherClosed.currentGuildId) && Intrinsics3.areEqual(this.queryMode, trackQuickswitcherClosed.queryMode) && Intrinsics3.areEqual(this.queryLength, trackQuickswitcherClosed.queryLength) && Intrinsics3.areEqual(this.maxQueryLength, trackQuickswitcherClosed.maxQueryLength) && Intrinsics3.areEqual(this.topResultType, trackQuickswitcherClosed.topResultType) && Intrinsics3.areEqual(this.topResultScore, trackQuickswitcherClosed.topResultScore) && Intrinsics3.areEqual(this.numResultsTotal, trackQuickswitcherClosed.numResultsTotal) && Intrinsics3.areEqual(this.numResultsUsers, trackQuickswitcherClosed.numResultsUsers) && Intrinsics3.areEqual(this.numResultsTextChannels, trackQuickswitcherClosed.numResultsTextChannels) && Intrinsics3.areEqual(this.numResultsVoiceChannels, trackQuickswitcherClosed.numResultsVoiceChannels) && Intrinsics3.areEqual(this.numResultsGuilds, trackQuickswitcherClosed.numResultsGuilds) && Intrinsics3.areEqual(this.numResultsGroupDms, trackQuickswitcherClosed.numResultsGroupDms) && Intrinsics3.areEqual(this.selectedType, trackQuickswitcherClosed.selectedType) && Intrinsics3.areEqual(this.selectedScore, trackQuickswitcherClosed.selectedScore) && Intrinsics3.areEqual(this.selectedIndex, trackQuickswitcherClosed.selectedIndex) && Intrinsics3.areEqual(this.selectedGuildId, trackQuickswitcherClosed.selectedGuildId) && Intrinsics3.areEqual(this.selectedChannelId, trackQuickswitcherClosed.selectedChannelId) && Intrinsics3.areEqual(this.selectedUserId, trackQuickswitcherClosed.selectedUserId) && Intrinsics3.areEqual(this.isEmailLike, trackQuickswitcherClosed.isEmailLike) && Intrinsics3.areEqual(this.isPhoneLike, trackQuickswitcherClosed.isPhoneLike) && Intrinsics3.areEqual(this.isUsernameLike, trackQuickswitcherClosed.isUsernameLike) && Intrinsics3.areEqual(this.query, trackQuickswitcherClosed.query);
+        return m.areEqual(this.currentChannelId, trackQuickswitcherClosed.currentChannelId) && m.areEqual(this.currentChannelType, trackQuickswitcherClosed.currentChannelType) && m.areEqual(this.currentGuildId, trackQuickswitcherClosed.currentGuildId) && m.areEqual(this.queryMode, trackQuickswitcherClosed.queryMode) && m.areEqual(this.queryLength, trackQuickswitcherClosed.queryLength) && m.areEqual(this.maxQueryLength, trackQuickswitcherClosed.maxQueryLength) && m.areEqual(this.topResultType, trackQuickswitcherClosed.topResultType) && m.areEqual(this.topResultScore, trackQuickswitcherClosed.topResultScore) && m.areEqual(this.numResultsTotal, trackQuickswitcherClosed.numResultsTotal) && m.areEqual(this.numResultsUsers, trackQuickswitcherClosed.numResultsUsers) && m.areEqual(this.numResultsTextChannels, trackQuickswitcherClosed.numResultsTextChannels) && m.areEqual(this.numResultsVoiceChannels, trackQuickswitcherClosed.numResultsVoiceChannels) && m.areEqual(this.numResultsGuilds, trackQuickswitcherClosed.numResultsGuilds) && m.areEqual(this.numResultsGroupDms, trackQuickswitcherClosed.numResultsGroupDms) && m.areEqual(this.selectedType, trackQuickswitcherClosed.selectedType) && m.areEqual(this.selectedScore, trackQuickswitcherClosed.selectedScore) && m.areEqual(this.selectedIndex, trackQuickswitcherClosed.selectedIndex) && m.areEqual(this.selectedGuildId, trackQuickswitcherClosed.selectedGuildId) && m.areEqual(this.selectedChannelId, trackQuickswitcherClosed.selectedChannelId) && m.areEqual(this.selectedUserId, trackQuickswitcherClosed.selectedUserId) && m.areEqual(this.isEmailLike, trackQuickswitcherClosed.isEmailLike) && m.areEqual(this.isPhoneLike, trackQuickswitcherClosed.isPhoneLike) && m.areEqual(this.isUsernameLike, trackQuickswitcherClosed.isUsernameLike) && m.areEqual(this.query, trackQuickswitcherClosed.query);
     }
 
     public int hashCode() {
@@ -105,7 +105,7 @@ public final /* data */ class TrackQuickswitcherClosed implements AnalyticsSchem
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackQuickswitcherClosed(currentChannelId=");
+        StringBuilder sbU = a.U("TrackQuickswitcherClosed(currentChannelId=");
         sbU.append(this.currentChannelId);
         sbU.append(", currentChannelType=");
         sbU.append(this.currentChannelType);
@@ -152,6 +152,6 @@ public final /* data */ class TrackQuickswitcherClosed implements AnalyticsSchem
         sbU.append(", isUsernameLike=");
         sbU.append(this.isUsernameLike);
         sbU.append(", query=");
-        return outline.E(sbU, this.query, ")");
+        return a.E(sbU, this.query, ")");
     }
 }

@@ -3,7 +3,6 @@ package b.i.a.f.e;
 import android.app.PendingIntent;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
 import com.google.android.gms.common.ConnectionResult;
 
 /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
@@ -11,7 +10,7 @@ import com.google.android.gms.common.ConnectionResult;
 public final class q implements Parcelable.Creator<ConnectionResult> {
     @Override // android.os.Parcelable.Creator
     public final ConnectionResult createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = b.c.a.a0.d.m2(parcel);
         int iG1 = 0;
         PendingIntent pendingIntent = null;
         String strR = null;
@@ -20,18 +19,18 @@ public final class q implements Parcelable.Creator<ConnectionResult> {
             int i = parcel.readInt();
             char c = (char) i;
             if (c == 1) {
-                iG1 = AnimatableValueParser.G1(parcel, i);
+                iG1 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 2) {
-                iG12 = AnimatableValueParser.G1(parcel, i);
+                iG12 = b.c.a.a0.d.G1(parcel, i);
             } else if (c == 3) {
-                pendingIntent = (PendingIntent) AnimatableValueParser.Q(parcel, i, PendingIntent.CREATOR);
+                pendingIntent = (PendingIntent) b.c.a.a0.d.Q(parcel, i, PendingIntent.CREATOR);
             } else if (c != 4) {
-                AnimatableValueParser.d2(parcel, i);
+                b.c.a.a0.d.d2(parcel, i);
             } else {
-                strR = AnimatableValueParser.R(parcel, i);
+                strR = b.c.a.a0.d.R(parcel, i);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        b.c.a.a0.d.f0(parcel, iM2);
         return new ConnectionResult(iG1, iG12, pendingIntent, strR);
     }
 

@@ -1,7 +1,7 @@
 package co.discord.media_engine.internal;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* compiled from: NativeStatistics.kt */
 /* loaded from: classes.dex */
@@ -100,7 +100,7 @@ public final /* data */ class InboundRtpStats {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InboundRtpStats(packets=");
+        StringBuilder sbU = a.U("InboundRtpStats(packets=");
         sbU.append(this.packets);
         sbU.append(", jitter=");
         sbU.append(this.jitter);
@@ -111,6 +111,6 @@ public final /* data */ class InboundRtpStats {
         sbU.append(", paddingBytes=");
         sbU.append(this.paddingBytes);
         sbU.append(", payloadBytes=");
-        return outline.C(sbU, this.payloadBytes, ")");
+        return a.C(sbU, this.payloadBytes, ")");
     }
 }

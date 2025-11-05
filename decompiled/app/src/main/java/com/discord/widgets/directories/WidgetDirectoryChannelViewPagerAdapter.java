@@ -2,14 +2,14 @@ package com.discord.widgets.directories;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.app.AppFragment;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.hubs.DirectoryEntryCategory;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: WidgetDirectoryChannelViewPagerAdapter.kt */
@@ -20,8 +20,8 @@ public final class WidgetDirectoryChannelViewPagerAdapter extends FragmentStateA
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetDirectoryChannelViewPagerAdapter(AppFragment appFragment) {
         super(appFragment);
-        Intrinsics3.checkNotNullParameter(appFragment, "fragment");
-        this.tabs = Collections2.emptyList();
+        m.checkNotNullParameter(appFragment, "fragment");
+        this.tabs = n.emptyList();
     }
 
     @Override // androidx.viewpager2.adapter.FragmentStateAdapter
@@ -40,7 +40,7 @@ public final class WidgetDirectoryChannelViewPagerAdapter extends FragmentStateA
     }
 
     public final void setTabs(List<? extends DirectoryEntryCategory> list) {
-        Intrinsics3.checkNotNullParameter(list, "value");
+        m.checkNotNullParameter(list, "value");
         this.tabs = list;
         notifyDataSetChanged();
     }
@@ -48,12 +48,12 @@ public final class WidgetDirectoryChannelViewPagerAdapter extends FragmentStateA
     @Override // androidx.viewpager2.adapter.FragmentStateAdapter
     public WidgetDirectoryCategory createFragment(int position) {
         WidgetDirectoryCategory widgetDirectoryCategory = new WidgetDirectoryCategory();
-        DirectoryEntryCategory directoryEntryCategory = (DirectoryEntryCategory) _Collections.getOrNull(this.tabs, position);
+        DirectoryEntryCategory directoryEntryCategory = (DirectoryEntryCategory) u.getOrNull(this.tabs, position);
         if (directoryEntryCategory != null) {
-            widgetDirectoryCategory.setArguments(AnimatableValueParser.e2(new WidgetDirectoryCategory2(directoryEntryCategory)));
+            widgetDirectoryCategory.setArguments(d.e2(new DirectoryCategoryArgs(directoryEntryCategory)));
             return widgetDirectoryCategory;
         }
-        StringBuilder sbV = outline.V("Couldn't find tab with position ", position, " in ");
+        StringBuilder sbV = a.V("Couldn't find tab with position ", position, " in ");
         sbV.append(this.tabs);
         throw new IllegalStateException(sbV.toString());
     }

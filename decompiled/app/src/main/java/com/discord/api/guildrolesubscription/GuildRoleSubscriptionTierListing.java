@@ -1,10 +1,10 @@
 package com.discord.api.guildrolesubscription;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.guildscheduledevent.GuildRoleSubscriptionRoleBenefits;
 import com.discord.api.premium.SubscriptionPlan;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: GuildRoleSubscriptionTierListing.kt */
@@ -53,7 +53,7 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
             return false;
         }
         GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing = (GuildRoleSubscriptionTierListing) other;
-        return this.id == guildRoleSubscriptionTierListing.id && this.applicationId == guildRoleSubscriptionTierListing.applicationId && Intrinsics3.areEqual(this.name, guildRoleSubscriptionTierListing.name) && this.published == guildRoleSubscriptionTierListing.published && Intrinsics3.areEqual(this.description, guildRoleSubscriptionTierListing.description) && Intrinsics3.areEqual(this.imageAsset, guildRoleSubscriptionTierListing.imageAsset) && Intrinsics3.areEqual(this.subscriptionPlans, guildRoleSubscriptionTierListing.subscriptionPlans) && Intrinsics3.areEqual(this.roleBenefits, guildRoleSubscriptionTierListing.roleBenefits) && this.roleId == guildRoleSubscriptionTierListing.roleId;
+        return this.id == guildRoleSubscriptionTierListing.id && this.applicationId == guildRoleSubscriptionTierListing.applicationId && m.areEqual(this.name, guildRoleSubscriptionTierListing.name) && this.published == guildRoleSubscriptionTierListing.published && m.areEqual(this.description, guildRoleSubscriptionTierListing.description) && m.areEqual(this.imageAsset, guildRoleSubscriptionTierListing.imageAsset) && m.areEqual(this.subscriptionPlans, guildRoleSubscriptionTierListing.subscriptionPlans) && m.areEqual(this.roleBenefits, guildRoleSubscriptionTierListing.roleBenefits) && this.roleId == guildRoleSubscriptionTierListing.roleId;
     }
 
     /* renamed from: f, reason: from getter */
@@ -101,7 +101,7 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("GuildRoleSubscriptionTierListing(id=");
+        StringBuilder sbU = a.U("GuildRoleSubscriptionTierListing(id=");
         sbU.append(this.id);
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
@@ -118,6 +118,6 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
         sbU.append(", roleBenefits=");
         sbU.append(this.roleBenefits);
         sbU.append(", roleId=");
-        return outline.C(sbU, this.roleId, ")");
+        return a.C(sbU, this.roleId, ")");
     }
 }

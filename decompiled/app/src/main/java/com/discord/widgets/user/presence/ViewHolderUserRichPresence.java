@@ -18,12 +18,12 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.ViewKt;
 import androidx.fragment.app.FragmentManager;
-import b.a.i.WidgetMusicRichPresenceBinding;
-import b.a.i.WidgetPlatformRichPresenceBinding;
-import b.a.i.WidgetStageChannelRichPresenceBinding;
-import b.a.i.WidgetStreamRichPresenceBinding;
-import b.a.i.WidgetUserRichPresenceBinding;
-import b.a.k.FormatUtils;
+import b.a.i.c6;
+import b.a.i.d6;
+import b.a.i.g6;
+import b.a.i.s5;
+import b.a.i.t5;
+import b.a.k.b;
 import com.discord.R;
 import com.discord.api.activity.Activity;
 import com.discord.api.activity.ActivityAssets;
@@ -33,7 +33,7 @@ import com.discord.app.AppComponent;
 import com.discord.models.user.User;
 import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.images.MGImages;
-import com.discord.utilities.presence.ActivityUtils;
+import com.discord.utilities.presence.ActivityUtilsKt;
 import com.discord.utilities.presence.PresenceUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.streams.StreamContext;
@@ -43,12 +43,12 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.views.StreamPreviewView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
-import d0.g0.Strings4;
-import d0.g0.StringsJVM;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g0.t;
+import d0.g0.w;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
@@ -103,28 +103,28 @@ public class ViewHolderUserRichPresence {
             int i4;
             LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
             if (type == 1) {
-                WidgetUserRichPresenceBinding widgetUserRichPresenceBindingA = WidgetUserRichPresenceBinding.a(layoutInflaterFrom, parent, true);
-                Intrinsics3.checkNotNullExpressionValue(widgetUserRichPresenceBindingA, "WidgetUserRichPresenceBi…e(inflater, parent, true)");
-                SimpleDraweeView simpleDraweeView = widgetUserRichPresenceBindingA.e;
-                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.richPresenceImageLarge");
-                SimpleDraweeView simpleDraweeView2 = widgetUserRichPresenceBindingA.f;
-                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.richPresenceImageSmall");
-                TextView textView = widgetUserRichPresenceBindingA.d;
-                Intrinsics3.checkNotNullExpressionValue(textView, "binding.richPresenceHeader");
-                TextView textView2 = widgetUserRichPresenceBindingA.k;
-                Intrinsics3.checkNotNullExpressionValue(textView2, "binding.richPresenceTitle");
-                TextView textView3 = widgetUserRichPresenceBindingA.c;
-                Intrinsics3.checkNotNullExpressionValue(textView3, "binding.richPresenceDetails");
-                TextView textView4 = widgetUserRichPresenceBindingA.j;
-                Intrinsics3.checkNotNullExpressionValue(textView4, "binding.richPresenceTime");
-                TextView textView5 = widgetUserRichPresenceBindingA.i;
-                Intrinsics3.checkNotNullExpressionValue(textView5, "binding.richPresenceState");
-                LinearLayout linearLayout = widgetUserRichPresenceBindingA.f122b;
-                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.richPresenceContainerData");
-                MaterialButton materialButton = widgetUserRichPresenceBindingA.g;
-                Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.richPresencePrimaryButton");
-                MaterialButton materialButton2 = widgetUserRichPresenceBindingA.h;
-                Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.richPresenceSecondaryButton");
+                g6 g6VarA = g6.a(layoutInflaterFrom, parent, true);
+                m.checkNotNullExpressionValue(g6VarA, "WidgetUserRichPresenceBi…e(inflater, parent, true)");
+                SimpleDraweeView simpleDraweeView = g6VarA.e;
+                m.checkNotNullExpressionValue(simpleDraweeView, "binding.richPresenceImageLarge");
+                SimpleDraweeView simpleDraweeView2 = g6VarA.f;
+                m.checkNotNullExpressionValue(simpleDraweeView2, "binding.richPresenceImageSmall");
+                TextView textView = g6VarA.d;
+                m.checkNotNullExpressionValue(textView, "binding.richPresenceHeader");
+                TextView textView2 = g6VarA.k;
+                m.checkNotNullExpressionValue(textView2, "binding.richPresenceTitle");
+                TextView textView3 = g6VarA.c;
+                m.checkNotNullExpressionValue(textView3, "binding.richPresenceDetails");
+                TextView textView4 = g6VarA.j;
+                m.checkNotNullExpressionValue(textView4, "binding.richPresenceTime");
+                TextView textView5 = g6VarA.i;
+                m.checkNotNullExpressionValue(textView5, "binding.richPresenceState");
+                LinearLayout linearLayout = g6VarA.f122b;
+                m.checkNotNullExpressionValue(linearLayout, "binding.richPresenceContainerData");
+                MaterialButton materialButton = g6VarA.g;
+                m.checkNotNullExpressionValue(materialButton, "binding.richPresencePrimaryButton");
+                MaterialButton materialButton2 = g6VarA.h;
+                m.checkNotNullExpressionValue(materialButton2, "binding.richPresenceSecondaryButton");
                 return new ViewHolderGameRichPresence(parent, simpleDraweeView, simpleDraweeView2, textView, textView2, textView3, textView4, textView5, linearLayout, materialButton, materialButton2);
             }
             if (type == 2) {
@@ -160,18 +160,18 @@ public class ViewHolderUserRichPresence {
                                                                 if (textView10 != null) {
                                                                     TextView textView11 = (TextView) viewInflate.findViewById(R.id.rich_presence_title);
                                                                     if (textView11 != null) {
-                                                                        Intrinsics3.checkNotNullExpressionValue(new WidgetMusicRichPresenceBinding((LinearLayout) viewInflate, barrier, space, linearLayout2, textView6, textView7, simpleDraweeView3, simpleDraweeView4, textView8, textView9, frameLayout, materialButton3, seekBar, textView10, textView11), "WidgetMusicRichPresenceB…e(inflater, parent, true)");
-                                                                        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView3, "binding.richPresenceImageLarge");
-                                                                        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView4, "binding.richPresenceImageSmall");
-                                                                        Intrinsics3.checkNotNullExpressionValue(textView7, "binding.richPresenceHeader");
-                                                                        Intrinsics3.checkNotNullExpressionValue(textView11, "binding.richPresenceTitle");
-                                                                        Intrinsics3.checkNotNullExpressionValue(textView6, "binding.richPresenceDetails");
-                                                                        Intrinsics3.checkNotNullExpressionValue(textView10, "binding.richPresenceTime");
-                                                                        Intrinsics3.checkNotNullExpressionValue(linearLayout2, "binding.richPresenceContainerData");
-                                                                        Intrinsics3.checkNotNullExpressionValue(materialButton3, "binding.richPresencePrimaryButton");
-                                                                        Intrinsics3.checkNotNullExpressionValue(seekBar, "binding.richPresenceSeekbar");
-                                                                        Intrinsics3.checkNotNullExpressionValue(textView8, "binding.richPresenceMusicDuration");
-                                                                        Intrinsics3.checkNotNullExpressionValue(textView9, "binding.richPresenceMusicElapsed");
+                                                                        m.checkNotNullExpressionValue(new s5((LinearLayout) viewInflate, barrier, space, linearLayout2, textView6, textView7, simpleDraweeView3, simpleDraweeView4, textView8, textView9, frameLayout, materialButton3, seekBar, textView10, textView11), "WidgetMusicRichPresenceB…e(inflater, parent, true)");
+                                                                        m.checkNotNullExpressionValue(simpleDraweeView3, "binding.richPresenceImageLarge");
+                                                                        m.checkNotNullExpressionValue(simpleDraweeView4, "binding.richPresenceImageSmall");
+                                                                        m.checkNotNullExpressionValue(textView7, "binding.richPresenceHeader");
+                                                                        m.checkNotNullExpressionValue(textView11, "binding.richPresenceTitle");
+                                                                        m.checkNotNullExpressionValue(textView6, "binding.richPresenceDetails");
+                                                                        m.checkNotNullExpressionValue(textView10, "binding.richPresenceTime");
+                                                                        m.checkNotNullExpressionValue(linearLayout2, "binding.richPresenceContainerData");
+                                                                        m.checkNotNullExpressionValue(materialButton3, "binding.richPresencePrimaryButton");
+                                                                        m.checkNotNullExpressionValue(seekBar, "binding.richPresenceSeekbar");
+                                                                        m.checkNotNullExpressionValue(textView8, "binding.richPresenceMusicDuration");
+                                                                        m.checkNotNullExpressionValue(textView9, "binding.richPresenceMusicElapsed");
                                                                         return new ViewHolderMusicRichPresence(parent, simpleDraweeView3, simpleDraweeView4, textView7, textView11, textView6, textView10, linearLayout2, materialButton3, seekBar, textView8, textView9);
                                                                     }
                                                                     i = R.id.rich_presence_title;
@@ -243,14 +243,14 @@ public class ViewHolderUserRichPresence {
                                             if (textView13 != null) {
                                                 TextView textView14 = (TextView) viewInflate2.findViewById(R.id.rich_presence_title);
                                                 if (textView14 != null) {
-                                                    Intrinsics3.checkNotNullExpressionValue(new WidgetPlatformRichPresenceBinding((LinearLayout) viewInflate2, barrier2, space2, linearLayout3, textView12, simpleDraweeView5, simpleDraweeView6, materialButton4, textView13, textView14), "WidgetPlatformRichPresen…e(inflater, parent, true)");
-                                                    Intrinsics3.checkNotNullExpressionValue(simpleDraweeView5, "binding.richPresenceImageLarge");
-                                                    Intrinsics3.checkNotNullExpressionValue(simpleDraweeView6, "binding.richPresenceImageSmall");
-                                                    Intrinsics3.checkNotNullExpressionValue(textView12, "binding.richPresenceHeader");
-                                                    Intrinsics3.checkNotNullExpressionValue(textView14, "binding.richPresenceTitle");
-                                                    Intrinsics3.checkNotNullExpressionValue(textView13, "binding.richPresenceTime");
-                                                    Intrinsics3.checkNotNullExpressionValue(linearLayout3, "binding.richPresenceContainerData");
-                                                    Intrinsics3.checkNotNullExpressionValue(materialButton4, "binding.richPresencePrimaryButton");
+                                                    m.checkNotNullExpressionValue(new t5((LinearLayout) viewInflate2, barrier2, space2, linearLayout3, textView12, simpleDraweeView5, simpleDraweeView6, materialButton4, textView13, textView14), "WidgetPlatformRichPresen…e(inflater, parent, true)");
+                                                    m.checkNotNullExpressionValue(simpleDraweeView5, "binding.richPresenceImageLarge");
+                                                    m.checkNotNullExpressionValue(simpleDraweeView6, "binding.richPresenceImageSmall");
+                                                    m.checkNotNullExpressionValue(textView12, "binding.richPresenceHeader");
+                                                    m.checkNotNullExpressionValue(textView14, "binding.richPresenceTitle");
+                                                    m.checkNotNullExpressionValue(textView13, "binding.richPresenceTime");
+                                                    m.checkNotNullExpressionValue(linearLayout3, "binding.richPresenceContainerData");
+                                                    m.checkNotNullExpressionValue(materialButton4, "binding.richPresencePrimaryButton");
                                                     viewHolderPlatformRichPresence = new ViewHolderPlatformRichPresence(parent, simpleDraweeView5, simpleDraweeView6, textView12, textView14, textView13, linearLayout3, materialButton4);
                                                 } else {
                                                     i2 = R.id.rich_presence_title;
@@ -301,15 +301,15 @@ public class ViewHolderUserRichPresence {
                                         if (textView19 != null) {
                                             StreamPreviewView streamPreviewView = (StreamPreviewView) viewInflate3.findViewById(R.id.stream_preview);
                                             if (streamPreviewView != null) {
-                                                Intrinsics3.checkNotNullExpressionValue(new WidgetStreamRichPresenceBinding((ConstraintLayout) viewInflate3, linearLayout4, textView15, textView16, simpleDraweeView7, textView17, textView18, textView19, streamPreviewView), "WidgetStreamRichPresence…e(inflater, parent, true)");
-                                                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView7, "binding.richPresenceImageLarge");
-                                                Intrinsics3.checkNotNullExpressionValue(textView16, "binding.richPresenceHeader");
-                                                Intrinsics3.checkNotNullExpressionValue(textView19, "binding.richPresenceTitle");
-                                                Intrinsics3.checkNotNullExpressionValue(textView15, "binding.richPresenceDetails");
-                                                Intrinsics3.checkNotNullExpressionValue(textView18, "binding.richPresenceTime");
-                                                Intrinsics3.checkNotNullExpressionValue(textView17, "binding.richPresenceState");
-                                                Intrinsics3.checkNotNullExpressionValue(linearLayout4, "binding.richPresenceContainerData");
-                                                Intrinsics3.checkNotNullExpressionValue(streamPreviewView, "binding.streamPreview");
+                                                m.checkNotNullExpressionValue(new d6((ConstraintLayout) viewInflate3, linearLayout4, textView15, textView16, simpleDraweeView7, textView17, textView18, textView19, streamPreviewView), "WidgetStreamRichPresence…e(inflater, parent, true)");
+                                                m.checkNotNullExpressionValue(simpleDraweeView7, "binding.richPresenceImageLarge");
+                                                m.checkNotNullExpressionValue(textView16, "binding.richPresenceHeader");
+                                                m.checkNotNullExpressionValue(textView19, "binding.richPresenceTitle");
+                                                m.checkNotNullExpressionValue(textView15, "binding.richPresenceDetails");
+                                                m.checkNotNullExpressionValue(textView18, "binding.richPresenceTime");
+                                                m.checkNotNullExpressionValue(textView17, "binding.richPresenceState");
+                                                m.checkNotNullExpressionValue(linearLayout4, "binding.richPresenceContainerData");
+                                                m.checkNotNullExpressionValue(streamPreviewView, "binding.streamPreview");
                                                 viewHolderPlatformRichPresence = new ViewHolderStreamRichPresence(parent, simpleDraweeView7, textView16, textView19, textView15, textView18, textView17, linearLayout4, streamPreviewView);
                                             } else {
                                                 i3 = R.id.stream_preview;
@@ -344,22 +344,22 @@ public class ViewHolderUserRichPresence {
                 throw new NullPointerException(str2.concat(viewInflate3.getResources().getResourceName(i3)));
             }
             if (type != 5) {
-                WidgetUserRichPresenceBinding widgetUserRichPresenceBindingA2 = WidgetUserRichPresenceBinding.a(layoutInflaterFrom, parent, true);
-                Intrinsics3.checkNotNullExpressionValue(widgetUserRichPresenceBindingA2, "WidgetUserRichPresenceBi…e(inflater, parent, true)");
-                SimpleDraweeView simpleDraweeView8 = widgetUserRichPresenceBindingA2.e;
-                Intrinsics3.checkNotNullExpressionValue(simpleDraweeView8, "binding.richPresenceImageLarge");
-                SimpleDraweeView simpleDraweeView9 = widgetUserRichPresenceBindingA2.f;
-                TextView textView20 = widgetUserRichPresenceBindingA2.d;
-                Intrinsics3.checkNotNullExpressionValue(textView20, "binding.richPresenceHeader");
-                TextView textView21 = widgetUserRichPresenceBindingA2.k;
-                Intrinsics3.checkNotNullExpressionValue(textView21, "binding.richPresenceTitle");
-                TextView textView22 = widgetUserRichPresenceBindingA2.c;
-                TextView textView23 = widgetUserRichPresenceBindingA2.j;
-                Intrinsics3.checkNotNullExpressionValue(textView23, "binding.richPresenceTime");
-                TextView textView24 = widgetUserRichPresenceBindingA2.i;
-                LinearLayout linearLayout5 = widgetUserRichPresenceBindingA2.f122b;
-                Intrinsics3.checkNotNullExpressionValue(linearLayout5, "binding.richPresenceContainerData");
-                return new ViewHolderUserRichPresence(parent, simpleDraweeView8, simpleDraweeView9, textView20, textView21, textView22, textView23, textView24, linearLayout5, widgetUserRichPresenceBindingA2.g, widgetUserRichPresenceBindingA2.h, 0, 2048, null);
+                g6 g6VarA2 = g6.a(layoutInflaterFrom, parent, true);
+                m.checkNotNullExpressionValue(g6VarA2, "WidgetUserRichPresenceBi…e(inflater, parent, true)");
+                SimpleDraweeView simpleDraweeView8 = g6VarA2.e;
+                m.checkNotNullExpressionValue(simpleDraweeView8, "binding.richPresenceImageLarge");
+                SimpleDraweeView simpleDraweeView9 = g6VarA2.f;
+                TextView textView20 = g6VarA2.d;
+                m.checkNotNullExpressionValue(textView20, "binding.richPresenceHeader");
+                TextView textView21 = g6VarA2.k;
+                m.checkNotNullExpressionValue(textView21, "binding.richPresenceTitle");
+                TextView textView22 = g6VarA2.c;
+                TextView textView23 = g6VarA2.j;
+                m.checkNotNullExpressionValue(textView23, "binding.richPresenceTime");
+                TextView textView24 = g6VarA2.i;
+                LinearLayout linearLayout5 = g6VarA2.f122b;
+                m.checkNotNullExpressionValue(linearLayout5, "binding.richPresenceContainerData");
+                return new ViewHolderUserRichPresence(parent, simpleDraweeView8, simpleDraweeView9, textView20, textView21, textView22, textView23, textView24, linearLayout5, g6VarA2.g, g6VarA2.h, 0, 2048, null);
             }
             View viewInflate4 = layoutInflaterFrom.inflate(R.layout.widget_stage_channel_rich_presence, parent, false);
             parent.addView(viewInflate4);
@@ -386,15 +386,15 @@ public class ViewHolderUserRichPresence {
                                                 if (textView28 != null) {
                                                     TextView textView29 = (TextView) viewInflate4.findViewById(R.id.rich_presence_title);
                                                     if (textView29 != null) {
-                                                        Intrinsics3.checkNotNullExpressionValue(new WidgetStageChannelRichPresenceBinding((LinearLayout) viewInflate4, barrier3, space3, linearLayout6, textView25, textView26, simpleDraweeView10, textView27, frameLayout2, materialButton5, textView28, textView29), "WidgetStageChannelRichPr…e(inflater, parent, true)");
-                                                        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView10, "binding.richPresenceImageLarge");
-                                                        Intrinsics3.checkNotNullExpressionValue(textView26, "binding.richPresenceHeader");
-                                                        Intrinsics3.checkNotNullExpressionValue(textView29, "binding.richPresenceTitle");
-                                                        Intrinsics3.checkNotNullExpressionValue(textView25, "binding.richPresenceDetails");
-                                                        Intrinsics3.checkNotNullExpressionValue(textView28, "binding.richPresenceTime");
-                                                        Intrinsics3.checkNotNullExpressionValue(linearLayout6, "binding.richPresenceContainerData");
-                                                        Intrinsics3.checkNotNullExpressionValue(materialButton5, "binding.richPresencePrimaryButton");
-                                                        Intrinsics3.checkNotNullExpressionValue(textView27, "binding.richPresenceImageLargeText");
+                                                        m.checkNotNullExpressionValue(new c6((LinearLayout) viewInflate4, barrier3, space3, linearLayout6, textView25, textView26, simpleDraweeView10, textView27, frameLayout2, materialButton5, textView28, textView29), "WidgetStageChannelRichPr…e(inflater, parent, true)");
+                                                        m.checkNotNullExpressionValue(simpleDraweeView10, "binding.richPresenceImageLarge");
+                                                        m.checkNotNullExpressionValue(textView26, "binding.richPresenceHeader");
+                                                        m.checkNotNullExpressionValue(textView29, "binding.richPresenceTitle");
+                                                        m.checkNotNullExpressionValue(textView25, "binding.richPresenceDetails");
+                                                        m.checkNotNullExpressionValue(textView28, "binding.richPresenceTime");
+                                                        m.checkNotNullExpressionValue(linearLayout6, "binding.richPresenceContainerData");
+                                                        m.checkNotNullExpressionValue(materialButton5, "binding.richPresencePrimaryButton");
+                                                        m.checkNotNullExpressionValue(textView27, "binding.richPresenceImageLargeText");
                                                         viewHolderPlatformRichPresence = new ViewHolderStageChannelRichPresence(parent, simpleDraweeView10, textView26, textView29, textView25, textView28, linearLayout6, materialButton5, textView27);
                                                     } else {
                                                         i4 = R.id.rich_presence_title;
@@ -446,20 +446,20 @@ public class ViewHolderUserRichPresence {
             if (streamContext != null) {
                 return 4;
             }
-            if (activity != null && ActivityUtils.isGamePlatform(activity)) {
+            if (activity != null && ActivityUtilsKt.isGamePlatform(activity)) {
                 return 3;
             }
-            if (activity != null && ActivityUtils.isGameActivity(activity)) {
+            if (activity != null && ActivityUtilsKt.isGameActivity(activity)) {
                 return 1;
             }
-            if (activity == null || !ActivityUtils.isSpotifyActivity(activity)) {
-                return (activity == null || !ActivityUtils.isStageChannelActivity(activity)) ? 0 : 5;
+            if (activity == null || !ActivityUtilsKt.isSpotifyActivity(activity)) {
+                return (activity == null || !ActivityUtilsKt.isStageChannelActivity(activity)) ? 0 : 5;
             }
             return 2;
         }
 
         public final ViewHolderUserRichPresence setRichPresence(ViewGroup parent, Activity activity, StreamContext streamContext, ViewHolderUserRichPresence oldViewHolder) {
-            Intrinsics3.checkNotNullParameter(parent, "parent");
+            m.checkNotNullParameter(parent, "parent");
             int rPViewHolderType = getRPViewHolderType(activity, streamContext);
             if (oldViewHolder != null && rPViewHolderType == oldViewHolder.getRichPresenceType()) {
                 return oldViewHolder;
@@ -475,7 +475,7 @@ public class ViewHolderUserRichPresence {
 
     /* compiled from: ViewHolderUserRichPresence.kt */
     /* renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureUiTimestamp$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -488,14 +488,14 @@ public class ViewHolderUserRichPresence {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             ViewHolderUserRichPresence.access$setPerSecondTimerSubscription$p(ViewHolderUserRichPresence.this, subscription);
         }
     }
 
     /* compiled from: ViewHolderUserRichPresence.kt */
     /* renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureUiTimestamp$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Long, Unit> {
         public final /* synthetic */ Activity $model;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -517,12 +517,12 @@ public class ViewHolderUserRichPresence {
     }
 
     public ViewHolderUserRichPresence(View view, SimpleDraweeView simpleDraweeView, SimpleDraweeView simpleDraweeView2, TextView textView, TextView textView2, TextView textView3, TextView textView4, TextView textView5, View view2, Button button, Button button2, int i) {
-        Intrinsics3.checkNotNullParameter(view, "root");
-        Intrinsics3.checkNotNullParameter(simpleDraweeView, "richPresenceImageLarge");
-        Intrinsics3.checkNotNullParameter(textView, "richPresenceHeader");
-        Intrinsics3.checkNotNullParameter(textView2, "richPresenceTitle");
-        Intrinsics3.checkNotNullParameter(textView4, "richPresenceTime");
-        Intrinsics3.checkNotNullParameter(view2, "richPresenceTextContainer");
+        m.checkNotNullParameter(view, "root");
+        m.checkNotNullParameter(simpleDraweeView, "richPresenceImageLarge");
+        m.checkNotNullParameter(textView, "richPresenceHeader");
+        m.checkNotNullParameter(textView2, "richPresenceTitle");
+        m.checkNotNullParameter(textView4, "richPresenceTime");
+        m.checkNotNullParameter(view2, "richPresenceTextContainer");
         this.root = view;
         this.richPresenceImageLarge = simpleDraweeView;
         this.richPresenceImageSmall = simpleDraweeView2;
@@ -622,16 +622,16 @@ public class ViewHolderUserRichPresence {
 
     @MainThread
     public void configureCustomButtonsUi(User user, Activity activity, Context applicationContext) {
-        Intrinsics3.checkNotNullParameter(applicationContext, "applicationContext");
+        m.checkNotNullParameter(applicationContext, "applicationContext");
         List<String> listC = activity != null ? activity.c() : null;
         int i = 0;
-        for (Object obj : Collections2.listOf((Object[]) new Button[]{this.richPresencePrimaryButton, this.richPresenceSecondaryButton})) {
+        for (Object obj : n.listOf((Object[]) new Button[]{this.richPresencePrimaryButton, this.richPresenceSecondaryButton})) {
             int i2 = i + 1;
             if (i < 0) {
-                Collections2.throwIndexOverflow();
+                n.throwIndexOverflow();
             }
             Button button = (Button) obj;
-            String str = listC != null ? (String) _Collections.getOrNull(listC, i) : null;
+            String str = listC != null ? (String) u.getOrNull(listC, i) : null;
             if (str != null) {
                 if (button != null) {
                     button.setText(str);
@@ -640,7 +640,7 @@ public class ViewHolderUserRichPresence {
                     ViewKt.setVisible(button, true);
                 }
                 if (button != null) {
-                    button.setOnClickListener(new ViewHolderUserRichPresence2(i, this, listC, applicationContext, user, activity));
+                    button.setOnClickListener(new ViewHolderUserRichPresence$configureCustomButtonsUi$$inlined$forEachIndexed$lambda$1(i, this, listC, applicationContext, user, activity));
                 }
             } else if (button != null) {
                 ViewKt.setVisible(button, false);
@@ -664,20 +664,20 @@ public class ViewHolderUserRichPresence {
             ActivityParty party = model.getParty();
             if (party != null) {
                 PresenceUtils presenceUtils = PresenceUtils.INSTANCE;
-                CharSequence charSequenceH = (presenceUtils.getMaxSize(party) == 0 || (context = this.root.getContext()) == null) ? null : FormatUtils.h(context, R.string.user_activity_state_size, new Object[]{String.valueOf(presenceUtils.getCurrentSize(party)), String.valueOf(presenceUtils.getMaxSize(party))}, null, 4);
+                CharSequence charSequenceH = (presenceUtils.getMaxSize(party) == 0 || (context = this.root.getContext()) == null) ? null : b.h(context, R.string.user_activity_state_size, new Object[]{String.valueOf(presenceUtils.getCurrentSize(party)), String.valueOf(presenceUtils.getMaxSize(party))}, null, 4);
                 if (charSequenceH == null) {
                     charSequenceH = "";
                 }
                 String str = state + ' ' + charSequenceH;
                 Objects.requireNonNull(str, "null cannot be cast to non-null type kotlin.CharSequence");
-                string = Strings4.trim(str).toString();
+                string = w.trim(str).toString();
             }
         } else {
             string = null;
         }
         TextView textView = this.richPresenceHeader;
         Context context2 = textView.getContext();
-        Intrinsics3.checkNotNullExpressionValue(context2, "richPresenceHeader.context");
+        m.checkNotNullExpressionValue(context2, "richPresenceHeader.context");
         textView.setText(PresenceUtils.getActivityHeader(context2, model));
         this.richPresenceTitle.setText(model.getDetails());
         TextView textView2 = this.richPresenceDetails;
@@ -696,8 +696,8 @@ public class ViewHolderUserRichPresence {
 
     @MainThread
     public void configureUi(FragmentManager fragmentManager, StreamContext streamContext, boolean isMe, User user, Context applicationContext, ModelRichPresence richPresence, boolean userInSameVoiceChannel) {
-        Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-        Intrinsics3.checkNotNullParameter(applicationContext, "applicationContext");
+        m.checkNotNullParameter(fragmentManager, "fragmentManager");
+        m.checkNotNullParameter(applicationContext, "applicationContext");
         disposeTimer();
         Activity primaryActivity = richPresence != null ? richPresence.getPrimaryActivity() : null;
         if (streamContext == null && primaryActivity == null) {
@@ -713,13 +713,13 @@ public class ViewHolderUserRichPresence {
 
     @MainThread
     public void configureUiTimestamp(Activity model, AppComponent appComponent) {
-        Intrinsics3.checkNotNullParameter(appComponent, "appComponent");
+        m.checkNotNullParameter(appComponent, "appComponent");
         if (model != null && this.root.getVisibility() == 0) {
             ActivityTimestamps timestamps = model.getTimestamps();
             if ((timestamps != null ? friendlyTime(timestamps) : null) != null) {
                 if (this.perSecondTimerSubscription == null) {
                     Observable<Long> observableE = Observable.E(0L, 1L, TimeUnit.SECONDS);
-                    Intrinsics3.checkNotNullExpressionValue(observableE, "Observable\n          .in…0L, 1L, TimeUnit.SECONDS)");
+                    m.checkNotNullExpressionValue(observableE, "Observable\n          .in…0L, 1L, TimeUnit.SECONDS)");
                     ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableE, appComponent, null, 2, null), getClass(), (Context) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(model), 58, (Object) null);
                     return;
                 }
@@ -743,7 +743,7 @@ public class ViewHolderUserRichPresence {
     }
 
     public final CharSequence friendlyTime(ActivityTimestamps activityTimestamps) {
-        Intrinsics3.checkNotNullParameter(activityTimestamps, "$this$friendlyTime");
+        m.checkNotNullParameter(activityTimestamps, "$this$friendlyTime");
         if (activityTimestamps.b() > 0) {
             return TimeUtils.INSTANCE.toFriendlyString(ClockFactory.get().currentTimeMillis(), activityTimestamps.b(), getString(R.string.user_activity_timestamp_end_simple), "timeDelta");
         }
@@ -810,13 +810,13 @@ public class ViewHolderUserRichPresence {
     }
 
     public final void setImageAndVisibilityBy(ImageView imageView, String str, boolean z2) {
-        Intrinsics3.checkNotNullParameter(imageView, "$this$setImageAndVisibilityBy");
+        m.checkNotNullParameter(imageView, "$this$setImageAndVisibilityBy");
         MGImages.setImage$default(imageView, str, 0, 0, z2, null, null, 108, null);
-        imageView.setVisibility((str == null || StringsJVM.isBlank(str)) ^ true ? 0 : 8);
+        imageView.setVisibility((str == null || t.isBlank(str)) ^ true ? 0 : 8);
     }
 
     public final void setOnActivityCustomButtonClicked(Function5<? super Context, ? super Long, ? super String, ? super Long, ? super Integer, Unit> newOnActivityCustomButtonClicked) {
-        Intrinsics3.checkNotNullParameter(newOnActivityCustomButtonClicked, "newOnActivityCustomButtonClicked");
+        m.checkNotNullParameter(newOnActivityCustomButtonClicked, "newOnActivityCustomButtonClicked");
         this.onActivityCustomButtonClicked = newOnActivityCustomButtonClicked;
     }
 

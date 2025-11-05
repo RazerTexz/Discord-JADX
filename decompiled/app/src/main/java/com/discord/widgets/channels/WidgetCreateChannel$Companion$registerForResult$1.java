@@ -3,8 +3,8 @@ package com.discord.widgets.channels;
 import android.content.Intent;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
+import d0.g0.t;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function3;
 
 /* compiled from: WidgetCreateChannel.kt */
@@ -24,7 +24,7 @@ public final class WidgetCreateChannel$Companion$registerForResult$1<O> implemen
     /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Intent data;
-        Intrinsics3.checkNotNullExpressionValue(activityResult, "activityResult");
+        m.checkNotNullExpressionValue(activityResult, "activityResult");
         if (activityResult.getResultCode() != -1 || (data = activityResult.getData()) == null) {
             return;
         }
@@ -32,7 +32,7 @@ public final class WidgetCreateChannel$Companion$registerForResult$1<O> implemen
         String stringExtra = data.getStringExtra("RESULT_EXTRA_CHANNEL_NAME");
         int intExtra = data.getIntExtra("RESULT_EXTRA_CHANNEL_ICON_RES_ID", -1);
         if (longExtra != -1) {
-            if ((stringExtra == null || StringsJVM.isBlank(stringExtra)) || intExtra == -1) {
+            if ((stringExtra == null || t.isBlank(stringExtra)) || intExtra == -1) {
                 return;
             }
             this.$callback.invoke(Long.valueOf(longExtra), stringExtra, Integer.valueOf(intExtra));

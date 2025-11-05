@@ -40,7 +40,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.customview.view.AbsSavedState;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
@@ -343,10 +343,10 @@ public class ViewPager extends ViewGroup {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("FragmentPager.SavedState{");
+            StringBuilder sbU = a.U("FragmentPager.SavedState{");
             sbU.append(Integer.toHexString(System.identityHashCode(this)));
             sbU.append(" position=");
-            return outline.B(sbU, this.position, "}");
+            return a.B(sbU, this.position, "}");
         }
 
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
@@ -1002,7 +1002,7 @@ public class ViewPager extends ViewGroup {
                     sb.append(" => ");
                     sb.append(parent2.getClass().getSimpleName());
                 }
-                StringBuilder sbU = outline.U("arrowScroll tried to find focus based on non-child current focused view ");
+                StringBuilder sbU = a.U("arrowScroll tried to find focus based on non-child current focused view ");
                 sbU.append(sb.toString());
                 Log.e(TAG, sbU.toString());
                 viewFindFocus = null;
@@ -2204,7 +2204,7 @@ public class ViewPager extends ViewGroup {
             } catch (Resources.NotFoundException unused) {
                 hexString = Integer.toHexString(getId());
             }
-            StringBuilder sbU = outline.U("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: ");
+            StringBuilder sbU = a.U("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: ");
             sbU.append(this.mExpectedAdapterCount);
             sbU.append(", found: ");
             sbU.append(count);

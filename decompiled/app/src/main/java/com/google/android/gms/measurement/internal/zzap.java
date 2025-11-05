@@ -3,7 +3,7 @@ package com.google.android.gms.measurement.internal;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.i.b.n;
 import b.i.a.f.i.b.o;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -38,9 +38,9 @@ public final class zzap extends AbstractSafeParcelable implements Iterable<Strin
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.p2(parcel, 2, x0(), false);
-        AnimatableValueParser.A2(parcel, iY2);
+        int iY2 = d.y2(parcel, 20293);
+        d.p2(parcel, 2, x0(), false);
+        d.A2(parcel, iY2);
     }
 
     public final Bundle x0() {

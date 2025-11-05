@@ -11,7 +11,7 @@ public final /* synthetic */ class c implements Comparator {
     public final int compare(Object obj, Object obj2) {
         Integer num = (Integer) obj;
         Integer num2 = (Integer) obj2;
-        int[] iArr = DefaultTrackSelector.f898b;
+        int[] iArr = h.f898b;
         if (num.intValue() == -1) {
             return num2.intValue() == -1 ? 0 : -1;
         }

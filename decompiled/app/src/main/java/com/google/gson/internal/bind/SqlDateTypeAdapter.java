@@ -1,6 +1,6 @@
 package com.google.gson.internal.bind;
 
-import b.i.d.TypeAdapterFactory2;
+import b.i.d.o;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
@@ -16,14 +16,14 @@ import java.text.SimpleDateFormat;
 
 /* loaded from: classes3.dex */
 public final class SqlDateTypeAdapter extends TypeAdapter<Date> {
-    public static final TypeAdapterFactory2 a = new AnonymousClass1();
+    public static final o a = new AnonymousClass1();
 
     /* renamed from: b, reason: collision with root package name */
     public final DateFormat f3124b = new SimpleDateFormat("MMM d, yyyy");
 
     /* renamed from: com.google.gson.internal.bind.SqlDateTypeAdapter$1, reason: invalid class name */
-    public class AnonymousClass1 implements TypeAdapterFactory2 {
-        @Override // b.i.d.TypeAdapterFactory2
+    public class AnonymousClass1 implements o {
+        @Override // b.i.d.o
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
             if (typeToken.getRawType() == Date.class) {
                 return new SqlDateTypeAdapter();

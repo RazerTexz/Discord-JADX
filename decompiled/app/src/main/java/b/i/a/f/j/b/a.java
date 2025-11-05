@@ -7,9 +7,9 @@ public class a implements a.d {
     public final int j = -1;
 
     /* renamed from: b.i.a.f.j.b.a$a, reason: collision with other inner class name */
-    public static class C0042a {
+    public static class C0119a {
     }
 
-    public a(C0042a c0042a, h hVar) {
+    public a(C0119a c0119a, h hVar) {
     }
 }

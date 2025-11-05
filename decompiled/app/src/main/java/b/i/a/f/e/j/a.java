@@ -4,7 +4,7 @@ import android.database.CursorWindow;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import com.google.android.gms.common.data.DataHolder;
 
 /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
@@ -12,7 +12,7 @@ import com.google.android.gms.common.data.DataHolder;
 public final class a implements Parcelable.Creator<DataHolder> {
     @Override // android.os.Parcelable.Creator
     public final DataHolder createFromParcel(Parcel parcel) {
-        int iM2 = AnimatableValueParser.m2(parcel);
+        int iM2 = d.m2(parcel);
         int i = 0;
         String[] strArrS = null;
         CursorWindow[] cursorWindowArr = null;
@@ -23,20 +23,20 @@ public final class a implements Parcelable.Creator<DataHolder> {
             int i2 = parcel.readInt();
             char c = (char) i2;
             if (c == 1) {
-                strArrS = AnimatableValueParser.S(parcel, i2);
+                strArrS = d.S(parcel, i2);
             } else if (c == 2) {
-                cursorWindowArr = (CursorWindow[]) AnimatableValueParser.U(parcel, i2, CursorWindow.CREATOR);
+                cursorWindowArr = (CursorWindow[]) d.U(parcel, i2, CursorWindow.CREATOR);
             } else if (c == 3) {
-                iG12 = AnimatableValueParser.G1(parcel, i2);
+                iG12 = d.G1(parcel, i2);
             } else if (c == 4) {
-                bundleM = AnimatableValueParser.M(parcel, i2);
+                bundleM = d.M(parcel, i2);
             } else if (c != 1000) {
-                AnimatableValueParser.d2(parcel, i2);
+                d.d2(parcel, i2);
             } else {
-                iG1 = AnimatableValueParser.G1(parcel, i2);
+                iG1 = d.G1(parcel, i2);
             }
         }
-        AnimatableValueParser.f0(parcel, iM2);
+        d.f0(parcel, iM2);
         DataHolder dataHolder = new DataHolder(iG1, strArrS, cursorWindowArr, iG12, bundleM);
         dataHolder.l = new Bundle();
         int i3 = 0;

@@ -2,8 +2,8 @@ package com.discord.widgets.channels.permissions;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.api.permission.PermissionOverwrite;
 import com.discord.api.role.GuildRole;
 import com.discord.models.guild.Guild;
@@ -15,21 +15,18 @@ import com.discord.stores.StorePermissions;
 import com.discord.stores.StoreStream;
 import com.discord.stores.StoreUser;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.widgets.channels.permissions.PermissionOwner;
 import com.discord.widgets.channels.permissions.PermissionOwnerListView;
-import d0.d0._Ranges;
-import d0.f0._Sequences2;
-import d0.t.Collections2;
-import d0.t.CollectionsJVM;
-import d0.t.Iterables2;
-import d0.t.MapsJVM;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.p.Schedulers2;
+import d0.d0.f;
+import d0.f0.q;
+import d0.t.g0;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -45,14 +42,14 @@ import rx.Observable;
 
 /* compiled from: WidgetStageChannelModeratorPermissionsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetStageChannelModeratorPermissionsViewModel extends AppViewModel<ViewState> {
+public final class WidgetStageChannelModeratorPermissionsViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
     /* compiled from: WidgetStageChannelModeratorPermissionsViewModel.kt */
     /* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissionsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -66,7 +63,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetStageChannelModeratorPermissionsViewModel widgetStageChannelModeratorPermissionsViewModel = WidgetStageChannelModeratorPermissionsViewModel.this;
-            Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
+            m.checkNotNullExpressionValue(storeState, "storeState");
             WidgetStageChannelModeratorPermissionsViewModel.access$handleStoreState(widgetStageChannelModeratorPermissionsViewModel, storeState);
         }
     }
@@ -77,7 +74,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
         }
 
         private final Observable<StoreState> observeStores(long channelId, StoreGuilds guildStore, StoreChannels channelStore, StoreUser userStore, StorePermissions permissionStore) {
-            return ObservationDeck.connectRx$default(ObservationDeck4.get(), new ObservationDeck.UpdateSource[]{guildStore, channelStore, userStore, permissionStore}, false, null, null, new WidgetStageChannelModeratorPermissionsViewModel2(channelStore, channelId, guildStore, userStore, permissionStore), 14, null);
+            return ObservationDeck.connectRx$default(ObservationDeckProvider.get(), new ObservationDeck.UpdateSource[]{guildStore, channelStore, userStore, permissionStore}, false, null, null, new WidgetStageChannelModeratorPermissionsViewModel$Companion$observeStores$1(channelStore, channelId, guildStore, userStore, permissionStore), 14, null);
         }
 
         public static /* synthetic */ Observable observeStores$default(Companion companion, long j, StoreGuilds storeGuilds, StoreChannels storeChannels, StoreUser storeUser, StorePermissions storePermissions, int i, Object obj) {
@@ -130,11 +127,11 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
             /* JADX WARN: Multi-variable type inference failed */
             public Valid(Guild guild, List<PermissionOverwrite> list, Map<Long, GuildRole> map, Map<Long, ? extends User> map2, Map<Long, GuildMember> map3, User user, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(guild, "guild");
-                Intrinsics3.checkNotNullParameter(list, "channelPermissionOverwrites");
-                Intrinsics3.checkNotNullParameter(map, "guildRoles");
-                Intrinsics3.checkNotNullParameter(map2, "usersWithOverwrites");
-                Intrinsics3.checkNotNullParameter(map3, "guildMembers");
+                m.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(list, "channelPermissionOverwrites");
+                m.checkNotNullParameter(map, "guildRoles");
+                m.checkNotNullParameter(map2, "usersWithOverwrites");
+                m.checkNotNullParameter(map3, "guildMembers");
                 this.guild = guild;
                 this.channelPermissionOverwrites = list;
                 this.guildRoles = map;
@@ -206,11 +203,11 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
             }
 
             public final Valid copy(Guild guild, List<PermissionOverwrite> channelPermissionOverwrites, Map<Long, GuildRole> guildRoles, Map<Long, ? extends User> usersWithOverwrites, Map<Long, GuildMember> guildMembers, User guildOwnerUser, boolean canEditModerators) {
-                Intrinsics3.checkNotNullParameter(guild, "guild");
-                Intrinsics3.checkNotNullParameter(channelPermissionOverwrites, "channelPermissionOverwrites");
-                Intrinsics3.checkNotNullParameter(guildRoles, "guildRoles");
-                Intrinsics3.checkNotNullParameter(usersWithOverwrites, "usersWithOverwrites");
-                Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
+                m.checkNotNullParameter(guild, "guild");
+                m.checkNotNullParameter(channelPermissionOverwrites, "channelPermissionOverwrites");
+                m.checkNotNullParameter(guildRoles, "guildRoles");
+                m.checkNotNullParameter(usersWithOverwrites, "usersWithOverwrites");
+                m.checkNotNullParameter(guildMembers, "guildMembers");
                 return new Valid(guild, channelPermissionOverwrites, guildRoles, usersWithOverwrites, guildMembers, guildOwnerUser, canEditModerators);
             }
 
@@ -222,7 +219,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.guild, valid.guild) && Intrinsics3.areEqual(this.channelPermissionOverwrites, valid.channelPermissionOverwrites) && Intrinsics3.areEqual(this.guildRoles, valid.guildRoles) && Intrinsics3.areEqual(this.usersWithOverwrites, valid.usersWithOverwrites) && Intrinsics3.areEqual(this.guildMembers, valid.guildMembers) && Intrinsics3.areEqual(this.guildOwnerUser, valid.guildOwnerUser) && this.canEditModerators == valid.canEditModerators;
+                return m.areEqual(this.guild, valid.guild) && m.areEqual(this.channelPermissionOverwrites, valid.channelPermissionOverwrites) && m.areEqual(this.guildRoles, valid.guildRoles) && m.areEqual(this.usersWithOverwrites, valid.usersWithOverwrites) && m.areEqual(this.guildMembers, valid.guildMembers) && m.areEqual(this.guildOwnerUser, valid.guildOwnerUser) && this.canEditModerators == valid.canEditModerators;
             }
 
             public final boolean getCanEditModerators() {
@@ -276,7 +273,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(guild=");
+                StringBuilder sbU = a.U("Valid(guild=");
                 sbU.append(this.guild);
                 sbU.append(", channelPermissionOverwrites=");
                 sbU.append(this.channelPermissionOverwrites);
@@ -289,7 +286,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
                 sbU.append(", guildOwnerUser=");
                 sbU.append(this.guildOwnerUser);
                 sbU.append(", canEditModerators=");
-                return outline.O(sbU, this.canEditModerators, ")");
+                return a.O(sbU, this.canEditModerators, ")");
             }
         }
 
@@ -322,8 +319,8 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Valid(List<PermissionOwnerListView.Item> list, List<PermissionOwnerListView.Item> list2, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(list, "roleItems");
-                Intrinsics3.checkNotNullParameter(list2, "memberItems");
+                m.checkNotNullParameter(list, "roleItems");
+                m.checkNotNullParameter(list2, "memberItems");
                 this.roleItems = list;
                 this.memberItems = list2;
                 this.canEditModerators = z2;
@@ -357,8 +354,8 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
             }
 
             public final Valid copy(List<PermissionOwnerListView.Item> roleItems, List<PermissionOwnerListView.Item> memberItems, boolean canEditModerators) {
-                Intrinsics3.checkNotNullParameter(roleItems, "roleItems");
-                Intrinsics3.checkNotNullParameter(memberItems, "memberItems");
+                m.checkNotNullParameter(roleItems, "roleItems");
+                m.checkNotNullParameter(memberItems, "memberItems");
                 return new Valid(roleItems, memberItems, canEditModerators);
             }
 
@@ -370,7 +367,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.roleItems, valid.roleItems) && Intrinsics3.areEqual(this.memberItems, valid.memberItems) && this.canEditModerators == valid.canEditModerators;
+                return m.areEqual(this.roleItems, valid.roleItems) && m.areEqual(this.memberItems, valid.memberItems) && this.canEditModerators == valid.canEditModerators;
             }
 
             public final boolean getCanEditModerators() {
@@ -400,12 +397,12 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(roleItems=");
+                StringBuilder sbU = a.U("Valid(roleItems=");
                 sbU.append(this.roleItems);
                 sbU.append(", memberItems=");
                 sbU.append(this.memberItems);
                 sbU.append(", canEditModerators=");
-                return outline.O(sbU, this.canEditModerators, ")");
+                return a.O(sbU, this.canEditModerators, ")");
             }
         }
 
@@ -419,8 +416,8 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
 
     public WidgetStageChannelModeratorPermissionsViewModel(long j) {
         super(null, 1, null);
-        Observable observableR = Companion.observeStores$default(INSTANCE, j, null, null, null, null, 30, null).X(Schedulers2.a()).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observeStores(channelId)…  .distinctUntilChanged()");
+        Observable observableR = Companion.observeStores$default(INSTANCE, j, null, null, null, null, 30, null).X(j0.p.a.a()).r();
+        m.checkNotNullExpressionValue(observableR, "observeStores(channelId)…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableR, this, null, 2, null), WidgetStageChannelModeratorPermissionsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }
 
@@ -462,7 +459,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
                 arrayList.add(next);
             }
         }
-        LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(arrayList, 10)), 16));
+        LinkedHashMap linkedHashMap = new LinkedHashMap(f.coerceAtLeast(g0.mapCapacity(d0.t.o.collectionSizeOrDefault(arrayList, 10)), 16));
         for (Object obj : arrayList) {
             linkedHashMap.put(Long.valueOf(((PermissionOverwrite) obj).e()), obj);
         }
@@ -474,11 +471,11 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
                 arrayList2.add(obj2);
             }
         }
-        ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList2, 10));
+        ArrayList arrayList3 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList2, 10));
         for (GuildRole guildRole2 : arrayList2) {
             arrayList3.add(new PermissionOwnerListView.Item(new PermissionOwner.Role(guildRole2), getRoleRemoveStatus(valid, guildRole2)));
         }
-        Set set = _Sequences2.toSet(_Sequences2.map(_Sequences2.filter(_Sequences2.filter(_Sequences2.filter(_Collections.asSequence(valid.getChannelPermissionOverwrites()), WidgetStageChannelModeratorPermissionsViewModel3.INSTANCE), WidgetStageChannelModeratorPermissionsViewModel4.INSTANCE), new WidgetStageChannelModeratorPermissionsViewModel5(storeState)), WidgetStageChannelModeratorPermissionsViewModel6.INSTANCE));
+        Set set = q.toSet(q.map(q.filter(q.filter(q.filter(u.asSequence(valid.getChannelPermissionOverwrites()), WidgetStageChannelModeratorPermissionsViewModel$handleStoreState$usersWithModeratorPermissions$1.INSTANCE), WidgetStageChannelModeratorPermissionsViewModel$handleStoreState$usersWithModeratorPermissions$2.INSTANCE), new WidgetStageChannelModeratorPermissionsViewModel$handleStoreState$usersWithModeratorPermissions$3(storeState)), WidgetStageChannelModeratorPermissionsViewModel$handleStoreState$usersWithModeratorPermissions$4.INSTANCE));
         ArrayList arrayList4 = new ArrayList();
         Iterator it2 = set.iterator();
         while (true) {
@@ -497,13 +494,13 @@ public final class WidgetStageChannelModeratorPermissionsViewModel extends AppVi
         }
         User guildOwnerUser = valid.getGuildOwnerUser();
         if (guildOwnerUser == null) {
-            listEmptyList = Collections2.emptyList();
+            listEmptyList = n.emptyList();
         } else {
-            GuildMember guildMember2 = (GuildMember) outline.f(guildOwnerUser, valid.getGuildMembers());
-            listEmptyList = CollectionsJVM.listOf(new PermissionOwnerListView.Item(new PermissionOwner.Member(guildOwnerUser, guildMember2 != null ? guildMember2.getNick() : null, true), getMemberRemoveStatus(valid, true)));
+            GuildMember guildMember2 = (GuildMember) a.f(guildOwnerUser, valid.getGuildMembers());
+            listEmptyList = d0.t.m.listOf(new PermissionOwnerListView.Item(new PermissionOwner.Member(guildOwnerUser, guildMember2 != null ? guildMember2.getNick() : null, true), getMemberRemoveStatus(valid, true)));
             if (listEmptyList == null) {
             }
         }
-        updateViewState(new ViewState.Valid(arrayList3, _Collections.plus((Collection) arrayList4, (Iterable) listEmptyList), valid.getCanEditModerators()));
+        updateViewState(new ViewState.Valid(arrayList3, u.plus((Collection) arrayList4, (Iterable) listEmptyList), valid.getCanEditModerators()));
     }
 }

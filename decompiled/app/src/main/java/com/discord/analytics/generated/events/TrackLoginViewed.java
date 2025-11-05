@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
-import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
+import com.discord.analytics.generated.traits.TrackStoreSkuMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLoginViewed.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLoginViewed implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2 {
+public final /* data */ class TrackLoginViewed implements AnalyticsSchema, TrackBaseReceiver, TrackStoreSkuMetadataReceiver {
     private TrackBase trackBase;
     private TrackStoreSkuMetadata trackStoreSkuMetadata;
     private final CharSequence loginSource = null;
@@ -35,7 +35,7 @@ public final /* data */ class TrackLoginViewed implements AnalyticsSchema, Track
             return false;
         }
         TrackLoginViewed trackLoginViewed = (TrackLoginViewed) other;
-        return Intrinsics3.areEqual(this.loginSource, trackLoginViewed.loginSource) && Intrinsics3.areEqual(this.inviteCode, trackLoginViewed.inviteCode) && Intrinsics3.areEqual(this.inviteGuildId, trackLoginViewed.inviteGuildId) && Intrinsics3.areEqual(this.inviteChannelId, trackLoginViewed.inviteChannelId) && Intrinsics3.areEqual(this.inviteChannelType, trackLoginViewed.inviteChannelType) && Intrinsics3.areEqual(this.inviteInviterId, trackLoginViewed.inviteInviterId);
+        return m.areEqual(this.loginSource, trackLoginViewed.loginSource) && m.areEqual(this.inviteCode, trackLoginViewed.inviteCode) && m.areEqual(this.inviteGuildId, trackLoginViewed.inviteGuildId) && m.areEqual(this.inviteChannelId, trackLoginViewed.inviteChannelId) && m.areEqual(this.inviteChannelType, trackLoginViewed.inviteChannelType) && m.areEqual(this.inviteInviterId, trackLoginViewed.inviteInviterId);
     }
 
     public int hashCode() {
@@ -54,7 +54,7 @@ public final /* data */ class TrackLoginViewed implements AnalyticsSchema, Track
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLoginViewed(loginSource=");
+        StringBuilder sbU = a.U("TrackLoginViewed(loginSource=");
         sbU.append(this.loginSource);
         sbU.append(", inviteCode=");
         sbU.append(this.inviteCode);
@@ -65,6 +65,6 @@ public final /* data */ class TrackLoginViewed implements AnalyticsSchema, Track
         sbU.append(", inviteChannelType=");
         sbU.append(this.inviteChannelType);
         sbU.append(", inviteInviterId=");
-        return outline.G(sbU, this.inviteInviterId, ")");
+        return a.G(sbU, this.inviteInviterId, ")");
     }
 }

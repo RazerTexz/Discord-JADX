@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackLeaveGuild.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackLeaveGuild implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackLeaveGuild implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long guildId = null;
     private final CharSequence guildName = null;
@@ -28,7 +28,7 @@ public final /* data */ class TrackLeaveGuild implements AnalyticsSchema, TrackB
             return false;
         }
         TrackLeaveGuild trackLeaveGuild = (TrackLeaveGuild) other;
-        return Intrinsics3.areEqual(this.guildId, trackLeaveGuild.guildId) && Intrinsics3.areEqual(this.guildName, trackLeaveGuild.guildName);
+        return m.areEqual(this.guildId, trackLeaveGuild.guildId) && m.areEqual(this.guildName, trackLeaveGuild.guildName);
     }
 
     public int hashCode() {
@@ -39,9 +39,9 @@ public final /* data */ class TrackLeaveGuild implements AnalyticsSchema, TrackB
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackLeaveGuild(guildId=");
+        StringBuilder sbU = a.U("TrackLeaveGuild(guildId=");
         sbU.append(this.guildId);
         sbU.append(", guildName=");
-        return outline.E(sbU, this.guildName, ")");
+        return a.E(sbU, this.guildName, ")");
     }
 }

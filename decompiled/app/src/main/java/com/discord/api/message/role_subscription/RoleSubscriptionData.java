@@ -1,7 +1,7 @@
 package com.discord.api.message.role_subscription;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: RoleSubscriptionData.kt */
 /* loaded from: classes.dex */
@@ -39,7 +39,7 @@ public final /* data */ class RoleSubscriptionData {
             return false;
         }
         RoleSubscriptionData roleSubscriptionData = (RoleSubscriptionData) other;
-        return this.roleSubscriptionListingId == roleSubscriptionData.roleSubscriptionListingId && Intrinsics3.areEqual(this.tierName, roleSubscriptionData.tierName) && this.totalMonthsSubscribed == roleSubscriptionData.totalMonthsSubscribed && this.isRenewal == roleSubscriptionData.isRenewal;
+        return this.roleSubscriptionListingId == roleSubscriptionData.roleSubscriptionListingId && m.areEqual(this.tierName, roleSubscriptionData.tierName) && this.totalMonthsSubscribed == roleSubscriptionData.totalMonthsSubscribed && this.isRenewal == roleSubscriptionData.isRenewal;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -57,13 +57,13 @@ public final /* data */ class RoleSubscriptionData {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("RoleSubscriptionData(roleSubscriptionListingId=");
+        StringBuilder sbU = a.U("RoleSubscriptionData(roleSubscriptionListingId=");
         sbU.append(this.roleSubscriptionListingId);
         sbU.append(", tierName=");
         sbU.append(this.tierName);
         sbU.append(", totalMonthsSubscribed=");
         sbU.append(this.totalMonthsSubscribed);
         sbU.append(", isRenewal=");
-        return outline.O(sbU, this.isRenewal, ")");
+        return a.O(sbU, this.isRenewal, ")");
     }
 }

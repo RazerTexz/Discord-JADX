@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkInformation.kt */
 /* loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final /* data */ class TrackNetworkInformation {
             return false;
         }
         TrackNetworkInformation trackNetworkInformation = (TrackNetworkInformation) other;
-        return Intrinsics3.areEqual(this.connectionType, trackNetworkInformation.connectionType) && Intrinsics3.areEqual(this.effectiveConnectionSpeed, trackNetworkInformation.effectiveConnectionSpeed) && Intrinsics3.areEqual(this.serviceProvider, trackNetworkInformation.serviceProvider);
+        return m.areEqual(this.connectionType, trackNetworkInformation.connectionType) && m.areEqual(this.effectiveConnectionSpeed, trackNetworkInformation.effectiveConnectionSpeed) && m.areEqual(this.serviceProvider, trackNetworkInformation.serviceProvider);
     }
 
     public int hashCode() {
@@ -31,11 +31,11 @@ public final /* data */ class TrackNetworkInformation {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkInformation(connectionType=");
+        StringBuilder sbU = a.U("TrackNetworkInformation(connectionType=");
         sbU.append(this.connectionType);
         sbU.append(", effectiveConnectionSpeed=");
         sbU.append(this.effectiveConnectionSpeed);
         sbU.append(", serviceProvider=");
-        return outline.E(sbU, this.serviceProvider, ")");
+        return a.E(sbU, this.serviceProvider, ")");
     }
 }

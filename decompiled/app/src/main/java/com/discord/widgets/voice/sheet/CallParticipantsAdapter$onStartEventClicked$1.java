@@ -1,14 +1,14 @@
 package com.discord.widgets.voice.sheet;
 
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: CallParticipantsAdapter.kt */
 /* loaded from: classes.dex */
-public final class CallParticipantsAdapter$onStartEventClicked$1 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
+public final class CallParticipantsAdapter$onStartEventClicked$1 extends o implements Function1<GuildScheduledEvent, Unit> {
     public static final CallParticipantsAdapter$onStartEventClicked$1 INSTANCE = new CallParticipantsAdapter$onStartEventClicked$1();
 
     public CallParticipantsAdapter$onStartEventClicked$1() {
@@ -23,6 +23,6 @@ public final class CallParticipantsAdapter$onStartEventClicked$1 extends Lambda 
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
-        Intrinsics3.checkNotNullParameter(guildScheduledEvent, "it");
+        m.checkNotNullParameter(guildScheduledEvent, "it");
     }
 }

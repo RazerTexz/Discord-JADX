@@ -9,12 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
-import b.i.a.g.d.PickerFragment;
+import b.i.a.g.d.i;
 import java.util.Iterator;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
 /* loaded from: classes3.dex */
-public final class MaterialTextInputPicker<S> extends PickerFragment<S> {
+public final class MaterialTextInputPicker<S> extends i<S> {
     private static final String CALENDAR_CONSTRAINTS_KEY = "CALENDAR_CONSTRAINTS_KEY";
     private static final String DATE_SELECTOR_KEY = "DATE_SELECTOR_KEY";
     private static final String THEME_RES_ID_KEY = "THEME_RES_ID_KEY";
@@ -60,7 +60,7 @@ public final class MaterialTextInputPicker<S> extends PickerFragment<S> {
         return materialTextInputPicker;
     }
 
-    @Override // b.i.a.g.d.PickerFragment
+    @Override // b.i.a.g.d.i
     @NonNull
     public DateSelector<S> getDateSelector() {
         DateSelector<S> dateSelector = this.dateSelector;

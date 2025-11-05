@@ -10,7 +10,7 @@ import androidx.view.GenericLifecycleObserver;
 import androidx.view.Lifecycle;
 import androidx.view.LifecycleOwner;
 import androidx.view.Recreator;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Map;
 
 @SuppressLint({"RestrictedApi"})
@@ -118,7 +118,7 @@ public final class SavedStateRegistry {
             cls.getDeclaredConstructor(new Class[0]);
             this.mRecreatorProvider.add(cls.getName());
         } catch (NoSuchMethodException e) {
-            StringBuilder sbU = outline.U("Class");
+            StringBuilder sbU = a.U("Class");
             sbU.append(cls.getSimpleName());
             sbU.append(" must have default constructor in order to be automatically recreated");
             throw new IllegalArgumentException(sbU.toString(), e);

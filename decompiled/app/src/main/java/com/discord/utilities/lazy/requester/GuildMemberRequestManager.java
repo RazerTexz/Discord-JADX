@@ -1,10 +1,10 @@
 package com.discord.utilities.lazy.requester;
 
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.t.Collections2;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -32,7 +32,7 @@ public final class GuildMemberRequestManager {
 
         /* JADX WARN: Multi-variable type inference failed */
         public GuildMemberRequestState(GuildMemberRequestManager guildMemberRequestManager, long j, Function1<? super Long, Boolean> function1) {
-            Intrinsics3.checkNotNullParameter(function1, "guildMemberExists");
+            m.checkNotNullParameter(function1, "guildMemberExists");
             this.this$0 = guildMemberRequestManager;
             this.guildId = j;
             this.guildMemberExists = function1;
@@ -52,7 +52,7 @@ public final class GuildMemberRequestManager {
             while (it.hasNext()) {
                 Long next = it.next();
                 Function1<Long, Boolean> function1 = this.guildMemberExists;
-                Intrinsics3.checkNotNullExpressionValue(next, "userId");
+                m.checkNotNullExpressionValue(next, "userId");
                 if (!function1.invoke(next).booleanValue()) {
                     this.unacknowledgedRequests.add(next);
                     this.sentRequests.add(next);
@@ -60,7 +60,7 @@ public final class GuildMemberRequestManager {
                 }
             }
             if (!hashSet.isEmpty()) {
-                GuildMemberRequestManager.access$getOnFlush$p(this.this$0).invoke(Long.valueOf(this.guildId), _Collections.toList(hashSet));
+                GuildMemberRequestManager.access$getOnFlush$p(this.this$0).invoke(Long.valueOf(this.guildId), u.toList(hashSet));
             }
             this.pendingRequests.clear();
         }
@@ -90,10 +90,10 @@ public final class GuildMemberRequestManager {
                 return false;
             }
             Iterator<Long> it = this.unacknowledgedRequests.iterator();
-            Intrinsics3.checkNotNullExpressionValue(it, "unacknowledgedRequests.iterator()");
+            m.checkNotNullExpressionValue(it, "unacknowledgedRequests.iterator()");
             while (it.hasNext()) {
                 Long next = it.next();
-                Intrinsics3.checkNotNullExpressionValue(next, "iter.next()");
+                m.checkNotNullExpressionValue(next, "iter.next()");
                 long jLongValue = next.longValue();
                 if (this.guildMemberExists.invoke(Long.valueOf(jLongValue)).booleanValue()) {
                     it.remove();
@@ -107,7 +107,7 @@ public final class GuildMemberRequestManager {
 
     /* compiled from: GuildMemberRequestManager.kt */
     /* renamed from: com.discord.utilities.lazy.requester.GuildMemberRequestManager$getGuildRequestState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Long, Boolean> {
+    public static final class AnonymousClass1 extends o implements Function1<Long, Boolean> {
         public final /* synthetic */ long $guildId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -128,8 +128,8 @@ public final class GuildMemberRequestManager {
 
     /* JADX WARN: Multi-variable type inference failed */
     public GuildMemberRequestManager(Function2<? super Long, ? super Long, Boolean> function2, Function2<? super Long, ? super List<Long>, Unit> function22) {
-        Intrinsics3.checkNotNullParameter(function2, "guildMemberExists");
-        Intrinsics3.checkNotNullParameter(function22, "onFlush");
+        m.checkNotNullParameter(function2, "guildMemberExists");
+        m.checkNotNullParameter(function22, "onFlush");
         this.guildMemberExists = function2;
         this.onFlush = function22;
         this.guildRequestStates = new HashMap<>();
@@ -170,13 +170,13 @@ public final class GuildMemberRequestManager {
 
     public final void requestUnacknowledged() {
         Collection<GuildMemberRequestState> collectionValues = this.guildRequestStates.values();
-        Intrinsics3.checkNotNullExpressionValue(collectionValues, "guildRequestStates.values");
+        m.checkNotNullExpressionValue(collectionValues, "guildRequestStates.values");
         int i = 0;
         if (!(collectionValues instanceof Collection) || !collectionValues.isEmpty()) {
             Iterator<T> it = collectionValues.iterator();
             while (it.hasNext()) {
                 if (((GuildMemberRequestState) it.next()).requestUnacknowledged() && (i = i + 1) < 0) {
-                    Collections2.throwCountOverflow();
+                    n.throwCountOverflow();
                 }
             }
         }

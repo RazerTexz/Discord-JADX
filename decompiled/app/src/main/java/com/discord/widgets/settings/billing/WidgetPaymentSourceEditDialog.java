@@ -16,18 +16,17 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.a.SelectorDialog;
-import b.a.d.AppToast;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.a.n;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppDialog;
 import com.discord.databinding.WidgetPaymentSourceEditDialogBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelPaymentSource;
-import com.discord.models.domain.ModelPaymentSource2;
+import com.discord.models.domain.PatchPaymentSourceRaw;
 import com.discord.models.domain.billing.ModelBillingAddress;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import com.discord.utilities.error.Error;
@@ -39,18 +38,17 @@ import com.discord.utilities.view.validators.Input;
 import com.discord.utilities.view.validators.InputValidator;
 import com.discord.utilities.view.validators.ValidationManager;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.notice.WidgetNoticeDialog;
 import com.discord.widgets.settings.billing.PaymentSourceAdapter;
 import com.discord.widgets.settings.billing.SettingsBillingViewModel;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.LazyJVM;
-import d0.g0.StringsJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
-import j0.k.Func1;
+import d0.g;
+import d0.g0.t;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -85,7 +83,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetPaymentSourceEditDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPaymentSourceEditDialogBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetPaymentSourceEditDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPaymentSourceEditDialogBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -107,8 +105,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
 
         public final void launch(FragmentManager fragmentManager, String paymentSourceId) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(paymentSourceId, "paymentSourceId");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(paymentSourceId, "paymentSourceId");
             WidgetPaymentSourceEditDialog widgetPaymentSourceEditDialog = new WidgetPaymentSourceEditDialog();
             Bundle bundle = new Bundle();
             bundle.putString(WidgetPaymentSourceEditDialog.ARG_PAYMENT_SOURCE_ID, paymentSourceId);
@@ -127,8 +125,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         private final String value;
 
         public StateEntry(String str, String str2) {
-            Intrinsics3.checkNotNullParameter(str, "label");
-            Intrinsics3.checkNotNullParameter(str2, "value");
+            m.checkNotNullParameter(str, "label");
+            m.checkNotNullParameter(str2, "value");
             this.label = str;
             this.value = str2;
         }
@@ -154,8 +152,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
 
         public final StateEntry copy(String label, String value) {
-            Intrinsics3.checkNotNullParameter(label, "label");
-            Intrinsics3.checkNotNullParameter(value, "value");
+            m.checkNotNullParameter(label, "label");
+            m.checkNotNullParameter(value, "value");
             return new StateEntry(label, value);
         }
 
@@ -167,7 +165,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
                 return false;
             }
             StateEntry stateEntry = (StateEntry) other;
-            return Intrinsics3.areEqual(this.label, stateEntry.label) && Intrinsics3.areEqual(this.value, stateEntry.value);
+            return m.areEqual(this.label, stateEntry.label) && m.areEqual(this.value, stateEntry.value);
         }
 
         public final String getLabel() {
@@ -186,16 +184,16 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StateEntry(label=");
+            StringBuilder sbU = a.U("StateEntry(label=");
             sbU.append(this.label);
             sbU.append(", value=");
-            return outline.J(sbU, this.value, ")");
+            return a.J(sbU, this.value, ")");
         }
     }
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -208,14 +206,14 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
-            AppToast.i(WidgetPaymentSourceEditDialog.this, R.string.payment_source_deleted, 0, 4);
+            b.a.d.m.i(WidgetPaymentSourceEditDialog.this, R.string.payment_source_deleted, 0, 4);
             WidgetPaymentSourceEditDialog.this.dismiss();
         }
     }
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -228,14 +226,14 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetPaymentSourceEditDialog.access$getBinding$p(WidgetPaymentSourceEditDialog.this).d.setIsLoading(false);
         }
     }
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public AnonymousClass3() {
             super(0);
         }
@@ -262,8 +260,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         public final void onClick(View view) {
             WidgetNoticeDialog.Companion companion = WidgetNoticeDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetPaymentSourceEditDialog.this.getParentFragmentManager();
-            Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-            WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, FormatUtils.k(WidgetPaymentSourceEditDialog.this, R.string.payment_source_delete, new Object[0], null, 4), FormatUtils.k(WidgetPaymentSourceEditDialog.this, R.string.payment_source_delete_disabled_tooltip, new Object[0], null, 4), FormatUtils.k(WidgetPaymentSourceEditDialog.this, R.string.okay, new Object[0], null, 4), "", null, null, null, null, null, null, null, 0, null, 16352, null);
+            m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+            WidgetNoticeDialog.Companion.show$default(companion, parentFragmentManager, b.k(WidgetPaymentSourceEditDialog.this, R.string.payment_source_delete, new Object[0], null, 4), b.k(WidgetPaymentSourceEditDialog.this, R.string.payment_source_delete_disabled_tooltip, new Object[0], null, 4), b.k(WidgetPaymentSourceEditDialog.this, R.string.okay, new Object[0], null, 4), "", null, null, null, null, null, null, null, 0, null, 16352, null);
         }
     }
 
@@ -299,7 +297,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$5, reason: invalid class name */
-    public static final class AnonymousClass5 extends Lambda implements Function1<View, Unit> {
+    public static final class AnonymousClass5 extends o implements Function1<View, Unit> {
         public final /* synthetic */ StateEntry[] $states;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -316,17 +314,17 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
-            Intrinsics3.checkNotNullParameter(view, "it");
+            m.checkNotNullParameter(view, "it");
             WidgetPaymentSourceEditDialog widgetPaymentSourceEditDialog = WidgetPaymentSourceEditDialog.this;
             StateEntry[] stateEntryArr = this.$states;
-            Intrinsics3.checkNotNullExpressionValue(stateEntryArr, "states");
+            m.checkNotNullExpressionValue(stateEntryArr, "states");
             WidgetPaymentSourceEditDialog.access$selectState(widgetPaymentSourceEditDialog, stateEntryArr);
         }
     }
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$6, reason: invalid class name */
-    public static final class AnonymousClass6 extends Lambda implements Function3<TextView, Integer, KeyEvent, Boolean> {
+    public static final class AnonymousClass6 extends o implements Function3<TextView, Integer, KeyEvent, Boolean> {
         public final /* synthetic */ StateEntry[] $states;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -341,13 +339,13 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
 
         public final boolean invoke(TextView textView, int i, KeyEvent keyEvent) {
-            Intrinsics3.checkNotNullParameter(textView, "<anonymous parameter 0>");
+            m.checkNotNullParameter(textView, "<anonymous parameter 0>");
             if (i != 2 && i != 6) {
                 return false;
             }
             WidgetPaymentSourceEditDialog widgetPaymentSourceEditDialog = WidgetPaymentSourceEditDialog.this;
             StateEntry[] stateEntryArr = this.$states;
-            Intrinsics3.checkNotNullExpressionValue(stateEntryArr, "states");
+            m.checkNotNullExpressionValue(stateEntryArr, "states");
             WidgetPaymentSourceEditDialog.access$selectState(widgetPaymentSourceEditDialog, stateEntryArr);
             return true;
         }
@@ -355,10 +353,10 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<SettingsBillingViewModel.ViewState.Loaded, List<? extends PaymentSourceAdapter.PaymentSourceItem>> {
+    public static final class AnonymousClass1<T, R> implements j0.k.b<SettingsBillingViewModel.ViewState.Loaded, List<? extends PaymentSourceAdapter.PaymentSourceItem>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ List<? extends PaymentSourceAdapter.PaymentSourceItem> call(SettingsBillingViewModel.ViewState.Loaded loaded) {
             return call2(loaded);
         }
@@ -382,11 +380,11 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<List<? extends PaymentSourceAdapter.PaymentSourceItem>, PaymentSourceAdapter.PaymentSourceItem> {
+    public static final class AnonymousClass2<T, R> implements j0.k.b<List<? extends PaymentSourceAdapter.PaymentSourceItem>, PaymentSourceAdapter.PaymentSourceItem> {
         public AnonymousClass2() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ PaymentSourceAdapter.PaymentSourceItem call(List<? extends PaymentSourceAdapter.PaymentSourceItem> list) {
             return call2((List<PaymentSourceAdapter.PaymentSourceItem>) list);
         }
@@ -394,7 +392,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final PaymentSourceAdapter.PaymentSourceItem call2(List<PaymentSourceAdapter.PaymentSourceItem> list) {
             T next;
-            Intrinsics3.checkNotNullExpressionValue(list, "paymentSources");
+            m.checkNotNullExpressionValue(list, "paymentSources");
             Iterator<T> it = list.iterator();
             while (true) {
                 if (!it.hasNext()) {
@@ -402,7 +400,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
                     break;
                 }
                 next = it.next();
-                if (Intrinsics3.areEqual(((PaymentSourceAdapter.PaymentSourceItem) next).getPaymentSource().getId(), WidgetPaymentSourceEditDialog.access$getPaymentSourceId$p(WidgetPaymentSourceEditDialog.this))) {
+                if (m.areEqual(((PaymentSourceAdapter.PaymentSourceItem) next).getPaymentSource().getId(), WidgetPaymentSourceEditDialog.access$getPaymentSourceId$p(WidgetPaymentSourceEditDialog.this))) {
                     break;
                 }
             }
@@ -412,7 +410,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<PaymentSourceAdapter.PaymentSourceItem, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<PaymentSourceAdapter.PaymentSourceItem, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -459,7 +457,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$selectState$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Integer, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Integer, Unit> {
         public final /* synthetic */ StateEntry[] $states;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -476,14 +474,14 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
         public final void invoke(int i) {
             TextInputLayout textInputLayout = WidgetPaymentSourceEditDialog.access$getBinding$p(WidgetPaymentSourceEditDialog.this).n;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditState");
+            m.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditState");
             ViewExtensions.setText(textInputLayout, this.$states[i].getLabel());
         }
     }
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Void, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -496,14 +494,14 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
-            AppToast.i(WidgetPaymentSourceEditDialog.this, R.string.payment_source_edit_saved, 0, 4);
+            b.a.d.m.i(WidgetPaymentSourceEditDialog.this, R.string.payment_source_edit_saved, 0, 4);
             WidgetPaymentSourceEditDialog.this.dismiss();
         }
     }
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -516,7 +514,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetPaymentSourceEditDialog.this.handleError(error);
             WidgetPaymentSourceEditDialog.access$getBinding$p(WidgetPaymentSourceEditDialog.this).d.setIsLoading(false);
         }
@@ -524,7 +522,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     /* compiled from: WidgetPaymentSourceEditDialog.kt */
     /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public AnonymousClass3() {
             super(0);
         }
@@ -543,13 +541,13 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     public WidgetPaymentSourceEditDialog() {
         super(R.layout.widget_payment_source_edit_dialog);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetPaymentSourceEditDialog2.INSTANCE, null, 2, null);
-        this.paymentSourceId = LazyJVM.lazy(new WidgetPaymentSourceEditDialog4(this));
-        WidgetPaymentSourceEditDialog6 widgetPaymentSourceEditDialog6 = WidgetPaymentSourceEditDialog6.INSTANCE;
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(SettingsBillingViewModel.class), new WidgetPaymentSourceEditDialog$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetPaymentSourceEditDialog6));
-        this.usStates = LazyJVM.lazy(new WidgetPaymentSourceEditDialog5(this));
-        this.caProvinces = LazyJVM.lazy(new WidgetPaymentSourceEditDialog3(this));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetPaymentSourceEditDialog$binding$2.INSTANCE, null, 2, null);
+        this.paymentSourceId = g.lazy(new WidgetPaymentSourceEditDialog$paymentSourceId$2(this));
+        WidgetPaymentSourceEditDialog$viewModel$2 widgetPaymentSourceEditDialog$viewModel$2 = WidgetPaymentSourceEditDialog$viewModel$2.INSTANCE;
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(SettingsBillingViewModel.class), new WidgetPaymentSourceEditDialog$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetPaymentSourceEditDialog$viewModel$2));
+        this.usStates = g.lazy(new WidgetPaymentSourceEditDialog$usStates$2(this));
+        this.caProvinces = g.lazy(new WidgetPaymentSourceEditDialog$caProvinces$2(this));
     }
 
     public static final /* synthetic */ void access$deletePaymentSource(WidgetPaymentSourceEditDialog widgetPaymentSourceEditDialog, ModelPaymentSource modelPaymentSource) {
@@ -628,28 +626,28 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         boolean isPremium = paymentSourceItem.getIsPremium();
         getBinding().o.bind(paymentSource, isPremium);
         TextView textView = getBinding().k;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.paymentSourceEditHelp");
-        textView.setText(paymentSource instanceof ModelPaymentSource.ModelPaymentSourcePaypal ? FormatUtils.k(this, R.string.payment_source_edit_help_paypal, new Object[]{"https://www.paypal.com"}, null, 4) : FormatUtils.k(this, R.string.payment_source_edit_help_card, new Object[0], null, 4));
+        m.checkNotNullExpressionValue(textView, "binding.paymentSourceEditHelp");
+        textView.setText(paymentSource instanceof ModelPaymentSource.ModelPaymentSourcePaypal ? b.k(this, R.string.payment_source_edit_help_paypal, new Object[]{"https://www.paypal.com"}, null, 4) : b.k(this, R.string.payment_source_edit_help_card, new Object[0], null, 4));
         StateEntry[] statesFor = getStatesFor(paymentSource);
         ModelBillingAddress billingAddress = paymentSource.getBillingAddress();
         TextInputLayout textInputLayout = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditName");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditName");
         ViewExtensions.setText(textInputLayout, billingAddress.getName());
         TextInputLayout textInputLayout2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.paymentSourceEditAddress1");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.paymentSourceEditAddress1");
         ViewExtensions.setText(textInputLayout2, billingAddress.getLine_1());
         TextInputLayout textInputLayout3 = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.paymentSourceEditAddress2");
+        m.checkNotNullExpressionValue(textInputLayout3, "binding.paymentSourceEditAddress2");
         ViewExtensions.setText(textInputLayout3, billingAddress.getLine_2());
         TextInputLayout textInputLayout4 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.paymentSourceEditCity");
+        m.checkNotNullExpressionValue(textInputLayout4, "binding.paymentSourceEditCity");
         ViewExtensions.setText(textInputLayout4, billingAddress.getCity());
         TextInputLayout textInputLayout5 = getBinding().m;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout5, "binding.paymentSourceEditPostalCode");
+        m.checkNotNullExpressionValue(textInputLayout5, "binding.paymentSourceEditPostalCode");
         ViewExtensions.setText(textInputLayout5, billingAddress.getPostalCode());
         TextInputLayout textInputLayout6 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout6, "binding.paymentSourceEditState");
-        Intrinsics3.checkNotNullExpressionValue(statesFor, "states");
+        m.checkNotNullExpressionValue(textInputLayout6, "binding.paymentSourceEditState");
+        m.checkNotNullExpressionValue(statesFor, "states");
         int length = statesFor.length;
         int i = 0;
         while (true) {
@@ -658,7 +656,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
                 break;
             }
             stateEntry = statesFor[i];
-            if (Intrinsics3.areEqual(stateEntry.getValue(), billingAddress.getState())) {
+            if (m.areEqual(stateEntry.getValue(), billingAddress.getState())) {
                 break;
             } else {
                 i++;
@@ -669,46 +667,46 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
         ViewExtensions.setText(textInputLayout6, state);
         TextInputLayout textInputLayout7 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout7, "binding.paymentSourceEditCountry");
+        m.checkNotNullExpressionValue(textInputLayout7, "binding.paymentSourceEditCountry");
         ViewExtensions.setText(textInputLayout7, billingAddress.getCountry());
         CheckBox checkBox = getBinding().i;
-        Intrinsics3.checkNotNullExpressionValue(checkBox, "binding.paymentSourceEditDefault");
+        m.checkNotNullExpressionValue(checkBox, "binding.paymentSourceEditDefault");
         checkBox.setChecked(paymentSource.getDefault());
         getBinding().d.setIsLoading(false);
         if (isPremium) {
             getBinding().c.setOnClickListener(new AnonymousClass2());
             MaterialButton materialButton = getBinding().c;
-            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.dialogDelete");
+            m.checkNotNullExpressionValue(materialButton, "binding.dialogDelete");
             materialButton.setAlpha(0.3f);
         } else {
             getBinding().c.setOnClickListener(new AnonymousClass3(paymentSource));
         }
         getBinding().d.setOnClickListener(new AnonymousClass4(paymentSource));
-        if (Intrinsics3.areEqual(paymentSource.getBillingAddress().getCountry(), "CA")) {
+        if (m.areEqual(paymentSource.getBillingAddress().getCountry(), "CA")) {
             TextInputLayout textInputLayout8 = getBinding().n;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout8, "binding.paymentSourceEditState");
-            textInputLayout8.setHint(FormatUtils.k(this, R.string.billing_address_province, new Object[0], null, 4));
+            m.checkNotNullExpressionValue(textInputLayout8, "binding.paymentSourceEditState");
+            textInputLayout8.setHint(b.k(this, R.string.billing_address_province, new Object[0], null, 4));
             TextInputLayout textInputLayout9 = getBinding().m;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout9, "binding.paymentSourceEditPostalCode");
-            textInputLayout9.setHint(FormatUtils.k(this, R.string.billing_address_postal_code, new Object[0], null, 4));
+            m.checkNotNullExpressionValue(textInputLayout9, "binding.paymentSourceEditPostalCode");
+            textInputLayout9.setHint(b.k(this, R.string.billing_address_postal_code, new Object[0], null, 4));
         }
         if (!(statesFor.length == 0)) {
             TextInputLayout textInputLayout10 = getBinding().n;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout10, "binding.paymentSourceEditState");
+            m.checkNotNullExpressionValue(textInputLayout10, "binding.paymentSourceEditState");
             ViewExtensions.setOnEditTextClickListener(textInputLayout10, new AnonymousClass5(statesFor));
             TextInputLayout textInputLayout11 = getBinding().n;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout11, "binding.paymentSourceEditState");
+            m.checkNotNullExpressionValue(textInputLayout11, "binding.paymentSourceEditState");
             ViewExtensions.setOnEditorActionListener(textInputLayout11, new AnonymousClass6(statesFor));
             return;
         }
         TextInputLayout textInputLayout12 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout12, "binding.paymentSourceEditState");
+        m.checkNotNullExpressionValue(textInputLayout12, "binding.paymentSourceEditState");
         EditText editText = textInputLayout12.getEditText();
         if (editText != null) {
             editText.setInputType(1);
         }
         TextInputLayout textInputLayout13 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout13, "binding.paymentSourceEditState");
+        m.checkNotNullExpressionValue(textInputLayout13, "binding.paymentSourceEditState");
         EditText editText2 = textInputLayout13.getEditText();
         if (editText2 != null) {
             editText2.setFocusableInTouchMode(true);
@@ -719,31 +717,31 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         ModelPaymentSource paymentSource = paymentSourceItem.getPaymentSource();
         Input[] inputArr = new Input[5];
         TextInputLayout textInputLayout = getBinding().l;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditName");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditName");
         BasicTextInputValidator.Companion companion = BasicTextInputValidator.INSTANCE;
         inputArr[0] = new Input.TextInputLayoutInput(ModelAuditLogEntry.CHANGE_KEY_NAME, textInputLayout, companion.createRequiredInputValidator(R.string.billing_address_name_error_required));
         TextInputLayout textInputLayout2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.paymentSourceEditAddress1");
+        m.checkNotNullExpressionValue(textInputLayout2, "binding.paymentSourceEditAddress1");
         inputArr[1] = new Input.TextInputLayoutInput("line_1", textInputLayout2, companion.createRequiredInputValidator(R.string.billing_address_address_error_required));
         TextInputLayout textInputLayout3 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.paymentSourceEditCity");
+        m.checkNotNullExpressionValue(textInputLayout3, "binding.paymentSourceEditCity");
         inputArr[2] = new Input.TextInputLayoutInput("city", textInputLayout3, companion.createRequiredInputValidator(R.string.billing_address_city_error_required));
         TextInputLayout textInputLayout4 = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.paymentSourceEditState");
+        m.checkNotNullExpressionValue(textInputLayout4, "binding.paymentSourceEditState");
         InputValidator[] inputValidatorArr = new InputValidator[1];
-        inputValidatorArr[0] = companion.createRequiredInputValidator(Intrinsics3.areEqual(paymentSource.getBillingAddress().getCountry(), "CA") ? R.string.billing_address_province_error_required : R.string.billing_address_state_error_required);
+        inputValidatorArr[0] = companion.createRequiredInputValidator(m.areEqual(paymentSource.getBillingAddress().getCountry(), "CA") ? R.string.billing_address_province_error_required : R.string.billing_address_state_error_required);
         inputArr[3] = new Input.TextInputLayoutInput("state", textInputLayout4, inputValidatorArr);
         TextInputLayout textInputLayout5 = getBinding().m;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout5, "binding.paymentSourceEditPostalCode");
+        m.checkNotNullExpressionValue(textInputLayout5, "binding.paymentSourceEditPostalCode");
         inputArr[4] = new Input.TextInputLayoutInput("postal_code", textInputLayout5, companion.createRequiredInputValidator(R.string.billing_address_postal_code_error_required));
         this.validationManager = new ValidationManager(inputArr);
     }
 
     private final void selectState(StateEntry[] states) {
-        SelectorDialog.Companion companion = SelectorDialog.INSTANCE;
+        n.Companion companion = n.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-        CharSequence charSequenceK = FormatUtils.k(this, R.string.payment_source_edit_select_state, new Object[0], null, 4);
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        CharSequence charSequenceK = b.k(this, R.string.payment_source_edit_select_state, new Object[0], null, 4);
         ArrayList arrayList = new ArrayList(states.length);
         for (StateEntry stateEntry : states) {
             arrayList.add(stateEntry.getLabel());
@@ -759,10 +757,10 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         String value;
         Companion companion = INSTANCE;
         TextInputLayout textInputLayout = getBinding().n;
-        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditState");
+        m.checkNotNullExpressionValue(textInputLayout, "binding.paymentSourceEditState");
         String strAccess$getTextOrEmpty = Companion.access$getTextOrEmpty(companion, textInputLayout);
         StateEntry[] statesFor = getStatesFor(paymentSource);
-        Intrinsics3.checkNotNullExpressionValue(statesFor, "getStatesFor(paymentSource)");
+        m.checkNotNullExpressionValue(statesFor, "getStatesFor(paymentSource)");
         int length = statesFor.length;
         int i = 0;
         while (true) {
@@ -771,7 +769,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
                 break;
             }
             stateEntry = statesFor[i];
-            if (StringsJVM.equals(stateEntry.getLabel(), strAccess$getTextOrEmpty, true)) {
+            if (t.equals(stateEntry.getLabel(), strAccess$getTextOrEmpty, true)) {
                 break;
             } else {
                 i++;
@@ -780,62 +778,62 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         String str = (stateEntry == null || (value = stateEntry.getValue()) == null) ? strAccess$getTextOrEmpty : value;
         ValidationManager validationManager = this.validationManager;
         if (validationManager == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("validationManager");
+            m.throwUninitializedPropertyAccessException("validationManager");
         }
         if (ValidationManager.validate$default(validationManager, false, 1, null)) {
             Companion companion2 = INSTANCE;
             TextInputLayout textInputLayout2 = getBinding().l;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "binding.paymentSourceEditName");
+            m.checkNotNullExpressionValue(textInputLayout2, "binding.paymentSourceEditName");
             String strAccess$getTextOrEmpty2 = Companion.access$getTextOrEmpty(companion2, textInputLayout2);
             TextInputLayout textInputLayout3 = getBinding().e;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout3, "binding.paymentSourceEditAddress1");
+            m.checkNotNullExpressionValue(textInputLayout3, "binding.paymentSourceEditAddress1");
             String strAccess$getTextOrEmpty3 = Companion.access$getTextOrEmpty(companion2, textInputLayout3);
             TextInputLayout textInputLayout4 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout4, "binding.paymentSourceEditAddress2");
+            m.checkNotNullExpressionValue(textInputLayout4, "binding.paymentSourceEditAddress2");
             String strAccess$getTextOrEmpty4 = Companion.access$getTextOrEmpty(companion2, textInputLayout4);
             TextInputLayout textInputLayout5 = getBinding().g;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout5, "binding.paymentSourceEditCity");
+            m.checkNotNullExpressionValue(textInputLayout5, "binding.paymentSourceEditCity");
             String strAccess$getTextOrEmpty5 = Companion.access$getTextOrEmpty(companion2, textInputLayout5);
             TextInputLayout textInputLayout6 = getBinding().m;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout6, "binding.paymentSourceEditPostalCode");
+            m.checkNotNullExpressionValue(textInputLayout6, "binding.paymentSourceEditPostalCode");
             String strAccess$getTextOrEmpty6 = Companion.access$getTextOrEmpty(companion2, textInputLayout6);
             TextInputLayout textInputLayout7 = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(textInputLayout7, "binding.paymentSourceEditCountry");
+            m.checkNotNullExpressionValue(textInputLayout7, "binding.paymentSourceEditCountry");
             ModelBillingAddress modelBillingAddress = new ModelBillingAddress(strAccess$getTextOrEmpty2, strAccess$getTextOrEmpty3, strAccess$getTextOrEmpty4, strAccess$getTextOrEmpty5, str, Companion.access$getTextOrEmpty(companion2, textInputLayout7), strAccess$getTextOrEmpty6);
             CheckBox checkBox = getBinding().i;
-            Intrinsics3.checkNotNullExpressionValue(checkBox, "binding.paymentSourceEditDefault");
-            ModelPaymentSource2 modelPaymentSource2 = new ModelPaymentSource2(modelBillingAddress, checkBox.isChecked());
+            m.checkNotNullExpressionValue(checkBox, "binding.paymentSourceEditDefault");
+            PatchPaymentSourceRaw patchPaymentSourceRaw = new PatchPaymentSourceRaw(modelBillingAddress, checkBox.isChecked());
             TextView textView = getBinding().j;
-            Intrinsics3.checkNotNullExpressionValue(textView, "binding.paymentSourceEditError");
+            m.checkNotNullExpressionValue(textView, "binding.paymentSourceEditError");
             textView.setVisibility(8);
             getBinding().d.setIsLoading(true);
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePaymentSource(paymentSource.getId(), modelPaymentSource2), false, 1, null), this, null, 2, null), WidgetPaymentSourceEditDialog.class, (Context) null, (Function1) null, new AnonymousClass2(), new AnonymousClass3(), (Function0) null, new AnonymousClass1(), 38, (Object) null);
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updatePaymentSource(paymentSource.getId(), patchPaymentSourceRaw), false, 1, null), this, null, 2, null), WidgetPaymentSourceEditDialog.class, (Context) null, (Function1) null, new AnonymousClass2(), new AnonymousClass3(), (Function0) null, new AnonymousClass1(), 38, (Object) null);
         }
     }
 
     @MainThread
     public final void handleError(Error error) {
-        Intrinsics3.checkNotNullParameter(error, "error");
+        m.checkNotNullParameter(error, "error");
         TextView textView = getBinding().j;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.paymentSourceEditError");
+        m.checkNotNullExpressionValue(textView, "binding.paymentSourceEditError");
         Error.Response response = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response, "error.response");
+        m.checkNotNullExpressionValue(response, "error.response");
         ViewExtensions.setTextAndVisibilityBy(textView, response.getMessage());
         ValidationManager validationManager = this.validationManager;
         if (validationManager == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("validationManager");
+            m.throwUninitializedPropertyAccessException("validationManager");
         }
         Error.Response response2 = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response2, "error.response");
+        m.checkNotNullExpressionValue(response2, "error.response");
         Map<String, List<String>> messages = response2.getMessages();
-        Intrinsics3.checkNotNullExpressionValue(messages, "error.response.messages");
+        m.checkNotNullExpressionValue(messages, "error.response.messages");
         validationManager.setErrors(messages);
         Error.Response response3 = error.getResponse();
-        Intrinsics3.checkNotNullExpressionValue(response3, "error.response");
+        m.checkNotNullExpressionValue(response3, "error.response");
         String message = response3.getMessage();
         if (message != null) {
             if (message.length() > 0) {
-                AppToast.h(getContext(), message, 0, null, 8);
+                b.a.d.m.h(getContext(), message, 0, null, 8);
             }
         }
     }
@@ -858,12 +856,12 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
 
     @Override // com.discord.app.AppDialog
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         Observable<R> observableG = getViewModel().observeViewState().y(WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$1.INSTANCE).G(WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
+        m.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
         Observable observableZ = observableG.G(AnonymousClass1.INSTANCE).G(new AnonymousClass2()).Z(1);
-        Intrinsics3.checkNotNullExpressionValue(observableZ, "viewModel\n        .obser…       }\n        .take(1)");
+        m.checkNotNullExpressionValue(observableZ, "viewModel\n        .obser…       }\n        .take(1)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(observableZ, this, null, 2, null), WidgetPaymentSourceEditDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 62, (Object) null);
         getBinding().f2508b.setNavigationOnClickListener(new AnonymousClass4());
         getBinding().d.setOnClickListener(new AnonymousClass5());

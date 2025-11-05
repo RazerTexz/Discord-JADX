@@ -1,11 +1,11 @@
 package com.discord.api.application;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
-import d0.g0.Strings4;
-import d0.t.Collections2;
-import d0.z.d.Intrinsics3;
+import d0.g0.w;
+import d0.t.n;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -29,7 +29,7 @@ public final /* data */ class Application {
         String strRemoveSuffix;
         String strW;
         String str = this.deeplinkUri;
-        return (str == null || (strRemoveSuffix = Strings4.removeSuffix(str, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN)) == null || (strW = outline.w(strRemoveSuffix, "/_discord")) == null) ? outline.C(outline.U("dscd"), this.id, "://connect/_discord") : strW;
+        return (str == null || (strRemoveSuffix = w.removeSuffix(str, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN)) == null || (strW = a.w(strRemoveSuffix, "/_discord")) == null) ? a.C(a.U("dscd"), this.id, "://connect/_discord") : strW;
     }
 
     /* renamed from: b, reason: from getter */
@@ -45,11 +45,11 @@ public final /* data */ class Application {
     public final List<String> d() {
         List<ThirdPartySku> list = this.thirdPartySkus;
         if (list == null) {
-            return Collections2.emptyList();
+            return n.emptyList();
         }
         ArrayList arrayList = new ArrayList();
         for (Object obj : list) {
-            if (Intrinsics3.areEqual(((ThirdPartySku) obj).getDistributor(), "google_play")) {
+            if (m.areEqual(((ThirdPartySku) obj).getDistributor(), "google_play")) {
                 arrayList.add(obj);
             }
         }
@@ -77,7 +77,7 @@ public final /* data */ class Application {
             return false;
         }
         Application application = (Application) other;
-        return this.id == application.id && Intrinsics3.areEqual(this.name, application.name) && Intrinsics3.areEqual(this.description, application.description) && Intrinsics3.areEqual(this.splash, application.splash) && Intrinsics3.areEqual(this.coverImage, application.coverImage) && Intrinsics3.areEqual(this.icon, application.icon) && Intrinsics3.areEqual(this.thirdPartySkus, application.thirdPartySkus) && Intrinsics3.areEqual(this.deeplinkUri, application.deeplinkUri) && Intrinsics3.areEqual(this.type, application.type) && Intrinsics3.areEqual(this.guildId, application.guildId) && Intrinsics3.areEqual(this.team, application.team);
+        return this.id == application.id && m.areEqual(this.name, application.name) && m.areEqual(this.description, application.description) && m.areEqual(this.splash, application.splash) && m.areEqual(this.coverImage, application.coverImage) && m.areEqual(this.icon, application.icon) && m.areEqual(this.thirdPartySkus, application.thirdPartySkus) && m.areEqual(this.deeplinkUri, application.deeplinkUri) && m.areEqual(this.type, application.type) && m.areEqual(this.guildId, application.guildId) && m.areEqual(this.team, application.team);
     }
 
     /* renamed from: f, reason: from getter */
@@ -131,7 +131,7 @@ public final /* data */ class Application {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("Application(id=");
+        StringBuilder sbU = a.U("Application(id=");
         sbU.append(this.id);
         sbU.append(", name=");
         sbU.append(this.name);

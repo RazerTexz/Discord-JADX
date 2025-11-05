@@ -1,7 +1,7 @@
 package com.lytefast.flexinput.viewmodel;
 
 import android.view.View;
-import b.b.a.h.FlexInputEvent;
+import b.b.a.h.a;
 import com.lytefast.flexinput.FlexInputListener;
 import com.lytefast.flexinput.model.Attachment;
 import java.util.List;
@@ -18,7 +18,7 @@ public interface FlexInputViewModel {
 
     boolean isSingleSelectMode();
 
-    Observable<FlexInputEvent> observeEvents();
+    Observable<a> observeEvents();
 
     Observable<FlexInputState> observeState();
 

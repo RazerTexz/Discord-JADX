@@ -1,7 +1,7 @@
 package com.discord.utilities.dimen;
 
 import android.content.res.Resources;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: DimenUtils.kt */
 /* loaded from: classes2.dex */
@@ -10,7 +10,7 @@ public final class DimenUtils {
 
     static {
         Resources system = Resources.getSystem();
-        Intrinsics3.checkNotNullExpressionValue(system, "Resources.getSystem()");
+        m.checkNotNullExpressionValue(system, "Resources.getSystem()");
         DENSITY = system.getDisplayMetrics().density;
     }
 

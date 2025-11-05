@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
 import androidx.work.ListenableWorker;
 import androidx.work.impl.utils.futures.SettableFuture;
-import b.i.b.d.a.ListenableFuture8;
+import b.i.b.d.a.a;
 
 /* loaded from: classes.dex */
 public abstract class Worker extends ListenableWorker {
@@ -40,7 +40,7 @@ public abstract class Worker extends ListenableWorker {
 
     @Override // androidx.work.ListenableWorker
     @NonNull
-    public final ListenableFuture8<ListenableWorker.Result> startWork() {
+    public final a<ListenableWorker.Result> startWork() {
         this.mFuture = SettableFuture.create();
         getBackgroundExecutor().execute(new AnonymousClass1());
         return this.mFuture;

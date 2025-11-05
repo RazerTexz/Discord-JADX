@@ -2,8 +2,8 @@ package com.discord.widgets.auth;
 
 import android.content.Context;
 import androidx.annotation.MainThread;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelGuildTemplate;
 import com.discord.models.domain.ModelInvite;
 import com.discord.stores.StoreAnalytics;
@@ -14,8 +14,8 @@ import com.discord.stores.StoreInviteSettings;
 import com.discord.stores.StoreStream;
 import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -25,7 +25,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetAuthLandingViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
+public final class WidgetAuthLandingViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -37,7 +37,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
     /* compiled from: WidgetAuthLandingViewModel.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthLandingViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -50,14 +50,14 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "it");
+            m.checkNotNullParameter(storeState, "it");
             WidgetAuthLandingViewModel.this.handleStoreState(storeState);
         }
     }
 
     /* compiled from: WidgetAuthLandingViewModel.kt */
     /* renamed from: com.discord.widgets.auth.WidgetAuthLandingViewModel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<GoogleSmartLockManager.SmartLockCredentials, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<GoogleSmartLockManager.SmartLockCredentials, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -70,7 +70,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GoogleSmartLockManager.SmartLockCredentials smartLockCredentials) {
-            Intrinsics3.checkNotNullParameter(smartLockCredentials, "it");
+            m.checkNotNullParameter(smartLockCredentials, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetAuthLandingViewModel.access$getEventSubject$p(WidgetAuthLandingViewModel.this);
             publishSubjectAccess$getEventSubject$p.k.onNext(new Event.SmartLockLogin(smartLockCredentials));
         }
@@ -86,8 +86,8 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
 
         private final Observable<StoreState> observeStoreState(StoreInviteSettings storeInviteSettings, StoreGuildTemplates storeGuildTemplates, StoreAuthentication storeAuthentication) {
-            Observable<StoreState> observableH = Observable.h(storeInviteSettings.getInviteCode(), storeInviteSettings.getInvite(), storeGuildTemplates.observeDynamicLinkGuildTemplateCode().Y(new WidgetAuthLandingViewModel2(storeGuildTemplates)), storeAuthentication.getAgeGateError(), WidgetAuthLandingViewModel3.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableH, "Observable.combineLatest…eError,\n        )\n      }");
+            Observable<StoreState> observableH = Observable.h(storeInviteSettings.getInviteCode(), storeInviteSettings.getInvite(), storeGuildTemplates.observeDynamicLinkGuildTemplateCode().Y(new WidgetAuthLandingViewModel$Companion$observeStoreState$1(storeGuildTemplates)), storeAuthentication.getAgeGateError(), WidgetAuthLandingViewModel$Companion$observeStoreState$2.INSTANCE);
+            m.checkNotNullExpressionValue(observableH, "Observable.combineLatest…eError,\n        )\n      }");
             return observableH;
         }
 
@@ -106,7 +106,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public SmartLockLogin(GoogleSmartLockManager.SmartLockCredentials smartLockCredentials) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(smartLockCredentials, "smartLockCredentials");
+                m.checkNotNullParameter(smartLockCredentials, "smartLockCredentials");
                 this.smartLockCredentials = smartLockCredentials;
             }
 
@@ -123,13 +123,13 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public final SmartLockLogin copy(GoogleSmartLockManager.SmartLockCredentials smartLockCredentials) {
-                Intrinsics3.checkNotNullParameter(smartLockCredentials, "smartLockCredentials");
+                m.checkNotNullParameter(smartLockCredentials, "smartLockCredentials");
                 return new SmartLockLogin(smartLockCredentials);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof SmartLockLogin) && Intrinsics3.areEqual(this.smartLockCredentials, ((SmartLockLogin) other).smartLockCredentials);
+                    return (other instanceof SmartLockLogin) && m.areEqual(this.smartLockCredentials, ((SmartLockLogin) other).smartLockCredentials);
                 }
                 return true;
             }
@@ -147,7 +147,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("SmartLockLogin(smartLockCredentials=");
+                StringBuilder sbU = a.U("SmartLockLogin(smartLockCredentials=");
                 sbU.append(this.smartLockCredentials);
                 sbU.append(")");
                 return sbU.toString();
@@ -170,7 +170,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         private final StoreInviteSettings.InviteCode inviteCode;
 
         public StoreState(StoreInviteSettings.InviteCode inviteCode, ModelInvite modelInvite, StoreGuildTemplates.GuildTemplateState guildTemplateState, String str) {
-            Intrinsics3.checkNotNullParameter(guildTemplateState, "guildTemplateState");
+            m.checkNotNullParameter(guildTemplateState, "guildTemplateState");
             this.inviteCode = inviteCode;
             this.invite = modelInvite;
             this.guildTemplateState = guildTemplateState;
@@ -214,7 +214,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
 
         public final StoreState copy(StoreInviteSettings.InviteCode inviteCode, ModelInvite invite, StoreGuildTemplates.GuildTemplateState guildTemplateState, String ageGateError) {
-            Intrinsics3.checkNotNullParameter(guildTemplateState, "guildTemplateState");
+            m.checkNotNullParameter(guildTemplateState, "guildTemplateState");
             return new StoreState(inviteCode, invite, guildTemplateState, ageGateError);
         }
 
@@ -226,7 +226,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
                 return false;
             }
             StoreState storeState = (StoreState) other;
-            return Intrinsics3.areEqual(this.inviteCode, storeState.inviteCode) && Intrinsics3.areEqual(this.invite, storeState.invite) && Intrinsics3.areEqual(this.guildTemplateState, storeState.guildTemplateState) && Intrinsics3.areEqual(this.ageGateError, storeState.ageGateError);
+            return m.areEqual(this.inviteCode, storeState.inviteCode) && m.areEqual(this.invite, storeState.invite) && m.areEqual(this.guildTemplateState, storeState.guildTemplateState) && m.areEqual(this.ageGateError, storeState.ageGateError);
         }
 
         public final String getAgeGateError() {
@@ -257,14 +257,14 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("StoreState(inviteCode=");
+            StringBuilder sbU = a.U("StoreState(inviteCode=");
             sbU.append(this.inviteCode);
             sbU.append(", invite=");
             sbU.append(this.invite);
             sbU.append(", guildTemplateState=");
             sbU.append(this.guildTemplateState);
             sbU.append(", ageGateError=");
-            return outline.J(sbU, this.ageGateError, ")");
+            return a.J(sbU, this.ageGateError, ")");
         }
     }
 
@@ -298,7 +298,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Empty) && Intrinsics3.areEqual(getAgeGateError(), ((Empty) other).getAgeGateError());
+                    return (other instanceof Empty) && m.areEqual(getAgeGateError(), ((Empty) other).getAgeGateError());
                 }
                 return true;
             }
@@ -317,7 +317,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Empty(ageGateError=");
+                StringBuilder sbU = a.U("Empty(ageGateError=");
                 sbU.append(getAgeGateError());
                 sbU.append(")");
                 return sbU.toString();
@@ -332,7 +332,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public GuildTemplate(ModelGuildTemplate modelGuildTemplate, String str) {
                 super(str, null);
-                Intrinsics3.checkNotNullParameter(modelGuildTemplate, "guildTemplate");
+                m.checkNotNullParameter(modelGuildTemplate, "guildTemplate");
                 this.guildTemplate = modelGuildTemplate;
                 this.ageGateError = str;
             }
@@ -357,7 +357,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public final GuildTemplate copy(ModelGuildTemplate guildTemplate, String ageGateError) {
-                Intrinsics3.checkNotNullParameter(guildTemplate, "guildTemplate");
+                m.checkNotNullParameter(guildTemplate, "guildTemplate");
                 return new GuildTemplate(guildTemplate, ageGateError);
             }
 
@@ -369,7 +369,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 GuildTemplate guildTemplate = (GuildTemplate) other;
-                return Intrinsics3.areEqual(this.guildTemplate, guildTemplate.guildTemplate) && Intrinsics3.areEqual(getAgeGateError(), guildTemplate.getAgeGateError());
+                return m.areEqual(this.guildTemplate, guildTemplate.guildTemplate) && m.areEqual(getAgeGateError(), guildTemplate.getAgeGateError());
             }
 
             @Override // com.discord.widgets.auth.WidgetAuthLandingViewModel.ViewState
@@ -389,7 +389,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("GuildTemplate(guildTemplate=");
+                StringBuilder sbU = a.U("GuildTemplate(guildTemplate=");
                 sbU.append(this.guildTemplate);
                 sbU.append(", ageGateError=");
                 sbU.append(getAgeGateError());
@@ -406,7 +406,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Invite(ModelInvite modelInvite, String str) {
                 super(str, null);
-                Intrinsics3.checkNotNullParameter(modelInvite, "invite");
+                m.checkNotNullParameter(modelInvite, "invite");
                 this.invite = modelInvite;
                 this.ageGateError = str;
             }
@@ -431,7 +431,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public final Invite copy(ModelInvite invite, String ageGateError) {
-                Intrinsics3.checkNotNullParameter(invite, "invite");
+                m.checkNotNullParameter(invite, "invite");
                 return new Invite(invite, ageGateError);
             }
 
@@ -443,7 +443,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
                     return false;
                 }
                 Invite invite = (Invite) other;
-                return Intrinsics3.areEqual(this.invite, invite.invite) && Intrinsics3.areEqual(getAgeGateError(), invite.getAgeGateError());
+                return m.areEqual(this.invite, invite.invite) && m.areEqual(getAgeGateError(), invite.getAgeGateError());
             }
 
             @Override // com.discord.widgets.auth.WidgetAuthLandingViewModel.ViewState
@@ -463,7 +463,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Invite(invite=");
+                StringBuilder sbU = a.U("Invite(invite=");
                 sbU.append(this.invite);
                 sbU.append(", ageGateError=");
                 sbU.append(getAgeGateError());
@@ -511,9 +511,9 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
     @MainThread
     public final void handleStoreState(StoreState storeState) {
-        Intrinsics3.checkNotNullParameter(storeState, "storeState");
+        m.checkNotNullParameter(storeState, "storeState");
         StoreInviteSettings.InviteCode inviteCode = storeState.getInviteCode();
-        if ((!Intrinsics3.areEqual(this.mostRecentStoreState != null ? r1.getInviteCode() : null, inviteCode)) && inviteCode != null) {
+        if ((!m.areEqual(this.mostRecentStoreState != null ? r1.getInviteCode() : null, inviteCode)) && inviteCode != null) {
             StoreInstantInvites.fetchInviteIfNotLoaded$default(this.storeInstantInvites, inviteCode.getInviteCode(), null, null, null, null, 30, null);
         }
         ModelInvite invite = storeState.getInvite();
@@ -531,7 +531,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -542,12 +542,12 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetAuthLandingViewModel(Context context, StoreAuthentication storeAuthentication, StoreAnalytics storeAnalytics, Observable<StoreState> observable, StoreInstantInvites storeInstantInvites, GoogleSmartLockManager googleSmartLockManager) {
         super(new ViewState.Empty(null));
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(storeAuthentication, "storeAuthentication");
-        Intrinsics3.checkNotNullParameter(storeAnalytics, "storeAnalytics");
-        Intrinsics3.checkNotNullParameter(observable, "storeObservable");
-        Intrinsics3.checkNotNullParameter(storeInstantInvites, "storeInstantInvites");
-        Intrinsics3.checkNotNullParameter(googleSmartLockManager, "googleSmartLockManager");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(storeAuthentication, "storeAuthentication");
+        m.checkNotNullParameter(storeAnalytics, "storeAnalytics");
+        m.checkNotNullParameter(observable, "storeObservable");
+        m.checkNotNullParameter(storeInstantInvites, "storeInstantInvites");
+        m.checkNotNullParameter(googleSmartLockManager, "googleSmartLockManager");
         this.storeInstantInvites = storeInstantInvites;
         this.googleSmartLockManager = googleSmartLockManager;
         this.eventSubject = PublishSubject.k0();

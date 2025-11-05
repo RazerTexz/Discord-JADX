@@ -1,15 +1,15 @@
 package b.i.a.c;
 
-import b.i.a.c.Player2;
-import b.i.a.c.f3.ListenerSet;
+import b.i.a.c.f3.p;
+import b.i.a.c.y1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class b implements ListenerSet.a {
+public final /* synthetic */ class b implements p.a {
     public static final /* synthetic */ b a = new b();
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((Player2.c) obj).a();
+        ((y1.c) obj).a();
     }
 }

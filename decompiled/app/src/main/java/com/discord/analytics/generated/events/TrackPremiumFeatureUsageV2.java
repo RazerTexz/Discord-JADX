@@ -1,20 +1,20 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackLocationStackMetadata;
-import com.discord.analytics.generated.traits.TrackLocationStackMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationStackMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackSourceMetadata;
-import com.discord.analytics.generated.traits.TrackSourceMetadata2;
+import com.discord.analytics.generated.traits.TrackSourceMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackPremiumFeatureUsageV2.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackPremiumFeatureUsageV2 implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSourceMetadata2, TrackLocationStackMetadata2 {
+public final /* data */ class TrackPremiumFeatureUsageV2 implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackSourceMetadataReceiver, TrackLocationStackMetadataReceiver {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
     private TrackLocationStackMetadata trackLocationStackMetadata;
@@ -42,7 +42,7 @@ public final /* data */ class TrackPremiumFeatureUsageV2 implements AnalyticsSch
             return false;
         }
         TrackPremiumFeatureUsageV2 trackPremiumFeatureUsageV2 = (TrackPremiumFeatureUsageV2) other;
-        return Intrinsics3.areEqual(this.featureName, trackPremiumFeatureUsageV2.featureName) && Intrinsics3.areEqual(this.featureTier, trackPremiumFeatureUsageV2.featureTier) && Intrinsics3.areEqual(this.guildId, trackPremiumFeatureUsageV2.guildId) && Intrinsics3.areEqual(this.rtcConnectionId, trackPremiumFeatureUsageV2.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackPremiumFeatureUsageV2.mediaSessionId) && Intrinsics3.areEqual(this.inOverlay, trackPremiumFeatureUsageV2.inOverlay) && Intrinsics3.areEqual(this.applicationName, trackPremiumFeatureUsageV2.applicationName);
+        return m.areEqual(this.featureName, trackPremiumFeatureUsageV2.featureName) && m.areEqual(this.featureTier, trackPremiumFeatureUsageV2.featureTier) && m.areEqual(this.guildId, trackPremiumFeatureUsageV2.guildId) && m.areEqual(this.rtcConnectionId, trackPremiumFeatureUsageV2.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackPremiumFeatureUsageV2.mediaSessionId) && m.areEqual(this.inOverlay, trackPremiumFeatureUsageV2.inOverlay) && m.areEqual(this.applicationName, trackPremiumFeatureUsageV2.applicationName);
     }
 
     public int hashCode() {
@@ -63,7 +63,7 @@ public final /* data */ class TrackPremiumFeatureUsageV2 implements AnalyticsSch
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackPremiumFeatureUsageV2(featureName=");
+        StringBuilder sbU = a.U("TrackPremiumFeatureUsageV2(featureName=");
         sbU.append(this.featureName);
         sbU.append(", featureTier=");
         sbU.append(this.featureTier);
@@ -76,6 +76,6 @@ public final /* data */ class TrackPremiumFeatureUsageV2 implements AnalyticsSch
         sbU.append(", inOverlay=");
         sbU.append(this.inOverlay);
         sbU.append(", applicationName=");
-        return outline.E(sbU, this.applicationName, ")");
+        return a.E(sbU, this.applicationName, ")");
     }
 }

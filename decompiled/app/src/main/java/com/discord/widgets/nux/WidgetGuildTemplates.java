@@ -8,18 +8,18 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
-import b.a.d.AppScreen2;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppFragment;
 import com.discord.databinding.WidgetNuxGuildTemplateBinding;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.guilds.create.CreateGuildTrigger;
-import com.discord.widgets.nux.GuildTemplatesAdapter2;
-import d0.LazyJVM;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
+import com.discord.widgets.nux.GuildTemplateViewType;
+import d0.g;
+import d0.t.o;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -31,7 +31,7 @@ import rx.functions.Func0;
 /* compiled from: WidgetGuildTemplates.kt */
 /* loaded from: classes2.dex */
 public class WidgetGuildTemplates extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetGuildTemplates.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNuxGuildTemplateBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetGuildTemplates.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNuxGuildTemplateBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -49,24 +49,24 @@ public class WidgetGuildTemplates extends AppFragment {
         }
 
         public final void launch(Context context, CreateGuildTrigger trigger, boolean isNux) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(trigger, "trigger");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(trigger, "trigger");
             String str = isNux ? GuildTemplateAnalytics.STEP_GUILD_TEMPLATE : GuildTemplateAnalytics.IN_APP_LOCATION_TEMPLATE;
             String string = context.getString(R.string.guild_template_selector_title);
-            Intrinsics3.checkNotNullExpressionValue(string, "context.getString(R.stri…_template_selector_title)");
+            m.checkNotNullExpressionValue(string, "context.getString(R.stri…_template_selector_title)");
             String string2 = context.getString(R.string.guild_template_selector_description);
-            Intrinsics3.checkNotNullExpressionValue(string2, "context.getString(R.stri…ate_selector_description)");
-            launch(context, new WidgetGuildTemplates2(isNux, str, trigger, new WidgetGuildTemplates3(string, string2, null, false, false, 28, null), false, 16, null));
+            m.checkNotNullExpressionValue(string2, "context.getString(R.stri…ate_selector_description)");
+            launch(context, new GuildCreateArgs(isNux, str, trigger, new GuildTemplateArgs(string, string2, null, false, false, 28, null), false, 16, null));
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
 
-        public final void launch(Context context, WidgetGuildTemplates2 args) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(args, "args");
-            AppScreen2.d(context, WidgetGuildTemplates.class, args);
+        public final void launch(Context context, GuildCreateArgs args) {
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(args, "args");
+            j.d(context, WidgetGuildTemplates.class, args);
         }
     }
 
@@ -107,12 +107,12 @@ public class WidgetGuildTemplates extends AppFragment {
 
     public WidgetGuildTemplates() {
         super(R.layout.widget_nux_guild_template);
-        this.args = LazyJVM.lazy(new WidgetGuildTemplates$$special$$inlined$args$1(this, "intent_args_key"));
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetGuildTemplates5.INSTANCE, null, 2, null);
-        this.adapter = new GuildTemplatesAdapter(new WidgetGuildTemplates4(this));
+        this.args = g.lazy(new WidgetGuildTemplates$$special$$inlined$args$1(this, "intent_args_key"));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetGuildTemplates$binding$2.INSTANCE, null, 2, null);
+        this.adapter = new GuildTemplatesAdapter(new WidgetGuildTemplates$adapter$1(this));
     }
 
-    public static final /* synthetic */ WidgetGuildTemplates2 access$getArgs$p(WidgetGuildTemplates widgetGuildTemplates) {
+    public static final /* synthetic */ GuildCreateArgs access$getArgs$p(WidgetGuildTemplates widgetGuildTemplates) {
         return widgetGuildTemplates.getArgs();
     }
 
@@ -124,8 +124,8 @@ public class WidgetGuildTemplates extends AppFragment {
         widgetGuildTemplates.trackPostRegistrationTransition(str, str2);
     }
 
-    private final WidgetGuildTemplates2 getArgs() {
-        return (WidgetGuildTemplates2) this.args.getValue();
+    private final GuildCreateArgs getArgs() {
+        return (GuildCreateArgs) this.args.getValue();
     }
 
     private final WidgetNuxGuildTemplateBinding getBinding() {
@@ -146,30 +146,30 @@ public class WidgetGuildTemplates extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         trackPostRegistrationTransition(GuildTemplateAnalytics.STEP_REGISTRATION, GuildTemplateAnalytics.STEP_GUILD_TEMPLATE);
         AppFragment.setOnBackPressed$default(this, new AnonymousClass1(), 0, 2, null);
         RecyclerView recyclerView = getBinding().f;
-        Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
+        m.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
         recyclerView.setAdapter(this.adapter);
         TextView textView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.nuxGuildTemplateSectionTitle");
+        m.checkNotNullExpressionValue(textView, "binding.nuxGuildTemplateSectionTitle");
         textView.setText(getArgs().getGuildTemplate().getTitle());
         TextView textView2 = getBinding().d;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.nuxGuildTemplateSectionCustomLabel");
+        m.checkNotNullExpressionValue(textView2, "binding.nuxGuildTemplateSectionCustomLabel");
         textView2.setText(getArgs().getGuildTemplate().getSubtitle());
         GuildTemplatesAdapter guildTemplatesAdapter = this.adapter;
-        List<GuildTemplates> templates = getArgs().getGuildTemplate().getTemplates();
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(templates, 10));
+        List<GuildTemplate> templates = getArgs().getGuildTemplate().getTemplates();
+        ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(templates, 10));
         Iterator<T> it = templates.iterator();
         while (it.hasNext()) {
-            arrayList.add(new GuildTemplatesAdapter2.Template((GuildTemplates) it.next()));
+            arrayList.add(new GuildTemplateViewType.Template((GuildTemplate) it.next()));
         }
         guildTemplatesAdapter.setItems(arrayList);
         getBinding().f2505b.setOnClickListener(new AnonymousClass3());
         LinearLayout linearLayout = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.nuxGuildTemplateSectionBottom");
+        m.checkNotNullExpressionValue(linearLayout, "binding.nuxGuildTemplateSectionBottom");
         linearLayout.setVisibility(getArgs().getGuildTemplate().getShowInvitePrompt() ? 0 : 8);
     }
 }

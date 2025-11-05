@@ -8,7 +8,7 @@ import androidx.annotation.MainThread;
 import androidx.annotation.Nullable;
 import androidx.annotation.RecentlyNonNull;
 import androidx.fragment.app.FragmentActivity;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.e.h.j.d1;
 import b.i.a.f.e.h.j.f1;
 import b.i.a.f.e.h.j.i;
@@ -37,7 +37,7 @@ public class LifecycleCallback {
     */
     public static j c(@RecentlyNonNull Activity activity) {
         j jVar;
-        AnimatableValueParser.z(activity, "Activity must not be null");
+        d.z(activity, "Activity must not be null");
         if (activity instanceof FragmentActivity) {
             FragmentActivity fragmentActivity = (FragmentActivity) activity;
             WeakHashMap<FragmentActivity, WeakReference<f1>> weakHashMap = f1.j;

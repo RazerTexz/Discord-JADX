@@ -1,9 +1,7 @@
 package d0.e0.p.d.m0.k.v;
 
-import d0.e0.p.d.m0.c.ModuleDescriptor2;
-import d0.e0.p.d.m0.n.KotlinType;
-import d0.e0.p.d.m0.n.KotlinType4;
-import d0.z.d.Intrinsics3;
+import d0.e0.p.d.m0.n.c0;
+import d0.e0.p.d.m0.n.j0;
 
 /* compiled from: constantValues.kt */
 /* loaded from: classes3.dex */
@@ -13,8 +11,8 @@ public final class i extends g<Double> {
     }
 
     @Override // d0.e0.p.d.m0.k.v.g
-    public /* bridge */ /* synthetic */ KotlinType getType(ModuleDescriptor2 moduleDescriptor2) {
-        return getType(moduleDescriptor2);
+    public /* bridge */ /* synthetic */ c0 getType(d0.e0.p.d.m0.c.c0 c0Var) {
+        return getType(c0Var);
     }
 
     @Override // d0.e0.p.d.m0.k.v.g
@@ -23,10 +21,10 @@ public final class i extends g<Double> {
     }
 
     @Override // d0.e0.p.d.m0.k.v.g
-    public KotlinType4 getType(ModuleDescriptor2 moduleDescriptor2) {
-        Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
-        KotlinType4 doubleType = moduleDescriptor2.getBuiltIns().getDoubleType();
-        Intrinsics3.checkNotNullExpressionValue(doubleType, "module.builtIns.doubleType");
+    public j0 getType(d0.e0.p.d.m0.c.c0 c0Var) {
+        d0.z.d.m.checkNotNullParameter(c0Var, "module");
+        j0 doubleType = c0Var.getBuiltIns().getDoubleType();
+        d0.z.d.m.checkNotNullExpressionValue(doubleType, "module.builtIns.doubleType");
         return doubleType;
     }
 }

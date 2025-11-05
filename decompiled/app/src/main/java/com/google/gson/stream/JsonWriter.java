@@ -1,6 +1,6 @@
 package com.google.gson.stream;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.Closeable;
 import java.io.Flushable;
 import java.io.IOException;
@@ -176,7 +176,7 @@ public class JsonWriter implements Closeable, Flushable {
             throw new IllegalStateException("Nesting problem.");
         }
         if (this.f3139s != null) {
-            StringBuilder sbU = outline.U("Dangling name: ");
+            StringBuilder sbU = a.U("Dangling name: ");
             sbU.append(this.f3139s);
             throw new IllegalStateException(sbU.toString());
         }

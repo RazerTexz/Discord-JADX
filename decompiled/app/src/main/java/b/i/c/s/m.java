@@ -2,7 +2,6 @@ package b.i.c.s;
 
 import android.os.Bundle;
 import android.util.Log;
-import b.d.b.a.outline;
 import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.Objects;
@@ -35,7 +34,7 @@ public final /* synthetic */ class m implements b.i.a.f.n.a {
             throw new IOException(string2);
         }
         String strValueOf = String.valueOf(bundle);
-        Log.w("FirebaseInstanceId", outline.j(strValueOf.length() + 21, "Unexpected response: ", strValueOf), new Throwable());
+        Log.w("FirebaseInstanceId", b.d.b.a.a.j(strValueOf.length() + 21, "Unexpected response: ", strValueOf), new Throwable());
         throw new IOException("SERVICE_NOT_AVAILABLE");
     }
 }

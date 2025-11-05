@@ -11,10 +11,10 @@ import com.discord.utilities.cache.SharedPreferencesProvider;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.bugreports.WidgetBugReport;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -46,7 +46,7 @@ public final class BugReportManager {
         public final BugReportManager get() {
             BugReportManager bugReportManagerAccess$getBugReportManager$cp = BugReportManager.access$getBugReportManager$cp();
             if (bugReportManagerAccess$getBugReportManager$cp == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("bugReportManager");
+                m.throwUninitializedPropertyAccessException("bugReportManager");
             }
             return bugReportManagerAccess$getBugReportManager$cp;
         }
@@ -55,7 +55,7 @@ public final class BugReportManager {
             BugReportManager.access$setBugReportManager$cp(new BugReportManager(SharedPreferencesProvider.INSTANCE.get(), null, 2, null));
             BugReportManager bugReportManagerAccess$getBugReportManager$cp = BugReportManager.access$getBugReportManager$cp();
             if (bugReportManagerAccess$getBugReportManager$cp == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("bugReportManager");
+                m.throwUninitializedPropertyAccessException("bugReportManager");
             }
             bugReportManagerAccess$getBugReportManager$cp.setupSubscriptions();
         }
@@ -67,10 +67,10 @@ public final class BugReportManager {
 
     /* compiled from: BugReportManager.kt */
     /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<MeUser, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<MeUser, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(MeUser meUser) {
             return call2(meUser);
         }
@@ -78,14 +78,14 @@ public final class BugReportManager {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             UserUtils userUtils = UserUtils.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(meUser, "it");
+            m.checkNotNullExpressionValue(meUser, "it");
             return Boolean.valueOf(userUtils.isStaff(meUser));
         }
     }
 
     /* compiled from: BugReportManager.kt */
     /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Boolean, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -99,18 +99,18 @@ public final class BugReportManager {
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             BugReportManager bugReportManager = BugReportManager.this;
-            Intrinsics3.checkNotNullExpressionValue(bool, "isStaff");
+            m.checkNotNullExpressionValue(bool, "isStaff");
             bugReportManager.setUserIsStaff(bool.booleanValue());
         }
     }
 
     public BugReportManager(SharedPreferences sharedPreferences, StoreUser storeUser) {
-        Intrinsics3.checkNotNullParameter(sharedPreferences, "cache");
-        Intrinsics3.checkNotNullParameter(storeUser, "storeUser");
+        m.checkNotNullParameter(sharedPreferences, "cache");
+        m.checkNotNullParameter(storeUser, "storeUser");
         this.cache = sharedPreferences;
         this.storeUser = storeUser;
         this.settingsEnabled = true;
-        this.screenshotDetector = LazyJVM.lazy(BugReportManager2.INSTANCE);
+        this.screenshotDetector = g.lazy(BugReportManager$screenshotDetector$2.INSTANCE);
         this.settingsEnabled = sharedPreferences.getBoolean(PREFS_SS_BUG_REPORTING_SETTINGS_ENABLED, true);
     }
 
@@ -144,8 +144,8 @@ public final class BugReportManager {
     }
 
     public final void onScreenshot(Context context, ScreenshotDetector.Screenshot screenshot) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(screenshot, "screenshot");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(screenshot, "screenshot");
         if (isEnabled()) {
             WidgetBugReport.INSTANCE.launch(context, screenshot);
         }
@@ -153,7 +153,7 @@ public final class BugReportManager {
 
     public final void setBugReportingSettingEnabled(boolean enabled) {
         SharedPreferences.Editor editorEdit = this.cache.edit();
-        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
+        m.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putBoolean(PREFS_SS_BUG_REPORTING_SETTINGS_ENABLED, enabled);
         editorEdit.apply();
         this.settingsEnabled = enabled;
@@ -167,7 +167,7 @@ public final class BugReportManager {
 
     public final void setupSubscriptions() {
         Observable observableR = this.storeUser.observeMe(true).G(AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "storeUser.observeMe(emit… }.distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "storeUser.observeMe(emit… }.distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(observableR, BugReportManager.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }
 

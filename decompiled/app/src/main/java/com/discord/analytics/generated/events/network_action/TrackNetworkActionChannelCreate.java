@@ -1,18 +1,18 @@
 package com.discord.analytics.generated.events.network_action;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackLocationMetadata;
-import com.discord.analytics.generated.traits.TrackLocationMetadata2;
+import com.discord.analytics.generated.traits.TrackLocationMetadataReceiver;
 import com.discord.analytics.generated.traits.TrackNetworkMetadata;
-import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
+import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackNetworkActionChannelCreate.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackNetworkActionChannelCreate implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
+public final /* data */ class TrackNetworkActionChannelCreate implements AnalyticsSchema, TrackBaseReceiver, TrackLocationMetadataReceiver, TrackNetworkMetadataReceiver {
     private final transient String analyticsSchemaTypeName;
     private final Long channelId;
     private final Long channelType;
@@ -32,7 +32,7 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
         this.analyticsSchemaTypeName = "network_action_channel_create";
     }
 
-    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
+    @Override // com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver
     public void b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
@@ -51,7 +51,7 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
             return false;
         }
         TrackNetworkActionChannelCreate trackNetworkActionChannelCreate = (TrackNetworkActionChannelCreate) other;
-        return Intrinsics3.areEqual(this.isPrivate, trackNetworkActionChannelCreate.isPrivate) && Intrinsics3.areEqual(this.channelType, trackNetworkActionChannelCreate.channelType) && Intrinsics3.areEqual(this.channelId, trackNetworkActionChannelCreate.channelId) && Intrinsics3.areEqual(this.parentId, trackNetworkActionChannelCreate.parentId) && Intrinsics3.areEqual(this.guildId, trackNetworkActionChannelCreate.guildId);
+        return m.areEqual(this.isPrivate, trackNetworkActionChannelCreate.isPrivate) && m.areEqual(this.channelType, trackNetworkActionChannelCreate.channelType) && m.areEqual(this.channelId, trackNetworkActionChannelCreate.channelId) && m.areEqual(this.parentId, trackNetworkActionChannelCreate.parentId) && m.areEqual(this.guildId, trackNetworkActionChannelCreate.guildId);
     }
 
     public int hashCode() {
@@ -68,7 +68,7 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackNetworkActionChannelCreate(isPrivate=");
+        StringBuilder sbU = a.U("TrackNetworkActionChannelCreate(isPrivate=");
         sbU.append(this.isPrivate);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -77,7 +77,7 @@ public final /* data */ class TrackNetworkActionChannelCreate implements Analyti
         sbU.append(", parentId=");
         sbU.append(this.parentId);
         sbU.append(", guildId=");
-        return outline.G(sbU, this.guildId, ")");
+        return a.G(sbU, this.guildId, ")");
     }
 
     public TrackNetworkActionChannelCreate() {

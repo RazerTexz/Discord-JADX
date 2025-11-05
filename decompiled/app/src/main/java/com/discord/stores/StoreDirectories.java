@@ -3,31 +3,29 @@ package com.discord.stores;
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
 import com.discord.analytics.generated.events.network_action.TrackNetworkActionDirectoryGuildEntryDelete;
-import com.discord.analytics.generated.traits.TrackNetworkMetadata2;
+import com.discord.analytics.generated.traits.TrackNetworkMetadataReceiver;
+import com.discord.api.directory.DirectoryEntryEvent;
 import com.discord.api.directory.DirectoryEntryGuild;
-import com.discord.api.directory.DirectoryEntryGuild2;
-import com.discord.api.directory.DirectoryEntryGuild3;
+import com.discord.api.directory.DirectoryEntryType;
 import com.discord.api.guild.preview.GuildPreview;
 import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.models.guild.Guild;
 import com.discord.stores.updates.ObservationDeck;
 import com.discord.stores.utilities.RestCallState;
-import com.discord.stores.utilities.RestCallState5;
-import com.discord.stores.utilities.RestCallState6;
+import com.discord.stores.utilities.RestCallStateKt;
+import com.discord.stores.utilities.Success;
 import com.discord.utilities.features.GrowthTeamFeatures;
 import com.discord.utilities.persister.Persister;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.t._Sets;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.n0;
+import d0.t.o0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -37,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -52,8 +50,8 @@ public final class StoreDirectories extends StoreV2 {
     private static final String HUB_NAME_PROMPT = "hub_name_prompt";
     private Map<Long, RestCallState<List<DirectoryEntryGuild>>> directoriesMap;
     private Map<Long, ? extends RestCallState<? extends List<DirectoryEntryGuild>>> directoriesMapSnapshot;
-    private Map<Long, RestCallState<List<DirectoryEntryGuild2>>> directoryGuildScheduledEventsMap;
-    private Map<Long, ? extends RestCallState<? extends List<DirectoryEntryGuild2>>> directoryGuildScheduledEventsMapSnapshot;
+    private Map<Long, RestCallState<List<DirectoryEntryEvent>>> directoryGuildScheduledEventsMap;
+    private Map<Long, ? extends RestCallState<? extends List<DirectoryEntryEvent>>> directoryGuildScheduledEventsMapSnapshot;
     private final Persister<Boolean> discordHubClickedPersister;
     private final Dispatcher dispatcher;
     private Map<Long, RestCallState<Map<Integer, Integer>>> entryCountMap;
@@ -67,7 +65,7 @@ public final class StoreDirectories extends StoreV2 {
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$addServerToDirectory$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ DirectoryEntryGuild $directoryEntry;
 
@@ -91,9 +89,9 @@ public final class StoreDirectories extends StoreV2 {
             RestCallState restCallState = (RestCallState) StoreDirectories.access$getDirectoriesMap$p(StoreDirectories.this).get(Long.valueOf(this.$channelId));
             List<DirectoryEntryGuild> listEmptyList = restCallState != null ? (List) restCallState.invoke() : null;
             if (listEmptyList == null) {
-                listEmptyList = Collections2.emptyList();
+                listEmptyList = n.emptyList();
             }
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(listEmptyList, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(listEmptyList, 10));
             boolean z2 = false;
             for (DirectoryEntryGuild directoryEntryGuild : listEmptyList) {
                 if (directoryEntryGuild.getGuild().getId() == this.$directoryEntry.getGuild().getId()) {
@@ -102,36 +100,36 @@ public final class StoreDirectories extends StoreV2 {
                 }
                 arrayList.add(directoryEntryGuild);
             }
-            mapAccess$getDirectoriesMap$p.put(lValueOf, new RestCallState6(_Collections.plus((Collection) arrayList, (Iterable) Collections2.listOfNotNull(z2 ? null : this.$directoryEntry))));
+            mapAccess$getDirectoriesMap$p.put(lValueOf, new Success(u.plus((Collection) arrayList, (Iterable) n.listOfNotNull(z2 ? null : this.$directoryEntry))));
             StoreDirectories.this.markChanged();
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<List<? extends DirectoryEntryGuild>, List<? extends DirectoryEntryGuild>> {
+    public static final class AnonymousClass1<T, R> implements b<List<? extends DirectoryEntryGuild>, List<? extends DirectoryEntryGuild>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ List<? extends DirectoryEntryGuild> call(List<? extends DirectoryEntryGuild> list) {
             return call2((List<DirectoryEntryGuild>) list);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final List<DirectoryEntryGuild> call2(List<DirectoryEntryGuild> list) {
-            Intrinsics3.checkNotNullExpressionValue(list, "entries");
-            return _Collections.sortedWith(list, new StoreDirectories$fetchDirectoriesForChannel$1$$special$$inlined$sortedByDescending$1());
+            m.checkNotNullExpressionValue(list, "entries");
+            return u.sortedWith(list, new StoreDirectories$fetchDirectoriesForChannel$1$$special$$inlined$sortedByDescending$1());
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild>>, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild>>, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* compiled from: StoreDirectories.kt */
         /* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public final /* synthetic */ RestCallState $entriesResponse;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -167,23 +165,23 @@ public final class StoreDirectories extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends List<DirectoryEntryGuild>> restCallState) {
-            Intrinsics3.checkNotNullParameter(restCallState, "entriesResponse");
+            m.checkNotNullParameter(restCallState, "entriesResponse");
             StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new AnonymousClass1(restCallState));
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$fetchEntryCountsForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RestCallState<? extends Map<Integer, ? extends Integer>>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RestCallState<? extends Map<Integer, ? extends Integer>>, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* compiled from: StoreDirectories.kt */
         /* renamed from: com.discord.stores.StoreDirectories$fetchEntryCountsForChannel$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01071 extends Lambda implements Function0<Unit> {
+        public static final class C02271 extends o implements Function0<Unit> {
             public final /* synthetic */ RestCallState $response;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C01071(RestCallState restCallState) {
+            public C02271(RestCallState restCallState) {
                 super(0);
                 this.$response = restCallState;
             }
@@ -215,23 +213,23 @@ public final class StoreDirectories extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends Map<Integer, Integer>> restCallState) {
-            Intrinsics3.checkNotNullParameter(restCallState, "response");
-            StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new C01071(restCallState));
+            m.checkNotNullParameter(restCallState, "response");
+            StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new C02271(restCallState));
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$fetchGuildScheduledEventsForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild2>>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<RestCallState<? extends List<? extends DirectoryEntryEvent>>, Unit> {
         public final /* synthetic */ long $channelId;
 
         /* compiled from: StoreDirectories.kt */
         /* renamed from: com.discord.stores.StoreDirectories$fetchGuildScheduledEventsForChannel$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01081 extends Lambda implements Function0<Unit> {
+        public static final class C02281 extends o implements Function0<Unit> {
             public final /* synthetic */ RestCallState $response;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C01081(RestCallState restCallState) {
+            public C02281(RestCallState restCallState) {
                 super(0);
                 this.$response = restCallState;
             }
@@ -246,18 +244,18 @@ public final class StoreDirectories extends StoreV2 {
             public final void invoke2() {
                 StoreDirectories.access$getDirectoryGuildScheduledEventsMap$p(StoreDirectories.this).put(Long.valueOf(AnonymousClass1.this.$channelId), this.$response);
                 RestCallState restCallState = this.$response;
-                if (restCallState instanceof RestCallState6) {
-                    Iterable iterable = (Iterable) ((RestCallState6) restCallState).invoke();
+                if (restCallState instanceof Success) {
+                    Iterable iterable = (Iterable) ((Success) restCallState).invoke();
                     ArrayList arrayList = new ArrayList();
                     Iterator it = iterable.iterator();
                     while (it.hasNext()) {
-                        GuildScheduledEvent guildScheduledEvent = ((DirectoryEntryGuild2) it.next()).getGuildScheduledEvent();
+                        GuildScheduledEvent guildScheduledEvent = ((DirectoryEntryEvent) it.next()).getGuildScheduledEvent();
                         if (!(guildScheduledEvent.getUserRsvp() != null)) {
                             guildScheduledEvent = null;
                         }
-                        Tuples2 tuples2 = guildScheduledEvent != null ? Tuples.to(Long.valueOf(guildScheduledEvent.getGuildId()), Long.valueOf(guildScheduledEvent.getId())) : null;
-                        if (tuples2 != null) {
-                            arrayList.add(tuples2);
+                        Pair pair = guildScheduledEvent != null ? d0.o.to(Long.valueOf(guildScheduledEvent.getGuildId()), Long.valueOf(guildScheduledEvent.getId())) : null;
+                        if (pair != null) {
+                            arrayList.add(pair);
                         }
                     }
                     StoreDirectories.access$getGuildScheduledEventsStore$p(StoreDirectories.this).addMeRsvpsForEvent(arrayList);
@@ -273,24 +271,24 @@ public final class StoreDirectories extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(RestCallState<? extends List<? extends DirectoryEntryGuild2>> restCallState) {
-            invoke2((RestCallState<? extends List<DirectoryEntryGuild2>>) restCallState);
+        public /* bridge */ /* synthetic */ Unit invoke(RestCallState<? extends List<? extends DirectoryEntryEvent>> restCallState) {
+            invoke2((RestCallState<? extends List<DirectoryEntryEvent>>) restCallState);
             return Unit.a;
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(RestCallState<? extends List<DirectoryEntryGuild2>> restCallState) {
-            Intrinsics3.checkNotNullParameter(restCallState, "response");
-            StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new C01081(restCallState));
+        public final void invoke2(RestCallState<? extends List<DirectoryEntryEvent>> restCallState) {
+            m.checkNotNullParameter(restCallState, "response");
+            StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new C02281(restCallState));
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$init$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Guild>, Set<? extends Long>> {
+    public static final class AnonymousClass1<T, R> implements b<Map<Long, ? extends Guild>, Set<? extends Long>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Set<? extends Long> call(Map<Long, ? extends Guild> map) {
             return call2((Map<Long, Guild>) map);
         }
@@ -304,18 +302,18 @@ public final class StoreDirectories extends StoreV2 {
                     arrayList.add(t);
                 }
             }
-            ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
             Iterator<T> it = arrayList.iterator();
             while (it.hasNext()) {
                 arrayList2.add(Long.valueOf(((Guild) it.next()).getId()));
             }
-            return _Collections.toSet(arrayList2);
+            return u.toSet(arrayList2);
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$init$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Set<? extends Long>, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Set<? extends Long>, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -336,13 +334,13 @@ public final class StoreDirectories extends StoreV2 {
                     arrayList.add(obj);
                 }
             }
-            Persister.set$default(persisterAccess$getHubNamePromptPersister$p, _Collections.toSet(arrayList), false, 2, null);
+            Persister.set$default(persisterAccess$getHubNamePromptPersister$p, u.toSet(arrayList), false, 2, null);
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$observeDirectories$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild>>>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild>>>> {
         public AnonymousClass1() {
             super(0);
         }
@@ -361,7 +359,7 @@ public final class StoreDirectories extends StoreV2 {
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$observeDirectoriesForChannel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<RestCallState<? extends List<? extends DirectoryEntryGuild>>> {
+    public static final class AnonymousClass1 extends o implements Function0<RestCallState<? extends List<? extends DirectoryEntryGuild>>> {
         public final /* synthetic */ long $channelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -384,26 +382,26 @@ public final class StoreDirectories extends StoreV2 {
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$observeDirectoryGuildScheduledEvents$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild2>>>> {
+    public static final class AnonymousClass1 extends o implements Function0<Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryEvent>>>> {
         public AnonymousClass1() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public /* bridge */ /* synthetic */ Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild2>>> invoke() {
+        public /* bridge */ /* synthetic */ Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryEvent>>> invoke() {
             return invoke2();
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild2>>> invoke2() {
+        public final Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryEvent>>> invoke2() {
             return StoreDirectories.access$getDirectoryGuildScheduledEventsMapSnapshot$p(StoreDirectories.this);
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<DirectoryEntryGuild, TrackNetworkMetadata2> {
+    public static final class AnonymousClass1 extends o implements Function1<DirectoryEntryGuild, TrackNetworkMetadataReceiver> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
 
@@ -415,25 +413,25 @@ public final class StoreDirectories extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ TrackNetworkMetadata2 invoke(DirectoryEntryGuild directoryEntryGuild) {
+        public /* bridge */ /* synthetic */ TrackNetworkMetadataReceiver invoke(DirectoryEntryGuild directoryEntryGuild) {
             return invoke2(directoryEntryGuild);
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final TrackNetworkMetadata2 invoke2(DirectoryEntryGuild directoryEntryGuild) {
+        public final TrackNetworkMetadataReceiver invoke2(DirectoryEntryGuild directoryEntryGuild) {
             return new TrackNetworkActionDirectoryGuildEntryDelete(Long.valueOf(this.$channelId), Long.valueOf(this.$guildId));
         }
     }
 
     /* compiled from: StoreDirectories.kt */
     /* renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<RestCallState<? extends DirectoryEntryGuild>, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<RestCallState<? extends DirectoryEntryGuild>, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
 
         /* compiled from: StoreDirectories.kt */
         /* renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$2$1, reason: invalid class name */
-        public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass1 extends o implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
             }
@@ -451,7 +449,7 @@ public final class StoreDirectories extends StoreV2 {
                 RestCallState restCallState = (RestCallState) StoreDirectories.access$getDirectoriesMap$p(StoreDirectories.this).get(Long.valueOf(AnonymousClass2.this.$channelId));
                 List listEmptyList = restCallState != null ? (List) restCallState.invoke() : null;
                 if (listEmptyList == null) {
-                    listEmptyList = Collections2.emptyList();
+                    listEmptyList = n.emptyList();
                 }
                 ArrayList arrayList = new ArrayList();
                 for (Object obj : listEmptyList) {
@@ -460,7 +458,7 @@ public final class StoreDirectories extends StoreV2 {
                         arrayList.add(obj);
                     }
                 }
-                mapAccess$getDirectoriesMap$p.put(lValueOf, new RestCallState6(arrayList));
+                mapAccess$getDirectoriesMap$p.put(lValueOf, new Success(arrayList));
                 StoreDirectories.this.markChanged();
             }
         }
@@ -480,8 +478,8 @@ public final class StoreDirectories extends StoreV2 {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<DirectoryEntryGuild> restCallState) {
-            Intrinsics3.checkNotNullParameter(restCallState, "request");
-            if (restCallState instanceof RestCallState6) {
+            m.checkNotNullParameter(restCallState, "request");
+            if (restCallState instanceof Success) {
                 StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new AnonymousClass1());
             }
         }
@@ -544,30 +542,30 @@ public final class StoreDirectories extends StoreV2 {
     }
 
     public final void addServerToDirectory(long channelId, DirectoryEntryGuild directoryEntry) {
-        Intrinsics3.checkNotNullParameter(directoryEntry, "directoryEntry");
+        m.checkNotNullParameter(directoryEntry, "directoryEntry");
         this.dispatcher.schedule(new AnonymousClass1(channelId, directoryEntry));
     }
 
     public final void fetchDirectoriesForChannel(long channelId) {
         Observable<R> observableG = this.restApi.getDirectoryEntries(channelId).G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "restApi\n        .getDire…imateMemberCount ?: 0 } }");
-        RestCallState5.executeRequest(observableG, new AnonymousClass2(channelId));
+        m.checkNotNullExpressionValue(observableG, "restApi\n        .getDire…imateMemberCount ?: 0 } }");
+        RestCallStateKt.executeRequest(observableG, new AnonymousClass2(channelId));
     }
 
     public final void fetchEntryCountsForChannel(long channelId) {
-        RestCallState5.executeRequest(this.restApi.getEntryCounts(channelId), new AnonymousClass1(channelId));
+        RestCallStateKt.executeRequest(this.restApi.getEntryCounts(channelId), new AnonymousClass1(channelId));
     }
 
     public final void fetchGuildScheduledEventsForChannel(long guildId, long channelId) {
         if (GrowthTeamFeatures.INSTANCE.hubEventsEnabled(guildId, false)) {
-            RestCallState5.executeRequest(this.restApi.getDirectoryGuildScheduledEvents(channelId, DirectoryEntryGuild3.GuildScheduledEvent.getKey()), new AnonymousClass1(channelId));
+            RestCallStateKt.executeRequest(this.restApi.getDirectoryGuildScheduledEvents(channelId, DirectoryEntryType.GuildScheduledEvent.getKey()), new AnonymousClass1(channelId));
         }
     }
 
     public final boolean getAndSetSeenNamePrompt(long guildId) {
         boolean zContains = this.hubNamePromptPersister.get().contains(Long.valueOf(guildId));
         Persister<Set<Long>> persister = this.hubNamePromptPersister;
-        persister.set(_Sets.plus(persister.get(), Long.valueOf(guildId)), true);
+        persister.set(o0.plus(persister.get(), Long.valueOf(guildId)), true);
         return zContains;
     }
 
@@ -579,7 +577,7 @@ public final class StoreDirectories extends StoreV2 {
         return (RestCallState) this.entryCountMapSnapshot.get(Long.valueOf(channelId));
     }
 
-    public final RestCallState<List<DirectoryEntryGuild2>> getGuildScheduledEventsForChannel(long channelId) {
+    public final RestCallState<List<DirectoryEntryEvent>> getGuildScheduledEventsForChannel(long channelId) {
         return (RestCallState) this.directoryGuildScheduledEventsMapSnapshot.get(Long.valueOf(channelId));
     }
 
@@ -589,10 +587,10 @@ public final class StoreDirectories extends StoreV2 {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         super.init(context);
         Observable observableR = ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.leadingEdgeThrottle(this.guildStore.observeGuilds(), 1L, TimeUnit.SECONDS)).G(AnonymousClass1.INSTANCE).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "guildStore\n        .obse…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "guildStore\n        .obse…  .distinctUntilChanged()");
         ObservableExtensionsKt.appSubscribe$default(observableR, StoreDirectories.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(), 62, (Object) null);
     }
 
@@ -612,18 +610,18 @@ public final class StoreDirectories extends StoreV2 {
         return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(channelId), 14, null);
     }
 
-    public final Observable<Map<Long, RestCallState<List<DirectoryEntryGuild2>>>> observeDirectoryGuildScheduledEvents() {
+    public final Observable<Map<Long, RestCallState<List<DirectoryEntryEvent>>>> observeDirectoryGuildScheduledEvents() {
         return ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null);
     }
 
     public final Observable<Boolean> observeDiscordHubClicked() {
         Observable<Boolean> observableR = this.discordHubClickedPersister.getObservable().r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "discordHubClickedPersist…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "discordHubClickedPersist…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final void removeServerFromDirectory(long channelId, long guildId) {
-        RestCallState5.executeRequest(RestCallState5.logNetworkAction(this.restApi.removeServerFromHub(channelId, guildId), new AnonymousClass1(channelId, guildId)), new AnonymousClass2(channelId, guildId));
+        RestCallStateKt.executeRequest(RestCallStateKt.logNetworkAction(this.restApi.removeServerFromHub(channelId, guildId), new AnonymousClass1(channelId, guildId)), new AnonymousClass2(channelId, guildId));
     }
 
     @Override // com.discord.stores.StoreV2
@@ -634,25 +632,25 @@ public final class StoreDirectories extends StoreV2 {
     }
 
     public StoreDirectories(Dispatcher dispatcher, ObservationDeck observationDeck, StoreGuilds storeGuilds, StoreGuildScheduledEvents storeGuildScheduledEvents, RestAPI restAPI) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
-        Intrinsics3.checkNotNullParameter(storeGuilds, "guildStore");
-        Intrinsics3.checkNotNullParameter(storeGuildScheduledEvents, "guildScheduledEventsStore");
-        Intrinsics3.checkNotNullParameter(restAPI, "restApi");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(storeGuilds, "guildStore");
+        m.checkNotNullParameter(storeGuildScheduledEvents, "guildScheduledEventsStore");
+        m.checkNotNullParameter(restAPI, "restApi");
         this.dispatcher = dispatcher;
         this.observationDeck = observationDeck;
         this.guildStore = storeGuilds;
         this.guildScheduledEventsStore = storeGuildScheduledEvents;
         this.restApi = restAPI;
-        this.directoriesMapSnapshot = Maps6.emptyMap();
+        this.directoriesMapSnapshot = h0.emptyMap();
         this.directoriesMap = new LinkedHashMap();
-        this.entryCountMapSnapshot = Maps6.emptyMap();
+        this.entryCountMapSnapshot = h0.emptyMap();
         this.entryCountMap = new LinkedHashMap();
-        this.directoryGuildScheduledEventsMapSnapshot = Maps6.emptyMap();
+        this.directoryGuildScheduledEventsMapSnapshot = h0.emptyMap();
         this.directoryGuildScheduledEventsMap = new LinkedHashMap();
         Boolean bool = Boolean.FALSE;
         this.discordHubClickedPersister = new Persister<>(DISCORD_HUB_VERIFICATION_CLICKED_KEY, bool);
         this.guildScheduledEventsHeaderDismissed = new Persister<>(GUILD_SCHEDULED_EVENTS_HEADER_DISMISSED, bool);
-        this.hubNamePromptPersister = new Persister<>(HUB_NAME_PROMPT, Sets5.emptySet());
+        this.hubNamePromptPersister = new Persister<>(HUB_NAME_PROMPT, n0.emptySet());
     }
 }

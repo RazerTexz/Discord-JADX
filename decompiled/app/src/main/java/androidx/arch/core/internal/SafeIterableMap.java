@@ -2,7 +2,7 @@ package androidx.arch.core.internal;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -330,7 +330,7 @@ public class SafeIterableMap<K, V> implements Iterable<Map.Entry<K, V>> {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("[");
+        StringBuilder sbU = a.U("[");
         Iterator<Map.Entry<K, V>> it = iterator();
         while (it.hasNext()) {
             sbU.append(it.next().toString());

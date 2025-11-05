@@ -2,13 +2,13 @@ package defpackage;
 
 import com.discord.views.OverlayMenuBubbleDialog;
 import com.discord.views.SearchInputView;
-import d0.z.d.Lambda;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: kotlin-style lambda group */
 /* loaded from: classes2.dex */
-public final class p extends Lambda implements Function0<Unit> {
+public final class p extends o implements Function0<Unit> {
     public final /* synthetic */ int j;
     public final /* synthetic */ Object k;
 

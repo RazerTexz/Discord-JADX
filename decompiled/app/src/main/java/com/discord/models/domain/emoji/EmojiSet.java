@@ -1,6 +1,6 @@
 package com.discord.models.domain.emoji;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -75,7 +75,7 @@ public class EmojiSet {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("EmojiSet(unicodeEmojis=");
+        StringBuilder sbU = a.U("EmojiSet(unicodeEmojis=");
         sbU.append(this.unicodeEmojis);
         sbU.append(", customEmojis=");
         sbU.append(this.customEmojis);
@@ -84,6 +84,6 @@ public class EmojiSet {
         sbU.append(", recentEmojis=");
         sbU.append(this.recentEmojis);
         sbU.append(", favoriteEmoji=");
-        return outline.N(sbU, this.favoriteEmoji, ")");
+        return a.N(sbU, this.favoriteEmoji, ")");
     }
 }

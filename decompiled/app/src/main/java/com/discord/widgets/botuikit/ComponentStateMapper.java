@@ -1,23 +1,23 @@
 package com.discord.widgets.botuikit;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
+import com.discord.api.botuikit.ActionComponent;
 import com.discord.api.botuikit.ActionRowComponent;
 import com.discord.api.botuikit.ButtonComponent;
 import com.discord.api.botuikit.Component;
-import com.discord.api.botuikit.Component5;
-import com.discord.api.botuikit.Component7;
-import com.discord.api.botuikit.Component8;
+import com.discord.api.botuikit.ComponentUtils;
+import com.discord.api.botuikit.LayoutComponent;
 import com.discord.api.botuikit.SelectComponent;
 import com.discord.models.botuikit.ActionInteractionComponentState;
-import com.discord.models.botuikit.ActionRowMessageComponent2;
-import com.discord.models.botuikit.ButtonMessageComponent2;
+import com.discord.models.botuikit.ActionRowMessageComponentKt;
+import com.discord.models.botuikit.ButtonMessageComponentKt;
 import com.discord.models.botuikit.MessageComponent;
-import com.discord.models.botuikit.SelectMessageComponent2;
+import com.discord.models.botuikit.SelectMessageComponentKt;
 import com.discord.stores.StoreApplicationInteractions;
 import com.discord.widgets.botuikit.ComponentChatListState;
-import d0.t._Arrays;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.k;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -36,7 +36,7 @@ public final class ComponentStateMapper {
 
     /* compiled from: ComponentStateMapper.kt */
     /* renamed from: com.discord.widgets.botuikit.ComponentStateMapper$processComponentsToMessageComponents$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<Integer, Component, Unit> {
+    public static final class AnonymousClass1 extends o implements Function2<Integer, Component, Unit> {
         public final /* synthetic */ Stack $childComponentsLevelStack;
         public final /* synthetic */ Ref$ObjectRef $childrenComponents;
         public final /* synthetic */ ComponentExperiments $componentExperiments;
@@ -61,25 +61,25 @@ public final class ComponentStateMapper {
         /* JADX WARN: Type inference failed for: r0v11, types: [T, com.discord.widgets.botuikit.ComponentStateMapper$ChildComponents] */
         /* JADX WARN: Type inference failed for: r8v0, types: [T, com.discord.widgets.botuikit.ComponentStateMapper$ChildComponents] */
         public final void invoke(int i, Component component) {
-            Component8 parentLayoutComponent;
-            Intrinsics3.checkNotNullParameter(component, "component");
-            if (component instanceof Component5) {
-                MessageComponent messageComponentCreateActionMessageComponent = ComponentStateMapper.INSTANCE.createActionMessageComponent((Component5) component, i, this.$componentState, this.$componentExperiments);
+            LayoutComponent parentLayoutComponent;
+            m.checkNotNullParameter(component, "component");
+            if (component instanceof ActionComponent) {
+                MessageComponent messageComponentCreateActionMessageComponent = ComponentStateMapper.INSTANCE.createActionMessageComponent((ActionComponent) component, i, this.$componentState, this.$componentExperiments);
                 if (messageComponentCreateActionMessageComponent != null) {
                     ((ChildComponents) this.$childrenComponents.element).getComponents()[((ChildComponents) this.$childrenComponents.element).getCurrentComponentInsertionIndex()] = messageComponentCreateActionMessageComponent;
                 }
                 ChildComponents childComponents = (ChildComponents) this.$childrenComponents.element;
                 childComponents.setCurrentComponentInsertionIndex(childComponents.getCurrentComponentInsertionIndex() + 1);
-            } else if (component instanceof Component8) {
+            } else if (component instanceof LayoutComponent) {
                 this.$childComponentsLevelStack.push((ChildComponents) this.$childrenComponents.element);
-                Component8 component8 = (Component8) component;
-                this.$childrenComponents.element = new ChildComponents(i, component8, 0, component8.a().size(), 4, null);
+                LayoutComponent layoutComponent = (LayoutComponent) component;
+                this.$childrenComponents.element = new ChildComponents(i, layoutComponent, 0, layoutComponent.a().size(), 4, null);
             }
             while (((ChildComponents) this.$childrenComponents.element).getCurrentComponentInsertionIndex() == ((ChildComponents) this.$childrenComponents.element).getTotal() && (parentLayoutComponent = ((ChildComponents) this.$childrenComponents.element).getParentLayoutComponent()) != null) {
-                MessageComponent messageLayoutComponent = ComponentStateMapper.INSTANCE.toMessageLayoutComponent(parentLayoutComponent, ((ChildComponents) this.$childrenComponents.element).getLayoutComponentIndex(), _Arrays.filterNotNull(((ChildComponents) this.$childrenComponents.element).getComponents()), this.$componentExperiments);
+                MessageComponent messageLayoutComponent = ComponentStateMapper.INSTANCE.toMessageLayoutComponent(parentLayoutComponent, ((ChildComponents) this.$childrenComponents.element).getLayoutComponentIndex(), k.filterNotNull(((ChildComponents) this.$childrenComponents.element).getComponents()), this.$componentExperiments);
                 Ref$ObjectRef ref$ObjectRef = this.$childrenComponents;
                 Object objPop = this.$childComponentsLevelStack.pop();
-                Intrinsics3.checkNotNullExpressionValue(objPop, "childComponentsLevelStack.pop()");
+                m.checkNotNullExpressionValue(objPop, "childComponentsLevelStack.pop()");
                 ref$ObjectRef.element = (ChildComponents) objPop;
                 ((ChildComponents) this.$childrenComponents.element).getComponents()[((ChildComponents) this.$childrenComponents.element).getCurrentComponentInsertionIndex()] = messageLayoutComponent;
                 ChildComponents childComponents2 = (ChildComponents) this.$childrenComponents.element;
@@ -95,13 +95,13 @@ public final class ComponentStateMapper {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final MessageComponent createActionMessageComponent(Component5 component, int index, ComponentChatListState.ComponentStoreState storeState, ComponentExperiments experimentController) {
+    public final MessageComponent createActionMessageComponent(ActionComponent component, int index, ComponentChatListState.ComponentStoreState storeState, ComponentExperiments experimentController) {
         Integer num;
         Set<Map.Entry<Integer, StoreApplicationInteractions.InteractionSendState>> setEntrySet;
         Object next;
-        Intrinsics3.checkNotNullParameter(component, "component");
-        Intrinsics3.checkNotNullParameter(storeState, "storeState");
-        Intrinsics3.checkNotNullParameter(experimentController, "experimentController");
+        m.checkNotNullParameter(component, "component");
+        m.checkNotNullParameter(storeState, "storeState");
+        m.checkNotNullParameter(experimentController, "experimentController");
         if (!experimentController.isEnabled(component.getType())) {
             return null;
         }
@@ -133,10 +133,10 @@ public final class ComponentStateMapper {
         StoreApplicationInteractions.InteractionSendState.Failed failed = (StoreApplicationInteractions.InteractionSendState.Failed) interactionSendState;
         ActionInteractionComponentState failed2 = (num != null && index == num.intValue()) ? ActionInteractionComponentState.Loading.INSTANCE : (num == null || num.intValue() == index) ? failed != null ? new ActionInteractionComponentState.Failed(failed.getErrorMessage()) : ActionInteractionComponentState.Enabled.INSTANCE : ActionInteractionComponentState.Disabled.INSTANCE;
         if (component instanceof ButtonComponent) {
-            return ButtonMessageComponent2.mergeToMessageComponent((ButtonComponent) component, index, failed2, storeState);
+            return ButtonMessageComponentKt.mergeToMessageComponent((ButtonComponent) component, index, failed2, storeState);
         }
         if (component instanceof SelectComponent) {
-            return SelectMessageComponent2.mergeToMessageComponent((SelectComponent) component, index, failed2, storeState);
+            return SelectMessageComponentKt.mergeToMessageComponent((SelectComponent) component, index, failed2, storeState);
         }
         return null;
     }
@@ -144,30 +144,30 @@ public final class ComponentStateMapper {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r0v2, types: [T, com.discord.widgets.botuikit.ComponentStateMapper$ChildComponents] */
     public final List<MessageComponent> processComponentsToMessageComponents(List<? extends Component> apiComponents, ComponentChatListState.ComponentStoreState componentStoreState, ComponentExperiments componentExperiments, boolean animateEmojis) {
-        Intrinsics3.checkNotNullParameter(apiComponents, "apiComponents");
-        Intrinsics3.checkNotNullParameter(componentExperiments, "componentExperiments");
+        m.checkNotNullParameter(apiComponents, "apiComponents");
+        m.checkNotNullParameter(componentExperiments, "componentExperiments");
         if (componentStoreState == null) {
             componentStoreState = new ComponentChatListState.ComponentStoreState(null, null, animateEmojis, 3, null);
         }
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = new ChildComponents(-1, null, 0, apiComponents.size());
         Stack stack = new Stack();
-        Component7 component7 = Component7.INSTANCE;
+        ComponentUtils componentUtils = ComponentUtils.INSTANCE;
         AnonymousClass1 anonymousClass1 = new AnonymousClass1(componentStoreState, componentExperiments, ref$ObjectRef, stack);
-        Objects.requireNonNull(component7);
-        Intrinsics3.checkNotNullParameter(apiComponents, "$this$forEachComponentIndexed");
-        Intrinsics3.checkNotNullParameter(anonymousClass1, "action");
-        component7.a(apiComponents, 0, anonymousClass1);
-        return _Arrays.filterNotNull(((ChildComponents) ref$ObjectRef.element).getComponents());
+        Objects.requireNonNull(componentUtils);
+        m.checkNotNullParameter(apiComponents, "$this$forEachComponentIndexed");
+        m.checkNotNullParameter(anonymousClass1, "action");
+        componentUtils.a(apiComponents, 0, anonymousClass1);
+        return k.filterNotNull(((ChildComponents) ref$ObjectRef.element).getComponents());
     }
 
-    public final MessageComponent toMessageLayoutComponent(Component8 component, int index, List<? extends MessageComponent> children, ComponentExperiments experimentController) {
-        Intrinsics3.checkNotNullParameter(component, "component");
-        Intrinsics3.checkNotNullParameter(children, "children");
-        Intrinsics3.checkNotNullParameter(experimentController, "experimentController");
+    public final MessageComponent toMessageLayoutComponent(LayoutComponent component, int index, List<? extends MessageComponent> children, ComponentExperiments experimentController) {
+        m.checkNotNullParameter(component, "component");
+        m.checkNotNullParameter(children, "children");
+        m.checkNotNullParameter(experimentController, "experimentController");
         ActionRowComponent actionRowComponent = (ActionRowComponent) component;
         if (experimentController.isEnabled(actionRowComponent.getType())) {
-            return ActionRowMessageComponent2.mergeToMessageComponent(actionRowComponent, index, children);
+            return ActionRowMessageComponentKt.mergeToMessageComponent(actionRowComponent, index, children);
         }
         return null;
     }
@@ -177,12 +177,12 @@ public final class ComponentStateMapper {
         private final MessageComponent[] components;
         private int currentComponentInsertionIndex;
         private final int layoutComponentIndex;
-        private final Component8 parentLayoutComponent;
+        private final LayoutComponent parentLayoutComponent;
         private final int total;
 
-        public ChildComponents(int i, Component8 component8, int i2, int i3) {
+        public ChildComponents(int i, LayoutComponent layoutComponent, int i2, int i3) {
             this.layoutComponentIndex = i;
-            this.parentLayoutComponent = component8;
+            this.parentLayoutComponent = layoutComponent;
             this.currentComponentInsertionIndex = i2;
             this.total = i3;
             MessageComponent[] messageComponentArr = new MessageComponent[i3];
@@ -192,12 +192,12 @@ public final class ComponentStateMapper {
             this.components = messageComponentArr;
         }
 
-        public static /* synthetic */ ChildComponents copy$default(ChildComponents childComponents, int i, Component8 component8, int i2, int i3, int i4, Object obj) {
+        public static /* synthetic */ ChildComponents copy$default(ChildComponents childComponents, int i, LayoutComponent layoutComponent, int i2, int i3, int i4, Object obj) {
             if ((i4 & 1) != 0) {
                 i = childComponents.layoutComponentIndex;
             }
             if ((i4 & 2) != 0) {
-                component8 = childComponents.parentLayoutComponent;
+                layoutComponent = childComponents.parentLayoutComponent;
             }
             if ((i4 & 4) != 0) {
                 i2 = childComponents.currentComponentInsertionIndex;
@@ -205,7 +205,7 @@ public final class ComponentStateMapper {
             if ((i4 & 8) != 0) {
                 i3 = childComponents.total;
             }
-            return childComponents.copy(i, component8, i2, i3);
+            return childComponents.copy(i, layoutComponent, i2, i3);
         }
 
         /* renamed from: component1, reason: from getter */
@@ -214,7 +214,7 @@ public final class ComponentStateMapper {
         }
 
         /* renamed from: component2, reason: from getter */
-        public final Component8 getParentLayoutComponent() {
+        public final LayoutComponent getParentLayoutComponent() {
             return this.parentLayoutComponent;
         }
 
@@ -228,7 +228,7 @@ public final class ComponentStateMapper {
             return this.total;
         }
 
-        public final ChildComponents copy(int layoutComponentIndex, Component8 parentLayoutComponent, int currentComponentInsertionIndex, int total) {
+        public final ChildComponents copy(int layoutComponentIndex, LayoutComponent parentLayoutComponent, int currentComponentInsertionIndex, int total) {
             return new ChildComponents(layoutComponentIndex, parentLayoutComponent, currentComponentInsertionIndex, total);
         }
 
@@ -240,7 +240,7 @@ public final class ComponentStateMapper {
                 return false;
             }
             ChildComponents childComponents = (ChildComponents) other;
-            return this.layoutComponentIndex == childComponents.layoutComponentIndex && Intrinsics3.areEqual(this.parentLayoutComponent, childComponents.parentLayoutComponent) && this.currentComponentInsertionIndex == childComponents.currentComponentInsertionIndex && this.total == childComponents.total;
+            return this.layoutComponentIndex == childComponents.layoutComponentIndex && m.areEqual(this.parentLayoutComponent, childComponents.parentLayoutComponent) && this.currentComponentInsertionIndex == childComponents.currentComponentInsertionIndex && this.total == childComponents.total;
         }
 
         public final MessageComponent[] getComponents() {
@@ -255,7 +255,7 @@ public final class ComponentStateMapper {
             return this.layoutComponentIndex;
         }
 
-        public final Component8 getParentLayoutComponent() {
+        public final LayoutComponent getParentLayoutComponent() {
             return this.parentLayoutComponent;
         }
 
@@ -265,8 +265,8 @@ public final class ComponentStateMapper {
 
         public int hashCode() {
             int i = this.layoutComponentIndex * 31;
-            Component8 component8 = this.parentLayoutComponent;
-            return ((((i + (component8 != null ? component8.hashCode() : 0)) * 31) + this.currentComponentInsertionIndex) * 31) + this.total;
+            LayoutComponent layoutComponent = this.parentLayoutComponent;
+            return ((((i + (layoutComponent != null ? layoutComponent.hashCode() : 0)) * 31) + this.currentComponentInsertionIndex) * 31) + this.total;
         }
 
         public final void setCurrentComponentInsertionIndex(int i) {
@@ -274,18 +274,18 @@ public final class ComponentStateMapper {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ChildComponents(layoutComponentIndex=");
+            StringBuilder sbU = a.U("ChildComponents(layoutComponentIndex=");
             sbU.append(this.layoutComponentIndex);
             sbU.append(", parentLayoutComponent=");
             sbU.append(this.parentLayoutComponent);
             sbU.append(", currentComponentInsertionIndex=");
             sbU.append(this.currentComponentInsertionIndex);
             sbU.append(", total=");
-            return outline.B(sbU, this.total, ")");
+            return a.B(sbU, this.total, ")");
         }
 
-        public /* synthetic */ ChildComponents(int i, Component8 component8, int i2, int i3, int i4, DefaultConstructorMarker defaultConstructorMarker) {
-            this(i, (i4 & 2) != 0 ? null : component8, (i4 & 4) != 0 ? 0 : i2, i3);
+        public /* synthetic */ ChildComponents(int i, LayoutComponent layoutComponent, int i2, int i3, int i4, DefaultConstructorMarker defaultConstructorMarker) {
+            this(i, (i4 & 2) != 0 ? null : layoutComponent, (i4 & 4) != 0 ? 0 : i2, i3);
         }
     }
 }

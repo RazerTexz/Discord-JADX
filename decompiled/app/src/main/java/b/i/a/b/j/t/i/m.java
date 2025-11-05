@@ -1,7 +1,6 @@
 package b.i.a.b.j.t.i;
 
 import android.database.sqlite.SQLiteDatabase;
-import b.i.a.b.Encoding2;
 import b.i.a.b.j.t.i.t;
 
 /* compiled from: SQLiteEventStore.java */
@@ -16,7 +15,7 @@ public final /* synthetic */ class m implements t.d {
     @Override // b.i.a.b.j.t.i.t.d
     public Object a() {
         SQLiteDatabase sQLiteDatabase = this.a;
-        Encoding2 encoding2 = t.j;
+        b.i.a.b.b bVar = t.j;
         sQLiteDatabase.beginTransaction();
         return null;
     }

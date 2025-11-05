@@ -5,7 +5,7 @@ import android.content.Context;
 import android.media.AudioDeviceInfo;
 import android.media.AudioManager;
 import android.os.Build;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Arrays;
 import org.webrtc.Logging;
 
@@ -35,7 +35,7 @@ public final class WebRtcAudioUtils {
             case 9:
                 return "MP3";
             default:
-                return outline.q("Invalid encoding: ", i);
+                return a.q("Invalid encoding: ", i);
         }
     }
 
@@ -124,7 +124,7 @@ public final class WebRtcAudioUtils {
     }
 
     public static String getThreadInfo() {
-        StringBuilder sbU = outline.U("@[name=");
+        StringBuilder sbU = a.U("@[name=");
         sbU.append(Thread.currentThread().getName());
         sbU.append(", id=");
         sbU.append(Thread.currentThread().getId());
@@ -150,7 +150,7 @@ public final class WebRtcAudioUtils {
         }
         Logging.d(str, "Audio Devices: ");
         for (AudioDeviceInfo audioDeviceInfo : devices) {
-            StringBuilder sbU = outline.U("  ");
+            StringBuilder sbU = a.U("  ");
             sbU.append(deviceTypeToString(audioDeviceInfo.getType()));
             sbU.append(audioDeviceInfo.isSource() ? "(in): " : "(out): ");
             if (audioDeviceInfo.getChannelCounts().length > 0) {
@@ -182,7 +182,7 @@ public final class WebRtcAudioUtils {
     }
 
     private static void logAudioStateBasic(String str, Context context, AudioManager audioManager) {
-        StringBuilder sbU = outline.U("Audio State: audio mode: ");
+        StringBuilder sbU = a.U("Audio State: audio mode: ");
         sbU.append(modeToString(audioManager.getMode()));
         sbU.append(", has mic: ");
         sbU.append(hasMicrophone(context));
@@ -208,7 +208,7 @@ public final class WebRtcAudioUtils {
         for (int i = 0; i < 6; i++) {
             int i2 = iArr[i];
             StringBuilder sb = new StringBuilder();
-            StringBuilder sbU = outline.U("  ");
+            StringBuilder sbU = a.U("  ");
             sbU.append(streamTypeToString(i2));
             sbU.append(": ");
             sb.append(sbU.toString());
@@ -222,7 +222,7 @@ public final class WebRtcAudioUtils {
     }
 
     public static void logDeviceInfo(String str) {
-        StringBuilder sbU = outline.U("Android SDK: ");
+        StringBuilder sbU = a.U("Android SDK: ");
         sbU.append(Build.VERSION.SDK_INT);
         sbU.append(", Release: ");
         sbU.append(Build.VERSION.RELEASE);

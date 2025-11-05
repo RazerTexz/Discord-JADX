@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackNetworkInformation;
-import com.discord.analytics.generated.traits.TrackNetworkInformation2;
+import com.discord.analytics.generated.traits.TrackNetworkInformationReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackJoinVoiceChannel.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackJoinVoiceChannel implements AnalyticsSchema, TrackBase2, TrackNetworkInformation2 {
+public final /* data */ class TrackJoinVoiceChannel implements AnalyticsSchema, TrackBaseReceiver, TrackNetworkInformationReceiver {
     private TrackBase trackBase;
     private TrackNetworkInformation trackNetworkInformation;
     private final Long channelId = null;
@@ -44,7 +44,7 @@ public final /* data */ class TrackJoinVoiceChannel implements AnalyticsSchema, 
             return false;
         }
         TrackJoinVoiceChannel trackJoinVoiceChannel = (TrackJoinVoiceChannel) other;
-        return Intrinsics3.areEqual(this.channelId, trackJoinVoiceChannel.channelId) && Intrinsics3.areEqual(this.channelType, trackJoinVoiceChannel.channelType) && Intrinsics3.areEqual(this.channelBitrate, trackJoinVoiceChannel.channelBitrate) && Intrinsics3.areEqual(this.guildId, trackJoinVoiceChannel.guildId) && Intrinsics3.areEqual(this.nonce, trackJoinVoiceChannel.nonce) && Intrinsics3.areEqual(this.rtcConnectionId, trackJoinVoiceChannel.rtcConnectionId) && Intrinsics3.areEqual(this.voiceStateCount, trackJoinVoiceChannel.voiceStateCount) && Intrinsics3.areEqual(this.videoStreamCount, trackJoinVoiceChannel.videoStreamCount) && Intrinsics3.areEqual(this.videoEnabled, trackJoinVoiceChannel.videoEnabled) && Intrinsics3.areEqual(this.gameName, trackJoinVoiceChannel.gameName) && Intrinsics3.areEqual(this.gamePlatform, trackJoinVoiceChannel.gamePlatform) && Intrinsics3.areEqual(this.gameId, trackJoinVoiceChannel.gameId) && Intrinsics3.areEqual(this.customStatusCount, trackJoinVoiceChannel.customStatusCount) && Intrinsics3.areEqual(this.stageInstanceId, trackJoinVoiceChannel.stageInstanceId) && Intrinsics3.areEqual(this.guildScheduledEventId, trackJoinVoiceChannel.guildScheduledEventId);
+        return m.areEqual(this.channelId, trackJoinVoiceChannel.channelId) && m.areEqual(this.channelType, trackJoinVoiceChannel.channelType) && m.areEqual(this.channelBitrate, trackJoinVoiceChannel.channelBitrate) && m.areEqual(this.guildId, trackJoinVoiceChannel.guildId) && m.areEqual(this.nonce, trackJoinVoiceChannel.nonce) && m.areEqual(this.rtcConnectionId, trackJoinVoiceChannel.rtcConnectionId) && m.areEqual(this.voiceStateCount, trackJoinVoiceChannel.voiceStateCount) && m.areEqual(this.videoStreamCount, trackJoinVoiceChannel.videoStreamCount) && m.areEqual(this.videoEnabled, trackJoinVoiceChannel.videoEnabled) && m.areEqual(this.gameName, trackJoinVoiceChannel.gameName) && m.areEqual(this.gamePlatform, trackJoinVoiceChannel.gamePlatform) && m.areEqual(this.gameId, trackJoinVoiceChannel.gameId) && m.areEqual(this.customStatusCount, trackJoinVoiceChannel.customStatusCount) && m.areEqual(this.stageInstanceId, trackJoinVoiceChannel.stageInstanceId) && m.areEqual(this.guildScheduledEventId, trackJoinVoiceChannel.guildScheduledEventId);
     }
 
     public int hashCode() {
@@ -81,7 +81,7 @@ public final /* data */ class TrackJoinVoiceChannel implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackJoinVoiceChannel(channelId=");
+        StringBuilder sbU = a.U("TrackJoinVoiceChannel(channelId=");
         sbU.append(this.channelId);
         sbU.append(", channelType=");
         sbU.append(this.channelType);
@@ -110,6 +110,6 @@ public final /* data */ class TrackJoinVoiceChannel implements AnalyticsSchema, 
         sbU.append(", stageInstanceId=");
         sbU.append(this.stageInstanceId);
         sbU.append(", guildScheduledEventId=");
-        return outline.G(sbU, this.guildScheduledEventId, ")");
+        return a.G(sbU, this.guildScheduledEventId, ")");
     }
 }

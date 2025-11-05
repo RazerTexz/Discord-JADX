@@ -1,18 +1,16 @@
 package okhttp3.internal.publicsuffix;
 
-import d0.f0._Sequences2;
-import d0.g0.Strings4;
-import d0.t.Collections2;
-import d0.t.CollectionsJVM;
-import d0.t._Collections;
-import d0.y.Closeable;
-import d0.z.d.Intrinsics3;
-import f0.e0.Util7;
-import f0.e0.k.Platform2;
-import g0.GzipSource;
-import g0.JvmOkio;
-import g0.RealBufferedSource;
-import g0.Timeout2;
+import d0.f0.q;
+import d0.g0.w;
+import d0.t.m;
+import d0.t.n;
+import d0.t.u;
+import d0.y.b;
+import f0.e0.c;
+import f0.e0.k.h;
+import g0.l;
+import g0.r;
+import g0.y;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InterruptedIOException;
@@ -36,7 +34,7 @@ public final class PublicSuffixDatabase {
     public static final byte[] a = {(byte) 42};
 
     /* renamed from: b, reason: collision with root package name */
-    public static final List<String> f3817b = CollectionsJVM.listOf("*");
+    public static final List<String> f3817b = m.listOf("*");
     public static final PublicSuffixDatabase c = new PublicSuffixDatabase();
 
     /* compiled from: PublicSuffixDatabase.kt */
@@ -76,13 +74,13 @@ public final class PublicSuffixDatabase {
                         z2 = false;
                     } else {
                         byte b2 = bArr2[i10][i11];
-                        byte[] bArr3 = Util7.a;
+                        byte[] bArr3 = c.a;
                         int i13 = b2 & 255;
                         z2 = z3;
                         i3 = i13;
                     }
                     byte b3 = bArr[i7 + i12];
-                    byte[] bArr4 = Util7.a;
+                    byte[] bArr4 = c.a;
                     i4 = i3 - (b3 & 255);
                     if (i4 != 0) {
                         break;
@@ -114,7 +112,7 @@ public final class PublicSuffixDatabase {
                         if (length2 >= i14) {
                             if (length2 <= i14) {
                                 Charset charset = StandardCharsets.UTF_8;
-                                Intrinsics3.checkExpressionValueIsNotNull(charset, "UTF_8");
+                                d0.z.d.m.checkExpressionValueIsNotNull(charset, "UTF_8");
                                 return new String(bArr, i7, i9, charset);
                             }
                         }
@@ -135,9 +133,9 @@ public final class PublicSuffixDatabase {
         List<String> listEmptyList2;
         int size;
         int size2;
-        Intrinsics3.checkParameterIsNotNull(str, "domain");
+        d0.z.d.m.checkParameterIsNotNull(str, "domain");
         String unicode = IDN.toUnicode(str);
-        Intrinsics3.checkExpressionValueIsNotNull(unicode, "unicodeDomain");
+        d0.z.d.m.checkExpressionValueIsNotNull(unicode, "unicodeDomain");
         List<String> listC = c(unicode);
         if (this.e.get() || !this.e.compareAndSet(false, true)) {
             try {
@@ -160,8 +158,8 @@ public final class PublicSuffixDatabase {
                         Thread.interrupted();
                         z2 = true;
                     } catch (IOException e) {
-                        Platform2.a aVar = Platform2.c;
-                        Platform2.a.i("Failed to read public suffix list", 5, e);
+                        h.a aVar = h.c;
+                        h.a.i("Failed to read public suffix list", 5, e);
                         if (z2) {
                             Thread.currentThread().interrupt();
                         }
@@ -182,12 +180,12 @@ public final class PublicSuffixDatabase {
         for (int i = 0; i < size3; i++) {
             String str3 = listC.get(i);
             Charset charset = StandardCharsets.UTF_8;
-            Intrinsics3.checkExpressionValueIsNotNull(charset, "UTF_8");
+            d0.z.d.m.checkExpressionValueIsNotNull(charset, "UTF_8");
             if (str3 == null) {
                 throw new TypeCastException("null cannot be cast to non-null type java.lang.String");
             }
             byte[] bytes = str3.getBytes(charset);
-            Intrinsics3.checkExpressionValueIsNotNull(bytes, "(this as java.lang.String).getBytes(charset)");
+            d0.z.d.m.checkExpressionValueIsNotNull(bytes, "(this as java.lang.String).getBytes(charset)");
             bArr[i] = bytes;
         }
         int i2 = 0;
@@ -199,7 +197,7 @@ public final class PublicSuffixDatabase {
             a aVar2 = d;
             byte[] bArr2 = this.g;
             if (bArr2 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("publicSuffixListBytes");
+                d0.z.d.m.throwUninitializedPropertyAccessException("publicSuffixListBytes");
             }
             strA = a.a(aVar2, bArr2, bArr, i2);
             if (strA != null) {
@@ -215,7 +213,7 @@ public final class PublicSuffixDatabase {
                 a aVar3 = d;
                 byte[] bArr4 = this.g;
                 if (bArr4 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("publicSuffixListBytes");
+                    d0.z.d.m.throwUninitializedPropertyAccessException("publicSuffixListBytes");
                 }
                 String strA3 = a.a(aVar3, bArr4, bArr3, i3);
                 if (strA3 != null) {
@@ -233,7 +231,7 @@ public final class PublicSuffixDatabase {
                 a aVar4 = d;
                 byte[] bArr5 = this.h;
                 if (bArr5 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("publicSuffixExceptionListBytes");
+                    d0.z.d.m.throwUninitializedPropertyAccessException("publicSuffixExceptionListBytes");
                 }
                 strA2 = a.a(aVar4, bArr5, bArr, i5);
                 if (strA2 != null) {
@@ -245,15 +243,15 @@ public final class PublicSuffixDatabase {
             strA2 = null;
         }
         if (strA2 != null) {
-            listEmptyList2 = Strings4.split$default((CharSequence) ('!' + strA2), new char[]{'.'}, false, 0, 6, (Object) null);
+            listEmptyList2 = w.split$default((CharSequence) ('!' + strA2), new char[]{'.'}, false, 0, 6, (Object) null);
         } else if (strA == null && str2 == null) {
             listEmptyList2 = f3817b;
         } else {
-            if (strA == null || (listEmptyList = Strings4.split$default((CharSequence) strA, new char[]{'.'}, false, 0, 6, (Object) null)) == null) {
-                listEmptyList = Collections2.emptyList();
+            if (strA == null || (listEmptyList = w.split$default((CharSequence) strA, new char[]{'.'}, false, 0, 6, (Object) null)) == null) {
+                listEmptyList = n.emptyList();
             }
-            if (str2 == null || (listEmptyList2 = Strings4.split$default((CharSequence) str2, new char[]{'.'}, false, 0, 6, (Object) null)) == null) {
-                listEmptyList2 = Collections2.emptyList();
+            if (str2 == null || (listEmptyList2 = w.split$default((CharSequence) str2, new char[]{'.'}, false, 0, 6, (Object) null)) == null) {
+                listEmptyList2 = n.emptyList();
             }
             if (listEmptyList.size() > listEmptyList2.size()) {
                 listEmptyList2 = listEmptyList;
@@ -269,7 +267,7 @@ public final class PublicSuffixDatabase {
             size = listC.size();
             size2 = listEmptyList2.size() + 1;
         }
-        return _Sequences2.joinToString$default(_Sequences2.drop(_Collections.asSequence(c(str)), size - size2), ".", null, null, 0, null, null, 62, null);
+        return q.joinToString$default(q.drop(u.asSequence(c(str)), size - size2), ".", null, null, 0, null, null, 62, null);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0048 A[Catch: all -> 0x0054, TryCatch #0 {, blocks: (B:9:0x0041, B:10:0x0044, B:12:0x0048, B:13:0x004b), top: B:26:0x0041 }] */
@@ -281,20 +279,20 @@ public final class PublicSuffixDatabase {
         if (resourceAsStream == null) {
             return;
         }
-        Intrinsics3.checkParameterIsNotNull(resourceAsStream, "$this$source");
-        GzipSource gzipSource = new GzipSource(new JvmOkio(resourceAsStream, new Timeout2()));
-        Intrinsics3.checkParameterIsNotNull(gzipSource, "$this$buffer");
-        RealBufferedSource realBufferedSource = new RealBufferedSource(gzipSource);
+        d0.z.d.m.checkParameterIsNotNull(resourceAsStream, "$this$source");
+        l lVar = new l(new g0.n(resourceAsStream, new y()));
+        d0.z.d.m.checkParameterIsNotNull(lVar, "$this$buffer");
+        r rVar = new r(lVar);
         try {
-            byte[] bArrZ = realBufferedSource.Z(realBufferedSource.readInt());
-            byte[] bArrZ2 = realBufferedSource.Z(realBufferedSource.readInt());
-            Closeable.closeFinally(realBufferedSource, null);
+            byte[] bArrZ = rVar.Z(rVar.readInt());
+            byte[] bArrZ2 = rVar.Z(rVar.readInt());
+            b.closeFinally(rVar, null);
             synchronized (this) {
                 if (bArrZ == null) {
-                    Intrinsics3.throwNpe();
+                    d0.z.d.m.throwNpe();
                     this.g = bArrZ;
                     if (bArrZ2 == null) {
-                        Intrinsics3.throwNpe();
+                        d0.z.d.m.throwNpe();
                     }
                     this.h = bArrZ2;
                 } else {
@@ -310,7 +308,7 @@ public final class PublicSuffixDatabase {
     }
 
     public final List<String> c(String str) {
-        List<String> listSplit$default = Strings4.split$default((CharSequence) str, new char[]{'.'}, false, 0, 6, (Object) null);
-        return Intrinsics3.areEqual((String) _Collections.last((List) listSplit$default), "") ? _Collections.dropLast(listSplit$default, 1) : listSplit$default;
+        List<String> listSplit$default = w.split$default((CharSequence) str, new char[]{'.'}, false, 0, 6, (Object) null);
+        return d0.z.d.m.areEqual((String) u.last((List) listSplit$default), "") ? u.dropLast(listSplit$default, 1) : listSplit$default;
     }
 }

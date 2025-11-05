@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.constraintlayout.motion.utils.Easing;
 import androidx.constraintlayout.widget.R;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.HashMap;
 
 /* loaded from: classes.dex */
@@ -138,7 +138,7 @@ public class KeyPosition extends KeyPositionBase {
                         keyPosition.mPercentHeight = typedArray.getFloat(index, keyPosition.mPercentHeight);
                         break;
                     default:
-                        StringBuilder sbU = outline.U("unused attribute 0x");
+                        StringBuilder sbU = a.U("unused attribute 0x");
                         sbU.append(Integer.toHexString(index));
                         sbU.append("   ");
                         sbU.append(mAttrMap.get(index));

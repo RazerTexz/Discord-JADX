@@ -5,7 +5,7 @@ import kotlin.coroutines.CoroutineContext;
 
 /* compiled from: Builders.common.kt */
 /* loaded from: classes3.dex */
-public class t1 extends AbstractCoroutine<Unit> {
+public class t1 extends b<Unit> {
     public t1(CoroutineContext coroutineContext, boolean z2) {
         super(coroutineContext, z2);
     }

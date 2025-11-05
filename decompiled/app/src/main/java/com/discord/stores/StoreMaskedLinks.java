@@ -10,11 +10,11 @@ import com.discord.api.channel.ChannelUtils;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelUserRelationship;
 import com.discord.models.user.User;
-import d0.t.Collections2;
-import d0.t.Sets5;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.t.n;
+import d0.t.n0;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -53,7 +53,7 @@ public final class StoreMaskedLinks extends StoreV2 {
         private final String getDomainName(String url) {
             try {
                 Uri uri = Uri.parse(url);
-                Intrinsics3.checkNotNullExpressionValue(uri, "Uri.parse(url)");
+                m.checkNotNullExpressionValue(uri, "Uri.parse(url)");
                 return uri.getHost();
             } catch (Exception unused) {
                 return null;
@@ -62,7 +62,7 @@ public final class StoreMaskedLinks extends StoreV2 {
 
         @VisibleForTesting
         public final boolean isImplicitlyTrustedDomain$app_productionGoogleRelease(String name) {
-            Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             return StoreMaskedLinks.access$getTRUSTED_DOMAINS$cp().contains(name) || StoreMaskedLinks.access$getDISCORD_DOMAINS_REGEX$cp().containsMatchIn(name);
         }
 
@@ -73,7 +73,7 @@ public final class StoreMaskedLinks extends StoreV2 {
 
     /* compiled from: StoreMaskedLinks.kt */
     /* renamed from: com.discord.stores.StoreMaskedLinks$trustDomain$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ String $url;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -101,18 +101,18 @@ public final class StoreMaskedLinks extends StoreV2 {
     static {
         Companion companion = new Companion(null);
         INSTANCE = companion;
-        TRUSTED_DOMAINS = Collections2.listOfNotNull((Object[]) new String[]{Companion.access$getDomainName(companion, BuildConfig.HOST), Companion.access$getDomainName(companion, BuildConfig.HOST_ALTERNATE), Companion.access$getDomainName(companion, BuildConfig.HOST_CDN), Companion.access$getDomainName(companion, BuildConfig.HOST_GIFT), Companion.access$getDomainName(companion, BuildConfig.HOST_INVITE), Companion.access$getDomainName(companion, BuildConfig.HOST_GUILD_TEMPLATE), Companion.access$getDomainName(companion, HOST_SPOTIFY), Companion.access$getDomainName(companion, HOST_SPOTIFY_OPEN)});
+        TRUSTED_DOMAINS = n.listOfNotNull((Object[]) new String[]{Companion.access$getDomainName(companion, BuildConfig.HOST), Companion.access$getDomainName(companion, BuildConfig.HOST_ALTERNATE), Companion.access$getDomainName(companion, BuildConfig.HOST_CDN), Companion.access$getDomainName(companion, BuildConfig.HOST_GIFT), Companion.access$getDomainName(companion, BuildConfig.HOST_INVITE), Companion.access$getDomainName(companion, BuildConfig.HOST_GUILD_TEMPLATE), Companion.access$getDomainName(companion, HOST_SPOTIFY), Companion.access$getDomainName(companion, HOST_SPOTIFY_OPEN)});
         DISCORD_DOMAINS_REGEX = new Regex("(?:^|\\.)(?:discordapp|discord)\\.com$");
     }
 
     public StoreMaskedLinks(Dispatcher dispatcher, StoreChannelsSelected storeChannelsSelected, StoreUserRelationships storeUserRelationships) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
-        Intrinsics3.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeChannelsSelected, "storeChannelsSelected");
+        m.checkNotNullParameter(storeUserRelationships, "storeUserRelationships");
         this.dispatcher = dispatcher;
         this.storeChannelsSelected = storeChannelsSelected;
         this.storeUserRelationships = storeUserRelationships;
-        this.userTrustedDomainsSnapshot = Sets5.emptySet();
+        this.userTrustedDomainsSnapshot = n0.emptySet();
         this.userTrustedDomains = new LinkedHashSet();
     }
 
@@ -137,11 +137,11 @@ public final class StoreMaskedLinks extends StoreV2 {
     }
 
     @Override // com.discord.stores.Store
-    @Store3
+    @StoreThread
     public void init(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         super.init(context);
-        Set<String> stringSet = getPrefs().getStringSet(USER_TRUSTED_DOMAINS_CACHE_KEY, Sets5.emptySet());
+        Set<String> stringSet = getPrefs().getStringSet(USER_TRUSTED_DOMAINS_CACHE_KEY, n0.emptySet());
         if (stringSet == null) {
             stringSet = new LinkedHashSet<>();
         }
@@ -150,11 +150,11 @@ public final class StoreMaskedLinks extends StoreV2 {
     }
 
     public final boolean isTrustedDomain(String url, String mask) {
-        Intrinsics3.checkNotNullParameter(url, "url");
+        m.checkNotNullParameter(url, "url");
         if (isTrustedDomain(url)) {
             return true;
         }
-        boolean z2 = mask == null || Intrinsics3.areEqual(mask, url);
+        boolean z2 = mask == null || m.areEqual(mask, url);
         Channel selectedChannel = this.storeChannelsSelected.getSelectedChannel();
         User userA = selectedChannel != null ? ChannelUtils.a(selectedChannel) : null;
         if (ModelUserRelationship.isType(this.storeUserRelationships.getRelationships().get(userA != null ? Long.valueOf(userA.getId()) : null), 1)) {
@@ -164,24 +164,24 @@ public final class StoreMaskedLinks extends StoreV2 {
     }
 
     @Override // com.discord.stores.StoreV2
-    @Store3
+    @StoreThread
     public void snapshotData() {
         super.snapshotData();
         this.userTrustedDomainsSnapshot = new HashSet(this.userTrustedDomains);
         SharedPreferences.Editor editorEdit = getPrefs().edit();
-        Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
+        m.checkNotNullExpressionValue(editorEdit, "editor");
         editorEdit.putStringSet(USER_TRUSTED_DOMAINS_CACHE_KEY, this.userTrustedDomainsSnapshot);
         editorEdit.apply();
     }
 
     public final void trustDomain(String url) {
-        Intrinsics3.checkNotNullParameter(url, "url");
+        m.checkNotNullParameter(url, "url");
         this.dispatcher.schedule(new AnonymousClass1(url));
     }
 
     private final boolean isTrustedDomain(String url) {
         Companion companion = INSTANCE;
         String strAccess$getDomainName = Companion.access$getDomainName(companion, url);
-        return _Collections.contains(this.userTrustedDomainsSnapshot, strAccess$getDomainName) || (strAccess$getDomainName != null && companion.isImplicitlyTrustedDomain$app_productionGoogleRelease(strAccess$getDomainName));
+        return u.contains(this.userTrustedDomainsSnapshot, strAccess$getDomainName) || (strAccess$getDomainName != null && companion.isImplicitlyTrustedDomain$app_productionGoogleRelease(strAccess$getDomainName));
     }
 }

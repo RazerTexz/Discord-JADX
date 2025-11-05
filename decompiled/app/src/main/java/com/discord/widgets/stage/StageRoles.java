@@ -1,6 +1,6 @@
 package com.discord.widgets.stage;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: StageRoles.kt */
@@ -118,7 +118,7 @@ public final class StageRoles {
 
     /* renamed from: toString-impl, reason: not valid java name */
     public static String m34toStringimpl(int i) {
-        return outline.r("StageRoles(rolesFlags=", i, ")");
+        return a.r("StageRoles(rolesFlags=", i, ")");
     }
 
     public boolean equals(Object obj) {

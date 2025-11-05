@@ -1,10 +1,10 @@
 package com.discord.api.botuikit.gson;
 
 import com.discord.api.botuikit.Component;
-import com.discord.api.botuikit.Component6;
-import com.discord.api.botuikit.Component9;
+import com.discord.api.botuikit.ComponentType;
+import com.discord.api.botuikit.UnknownComponent;
 import com.discord.gsonutils.RuntimeTypeAdapterFactory;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ComponentRuntimeTypeAdapter.kt */
 /* loaded from: classes.dex */
@@ -13,12 +13,12 @@ public final class ComponentRuntimeTypeAdapter {
     private static final RuntimeTypeAdapterFactory<Component> componentRuntimeTypeAdapterFactory;
 
     static {
-        RuntimeTypeAdapterFactory<Component> runtimeTypeAdapterFactory = new RuntimeTypeAdapterFactory<>(Component.class, "type", true, Component9.class);
-        Component6[] component6ArrValues = Component6.values();
+        RuntimeTypeAdapterFactory<Component> runtimeTypeAdapterFactory = new RuntimeTypeAdapterFactory<>(Component.class, "type", true, UnknownComponent.class);
+        ComponentType[] componentTypeArrValues = ComponentType.values();
         for (int i = 0; i < 5; i++) {
-            Component6 component6 = component6ArrValues[i];
-            Class<? extends Component> clazz = component6.getClazz();
-            String strValueOf = String.valueOf(component6.getType());
+            ComponentType componentType = componentTypeArrValues[i];
+            Class<? extends Component> clazz = componentType.getClazz();
+            String strValueOf = String.valueOf(componentType.getType());
             if (clazz == null || strValueOf == null) {
                 throw null;
             }
@@ -28,7 +28,7 @@ public final class ComponentRuntimeTypeAdapter {
             runtimeTypeAdapterFactory.l.put(strValueOf, clazz);
             runtimeTypeAdapterFactory.m.put(clazz, strValueOf);
         }
-        Intrinsics3.checkNotNullExpressionValue(runtimeTypeAdapterFactory, "RuntimeTypeAdapterFactor…ype.toString())\n    }\n  }");
+        m.checkNotNullExpressionValue(runtimeTypeAdapterFactory, "RuntimeTypeAdapterFactor…ype.toString())\n    }\n  }");
         componentRuntimeTypeAdapterFactory = runtimeTypeAdapterFactory;
     }
 

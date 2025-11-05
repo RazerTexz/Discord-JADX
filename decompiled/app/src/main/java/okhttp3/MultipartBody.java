@@ -2,10 +2,10 @@ package okhttp3;
 
 import androidx.browser.trusted.sharing.ShareTarget;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.g0.Strings4;
-import d0.z.d.Intrinsics3;
-import f0.e0.Util7;
-import g0.Buffer3;
+import d0.g0.w;
+import d0.z.d.m;
+import f0.e0.c;
+import g0.e;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public final class MultipartBody extends RequestBody {
         }
 
         public static final Part a(Headers headers, RequestBody requestBody) {
-            Intrinsics3.checkParameterIsNotNull(requestBody, "body");
+            m.checkParameterIsNotNull(requestBody, "body");
             if (!(headers.c("Content-Type") == null)) {
                 throw new IllegalArgumentException("Unexpected header: Content-Type".toString());
             }
@@ -59,8 +59,8 @@ public final class MultipartBody extends RequestBody {
         }
 
         public static final Part b(String str, String str2, RequestBody requestBody) {
-            Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
-            Intrinsics3.checkParameterIsNotNull(requestBody, "body");
+            m.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+            m.checkParameterIsNotNull(requestBody, "body");
             StringBuilder sb = new StringBuilder();
             sb.append("form-data; name=");
             b bVar = MultipartBody.f;
@@ -70,23 +70,23 @@ public final class MultipartBody extends RequestBody {
                 bVar.a(sb, str2);
             }
             String string = sb.toString();
-            Intrinsics3.checkExpressionValueIsNotNull(string, "StringBuilder().apply(builderAction).toString()");
+            m.checkExpressionValueIsNotNull(string, "StringBuilder().apply(builderAction).toString()");
             ArrayList arrayList = new ArrayList(20);
-            Intrinsics3.checkParameterIsNotNull("Content-Disposition", ModelAuditLogEntry.CHANGE_KEY_NAME);
-            Intrinsics3.checkParameterIsNotNull(string, "value");
+            m.checkParameterIsNotNull("Content-Disposition", ModelAuditLogEntry.CHANGE_KEY_NAME);
+            m.checkParameterIsNotNull(string, "value");
             if (1 == 0) {
                 throw new IllegalArgumentException("name is empty".toString());
             }
             for (int i = 0; i < 19; i++) {
                 char cCharAt = "Content-Disposition".charAt(i);
                 if (!('!' <= cCharAt && '~' >= cCharAt)) {
-                    throw new IllegalArgumentException(Util7.j("Unexpected char %#04x at %d in header name: %s", Integer.valueOf(cCharAt), Integer.valueOf(i), "Content-Disposition").toString());
+                    throw new IllegalArgumentException(c.j("Unexpected char %#04x at %d in header name: %s", Integer.valueOf(cCharAt), Integer.valueOf(i), "Content-Disposition").toString());
                 }
             }
-            Intrinsics3.checkParameterIsNotNull("Content-Disposition", ModelAuditLogEntry.CHANGE_KEY_NAME);
-            Intrinsics3.checkParameterIsNotNull(string, "value");
+            m.checkParameterIsNotNull("Content-Disposition", ModelAuditLogEntry.CHANGE_KEY_NAME);
+            m.checkParameterIsNotNull(string, "value");
             arrayList.add("Content-Disposition");
-            arrayList.add(Strings4.trim(string).toString());
+            arrayList.add(w.trim(string).toString());
             Object[] array = arrayList.toArray(new String[0]);
             if (array != null) {
                 return a(new Headers((String[]) array, null), requestBody);
@@ -105,29 +105,29 @@ public final class MultipartBody extends RequestBody {
 
         public a() {
             String string = UUID.randomUUID().toString();
-            Intrinsics3.checkExpressionValueIsNotNull(string, "UUID.randomUUID().toString()");
-            Intrinsics3.checkParameterIsNotNull(string, "boundary");
+            m.checkExpressionValueIsNotNull(string, "UUID.randomUUID().toString()");
+            m.checkParameterIsNotNull(string, "boundary");
             this.a = ByteString.INSTANCE.c(string);
             this.f3811b = MultipartBody.a;
             this.c = new ArrayList();
         }
 
         public final a a(Part part) {
-            Intrinsics3.checkParameterIsNotNull(part, "part");
+            m.checkParameterIsNotNull(part, "part");
             this.c.add(part);
             return this;
         }
 
         public final MultipartBody b() {
             if (!this.c.isEmpty()) {
-                return new MultipartBody(this.a, this.f3811b, Util7.z(this.c));
+                return new MultipartBody(this.a, this.f3811b, c.z(this.c));
             }
             throw new IllegalStateException("Multipart body must have at least one part.".toString());
         }
 
         public final a c(MediaType mediaType) {
-            Intrinsics3.checkParameterIsNotNull(mediaType, "type");
-            if (Intrinsics3.areEqual(mediaType.type, "multipart")) {
+            m.checkParameterIsNotNull(mediaType, "type");
+            if (m.areEqual(mediaType.type, "multipart")) {
                 this.f3811b = mediaType;
                 return this;
             }
@@ -141,8 +141,8 @@ public final class MultipartBody extends RequestBody {
         }
 
         public final void a(StringBuilder sb, String str) {
-            Intrinsics3.checkParameterIsNotNull(sb, "$this$appendQuotedString");
-            Intrinsics3.checkParameterIsNotNull(str, "key");
+            m.checkParameterIsNotNull(sb, "$this$appendQuotedString");
+            m.checkParameterIsNotNull(str, "key");
             sb.append('\"');
             int length = str.length();
             for (int i = 0; i < length; i++) {
@@ -175,9 +175,9 @@ public final class MultipartBody extends RequestBody {
     }
 
     public MultipartBody(ByteString byteString, MediaType mediaType, List<Part> list) {
-        Intrinsics3.checkParameterIsNotNull(byteString, "boundaryByteString");
-        Intrinsics3.checkParameterIsNotNull(mediaType, "type");
-        Intrinsics3.checkParameterIsNotNull(list, "parts");
+        m.checkParameterIsNotNull(byteString, "boundaryByteString");
+        m.checkParameterIsNotNull(mediaType, "type");
+        m.checkParameterIsNotNull(list, "parts");
         this.i = byteString;
         this.j = mediaType;
         this.k = list;
@@ -188,12 +188,12 @@ public final class MultipartBody extends RequestBody {
 
     /* JADX WARN: Multi-variable type inference failed */
     public final long a(BufferedSink bufferedSink, boolean z2) throws IOException {
-        Buffer3 buffer3;
+        e eVar;
         if (z2) {
-            bufferedSink = new Buffer3();
-            buffer3 = bufferedSink;
+            bufferedSink = new e();
+            eVar = bufferedSink;
         } else {
-            buffer3 = 0;
+            eVar = 0;
         }
         int size = this.k.size();
         long j = 0;
@@ -202,7 +202,7 @@ public final class MultipartBody extends RequestBody {
             Headers headers = part.headers;
             RequestBody requestBody = part.body;
             if (bufferedSink == null) {
-                Intrinsics3.throwNpe();
+                m.throwNpe();
             }
             bufferedSink.write(e);
             bufferedSink.e0(this.i);
@@ -221,10 +221,10 @@ public final class MultipartBody extends RequestBody {
             if (jContentLength != -1) {
                 bufferedSink.K("Content-Length: ").q0(jContentLength).write(d);
             } else if (z2) {
-                if (buffer3 == 0) {
-                    Intrinsics3.throwNpe();
+                if (eVar == 0) {
+                    m.throwNpe();
                 }
-                buffer3.skip(buffer3.k);
+                eVar.skip(eVar.k);
                 return -1L;
             }
             byte[] bArr = d;
@@ -237,7 +237,7 @@ public final class MultipartBody extends RequestBody {
             bufferedSink.write(bArr);
         }
         if (bufferedSink == null) {
-            Intrinsics3.throwNpe();
+            m.throwNpe();
         }
         byte[] bArr2 = e;
         bufferedSink.write(bArr2);
@@ -247,12 +247,12 @@ public final class MultipartBody extends RequestBody {
         if (!z2) {
             return j;
         }
-        if (buffer3 == 0) {
-            Intrinsics3.throwNpe();
+        if (eVar == 0) {
+            m.throwNpe();
         }
-        long j2 = buffer3.k;
+        long j2 = eVar.k;
         long j3 = j + j2;
-        buffer3.skip(j2);
+        eVar.skip(j2);
         return j3;
     }
 
@@ -275,7 +275,7 @@ public final class MultipartBody extends RequestBody {
 
     @Override // okhttp3.RequestBody
     public void writeTo(BufferedSink bufferedSink) throws IOException {
-        Intrinsics3.checkParameterIsNotNull(bufferedSink, "sink");
+        m.checkParameterIsNotNull(bufferedSink, "sink");
         a(bufferedSink, false);
     }
 }

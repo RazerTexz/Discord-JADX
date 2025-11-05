@@ -4,7 +4,6 @@ import android.os.Parcel;
 import android.os.ParcelUuid;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
 import b.i.a.f.h.m.d;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Arrays;
@@ -54,7 +53,7 @@ public final class zzgp extends AbstractSafeParcelable {
         }
         if (obj != null && zzgp.class == obj.getClass()) {
             zzgp zzgpVar = (zzgp) obj;
-            if (this.p == zzgpVar.p && Arrays.equals(this.q, zzgpVar.q) && Arrays.equals(this.r, zzgpVar.r) && AnimatableValueParser.h0(this.m, zzgpVar.m) && Arrays.equals(this.n, zzgpVar.n) && Arrays.equals(this.o, zzgpVar.o) && AnimatableValueParser.h0(this.k, zzgpVar.k) && AnimatableValueParser.h0(this.l, zzgpVar.l)) {
+            if (this.p == zzgpVar.p && Arrays.equals(this.q, zzgpVar.q) && Arrays.equals(this.r, zzgpVar.r) && b.c.a.a0.d.h0(this.m, zzgpVar.m) && Arrays.equals(this.n, zzgpVar.n) && Arrays.equals(this.o, zzgpVar.o) && b.c.a.a0.d.h0(this.k, zzgpVar.k) && b.c.a.a0.d.h0(this.l, zzgpVar.l)) {
                 return true;
             }
         }
@@ -67,20 +66,20 @@ public final class zzgp extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = b.c.a.a0.d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        AnimatableValueParser.s2(parcel, 4, this.k, i, false);
-        AnimatableValueParser.s2(parcel, 5, this.l, i, false);
-        AnimatableValueParser.s2(parcel, 6, this.m, i, false);
-        AnimatableValueParser.q2(parcel, 7, this.n, false);
-        AnimatableValueParser.q2(parcel, 8, this.o, false);
+        b.c.a.a0.d.s2(parcel, 4, this.k, i, false);
+        b.c.a.a0.d.s2(parcel, 5, this.l, i, false);
+        b.c.a.a0.d.s2(parcel, 6, this.m, i, false);
+        b.c.a.a0.d.q2(parcel, 7, this.n, false);
+        b.c.a.a0.d.q2(parcel, 8, this.o, false);
         int i3 = this.p;
         parcel.writeInt(262153);
         parcel.writeInt(i3);
-        AnimatableValueParser.q2(parcel, 10, this.q, false);
-        AnimatableValueParser.q2(parcel, 11, this.r, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        b.c.a.a0.d.q2(parcel, 10, this.q, false);
+        b.c.a.a0.d.q2(parcel, 11, this.r, false);
+        b.c.a.a0.d.A2(parcel, iY2);
     }
 }

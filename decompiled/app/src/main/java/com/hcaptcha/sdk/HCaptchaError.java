@@ -1,7 +1,7 @@
 package com.hcaptcha.sdk;
 
 import androidx.annotation.NonNull;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.io.Serializable;
 
 /* loaded from: classes3.dex */
@@ -29,7 +29,7 @@ public enum HCaptchaError implements Serializable {
                 return hCaptchaError;
             }
         }
-        throw new RuntimeException(outline.q("Unsupported error id: ", i));
+        throw new RuntimeException(a.q("Unsupported error id: ", i));
     }
 
     public int getErrorId() {

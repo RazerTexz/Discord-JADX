@@ -22,24 +22,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import b.c.a.a0.AnimatableValueParser;
-import b.i.a.c.DeviceInfo2;
-import b.i.a.c.MediaItem2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.PlaybackParameters;
-import b.i.a.c.Player;
-import b.i.a.c.Player2;
-import b.i.a.c.Player3;
-import b.i.a.c.Timeline;
-import b.i.a.c.TracksInfo;
-import b.i.a.c.a3.TrackGroupArray;
-import b.i.a.c.b3.Cue;
-import b.i.a.c.c3.TrackSelectionArray;
-import b.i.a.c.d3.AdOverlayInfo;
-import b.i.a.c.f3.ErrorMessageProvider;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.g3.VideoSize;
-import b.i.b.b.ImmutableList2;
+import b.c.a.a0.d;
+import b.i.a.c.a2;
+import b.i.a.c.a3.o0;
+import b.i.a.c.b3.b;
+import b.i.a.c.c1;
+import b.i.a.c.c3.n;
+import b.i.a.c.d3.i;
+import b.i.a.c.f3.e0;
+import b.i.a.c.f3.m;
+import b.i.a.c.g3.y;
+import b.i.a.c.o1;
+import b.i.a.c.o2;
+import b.i.a.c.p1;
+import b.i.a.c.p2;
+import b.i.a.c.x1;
+import b.i.a.c.y1;
+import b.i.a.c.z1;
+import b.i.b.b.p;
 import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.google.android.exoplayer2.PlaybackException;
 import com.google.android.exoplayer2.metadata.Metadata;
@@ -61,7 +61,7 @@ public class PlayerView extends FrameLayout {
     public boolean C;
 
     @Nullable
-    public ErrorMessageProvider<? super PlaybackException> D;
+    public m<? super PlaybackException> D;
 
     @Nullable
     public CharSequence E;
@@ -106,7 +106,7 @@ public class PlayerView extends FrameLayout {
     public final FrameLayout v;
 
     @Nullable
-    public Player2 w;
+    public y1 w;
 
     /* renamed from: x, reason: collision with root package name */
     public boolean f2973x;
@@ -118,8 +118,8 @@ public class PlayerView extends FrameLayout {
     /* renamed from: z, reason: collision with root package name */
     public boolean f2975z;
 
-    public final class a implements Player2.e, View.OnLayoutChangeListener, View.OnClickListener, PlayerControlView.e {
-        public final Timeline.b j = new Timeline.b();
+    public final class a implements y1.e, View.OnLayoutChangeListener, View.OnClickListener, PlayerControlView.e {
+        public final o2.b j = new o2.b();
 
         @Nullable
         public Object k;
@@ -127,42 +127,42 @@ public class PlayerView extends FrameLayout {
         public a() {
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void A(MediaMetadata mediaMetadata) {
-            Player.i(this, mediaMetadata);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void A(p1 p1Var) {
+            a2.i(this, p1Var);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void D(boolean z2) {
-            Player.t(this, z2);
+            a2.t(this, z2);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void E(Player2 player2, Player2.d dVar) {
-            Player.e(this, player2, dVar);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void E(y1 y1Var, y1.d dVar) {
+            a2.e(this, y1Var, dVar);
         }
 
-        @Override // b.i.a.c.Player2.e
+        @Override // b.i.a.c.y1.e
         public /* synthetic */ void G(int i, boolean z2) {
-            Player.d(this, i, z2);
+            a2.d(this, i, z2);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void H(boolean z2, int i) {
-            Player3.k(this, z2, i);
+            z1.k(this, z2, i);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void L(int i) {
-            Player.s(this, i);
+            a2.s(this, i);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void M(MediaItem2 mediaItem2, int i) {
-            Player.h(this, mediaItem2, i);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void M(o1 o1Var, int i) {
+            a2.h(this, o1Var, i);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public void W(boolean z2, int i) {
             PlayerView playerView = PlayerView.this;
             int i2 = PlayerView.j;
@@ -175,32 +175,32 @@ public class PlayerView extends FrameLayout {
             }
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void Y(TrackGroupArray trackGroupArray, TrackSelectionArray trackSelectionArray) {
-            Player3.r(this, trackGroupArray, trackSelectionArray);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void Y(o0 o0Var, n nVar) {
+            z1.r(this, o0Var, nVar);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void a() {
-            Player3.o(this);
+            z1.o(this);
         }
 
-        @Override // b.i.a.c.Player2.e
+        @Override // b.i.a.c.y1.e
         public /* synthetic */ void a0(int i, int i2) {
-            Player.v(this, i, i2);
+            a2.v(this, i, i2);
         }
 
-        @Override // b.i.a.c.Player2.e
+        @Override // b.i.a.c.y1.e
         public /* synthetic */ void b(Metadata metadata) {
-            Player.j(this, metadata);
+            a2.j(this, metadata);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void b0(PlaybackParameters playbackParameters) {
-            Player.l(this, playbackParameters);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void b0(x1 x1Var) {
+            a2.l(this, x1Var);
         }
 
-        @Override // b.i.a.c.Player2.e
+        @Override // b.i.a.c.y1.e
         public void c() {
             View view = PlayerView.this.m;
             if (view != null) {
@@ -208,33 +208,33 @@ public class PlayerView extends FrameLayout {
             }
         }
 
-        @Override // b.i.a.c.Player2.e
+        @Override // b.i.a.c.y1.e
         public /* synthetic */ void d(boolean z2) {
-            Player.u(this, z2);
+            a2.u(this, z2);
         }
 
-        @Override // b.i.a.c.Player2.e
-        public void e(List<Cue> list) {
+        @Override // b.i.a.c.y1.e
+        public void e(List<b> list) {
             SubtitleView subtitleView = PlayerView.this.q;
             if (subtitleView != null) {
                 subtitleView.setCues(list);
             }
         }
 
-        @Override // b.i.a.c.Player2.e
-        public void f(VideoSize videoSize) {
+        @Override // b.i.a.c.y1.e
+        public void f(y yVar) {
             PlayerView playerView = PlayerView.this;
             int i = PlayerView.j;
             playerView.k();
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void f0(PlaybackException playbackException) {
-            Player.p(this, playbackException);
+            a2.p(this, playbackException);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public void g(Player2.f fVar, Player2.f fVar2, int i) {
+        @Override // b.i.a.c.y1.c
+        public void g(y1.f fVar, y1.f fVar2, int i) {
             PlayerView playerView = PlayerView.this;
             int i2 = PlayerView.j;
             if (playerView.e()) {
@@ -245,24 +245,24 @@ public class PlayerView extends FrameLayout {
             }
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void h(int i) {
-            Player.n(this, i);
+            a2.n(this, i);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void i(boolean z2) {
-            Player3.d(this, z2);
+            z1.d(this, z2);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void j(int i) {
-            Player3.l(this, i);
+            z1.l(this, i);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void j0(boolean z2) {
-            Player.g(this, z2);
+            a2.g(this, z2);
         }
 
         @Override // com.google.android.exoplayer2.ui.PlayerControlView.e
@@ -284,56 +284,56 @@ public class PlayerView extends FrameLayout {
             PlayerView.a((TextureView) view, PlayerView.this.J);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public void p(TracksInfo tracksInfo) {
-            Player2 player2 = PlayerView.this.w;
-            Objects.requireNonNull(player2);
-            Timeline timelineK = player2.K();
-            if (timelineK.q()) {
+        @Override // b.i.a.c.y1.c
+        public void p(p2 p2Var) {
+            y1 y1Var = PlayerView.this.w;
+            Objects.requireNonNull(y1Var);
+            o2 o2VarK = y1Var.K();
+            if (o2VarK.q()) {
                 this.k = null;
-            } else if (player2.H().k.isEmpty()) {
+            } else if (y1Var.H().k.isEmpty()) {
                 Object obj = this.k;
                 if (obj != null) {
-                    int iB = timelineK.b(obj);
+                    int iB = o2VarK.b(obj);
                     if (iB != -1) {
-                        if (player2.C() == timelineK.f(iB, this.j).l) {
+                        if (y1Var.C() == o2VarK.f(iB, this.j).l) {
                             return;
                         }
                     }
                     this.k = null;
                 }
             } else {
-                this.k = timelineK.g(player2.m(), this.j, true).k;
+                this.k = o2VarK.g(y1Var.m(), this.j, true).k;
             }
             PlayerView.this.o(false);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void r(boolean z2) {
-            Player.f(this, z2);
+            a2.f(this, z2);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public /* synthetic */ void s(PlaybackException playbackException) {
-            Player.o(this, playbackException);
+            a2.o(this, playbackException);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void t(Player2.b bVar) {
-            Player.a(this, bVar);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void t(y1.b bVar) {
+            a2.a(this, bVar);
         }
 
-        @Override // b.i.a.c.Player2.c
-        public /* synthetic */ void v(Timeline timeline, int i) {
-            Player.w(this, timeline, i);
+        @Override // b.i.a.c.y1.c
+        public /* synthetic */ void v(o2 o2Var, int i) {
+            a2.w(this, o2Var, i);
         }
 
-        @Override // b.i.a.c.Player2.e
+        @Override // b.i.a.c.y1.e
         public /* synthetic */ void w(float f) {
-            Player.z(this, f);
+            a2.z(this, f);
         }
 
-        @Override // b.i.a.c.Player2.c
+        @Override // b.i.a.c.y1.c
         public void y(int i) {
             PlayerView playerView = PlayerView.this;
             int i2 = PlayerView.j;
@@ -347,9 +347,9 @@ public class PlayerView extends FrameLayout {
             }
         }
 
-        @Override // b.i.a.c.Player2.e
-        public /* synthetic */ void z(DeviceInfo2 deviceInfo2) {
-            Player.c(this, deviceInfo2);
+        @Override // b.i.a.c.y1.e
+        public /* synthetic */ void z(c1 c1Var) {
+            a2.c(this, c1Var);
         }
     }
 
@@ -384,7 +384,7 @@ public class PlayerView extends FrameLayout {
             this.u = null;
             this.v = null;
             ImageView imageView = new ImageView(context);
-            if (Util2.a >= 23) {
+            if (e0.a >= 23) {
                 Resources resources = getResources();
                 imageView.setImageDrawable(resources.getDrawable(R.b.exo_edit_mode_logo, null));
                 imageView.setBackgroundColor(resources.getColor(R.a.exo_edit_mode_background_color, null));
@@ -590,8 +590,8 @@ public class PlayerView extends FrameLayout {
 
     @Override // android.view.ViewGroup, android.view.View
     public boolean dispatchKeyEvent(KeyEvent keyEvent) {
-        Player2 player2 = this.w;
-        if (player2 != null && player2.f()) {
+        y1 y1Var = this.w;
+        if (y1Var != null && y1Var.f()) {
             return super.dispatchKeyEvent(keyEvent);
         }
         int keyCode = keyEvent.getKeyCode();
@@ -612,8 +612,8 @@ public class PlayerView extends FrameLayout {
     }
 
     public final boolean e() {
-        Player2 player2 = this.w;
-        return player2 != null && player2.f() && this.w.j();
+        y1 y1Var = this.w;
+        return y1Var != null && y1Var.f() && this.w.j();
     }
 
     public final void f(boolean z2) {
@@ -645,17 +645,17 @@ public class PlayerView extends FrameLayout {
         return false;
     }
 
-    public List<AdOverlayInfo> getAdOverlayInfos() {
+    public List<i> getAdOverlayInfos() {
         ArrayList arrayList = new ArrayList();
         FrameLayout frameLayout = this.v;
         if (frameLayout != null) {
-            arrayList.add(new AdOverlayInfo(frameLayout, 3, "Transparent overlay does not impact viewability"));
+            arrayList.add(new i(frameLayout, 3, "Transparent overlay does not impact viewability"));
         }
         PlayerControlView playerControlView = this.t;
         if (playerControlView != null) {
-            arrayList.add(new AdOverlayInfo(playerControlView, 0));
+            arrayList.add(new i(playerControlView, 0));
         }
-        return ImmutableList2.n(arrayList);
+        return p.n(arrayList);
     }
 
     public ViewGroup getAdViewGroup() {
@@ -689,12 +689,12 @@ public class PlayerView extends FrameLayout {
     }
 
     @Nullable
-    public Player2 getPlayer() {
+    public y1 getPlayer() {
         return this.w;
     }
 
     public int getResizeMode() {
-        AnimatableValueParser.H(this.l);
+        d.H(this.l);
         return this.l.getResizeMode();
     }
 
@@ -717,11 +717,11 @@ public class PlayerView extends FrameLayout {
     }
 
     public final boolean h() {
-        Player2 player2 = this.w;
-        if (player2 == null) {
+        y1 y1Var = this.w;
+        if (y1Var == null) {
             return true;
         }
-        int iY = player2.y();
+        int iY = y1Var.y();
         return this.G && (iY == 1 || iY == 4 || !this.w.j());
     }
 
@@ -745,12 +745,12 @@ public class PlayerView extends FrameLayout {
     }
 
     public final void k() {
-        Player2 player2 = this.w;
-        VideoSize videoSizeO = player2 != null ? player2.o() : VideoSize.j;
-        int i = videoSizeO.k;
-        int i2 = videoSizeO.l;
-        int i3 = videoSizeO.m;
-        float f = (i2 == 0 || i == 0) ? 0.0f : (i * videoSizeO.n) / i2;
+        y1 y1Var = this.w;
+        y yVarO = y1Var != null ? y1Var.o() : y.j;
+        int i = yVarO.k;
+        int i2 = yVarO.l;
+        int i3 = yVarO.m;
+        float f = (i2 == 0 || i == 0) ? 0.0f : (i * yVarO.n) / i2;
         View view = this.n;
         if (view instanceof TextureView) {
             if (f > 0.0f && (i3 == 90 || i3 == 270)) {
@@ -775,9 +775,9 @@ public class PlayerView extends FrameLayout {
     public final void l() {
         int i;
         if (this.r != null) {
-            Player2 player2 = this.w;
+            y1 y1Var = this.w;
             boolean z2 = true;
-            if (player2 == null || player2.y() != 2 || ((i = this.B) != 2 && (i != 1 || !this.w.j()))) {
+            if (y1Var == null || y1Var.y() != 2 || ((i = this.B) != 2 && (i != 1 || !this.w.j()))) {
                 z2 = false;
             }
             this.r.setVisibility(z2 ? 0 : 8);
@@ -796,7 +796,7 @@ public class PlayerView extends FrameLayout {
     }
 
     public final void n() {
-        ErrorMessageProvider<? super PlaybackException> errorMessageProvider;
+        m<? super PlaybackException> mVar;
         TextView textView = this.f2972s;
         if (textView != null) {
             CharSequence charSequence = this.E;
@@ -805,12 +805,12 @@ public class PlayerView extends FrameLayout {
                 this.f2972s.setVisibility(0);
                 return;
             }
-            Player2 player2 = this.w;
-            PlaybackException playbackExceptionT = player2 != null ? player2.t() : null;
-            if (playbackExceptionT == null || (errorMessageProvider = this.D) == null) {
+            y1 y1Var = this.w;
+            PlaybackException playbackExceptionT = y1Var != null ? y1Var.t() : null;
+            if (playbackExceptionT == null || (mVar = this.D) == null) {
                 this.f2972s.setVisibility(8);
             } else {
-                this.f2972s.setText((CharSequence) errorMessageProvider.a(playbackExceptionT).second);
+                this.f2972s.setText((CharSequence) mVar.a(playbackExceptionT).second);
                 this.f2972s.setVisibility(0);
             }
         }
@@ -820,8 +820,8 @@ public class PlayerView extends FrameLayout {
         boolean z3;
         boolean z4;
         boolean z5;
-        Player2 player2 = this.w;
-        if (player2 == null || !player2.D(30) || player2.H().k.isEmpty()) {
+        y1 y1Var = this.w;
+        if (y1Var == null || !y1Var.D(30) || y1Var.H().k.isEmpty()) {
             if (this.C) {
                 return;
             }
@@ -832,16 +832,16 @@ public class PlayerView extends FrameLayout {
         if (z2 && !this.C) {
             b();
         }
-        TracksInfo tracksInfoH = player2.H();
+        p2 p2VarH = y1Var.H();
         boolean zG = false;
         int i = 0;
         while (true) {
             z3 = true;
-            if (i >= tracksInfoH.k.size()) {
+            if (i >= p2VarH.k.size()) {
                 z4 = false;
                 break;
             }
-            TracksInfo.a aVar = tracksInfoH.k.get(i);
+            p2.a aVar = p2VarH.k.get(i);
             boolean[] zArr = aVar.m;
             int length = zArr.length;
             int i2 = 0;
@@ -869,12 +869,12 @@ public class PlayerView extends FrameLayout {
         }
         b();
         if (this.f2975z) {
-            AnimatableValueParser.H(this.p);
+            d.H(this.p);
         } else {
             z3 = false;
         }
         if (z3) {
-            byte[] bArr = player2.S().v;
+            byte[] bArr = y1Var.S().v;
             if (bArr != null) {
                 zG = g(new BitmapDrawable(getResources(), BitmapFactory.decodeByteArray(bArr, 0, bArr.length)));
             }
@@ -917,7 +917,7 @@ public class PlayerView extends FrameLayout {
         if (!this.f2973x) {
             return false;
         }
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         return true;
     }
 
@@ -928,7 +928,7 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setAspectRatioListener(@Nullable AspectRatioFrameLayout.b bVar) {
-        AnimatableValueParser.H(this.l);
+        d.H(this.l);
         this.l.setAspectRatioListener(bVar);
     }
 
@@ -941,13 +941,13 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setControllerHideOnTouch(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.I = z2;
         m();
     }
 
     public void setControllerShowTimeoutMs(int i) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.F = i;
         if (this.t.e()) {
             i(h());
@@ -955,7 +955,7 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setControllerVisibilityListener(@Nullable PlayerControlView.e eVar) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         PlayerControlView.e eVar2 = this.f2974y;
         if (eVar2 == eVar) {
             return;
@@ -972,7 +972,7 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setCustomErrorMessage(@Nullable CharSequence charSequence) {
-        AnimatableValueParser.D(this.f2972s != null);
+        d.D(this.f2972s != null);
         this.E = charSequence;
         n();
     }
@@ -984,9 +984,9 @@ public class PlayerView extends FrameLayout {
         }
     }
 
-    public void setErrorMessageProvider(@Nullable ErrorMessageProvider<? super PlaybackException> errorMessageProvider) {
-        if (this.D != errorMessageProvider) {
-            this.D = errorMessageProvider;
+    public void setErrorMessageProvider(@Nullable m<? super PlaybackException> mVar) {
+        if (this.D != mVar) {
+            this.D = mVar;
             n();
         }
     }
@@ -998,21 +998,21 @@ public class PlayerView extends FrameLayout {
         }
     }
 
-    public void setPlayer(@Nullable Player2 player2) {
-        AnimatableValueParser.D(Looper.myLooper() == Looper.getMainLooper());
-        AnimatableValueParser.j(player2 == null || player2.L() == Looper.getMainLooper());
-        Player2 player22 = this.w;
-        if (player22 == player2) {
+    public void setPlayer(@Nullable y1 y1Var) {
+        d.D(Looper.myLooper() == Looper.getMainLooper());
+        d.j(y1Var == null || y1Var.L() == Looper.getMainLooper());
+        y1 y1Var2 = this.w;
+        if (y1Var2 == y1Var) {
             return;
         }
-        if (player22 != null) {
-            player22.p(this.k);
-            if (player22.D(27)) {
+        if (y1Var2 != null) {
+            y1Var2.p(this.k);
+            if (y1Var2.D(27)) {
                 View view = this.n;
                 if (view instanceof TextureView) {
-                    player22.n((TextureView) view);
+                    y1Var2.n((TextureView) view);
                 } else if (view instanceof SurfaceView) {
-                    player22.F((SurfaceView) view);
+                    y1Var2.F((SurfaceView) view);
                 }
             }
         }
@@ -1020,40 +1020,40 @@ public class PlayerView extends FrameLayout {
         if (subtitleView != null) {
             subtitleView.setCues(null);
         }
-        this.w = player2;
+        this.w = y1Var;
         if (p()) {
-            this.t.setPlayer(player2);
+            this.t.setPlayer(y1Var);
         }
         l();
         n();
         o(true);
-        if (player2 == null) {
+        if (y1Var == null) {
             d();
             return;
         }
-        if (player2.D(27)) {
+        if (y1Var.D(27)) {
             View view2 = this.n;
             if (view2 instanceof TextureView) {
-                player2.Q((TextureView) view2);
+                y1Var.Q((TextureView) view2);
             } else if (view2 instanceof SurfaceView) {
-                player2.r((SurfaceView) view2);
+                y1Var.r((SurfaceView) view2);
             }
             k();
         }
-        if (this.q != null && player2.D(28)) {
-            this.q.setCues(player2.A());
+        if (this.q != null && y1Var.D(28)) {
+            this.q.setCues(y1Var.A());
         }
-        player2.x(this.k);
+        y1Var.x(this.k);
         f(false);
     }
 
     public void setRepeatToggleModes(int i) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setRepeatToggleModes(i);
     }
 
     public void setResizeMode(int i) {
-        AnimatableValueParser.H(this.l);
+        d.H(this.l);
         this.l.setResizeMode(i);
     }
 
@@ -1065,32 +1065,32 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setShowFastForwardButton(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setShowFastForwardButton(z2);
     }
 
     public void setShowMultiWindowTimeBar(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setShowMultiWindowTimeBar(z2);
     }
 
     public void setShowNextButton(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setShowNextButton(z2);
     }
 
     public void setShowPreviousButton(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setShowPreviousButton(z2);
     }
 
     public void setShowRewindButton(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setShowRewindButton(z2);
     }
 
     public void setShowShuffleButton(boolean z2) {
-        AnimatableValueParser.H(this.t);
+        d.H(this.t);
         this.t.setShowShuffleButton(z2);
     }
 
@@ -1102,7 +1102,7 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setUseArtwork(boolean z2) {
-        AnimatableValueParser.D((z2 && this.p == null) ? false : true);
+        d.D((z2 && this.p == null) ? false : true);
         if (this.f2975z != z2) {
             this.f2975z = z2;
             o(false);
@@ -1110,7 +1110,7 @@ public class PlayerView extends FrameLayout {
     }
 
     public void setUseController(boolean z2) {
-        AnimatableValueParser.D((z2 && this.t == null) ? false : true);
+        d.D((z2 && this.t == null) ? false : true);
         if (this.f2973x == z2) {
             return;
         }

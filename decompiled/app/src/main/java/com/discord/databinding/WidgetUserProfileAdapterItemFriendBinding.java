@@ -6,7 +6,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.WidgetUserProfileAdapterItemFriendMutualServerBinding;
+import b.a.i.f6;
 import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.discord.views.StatusView;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -19,16 +19,16 @@ public final class WidgetUserProfileAdapterItemFriendBinding implements ViewBind
 
     /* renamed from: b, reason: collision with root package name */
     @NonNull
-    public final WidgetUserProfileAdapterItemFriendMutualServerBinding f2690b;
+    public final f6 f2690b;
 
     @NonNull
-    public final WidgetUserProfileAdapterItemFriendMutualServerBinding c;
+    public final f6 c;
 
     @NonNull
-    public final WidgetUserProfileAdapterItemFriendMutualServerBinding d;
+    public final f6 d;
 
     @NonNull
-    public final WidgetUserProfileAdapterItemFriendMutualServerBinding e;
+    public final f6 e;
 
     @NonNull
     public final SimpleDraweeView f;
@@ -42,12 +42,12 @@ public final class WidgetUserProfileAdapterItemFriendBinding implements ViewBind
     @NonNull
     public final TextView i;
 
-    public WidgetUserProfileAdapterItemFriendBinding(@NonNull RelativeLayout relativeLayout, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding2, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding3, @NonNull WidgetUserProfileAdapterItemFriendMutualServerBinding widgetUserProfileAdapterItemFriendMutualServerBinding4, @NonNull SimpleDraweeView simpleDraweeView, @NonNull LinearLayout linearLayout, @NonNull StatusView statusView, @NonNull SimpleDraweeSpanTextView simpleDraweeSpanTextView, @NonNull TextView textView) {
+    public WidgetUserProfileAdapterItemFriendBinding(@NonNull RelativeLayout relativeLayout, @NonNull f6 f6Var, @NonNull f6 f6Var2, @NonNull f6 f6Var3, @NonNull f6 f6Var4, @NonNull SimpleDraweeView simpleDraweeView, @NonNull LinearLayout linearLayout, @NonNull StatusView statusView, @NonNull SimpleDraweeSpanTextView simpleDraweeSpanTextView, @NonNull TextView textView) {
         this.a = relativeLayout;
-        this.f2690b = widgetUserProfileAdapterItemFriendMutualServerBinding;
-        this.c = widgetUserProfileAdapterItemFriendMutualServerBinding2;
-        this.d = widgetUserProfileAdapterItemFriendMutualServerBinding3;
-        this.e = widgetUserProfileAdapterItemFriendMutualServerBinding4;
+        this.f2690b = f6Var;
+        this.c = f6Var2;
+        this.d = f6Var3;
+        this.e = f6Var4;
         this.f = simpleDraweeView;
         this.g = statusView;
         this.h = simpleDraweeSpanTextView;

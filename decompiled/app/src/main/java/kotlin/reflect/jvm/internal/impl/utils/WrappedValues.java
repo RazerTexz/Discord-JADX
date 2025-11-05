@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.utils;
 
-import d0.e0.p.d.m0.p.exceptionUtils;
+import d0.e0.p.d.m0.p.c;
 
 /* loaded from: classes3.dex */
 public class WrappedValues {
@@ -129,7 +129,7 @@ public class WrappedValues {
     /* JADX WARN: Multi-variable type inference failed */
     public static <V> V unescapeThrowable(Object obj) {
         if (obj instanceof b) {
-            throw exceptionUtils.rethrow(((b) obj).getThrowable());
+            throw c.rethrow(((b) obj).getThrowable());
         }
         return obj;
     }

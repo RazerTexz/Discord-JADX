@@ -1,8 +1,8 @@
 package co.discord.media_engine;
 
 import a0.a.a.b;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: Statistics.kt */
 /* loaded from: classes.dex */
@@ -39,8 +39,8 @@ public final /* data */ class InboundRtpAudio {
     private final String type;
 
     public InboundRtpAudio(String str, long j, StatsCodec statsCodec, long j2, long j3, long j4, float f, boolean z2, long j5, long j6, long j7, long j8, int i, int i2, int i3, int i4, int i5, Long l, Long l2, Long l3, Long l4, Long l5, Long l6, Long l7, PlayoutMetric playoutMetric, PlayoutMetric playoutMetric2, PlayoutMetric playoutMetric3, PlayoutMetric playoutMetric4, PlayoutMetric playoutMetric5, PlayoutMetric playoutMetric6) {
-        Intrinsics3.checkNotNullParameter(str, "type");
-        Intrinsics3.checkNotNullParameter(statsCodec, "codec");
+        m.checkNotNullParameter(str, "type");
+        m.checkNotNullParameter(statsCodec, "codec");
         this.type = str;
         this.ssrc = j;
         this.codec = statsCodec;
@@ -228,8 +228,8 @@ public final /* data */ class InboundRtpAudio {
     }
 
     public final InboundRtpAudio copy(String type, long ssrc, StatsCodec codec, long bytesReceived, long packetsReceived, long packetsLost, float audioLevel, boolean audioDetected, long jitter, long jitterBuffer, long jitterBufferPreferred, long delayEstimate, int decodingCNG, int decodingMutedOutput, int decodingNormal, int decodingPLC, int decodingPLCCNG, Long opSilence, Long opNormal, Long opMerge, Long opExpand, Long opAccelerate, Long opPreemptiveExpand, Long opCNG, PlayoutMetric audioJitterBuffer, PlayoutMetric audioJitterDelay, PlayoutMetric audioJitterTarget, PlayoutMetric audioPlayoutUnderruns, PlayoutMetric relativeReceptionDelay, PlayoutMetric relativePlayoutDelay) {
-        Intrinsics3.checkNotNullParameter(type, "type");
-        Intrinsics3.checkNotNullParameter(codec, "codec");
+        m.checkNotNullParameter(type, "type");
+        m.checkNotNullParameter(codec, "codec");
         return new InboundRtpAudio(type, ssrc, codec, bytesReceived, packetsReceived, packetsLost, audioLevel, audioDetected, jitter, jitterBuffer, jitterBufferPreferred, delayEstimate, decodingCNG, decodingMutedOutput, decodingNormal, decodingPLC, decodingPLCCNG, opSilence, opNormal, opMerge, opExpand, opAccelerate, opPreemptiveExpand, opCNG, audioJitterBuffer, audioJitterDelay, audioJitterTarget, audioPlayoutUnderruns, relativeReceptionDelay, relativePlayoutDelay);
     }
 
@@ -241,7 +241,7 @@ public final /* data */ class InboundRtpAudio {
             return false;
         }
         InboundRtpAudio inboundRtpAudio = (InboundRtpAudio) other;
-        return Intrinsics3.areEqual(this.type, inboundRtpAudio.type) && this.ssrc == inboundRtpAudio.ssrc && Intrinsics3.areEqual(this.codec, inboundRtpAudio.codec) && this.bytesReceived == inboundRtpAudio.bytesReceived && this.packetsReceived == inboundRtpAudio.packetsReceived && this.packetsLost == inboundRtpAudio.packetsLost && Float.compare(this.audioLevel, inboundRtpAudio.audioLevel) == 0 && this.audioDetected == inboundRtpAudio.audioDetected && this.jitter == inboundRtpAudio.jitter && this.jitterBuffer == inboundRtpAudio.jitterBuffer && this.jitterBufferPreferred == inboundRtpAudio.jitterBufferPreferred && this.delayEstimate == inboundRtpAudio.delayEstimate && this.decodingCNG == inboundRtpAudio.decodingCNG && this.decodingMutedOutput == inboundRtpAudio.decodingMutedOutput && this.decodingNormal == inboundRtpAudio.decodingNormal && this.decodingPLC == inboundRtpAudio.decodingPLC && this.decodingPLCCNG == inboundRtpAudio.decodingPLCCNG && Intrinsics3.areEqual(this.opSilence, inboundRtpAudio.opSilence) && Intrinsics3.areEqual(this.opNormal, inboundRtpAudio.opNormal) && Intrinsics3.areEqual(this.opMerge, inboundRtpAudio.opMerge) && Intrinsics3.areEqual(this.opExpand, inboundRtpAudio.opExpand) && Intrinsics3.areEqual(this.opAccelerate, inboundRtpAudio.opAccelerate) && Intrinsics3.areEqual(this.opPreemptiveExpand, inboundRtpAudio.opPreemptiveExpand) && Intrinsics3.areEqual(this.opCNG, inboundRtpAudio.opCNG) && Intrinsics3.areEqual(this.audioJitterBuffer, inboundRtpAudio.audioJitterBuffer) && Intrinsics3.areEqual(this.audioJitterDelay, inboundRtpAudio.audioJitterDelay) && Intrinsics3.areEqual(this.audioJitterTarget, inboundRtpAudio.audioJitterTarget) && Intrinsics3.areEqual(this.audioPlayoutUnderruns, inboundRtpAudio.audioPlayoutUnderruns) && Intrinsics3.areEqual(this.relativeReceptionDelay, inboundRtpAudio.relativeReceptionDelay) && Intrinsics3.areEqual(this.relativePlayoutDelay, inboundRtpAudio.relativePlayoutDelay);
+        return m.areEqual(this.type, inboundRtpAudio.type) && this.ssrc == inboundRtpAudio.ssrc && m.areEqual(this.codec, inboundRtpAudio.codec) && this.bytesReceived == inboundRtpAudio.bytesReceived && this.packetsReceived == inboundRtpAudio.packetsReceived && this.packetsLost == inboundRtpAudio.packetsLost && Float.compare(this.audioLevel, inboundRtpAudio.audioLevel) == 0 && this.audioDetected == inboundRtpAudio.audioDetected && this.jitter == inboundRtpAudio.jitter && this.jitterBuffer == inboundRtpAudio.jitterBuffer && this.jitterBufferPreferred == inboundRtpAudio.jitterBufferPreferred && this.delayEstimate == inboundRtpAudio.delayEstimate && this.decodingCNG == inboundRtpAudio.decodingCNG && this.decodingMutedOutput == inboundRtpAudio.decodingMutedOutput && this.decodingNormal == inboundRtpAudio.decodingNormal && this.decodingPLC == inboundRtpAudio.decodingPLC && this.decodingPLCCNG == inboundRtpAudio.decodingPLCCNG && m.areEqual(this.opSilence, inboundRtpAudio.opSilence) && m.areEqual(this.opNormal, inboundRtpAudio.opNormal) && m.areEqual(this.opMerge, inboundRtpAudio.opMerge) && m.areEqual(this.opExpand, inboundRtpAudio.opExpand) && m.areEqual(this.opAccelerate, inboundRtpAudio.opAccelerate) && m.areEqual(this.opPreemptiveExpand, inboundRtpAudio.opPreemptiveExpand) && m.areEqual(this.opCNG, inboundRtpAudio.opCNG) && m.areEqual(this.audioJitterBuffer, inboundRtpAudio.audioJitterBuffer) && m.areEqual(this.audioJitterDelay, inboundRtpAudio.audioJitterDelay) && m.areEqual(this.audioJitterTarget, inboundRtpAudio.audioJitterTarget) && m.areEqual(this.audioPlayoutUnderruns, inboundRtpAudio.audioPlayoutUnderruns) && m.areEqual(this.relativeReceptionDelay, inboundRtpAudio.relativeReceptionDelay) && m.areEqual(this.relativePlayoutDelay, inboundRtpAudio.relativePlayoutDelay);
     }
 
     public final boolean getAudioDetected() {
@@ -405,7 +405,7 @@ public final /* data */ class InboundRtpAudio {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("InboundRtpAudio(type=");
+        StringBuilder sbU = a.U("InboundRtpAudio(type=");
         sbU.append(this.type);
         sbU.append(", ssrc=");
         sbU.append(this.ssrc);

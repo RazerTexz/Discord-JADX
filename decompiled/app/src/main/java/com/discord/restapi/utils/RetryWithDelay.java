@@ -3,10 +3,10 @@ package com.discord.restapi.utils;
 import androidx.browser.trusted.sharing.ShareTarget;
 import androidx.core.app.NotificationCompat;
 import androidx.exifinterface.media.ExifInterface;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.z.d.k;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -25,7 +25,7 @@ public final class RetryWithDelay {
 
     /* compiled from: RetryWithDelay.kt */
     /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Throwable, Boolean> {
+    public static final class AnonymousClass1 extends o implements Function1<Throwable, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -42,12 +42,12 @@ public final class RetryWithDelay {
             Response response;
             Request request;
             String str;
-            Intrinsics3.checkNotNullParameter(th, "throwable");
+            m.checkNotNullParameter(th, "throwable");
             if (th instanceof HttpException) {
                 HttpException httpException = (HttpException) th;
                 int iA = httpException.a();
                 retrofit2.Response<?> response2 = httpException.j;
-                if ((response2 != null && (response = response2.a) != null && (request = response.request) != null && (str = request.method) != null && (!Intrinsics3.areEqual(str, ShareTarget.METHOD_GET))) || iA == 401 || iA == 429 || iA == 503 || iA == 403 || iA == 404) {
+                if ((response2 != null && (response = response2.a) != null && (request = response.request) != null && (str = request.method) != null && (!m.areEqual(str, ShareTarget.METHOD_GET))) || iA == 401 || iA == 429 || iA == 503 || iA == 403 || iA == 404) {
                     return false;
                 }
             } else if (th instanceof TimeoutException) {
@@ -59,14 +59,14 @@ public final class RetryWithDelay {
 
     /* compiled from: RetryWithDelay.kt */
     /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$2, reason: invalid class name */
-    public static final class AnonymousClass2<T, R> implements Func1<Observable<? extends Throwable>, Observable<?>> {
+    public static final class AnonymousClass2<T, R> implements b<Observable<? extends Throwable>, Observable<?>> {
         public final /* synthetic */ long $delayMillis;
         public final /* synthetic */ Integer $maxHalfLives;
         public final /* synthetic */ Integer $maxRetries;
 
         /* compiled from: RetryWithDelay.kt */
         /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$2$1, reason: invalid class name */
-        public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Throwable, Boolean> {
+        public static final /* synthetic */ class AnonymousClass1 extends k implements Function1<Throwable, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
             public AnonymousClass1() {
@@ -80,7 +80,7 @@ public final class RetryWithDelay {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(Throwable th) {
-                Intrinsics3.checkNotNullParameter(th, "p1");
+                m.checkNotNullParameter(th, "p1");
                 return AnonymousClass1.INSTANCE.invoke2(th);
             }
         }
@@ -91,7 +91,7 @@ public final class RetryWithDelay {
             this.$maxRetries = num2;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<?> call(Observable<? extends Throwable> observable) {
             return call2(observable);
         }
@@ -99,14 +99,14 @@ public final class RetryWithDelay {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<?> call2(Observable<? extends Throwable> observable) {
             RetryWithDelay retryWithDelay = RetryWithDelay.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(observable, "it");
+            m.checkNotNullExpressionValue(observable, "it");
             return RetryWithDelay.access$retryWithDelay(retryWithDelay, observable, this.$delayMillis, this.$maxHalfLives, this.$maxRetries, AnonymousClass1.INSTANCE);
         }
     }
 
     /* compiled from: RetryWithDelay.kt */
     /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$3, reason: invalid class name */
-    public static final class AnonymousClass3<T, R> implements Func1<Observable<? extends Throwable>, Observable<?>> {
+    public static final class AnonymousClass3<T, R> implements b<Observable<? extends Throwable>, Observable<?>> {
         public final /* synthetic */ long $delayMillis;
         public final /* synthetic */ Integer $maxHalfLives;
         public final /* synthetic */ Integer $maxRetries;
@@ -119,7 +119,7 @@ public final class RetryWithDelay {
             this.$predicate = function1;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<?> call(Observable<? extends Throwable> observable) {
             return call2(observable);
         }
@@ -127,14 +127,14 @@ public final class RetryWithDelay {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<?> call2(Observable<? extends Throwable> observable) {
             RetryWithDelay retryWithDelay = RetryWithDelay.INSTANCE;
-            Intrinsics3.checkNotNullExpressionValue(observable, "it");
+            m.checkNotNullExpressionValue(observable, "it");
             return RetryWithDelay.access$retryWithDelay(retryWithDelay, observable, this.$delayMillis, this.$maxHalfLives, this.$maxRetries, this.$predicate);
         }
     }
 
     /* compiled from: RetryWithDelay.kt */
     /* renamed from: com.discord.restapi.utils.RetryWithDelay$retryWithDelay$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Throwable, Observable<? extends Object>> {
+    public static final class AnonymousClass1<T, R> implements b<Throwable, Observable<? extends Object>> {
         public final /* synthetic */ Ref$LongRef $currentDelayMillis;
         public final /* synthetic */ Ref$IntRef $currentHalfLife;
         public final /* synthetic */ Ref$IntRef $currentRetry;
@@ -151,7 +151,7 @@ public final class RetryWithDelay {
             this.$currentDelayMillis = ref$LongRef;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Object> call(Throwable th) {
             return call2(th);
         }
@@ -163,7 +163,7 @@ public final class RetryWithDelay {
             ref$IntRef.element = i + 1;
             if (i < this.$maxRetries) {
                 Function1 function1 = this.$retryPredicate;
-                Intrinsics3.checkNotNullExpressionValue(th, "it");
+                m.checkNotNullExpressionValue(th, "it");
                 if (((Boolean) function1.invoke(th)).booleanValue()) {
                     Ref$IntRef ref$IntRef2 = this.$currentHalfLife;
                     int i2 = ref$IntRef2.element;
@@ -211,15 +211,15 @@ public final class RetryWithDelay {
         Ref$LongRef ref$LongRef = new Ref$LongRef();
         ref$LongRef.element = j;
         Observable<R> observableA = observable.A(new AnonymousClass1(iIntValue, ref$IntRef, function1, iIntValue2, ref$IntRef2, ref$LongRef));
-        Intrinsics3.checkNotNullExpressionValue(observableA, "flatMap {\n      if (curr…able.error<Any>(it)\n    }");
+        m.checkNotNullExpressionValue(observableA, "flatMap {\n      if (curr…able.error<Any>(it)\n    }");
         return observableA;
     }
 
     public final <T> Observable<T> restRetry(Observable<T> observable, long j, Integer num, Integer num2) {
-        Intrinsics3.checkNotNullParameter(observable, "$this$restRetry");
+        m.checkNotNullParameter(observable, "$this$restRetry");
         AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
         Observable<T> observableO = observable.O(new AnonymousClass2(j, num, num2));
-        Intrinsics3.checkNotNullExpressionValue(observableO, "retryWhen { it.retryWith…ries, ::isNetworkError) }");
+        m.checkNotNullExpressionValue(observableO, "retryWhen { it.retryWith…ries, ::isNetworkError) }");
         return observableO;
     }
 
@@ -239,10 +239,10 @@ public final class RetryWithDelay {
     }
 
     public final <T> Observable<T> restRetry(Observable<T> observable, long j, Integer num, Integer num2, Function1<? super Throwable, Boolean> function1) {
-        Intrinsics3.checkNotNullParameter(observable, "$this$restRetry");
-        Intrinsics3.checkNotNullParameter(function1, "predicate");
+        m.checkNotNullParameter(observable, "$this$restRetry");
+        m.checkNotNullParameter(function1, "predicate");
         Observable<T> observableO = observable.O(new AnonymousClass3(j, num, num2, function1));
-        Intrinsics3.checkNotNullExpressionValue(observableO, "retryWhen { it.retryWith… maxRetries, predicate) }");
+        m.checkNotNullExpressionValue(observableO, "retryWhen { it.retryWith… maxRetries, predicate) }");
         return observableO;
     }
 }

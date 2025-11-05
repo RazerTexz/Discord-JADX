@@ -1,8 +1,8 @@
 package com.discord.rtcconnection.enums;
 
 import android.content.Intent;
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: ScoAudioState.kt */
@@ -36,14 +36,14 @@ public enum ScoAudioState {
         }
 
         public final b b(Intent intent) {
-            Intrinsics3.checkNotNullParameter(intent, "intent");
-            if (!Intrinsics3.areEqual(intent.getAction(), "android.media.ACTION_SCO_AUDIO_STATE_UPDATED")) {
+            m.checkNotNullParameter(intent, "intent");
+            if (!m.areEqual(intent.getAction(), "android.media.ACTION_SCO_AUDIO_STATE_UPDATED")) {
                 throw new IllegalArgumentException("Failed requirement.".toString());
             }
             ScoAudioState scoAudioStateA = a(intent.getIntExtra("android.media.extra.SCO_AUDIO_STATE", 0));
-            Intrinsics3.checkNotNull(scoAudioStateA);
+            m.checkNotNull(scoAudioStateA);
             ScoAudioState scoAudioStateA2 = a(intent.getIntExtra("android.media.extra.SCO_AUDIO_PREVIOUS_STATE", 0));
-            Intrinsics3.checkNotNull(scoAudioStateA2);
+            m.checkNotNull(scoAudioStateA2);
             return new b(scoAudioStateA, scoAudioStateA2);
         }
     }
@@ -56,8 +56,8 @@ public enum ScoAudioState {
         public final ScoAudioState f2792b;
 
         public b(ScoAudioState scoAudioState, ScoAudioState scoAudioState2) {
-            Intrinsics3.checkNotNullParameter(scoAudioState, "current");
-            Intrinsics3.checkNotNullParameter(scoAudioState2, "previous");
+            m.checkNotNullParameter(scoAudioState, "current");
+            m.checkNotNullParameter(scoAudioState2, "previous");
             this.a = scoAudioState;
             this.f2792b = scoAudioState2;
         }
@@ -70,7 +70,7 @@ public enum ScoAudioState {
                 return false;
             }
             b bVar = (b) obj;
-            return Intrinsics3.areEqual(this.a, bVar.a) && Intrinsics3.areEqual(this.f2792b, bVar.f2792b);
+            return m.areEqual(this.a, bVar.a) && m.areEqual(this.f2792b, bVar.f2792b);
         }
 
         public int hashCode() {
@@ -84,7 +84,7 @@ public enum ScoAudioState {
             if (this.f2792b == ScoAudioState.Error) {
                 return String.valueOf(this.a);
             }
-            StringBuilder sbU = outline.U("Update(");
+            StringBuilder sbU = a.U("Update(");
             sbU.append(this.f2792b);
             sbU.append(" -> ");
             sbU.append(this.a);

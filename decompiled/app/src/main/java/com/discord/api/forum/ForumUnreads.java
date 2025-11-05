@@ -1,7 +1,7 @@
 package com.discord.api.forum;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ForumUnreads.kt */
@@ -28,7 +28,7 @@ public final /* data */ class ForumUnreads {
             return false;
         }
         ForumUnreads forumUnreads = (ForumUnreads) other;
-        return this.channelId == forumUnreads.channelId && this.permissionDenied == forumUnreads.permissionDenied && Intrinsics3.areEqual(this.threads, forumUnreads.threads);
+        return this.channelId == forumUnreads.channelId && this.permissionDenied == forumUnreads.permissionDenied && m.areEqual(this.threads, forumUnreads.threads);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -46,11 +46,11 @@ public final /* data */ class ForumUnreads {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ForumUnreads(channelId=");
+        StringBuilder sbU = a.U("ForumUnreads(channelId=");
         sbU.append(this.channelId);
         sbU.append(", permissionDenied=");
         sbU.append(this.permissionDenied);
         sbU.append(", threads=");
-        return outline.L(sbU, this.threads, ")");
+        return a.L(sbU, this.threads, ")");
     }
 }

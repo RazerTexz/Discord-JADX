@@ -12,13 +12,13 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import b.a.d.AppScreen2;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
+import b.a.d.j;
+import b.a.k.b;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.api.botuikit.ActionRowComponent;
 import com.discord.api.botuikit.TextComponent;
-import com.discord.api.botuikit.TextComponent2;
+import com.discord.api.botuikit.TextStyle;
 import com.discord.api.interaction.InteractionModalCreate;
 import com.discord.app.AppFragment;
 import com.discord.databinding.BotUikitTextInputBinding;
@@ -31,23 +31,22 @@ import com.discord.utilities.icon.IconUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import d0.LazyJVM;
-import d0.t.Iterables2;
-import d0.t._Collections;
-import d0.t._CollectionsJvm;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.t.t;
+import d0.t.u;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import kotlin.Lazy;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -57,7 +56,7 @@ import kotlin.reflect.KProperty;
 /* compiled from: ModalComponent.kt */
 /* loaded from: classes2.dex */
 public final class ModalComponent extends AppFragment {
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(ModalComponent.class, "binding", "getBinding()Lcom/discord/databinding/ViewInteractionModalBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(ModalComponent.class, "binding", "getBinding()Lcom/discord/databinding/ViewInteractionModalBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -76,11 +75,11 @@ public final class ModalComponent extends AppFragment {
         }
 
         public final void show(Context context, Options options) {
-            Intrinsics3.checkNotNullParameter(context, "context");
-            Intrinsics3.checkNotNullParameter(options, "options");
+            m.checkNotNullParameter(context, "context");
+            m.checkNotNullParameter(options, "options");
             Intent intent = new Intent();
             intent.putExtra("extra_options", options);
-            AppScreen2.d(context, ModalComponent.class, intent);
+            j.d(context, ModalComponent.class, intent);
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -97,7 +96,7 @@ public final class ModalComponent extends AppFragment {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator
             public final Options createFromParcel(Parcel parcel) {
-                Intrinsics3.checkNotNullParameter(parcel, "in");
+                m.checkNotNullParameter(parcel, "in");
                 return new Options((InteractionModalCreate) parcel.readSerializable());
             }
 
@@ -119,7 +118,7 @@ public final class ModalComponent extends AppFragment {
         }
 
         public Options(InteractionModalCreate interactionModalCreate) {
-            Intrinsics3.checkNotNullParameter(interactionModalCreate, "modal");
+            m.checkNotNullParameter(interactionModalCreate, "modal");
             this.modal = interactionModalCreate;
         }
 
@@ -136,7 +135,7 @@ public final class ModalComponent extends AppFragment {
         }
 
         public final Options copy(InteractionModalCreate modal) {
-            Intrinsics3.checkNotNullParameter(modal, "modal");
+            m.checkNotNullParameter(modal, "modal");
             return new Options(modal);
         }
 
@@ -147,7 +146,7 @@ public final class ModalComponent extends AppFragment {
 
         public boolean equals(Object other) {
             if (this != other) {
-                return (other instanceof Options) && Intrinsics3.areEqual(this.modal, ((Options) other).modal);
+                return (other instanceof Options) && m.areEqual(this.modal, ((Options) other).modal);
             }
             return true;
         }
@@ -165,7 +164,7 @@ public final class ModalComponent extends AppFragment {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("Options(modal=");
+            StringBuilder sbU = a.U("Options(modal=");
             sbU.append(this.modal);
             sbU.append(")");
             return sbU.toString();
@@ -173,7 +172,7 @@ public final class ModalComponent extends AppFragment {
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int flags) {
-            Intrinsics3.checkNotNullParameter(parcel, "parcel");
+            m.checkNotNullParameter(parcel, "parcel");
             parcel.writeSerializable(this.modal);
         }
     }
@@ -213,8 +212,8 @@ public final class ModalComponent extends AppFragment {
 
         /* compiled from: ModalComponent.kt */
         /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$2, reason: invalid class name and collision with other inner class name */
-        public static final class C02382 extends Lambda implements Function1<String, Unit> {
-            public C02382() {
+        public static final class C03582 extends o implements Function1<String, Unit> {
+            public C03582() {
                 super(1);
             }
 
@@ -226,14 +225,14 @@ public final class ModalComponent extends AppFragment {
 
             /* renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(String str) {
-                Intrinsics3.checkNotNullParameter(str, "nonce");
+                m.checkNotNullParameter(str, "nonce");
                 ModalComponent.access$setSentNonce$p(ModalComponent.this, str);
             }
         }
 
         /* compiled from: ModalComponent.kt */
         /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$3, reason: invalid class name */
-        public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+        public static final class AnonymousClass3 extends o implements Function0<Unit> {
 
             /* compiled from: ModalComponent.kt */
             /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$3$1, reason: invalid class name */
@@ -245,10 +244,10 @@ public final class ModalComponent extends AppFragment {
                 public final void run() {
                     ModalComponent.access$setSentNonce$p(ModalComponent.this, null);
                     LinearLayout linearLayout = ModalComponent.access$getBinding$p(ModalComponent.this).d;
-                    Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.error");
+                    m.checkNotNullExpressionValue(linearLayout, "binding.error");
                     linearLayout.setVisibility(0);
                     MaterialButton materialButton = ModalComponent.access$getBinding$p(ModalComponent.this).f;
-                    Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.submit");
+                    m.checkNotNullExpressionValue(materialButton, "binding.submit");
                     materialButton.setEnabled(true);
                 }
             }
@@ -278,43 +277,43 @@ public final class ModalComponent extends AppFragment {
         public final void onClick(View view) {
             ArrayList arrayList = new ArrayList();
             boolean z2 = true;
-            for (Tuples2 tuples2 : this.$components) {
-                TextComponent textComponent = (TextComponent) tuples2.component1();
-                BotUikitTextInputBinding botUikitTextInputBinding = (BotUikitTextInputBinding) tuples2.component2();
+            for (Pair pair : this.$components) {
+                TextComponent textComponent = (TextComponent) pair.component1();
+                BotUikitTextInputBinding botUikitTextInputBinding = (BotUikitTextInputBinding) pair.component2();
                 TextInputEditText textInputEditText = botUikitTextInputBinding.f2089b;
-                Intrinsics3.checkNotNullExpressionValue(textInputEditText, "text.editText");
+                m.checkNotNullExpressionValue(textInputEditText, "text.editText");
                 String strValueOf = String.valueOf(textInputEditText.getText());
                 if (strValueOf.length() == 0) {
-                    if (Intrinsics3.areEqual(textComponent.getRequired(), Boolean.TRUE)) {
+                    if (m.areEqual(textComponent.getRequired(), Boolean.TRUE)) {
                         TextInputLayout textInputLayout = botUikitTextInputBinding.d;
-                        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "text.layout");
-                        textInputLayout.setError(FormatUtils.k(ModalComponent.this, R.string.form_length_error, new Object[]{Integer.valueOf(textComponent.getMinLength()), Integer.valueOf(textComponent.getMaxLength())}, null, 4));
+                        m.checkNotNullExpressionValue(textInputLayout, "text.layout");
+                        textInputLayout.setError(b.k(ModalComponent.this, R.string.form_length_error, new Object[]{Integer.valueOf(textComponent.getMinLength()), Integer.valueOf(textComponent.getMaxLength())}, null, 4));
                         z2 = false;
                     }
                 } else if (strValueOf.length() < textComponent.getMinLength() || strValueOf.length() > textComponent.getMaxLength()) {
                     TextInputLayout textInputLayout2 = botUikitTextInputBinding.d;
-                    Intrinsics3.checkNotNullExpressionValue(textInputLayout2, "text.layout");
-                    textInputLayout2.setError(FormatUtils.k(ModalComponent.this, R.string.form_length_error, new Object[]{Integer.valueOf(textComponent.getMinLength()), Integer.valueOf(textComponent.getMaxLength())}, null, 4));
+                    m.checkNotNullExpressionValue(textInputLayout2, "text.layout");
+                    textInputLayout2.setError(b.k(ModalComponent.this, R.string.form_length_error, new Object[]{Integer.valueOf(textComponent.getMinLength()), Integer.valueOf(textComponent.getMaxLength())}, null, 4));
                     z2 = false;
                 }
-                arrayList.add(new Tuples2(textComponent.getCustomId(), strValueOf));
+                arrayList.add(new Pair(textComponent.getCustomId(), strValueOf));
             }
             if (z2) {
                 ModalComponent.access$setSentNonce$p(ModalComponent.this, null);
                 LinearLayout linearLayout = ModalComponent.access$getBinding$p(ModalComponent.this).d;
-                Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.error");
+                m.checkNotNullExpressionValue(linearLayout, "binding.error");
                 linearLayout.setVisibility(8);
                 MaterialButton materialButton = ModalComponent.access$getBinding$p(ModalComponent.this).f;
-                Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.submit");
+                m.checkNotNullExpressionValue(materialButton, "binding.submit");
                 materialButton.setEnabled(false);
-                StoreStream.INSTANCE.getInteractions().sendModalInteraction(ModalComponent.this.getArgs().getModal(), arrayList, new C02382(), new AnonymousClass3());
+                StoreStream.INSTANCE.getInteractions().sendModalInteraction(ModalComponent.this.getArgs().getModal(), arrayList, new C03582(), new AnonymousClass3());
             }
         }
     }
 
     /* compiled from: ModalComponent.kt */
     /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBoundOrOnResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Map<String, ? extends StoreApplicationInteractions.SentInteraction>, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<Map<String, ? extends StoreApplicationInteractions.SentInteraction>, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -329,7 +328,7 @@ public final class ModalComponent extends AppFragment {
         public final void invoke2(Map<String, StoreApplicationInteractions.SentInteraction> map) {
             StoreApplicationInteractions.SentInteraction sentInteraction;
             FragmentActivity activity;
-            Intrinsics3.checkNotNullParameter(map, "sentInteractions");
+            m.checkNotNullParameter(map, "sentInteractions");
             String strAccess$getSentNonce$p = ModalComponent.access$getSentNonce$p(ModalComponent.this);
             if (strAccess$getSentNonce$p == null || (sentInteraction = map.get(strAccess$getSentNonce$p)) == null) {
                 return;
@@ -344,10 +343,10 @@ public final class ModalComponent extends AppFragment {
             }
             ModalComponent.access$setSentNonce$p(ModalComponent.this, null);
             LinearLayout linearLayout = ModalComponent.access$getBinding$p(ModalComponent.this).d;
-            Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.error");
+            m.checkNotNullExpressionValue(linearLayout, "binding.error");
             linearLayout.setVisibility(0);
             MaterialButton materialButton = ModalComponent.access$getBinding$p(ModalComponent.this).f;
-            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.submit");
+            m.checkNotNullExpressionValue(materialButton, "binding.submit");
             materialButton.setEnabled(true);
         }
     }
@@ -358,8 +357,8 @@ public final class ModalComponent extends AppFragment {
 
     public ModalComponent(@LayoutRes int i) {
         super(i);
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, ModalComponent2.INSTANCE, null, 2, null);
-        this.args = LazyJVM.lazy(new ModalComponent$$special$$inlined$args$1(this, "extra_options"));
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, ModalComponent$binding$2.INSTANCE, null, 2, null);
+        this.args = g.lazy(new ModalComponent$$special$$inlined$args$1(this, "extra_options"));
     }
 
     public static final /* synthetic */ ViewInteractionModalBinding access$getBinding$p(ModalComponent modalComponent) {
@@ -384,25 +383,25 @@ public final class ModalComponent extends AppFragment {
 
     @Override // com.discord.app.AppFragment
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         TextView textView = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.title");
+        m.checkNotNullExpressionValue(textView, "binding.title");
         textView.setText(getArgs().getModal().getTitle());
         SimpleDraweeView simpleDraweeView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.icon");
+        m.checkNotNullExpressionValue(simpleDraweeView, "binding.icon");
         simpleDraweeView.setContentDescription(getArgs().getModal().getApplication().getName());
         SimpleDraweeView simpleDraweeView2 = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(simpleDraweeView2, "binding.icon");
+        m.checkNotNullExpressionValue(simpleDraweeView2, "binding.icon");
         IconUtils.setApplicationIcon(simpleDraweeView2, StoreApplicationCommandsKt.toDomainApplication(getArgs().getModal().getApplication()));
         TextView textView2 = getBinding().h;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.warning");
-        FormatUtils.n(textView2, R.string.interaction_form_submission_application, new Object[]{getArgs().getModal().getApplication().getName()}, null, 4);
-        List listFilterIsInstance = _CollectionsJvm.filterIsInstance(getArgs().getModal().b(), ActionRowComponent.class);
+        m.checkNotNullExpressionValue(textView2, "binding.warning");
+        b.n(textView2, R.string.interaction_form_submission_application, new Object[]{getArgs().getModal().getApplication().getName()}, null, 4);
+        List listFilterIsInstance = t.filterIsInstance(getArgs().getModal().b(), ActionRowComponent.class);
         ArrayList arrayList = new ArrayList();
         Iterator it = listFilterIsInstance.iterator();
         while (it.hasNext()) {
-            Object orNull = _Collections.getOrNull(((ActionRowComponent) it.next()).b(), 0);
+            Object orNull = u.getOrNull(((ActionRowComponent) it.next()).b(), 0);
             if (!(orNull instanceof TextComponent)) {
                 orNull = null;
             }
@@ -411,7 +410,7 @@ public final class ModalComponent extends AppFragment {
                 arrayList.add(textComponent);
             }
         }
-        ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(arrayList, 10));
+        ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
         Iterator it2 = arrayList.iterator();
         while (it2.hasNext()) {
             TextComponent textComponent2 = (TextComponent) it2.next();
@@ -427,31 +426,31 @@ public final class ModalComponent extends AppFragment {
                     if (textInputLayout != null) {
                         LinearLayout linearLayout = (LinearLayout) viewInflate;
                         BotUikitTextInputBinding botUikitTextInputBinding = new BotUikitTextInputBinding(linearLayout, textInputEditText, textView3, textInputLayout);
-                        Intrinsics3.checkNotNullExpressionValue(botUikitTextInputBinding, "BotUikitTextInputBinding…r.from(requireContext()))");
-                        Intrinsics3.checkNotNullExpressionValue(textView3, "textInput.label");
+                        m.checkNotNullExpressionValue(botUikitTextInputBinding, "BotUikitTextInputBinding…r.from(requireContext()))");
+                        m.checkNotNullExpressionValue(textView3, "textInput.label");
                         textView3.setText(textComponent2.getLabel());
-                        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "textInput.layout");
+                        m.checkNotNullExpressionValue(textInputLayout, "textInput.layout");
                         textInputLayout.setCounterMaxLength(textComponent2.getMaxLength());
-                        Intrinsics3.checkNotNullExpressionValue(textInputLayout, "textInput.layout");
-                        ViewExtensions.addBindedTextWatcher(textInputLayout, this, new ModalComponent3(botUikitTextInputBinding));
+                        m.checkNotNullExpressionValue(textInputLayout, "textInput.layout");
+                        ViewExtensions.addBindedTextWatcher(textInputLayout, this, new ModalComponent$onViewBound$components$2$1(botUikitTextInputBinding));
                         textInputEditText.setText(textComponent2.getValue());
-                        Intrinsics3.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
+                        m.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
                         textInputEditText.setHint(textComponent2.getPlaceholder());
-                        if (textComponent2.getStyle() == TextComponent2.PARAGRAPH) {
-                            Intrinsics3.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
+                        if (textComponent2.getStyle() == TextStyle.PARAGRAPH) {
+                            m.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
                             textInputEditText.setMaxLines(5);
-                            Intrinsics3.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
+                            m.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
                             textInputEditText.setInputType(131073);
-                            Intrinsics3.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
+                            m.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
                             textInputEditText.setMinHeight(DimenUtils.dpToPixels(96));
                         } else {
-                            Intrinsics3.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
+                            m.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
                             textInputEditText.setMaxLines(1);
-                            Intrinsics3.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
+                            m.checkNotNullExpressionValue(textInputEditText, "textInput.editText");
                             textInputEditText.setInputType(1);
                         }
                         getBinding().c.addView(linearLayout);
-                        arrayList2.add(new Tuples2(textComponent2, botUikitTextInputBinding));
+                        arrayList2.add(new Pair(textComponent2, botUikitTextInputBinding));
                     }
                 }
             }

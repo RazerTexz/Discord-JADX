@@ -3,7 +3,7 @@ package com.google.android.gms.nearby.messages.internal;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.j.b.e.m0;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import com.google.android.gms.nearby.messages.Distance;
@@ -71,7 +71,7 @@ public final class zze extends AbstractSafeParcelable implements Distance {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
@@ -81,6 +81,6 @@ public final class zze extends AbstractSafeParcelable implements Distance {
         double d = this.l;
         parcel.writeInt(524291);
         parcel.writeDouble(d);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.A2(parcel, iY2);
     }
 }

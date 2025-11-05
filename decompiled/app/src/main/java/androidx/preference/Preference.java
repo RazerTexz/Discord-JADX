@@ -29,7 +29,7 @@ import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.preference.PreferenceManager;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -263,7 +263,7 @@ public class Preference implements Comparable<Preference> {
             preferenceFindPreferenceInHierarchy.registerDependent(this);
             return;
         }
-        StringBuilder sbU = outline.U("Dependency \"");
+        StringBuilder sbU = a.U("Dependency \"");
         sbU.append(this.mDependencyKey);
         sbU.append("\" not found for preference \"");
         sbU.append(this.mKey);

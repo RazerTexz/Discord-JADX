@@ -1,12 +1,12 @@
 package com.discord.stores;
 
-import d0.z.d.FunctionReferenceImpl;
+import d0.z.d.k;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
 /* compiled from: StoreMediaEngine.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class StoreMediaEngine$localVoiceStatus$2 extends FunctionReferenceImpl implements Function0<Unit> {
+public final /* synthetic */ class StoreMediaEngine$localVoiceStatus$2 extends k implements Function0<Unit> {
     public StoreMediaEngine$localVoiceStatus$2(StoreMediaEngine storeMediaEngine) {
         super(0, storeMediaEngine, StoreMediaEngine.class, "disableLocalVoiceStatusListening", "disableLocalVoiceStatusListening()V", 0);
     }

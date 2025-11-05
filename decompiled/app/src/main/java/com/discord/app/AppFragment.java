@@ -18,25 +18,19 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
-import b.a.d.AppActivity2;
-import b.a.d.AppFragment2;
-import b.a.d.AppToast;
-import b.a.k.FormatUtils;
-import b.a.l.MediaPickerChooser2;
-import b.b.a.f.SimpleFileManager;
 import com.discord.R;
 import com.discord.app.AppLogger;
 import com.discord.media_picker.MediaPicker;
 import com.discord.media_picker.RequestType;
 import com.discord.models.domain.ModelAuditLogEntry;
-import com.discord.utilities.attachments.AttachmentUtils;
+import com.discord.utilities.attachments.AttachmentUtilsKt;
 import com.discord.utilities.display.DisplayUtils;
 import com.discord.utilities.view.text.TextWatcher;
 import com.discord.views.ToolbarTitleLayout;
 import com.lytefast.flexinput.managers.FileManager;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.g;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
@@ -55,7 +49,7 @@ import rx.subjects.Subject;
 
 /* compiled from: AppFragment.kt */
 /* loaded from: classes.dex */
-public abstract class AppFragment extends Fragment implements AppComponent, AppPermissions2, MediaPicker.Provider, AppLogger.a {
+public abstract class AppFragment extends Fragment implements AppComponent, AppPermissionsRequests, MediaPicker.Provider, AppLogger.a {
 
     /* renamed from: appLogger$delegate, reason: from kotlin metadata */
     private final Lazy appLogger;
@@ -63,12 +57,12 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     /* renamed from: fileManager$delegate, reason: from kotlin metadata */
     private final Lazy fileManager;
     private boolean isRecreated;
-    private final AppLogger2 loggingConfig;
+    private final LoggingConfig loggingConfig;
     private boolean onViewBoundOrOnResumeInvoked;
     private final Subject<Void, Void> unsubscribeSignal;
 
     /* compiled from: AppFragment.kt */
-    public static final class a extends Lambda implements Function0<AppLogger> {
+    public static final class a extends o implements Function0<AppLogger> {
         public a() {
             super(0);
         }
@@ -80,14 +74,14 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     /* compiled from: AppFragment.kt */
-    public static final class b extends Lambda implements Function0<SimpleFileManager> {
+    public static final class b extends o implements Function0<b.b.a.f.b> {
         public b() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public SimpleFileManager invoke() {
-            return new SimpleFileManager(AppFragment.this.requireContext(), null, null, 6);
+        public b.b.a.f.b invoke() {
+            return new b.b.a.f.b(AppFragment.this.requireContext(), null, null, 6);
         }
     }
 
@@ -98,15 +92,15 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
 
         @Override // com.discord.media_picker.MediaPicker.a
         public void a(Exception exc) {
-            Intrinsics3.checkNotNullParameter(exc, "e");
-            AppToast.h(AppFragment.this.getContext(), FormatUtils.k(AppFragment.this, R.string.upload_open_file_failed, new Object[]{exc.getMessage()}, null, 4), 0, null, 12);
+            m.checkNotNullParameter(exc, "e");
+            b.a.d.m.h(AppFragment.this.getContext(), b.a.k.b.k(AppFragment.this, R.string.upload_open_file_failed, new Object[]{exc.getMessage()}, null, 4), 0, null, 12);
         }
 
         @Override // com.discord.media_picker.MediaPicker.a
         public void b(Uri uri, RequestType requestType) {
-            Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-            Intrinsics3.checkNotNullParameter(requestType, "request");
-            String mimeType$default = AttachmentUtils.getMimeType$default(AppFragment.this.requireContext().getContentResolver(), uri, null, 4, null);
+            m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+            m.checkNotNullParameter(requestType, "request");
+            String mimeType$default = AttachmentUtilsKt.getMimeType$default(AppFragment.this.requireContext().getContentResolver(), uri, null, 4, null);
             if (requestType.ordinal() != 3) {
                 AppFragment.this.onImageChosen(uri, mimeType$default);
             } else {
@@ -116,7 +110,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     /* compiled from: AppFragment.kt */
-    public static final class d extends Lambda implements Function0<Unit> {
+    public static final class d extends o implements Function0<Unit> {
         public d() {
             super(0);
         }
@@ -125,17 +119,17 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         public Unit invoke() {
             MediaPicker mediaPicker = MediaPicker.a;
             AppFragment appFragment = AppFragment.this;
-            CharSequence charSequenceK = FormatUtils.k(appFragment, R.string.choose_an_application, new Object[0], null, 4);
-            AppFragment2 appFragment2 = new AppFragment2(this);
-            Intrinsics3.checkNotNullParameter(appFragment, "provider");
-            Intrinsics3.checkNotNullParameter(charSequenceK, "chooserTitle");
-            Intrinsics3.checkNotNullParameter("image/*", "mimeType");
-            Intrinsics3.checkNotNullParameter(appFragment2, "onError");
+            CharSequence charSequenceK = b.a.k.b.k(appFragment, R.string.choose_an_application, new Object[0], null, 4);
+            b.a.d.e eVar = new b.a.d.e(this);
+            m.checkNotNullParameter(appFragment, "provider");
+            m.checkNotNullParameter(charSequenceK, "chooserTitle");
+            m.checkNotNullParameter("image/*", "mimeType");
+            m.checkNotNullParameter(eVar, "onError");
             try {
                 Uri uriA = mediaPicker.a(appFragment);
                 PackageManager packageManager = appFragment.requireContext().getPackageManager();
-                Intrinsics3.checkNotNullExpressionValue(packageManager, "provider.requireContext().packageManager");
-                Intent intentB = MediaPickerChooser2.b(packageManager, charSequenceK, uriA, "image/*");
+                m.checkNotNullExpressionValue(packageManager, "provider.requireContext().packageManager");
+                Intent intentB = b.a.l.b.b(packageManager, charSequenceK, uriA, "image/*");
                 mediaPicker.c(appFragment.requireContext(), new Intent("android.media.action.IMAGE_CAPTURE"), uriA);
                 try {
                     appFragment.startActivityForResult(intentB, RequestType.CHOOSER.getCode$media_picker_release());
@@ -143,14 +137,14 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
                     throw new IOException("No application available for media picker.");
                 }
             } catch (IOException e) {
-                appFragment2.invoke(e);
+                eVar.invoke(e);
             }
             return Unit.a;
         }
     }
 
     /* compiled from: AppFragment.kt */
-    public static final class e extends Lambda implements Function0<Boolean> {
+    public static final class e extends o implements Function0<Boolean> {
         public final /* synthetic */ Func0 $onBackAction;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -162,17 +156,17 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         @Override // kotlin.jvm.functions.Function0
         public Boolean invoke() {
             Object objCall = this.$onBackAction.call();
-            Intrinsics3.checkNotNullExpressionValue(objCall, "onBackAction.call()");
+            m.checkNotNullExpressionValue(objCall, "onBackAction.call()");
             return Boolean.valueOf(((Boolean) objCall).booleanValue());
         }
     }
 
     public AppFragment() {
         PublishSubject publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.unsubscribeSignal = publishSubjectK0;
-        this.fileManager = LazyJVM.lazy(new b());
-        this.appLogger = LazyJVM.lazy(new a());
+        this.fileManager = g.lazy(new b());
+        this.appLogger = g.lazy(new a());
     }
 
     public static /* synthetic */ Unit bindToolbar$default(AppFragment appFragment, View view, int i, Object obj) {
@@ -264,7 +258,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     @Override // com.discord.app.AppLogger.a
-    public AppLogger2 getLoggingConfig() {
+    public LoggingConfig getLoggingConfig() {
         return this.loggingConfig;
     }
 
@@ -279,7 +273,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         return this.unsubscribeSignal;
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public boolean hasMedia() {
         return requireAppActivity().appPermissions.hasMedia();
     }
@@ -307,8 +301,8 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         MediaPicker mediaPicker = MediaPicker.a;
         Context contextRequireContext = requireContext();
         c cVar = new c();
-        Intrinsics3.checkNotNullParameter(contextRequireContext, "context");
-        Intrinsics3.checkNotNullParameter(cVar, "result");
+        m.checkNotNullParameter(contextRequireContext, "context");
+        m.checkNotNullParameter(cVar, "result");
         Objects.requireNonNull(RequestType.INSTANCE);
         if (requestCode == 800) {
             requestType = RequestType.CROP;
@@ -353,10 +347,10 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
             String name = getClass().getName();
-            Intrinsics3.checkNotNullExpressionValue(name, "javaClass.name");
-            Intrinsics3.checkNotNullParameter(name, "key");
+            m.checkNotNullExpressionValue(name, "javaClass.name");
+            m.checkNotNullParameter(name, "key");
             Collection<HashMap<String, Function0<Boolean>>> collectionValues = appActivity.l.values();
-            Intrinsics3.checkNotNullExpressionValue(collectionValues, "backPressHandlers\n        .values");
+            m.checkNotNullExpressionValue(collectionValues, "backPressHandlers\n        .values");
             Iterator<T> it = collectionValues.iterator();
             while (it.hasNext()) {
                 ((HashMap) it.next()).remove(name);
@@ -370,20 +364,20 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     public void onDetach() {
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
-            Intrinsics3.checkNotNullParameter(this, "fragmentOwner");
+            m.checkNotNullParameter(this, "fragmentOwner");
             appActivity.newIntentListeners.remove(Integer.valueOf(getId()));
         }
         super.onDetach();
     }
 
     public void onImageChosen(Uri uri, String mimeType) {
-        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        m.checkNotNullParameter(mimeType, "mimeType");
     }
 
     public void onImageCropped(Uri uri, String mimeType) {
-        Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
-        Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
+        m.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
+        m.checkNotNullParameter(mimeType, "mimeType");
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -404,7 +398,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
 
     @CallSuper
     public void onViewBound(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
     }
 
     @CallSuper
@@ -414,7 +408,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
 
     @Override // androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
@@ -431,46 +425,46 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         requestMedia(new d());
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestCameraQRScanner(Function0<Unit> onSuccess, Function0<Unit> onFailure) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
         requireAppActivity().appPermissions.requestCameraQRScanner(onSuccess, onFailure);
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestContacts(Function0<Unit> onSuccess, Function0<Unit> onFailure) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
-        Intrinsics3.checkNotNullParameter(onFailure, "onFailure");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onFailure, "onFailure");
         requireAppActivity().appPermissions.requestContacts(onSuccess, onFailure);
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestMedia(Function0<Unit> onSuccess) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
         requireAppActivity().appPermissions.requestMedia(onSuccess);
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestMediaDownload(Function0<Unit> onSuccess) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
         requireAppActivity().appPermissions.requestMediaDownload(onSuccess);
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestMicrophone(Function0<Unit> onFailure, Function0<Unit> onSuccess) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
         requireAppActivity().appPermissions.requestMicrophone(onFailure, onSuccess);
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestVideoCallPermissions(Function0<Unit> onSuccess) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
         requireAppActivity().appPermissions.requestVideoCallPermissions(onSuccess);
     }
 
     public final AppActivity requireAppActivity() {
         AppActivity appActivity = getAppActivity();
-        Intrinsics3.checkNotNull(appActivity);
+        m.checkNotNull(appActivity);
         return appActivity;
     }
 
@@ -502,7 +496,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
             menu.clear();
         }
         toolbar.inflateMenu(menuResId);
-        toolbar.setOnMenuItemClickListener(new AppActivity2(toolbar, menuResId, onSelected, onConfigured));
+        toolbar.setOnMenuItemClickListener(new b.a.d.b(toolbar, menuResId, onSelected, onConfigured));
         Menu menu2 = toolbar.getMenu();
         if (menu2 != null && onConfigured != null) {
             onConfigured.call(menu2);
@@ -539,12 +533,12 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     public final Unit setActionBarTitleClick(View.OnClickListener onClickListener) {
-        Intrinsics3.checkNotNullParameter(onClickListener, "onClickListener");
+        m.checkNotNullParameter(onClickListener, "onClickListener");
         AppActivity appActivity = getAppActivity();
         if (appActivity == null) {
             return null;
         }
-        Intrinsics3.checkNotNullParameter(onClickListener, "onClickListener");
+        m.checkNotNullParameter(onClickListener, "onClickListener");
         ToolbarTitleLayout toolbarTitleLayoutE = appActivity.e();
         if (toolbarTitleLayoutE == null) {
             return null;
@@ -592,14 +586,14 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     public final void setOnBackPressed(Func0<Boolean> onBackAction, int priority) {
-        Intrinsics3.checkNotNullParameter(onBackAction, "onBackAction");
+        m.checkNotNullParameter(onBackAction, "onBackAction");
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
             e eVar = new e(onBackAction);
             String name = getClass().getName();
-            Intrinsics3.checkNotNullExpressionValue(name, "javaClass.name");
-            Intrinsics3.checkNotNullParameter(eVar, "handler");
-            Intrinsics3.checkNotNullParameter(name, "key");
+            m.checkNotNullExpressionValue(name, "javaClass.name");
+            m.checkNotNullParameter(eVar, "handler");
+            m.checkNotNullParameter(name, "key");
             HashMap<String, Function0<Boolean>> map = appActivity.l.get(Integer.valueOf(priority));
             if (map == null) {
                 map = new HashMap<>();
@@ -610,17 +604,17 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     }
 
     public final void setOnNewIntentListener(Function1<? super Intent, Unit> action) {
-        Intrinsics3.checkNotNullParameter(action, "action");
+        m.checkNotNullParameter(action, "action");
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
-            Intrinsics3.checkNotNullParameter(this, "fragmentOwner");
-            Intrinsics3.checkNotNullParameter(action, "action");
+            m.checkNotNullParameter(this, "fragmentOwner");
+            m.checkNotNullParameter(action, "action");
             appActivity.newIntentListeners.put(Integer.valueOf(getId()), action);
         }
     }
 
     public void showKeyboard(View view) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         AppActivity appActivity = getAppActivity();
         if (appActivity != null) {
             appActivity.showKeyboard(view);
@@ -632,7 +626,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         if (view == null || (toolbar = (Toolbar) view.findViewById(R.id.action_bar_toolbar)) == null) {
             return null;
         }
-        if (!Intrinsics3.areEqual(appActivity.toolbar, toolbar)) {
+        if (!m.areEqual(appActivity.toolbar, toolbar)) {
             appActivity.n(toolbar);
         }
         return Unit.a;
@@ -678,9 +672,9 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         toolbarTitleLayoutE.a(title, leftDrawable, trailingDrawable);
     }
 
-    @Override // com.discord.app.AppPermissions2
+    @Override // com.discord.app.AppPermissionsRequests
     public void requestCameraQRScanner(Function0<Unit> onSuccess) {
-        Intrinsics3.checkNotNullParameter(onSuccess, "onSuccess");
+        m.checkNotNullParameter(onSuccess, "onSuccess");
         requireAppActivity().appPermissions.requestCameraQRScanner(onSuccess);
     }
 
@@ -695,10 +689,10 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
     public AppFragment(@LayoutRes int i) {
         super(i);
         PublishSubject publishSubjectK0 = PublishSubject.k0();
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
+        m.checkNotNullExpressionValue(publishSubjectK0, "PublishSubject.create()");
         this.unsubscribeSignal = publishSubjectK0;
-        this.fileManager = LazyJVM.lazy(new b());
-        this.appLogger = LazyJVM.lazy(new a());
+        this.fileManager = g.lazy(new b());
+        this.appLogger = g.lazy(new a());
     }
 
     public final Unit setActionBarTitle(@StringRes int titleResId) {

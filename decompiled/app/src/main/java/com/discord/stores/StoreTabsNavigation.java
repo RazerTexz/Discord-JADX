@@ -2,10 +2,10 @@ package com.discord.stores;
 
 import com.discord.stores.StoreNavigation;
 import com.discord.stores.updates.ObservationDeck;
-import com.discord.stores.updates.ObservationDeck4;
+import com.discord.stores.updates.ObservationDeckProvider;
 import com.discord.widgets.tabs.NavigationTab;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -23,7 +23,7 @@ public final class StoreTabsNavigation extends StoreV2 {
 
     /* compiled from: StoreTabsNavigation.kt */
     /* renamed from: com.discord.stores.StoreTabsNavigation$observeSelectedTab$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<NavigationTab> {
+    public static final class AnonymousClass1 extends o implements Function0<NavigationTab> {
         public AnonymousClass1() {
             super(0);
         }
@@ -42,7 +42,7 @@ public final class StoreTabsNavigation extends StoreV2 {
 
     /* compiled from: StoreTabsNavigation.kt */
     /* renamed from: com.discord.stores.StoreTabsNavigation$selectHomeTab$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ boolean $dismissTabsDialogs;
         public final /* synthetic */ StoreNavigation.PanelAction $panelAction;
 
@@ -71,7 +71,7 @@ public final class StoreTabsNavigation extends StoreV2 {
 
     /* compiled from: StoreTabsNavigation.kt */
     /* renamed from: com.discord.stores.StoreTabsNavigation$selectTab$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ boolean $dismissTabsDialogs;
         public final /* synthetic */ NavigationTab $navigationTab;
 
@@ -95,7 +95,7 @@ public final class StoreTabsNavigation extends StoreV2 {
     }
 
     public /* synthetic */ StoreTabsNavigation(Dispatcher dispatcher, StoreStream storeStream, ObservationDeck observationDeck, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(dispatcher, storeStream, (i & 4) != 0 ? ObservationDeck4.get() : observationDeck);
+        this(dispatcher, storeStream, (i & 4) != 0 ? ObservationDeckProvider.get() : observationDeck);
     }
 
     public static final /* synthetic */ void access$dismissTabsDialogs(StoreTabsNavigation storeTabsNavigation) {
@@ -115,13 +115,13 @@ public final class StoreTabsNavigation extends StoreV2 {
         publishSubject.k.onNext(Unit.a);
     }
 
-    @Store3
+    @StoreThread
     private final void handleTabSelection(NavigationTab navigationTab) {
         this.selectedTab = navigationTab;
         markChanged();
     }
 
-    @Store3
+    @StoreThread
     private final void notifyHomeTabSelected(StoreNavigation.PanelAction panelAction) {
         this.storeStream.handleHomeTabSelected(panelAction);
     }
@@ -151,36 +151,36 @@ public final class StoreTabsNavigation extends StoreV2 {
         return this.selectedTab;
     }
 
-    @Store3
+    @StoreThread
     public final void handlePreLogout() {
         selectTabInternal$app_productionGoogleRelease$default(this, NavigationTab.HOME, false, 2, null);
     }
 
     public final Observable<Unit> observeDismissTabsDialogEvent() {
         PublishSubject<Unit> publishSubject = this.dismissTabsDialogEventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "dismissTabsDialogEventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "dismissTabsDialogEventSubject");
         return publishSubject;
     }
 
     public final Observable<NavigationTab> observeSelectedTab() {
         Observable<NavigationTab> observableR = ObservationDeck.connectRx$default(this.observationDeck, new ObservationDeck.UpdateSource[]{this}, false, null, null, new AnonymousClass1(), 14, null).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "observationDeck.connectR…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final void selectHomeTab(StoreNavigation.PanelAction panelAction, boolean dismissTabsDialogs) {
-        Intrinsics3.checkNotNullParameter(panelAction, "panelAction");
+        m.checkNotNullParameter(panelAction, "panelAction");
         this.dispatcher.schedule(new AnonymousClass1(panelAction, dismissTabsDialogs));
     }
 
     public final void selectTab(NavigationTab navigationTab, boolean dismissTabsDialogs) {
-        Intrinsics3.checkNotNullParameter(navigationTab, "navigationTab");
+        m.checkNotNullParameter(navigationTab, "navigationTab");
         this.dispatcher.schedule(new AnonymousClass1(navigationTab, dismissTabsDialogs));
     }
 
-    @Store3
+    @StoreThread
     public final void selectTabInternal$app_productionGoogleRelease(NavigationTab navigationTab, boolean dismissTabsDialogs) {
-        Intrinsics3.checkNotNullParameter(navigationTab, "navigationTab");
+        m.checkNotNullParameter(navigationTab, "navigationTab");
         handleTabSelection(navigationTab);
         if (dismissTabsDialogs) {
             dismissTabsDialogs();
@@ -188,9 +188,9 @@ public final class StoreTabsNavigation extends StoreV2 {
     }
 
     public StoreTabsNavigation(Dispatcher dispatcher, StoreStream storeStream, ObservationDeck observationDeck) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
-        Intrinsics3.checkNotNullParameter(storeStream, "storeStream");
-        Intrinsics3.checkNotNullParameter(observationDeck, "observationDeck");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(storeStream, "storeStream");
+        m.checkNotNullParameter(observationDeck, "observationDeck");
         this.dispatcher = dispatcher;
         this.storeStream = storeStream;
         this.observationDeck = observationDeck;

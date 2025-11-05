@@ -1,8 +1,8 @@
 package com.discord.api.connectedaccounts;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ConnectedIntegrationGuild.kt */
 /* loaded from: classes.dex */
@@ -34,7 +34,7 @@ public final /* data */ class ConnectedIntegrationGuild {
             return false;
         }
         ConnectedIntegrationGuild connectedIntegrationGuild = (ConnectedIntegrationGuild) other;
-        return this.id == connectedIntegrationGuild.id && Intrinsics3.areEqual(this.icon, connectedIntegrationGuild.icon) && Intrinsics3.areEqual(this.name, connectedIntegrationGuild.name);
+        return this.id == connectedIntegrationGuild.id && m.areEqual(this.icon, connectedIntegrationGuild.icon) && m.areEqual(this.name, connectedIntegrationGuild.name);
     }
 
     public int hashCode() {
@@ -47,11 +47,11 @@ public final /* data */ class ConnectedIntegrationGuild {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ConnectedIntegrationGuild(id=");
+        StringBuilder sbU = a.U("ConnectedIntegrationGuild(id=");
         sbU.append(this.id);
         sbU.append(", icon=");
         sbU.append(this.icon);
         sbU.append(", name=");
-        return outline.J(sbU, this.name, ")");
+        return a.J(sbU, this.name, ")");
     }
 }

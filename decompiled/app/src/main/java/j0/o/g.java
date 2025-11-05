@@ -10,7 +10,7 @@ public final class g implements Func2<Observable, Observable.a, Observable.a> {
     @Override // rx.functions.Func2
     public Observable.a call(Observable observable, Observable.a aVar) {
         Observable.a aVar2 = aVar;
-        Objects.requireNonNull(RxJavaPlugins.a.c());
+        Objects.requireNonNull(o.a.c());
         return aVar2;
     }
 }

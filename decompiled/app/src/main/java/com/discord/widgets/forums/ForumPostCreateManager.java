@@ -17,11 +17,10 @@ import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.threads.ThreadUtils;
 import com.discord.widgets.chat.MessageManager;
 import com.lytefast.flexinput.model.Attachment;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
+import d0.t.n;
+import d0.z.d.m;
+import d0.z.d.o;
+import j0.k.b;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -43,10 +42,10 @@ public final class ForumPostCreateManager {
 
     /* compiled from: ForumPostCreateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Channel, Observable<? extends Channel>> {
+    public static final class AnonymousClass1<T, R> implements b<Channel, Observable<? extends Channel>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Channel> call(Channel channel) {
             return call2(channel);
         }
@@ -54,14 +53,14 @@ public final class ForumPostCreateManager {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             Observable<R> observableG = StoreStream.INSTANCE.getChannels().observeChannel(channel.getId()).y(ObservableExtensionsKt.AnonymousClass1.INSTANCE).G(ObservableExtensionsKt.AnonymousClass2.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
+            m.checkNotNullExpressionValue(observableG, "filter { it != null }.map { it!! }");
             return ObservableExtensionsKt.computationLatest(ObservableExtensionsKt.takeSingleUntilTimeout$default(observableG, 0L, false, 3, null));
         }
     }
 
     /* compiled from: ForumPostCreateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Channel, Unit> {
         public final /* synthetic */ long $forumChannelId;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -85,7 +84,7 @@ public final class ForumPostCreateManager {
 
     /* compiled from: ForumPostCreateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<Error, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ long $forumChannelId;
 
@@ -104,14 +103,14 @@ public final class ForumPostCreateManager {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "error");
+            m.checkNotNullParameter(error, "error");
             ThreadUtils.INSTANCE.handleThreadCreateError(this.$context, error, this.$forumChannelId);
         }
     }
 
     /* compiled from: ForumPostCreateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass4 extends o implements Function0<Unit> {
         public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
 
         public AnonymousClass4() {
@@ -147,9 +146,9 @@ public final class ForumPostCreateManager {
         */
         public final Boolean call2(Boolean bool, Boolean bool2) {
             boolean z2;
-            Intrinsics3.checkNotNullExpressionValue(bool, "canAccess");
+            m.checkNotNullExpressionValue(bool, "canAccess");
             if (bool.booleanValue()) {
-                Intrinsics3.checkNotNullExpressionValue(bool2, "isCreateInProgress");
+                m.checkNotNullExpressionValue(bool2, "isCreateInProgress");
                 z2 = bool2.booleanValue();
             }
             return Boolean.valueOf(z2);
@@ -158,7 +157,7 @@ public final class ForumPostCreateManager {
 
     /* compiled from: ForumPostCreateManager.kt */
     /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$sendCreateForumPostWithMessageRequest$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<SendUtils.SendPayload.ReadyToSend, Observable<? extends Channel>> {
+    public static final class AnonymousClass1<T, R> implements b<SendUtils.SendPayload.ReadyToSend, Observable<? extends Channel>> {
         public final /* synthetic */ List $appliedTags;
         public final /* synthetic */ int $autoArchiveDuration;
         public final /* synthetic */ long $channelId;
@@ -173,7 +172,7 @@ public final class ForumPostCreateManager {
             this.$autoArchiveDuration = i;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Channel> call(SendUtils.SendPayload.ReadyToSend readyToSend) {
             return call2(readyToSend);
         }
@@ -181,7 +180,7 @@ public final class ForumPostCreateManager {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(SendUtils.SendPayload.ReadyToSend readyToSend) {
             List<SendUtils.FileUpload> uploads = readyToSend.getUploads();
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
+            ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(uploads, 10));
             Iterator<T> it = uploads.iterator();
             while (it.hasNext()) {
                 arrayList.add(((SendUtils.FileUpload) it.next()).getPart());
@@ -218,23 +217,23 @@ public final class ForumPostCreateManager {
         RestAPIParams.Message message = new RestAPIParams.Message(content, String.valueOf(NonceGenerator.Companion.computeNonce$default(NonceGenerator.INSTANCE, null, 1, null)), null, null, stickerIds, null, null, null, null);
         SendUtils sendUtils = SendUtils.INSTANCE;
         ContentResolver contentResolver = context.getContentResolver();
-        Intrinsics3.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
+        m.checkNotNullExpressionValue(contentResolver, "context.contentResolver");
         Observable<R> observableG = sendUtils.getSendPayload(contentResolver, message, attachments).y(ForumPostCreateManager$sendCreateForumPostWithMessageRequest$$inlined$filterIs$1.INSTANCE).G(ForumPostCreateManager$sendCreateForumPostWithMessageRequest$$inlined$filterIs$2.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
+        m.checkNotNullExpressionValue(observableG, "filter { it is T }.map { it as T }");
         Observable<Channel> observableA = observableG.Z(1).A(new AnonymousClass1(channelId, name, appliedTags, stickerIds, autoArchiveDuration));
-        Intrinsics3.checkNotNullExpressionValue(observableA, "SendUtils\n        .getSe…(),\n          )\n        }");
+        m.checkNotNullExpressionValue(observableA, "SendUtils\n        .getSe…(),\n          )\n        }");
         return observableA;
     }
 
     public final void createForumPostWithMessage(Context context, MessageManager messageManager, long forumChannelId, int autoArchiveDuration, String content, StoreThreadDraft.ThreadDraftState threadDraftState, MessageManager.AttachmentsRequest attachmentsRequest, Function2<? super Integer, ? super Integer, Unit> onMessageTooLong, Function2<? super Integer, ? super Boolean, Unit> onFilesTooLarge) {
-        Intrinsics3.checkNotNullParameter(context, "context");
-        Intrinsics3.checkNotNullParameter(messageManager, "messageManager");
-        Intrinsics3.checkNotNullParameter(content, "content");
-        Intrinsics3.checkNotNullParameter(threadDraftState, "threadDraftState");
+        m.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(messageManager, "messageManager");
+        m.checkNotNullParameter(content, "content");
+        m.checkNotNullParameter(threadDraftState, "threadDraftState");
         BehaviorSubject<Boolean> behaviorSubject = isCreateInProgressBehaviorSubject;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "isCreateInProgressBehaviorSubject");
+        m.checkNotNullExpressionValue(behaviorSubject, "isCreateInProgressBehaviorSubject");
         Boolean boolN0 = behaviorSubject.n0();
-        Intrinsics3.checkNotNullExpressionValue(boolN0, "isCreateInProgressBehaviorSubject.value");
+        m.checkNotNullExpressionValue(boolN0, "isCreateInProgressBehaviorSubject.value");
         if (boolN0.booleanValue()) {
             return;
         }
@@ -243,15 +242,15 @@ public final class ForumPostCreateManager {
             StoreStream.INSTANCE.getThreadDraft().setDraftState(StoreThreadDraft.ThreadDraftState.copy$default(threadDraftState, false, null, null, false, true, 15, null));
         } else if (messageManager.isValidForumPostFirstMessage(content, attachmentsRequest, onMessageTooLong, onFilesTooLarge)) {
             behaviorSubject.onNext(Boolean.TRUE);
-            Observable observableA = ObservableExtensionsKt.restSubscribeOn$default(sendCreateForumPostWithMessageRequest(context, forumChannelId, threadName, content, attachmentsRequest != null ? attachmentsRequest.getAttachments() : null, autoArchiveDuration, Collections2.emptyList(), Collections2.emptyList()), false, 1, null).A(AnonymousClass1.INSTANCE);
-            Intrinsics3.checkNotNullExpressionValue(observableA, "sendCreateForumPostWithM…utationLatest()\n        }");
+            Observable observableA = ObservableExtensionsKt.restSubscribeOn$default(sendCreateForumPostWithMessageRequest(context, forumChannelId, threadName, content, attachmentsRequest != null ? attachmentsRequest.getAttachments() : null, autoArchiveDuration, n.emptyList(), n.emptyList()), false, 1, null).A(AnonymousClass1.INSTANCE);
+            m.checkNotNullExpressionValue(observableA, "sendCreateForumPostWithM…utationLatest()\n        }");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(observableA), ForumPostCreateManager.class, (Context) null, (Function1) null, new AnonymousClass3(context, forumChannelId), (Function0) null, AnonymousClass4.INSTANCE, new AnonymousClass2(forumChannelId), 22, (Object) null);
         }
     }
 
     public final Observable<Boolean> observeIsForumPostCreateInProgress(long guildId) {
         Observable<Boolean> observableJ = Observable.j(ForumUtils.observeCanAccessRedesignedForumChannels$default(ForumUtils.INSTANCE, guildId, null, null, 6, null), isCreateInProgressBehaviorSubject, AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…s && isCreateInProgress }");
+        m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…s && isCreateInProgress }");
         return observableJ;
     }
 }

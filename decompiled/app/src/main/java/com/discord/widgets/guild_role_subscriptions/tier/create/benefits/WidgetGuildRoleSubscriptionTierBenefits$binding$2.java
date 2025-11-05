@@ -8,13 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.R;
 import com.discord.databinding.WidgetGuildRoleSubscriptionTierBenefitsBinding;
 import com.google.android.material.radiobutton.MaterialRadioButton;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
+import d0.z.d.k;
+import d0.z.d.m;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
 /* loaded from: classes2.dex */
-public final /* synthetic */ class WidgetGuildRoleSubscriptionTierBenefits$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildRoleSubscriptionTierBenefitsBinding> {
+public final /* synthetic */ class WidgetGuildRoleSubscriptionTierBenefits$binding$2 extends k implements Function1<View, WidgetGuildRoleSubscriptionTierBenefitsBinding> {
     public static final WidgetGuildRoleSubscriptionTierBenefits$binding$2 INSTANCE = new WidgetGuildRoleSubscriptionTierBenefits$binding$2();
 
     public WidgetGuildRoleSubscriptionTierBenefits$binding$2() {
@@ -28,7 +28,7 @@ public final /* synthetic */ class WidgetGuildRoleSubscriptionTierBenefits$bindi
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildRoleSubscriptionTierBenefitsBinding invoke2(View view) {
-        Intrinsics3.checkNotNullParameter(view, "p1");
+        m.checkNotNullParameter(view, "p1");
         int i = R.id.guild_role_subscription_tier_all_channels;
         MaterialRadioButton materialRadioButton = (MaterialRadioButton) view.findViewById(R.id.guild_role_subscription_tier_all_channels);
         if (materialRadioButton != null) {

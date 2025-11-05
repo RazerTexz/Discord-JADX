@@ -3,8 +3,7 @@ package com.google.android.gms.nearby.messages.internal;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import b.i.a.f.j.b.e.d;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import java.util.Arrays;
@@ -32,7 +31,7 @@ public final class zzad extends AbstractSafeParcelable {
         }
         if ((obj instanceof zzad) && hashCode() == obj.hashCode()) {
             zzad zzadVar = (zzad) obj;
-            if (AnimatableValueParser.h0(this.k, zzadVar.k) && AnimatableValueParser.h0(this.l, zzadVar.l)) {
+            if (b.c.a.a0.d.h0(this.k, zzadVar.k) && b.c.a.a0.d.h0(this.l, zzadVar.l)) {
                 return true;
             }
         }
@@ -46,17 +45,17 @@ public final class zzad extends AbstractSafeParcelable {
     public final String toString() {
         String str = this.k;
         String str2 = this.l;
-        return outline.l(outline.b(str2, outline.b(str, 17)), "namespace=", str, ", type=", str2);
+        return a.l(a.b(str2, a.b(str, 17)), "namespace=", str, ", type=", str2);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
-        AnimatableValueParser.t2(parcel, 1, this.k, false);
-        AnimatableValueParser.t2(parcel, 2, this.l, false);
+        int iY2 = b.c.a.a0.d.y2(parcel, 20293);
+        b.c.a.a0.d.t2(parcel, 1, this.k, false);
+        b.c.a.a0.d.t2(parcel, 2, this.l, false);
         int i2 = this.j;
         parcel.writeInt(263144);
         parcel.writeInt(i2);
-        AnimatableValueParser.A2(parcel, iY2);
+        b.c.a.a0.d.A2(parcel, iY2);
     }
 }

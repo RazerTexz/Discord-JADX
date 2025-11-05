@@ -1,21 +1,20 @@
 package b.i.a.c.x2.i0;
 
-import b.i.b.a.Function2;
 import java.util.Objects;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class c implements Function2 {
-    public final /* synthetic */ FragmentedMp4Extractor a;
+public final /* synthetic */ class c implements b.i.b.a.e {
+    public final /* synthetic */ g a;
 
-    public /* synthetic */ c(FragmentedMp4Extractor fragmentedMp4Extractor) {
-        this.a = fragmentedMp4Extractor;
+    public /* synthetic */ c(g gVar) {
+        this.a = gVar;
     }
 
-    @Override // b.i.b.a.Function2
+    @Override // b.i.b.a.e
     public final Object apply(Object obj) {
-        Track track = (Track) obj;
+        m mVar = (m) obj;
         Objects.requireNonNull(this.a);
-        return track;
+        return mVar;
     }
 }

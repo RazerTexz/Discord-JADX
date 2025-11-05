@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackUserPremiumGuildSubscriptionSlotRemoved.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserPremiumGuildSubscriptionSlotRemoved implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackUserPremiumGuildSubscriptionSlotRemoved implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long slotId = null;
     private final Long subscriptionId = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackUserPremiumGuildSubscriptionSlotRemoved imple
             return false;
         }
         TrackUserPremiumGuildSubscriptionSlotRemoved trackUserPremiumGuildSubscriptionSlotRemoved = (TrackUserPremiumGuildSubscriptionSlotRemoved) other;
-        return Intrinsics3.areEqual(this.slotId, trackUserPremiumGuildSubscriptionSlotRemoved.slotId) && Intrinsics3.areEqual(this.subscriptionId, trackUserPremiumGuildSubscriptionSlotRemoved.subscriptionId) && Intrinsics3.areEqual(this.removalType, trackUserPremiumGuildSubscriptionSlotRemoved.removalType);
+        return m.areEqual(this.slotId, trackUserPremiumGuildSubscriptionSlotRemoved.slotId) && m.areEqual(this.subscriptionId, trackUserPremiumGuildSubscriptionSlotRemoved.subscriptionId) && m.areEqual(this.removalType, trackUserPremiumGuildSubscriptionSlotRemoved.removalType);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackUserPremiumGuildSubscriptionSlotRemoved imple
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUserPremiumGuildSubscriptionSlotRemoved(slotId=");
+        StringBuilder sbU = a.U("TrackUserPremiumGuildSubscriptionSlotRemoved(slotId=");
         sbU.append(this.slotId);
         sbU.append(", subscriptionId=");
         sbU.append(this.subscriptionId);
         sbU.append(", removalType=");
-        return outline.E(sbU, this.removalType, ")");
+        return a.E(sbU, this.removalType, ")");
     }
 }

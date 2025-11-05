@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackA11yRuntimeViolation.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackA11yRuntimeViolation implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackA11yRuntimeViolation implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final CharSequence ruleId = null;
     private final CharSequence trace = null;
@@ -30,7 +30,7 @@ public final /* data */ class TrackA11yRuntimeViolation implements AnalyticsSche
             return false;
         }
         TrackA11yRuntimeViolation trackA11yRuntimeViolation = (TrackA11yRuntimeViolation) other;
-        return Intrinsics3.areEqual(this.ruleId, trackA11yRuntimeViolation.ruleId) && Intrinsics3.areEqual(this.trace, trackA11yRuntimeViolation.trace) && Intrinsics3.areEqual(this.message, trackA11yRuntimeViolation.message) && Intrinsics3.areEqual(this.hash, trackA11yRuntimeViolation.hash);
+        return m.areEqual(this.ruleId, trackA11yRuntimeViolation.ruleId) && m.areEqual(this.trace, trackA11yRuntimeViolation.trace) && m.areEqual(this.message, trackA11yRuntimeViolation.message) && m.areEqual(this.hash, trackA11yRuntimeViolation.hash);
     }
 
     public int hashCode() {
@@ -45,13 +45,13 @@ public final /* data */ class TrackA11yRuntimeViolation implements AnalyticsSche
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackA11yRuntimeViolation(ruleId=");
+        StringBuilder sbU = a.U("TrackA11yRuntimeViolation(ruleId=");
         sbU.append(this.ruleId);
         sbU.append(", trace=");
         sbU.append(this.trace);
         sbU.append(", message=");
         sbU.append(this.message);
         sbU.append(", hash=");
-        return outline.E(sbU, this.hash, ")");
+        return a.E(sbU, this.hash, ")");
     }
 }

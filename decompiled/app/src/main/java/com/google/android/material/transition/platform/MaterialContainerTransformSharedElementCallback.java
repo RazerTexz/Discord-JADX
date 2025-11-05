@@ -16,8 +16,8 @@ import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.graphics.BlendModeColorFilterCompat;
 import androidx.core.graphics.BlendModeCompat;
-import b.i.a.g.l.l.TransitionListenerAdapter3;
-import b.i.a.g.l.l.TransitionUtils5;
+import b.i.a.g.l.l.i;
+import b.i.a.g.l.l.k;
 import com.google.android.material.R;
 import com.google.android.material.internal.ContextUtils;
 import com.google.android.material.shape.ShapeAppearanceModel;
@@ -59,32 +59,32 @@ public class MaterialContainerTransformSharedElementCallback extends SharedEleme
         }
     }
 
-    public class a extends TransitionListenerAdapter3 {
+    public class a extends i {
         public final /* synthetic */ Window a;
 
         public a(MaterialContainerTransformSharedElementCallback materialContainerTransformSharedElementCallback, Window window) {
             this.a = window;
         }
 
-        @Override // b.i.a.g.l.l.TransitionListenerAdapter3, android.transition.Transition.TransitionListener
+        @Override // b.i.a.g.l.l.i, android.transition.Transition.TransitionListener
         public void onTransitionEnd(Transition transition) {
             MaterialContainerTransformSharedElementCallback.access$100(this.a);
         }
 
-        @Override // b.i.a.g.l.l.TransitionListenerAdapter3, android.transition.Transition.TransitionListener
+        @Override // b.i.a.g.l.l.i, android.transition.Transition.TransitionListener
         public void onTransitionStart(Transition transition) {
             MaterialContainerTransformSharedElementCallback.access$000(this.a);
         }
     }
 
-    public class b extends TransitionListenerAdapter3 {
+    public class b extends i {
         public final /* synthetic */ Activity a;
 
         public b(MaterialContainerTransformSharedElementCallback materialContainerTransformSharedElementCallback, Activity activity) {
             this.a = activity;
         }
 
-        @Override // b.i.a.g.l.l.TransitionListenerAdapter3, android.transition.Transition.TransitionListener
+        @Override // b.i.a.g.l.l.i, android.transition.Transition.TransitionListener
         public void onTransitionEnd(Transition transition) {
             View view;
             if (MaterialContainerTransformSharedElementCallback.access$200() != null && (view = (View) MaterialContainerTransformSharedElementCallback.access$200().get()) != null) {
@@ -96,14 +96,14 @@ public class MaterialContainerTransformSharedElementCallback extends SharedEleme
         }
     }
 
-    public class c extends TransitionListenerAdapter3 {
+    public class c extends i {
         public final /* synthetic */ Window a;
 
         public c(MaterialContainerTransformSharedElementCallback materialContainerTransformSharedElementCallback, Window window) {
             this.a = window;
         }
 
-        @Override // b.i.a.g.l.l.TransitionListenerAdapter3, android.transition.Transition.TransitionListener
+        @Override // b.i.a.g.l.l.i, android.transition.Transition.TransitionListener
         public void onTransitionStart(Transition transition) {
             MaterialContainerTransformSharedElementCallback.access$000(this.a);
         }
@@ -224,7 +224,7 @@ public class MaterialContainerTransformSharedElementCallback extends SharedEleme
         }
         if (!this.entering && !list2.isEmpty()) {
             View view2 = list2.get(0);
-            RectF rectF = TransitionUtils5.a;
+            RectF rectF = k.a;
             this.returnEndBounds = new Rect(view2.getLeft(), view2.getTop(), view2.getRight(), view2.getBottom());
         }
         this.entering = false;

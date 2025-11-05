@@ -1,11 +1,11 @@
 package kotlin.reflect.jvm.internal.impl.protobuf;
 
-import d0.e0.p.d.m0.i.MessageLite;
+import d0.e0.p.d.m0.i.n;
 import java.io.IOException;
 
 /* loaded from: classes3.dex */
 public class InvalidProtocolBufferException extends IOException {
-    private MessageLite unfinishedMessage;
+    private n unfinishedMessage;
 
     public InvalidProtocolBufferException(String str) {
         super(str);
@@ -24,12 +24,12 @@ public class InvalidProtocolBufferException extends IOException {
         return new InvalidProtocolBufferException("While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either than the input has been truncated or that an embedded message misreported its own length.");
     }
 
-    public MessageLite getUnfinishedMessage() {
+    public n getUnfinishedMessage() {
         return this.unfinishedMessage;
     }
 
-    public InvalidProtocolBufferException setUnfinishedMessage(MessageLite messageLite) {
-        this.unfinishedMessage = messageLite;
+    public InvalidProtocolBufferException setUnfinishedMessage(n nVar) {
+        this.unfinishedMessage = nVar;
         return this;
     }
 }

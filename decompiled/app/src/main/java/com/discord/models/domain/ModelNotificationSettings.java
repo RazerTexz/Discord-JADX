@@ -2,7 +2,7 @@ package com.discord.models.domain;
 
 import androidx.recyclerview.widget.RecyclerView;
 import b.a.m.a.k;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
 import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
@@ -219,7 +219,7 @@ public class ModelNotificationSettings implements Model {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelNotificationSettings(suppressEveryone=");
+        StringBuilder sbU = a.U("ModelNotificationSettings(suppressEveryone=");
         sbU.append(isSuppressEveryone());
         sbU.append(", suppressRoles=");
         sbU.append(isSuppressRoles());
@@ -367,7 +367,7 @@ public class ModelNotificationSettings implements Model {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ModelNotificationSettings.ChannelOverride(muted=");
+            StringBuilder sbU = a.U("ModelNotificationSettings.ChannelOverride(muted=");
             sbU.append(isMuted());
             sbU.append(", muteConfig=");
             sbU.append(getMuteConfig());

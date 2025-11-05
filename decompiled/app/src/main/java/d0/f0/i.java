@@ -1,7 +1,5 @@
 package d0.f0;
 
-import d0.z.d.Intrinsics3;
-import d0.z.d.g0.KMarkers;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -18,7 +16,7 @@ public final class i<T> implements Sequence<T> {
     public final Function1<T, T> f3573b;
 
     /* compiled from: Sequences.kt */
-    public static final class a implements Iterator<T>, KMarkers {
+    public static final class a implements Iterator<T>, d0.z.d.g0.a {
         public T j;
         public int k = -2;
 
@@ -32,7 +30,7 @@ public final class i<T> implements Sequence<T> {
             } else {
                 Function1 function1Access$getGetNextValue$p = i.access$getGetNextValue$p(i.this);
                 T t2 = this.j;
-                Intrinsics3.checkNotNull(t2);
+                d0.z.d.m.checkNotNull(t2);
                 t = (T) function1Access$getGetNextValue$p.invoke(t2);
             }
             this.j = t;
@@ -69,8 +67,8 @@ public final class i<T> implements Sequence<T> {
 
     /* JADX WARN: Multi-variable type inference failed */
     public i(Function0<? extends T> function0, Function1<? super T, ? extends T> function1) {
-        Intrinsics3.checkNotNullParameter(function0, "getInitialValue");
-        Intrinsics3.checkNotNullParameter(function1, "getNextValue");
+        d0.z.d.m.checkNotNullParameter(function0, "getInitialValue");
+        d0.z.d.m.checkNotNullParameter(function1, "getNextValue");
         this.a = function0;
         this.f3573b = function1;
     }

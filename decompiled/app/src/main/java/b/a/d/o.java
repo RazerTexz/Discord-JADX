@@ -4,11 +4,6 @@ import android.content.Context;
 import androidx.core.app.NotificationCompat;
 import com.discord.app.AppFragment;
 import com.discord.utilities.error.Error;
-import d0.t.Maps6;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.l.e.ScalarSynchronousObservable;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +20,7 @@ public final class o {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: AppTransformers.kt */
-    public static final class a<T> extends Lambda implements Function1<T, T> {
+    public static final class a<T> extends d0.z.d.o implements Function1<T, T> {
         public static final a j = new a();
 
         public a() {
@@ -34,7 +29,7 @@ public final class o {
 
         @Override // kotlin.jvm.functions.Function1
         public final T invoke(T t) {
-            Intrinsics3.checkNotNull(t);
+            d0.z.d.m.checkNotNull(t);
             return t;
         }
     }
@@ -44,9 +39,9 @@ public final class o {
     public static final class b<T, R, K, V, V1> implements Observable.c<Map<K, ? extends V>, Map<K, ? extends V1>> {
         public static final b j = new b();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public Object call(Object obj) {
-            return new ScalarSynchronousObservable(Maps6.emptyMap());
+            return new j0.l.e.k(d0.t.h0.emptyMap());
         }
     }
 
@@ -61,7 +56,7 @@ public final class o {
             this.k = function1;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public Object call(Object obj) {
             return ((Observable) obj).Y(new s(this)).r();
         }
@@ -81,7 +76,7 @@ public final class o {
             this.m = timeUnit;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public Object call(Object obj) {
             return ((Observable) obj).Y(new t(this));
         }
@@ -89,7 +84,7 @@ public final class o {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: AppTransformers.kt */
-    public static final /* synthetic */ class e<T> extends FunctionReferenceImpl implements Function1<T, Unit> {
+    public static final /* synthetic */ class e<T> extends d0.z.d.k implements Function1<T, Unit> {
         public e(Action1 action1) {
             super(1, action1, Action1.class, NotificationCompat.CATEGORY_CALL, "call(Ljava/lang/Object;)V", 0);
         }
@@ -103,7 +98,7 @@ public final class o {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: AppTransformers.kt */
-    public static final /* synthetic */ class f<T> extends FunctionReferenceImpl implements Function1<T, Unit> {
+    public static final /* synthetic */ class f<T> extends d0.z.d.k implements Function1<T, Unit> {
         public f(Action1 action1) {
             super(1, action1, Action1.class, NotificationCompat.CATEGORY_CALL, "call(Ljava/lang/Object;)V", 0);
         }
@@ -116,18 +111,18 @@ public final class o {
     }
 
     public static final <K, T> Observable.c<Map<K, T>, Map<K, T>> a(Collection<? extends K> collection) {
-        Intrinsics3.checkNotNullParameter(collection, "filterKeys");
+        d0.z.d.m.checkNotNullParameter(collection, "filterKeys");
         return b(collection, a.j);
     }
 
     public static final <K, V, V1> Observable.c<Map<K, V>, Map<K, V1>> b(Collection<? extends K> collection, Function1<? super V, ? extends V1> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "valueMapper");
+        d0.z.d.m.checkNotNullParameter(function1, "valueMapper");
         return (collection == null || collection.isEmpty()) ? b.j : new c(collection, function1);
     }
 
     public static final <T> Observable.c<T, T> c(Function1<? super T, Boolean> function1, T t, long j, TimeUnit timeUnit) {
-        Intrinsics3.checkNotNullParameter(function1, "predicate");
-        Intrinsics3.checkNotNullParameter(timeUnit, "timeUnit");
+        d0.z.d.m.checkNotNullParameter(function1, "predicate");
+        d0.z.d.m.checkNotNullParameter(timeUnit, "timeUnit");
         return new d(function1, t, j, timeUnit);
     }
 
@@ -139,8 +134,8 @@ public final class o {
     }
 
     public static final <T> Observable.c<T, T> e(Action1<? super T> action1, Class<?> cls) {
-        Intrinsics3.checkNotNullParameter(action1, "onNext");
-        Intrinsics3.checkNotNullParameter(cls, "errorClass");
+        d0.z.d.m.checkNotNullParameter(action1, "onNext");
+        d0.z.d.m.checkNotNullParameter(cls, "errorClass");
         return new w(null, cls, null, action1, null);
     }
 
@@ -149,26 +144,26 @@ public final class o {
         int i2 = i & 8;
         Context context2 = (i & 16) != 0 ? null : context;
         int i3 = i & 32;
-        Intrinsics3.checkNotNullParameter(function1, "onNext");
-        Intrinsics3.checkNotNullParameter(str, "errorTag");
+        d0.z.d.m.checkNotNullParameter(function1, "onNext");
+        d0.z.d.m.checkNotNullParameter(str, "errorTag");
         return new y(context2, str, null, function1, function14, null);
     }
 
     public static final <T> Observable.c<T, T> h(Action1<? super T> action1, Context context, Action1<Error> action12) {
-        Intrinsics3.checkNotNullParameter(action1, "onNext");
+        d0.z.d.m.checkNotNullParameter(action1, "onNext");
         e eVar = new e(action1);
         c0 c0Var = (40 & 4) != 0 ? null : action12 != null ? new c0(action12) : null;
         int i = 40 & 8;
         Context context2 = (40 & 16) != 0 ? null : context;
         int i2 = 40 & 32;
-        Intrinsics3.checkNotNullParameter(eVar, "onNext");
-        Intrinsics3.checkNotNullParameter("restClient", "errorTag");
+        d0.z.d.m.checkNotNullParameter(eVar, "onNext");
+        d0.z.d.m.checkNotNullParameter("restClient", "errorTag");
         return new y(context2, "restClient", null, eVar, c0Var, null);
     }
 
     public static final <T> Observable.c<T, T> i(Action1<? super T> action1, AppFragment appFragment) {
-        Intrinsics3.checkNotNullParameter(action1, "onNext");
-        Intrinsics3.checkNotNullParameter(appFragment, "fragment");
+        d0.z.d.m.checkNotNullParameter(action1, "onNext");
+        d0.z.d.m.checkNotNullParameter(appFragment, "fragment");
         return a.g(appFragment.getContext(), new f(action1), null);
     }
 
@@ -178,7 +173,7 @@ public final class o {
     }
 
     public final <T> Observable.c<T, T> g(Context context, Function1<? super T, Unit> function1, Action1<Error> action1) {
-        Intrinsics3.checkNotNullParameter(function1, "onNext");
+        d0.z.d.m.checkNotNullParameter(function1, "onNext");
         return f(this, function1, "restClient", action1 != null ? new c0(action1) : null, null, context, null, 40);
     }
 }

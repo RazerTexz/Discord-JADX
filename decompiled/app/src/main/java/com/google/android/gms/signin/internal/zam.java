@@ -3,7 +3,7 @@ package com.google.android.gms.signin.internal;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.l.b.j;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
@@ -27,13 +27,13 @@ public final class zam extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
-        AnimatableValueParser.s2(parcel, 2, this.k, i, false);
-        AnimatableValueParser.s2(parcel, 3, this.l, i, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.s2(parcel, 2, this.k, i, false);
+        d.s2(parcel, 3, this.l, i, false);
+        d.A2(parcel, iY2);
     }
 
     public zam() {

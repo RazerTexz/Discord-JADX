@@ -1,6 +1,6 @@
 package d0.f0;
 
-import d0.t.Collections3;
+import d0.t.v;
 import java.util.Iterator;
 import kotlin.sequences.Sequence;
 
@@ -16,7 +16,7 @@ public final class f implements Sequence, e {
 
     @Override // kotlin.sequences.Sequence
     public Iterator iterator() {
-        return Collections3.j;
+        return v.j;
     }
 
     @Override // d0.f0.e

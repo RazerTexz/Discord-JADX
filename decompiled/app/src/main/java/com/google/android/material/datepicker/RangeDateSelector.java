@@ -16,8 +16,7 @@ import androidx.annotation.RestrictTo;
 import androidx.core.util.Pair;
 import androidx.core.util.Preconditions;
 import b.i.a.f.e.o.f;
-import b.i.a.g.d.DateFormatTextWatcher;
-import b.i.a.g.d.UtcDates;
+import b.i.a.g.d.l;
 import com.google.android.material.R;
 import com.google.android.material.internal.ManufacturerUtils;
 import com.google.android.material.internal.ViewUtils;
@@ -49,7 +48,7 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
     @Nullable
     private Long proposedTextEnd = null;
 
-    public class a extends DateFormatTextWatcher {
+    public class a extends b.i.a.g.d.c {
         public final /* synthetic */ TextInputLayout p;
         public final /* synthetic */ TextInputLayout q;
         public final /* synthetic */ OnSelectionChangedListener r;
@@ -62,20 +61,20 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             this.r = onSelectionChangedListener;
         }
 
-        @Override // b.i.a.g.d.DateFormatTextWatcher
+        @Override // b.i.a.g.d.c
         public void a() {
             RangeDateSelector.access$002(RangeDateSelector.this, null);
             RangeDateSelector.access$100(RangeDateSelector.this, this.p, this.q, this.r);
         }
 
-        @Override // b.i.a.g.d.DateFormatTextWatcher
+        @Override // b.i.a.g.d.c
         public void b(@Nullable Long l) {
             RangeDateSelector.access$002(RangeDateSelector.this, l);
             RangeDateSelector.access$100(RangeDateSelector.this, this.p, this.q, this.r);
         }
     }
 
-    public class b extends DateFormatTextWatcher {
+    public class b extends b.i.a.g.d.c {
         public final /* synthetic */ TextInputLayout p;
         public final /* synthetic */ TextInputLayout q;
         public final /* synthetic */ OnSelectionChangedListener r;
@@ -88,13 +87,13 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             this.r = onSelectionChangedListener;
         }
 
-        @Override // b.i.a.g.d.DateFormatTextWatcher
+        @Override // b.i.a.g.d.c
         public void a() {
             RangeDateSelector.access$202(RangeDateSelector.this, null);
             RangeDateSelector.access$100(RangeDateSelector.this, this.p, this.q, this.r);
         }
 
-        @Override // b.i.a.g.d.DateFormatTextWatcher
+        @Override // b.i.a.g.d.c
         public void b(@Nullable Long l) {
             RangeDateSelector.access$202(RangeDateSelector.this, l);
             RangeDateSelector.access$100(RangeDateSelector.this, this.p, this.q, this.r);
@@ -248,10 +247,10 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
         } else if (l2 == null) {
             pairCreate = Pair.create(f.h0(l.longValue(), null), null);
         } else {
-            Calendar calendarH = UtcDates.h();
-            Calendar calendarI = UtcDates.i();
+            Calendar calendarH = l.h();
+            Calendar calendarI = l.i();
             calendarI.setTimeInMillis(l.longValue());
-            Calendar calendarI2 = UtcDates.i();
+            Calendar calendarI2 = l.i();
             calendarI2.setTimeInMillis(l2.longValue());
             pairCreate = calendarI.get(1) == calendarI2.get(1) ? calendarI.get(1) == calendarH.get(1) ? Pair.create(f.n0(l.longValue(), Locale.getDefault()), f.n0(l2.longValue(), Locale.getDefault())) : Pair.create(f.n0(l.longValue(), Locale.getDefault()), f.s0(l2.longValue(), Locale.getDefault())) : Pair.create(f.s0(l.longValue(), Locale.getDefault()), f.s0(l2.longValue(), Locale.getDefault()));
         }
@@ -276,7 +275,7 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             editText2.setInputType(17);
         }
         this.invalidRangeStartError = viewInflate.getResources().getString(R.string.mtrl_picker_invalid_range);
-        SimpleDateFormat simpleDateFormatE = UtcDates.e();
+        SimpleDateFormat simpleDateFormatE = l.e();
         Long l = this.selectedStartItem;
         if (l != null) {
             editText.setText(simpleDateFormatE.format(l));
@@ -287,7 +286,7 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             editText2.setText(simpleDateFormatE.format(l2));
             this.proposedTextEnd = this.selectedEndItem;
         }
-        String strF = UtcDates.f(viewInflate.getResources(), simpleDateFormatE);
+        String strF = l.f(viewInflate.getResources(), simpleDateFormatE);
         textInputLayout.setPlaceholderText(strF);
         textInputLayout2.setPlaceholderText(strF);
         editText.addTextChangedListener(new a(strF, simpleDateFormatE, textInputLayout, calendarConstraints, textInputLayout, textInputLayout2, onSelectionChangedListener));
@@ -334,8 +333,8 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             Preconditions.checkArgument(isValidRange(l.longValue(), pair.second.longValue()));
         }
         Long l2 = pair.first;
-        this.selectedStartItem = l2 == null ? null : Long.valueOf(UtcDates.a(l2.longValue()));
+        this.selectedStartItem = l2 == null ? null : Long.valueOf(l.a(l2.longValue()));
         Long l3 = pair.second;
-        this.selectedEndItem = l3 != null ? Long.valueOf(UtcDates.a(l3.longValue())) : null;
+        this.selectedEndItem = l3 != null ? Long.valueOf(l.a(l3.longValue())) : null;
     }
 }

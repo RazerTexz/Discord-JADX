@@ -15,7 +15,7 @@ import androidx.constraintlayout.widget.Guideline;
 import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.app.AppLog;
 import com.discord.databinding.WidgetChannelMembersListItemAddOrLeaveBinding;
@@ -35,8 +35,8 @@ import com.discord.views.UsernameView;
 import com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel;
 import com.discord.widgets.roles.RoleIconView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
@@ -62,7 +62,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     /* compiled from: ChannelMembersListAdapter.kt */
     /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function2<ListUpdateRequest, ListUpdateRequest, ListUpdateOperation> {
+    public static final class AnonymousClass1 extends o implements Function2<ListUpdateRequest, ListUpdateRequest, ListUpdateOperation> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
         public AnonymousClass1() {
@@ -76,8 +76,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ListUpdateOperation invoke2(ListUpdateRequest listUpdateRequest, ListUpdateRequest listUpdateRequest2) {
-            Intrinsics3.checkNotNullParameter(listUpdateRequest, "prevRequest");
-            Intrinsics3.checkNotNullParameter(listUpdateRequest2, "nextRequest");
+            m.checkNotNullParameter(listUpdateRequest, "prevRequest");
+            m.checkNotNullParameter(listUpdateRequest2, "nextRequest");
             if (listUpdateRequest2.getForceOverwrite()) {
                 return new ListUpdateOperation.OverwriteUpdate(listUpdateRequest2);
             }
@@ -85,11 +85,11 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             WidgetChannelMembersListViewModel.MemberList rows = listUpdateRequest.getRows();
             String listId2 = listUpdateRequest2.getListId();
             WidgetChannelMembersListViewModel.MemberList rows2 = listUpdateRequest2.getRows();
-            if (!Intrinsics3.areEqual(listId, listId2) || Math.abs(rows.getSize() - rows2.getSize()) >= 255) {
+            if (!m.areEqual(listId, listId2) || Math.abs(rows.getSize() - rows2.getSize()) >= 255) {
                 return new ListUpdateOperation.OverwriteUpdate(listUpdateRequest2);
             }
             DiffUtil.DiffResult diffResultCalculateDiff = DiffUtil.calculateDiff(new DiffUtilCallback(rows, rows2));
-            Intrinsics3.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(diffUtilCallback)");
+            m.checkNotNullExpressionValue(diffResultCalculateDiff, "DiffUtil.calculateDiff(diffUtilCallback)");
             return new ListUpdateOperation.DiffUpdate(diffResultCalculateDiff, listUpdateRequest2);
         }
     }
@@ -108,14 +108,14 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         public final ListUpdateOperation call2(ListUpdateOperation listUpdateOperation, ListUpdateRequest listUpdateRequest) {
             AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
             ListUpdateRequest request = listUpdateOperation.getRequest();
-            Intrinsics3.checkNotNullExpressionValue(listUpdateRequest, "nextUpdate");
+            m.checkNotNullExpressionValue(listUpdateRequest, "nextUpdate");
             return anonymousClass1.invoke2(request, listUpdateRequest);
         }
     }
 
     /* compiled from: ChannelMembersListAdapter.kt */
     /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function1<ListUpdateOperation, Unit> {
+    public static final class AnonymousClass3 extends o implements Function1<ListUpdateOperation, Unit> {
         public AnonymousClass3() {
             super(1);
         }
@@ -139,7 +139,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     /* compiled from: ChannelMembersListAdapter.kt */
     /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$4, reason: invalid class name */
-    public static final class AnonymousClass4 extends Lambda implements Function1<Subscription, Unit> {
+    public static final class AnonymousClass4 extends o implements Function1<Subscription, Unit> {
         public AnonymousClass4() {
             super(1);
         }
@@ -152,7 +152,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
-            Intrinsics3.checkNotNullParameter(subscription, "it");
+            m.checkNotNullParameter(subscription, "it");
             ChannelMembersListAdapter.access$setUpdatesSubscription$p(ChannelMembersListAdapter.this, subscription);
         }
     }
@@ -163,20 +163,20 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         private final WidgetChannelMembersListViewModel.MemberList prevMemberList;
 
         public DiffUtilCallback(WidgetChannelMembersListViewModel.MemberList memberList, WidgetChannelMembersListViewModel.MemberList memberList2) {
-            Intrinsics3.checkNotNullParameter(memberList, "prevMemberList");
-            Intrinsics3.checkNotNullParameter(memberList2, "nextMemberList");
+            m.checkNotNullParameter(memberList, "prevMemberList");
+            m.checkNotNullParameter(memberList2, "nextMemberList");
             this.prevMemberList = memberList;
             this.nextMemberList = memberList2;
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
         public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-            return Intrinsics3.areEqual(this.prevMemberList.get(oldItemPosition), this.nextMemberList.get(newItemPosition));
+            return m.areEqual(this.prevMemberList.get(oldItemPosition), this.nextMemberList.get(newItemPosition));
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
         public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-            return Intrinsics3.areEqual(this.prevMemberList.get(oldItemPosition).getRowId(), this.nextMemberList.get(newItemPosition).getRowId());
+            return m.areEqual(this.prevMemberList.get(oldItemPosition).getRowId(), this.nextMemberList.get(newItemPosition).getRowId());
         }
 
         @Override // androidx.recyclerview.widget.DiffUtil.Callback
@@ -203,7 +203,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public AddMember(String str, @StringRes int i) {
                 super(ViewType.ADD_MEMBER, str, null);
-                Intrinsics3.checkNotNullParameter(str, "rowId");
+                m.checkNotNullParameter(str, "rowId");
                 this.rowId = str;
                 this.title = i;
             }
@@ -228,7 +228,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public final AddMember copy(String rowId, @StringRes int title) {
-                Intrinsics3.checkNotNullParameter(rowId, "rowId");
+                m.checkNotNullParameter(rowId, "rowId");
                 return new AddMember(rowId, title);
             }
 
@@ -240,7 +240,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                     return false;
                 }
                 AddMember addMember = (AddMember) other;
-                return Intrinsics3.areEqual(getRowId(), addMember.getRowId()) && this.title == addMember.title;
+                return m.areEqual(getRowId(), addMember.getRowId()) && this.title == addMember.title;
             }
 
             @Override // com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter.Item
@@ -258,10 +258,10 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("AddMember(rowId=");
+                StringBuilder sbU = a.U("AddMember(rowId=");
                 sbU.append(getRowId());
                 sbU.append(", title=");
-                return outline.B(sbU, this.title, ")");
+                return a.B(sbU, this.title, ")");
             }
 
             @Override // com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter.Item
@@ -286,8 +286,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Header(String str, Type type, int i) {
                 super(ViewType.HEADER, str, null);
-                Intrinsics3.checkNotNullParameter(str, "rowId");
-                Intrinsics3.checkNotNullParameter(type, "headerType");
+                m.checkNotNullParameter(str, "rowId");
+                m.checkNotNullParameter(type, "headerType");
                 this.rowId = str;
                 this.headerType = type;
                 this.memberCount = i;
@@ -321,8 +321,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public final Header copy(String rowId, Type headerType, int memberCount) {
-                Intrinsics3.checkNotNullParameter(rowId, "rowId");
-                Intrinsics3.checkNotNullParameter(headerType, "headerType");
+                m.checkNotNullParameter(rowId, "rowId");
+                m.checkNotNullParameter(headerType, "headerType");
                 return new Header(rowId, headerType, memberCount);
             }
 
@@ -334,7 +334,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                     return false;
                 }
                 Header header = (Header) other;
-                return Intrinsics3.areEqual(getRowId(), header.getRowId()) && Intrinsics3.areEqual(this.headerType, header.headerType) && this.memberCount == header.memberCount;
+                return m.areEqual(getRowId(), header.getRowId()) && m.areEqual(this.headerType, header.headerType) && this.memberCount == header.memberCount;
             }
 
             public final Type getHeaderType() {
@@ -358,12 +358,12 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Header(rowId=");
+                StringBuilder sbU = a.U("Header(rowId=");
                 sbU.append(getRowId());
                 sbU.append(", headerType=");
                 sbU.append(this.headerType);
                 sbU.append(", memberCount=");
-                return outline.B(sbU, this.memberCount, ")");
+                return a.B(sbU, this.memberCount, ")");
             }
 
             @Override // com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter.Item
@@ -380,7 +380,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public JoinLeaveThread(String str, boolean z2) {
                 super(ViewType.JOIN_LEAVE_THREAD, str, null);
-                Intrinsics3.checkNotNullParameter(str, "rowId");
+                m.checkNotNullParameter(str, "rowId");
                 this.rowId = str;
                 this.isThreadJoined = z2;
             }
@@ -405,7 +405,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public final JoinLeaveThread copy(String rowId, boolean isThreadJoined) {
-                Intrinsics3.checkNotNullParameter(rowId, "rowId");
+                m.checkNotNullParameter(rowId, "rowId");
                 return new JoinLeaveThread(rowId, isThreadJoined);
             }
 
@@ -417,7 +417,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                     return false;
                 }
                 JoinLeaveThread joinLeaveThread = (JoinLeaveThread) other;
-                return Intrinsics3.areEqual(getRowId(), joinLeaveThread.getRowId()) && this.isThreadJoined == joinLeaveThread.isThreadJoined;
+                return m.areEqual(getRowId(), joinLeaveThread.getRowId()) && this.isThreadJoined == joinLeaveThread.isThreadJoined;
             }
 
             @Override // com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter.Item
@@ -442,10 +442,10 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("JoinLeaveThread(rowId=");
+                StringBuilder sbU = a.U("JoinLeaveThread(rowId=");
                 sbU.append(getRowId());
                 sbU.append(", isThreadJoined=");
-                return outline.O(sbU, this.isThreadJoined, ")");
+                return a.O(sbU, this.isThreadJoined, ")");
             }
 
             @Override // com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter.Item
@@ -474,7 +474,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Member(long j, Long l, String str, boolean z2, Integer num, boolean z3, Presence presence, @ColorInt Integer num2, String str2, boolean z4, String str3, boolean z5, boolean z6, int i) {
                 super(ViewType.MEMBER, Long.valueOf(j), null);
-                Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 this.userId = j;
                 this.guildId = l;
                 this.name = str;
@@ -566,7 +566,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public final Member copy(long userId, Long guildId, String name, boolean isBot, Integer tagText, boolean tagVerified, Presence presence, @ColorInt Integer color, String avatarUrl, boolean showOwnerIndicator, String premiumSince, boolean isApplicationStreaming, boolean canDisplayStatusEmoji, int userFlags) {
-                Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+                m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 return new Member(userId, guildId, name, isBot, tagText, tagVerified, presence, color, avatarUrl, showOwnerIndicator, premiumSince, isApplicationStreaming, canDisplayStatusEmoji, userFlags);
             }
 
@@ -578,7 +578,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                     return false;
                 }
                 Member member = (Member) other;
-                return this.userId == member.userId && Intrinsics3.areEqual(this.guildId, member.guildId) && Intrinsics3.areEqual(this.name, member.name) && this.isBot == member.isBot && Intrinsics3.areEqual(this.tagText, member.tagText) && this.tagVerified == member.tagVerified && Intrinsics3.areEqual(this.presence, member.presence) && Intrinsics3.areEqual(this.color, member.color) && Intrinsics3.areEqual(this.avatarUrl, member.avatarUrl) && this.showOwnerIndicator == member.showOwnerIndicator && Intrinsics3.areEqual(this.premiumSince, member.premiumSince) && this.isApplicationStreaming == member.isApplicationStreaming && this.canDisplayStatusEmoji == member.canDisplayStatusEmoji && this.userFlags == member.userFlags;
+                return this.userId == member.userId && m.areEqual(this.guildId, member.guildId) && m.areEqual(this.name, member.name) && this.isBot == member.isBot && m.areEqual(this.tagText, member.tagText) && this.tagVerified == member.tagVerified && m.areEqual(this.presence, member.presence) && m.areEqual(this.color, member.color) && m.areEqual(this.avatarUrl, member.avatarUrl) && this.showOwnerIndicator == member.showOwnerIndicator && m.areEqual(this.premiumSince, member.premiumSince) && this.isApplicationStreaming == member.isApplicationStreaming && this.canDisplayStatusEmoji == member.canDisplayStatusEmoji && this.userFlags == member.userFlags;
             }
 
             public final String getAvatarUrl() {
@@ -683,7 +683,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Member(userId=");
+                StringBuilder sbU = a.U("Member(userId=");
                 sbU.append(this.userId);
                 sbU.append(", guildId=");
                 sbU.append(this.guildId);
@@ -710,7 +710,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 sbU.append(", canDisplayStatusEmoji=");
                 sbU.append(this.canDisplayStatusEmoji);
                 sbU.append(", userFlags=");
-                return outline.B(sbU, this.userFlags, ")");
+                return a.B(sbU, this.userFlags, ")");
             }
         }
 
@@ -720,8 +720,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public PlaceholderHeader(String str) {
-                super(ViewType.PLACEHOLDER_HEADER, outline.w("placeholder:", str), null);
-                Intrinsics3.checkNotNullParameter(str, "listId");
+                super(ViewType.PLACEHOLDER_HEADER, a.w("placeholder:", str), null);
+                m.checkNotNullParameter(str, "listId");
                 this.listId = str;
             }
 
@@ -738,13 +738,13 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public final PlaceholderHeader copy(String listId) {
-                Intrinsics3.checkNotNullParameter(listId, "listId");
+                m.checkNotNullParameter(listId, "listId");
                 return new PlaceholderHeader(listId);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof PlaceholderHeader) && Intrinsics3.areEqual(this.listId, ((PlaceholderHeader) other).listId);
+                    return (other instanceof PlaceholderHeader) && m.areEqual(this.listId, ((PlaceholderHeader) other).listId);
                 }
                 return true;
             }
@@ -762,7 +762,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                return outline.J(outline.U("PlaceholderHeader(listId="), this.listId, ")");
+                return a.J(a.U("PlaceholderHeader(listId="), this.listId, ")");
             }
         }
 
@@ -803,7 +803,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("PlaceholderMember(placeholderSize=");
+                StringBuilder sbU = a.U("PlaceholderMember(placeholderSize=");
                 sbU.append(this.placeholderSize);
                 sbU.append(")");
                 return sbU.toString();
@@ -820,7 +820,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public RoleHeader(long j, String str, int i, Long l) {
                 super(ViewType.ROLE_HEADER, Long.valueOf(j), null);
-                Intrinsics3.checkNotNullParameter(str, "roleName");
+                m.checkNotNullParameter(str, "roleName");
                 this.roleId = j;
                 this.roleName = str;
                 this.memberCount = i;
@@ -867,7 +867,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public final RoleHeader copy(long roleId, String roleName, int memberCount, Long guildId) {
-                Intrinsics3.checkNotNullParameter(roleName, "roleName");
+                m.checkNotNullParameter(roleName, "roleName");
                 return new RoleHeader(roleId, roleName, memberCount, guildId);
             }
 
@@ -879,7 +879,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                     return false;
                 }
                 RoleHeader roleHeader = (RoleHeader) other;
-                return this.roleId == roleHeader.roleId && Intrinsics3.areEqual(this.roleName, roleHeader.roleName) && this.memberCount == roleHeader.memberCount && Intrinsics3.areEqual(this.guildId, roleHeader.guildId);
+                return this.roleId == roleHeader.roleId && m.areEqual(this.roleName, roleHeader.roleName) && this.memberCount == roleHeader.memberCount && m.areEqual(this.guildId, roleHeader.guildId);
             }
 
             public final Long getGuildId() {
@@ -907,14 +907,14 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("RoleHeader(roleId=");
+                StringBuilder sbU = a.U("RoleHeader(roleId=");
                 sbU.append(this.roleId);
                 sbU.append(", roleName=");
                 sbU.append(this.roleName);
                 sbU.append(", memberCount=");
                 sbU.append(this.memberCount);
                 sbU.append(", guildId=");
-                return outline.G(sbU, this.guildId, ")");
+                return a.G(sbU, this.guildId, ")");
             }
         }
 
@@ -947,8 +947,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public DiffUpdate(DiffUtil.DiffResult diffResult, ListUpdateRequest listUpdateRequest) {
                 super(listUpdateRequest, null);
-                Intrinsics3.checkNotNullParameter(diffResult, "diffResult");
-                Intrinsics3.checkNotNullParameter(listUpdateRequest, "listUpdateRequest");
+                m.checkNotNullParameter(diffResult, "diffResult");
+                m.checkNotNullParameter(listUpdateRequest, "listUpdateRequest");
                 this.diffResult = diffResult;
             }
 
@@ -962,7 +962,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public OverwriteUpdate(ListUpdateRequest listUpdateRequest) {
                 super(listUpdateRequest, null);
-                Intrinsics3.checkNotNullParameter(listUpdateRequest, "listUpdateRequest");
+                m.checkNotNullParameter(listUpdateRequest, "listUpdateRequest");
             }
         }
 
@@ -986,8 +986,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         private final WidgetChannelMembersListViewModel.MemberList rows;
 
         public ListUpdateRequest(String str, WidgetChannelMembersListViewModel.MemberList memberList, boolean z2) {
-            Intrinsics3.checkNotNullParameter(str, "listId");
-            Intrinsics3.checkNotNullParameter(memberList, "rows");
+            m.checkNotNullParameter(str, "listId");
+            m.checkNotNullParameter(memberList, "rows");
             this.listId = str;
             this.rows = memberList;
             this.forceOverwrite = z2;
@@ -1022,8 +1022,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
 
         public final ListUpdateRequest copy(String listId, WidgetChannelMembersListViewModel.MemberList rows, boolean forceOverwrite) {
-            Intrinsics3.checkNotNullParameter(listId, "listId");
-            Intrinsics3.checkNotNullParameter(rows, "rows");
+            m.checkNotNullParameter(listId, "listId");
+            m.checkNotNullParameter(rows, "rows");
             return new ListUpdateRequest(listId, rows, forceOverwrite);
         }
 
@@ -1035,7 +1035,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return false;
             }
             ListUpdateRequest listUpdateRequest = (ListUpdateRequest) other;
-            return Intrinsics3.areEqual(this.listId, listUpdateRequest.listId) && Intrinsics3.areEqual(this.rows, listUpdateRequest.rows) && this.forceOverwrite == listUpdateRequest.forceOverwrite;
+            return m.areEqual(this.listId, listUpdateRequest.listId) && m.areEqual(this.rows, listUpdateRequest.rows) && this.forceOverwrite == listUpdateRequest.forceOverwrite;
         }
 
         public final boolean getForceOverwrite() {
@@ -1065,12 +1065,12 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ListUpdateRequest(listId=");
+            StringBuilder sbU = a.U("ListUpdateRequest(listId=");
             sbU.append(this.listId);
             sbU.append(", rows=");
             sbU.append(this.rows);
             sbU.append(", forceOverwrite=");
-            return outline.O(sbU, this.forceOverwrite, ")");
+            return a.O(sbU, this.forceOverwrite, ")");
         }
     }
 
@@ -1083,8 +1083,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         private final ChannelMembersListViewHolderRoleHeader roleStickyHeader;
 
         public StickyHeadersManager(WidgetChannelMembersListItemHeaderBinding widgetChannelMembersListItemHeaderBinding, WidgetChannelMembersListItemPlaceholderHeaderBinding widgetChannelMembersListItemPlaceholderHeaderBinding) {
-            Intrinsics3.checkNotNullParameter(widgetChannelMembersListItemHeaderBinding, "headerViewBinding");
-            Intrinsics3.checkNotNullParameter(widgetChannelMembersListItemPlaceholderHeaderBinding, "placeholderHeaderViewBinding");
+            m.checkNotNullParameter(widgetChannelMembersListItemHeaderBinding, "headerViewBinding");
+            m.checkNotNullParameter(widgetChannelMembersListItemPlaceholderHeaderBinding, "placeholderHeaderViewBinding");
             this.headerViewBinding = widgetChannelMembersListItemHeaderBinding;
             this.placeholderHeaderViewBinding = widgetChannelMembersListItemPlaceholderHeaderBinding;
             this.roleStickyHeader = new ChannelMembersListViewHolderRoleHeader(widgetChannelMembersListItemHeaderBinding);
@@ -1093,7 +1093,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
 
         public final void bindStickyHeaderView(Item row) {
-            Intrinsics3.checkNotNullParameter(row, "row");
+            m.checkNotNullParameter(row, "row");
             if (row instanceof Item.RoleHeader) {
                 this.roleStickyHeader.bind((Item.RoleHeader) row);
                 this.currentStickyHeaderView = this.headerViewBinding.a;
@@ -1104,21 +1104,21 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 WidgetChannelMembersListItemHeaderBinding widgetChannelMembersListItemHeaderBinding = this.headerViewBinding;
                 this.currentStickyHeaderView = widgetChannelMembersListItemHeaderBinding.a;
                 RoleIconView roleIconView = widgetChannelMembersListItemHeaderBinding.f2259b;
-                Intrinsics3.checkNotNullExpressionValue(roleIconView, "headerViewBinding.channe…ersListItemHeaderRoleIcon");
+                m.checkNotNullExpressionValue(roleIconView, "headerViewBinding.channe…ersListItemHeaderRoleIcon");
                 roleIconView.setVisibility(8);
                 return;
             }
             if (row instanceof Item.PlaceholderHeader) {
                 this.currentStickyHeaderView = this.placeholderHeaderViewBinding.a;
                 RoleIconView roleIconView2 = this.headerViewBinding.f2259b;
-                Intrinsics3.checkNotNullExpressionValue(roleIconView2, "headerViewBinding.channe…ersListItemHeaderRoleIcon");
+                m.checkNotNullExpressionValue(roleIconView2, "headerViewBinding.channe…ersListItemHeaderRoleIcon");
                 roleIconView2.setVisibility(8);
                 return;
             }
             if (row instanceof Item.AddMember) {
                 this.currentStickyHeaderView = null;
                 RoleIconView roleIconView3 = this.headerViewBinding.f2259b;
-                Intrinsics3.checkNotNullExpressionValue(roleIconView3, "headerViewBinding.channe…ersListItemHeaderRoleIcon");
+                m.checkNotNullExpressionValue(roleIconView3, "headerViewBinding.channe…ersListItemHeaderRoleIcon");
                 roleIconView3.setVisibility(8);
             }
         }
@@ -1128,12 +1128,12 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
 
         public final void layoutViews(RecyclerView recyclerView) {
-            Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+            m.checkNotNullParameter(recyclerView, "recyclerView");
             LinearLayout linearLayout = this.headerViewBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(linearLayout, "headerViewBinding.root");
+            m.checkNotNullExpressionValue(linearLayout, "headerViewBinding.root");
             StickyHeaderItemDecoration.LayoutManager.layoutHeaderView(recyclerView, linearLayout);
             FrameLayout frameLayout = this.placeholderHeaderViewBinding.a;
-            Intrinsics3.checkNotNullExpressionValue(frameLayout, "placeholderHeaderViewBinding.root");
+            m.checkNotNullExpressionValue(frameLayout, "placeholderHeaderViewBinding.root");
             StickyHeaderItemDecoration.LayoutManager.layoutHeaderView(recyclerView, frameLayout);
         }
     }
@@ -1213,7 +1213,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     /* compiled from: ChannelMembersListAdapter.kt */
     /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ Item.Member $item;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -1238,7 +1238,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     /* compiled from: ChannelMembersListAdapter.kt */
     /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass2 extends o implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
         }
@@ -1259,7 +1259,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     /* compiled from: ChannelMembersListAdapter.kt */
     /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$3, reason: invalid class name */
-    public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass3 extends o implements Function0<Unit> {
         public AnonymousClass3() {
             super(0);
         }
@@ -1285,9 +1285,9 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         this.memberList = empty;
         ListUpdateOperation.OverwriteUpdate overwriteUpdate = new ListUpdateOperation.OverwriteUpdate(new ListUpdateRequest("", empty, false));
         AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
-        Intrinsics3.checkNotNullExpressionValue(publishSubjectK0, "updatesSubject");
+        m.checkNotNullExpressionValue(publishSubjectK0, "updatesSubject");
         Observable observableS = ObservableExtensionsKt.computationLatest(publishSubjectK0).Q(overwriteUpdate, AnonymousClass2.INSTANCE).S(1);
-        Intrinsics3.checkNotNullExpressionValue(observableS, "updatesSubject\n        .…      })\n        .skip(1)");
+        m.checkNotNullExpressionValue(observableS, "updatesSubject\n        .…      })\n        .skip(1)");
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui(observableS), ChannelMembersListAdapter.class, (Context) null, new AnonymousClass4(), (Function1) null, (Function0) null, (Function0) null, new AnonymousClass3(), 58, (Object) null);
     }
 
@@ -1310,7 +1310,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
     public static final /* synthetic */ StickyHeadersManager access$getStickyHeadersManager$p(ChannelMembersListAdapter channelMembersListAdapter) {
         StickyHeadersManager stickyHeadersManager = channelMembersListAdapter.stickyHeadersManager;
         if (stickyHeadersManager == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("stickyHeadersManager");
+            m.throwUninitializedPropertyAccessException("stickyHeadersManager");
         }
         return stickyHeadersManager;
     }
@@ -1359,26 +1359,26 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             try {
                 StickyHeadersManager stickyHeadersManager = this.stickyHeadersManager;
                 if (stickyHeadersManager == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("stickyHeadersManager");
+                    m.throwUninitializedPropertyAccessException("stickyHeadersManager");
                 }
                 stickyHeadersManager.bindStickyHeaderView(item);
                 StickyHeadersManager stickyHeadersManager2 = this.stickyHeadersManager;
                 if (stickyHeadersManager2 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("stickyHeadersManager");
+                    m.throwUninitializedPropertyAccessException("stickyHeadersManager");
                 }
                 return stickyHeadersManager2.getCurrentStickyHeaderView();
             } catch (ClassCastException unused) {
                 Logger.e$default(AppLog.g, "Failed to cast header", null, null, 6, null);
                 StickyHeadersManager stickyHeadersManager3 = this.stickyHeadersManager;
                 if (stickyHeadersManager3 == null) {
-                    Intrinsics3.throwUninitializedPropertyAccessException("stickyHeadersManager");
+                    m.throwUninitializedPropertyAccessException("stickyHeadersManager");
                 }
                 return stickyHeadersManager3.getCurrentStickyHeaderView();
             }
         } catch (Throwable unused2) {
             StickyHeadersManager stickyHeadersManager4 = this.stickyHeadersManager;
             if (stickyHeadersManager4 == null) {
-                Intrinsics3.throwUninitializedPropertyAccessException("stickyHeadersManager");
+                m.throwUninitializedPropertyAccessException("stickyHeadersManager");
             }
             return stickyHeadersManager4.getCurrentStickyHeaderView();
         }
@@ -1441,19 +1441,19 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        Intrinsics3.checkNotNullParameter(recyclerView, "recyclerView");
+        m.checkNotNullParameter(recyclerView, "recyclerView");
         super.onAttachedToRecyclerView(recyclerView);
         WidgetChannelMembersListItemHeaderBinding widgetChannelMembersListItemHeaderBindingA = WidgetChannelMembersListItemHeaderBinding.a(LayoutInflater.from(recyclerView.getContext()), recyclerView, false);
-        Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemHeaderBindingA, "WidgetChannelMembersList…View,\n        false\n    )");
+        m.checkNotNullExpressionValue(widgetChannelMembersListItemHeaderBindingA, "WidgetChannelMembersList…View,\n        false\n    )");
         WidgetChannelMembersListItemPlaceholderHeaderBinding widgetChannelMembersListItemPlaceholderHeaderBindingA = WidgetChannelMembersListItemPlaceholderHeaderBinding.a(LayoutInflater.from(recyclerView.getContext()), recyclerView, false);
-        Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemPlaceholderHeaderBindingA, "WidgetChannelMembersList…View,\n        false\n    )");
+        m.checkNotNullExpressionValue(widgetChannelMembersListItemPlaceholderHeaderBindingA, "WidgetChannelMembersList…View,\n        false\n    )");
         this.stickyHeadersManager = new StickyHeadersManager(widgetChannelMembersListItemHeaderBindingA, widgetChannelMembersListItemPlaceholderHeaderBindingA);
         recyclerView.addOnLayoutChangeListener(new AnonymousClass1(recyclerView));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        Intrinsics3.checkNotNullParameter(holder, "holder");
+        m.checkNotNullParameter(holder, "holder");
         if (holder instanceof ChannelMembersListViewHolderHeader) {
             Item item = this.memberList.get(position);
             Objects.requireNonNull(item, "null cannot be cast to non-null type com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter.Item.Header");
@@ -1488,20 +1488,20 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics3.checkNotNullParameter(parent, "parent");
+        m.checkNotNullParameter(parent, "parent");
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(parent.getContext());
         switch (ViewType.INSTANCE.fromOrdinal(viewType)) {
             case ROLE_HEADER:
                 WidgetChannelMembersListItemHeaderBinding widgetChannelMembersListItemHeaderBindingA = WidgetChannelMembersListItemHeaderBinding.a(layoutInflaterFrom, parent, false);
-                Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemHeaderBindingA, "WidgetChannelMembersList…(inflater, parent, false)");
+                m.checkNotNullExpressionValue(widgetChannelMembersListItemHeaderBindingA, "WidgetChannelMembersList…(inflater, parent, false)");
                 return new ChannelMembersListViewHolderRoleHeader(widgetChannelMembersListItemHeaderBindingA);
             case PLACEHOLDER_HEADER:
                 WidgetChannelMembersListItemPlaceholderHeaderBinding widgetChannelMembersListItemPlaceholderHeaderBindingA = WidgetChannelMembersListItemPlaceholderHeaderBinding.a(layoutInflaterFrom, parent, false);
-                Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemPlaceholderHeaderBindingA, "WidgetChannelMembersList…(inflater, parent, false)");
+                m.checkNotNullExpressionValue(widgetChannelMembersListItemPlaceholderHeaderBindingA, "WidgetChannelMembersList…(inflater, parent, false)");
                 return new ChannelMembersListViewHolderPlaceholderHeader(widgetChannelMembersListItemPlaceholderHeaderBindingA);
             case HEADER:
                 WidgetChannelMembersListItemHeaderBinding widgetChannelMembersListItemHeaderBindingA2 = WidgetChannelMembersListItemHeaderBinding.a(layoutInflaterFrom, parent, false);
-                Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemHeaderBindingA2, "WidgetChannelMembersList…(inflater, parent, false)");
+                m.checkNotNullExpressionValue(widgetChannelMembersListItemHeaderBindingA2, "WidgetChannelMembersList…(inflater, parent, false)");
                 return new ChannelMembersListViewHolderHeader(widgetChannelMembersListItemHeaderBindingA2);
             case MEMBER:
                 View viewInflate = layoutInflaterFrom.inflate(R.layout.widget_channel_members_list_item_user, parent, false);
@@ -1527,7 +1527,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                                         ImageView imageView3 = (ImageView) viewInflate.findViewById(R.id.channel_members_list_item_rich_presence_iv);
                                         if (imageView3 != null) {
                                             WidgetChannelMembersListItemUserBinding widgetChannelMembersListItemUserBinding = new WidgetChannelMembersListItemUserBinding((ConstraintLayout) viewInflate, simpleDraweeView, imageView, simpleDraweeSpanTextView, imageView2, usernameView, statusView, imageView3);
-                                            Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemUserBinding, "WidgetChannelMembersList…(inflater, parent, false)");
+                                            m.checkNotNullExpressionValue(widgetChannelMembersListItemUserBinding, "WidgetChannelMembersList…(inflater, parent, false)");
                                             return new ChannelMembersListViewHolderMember(widgetChannelMembersListItemUserBinding);
                                         }
                                     }
@@ -1539,7 +1539,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
             case ADD_MEMBER:
                 WidgetChannelMembersListItemAddOrLeaveBinding widgetChannelMembersListItemAddOrLeaveBindingA = WidgetChannelMembersListItemAddOrLeaveBinding.a(layoutInflaterFrom, parent, false);
-                Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemAddOrLeaveBindingA, "WidgetChannelMembersList…(inflater, parent, false)");
+                m.checkNotNullExpressionValue(widgetChannelMembersListItemAddOrLeaveBindingA, "WidgetChannelMembersList…(inflater, parent, false)");
                 return new ChannelMembersListViewHolderAdd(widgetChannelMembersListItemAddOrLeaveBindingA);
             case LOADING:
                 View viewInflate2 = layoutInflaterFrom.inflate(R.layout.widget_channel_members_list_item_loading, parent, false);
@@ -1553,7 +1553,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                         Guideline guideline = (Guideline) viewInflate2.findViewById(R.id.username_placeholder_end_guideline);
                         if (guideline != null) {
                             WidgetChannelMembersListItemLoadingBinding widgetChannelMembersListItemLoadingBinding = new WidgetChannelMembersListItemLoadingBinding((ConstraintLayout) viewInflate2, viewFindViewById, viewFindViewById2, guideline);
-                            Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemLoadingBinding, "WidgetChannelMembersList…(inflater, parent, false)");
+                            m.checkNotNullExpressionValue(widgetChannelMembersListItemLoadingBinding, "WidgetChannelMembersList…(inflater, parent, false)");
                             return new ChannelMembersListViewHolderLoading(widgetChannelMembersListItemLoadingBinding);
                         }
                     }
@@ -1561,7 +1561,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 throw new NullPointerException("Missing required view with ID: ".concat(viewInflate2.getResources().getResourceName(i2)));
             case JOIN_LEAVE_THREAD:
                 WidgetChannelMembersListItemAddOrLeaveBinding widgetChannelMembersListItemAddOrLeaveBindingA2 = WidgetChannelMembersListItemAddOrLeaveBinding.a(layoutInflaterFrom, parent, false);
-                Intrinsics3.checkNotNullExpressionValue(widgetChannelMembersListItemAddOrLeaveBindingA2, "WidgetChannelMembersList…(inflater, parent, false)");
+                m.checkNotNullExpressionValue(widgetChannelMembersListItemAddOrLeaveBindingA2, "WidgetChannelMembersList…(inflater, parent, false)");
                 return new ChannelMembersListViewHolderJoinLeaveThread(widgetChannelMembersListItemAddOrLeaveBindingA2);
             default:
                 throw new NoWhenBranchMatchedException();
@@ -1569,19 +1569,19 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
     }
 
     public final void setData(String listId, WidgetChannelMembersListViewModel.MemberList rows, boolean forceOverwrite) {
-        Intrinsics3.checkNotNullParameter(listId, "listId");
-        Intrinsics3.checkNotNullParameter(rows, "rows");
+        m.checkNotNullParameter(listId, "listId");
+        m.checkNotNullParameter(rows, "rows");
         PublishSubject<ListUpdateRequest> publishSubject = this.updatesSubject;
         publishSubject.k.onNext(new ListUpdateRequest(listId, rows, forceOverwrite));
     }
 
     public final void setOnAddMemberClicked(Function0<Unit> addMember) {
-        Intrinsics3.checkNotNullParameter(addMember, "addMember");
+        m.checkNotNullParameter(addMember, "addMember");
         this.onAddMemberClicked = addMember;
     }
 
     public final void setOnJoinLeaveThreadClicked(Function0<Unit> joinLeaveThread) {
-        Intrinsics3.checkNotNullParameter(joinLeaveThread, "joinLeaveThread");
+        m.checkNotNullParameter(joinLeaveThread, "joinLeaveThread");
         this.onJoinLeaveThreadClicked = joinLeaveThread;
     }
 

@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.discord.R;
 import com.discord.databinding.ViewServerSettingsCommunitySettingSelectorBinding;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
 /* compiled from: CommunitySelectorView.kt */
@@ -31,40 +31,40 @@ public final class CommunitySelectorView extends LinearLayout {
 
     private final void initAttrs(AttributeSet attrs) {
         TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attrs, R.a.CommunitySelectorView, 0, 0);
-        Intrinsics3.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…munitySelectorView, 0, 0)");
+        m.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "context.obtainStyledAttr…munitySelectorView, 0, 0)");
         CharSequence text = typedArrayObtainStyledAttributes.getText(3);
         CharSequence text2 = typedArrayObtainStyledAttributes.getText(2);
         CharSequence text3 = typedArrayObtainStyledAttributes.getText(0);
         boolean z2 = typedArrayObtainStyledAttributes.getBoolean(1, true);
         typedArrayObtainStyledAttributes.recycle();
         TextView textView = this.binding.e;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.serverSettingsCo…unitySettingSelectorTitle");
+        m.checkNotNullExpressionValue(textView, "binding.serverSettingsCo…unitySettingSelectorTitle");
         textView.setText(text);
         TextView textView2 = this.binding.f2208b;
-        Intrinsics3.checkNotNullExpressionValue(textView2, "binding.serverSettingsCo…ettingSelectorDescription");
+        m.checkNotNullExpressionValue(textView2, "binding.serverSettingsCo…ettingSelectorDescription");
         textView2.setText(text3);
         TextView textView3 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView3, "binding.serverSettingsCo…tySettingSelectorSubtitle");
+        m.checkNotNullExpressionValue(textView3, "binding.serverSettingsCo…tySettingSelectorSubtitle");
         textView3.setText(text2);
         TextView textView4 = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView4, "binding.serverSettingsCo…tySettingSelectorSubtitle");
+        m.checkNotNullExpressionValue(textView4, "binding.serverSettingsCo…tySettingSelectorSubtitle");
         textView4.setVisibility(z2 ? 0 : 8);
         ImageView imageView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(imageView, "binding.serverSettingsCo…ttingSelectorDropdownIcon");
+        m.checkNotNullExpressionValue(imageView, "binding.serverSettingsCo…ttingSelectorDropdownIcon");
         imageView.setVisibility(z2 ? 0 : 8);
     }
 
     public final void setSubtitle(CharSequence subtitle) {
-        Intrinsics3.checkNotNullParameter(subtitle, "subtitle");
+        m.checkNotNullParameter(subtitle, "subtitle");
         TextView textView = this.binding.d;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.serverSettingsCo…tySettingSelectorSubtitle");
+        m.checkNotNullExpressionValue(textView, "binding.serverSettingsCo…tySettingSelectorSubtitle");
         textView.setText(subtitle);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CommunitySelectorView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(R.layout.view_server_settings_community_setting_selector, this);
         int i2 = R.id.server_settings_community_setting_selector_description;
         TextView textView = (TextView) findViewById(R.id.server_settings_community_setting_selector_description);
@@ -79,7 +79,7 @@ public final class CommunitySelectorView extends LinearLayout {
                     TextView textView3 = (TextView) findViewById(R.id.server_settings_community_setting_selector_title);
                     if (textView3 != null) {
                         ViewServerSettingsCommunitySettingSelectorBinding viewServerSettingsCommunitySettingSelectorBinding = new ViewServerSettingsCommunitySettingSelectorBinding(this, textView, imageView, textView2, textView3);
-                        Intrinsics3.checkNotNullExpressionValue(viewServerSettingsCommunitySettingSelectorBinding, "ViewServerSettingsCommun…ater.from(context), this)");
+                        m.checkNotNullExpressionValue(viewServerSettingsCommunitySettingSelectorBinding, "ViewServerSettingsCommun…ater.from(context), this)");
                         this.binding = viewServerSettingsCommunitySettingSelectorBinding;
                         if (attributeSet != null) {
                             initAttrs(attributeSet);

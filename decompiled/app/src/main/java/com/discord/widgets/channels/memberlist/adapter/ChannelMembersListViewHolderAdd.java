@@ -7,7 +7,7 @@ import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.R;
 import com.discord.databinding.WidgetChannelMembersListItemAddOrLeaveBinding;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
@@ -34,16 +34,16 @@ public final class ChannelMembersListViewHolderAdd extends RecyclerView.ViewHold
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ChannelMembersListViewHolderAdd(WidgetChannelMembersListItemAddOrLeaveBinding widgetChannelMembersListItemAddOrLeaveBinding) {
         super(widgetChannelMembersListItemAddOrLeaveBinding.a);
-        Intrinsics3.checkNotNullParameter(widgetChannelMembersListItemAddOrLeaveBinding, "binding");
+        m.checkNotNullParameter(widgetChannelMembersListItemAddOrLeaveBinding, "binding");
         this.binding = widgetChannelMembersListItemAddOrLeaveBinding;
     }
 
     public final void bind(Function0<Unit> onClicked, @StringRes int title) {
-        Intrinsics3.checkNotNullParameter(onClicked, "onClicked");
+        m.checkNotNullParameter(onClicked, "onClicked");
         TextView textView = this.binding.c;
-        Intrinsics3.checkNotNullExpressionValue(textView, "binding.channelMembersListItemAddOrLeaveTitle");
+        m.checkNotNullExpressionValue(textView, "binding.channelMembersListItemAddOrLeaveTitle");
         LinearLayout linearLayout = this.binding.a;
-        Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.root");
+        m.checkNotNullExpressionValue(linearLayout, "binding.root");
         textView.setText(linearLayout.getContext().getText(title));
         this.binding.f2258b.setImageResource(R.drawable.ic_add_person_16dp);
         this.binding.a.setOnClickListener(new AnonymousClass1(onClicked));

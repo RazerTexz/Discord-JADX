@@ -4,7 +4,7 @@ import android.media.MediaCodecInfo;
 import android.media.MediaCodecList;
 import android.os.Build;
 import androidx.annotation.Nullable;
-import h0.c.VideoDecoderFactory2;
+import h0.c.q0;
 import java.util.ArrayList;
 import org.webrtc.EglBase;
 
@@ -70,7 +70,7 @@ public class MediaCodecVideoDecoderFactory implements VideoDecoderFactory {
 
     @Override // org.webrtc.VideoDecoderFactory
     public /* synthetic */ VideoDecoder createDecoder(String str) {
-        return VideoDecoderFactory2.a(this, str);
+        return q0.a(this, str);
     }
 
     @Override // org.webrtc.VideoDecoderFactory

@@ -14,8 +14,8 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.WidgetCallFullscreenAudioShareWarningBinding;
-import b.a.i.WidgetCallFullscreenPrivateCallBinding;
+import b.a.i.p4;
+import b.a.i.q4;
 import com.discord.views.calls.CallEventsButtonView;
 import com.discord.views.calls.StageCallVisitCommunityView;
 import com.discord.views.calls.VideoCallParticipantView;
@@ -43,7 +43,7 @@ public final class WidgetCallFullscreenBinding implements ViewBinding {
     public final RelativeLayout d;
 
     @NonNull
-    public final WidgetCallFullscreenAudioShareWarningBinding e;
+    public final p4 e;
 
     @NonNull
     public final CoordinatorLayout f;
@@ -86,7 +86,7 @@ public final class WidgetCallFullscreenBinding implements ViewBinding {
 
     /* renamed from: s, reason: collision with root package name */
     @NonNull
-    public final WidgetCallFullscreenPrivateCallBinding f2246s;
+    public final q4 f2246s;
 
     @NonNull
     public final ConstraintLayout t;
@@ -108,12 +108,12 @@ public final class WidgetCallFullscreenBinding implements ViewBinding {
     @NonNull
     public final VoiceControlsSheetView f2248y;
 
-    public WidgetCallFullscreenBinding(@NonNull ConstraintLayout constraintLayout, @NonNull Toolbar toolbar, @NonNull AppBarLayout appBarLayout, @NonNull RelativeLayout relativeLayout, @NonNull WidgetCallFullscreenAudioShareWarningBinding widgetCallFullscreenAudioShareWarningBinding, @NonNull Barrier barrier, @NonNull ConstraintLayout constraintLayout2, @NonNull CoordinatorLayout coordinatorLayout, @NonNull MaterialButton materialButton, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton2, @NonNull VideoCallParticipantView videoCallParticipantView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton3, @NonNull ConstraintLayout constraintLayout4, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull ImageView imageView, @NonNull RecyclerView recyclerView2, @NonNull StageCallVisitCommunityView stageCallVisitCommunityView, @NonNull ViewStub viewStub, @NonNull WidgetCallFullscreenPrivateCallBinding widgetCallFullscreenPrivateCallBinding, @NonNull ConstraintLayout constraintLayout5, @NonNull UserSummaryView userSummaryView, @NonNull MaterialTextView materialTextView, @NonNull CallEventsButtonView callEventsButtonView, @NonNull VoiceCallActiveEventView voiceCallActiveEventView, @NonNull Barrier barrier2, @NonNull VoiceControlsSheetView voiceControlsSheetView, @NonNull FragmentContainerView fragmentContainerView) {
+    public WidgetCallFullscreenBinding(@NonNull ConstraintLayout constraintLayout, @NonNull Toolbar toolbar, @NonNull AppBarLayout appBarLayout, @NonNull RelativeLayout relativeLayout, @NonNull p4 p4Var, @NonNull Barrier barrier, @NonNull ConstraintLayout constraintLayout2, @NonNull CoordinatorLayout coordinatorLayout, @NonNull MaterialButton materialButton, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull LinearLayout linearLayout, @NonNull MaterialButton materialButton2, @NonNull VideoCallParticipantView videoCallParticipantView, @NonNull RecyclerView recyclerView, @NonNull MaterialButton materialButton3, @NonNull ConstraintLayout constraintLayout4, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull ImageView imageView, @NonNull RecyclerView recyclerView2, @NonNull StageCallVisitCommunityView stageCallVisitCommunityView, @NonNull ViewStub viewStub, @NonNull q4 q4Var, @NonNull ConstraintLayout constraintLayout5, @NonNull UserSummaryView userSummaryView, @NonNull MaterialTextView materialTextView, @NonNull CallEventsButtonView callEventsButtonView, @NonNull VoiceCallActiveEventView voiceCallActiveEventView, @NonNull Barrier barrier2, @NonNull VoiceControlsSheetView voiceControlsSheetView, @NonNull FragmentContainerView fragmentContainerView) {
         this.a = constraintLayout;
         this.f2245b = toolbar;
         this.c = appBarLayout;
         this.d = relativeLayout;
-        this.e = widgetCallFullscreenAudioShareWarningBinding;
+        this.e = p4Var;
         this.f = coordinatorLayout;
         this.g = materialButton;
         this.h = textView;
@@ -127,7 +127,7 @@ public final class WidgetCallFullscreenBinding implements ViewBinding {
         this.p = recyclerView2;
         this.q = stageCallVisitCommunityView;
         this.r = viewStub;
-        this.f2246s = widgetCallFullscreenPrivateCallBinding;
+        this.f2246s = q4Var;
         this.t = constraintLayout5;
         this.u = userSummaryView;
         this.v = materialTextView;

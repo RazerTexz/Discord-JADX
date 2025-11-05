@@ -1,7 +1,7 @@
 package com.discord.models.experiments.dto;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: UnauthenticatedUserExperimentsDto.kt */
@@ -11,8 +11,8 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
     private final String fingerprint;
 
     public UnauthenticatedUserExperimentsDto(String str, List<UserExperimentDto> list) {
-        Intrinsics3.checkNotNullParameter(str, "fingerprint");
-        Intrinsics3.checkNotNullParameter(list, "assignments");
+        m.checkNotNullParameter(str, "fingerprint");
+        m.checkNotNullParameter(list, "assignments");
         this.fingerprint = str;
         this.assignments = list;
     }
@@ -38,8 +38,8 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
     }
 
     public final UnauthenticatedUserExperimentsDto copy(String fingerprint, List<UserExperimentDto> assignments) {
-        Intrinsics3.checkNotNullParameter(fingerprint, "fingerprint");
-        Intrinsics3.checkNotNullParameter(assignments, "assignments");
+        m.checkNotNullParameter(fingerprint, "fingerprint");
+        m.checkNotNullParameter(assignments, "assignments");
         return new UnauthenticatedUserExperimentsDto(fingerprint, assignments);
     }
 
@@ -51,7 +51,7 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
             return false;
         }
         UnauthenticatedUserExperimentsDto unauthenticatedUserExperimentsDto = (UnauthenticatedUserExperimentsDto) other;
-        return Intrinsics3.areEqual(this.fingerprint, unauthenticatedUserExperimentsDto.fingerprint) && Intrinsics3.areEqual(this.assignments, unauthenticatedUserExperimentsDto.assignments);
+        return m.areEqual(this.fingerprint, unauthenticatedUserExperimentsDto.fingerprint) && m.areEqual(this.assignments, unauthenticatedUserExperimentsDto.assignments);
     }
 
     public final List<UserExperimentDto> getAssignments() {
@@ -70,9 +70,9 @@ public final /* data */ class UnauthenticatedUserExperimentsDto {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("UnauthenticatedUserExperimentsDto(fingerprint=");
+        StringBuilder sbU = a.U("UnauthenticatedUserExperimentsDto(fingerprint=");
         sbU.append(this.fingerprint);
         sbU.append(", assignments=");
-        return outline.L(sbU, this.assignments, ")");
+        return a.L(sbU, this.assignments, ")");
     }
 }

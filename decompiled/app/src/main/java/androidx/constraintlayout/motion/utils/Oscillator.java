@@ -1,6 +1,6 @@
 package androidx.constraintlayout.motion.utils;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.Arrays;
 
 /* loaded from: classes.dex */
@@ -176,7 +176,7 @@ public class Oscillator {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("pos =");
+        StringBuilder sbU = a.U("pos =");
         sbU.append(Arrays.toString(this.mPosition));
         sbU.append(" period=");
         sbU.append(Arrays.toString(this.mPeriod));

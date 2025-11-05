@@ -11,7 +11,7 @@ import androidx.constraintlayout.solver.widgets.analyzer.HorizontalWidgetRun;
 import androidx.constraintlayout.solver.widgets.analyzer.VerticalWidgetRun;
 import androidx.constraintlayout.solver.widgets.analyzer.WidgetRun;
 import androidx.exifinterface.media.ExifInterface;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -2656,8 +2656,8 @@ public class ConstraintWidget {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.mType != null ? outline.J(outline.U("type: "), this.mType, " ") : "");
-        sb.append(this.mDebugName != null ? outline.J(outline.U("id: "), this.mDebugName, " ") : "");
+        sb.append(this.mType != null ? a.J(a.U("type: "), this.mType, " ") : "");
+        sb.append(this.mDebugName != null ? a.J(a.U("id: "), this.mDebugName, " ") : "");
         sb.append("(");
         sb.append(this.mX);
         sb.append(", ");
@@ -2665,7 +2665,7 @@ public class ConstraintWidget {
         sb.append(") - (");
         sb.append(this.mWidth);
         sb.append(" x ");
-        return outline.B(sb, this.mHeight, ")");
+        return a.B(sb, this.mHeight, ")");
     }
 
     public void updateFromRuns(boolean z2, boolean z3) {

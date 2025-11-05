@@ -10,34 +10,34 @@ import androidx.annotation.ColorInt;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentViewModelLazyKt;
-import b.a.a.b.SingleValuePropPremiumUpsellDialog;
-import b.a.d.AppViewModelDelegates3;
-import b.a.d.AppViewModelDelegates5;
-import b.a.k.FormatUtils;
-import b.d.b.a.outline;
-import b.k.a.a.ColorPickerDialogListener;
+import b.a.a.b.d;
+import b.a.d.g0;
+import b.a.d.i0;
+import b.a.k.b;
+import b.d.b.a.a;
+import b.k.a.a.f;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
 import com.discord.app.AppLog;
 import com.discord.databinding.WidgetEditProfileBannerSheetBinding;
-import com.discord.utilities.KotlinExtensions;
+import com.discord.utilities.KotlinExtensionsKt;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.analytics.Traits;
 import com.discord.utilities.color.ColorCompat;
-import com.discord.utilities.color.ColorCompat2;
+import com.discord.utilities.color.ColorCompatKt;
 import com.discord.utilities.font.FontUtils;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
-import com.discord.utilities.viewbinding.FragmentViewBindingDelegate3;
+import com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt;
 import com.discord.widgets.settings.profile.EditProfileBannerSheetViewModel;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.jaredrummler.android.colorpicker.ColorPickerDialog;
-import d0.LazyJVM;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import d0.z.d.Reflection2;
+import d0.g;
+import d0.z.d.a0;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Lazy;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -67,7 +67,7 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
 
     /* renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
-    public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.d0(WidgetEditProfileBannerSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEditProfileBannerSheetBinding;", 0)};
+    public static final /* synthetic */ KProperty[] $$delegatedProperties = {a.d0(WidgetEditProfileBannerSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEditProfileBannerSheetBinding;", 0)};
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -78,15 +78,15 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
         }
 
         public static /* synthetic */ void show$default(Companion companion, Long l, String str, String str2, boolean z2, FragmentManager fragmentManager, Function0 function0, Function0 function02, Function1 function1, int i, Object obj) {
-            companion.show((i & 1) != 0 ? null : l, str, str2, z2, fragmentManager, (i & 32) != 0 ? WidgetEditProfileBannerSheet2.INSTANCE : function0, (i & 64) != 0 ? WidgetEditProfileBannerSheet3.INSTANCE : function02, (i & 128) != 0 ? WidgetEditProfileBannerSheet4.INSTANCE : function1);
+            companion.show((i & 1) != 0 ? null : l, str, str2, z2, fragmentManager, (i & 32) != 0 ? WidgetEditProfileBannerSheet$Companion$show$1.INSTANCE : function0, (i & 64) != 0 ? WidgetEditProfileBannerSheet$Companion$show$2.INSTANCE : function02, (i & 128) != 0 ? WidgetEditProfileBannerSheet$Companion$show$3.INSTANCE : function1);
         }
 
         public final void show(Long guildId, String defaultBannerColorHex, String initialColorPreviewHex, boolean hasBannerImage, FragmentManager fragmentManager, Function0<Unit> onChangeProfileBannerImage, Function0<Unit> onRemoveProfileBannerImage, Function1<? super Integer, Unit> onColorSelected) {
-            Intrinsics3.checkNotNullParameter(defaultBannerColorHex, "defaultBannerColorHex");
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
-            Intrinsics3.checkNotNullParameter(onChangeProfileBannerImage, "onChangeProfileBannerImage");
-            Intrinsics3.checkNotNullParameter(onRemoveProfileBannerImage, "onRemoveProfileBannerImage");
-            Intrinsics3.checkNotNullParameter(onColorSelected, "onColorSelected");
+            m.checkNotNullParameter(defaultBannerColorHex, "defaultBannerColorHex");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(onChangeProfileBannerImage, "onChangeProfileBannerImage");
+            m.checkNotNullParameter(onRemoveProfileBannerImage, "onRemoveProfileBannerImage");
+            m.checkNotNullParameter(onColorSelected, "onColorSelected");
             WidgetEditProfileBannerSheet widgetEditProfileBannerSheet = new WidgetEditProfileBannerSheet();
             Bundle bundle = new Bundle();
             bundle.putString(WidgetEditProfileBannerSheet.ARG_DEFAULT_BANNER_COLOR_HEX, defaultBannerColorHex);
@@ -147,7 +147,7 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
 
     /* compiled from: WidgetEditProfileBannerSheet.kt */
     /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$isGuildContext$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function0<Boolean> {
+    public static final class AnonymousClass2 extends o implements Function0<Boolean> {
         public AnonymousClass2() {
             super(0);
         }
@@ -165,17 +165,17 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
 
     /* compiled from: WidgetEditProfileBannerSheet.kt */
     /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$launchColorPicker$1, reason: invalid class name */
-    public static final class AnonymousClass1 implements ColorPickerDialogListener {
+    public static final class AnonymousClass1 implements f {
         public AnonymousClass1() {
         }
 
-        @Override // b.k.a.a.ColorPickerDialogListener
+        @Override // b.k.a.a.f
         public void onColorReset(int dialogId) {
             WidgetEditProfileBannerSheet.access$getViewModel$p(WidgetEditProfileBannerSheet.this).updateColorPreview(null);
             WidgetEditProfileBannerSheet.this.getOnColorSelected().invoke(null);
         }
 
-        @Override // b.k.a.a.ColorPickerDialogListener
+        @Override // b.k.a.a.f
         public void onColorSelected(int dialogId, int selectedColor) {
             EditProfileBannerSheetViewModel editProfileBannerSheetViewModelAccess$getViewModel$p = WidgetEditProfileBannerSheet.access$getViewModel$p(WidgetEditProfileBannerSheet.this);
             ColorCompat colorCompat = ColorCompat.INSTANCE;
@@ -183,14 +183,14 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
             WidgetEditProfileBannerSheet.this.getOnColorSelected().invoke(Integer.valueOf(colorCompat.removeAlphaComponent(selectedColor)));
         }
 
-        @Override // b.k.a.a.ColorPickerDialogListener
+        @Override // b.k.a.a.f
         public void onDialogDismissed(int dialogId) {
         }
     }
 
     /* compiled from: WidgetEditProfileBannerSheet.kt */
     /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onResume$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<EditProfileBannerSheetViewModel.ViewState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<EditProfileBannerSheetViewModel.ViewState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -203,7 +203,7 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EditProfileBannerSheetViewModel.ViewState viewState) {
-            Intrinsics3.checkNotNullParameter(viewState, "viewState");
+            m.checkNotNullParameter(viewState, "viewState");
             WidgetEditProfileBannerSheet.access$configureUi(WidgetEditProfileBannerSheet.this, viewState);
         }
     }
@@ -235,14 +235,14 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
 
     public WidgetEditProfileBannerSheet() {
         super(false, 1, null);
-        this.onChangeProfileBannerImage = WidgetEditProfileBannerSheet6.INSTANCE;
-        this.onRemoveProfileBannerImage = WidgetEditProfileBannerSheet8.INSTANCE;
-        this.onColorSelected = WidgetEditProfileBannerSheet7.INSTANCE;
-        this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetEditProfileBannerSheet5.INSTANCE, null, 2, null);
-        this.isGuildContext = LazyJVM.lazy(new AnonymousClass2());
-        WidgetEditProfileBannerSheet9 widgetEditProfileBannerSheet9 = new WidgetEditProfileBannerSheet9(this);
-        AppViewModelDelegates3 appViewModelDelegates3 = new AppViewModelDelegates3(this);
-        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(EditProfileBannerSheetViewModel.class), new WidgetEditProfileBannerSheet$appViewModels$$inlined$viewModels$1(appViewModelDelegates3), new AppViewModelDelegates5(widgetEditProfileBannerSheet9));
+        this.onChangeProfileBannerImage = WidgetEditProfileBannerSheet$onChangeProfileBannerImage$1.INSTANCE;
+        this.onRemoveProfileBannerImage = WidgetEditProfileBannerSheet$onRemoveProfileBannerImage$1.INSTANCE;
+        this.onColorSelected = WidgetEditProfileBannerSheet$onColorSelected$1.INSTANCE;
+        this.binding = FragmentViewBindingDelegateKt.viewBinding$default(this, WidgetEditProfileBannerSheet$binding$2.INSTANCE, null, 2, null);
+        this.isGuildContext = g.lazy(new AnonymousClass2());
+        WidgetEditProfileBannerSheet$viewModel$2 widgetEditProfileBannerSheet$viewModel$2 = new WidgetEditProfileBannerSheet$viewModel$2(this);
+        g0 g0Var = new g0(this);
+        this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, a0.getOrCreateKotlinClass(EditProfileBannerSheetViewModel.class), new WidgetEditProfileBannerSheet$appViewModels$$inlined$viewModels$1(g0Var), new i0(widgetEditProfileBannerSheet$viewModel$2));
     }
 
     public static final /* synthetic */ void access$configureUi(WidgetEditProfileBannerSheet widgetEditProfileBannerSheet, EditProfileBannerSheetViewModel.ViewState viewState) {
@@ -275,14 +275,14 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
 
     private final void configureStringsForGuild() {
         MaterialTextView materialTextView = getBinding().e;
-        Intrinsics3.checkNotNullExpressionValue(materialTextView, "binding.bannerColorItemTitle");
-        materialTextView.setText(FormatUtils.k(this, R.string.change_identity_profile_color, new Object[0], null, 4));
+        m.checkNotNullExpressionValue(materialTextView, "binding.bannerColorItemTitle");
+        materialTextView.setText(b.k(this, R.string.change_identity_profile_color, new Object[0], null, 4));
         MaterialTextView materialTextView2 = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(materialTextView2, "binding.bannerChangeImageItemTitle");
-        materialTextView2.setText(FormatUtils.k(this, R.string.change_identity_profile_banner, new Object[0], null, 4));
+        m.checkNotNullExpressionValue(materialTextView2, "binding.bannerChangeImageItemTitle");
+        materialTextView2.setText(b.k(this, R.string.change_identity_profile_banner, new Object[0], null, 4));
         MaterialTextView materialTextView3 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(materialTextView3, "binding.bannerRemoveImageItem");
-        materialTextView3.setText(FormatUtils.k(this, R.string.change_identity_reset_banner, new Object[0], null, 4));
+        m.checkNotNullExpressionValue(materialTextView3, "binding.bannerRemoveImageItem");
+        materialTextView3.setText(b.k(this, R.string.change_identity_reset_banner, new Object[0], null, 4));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -299,30 +299,30 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
                 try {
                     ref$ObjectRef.element = Integer.valueOf(Color.parseColor(bannerColorHex));
                 } catch (IllegalArgumentException e) {
-                    Logger.e$default(AppLog.g, outline.w("failed to parse banner color string: ", bannerColorHex), e, null, 4, null);
+                    Logger.e$default(AppLog.g, a.w("failed to parse banner color string: ", bannerColorHex), e, null, 4, null);
                 }
             }
             if (((Integer) ref$ObjectRef.element) != null) {
                 ImageView imageView = getBinding().f;
-                Intrinsics3.checkNotNullExpressionValue(imageView, "binding.bannerColorPreview");
-                ColorCompat2.tintWithColor(imageView, ((Integer) ref$ObjectRef.element).intValue());
+                m.checkNotNullExpressionValue(imageView, "binding.bannerColorPreview");
+                ColorCompatKt.tintWithColor(imageView, ((Integer) ref$ObjectRef.element).intValue());
             }
             ImageView imageView2 = getBinding().f;
-            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.bannerColorPreview");
+            m.checkNotNullExpressionValue(imageView2, "binding.bannerColorPreview");
             imageView2.setVisibility(((Integer) ref$ObjectRef.element) == null ? 4 : 0);
             getBinding().d.setOnClickListener(new AnonymousClass1(ref$ObjectRef));
             MaterialButton materialButton = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(materialButton, "binding.premiumUpsellButton");
+            m.checkNotNullExpressionValue(materialButton, "binding.premiumUpsellButton");
             materialButton.setVisibility(viewState.getShowPremiumUpsell() ? 0 : 8);
             MaterialButton materialButton2 = getBinding().h;
-            Intrinsics3.checkNotNullExpressionValue(materialButton2, "binding.premiumUpsellButton");
+            m.checkNotNullExpressionValue(materialButton2, "binding.premiumUpsellButton");
             if ((materialButton2.getVisibility() == 0) && !getViewModel().getUpsellViewedTracked()) {
                 AnalyticsTracker.premiumUpsellViewed$default(AnalyticsTracker.INSTANCE, AnalyticsTracker.PremiumUpsellType.CustomProfileBannerUpsell, new Traits.Location(Traits.Location.Page.USER_SETTINGS, "User Profile", Traits.Location.Obj.EDIT_PROFILE_BANNER, null, null, 24, null), null, null, 12, null);
                 getViewModel().setUpsellViewedTracked(true);
             }
             getBinding().f2369b.setOnClickListener(new AnonymousClass2(viewState));
         }
-        KotlinExtensions.getExhaustive(Unit.a);
+        KotlinExtensionsKt.getExhaustive(Unit.a);
     }
 
     private final WidgetEditProfileBannerSheetBinding getBinding() {
@@ -365,16 +365,16 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
     }
 
     private final void navigateToUpsellModal() {
-        SingleValuePropPremiumUpsellDialog.Companion companion = SingleValuePropPremiumUpsellDialog.INSTANCE;
+        d.Companion companion = d.INSTANCE;
         FragmentManager parentFragmentManager = getParentFragmentManager();
-        Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+        m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
         AnalyticsTracker.PremiumUpsellType premiumUpsellType = AnalyticsTracker.PremiumUpsellType.CustomProfileUpsellModal;
         Resources resources = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-        String string = FormatUtils.i(resources, R.string.premium_profile_customization_upsell_header, new Object[0], null, 4).toString();
+        m.checkNotNullExpressionValue(resources, "resources");
+        String string = b.i(resources, R.string.premium_profile_customization_upsell_header, new Object[0], null, 4).toString();
         Resources resources2 = getResources();
-        Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-        companion.a(parentFragmentManager, premiumUpsellType, R.drawable.img_profile_banner_value_prop, string, FormatUtils.i(resources2, R.string.premium_profile_customization_upsell_body, new Object[0], null, 4).toString(), Traits.Location.Page.USER_SETTINGS, "User Profile", Traits.Location.Obj.EDIT_PROFILE_BANNER);
+        m.checkNotNullExpressionValue(resources2, "resources");
+        companion.a(parentFragmentManager, premiumUpsellType, R.drawable.img_profile_banner_value_prop, string, b.i(resources2, R.string.premium_profile_customization_upsell_body, new Object[0], null, 4).toString(), Traits.Location.Page.USER_SETTINGS, "User Profile", Traits.Location.Obj.EDIT_PROFILE_BANNER);
     }
 
     @Override // com.discord.app.AppBottomSheet
@@ -413,40 +413,40 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
         CharSequence charSequenceI;
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         getBinding().h.setOnClickListener(new AnonymousClass1());
         getBinding().g.setOnClickListener(new AnonymousClass2());
         boolean z2 = getArgumentsOrDefault().getBoolean(ARG_HAS_BANNER_IMAGE);
         MaterialTextView materialTextView = getBinding().c;
-        Intrinsics3.checkNotNullExpressionValue(materialTextView, "binding.bannerChangeImageItemTitle");
+        m.checkNotNullExpressionValue(materialTextView, "binding.bannerChangeImageItemTitle");
         if (z2) {
             Resources resources = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources, "resources");
-            charSequenceI = FormatUtils.i(resources, R.string.user_settings_change_profile_banner, new Object[0], null, 4);
+            m.checkNotNullExpressionValue(resources, "resources");
+            charSequenceI = b.i(resources, R.string.user_settings_change_profile_banner, new Object[0], null, 4);
         } else {
             Resources resources2 = getResources();
-            Intrinsics3.checkNotNullExpressionValue(resources2, "resources");
-            charSequenceI = FormatUtils.i(resources2, R.string.user_settings_upload_banner, new Object[0], null, 4);
+            m.checkNotNullExpressionValue(resources2, "resources");
+            charSequenceI = b.i(resources2, R.string.user_settings_upload_banner, new Object[0], null, 4);
         }
         materialTextView.setText(charSequenceI);
         MaterialTextView materialTextView2 = getBinding().g;
-        Intrinsics3.checkNotNullExpressionValue(materialTextView2, "binding.bannerRemoveImageItem");
+        m.checkNotNullExpressionValue(materialTextView2, "binding.bannerRemoveImageItem");
         materialTextView2.setVisibility(z2 ? 0 : 8);
     }
 
     public final void setOnChangeProfileBannerImage(Function0<Unit> function0) {
-        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
+        m.checkNotNullParameter(function0, "<set-?>");
         this.onChangeProfileBannerImage = function0;
     }
 
     public final void setOnColorSelected(Function1<? super Integer, Unit> function1) {
-        Intrinsics3.checkNotNullParameter(function1, "<set-?>");
+        m.checkNotNullParameter(function1, "<set-?>");
         this.onColorSelected = function1;
     }
 
     public final void setOnRemoveProfileBannerImage(Function0<Unit> function0) {
-        Intrinsics3.checkNotNullParameter(function0, "<set-?>");
+        m.checkNotNullParameter(function0, "<set-?>");
         this.onRemoveProfileBannerImage = function0;
     }
 }

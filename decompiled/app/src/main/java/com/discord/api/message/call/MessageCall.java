@@ -1,8 +1,8 @@
 package com.discord.api.message.call;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.utcdatetime.UtcDateTime;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: MessageCall.kt */
@@ -28,7 +28,7 @@ public final /* data */ class MessageCall {
             return false;
         }
         MessageCall messageCall = (MessageCall) other;
-        return Intrinsics3.areEqual(this.participants, messageCall.participants) && Intrinsics3.areEqual(this.endedTimestamp, messageCall.endedTimestamp);
+        return m.areEqual(this.participants, messageCall.participants) && m.areEqual(this.endedTimestamp, messageCall.endedTimestamp);
     }
 
     public int hashCode() {
@@ -39,7 +39,7 @@ public final /* data */ class MessageCall {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("MessageCall(participants=");
+        StringBuilder sbU = a.U("MessageCall(participants=");
         sbU.append(this.participants);
         sbU.append(", endedTimestamp=");
         sbU.append(this.endedTimestamp);

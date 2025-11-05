@@ -1,7 +1,7 @@
 package com.discord.models.gifpicker.domain;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 import java.io.Serializable;
 
 /* compiled from: ModelGifCategory.kt */
@@ -11,8 +11,8 @@ public final /* data */ class ModelGifCategory implements Serializable {
     private final String gifPreviewUrl;
 
     public ModelGifCategory(String str, String str2) {
-        Intrinsics3.checkNotNullParameter(str, "categoryName");
-        Intrinsics3.checkNotNullParameter(str2, "gifPreviewUrl");
+        m.checkNotNullParameter(str, "categoryName");
+        m.checkNotNullParameter(str2, "gifPreviewUrl");
         this.categoryName = str;
         this.gifPreviewUrl = str2;
     }
@@ -38,8 +38,8 @@ public final /* data */ class ModelGifCategory implements Serializable {
     }
 
     public final ModelGifCategory copy(String categoryName, String gifPreviewUrl) {
-        Intrinsics3.checkNotNullParameter(categoryName, "categoryName");
-        Intrinsics3.checkNotNullParameter(gifPreviewUrl, "gifPreviewUrl");
+        m.checkNotNullParameter(categoryName, "categoryName");
+        m.checkNotNullParameter(gifPreviewUrl, "gifPreviewUrl");
         return new ModelGifCategory(categoryName, gifPreviewUrl);
     }
 
@@ -51,7 +51,7 @@ public final /* data */ class ModelGifCategory implements Serializable {
             return false;
         }
         ModelGifCategory modelGifCategory = (ModelGifCategory) other;
-        return Intrinsics3.areEqual(this.categoryName, modelGifCategory.categoryName) && Intrinsics3.areEqual(this.gifPreviewUrl, modelGifCategory.gifPreviewUrl);
+        return m.areEqual(this.categoryName, modelGifCategory.categoryName) && m.areEqual(this.gifPreviewUrl, modelGifCategory.gifPreviewUrl);
     }
 
     public final String getCategoryName() {
@@ -70,9 +70,9 @@ public final /* data */ class ModelGifCategory implements Serializable {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelGifCategory(categoryName=");
+        StringBuilder sbU = a.U("ModelGifCategory(categoryName=");
         sbU.append(this.categoryName);
         sbU.append(", gifPreviewUrl=");
-        return outline.J(sbU, this.gifPreviewUrl, ")");
+        return a.J(sbU, this.gifPreviewUrl, ")");
     }
 }

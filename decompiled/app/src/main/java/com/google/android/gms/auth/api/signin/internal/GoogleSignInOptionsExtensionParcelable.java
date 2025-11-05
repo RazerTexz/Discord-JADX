@@ -3,7 +3,7 @@ package com.google.android.gms.auth.api.signin.internal;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.c.a.a0.AnimatableValueParser;
+import b.c.a.a0.d;
 import b.i.a.f.c.a.f.b.b;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 
@@ -23,14 +23,14 @@ public class GoogleSignInOptionsExtensionParcelable extends AbstractSafeParcelab
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int iY2 = AnimatableValueParser.y2(parcel, 20293);
+        int iY2 = d.y2(parcel, 20293);
         int i2 = this.j;
         parcel.writeInt(262145);
         parcel.writeInt(i2);
         int i3 = this.k;
         parcel.writeInt(262146);
         parcel.writeInt(i3);
-        AnimatableValueParser.p2(parcel, 3, this.l, false);
-        AnimatableValueParser.A2(parcel, iY2);
+        d.p2(parcel, 3, this.l, false);
+        d.A2(parcel, iY2);
     }
 }

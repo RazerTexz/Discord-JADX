@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackVideoStreamQualityChanged.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackVideoStreamQualityChanged implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackVideoStreamQualityChanged implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Long channelId = null;
     private final Long guildId = null;
@@ -33,7 +33,7 @@ public final /* data */ class TrackVideoStreamQualityChanged implements Analytic
             return false;
         }
         TrackVideoStreamQualityChanged trackVideoStreamQualityChanged = (TrackVideoStreamQualityChanged) other;
-        return Intrinsics3.areEqual(this.channelId, trackVideoStreamQualityChanged.channelId) && Intrinsics3.areEqual(this.guildId, trackVideoStreamQualityChanged.guildId) && Intrinsics3.areEqual(this.rtcConnectionId, trackVideoStreamQualityChanged.rtcConnectionId) && Intrinsics3.areEqual(this.mediaSessionId, trackVideoStreamQualityChanged.mediaSessionId) && Intrinsics3.areEqual(this.senderUserId, trackVideoStreamQualityChanged.senderUserId) && Intrinsics3.areEqual(this.previousQuality, trackVideoStreamQualityChanged.previousQuality) && Intrinsics3.areEqual(this.quality, trackVideoStreamQualityChanged.quality);
+        return m.areEqual(this.channelId, trackVideoStreamQualityChanged.channelId) && m.areEqual(this.guildId, trackVideoStreamQualityChanged.guildId) && m.areEqual(this.rtcConnectionId, trackVideoStreamQualityChanged.rtcConnectionId) && m.areEqual(this.mediaSessionId, trackVideoStreamQualityChanged.mediaSessionId) && m.areEqual(this.senderUserId, trackVideoStreamQualityChanged.senderUserId) && m.areEqual(this.previousQuality, trackVideoStreamQualityChanged.previousQuality) && m.areEqual(this.quality, trackVideoStreamQualityChanged.quality);
     }
 
     public int hashCode() {
@@ -54,7 +54,7 @@ public final /* data */ class TrackVideoStreamQualityChanged implements Analytic
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackVideoStreamQualityChanged(channelId=");
+        StringBuilder sbU = a.U("TrackVideoStreamQualityChanged(channelId=");
         sbU.append(this.channelId);
         sbU.append(", guildId=");
         sbU.append(this.guildId);
@@ -67,6 +67,6 @@ public final /* data */ class TrackVideoStreamQualityChanged implements Analytic
         sbU.append(", previousQuality=");
         sbU.append(this.previousQuality);
         sbU.append(", quality=");
-        return outline.E(sbU, this.quality, ")");
+        return a.E(sbU, this.quality, ")");
     }
 }

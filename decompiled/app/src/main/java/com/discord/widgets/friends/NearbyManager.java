@@ -1,8 +1,8 @@
 package com.discord.widgets.friends;
 
 import androidx.fragment.app.FragmentActivity;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import b.i.a.f.e.h.j.k;
 import b.i.a.f.j.b.a;
 import b.i.a.f.j.b.b;
@@ -17,8 +17,8 @@ import com.google.android.gms.nearby.messages.MessagesClient;
 import com.google.android.gms.nearby.messages.PublishOptions;
 import com.google.android.gms.nearby.messages.Strategy;
 import com.google.android.gms.nearby.messages.SubscribeOptions;
-import d0.g0.Charsets2;
-import d0.z.d.Intrinsics3;
+import d0.g0.c;
+import d0.z.d.m;
 import java.nio.charset.Charset;
 import java.util.HashSet;
 import java.util.Objects;
@@ -51,7 +51,7 @@ public final class NearbyManager {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Connected(Set<Long> set) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(set, "nearbyUserIds");
+                m.checkNotNullParameter(set, "nearbyUserIds");
                 this.nearbyUserIds = set;
             }
 
@@ -68,13 +68,13 @@ public final class NearbyManager {
             }
 
             public final Connected copy(Set<Long> nearbyUserIds) {
-                Intrinsics3.checkNotNullParameter(nearbyUserIds, "nearbyUserIds");
+                m.checkNotNullParameter(nearbyUserIds, "nearbyUserIds");
                 return new Connected(nearbyUserIds);
             }
 
             public boolean equals(Object other) {
                 if (this != other) {
-                    return (other instanceof Connected) && Intrinsics3.areEqual(this.nearbyUserIds, ((Connected) other).nearbyUserIds);
+                    return (other instanceof Connected) && m.areEqual(this.nearbyUserIds, ((Connected) other).nearbyUserIds);
                 }
                 return true;
             }
@@ -92,7 +92,7 @@ public final class NearbyManager {
             }
 
             public String toString() {
-                return outline.N(outline.U("Connected(nearbyUserIds="), this.nearbyUserIds, ")");
+                return a.N(a.U("Connected(nearbyUserIds="), this.nearbyUserIds, ")");
             }
         }
 
@@ -137,7 +137,7 @@ public final class NearbyManager {
             }
 
             public String toString() {
-                return outline.B(outline.U("Disconnected(code="), this.code, ")");
+                return a.B(a.U("Disconnected(code="), this.code, ")");
             }
         }
 
@@ -219,11 +219,11 @@ public final class NearbyManager {
     }
 
     private final void buildClient(FragmentActivity fragmentActivity) {
-        a aVar = new a(new a.C0042a(), null);
-        AnimatableValueParser.z(fragmentActivity, "Activity must not be null");
-        AnimatableValueParser.z(aVar, "Options must not be null");
+        b.i.a.f.j.b.a aVar = new b.i.a.f.j.b.a(new a.C0119a(), null);
+        d.z(fragmentActivity, "Activity must not be null");
+        d.z(aVar, "Options must not be null");
         i iVar = new i(fragmentActivity, aVar);
-        k kVarM = iVar.m(new NearbyManager2(this));
+        k kVarM = iVar.m(new NearbyManager$buildClient$$inlined$also$lambda$1(this));
         iVar.k(kVarM, new n(kVarM), new o(kVarM));
         this.messagesClient = iVar;
     }
@@ -243,12 +243,12 @@ public final class NearbyManager {
 
     private final Long parseUserId(Message message) {
         byte[] bArr = message.l;
-        Intrinsics3.checkNotNullExpressionValue(bArr, "message.content");
-        String str = new String(bArr, Charsets2.a);
+        m.checkNotNullExpressionValue(bArr, "message.content");
+        String str = new String(bArr, c.a);
         if (str.charAt(0) == 'u') {
             try {
                 String strSubstring = str.substring(2);
-                Intrinsics3.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
+                m.checkNotNullExpressionValue(strSubstring, "(this as java.lang.String).substring(startIndex)");
                 return Long.valueOf(Long.parseLong(strSubstring));
             } catch (Throwable unused) {
             }
@@ -258,11 +258,11 @@ public final class NearbyManager {
 
     private final void setupBroadcaster(long userId) {
         this.messagePublishOptions = new PublishOptions(Strategy.j, new AnonymousClass1(), null);
-        String strT = outline.t("u:", userId);
-        Charset charset = Charsets2.a;
+        String strT = b.d.b.a.a.t("u:", userId);
+        Charset charset = c.a;
         Objects.requireNonNull(strT, "null cannot be cast to non-null type java.lang.String");
         byte[] bytes = strT.getBytes(charset);
-        Intrinsics3.checkNotNullExpressionValue(bytes, "(this as java.lang.String).getBytes(charset)");
+        m.checkNotNullExpressionValue(bytes, "(this as java.lang.String).getBytes(charset)");
         this.outboundMessage = new Message(2, bytes, "", "", Message.j, 0L);
     }
 
@@ -287,7 +287,7 @@ public final class NearbyManager {
     }
 
     public final void buildClientAndPublish(FragmentActivity fragmentActivity) {
-        Intrinsics3.checkNotNullParameter(fragmentActivity, "fragmentActivity");
+        m.checkNotNullParameter(fragmentActivity, "fragmentActivity");
         if (this.messagesClient == null) {
             buildClient(fragmentActivity);
         }
@@ -309,7 +309,7 @@ public final class NearbyManager {
 
     public final Observable<NearbyState> getState() {
         BehaviorSubject<NearbyState> behaviorSubject = this.nearbyStateSubject;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "nearbyStateSubject");
+        m.checkNotNullExpressionValue(behaviorSubject, "nearbyStateSubject");
         return behaviorSubject;
     }
 

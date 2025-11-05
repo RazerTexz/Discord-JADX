@@ -4,9 +4,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import b.a.i.LayoutAgeVerifyBinding;
-import b.a.i.LayoutAgeVerifyConfirmBinding;
-import b.a.i.LayoutAgeVerifyUnderageBinding;
+import b.a.i.g0;
+import b.a.i.h0;
+import b.a.i.i0;
 import com.discord.app.AppViewFlipper;
 
 /* loaded from: classes.dex */
@@ -20,20 +20,20 @@ public final class WidgetAgeVerifyBinding implements ViewBinding {
     public final AppViewFlipper f2224b;
 
     @NonNull
-    public final LayoutAgeVerifyConfirmBinding c;
+    public final h0 c;
 
     @NonNull
-    public final LayoutAgeVerifyUnderageBinding d;
+    public final i0 d;
 
     @NonNull
-    public final LayoutAgeVerifyBinding e;
+    public final g0 e;
 
-    public WidgetAgeVerifyBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull LayoutAgeVerifyConfirmBinding layoutAgeVerifyConfirmBinding, @NonNull LayoutAgeVerifyUnderageBinding layoutAgeVerifyUnderageBinding, @NonNull LayoutAgeVerifyBinding layoutAgeVerifyBinding) {
+    public WidgetAgeVerifyBinding(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppViewFlipper appViewFlipper, @NonNull h0 h0Var, @NonNull i0 i0Var, @NonNull g0 g0Var) {
         this.a = coordinatorLayout;
         this.f2224b = appViewFlipper;
-        this.c = layoutAgeVerifyConfirmBinding;
-        this.d = layoutAgeVerifyUnderageBinding;
-        this.e = layoutAgeVerifyBinding;
+        this.c = h0Var;
+        this.d = i0Var;
+        this.e = g0Var;
     }
 
     @Override // androidx.viewbinding.ViewBinding

@@ -1,19 +1,19 @@
 package b.i.a.c;
 
-import b.i.a.c.Player2;
-import b.i.a.c.f3.ListenerSet;
+import b.i.a.c.f3.p;
+import b.i.a.c.y1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class n implements ListenerSet.a {
+public final /* synthetic */ class n implements p.a {
     public final /* synthetic */ boolean a;
 
     public /* synthetic */ n(boolean z2) {
         this.a = z2;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((Player2.c) obj).D(this.a);
+        ((y1.c) obj).D(this.a);
     }
 }

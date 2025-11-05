@@ -1,8 +1,8 @@
 package com.discord.widgets.guilds;
 
 import android.content.Context;
-import b.a.d.AppViewModel;
-import b.d.b.a.outline;
+import b.a.d.d0;
+import b.d.b.a.a;
 import com.discord.R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.models.domain.ModelGuildFolder;
@@ -14,9 +14,8 @@ import com.discord.stores.StoreUserSettings;
 import com.discord.utilities.error.Error;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Iterables2;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
@@ -29,7 +28,7 @@ import rx.subjects.PublishSubject;
 
 /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewState> {
+public final class WidgetGuildFolderSettingsViewModel extends d0<ViewState> {
 
     /* renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
@@ -40,7 +39,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
 
     /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<StoreState, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<StoreState, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -53,7 +52,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
-            Intrinsics3.checkNotNullParameter(storeState, "storeState");
+            m.checkNotNullParameter(storeState, "storeState");
             WidgetGuildFolderSettingsViewModel.access$handleStoreState(WidgetGuildFolderSettingsViewModel.this, storeState);
         }
     }
@@ -68,8 +67,8 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
 
         private final Observable<StoreState> observeStoreState(long folderId, StoreUserSettings storeUserSettings, StoreGuildsSorted storeGuildsSorted) {
-            Observable<StoreState> observableJ = Observable.j(storeUserSettings.observeGuildFolders(), storeGuildsSorted.observeEntries(), new WidgetGuildFolderSettingsViewModel2(folderId));
-            Intrinsics3.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…Guilds)\n        }\n      }");
+            Observable<StoreState> observableJ = Observable.j(storeUserSettings.observeGuildFolders(), storeGuildsSorted.observeEntries(), new WidgetGuildFolderSettingsViewModel$Companion$observeStoreState$1(folderId));
+            m.checkNotNullExpressionValue(observableJ, "Observable.combineLatest…Guilds)\n        }\n      }");
             return observableJ;
         }
 
@@ -122,7 +121,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                return outline.B(outline.U("UpdateFolderSettingsFailure(failureMessageStringRes="), this.failureMessageStringRes, ")");
+                return a.B(a.U("UpdateFolderSettingsFailure(failureMessageStringRes="), this.failureMessageStringRes, ")");
             }
         }
 
@@ -167,7 +166,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                return outline.B(outline.U("UpdateFolderSettingsSuccess(successMessageStringRes="), this.successMessageStringRes, ")");
+                return a.B(a.U("UpdateFolderSettingsSuccess(successMessageStringRes="), this.successMessageStringRes, ")");
             }
         }
 
@@ -221,7 +220,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                 return false;
             }
             FormState formState = (FormState) other;
-            return Intrinsics3.areEqual(this.name, formState.name) && Intrinsics3.areEqual(this.color, formState.color);
+            return m.areEqual(this.name, formState.name) && m.areEqual(this.color, formState.color);
         }
 
         public final Integer getColor() {
@@ -240,10 +239,10 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("FormState(name=");
+            StringBuilder sbU = a.U("FormState(name=");
             sbU.append(this.name);
             sbU.append(", color=");
-            return outline.F(sbU, this.color, ")");
+            return a.F(sbU, this.color, ")");
         }
     }
 
@@ -268,8 +267,8 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             /* JADX WARN: Multi-variable type inference failed */
             public Valid(ModelGuildFolder modelGuildFolder, List<? extends StoreGuildsSorted.Entry> list) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(modelGuildFolder, "folder");
-                Intrinsics3.checkNotNullParameter(list, "sortedGuilds");
+                m.checkNotNullParameter(modelGuildFolder, "folder");
+                m.checkNotNullParameter(list, "sortedGuilds");
                 this.folder = modelGuildFolder;
                 this.sortedGuilds = list;
             }
@@ -295,8 +294,8 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             public final Valid copy(ModelGuildFolder folder, List<? extends StoreGuildsSorted.Entry> sortedGuilds) {
-                Intrinsics3.checkNotNullParameter(folder, "folder");
-                Intrinsics3.checkNotNullParameter(sortedGuilds, "sortedGuilds");
+                m.checkNotNullParameter(folder, "folder");
+                m.checkNotNullParameter(sortedGuilds, "sortedGuilds");
                 return new Valid(folder, sortedGuilds);
             }
 
@@ -308,7 +307,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                     return false;
                 }
                 Valid valid = (Valid) other;
-                return Intrinsics3.areEqual(this.folder, valid.folder) && Intrinsics3.areEqual(this.sortedGuilds, valid.sortedGuilds);
+                return m.areEqual(this.folder, valid.folder) && m.areEqual(this.sortedGuilds, valid.sortedGuilds);
             }
 
             public final ModelGuildFolder getFolder() {
@@ -327,10 +326,10 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Valid(folder=");
+                StringBuilder sbU = a.U("Valid(folder=");
                 sbU.append(this.folder);
                 sbU.append(", sortedGuilds=");
-                return outline.L(sbU, this.sortedGuilds, ")");
+                return a.L(sbU, this.sortedGuilds, ")");
             }
         }
 
@@ -353,7 +352,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public Loaded(FormState formState, boolean z2) {
                 super(null);
-                Intrinsics3.checkNotNullParameter(formState, "formState");
+                m.checkNotNullParameter(formState, "formState");
                 this.formState = formState;
                 this.showSave = z2;
             }
@@ -379,7 +378,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             public final Loaded copy(FormState formState, boolean showSave) {
-                Intrinsics3.checkNotNullParameter(formState, "formState");
+                m.checkNotNullParameter(formState, "formState");
                 return new Loaded(formState, showSave);
             }
 
@@ -391,7 +390,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                     return false;
                 }
                 Loaded loaded = (Loaded) other;
-                return Intrinsics3.areEqual(this.formState, loaded.formState) && this.showSave == loaded.showSave;
+                return m.areEqual(this.formState, loaded.formState) && this.showSave == loaded.showSave;
             }
 
             public final FormState getFormState() {
@@ -415,10 +414,10 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             public String toString() {
-                StringBuilder sbU = outline.U("Loaded(formState=");
+                StringBuilder sbU = a.U("Loaded(formState=");
                 sbU.append(this.formState);
                 sbU.append(", showSave=");
-                return outline.O(sbU, this.showSave, ")");
+                return a.O(sbU, this.showSave, ")");
             }
         }
 
@@ -441,7 +440,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
 
     /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserSettings, Unit> {
+    public static final class AnonymousClass1 extends o implements Function1<ModelUserSettings, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -454,14 +453,14 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
-            Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
+            m.checkNotNullParameter(modelUserSettings, "it");
             WidgetGuildFolderSettingsViewModel.access$emitUpdateSuccessEvent(WidgetGuildFolderSettingsViewModel.this);
         }
     }
 
     /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
     /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$2, reason: invalid class name */
-    public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
+    public static final class AnonymousClass2 extends o implements Function1<Error, Unit> {
         public AnonymousClass2() {
             super(1);
         }
@@ -474,7 +473,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
-            Intrinsics3.checkNotNullParameter(error, "it");
+            m.checkNotNullParameter(error, "it");
             WidgetGuildFolderSettingsViewModel.access$emitUpdateFailureEvent(WidgetGuildFolderSettingsViewModel.this);
         }
     }
@@ -515,7 +514,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
     }
 
     private final boolean shouldShowSave(StoreState.Valid storeState, FormState formState) {
-        return (Intrinsics3.areEqual(storeState.getFolder().getColor(), formState.getColor()) ^ true) || (Intrinsics3.areEqual(storeState.getFolder().getName(), formState.getName()) ^ true);
+        return (m.areEqual(storeState.getFolder().getColor(), formState.getColor()) ^ true) || (m.areEqual(storeState.getFolder().getName(), formState.getName()) ^ true);
     }
 
     private final void updateFormState(FormState formState) {
@@ -544,7 +543,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
 
     public final Observable<Event> observeEvents() {
         PublishSubject<Event> publishSubject = this.eventSubject;
-        Intrinsics3.checkNotNullExpressionValue(publishSubject, "eventSubject");
+        m.checkNotNullExpressionValue(publishSubject, "eventSubject");
         return publishSubject;
     }
 
@@ -564,7 +563,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             if (loaded != null) {
                 FormState formState = loaded.getFormState();
                 List<StoreGuildsSorted.Entry> sortedGuilds = valid.getSortedGuilds();
-                ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(sortedGuilds, 10));
+                ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(sortedGuilds, 10));
                 for (StoreGuildsSorted.Entry entry : sortedGuilds) {
                     if (entry instanceof StoreGuildsSorted.Entry.SingletonGuild) {
                         modelGuildFolderAsModelGuildFolder = entry.asModelGuildFolder();
@@ -594,7 +593,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
     }
 
     public final void setName(String name) {
-        Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
+        m.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
@@ -612,8 +611,8 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildFolderSettingsViewModel(long j, StoreUserSettings storeUserSettings, StoreGuildsSorted storeGuildsSorted) {
         super(ViewState.Uninitialized.INSTANCE);
-        Intrinsics3.checkNotNullParameter(storeUserSettings, "storeUserSettings");
-        Intrinsics3.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
+        m.checkNotNullParameter(storeUserSettings, "storeUserSettings");
+        m.checkNotNullParameter(storeGuildsSorted, "storeGuildsSorted");
         this.folderId = j;
         this.storeUserSettings = storeUserSettings;
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.computationLatest(Companion.access$observeStoreState(INSTANCE, j, storeUserSettings, storeGuildsSorted)), this, null, 2, null), WidgetGuildFolderSettingsViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);

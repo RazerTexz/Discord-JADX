@@ -1,8 +1,8 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.Model;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.io.IOException;
 import java.util.List;
 import kotlin.jvm.internal.Ref$ObjectRef;
@@ -27,19 +27,19 @@ public final /* data */ class ModelChannelUnreadUpdate {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // com.discord.models.domain.Model.Parser
         public ModelChannelUnreadUpdate parse(Model.JsonReader reader) throws IOException {
-            Ref$ObjectRef ref$ObjectRefC0 = outline.c0(reader, "reader");
+            Ref$ObjectRef ref$ObjectRefC0 = a.c0(reader, "reader");
             ref$ObjectRefC0.element = null;
-            reader.nextObject(new ModelChannelUnreadUpdate2(ref$ObjectRefC0, reader));
+            reader.nextObject(new ModelChannelUnreadUpdate$Parser$parse$1(ref$ObjectRefC0, reader));
             T t = ref$ObjectRefC0.element;
             if (t == 0) {
-                Intrinsics3.throwUninitializedPropertyAccessException("channelReadStates");
+                m.throwUninitializedPropertyAccessException("channelReadStates");
             }
             return new ModelChannelUnreadUpdate((List) t);
         }
     }
 
     public ModelChannelUnreadUpdate(List<ModelReadState> list) {
-        Intrinsics3.checkNotNullParameter(list, "channelReadStates");
+        m.checkNotNullParameter(list, "channelReadStates");
         this.channelReadStates = list;
     }
 
@@ -56,13 +56,13 @@ public final /* data */ class ModelChannelUnreadUpdate {
     }
 
     public final ModelChannelUnreadUpdate copy(List<ModelReadState> channelReadStates) {
-        Intrinsics3.checkNotNullParameter(channelReadStates, "channelReadStates");
+        m.checkNotNullParameter(channelReadStates, "channelReadStates");
         return new ModelChannelUnreadUpdate(channelReadStates);
     }
 
     public boolean equals(Object other) {
         if (this != other) {
-            return (other instanceof ModelChannelUnreadUpdate) && Intrinsics3.areEqual(this.channelReadStates, ((ModelChannelUnreadUpdate) other).channelReadStates);
+            return (other instanceof ModelChannelUnreadUpdate) && m.areEqual(this.channelReadStates, ((ModelChannelUnreadUpdate) other).channelReadStates);
         }
         return true;
     }
@@ -80,6 +80,6 @@ public final /* data */ class ModelChannelUnreadUpdate {
     }
 
     public String toString() {
-        return outline.L(outline.U("ModelChannelUnreadUpdate(channelReadStates="), this.channelReadStates, ")");
+        return a.L(a.U("ModelChannelUnreadUpdate(channelReadStates="), this.channelReadStates, ")");
     }
 }

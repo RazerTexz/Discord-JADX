@@ -1,19 +1,19 @@
 package com.facebook.drawee.view;
 
 import android.graphics.drawable.Drawable;
-import b.c.a.a0.AnimatableValueParser;
-import b.f.d.d.Objects2;
-import b.f.g.b.DraweeEventTracker;
-import b.f.g.e.VisibilityAwareDrawable;
-import b.f.g.e.VisibilityCallback;
+import b.c.a.a0.d;
+import b.f.d.d.i;
+import b.f.g.b.c;
+import b.f.g.e.f0;
+import b.f.g.e.g0;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.interfaces.DraweeHierarchy;
 import java.util.Objects;
 
 /* loaded from: classes.dex */
-public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallback {
+public class DraweeHolder<DH extends DraweeHierarchy> implements g0 {
     public DH d;
-    public final DraweeEventTracker f;
+    public final c f;
     public boolean a = false;
 
     /* renamed from: b, reason: collision with root package name */
@@ -22,7 +22,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
     public DraweeController e = null;
 
     public DraweeHolder(DH dh) {
-        this.f = DraweeEventTracker.f494b ? new DraweeEventTracker() : DraweeEventTracker.a;
+        this.f = c.f494b ? new c() : c.a;
         if (dh != null) {
             h(dh);
         }
@@ -32,7 +32,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         if (this.a) {
             return;
         }
-        this.f.a(DraweeEventTracker.a.ON_ATTACH_CONTROLLER);
+        this.f.a(c.a.ON_ATTACH_CONTROLLER);
         this.a = true;
         DraweeController draweeController = this.e;
         if (draweeController == null || draweeController.b() == null) {
@@ -51,7 +51,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
 
     public final void c() {
         if (this.a) {
-            this.f.a(DraweeEventTracker.a.ON_DETACH_CONTROLLER);
+            this.f.a(c.a.ON_DETACH_CONTROLLER);
             this.a = false;
             if (e()) {
                 this.e.a();
@@ -76,7 +76,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         if (this.c == z2) {
             return;
         }
-        this.f.a(z2 ? DraweeEventTracker.a.ON_DRAWABLE_SHOW : DraweeEventTracker.a.ON_DRAWABLE_HIDE);
+        this.f.a(z2 ? c.a.ON_DRAWABLE_SHOW : c.a.ON_DRAWABLE_HIDE);
         this.c = z2;
         b();
     }
@@ -87,15 +87,15 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
             c();
         }
         if (e()) {
-            this.f.a(DraweeEventTracker.a.ON_CLEAR_OLD_CONTROLLER);
+            this.f.a(c.a.ON_CLEAR_OLD_CONTROLLER);
             this.e.e(null);
         }
         this.e = draweeController;
         if (draweeController != null) {
-            this.f.a(DraweeEventTracker.a.ON_SET_CONTROLLER);
+            this.f.a(c.a.ON_SET_CONTROLLER);
             this.e.e(this.d);
         } else {
-            this.f.a(DraweeEventTracker.a.ON_CLEAR_CONTROLLER);
+            this.f.a(c.a.ON_CLEAR_CONTROLLER);
         }
         if (z2) {
             a();
@@ -103,19 +103,19 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
     }
 
     public void h(DH dh) {
-        this.f.a(DraweeEventTracker.a.ON_SET_HIERARCHY);
+        this.f.a(c.a.ON_SET_HIERARCHY);
         boolean zE = e();
         Object objD = d();
-        if (objD instanceof VisibilityAwareDrawable) {
-            ((VisibilityAwareDrawable) objD).k(null);
+        if (objD instanceof f0) {
+            ((f0) objD).k(null);
         }
         Objects.requireNonNull(dh);
         this.d = dh;
         Drawable drawableE = dh.e();
         f(drawableE == null || drawableE.isVisible());
         Object objD2 = d();
-        if (objD2 instanceof VisibilityAwareDrawable) {
-            ((VisibilityAwareDrawable) objD2).k(this);
+        if (objD2 instanceof f0) {
+            ((f0) objD2).k(this);
         }
         if (zE) {
             this.e.e(dh);
@@ -123,11 +123,11 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
     }
 
     public String toString() {
-        Objects2 objects2H2 = AnimatableValueParser.h2(this);
-        objects2H2.b("controllerAttached", this.a);
-        objects2H2.b("holderAttached", this.f2893b);
-        objects2H2.b("drawableVisible", this.c);
-        objects2H2.c("events", this.f.toString());
-        return objects2H2.toString();
+        i iVarH2 = d.h2(this);
+        iVarH2.b("controllerAttached", this.a);
+        iVarH2.b("holderAttached", this.f2893b);
+        iVarH2.b("drawableVisible", this.c);
+        iVarH2.c("events", this.f.toString());
+        return iVarH2.toString();
     }
 }

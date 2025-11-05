@@ -31,7 +31,7 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.PointerIconCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.PopupWindowCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.lang.reflect.Method;
 
 /* loaded from: classes.dex */
@@ -283,7 +283,7 @@ public class ListPopupWindow implements ShowableListMenu {
                     linearLayout.addView(view2);
                     linearLayout.addView(view, layoutParams);
                 } else if (i3 != 1) {
-                    StringBuilder sbU = outline.U("Invalid hint position ");
+                    StringBuilder sbU = a.U("Invalid hint position ");
                     sbU.append(this.mPromptPosition);
                     Log.e(TAG, sbU.toString());
                 } else {

@@ -2,7 +2,7 @@ package androidx.constraintlayout.motion.utils;
 
 import android.util.Log;
 import androidx.constraintlayout.motion.widget.MotionInterpolator;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public class StopLogic extends MotionInterpolator {
@@ -160,7 +160,7 @@ public class StopLogic extends MotionInterpolator {
     }
 
     public void debug(String str, String str2, float f) {
-        StringBuilder sbX = outline.X(str2, " ===== ");
+        StringBuilder sbX = a.X(str2, " ===== ");
         sbX.append(this.mType);
         Log.v(str, sbX.toString());
         StringBuilder sb = new StringBuilder();
@@ -173,7 +173,7 @@ public class StopLogic extends MotionInterpolator {
         Log.v(str, sb.toString());
         Log.v(str, str2 + " dur " + this.mStage1Duration + " vel " + this.mStage1Velocity + " pos " + this.mStage1EndPosition);
         if (this.mNumberOfStages > 1) {
-            StringBuilder sbX2 = outline.X(str2, " dur ");
+            StringBuilder sbX2 = a.X(str2, " dur ");
             sbX2.append(this.mStage2Duration);
             sbX2.append(" vel ");
             sbX2.append(this.mStage2Velocity);
@@ -182,7 +182,7 @@ public class StopLogic extends MotionInterpolator {
             Log.v(str, sbX2.toString());
         }
         if (this.mNumberOfStages > 2) {
-            StringBuilder sbX3 = outline.X(str2, " dur ");
+            StringBuilder sbX3 = a.X(str2, " dur ");
             sbX3.append(this.mStage3Duration);
             sbX3.append(" vel ");
             sbX3.append(this.mStage3Velocity);

@@ -1,6 +1,6 @@
 package com.discord.utilities.buildutils;
 
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import kotlin.text.Regex;
 
 /* compiled from: BuildUtils.kt */
@@ -12,7 +12,7 @@ public final class BuildUtils {
     }
 
     public final boolean isValidBuildVersionName(String versionName) {
-        Intrinsics3.checkNotNullParameter(versionName, "versionName");
+        m.checkNotNullParameter(versionName, "versionName");
         return new Regex("^\\d+[.]\\d+ - (Dev|Alpha|Beta|Stable)$").matches(versionName);
     }
 }

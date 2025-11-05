@@ -2,9 +2,6 @@ package b.i.c.m.d.k;
 
 import android.os.Build;
 import b.i.c.m.d.k.x;
-import b.i.c.m.d.p.ByteString2;
-import b.i.c.m.d.p.CodedOutputStream2;
-import b.i.c.m.d.p.SessionProtobufHelper;
 
 /* compiled from: CrashlyticsController.java */
 /* loaded from: classes3.dex */
@@ -16,18 +13,18 @@ public class w implements x.g {
     }
 
     @Override // b.i.c.m.d.k.x.g
-    public void a(CodedOutputStream2 codedOutputStream2) throws Exception {
+    public void a(b.i.c.m.d.p.c cVar) throws Exception {
         String str = Build.VERSION.RELEASE;
         String str2 = Build.VERSION.CODENAME;
         boolean z2 = this.a;
-        ByteString2 byteString2 = SessionProtobufHelper.a;
-        ByteString2 byteString2A = ByteString2.a(str);
-        ByteString2 byteString2A2 = ByteString2.a(str2);
-        codedOutputStream2.r(8, 2);
-        codedOutputStream2.o(CodedOutputStream2.a(4, z2) + CodedOutputStream2.b(3, byteString2A2) + CodedOutputStream2.b(2, byteString2A) + CodedOutputStream2.c(1, 3) + 0);
-        codedOutputStream2.m(1, 3);
-        codedOutputStream2.l(2, byteString2A);
-        codedOutputStream2.l(3, byteString2A2);
-        codedOutputStream2.k(4, z2);
+        b.i.c.m.d.p.a aVar = b.i.c.m.d.p.d.a;
+        b.i.c.m.d.p.a aVarA = b.i.c.m.d.p.a.a(str);
+        b.i.c.m.d.p.a aVarA2 = b.i.c.m.d.p.a.a(str2);
+        cVar.r(8, 2);
+        cVar.o(b.i.c.m.d.p.c.a(4, z2) + b.i.c.m.d.p.c.b(3, aVarA2) + b.i.c.m.d.p.c.b(2, aVarA) + b.i.c.m.d.p.c.c(1, 3) + 0);
+        cVar.m(1, 3);
+        cVar.l(2, aVarA);
+        cVar.l(3, aVarA2);
+        cVar.k(4, z2);
     }
 }

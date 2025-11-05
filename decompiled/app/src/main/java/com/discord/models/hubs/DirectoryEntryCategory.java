@@ -3,7 +3,7 @@ package com.discord.models.hubs;
 import android.content.Context;
 import androidx.annotation.StringRes;
 import com.discord.R;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -53,7 +53,7 @@ public enum DirectoryEntryCategory {
         }
 
         public final List<DirectoryEntryCategory> getCategories(boolean isHQDirectoryChannel) {
-            return isHQDirectoryChannel ? DirectoryEntryCategory2.access$getHQ_DIRECTORY_CATEGORIES$p() : DirectoryEntryCategory2.access$getHUB_CATEGORIES$p();
+            return isHQDirectoryChannel ? DirectoryEntryCategoryKt.access$getHQ_DIRECTORY_CATEGORIES$p() : DirectoryEntryCategoryKt.access$getHUB_CATEGORIES$p();
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -76,9 +76,9 @@ public enum DirectoryEntryCategory {
     }
 
     public final String getTitle(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         String string = context.getString(this.titleRes);
-        Intrinsics3.checkNotNullExpressionValue(string, "context.getString(titleRes)");
+        m.checkNotNullExpressionValue(string, "context.getString(titleRes)");
         return string;
     }
 

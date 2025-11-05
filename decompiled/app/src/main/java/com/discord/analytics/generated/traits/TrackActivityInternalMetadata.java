@@ -1,7 +1,7 @@
 package com.discord.analytics.generated.traits;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
+import b.d.b.a.a;
+import d0.z.d.m;
 
 /* compiled from: TrackActivityInternalMetadata.kt */
 /* loaded from: classes.dex */
@@ -23,7 +23,7 @@ public final /* data */ class TrackActivityInternalMetadata {
             return false;
         }
         TrackActivityInternalMetadata trackActivityInternalMetadata = (TrackActivityInternalMetadata) other;
-        return Intrinsics3.areEqual(this.activityApplicationId, trackActivityInternalMetadata.activityApplicationId) && Intrinsics3.areEqual(this.groupSessionId, trackActivityInternalMetadata.groupSessionId) && Intrinsics3.areEqual(this.userSessionId, trackActivityInternalMetadata.userSessionId) && Intrinsics3.areEqual(this.activityInstanceId, trackActivityInternalMetadata.activityInstanceId) && Intrinsics3.areEqual(this.activityVersion, trackActivityInternalMetadata.activityVersion) && Intrinsics3.areEqual(this.numConcurrentUsers, trackActivityInternalMetadata.numConcurrentUsers) && Intrinsics3.areEqual(this.activityGuildId, trackActivityInternalMetadata.activityGuildId) && Intrinsics3.areEqual(this.participationMode, trackActivityInternalMetadata.participationMode);
+        return m.areEqual(this.activityApplicationId, trackActivityInternalMetadata.activityApplicationId) && m.areEqual(this.groupSessionId, trackActivityInternalMetadata.groupSessionId) && m.areEqual(this.userSessionId, trackActivityInternalMetadata.userSessionId) && m.areEqual(this.activityInstanceId, trackActivityInternalMetadata.activityInstanceId) && m.areEqual(this.activityVersion, trackActivityInternalMetadata.activityVersion) && m.areEqual(this.numConcurrentUsers, trackActivityInternalMetadata.numConcurrentUsers) && m.areEqual(this.activityGuildId, trackActivityInternalMetadata.activityGuildId) && m.areEqual(this.participationMode, trackActivityInternalMetadata.participationMode);
     }
 
     public int hashCode() {
@@ -46,7 +46,7 @@ public final /* data */ class TrackActivityInternalMetadata {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackActivityInternalMetadata(activityApplicationId=");
+        StringBuilder sbU = a.U("TrackActivityInternalMetadata(activityApplicationId=");
         sbU.append(this.activityApplicationId);
         sbU.append(", groupSessionId=");
         sbU.append(this.groupSessionId);
@@ -61,6 +61,6 @@ public final /* data */ class TrackActivityInternalMetadata {
         sbU.append(", activityGuildId=");
         sbU.append(this.activityGuildId);
         sbU.append(", participationMode=");
-        return outline.E(sbU, this.participationMode, ")");
+        return a.E(sbU, this.participationMode, ")");
     }
 }

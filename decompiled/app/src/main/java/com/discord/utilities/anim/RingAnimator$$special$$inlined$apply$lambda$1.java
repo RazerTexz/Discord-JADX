@@ -1,7 +1,7 @@
 package com.discord.utilities.anim;
 
 import android.animation.Animator;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: Animator.kt */
 /* loaded from: classes2.dex */
@@ -14,23 +14,23 @@ public final class RingAnimator$$special$$inlined$apply$lambda$1 implements Anim
 
     @Override // android.animation.Animator.AnimatorListener
     public void onAnimationCancel(Animator animator) {
-        Intrinsics3.checkNotNullParameter(animator, "animator");
+        m.checkNotNullParameter(animator, "animator");
     }
 
     @Override // android.animation.Animator.AnimatorListener
     public void onAnimationEnd(Animator animator) {
-        Intrinsics3.checkNotNullParameter(animator, "animator");
+        m.checkNotNullParameter(animator, "animator");
         RingAnimator.access$setAnimating$p(this.this$0, false);
         this.this$0.onUpdate();
     }
 
     @Override // android.animation.Animator.AnimatorListener
     public void onAnimationRepeat(Animator animator) {
-        Intrinsics3.checkNotNullParameter(animator, "animator");
+        m.checkNotNullParameter(animator, "animator");
     }
 
     @Override // android.animation.Animator.AnimatorListener
     public void onAnimationStart(Animator animator) {
-        Intrinsics3.checkNotNullParameter(animator, "animator");
+        m.checkNotNullParameter(animator, "animator");
     }
 }

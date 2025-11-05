@@ -3,12 +3,10 @@ package com.google.android.exoplayer2.metadata.mp4;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
-import b.i.a.c.Format2;
-import b.i.a.c.MediaMetadata;
-import b.i.a.c.f3.Util2;
-import b.i.a.c.z2.Metadata2;
+import b.c.a.a0.d;
+import b.i.a.c.f3.e0;
+import b.i.a.c.j1;
+import b.i.a.c.p1;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +36,7 @@ public final class SlowMotionData implements Metadata.Entry {
         }
 
         public Segment(long j, long j2, int i) {
-            AnimatableValueParser.j(j < j2);
+            d.j(j < j2);
             this.j = j;
             this.k = j2;
             this.l = i;
@@ -65,7 +63,7 @@ public final class SlowMotionData implements Metadata.Entry {
         }
 
         public String toString() {
-            return Util2.k("Segment: startTimeMs=%d, endTimeMs=%d, speedDivisor=%d", Long.valueOf(this.j), Long.valueOf(this.k), Integer.valueOf(this.l));
+            return e0.k("Segment: startTimeMs=%d, endTimeMs=%d, speedDivisor=%d", Long.valueOf(this.j), Long.valueOf(this.k), Integer.valueOf(this.l));
         }
 
         @Override // android.os.Parcelable
@@ -109,7 +107,7 @@ public final class SlowMotionData implements Metadata.Entry {
                 }
             }
         }
-        AnimatableValueParser.j(!z2);
+        d.j(!z2);
     }
 
     @Override // android.os.Parcelable
@@ -132,18 +130,18 @@ public final class SlowMotionData implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ void n(MediaMetadata.b bVar) {
-        Metadata2.c(this, bVar);
+    public /* synthetic */ void n(p1.b bVar) {
+        b.i.a.c.z2.a.c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     public /* synthetic */ byte[] o0() {
-        return Metadata2.a(this);
+        return b.i.a.c.z2.a.a(this);
     }
 
     public String toString() {
         String strValueOf = String.valueOf(this.j);
-        return outline.j(strValueOf.length() + 21, "SlowMotion: segments=", strValueOf);
+        return b.d.b.a.a.j(strValueOf.length() + 21, "SlowMotion: segments=", strValueOf);
     }
 
     @Override // android.os.Parcelable
@@ -152,7 +150,7 @@ public final class SlowMotionData implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    public /* synthetic */ Format2 y() {
-        return Metadata2.b(this);
+    public /* synthetic */ j1 y() {
+        return b.i.a.c.z2.a.b(this);
     }
 }

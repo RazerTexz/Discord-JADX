@@ -8,8 +8,8 @@ import b.i.a.f.e.h.c;
 
 /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
 /* loaded from: classes3.dex */
-public final class e extends a.AbstractC0035a<b.i.a.f.l.b.a, a> {
-    @Override // b.i.a.f.e.h.a.AbstractC0035a
+public final class e extends a.AbstractC0112a<b.i.a.f.l.b.a, a> {
+    @Override // b.i.a.f.e.h.a.AbstractC0112a
     public final a.f a(Context context, Looper looper, b.i.a.f.e.k.c cVar, a aVar, c.a aVar2, c.b bVar) {
         a aVar3 = cVar.g;
         Integer num = cVar.h;

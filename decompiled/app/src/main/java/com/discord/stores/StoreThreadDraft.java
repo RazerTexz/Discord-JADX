@@ -1,8 +1,8 @@
 package com.discord.stores;
 
-import b.d.b.a.outline;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import b.d.b.a.a;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -94,7 +94,7 @@ public final class StoreThreadDraft extends StoreV2 {
                 return false;
             }
             ThreadDraftState threadDraftState = (ThreadDraftState) other;
-            return this.isPrivate == threadDraftState.isPrivate && Intrinsics3.areEqual(this.autoArchiveDuration, threadDraftState.autoArchiveDuration) && Intrinsics3.areEqual(this.threadName, threadDraftState.threadName) && this.isSending == threadDraftState.isSending && this.shouldDisplayNameError == threadDraftState.shouldDisplayNameError;
+            return this.isPrivate == threadDraftState.isPrivate && m.areEqual(this.autoArchiveDuration, threadDraftState.autoArchiveDuration) && m.areEqual(this.threadName, threadDraftState.threadName) && this.isSending == threadDraftState.isSending && this.shouldDisplayNameError == threadDraftState.shouldDisplayNameError;
         }
 
         public final Integer getAutoArchiveDuration() {
@@ -144,7 +144,7 @@ public final class StoreThreadDraft extends StoreV2 {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("ThreadDraftState(isPrivate=");
+            StringBuilder sbU = a.U("ThreadDraftState(isPrivate=");
             sbU.append(this.isPrivate);
             sbU.append(", autoArchiveDuration=");
             sbU.append(this.autoArchiveDuration);
@@ -153,7 +153,7 @@ public final class StoreThreadDraft extends StoreV2 {
             sbU.append(", isSending=");
             sbU.append(this.isSending);
             sbU.append(", shouldDisplayNameError=");
-            return outline.O(sbU, this.shouldDisplayNameError, ")");
+            return a.O(sbU, this.shouldDisplayNameError, ")");
         }
 
         public /* synthetic */ ThreadDraftState(boolean z2, Integer num, String str, boolean z3, boolean z4, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -163,7 +163,7 @@ public final class StoreThreadDraft extends StoreV2 {
 
     /* compiled from: StoreThreadDraft.kt */
     /* renamed from: com.discord.stores.StoreThreadDraft$clearDraftState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -182,7 +182,7 @@ public final class StoreThreadDraft extends StoreV2 {
 
     /* compiled from: StoreThreadDraft.kt */
     /* renamed from: com.discord.stores.StoreThreadDraft$setDraftSending$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -197,14 +197,14 @@ public final class StoreThreadDraft extends StoreV2 {
         public final void invoke2() {
             BehaviorSubject behaviorSubjectAccess$getDraftStateSubject$p = StoreThreadDraft.access$getDraftStateSubject$p(StoreThreadDraft.this);
             BehaviorSubject behaviorSubjectAccess$getDraftStateSubject$p2 = StoreThreadDraft.access$getDraftStateSubject$p(StoreThreadDraft.this);
-            Intrinsics3.checkNotNullExpressionValue(behaviorSubjectAccess$getDraftStateSubject$p2, "draftStateSubject");
+            m.checkNotNullExpressionValue(behaviorSubjectAccess$getDraftStateSubject$p2, "draftStateSubject");
             behaviorSubjectAccess$getDraftStateSubject$p.onNext(ThreadDraftState.copy$default((ThreadDraftState) behaviorSubjectAccess$getDraftStateSubject$p2.n0(), false, null, null, true, false, 23, null));
         }
     }
 
     /* compiled from: StoreThreadDraft.kt */
     /* renamed from: com.discord.stores.StoreThreadDraft$setDraftState$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public final /* synthetic */ ThreadDraftState $draftState;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -226,7 +226,7 @@ public final class StoreThreadDraft extends StoreV2 {
     }
 
     public StoreThreadDraft(Dispatcher dispatcher) {
-        Intrinsics3.checkNotNullParameter(dispatcher, "dispatcher");
+        m.checkNotNullParameter(dispatcher, "dispatcher");
         this.dispatcher = dispatcher;
         this.draftStateSubject = BehaviorSubject.l0(new ThreadDraftState(false, null, null, false, false, 31, null));
     }
@@ -241,7 +241,7 @@ public final class StoreThreadDraft extends StoreV2 {
 
     public final Observable<ThreadDraftState> observeDraftState() {
         BehaviorSubject<ThreadDraftState> behaviorSubject = this.draftStateSubject;
-        Intrinsics3.checkNotNullExpressionValue(behaviorSubject, "draftStateSubject");
+        m.checkNotNullExpressionValue(behaviorSubject, "draftStateSubject");
         return behaviorSubject;
     }
 
@@ -250,7 +250,7 @@ public final class StoreThreadDraft extends StoreV2 {
     }
 
     public final void setDraftState(ThreadDraftState draftState) {
-        Intrinsics3.checkNotNullParameter(draftState, "draftState");
+        m.checkNotNullParameter(draftState, "draftState");
         this.dispatcher.schedule(new AnonymousClass1(draftState));
     }
 }

@@ -1,6 +1,6 @@
 package com.discord.api.guildscheduledevent;
 
-import d0.t.Sets5;
+import d0.t.n0;
 import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
@@ -32,7 +32,7 @@ public enum GuildScheduledEventStatus {
         GuildScheduledEventStatus guildScheduledEventStatus = COMPLETED;
         GuildScheduledEventStatus guildScheduledEventStatus2 = CANCELED;
         INSTANCE = new Companion(null);
-        DONE = Sets5.setOf((Object[]) new GuildScheduledEventStatus[]{guildScheduledEventStatus, guildScheduledEventStatus2});
+        DONE = n0.setOf((Object[]) new GuildScheduledEventStatus[]{guildScheduledEventStatus, guildScheduledEventStatus2});
     }
 
     GuildScheduledEventStatus(int i) {

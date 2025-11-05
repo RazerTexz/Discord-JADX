@@ -1,8 +1,8 @@
 package com.discord.models.domain;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.premium.SubscriptionPlan;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: ModelEntitlement.kt */
 /* loaded from: classes.dex */
@@ -19,7 +19,7 @@ public final /* data */ class ModelEntitlement {
     private final long userId;
 
     public ModelEntitlement(long j, long j2, int i, long j3, long j4, ModelSku modelSku, SubscriptionPlan subscriptionPlan, Long l, Boolean bool, Long l2) {
-        Intrinsics3.checkNotNullParameter(modelSku, "sku");
+        m.checkNotNullParameter(modelSku, "sku");
         this.id = j;
         this.applicationId = j2;
         this.type = i;
@@ -87,7 +87,7 @@ public final /* data */ class ModelEntitlement {
     }
 
     public final ModelEntitlement copy(long id2, long applicationId, int type, long userId, long skuId, ModelSku sku, SubscriptionPlan subscriptionPlan, Long parentId, Boolean consumed, Long promotionId) {
-        Intrinsics3.checkNotNullParameter(sku, "sku");
+        m.checkNotNullParameter(sku, "sku");
         return new ModelEntitlement(id2, applicationId, type, userId, skuId, sku, subscriptionPlan, parentId, consumed, promotionId);
     }
 
@@ -99,7 +99,7 @@ public final /* data */ class ModelEntitlement {
             return false;
         }
         ModelEntitlement modelEntitlement = (ModelEntitlement) other;
-        return this.id == modelEntitlement.id && this.applicationId == modelEntitlement.applicationId && this.type == modelEntitlement.type && this.userId == modelEntitlement.userId && this.skuId == modelEntitlement.skuId && Intrinsics3.areEqual(this.sku, modelEntitlement.sku) && Intrinsics3.areEqual(this.subscriptionPlan, modelEntitlement.subscriptionPlan) && Intrinsics3.areEqual(this.parentId, modelEntitlement.parentId) && Intrinsics3.areEqual(this.consumed, modelEntitlement.consumed) && Intrinsics3.areEqual(this.promotionId, modelEntitlement.promotionId);
+        return this.id == modelEntitlement.id && this.applicationId == modelEntitlement.applicationId && this.type == modelEntitlement.type && this.userId == modelEntitlement.userId && this.skuId == modelEntitlement.skuId && m.areEqual(this.sku, modelEntitlement.sku) && m.areEqual(this.subscriptionPlan, modelEntitlement.subscriptionPlan) && m.areEqual(this.parentId, modelEntitlement.parentId) && m.areEqual(this.consumed, modelEntitlement.consumed) && m.areEqual(this.promotionId, modelEntitlement.promotionId);
     }
 
     public final long getApplicationId() {
@@ -163,7 +163,7 @@ public final /* data */ class ModelEntitlement {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelEntitlement(id=");
+        StringBuilder sbU = a.U("ModelEntitlement(id=");
         sbU.append(this.id);
         sbU.append(", applicationId=");
         sbU.append(this.applicationId);
@@ -182,6 +182,6 @@ public final /* data */ class ModelEntitlement {
         sbU.append(", consumed=");
         sbU.append(this.consumed);
         sbU.append(", promotionId=");
-        return outline.G(sbU, this.promotionId, ")");
+        return a.G(sbU, this.promotionId, ")");
     }
 }

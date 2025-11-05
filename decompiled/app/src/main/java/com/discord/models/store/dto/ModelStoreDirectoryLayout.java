@@ -1,8 +1,8 @@
 package com.discord.models.store.dto;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.models.domain.ModelAuditLogEntry;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 import java.util.List;
 
 /* compiled from: ModelStoreDirectoryLayout.kt */
@@ -12,7 +12,7 @@ public final /* data */ class ModelStoreDirectoryLayout {
     private final long id;
 
     public ModelStoreDirectoryLayout(long j, List<Long> list) {
-        Intrinsics3.checkNotNullParameter(list, "allSkus");
+        m.checkNotNullParameter(list, "allSkus");
         this.id = j;
         this.allSkus = list;
     }
@@ -38,7 +38,7 @@ public final /* data */ class ModelStoreDirectoryLayout {
     }
 
     public final ModelStoreDirectoryLayout copy(long id2, List<Long> allSkus) {
-        Intrinsics3.checkNotNullParameter(allSkus, "allSkus");
+        m.checkNotNullParameter(allSkus, "allSkus");
         return new ModelStoreDirectoryLayout(id2, allSkus);
     }
 
@@ -50,7 +50,7 @@ public final /* data */ class ModelStoreDirectoryLayout {
             return false;
         }
         ModelStoreDirectoryLayout modelStoreDirectoryLayout = (ModelStoreDirectoryLayout) other;
-        return this.id == modelStoreDirectoryLayout.id && Intrinsics3.areEqual(this.allSkus, modelStoreDirectoryLayout.allSkus);
+        return this.id == modelStoreDirectoryLayout.id && m.areEqual(this.allSkus, modelStoreDirectoryLayout.allSkus);
     }
 
     public final List<Long> getAllSkus() {
@@ -69,9 +69,9 @@ public final /* data */ class ModelStoreDirectoryLayout {
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("ModelStoreDirectoryLayout(id=");
+        StringBuilder sbU = a.U("ModelStoreDirectoryLayout(id=");
         sbU.append(this.id);
         sbU.append(", allSkus=");
-        return outline.L(sbU, this.allSkus, ")");
+        return a.L(sbU, this.allSkus, ")");
     }
 }

@@ -1,14 +1,14 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackUserPhoneUpdated.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, TrackBase2 {
+public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, TrackBaseReceiver {
     private TrackBase trackBase;
     private final Boolean phoneNumberChanged = null;
     private final Boolean smsBackupEnabled = null;
@@ -29,7 +29,7 @@ public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, 
             return false;
         }
         TrackUserPhoneUpdated trackUserPhoneUpdated = (TrackUserPhoneUpdated) other;
-        return Intrinsics3.areEqual(this.phoneNumberChanged, trackUserPhoneUpdated.phoneNumberChanged) && Intrinsics3.areEqual(this.smsBackupEnabled, trackUserPhoneUpdated.smsBackupEnabled) && Intrinsics3.areEqual(this.didRequireVerifiedPhone, trackUserPhoneUpdated.didRequireVerifiedPhone);
+        return m.areEqual(this.phoneNumberChanged, trackUserPhoneUpdated.phoneNumberChanged) && m.areEqual(this.smsBackupEnabled, trackUserPhoneUpdated.smsBackupEnabled) && m.areEqual(this.didRequireVerifiedPhone, trackUserPhoneUpdated.didRequireVerifiedPhone);
     }
 
     public int hashCode() {
@@ -42,11 +42,11 @@ public final /* data */ class TrackUserPhoneUpdated implements AnalyticsSchema, 
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackUserPhoneUpdated(phoneNumberChanged=");
+        StringBuilder sbU = a.U("TrackUserPhoneUpdated(phoneNumberChanged=");
         sbU.append(this.phoneNumberChanged);
         sbU.append(", smsBackupEnabled=");
         sbU.append(this.smsBackupEnabled);
         sbU.append(", didRequireVerifiedPhone=");
-        return outline.D(sbU, this.didRequireVerifiedPhone, ")");
+        return a.D(sbU, this.didRequireVerifiedPhone, ")");
     }
 }

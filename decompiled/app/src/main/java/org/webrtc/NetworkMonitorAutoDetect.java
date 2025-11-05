@@ -17,7 +17,7 @@ import android.net.wifi.p2p.WifiP2pGroup;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Build;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import h0.c.q;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -98,7 +98,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
 
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onAvailable(Network network) {
-            StringBuilder sbU = outline.U("Network becomes available: ");
+            StringBuilder sbU = a.U("Network becomes available: ");
             sbU.append(network.toString());
             Logging.d(NetworkMonitorAutoDetect.TAG, sbU.toString());
             onNetworkChanged(network);
@@ -106,7 +106,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
 
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onCapabilitiesChanged(Network network, NetworkCapabilities networkCapabilities) {
-            StringBuilder sbU = outline.U("capabilities changed: ");
+            StringBuilder sbU = a.U("capabilities changed: ");
             sbU.append(networkCapabilities.toString());
             Logging.d(NetworkMonitorAutoDetect.TAG, sbU.toString());
             onNetworkChanged(network);
@@ -120,7 +120,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
 
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onLosing(Network network, int i) {
-            StringBuilder sbU = outline.U("Network ");
+            StringBuilder sbU = a.U("Network ");
             sbU.append(network.toString());
             sbU.append(" is about to lose in ");
             sbU.append(i);
@@ -130,7 +130,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
 
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onLost(Network network) {
-            StringBuilder sbU = outline.U("Network ");
+            StringBuilder sbU = a.U("Network ");
             sbU.append(network.toString());
             sbU.append(" is disconnected");
             Logging.d(NetworkMonitorAutoDetect.TAG, sbU.toString());
@@ -268,7 +268,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
         }
         this.connectionType = connectionType;
         this.wifiSSID = wifiSSID;
-        StringBuilder sbU = outline.U("Network connectivity changed, type is: ");
+        StringBuilder sbU = a.U("Network connectivity changed, type is: ");
         sbU.append(this.connectionType);
         Logging.d(TAG, sbU.toString());
         this.observer.onConnectionTypeChanged(connectionType);
@@ -431,13 +431,13 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
             }
             LinkProperties linkProperties = connectivityManager.getLinkProperties(network);
             if (linkProperties == null) {
-                StringBuilder sbU = outline.U("Detected unknown network: ");
+                StringBuilder sbU = a.U("Detected unknown network: ");
                 sbU.append(network.toString());
                 Logging.w(NetworkMonitorAutoDetect.TAG, sbU.toString());
                 return null;
             }
             if (linkProperties.getInterfaceName() == null) {
-                StringBuilder sbU2 = outline.U("Null interface name for network ");
+                StringBuilder sbU2 = a.U("Null interface name for network ");
                 sbU2.append(network.toString());
                 Logging.w(NetworkMonitorAutoDetect.TAG, sbU2.toString());
                 return null;
@@ -445,14 +445,14 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
             NetworkState networkState = getNetworkState(network);
             NetworkChangeDetector.ConnectionType connectionType = NetworkMonitorAutoDetect.getConnectionType(networkState);
             if (connectionType == NetworkChangeDetector.ConnectionType.CONNECTION_NONE) {
-                StringBuilder sbU3 = outline.U("Network ");
+                StringBuilder sbU3 = a.U("Network ");
                 sbU3.append(network.toString());
                 sbU3.append(" is disconnected");
                 Logging.d(NetworkMonitorAutoDetect.TAG, sbU3.toString());
                 return null;
             }
             if (connectionType == NetworkChangeDetector.ConnectionType.CONNECTION_UNKNOWN || connectionType == NetworkChangeDetector.ConnectionType.CONNECTION_UNKNOWN_CELLULAR) {
-                StringBuilder sbU4 = outline.U("Network ");
+                StringBuilder sbU4 = a.U("Network ");
                 sbU4.append(network.toString());
                 sbU4.append(" connection type is ");
                 sbU4.append(connectionType);
@@ -564,7 +564,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
             if (network != null && (connectivityManager = this.connectivityManager) != null) {
                 NetworkInfo networkInfo = connectivityManager.getNetworkInfo(network);
                 if (networkInfo == null) {
-                    StringBuilder sbU = outline.U("Couldn't retrieve information from network ");
+                    StringBuilder sbU = a.U("Couldn't retrieve information from network ");
                     sbU.append(network.toString());
                     Logging.w(NetworkMonitorAutoDetect.TAG, sbU.toString());
                     return new NetworkState(false, -1, -1, -1, -1);

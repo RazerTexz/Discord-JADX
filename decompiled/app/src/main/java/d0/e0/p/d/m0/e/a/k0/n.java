@@ -5,7 +5,7 @@ package d0.e0.p.d.m0.e.a.k0;
 public interface n extends q {
     boolean getHasConstantNotNullInitializer();
 
-    javaTypes5 getType();
+    x getType();
 
     boolean isEnumEntry();
 }

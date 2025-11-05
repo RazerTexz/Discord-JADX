@@ -3,14 +3,14 @@ package com.google.android.material.timepicker;
 import android.content.res.Resources;
 import android.os.Parcel;
 import android.os.Parcelable;
-import b.i.a.g.k.MaxInputValidator;
+import b.i.a.g.k.d;
 import java.util.Arrays;
 
 /* loaded from: classes3.dex */
 public class TimeModel implements Parcelable {
     public static final Parcelable.Creator<TimeModel> CREATOR = new a();
-    public final MaxInputValidator j;
-    public final MaxInputValidator k;
+    public final d j;
+    public final d k;
     public final int l;
     public int m;
     public int n;
@@ -105,7 +105,7 @@ public class TimeModel implements Parcelable {
         this.o = i3;
         this.l = i4;
         this.p = i >= 12 ? 1 : 0;
-        this.j = new MaxInputValidator(59);
-        this.k = new MaxInputValidator(i4 == 1 ? 24 : 12);
+        this.j = new d(59);
+        this.k = new d(i4 == 1 ? 24 : 12);
     }
 }

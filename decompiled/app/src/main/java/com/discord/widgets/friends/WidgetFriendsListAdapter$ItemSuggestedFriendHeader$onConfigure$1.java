@@ -2,14 +2,14 @@ package com.discord.widgets.friends;
 
 import com.discord.i18n.RenderContext;
 import com.discord.widgets.friends.FriendsListViewModel;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 /* compiled from: WidgetFriendsListAdapter.kt */
 /* loaded from: classes2.dex */
-public final class WidgetFriendsListAdapter$ItemSuggestedFriendHeader$onConfigure$1 extends Lambda implements Function1<RenderContext, Unit> {
+public final class WidgetFriendsListAdapter$ItemSuggestedFriendHeader$onConfigure$1 extends o implements Function1<RenderContext, Unit> {
     public final /* synthetic */ FriendsListViewModel.Item $data;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -20,7 +20,7 @@ public final class WidgetFriendsListAdapter$ItemSuggestedFriendHeader$onConfigur
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
-        Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
+        m.checkNotNullParameter(renderContext, "$receiver");
         renderContext.args.put("count", String.valueOf(((FriendsListViewModel.Item.SuggestedFriendsHeader) this.$data).getCount()));
     }
 

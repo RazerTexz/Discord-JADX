@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.discord.R;
 import com.discord.app.AppBottomSheet;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -42,7 +42,7 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
         }
 
         public final void show(FragmentManager fragmentManager, Function0<Unit> onGifSelected, Function0<Unit> onCancel) {
-            Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
+            m.checkNotNullParameter(fragmentManager, "fragmentManager");
             WidgetGifPickerSheet widgetGifPickerSheet = new WidgetGifPickerSheet();
             widgetGifPickerSheet.show(fragmentManager, WidgetGifPickerSheet.class.getSimpleName());
             widgetGifPickerSheet.setOnGifSelected(onGifSelected);
@@ -56,7 +56,7 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
 
     /* compiled from: WidgetGifPickerSheet.kt */
     /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSheet$onViewCreated$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
+    public static final class AnonymousClass1 extends o implements Function0<Unit> {
         public AnonymousClass1() {
             super(0);
         }
@@ -86,7 +86,7 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
         public final void run() {
             ViewGroup.LayoutParams layoutParams = WidgetGifPickerSheet.access$getContainer$p(WidgetGifPickerSheet.this).getLayoutParams();
             if (layoutParams != null) {
-                Intrinsics3.checkNotNullExpressionValue(WidgetGifPickerSheet.this.getResources(), "resources");
+                m.checkNotNullExpressionValue(WidgetGifPickerSheet.this.getResources(), "resources");
                 layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
             }
         }
@@ -99,7 +99,7 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
     public static final /* synthetic */ View access$getContainer$p(WidgetGifPickerSheet widgetGifPickerSheet) {
         View view = widgetGifPickerSheet.container;
         if (view == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("container");
+            m.throwUninitializedPropertyAccessException("container");
         }
         return view;
     }
@@ -131,11 +131,11 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
 
     @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnCancelListener
     public void onCancel(DialogInterface dialog) {
-        Intrinsics3.checkNotNullParameter(dialog, "dialog");
+        m.checkNotNullParameter(dialog, "dialog");
         super.onCancel(dialog);
         WidgetGifPickerSearch widgetGifPickerSearch = this.gifPickerFragment;
         if (widgetGifPickerSearch == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("gifPickerFragment");
+            m.throwUninitializedPropertyAccessException("gifPickerFragment");
         }
         widgetGifPickerSearch.clearSearchBar();
         Function0<Unit> function0 = this.onCancel;
@@ -146,24 +146,24 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        Intrinsics3.checkNotNullParameter(view, "view");
+        m.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         setBottomSheetCollapsedStateDisabled();
         this.container = view;
         WidgetGifPickerSearch widgetGifPickerSearch = new WidgetGifPickerSearch();
         this.gifPickerFragment = widgetGifPickerSearch;
         if (widgetGifPickerSearch == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("gifPickerFragment");
+            m.throwUninitializedPropertyAccessException("gifPickerFragment");
         }
         widgetGifPickerSearch.setOnGifSelected(new AnonymousClass1());
         FragmentTransaction fragmentTransactionBeginTransaction = getChildFragmentManager().beginTransaction();
         WidgetGifPickerSearch widgetGifPickerSearch2 = this.gifPickerFragment;
         if (widgetGifPickerSearch2 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("gifPickerFragment");
+            m.throwUninitializedPropertyAccessException("gifPickerFragment");
         }
         WidgetGifPickerSearch widgetGifPickerSearch3 = this.gifPickerFragment;
         if (widgetGifPickerSearch3 == null) {
-            Intrinsics3.throwUninitializedPropertyAccessException("gifPickerFragment");
+            m.throwUninitializedPropertyAccessException("gifPickerFragment");
         }
         fragmentTransactionBeginTransaction.replace(R.id.gif_search_sheet_content, widgetGifPickerSearch2, widgetGifPickerSearch3.getClass().getSimpleName()).runOnCommit(new AnonymousClass2()).commit();
     }

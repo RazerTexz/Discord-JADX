@@ -1,24 +1,24 @@
 package b.i.a.c.s2;
 
-import b.i.a.c.PlaybackParameters;
-import b.i.a.c.f3.ListenerSet;
-import b.i.a.c.s2.AnalyticsListener;
+import b.i.a.c.f3.p;
+import b.i.a.c.s2.h1;
+import b.i.a.c.x1;
 
 /* compiled from: lambda */
 /* loaded from: classes3.dex */
-public final /* synthetic */ class m implements ListenerSet.a {
-    public final /* synthetic */ AnalyticsListener.a a;
+public final /* synthetic */ class m implements p.a {
+    public final /* synthetic */ h1.a a;
 
     /* renamed from: b, reason: collision with root package name */
-    public final /* synthetic */ PlaybackParameters f1093b;
+    public final /* synthetic */ x1 f1093b;
 
-    public /* synthetic */ m(AnalyticsListener.a aVar, PlaybackParameters playbackParameters) {
+    public /* synthetic */ m(h1.a aVar, x1 x1Var) {
         this.a = aVar;
-        this.f1093b = playbackParameters;
+        this.f1093b = x1Var;
     }
 
-    @Override // b.i.a.c.f3.ListenerSet.a
+    @Override // b.i.a.c.f3.p.a
     public final void invoke(Object obj) {
-        ((AnalyticsListener) obj).I();
+        ((h1) obj).I();
     }
 }

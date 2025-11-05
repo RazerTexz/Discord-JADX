@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.app.BundleCompat;
-import x.a.a.ICustomTabsCallback;
+import x.a.a.a;
 
 /* loaded from: classes.dex */
 public class CustomTabsSessionToken {
@@ -21,7 +21,7 @@ public class CustomTabsSessionToken {
     private final CustomTabsCallback mCallback;
 
     @Nullable
-    public final ICustomTabsCallback mCallbackBinder;
+    public final a mCallbackBinder;
 
     @Nullable
     private final PendingIntent mSessionId;
@@ -88,45 +88,45 @@ public class CustomTabsSessionToken {
         }
     }
 
-    public static class MockCallback extends ICustomTabsCallback.a {
-        @Override // x.a.a.ICustomTabsCallback.a, android.os.IInterface
+    public static class MockCallback extends a.AbstractBinderC0650a {
+        @Override // x.a.a.a.AbstractBinderC0650a, android.os.IInterface
         public IBinder asBinder() {
             return this;
         }
 
-        @Override // x.a.a.ICustomTabsCallback
+        @Override // x.a.a.a
         public void extraCallback(String str, Bundle bundle) {
         }
 
-        @Override // x.a.a.ICustomTabsCallback
+        @Override // x.a.a.a
         public Bundle extraCallbackWithResult(String str, Bundle bundle) {
             return null;
         }
 
-        @Override // x.a.a.ICustomTabsCallback
+        @Override // x.a.a.a
         public void onMessageChannelReady(Bundle bundle) {
         }
 
-        @Override // x.a.a.ICustomTabsCallback
+        @Override // x.a.a.a
         public void onNavigationEvent(int i, Bundle bundle) {
         }
 
-        @Override // x.a.a.ICustomTabsCallback
+        @Override // x.a.a.a
         public void onPostMessage(String str, Bundle bundle) {
         }
 
-        @Override // x.a.a.ICustomTabsCallback
+        @Override // x.a.a.a
         public void onRelationshipValidationResult(int i, Uri uri, boolean z2, Bundle bundle) {
         }
     }
 
-    public CustomTabsSessionToken(@Nullable ICustomTabsCallback iCustomTabsCallback, @Nullable PendingIntent pendingIntent) {
-        if (iCustomTabsCallback == null && pendingIntent == null) {
+    public CustomTabsSessionToken(@Nullable a aVar, @Nullable PendingIntent pendingIntent) {
+        if (aVar == null && pendingIntent == null) {
             throw new IllegalStateException("CustomTabsSessionToken must have either a session id or a callback (or both).");
         }
-        this.mCallbackBinder = iCustomTabsCallback;
+        this.mCallbackBinder = aVar;
         this.mSessionId = pendingIntent;
-        this.mCallback = iCustomTabsCallback == null ? null : new AnonymousClass1();
+        this.mCallback = aVar == null ? null : new AnonymousClass1();
     }
 
     @NonNull
@@ -135,9 +135,9 @@ public class CustomTabsSessionToken {
     }
 
     private IBinder getCallbackBinderAssertNotNull() {
-        ICustomTabsCallback iCustomTabsCallback = this.mCallbackBinder;
-        if (iCustomTabsCallback != null) {
-            return iCustomTabsCallback.asBinder();
+        a aVar = this.mCallbackBinder;
+        if (aVar != null) {
+            return aVar.asBinder();
         }
         throw new IllegalStateException("CustomTabSessionToken must have valid binder or pending session");
     }
@@ -153,7 +153,7 @@ public class CustomTabsSessionToken {
         if (binder == null && pendingIntent == null) {
             return null;
         }
-        return new CustomTabsSessionToken(binder != null ? ICustomTabsCallback.a.asInterface(binder) : null, pendingIntent);
+        return new CustomTabsSessionToken(binder != null ? a.AbstractBinderC0650a.asInterface(binder) : null, pendingIntent);
     }
 
     public boolean equals(Object obj) {
@@ -176,11 +176,11 @@ public class CustomTabsSessionToken {
 
     @Nullable
     public IBinder getCallbackBinder() {
-        ICustomTabsCallback iCustomTabsCallback = this.mCallbackBinder;
-        if (iCustomTabsCallback == null) {
+        a aVar = this.mCallbackBinder;
+        if (aVar == null) {
             return null;
         }
-        return iCustomTabsCallback.asBinder();
+        return aVar.asBinder();
     }
 
     @Nullable

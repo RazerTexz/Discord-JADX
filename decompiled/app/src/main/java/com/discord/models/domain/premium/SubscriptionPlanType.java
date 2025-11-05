@@ -1,16 +1,16 @@
 package com.discord.models.domain.premium;
 
 import androidx.room.RoomDatabase;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.premium.PremiumTier;
 import com.discord.api.premium.SubscriptionInterval;
 import com.discord.models.domain.ModelSubscription;
-import d0.t.Iterables2;
-import d0.t.Sets5;
-import d0.t.SetsJVM;
-import d0.t._Collections;
-import d0.t._Sets;
-import d0.z.d.Intrinsics3;
+import d0.t.m0;
+import d0.t.n0;
+import d0.t.o;
+import d0.t.o0;
+import d0.t.u;
+import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -111,20 +111,20 @@ public final class SubscriptionPlanType {
             if (subscriptionPlanType != null) {
                 return subscriptionPlanType;
             }
-            throw new IllegalArgumentException(outline.t("unsupported type plan id: ", planId));
+            throw new IllegalArgumentException(a.t("unsupported type plan id: ", planId));
         }
 
         public final SubscriptionPlanType getBasePlanFromSubscriptionItems(List<ModelSubscription.SubscriptionItem> items, SubscriptionInterval interval, int intervalCount) {
             Object next;
             SubscriptionInterval interval2;
-            Intrinsics3.checkNotNullParameter(items, "items");
-            Intrinsics3.checkNotNullParameter(interval, "interval");
-            ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(items, 10));
+            m.checkNotNullParameter(items, "items");
+            m.checkNotNullParameter(interval, "interval");
+            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(items, 10));
             Iterator<T> it = items.iterator();
             while (it.hasNext()) {
                 arrayList.add(SubscriptionPlanType.INSTANCE.from(((ModelSubscription.SubscriptionItem) it.next()).getPlanId()));
             }
-            SubscriptionPlanType subscriptionPlanType = (SubscriptionPlanType) _Collections.firstOrNull((List) arrayList);
+            SubscriptionPlanType subscriptionPlanType = (SubscriptionPlanType) u.firstOrNull((List) arrayList);
             if (subscriptionPlanType != null && (interval2 = subscriptionPlanType.getInterval()) != null) {
                 interval = interval2;
             }
@@ -161,7 +161,7 @@ public final class SubscriptionPlanType {
 
         public final SubscriptionPlanType from(String planTypeString) {
             SubscriptionPlanType subscriptionPlanType;
-            Intrinsics3.checkNotNullParameter(planTypeString, "planTypeString");
+            m.checkNotNullParameter(planTypeString, "planTypeString");
             SubscriptionPlanType[] subscriptionPlanTypeArrValues = SubscriptionPlanType.values();
             int i = 0;
             while (true) {
@@ -170,7 +170,7 @@ public final class SubscriptionPlanType {
                     break;
                 }
                 subscriptionPlanType = subscriptionPlanTypeArrValues[i];
-                if (Intrinsics3.areEqual(subscriptionPlanType.getPlanTypeString(), planTypeString)) {
+                if (m.areEqual(subscriptionPlanType.getPlanTypeString(), planTypeString)) {
                     break;
                 }
                 i++;
@@ -178,7 +178,7 @@ public final class SubscriptionPlanType {
             if (subscriptionPlanType != null) {
                 return subscriptionPlanType;
             }
-            throw new IllegalArgumentException(outline.w("unsupported planTypeString: ", planTypeString));
+            throw new IllegalArgumentException(a.w("unsupported planTypeString: ", planTypeString));
         }
     }
 
@@ -224,16 +224,16 @@ public final class SubscriptionPlanType {
         PREMIUM_GUILD_YEAR = subscriptionPlanType17;
         $VALUES = new SubscriptionPlanType[]{subscriptionPlanType, subscriptionPlanType2, subscriptionPlanType3, subscriptionPlanType4, subscriptionPlanType5, subscriptionPlanType6, subscriptionPlanType7, subscriptionPlanType8, subscriptionPlanType9, subscriptionPlanType10, subscriptionPlanType11, subscriptionPlanType12, subscriptionPlanType13, subscriptionPlanType14, subscriptionPlanType15, subscriptionPlanType16, subscriptionPlanType17};
         INSTANCE = new Companion(null);
-        Set<SubscriptionPlanType> of = SetsJVM.setOf(subscriptionPlanType13);
+        Set<SubscriptionPlanType> of = m0.setOf(subscriptionPlanType13);
         TIER_0_PLANS = of;
-        Set<SubscriptionPlanType> of2 = Sets5.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType8, subscriptionPlanType7});
+        Set<SubscriptionPlanType> of2 = n0.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType8, subscriptionPlanType7});
         TIER_1_PLANS = of2;
-        Set<SubscriptionPlanType> of3 = Sets5.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType6, subscriptionPlanType5});
+        Set<SubscriptionPlanType> of3 = n0.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType6, subscriptionPlanType5});
         LEGACY_PLANS = of3;
-        Set<SubscriptionPlanType> setPlus = _Sets.plus(Sets5.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType9, subscriptionPlanType10, subscriptionPlanType11, subscriptionPlanType12}), (Iterable) of3);
+        Set<SubscriptionPlanType> setPlus = o0.plus(n0.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType9, subscriptionPlanType10, subscriptionPlanType11, subscriptionPlanType12}), (Iterable) of3);
         TIER_2_PLANS = setPlus;
-        PREMIUM_PLANS = _Sets.plus(_Sets.plus((Set) of, (Iterable) of2), (Iterable) setPlus);
-        PREMIUM_GUILD_PLANS = Sets5.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType14, subscriptionPlanType10, subscriptionPlanType11, subscriptionPlanType17});
+        PREMIUM_PLANS = o0.plus(o0.plus((Set) of, (Iterable) of2), (Iterable) setPlus);
+        PREMIUM_GUILD_PLANS = n0.setOf((Object[]) new SubscriptionPlanType[]{subscriptionPlanType14, subscriptionPlanType10, subscriptionPlanType11, subscriptionPlanType17});
     }
 
     private SubscriptionPlanType(String str, int i, int i2, SubscriptionInterval subscriptionInterval, int i3, String str2, long j, PremiumTier premiumTier) {

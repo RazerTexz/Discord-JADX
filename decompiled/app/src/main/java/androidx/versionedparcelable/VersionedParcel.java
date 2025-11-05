@@ -14,7 +14,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.collection.ArrayMap;
 import androidx.collection.ArraySet;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.message.MessageTypes;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -394,9 +394,9 @@ public abstract class VersionedParcel {
         try {
             return (Serializable) new AnonymousClass1(new ByteArrayInputStream(readByteArray())).readObject();
         } catch (IOException e) {
-            throw new RuntimeException(outline.y("VersionedParcelable encountered IOException reading a Serializable object (name = ", string, ")"), e);
+            throw new RuntimeException(a.y("VersionedParcelable encountered IOException reading a Serializable object (name = ", string, ")"), e);
         } catch (ClassNotFoundException e2) {
-            throw new RuntimeException(outline.y("VersionedParcelable encountered ClassNotFoundException reading a Serializable object (name = ", string, ")"), e2);
+            throw new RuntimeException(a.y("VersionedParcelable encountered ClassNotFoundException reading a Serializable object (name = ", string, ")"), e2);
         }
     }
 
@@ -798,7 +798,7 @@ public abstract class VersionedParcel {
             objectOutputStream.close();
             writeByteArray(byteArrayOutputStream.toByteArray());
         } catch (IOException e) {
-            throw new RuntimeException(outline.y("VersionedParcelable encountered IOException writing serializable object (name = ", name, ")"), e);
+            throw new RuntimeException(a.y("VersionedParcelable encountered IOException writing serializable object (name = ", name, ")"), e);
         }
     }
 

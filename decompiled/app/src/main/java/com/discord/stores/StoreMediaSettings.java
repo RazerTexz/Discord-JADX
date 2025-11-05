@@ -2,7 +2,7 @@ package com.discord.stores;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.permission.Permission;
@@ -14,12 +14,10 @@ import com.discord.utilities.media.AppSound;
 import com.discord.utilities.media.AppSoundManager;
 import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.utilities.rx.ObservableExtensionsKt;
-import d0.t.Maps6;
-import d0.t._Arrays;
-import d0.z.d.FunctionReferenceImpl;
-import d0.z.d.Intrinsics3;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.t.h0;
+import d0.t.k;
+import d0.z.d.m;
+import j0.k.b;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Unit;
@@ -118,12 +116,12 @@ public final class StoreMediaSettings extends Store {
         }
 
         public VoiceConfiguration(boolean z2, boolean z3, boolean z4, VadUseKrisp vadUseKrisp, boolean z5, boolean z6, NoiseProcessing noiseProcessing, float f, MediaEngineConnection.InputMode inputMode, float f2, Map<Long, Boolean> map, Map<Long, Float> map2, Map<Long, Boolean> map3, boolean z7, boolean z8) {
-            Intrinsics3.checkNotNullParameter(vadUseKrisp, "vadUseKrisp");
-            Intrinsics3.checkNotNullParameter(noiseProcessing, "noiseProcessing");
-            Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
-            Intrinsics3.checkNotNullParameter(map, "mutedUsers");
-            Intrinsics3.checkNotNullParameter(map2, "userOutputVolumes");
-            Intrinsics3.checkNotNullParameter(map3, "offScreenUsers");
+            m.checkNotNullParameter(vadUseKrisp, "vadUseKrisp");
+            m.checkNotNullParameter(noiseProcessing, "noiseProcessing");
+            m.checkNotNullParameter(inputMode, "inputMode");
+            m.checkNotNullParameter(map, "mutedUsers");
+            m.checkNotNullParameter(map2, "userOutputVolumes");
+            m.checkNotNullParameter(map3, "offScreenUsers");
             this.isSelfMuted = z2;
             this.isSelfDeafened = z3;
             this.automaticVad = z4;
@@ -226,12 +224,12 @@ public final class StoreMediaSettings extends Store {
         }
 
         public final VoiceConfiguration copy(boolean isSelfMuted, boolean isSelfDeafened, boolean automaticVad, VadUseKrisp vadUseKrisp, boolean automaticGainControl, boolean echoCancellation, NoiseProcessing noiseProcessing, float sensitivity, MediaEngineConnection.InputMode inputMode, float outputVolume, Map<Long, Boolean> mutedUsers, Map<Long, Float> userOutputVolumes, Map<Long, Boolean> offScreenUsers, boolean enableVideoHardwareScaling, boolean voiceParticipantsHidden) {
-            Intrinsics3.checkNotNullParameter(vadUseKrisp, "vadUseKrisp");
-            Intrinsics3.checkNotNullParameter(noiseProcessing, "noiseProcessing");
-            Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
-            Intrinsics3.checkNotNullParameter(mutedUsers, "mutedUsers");
-            Intrinsics3.checkNotNullParameter(userOutputVolumes, "userOutputVolumes");
-            Intrinsics3.checkNotNullParameter(offScreenUsers, "offScreenUsers");
+            m.checkNotNullParameter(vadUseKrisp, "vadUseKrisp");
+            m.checkNotNullParameter(noiseProcessing, "noiseProcessing");
+            m.checkNotNullParameter(inputMode, "inputMode");
+            m.checkNotNullParameter(mutedUsers, "mutedUsers");
+            m.checkNotNullParameter(userOutputVolumes, "userOutputVolumes");
+            m.checkNotNullParameter(offScreenUsers, "offScreenUsers");
             return new VoiceConfiguration(isSelfMuted, isSelfDeafened, automaticVad, vadUseKrisp, automaticGainControl, echoCancellation, noiseProcessing, sensitivity, inputMode, outputVolume, mutedUsers, userOutputVolumes, offScreenUsers, enableVideoHardwareScaling, voiceParticipantsHidden);
         }
 
@@ -243,7 +241,7 @@ public final class StoreMediaSettings extends Store {
                 return false;
             }
             VoiceConfiguration voiceConfiguration = (VoiceConfiguration) other;
-            return this.isSelfMuted == voiceConfiguration.isSelfMuted && this.isSelfDeafened == voiceConfiguration.isSelfDeafened && this.automaticVad == voiceConfiguration.automaticVad && Intrinsics3.areEqual(this.vadUseKrisp, voiceConfiguration.vadUseKrisp) && this.automaticGainControl == voiceConfiguration.automaticGainControl && this.echoCancellation == voiceConfiguration.echoCancellation && Intrinsics3.areEqual(this.noiseProcessing, voiceConfiguration.noiseProcessing) && Float.compare(this.sensitivity, voiceConfiguration.sensitivity) == 0 && Intrinsics3.areEqual(this.inputMode, voiceConfiguration.inputMode) && Float.compare(this.outputVolume, voiceConfiguration.outputVolume) == 0 && Intrinsics3.areEqual(this.mutedUsers, voiceConfiguration.mutedUsers) && Intrinsics3.areEqual(this.userOutputVolumes, voiceConfiguration.userOutputVolumes) && Intrinsics3.areEqual(this.offScreenUsers, voiceConfiguration.offScreenUsers) && this.enableVideoHardwareScaling == voiceConfiguration.enableVideoHardwareScaling && this.voiceParticipantsHidden == voiceConfiguration.voiceParticipantsHidden;
+            return this.isSelfMuted == voiceConfiguration.isSelfMuted && this.isSelfDeafened == voiceConfiguration.isSelfDeafened && this.automaticVad == voiceConfiguration.automaticVad && m.areEqual(this.vadUseKrisp, voiceConfiguration.vadUseKrisp) && this.automaticGainControl == voiceConfiguration.automaticGainControl && this.echoCancellation == voiceConfiguration.echoCancellation && m.areEqual(this.noiseProcessing, voiceConfiguration.noiseProcessing) && Float.compare(this.sensitivity, voiceConfiguration.sensitivity) == 0 && m.areEqual(this.inputMode, voiceConfiguration.inputMode) && Float.compare(this.outputVolume, voiceConfiguration.outputVolume) == 0 && m.areEqual(this.mutedUsers, voiceConfiguration.mutedUsers) && m.areEqual(this.userOutputVolumes, voiceConfiguration.userOutputVolumes) && m.areEqual(this.offScreenUsers, voiceConfiguration.offScreenUsers) && this.enableVideoHardwareScaling == voiceConfiguration.enableVideoHardwareScaling && this.voiceParticipantsHidden == voiceConfiguration.voiceParticipantsHidden;
         }
 
         public final boolean getAutomaticGainControl() {
@@ -372,11 +370,11 @@ public final class StoreMediaSettings extends Store {
             int i = 63 & 1;
             int i2 = 63 & 8;
             int i3 = 63 & 16;
-            return new MediaEngine.VoiceConfig(this.outputVolume, this.echoCancellation, _Arrays.contains(new NoiseProcessing[]{NoiseProcessing.Suppression, NoiseProcessing.CancellationTemporarilyDisabled}, this.noiseProcessing), this.noiseProcessing == NoiseProcessing.Cancellation, this.automaticGainControl, this.inputMode, new MediaEngineConnection.c((int) this.sensitivity, (2 & 63) != 0 ? 10 : 0, (63 & 4) != 0 ? 40 : 0, this.automaticVad, this.vadUseKrisp == VadUseKrisp.Enabled, (63 & 32) != 0 ? 5 : 0), this.isSelfDeafened, isSelfMuted());
+            return new MediaEngine.VoiceConfig(this.outputVolume, this.echoCancellation, k.contains(new NoiseProcessing[]{NoiseProcessing.Suppression, NoiseProcessing.CancellationTemporarilyDisabled}, this.noiseProcessing), this.noiseProcessing == NoiseProcessing.Cancellation, this.automaticGainControl, this.inputMode, new MediaEngineConnection.c((int) this.sensitivity, (2 & 63) != 0 ? 10 : 0, (63 & 4) != 0 ? 40 : 0, this.automaticVad, this.vadUseKrisp == VadUseKrisp.Enabled, (63 & 32) != 0 ? 5 : 0), this.isSelfDeafened, isSelfMuted());
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("VoiceConfiguration(isSelfMuted=");
+            StringBuilder sbU = a.U("VoiceConfiguration(isSelfMuted=");
             sbU.append(this.isSelfMuted);
             sbU.append(", isSelfDeafened=");
             sbU.append(this.isSelfDeafened);
@@ -405,11 +403,11 @@ public final class StoreMediaSettings extends Store {
             sbU.append(", enableVideoHardwareScaling=");
             sbU.append(this.enableVideoHardwareScaling);
             sbU.append(", voiceParticipantsHidden=");
-            return outline.O(sbU, this.voiceParticipantsHidden, ")");
+            return a.O(sbU, this.voiceParticipantsHidden, ")");
         }
 
         public /* synthetic */ VoiceConfiguration(boolean z2, boolean z3, boolean z4, VadUseKrisp vadUseKrisp, boolean z5, boolean z6, NoiseProcessing noiseProcessing, float f, MediaEngineConnection.InputMode inputMode, float f2, Map map, Map map2, Map map3, boolean z7, boolean z8, int i, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i & 1) != 0 ? false : z2, (i & 2) != 0 ? false : z3, (i & 4) != 0 ? true : z4, (i & 8) != 0 ? VadUseKrisp.Enabled : vadUseKrisp, (i & 16) != 0 ? true : z5, (i & 32) == 0 ? z6 : true, (i & 64) != 0 ? NoiseProcessing.Cancellation : noiseProcessing, (i & 128) != 0 ? -50.0f : f, (i & 256) != 0 ? MediaEngineConnection.InputMode.VOICE_ACTIVITY : inputMode, (i & 512) != 0 ? 100.0f : f2, (i & 1024) != 0 ? Maps6.emptyMap() : map, (i & 2048) != 0 ? Maps6.emptyMap() : map2, (i & 4096) != 0 ? Maps6.emptyMap() : map3, (i & 8192) != 0 ? false : z7, (i & 16384) == 0 ? z8 : false);
+            this((i & 1) != 0 ? false : z2, (i & 2) != 0 ? false : z3, (i & 4) != 0 ? true : z4, (i & 8) != 0 ? VadUseKrisp.Enabled : vadUseKrisp, (i & 16) != 0 ? true : z5, (i & 32) == 0 ? z6 : true, (i & 64) != 0 ? NoiseProcessing.Cancellation : noiseProcessing, (i & 128) != 0 ? -50.0f : f, (i & 256) != 0 ? MediaEngineConnection.InputMode.VOICE_ACTIVITY : inputMode, (i & 512) != 0 ? 100.0f : f2, (i & 1024) != 0 ? h0.emptyMap() : map, (i & 2048) != 0 ? h0.emptyMap() : map2, (i & 4096) != 0 ? h0.emptyMap() : map3, (i & 8192) != 0 ? false : z7, (i & 16384) == 0 ? z8 : false);
         }
     }
 
@@ -431,10 +429,10 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$getInputMode$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<VoiceConfiguration, MediaEngineConnection.InputMode> {
+    public static final class AnonymousClass1<T, R> implements b<VoiceConfiguration, MediaEngineConnection.InputMode> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ MediaEngineConnection.InputMode call(VoiceConfiguration voiceConfiguration) {
             return call2(voiceConfiguration);
         }
@@ -447,10 +445,10 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$getUsersMuted$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<VoiceConfiguration, Map<Long, ? extends Boolean>> {
+    public static final class AnonymousClass1<T, R> implements b<VoiceConfiguration, Map<Long, ? extends Boolean>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Map<Long, ? extends Boolean> call(VoiceConfiguration voiceConfiguration) {
             return call2(voiceConfiguration);
         }
@@ -463,10 +461,10 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$getUsersOffScreen$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<VoiceConfiguration, Map<Long, ? extends Boolean>> {
+    public static final class AnonymousClass1<T, R> implements b<VoiceConfiguration, Map<Long, ? extends Boolean>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Map<Long, ? extends Boolean> call(VoiceConfiguration voiceConfiguration) {
             return call2(voiceConfiguration);
         }
@@ -479,10 +477,10 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$getUsersVolume$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<VoiceConfiguration, Map<Long, ? extends Float>> {
+    public static final class AnonymousClass1<T, R> implements b<VoiceConfiguration, Map<Long, ? extends Float>> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Map<Long, ? extends Float> call(VoiceConfiguration voiceConfiguration) {
             return call2(voiceConfiguration);
         }
@@ -495,19 +493,19 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$init$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Long, Observable<? extends Boolean>> {
+    public static final class AnonymousClass1<T, R> implements b<Long, Observable<? extends Boolean>> {
 
         /* compiled from: StoreMediaSettings.kt */
         /* renamed from: com.discord.stores.StoreMediaSettings$init$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01491<T, R> implements Func1<Channel, Observable<? extends Boolean>> {
+        public static final class C02691<T, R> implements b<Channel, Observable<? extends Boolean>> {
             public final /* synthetic */ Long $id;
 
             /* compiled from: StoreMediaSettings.kt */
             /* renamed from: com.discord.stores.StoreMediaSettings$init$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01501<T, R> implements Func1<Long, Boolean> {
-                public static final C01501 INSTANCE = new C01501();
+            public static final class C02701<T, R> implements b<Long, Boolean> {
+                public static final C02701 INSTANCE = new C02701();
 
-                @Override // j0.k.Func1
+                @Override // j0.k.b
                 public /* bridge */ /* synthetic */ Boolean call(Long l) {
                     return call2(l);
                 }
@@ -518,11 +516,11 @@ public final class StoreMediaSettings extends Store {
                 }
             }
 
-            public C01491(Long l) {
+            public C02691(Long l) {
                 this.$id = l;
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends Boolean> call(Channel channel) {
                 return call2(channel);
             }
@@ -530,19 +528,19 @@ public final class StoreMediaSettings extends Store {
             /* renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Boolean> call2(Channel channel) {
                 if (channel == null || ChannelUtils.B(channel) || ChannelUtils.D(channel)) {
-                    return new ScalarSynchronousObservable(Boolean.TRUE);
+                    return new j0.l.e.k(Boolean.TRUE);
                 }
                 StorePermissions storePermissionsAccess$getStorePermissions$p = StoreMediaSettings.access$getStorePermissions$p(StoreMediaSettings.this);
                 Long l = this.$id;
-                Intrinsics3.checkNotNullExpressionValue(l, ModelAuditLogEntry.CHANGE_KEY_ID);
-                return storePermissionsAccess$getStorePermissions$p.observePermissionsForChannel(l.longValue()).G(C01501.INSTANCE);
+                m.checkNotNullExpressionValue(l, ModelAuditLogEntry.CHANGE_KEY_ID);
+                return storePermissionsAccess$getStorePermissions$p.observePermissionsForChannel(l.longValue()).G(C02701.INSTANCE);
             }
         }
 
         public AnonymousClass1() {
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Boolean> call(Long l) {
             return call2(l);
         }
@@ -550,14 +548,14 @@ public final class StoreMediaSettings extends Store {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Boolean> call2(Long l) {
             StoreChannels storeChannelsAccess$getStoreChannels$p = StoreMediaSettings.access$getStoreChannels$p(StoreMediaSettings.this);
-            Intrinsics3.checkNotNullExpressionValue(l, ModelAuditLogEntry.CHANGE_KEY_ID);
-            return storeChannelsAccess$getStoreChannels$p.observeChannel(l.longValue()).Y(new C01491(l));
+            m.checkNotNullExpressionValue(l, ModelAuditLogEntry.CHANGE_KEY_ID);
+            return storeChannelsAccess$getStoreChannels$p.observeChannel(l.longValue()).Y(new C02691(l));
         }
     }
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$init$2, reason: invalid class name */
-    public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
+    public static final /* synthetic */ class AnonymousClass2 extends d0.z.d.k implements Function1<Boolean, Unit> {
         public AnonymousClass2(StoreMediaSettings storeMediaSettings) {
             super(1, storeMediaSettings, StoreMediaSettings.class, "handleCanUseVad", "handleCanUseVad(Z)V", 0);
         }
@@ -575,10 +573,10 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$isSelfDeafened$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<VoiceConfiguration, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<VoiceConfiguration, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(VoiceConfiguration voiceConfiguration) {
             return call2(voiceConfiguration);
         }
@@ -591,10 +589,10 @@ public final class StoreMediaSettings extends Store {
 
     /* compiled from: StoreMediaSettings.kt */
     /* renamed from: com.discord.stores.StoreMediaSettings$isSelfMuted$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<VoiceConfiguration, Boolean> {
+    public static final class AnonymousClass1<T, R> implements b<VoiceConfiguration, Boolean> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(VoiceConfiguration voiceConfiguration) {
             return call2(voiceConfiguration);
         }
@@ -644,9 +642,9 @@ public final class StoreMediaSettings extends Store {
 
     public final Observable<MediaEngineConnection.InputMode> getInputMode() {
         Observable<R> observableG = this.voiceConfigurationSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…    .map { it.inputMode }");
+        m.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…    .map { it.inputMode }");
         Observable<MediaEngineConnection.InputMode> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -656,25 +654,25 @@ public final class StoreMediaSettings extends Store {
 
     public final Observable<Map<Long, Boolean>> getUsersMuted() {
         Observable<R> observableG = this.voiceConfigurationSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…   .map { it.mutedUsers }");
+        m.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…   .map { it.mutedUsers }");
         Observable<Map<Long, Boolean>> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<Map<Long, Boolean>> getUsersOffScreen() {
         Observable<R> observableG = this.voiceConfigurationSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…map { it.offScreenUsers }");
+        m.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…map { it.offScreenUsers }");
         Observable<Map<Long, Boolean>> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<Map<Long, Float>> getUsersVolume() {
         Observable<R> observableG = this.voiceConfigurationSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec… { it.userOutputVolumes }");
+        m.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec… { it.userOutputVolumes }");
         Observable<Map<Long, Float>> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -684,7 +682,7 @@ public final class StoreMediaSettings extends Store {
 
     public final Observable<VoiceConfiguration> getVoiceConfig() {
         Observable<VoiceConfiguration> observableR = ObservableExtensionsKt.computationLatest(this.voiceConfigurationSubject).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -696,7 +694,7 @@ public final class StoreMediaSettings extends Store {
         return this.voiceConfiguration;
     }
 
-    @Store3
+    @StoreThread
     public final void handleVoiceChannelSelected(long channelId) {
         Channel channelFindChannelByIdInternal$app_productionGoogleRelease = this.storeChannels.findChannelByIdInternal$app_productionGoogleRelease(channelId);
         if (channelFindChannelByIdInternal$app_productionGoogleRelease == null || !ChannelUtils.B(channelFindChannelByIdInternal$app_productionGoogleRelease)) {
@@ -708,23 +706,23 @@ public final class StoreMediaSettings extends Store {
     public final void init() {
         setVoiceConfiguration(this.voiceConfigurationCache.read());
         Observable<R> observableY = this.storeVoiceChannelSelected.observeSelectedVoiceChannelId().Y(new AnonymousClass1());
-        Intrinsics3.checkNotNullExpressionValue(observableY, "storeVoiceChannelSelecte…              }\n        }");
+        m.checkNotNullExpressionValue(observableY, "storeVoiceChannelSelecte…              }\n        }");
         ObservableExtensionsKt.appSubscribe$default(observableY, StoreMediaSettings.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass2(this), 62, (Object) null);
     }
 
     public final Observable<Boolean> isSelfDeafened() {
         Observable<R> observableG = this.voiceConfigurationSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…map { it.isSelfDeafened }");
+        m.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec…map { it.isSelfDeafened }");
         Observable<Boolean> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
     public final Observable<Boolean> isSelfMuted() {
         Observable<R> observableG = this.voiceConfigurationSubject.G(AnonymousClass1.INSTANCE);
-        Intrinsics3.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec….map { it.isSelfMuted() }");
+        m.checkNotNullExpressionValue(observableG, "voiceConfigurationSubjec….map { it.isSelfMuted() }");
         Observable<Boolean> observableR = ObservableExtensionsKt.computationLatest(observableG).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "voiceConfigurationSubjec…  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -737,7 +735,7 @@ public final class StoreMediaSettings extends Store {
     }
 
     public final synchronized void setNoiseProcessing(NoiseProcessing noiseProcessing) {
-        Intrinsics3.checkNotNullParameter(noiseProcessing, "noiseProcessing");
+        m.checkNotNullParameter(noiseProcessing, "noiseProcessing");
         if (noiseProcessing != this.voiceConfiguration.getNoiseProcessing()) {
             setVoiceConfiguration(VoiceConfiguration.copy$default(this.voiceConfiguration, false, false, false, null, false, false, noiseProcessing, 0.0f, null, 0.0f, null, null, null, false, false, 32703, null));
         }
@@ -788,14 +786,14 @@ public final class StoreMediaSettings extends Store {
     }
 
     public final synchronized void setVADUseKrisp(VadUseKrisp status) {
-        Intrinsics3.checkNotNullParameter(status, "status");
+        m.checkNotNullParameter(status, "status");
         if (status != this.voiceConfiguration.getVadUseKrisp()) {
             setVoiceConfiguration(VoiceConfiguration.copy$default(this.voiceConfiguration, false, false, false, status, false, false, null, 0.0f, null, 0.0f, null, null, null, false, false, 32759, null));
         }
     }
 
     public final synchronized void setVoiceInputMode(MediaEngineConnection.InputMode inputMode) {
-        Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
+        m.checkNotNullParameter(inputMode, "inputMode");
         setVoiceConfiguration(VoiceConfiguration.copy$default(this.voiceConfiguration, false, false, false, null, false, false, null, 0.0f, inputMode, 0.0f, null, null, null, false, false, 32511, null));
         updateForceMute();
     }
@@ -855,7 +853,7 @@ public final class StoreMediaSettings extends Store {
         if (bool == null) {
             bool = Boolean.FALSE;
         }
-        Intrinsics3.checkNotNullExpressionValue(bool, "get(userId) ?: false");
+        m.checkNotNullExpressionValue(bool, "get(userId) ?: false");
         map.put(Long.valueOf(userId), Boolean.valueOf(!bool.booleanValue()));
         setVoiceConfiguration(VoiceConfiguration.copy$default(voiceConfiguration, false, false, false, null, false, false, null, 0.0f, null, 0.0f, map, null, null, false, false, 31743, null));
     }
@@ -876,11 +874,11 @@ public final class StoreMediaSettings extends Store {
     }
 
     public StoreMediaSettings(StoreVoiceChannelSelected storeVoiceChannelSelected, StoreChannels storeChannels, StorePermissions storePermissions, VoiceConfigurationCache voiceConfigurationCache, AppSoundManager appSoundManager) {
-        Intrinsics3.checkNotNullParameter(storeVoiceChannelSelected, "storeVoiceChannelSelected");
-        Intrinsics3.checkNotNullParameter(storeChannels, "storeChannels");
-        Intrinsics3.checkNotNullParameter(storePermissions, "storePermissions");
-        Intrinsics3.checkNotNullParameter(voiceConfigurationCache, "voiceConfigurationCache");
-        Intrinsics3.checkNotNullParameter(appSoundManager, "appSoundManager");
+        m.checkNotNullParameter(storeVoiceChannelSelected, "storeVoiceChannelSelected");
+        m.checkNotNullParameter(storeChannels, "storeChannels");
+        m.checkNotNullParameter(storePermissions, "storePermissions");
+        m.checkNotNullParameter(voiceConfigurationCache, "voiceConfigurationCache");
+        m.checkNotNullParameter(appSoundManager, "appSoundManager");
         this.storeVoiceChannelSelected = storeVoiceChannelSelected;
         this.storeChannels = storeChannels;
         this.storePermissions = storePermissions;
@@ -893,7 +891,7 @@ public final class StoreMediaSettings extends Store {
     }
 
     public final synchronized void setVoiceConfiguration(NoiseProcessing noiseProcessing) {
-        Intrinsics3.checkNotNullParameter(noiseProcessing, "noiseProcessing");
+        m.checkNotNullParameter(noiseProcessing, "noiseProcessing");
         if (noiseProcessing != this.voiceConfiguration.getNoiseProcessing()) {
             setVoiceConfiguration(VoiceConfiguration.copy$default(this.voiceConfiguration, false, false, false, null, false, false, noiseProcessing, 0.0f, null, 0.0f, null, null, null, false, false, 32703, null));
         }

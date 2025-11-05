@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
 import java.util.List;
 
 /* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
@@ -64,7 +63,7 @@ public final class r {
             return b.i.a.f.e.p.b.a(this.a).a.getPackageManager().getPackageInfo(str, 0);
         } catch (PackageManager.NameNotFoundException e) {
             String strValueOf = String.valueOf(e);
-            outline.h0(strValueOf.length() + 23, "Failed to find package ", strValueOf, "Metadata");
+            b.d.b.a.a.h0(strValueOf.length() + 23, "Failed to find package ", strValueOf, "Metadata");
             return null;
         }
     }

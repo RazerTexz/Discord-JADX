@@ -1,0 +1,61 @@
+package com.discord.utilities.hubs;
+
+import android.content.Intent;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.fragment.app.FragmentManager;
+import com.discord.app.AppFragment;
+import com.discord.widgets.hubs.AddServerConfirmationArgs;
+import com.discord.widgets.hubs.DescriptionResult;
+import com.discord.widgets.hubs.WidgetHubAddServerConfirmationDialog;
+import d0.z.d.m;
+
+/* compiled from: HubUtils.kt */
+/* loaded from: classes2.dex */
+public final class HubUtilsKt {
+
+    /* compiled from: HubUtils.kt */
+    /* renamed from: com.discord.utilities.hubs.HubUtilsKt$getAddServerActivityResultHandler$1, reason: invalid class name */
+    public static final class AnonymousClass1<O> implements ActivityResultCallback<ActivityResult> {
+        public final /* synthetic */ AppFragment $this_getAddServerActivityResultHandler;
+
+        public AnonymousClass1(AppFragment appFragment) {
+            this.$this_getAddServerActivityResultHandler = appFragment;
+        }
+
+        /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+        public final void onActivityResult2(ActivityResult activityResult) {
+            Intent data;
+            if (activityResult == null || (data = activityResult.getData()) == null) {
+                return;
+            }
+            if (!(activityResult.getResultCode() == -1)) {
+                data = null;
+            }
+            if (data != null) {
+                m.checkNotNullParameter(data, "$this$getArgsFromIntent");
+                DescriptionResult descriptionResult = (DescriptionResult) data.getParcelableExtra("intent_args_key");
+                if (descriptionResult != null) {
+                    WidgetHubAddServerConfirmationDialog.Companion companion = WidgetHubAddServerConfirmationDialog.INSTANCE;
+                    FragmentManager parentFragmentManager = this.$this_getAddServerActivityResultHandler.getParentFragmentManager();
+                    m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
+                    companion.show(parentFragmentManager, new AddServerConfirmationArgs(descriptionResult.getGuildId(), descriptionResult.getHubName()));
+                }
+            }
+        }
+
+        @Override // androidx.activity.result.ActivityResultCallback
+        public /* bridge */ /* synthetic */ void onActivityResult(ActivityResult activityResult) {
+            onActivityResult2(activityResult);
+        }
+    }
+
+    public static final ActivityResultLauncher<Intent> getAddServerActivityResultHandler(AppFragment appFragment) {
+        m.checkNotNullParameter(appFragment, "$this$getAddServerActivityResultHandler");
+        ActivityResultLauncher<Intent> activityResultLauncherRegisterForActivityResult = appFragment.registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new AnonymousClass1(appFragment));
+        m.checkNotNullExpressionValue(activityResultLauncherRegisterForActivityResult, "registerForActivityResul…      )\n          }\n    }");
+        return activityResultLauncherRegisterForActivityResult;
+    }
+}

@@ -2,14 +2,14 @@ package com.discord.widgets.guildscheduledevent;
 
 import androidx.fragment.app.FragmentActivity;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
+import d0.z.d.m;
+import d0.z.d.o;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function3;
 
 /* compiled from: WidgetGuildScheduledEventSettings.kt */
 /* loaded from: classes2.dex */
-public final class WidgetGuildScheduledEventSettings$previewLauncher$1 extends Lambda implements Function3<Long, Long, Boolean, Unit> {
+public final class WidgetGuildScheduledEventSettings$previewLauncher$1 extends o implements Function3<Long, Long, Boolean, Unit> {
     public final /* synthetic */ WidgetGuildScheduledEventSettings this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -30,7 +30,7 @@ public final class WidgetGuildScheduledEventSettings$previewLauncher$1 extends L
             activity.setResult(-1);
             if (z2) {
                 WidgetGuildScheduledEventCreateSuccess.Companion companion = WidgetGuildScheduledEventCreateSuccess.INSTANCE;
-                Intrinsics3.checkNotNullExpressionValue(activity, "this");
+                m.checkNotNullExpressionValue(activity, "this");
                 companion.launch(activity, l, WidgetGuildScheduledEventSettings.access$getGuildId$p(this.this$0), j);
             }
             activity.finish();

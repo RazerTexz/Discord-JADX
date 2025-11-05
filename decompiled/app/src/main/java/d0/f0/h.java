@@ -1,7 +1,5 @@
 package d0.f0;
 
-import d0.z.d.Intrinsics3;
-import d0.z.d.g0.KMarkers;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import kotlin.jvm.functions.Function1;
@@ -17,7 +15,7 @@ public final class h<T, R, E> implements Sequence<E> {
     public final Function1<R, Iterator<E>> c;
 
     /* compiled from: Sequences.kt */
-    public static final class a implements Iterator<E>, KMarkers {
+    public static final class a implements Iterator<E>, d0.z.d.g0.a {
         public final Iterator<T> j;
         public Iterator<? extends E> k;
 
@@ -57,7 +55,7 @@ public final class h<T, R, E> implements Sequence<E> {
                 throw new NoSuchElementException();
             }
             Iterator<? extends E> it = this.k;
-            Intrinsics3.checkNotNull(it);
+            d0.z.d.m.checkNotNull(it);
             return it.next();
         }
 
@@ -69,9 +67,9 @@ public final class h<T, R, E> implements Sequence<E> {
 
     /* JADX WARN: Multi-variable type inference failed */
     public h(Sequence<? extends T> sequence, Function1<? super T, ? extends R> function1, Function1<? super R, ? extends Iterator<? extends E>> function12) {
-        Intrinsics3.checkNotNullParameter(sequence, "sequence");
-        Intrinsics3.checkNotNullParameter(function1, "transformer");
-        Intrinsics3.checkNotNullParameter(function12, "iterator");
+        d0.z.d.m.checkNotNullParameter(sequence, "sequence");
+        d0.z.d.m.checkNotNullParameter(function1, "transformer");
+        d0.z.d.m.checkNotNullParameter(function12, "iterator");
         this.a = sequence;
         this.f3572b = function1;
         this.c = function12;

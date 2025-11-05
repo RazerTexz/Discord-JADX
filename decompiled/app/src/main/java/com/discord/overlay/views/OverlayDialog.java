@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.util.Log;
 import android.view.WindowManager;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: OverlayDialog.kt */
 /* loaded from: classes.dex */
@@ -12,13 +12,13 @@ public class OverlayDialog extends OverlayBubbleWrap {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OverlayDialog(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         WindowManager.LayoutParams windowLayoutParams = getWindowLayoutParams();
         windowLayoutParams.width = -1;
         windowLayoutParams.height = -1;
         windowLayoutParams.x = 0;
         windowLayoutParams.y = 0;
-        Intrinsics3.checkNotNullParameter(windowLayoutParams, "$this$addFlag");
+        m.checkNotNullParameter(windowLayoutParams, "$this$addFlag");
         windowLayoutParams.flags |= 2;
         windowLayoutParams.dimAmount = 0.5f;
         setStateListAnimator(null);

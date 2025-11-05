@@ -4,7 +4,7 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.pm.PackageManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import b.d.b.a.outline;
+import b.d.b.a.a;
 
 /* loaded from: classes.dex */
 public final class AccessibilityServiceInfoCompat {
@@ -30,7 +30,7 @@ public final class AccessibilityServiceInfoCompat {
 
     @NonNull
     public static String feedbackTypeToString(int i) {
-        StringBuilder sbU = outline.U("[");
+        StringBuilder sbU = a.U("[");
         while (i > 0) {
             int iNumberOfTrailingZeros = 1 << Integer.numberOfTrailingZeros(i);
             i &= ~iNumberOfTrailingZeros;

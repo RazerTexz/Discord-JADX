@@ -1,6 +1,6 @@
 package org.webrtc;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import java.nio.ByteBuffer;
 
 /* loaded from: classes3.dex */
@@ -15,7 +15,7 @@ public class YuvHelper {
         int i8 = ((i5 + 1) / 2) * i6;
         int i9 = (i8 * 2) + i7;
         if (byteBuffer4.capacity() < i9) {
-            StringBuilder sbV = outline.V("Expected destination buffer capacity to be at least ", i9, " was ");
+            StringBuilder sbV = a.V("Expected destination buffer capacity to be at least ", i9, " was ");
             sbV.append(byteBuffer4.capacity());
             throw new IllegalArgumentException(sbV.toString());
         }
@@ -37,7 +37,7 @@ public class YuvHelper {
         int i13 = i10 * i11;
         int i14 = (i13 * 2) + i12;
         if (byteBuffer4.capacity() < i14) {
-            StringBuilder sbV = outline.V("Expected destination buffer capacity to be at least ", i14, " was ");
+            StringBuilder sbV = a.V("Expected destination buffer capacity to be at least ", i14, " was ");
             sbV.append(byteBuffer4.capacity());
             throw new IllegalArgumentException(sbV.toString());
         }
@@ -54,7 +54,7 @@ public class YuvHelper {
         int i7 = i4 * i5;
         int i8 = (((i5 + 1) / 2) * i6 * 2) + i7;
         if (byteBuffer4.capacity() < i8) {
-            StringBuilder sbV = outline.V("Expected destination buffer capacity to be at least ", i8, " was ");
+            StringBuilder sbV = a.V("Expected destination buffer capacity to be at least ", i8, " was ");
             sbV.append(byteBuffer4.capacity());
             throw new IllegalArgumentException(sbV.toString());
         }

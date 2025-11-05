@@ -1,7 +1,5 @@
 package b.i.a.f.h.l;
 
-import b.d.b.a.outline;
-
 /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
 /* loaded from: classes3.dex */
 public final class y3 extends z3 {
@@ -22,9 +20,9 @@ public final class y3 extends z3 {
             return this.zzb[this.zzc + i];
         }
         if (i < 0) {
-            throw new ArrayIndexOutOfBoundsException(outline.g(22, "Index < 0: ", i));
+            throw new ArrayIndexOutOfBoundsException(b.d.b.a.a.g(22, "Index < 0: ", i));
         }
-        throw new ArrayIndexOutOfBoundsException(outline.h(40, "Index > length: ", i, ", ", i2));
+        throw new ArrayIndexOutOfBoundsException(b.d.b.a.a.h(40, "Index > length: ", i, ", ", i2));
     }
 
     @Override // b.i.a.f.h.l.z3, b.i.a.f.h.l.t3

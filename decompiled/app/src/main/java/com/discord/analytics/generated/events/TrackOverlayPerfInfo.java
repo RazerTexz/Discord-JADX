@@ -1,16 +1,16 @@
 package com.discord.analytics.generated.events;
 
-import b.d.b.a.outline;
+import b.d.b.a.a;
 import com.discord.analytics.generated.traits.TrackBase;
-import com.discord.analytics.generated.traits.TrackBase2;
+import com.discord.analytics.generated.traits.TrackBaseReceiver;
 import com.discord.analytics.generated.traits.TrackOverlayClientMetadata;
-import com.discord.analytics.generated.traits.TrackOverlayClientMetadata2;
+import com.discord.analytics.generated.traits.TrackOverlayClientMetadataReceiver;
 import com.discord.api.science.AnalyticsSchema;
-import d0.z.d.Intrinsics3;
+import d0.z.d.m;
 
 /* compiled from: TrackOverlayPerfInfo.kt */
 /* loaded from: classes.dex */
-public final /* data */ class TrackOverlayPerfInfo implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
+public final /* data */ class TrackOverlayPerfInfo implements AnalyticsSchema, TrackBaseReceiver, TrackOverlayClientMetadataReceiver {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
     private final Long width = null;
@@ -48,7 +48,7 @@ public final /* data */ class TrackOverlayPerfInfo implements AnalyticsSchema, T
             return false;
         }
         TrackOverlayPerfInfo trackOverlayPerfInfo = (TrackOverlayPerfInfo) other;
-        return Intrinsics3.areEqual(this.width, trackOverlayPerfInfo.width) && Intrinsics3.areEqual(this.height, trackOverlayPerfInfo.height) && Intrinsics3.areEqual(this.apiName, trackOverlayPerfInfo.apiName) && Intrinsics3.areEqual(this.fullscreen, trackOverlayPerfInfo.fullscreen) && Intrinsics3.areEqual(this.frameBufferSource, trackOverlayPerfInfo.frameBufferSource) && Intrinsics3.areEqual(this.durationUs, trackOverlayPerfInfo.durationUs) && Intrinsics3.areEqual(this.frameCount, trackOverlayPerfInfo.frameCount) && Intrinsics3.areEqual(this.framesReceived, trackOverlayPerfInfo.framesReceived) && Intrinsics3.areEqual(this.framesCaptured, trackOverlayPerfInfo.framesCaptured) && Intrinsics3.areEqual(this.lockFailures, trackOverlayPerfInfo.lockFailures) && Intrinsics3.areEqual(this.frameTimeMinUs, trackOverlayPerfInfo.frameTimeMinUs) && Intrinsics3.areEqual(this.frameTimeMaxUs, trackOverlayPerfInfo.frameTimeMaxUs) && Intrinsics3.areEqual(this.frameTimeAvgUs, trackOverlayPerfInfo.frameTimeAvgUs) && Intrinsics3.areEqual(this.drawTimeMinUs, trackOverlayPerfInfo.drawTimeMinUs) && Intrinsics3.areEqual(this.drawTimeMaxUs, trackOverlayPerfInfo.drawTimeMaxUs) && Intrinsics3.areEqual(this.drawTimeAvgUs, trackOverlayPerfInfo.drawTimeAvgUs) && Intrinsics3.areEqual(this.captureTimeMinUs, trackOverlayPerfInfo.captureTimeMinUs) && Intrinsics3.areEqual(this.captureTimeMaxUs, trackOverlayPerfInfo.captureTimeMaxUs) && Intrinsics3.areEqual(this.captureTimeAvgUs, trackOverlayPerfInfo.captureTimeAvgUs);
+        return m.areEqual(this.width, trackOverlayPerfInfo.width) && m.areEqual(this.height, trackOverlayPerfInfo.height) && m.areEqual(this.apiName, trackOverlayPerfInfo.apiName) && m.areEqual(this.fullscreen, trackOverlayPerfInfo.fullscreen) && m.areEqual(this.frameBufferSource, trackOverlayPerfInfo.frameBufferSource) && m.areEqual(this.durationUs, trackOverlayPerfInfo.durationUs) && m.areEqual(this.frameCount, trackOverlayPerfInfo.frameCount) && m.areEqual(this.framesReceived, trackOverlayPerfInfo.framesReceived) && m.areEqual(this.framesCaptured, trackOverlayPerfInfo.framesCaptured) && m.areEqual(this.lockFailures, trackOverlayPerfInfo.lockFailures) && m.areEqual(this.frameTimeMinUs, trackOverlayPerfInfo.frameTimeMinUs) && m.areEqual(this.frameTimeMaxUs, trackOverlayPerfInfo.frameTimeMaxUs) && m.areEqual(this.frameTimeAvgUs, trackOverlayPerfInfo.frameTimeAvgUs) && m.areEqual(this.drawTimeMinUs, trackOverlayPerfInfo.drawTimeMinUs) && m.areEqual(this.drawTimeMaxUs, trackOverlayPerfInfo.drawTimeMaxUs) && m.areEqual(this.drawTimeAvgUs, trackOverlayPerfInfo.drawTimeAvgUs) && m.areEqual(this.captureTimeMinUs, trackOverlayPerfInfo.captureTimeMinUs) && m.areEqual(this.captureTimeMaxUs, trackOverlayPerfInfo.captureTimeMaxUs) && m.areEqual(this.captureTimeAvgUs, trackOverlayPerfInfo.captureTimeAvgUs);
     }
 
     public int hashCode() {
@@ -93,7 +93,7 @@ public final /* data */ class TrackOverlayPerfInfo implements AnalyticsSchema, T
     }
 
     public String toString() {
-        StringBuilder sbU = outline.U("TrackOverlayPerfInfo(width=");
+        StringBuilder sbU = a.U("TrackOverlayPerfInfo(width=");
         sbU.append(this.width);
         sbU.append(", height=");
         sbU.append(this.height);
@@ -130,6 +130,6 @@ public final /* data */ class TrackOverlayPerfInfo implements AnalyticsSchema, T
         sbU.append(", captureTimeMaxUs=");
         sbU.append(this.captureTimeMaxUs);
         sbU.append(", captureTimeAvgUs=");
-        return outline.G(sbU, this.captureTimeAvgUs, ")");
+        return a.G(sbU, this.captureTimeAvgUs, ")");
     }
 }

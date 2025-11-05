@@ -1,6 +1,5 @@
 package b.i.a.f.h.l;
 
-import b.d.b.a.outline;
 import java.io.Serializable;
 import java.util.Arrays;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
@@ -34,6 +33,6 @@ public final class b3<T> implements z2<T>, Serializable {
 
     public final String toString() {
         String strValueOf = String.valueOf(this.zza);
-        return outline.k(strValueOf.length() + 22, "Suppliers.ofInstance(", strValueOf, ")");
+        return b.d.b.a.a.k(strValueOf.length() + 22, "Suppliers.ofInstance(", strValueOf, ")");
     }
 }

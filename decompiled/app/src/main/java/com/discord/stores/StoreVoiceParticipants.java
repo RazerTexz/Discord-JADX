@@ -2,8 +2,8 @@ package com.discord.stores;
 
 import android.content.Context;
 import androidx.core.app.NotificationCompat;
-import b.c.a.a0.AnimatableValueParser;
-import b.d.b.a.outline;
+import b.c.a.a0.d;
+import b.d.b.a.a;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
 import com.discord.api.stageinstance.StageInstance;
@@ -21,15 +21,13 @@ import com.discord.stores.StoreVideoStreams;
 import com.discord.utilities.rx.ObservableExtensionsKt;
 import com.discord.utilities.streams.StreamContext;
 import com.discord.utilities.streams.StreamContextService;
-import d0.Tuples;
-import d0.t.Collections2;
-import d0.t.Iterables2;
-import d0.t.Maps6;
-import d0.t._Collections;
-import d0.z.d.Intrinsics3;
-import d0.z.d.Lambda;
-import j0.k.Func1;
-import j0.l.e.ScalarSynchronousObservable;
+import d0.o;
+import d0.t.h0;
+import d0.t.n;
+import d0.t.u;
+import d0.z.d.m;
+import j0.k.b;
+import j0.l.e.k;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -38,7 +36,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import kotlin.Tuples2;
+import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -90,7 +88,7 @@ public final class StoreVoiceParticipants extends Store {
         public VoiceUser(User user, VoiceState voiceState, boolean z2, StoreVideoStreams.UserStreams userStreams, boolean z3, GuildMember guildMember, String str, StreamContext streamContext, boolean z4, StoreMediaSettings.VoiceConfiguration voiceConfiguration, boolean z5) {
             boolean selfMute;
             boolean selfDeaf;
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             this.user = user;
             this.voiceState = voiceState;
             this.isRinging = z2;
@@ -125,8 +123,8 @@ public final class StoreVoiceParticipants extends Store {
             }
             this.isSelfDeafened = selfDeaf;
             this.isDeafened = deaf || selfDeaf;
-            this.isRequestingToSpeak = AnimatableValueParser.y0(voiceState).getIsRequestingToSpeak();
-            this.isInvitedToSpeak = AnimatableValueParser.y0(voiceState) == StageRequestToSpeakState.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+            this.isRequestingToSpeak = d.y0(voiceState).getIsRequestingToSpeak();
+            this.isInvitedToSpeak = d.y0(voiceState) == StageRequestToSpeakState.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         }
 
         /* renamed from: component10, reason: from getter */
@@ -189,7 +187,7 @@ public final class StoreVoiceParticipants extends Store {
         }
 
         public final VoiceUser copy(User user, VoiceState voiceState, boolean isRinging, StoreVideoStreams.UserStreams streams, boolean isMe, GuildMember guildMember, String watchingStream, StreamContext streamContext, boolean isBooster, StoreMediaSettings.VoiceConfiguration voiceConfiguration, boolean _isSpeaking) {
-            Intrinsics3.checkNotNullParameter(user, "user");
+            m.checkNotNullParameter(user, "user");
             return new VoiceUser(user, voiceState, isRinging, streams, isMe, guildMember, watchingStream, streamContext, isBooster, voiceConfiguration, _isSpeaking);
         }
 
@@ -201,7 +199,7 @@ public final class StoreVoiceParticipants extends Store {
                 return false;
             }
             VoiceUser voiceUser = (VoiceUser) other;
-            return Intrinsics3.areEqual(this.user, voiceUser.user) && Intrinsics3.areEqual(this.voiceState, voiceUser.voiceState) && this.isRinging == voiceUser.isRinging && Intrinsics3.areEqual(this.streams, voiceUser.streams) && this.isMe == voiceUser.isMe && Intrinsics3.areEqual(this.guildMember, voiceUser.guildMember) && Intrinsics3.areEqual(this.watchingStream, voiceUser.watchingStream) && Intrinsics3.areEqual(this.streamContext, voiceUser.streamContext) && this.isBooster == voiceUser.isBooster && Intrinsics3.areEqual(this.voiceConfiguration, voiceUser.voiceConfiguration) && this._isSpeaking == voiceUser._isSpeaking;
+            return m.areEqual(this.user, voiceUser.user) && m.areEqual(this.voiceState, voiceUser.voiceState) && this.isRinging == voiceUser.isRinging && m.areEqual(this.streams, voiceUser.streams) && this.isMe == voiceUser.isMe && m.areEqual(this.guildMember, voiceUser.guildMember) && m.areEqual(this.watchingStream, voiceUser.watchingStream) && m.areEqual(this.streamContext, voiceUser.streamContext) && this.isBooster == voiceUser.isBooster && m.areEqual(this.voiceConfiguration, voiceUser.voiceConfiguration) && this._isSpeaking == voiceUser._isSpeaking;
         }
 
         public final ModelApplicationStream getApplicationStream() {
@@ -329,7 +327,7 @@ public final class StoreVoiceParticipants extends Store {
         }
 
         public String toString() {
-            StringBuilder sbU = outline.U("VoiceUser(user=");
+            StringBuilder sbU = a.U("VoiceUser(user=");
             sbU.append(this.user);
             sbU.append(", voiceState=");
             sbU.append(this.voiceState);
@@ -350,48 +348,48 @@ public final class StoreVoiceParticipants extends Store {
             sbU.append(", voiceConfiguration=");
             sbU.append(this.voiceConfiguration);
             sbU.append(", _isSpeaking=");
-            return outline.O(sbU, this._isSpeaking, ")");
+            return a.O(sbU, this._isSpeaking, ")");
         }
     }
 
     /* compiled from: StoreVoiceParticipants.kt */
     /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Channel, Observable<? extends Map<Long, ? extends VoiceUser>>> {
+    public static final class AnonymousClass1<T, R> implements b<Channel, Observable<? extends Map<Long, ? extends VoiceUser>>> {
         public final /* synthetic */ long $channelId;
 
         /* compiled from: StoreVoiceParticipants.kt */
         /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01941<T, R> implements Func1<Map<Long, ? extends VoiceState>, Observable<? extends Map<Long, ? extends VoiceUser>>> {
+        public static final class C03141<T, R> implements b<Map<Long, ? extends VoiceState>, Observable<? extends Map<Long, ? extends VoiceUser>>> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ long $guildId;
 
             /* compiled from: StoreVoiceParticipants.kt */
             /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01951<T1, T2, R> implements Func2<MeUser, Collection<? extends User>, Tuples2<? extends MeUser, ? extends Collection<? extends User>>> {
-                public static final C01951 INSTANCE = new C01951();
+            public static final class C03151<T1, T2, R> implements Func2<MeUser, Collection<? extends User>, Pair<? extends MeUser, ? extends Collection<? extends User>>> {
+                public static final C03151 INSTANCE = new C03151();
 
                 @Override // rx.functions.Func2
-                public /* bridge */ /* synthetic */ Tuples2<? extends MeUser, ? extends Collection<? extends User>> call(MeUser meUser, Collection<? extends User> collection) {
+                public /* bridge */ /* synthetic */ Pair<? extends MeUser, ? extends Collection<? extends User>> call(MeUser meUser, Collection<? extends User> collection) {
                     return call2(meUser, collection);
                 }
 
                 /* renamed from: call, reason: avoid collision after fix types in other method */
-                public final Tuples2<MeUser, Collection<User>> call2(MeUser meUser, Collection<? extends User> collection) {
-                    return Tuples.to(meUser, collection);
+                public final Pair<MeUser, Collection<User>> call2(MeUser meUser, Collection<? extends User> collection) {
+                    return o.to(meUser, collection);
                 }
             }
 
             /* compiled from: StoreVoiceParticipants.kt */
             /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2, reason: invalid class name */
-            public static final class AnonymousClass2<T, R> implements Func1<Tuples2<? extends MeUser, ? extends Collection<? extends User>>, Observable<? extends Map<Long, ? extends VoiceUser>>> {
+            public static final class AnonymousClass2<T, R> implements b<Pair<? extends MeUser, ? extends Collection<? extends User>>, Observable<? extends Map<Long, ? extends VoiceUser>>> {
                 public final /* synthetic */ Map $voiceStates;
 
                 /* compiled from: StoreVoiceParticipants.kt */
                 /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2$1, reason: invalid class name and collision with other inner class name */
-                public static final class C01961<T, R> implements Func1<ModelCall, List<? extends Long>> {
-                    public static final C01961 INSTANCE = new C01961();
+                public static final class C03161<T, R> implements b<ModelCall, List<? extends Long>> {
+                    public static final C03161 INSTANCE = new C03161();
 
-                    @Override // j0.k.Func1
+                    @Override // j0.k.b
                     public /* bridge */ /* synthetic */ List<? extends Long> call(ModelCall modelCall) {
                         return call2(modelCall);
                     }
@@ -399,17 +397,17 @@ public final class StoreVoiceParticipants extends Store {
                     /* renamed from: call, reason: avoid collision after fix types in other method */
                     public final List<Long> call2(ModelCall modelCall) {
                         List<Long> ringing;
-                        return (modelCall == null || (ringing = modelCall.getRinging()) == null) ? Collections2.emptyList() : ringing;
+                        return (modelCall == null || (ringing = modelCall.getRinging()) == null) ? n.emptyList() : ringing;
                     }
                 }
 
                 /* compiled from: StoreVoiceParticipants.kt */
                 /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2$2, reason: invalid class name and collision with other inner class name */
-                public static final class C01972<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Set<? extends Long>, List<? extends Long>, Map<Long, ? extends StoreVideoStreams.UserStreams>, Map<Long, ? extends GuildMember>, Map<String, ? extends List<? extends Long>>, StoreMediaSettings.VoiceConfiguration, Map<Long, ? extends StreamContext>, Map<Long, ? extends VoiceUser>> {
+                public static final class C03172<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Set<? extends Long>, List<? extends Long>, Map<Long, ? extends StoreVideoStreams.UserStreams>, Map<Long, ? extends GuildMember>, Map<String, ? extends List<? extends Long>>, StoreMediaSettings.VoiceConfiguration, Map<Long, ? extends StreamContext>, Map<Long, ? extends VoiceUser>> {
                     public final /* synthetic */ MeUser $meUser;
                     public final /* synthetic */ Collection $otherUsers;
 
-                    public C01972(MeUser meUser, Collection collection) {
+                    public C03172(MeUser meUser, Collection collection) {
                         this.$meUser = meUser;
                         this.$otherUsers = collection;
                     }
@@ -423,18 +421,18 @@ public final class StoreVoiceParticipants extends Store {
                     public final Map<Long, VoiceUser> call2(Set<Long> set, List<Long> list, Map<Long, StoreVideoStreams.UserStreams> map, Map<Long, GuildMember> map2, Map<String, ? extends List<Long>> map3, StoreMediaSettings.VoiceConfiguration voiceConfiguration, Map<Long, StreamContext> map4) {
                         StoreVoiceParticipants storeVoiceParticipants = StoreVoiceParticipants.this;
                         MeUser meUser = this.$meUser;
-                        Intrinsics3.checkNotNullExpressionValue(meUser, "meUser");
+                        m.checkNotNullExpressionValue(meUser, "meUser");
                         Collection collection = this.$otherUsers;
-                        Intrinsics3.checkNotNullExpressionValue(collection, "otherUsers");
+                        m.checkNotNullExpressionValue(collection, "otherUsers");
                         Map map5 = AnonymousClass2.this.$voiceStates;
-                        Intrinsics3.checkNotNullExpressionValue(map5, "voiceStates");
-                        Intrinsics3.checkNotNullExpressionValue(set, "speakingUsers");
-                        Intrinsics3.checkNotNullExpressionValue(list, "ringingUsers");
-                        Intrinsics3.checkNotNullExpressionValue(map, "videoStreams");
-                        Intrinsics3.checkNotNullExpressionValue(map2, "guildMembers");
-                        Intrinsics3.checkNotNullExpressionValue(map3, "streamSpectators");
-                        Intrinsics3.checkNotNullExpressionValue(voiceConfiguration, "voiceConfig");
-                        Intrinsics3.checkNotNullExpressionValue(map4, "streamContexts");
+                        m.checkNotNullExpressionValue(map5, "voiceStates");
+                        m.checkNotNullExpressionValue(set, "speakingUsers");
+                        m.checkNotNullExpressionValue(list, "ringingUsers");
+                        m.checkNotNullExpressionValue(map, "videoStreams");
+                        m.checkNotNullExpressionValue(map2, "guildMembers");
+                        m.checkNotNullExpressionValue(map3, "streamSpectators");
+                        m.checkNotNullExpressionValue(voiceConfiguration, "voiceConfig");
+                        m.checkNotNullExpressionValue(map4, "streamContexts");
                         return StoreVoiceParticipants.access$create(storeVoiceParticipants, meUser, collection, map5, set, list, map, map2, map3, voiceConfiguration, map4);
                     }
                 }
@@ -443,31 +441,31 @@ public final class StoreVoiceParticipants extends Store {
                     this.$voiceStates = map;
                 }
 
-                @Override // j0.k.Func1
-                public /* bridge */ /* synthetic */ Observable<? extends Map<Long, ? extends VoiceUser>> call(Tuples2<? extends MeUser, ? extends Collection<? extends User>> tuples2) {
-                    return call2((Tuples2<MeUser, ? extends Collection<? extends User>>) tuples2);
+                @Override // j0.k.b
+                public /* bridge */ /* synthetic */ Observable<? extends Map<Long, ? extends VoiceUser>> call(Pair<? extends MeUser, ? extends Collection<? extends User>> pair) {
+                    return call2((Pair<MeUser, ? extends Collection<? extends User>>) pair);
                 }
 
                 /* renamed from: call, reason: avoid collision after fix types in other method */
-                public final Observable<? extends Map<Long, VoiceUser>> call2(Tuples2<MeUser, ? extends Collection<? extends User>> tuples2) {
-                    MeUser meUserComponent1 = tuples2.component1();
-                    Collection<? extends User> collectionComponent2 = tuples2.component2();
-                    Intrinsics3.checkNotNullExpressionValue(collectionComponent2, "otherUsers");
-                    ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(collectionComponent2, 10));
+                public final Observable<? extends Map<Long, VoiceUser>> call2(Pair<MeUser, ? extends Collection<? extends User>> pair) {
+                    MeUser meUserComponent1 = pair.component1();
+                    Collection<? extends User> collectionComponent2 = pair.component2();
+                    m.checkNotNullExpressionValue(collectionComponent2, "otherUsers");
+                    ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(collectionComponent2, 10));
                     Iterator<T> it = collectionComponent2.iterator();
                     while (it.hasNext()) {
                         arrayList.add(Long.valueOf(((User) it.next()).getId()));
                     }
-                    return Observable.e(ObservableExtensionsKt.leadingEdgeThrottle(StoreVoiceParticipants.this.getStream().getVoiceSpeaking().observeSpeakingUsers(), 250L, TimeUnit.MILLISECONDS), StoreVoiceParticipants.this.getStream().getCalls().get(AnonymousClass1.this.$channelId).G(C01961.INSTANCE), StoreVoiceParticipants.this.getStream().getVideoStreams().observeUserStreams(), ObservableExtensionsKt.leadingEdgeThrottle(StoreVoiceParticipants.this.getStream().getGuilds().observeComputed(C01941.this.$guildId), 1L, TimeUnit.SECONDS), StoreVoiceParticipants.this.getStream().getApplicationStreaming().observeStreamSpectators(), StoreVoiceParticipants.this.getStream().getMediaSettings().getVoiceConfig(), StoreVoiceParticipants.access$getStreamContextsForUsers(StoreVoiceParticipants.this, _Collections.plus((Collection<? extends Long>) arrayList, Long.valueOf(meUserComponent1.getId()))), new C01972(meUserComponent1, collectionComponent2));
+                    return Observable.e(ObservableExtensionsKt.leadingEdgeThrottle(StoreVoiceParticipants.this.getStream().getVoiceSpeaking().observeSpeakingUsers(), 250L, TimeUnit.MILLISECONDS), StoreVoiceParticipants.this.getStream().getCalls().get(AnonymousClass1.this.$channelId).G(C03161.INSTANCE), StoreVoiceParticipants.this.getStream().getVideoStreams().observeUserStreams(), ObservableExtensionsKt.leadingEdgeThrottle(StoreVoiceParticipants.this.getStream().getGuilds().observeComputed(C03141.this.$guildId), 1L, TimeUnit.SECONDS), StoreVoiceParticipants.this.getStream().getApplicationStreaming().observeStreamSpectators(), StoreVoiceParticipants.this.getStream().getMediaSettings().getVoiceConfig(), StoreVoiceParticipants.access$getStreamContextsForUsers(StoreVoiceParticipants.this, u.plus((Collection<? extends Long>) arrayList, Long.valueOf(meUserComponent1.getId()))), new C03172(meUserComponent1, collectionComponent2));
                 }
             }
 
-            public C01941(Channel channel, long j) {
+            public C03141(Channel channel, long j) {
                 this.$channel = channel;
                 this.$guildId = j;
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends Map<Long, ? extends VoiceUser>> call(Map<Long, ? extends VoiceState> map) {
                 return call2((Map<Long, VoiceState>) map);
             }
@@ -477,8 +475,8 @@ public final class StoreVoiceParticipants extends Store {
                 Observable observableObserveMe$default = StoreUser.observeMe$default(StoreVoiceParticipants.this.getStream().getUsers(), false, 1, null);
                 StoreVoiceParticipants storeVoiceParticipants = StoreVoiceParticipants.this;
                 Channel channel = this.$channel;
-                Intrinsics3.checkNotNullExpressionValue(map, "voiceStates");
-                return Observable.j(observableObserveMe$default, StoreVoiceParticipants.access$getOtherVoiceUsers(storeVoiceParticipants, channel, map), C01951.INSTANCE).Y(new AnonymousClass2(map));
+                m.checkNotNullExpressionValue(map, "voiceStates");
+                return Observable.j(observableObserveMe$default, StoreVoiceParticipants.access$getOtherVoiceUsers(storeVoiceParticipants, channel, map), C03151.INSTANCE).Y(new AnonymousClass2(map));
             }
         }
 
@@ -486,7 +484,7 @@ public final class StoreVoiceParticipants extends Store {
             this.$channelId = j;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Map<Long, ? extends VoiceUser>> call(Channel channel) {
             return call2(channel);
         }
@@ -494,25 +492,25 @@ public final class StoreVoiceParticipants extends Store {
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, VoiceUser>> call2(Channel channel) {
             if (channel == null) {
-                return new ScalarSynchronousObservable(Maps6.emptyMap());
+                return new k(h0.emptyMap());
             }
             long guildId = ChannelUtils.B(channel) ? 0L : channel.getGuildId();
-            return StoreVoiceParticipants.this.getStream().getVoiceStates().observe(guildId, channel.getId()).Y(new C01941(channel, guildId));
+            return StoreVoiceParticipants.this.getStream().getVoiceStates().observe(guildId, channel.getId()).Y(new C03141(channel, guildId));
         }
     }
 
     /* compiled from: StoreVoiceParticipants.kt */
     /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1, reason: invalid class name */
-    public static final class AnonymousClass1<T, R> implements Func1<Long, Observable<? extends Collection<? extends User>>> {
+    public static final class AnonymousClass1<T, R> implements b<Long, Observable<? extends Collection<? extends User>>> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Map $voiceStates;
 
         /* compiled from: StoreVoiceParticipants.kt */
         /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$1, reason: invalid class name and collision with other inner class name */
-        public static final class C01981<T, R> implements Func1<Map<Long, ? extends GuildMember>, Set<? extends Long>> {
-            public static final C01981 INSTANCE = new C01981();
+        public static final class C03181<T, R> implements b<Map<Long, ? extends GuildMember>, Set<? extends Long>> {
+            public static final C03181 INSTANCE = new C03181();
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Set<? extends Long> call(Map<Long, ? extends GuildMember> map) {
                 return call2((Map<Long, GuildMember>) map);
             }
@@ -525,21 +523,21 @@ public final class StoreVoiceParticipants extends Store {
 
         /* compiled from: StoreVoiceParticipants.kt */
         /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$2, reason: invalid class name */
-        public static final class AnonymousClass2<T, R> implements Func1<Set<? extends Long>, List<? extends Long>> {
+        public static final class AnonymousClass2<T, R> implements b<Set<? extends Long>, List<? extends Long>> {
             public final /* synthetic */ Long $meId;
 
             public AnonymousClass2(Long l) {
                 this.$meId = l;
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ List<? extends Long> call(Set<? extends Long> set) {
                 return call2((Set<Long>) set);
             }
 
             /* renamed from: call, reason: avoid collision after fix types in other method */
             public final List<Long> call2(Set<Long> set) {
-                Intrinsics3.checkNotNullExpressionValue(set, "memberIds");
+                m.checkNotNullExpressionValue(set, "memberIds");
                 ArrayList arrayList = new ArrayList();
                 for (T t : set) {
                     long jLongValue = ((Number) t).longValue();
@@ -554,12 +552,12 @@ public final class StoreVoiceParticipants extends Store {
 
         /* compiled from: StoreVoiceParticipants.kt */
         /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3, reason: invalid class name */
-        public static final class AnonymousClass3<T, R> implements Func1<List<? extends Long>, Observable<? extends Collection<? extends User>>> {
+        public static final class AnonymousClass3<T, R> implements b<List<? extends Long>, Observable<? extends Collection<? extends User>>> {
 
             /* compiled from: StoreVoiceParticipants.kt */
             /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3$1, reason: invalid class name and collision with other inner class name */
-            public static final class C01991<T> implements Action1<Map<Long, ? extends User>> {
-                public C01991() {
+            public static final class C03191<T> implements Action1<Map<Long, ? extends User>> {
+                public C03191() {
                 }
 
                 @Override // rx.functions.Action1
@@ -576,7 +574,7 @@ public final class StoreVoiceParticipants extends Store {
                         Iterator it = AnonymousClass1.this.$voiceStates.keySet().iterator();
                         while (it.hasNext()) {
                             long jLongValue = ((Number) it.next()).longValue();
-                            Intrinsics3.checkNotNullExpressionValue(map, "otherUsers");
+                            m.checkNotNullExpressionValue(map, "otherUsers");
                             if (!map.containsKey(Long.valueOf(jLongValue))) {
                                 guildMemberRequester.queueRequest(AnonymousClass1.this.$channel.getGuildId(), jLongValue);
                             }
@@ -588,10 +586,10 @@ public final class StoreVoiceParticipants extends Store {
 
             /* compiled from: StoreVoiceParticipants.kt */
             /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3$2, reason: invalid class name */
-            public static final class AnonymousClass2<T, R> implements Func1<Map<Long, ? extends User>, Collection<? extends User>> {
+            public static final class AnonymousClass2<T, R> implements b<Map<Long, ? extends User>, Collection<? extends User>> {
                 public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-                @Override // j0.k.Func1
+                @Override // j0.k.b
                 public /* bridge */ /* synthetic */ Collection<? extends User> call(Map<Long, ? extends User> map) {
                     return call2(map);
                 }
@@ -605,7 +603,7 @@ public final class StoreVoiceParticipants extends Store {
             public AnonymousClass3() {
             }
 
-            @Override // j0.k.Func1
+            @Override // j0.k.b
             public /* bridge */ /* synthetic */ Observable<? extends Collection<? extends User>> call(List<? extends Long> list) {
                 return call2((List<Long>) list);
             }
@@ -613,8 +611,8 @@ public final class StoreVoiceParticipants extends Store {
             /* renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Collection<User>> call2(List<Long> list) {
                 StoreUser users = StoreStream.INSTANCE.getUsers();
-                Intrinsics3.checkNotNullExpressionValue(list, "otherMemberIds");
-                return users.observeUsers(list).u(new C01991()).G(AnonymousClass2.INSTANCE);
+                m.checkNotNullExpressionValue(list, "otherMemberIds");
+                return users.observeUsers(list).u(new C03191()).G(AnonymousClass2.INSTANCE);
             }
         }
 
@@ -623,14 +621,14 @@ public final class StoreVoiceParticipants extends Store {
             this.$voiceStates = map;
         }
 
-        @Override // j0.k.Func1
+        @Override // j0.k.b
         public /* bridge */ /* synthetic */ Observable<? extends Collection<? extends User>> call(Long l) {
             return call2(l);
         }
 
         /* renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Collection<User>> call2(Long l) {
-            return StoreStream.INSTANCE.getGuilds().observeComputed(this.$channel.getGuildId()).G(C01981.INSTANCE).G(new AnonymousClass2(l)).Y(new AnonymousClass3());
+            return StoreStream.INSTANCE.getGuilds().observeComputed(this.$channel.getGuildId()).G(C03181.INSTANCE).G(new AnonymousClass2(l)).Y(new AnonymousClass3());
         }
     }
 
@@ -656,7 +654,7 @@ public final class StoreVoiceParticipants extends Store {
             for (Object obj : this.$userIds) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    Collections2.throwIndexOverflow();
+                    n.throwIndexOverflow();
                 }
                 linkedHashMap.put(Long.valueOf(((Number) obj).longValue()), (StreamContext) objArr[i]);
                 i = i2;
@@ -667,7 +665,7 @@ public final class StoreVoiceParticipants extends Store {
 
     /* compiled from: StoreVoiceParticipants.kt */
     /* renamed from: com.discord.stores.StoreVoiceParticipants$init$1, reason: invalid class name */
-    public static final class AnonymousClass1 extends Lambda implements Function1<Long, Unit> {
+    public static final class AnonymousClass1 extends d0.z.d.o implements Function1<Long, Unit> {
         public AnonymousClass1() {
             super(1);
         }
@@ -684,7 +682,7 @@ public final class StoreVoiceParticipants extends Store {
     }
 
     public StoreVoiceParticipants(StoreStream storeStream) {
-        Intrinsics3.checkNotNullParameter(storeStream, "stream");
+        m.checkNotNullParameter(storeStream, "stream");
         this.stream = storeStream;
         this.selectedParticipantSubject = BehaviorSubject.l0(0L);
     }
@@ -714,14 +712,14 @@ public final class StoreVoiceParticipants extends Store {
         while (it.hasNext()) {
             arrayList.add((String) ((Map.Entry) it.next()).getKey());
         }
-        String str = (String) _Collections.firstOrNull((List) arrayList);
+        String str = (String) u.firstOrNull((List) arrayList);
         VoiceState voiceState = voiceStates.get(Long.valueOf(meUser.getId()));
         boolean zContains = ringingUsers.contains(Long.valueOf(meUser.getId()));
         StoreVideoStreams.UserStreams userStreams = videoStreams.get(Long.valueOf(meUser.getId()));
         GuildMember guildMember = guildMembers.get(Long.valueOf(meUser.getId()));
         GuildMember guildMember2 = guildMembers.get(Long.valueOf(meUser.getId()));
         linkedHashMap.put(Long.valueOf(meUser.getId()), new VoiceUser(meUser, voiceState, zContains, userStreams, true, guildMember, str, null, (guildMember2 != null ? guildMember2.getPremiumSince() : null) != null, voiceConfiguration, speakingUsers.contains(Long.valueOf(meUser.getId()))));
-        ArrayList<VoiceUser> arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(otherUsers, 10));
+        ArrayList<VoiceUser> arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(otherUsers, 10));
         for (User user : otherUsers) {
             LinkedHashMap linkedHashMap3 = new LinkedHashMap();
             for (Map.Entry<String, ? extends List<Long>> entry2 : streamSpectators.entrySet()) {
@@ -734,13 +732,13 @@ public final class StoreVoiceParticipants extends Store {
             while (it2.hasNext()) {
                 arrayList3.add((String) ((Map.Entry) it2.next()).getKey());
             }
-            String str2 = (String) _Collections.firstOrNull((List) arrayList3);
-            VoiceState voiceState2 = (VoiceState) outline.f(user, voiceStates);
+            String str2 = (String) u.firstOrNull((List) arrayList3);
+            VoiceState voiceState2 = (VoiceState) a.f(user, voiceStates);
             boolean zContains2 = ringingUsers.contains(Long.valueOf(user.getId()));
-            StoreVideoStreams.UserStreams userStreams2 = (StoreVideoStreams.UserStreams) outline.f(user, videoStreams);
-            GuildMember guildMember3 = (GuildMember) outline.f(user, guildMembers);
-            StreamContext streamContext = (StreamContext) outline.f(user, streamContexts);
-            GuildMember guildMember4 = (GuildMember) outline.f(user, guildMembers);
+            StoreVideoStreams.UserStreams userStreams2 = (StoreVideoStreams.UserStreams) a.f(user, videoStreams);
+            GuildMember guildMember3 = (GuildMember) a.f(user, guildMembers);
+            StreamContext streamContext = (StreamContext) a.f(user, streamContexts);
+            GuildMember guildMember4 = (GuildMember) a.f(user, guildMembers);
             arrayList2.add(new VoiceUser(user, voiceState2, zContains2, userStreams2, false, guildMember3, str2, streamContext, (guildMember4 != null ? guildMember4.getPremiumSince() : null) != null, voiceConfiguration, speakingUsers.contains(Long.valueOf(user.getId()))));
         }
         for (VoiceUser voiceUser : arrayList2) {
@@ -751,35 +749,35 @@ public final class StoreVoiceParticipants extends Store {
 
     private final Observable<Collection<User>> getOtherVoiceUsers(Channel channel, Map<Long, VoiceState> voiceStates) {
         if (ChannelUtils.B(channel)) {
-            ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(ChannelUtils.g(channel));
-            Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable, "Observable.just(channel.getRecipients())");
-            return scalarSynchronousObservable;
+            k kVar = new k(ChannelUtils.g(channel));
+            m.checkNotNullExpressionValue(kVar, "Observable.just(channel.getRecipients())");
+            return kVar;
         }
         if (ChannelUtils.w(channel)) {
             Observable observableY = StoreStream.INSTANCE.getUsers().observeMeId().Y(new AnonymousClass1(channel, voiceStates));
-            Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
+            m.checkNotNullExpressionValue(observableY, "StoreStream\n            …          }\n            }");
             return observableY;
         }
-        ScalarSynchronousObservable scalarSynchronousObservable2 = new ScalarSynchronousObservable(Collections2.emptyList());
-        Intrinsics3.checkNotNullExpressionValue(scalarSynchronousObservable2, "Observable.just(emptyList())");
-        return scalarSynchronousObservable2;
+        k kVar2 = new k(n.emptyList());
+        m.checkNotNullExpressionValue(kVar2, "Observable.just(emptyList())");
+        return kVar2;
     }
 
     private final Observable<Map<Long, StreamContext>> getStreamContextsForUsers(List<Long> userIds) {
-        ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(userIds, 10));
+        ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(userIds, 10));
         for (Iterator it = userIds.iterator(); it.hasNext(); it = it) {
             arrayList.add(new StreamContextService(null, null, null, null, null, null, null, null, 255, null).getForUser(((Number) it.next()).longValue(), true));
         }
         Observable<Map<Long, StreamContext>> observableB = Observable.b(arrayList, new AnonymousClass1(userIds));
-        Intrinsics3.checkNotNullExpressionValue(observableB, "Observable\n        .comb…}\n          map\n        }");
+        m.checkNotNullExpressionValue(observableB, "Observable\n        .comb…}\n          map\n        }");
         return observableB;
     }
 
     public final Observable<Map<Long, VoiceUser>> get(long channelId) {
         Observable<R> observableY = StoreStream.INSTANCE.getChannels().observeChannel(channelId).Y(new AnonymousClass1(channelId));
-        Intrinsics3.checkNotNullExpressionValue(observableY, "StoreStream\n        .get…  }\n          }\n        }");
+        m.checkNotNullExpressionValue(observableY, "StoreStream\n        .get…  }\n          }\n        }");
         Observable<Map<Long, VoiceUser>> observableR = ObservableExtensionsKt.computationLatest(observableY).r();
-        Intrinsics3.checkNotNullExpressionValue(observableR, "StoreStream\n        .get…  .distinctUntilChanged()");
+        m.checkNotNullExpressionValue(observableR, "StoreStream\n        .get…  .distinctUntilChanged()");
         return observableR;
     }
 
@@ -789,7 +787,7 @@ public final class StoreVoiceParticipants extends Store {
 
     @Override // com.discord.stores.Store
     public void init(Context context) {
-        Intrinsics3.checkNotNullParameter(context, "context");
+        m.checkNotNullParameter(context, "context");
         super.init(context);
         ObservableExtensionsKt.appSubscribe$default(this.stream.getVoiceChannelSelected().observeSelectedVoiceChannelId(), StoreVoiceParticipants.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
     }

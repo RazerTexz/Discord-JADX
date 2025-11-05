@@ -3,8 +3,8 @@ package co.discord.media_engine;
 import android.content.Context;
 import android.util.AttributeSet;
 import com.hammerandchisel.libdiscord.Discord;
-import d0.t.Sets5;
-import d0.z.d.Intrinsics3;
+import d0.t.n0;
+import d0.z.d.m;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -27,9 +27,9 @@ public class VideoStreamRenderer extends SurfaceViewRenderer {
         }
 
         public final void addSink(Discord discord, VideoStreamRenderer sink, String streamId) {
-            Intrinsics3.checkNotNullParameter(discord, "discord");
-            Intrinsics3.checkNotNullParameter(sink, "sink");
-            Intrinsics3.checkNotNullParameter(streamId, "streamId");
+            m.checkNotNullParameter(discord, "discord");
+            m.checkNotNullParameter(sink, "sink");
+            m.checkNotNullParameter(streamId, "streamId");
             synchronized (VideoStreamRenderer.access$getStreams$cp()) {
                 VideoStreamRenderer.access$Muxer();
                 Set set = (Set) VideoStreamRenderer.access$getStreams$cp().get(streamId);
@@ -38,8 +38,8 @@ public class VideoStreamRenderer extends SurfaceViewRenderer {
                         set.add(sink);
                     }
                 } else {
-                    Set setMutableSetOf = Sets5.mutableSetOf(sink);
-                    discord.setVideoOutputSink(streamId, new VideoStreamRenderer2(setMutableSetOf));
+                    Set setMutableSetOf = n0.mutableSetOf(sink);
+                    discord.setVideoOutputSink(streamId, new VideoStreamRenderer$Muxer$addSink$1$2(setMutableSetOf));
                     VideoStreamRenderer.access$Muxer();
                     VideoStreamRenderer.access$getStreams$cp().put(streamId, setMutableSetOf);
                 }
@@ -47,9 +47,9 @@ public class VideoStreamRenderer extends SurfaceViewRenderer {
         }
 
         public final void removeSink(Discord discord, VideoStreamRenderer sink, String streamId) {
-            Intrinsics3.checkNotNullParameter(discord, "discord");
-            Intrinsics3.checkNotNullParameter(sink, "sink");
-            Intrinsics3.checkNotNullParameter(streamId, "streamId");
+            m.checkNotNullParameter(discord, "discord");
+            m.checkNotNullParameter(sink, "sink");
+            m.checkNotNullParameter(streamId, "streamId");
             synchronized (VideoStreamRenderer.access$getStreams$cp()) {
                 VideoStreamRenderer.access$Muxer();
                 Set set = (Set) VideoStreamRenderer.access$getStreams$cp().get(streamId);
@@ -74,7 +74,7 @@ public class VideoStreamRenderer extends SurfaceViewRenderer {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public VideoStreamRenderer(Context context) {
         super(context);
-        Intrinsics3.checkNotNullParameter(context, "ctx");
+        m.checkNotNullParameter(context, "ctx");
         this.streamIdentifier = "";
     }
 
@@ -123,8 +123,8 @@ public class VideoStreamRenderer extends SurfaceViewRenderer {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public VideoStreamRenderer(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics3.checkNotNullParameter(context, "ctx");
-        Intrinsics3.checkNotNullParameter(attributeSet, "attrs");
+        m.checkNotNullParameter(context, "ctx");
+        m.checkNotNullParameter(attributeSet, "attrs");
         this.streamIdentifier = "";
     }
 }
