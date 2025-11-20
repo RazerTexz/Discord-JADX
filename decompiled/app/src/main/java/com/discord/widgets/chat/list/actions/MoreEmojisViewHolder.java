@@ -40,7 +40,7 @@ public final class MoreEmojisViewHolder extends MGRecyclerViewHolder<WidgetChatL
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, EmojiItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         this.itemView.setOnClickListener(new AnonymousClass1());
     }
 }

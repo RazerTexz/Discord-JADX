@@ -162,11 +162,10 @@ public final class l {
                             case 73135176:
                                 if (!strAsString.equals("MAYBE")) {
                                     iVar = null;
-                                    break;
                                 } else {
                                     iVar = new i(hVar2, z4);
-                                    break;
                                 }
+                                break;
                             case 74175084:
                                 if (!strAsString.equals("NEVER")) {
                                 }
@@ -180,7 +179,6 @@ public final class l {
                             case 1933739535:
                                 if (strAsString.equals("ALWAYS")) {
                                     iVar3 = new i(hVar3, z4);
-                                    break;
                                 }
                                 iVar = null;
                                 break;
@@ -268,7 +266,6 @@ public final class l {
         k kVar;
         Boolean bool;
         boolean z2;
-        Iterator it;
         boolean z3;
         boolean z4;
         c0 type;
@@ -278,9 +275,9 @@ public final class l {
         d0.z.d.m.checkNotNullParameter(gVar, "c");
         d0.z.d.m.checkNotNullParameter(collection, "platformSignatures");
         ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(collection, 10));
-        Iterator<T> it2 = collection.iterator();
-        while (it2.hasNext()) {
-            d0.e0.p.d.m0.c.b bVarEnhance = (d0.e0.p.d.m0.c.b) it2.next();
+        Iterator<T> it = collection.iterator();
+        while (it.hasNext()) {
+            d0.e0.p.d.m0.c.b bVarEnhance = (d0.e0.p.d.m0.c.b) it.next();
             if (bVarEnhance instanceof d0.e0.p.d.m0.e.a.h0.b) {
                 d0.e0.p.d.m0.e.a.h0.b bVar3 = (d0.e0.p.d.m0.e.a.h0.b) bVarEnhance;
                 if (bVar3.getKind() != b.a.FAKE_OVERRIDE || bVar3.getOriginal().getOverriddenDescriptors().size() != 1) {
@@ -304,7 +301,7 @@ public final class l {
                             }
                             List<c1> valueParameters = bVar.getValueParameters();
                             d0.z.d.m.checkNotNullExpressionValue(valueParameters, "annotationOwnerForMember.valueParameters");
-                            ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(valueParameters, 10));
+                            ArrayList<c> arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(valueParameters, 10));
                             while (r0.hasNext()) {
                             }
                             n0 n0Var = (n0) (bVarEnhance instanceof n0 ? null : bVarEnhance);
@@ -335,7 +332,7 @@ public final class l {
                         }
                         List<c1> valueParameters2 = bVar.getValueParameters();
                         d0.z.d.m.checkNotNullExpressionValue(valueParameters2, "annotationOwnerForMember.valueParameters");
-                        ArrayList arrayList22 = new ArrayList(d0.t.o.collectionSizeOrDefault(valueParameters2, 10));
+                        ArrayList<c> arrayList22 = new ArrayList(d0.t.o.collectionSizeOrDefault(valueParameters2, 10));
                         for (c1 c1Var : valueParameters2) {
                             a aVarEnhance2 = c(bVarEnhance, c1Var, gVarCopyWithNewDefaultTypeQualifiers, new p(c1Var)).enhance((kVar == null || (parametersInfo = kVar.getParametersInfo()) == null) ? wVar : (w) d0.t.u.getOrNull(parametersInfo, c1Var.getIndex()));
                             if (aVarEnhance2.getWereChanges()) {
@@ -370,9 +367,7 @@ public final class l {
                                 Pair<a.InterfaceC0511a<?>, ?> pair = z2 ? d0.o.to(d0.e0.p.d.m0.k.w.a.getDEPRECATED_FUNCTION_KEY(), new d0.e0.p.d.m0.e.a.m(bVarEnhance)) : null;
                                 c0 type2 = aVarEnhance$default == null ? null : aVarEnhance$default.getType();
                                 ArrayList arrayList3 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList22, 10));
-                                it = arrayList22.iterator();
-                                while (it.hasNext()) {
-                                    c cVar = (c) it.next();
+                                for (c cVar : arrayList22) {
                                     arrayList3.add(new d0.e0.p.d.m0.e.a.h0.l(cVar.getType(), cVar.getHasDefaultValue()));
                                 }
                                 bVarEnhance = bVar2.enhance(type2, arrayList3, aVarEnhance3.getType(), pair);
@@ -381,9 +376,9 @@ public final class l {
                                 if (!z3 || z2) {
                                 }
                             } else {
-                                Iterator it3 = arrayList22.iterator();
-                                while (it3.hasNext()) {
-                                    if (((c) it3.next()).getWereChanges()) {
+                                Iterator it2 = arrayList22.iterator();
+                                while (it2.hasNext()) {
+                                    if (((c) it2.next()).getWereChanges()) {
                                         z3 = true;
                                         break;
                                     }
@@ -395,8 +390,7 @@ public final class l {
                                     if (aVarEnhance$default == null) {
                                     }
                                     ArrayList arrayList32 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList22, 10));
-                                    it = arrayList22.iterator();
-                                    while (it.hasNext()) {
+                                    while (r3.hasNext()) {
                                     }
                                     bVarEnhance = bVar2.enhance(type2, arrayList32, aVarEnhance3.getType(), pair);
                                 }
@@ -412,15 +406,14 @@ public final class l {
                                 if (aVarEnhance$default == null) {
                                 }
                                 ArrayList arrayList322 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList22, 10));
-                                it = arrayList22.iterator();
-                                while (it.hasNext()) {
+                                while (r3.hasNext()) {
                                 }
                                 bVarEnhance = bVar2.enhance(type2, arrayList322, aVarEnhance3.getType(), pair);
                             }
                         } else {
-                            Iterator it4 = arrayList22.iterator();
-                            while (it4.hasNext()) {
-                                if (((c) it4.next()).getContainsFunctionN()) {
+                            Iterator it3 = arrayList22.iterator();
+                            while (it3.hasNext()) {
+                                if (((c) it3.next()).getContainsFunctionN()) {
                                     z4 = true;
                                     break;
                                 }

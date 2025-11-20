@@ -125,25 +125,26 @@ public class HandleLog {
                 if ((typeNode.get().mods.flags & 512) != 0) {
                     annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " is legal only on classes and enums.");
                     break;
-                } else if (JavacHandlerUtil.fieldExists(logFieldName.getName(), typeNode) != JavacHandlerUtil.MemberExistsResult.NOT_EXISTS) {
-                    annotationNode.addWarning("Field '" + logFieldName + "' already exists.");
-                    break;
                 } else {
-                    Object valueGuess = annotation.getValueGuess(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-                    JCTree.JCLiteral jCLiteralLiteral = (JCTree.JCExpression) annotation.getActualExpression(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-                    if ((valueGuess instanceof String) && ((String) valueGuess).trim().isEmpty()) {
-                        jCLiteralLiteral = null;
+                    if (JavacHandlerUtil.fieldExists(logFieldName.getName(), typeNode) != JavacHandlerUtil.MemberExistsResult.NOT_EXISTS) {
+                        annotationNode.addWarning("Field '" + logFieldName + "' already exists.");
+                    } else {
+                        Object valueGuess = annotation.getValueGuess(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+                        JCTree.JCLiteral jCLiteralLiteral = (JCTree.JCExpression) annotation.getActualExpression(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+                        if ((valueGuess instanceof String) && ((String) valueGuess).trim().isEmpty()) {
+                            jCLiteralLiteral = null;
+                        }
+                        if (framework.getDeclaration().getParametersWithTopic() == null && jCLiteralLiteral != null) {
+                            annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " does not allow a topic.");
+                            jCLiteralLiteral = null;
+                        }
+                        if (framework.getDeclaration().getParametersWithoutTopic() == null && jCLiteralLiteral == null) {
+                            annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " requires a topic.");
+                            jCLiteralLiteral = typeNode.getTreeMaker().Literal("");
+                        }
+                        JCTree.JCFieldAccess loggingType = selfType(typeNode);
+                        createField(framework, typeNode, loggingType, annotationNode.get(), logFieldName.getName(), useStatic, jCLiteralLiteral);
                     }
-                    if (framework.getDeclaration().getParametersWithTopic() == null && jCLiteralLiteral != null) {
-                        annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " does not allow a topic.");
-                        jCLiteralLiteral = null;
-                    }
-                    if (framework.getDeclaration().getParametersWithoutTopic() == null && jCLiteralLiteral == null) {
-                        annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " requires a topic.");
-                        jCLiteralLiteral = typeNode.getTreeMaker().Literal("");
-                    }
-                    JCTree.JCFieldAccess loggingType = selfType(typeNode);
-                    createField(framework, typeNode, loggingType, annotationNode.get(), logFieldName.getName(), useStatic, jCLiteralLiteral);
                     break;
                 }
                 break;

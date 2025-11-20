@@ -381,6 +381,7 @@ public final class InviteJoinHelper {
                             channel = this.$invite.getChannel();
                             if (channel != null) {
                             }
+                            break;
                         } else {
                             Function2 function24 = this.$onInvitePostSuccess;
                             ModelInvite modelInvite6 = this.$invite;

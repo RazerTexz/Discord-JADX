@@ -138,6 +138,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
                         } catch (Throwable th) {
                             Log.e("RLottieDrawable", "Error Loading Frame in Runnable", th);
                         }
+                        break;
                     }
                     if (((RLottieDrawable) this.k).E != null) {
                         try {
@@ -147,6 +148,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
                                 }
                                 ((RLottieDrawable) this.k).v.clear();
                             }
+                            break;
                         } catch (Exception unused) {
                         }
                         RLottieDrawable rLottieDrawable2 = (RLottieDrawable) this.k;

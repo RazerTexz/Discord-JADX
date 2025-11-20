@@ -673,7 +673,6 @@ public class e implements h {
                                             eVar2.a(i6);
                                             eVar2.I.a(jA);
                                             eVar2.J = true;
-                                            break;
                                         }
                                         break;
                                     case 251:
@@ -719,8 +718,8 @@ public class e implements h {
                                                 if (i7 != 3) {
                                                     if (i7 == 15) {
                                                         eVar2.f1195z.w = 3;
-                                                        break;
                                                     }
+                                                    break;
                                                 } else {
                                                     eVar2.f1195z.w = 1;
                                                     break;
@@ -774,8 +773,8 @@ public class e implements h {
                                                 if (i8 != 2) {
                                                     if (i8 == 3) {
                                                         eVar2.f1195z.r = 3;
-                                                        break;
                                                     }
+                                                    break;
                                                 } else {
                                                     eVar2.f1195z.r = 2;
                                                     break;
@@ -804,8 +803,8 @@ public class e implements h {
                                                 if (i9 != 1) {
                                                     if (i9 == 2) {
                                                         eVar2.f1195z.A = 1;
-                                                        break;
                                                     }
+                                                    break;
                                                 } else {
                                                     eVar2.f1195z.A = 2;
                                                     break;
@@ -816,7 +815,6 @@ public class e implements h {
                                                 int iB2 = n.b((int) jA);
                                                 if (iB2 != -1) {
                                                     eVar2.f1195z.f1200z = iB2;
-                                                    break;
                                                 }
                                                 break;
                                             case 21947:
@@ -825,7 +823,6 @@ public class e implements h {
                                                 int iA2 = n.a((int) jA);
                                                 if (iA2 != -1) {
                                                     eVar2.f1195z.f1199y = iA2;
-                                                    break;
                                                 }
                                                 break;
                                             case 21948:
@@ -837,6 +834,7 @@ public class e implements h {
                                                 eVar2.f1195z.C = (int) jA;
                                                 break;
                                         }
+                                        break;
                                 }
                             } else if (jA != 1) {
                                 throw ParserException.a(b.d.b.a.a.i(55, "ContentEncodingScope ", jA, " not supported"), null);
@@ -1182,6 +1180,7 @@ public class e implements h {
                                             eVar5.f1195z.u = (float) dIntBitsToFloat;
                                             break;
                                     }
+                                    break;
                             }
                         } else {
                             eVar5.f1193x = (long) dIntBitsToFloat;
@@ -1483,11 +1482,10 @@ public class e implements h {
                 case -2095576542:
                     if (str11.equals("V_MPEG4/ISO/AP")) {
                         c2 = 0;
-                        break;
                     } else {
                         c2 = 65535;
-                        break;
                     }
+                    break;
                 case -2095575984:
                     if (str11.equals("V_MPEG4/ISO/SP")) {
                         c2 = 1;
@@ -1837,7 +1835,6 @@ public class e implements h {
                                         if (bArr != null) {
                                             str8 = oVarA.a;
                                             str13 = "video/dolby-vision";
-                                            break;
                                         }
                                         int i212 = (r0.V ? 1 : 0) | 0 | (r0.U ? 2 : 0);
                                         bVar = new j1.b();
@@ -1846,7 +1843,6 @@ public class e implements h {
                                         str9 = r0.a;
                                         if (str9 != null) {
                                             bVar.f1021b = r0.a;
-                                            break;
                                         }
                                         bVar.b(i20);
                                         bVar.k = str13;
@@ -1861,7 +1857,6 @@ public class e implements h {
                                         r0.X = wVarP2;
                                         wVarP2.e(j1VarA2);
                                         this.h.put(r0.c, r0);
-                                        break;
                                     } else {
                                         Log.w("MatroskaExtractor", "Non-PCM MS/ACM is unsupported. Setting mimeType to ".concat("audio/x-unknown"));
                                     }
@@ -1897,7 +1892,9 @@ public class e implements h {
                                     r0.X = wVarP22;
                                     wVarP22.e(j1VarA22);
                                     this.h.put(r0.c, r0);
+                                    break;
                                 }
+                                break;
                             }
                             z3 = false;
                             if (z3) {
@@ -1934,6 +1931,7 @@ public class e implements h {
                             r0.X = wVarP222;
                             wVarP222.e(j1VarA222);
                             this.h.put(r0.c, r0);
+                            break;
                         }
                         z3 = true;
                         if (z3) {
@@ -2082,10 +2080,10 @@ public class e implements h {
                             r0.X = wVarP222222;
                             wVarP222222.e(j1VarA222222);
                             this.h.put(r0.c, r0);
-                            break;
                         } catch (ArrayIndexOutOfBoundsException unused2) {
                             throw ParserException.a("Error parsing vorbis codec private", r0);
                         }
+                        break;
                     } catch (ArrayIndexOutOfBoundsException unused3) {
                         r0 = 0;
                     }
@@ -2226,7 +2224,6 @@ public class e implements h {
                         r0.X = wVarP222222222;
                         wVarP222222222.e(j1VarA222222222);
                         this.h.put(r0.c, r0);
-                        break;
                     } catch (ArrayIndexOutOfBoundsException unused4) {
                         throw ParserException.a("Error parsing FourCC private data", null);
                     }
@@ -2740,7 +2737,6 @@ public class e implements h {
                         r0.X = wVarP2222222222222222222222;
                         wVarP2222222222222222222222.e(j1VarA2222222222222222222222);
                         this.h.put(r0.c, r0);
-                        break;
                     } else {
                         StringBuilder sb3 = new StringBuilder(90);
                         sb3.append("Unsupported floating point PCM bit depth: ");
@@ -2790,52 +2786,54 @@ public class e implements h {
                     int i36 = r0.P;
                     if (i36 == 8) {
                         iR = 3;
-                    } else if (i36 != 16) {
-                        StringBuilder sb4 = new StringBuilder(86);
-                        sb4.append("Unsupported big endian PCM bit depth: ");
-                        sb4.append(i36);
-                        sb4.append(". Setting mimeType to ");
-                        sb4.append("audio/x-unknown");
-                        Log.w("MatroskaExtractor", sb4.toString());
-                        str3 = str13;
-                        list3 = null;
-                        str7 = null;
-                        list4 = list3;
-                        str = str7;
-                        i2 = -1;
-                        list6 = list4;
-                        str13 = str3;
-                        list5 = list6;
-                        str8 = str;
-                        i3 = i2;
-                        list2 = list5;
-                        iR = -1;
-                        bArr = r0.N;
-                        if (bArr != null) {
-                        }
-                        int i21222222222222222222222222 = (r0.V ? 1 : 0) | 0 | (r0.U ? 2 : 0);
-                        bVar = new j1.b();
-                        if (b.i.a.c.f3.t.h(str13)) {
-                        }
-                        str9 = r0.a;
-                        if (str9 != null) {
-                        }
-                        bVar.b(i20);
-                        bVar.k = str13;
-                        bVar.l = i3;
-                        bVar.c = r0.W;
-                        bVar.d = i21222222222222222222222222;
-                        bVar.m = list2;
-                        bVar.h = str8;
-                        bVar.n = r0.l;
-                        j1 j1VarA222222222222222222222222 = bVar.a();
-                        w wVarP222222222222222222222222 = jVar2.p(r0.c, i4);
-                        r0.X = wVarP222222222222222222222222;
-                        wVarP222222222222222222222222.e(j1VarA222222222222222222222222);
-                        this.h.put(r0.c, r0);
-                        break;
                     } else {
-                        iR = 268435456;
+                        if (i36 != 16) {
+                            StringBuilder sb4 = new StringBuilder(86);
+                            sb4.append("Unsupported big endian PCM bit depth: ");
+                            sb4.append(i36);
+                            sb4.append(". Setting mimeType to ");
+                            sb4.append("audio/x-unknown");
+                            Log.w("MatroskaExtractor", sb4.toString());
+                            str3 = str13;
+                            list3 = null;
+                            str7 = null;
+                            list4 = list3;
+                            str = str7;
+                            i2 = -1;
+                            list6 = list4;
+                            str13 = str3;
+                            list5 = list6;
+                            str8 = str;
+                            i3 = i2;
+                            list2 = list5;
+                            iR = -1;
+                            bArr = r0.N;
+                            if (bArr != null) {
+                            }
+                            int i21222222222222222222222222 = (r0.V ? 1 : 0) | 0 | (r0.U ? 2 : 0);
+                            bVar = new j1.b();
+                            if (b.i.a.c.f3.t.h(str13)) {
+                            }
+                            str9 = r0.a;
+                            if (str9 != null) {
+                            }
+                            bVar.b(i20);
+                            bVar.k = str13;
+                            bVar.l = i3;
+                            bVar.c = r0.W;
+                            bVar.d = i21222222222222222222222222;
+                            bVar.m = list2;
+                            bVar.h = str8;
+                            bVar.n = r0.l;
+                            j1 j1VarA222222222222222222222222 = bVar.a();
+                            w wVarP222222222222222222222222 = jVar2.p(r0.c, i4);
+                            r0.X = wVarP222222222222222222222222;
+                            wVarP222222222222222222222222.e(j1VarA222222222222222222222222);
+                            this.h.put(r0.c, r0);
+                        } else {
+                            iR = 268435456;
+                        }
+                        break;
                     }
                     str13 = "audio/raw";
                     list2 = null;
@@ -2911,7 +2909,6 @@ public class e implements h {
                         r0.X = wVarP22222222222222222222222222;
                         wVarP22222222222222222222222222.e(j1VarA22222222222222222222222222);
                         this.h.put(r0.c, r0);
-                        break;
                     }
                     str13 = "audio/raw";
                     list2 = null;

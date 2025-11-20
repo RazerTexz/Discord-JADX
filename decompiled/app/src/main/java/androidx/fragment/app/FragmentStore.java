@@ -315,12 +315,10 @@ public class FragmentStore {
                 return null;
             }
             ArrayList<String> arrayList = new ArrayList<>(this.mAdded.size());
-            Iterator<Fragment> it = this.mAdded.iterator();
-            while (it.hasNext()) {
-                Fragment next = it.next();
-                arrayList.add(next.mWho);
+            for (Fragment fragment : this.mAdded) {
+                arrayList.add(fragment.mWho);
                 if (FragmentManager.isLoggingEnabled(2)) {
-                    Log.v("FragmentManager", "saveAllState: adding fragment (" + next.mWho + "): " + next);
+                    Log.v("FragmentManager", "saveAllState: adding fragment (" + fragment.mWho + "): " + fragment);
                 }
             }
             return arrayList;

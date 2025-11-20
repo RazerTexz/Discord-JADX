@@ -160,6 +160,7 @@ public final class g1 extends u4<g1, a> implements d6 {
                             aVar = new u4.a<>(zzg);
                             zzh = aVar;
                         }
+                        break;
                     }
                 }
                 return aVar;

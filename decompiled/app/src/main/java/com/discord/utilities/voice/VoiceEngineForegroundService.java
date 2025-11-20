@@ -549,13 +549,11 @@ public final class VoiceEngineForegroundService extends IntentService implements
             case 1014152586:
                 if (action.equals("com.discord.utilities.voice.action.stage_invite_decline")) {
                     ackStageInvite(intent, false);
-                    break;
                 }
                 break;
             case 1602537513:
                 if (action.equals("com.discord.utilities.voice.action.toggle_muted")) {
                     onToggleSelfMute.invoke();
-                    break;
                 }
                 break;
         }

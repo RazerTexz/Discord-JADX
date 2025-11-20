@@ -99,7 +99,6 @@ public abstract class ea {
         switch (aa.a[bVarV.ordinal()]) {
             case 1:
                 try {
-                    break;
                 } catch (PatternSyntaxException unused) {
                     if (q3Var == null) {
                         return null;
@@ -107,6 +106,7 @@ public abstract class ea {
                     q3Var.i.b("Invalid regular expression in REGEXP audience filter. expression", str2);
                     return null;
                 }
+                break;
         }
         return null;
     }

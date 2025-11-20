@@ -33,7 +33,6 @@ import java.util.Calendar;
 import java.util.Currency;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Locale;
@@ -267,11 +266,9 @@ public abstract class b extends q implements Serializable {
             LinkedHashSet<b.g.a.c.e0.b> linkedHashSet = iVar._registeredSubtypes;
             if (linkedHashSet != null) {
                 Class<?> cls = cVar.l;
-                Iterator<b.g.a.c.e0.b> it = linkedHashSet.iterator();
-                while (it.hasNext()) {
-                    b.g.a.c.e0.b next = it.next();
-                    if (cls.isAssignableFrom(next._class)) {
-                        iVar.b(b.g.a.c.c0.d.h(vVar, next._class), next, vVar, bVarE, map);
+                for (b.g.a.c.e0.b bVar : linkedHashSet) {
+                    if (cls.isAssignableFrom(bVar._class)) {
+                        iVar.b(b.g.a.c.c0.d.h(vVar, bVar._class), bVar, vVar, bVarE, map);
                     }
                 }
             }

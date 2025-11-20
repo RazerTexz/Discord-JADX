@@ -168,7 +168,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ChannelListItemAddServer) {
                 this.binding.c.setText(R.string.hub_sidebar_add_servers);
                 this.binding.f2291b.setImageResource(R.drawable.ic_add_24dp);
@@ -276,7 +276,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemCategory channelListItemCategory = (ChannelListItemCategory) data;
             LinearLayout linearLayout = this.binding.a;
             m.checkNotNullExpressionValue(linearLayout, "binding.root");
@@ -346,7 +346,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemDirectory channelListItemDirectory = (ChannelListItemDirectory) data;
             boolean zX = ChannelUtils.x(channelListItemDirectory.getChannel());
             if (zX) {
@@ -494,7 +494,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             int i;
             boolean z2;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemPrivate channelListItemPrivate = (ChannelListItemPrivate) data;
             Channel channel = channelListItemPrivate.getChannel();
             Presence presence = channelListItemPrivate.getPresence();
@@ -673,7 +673,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         public void onConfigure2(int position, ChannelListItem data) {
             ColorStateList colorStateListValueOf;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemStageVoiceChannel channelListItemStageVoiceChannel = (ChannelListItemStageVoiceChannel) data;
             Channel channelComponent1 = channelListItemStageVoiceChannel.component1();
             boolean selected = channelListItemStageVoiceChannel.getSelected();
@@ -864,7 +864,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemTextChannel channelListItemTextChannel = (ChannelListItemTextChannel) data;
             boolean z2 = channelListItemTextChannel.getChannel().getType() == 5;
             RelativeLayout relativeLayout = this.binding.a;
@@ -1005,7 +1005,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemThread channelListItemThread = (ChannelListItemThread) data;
             ConstraintLayout constraintLayout = this.binding.a;
             m.checkNotNullExpressionValue(constraintLayout, "binding.root");
@@ -1178,7 +1178,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemVoiceChannel channelListItemVoiceChannel = (ChannelListItemVoiceChannel) data;
             Channel channelComponent1 = channelListItemVoiceChannel.component1();
             boolean textSelected = channelListItemVoiceChannel.getTextSelected();
@@ -1327,7 +1327,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ChannelListItemGuildJoinRequest) {
                 ConstraintLayout constraintLayout = this.binding.a;
                 m.checkNotNullExpressionValue(constraintLayout, "binding.root");
@@ -1412,7 +1412,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             LinearLayout linearLayout = this.binding.a;
             m.checkNotNullExpressionValue(linearLayout, "binding.root");
             Context context = linearLayout.getContext();
@@ -1466,7 +1466,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemGuildScheduledEvents channelListItemGuildScheduledEvents = (ChannelListItemGuildScheduledEvents) data;
             View view = this.itemView;
             m.checkNotNullExpressionValue(view, "itemView");
@@ -1517,7 +1517,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemHeader channelListItemHeader = (ChannelListItemHeader) data;
             int textResId = channelListItemHeader.getTextResId();
             boolean ableToManageChannel = channelListItemHeader.getAbleToManageChannel();
@@ -1567,7 +1567,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ChannelListItemInvite) {
                 this.itemView.setOnClickListener(new WidgetChannelsListAdapter$ItemInvite$onConfigure$1(this, data));
                 View view = this.itemView;
@@ -1609,7 +1609,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             LinkifiedTextView linkifiedTextView = this.binding.f2296b;
             m.checkNotNullExpressionValue(linkifiedTextView, "binding.channelsListItemMfaText");
             b.m(linkifiedTextView, R.string.two_fa_guild_mfa_warning, new Object[0], WidgetChannelsListAdapter$ItemMFA$onConfigure$1.INSTANCE);
@@ -1632,7 +1632,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             View view = this.itemView;
             m.checkNotNullExpressionValue(view, "itemView");
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
@@ -1744,7 +1744,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
             String locationName;
             CharSequence username;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemActiveEventData data2 = ((ChannelListItemActiveEvent) data).getData();
             GuildScheduledEventLocationInfo locationInfo = data2.getLocationInfo();
             if (!(locationInfo instanceof GuildScheduledEventLocationInfo.ChannelLocation)) {
@@ -1838,7 +1838,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemStageAudienceCount channelListItemStageAudienceCount = (ChannelListItemStageAudienceCount) data;
             TextView textView = this.binding.f2285b;
             if (channelListItemStageAudienceCount.getAudienceSize() != 0) {
@@ -1905,7 +1905,7 @@ public final class WidgetChannelsListAdapter extends MGRecyclerAdapterSimple<Cha
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelListItemVoiceUser channelListItemVoiceUser = (ChannelListItemVoiceUser) data;
             Channel channel = channelListItemVoiceUser.getChannel();
             VoiceState voiceState = channelListItemVoiceUser.getVoiceState();

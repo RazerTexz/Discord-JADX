@@ -53,7 +53,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, RoleItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f2179b.setText(data.getRole().getName());
             CheckedSetting checkedSetting = this.binding.f2179b;
             GuildRole role = data.getRole();

@@ -621,9 +621,13 @@ public final class MediaCodecUtil {
                                                             i6 = -1;
                                                             break;
                                                     }
+                                                    break;
                                             }
+                                            break;
                                     }
+                                    break;
                             }
+                            break;
                     }
                     if (i6 != i5) {
                         return new Pair<>(Integer.valueOf(i18), Integer.valueOf(i6));
@@ -820,6 +824,7 @@ public final class MediaCodecUtil {
                     Log.w("MediaCodecUtil", strValueOf15.length() != 0 ? "Ignoring malformed MP4A codec string: ".concat(strValueOf15) : new String("Ignoring malformed MP4A codec string: "));
                     return null;
                 }
+                break;
             case "vp09":
                 String str10 = j1Var.t;
                 if (strArrSplit.length < 3) {

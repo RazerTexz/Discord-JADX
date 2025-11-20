@@ -1946,7 +1946,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfWorkSpec.insert((EntityInsertionAdapter<WorkSpec>) workSpec);
+            this.__insertionAdapterOfWorkSpec.insert(workSpec);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

@@ -208,11 +208,10 @@ public final class i implements b.i.a.c.x2.h, t {
                                         case -1711564334:
                                             if (strQ.equals("SlowMotion_Data")) {
                                                 i = 0;
-                                                break;
                                             } else {
                                                 i = -1;
-                                                break;
                                             }
+                                            break;
                                         case -1332107749:
                                             if (strQ.equals("Super_SlowMotion_Edit_Data")) {
                                                 i = 1;

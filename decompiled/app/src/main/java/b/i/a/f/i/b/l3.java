@@ -78,6 +78,7 @@ public abstract class l3 extends b.i.a.f.h.l.s0 implements i3 {
                         if (z2 || !t9.r0(u9Var.c)) {
                             arrayList.add(new zzku(u9Var));
                         }
+                        break;
                     }
                 } catch (InterruptedException | ExecutionException e) {
                     z4Var5.a.g().f.c("Failed to get user properties. appId", q3.s(zznVar4.j), e);

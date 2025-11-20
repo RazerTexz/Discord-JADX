@@ -174,7 +174,7 @@ public final class ObservableExtensionsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(Object obj) {
-            return call((AnonymousClass1<T, R>) obj);
+            return call(obj);
         }
     }
 

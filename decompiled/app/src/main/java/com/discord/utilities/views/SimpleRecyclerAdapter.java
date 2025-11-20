@@ -81,7 +81,7 @@ public class SimpleRecyclerAdapter<T, VH extends ViewHolder<T>> extends Recycler
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
-        onBindViewHolder((SimpleRecyclerAdapter<T, VH>) viewHolder, i);
+        onBindViewHolder((ViewHolder) viewHolder, i);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

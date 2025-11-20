@@ -136,7 +136,7 @@ public final class WidgetUserMutualGuilds extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Model.Item data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 this.binding.a.setOnClickListener(new WidgetUserMutualGuilds$Adapter$ViewHolder$onConfigure$1(this, data));
                 SimpleDraweeView simpleDraweeView = this.binding.c;
                 Guild guild = data.getGuild();

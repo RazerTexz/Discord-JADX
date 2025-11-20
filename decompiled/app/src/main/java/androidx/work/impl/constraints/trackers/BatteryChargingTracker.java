@@ -65,11 +65,10 @@ public class BatteryChargingTracker extends BroadcastReceiverConstraintTracker<B
             case -1886648615:
                 if (!action.equals("android.intent.action.ACTION_POWER_DISCONNECTED")) {
                     c = 65535;
-                    break;
                 } else {
                     c = 0;
-                    break;
                 }
+                break;
             case -54942926:
                 if (!action.equals("android.os.action.DISCHARGING")) {
                 }

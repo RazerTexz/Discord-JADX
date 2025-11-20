@@ -319,9 +319,7 @@ public class EclipseHandlerUtil {
 
     public static void sanityCheckForMethodGeneratingAnnotationsOnBuilderClass(EclipseNode typeNode, EclipseNode errorNode) {
         List<String> disallowed = null;
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : typeNode.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION) {
                 for (String annType : HandlerUtil.INVALID_ON_BUILDERS) {
                     if (annotationTypeMatches(annType, child)) {
@@ -818,9 +816,7 @@ public class EclipseHandlerUtil {
             case 5:
             case 7:
             case 8:
-                Iterator<EclipseNode> it = node.down().iterator();
-                while (it.hasNext()) {
-                    EclipseNode child = it.next();
+                for (EclipseNode child : node.down()) {
                     if (annotationTypeMatches(type, child)) {
                         break;
                     }
@@ -840,9 +836,7 @@ public class EclipseHandlerUtil {
             case 5:
             case 7:
             case 8:
-                Iterator<EclipseNode> it = node.down().iterator();
-                while (it.hasNext()) {
-                    EclipseNode child = it.next();
+                for (EclipseNode child : node.down()) {
                     if (annotationTypeMatches(type, child)) {
                         break;
                     }
@@ -854,9 +848,7 @@ public class EclipseHandlerUtil {
 
     public static EclipseNode findInnerClass(EclipseNode parent, String name) {
         char[] c = name.toCharArray();
-        Iterator<EclipseNode> it = parent.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : parent.down()) {
             if (child.getKind() == AST.Kind.TYPE) {
                 TypeDeclaration td = child.get();
                 if (Arrays.equals(td.name, c)) {
@@ -891,9 +883,7 @@ public class EclipseHandlerUtil {
 
     public static String scanForNearestAnnotation(EclipseNode node, String... anns) {
         while (node != null) {
-            Iterator<EclipseNode> it = node.down().iterator();
-            while (it.hasNext()) {
-                EclipseNode ann = it.next();
+            for (EclipseNode ann : node.down()) {
                 if (ann.getKind() == AST.Kind.ANNOTATION) {
                     Annotation a = ann.get();
                     TypeReference aType = a.type;
@@ -1695,9 +1685,7 @@ public class EclipseHandlerUtil {
         boolean isBoolean = forceBool || isBoolean(fieldType);
         EclipseNode typeNode = field.up();
         for (String potentialGetterName : toAllGetterNames(field, isBoolean)) {
-            Iterator<EclipseNode> it = typeNode.down().iterator();
-            while (it.hasNext()) {
-                EclipseNode potentialGetter = it.next();
+            for (EclipseNode potentialGetter : typeNode.down()) {
                 if (potentialGetter.getKind() == AST.Kind.METHOD && (potentialGetter.get() instanceof MethodDeclaration)) {
                     MethodDeclaration method = potentialGetter.get();
                     if (potentialGetterName.equalsIgnoreCase(new String(method.selector)) && (method.modifiers & 8) == 0 && (method.arguments == null || method.arguments.length <= 0)) {
@@ -1707,9 +1695,7 @@ public class EclipseHandlerUtil {
             }
         }
         boolean hasGetterAnnotation = false;
-        Iterator<EclipseNode> it2 = field.down().iterator();
-        while (it2.hasNext()) {
-            EclipseNode child = it2.next();
+        for (EclipseNode child : field.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Getter.class, child)) {
                 AnnotationValues<Getter> ann = createAnnotation(Getter.class, child);
                 if (ann.getInstance().value() == AccessLevel.NONE) {
@@ -1719,9 +1705,7 @@ public class EclipseHandlerUtil {
             }
         }
         if (!hasGetterAnnotation && HandleGetter.fieldQualifiesForGetterGeneration(field) && (containingType = field.up()) != null) {
-            Iterator<EclipseNode> it3 = containingType.down().iterator();
-            while (it3.hasNext()) {
-                EclipseNode child2 = it3.next();
+            for (EclipseNode child2 : containingType.down()) {
                 if (child2.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Data.class, child2)) {
                     hasGetterAnnotation = true;
                 }
@@ -1747,9 +1731,7 @@ public class EclipseHandlerUtil {
         if (fieldAccess == HandlerUtil.FieldAccess.ALWAYS_FIELD) {
             return false;
         }
-        Iterator<EclipseNode> it = field.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : field.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Getter.class, child)) {
                 AnnotationValues<Getter> ann = createAnnotation(Getter.class, child);
                 if (ann.getInstance().lazy()) {
@@ -1953,9 +1935,7 @@ public class EclipseHandlerUtil {
                 if (current == null) {
                     break;
                 }
-                Iterator<EclipseNode> it2 = current.down().iterator();
-                while (it2.hasNext()) {
-                    EclipseNode node2 = it2.next();
+                for (EclipseNode node2 : current.down()) {
                     if (annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Accessors.class, node2)) {
                         AnnotationValues<Accessors> ann2 = createAnnotation(Accessors.class, node2);
                         if (ann2.isExplicit("prefix")) {
@@ -1973,9 +1953,7 @@ public class EclipseHandlerUtil {
     }
 
     public static AnnotationValues<Accessors> getAccessorsForField(EclipseNode field) {
-        Iterator<EclipseNode> it = field.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode node = it.next();
+        for (EclipseNode node : field.down()) {
             if (annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Accessors.class, node)) {
                 return createAnnotation(Accessors.class, node);
             }
@@ -1984,9 +1962,7 @@ public class EclipseHandlerUtil {
         while (true) {
             EclipseNode current = eclipseNodeUp;
             if (current != null) {
-                Iterator<EclipseNode> it2 = current.down().iterator();
-                while (it2.hasNext()) {
-                    EclipseNode node2 = it2.next();
+                for (EclipseNode node2 : current.down()) {
                     if (annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Accessors.class, node2)) {
                         return createAnnotation(Accessors.class, node2);
                     }
@@ -2382,9 +2358,7 @@ public class EclipseHandlerUtil {
 
     public static List<Integer> createListOfNonExistentFields(List<String> list, EclipseNode type, boolean excludeStandard, boolean excludeTransient) {
         boolean[] matched = new boolean[list.size()];
-        Iterator<EclipseNode> it = type.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : type.down()) {
             if (list.isEmpty()) {
                 break;
             }

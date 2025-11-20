@@ -54,7 +54,7 @@ public final class SpeakerViewHolder extends StageCallViewHolder {
     public void onConfigure2(int position, StageCallItem data) throws Resources.NotFoundException {
         int dimensionPixelSize;
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StageCallItem.SpeakerItem speakerItem = (StageCallItem.SpeakerItem) data;
         StageCallSpeakerView stageCallSpeakerView = this.binding.f2654b;
         m.checkNotNullExpressionValue(stageCallSpeakerView, "binding.stageChannelSpeakerContainer");

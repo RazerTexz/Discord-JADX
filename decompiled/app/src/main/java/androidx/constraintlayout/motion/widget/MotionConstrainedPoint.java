@@ -66,85 +66,71 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
                 case -1249320806:
                     if (str.equals(Key.ROTATION_X)) {
                         c = 0;
-                        break;
                     }
                     break;
                 case -1249320805:
                     if (str.equals(Key.ROTATION_Y)) {
                         c = 1;
-                        break;
                     }
                     break;
                 case -1225497657:
                     if (str.equals(Key.TRANSLATION_X)) {
                         c = 2;
-                        break;
                     }
                     break;
                 case -1225497656:
                     if (str.equals(Key.TRANSLATION_Y)) {
                         c = 3;
-                        break;
                     }
                     break;
                 case -1225497655:
                     if (str.equals(Key.TRANSLATION_Z)) {
                         c = 4;
-                        break;
                     }
                     break;
                 case -1001078227:
                     if (str.equals("progress")) {
                         c = 5;
-                        break;
                     }
                     break;
                 case -908189618:
                     if (str.equals(Key.SCALE_X)) {
                         c = 6;
-                        break;
                     }
                     break;
                 case -908189617:
                     if (str.equals(Key.SCALE_Y)) {
                         c = 7;
-                        break;
                     }
                     break;
                 case -760884510:
                     if (str.equals(Key.PIVOT_X)) {
                         c = '\b';
-                        break;
                     }
                     break;
                 case -760884509:
                     if (str.equals(Key.PIVOT_Y)) {
                         c = '\t';
-                        break;
                     }
                     break;
                 case -40300674:
                     if (str.equals(Key.ROTATION)) {
                         c = '\n';
-                        break;
                     }
                     break;
                 case -4379043:
                     if (str.equals(Key.ELEVATION)) {
                         c = 11;
-                        break;
                     }
                     break;
                 case 37232917:
                     if (str.equals(Key.TRANSITION_PATH_ROTATE)) {
                         c = '\f';
-                        break;
                     }
                     break;
                 case 92909918:
                     if (str.equals(Key.ALPHA)) {
                         c = '\r';
-                        break;
                     }
                     break;
             }
@@ -198,11 +184,10 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
                             ConstraintAttribute constraintAttribute = this.attributes.get(str2);
                             if (splineSet instanceof SplineSet.CustomSet) {
                                 ((SplineSet.CustomSet) splineSet).setPoint(i, constraintAttribute);
-                                break;
                             } else {
                                 Log.e("MotionPaths", str + " splineSet not a CustomSet frame = " + i + ", value" + constraintAttribute.getValueToInterpolate() + splineSet);
-                                break;
                             }
+                            break;
                         } else {
                             Log.e("MotionPaths", "UNKNOWN customName " + str2);
                             break;
@@ -211,6 +196,7 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
                         Log.e("MotionPaths", "UNKNOWN spline " + str);
                         break;
                     }
+                    break;
             }
         }
     }

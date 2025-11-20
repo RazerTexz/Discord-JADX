@@ -64,15 +64,13 @@ public final class g implements b.i.a.c.b3.g {
         Map<String, e> map2 = this.m;
         Map<String, String> map3 = this.n;
         Objects.requireNonNull(dVar);
-        ArrayList arrayList = new ArrayList();
+        ArrayList<Pair> arrayList = new ArrayList();
         dVar.h(j, dVar.h, arrayList);
         TreeMap treeMap = new TreeMap();
         dVar.j(j, false, dVar.h, treeMap);
         dVar.i(j, map, map2, dVar.h, treeMap);
         ArrayList arrayList2 = new ArrayList();
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            Pair pair = (Pair) it.next();
+        for (Pair pair : arrayList) {
             String str = map3.get(pair.second);
             if (str != null) {
                 byte[] bArrDecode = Base64.decode(str, 0);

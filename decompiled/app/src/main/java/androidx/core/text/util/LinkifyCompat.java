@@ -23,7 +23,6 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -92,7 +91,7 @@ public final class LinkifyCompat {
         if ((i & 4) != 0) {
             Linkify.addLinks(spannable, 4);
         }
-        ArrayList arrayList = new ArrayList();
+        ArrayList<LinkSpec> arrayList = new ArrayList();
         if ((i & 1) != 0) {
             gatherLinks(arrayList, spannable, PatternsCompat.AUTOLINK_WEB_URL, new String[]{"http://", "https://", "rtsp://"}, Linkify.sUrlMatchFilter, null);
         }
@@ -106,9 +105,7 @@ public final class LinkifyCompat {
         if (arrayList.size() == 0) {
             return false;
         }
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            LinkSpec linkSpec = (LinkSpec) it.next();
+        for (LinkSpec linkSpec : arrayList) {
             if (linkSpec.frameworkAddedSpan == null) {
                 applyLink(linkSpec.url, linkSpec.start, linkSpec.end, spannable);
             }

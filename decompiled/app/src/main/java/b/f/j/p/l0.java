@@ -191,16 +191,14 @@ public abstract class l0<K, T extends Closeable> implements w0<T> {
                 if (this.g != aVar) {
                     return;
                 }
-                Iterator<Pair<l<T>, x0>> it = this.f623b.iterator();
                 this.f623b.clear();
                 l0.this.e(this.a, this);
                 b(this.c);
                 this.c = null;
-                while (it.hasNext()) {
-                    Pair<l<T>, x0> next = it.next();
-                    synchronized (next) {
-                        ((x0) next.second).o().k((x0) next.second, l0.this.d, th, null);
-                        ((l) next.first).c(th);
+                for (Pair<l<T>, x0> pair : this.f623b) {
+                    synchronized (pair) {
+                        ((x0) pair.second).o().k((x0) pair.second, l0.this.d, th, null);
+                        ((l) pair.first).c(th);
                     }
                 }
             }
@@ -213,7 +211,6 @@ public abstract class l0<K, T extends Closeable> implements w0<T> {
                 }
                 b(this.c);
                 this.c = null;
-                Iterator<Pair<l<T>, x0>> it = this.f623b.iterator();
                 int size = this.f623b.size();
                 if (b.f.j.p.b.f(i)) {
                     this.c = (T) l0.this.c(t);
@@ -222,18 +219,17 @@ public abstract class l0<K, T extends Closeable> implements w0<T> {
                     this.f623b.clear();
                     l0.this.e(this.a, this);
                 }
-                while (it.hasNext()) {
-                    Pair<l<T>, x0> next = it.next();
-                    synchronized (next) {
+                for (Pair<l<T>, x0> pair : this.f623b) {
+                    synchronized (pair) {
                         if (b.f.j.p.b.e(i)) {
-                            ((x0) next.second).o().j((x0) next.second, l0.this.d, null);
+                            ((x0) pair.second).o().j((x0) pair.second, l0.this.d, null);
                             d dVar = this.f;
                             if (dVar != null) {
-                                ((x0) next.second).j(dVar.h);
+                                ((x0) pair.second).j(dVar.h);
                             }
-                            ((x0) next.second).d(l0.this.e, Integer.valueOf(size));
+                            ((x0) pair.second).d(l0.this.e, Integer.valueOf(size));
                         }
-                        ((l) next.first).b(t, i);
+                        ((l) pair.first).b(t, i);
                     }
                 }
             }
@@ -245,11 +241,9 @@ public abstract class l0<K, T extends Closeable> implements w0<T> {
                     return;
                 }
                 this.d = f;
-                Iterator<Pair<l<T>, x0>> it = this.f623b.iterator();
-                while (it.hasNext()) {
-                    Pair<l<T>, x0> next = it.next();
-                    synchronized (next) {
-                        ((l) next.first).a(f);
+                for (Pair<l<T>, x0> pair : this.f623b) {
+                    synchronized (pair) {
+                        ((l) pair.first).a(f);
                     }
                 }
             }

@@ -54,9 +54,7 @@ public class JavacSingularsRecipes {
 
     private static void loadAll(TypeLibrary library, Map<String, JavacSingularizer> map) throws IOException {
         for (JavacSingularizer handler : SpiLoadUtil.findServices(JavacSingularizer.class, JavacSingularizer.class.getClassLoader())) {
-            Iterator<String> it = handler.getSupportedTypes().iterator();
-            while (it.hasNext()) {
-                String type = it.next();
+            for (String type : handler.getSupportedTypes()) {
                 JavacSingularizer existingSingularizer = map.get(type);
                 if (existingSingularizer != null) {
                     JavacSingularizer toKeep = existingSingularizer.getClass().getName().compareTo(handler.getClass().getName()) > 0 ? handler : existingSingularizer;
@@ -254,9 +252,7 @@ public class JavacSingularsRecipes {
         }
 
         public boolean checkForAlreadyExistingNodesAndGenerateError(JavacNode builderType, SingularData data) {
-            Iterator<JavacNode> it = builderType.down().iterator();
-            while (it.hasNext()) {
-                JavacNode child = it.next();
+            for (JavacNode child : builderType.down()) {
                 switch ($SWITCH_TABLE$lombok$core$AST$Kind()[child.getKind().ordinal()]) {
                     case 3:
                         JCTree.JCVariableDecl field = child.get();
@@ -268,9 +264,6 @@ public class JavacSingularsRecipes {
                                     return true;
                                 }
                             }
-                            break;
-                        } else {
-                            break;
                         }
                         break;
                     case 5:
@@ -283,9 +276,6 @@ public class JavacSingularsRecipes {
                                     return true;
                                 }
                             }
-                            break;
-                        } else {
-                            break;
                         }
                         break;
                 }
@@ -367,15 +357,11 @@ public class JavacSingularsRecipes {
             com.sun.tools.javac.util.List<JCTree.JCExpression> thrown = com.sun.tools.javac.util.List.nil();
             if (ignoreNullCollections != null) {
                 if (ignoreNullCollections.booleanValue()) {
-                    Iterator it = jcVariableDecls.iterator();
-                    while (it.hasNext()) {
-                        JCTree.JCVariableDecl d = (JCTree.JCVariableDecl) it.next();
+                    for (JCTree.JCVariableDecl d : jcVariableDecls) {
                         JavacHandlerUtil.createRelevantNullableAnnotation(builderType, d);
                     }
                 } else {
-                    Iterator it2 = jcVariableDecls.iterator();
-                    while (it2.hasNext()) {
-                        JCTree.JCVariableDecl d2 = (JCTree.JCVariableDecl) it2.next();
+                    for (JCTree.JCVariableDecl d2 : jcVariableDecls) {
                         JavacHandlerUtil.createRelevantNonNullAnnotation(builderType, d2);
                     }
                 }

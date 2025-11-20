@@ -821,31 +821,23 @@ public final class StoreAuditLog extends StoreV2 {
                                 case 3079692:
                                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_DENIED)) {
                                         arrayList2.addAll(AuditLogChangeUtils.INSTANCE.transformPermissionOverride(change5));
-                                        break;
-                                    } else {
-                                        break;
                                     }
+                                    break;
                                 case 92906313:
                                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_GRANTED)) {
                                         arrayList2.addAll(AuditLogChangeUtils.INSTANCE.transformPermissionOverride(change5));
-                                        break;
-                                    } else {
-                                        break;
                                     }
+                                    break;
                                 case 108404047:
                                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET)) {
                                         arrayList2.addAll(AuditLogChangeUtils.INSTANCE.transformPermissionOverride(change5));
-                                        break;
-                                    } else {
-                                        break;
                                     }
+                                    break;
                                 case 1133704324:
                                     if (key.equals(ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS)) {
                                         arrayList2.addAll(AuditLogChangeUtils.INSTANCE.transformPermissionChange(change5));
-                                        break;
-                                    } else {
-                                        break;
                                     }
+                                    break;
                             }
                         }
                         arrayList2.add(change5);

@@ -142,7 +142,7 @@ public final class CompositeException extends RuntimeException {
                 Throwable next = it.next();
                 if (!hashSet.contains(next)) {
                     hashSet.add(next);
-                    ArrayList arrayList = new ArrayList();
+                    ArrayList<Throwable> arrayList = new ArrayList();
                     Throwable cause = next.getCause();
                     if (cause != null && cause != next) {
                         while (true) {
@@ -154,9 +154,7 @@ public final class CompositeException extends RuntimeException {
                             cause = cause.getCause();
                         }
                     }
-                    Iterator it2 = arrayList.iterator();
-                    while (it2.hasNext()) {
-                        Throwable th = (Throwable) it2.next();
+                    for (Throwable th : arrayList) {
                         if (hashSet.contains(th)) {
                             next = new RuntimeException("Duplicate found in causal chain so cropping to prevent loop ...");
                         } else {

@@ -1229,21 +1229,26 @@ public final class q extends g.d<q> implements d0.e0.p.d.m0.i.o {
                     switch (tag) {
                         case 0:
                             z2 = true;
+                            break;
                         case 8:
                             this.bitField0_ |= 4096;
                             this.flags_ = dVar.readInt32();
+                            break;
                         case 18:
                             if (!(z3 & true)) {
                                 this.argument_ = new ArrayList();
                                 z3 |= true;
                             }
                             this.argument_.add(dVar.readMessage(b.k, eVar));
+                            break;
                         case 24:
                             this.bitField0_ |= 1;
                             this.nullable_ = dVar.readBool();
+                            break;
                         case 32:
                             this.bitField0_ |= 2;
                             this.flexibleTypeCapabilitiesId_ = dVar.readInt32();
+                            break;
                         case 42:
                             builder = (this.bitField0_ & 4) == 4 ? this.flexibleUpperBound_.toBuilder() : null;
                             q qVar = (q) dVar.readMessage(k, eVar);
@@ -1253,18 +1258,23 @@ public final class q extends g.d<q> implements d0.e0.p.d.m0.i.o {
                                 this.flexibleUpperBound_ = builder.buildPartial();
                             }
                             this.bitField0_ |= 4;
+                            break;
                         case 48:
                             this.bitField0_ |= 16;
                             this.className_ = dVar.readInt32();
+                            break;
                         case 56:
                             this.bitField0_ |= 32;
                             this.typeParameter_ = dVar.readInt32();
+                            break;
                         case 64:
                             this.bitField0_ |= 8;
                             this.flexibleUpperBoundId_ = dVar.readInt32();
+                            break;
                         case 72:
                             this.bitField0_ |= 64;
                             this.typeParameterName_ = dVar.readInt32();
+                            break;
                         case 82:
                             builder = (this.bitField0_ & 256) == 256 ? this.outerType_.toBuilder() : null;
                             q qVar2 = (q) dVar.readMessage(k, eVar);
@@ -1274,12 +1284,15 @@ public final class q extends g.d<q> implements d0.e0.p.d.m0.i.o {
                                 this.outerType_ = builder.buildPartial();
                             }
                             this.bitField0_ |= 256;
+                            break;
                         case 88:
                             this.bitField0_ |= 512;
                             this.outerTypeId_ = dVar.readInt32();
+                            break;
                         case 96:
                             this.bitField0_ |= 128;
                             this.typeAliasName_ = dVar.readInt32();
+                            break;
                         case 106:
                             builder = (this.bitField0_ & 1024) == 1024 ? this.abbreviatedType_.toBuilder() : null;
                             q qVar3 = (q) dVar.readMessage(k, eVar);
@@ -1289,13 +1302,16 @@ public final class q extends g.d<q> implements d0.e0.p.d.m0.i.o {
                                 this.abbreviatedType_ = builder.buildPartial();
                             }
                             this.bitField0_ |= 1024;
+                            break;
                         case 112:
                             this.bitField0_ |= 2048;
                             this.abbreviatedTypeId_ = dVar.readInt32();
+                            break;
                         default:
                             if (!f(dVar, codedOutputStreamNewInstance, eVar, tag)) {
                                 z2 = true;
                             }
+                            break;
                     }
                 } catch (InvalidProtocolBufferException e) {
                     throw e.setUnfinishedMessage(this);

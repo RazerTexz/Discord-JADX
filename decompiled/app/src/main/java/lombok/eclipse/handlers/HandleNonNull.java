@@ -2,7 +2,6 @@ package lombok.eclipse.handlers;
 
 import java.lang.annotation.Annotation;
 import java.util.Arrays;
-import java.util.Iterator;
 import lombok.ConfigurationKeys;
 import lombok.NonNull;
 import lombok.core.AST;
@@ -92,13 +91,9 @@ public class HandleNonNull extends EclipseAnnotationHandler<NonNull> {
     }
 
     public void fix(EclipseNode method) {
-        Iterator<EclipseNode> it = method.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode m = it.next();
+        for (EclipseNode m : method.down()) {
             if (m.getKind() == AST.Kind.ARGUMENT) {
-                Iterator<EclipseNode> it2 = m.down().iterator();
-                while (it2.hasNext()) {
-                    EclipseNode c = it2.next();
+                for (EclipseNode c : m.down()) {
                     if (c.getKind() == AST.Kind.ANNOTATION && EclipseHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) NonNull.class, c)) {
                         handle0((org.eclipse.jdt.internal.compiler.ast.Annotation) c.get(), c, true);
                     }
@@ -155,10 +150,10 @@ public class HandleNonNull extends EclipseAnnotationHandler<NonNull> {
                 }
                 if (ok) {
                     paramNode = typeNode.directUp();
-                    break;
                 } else {
                     return;
                 }
+                break;
         }
         try {
             Argument param = paramNode.get();

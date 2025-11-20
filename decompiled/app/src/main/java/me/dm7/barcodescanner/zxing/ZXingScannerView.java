@@ -116,7 +116,7 @@ public class ZXingScannerView extends e0.a.a.a.a {
 
     public final void c() {
         EnumMap enumMap = new EnumMap(b.i.e.d.class);
-        enumMap.put((EnumMap) b.i.e.d.POSSIBLE_FORMATS, (b.i.e.d) getFormats());
+        enumMap.put(b.i.e.d.POSSIBLE_FORMATS, getFormats());
         g gVar = new g();
         this.E = gVar;
         gVar.c(enumMap);

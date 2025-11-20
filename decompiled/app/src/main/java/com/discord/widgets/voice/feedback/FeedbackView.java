@@ -62,7 +62,7 @@ public final class FeedbackView extends LinearLayout {
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FeedbackIssue data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.issueItem;
             textView.setText(textView.getResources().getString(data.getReasonStringRes()));
             this.issueItem.setOnClickListener(new FeedbackView$IssueViewHolder$onConfigure$1(this, data));

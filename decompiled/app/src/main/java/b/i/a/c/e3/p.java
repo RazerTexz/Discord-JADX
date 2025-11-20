@@ -14,7 +14,6 @@ import com.discord.widgets.chat.input.MentionUtilsKt;
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
@@ -88,1429 +87,1191 @@ public final class p implements f, a0 {
                 case 2083:
                     if (strW1.equals("AD")) {
                         c = 0;
-                        break;
                     }
                     break;
                 case 2084:
                     if (strW1.equals("AE")) {
                         c = 1;
-                        break;
                     }
                     break;
                 case 2085:
                     if (strW1.equals("AF")) {
                         c = 2;
-                        break;
                     }
                     break;
                 case 2086:
                     if (strW1.equals("AG")) {
                         c = 3;
-                        break;
                     }
                     break;
                 case 2088:
                     if (strW1.equals("AI")) {
                         c = 4;
-                        break;
                     }
                     break;
                 case 2091:
                     if (strW1.equals("AL")) {
                         c = 5;
-                        break;
                     }
                     break;
                 case 2092:
                     if (strW1.equals("AM")) {
                         c = 6;
-                        break;
                     }
                     break;
                 case 2094:
                     if (strW1.equals("AO")) {
                         c = 7;
-                        break;
                     }
                     break;
                 case 2096:
                     if (strW1.equals("AQ")) {
                         c = '\b';
-                        break;
                     }
                     break;
                 case 2097:
                     if (strW1.equals("AR")) {
                         c = '\t';
-                        break;
                     }
                     break;
                 case 2098:
                     if (strW1.equals("AS")) {
                         c = '\n';
-                        break;
                     }
                     break;
                 case 2099:
                     if (strW1.equals("AT")) {
                         c = 11;
-                        break;
                     }
                     break;
                 case 2100:
                     if (strW1.equals("AU")) {
                         c = '\f';
-                        break;
                     }
                     break;
                 case 2102:
                     if (strW1.equals("AW")) {
                         c = '\r';
-                        break;
                     }
                     break;
                 case 2103:
                     if (strW1.equals("AX")) {
                         c = 14;
-                        break;
                     }
                     break;
                 case 2105:
                     if (strW1.equals("AZ")) {
                         c = 15;
-                        break;
                     }
                     break;
                 case 2111:
                     if (strW1.equals("BA")) {
                         c = 16;
-                        break;
                     }
                     break;
                 case 2112:
                     if (strW1.equals("BB")) {
                         c = 17;
-                        break;
                     }
                     break;
                 case 2114:
                     if (strW1.equals("BD")) {
                         c = 18;
-                        break;
                     }
                     break;
                 case 2115:
                     if (strW1.equals("BE")) {
                         c = 19;
-                        break;
                     }
                     break;
                 case 2116:
                     if (strW1.equals("BF")) {
                         c = 20;
-                        break;
                     }
                     break;
                 case 2117:
                     if (strW1.equals("BG")) {
                         c = 21;
-                        break;
                     }
                     break;
                 case 2118:
                     if (strW1.equals("BH")) {
                         c = 22;
-                        break;
                     }
                     break;
                 case 2119:
                     if (strW1.equals("BI")) {
                         c = 23;
-                        break;
                     }
                     break;
                 case 2120:
                     if (strW1.equals("BJ")) {
                         c = 24;
-                        break;
                     }
                     break;
                 case 2122:
                     if (strW1.equals("BL")) {
                         c = 25;
-                        break;
                     }
                     break;
                 case 2123:
                     if (strW1.equals("BM")) {
                         c = 26;
-                        break;
                     }
                     break;
                 case 2124:
                     if (strW1.equals("BN")) {
                         c = 27;
-                        break;
                     }
                     break;
                 case 2125:
                     if (strW1.equals("BO")) {
                         c = 28;
-                        break;
                     }
                     break;
                 case 2127:
                     if (strW1.equals("BQ")) {
                         c = 29;
-                        break;
                     }
                     break;
                 case 2128:
                     if (strW1.equals("BR")) {
                         c = 30;
-                        break;
                     }
                     break;
                 case 2129:
                     if (strW1.equals("BS")) {
                         c = 31;
-                        break;
                     }
                     break;
                 case 2130:
                     if (strW1.equals("BT")) {
                         c = ' ';
-                        break;
                     }
                     break;
                 case 2133:
                     if (strW1.equals("BW")) {
                         c = '!';
-                        break;
                     }
                     break;
                 case 2135:
                     if (strW1.equals("BY")) {
                         c = '\"';
-                        break;
                     }
                     break;
                 case 2136:
                     if (strW1.equals("BZ")) {
                         c = MentionUtilsKt.CHANNELS_CHAR;
-                        break;
                     }
                     break;
                 case 2142:
                     if (strW1.equals("CA")) {
                         c = '$';
-                        break;
                     }
                     break;
                 case 2145:
                     if (strW1.equals("CD")) {
                         c = '%';
-                        break;
                     }
                     break;
                 case 2147:
                     if (strW1.equals("CF")) {
                         c = '&';
-                        break;
                     }
                     break;
                 case 2148:
                     if (strW1.equals("CG")) {
                         c = '\'';
-                        break;
                     }
                     break;
                 case 2149:
                     if (strW1.equals("CH")) {
                         c = '(';
-                        break;
                     }
                     break;
                 case 2150:
                     if (strW1.equals("CI")) {
                         c = ')';
-                        break;
                     }
                     break;
                 case 2152:
                     if (strW1.equals("CK")) {
                         c = '*';
-                        break;
                     }
                     break;
                 case 2153:
                     if (strW1.equals("CL")) {
                         c = '+';
-                        break;
                     }
                     break;
                 case 2154:
                     if (strW1.equals("CM")) {
                         c = ',';
-                        break;
                     }
                     break;
                 case 2155:
                     if (strW1.equals("CN")) {
                         c = '-';
-                        break;
                     }
                     break;
                 case 2156:
                     if (strW1.equals("CO")) {
                         c = '.';
-                        break;
                     }
                     break;
                 case 2159:
                     if (strW1.equals("CR")) {
                         c = MentionUtilsKt.SLASH_CHAR;
-                        break;
                     }
                     break;
                 case 2162:
                     if (strW1.equals("CU")) {
                         c = '0';
-                        break;
                     }
                     break;
                 case 2163:
                     if (strW1.equals("CV")) {
                         c = '1';
-                        break;
                     }
                     break;
                 case 2164:
                     if (strW1.equals("CW")) {
                         c = '2';
-                        break;
                     }
                     break;
                 case 2165:
                     if (strW1.equals("CX")) {
                         c = '3';
-                        break;
                     }
                     break;
                 case 2166:
                     if (strW1.equals("CY")) {
                         c = '4';
-                        break;
                     }
                     break;
                 case 2167:
                     if (strW1.equals("CZ")) {
                         c = '5';
-                        break;
                     }
                     break;
                 case 2177:
                     if (strW1.equals("DE")) {
                         c = '6';
-                        break;
                     }
                     break;
                 case 2182:
                     if (strW1.equals("DJ")) {
                         c = '7';
-                        break;
                     }
                     break;
                 case 2183:
                     if (strW1.equals("DK")) {
                         c = '8';
-                        break;
                     }
                     break;
                 case 2185:
                     if (strW1.equals("DM")) {
                         c = '9';
-                        break;
                     }
                     break;
                 case 2187:
                     if (strW1.equals("DO")) {
                         c = MentionUtilsKt.EMOJIS_AND_STICKERS_CHAR;
-                        break;
                     }
                     break;
                 case 2198:
                     if (strW1.equals("DZ")) {
                         c = ';';
-                        break;
                     }
                     break;
                 case 2206:
                     if (strW1.equals("EC")) {
                         c = '<';
-                        break;
                     }
                     break;
                 case 2208:
                     if (strW1.equals("EE")) {
                         c = '=';
-                        break;
                     }
                     break;
                 case 2210:
                     if (strW1.equals("EG")) {
                         c = '>';
-                        break;
                     }
                     break;
                 case 2221:
                     if (strW1.equals("ER")) {
                         c = '?';
-                        break;
                     }
                     break;
                 case 2222:
                     if (strW1.equals("ES")) {
                         c = MentionUtilsKt.MENTIONS_CHAR;
-                        break;
                     }
                     break;
                 case 2223:
                     if (strW1.equals("ET")) {
                         c = 'A';
-                        break;
                     }
                     break;
                 case 2243:
                     if (strW1.equals("FI")) {
                         c = 'B';
-                        break;
                     }
                     break;
                 case 2244:
                     if (strW1.equals("FJ")) {
                         c = 'C';
-                        break;
                     }
                     break;
                 case 2245:
                     if (strW1.equals("FK")) {
                         c = 'D';
-                        break;
                     }
                     break;
                 case 2247:
                     if (strW1.equals("FM")) {
                         c = 'E';
-                        break;
                     }
                     break;
                 case 2249:
                     if (strW1.equals("FO")) {
                         c = 'F';
-                        break;
                     }
                     break;
                 case 2252:
                     if (strW1.equals("FR")) {
                         c = 'G';
-                        break;
                     }
                     break;
                 case 2266:
                     if (strW1.equals("GA")) {
                         c = 'H';
-                        break;
                     }
                     break;
                 case 2267:
                     if (strW1.equals("GB")) {
                         c = 'I';
-                        break;
                     }
                     break;
                 case 2269:
                     if (strW1.equals("GD")) {
                         c = 'J';
-                        break;
                     }
                     break;
                 case 2270:
                     if (strW1.equals("GE")) {
                         c = 'K';
-                        break;
                     }
                     break;
                 case 2271:
                     if (strW1.equals("GF")) {
                         c = 'L';
-                        break;
                     }
                     break;
                 case 2272:
                     if (strW1.equals("GG")) {
                         c = 'M';
-                        break;
                     }
                     break;
                 case 2273:
                     if (strW1.equals("GH")) {
                         c = 'N';
-                        break;
                     }
                     break;
                 case 2274:
                     if (strW1.equals("GI")) {
                         c = 'O';
-                        break;
                     }
                     break;
                 case 2277:
                     if (strW1.equals("GL")) {
                         c = 'P';
-                        break;
                     }
                     break;
                 case 2278:
                     if (strW1.equals("GM")) {
                         c = 'Q';
-                        break;
                     }
                     break;
                 case 2279:
                     if (strW1.equals("GN")) {
                         c = 'R';
-                        break;
                     }
                     break;
                 case 2281:
                     if (strW1.equals("GP")) {
                         c = 'S';
-                        break;
                     }
                     break;
                 case 2282:
                     if (strW1.equals("GQ")) {
                         c = 'T';
-                        break;
                     }
                     break;
                 case 2283:
                     if (strW1.equals("GR")) {
                         c = 'U';
-                        break;
                     }
                     break;
                 case 2285:
                     if (strW1.equals("GT")) {
                         c = 'V';
-                        break;
                     }
                     break;
                 case 2286:
                     if (strW1.equals("GU")) {
                         c = 'W';
-                        break;
                     }
                     break;
                 case 2288:
                     if (strW1.equals("GW")) {
                         c = 'X';
-                        break;
                     }
                     break;
                 case 2290:
                     if (strW1.equals("GY")) {
                         c = 'Y';
-                        break;
                     }
                     break;
                 case 2307:
                     if (strW1.equals("HK")) {
                         c = 'Z';
-                        break;
                     }
                     break;
                 case 2310:
                     if (strW1.equals("HN")) {
                         c = '[';
-                        break;
                     }
                     break;
                 case 2314:
                     if (strW1.equals("HR")) {
                         c = '\\';
-                        break;
                     }
                     break;
                 case 2316:
                     if (strW1.equals("HT")) {
                         c = ']';
-                        break;
                     }
                     break;
                 case 2317:
                     if (strW1.equals("HU")) {
                         c = '^';
-                        break;
                     }
                     break;
                 case 2331:
                     if (strW1.equals("ID")) {
                         c = '_';
-                        break;
                     }
                     break;
                 case 2332:
                     if (strW1.equals("IE")) {
                         c = '`';
-                        break;
                     }
                     break;
                 case 2339:
                     if (strW1.equals("IL")) {
                         c = 'a';
-                        break;
                     }
                     break;
                 case 2340:
                     if (strW1.equals("IM")) {
                         c = 'b';
-                        break;
                     }
                     break;
                 case 2341:
                     if (strW1.equals("IN")) {
                         c = 'c';
-                        break;
                     }
                     break;
                 case 2342:
                     if (strW1.equals("IO")) {
                         c = 'd';
-                        break;
                     }
                     break;
                 case 2344:
                     if (strW1.equals("IQ")) {
                         c = 'e';
-                        break;
                     }
                     break;
                 case 2345:
                     if (strW1.equals("IR")) {
                         c = 'f';
-                        break;
                     }
                     break;
                 case 2346:
                     if (strW1.equals("IS")) {
                         c = 'g';
-                        break;
                     }
                     break;
                 case 2347:
                     if (strW1.equals("IT")) {
                         c = 'h';
-                        break;
                     }
                     break;
                 case 2363:
                     if (strW1.equals("JE")) {
                         c = 'i';
-                        break;
                     }
                     break;
                 case 2371:
                     if (strW1.equals("JM")) {
                         c = 'j';
-                        break;
                     }
                     break;
                 case 2373:
                     if (strW1.equals("JO")) {
                         c = 'k';
-                        break;
                     }
                     break;
                 case 2374:
                     if (strW1.equals("JP")) {
                         c = 'l';
-                        break;
                     }
                     break;
                 case 2394:
                     if (strW1.equals("KE")) {
                         c = 'm';
-                        break;
                     }
                     break;
                 case 2396:
                     if (strW1.equals("KG")) {
                         c = 'n';
-                        break;
                     }
                     break;
                 case 2397:
                     if (strW1.equals("KH")) {
                         c = 'o';
-                        break;
                     }
                     break;
                 case 2398:
                     if (strW1.equals("KI")) {
                         c = 'p';
-                        break;
                     }
                     break;
                 case 2402:
                     if (strW1.equals("KM")) {
                         c = 'q';
-                        break;
                     }
                     break;
                 case 2405:
                     if (strW1.equals("KP")) {
                         c = 'r';
-                        break;
                     }
                     break;
                 case 2407:
                     if (strW1.equals("KR")) {
                         c = 's';
-                        break;
                     }
                     break;
                 case 2412:
                     if (strW1.equals("KW")) {
                         c = 't';
-                        break;
                     }
                     break;
                 case 2414:
                     if (strW1.equals("KY")) {
                         c = 'u';
-                        break;
                     }
                     break;
                 case 2415:
                     if (strW1.equals("KZ")) {
                         c = 'v';
-                        break;
                     }
                     break;
                 case 2421:
                     if (strW1.equals("LA")) {
                         c = 'w';
-                        break;
                     }
                     break;
                 case 2422:
                     if (strW1.equals("LB")) {
                         c = 'x';
-                        break;
                     }
                     break;
                 case 2423:
                     if (strW1.equals("LC")) {
                         c = 'y';
-                        break;
                     }
                     break;
                 case 2429:
                     if (strW1.equals("LI")) {
                         c = 'z';
-                        break;
                     }
                     break;
                 case 2431:
                     if (strW1.equals("LK")) {
                         c = '{';
-                        break;
                     }
                     break;
                 case 2438:
                     if (strW1.equals("LR")) {
                         c = '|';
-                        break;
                     }
                     break;
                 case 2439:
                     if (strW1.equals("LS")) {
                         c = '}';
-                        break;
                     }
                     break;
                 case 2440:
                     if (strW1.equals("LT")) {
                         c = '~';
-                        break;
                     }
                     break;
                 case 2441:
                     if (strW1.equals("LU")) {
                         c = 127;
-                        break;
                     }
                     break;
                 case 2442:
                     if (strW1.equals("LV")) {
                         c = 128;
-                        break;
                     }
                     break;
                 case 2445:
                     if (strW1.equals("LY")) {
                         c = 129;
-                        break;
                     }
                     break;
                 case 2452:
                     if (strW1.equals("MA")) {
                         c = 130;
-                        break;
                     }
                     break;
                 case 2454:
                     if (strW1.equals("MC")) {
                         c = 131;
-                        break;
                     }
                     break;
                 case 2455:
                     if (strW1.equals("MD")) {
                         c = 132;
-                        break;
                     }
                     break;
                 case 2456:
                     if (strW1.equals("ME")) {
                         c = 133;
-                        break;
                     }
                     break;
                 case 2457:
                     if (strW1.equals("MF")) {
                         c = 134;
-                        break;
                     }
                     break;
                 case 2458:
                     if (strW1.equals("MG")) {
                         c = 135;
-                        break;
                     }
                     break;
                 case 2459:
                     if (strW1.equals("MH")) {
                         c = 136;
-                        break;
                     }
                     break;
                 case 2462:
                     if (strW1.equals("MK")) {
                         c = 137;
-                        break;
                     }
                     break;
                 case 2463:
                     if (strW1.equals("ML")) {
                         c = 138;
-                        break;
                     }
                     break;
                 case 2464:
                     if (strW1.equals("MM")) {
                         c = 139;
-                        break;
                     }
                     break;
                 case 2465:
                     if (strW1.equals("MN")) {
                         c = 140;
-                        break;
                     }
                     break;
                 case 2466:
                     if (strW1.equals("MO")) {
                         c = 141;
-                        break;
                     }
                     break;
                 case 2467:
                     if (strW1.equals("MP")) {
                         c = 142;
-                        break;
                     }
                     break;
                 case 2468:
                     if (strW1.equals("MQ")) {
                         c = 143;
-                        break;
                     }
                     break;
                 case 2469:
                     if (strW1.equals("MR")) {
                         c = 144;
-                        break;
                     }
                     break;
                 case 2470:
                     if (strW1.equals("MS")) {
                         c = 145;
-                        break;
                     }
                     break;
                 case 2471:
                     if (strW1.equals("MT")) {
                         c = 146;
-                        break;
                     }
                     break;
                 case 2472:
                     if (strW1.equals("MU")) {
                         c = 147;
-                        break;
                     }
                     break;
                 case 2473:
                     if (strW1.equals("MV")) {
                         c = 148;
-                        break;
                     }
                     break;
                 case 2474:
                     if (strW1.equals("MW")) {
                         c = 149;
-                        break;
                     }
                     break;
                 case 2475:
                     if (strW1.equals("MX")) {
                         c = 150;
-                        break;
                     }
                     break;
                 case 2476:
                     if (strW1.equals("MY")) {
                         c = 151;
-                        break;
                     }
                     break;
                 case 2477:
                     if (strW1.equals("MZ")) {
                         c = 152;
-                        break;
                     }
                     break;
                 case 2483:
                     if (strW1.equals("NA")) {
                         c = 153;
-                        break;
                     }
                     break;
                 case 2485:
                     if (strW1.equals("NC")) {
                         c = 154;
-                        break;
                     }
                     break;
                 case 2487:
                     if (strW1.equals("NE")) {
                         c = 155;
-                        break;
                     }
                     break;
                 case 2489:
                     if (strW1.equals("NG")) {
                         c = 156;
-                        break;
                     }
                     break;
                 case 2491:
                     if (strW1.equals("NI")) {
                         c = 157;
-                        break;
                     }
                     break;
                 case 2494:
                     if (strW1.equals("NL")) {
                         c = 158;
-                        break;
                     }
                     break;
                 case 2497:
                     if (strW1.equals("NO")) {
                         c = 159;
-                        break;
                     }
                     break;
                 case 2498:
                     if (strW1.equals("NP")) {
                         c = 160;
-                        break;
                     }
                     break;
                 case 2500:
                     if (strW1.equals("NR")) {
                         c = 161;
-                        break;
                     }
                     break;
                 case 2503:
                     if (strW1.equals("NU")) {
                         c = 162;
-                        break;
                     }
                     break;
                 case 2508:
                     if (strW1.equals("NZ")) {
                         c = 163;
-                        break;
                     }
                     break;
                 case 2526:
                     if (strW1.equals("OM")) {
                         c = 164;
-                        break;
                     }
                     break;
                 case 2545:
                     if (strW1.equals("PA")) {
                         c = 165;
-                        break;
                     }
                     break;
                 case 2549:
                     if (strW1.equals("PE")) {
                         c = 166;
-                        break;
                     }
                     break;
                 case 2550:
                     if (strW1.equals("PF")) {
                         c = 167;
-                        break;
                     }
                     break;
                 case 2551:
                     if (strW1.equals("PG")) {
                         c = 168;
-                        break;
                     }
                     break;
                 case 2552:
                     if (strW1.equals("PH")) {
                         c = 169;
-                        break;
                     }
                     break;
                 case 2555:
                     if (strW1.equals("PK")) {
                         c = 170;
-                        break;
                     }
                     break;
                 case 2556:
                     if (strW1.equals("PL")) {
                         c = 171;
-                        break;
                     }
                     break;
                 case 2557:
                     if (strW1.equals("PM")) {
                         c = 172;
-                        break;
                     }
                     break;
                 case 2562:
                     if (strW1.equals("PR")) {
                         c = 173;
-                        break;
                     }
                     break;
                 case 2563:
                     if (strW1.equals("PS")) {
                         c = 174;
-                        break;
                     }
                     break;
                 case 2564:
                     if (strW1.equals("PT")) {
                         c = 175;
-                        break;
                     }
                     break;
                 case 2567:
                     if (strW1.equals("PW")) {
                         c = 176;
-                        break;
                     }
                     break;
                 case 2569:
                     if (strW1.equals("PY")) {
                         c = 177;
-                        break;
                     }
                     break;
                 case 2576:
                     if (strW1.equals("QA")) {
                         c = 178;
-                        break;
                     }
                     break;
                 case 2611:
                     if (strW1.equals("RE")) {
                         c = 179;
-                        break;
                     }
                     break;
                 case 2621:
                     if (strW1.equals("RO")) {
                         c = 180;
-                        break;
                     }
                     break;
                 case 2625:
                     if (strW1.equals("RS")) {
                         c = 181;
-                        break;
                     }
                     break;
                 case 2627:
                     if (strW1.equals("RU")) {
                         c = 182;
-                        break;
                     }
                     break;
                 case 2629:
                     if (strW1.equals("RW")) {
                         c = 183;
-                        break;
                     }
                     break;
                 case 2638:
                     if (strW1.equals("SA")) {
                         c = 184;
-                        break;
                     }
                     break;
                 case 2639:
                     if (strW1.equals("SB")) {
                         c = 185;
-                        break;
                     }
                     break;
                 case 2640:
                     if (strW1.equals("SC")) {
                         c = 186;
-                        break;
                     }
                     break;
                 case 2641:
                     if (strW1.equals("SD")) {
                         c = 187;
-                        break;
                     }
                     break;
                 case 2642:
                     if (strW1.equals("SE")) {
                         c = 188;
-                        break;
                     }
                     break;
                 case 2644:
                     if (strW1.equals("SG")) {
                         c = 189;
-                        break;
                     }
                     break;
                 case 2645:
                     if (strW1.equals("SH")) {
                         c = 190;
-                        break;
                     }
                     break;
                 case 2646:
                     if (strW1.equals("SI")) {
                         c = 191;
-                        break;
                     }
                     break;
                 case 2647:
                     if (strW1.equals("SJ")) {
                         c = 192;
-                        break;
                     }
                     break;
                 case 2648:
                     if (strW1.equals("SK")) {
                         c = 193;
-                        break;
                     }
                     break;
                 case 2649:
                     if (strW1.equals("SL")) {
                         c = 194;
-                        break;
                     }
                     break;
                 case 2650:
                     if (strW1.equals("SM")) {
                         c = 195;
-                        break;
                     }
                     break;
                 case 2651:
                     if (strW1.equals("SN")) {
                         c = 196;
-                        break;
                     }
                     break;
                 case 2652:
                     if (strW1.equals("SO")) {
                         c = 197;
-                        break;
                     }
                     break;
                 case 2655:
                     if (strW1.equals("SR")) {
                         c = 198;
-                        break;
                     }
                     break;
                 case 2656:
                     if (strW1.equals("SS")) {
                         c = 199;
-                        break;
                     }
                     break;
                 case 2657:
                     if (strW1.equals("ST")) {
                         c = 200;
-                        break;
                     }
                     break;
                 case 2659:
                     if (strW1.equals("SV")) {
                         c = 201;
-                        break;
                     }
                     break;
                 case 2661:
                     if (strW1.equals("SX")) {
                         c = 202;
-                        break;
                     }
                     break;
                 case 2662:
                     if (strW1.equals("SY")) {
                         c = 203;
-                        break;
                     }
                     break;
                 case 2663:
                     if (strW1.equals("SZ")) {
                         c = 204;
-                        break;
                     }
                     break;
                 case 2671:
                     if (strW1.equals("TC")) {
                         c = 205;
-                        break;
                     }
                     break;
                 case 2672:
                     if (strW1.equals("TD")) {
                         c = 206;
-                        break;
                     }
                     break;
                 case 2675:
                     if (strW1.equals("TG")) {
                         c = 207;
-                        break;
                     }
                     break;
                 case 2676:
                     if (strW1.equals("TH")) {
                         c = 208;
-                        break;
                     }
                     break;
                 case 2678:
                     if (strW1.equals("TJ")) {
                         c = 209;
-                        break;
                     }
                     break;
                 case 2680:
                     if (strW1.equals("TL")) {
                         c = 210;
-                        break;
                     }
                     break;
                 case 2681:
                     if (strW1.equals("TM")) {
                         c = 211;
-                        break;
                     }
                     break;
                 case 2682:
                     if (strW1.equals("TN")) {
                         c = 212;
-                        break;
                     }
                     break;
                 case 2683:
                     if (strW1.equals("TO")) {
                         c = 213;
-                        break;
                     }
                     break;
                 case 2686:
                     if (strW1.equals("TR")) {
                         c = 214;
-                        break;
                     }
                     break;
                 case 2688:
                     if (strW1.equals("TT")) {
                         c = 215;
-                        break;
                     }
                     break;
                 case 2690:
                     if (strW1.equals("TV")) {
                         c = 216;
-                        break;
                     }
                     break;
                 case 2691:
                     if (strW1.equals("TW")) {
                         c = 217;
-                        break;
                     }
                     break;
                 case 2694:
                     if (strW1.equals("TZ")) {
                         c = 218;
-                        break;
                     }
                     break;
                 case 2700:
                     if (strW1.equals("UA")) {
                         c = 219;
-                        break;
                     }
                     break;
                 case 2706:
                     if (strW1.equals("UG")) {
                         c = 220;
-                        break;
                     }
                     break;
                 case 2718:
                     if (strW1.equals("US")) {
                         c = 221;
-                        break;
                     }
                     break;
                 case 2724:
                     if (strW1.equals("UY")) {
                         c = 222;
-                        break;
                     }
                     break;
                 case 2725:
                     if (strW1.equals("UZ")) {
                         c = 223;
-                        break;
                     }
                     break;
                 case 2733:
                     if (strW1.equals("VC")) {
                         c = 224;
-                        break;
                     }
                     break;
                 case 2735:
                     if (strW1.equals("VE")) {
                         c = 225;
-                        break;
                     }
                     break;
                 case 2737:
                     if (strW1.equals("VG")) {
                         c = 226;
-                        break;
                     }
                     break;
                 case 2739:
                     if (strW1.equals("VI")) {
                         c = 227;
-                        break;
                     }
                     break;
                 case 2744:
                     if (strW1.equals("VN")) {
                         c = 228;
-                        break;
                     }
                     break;
                 case 2751:
                     if (strW1.equals("VU")) {
                         c = 229;
-                        break;
                     }
                     break;
                 case 2767:
                     if (strW1.equals("WF")) {
                         c = 230;
-                        break;
                     }
                     break;
                 case 2780:
                     if (strW1.equals("WS")) {
                         c = 231;
-                        break;
                     }
                     break;
                 case 2803:
                     if (strW1.equals("XK")) {
                         c = 232;
-                        break;
                     }
                     break;
                 case 2828:
                     if (strW1.equals("YE")) {
                         c = 233;
-                        break;
                     }
                     break;
                 case 2843:
                     if (strW1.equals("YT")) {
                         c = 234;
-                        break;
                     }
                     break;
                 case 2855:
                     if (strW1.equals("ZA")) {
                         c = 235;
-                        break;
                     }
                     break;
                 case 2867:
                     if (strW1.equals("ZM")) {
                         c = 236;
-                        break;
                     }
                     break;
                 case 2877:
                     if (strW1.equals("ZW")) {
                         c = 237;
-                        break;
                     }
                     break;
             }
@@ -2116,11 +1877,9 @@ public final class p implements f, a0 {
         this.p = i2;
         this.f946s = h(i2);
         b.i.a.c.e3.b bVar = new b.i.a.c.e3.b(this);
-        Iterator<WeakReference<v.b>> it = vVar.c.iterator();
-        while (it.hasNext()) {
-            WeakReference<v.b> next = it.next();
-            if (next.get() == null) {
-                vVar.c.remove(next);
+        for (WeakReference<v.b> weakReference : vVar.c) {
+            if (weakReference.get() == null) {
+                vVar.c.remove(weakReference);
             }
         }
         vVar.c.add(new WeakReference<>(bVar));
@@ -2209,11 +1968,9 @@ public final class p implements f, a0 {
             return;
         }
         this.t = j2;
-        Iterator<f.a.C0099a.C0100a> it = this.i.a.iterator();
-        while (it.hasNext()) {
-            f.a.C0099a.C0100a next = it.next();
-            if (!next.c) {
-                next.a.post(new b.i.a.c.e3.a(next, i, j, j2));
+        for (f.a.C0099a.C0100a c0100a : this.i.a) {
+            if (!c0100a.c) {
+                c0100a.a.post(new b.i.a.c.e3.a(c0100a, i, j, j2));
             }
         }
     }

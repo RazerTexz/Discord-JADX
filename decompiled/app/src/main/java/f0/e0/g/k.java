@@ -5,7 +5,6 @@ import f0.c0;
 import f0.e0.g.e;
 import f0.e0.k.h;
 import java.lang.ref.Reference;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
@@ -31,22 +30,20 @@ public final class k {
         public long a() {
             k kVar = k.this;
             long jNanoTime = System.nanoTime();
-            Iterator<j> it = kVar.d.iterator();
             j jVar = null;
             long j = Long.MIN_VALUE;
             int i = 0;
             int i2 = 0;
-            while (it.hasNext()) {
-                j next = it.next();
-                d0.z.d.m.checkExpressionValueIsNotNull(next, "connection");
-                synchronized (next) {
-                    if (kVar.b(next, jNanoTime) > 0) {
+            for (j jVar2 : kVar.d) {
+                d0.z.d.m.checkExpressionValueIsNotNull(jVar2, "connection");
+                synchronized (jVar2) {
+                    if (kVar.b(jVar2, jNanoTime) > 0) {
                         i2++;
                     } else {
                         i++;
-                        long j2 = jNanoTime - next.p;
+                        long j2 = jNanoTime - jVar2.p;
                         if (j2 > j) {
-                            jVar = next;
+                            jVar = jVar2;
                             j = j2;
                         }
                     }
@@ -100,17 +97,15 @@ public final class k {
     public final boolean a(f0.a aVar, e eVar, List<c0> list, boolean z2) {
         d0.z.d.m.checkParameterIsNotNull(aVar, "address");
         d0.z.d.m.checkParameterIsNotNull(eVar, NotificationCompat.CATEGORY_CALL);
-        Iterator<j> it = this.d.iterator();
-        while (it.hasNext()) {
-            j next = it.next();
-            d0.z.d.m.checkExpressionValueIsNotNull(next, "connection");
-            synchronized (next) {
+        for (j jVar : this.d) {
+            d0.z.d.m.checkExpressionValueIsNotNull(jVar, "connection");
+            synchronized (jVar) {
                 if (z2) {
-                    if (!next.j()) {
+                    if (!jVar.j()) {
                     }
                 }
-                if (next.h(aVar, list)) {
-                    eVar.f(next);
+                if (jVar.h(aVar, list)) {
+                    eVar.f(jVar);
                     return true;
                 }
             }

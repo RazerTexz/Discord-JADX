@@ -830,11 +830,10 @@ public class d {
                         case -2123537834:
                             if (!str.equals("audio/eac3-joc")) {
                                 c3 = 65535;
-                                break;
                             } else {
                                 c3 = 0;
-                                break;
                             }
+                            break;
                         case -1662384011:
                             if (str.equals("video/mp2p")) {
                                 c3 = 1;

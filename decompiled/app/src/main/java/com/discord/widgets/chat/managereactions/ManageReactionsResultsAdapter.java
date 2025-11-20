@@ -101,7 +101,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f2484b.setOnClickListener(new ManageReactionsResultsAdapter$ErrorViewHolder$onConfigure$1(data));
         }
     }
@@ -310,7 +310,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             String username;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ReactionUserItem) {
                 TextView textView = this.binding.d;
                 m.checkNotNullExpressionValue(textView, "binding.manageReactionsResultUserName");

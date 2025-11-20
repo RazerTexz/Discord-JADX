@@ -83,133 +83,111 @@ public final class TextInformationFrame extends Id3Frame {
             case 82815:
                 if (str.equals("TAL")) {
                     c = 0;
-                    break;
                 }
                 break;
             case 82878:
                 if (str.equals("TCM")) {
                     c = 1;
-                    break;
                 }
                 break;
             case 82897:
                 if (str.equals("TDA")) {
                     c = 2;
-                    break;
                 }
                 break;
             case 83253:
                 if (str.equals("TP1")) {
                     c = 3;
-                    break;
                 }
                 break;
             case 83254:
                 if (str.equals("TP2")) {
                     c = 4;
-                    break;
                 }
                 break;
             case 83255:
                 if (str.equals("TP3")) {
                     c = 5;
-                    break;
                 }
                 break;
             case 83341:
                 if (str.equals("TRK")) {
                     c = 6;
-                    break;
                 }
                 break;
             case 83378:
                 if (str.equals("TT2")) {
                     c = 7;
-                    break;
                 }
                 break;
             case 83536:
                 if (str.equals("TXT")) {
                     c = '\b';
-                    break;
                 }
                 break;
             case 83552:
                 if (str.equals("TYE")) {
                     c = '\t';
-                    break;
                 }
                 break;
             case 2567331:
                 if (str.equals("TALB")) {
                     c = '\n';
-                    break;
                 }
                 break;
             case 2569357:
                 if (str.equals("TCOM")) {
                     c = 11;
-                    break;
                 }
                 break;
             case 2569891:
                 if (str.equals("TDAT")) {
                     c = '\f';
-                    break;
                 }
                 break;
             case 2570401:
                 if (str.equals("TDRC")) {
                     c = '\r';
-                    break;
                 }
                 break;
             case 2570410:
                 if (str.equals("TDRL")) {
                     c = 14;
-                    break;
                 }
                 break;
             case 2571565:
                 if (str.equals("TEXT")) {
                     c = 15;
-                    break;
                 }
                 break;
             case 2575251:
                 if (str.equals("TIT2")) {
                     c = 16;
-                    break;
                 }
                 break;
             case 2581512:
                 if (str.equals("TPE1")) {
                     c = 17;
-                    break;
                 }
                 break;
             case 2581513:
                 if (str.equals("TPE2")) {
                     c = 18;
-                    break;
                 }
                 break;
             case 2581514:
                 if (str.equals("TPE3")) {
                     c = 19;
-                    break;
                 }
                 break;
             case 2583398:
                 if (str.equals("TRCK")) {
                     c = 20;
-                    break;
                 }
                 break;
             case 2590194:
                 if (str.equals("TYER")) {
                     c = 21;
-                    break;
                 }
                 break;
         }

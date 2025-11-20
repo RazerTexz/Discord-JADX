@@ -4,7 +4,6 @@ import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
@@ -112,19 +111,14 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
         if (checkForTypeLevelWith && EclipseHandlerUtil.hasAnnotation((Class<? extends Annotation>) With.class, typeNode)) {
             return true;
         }
-        TypeDeclaration typeDecl = null;
-        if (typeNode.get() instanceof TypeDeclaration) {
-            typeDecl = (TypeDeclaration) typeNode.get();
-        }
+        TypeDeclaration typeDecl = typeNode.get() instanceof TypeDeclaration ? (TypeDeclaration) typeNode.get() : null;
         int modifiers = typeDecl == null ? 0 : typeDecl.modifiers;
         boolean notAClass = (modifiers & 25088) != 0;
         if (typeDecl == null || notAClass) {
             pos.addError("@With is only supported on a class or a field.");
             return false;
         }
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode field = it.next();
+        for (EclipseNode field : typeNode.down()) {
             if (field.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fieldDecl = field.get();
                 if (EclipseHandlerUtil.filterField(fieldDecl) && ((fieldDecl.modifiers & 16) == 0 || fieldDecl.initialization == null)) {
@@ -136,9 +130,7 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
     }
 
     public void generateWithForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) throws IllegalArgumentException {
-        Iterator<EclipseNode> it = fieldNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : fieldNode.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION && EclipseHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) With.class, child)) {
                 return;
             }
@@ -246,14 +238,8 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
         if (method.returnType == null) {
             return null;
         }
-        org.eclipse.jdt.internal.compiler.ast.Annotation[] deprecated = null;
-        org.eclipse.jdt.internal.compiler.ast.Annotation[] checkerFramework = null;
-        if (EclipseHandlerUtil.isFieldDeprecated(fieldNode)) {
-            deprecated = new org.eclipse.jdt.internal.compiler.ast.Annotation[]{EclipseHandlerUtil.generateDeprecatedAnnotation(source)};
-        }
-        if (EclipseHandlerUtil.getCheckerFrameworkVersion(fieldNode).generateSideEffectFree()) {
-            checkerFramework = new org.eclipse.jdt.internal.compiler.ast.Annotation[]{EclipseHandlerUtil.generateNamedAnnotation(source, CheckerFrameworkVersion.NAME__SIDE_EFFECT_FREE)};
-        }
+        org.eclipse.jdt.internal.compiler.ast.Annotation[] deprecated = EclipseHandlerUtil.isFieldDeprecated(fieldNode) ? new org.eclipse.jdt.internal.compiler.ast.Annotation[]{EclipseHandlerUtil.generateDeprecatedAnnotation(source)} : null;
+        org.eclipse.jdt.internal.compiler.ast.Annotation[] checkerFramework = EclipseHandlerUtil.getCheckerFrameworkVersion(fieldNode).generateSideEffectFree() ? new org.eclipse.jdt.internal.compiler.ast.Annotation[]{EclipseHandlerUtil.generateNamedAnnotation(source, CheckerFrameworkVersion.NAME__SIDE_EFFECT_FREE)} : null;
         method.annotations = EclipseHandlerUtil.copyAnnotations(source, new org.eclipse.jdt.internal.compiler.ast.Annotation[]{(org.eclipse.jdt.internal.compiler.ast.Annotation[]) onMethod.toArray(new org.eclipse.jdt.internal.compiler.ast.Annotation[0]), checkerFramework, deprecated});
         Argument param = new Argument(field.name, p, EclipseHandlerUtil.copyType(field.type, source), 16);
         param.sourceStart = pS;
@@ -267,9 +253,7 @@ public class HandleWith extends EclipseAnnotationHandler<With> {
         org.eclipse.jdt.internal.compiler.ast.Annotation[] copyableAnnotations = EclipseHandlerUtil.findCopyableAnnotations(fieldNode);
         if (!makeAbstract) {
             List<Expression> args = new ArrayList<>();
-            Iterator<EclipseNode> it = fieldNode.up().down().iterator();
-            while (it.hasNext()) {
-                EclipseNode child = it.next();
+            for (EclipseNode child : fieldNode.up().down()) {
                 if (child.getKind() == AST.Kind.FIELD) {
                     FieldDeclaration childDecl = child.get();
                     if (childDecl.name == null || childDecl.name.length <= 0 || childDecl.name[0] != '$') {

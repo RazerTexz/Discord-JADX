@@ -243,17 +243,15 @@ public class HandleDelegate extends JavacAnnotationHandler<Delegate> {
         for (Type.TypeVar typeVar : sig.type.getTypeVariables()) {
             Name name = typeVar.tsym.name;
             ListBuffer<JCTree.JCExpression> bounds = new ListBuffer<>();
-            Iterator it = types.getBounds(typeVar).iterator();
-            while (it.hasNext()) {
-                Type type = (Type) it.next();
+            for (Type type : types.getBounds(typeVar)) {
                 bounds.append(JavacResolution.typeToJCTree(type, annotation.getAst(), true));
             }
             typeParams.append(maker.TypeParameter(name, bounds.toList()));
             typeArgs.append(maker.Ident(name));
         }
-        Iterator it2 = sig.type.getThrownTypes().iterator();
-        while (it2.hasNext()) {
-            thrown.append(JavacResolution.typeToJCTree((TypeMirror) it2.next(), annotation.getAst(), true));
+        Iterator it = sig.type.getThrownTypes().iterator();
+        while (it.hasNext()) {
+            thrown.append(JavacResolution.typeToJCTree((TypeMirror) it.next(), annotation.getAst(), true));
         }
         int idx = 0;
         String[] paramNames = sig.getParameterNames();

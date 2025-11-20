@@ -31,19 +31,14 @@ public class HandleFieldDefaults extends EclipseASTAdapter {
         if (checkForTypeLevelFieldDefaults && EclipseHandlerUtil.hasAnnotation((Class<? extends Annotation>) FieldDefaults.class, typeNode)) {
             return true;
         }
-        TypeDeclaration typeDecl = null;
-        if (typeNode.get() instanceof TypeDeclaration) {
-            typeDecl = (TypeDeclaration) typeNode.get();
-        }
+        TypeDeclaration typeDecl = typeNode.get() instanceof TypeDeclaration ? (TypeDeclaration) typeNode.get() : null;
         int modifiers = typeDecl == null ? 0 : typeDecl.modifiers;
         boolean notAClass = (modifiers & 8704) != 0;
         if (typeDecl == null || notAClass) {
             pos.addError("@FieldDefaults is only supported on a class or an enum.");
             return false;
         }
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode field = it.next();
+        for (EclipseNode field : typeNode.down()) {
             if (field.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fieldDecl = field.get();
                 if (EclipseHandlerUtil.filterField(fieldDecl, false)) {

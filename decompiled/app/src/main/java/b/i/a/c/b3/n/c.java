@@ -445,8 +445,8 @@ public final class c extends e {
                                                                                                     int i10 = this.f848x;
                                                                                                     if (i10 == 1 || i10 == 3) {
                                                                                                         k();
-                                                                                                        break;
                                                                                                     }
+                                                                                                    break;
                                                                                                 case 45:
                                                                                                     if (i9 == 1 && !this.u.e()) {
                                                                                                         a aVar5 = this.u;
@@ -457,7 +457,6 @@ public final class c extends e {
                                                                                                         while (aVar5.f851b.size() >= iMin) {
                                                                                                             aVar5.f851b.remove(0);
                                                                                                         }
-                                                                                                        break;
                                                                                                     }
                                                                                                     break;
                                                                                                 case 46:

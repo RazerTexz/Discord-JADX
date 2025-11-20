@@ -160,7 +160,7 @@ public final class ManageReactionsEmojisAdapter extends MGRecyclerAdapterSimple<
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ReactionEmojiItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             EmojiNode.Companion companion = EmojiNode.INSTANCE;
             SimpleDraweeSpanTextView simpleDraweeSpanTextView = this.binding.c;
             m.checkNotNullExpressionValue(simpleDraweeSpanTextView, "binding.manageReactionsEmojiEmojiTextview");

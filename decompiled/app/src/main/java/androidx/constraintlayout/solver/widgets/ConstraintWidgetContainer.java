@@ -12,7 +12,6 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
 
 /* loaded from: classes.dex */
 public class ConstraintWidgetContainer extends WidgetContainer {
@@ -155,37 +154,35 @@ public class ConstraintWidgetContainer extends WidgetContainer {
                 }
             }
             addChildrenToSolverByDependency(this, linearSystem, hashSet, getHorizontalDimensionBehaviour() == ConstraintWidget.DimensionBehaviour.WRAP_CONTENT ? 0 : 1, false);
-            Iterator<ConstraintWidget> it = hashSet.iterator();
-            while (it.hasNext()) {
-                ConstraintWidget next = it.next();
-                Optimizer.checkMatchParent(this, linearSystem, next);
-                next.addToSolver(linearSystem, zOptimizeFor);
+            for (ConstraintWidget constraintWidget5 : hashSet) {
+                Optimizer.checkMatchParent(this, linearSystem, constraintWidget5);
+                constraintWidget5.addToSolver(linearSystem, zOptimizeFor);
             }
         } else {
             for (int i5 = 0; i5 < size; i5++) {
-                ConstraintWidget constraintWidget5 = this.mChildren.get(i5);
-                if (constraintWidget5 instanceof ConstraintWidgetContainer) {
-                    ConstraintWidget.DimensionBehaviour[] dimensionBehaviourArr = constraintWidget5.mListDimensionBehaviors;
+                ConstraintWidget constraintWidget6 = this.mChildren.get(i5);
+                if (constraintWidget6 instanceof ConstraintWidgetContainer) {
+                    ConstraintWidget.DimensionBehaviour[] dimensionBehaviourArr = constraintWidget6.mListDimensionBehaviors;
                     ConstraintWidget.DimensionBehaviour dimensionBehaviour = dimensionBehaviourArr[0];
                     ConstraintWidget.DimensionBehaviour dimensionBehaviour2 = dimensionBehaviourArr[1];
                     ConstraintWidget.DimensionBehaviour dimensionBehaviour3 = ConstraintWidget.DimensionBehaviour.WRAP_CONTENT;
                     if (dimensionBehaviour == dimensionBehaviour3) {
-                        constraintWidget5.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.FIXED);
+                        constraintWidget6.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.FIXED);
                     }
                     if (dimensionBehaviour2 == dimensionBehaviour3) {
-                        constraintWidget5.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.FIXED);
+                        constraintWidget6.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.FIXED);
                     }
-                    constraintWidget5.addToSolver(linearSystem, zOptimizeFor);
+                    constraintWidget6.addToSolver(linearSystem, zOptimizeFor);
                     if (dimensionBehaviour == dimensionBehaviour3) {
-                        constraintWidget5.setHorizontalDimensionBehaviour(dimensionBehaviour);
+                        constraintWidget6.setHorizontalDimensionBehaviour(dimensionBehaviour);
                     }
                     if (dimensionBehaviour2 == dimensionBehaviour3) {
-                        constraintWidget5.setVerticalDimensionBehaviour(dimensionBehaviour2);
+                        constraintWidget6.setVerticalDimensionBehaviour(dimensionBehaviour2);
                     }
                 } else {
-                    Optimizer.checkMatchParent(this, linearSystem, constraintWidget5);
-                    if (!constraintWidget5.addFirst()) {
-                        constraintWidget5.addToSolver(linearSystem, zOptimizeFor);
+                    Optimizer.checkMatchParent(this, linearSystem, constraintWidget6);
+                    if (!constraintWidget6.addFirst()) {
+                        constraintWidget6.addToSolver(linearSystem, zOptimizeFor);
                     }
                 }
             }

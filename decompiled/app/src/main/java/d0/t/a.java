@@ -18,7 +18,7 @@ public abstract class a<E> implements Collection<E>, d0.z.d.g0.a {
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ CharSequence invoke(Object obj) {
-            return invoke((C0594a) obj);
+            return invoke(obj);
         }
 
         /* JADX WARN: Can't rename method to resolve collision */

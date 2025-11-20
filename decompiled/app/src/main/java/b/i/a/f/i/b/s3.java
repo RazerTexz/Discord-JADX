@@ -29,7 +29,7 @@ public final class s3 {
         this.d.w(this.a, this.f1567b, this.c, str, obj, obj2, null);
     }
 
-    public final void d(String str, Object obj, Object obj2, Object obj3) throws IllegalStateException {
+    public final void d(String str, Object obj, Object obj2, Object obj3) {
         this.d.w(this.a, this.f1567b, this.c, str, obj, obj2, obj3);
     }
 }

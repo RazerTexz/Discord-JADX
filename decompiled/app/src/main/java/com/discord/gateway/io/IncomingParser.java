@@ -393,37 +393,31 @@ public final class IncomingParser implements Model {
                         case -2050181436:
                             if (str.equals("GUILD_JOIN_REQUEST_DELETE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildJoinRequestDelete.class);
-                                break;
                             }
                             break;
                         case -2026522382:
                             if (str.equals("SESSIONS_REPLACE")) {
                                 this.data = reader.nextList(new AnonymousClass2(reader));
-                                break;
                             }
                             break;
                         case -2002723137:
                             if (str.equals("GUILD_SCHEDULED_EVENT_CREATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildScheduledEvent.class);
-                                break;
                             }
                             break;
                         case -1985887378:
                             if (str.equals("GUILD_SCHEDULED_EVENT_DELETE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildScheduledEvent.class);
-                                break;
                             }
                             break;
                         case -1967037287:
                             if (str.equals("THREAD_MEMBER_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, ThreadMemberUpdate.class);
-                                break;
                             }
                             break;
                         case -1921449515:
                             if (str.equals("APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, ApplicationCommandAutocompleteResult.class);
-                                break;
                             }
                             break;
                         case -1893369777:
@@ -431,19 +425,16 @@ public final class IncomingParser implements Model {
                         case -1862771270:
                             if (str.equals("THREAD_MEMBER_LIST_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, ThreadMemberListUpdate.class);
-                                break;
                             }
                             break;
                         case -1825641445:
                             if (str.equals("GUILD_MEMBERS_CHUNK")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildMembersChunk.class);
-                                break;
                             }
                             break;
                         case -1580624828:
                             if (str.equals("EMBEDDED_ACTIVITY_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, EmbeddedActivityInboundUpdate.class);
-                                break;
                             }
                             break;
                         case -1553569310:
@@ -453,31 +444,26 @@ public final class IncomingParser implements Model {
                         case -1533134522:
                             if (str.equals("FORUM_UNREADS")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, ForumUnreads.class);
-                                break;
                             }
                             break;
                         case -1489275252:
                             if (str.equals(NotificationData.TYPE_GUILD_SCHEDULED_EVENT_UPDATE)) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildScheduledEvent.class);
-                                break;
                             }
                             break;
                         case -1484942443:
                             if (str.equals("GUILD_SCHEDULED_EVENT_USER_REMOVE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildScheduledEventUserUpdate.class);
-                                break;
                             }
                             break;
                         case -1467383482:
                             if (str.equals("USER_REQUIRED_ACTION_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, UserRequiredActionUpdate.class);
-                                break;
                             }
                             break;
                         case -1446088218:
                             if (str.equals("GUILD_STICKERS_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildStickersUpdate.class);
-                                break;
                             }
                             break;
                         case -1327124998:
@@ -495,19 +481,16 @@ public final class IncomingParser implements Model {
                         case -1201943215:
                             if (str.equals("GUILD_MEMBER_LIST_UPDATE")) {
                                 this.data = ModelGuildMemberListUpdate.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case -960563390:
                             if (str.equals("USER_NOTE_UPDATE")) {
                                 this.data = ModelUserNote.Update.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case -903406451:
                             if (str.equals("PRESENCE_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, Presence.class);
-                                break;
                             }
                             break;
                         case -850953239:
@@ -515,19 +498,16 @@ public final class IncomingParser implements Model {
                         case -843352707:
                             if (str.equals("GUILD_INTEGRATIONS_UPDATE")) {
                                 this.data = reader.parse(new ModelGuildIntegration.Update());
-                                break;
                             }
                             break;
                         case -778017807:
                             if (str.equals("USER_SETTINGS_UPDATE")) {
                                 this.data = reader.parse(new ModelUserSettings());
-                                break;
                             }
                             break;
                         case -767350043:
                             if (str.equals("GUILD_APPLICATION_COMMANDS_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildApplicationCommands.class);
-                                break;
                             }
                             break;
                         case -749868974:
@@ -543,7 +523,6 @@ public final class IncomingParser implements Model {
                         case -510741638:
                             if (str.equals("TYPING_START")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, TypingUser.class);
-                                break;
                             }
                             break;
                         case -273749272:
@@ -557,7 +536,6 @@ public final class IncomingParser implements Model {
                         case -207118083:
                             if (str.equals("CHANNEL_UNREAD_UPDATE")) {
                                 this.data = ModelChannelUnreadUpdate.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case -161616987:
@@ -565,7 +543,6 @@ public final class IncomingParser implements Model {
                         case -135720355:
                             if (str.equals("GUILD_MEMBER_REMOVE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildMemberRemove.class);
-                                break;
                             }
                             break;
                         case -107601202:
@@ -573,7 +550,6 @@ public final class IncomingParser implements Model {
                         case -45642698:
                             if (str.equals("FRIEND_SUGGESTION_CREATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, FriendSuggestion.class);
-                                break;
                             }
                             break;
                         case -39955806:
@@ -581,7 +557,6 @@ public final class IncomingParser implements Model {
                         case -28806939:
                             if (str.equals("FRIEND_SUGGESTION_DELETE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, FriendSuggestionDelete.class);
-                                break;
                             }
                             break;
                         case 77848963:
@@ -594,19 +569,16 @@ public final class IncomingParser implements Model {
                                 sbU.append(ClockFactory.get().currentTimeMillis() - jCurrentTimeMillis);
                                 sbU.append(" ms.");
                                 function1.invoke(sbU.toString());
-                                break;
                             }
                             break;
                         case 85547718:
                             if (str.equals("STREAM_SERVER_UPDATE")) {
                                 this.data = StreamServerUpdate.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case 151900580:
                             if (str.equals("THREAD_MEMBERS_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, ThreadMembersUpdate.class);
-                                break;
                             }
                             break;
                         case 239698613:
@@ -616,7 +588,6 @@ public final class IncomingParser implements Model {
                         case 391412669:
                             if (str.equals("USER_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, User.class);
-                                break;
                             }
                             break;
                         case 789496470:
@@ -634,13 +605,11 @@ public final class IncomingParser implements Model {
                         case 1276846319:
                             if (str.equals("GUILD_EMOJIS_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildEmojisUpdate.class);
-                                break;
                             }
                             break;
                         case 1281125393:
                             if (str.equals("MESSAGE_ACK")) {
                                 this.data = ModelReadState.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case 1285223808:
@@ -648,13 +617,11 @@ public final class IncomingParser implements Model {
                         case 1389895301:
                             if (str.equals("USER_GUILD_SETTINGS_UPDATE")) {
                                 this.data = reader.parse(new ModelNotificationSettings());
-                                break;
                             }
                             break;
                         case 1476675193:
                             if (str.equals("GUILD_ROLE_CREATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildRoleCreate.class);
-                                break;
                             }
                             break;
                         case 1478484999:
@@ -662,7 +629,6 @@ public final class IncomingParser implements Model {
                         case 1493510952:
                             if (str.equals("GUILD_ROLE_DELETE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildRoleDelete.class);
-                                break;
                             }
                             break;
                         case 1511636001:
@@ -672,7 +638,6 @@ public final class IncomingParser implements Model {
                         case 1616207515:
                             if (str.equals("STREAM_CREATE")) {
                                 this.data = StreamCreateOrUpdate.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case 1622830784:
@@ -680,25 +645,21 @@ public final class IncomingParser implements Model {
                         case 1633043274:
                             if (str.equals("STREAM_DELETE")) {
                                 this.data = StreamDelete.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case 1689894925:
                             if (str.equals("PRESENCES_REPLACE")) {
                                 this.data = reader.nextList(new AnonymousClass1(reader));
-                                break;
                             }
                             break;
                         case 1699412580:
                             if (str.equals("VOICE_STATE_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, VoiceState.class);
-                                break;
                             }
                             break;
                         case 1737758480:
                             if (str.equals("GUILD_SCHEDULED_EVENT_USER_ADD")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildScheduledEventUserUpdate.class);
-                                break;
                             }
                             break;
                         case 1781835934:
@@ -706,31 +667,26 @@ public final class IncomingParser implements Model {
                         case 1882183896:
                             if (str.equals("VOICE_SERVER_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, VoiceServer.class);
-                                break;
                             }
                             break;
                         case 1901414427:
                             if (str.equals("INTERACTION_MODAL_CREATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, InteractionModalCreate.class);
-                                break;
                             }
                             break;
                         case 1928220071:
                             if (str.equals("THREAD_LIST_SYNC")) {
                                 this.data = ModelThreadListSync.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                         case 1990123078:
                             if (str.equals("GUILD_ROLE_UPDATE")) {
                                 this.data = InboundGatewayGsonParser.fromJson(reader, GuildRoleUpdate.class);
-                                break;
                             }
                             break;
                         case 2129655400:
                             if (str.equals("STREAM_UPDATE")) {
                                 this.data = StreamCreateOrUpdate.Parser.INSTANCE.parse(reader);
-                                break;
                             }
                             break;
                     }

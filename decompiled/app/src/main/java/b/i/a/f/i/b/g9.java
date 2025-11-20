@@ -14,7 +14,7 @@ public final class g9 extends i {
     }
 
     @Override // b.i.a.f.i.b.i
-    public final void a() throws IllegalStateException {
+    public final void a() {
         this.f.s();
         this.f.g().n.a("Starting upload from DelayedRunnable");
         this.e.Q();

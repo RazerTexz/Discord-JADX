@@ -85,7 +85,7 @@ public final class MediaViewHolder extends StageCallViewHolder {
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StageCallItem.MediaItem mediaItem = (StageCallItem.MediaItem) data;
         VideoCallParticipantView videoCallParticipantView = this.binding.f2655b;
         m.checkNotNullExpressionValue(videoCallParticipantView, "binding.stageChannelMediaSpeakerContainer");

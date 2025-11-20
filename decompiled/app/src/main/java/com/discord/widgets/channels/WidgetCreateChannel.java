@@ -275,7 +275,7 @@ public final class WidgetCreateChannel extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, SingleTypePayload<GuildRole> data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 GuildRole data2 = data.getData();
                 boolean zContainsKey = ((RolesAdapter) this.adapter).getCheckedRoles().containsKey(Long.valueOf(data2.getId()));
                 CheckedSetting checkedSetting = this.binding.f2180b;

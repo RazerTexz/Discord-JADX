@@ -61,7 +61,7 @@ public class q extends p {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Boolean invoke(Object obj) {
-            return Boolean.valueOf(invoke2((c<T>) obj));
+            return Boolean.valueOf(invoke2(obj));
         }
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */

@@ -58,15 +58,14 @@ public final class r implements t.b {
             default:
                 if (iG < 10000) {
                     string = "?";
-                    break;
                 } else {
                     StringBuilder sb = new StringBuilder(20);
                     sb.append("custom (");
                     sb.append(iG);
                     sb.append(")");
                     string = sb.toString();
-                    break;
                 }
+                break;
             case 0:
                 string = "default";
                 break;

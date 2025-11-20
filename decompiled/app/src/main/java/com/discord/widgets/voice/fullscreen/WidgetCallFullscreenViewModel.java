@@ -3810,7 +3810,7 @@ public final class WidgetCallFullscreenViewModel extends d0<ViewState> {
         ViewState.Valid valid = (ViewState.Valid) viewState2;
         String analyticsVideoLayout = valid != null ? valid.getAnalyticsVideoLayout() : null;
         DisplayMode displayMode = valid != null ? valid.getDisplayMode() : null;
-        super.updateViewState((WidgetCallFullscreenViewModel) viewState);
+        super.updateViewState(viewState);
         if (!(viewState instanceof ViewState.Valid)) {
             this.streamRtcConnectionStore.updateFocusedParticipant(null);
             RtcConnection rtcConnection = StoreStream.INSTANCE.getRtcConnection().getRtcConnection();

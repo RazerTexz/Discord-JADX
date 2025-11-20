@@ -144,7 +144,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
             /* JADX WARN: Multi-variable type inference failed */
             @Override // androidx.core.view.accessibility.AccessibilityViewCommand
             public boolean perform(@NonNull View view, @Nullable AccessibilityViewCommand.CommandArguments commandArguments) throws Resources.NotFoundException {
-                BaseBehavior.this.onNestedPreScroll(this.a, (CoordinatorLayout) this.f3026b, this.c, 0, this.d, new int[]{0, 0}, 1);
+                BaseBehavior.this.onNestedPreScroll(this.a, this.f3026b, this.c, 0, this.d, new int[]{0, 0}, 1);
                 return true;
             }
         }
@@ -391,17 +391,17 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
         @Override // b.i.a.g.a.a
         public /* bridge */ /* synthetic */ boolean canDragView(View view) {
-            return canDragView((BaseBehavior<T>) view);
+            return canDragView((AppBarLayout) view);
         }
 
         @Override // b.i.a.g.a.a
         public /* bridge */ /* synthetic */ int getMaxDragOffset(@NonNull View view) {
-            return getMaxDragOffset((BaseBehavior<T>) view);
+            return getMaxDragOffset((AppBarLayout) view);
         }
 
         @Override // b.i.a.g.a.a
         public /* bridge */ /* synthetic */ int getScrollRangeForDragFling(@NonNull View view) {
-            return getScrollRangeForDragFling((BaseBehavior<T>) view);
+            return getScrollRangeForDragFling((AppBarLayout) view);
         }
 
         @Override // b.i.a.g.a.a
@@ -417,47 +417,47 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
         @Override // b.i.a.g.a.a
         public /* bridge */ /* synthetic */ void onFlingFinished(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view) throws Resources.NotFoundException {
-            onFlingFinished(coordinatorLayout, (CoordinatorLayout) view);
+            onFlingFinished(coordinatorLayout, (AppBarLayout) view);
         }
 
         @Override // b.i.a.g.a.c, androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ boolean onLayoutChild(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view, int i) {
-            return onLayoutChild(coordinatorLayout, (CoordinatorLayout) view, i);
+            return onLayoutChild(coordinatorLayout, (AppBarLayout) view, i);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ boolean onMeasureChild(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view, int i, int i2, int i3, int i4) {
-            return onMeasureChild(coordinatorLayout, (CoordinatorLayout) view, i, i2, i3, i4);
+            return onMeasureChild(coordinatorLayout, (AppBarLayout) view, i, i2, i3, i4);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ void onNestedPreScroll(CoordinatorLayout coordinatorLayout, @NonNull View view, View view2, int i, int i2, int[] iArr, int i3) throws Resources.NotFoundException {
-            onNestedPreScroll(coordinatorLayout, (CoordinatorLayout) view, view2, i, i2, iArr, i3);
+            onNestedPreScroll(coordinatorLayout, (AppBarLayout) view, view2, i, i2, iArr, i3);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ void onNestedScroll(CoordinatorLayout coordinatorLayout, @NonNull View view, View view2, int i, int i2, int i3, int i4, int i5, int[] iArr) {
-            onNestedScroll(coordinatorLayout, (CoordinatorLayout) view, view2, i, i2, i3, i4, i5, iArr);
+            onNestedScroll(coordinatorLayout, (AppBarLayout) view, view2, i, i2, i3, i4, i5, iArr);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ void onRestoreInstanceState(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view, Parcelable parcelable) {
-            onRestoreInstanceState(coordinatorLayout, (CoordinatorLayout) view, parcelable);
+            onRestoreInstanceState(coordinatorLayout, (AppBarLayout) view, parcelable);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ Parcelable onSaveInstanceState(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view) {
-            return onSaveInstanceState(coordinatorLayout, (CoordinatorLayout) view);
+            return onSaveInstanceState(coordinatorLayout, (AppBarLayout) view);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view, @NonNull View view2, View view3, int i, int i2) {
-            return onStartNestedScroll(coordinatorLayout, (CoordinatorLayout) view, view2, view3, i, i2);
+            return onStartNestedScroll(coordinatorLayout, (AppBarLayout) view, view2, view3, i, i2);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.Behavior
         public /* bridge */ /* synthetic */ void onStopNestedScroll(CoordinatorLayout coordinatorLayout, @NonNull View view, View view2, int i) throws Resources.NotFoundException {
-            onStopNestedScroll(coordinatorLayout, (CoordinatorLayout) view, view2, i);
+            onStopNestedScroll(coordinatorLayout, (AppBarLayout) view, view2, i);
         }
 
         public void setDragCallback(@Nullable BaseDragCallback baseDragCallback) {
@@ -466,7 +466,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
         @Override // b.i.a.g.a.a
         public /* bridge */ /* synthetic */ int setHeaderTopBottomOffset(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View view, int i, int i2, int i3) {
-            return setHeaderTopBottomOffset(coordinatorLayout, (CoordinatorLayout) view, i, i2, i3);
+            return setHeaderTopBottomOffset(coordinatorLayout, (AppBarLayout) view, i, i2, i3);
         }
 
         public boolean canDragView(T t) {
@@ -498,7 +498,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
         }
 
         public boolean onLayoutChild(@NonNull CoordinatorLayout coordinatorLayout, @NonNull T t, int i) throws Resources.NotFoundException {
-            boolean zOnLayoutChild = super.onLayoutChild(coordinatorLayout, (CoordinatorLayout) t, i);
+            boolean zOnLayoutChild = super.onLayoutChild(coordinatorLayout, t, i);
             int pendingAction = t.getPendingAction();
             int i2 = this.offsetToChildIndexOnLayout;
             if (i2 >= 0 && (pendingAction & 8) == 0) {
@@ -533,7 +533,7 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
         public boolean onMeasureChild(@NonNull CoordinatorLayout coordinatorLayout, @NonNull T t, int i, int i2, int i3, int i4) {
             if (((ViewGroup.MarginLayoutParams) ((CoordinatorLayout.LayoutParams) t.getLayoutParams())).height != -2) {
-                return super.onMeasureChild(coordinatorLayout, (CoordinatorLayout) t, i, i2, i3, i4);
+                return super.onMeasureChild(coordinatorLayout, t, i, i2, i3, i4);
             }
             coordinatorLayout.onMeasureChild(t, i, i2, View.MeasureSpec.makeMeasureSpec(0, 0), i4);
             return true;
@@ -571,19 +571,19 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
         public void onRestoreInstanceState(@NonNull CoordinatorLayout coordinatorLayout, @NonNull T t, Parcelable parcelable) {
             if (!(parcelable instanceof SavedState)) {
-                super.onRestoreInstanceState(coordinatorLayout, (CoordinatorLayout) t, parcelable);
+                super.onRestoreInstanceState(coordinatorLayout, t, parcelable);
                 this.offsetToChildIndexOnLayout = -1;
                 return;
             }
             SavedState savedState = (SavedState) parcelable;
-            super.onRestoreInstanceState(coordinatorLayout, (CoordinatorLayout) t, savedState.getSuperState());
+            super.onRestoreInstanceState(coordinatorLayout, t, savedState.getSuperState());
             this.offsetToChildIndexOnLayout = savedState.firstVisibleChildIndex;
             this.offsetToChildIndexOnLayoutPerc = savedState.firstVisibleChildPercentageShown;
             this.offsetToChildIndexOnLayoutIsMinHeight = savedState.firstVisibleChildAtMinimumHeight;
         }
 
         public Parcelable onSaveInstanceState(@NonNull CoordinatorLayout coordinatorLayout, @NonNull T t) {
-            Parcelable parcelableOnSaveInstanceState = super.onSaveInstanceState(coordinatorLayout, (CoordinatorLayout) t);
+            Parcelable parcelableOnSaveInstanceState = super.onSaveInstanceState(coordinatorLayout, t);
             int topAndBottomOffset = getTopAndBottomOffset();
             int childCount = t.getChildCount();
             for (int i = 0; i < childCount; i++) {
@@ -730,42 +730,42 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Atta
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ boolean onLayoutChild(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, int i) {
-            return super.onLayoutChild(coordinatorLayout, (CoordinatorLayout) appBarLayout, i);
+            return super.onLayoutChild(coordinatorLayout, appBarLayout, i);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ boolean onMeasureChild(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, int i, int i2, int i3, int i4) {
-            return super.onMeasureChild(coordinatorLayout, (CoordinatorLayout) appBarLayout, i, i2, i3, i4);
+            return super.onMeasureChild(coordinatorLayout, appBarLayout, i, i2, i3, i4);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ void onNestedPreScroll(CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, View view, int i, int i2, int[] iArr, int i3) throws Resources.NotFoundException {
-            super.onNestedPreScroll(coordinatorLayout, (CoordinatorLayout) appBarLayout, view, i, i2, iArr, i3);
+            super.onNestedPreScroll(coordinatorLayout, appBarLayout, view, i, i2, iArr, i3);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ void onNestedScroll(CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, View view, int i, int i2, int i3, int i4, int i5, int[] iArr) {
-            super.onNestedScroll(coordinatorLayout, (CoordinatorLayout) appBarLayout, view, i, i2, i3, i4, i5, iArr);
+            super.onNestedScroll(coordinatorLayout, appBarLayout, view, i, i2, i3, i4, i5, iArr);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ void onRestoreInstanceState(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, Parcelable parcelable) {
-            super.onRestoreInstanceState(coordinatorLayout, (CoordinatorLayout) appBarLayout, parcelable);
+            super.onRestoreInstanceState(coordinatorLayout, appBarLayout, parcelable);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ Parcelable onSaveInstanceState(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout) {
-            return super.onSaveInstanceState(coordinatorLayout, (CoordinatorLayout) appBarLayout);
+            return super.onSaveInstanceState(coordinatorLayout, appBarLayout);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, @NonNull View view, View view2, int i, int i2) {
-            return super.onStartNestedScroll(coordinatorLayout, (CoordinatorLayout) appBarLayout, view, view2, i, i2);
+            return super.onStartNestedScroll(coordinatorLayout, appBarLayout, view, view2, i, i2);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
         public /* bridge */ /* synthetic */ void onStopNestedScroll(CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, View view, int i) throws Resources.NotFoundException {
-            super.onStopNestedScroll(coordinatorLayout, (CoordinatorLayout) appBarLayout, view, i);
+            super.onStopNestedScroll(coordinatorLayout, appBarLayout, view, i);
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior

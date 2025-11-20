@@ -32,7 +32,7 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Integer invoke(Object obj) {
-            return Integer.valueOf(invoke2((AnonymousClass1) obj));
+            return Integer.valueOf(invoke2(obj));
         }
     }
 

@@ -84,7 +84,7 @@ public final class n {
                                 enumMap = null;
                             } else {
                                 enumMap = new EnumMap(b.i.e.j.class);
-                                enumMap.put((EnumMap) b.i.e.j.SUGGESTED_PRICE, (b.i.e.j) str2);
+                                enumMap.put(b.i.e.j.SUGGESTED_PRICE, str2);
                             }
                         }
                         str = "";

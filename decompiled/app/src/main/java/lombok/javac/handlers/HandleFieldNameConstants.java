@@ -5,7 +5,6 @@ import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
@@ -24,10 +23,7 @@ public class HandleFieldNameConstants extends JavacAnnotationHandler<FieldNameCo
     private static final IdentifierName FIELDS = IdentifierName.valueOf("Fields");
 
     public void generateFieldNameConstantsForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean asEnum, IdentifierName innerTypeName, boolean onlyExplicit, boolean uppercase) {
-        JCTree.JCClassDecl typeDecl = null;
-        if (typeNode.get() instanceof JCTree.JCClassDecl) {
-            typeDecl = (JCTree.JCClassDecl) typeNode.get();
-        }
+        JCTree.JCClassDecl typeDecl = typeNode.get() instanceof JCTree.JCClassDecl ? (JCTree.JCClassDecl) typeNode.get() : null;
         long modifiers = typeDecl == null ? 0L : typeDecl.mods.flags;
         boolean notAClass = (modifiers & 8704) != 0;
         if (typeDecl == null || notAClass) {
@@ -35,9 +31,7 @@ public class HandleFieldNameConstants extends JavacAnnotationHandler<FieldNameCo
             return;
         }
         List<JavacNode> qualified = new ArrayList<>();
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode field = it.next();
+        for (JavacNode field : typeNode.down()) {
             if (fieldQualifiesForFieldNameConstantsGeneration(field, onlyExplicit)) {
                 qualified.add(field);
             }

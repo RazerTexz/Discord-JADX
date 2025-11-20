@@ -48,15 +48,13 @@ public final class GuildMemberRequestManager {
 
         public final void flushRequests() {
             HashSet hashSet = new HashSet();
-            Iterator<Long> it = this.pendingRequests.iterator();
-            while (it.hasNext()) {
-                Long next = it.next();
+            for (Long l : this.pendingRequests) {
                 Function1<Long, Boolean> function1 = this.guildMemberExists;
-                m.checkNotNullExpressionValue(next, "userId");
-                if (!function1.invoke(next).booleanValue()) {
-                    this.unacknowledgedRequests.add(next);
-                    this.sentRequests.add(next);
-                    hashSet.add(next);
+                m.checkNotNullExpressionValue(l, "userId");
+                if (!function1.invoke(l).booleanValue()) {
+                    this.unacknowledgedRequests.add(l);
+                    this.sentRequests.add(l);
+                    hashSet.add(l);
                 }
             }
             if (!hashSet.isEmpty()) {

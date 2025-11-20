@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.IdentityHashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import lombok.core.AST;
@@ -53,9 +52,7 @@ public abstract class LombokNode<A extends AST<A, L, N>, L extends LombokNode<A,
         this.kind = kind;
         this.node = node;
         this.children = children != null ? LombokImmutableList.copyOf((Collection) children) : LombokImmutableList.of();
-        Iterator<L> it = this.children.iterator();
-        while (it.hasNext()) {
-            L child = it.next();
+        for (L child : this.children) {
             child.parent = this;
             if (!child.isStructurallySignificant) {
                 child.isStructurallySignificant = calculateIsStructurallySignificant(node);
@@ -123,9 +120,7 @@ public abstract class LombokNode<A extends AST<A, L, N>, L extends LombokNode<A,
             return Collections.emptyList();
         }
         List<L> fields = new ArrayList<>();
-        Iterator<L> it = lombokNodeUp2.down().iterator();
-        while (it.hasNext()) {
-            L potentialField = it.next();
+        for (L potentialField : lombokNodeUp2.down()) {
             if (potentialField.getKind() == AST.Kind.FIELD && fieldContainsAnnotation(potentialField.get(), get())) {
                 fields.add(potentialField);
             }
@@ -178,9 +173,7 @@ public abstract class LombokNode<A extends AST<A, L, N>, L extends LombokNode<A,
     }
 
     private void gatherAndRemoveChildren(Map<N, L> map) {
-        Iterator<L> it = this.children.iterator();
-        while (it.hasNext()) {
-            LombokNode child = it.next();
+        for (LombokNode child : this.children) {
             child.gatherAndRemoveChildren(map);
         }
         getAst().identityDetector.remove(get());

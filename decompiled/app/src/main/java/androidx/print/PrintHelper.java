@@ -278,7 +278,7 @@ public final class PrintHelper {
             /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
             public void onPostExecute2(Bitmap bitmap) {
                 PrintAttributes.MediaSize mediaSize;
-                super.onPostExecute((AnonymousClass1) bitmap);
+                super.onPostExecute(bitmap);
                 if (bitmap != null && (!PrintHelper.PRINT_ACTIVITY_RESPECTS_ORIENTATION || PrintHelper.this.mOrientation == 0)) {
                     synchronized (this) {
                         mediaSize = PrintUriAdapter.this.mAttributes.getMediaSize();

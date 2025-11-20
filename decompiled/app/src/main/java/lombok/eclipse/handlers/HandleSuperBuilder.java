@@ -793,9 +793,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
 
     private void generateBuilderFields(HandleBuilder.BuilderJob job) {
         List<EclipseNode> existing = new ArrayList<>();
-        Iterator<EclipseNode> it = job.builderType.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : job.builderType.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 existing.add(child);
             }
@@ -912,9 +910,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     }
 
     private void addObtainVia(HandleBuilder.BuilderFieldData bfd, EclipseNode node) throws SecurityException {
-        Iterator<EclipseNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Builder.ObtainVia.class, child)) {
                 AnnotationValues<Builder.ObtainVia> ann = EclipseHandlerUtil.createAnnotation(Builder.ObtainVia.class, child);
                 bfd.obtainVia = ann.getInstance();
@@ -926,9 +922,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
 
     private EclipseSingularsRecipes.SingularData getSingularData(EclipseNode node, ASTNode source, String setterPrefix) throws SecurityException {
         String typeName;
-        Iterator<EclipseNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Singular.class, child)) {
                 char[] pluralName = node.getKind() == AST.Kind.FIELD ? EclipseHandlerUtil.removePrefixFromField(node) : node.get().name;
                 AnnotationValues<Singular> ann = EclipseHandlerUtil.createAnnotation(Singular.class, child);
@@ -1075,9 +1069,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
 
     private EclipseNode findInnerClass(EclipseNode parent, String name) {
         char[] c = name.toCharArray();
-        Iterator<EclipseNode> it = parent.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : parent.down()) {
             if (child.getKind() == AST.Kind.TYPE) {
                 TypeDeclaration td = child.get();
                 if (Arrays.equals(td.name, c)) {

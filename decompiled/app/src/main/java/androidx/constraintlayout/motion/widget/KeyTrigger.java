@@ -79,18 +79,23 @@ public class KeyTrigger extends Key {
                     case 1:
                         KeyTrigger.access$102(keyTrigger, typedArray.getString(index));
                         continue;
+                        break;
                     case 2:
                         KeyTrigger.access$202(keyTrigger, typedArray.getString(index));
                         continue;
+                        break;
                     case 4:
                         KeyTrigger.access$302(keyTrigger, typedArray.getString(index));
                         continue;
+                        break;
                     case 5:
                         keyTrigger.mTriggerSlack = typedArray.getFloat(index, keyTrigger.mTriggerSlack);
                         continue;
+                        break;
                     case 6:
                         KeyTrigger.access$402(keyTrigger, typedArray.getResourceId(index, KeyTrigger.access$400(keyTrigger)));
                         continue;
+                        break;
                     case 7:
                         if (MotionLayout.IS_IN_EDIT_MODE) {
                             int resourceId = typedArray.getResourceId(index, keyTrigger.mTargetId);
@@ -105,17 +110,21 @@ public class KeyTrigger extends Key {
                         } else {
                             keyTrigger.mTargetId = typedArray.getResourceId(index, keyTrigger.mTargetId);
                         }
+                        break;
                     case 8:
                         int integer = typedArray.getInteger(index, keyTrigger.mFramePosition);
                         keyTrigger.mFramePosition = integer;
                         KeyTrigger.access$002(keyTrigger, (integer + 0.5f) / 100.0f);
                         continue;
+                        break;
                     case 9:
                         KeyTrigger.access$502(keyTrigger, typedArray.getResourceId(index, KeyTrigger.access$500(keyTrigger)));
                         continue;
+                        break;
                     case 10:
                         KeyTrigger.access$602(keyTrigger, typedArray.getBoolean(index, KeyTrigger.access$600(keyTrigger)));
                         continue;
+                        break;
                     case 11:
                         KeyTrigger.access$702(keyTrigger, typedArray.getResourceId(index, KeyTrigger.access$700(keyTrigger)));
                         break;

@@ -101,7 +101,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (!(data instanceof EmojiItem)) {
                 data = null;
             }
@@ -464,7 +464,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Unit unit;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (!(data instanceof HeaderItem)) {
                 data = null;
             }

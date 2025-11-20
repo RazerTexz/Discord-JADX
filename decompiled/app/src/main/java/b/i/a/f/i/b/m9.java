@@ -20,7 +20,7 @@ public final class m9 implements z3 {
     }
 
     @Override // b.i.a.f.i.b.z3
-    public final void a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) throws IllegalStateException {
+    public final void a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) {
         g gVarK;
         long jLongValue;
         k9 k9Var = this.f1550b;

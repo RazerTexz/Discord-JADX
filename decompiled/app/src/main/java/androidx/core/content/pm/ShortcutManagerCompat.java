@@ -143,9 +143,7 @@ public class ShortcutManagerCompat {
 
     @VisibleForTesting
     public static void convertUriIconsToBitmapIcons(@NonNull Context context, @NonNull List<ShortcutInfoCompat> list) {
-        Iterator it = new ArrayList(list).iterator();
-        while (it.hasNext()) {
-            ShortcutInfoCompat shortcutInfoCompat = (ShortcutInfoCompat) it.next();
+        for (ShortcutInfoCompat shortcutInfoCompat : new ArrayList(list)) {
             if (!convertUriIconToBitmapIcon(context, shortcutInfoCompat)) {
                 list.remove(shortcutInfoCompat);
             }

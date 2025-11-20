@@ -203,7 +203,6 @@ public final class AutocompleteModelUtils {
                         }
                     }
                     arrayList = arrayList2;
-                    break;
                 }
                 break;
             case 7:
@@ -232,7 +231,6 @@ public final class AutocompleteModelUtils {
                     }
                     if (!(commandAutocompleteState instanceof CommandAutocompleteState.Choices)) {
                         arrayList = n.emptyList();
-                        break;
                     } else {
                         List<ApplicationCommandAutocompleteChoice> choices = ((CommandAutocompleteState.Choices) commandAutocompleteState).getChoices();
                         arrayList2 = new ArrayList(o.collectionSizeOrDefault(choices, 10));
@@ -240,6 +238,7 @@ public final class AutocompleteModelUtils {
                             arrayList2.add(new ApplicationCommandChoiceAutocompletable(new CommandChoice(applicationCommandAutocompleteChoice.getName(), applicationCommandAutocompleteChoice.getValue()), selectedCommandOption.getName()));
                         }
                     }
+                    break;
                 } else {
                     List listPlus = u.plus((Collection) ApplicationCommandsAutocompletableSource.INSTANCE.createFromCommandOption(selectedCommandOption), (Iterable) listFlatten);
                     arrayList2 = new ArrayList();

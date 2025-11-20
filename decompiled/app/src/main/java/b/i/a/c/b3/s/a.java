@@ -155,11 +155,10 @@ public final class a extends f {
                                     case -685620710:
                                         if (str.equals("{\\an1}")) {
                                             c = 0;
-                                            break;
                                         } else {
                                             c = 65535;
-                                            break;
                                         }
+                                        break;
                                     case -685620679:
                                         if (str.equals("{\\an2}")) {
                                             c = 6;
@@ -215,11 +214,10 @@ public final class a extends f {
                                     case -685620710:
                                         if (str.equals("{\\an1}")) {
                                             c2 = 0;
-                                            break;
                                         } else {
                                             c2 = 65535;
-                                            break;
                                         }
+                                        break;
                                     case -685620679:
                                         if (str.equals("{\\an2}")) {
                                             c2 = 1;

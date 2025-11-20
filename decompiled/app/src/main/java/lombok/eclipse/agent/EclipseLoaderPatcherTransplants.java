@@ -37,7 +37,7 @@ public class EclipseLoaderPatcherTransplants {
                     shadowLoader = (ClassLoader) shadowLoaderField.get(original);
                     if (shadowLoader == null) {
                         Class shadowClassLoaderClass = (Class) original.getClass().getField("lombok$shadowLoaderClass").get(null);
-                        Class classLoaderClass = Class.forName("java.lang.ClassLoader");
+                        Class<?> cls = Class.forName("java.lang.ClassLoader");
                         String jarLoc = (String) original.getClass().getField("lombok$location").get(null);
                         if (shadowClassLoaderClass == null) {
                             JarFile jf = new JarFile(jarLoc);
@@ -58,12 +58,12 @@ public class EclipseLoaderPatcherTransplants {
                                     len += r;
                                 } else {
                                     in.close();
-                                    Class[] paramTypes = new Class[4];
-                                    paramTypes[0] = "".getClass();
-                                    paramTypes[1] = new byte[0].getClass();
-                                    paramTypes[2] = Integer.TYPE;
-                                    paramTypes[3] = paramTypes[2];
-                                    Method defineClassMethod = classLoaderClass.getDeclaredMethod("defineClass", paramTypes);
+                                    Class<?>[] clsArr = new Class[4];
+                                    clsArr[0] = "".getClass();
+                                    clsArr[1] = new byte[0].getClass();
+                                    clsArr[2] = Integer.TYPE;
+                                    clsArr[3] = clsArr[2];
+                                    Method defineClassMethod = cls.getDeclaredMethod("defineClass", clsArr);
                                     defineClassMethod.setAccessible(true);
                                     shadowClassLoaderClass = (Class) defineClassMethod.invoke(original, "lombok.launch.ShadowClassLoader", bytes, new Integer(0), new Integer(len));
                                     original.getClass().getField("lombok$shadowLoaderClass").set(null, shadowClassLoaderClass);
@@ -75,13 +75,13 @@ public class EclipseLoaderPatcherTransplants {
                             } while (len != bytes.length);
                             throw new IllegalStateException("lombok.launch.ShadowClassLoader too large.");
                         }
-                        Class[] paramTypes2 = new Class[5];
-                        paramTypes2[0] = classLoaderClass;
-                        paramTypes2[1] = "".getClass();
-                        paramTypes2[2] = paramTypes2[1];
-                        paramTypes2[3] = Class.forName("java.util.List");
-                        paramTypes2[4] = paramTypes2[3];
-                        Constructor constructor = shadowClassLoaderClass.getDeclaredConstructor(paramTypes2);
+                        Class<?>[] clsArr2 = new Class[5];
+                        clsArr2[0] = cls;
+                        clsArr2[1] = "".getClass();
+                        clsArr2[2] = clsArr2[1];
+                        clsArr2[3] = Class.forName("java.util.List");
+                        clsArr2[4] = clsArr2[3];
+                        Constructor constructor = shadowClassLoaderClass.getDeclaredConstructor(clsArr2);
                         constructor.setAccessible(true);
                         shadowLoader = (ClassLoader) constructor.newInstance(original, "lombok", jarLoc, Arrays.asList("lombok."), Arrays.asList("lombok.patcher.Symbols"));
                         shadowLoaderField.set(original, shadowLoader);
@@ -89,21 +89,21 @@ public class EclipseLoaderPatcherTransplants {
                 }
             }
             if (resolve) {
-                Class[] paramTypes3 = {"".getClass(), Boolean.TYPE};
+                Class[] paramTypes = {"".getClass(), Boolean.TYPE};
                 ?? r0 = shadowLoader.getClass();
-                Class[] clsArr = new Class[2];
-                Class<?> cls = class$0;
-                if (cls == null) {
+                Class[] clsArr3 = new Class[2];
+                Class<?> cls2 = class$0;
+                if (cls2 == null) {
                     try {
-                        cls = Class.forName("java.lang.String");
-                        class$0 = cls;
+                        cls2 = Class.forName("java.lang.String");
+                        class$0 = cls2;
                     } catch (ClassNotFoundException unused) {
                         throw new NoClassDefFoundError(r0.getMessage());
                     }
                 }
-                clsArr[0] = cls;
-                clsArr[1] = Boolean.TYPE;
-                Method m = r0.getDeclaredMethod("loadClass", clsArr);
+                clsArr3[0] = cls2;
+                clsArr3[1] = Boolean.TYPE;
+                Method m = r0.getDeclaredMethod("loadClass", clsArr3);
                 m.setAccessible(true);
                 return (Class) m.invoke(shadowLoader, name, Boolean.TRUE);
             }

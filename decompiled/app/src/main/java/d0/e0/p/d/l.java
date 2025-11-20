@@ -32,7 +32,7 @@ public final class l<T, V> extends q<T, V> implements d0.e0.e<T, V> {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Object invoke(Object obj, Object obj2) throws IllegalCallableAccessException {
-            m79invoke((a<T, V>) obj, obj2);
+            m79invoke(obj, obj2);
             return Unit.a;
         }
 

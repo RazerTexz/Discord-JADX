@@ -471,11 +471,11 @@ public class PatchVal {
                     case 3:
                         ReferenceContext parentAST = parent.referenceContext();
                         if (parentAST == referenceContext) {
-                            break;
                         } else {
                             clearIgnoreFurtherInvestigationField(parentAST);
                             return;
                         }
+                        break;
                 }
                 scope = parent.parent;
             } else {

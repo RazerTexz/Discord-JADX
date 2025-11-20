@@ -327,13 +327,11 @@ public class NotificationCompat {
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList<RemoteInput> arrayList3 = this.mRemoteInputs;
                 if (arrayList3 != null) {
-                    Iterator<RemoteInput> it = arrayList3.iterator();
-                    while (it.hasNext()) {
-                        RemoteInput next = it.next();
-                        if (next.isDataOnly()) {
-                            arrayList.add(next);
+                    for (RemoteInput remoteInput : arrayList3) {
+                        if (remoteInput.isDataOnly()) {
+                            arrayList.add(remoteInput);
                         } else {
-                            arrayList2.add(next);
+                            arrayList2.add(remoteInput);
                         }
                     }
                 }

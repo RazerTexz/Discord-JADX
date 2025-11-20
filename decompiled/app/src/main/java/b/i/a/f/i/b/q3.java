@@ -212,7 +212,7 @@ public final class q3 extends r5 {
         Log.println(i, F(), str);
     }
 
-    public final void w(int i, boolean z2, boolean z3, String str, Object obj, Object obj2, Object obj3) throws IllegalStateException {
+    public final void w(int i, boolean z2, boolean z3, String str, Object obj, Object obj2, Object obj3) {
         if (!z2 && Log.isLoggable(F(), i)) {
             Log.println(i, F(), u(false, str, obj, obj2, obj3));
         }

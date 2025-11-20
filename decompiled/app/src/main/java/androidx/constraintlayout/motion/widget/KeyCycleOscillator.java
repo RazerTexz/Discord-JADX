@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 
 /* loaded from: classes.dex */
 public abstract class KeyCycleOscillator {
@@ -475,19 +474,17 @@ public abstract class KeyCycleOscillator {
         double[] dArr = new double[size];
         double[][] dArr2 = (double[][]) Array.newInstance((Class<?>) double.class, size, 2);
         this.mCycleOscillator = new CycleOscillator(this.mWaveShape, this.mVariesBy, size);
-        Iterator<WavePoint> it = this.mWavePoints.iterator();
         int i = 0;
-        while (it.hasNext()) {
-            WavePoint next = it.next();
-            float f2 = next.mPeriod;
+        for (WavePoint wavePoint : this.mWavePoints) {
+            float f2 = wavePoint.mPeriod;
             dArr[i] = f2 * 0.01d;
             double[] dArr3 = dArr2[i];
-            float f3 = next.mValue;
+            float f3 = wavePoint.mValue;
             dArr3[0] = f3;
             double[] dArr4 = dArr2[i];
-            float f4 = next.mOffset;
+            float f4 = wavePoint.mOffset;
             dArr4[1] = f4;
-            this.mCycleOscillator.setPoint(i, next.mPosition, f2, f4, f3);
+            this.mCycleOscillator.setPoint(i, wavePoint.mPosition, f2, f4, f3);
             i++;
         }
         this.mCycleOscillator.setup(f);
@@ -497,13 +494,11 @@ public abstract class KeyCycleOscillator {
     public String toString() {
         String string = this.mType;
         DecimalFormat decimalFormat = new DecimalFormat("##.##");
-        Iterator<WavePoint> it = this.mWavePoints.iterator();
-        while (it.hasNext()) {
-            WavePoint next = it.next();
+        for (WavePoint wavePoint : this.mWavePoints) {
             StringBuilder sbX = a.X(string, "[");
-            sbX.append(next.mPosition);
+            sbX.append(wavePoint.mPosition);
             sbX.append(" , ");
-            sbX.append(decimalFormat.format(next.mValue));
+            sbX.append(decimalFormat.format(wavePoint.mValue));
             sbX.append("] ");
             string = sbX.toString();
         }

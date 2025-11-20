@@ -112,21 +112,19 @@ public class ViewPropertyAnimatorCompatSet {
         if (this.mIsStarted) {
             return;
         }
-        Iterator<ViewPropertyAnimatorCompat> it = this.mAnimators.iterator();
-        while (it.hasNext()) {
-            ViewPropertyAnimatorCompat next = it.next();
+        for (ViewPropertyAnimatorCompat viewPropertyAnimatorCompat : this.mAnimators) {
             long j = this.mDuration;
             if (j >= 0) {
-                next.setDuration(j);
+                viewPropertyAnimatorCompat.setDuration(j);
             }
             Interpolator interpolator = this.mInterpolator;
             if (interpolator != null) {
-                next.setInterpolator(interpolator);
+                viewPropertyAnimatorCompat.setInterpolator(interpolator);
             }
             if (this.mListener != null) {
-                next.setListener(this.mProxyListener);
+                viewPropertyAnimatorCompat.setListener(this.mProxyListener);
             }
-            next.start();
+            viewPropertyAnimatorCompat.start();
         }
         this.mIsStarted = true;
     }

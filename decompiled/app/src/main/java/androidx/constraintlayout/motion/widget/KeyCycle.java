@@ -102,17 +102,17 @@ public class KeyCycle extends Key {
                             keyCycle.mTargetId = resourceId;
                             if (resourceId == -1) {
                                 keyCycle.mTargetString = typedArray.getString(index);
-                                break;
-                            } else {
-                                break;
                             }
-                        } else if (typedArray.peekValue(index).type == 3) {
-                            keyCycle.mTargetString = typedArray.getString(index);
                             break;
                         } else {
-                            keyCycle.mTargetId = typedArray.getResourceId(index, keyCycle.mTargetId);
+                            if (typedArray.peekValue(index).type == 3) {
+                                keyCycle.mTargetString = typedArray.getString(index);
+                            } else {
+                                keyCycle.mTargetId = typedArray.getResourceId(index, keyCycle.mTargetId);
+                            }
                             break;
                         }
+                        break;
                     case 2:
                         keyCycle.mFramePosition = typedArray.getInt(index, keyCycle.mFramePosition);
                         break;
@@ -131,11 +131,10 @@ public class KeyCycle extends Key {
                     case 7:
                         if (typedArray.peekValue(index).type == 5) {
                             KeyCycle.access$502(keyCycle, typedArray.getDimension(index, KeyCycle.access$500(keyCycle)));
-                            break;
                         } else {
                             KeyCycle.access$502(keyCycle, typedArray.getFloat(index, KeyCycle.access$500(keyCycle)));
-                            break;
                         }
+                        break;
                     case 8:
                         KeyCycle.access$602(keyCycle, typedArray.getInt(index, KeyCycle.access$600(keyCycle)));
                         break;

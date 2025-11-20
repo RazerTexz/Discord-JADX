@@ -35,7 +35,7 @@ public final class SharedPreferenceExtensionsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ String invoke(Object obj) {
-            return invoke2((AnonymousClass1<V>) obj);
+            return invoke2(obj);
         }
 
         @Override // kotlin.jvm.functions.Function1

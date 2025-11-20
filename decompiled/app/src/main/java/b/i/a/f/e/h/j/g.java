@@ -798,6 +798,7 @@ public class g implements Handler.Callback {
                     Objects.requireNonNull(cVar);
                     synchronized (cVar) {
                         cVar.m.add(tVar);
+                        break;
                     }
                     if (!cVar.l.get()) {
                         ActivityManager.RunningAppProcessInfo runningAppProcessInfo = new ActivityManager.RunningAppProcessInfo();

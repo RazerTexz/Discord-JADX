@@ -129,17 +129,17 @@ public class KeyTimeCycle extends Key {
                             keyTimeCycle.mTargetId = resourceId;
                             if (resourceId == -1) {
                                 keyTimeCycle.mTargetString = typedArray.getString(index);
-                                break;
-                            } else {
-                                break;
                             }
-                        } else if (typedArray.peekValue(index).type == 3) {
-                            keyTimeCycle.mTargetString = typedArray.getString(index);
                             break;
                         } else {
-                            keyTimeCycle.mTargetId = typedArray.getResourceId(index, keyTimeCycle.mTargetId);
+                            if (typedArray.peekValue(index).type == 3) {
+                                keyTimeCycle.mTargetString = typedArray.getString(index);
+                            } else {
+                                keyTimeCycle.mTargetId = typedArray.getResourceId(index, keyTimeCycle.mTargetId);
+                            }
                             break;
                         }
+                        break;
                     case 12:
                         keyTimeCycle.mFramePosition = typedArray.getInt(index, keyTimeCycle.mFramePosition);
                         break;
@@ -170,11 +170,10 @@ public class KeyTimeCycle extends Key {
                     case 21:
                         if (typedArray.peekValue(index).type == 5) {
                             KeyTimeCycle.access$602(keyTimeCycle, typedArray.getDimension(index, KeyTimeCycle.access$600(keyTimeCycle)));
-                            break;
                         } else {
                             KeyTimeCycle.access$602(keyTimeCycle, typedArray.getFloat(index, KeyTimeCycle.access$600(keyTimeCycle)));
-                            break;
                         }
+                        break;
                 }
             }
         }
@@ -349,11 +348,10 @@ public class KeyTimeCycle extends Key {
                     case -1249320806:
                         if (str.equals(Key.ROTATION_X)) {
                             c = 0;
-                            break;
                         } else {
                             c = 65535;
-                            break;
                         }
+                        break;
                     case -1249320805:
                         if (str.equals(Key.ROTATION_Y)) {
                             c = 1;
@@ -422,88 +420,76 @@ public class KeyTimeCycle extends Key {
                 switch (c) {
                     case 0:
                         if (Float.isNaN(this.mRotationX)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mRotationX, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 1:
                         if (Float.isNaN(this.mRotationY)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mRotationY, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 2:
                         if (Float.isNaN(this.mTranslationX)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mTranslationX, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 3:
                         if (Float.isNaN(this.mTranslationY)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mTranslationY, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 4:
                         if (Float.isNaN(this.mTranslationZ)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mTranslationZ, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 5:
                         if (Float.isNaN(this.mProgress)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mProgress, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 6:
                         if (Float.isNaN(this.mScaleX)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mScaleX, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 7:
                         if (Float.isNaN(this.mScaleY)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mScaleY, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case '\b':
                         if (Float.isNaN(this.mRotation)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mRotation, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case '\t':
                         if (Float.isNaN(this.mElevation)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mElevation, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case '\n':
                         if (Float.isNaN(this.mTransitionPathRotate)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mTransitionPathRotate, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     case 11:
                         if (Float.isNaN(this.mAlpha)) {
-                            break;
                         } else {
                             timeCycleSplineSet.setPoint(this.mFramePosition, this.mAlpha, this.mWavePeriod, this.mWaveShape, this.mWaveOffset);
-                            break;
                         }
+                        break;
                     default:
                         Log.e("KeyTimeCycles", "UNKNOWN addValues \"" + str + "\"");
                         break;

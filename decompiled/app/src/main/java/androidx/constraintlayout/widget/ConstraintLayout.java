@@ -1850,10 +1850,8 @@ public class ConstraintLayout extends ViewGroup {
                         this.circleConstraint = resourceId;
                         if (resourceId == -1) {
                             this.circleConstraint = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 3:
                         this.circleRadius = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.circleRadius);
                         break;
@@ -1862,10 +1860,8 @@ public class ConstraintLayout extends ViewGroup {
                         this.circleAngle = f;
                         if (f < 0.0f) {
                             this.circleAngle = (360.0f - f) % 360.0f;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 5:
                         this.guideBegin = typedArrayObtainStyledAttributes.getDimensionPixelOffset(index, this.guideBegin);
                         break;
@@ -1880,118 +1876,92 @@ public class ConstraintLayout extends ViewGroup {
                         this.leftToLeft = resourceId2;
                         if (resourceId2 == -1) {
                             this.leftToLeft = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 9:
                         int resourceId3 = typedArrayObtainStyledAttributes.getResourceId(index, this.leftToRight);
                         this.leftToRight = resourceId3;
                         if (resourceId3 == -1) {
                             this.leftToRight = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 10:
                         int resourceId4 = typedArrayObtainStyledAttributes.getResourceId(index, this.rightToLeft);
                         this.rightToLeft = resourceId4;
                         if (resourceId4 == -1) {
                             this.rightToLeft = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 11:
                         int resourceId5 = typedArrayObtainStyledAttributes.getResourceId(index, this.rightToRight);
                         this.rightToRight = resourceId5;
                         if (resourceId5 == -1) {
                             this.rightToRight = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 12:
                         int resourceId6 = typedArrayObtainStyledAttributes.getResourceId(index, this.topToTop);
                         this.topToTop = resourceId6;
                         if (resourceId6 == -1) {
                             this.topToTop = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 13:
                         int resourceId7 = typedArrayObtainStyledAttributes.getResourceId(index, this.topToBottom);
                         this.topToBottom = resourceId7;
                         if (resourceId7 == -1) {
                             this.topToBottom = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 14:
                         int resourceId8 = typedArrayObtainStyledAttributes.getResourceId(index, this.bottomToTop);
                         this.bottomToTop = resourceId8;
                         if (resourceId8 == -1) {
                             this.bottomToTop = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 15:
                         int resourceId9 = typedArrayObtainStyledAttributes.getResourceId(index, this.bottomToBottom);
                         this.bottomToBottom = resourceId9;
                         if (resourceId9 == -1) {
                             this.bottomToBottom = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 16:
                         int resourceId10 = typedArrayObtainStyledAttributes.getResourceId(index, this.baselineToBaseline);
                         this.baselineToBaseline = resourceId10;
                         if (resourceId10 == -1) {
                             this.baselineToBaseline = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 17:
                         int resourceId11 = typedArrayObtainStyledAttributes.getResourceId(index, this.startToEnd);
                         this.startToEnd = resourceId11;
                         if (resourceId11 == -1) {
                             this.startToEnd = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 18:
                         int resourceId12 = typedArrayObtainStyledAttributes.getResourceId(index, this.startToStart);
                         this.startToStart = resourceId12;
                         if (resourceId12 == -1) {
                             this.startToStart = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 19:
                         int resourceId13 = typedArrayObtainStyledAttributes.getResourceId(index, this.endToStart);
                         this.endToStart = resourceId13;
                         if (resourceId13 == -1) {
                             this.endToStart = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 20:
                         int resourceId14 = typedArrayObtainStyledAttributes.getResourceId(index, this.endToEnd);
                         this.endToEnd = resourceId14;
                         if (resourceId14 == -1) {
                             this.endToEnd = typedArrayObtainStyledAttributes.getInt(index, -1);
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 21:
                         this.goneLeftMargin = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.goneLeftMargin);
                         break;
@@ -2027,19 +1997,15 @@ public class ConstraintLayout extends ViewGroup {
                         this.matchConstraintDefaultWidth = i4;
                         if (i4 == 1) {
                             Log.e(ConstraintLayout.TAG, "layout_constraintWidth_default=\"wrap\" is deprecated.\nUse layout_width=\"WRAP_CONTENT\" and layout_constrainedWidth=\"true\" instead.");
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 32:
                         int i5 = typedArrayObtainStyledAttributes.getInt(index, 0);
                         this.matchConstraintDefaultHeight = i5;
                         if (i5 == 1) {
                             Log.e(ConstraintLayout.TAG, "layout_constraintHeight_default=\"wrap\" is deprecated.\nUse layout_height=\"WRAP_CONTENT\" and layout_constrainedHeight=\"true\" instead.");
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 33:
                         try {
                             this.matchConstraintMinWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMinWidth);
@@ -2047,11 +2013,10 @@ public class ConstraintLayout extends ViewGroup {
                         } catch (Exception unused) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMinWidth) == -2) {
                                 this.matchConstraintMinWidth = -2;
-                                break;
-                            } else {
-                                break;
                             }
+                            break;
                         }
+                        break;
                     case 34:
                         try {
                             this.matchConstraintMaxWidth = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMaxWidth);
@@ -2059,11 +2024,10 @@ public class ConstraintLayout extends ViewGroup {
                         } catch (Exception unused2) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMaxWidth) == -2) {
                                 this.matchConstraintMaxWidth = -2;
-                                break;
-                            } else {
-                                break;
                             }
+                            break;
                         }
+                        break;
                     case 35:
                         this.matchConstraintPercentWidth = Math.max(0.0f, typedArrayObtainStyledAttributes.getFloat(index, this.matchConstraintPercentWidth));
                         this.matchConstraintDefaultWidth = 2;
@@ -2075,11 +2039,10 @@ public class ConstraintLayout extends ViewGroup {
                         } catch (Exception unused3) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMinHeight) == -2) {
                                 this.matchConstraintMinHeight = -2;
-                                break;
-                            } else {
-                                break;
                             }
+                            break;
                         }
+                        break;
                     case 37:
                         try {
                             this.matchConstraintMaxHeight = typedArrayObtainStyledAttributes.getDimensionPixelSize(index, this.matchConstraintMaxHeight);
@@ -2087,11 +2050,10 @@ public class ConstraintLayout extends ViewGroup {
                         } catch (Exception unused4) {
                             if (typedArrayObtainStyledAttributes.getInt(index, this.matchConstraintMaxHeight) == -2) {
                                 this.matchConstraintMaxHeight = -2;
-                                break;
-                            } else {
-                                break;
                             }
+                            break;
                         }
+                        break;
                     case 38:
                         this.matchConstraintPercentHeight = Math.max(0.0f, typedArrayObtainStyledAttributes.getFloat(index, this.matchConstraintPercentHeight));
                         this.matchConstraintDefaultHeight = 2;
@@ -2129,11 +2091,12 @@ public class ConstraintLayout extends ViewGroup {
                                                 float f3 = Float.parseFloat(strSubstring3);
                                                 if (f2 <= 0.0f || f3 <= 0.0f) {
                                                     break;
-                                                } else if (this.dimensionRatioSide == 1) {
-                                                    this.dimensionRatioValue = Math.abs(f3 / f2);
-                                                    break;
                                                 } else {
-                                                    this.dimensionRatioValue = Math.abs(f2 / f3);
+                                                    if (this.dimensionRatioSide == 1) {
+                                                        this.dimensionRatioValue = Math.abs(f3 / f2);
+                                                    } else {
+                                                        this.dimensionRatioValue = Math.abs(f2 / f3);
+                                                    }
                                                     break;
                                                 }
                                             } catch (NumberFormatException unused5) {
@@ -2144,10 +2107,8 @@ public class ConstraintLayout extends ViewGroup {
                                         String strSubstring4 = this.dimensionRatio.substring(i);
                                         if (strSubstring4.length() > 0) {
                                             this.dimensionRatioValue = Float.parseFloat(strSubstring4);
-                                            break;
-                                        } else {
-                                            break;
                                         }
+                                        break;
                                     }
                                 } else {
                                     break;
@@ -2175,6 +2136,7 @@ public class ConstraintLayout extends ViewGroup {
                                 this.constraintTag = typedArrayObtainStyledAttributes.getString(index);
                                 break;
                         }
+                        break;
                 }
             }
             typedArrayObtainStyledAttributes.recycle();

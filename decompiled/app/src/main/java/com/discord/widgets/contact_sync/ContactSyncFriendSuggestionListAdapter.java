@@ -87,7 +87,7 @@ public final class ContactSyncFriendSuggestionListAdapter extends MGRecyclerAdap
         public void onConfigure2(int position, WidgetContactSyncViewModel.Item data) {
             Object next;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             WidgetContactSyncViewModel.Item.FriendSuggestionItem friendSuggestionItem = (WidgetContactSyncViewModel.Item.FriendSuggestionItem) data;
             FriendSuggestion suggestion = friendSuggestionItem.getSuggestion();
             User suggestedUser = suggestion.getSuggestedUser();

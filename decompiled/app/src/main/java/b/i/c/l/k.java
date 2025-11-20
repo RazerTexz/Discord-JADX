@@ -26,7 +26,7 @@ public class k extends a {
         Set<m> set;
         q qVar = new q(executor);
         this.e = qVar;
-        ArrayList arrayList = new ArrayList();
+        ArrayList<d> arrayList = new ArrayList();
         arrayList.add(d.c(qVar, q.class, b.i.c.q.d.class, b.i.c.q.c.class));
         Iterator<g> it = iterable.iterator();
         while (it.hasNext()) {
@@ -38,13 +38,11 @@ public class k extends a {
             }
         }
         HashMap map = new HashMap(arrayList.size());
-        Iterator it2 = arrayList.iterator();
-        while (it2.hasNext()) {
-            d dVar2 = (d) it2.next();
+        for (d dVar2 : arrayList) {
             m mVar = new m(dVar2);
-            Iterator it3 = dVar2.a.iterator();
-            while (it3.hasNext()) {
-                Class cls = (Class) it3.next();
+            Iterator it2 = dVar2.a.iterator();
+            while (it2.hasNext()) {
+                Class cls = (Class) it2.next();
                 boolean z2 = !dVar2.b();
                 n nVar = new n(cls, z2, null);
                 if (!map.containsKey(nVar)) {
@@ -57,9 +55,9 @@ public class k extends a {
                 set2.add(mVar);
             }
         }
-        Iterator it4 = map.values().iterator();
-        while (it4.hasNext()) {
-            for (m mVar2 : (Set) it4.next()) {
+        Iterator it3 = map.values().iterator();
+        while (it3.hasNext()) {
+            for (m mVar2 : (Set) it3.next()) {
                 for (o oVar : mVar2.a.f1662b) {
                     if ((oVar.c == 0) && (set = (Set) map.get(new n(oVar.a, oVar.a(), null))) != null) {
                         for (m mVar3 : set) {
@@ -70,15 +68,13 @@ public class k extends a {
                 }
             }
         }
-        HashSet hashSet = new HashSet();
-        Iterator it5 = map.values().iterator();
-        while (it5.hasNext()) {
-            hashSet.addAll((Set) it5.next());
+        HashSet<m> hashSet = new HashSet();
+        Iterator it4 = map.values().iterator();
+        while (it4.hasNext()) {
+            hashSet.addAll((Set) it4.next());
         }
         HashSet hashSet2 = new HashSet();
-        Iterator it6 = hashSet.iterator();
-        while (it6.hasNext()) {
-            m mVar4 = (m) it6.next();
+        for (m mVar4 : hashSet) {
             if (mVar4.a()) {
                 hashSet2.add(mVar4);
             }
@@ -97,27 +93,25 @@ public class k extends a {
         }
         if (i != arrayList.size()) {
             ArrayList arrayList2 = new ArrayList();
-            Iterator it7 = hashSet.iterator();
-            while (it7.hasNext()) {
-                m mVar7 = (m) it7.next();
+            for (m mVar7 : hashSet) {
                 if (!mVar7.a() && !mVar7.f1666b.isEmpty()) {
                     arrayList2.add(mVar7.a);
                 }
             }
             throw new DependencyCycleException(arrayList2);
         }
-        Iterator it8 = arrayList.iterator();
-        while (it8.hasNext()) {
-            d<?> dVar3 = (d) it8.next();
+        Iterator it5 = arrayList.iterator();
+        while (it5.hasNext()) {
+            d<?> dVar3 = (d) it5.next();
             this.f1665b.put(dVar3, new r<>(new h(this, dVar3)));
         }
         for (Map.Entry<d<?>, r<?>> entry : this.f1665b.entrySet()) {
             d<?> key = entry.getKey();
             if (key.b()) {
                 r<?> value = entry.getValue();
-                Iterator<Class<? super Object>> it9 = key.a.iterator();
-                while (it9.hasNext()) {
-                    this.c.put(it9.next(), value);
+                Iterator<Class<? super Object>> it6 = key.a.iterator();
+                while (it6.hasNext()) {
+                    this.c.put(it6.next(), value);
                 }
             }
         }

@@ -13,7 +13,6 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -351,17 +350,15 @@ public class n implements Serializable {
         }
         ArrayList<j> arrayList = cVar3.c;
         if (arrayList != null) {
-            Iterator<j> it = arrayList.iterator();
-            while (it.hasNext()) {
-                j next = it.next();
-                if (next._referencedType != null) {
+            for (j jVar7 : arrayList) {
+                if (jVar7._referencedType != null) {
                     StringBuilder sbU = b.d.b.a.a.U("Trying to re-set self reference; old value = ");
-                    sbU.append(next._referencedType);
+                    sbU.append(jVar7._referencedType);
                     sbU.append(", new = ");
                     sbU.append(iVar);
                     throw new IllegalStateException(sbU.toString());
                 }
-                next._referencedType = iVar;
+                jVar7._referencedType = iVar;
             }
         }
         if (!iVar.s()) {

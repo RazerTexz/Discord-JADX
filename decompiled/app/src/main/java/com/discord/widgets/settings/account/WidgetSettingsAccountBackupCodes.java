@@ -90,7 +90,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, MGRecyclerDataPayload data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 TextView textView = this.binding.f2624b;
                 m.checkNotNullExpressionValue(textView, "binding.itemHeader");
                 textView.setText(((BackupCodeItemHeader) data).getHeaderText());
@@ -121,7 +121,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, MGRecyclerDataPayload data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 BackupCodeItem backupCodeItem = (BackupCodeItem) data;
                 TextView textView = this.binding.f2623b;
                 m.checkNotNullExpressionValue(textView, "binding.itemBackupCodeTv");

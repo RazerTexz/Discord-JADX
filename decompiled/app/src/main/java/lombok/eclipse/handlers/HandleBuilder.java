@@ -475,9 +475,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
                 return;
             }
             if (fillParametersFrom != null) {
-                Iterator<EclipseNode> it = fillParametersFrom.down().iterator();
-                while (it.hasNext()) {
-                    EclipseNode param = it.next();
+                for (EclipseNode param : fillParametersFrom.down()) {
                     if (param.getKind() == AST.Kind.ARGUMENT) {
                         BuilderFieldData bfd2 = new BuilderFieldData();
                         Argument arg = param.get();
@@ -515,12 +513,12 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
                     }
                 }
             }
-            Iterator<BuilderFieldData> it2 = job.builderFields.iterator();
+            Iterator<BuilderFieldData> it = job.builderFields.iterator();
             while (true) {
-                if (!it2.hasNext()) {
+                if (!it.hasNext()) {
                     break;
                 }
-                BuilderFieldData bfd4 = it2.next();
+                BuilderFieldData bfd4 = it.next();
                 if (bfd4.singularData != null && bfd4.singularData.getSingularizer() != null && bfd4.singularData.getSingularizer().requiresCleaning()) {
                     addCleaning = true;
                     break;
@@ -547,9 +545,9 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
             if (EclipseHandlerUtil.constructorExists(job.builderType) == EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS && (cd = HandleConstructor.createConstructor(AccessLevel.PACKAGE, job.builderType, Collections.emptyList(), false, annotationNode, Collections.emptyList())) != null) {
                 EclipseHandlerUtil.injectMethod(job.builderType, cd);
             }
-            Iterator<BuilderFieldData> it3 = job.builderFields.iterator();
-            while (it3.hasNext()) {
-                makePrefixedSetterMethodsForBuilder(job, it3.next(), annInstance.setterPrefix());
+            Iterator<BuilderFieldData> it2 = job.builderFields.iterator();
+            while (it2.hasNext()) {
+                makePrefixedSetterMethodsForBuilder(job, it2.next(), annInstance.setterPrefix());
             }
             EclipseHandlerUtil.MemberExistsResult methodExists = EclipseHandlerUtil.methodExists(job.buildMethodName, job.builderType, -1);
             if (methodExists == EclipseHandlerUtil.MemberExistsResult.EXISTS_BY_LOMBOK) {
@@ -560,9 +558,9 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
             }
             if (EclipseHandlerUtil.methodExists("toString", job.builderType, 0) == EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS) {
                 List<InclusionExclusionUtils.Included<EclipseNode, ToString.Include>> fieldNodes = new ArrayList<>();
-                Iterator<BuilderFieldData> it4 = job.builderFields.iterator();
-                while (it4.hasNext()) {
-                    for (EclipseNode f : it4.next().createdFields) {
+                Iterator<BuilderFieldData> it3 = job.builderFields.iterator();
+                while (it3.hasNext()) {
+                    for (EclipseNode f : it3.next().createdFields) {
                         fieldNodes.add(new InclusionExclusionUtils.Included<>(f, null, true, false));
                     }
                 }
@@ -594,7 +592,6 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
                         MethodDeclaration md6 = generateToBuilderMethod(job, tps, annInstance.setterPrefix());
                         if (md6 != null) {
                             EclipseHandlerUtil.injectMethod(job.parentType, md6);
-                            break;
                         }
                         break;
                     case 3:
@@ -603,9 +600,9 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
                 }
             }
             if (nonFinalNonDefaultedFields != null && generateBuilderMethod) {
-                Iterator<EclipseNode> it5 = nonFinalNonDefaultedFields.iterator();
-                while (it5.hasNext()) {
-                    it5.next().addWarning("@Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.");
+                Iterator<EclipseNode> it4 = nonFinalNonDefaultedFields.iterator();
+                while (it4.hasNext()) {
+                    it4.next().addWarning("@Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.");
                 }
             }
         }
@@ -977,9 +974,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
 
     public void generateBuilderFields(BuilderJob job) {
         List<EclipseNode> existing = new ArrayList<>();
-        Iterator<EclipseNode> it = job.builderType.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : job.builderType.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 existing.add(child);
             }
@@ -1103,9 +1098,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
     }
 
     private void addObtainVia(BuilderFieldData bfd, EclipseNode node) throws SecurityException {
-        Iterator<EclipseNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Builder.ObtainVia.class, child)) {
                 AnnotationValues<Builder.ObtainVia> ann = EclipseHandlerUtil.createAnnotation(Builder.ObtainVia.class, child);
                 bfd.obtainVia = ann.getInstance();
@@ -1117,9 +1110,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
 
     private EclipseSingularsRecipes.SingularData getSingularData(EclipseNode node, ASTNode source, String setterPrefix) throws SecurityException {
         String typeName;
-        Iterator<EclipseNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Singular.class, child)) {
                 char[] pluralName = node.getKind() == AST.Kind.FIELD ? EclipseHandlerUtil.removePrefixFromField(node) : node.get().name;
                 AnnotationValues<Singular> ann = EclipseHandlerUtil.createAnnotation(Singular.class, child);

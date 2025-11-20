@@ -16,9 +16,9 @@ public final class a {
     static {
         EnumMap<d, Integer> enumMap = new EnumMap<>(d.class);
         f804b = enumMap;
-        enumMap.put((EnumMap<d, Integer>) d.DEFAULT, (d) 0);
-        f804b.put((EnumMap<d, Integer>) d.VERY_LOW, (d) 1);
-        f804b.put((EnumMap<d, Integer>) d.HIGHEST, (d) 2);
+        enumMap.put(d.DEFAULT, 0);
+        f804b.put(d.VERY_LOW, 1);
+        f804b.put(d.HIGHEST, 2);
         for (K k : f804b.keySet()) {
             a.append(f804b.get(k).intValue(), k);
         }

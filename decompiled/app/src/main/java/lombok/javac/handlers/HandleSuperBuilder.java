@@ -563,9 +563,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         ListBuffer<JavacNode> allFields = new ListBuffer<>();
         ArrayList<JavacNode> nonFinalNonDefaultedFields = null;
         boolean valuePresent = JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) Value.class, parent) || JavacHandlerUtil.hasAnnotation("lombok.experimental.Value", parent);
-        Iterator it = HandleConstructor.findAllFields(parent, true).iterator();
-        while (it.hasNext()) {
-            JavacNode fieldNode = (JavacNode) it.next();
+        for (JavacNode fieldNode : HandleConstructor.findAllFields(parent, true)) {
             JCTree.JCVariableDecl fd = fieldNode.get();
             JavacNode isDefault = JavacHandlerUtil.findAnnotation(Builder.Default.class, fieldNode, true);
             boolean isFinal = (fd.mods.flags & 16) != 0 || (valuePresent && !JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) NonFinal.class, fieldNode));
@@ -644,12 +642,12 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
             String superclassBuilderClassName2 = String.valueOf(extendsClause.toString()) + "Builder";
             jCFieldAccessChainDots = JavacHandlerUtil.chainDots(parent, extendsClause.toString(), superclassBuilderClassName2, new String[0]);
         }
-        Iterator<HandleBuilder.BuilderFieldData> it2 = job.builderFields.iterator();
+        Iterator<HandleBuilder.BuilderFieldData> it = job.builderFields.iterator();
         while (true) {
-            if (!it2.hasNext()) {
+            if (!it.hasNext()) {
                 break;
             }
-            HandleBuilder.BuilderFieldData bfd2 = it2.next();
+            HandleBuilder.BuilderFieldData bfd2 = it.next();
             if (bfd2.singularData != null && bfd2.singularData.getSingularizer() != null && bfd2.singularData.getSingularizer().requiresCleaning()) {
                 addCleaning = true;
                 break;
@@ -757,9 +755,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private JCTree.JCMethodDecl generateBuilderMethod(SuperBuilderJob job) {
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
-        Iterator it = job.typeParams.iterator();
-        while (it.hasNext()) {
-            JCTree.JCTypeParameter typeParam = (JCTree.JCTypeParameter) it.next();
+        for (JCTree.JCTypeParameter typeParam : job.typeParams) {
             typeArgs.append(maker.Ident(typeParam.name));
         }
         JCTree.JCBlock body = maker.Block(0L, List.of(maker.Return(maker.NewClass(null, List.nil(), JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, job.parentType, job.toName(job.builderImplClassName), false, job.typeParams), List.nil(), null))));
@@ -779,9 +775,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private JCTree.JCMethodDecl generateToBuilderMethod(SuperBuilderJob job) {
         JavacTreeMaker maker = job.getTreeMaker();
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
-        Iterator it = job.typeParams.iterator();
-        while (it.hasNext()) {
-            JCTree.JCTypeParameter typeParam = (JCTree.JCTypeParameter) it.next();
+        for (JCTree.JCTypeParameter typeParam : job.typeParams) {
             typeArgs.append(maker.Ident(typeParam.name));
         }
         JCTree.JCNewClass jCNewClassNewClass = maker.NewClass(null, List.nil(), JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, job.parentType, job.toName(job.builderImplClassName), false, job.typeParams), List.nil(), null);
@@ -979,9 +973,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private void generateBuilderFields(JavacNode builderType, java.util.List<HandleBuilder.BuilderFieldData> builderFields, JCTree source) {
         int len = builderFields.size();
         java.util.List<JavacNode> existing = new ArrayList<>();
-        Iterator<JavacNode> it = builderType.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : builderType.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 existing.add(child);
             }
@@ -1075,9 +1067,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private void generateSimpleSetterMethodForBuilder(SuperBuilderJob job, boolean deprecate, JavacNode fieldNode, Name paramName, Name nameOfSetFlag, JCTree.JCExpression returnType, JCTree.JCStatement returnStatement, List<JCTree.JCAnnotation> annosOnParam, JavacNode originalFieldNode, String setterPrefix) {
         String setterName = HandlerUtil.buildAccessorName(setterPrefix, paramName.toString());
         Name setterName_ = job.builderType.toName(setterName);
-        Iterator<JavacNode> it = job.builderType.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : job.builderType.down()) {
             if (child.getKind() == AST.Kind.METHOD) {
                 JCTree.JCMethodDecl methodDecl = child.get();
                 Name existingName = methodDecl.name;
@@ -1112,9 +1102,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     }
 
     private void addObtainVia(HandleBuilder.BuilderFieldData bfd, JavacNode node) {
-        Iterator<JavacNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : node.down()) {
             if (JavacHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) Builder.ObtainVia.class, child)) {
                 AnnotationValues<Builder.ObtainVia> ann = JavacHandlerUtil.createAnnotation(Builder.ObtainVia.class, child);
                 bfd.obtainVia = ann.getInstance();
@@ -1126,9 +1114,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     }
 
     private JavacSingularsRecipes.SingularData getSingularData(JavacNode node, String setterPrefix) {
-        Iterator<JavacNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : node.down()) {
             if (JavacHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) Singular.class, child)) {
                 Name pluralName = node.getKind() == AST.Kind.FIELD ? JavacHandlerUtil.removePrefixFromField(node) : node.get().name;
                 AnnotationValues<Singular> ann = JavacHandlerUtil.createAnnotation(Singular.class, child);
@@ -1148,10 +1134,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
                     }
                 }
                 Name singularName = node.toName(explicitSingular);
-                JCTree.JCExpression type = null;
-                if (node.get() instanceof JCTree.JCVariableDecl) {
-                    type = node.get().vartype;
-                }
+                JCTree.JCExpression type = node.get() instanceof JCTree.JCVariableDecl ? node.get().vartype : null;
                 List<JCTree.JCExpression> typeArgs = List.nil();
                 if (type instanceof JCTree.JCTypeApply) {
                     typeArgs = ((JCTree.JCTypeApply) type).arguments;
@@ -1172,15 +1155,11 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
 
     private HashSet<String> gatherUsedTypeNames(List<JCTree.JCTypeParameter> typeParams, JCTree.JCClassDecl td) {
         HashSet<String> usedNames = new HashSet<>();
-        Iterator it = typeParams.iterator();
-        while (it.hasNext()) {
-            JCTree.JCTypeParameter typeParam = (JCTree.JCTypeParameter) it.next();
+        for (JCTree.JCTypeParameter typeParam : typeParams) {
             usedNames.add(typeParam.getName().toString());
         }
         usedNames.add(td.name.toString());
-        Iterator it2 = td.getMembers().iterator();
-        while (it2.hasNext()) {
-            JCTree.JCVariableDecl jCVariableDecl = (JCTree) it2.next();
+        for (JCTree.JCVariableDecl jCVariableDecl : td.getMembers()) {
             if (jCVariableDecl.getKind() == Tree.Kind.VARIABLE && (jCVariableDecl instanceof JCTree.JCVariableDecl)) {
                 JCTree.JCIdent type = jCVariableDecl.getType();
                 if (type instanceof JCTree.JCIdent) {
@@ -1203,9 +1182,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     }
 
     private JavacNode findInnerClass(JavacNode parent, String name) {
-        Iterator<JavacNode> it = parent.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : parent.down()) {
             if (child.getKind() == AST.Kind.TYPE) {
                 JCTree.JCClassDecl td = child.get();
                 if (td.name.contentEquals(name)) {
@@ -1260,9 +1237,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
 
     private boolean constructorExists(JavacNode type, String builderClassName) {
         if (type != null && (type.get() instanceof JCTree.JCClassDecl)) {
-            Iterator it = type.get().defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCMethodDecl jCMethodDecl = (JCTree) it.next();
+            for (JCTree.JCMethodDecl jCMethodDecl : type.get().defs) {
                 if (jCMethodDecl instanceof JCTree.JCMethodDecl) {
                     JCTree.JCMethodDecl md = jCMethodDecl;
                     String name = md.name.toString();

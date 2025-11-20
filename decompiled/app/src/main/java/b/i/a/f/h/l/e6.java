@@ -679,108 +679,126 @@ public final class e6<T> implements q6<T> {
                         ((g4) v7Var).a(i5, j7.q(t, j));
                         continue;
                     }
+                    break;
                 case 1:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).b(i5, j7.n(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 2:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.g(i5, unsafe.getLong(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 3:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.g(i5, unsafe.getLong(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 4:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.s(i5, unsafe.getInt(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 5:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.z(i5, unsafe.getLong(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 6:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.G(i5, unsafe.getInt(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 7:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.l(i5, j7.m(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 8:
                     if ((i & i3) != 0) {
                         r(i5, unsafe.getObject(t, j), v7Var);
                     } else {
                         continue;
                     }
+                    break;
                 case 9:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).d(i5, unsafe.getObject(t, j), o(i4));
                     } else {
                         continue;
                     }
+                    break;
                 case 10:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.h(i5, (t3) unsafe.getObject(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 11:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.y(i5, unsafe.getInt(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 12:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.s(i5, unsafe.getInt(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 13:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.G(i5, unsafe.getInt(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 14:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).a.z(i5, unsafe.getLong(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 15:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).g(i5, unsafe.getInt(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 16:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).f(i5, unsafe.getLong(t, j));
                     } else {
                         continue;
                     }
+                    break;
                 case 17:
                     if ((i & i3) != 0) {
                         ((g4) v7Var).e(i5, unsafe.getObject(t, j), o(i4));
                     } else {
                         continue;
                     }
+                    break;
                 case 18:
                     s6.h(this.c[i4], (List) unsafe.getObject(t, j), v7Var, false);
                     break;
@@ -883,109 +901,91 @@ public final class e6<T> implements q6<T> {
                 case 51:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a(i5, y(t, j));
-                        break;
                     }
                     break;
                 case 52:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).b(i5, F(t, j));
-                        break;
                     }
                     break;
                 case 53:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.g(i5, L(t, j));
-                        break;
                     }
                     break;
                 case 54:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.g(i5, L(t, j));
-                        break;
                     }
                     break;
                 case 55:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.s(i5, J(t, j));
-                        break;
                     }
                     break;
                 case 56:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.z(i5, L(t, j));
-                        break;
                     }
                     break;
                 case 57:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.G(i5, J(t, j));
-                        break;
                     }
                     break;
                 case 58:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.l(i5, N(t, j));
-                        break;
                     }
                     break;
                 case 59:
                     if (w(t, i5, i4)) {
                         r(i5, unsafe.getObject(t, j), v7Var);
-                        break;
                     }
                     break;
                 case 60:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).d(i5, unsafe.getObject(t, j), o(i4));
-                        break;
                     }
                     break;
                 case 61:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.h(i5, (t3) unsafe.getObject(t, j));
-                        break;
                     }
                     break;
                 case 62:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.y(i5, J(t, j));
-                        break;
                     }
                     break;
                 case 63:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.s(i5, J(t, j));
-                        break;
                     }
                     break;
                 case 64:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.G(i5, J(t, j));
-                        break;
                     }
                     break;
                 case 65:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).a.z(i5, L(t, j));
-                        break;
                     }
                     break;
                 case 66:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).g(i5, J(t, j));
-                        break;
                     }
                     break;
                 case 67:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).f(i5, L(t, j));
-                        break;
                     }
                     break;
                 case 68:
                     if (w(t, i5, i4)) {
                         ((g4) v7Var).e(i5, unsafe.getObject(t, j), o(i4));
-                        break;
                     }
                     break;
             }
@@ -1188,163 +1188,127 @@ public final class e6<T> implements q6<T> {
                         i = i2 * 53;
                         iA = w4.a(Double.doubleToLongBits(y(t, j)));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 52:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = Float.floatToIntBits(F(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 53:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = w4.a(L(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 54:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = w4.a(L(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 55:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = J(t, j);
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 56:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = w4.a(L(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 57:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = J(t, j);
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 58:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = w4.b(N(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 59:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = ((String) j7.r(t, j)).hashCode();
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 60:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = j7.r(t, j).hashCode();
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 61:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = j7.r(t, j).hashCode();
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 62:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = J(t, j);
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 63:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = J(t, j);
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 64:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = J(t, j);
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 65:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = w4.a(L(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 66:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = J(t, j);
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 67:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = w4.a(L(t, j));
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 68:
                     if (w(t, i4, i3)) {
                         i = i2 * 53;
                         iA = j7.r(t, j).hashCode();
                         i2 = iA + i;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
             }
         }
         int iHashCode2 = this.o.e(t).hashCode() + (i2 * 53);
@@ -1481,147 +1445,111 @@ public final class e6<T> implements q6<T> {
                         if (v(t, i3)) {
                             iU2 = zzhi.u(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 1:
                         if (v(t, i3)) {
                             iU2 = zzhi.n(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 2:
                         if (v(t, i3)) {
                             iU2 = zzhi.B(i5, j7.i(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 3:
                         if (v(t, i3)) {
                             iU2 = zzhi.E(i5, j7.i(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 4:
                         if (v(t, i3)) {
                             iU2 = zzhi.I(i5, j7.b(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 5:
                         if (v(t, i3)) {
                             iU2 = zzhi.N(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 6:
                         if (v(t, i3)) {
                             iU2 = zzhi.S(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 7:
                         if (v(t, i3)) {
                             iU2 = zzhi.v(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 8:
                         if (v(t, i3)) {
                             Object objR = j7.r(t, j);
                             iU2 = objR instanceof t3 ? zzhi.w(i5, (t3) objR) : zzhi.o(i5, (String) objR);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 9:
                         if (v(t, i3)) {
                             iU2 = s6.a(i5, j7.r(t, j), o(i3));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 10:
                         if (v(t, i3)) {
                             iU2 = zzhi.w(i5, (t3) j7.r(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 11:
                         if (v(t, i3)) {
                             iU2 = zzhi.M(i5, j7.b(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 12:
                         if (v(t, i3)) {
                             iU2 = zzhi.U(i5, j7.b(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 13:
                         if (v(t, i3)) {
                             iU2 = zzhi.T(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 14:
                         if (v(t, i3)) {
                             iU2 = zzhi.Q(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 15:
                         if (v(t, i3)) {
                             iU2 = zzhi.P(i5, j7.b(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 16:
                         if (v(t, i3)) {
                             iU2 = zzhi.J(i5, j7.i(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 17:
                         if (v(t, i3)) {
                             iU2 = zzhi.x(i5, (c6) j7.r(t, j), o(i3));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 18:
                         iU2 = s6.K(i5, q(t, j));
                         i2 += iU2;
@@ -1699,70 +1627,56 @@ public final class e6<T> implements q6<T> {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 36:
                         iL3 = s6.I((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 37:
                         iL3 = s6.d((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 38:
                         iL3 = s6.n((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 39:
                         iL3 = s6.z((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 40:
                         iL3 = s6.L((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 41:
                         iL3 = s6.I((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 42:
                         List list = (List) unsafe.getObject(t, j);
                         Class<?> cls2 = s6.a;
@@ -1771,70 +1685,56 @@ public final class e6<T> implements q6<T> {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 43:
                         iL3 = s6.C((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 44:
                         iL3 = s6.w((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 45:
                         iL3 = s6.I((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 46:
                         iL3 = s6.L((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 47:
                         iL3 = s6.F((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 48:
                         iL3 = s6.t((List) unsafe.getObject(t, j));
                         if (iL3 > 0) {
                             iD2 = zzhi.D(i5);
                             iL4 = zzhi.L(iL3);
                             i2 = iL4 + iD2 + iL3 + i2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 49:
                         iU2 = s6.m(i5, q(t, j), o(i3));
                         i2 += iU2;
@@ -1847,147 +1747,111 @@ public final class e6<T> implements q6<T> {
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.u(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 52:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.n(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 53:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.B(i5, L(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 54:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.E(i5, L(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 55:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.I(i5, J(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 56:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.N(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 57:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.S(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 58:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.v(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 59:
                         if (w(t, i5, i3)) {
                             Object objR2 = j7.r(t, j);
                             iU2 = objR2 instanceof t3 ? zzhi.w(i5, (t3) objR2) : zzhi.o(i5, (String) objR2);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 60:
                         if (w(t, i5, i3)) {
                             iU2 = s6.a(i5, j7.r(t, j), o(i3));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 61:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.w(i5, (t3) j7.r(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 62:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.M(i5, J(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 63:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.U(i5, J(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 64:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.T(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 65:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.Q(i5);
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 66:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.P(i5, J(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 67:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.J(i5, L(t, j));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                     case 68:
                         if (w(t, i5, i3)) {
                             iU2 = zzhi.x(i5, (c6) j7.r(t, j), o(i3));
                             i2 += iU2;
-                            break;
-                        } else {
-                            break;
                         }
+                        break;
                 }
             }
             d7<?, ?> d7Var = this.o;
@@ -2019,147 +1883,111 @@ public final class e6<T> implements q6<T> {
                     if ((i9 & i) != 0) {
                         iU = zzhi.u(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 1:
                     if ((i9 & i) != 0) {
                         iU = zzhi.n(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 2:
                     if ((i9 & i) != 0) {
                         iU = zzhi.B(i11, unsafe2.getLong(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 3:
                     if ((i9 & i) != 0) {
                         iU = zzhi.E(i11, unsafe2.getLong(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 4:
                     if ((i9 & i) != 0) {
                         iU = zzhi.I(i11, unsafe2.getInt(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 5:
                     if ((i9 & i) != 0) {
                         iU = zzhi.N(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 6:
                     if ((i9 & i) != 0) {
                         iU = zzhi.S(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 7:
                     if ((i9 & i) != 0) {
                         iU = zzhi.v(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 8:
                     if ((i9 & i) != 0) {
                         Object object = unsafe2.getObject(t, j2);
                         iU = object instanceof t3 ? zzhi.w(i11, (t3) object) : zzhi.o(i11, (String) object);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 9:
                     if ((i9 & i) != 0) {
                         iU = s6.a(i11, unsafe2.getObject(t, j2), o(i10));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 10:
                     if ((i9 & i) != 0) {
                         iU = zzhi.w(i11, (t3) unsafe2.getObject(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 11:
                     if ((i9 & i) != 0) {
                         iU = zzhi.M(i11, unsafe2.getInt(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 12:
                     if ((i9 & i) != 0) {
                         iU = zzhi.U(i11, unsafe2.getInt(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 13:
                     if ((i9 & i) != 0) {
                         iU = zzhi.T(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 14:
                     if ((i9 & i) != 0) {
                         iU = zzhi.Q(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 15:
                     if ((i9 & i) != 0) {
                         iU = zzhi.P(i11, unsafe2.getInt(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 16:
                     if ((i9 & i) != 0) {
                         iU = zzhi.J(i11, unsafe2.getLong(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 17:
                     if ((i9 & i) != 0) {
                         iU = zzhi.x(i11, (c6) unsafe2.getObject(t, j2), o(i10));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 18:
                     iU = s6.K(i11, (List) unsafe2.getObject(t, j2));
                     i7 += iU;
@@ -2237,70 +2065,56 @@ public final class e6<T> implements q6<T> {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 36:
                     iL = s6.I((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 37:
                     iL = s6.d((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 38:
                     iL = s6.n((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 39:
                     iL = s6.z((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 40:
                     iL = s6.L((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 41:
                     iL = s6.I((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 42:
                     List list3 = (List) unsafe2.getObject(t, j2);
                     Class<?> cls4 = s6.a;
@@ -2309,70 +2123,56 @@ public final class e6<T> implements q6<T> {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 43:
                     iL = s6.C((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 44:
                     iL = s6.w((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 45:
                     iL = s6.I((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 46:
                     iL = s6.L((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 47:
                     iL = s6.F((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 48:
                     iL = s6.t((List) unsafe2.getObject(t, j2));
                     if (iL > 0) {
                         iD = zzhi.D(i11);
                         iL2 = zzhi.L(iL);
                         i7 = iL2 + iD + iL + i7;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 49:
                     iU = s6.m(i11, (List) unsafe2.getObject(t, j2), o(i10));
                     i7 += iU;
@@ -2385,147 +2185,111 @@ public final class e6<T> implements q6<T> {
                     if (w(t, i11, i10)) {
                         iU = zzhi.u(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 52:
                     if (w(t, i11, i10)) {
                         iU = zzhi.n(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 53:
                     if (w(t, i11, i10)) {
                         iU = zzhi.B(i11, L(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 54:
                     if (w(t, i11, i10)) {
                         iU = zzhi.E(i11, L(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 55:
                     if (w(t, i11, i10)) {
                         iU = zzhi.I(i11, J(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 56:
                     if (w(t, i11, i10)) {
                         iU = zzhi.N(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 57:
                     if (w(t, i11, i10)) {
                         iU = zzhi.S(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 58:
                     if (w(t, i11, i10)) {
                         iU = zzhi.v(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 59:
                     if (w(t, i11, i10)) {
                         Object object2 = unsafe2.getObject(t, j2);
                         iU = object2 instanceof t3 ? zzhi.w(i11, (t3) object2) : zzhi.o(i11, (String) object2);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 60:
                     if (w(t, i11, i10)) {
                         iU = s6.a(i11, unsafe2.getObject(t, j2), o(i10));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 61:
                     if (w(t, i11, i10)) {
                         iU = zzhi.w(i11, (t3) unsafe2.getObject(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 62:
                     if (w(t, i11, i10)) {
                         iU = zzhi.M(i11, J(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 63:
                     if (w(t, i11, i10)) {
                         iU = zzhi.U(i11, J(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 64:
                     if (w(t, i11, i10)) {
                         iU = zzhi.T(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 65:
                     if (w(t, i11, i10)) {
                         iU = zzhi.Q(i11);
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 66:
                     if (w(t, i11, i10)) {
                         iU = zzhi.P(i11, J(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 67:
                     if (w(t, i11, i10)) {
                         iU = zzhi.J(i11, L(t, j2));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 68:
                     if (w(t, i11, i10)) {
                         iU = zzhi.x(i11, (c6) unsafe2.getObject(t, j2), o(i10));
                         i7 += iU;
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
             }
         }
         d7<?, ?> d7Var2 = this.o;
@@ -2570,7 +2334,6 @@ public final class e6<T> implements q6<T> {
                 case 0:
                     if (!H(t, t2, i) || Double.doubleToLongBits(j7.q(t, j)) != Double.doubleToLongBits(j7.q(t2, j))) {
                         zJ = false;
-                        break;
                     }
                     break;
                 case 1:
@@ -2743,129 +2506,93 @@ public final class e6<T> implements q6<T> {
                 case 0:
                     if (v(t, i)) {
                         ((g4) v7Var).a(i2, j7.q(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 1:
                     if (v(t, i)) {
                         ((g4) v7Var).b(i2, j7.n(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 2:
                     if (v(t, i)) {
                         ((g4) v7Var).a.g(i2, j7.i(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 3:
                     if (v(t, i)) {
                         ((g4) v7Var).a.g(i2, j7.i(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 4:
                     if (v(t, i)) {
                         ((g4) v7Var).a.s(i2, j7.b(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 5:
                     if (v(t, i)) {
                         ((g4) v7Var).a.z(i2, j7.i(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 6:
                     if (v(t, i)) {
                         ((g4) v7Var).a.G(i2, j7.b(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 7:
                     if (v(t, i)) {
                         ((g4) v7Var).a.l(i2, j7.m(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 8:
                     if (v(t, i)) {
                         r(i2, j7.r(t, I & 1048575), v7Var);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 9:
                     if (v(t, i)) {
                         ((g4) v7Var).d(i2, j7.r(t, I & 1048575), o(i));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 10:
                     if (v(t, i)) {
                         ((g4) v7Var).a.h(i2, (t3) j7.r(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 11:
                     if (v(t, i)) {
                         ((g4) v7Var).a.y(i2, j7.b(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 12:
                     if (v(t, i)) {
                         ((g4) v7Var).a.s(i2, j7.b(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 13:
                     if (v(t, i)) {
                         ((g4) v7Var).a.G(i2, j7.b(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 14:
                     if (v(t, i)) {
                         ((g4) v7Var).a.z(i2, j7.i(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 15:
                     if (v(t, i)) {
                         ((g4) v7Var).g(i2, j7.b(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 16:
                     if (v(t, i)) {
                         ((g4) v7Var).f(i2, j7.i(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 17:
                     if (v(t, i)) {
                         ((g4) v7Var).e(i2, j7.r(t, I & 1048575), o(i));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 18:
                     s6.h(this.c[i], (List) j7.r(t, I & 1048575), v7Var, false);
                     break;
@@ -2968,129 +2695,93 @@ public final class e6<T> implements q6<T> {
                 case 51:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a(i2, y(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 52:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).b(i2, F(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 53:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.g(i2, L(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 54:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.g(i2, L(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 55:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.s(i2, J(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 56:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.z(i2, L(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 57:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.G(i2, J(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 58:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.l(i2, N(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 59:
                     if (w(t, i2, i)) {
                         r(i2, j7.r(t, I & 1048575), v7Var);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 60:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).d(i2, j7.r(t, I & 1048575), o(i));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 61:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.h(i2, (t3) j7.r(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 62:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.y(i2, J(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 63:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.s(i2, J(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 64:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.G(i2, J(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 65:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).a.z(i2, L(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 66:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).g(i2, J(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 67:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).f(i2, L(t, I & 1048575));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 68:
                     if (w(t, i2, i)) {
                         ((g4) v7Var).e(i2, j7.r(t, I & 1048575), o(i));
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
             }
         }
         while (entry != null) {
@@ -3244,7 +2935,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3270,7 +2960,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3298,7 +2987,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3326,7 +3014,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3355,7 +3042,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3369,7 +3055,6 @@ public final class e6<T> implements q6<T> {
                             i15 = i2;
                             if (i24 != 5) {
                                 i5 = i13;
-                                break;
                             } else {
                                 unsafe2.putInt(t5, j, b.i.a.f.e.o.f.N1(bArr3, iJ1));
                                 iI1 = iJ1 + 4;
@@ -3381,8 +3066,8 @@ public final class e6<T> implements q6<T> {
                                 i18 = i4;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
+                            break;
                         case 7:
                             i4 = i23;
                             i13 = i3;
@@ -3392,7 +3077,6 @@ public final class e6<T> implements q6<T> {
                             i15 = i2;
                             if (i24 != 0) {
                                 i5 = i13;
-                                break;
                             } else {
                                 iI1 = b.i.a.f.e.o.f.n2(bArr3, iJ1, s3Var5);
                                 j7.e.g(t5, j, s3Var5.f1493b != 0);
@@ -3404,8 +3088,8 @@ public final class e6<T> implements q6<T> {
                                 i18 = i4;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
+                            break;
                         case 8:
                             i4 = i23;
                             i13 = i3;
@@ -3430,7 +3114,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3465,7 +3148,6 @@ public final class e6<T> implements q6<T> {
                                 unsafe2 = unsafe;
                                 i17 = 0;
                                 i16 = -1;
-                                break;
                             }
                             i5 = i13;
                             break;
@@ -3478,7 +3160,6 @@ public final class e6<T> implements q6<T> {
                             e6Var4 = e6Var6;
                             if (i24 != 2) {
                                 i5 = i13;
-                                break;
                             } else {
                                 iI1 = b.i.a.f.e.o.f.v2(bArr3, iJ1, s3Var6);
                                 unsafe2.putObject(t6, j, s3Var6.c);
@@ -3488,8 +3169,8 @@ public final class e6<T> implements q6<T> {
                                 t2 = t6;
                                 s3Var2 = s3Var6;
                                 i12 = i13;
-                                break;
                             }
+                            break;
                         case 12:
                             i4 = i23;
                             i13 = i3;
@@ -3499,7 +3180,6 @@ public final class e6<T> implements q6<T> {
                             e6Var4 = e6Var6;
                             if (i24 != 0) {
                                 i5 = i13;
-                                break;
                             } else {
                                 iI1 = b.i.a.f.e.o.f.O1(bArr3, iJ1, s3Var6);
                                 unsafe2.putInt(t6, j, s3Var6.a);
@@ -3509,8 +3189,8 @@ public final class e6<T> implements q6<T> {
                                 t2 = t6;
                                 s3Var2 = s3Var6;
                                 i12 = i13;
-                                break;
                             }
+                            break;
                         case 15:
                             i4 = i23;
                             i13 = i3;
@@ -3520,7 +3200,6 @@ public final class e6<T> implements q6<T> {
                             e6Var4 = e6Var6;
                             if (i24 != 0) {
                                 i5 = i13;
-                                break;
                             } else {
                                 iI1 = b.i.a.f.e.o.f.O1(bArr3, iJ1, s3Var6);
                                 unsafe2.putInt(t6, j, d4.b(s3Var6.a));
@@ -3530,14 +3209,13 @@ public final class e6<T> implements q6<T> {
                                 t2 = t6;
                                 s3Var2 = s3Var6;
                                 i12 = i13;
-                                break;
                             }
+                            break;
                         case 16:
                             if (i24 != 0) {
                                 i4 = i23;
                                 i13 = i3;
                                 i5 = i13;
-                                break;
                             } else {
                                 bArr3 = bArr2;
                                 int iN2 = b.i.a.f.e.o.f.n2(bArr3, iJ1, s3Var7);
@@ -3555,8 +3233,8 @@ public final class e6<T> implements q6<T> {
                                 t2 = t6;
                                 s3Var2 = s3Var6;
                                 i12 = i13;
-                                break;
                             }
+                            break;
                         default:
                             i4 = i23;
                             i13 = i3;
@@ -3674,74 +3352,56 @@ public final class e6<T> implements q6<T> {
                     if (v(t2, i)) {
                         j7.d(t, j, j7.q(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 1:
                     if (v(t2, i)) {
                         j7.e.d(t, j, j7.n(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 2:
                     if (v(t2, i)) {
                         j7.e(t, j, j7.i(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 3:
                     if (v(t2, i)) {
                         j7.e(t, j, j7.i(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 4:
                     if (v(t2, i)) {
                         j7.e.e(t, j, j7.b(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 5:
                     if (v(t2, i)) {
                         j7.e(t, j, j7.i(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 6:
                     if (v(t2, i)) {
                         j7.e.e(t, j, j7.b(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 7:
                     if (v(t2, i)) {
                         j7.e.g(t, j, j7.m(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 8:
                     if (v(t2, i)) {
                         j7.f(t, j, j7.r(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 9:
                     u(t, t2, i);
                     break;
@@ -3749,58 +3409,44 @@ public final class e6<T> implements q6<T> {
                     if (v(t2, i)) {
                         j7.f(t, j, j7.r(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 11:
                     if (v(t2, i)) {
                         j7.e.e(t, j, j7.b(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 12:
                     if (v(t2, i)) {
                         j7.e.e(t, j, j7.b(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 13:
                     if (v(t2, i)) {
                         j7.e.e(t, j, j7.b(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 14:
                     if (v(t2, i)) {
                         j7.e(t, j, j7.i(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 15:
                     if (v(t2, i)) {
                         j7.e.e(t, j, j7.b(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 16:
                     if (v(t2, i)) {
                         j7.e(t, j, j7.i(t2, j));
                         B(t, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 17:
                     u(t, t2, i);
                     break;
@@ -3855,10 +3501,8 @@ public final class e6<T> implements q6<T> {
                     if (w(t2, i2, i)) {
                         j7.f(t, j, j7.r(t2, j));
                         C(t, i2, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 60:
                     E(t, t2, i);
                     break;
@@ -3872,10 +3516,8 @@ public final class e6<T> implements q6<T> {
                     if (w(t2, i2, i)) {
                         j7.f(t, j, j7.r(t2, j));
                         C(t, i2, i);
-                        break;
-                    } else {
-                        break;
                     }
+                    break;
                 case 68:
                     E(t, t2, i);
                     break;
@@ -4295,7 +3937,6 @@ public final class e6<T> implements q6<T> {
                                 }
                             }
                         }
-                        break;
                     } else {
                         iO1 = b.i.a.f.e.o.f.O1(bArr, iO1, s3Var);
                         int i22 = s3Var.a;
@@ -4326,8 +3967,8 @@ public final class e6<T> implements q6<T> {
                                 }
                             }
                         }
-                        break;
                     }
+                    break;
                 }
                 break;
             case 27:
@@ -4498,13 +4139,12 @@ public final class e6<T> implements q6<T> {
                     while (iO1 < i2) {
                         int iO119 = b.i.a.f.e.o.f.O1(bArr, iO1, s3Var);
                         if (i3 != s3Var.a) {
-                            break;
                         } else {
                             iO1 = b.i.a.f.e.o.f.L1(q6VarO, bArr, iO119, i2, i30, s3Var);
                             b5VarF.add(s3Var.c);
                         }
+                        break;
                     }
-                    break;
                 }
                 break;
         }
@@ -4759,7 +4399,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i6 = i19;
                                 unsafe = unsafe2;
@@ -4789,7 +4428,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i6 = i19;
                                 unsafe = unsafe2;
@@ -4823,7 +4461,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i20 = i21;
                                 i6 = i19;
@@ -4856,7 +4493,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i20 = i21;
                                 i6 = i19;
@@ -4889,7 +4525,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i20 = i23;
                                 i6 = i19;
@@ -4915,7 +4550,6 @@ public final class e6<T> implements q6<T> {
                                     i11 = i3;
                                     i4 = i20;
                                     i10 = i14;
-                                    break;
                                 } else {
                                     unsafe2.putInt(obj4, j9, b.i.a.f.e.o.f.N1(bArr2, iJ1));
                                     iI1 = iJ1 + 4;
@@ -4928,8 +4562,8 @@ public final class e6<T> implements q6<T> {
                                     i28 = i12;
                                     i31 = i25;
                                     i27 = i3;
-                                    break;
                                 }
+                                break;
                             case 7:
                                 i12 = i34;
                                 i23 = i36;
@@ -4944,7 +4578,6 @@ public final class e6<T> implements q6<T> {
                                     i11 = i3;
                                     i4 = i20;
                                     i10 = i14;
-                                    break;
                                 } else {
                                     int iN22 = b.i.a.f.e.o.f.n2(bArr2, iJ1, s3Var3);
                                     j7.e.g(obj4, j10, s3Var3.f1493b != 0);
@@ -4958,8 +4591,8 @@ public final class e6<T> implements q6<T> {
                                     i28 = i12;
                                     i31 = i25;
                                     i27 = i3;
-                                    break;
                                 }
+                                break;
                             case 8:
                                 i12 = i34;
                                 i23 = i36;
@@ -4974,7 +4607,6 @@ public final class e6<T> implements q6<T> {
                                     i11 = i3;
                                     i4 = i20;
                                     i10 = i14;
-                                    break;
                                 } else {
                                     iI1 = (536870912 & i37) == 0 ? b.i.a.f.e.o.f.r2(bArr2, iJ1, s3Var3) : b.i.a.f.e.o.f.t2(bArr2, iJ1, s3Var3);
                                     unsafe2.putObject(obj4, j11, s3Var3.c);
@@ -4987,8 +4619,8 @@ public final class e6<T> implements q6<T> {
                                     i28 = i12;
                                     i31 = i25;
                                     i27 = i3;
-                                    break;
                                 }
+                                break;
                             case 9:
                                 i12 = i34;
                                 i23 = i36;
@@ -5003,7 +4635,6 @@ public final class e6<T> implements q6<T> {
                                     i11 = i3;
                                     i4 = i20;
                                     i10 = i14;
-                                    break;
                                 } else {
                                     iI1 = b.i.a.f.e.o.f.M1(e6Var2.o(i14), bArr2, iJ1, i2, s3Var3);
                                     if ((i7 & i40) == 0) {
@@ -5020,8 +4651,8 @@ public final class e6<T> implements q6<T> {
                                     i28 = i12;
                                     i31 = i25;
                                     i27 = i3;
-                                    break;
                                 }
+                                break;
                             case 10:
                                 i12 = i34;
                                 i24 = i36;
@@ -5043,7 +4674,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i20 = i24;
                                 i6 = i19;
@@ -5063,7 +4693,21 @@ public final class e6<T> implements q6<T> {
                                     iI1 = b.i.a.f.e.o.f.O1(bArr2, iJ1, s3Var3);
                                     int i42 = s3Var3.a;
                                     a5 a5VarG = e6Var2.G(i14);
-                                    if (a5VarG == null || a5VarG.f(i42)) {
+                                    if (a5VarG != null && !a5VarG.f(i42)) {
+                                        M(t).a(i24, Long.valueOf(i42));
+                                        i20 = i24;
+                                        i30 = i19;
+                                        bArr3 = bArr2;
+                                        i31 = i7;
+                                        i13 = i20;
+                                        bArr2 = bArr;
+                                        i27 = i3;
+                                        s3Var3 = s3Var;
+                                        i29 = i14;
+                                        i32 = i13;
+                                        i28 = i12;
+                                        i26 = i2;
+                                    } else {
                                         unsafe2.putInt(obj4, j14, i42);
                                         i20 = i24;
                                         i7 |= i40;
@@ -5078,22 +4722,8 @@ public final class e6<T> implements q6<T> {
                                         i32 = i13;
                                         i28 = i12;
                                         i26 = i2;
-                                        break;
-                                    } else {
-                                        M(t).a(i24, Long.valueOf(i42));
-                                        i20 = i24;
-                                        i30 = i19;
-                                        bArr3 = bArr2;
-                                        i31 = i7;
-                                        i13 = i20;
-                                        bArr2 = bArr;
-                                        i27 = i3;
-                                        s3Var3 = s3Var;
-                                        i29 = i14;
-                                        i32 = i13;
-                                        i28 = i12;
-                                        i26 = i2;
                                     }
+                                    break;
                                 }
                                 i20 = i24;
                                 i6 = i19;
@@ -5125,7 +4755,6 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
                                 i20 = i24;
                                 i6 = i19;
@@ -5151,7 +4780,6 @@ public final class e6<T> implements q6<T> {
                                     i11 = i3;
                                     i4 = i20;
                                     i10 = i14;
-                                    break;
                                 } else {
                                     iN2 = b.i.a.f.e.o.f.n2(bArr2, iJ1, s3Var3);
                                     i22 = i24;
@@ -5172,8 +4800,8 @@ public final class e6<T> implements q6<T> {
                                     i32 = i13;
                                     i28 = i12;
                                     i26 = i2;
-                                    break;
                                 }
+                                break;
                             case 17:
                                 if (i35 != 3) {
                                     i20 = i36;
@@ -5186,7 +4814,6 @@ public final class e6<T> implements q6<T> {
                                     i11 = i3;
                                     i4 = i20;
                                     i10 = i14;
-                                    break;
                                 } else {
                                     int i44 = iZ;
                                     iI1 = b.i.a.f.e.o.f.L1(e6Var2.o(iZ), bArr, iJ1, i2, (i34 << 3) | 4, s3Var);
@@ -5205,8 +4832,8 @@ public final class e6<T> implements q6<T> {
                                     bArr3 = bArr2;
                                     i31 = i25;
                                     i27 = i3;
-                                    break;
                                 }
+                                break;
                             default:
                                 i12 = i34;
                                 i20 = i36;

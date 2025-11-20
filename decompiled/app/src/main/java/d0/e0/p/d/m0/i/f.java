@@ -226,22 +226,20 @@ public final class f<FieldDescriptorType extends a<FieldDescriptorType>> {
             case 11:
                 if (!(obj instanceof c)) {
                     codedOutputStream.writeByteArrayNoTag((byte[]) obj);
-                    break;
                 } else {
                     codedOutputStream.writeBytesNoTag((c) obj);
-                    break;
                 }
+                break;
             case 12:
                 codedOutputStream.writeUInt32NoTag(((Integer) obj).intValue());
                 break;
             case 13:
                 if (!(obj instanceof h.a)) {
                     codedOutputStream.writeEnumNoTag(((Integer) obj).intValue());
-                    break;
                 } else {
                     codedOutputStream.writeEnumNoTag(((h.a) obj).getNumber());
-                    break;
                 }
+                break;
             case 14:
                 codedOutputStream.writeSFixed32NoTag(((Integer) obj).intValue());
                 break;
@@ -356,7 +354,7 @@ public final class f<FieldDescriptorType extends a<FieldDescriptorType>> {
         Object field = getField(fielddescriptortype);
         if (field == null) {
             arrayList = new ArrayList();
-            this.f3429b.put((t<FieldDescriptorType, Object>) fielddescriptortype, (FieldDescriptorType) arrayList);
+            this.f3429b.put(fielddescriptortype, arrayList);
         } else {
             arrayList = (List) field;
         }
@@ -409,18 +407,18 @@ public final class f<FieldDescriptorType extends a<FieldDescriptorType>> {
             while (it.hasNext()) {
                 ((List) field).add(a(it.next()));
             }
-            this.f3429b.put((t<FieldDescriptorType, Object>) key, (FieldDescriptorType) field);
+            this.f3429b.put(key, field);
             return;
         }
         if (key.getLiteJavaType() != w.c.MESSAGE) {
-            this.f3429b.put((t<FieldDescriptorType, Object>) key, (FieldDescriptorType) a(value));
+            this.f3429b.put(key, a(value));
             return;
         }
         Object field2 = getField(key);
         if (field2 == null) {
-            this.f3429b.put((t<FieldDescriptorType, Object>) key, (FieldDescriptorType) a(value));
+            this.f3429b.put(key, a(value));
         } else {
-            this.f3429b.put((t<FieldDescriptorType, Object>) key, (FieldDescriptorType) key.internalMergeFrom(((n) field2).toBuilder(), (n) value).build());
+            this.f3429b.put(key, key.internalMergeFrom(((n) field2).toBuilder(), (n) value).build());
         }
     }
 
@@ -527,7 +525,7 @@ public final class f<FieldDescriptorType extends a<FieldDescriptorType>> {
         if (obj instanceof i) {
             this.d = true;
         }
-        this.f3429b.put((t<FieldDescriptorType, Object>) fielddescriptortype, (FieldDescriptorType) obj);
+        this.f3429b.put(fielddescriptortype, obj);
     }
 
     public f<FieldDescriptorType> clone() {

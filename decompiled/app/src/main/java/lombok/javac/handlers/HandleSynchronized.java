@@ -5,7 +5,6 @@ import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.Context;
 import com.sun.tools.javac.util.List;
 import java.lang.annotation.Annotation;
-import java.util.Iterator;
 import lombok.ConfigurationKeys;
 import lombok.Synchronized;
 import lombok.core.AST;
@@ -55,9 +54,7 @@ public class HandleSynchronized extends JavacAnnotationHandler<Synchronized> {
         JavacNode typeNode = JavacHandlerUtil.upToTypeNode(annotationNode);
         JavacHandlerUtil.MemberExistsResult exists = JavacHandlerUtil.MemberExistsResult.NOT_EXISTS;
         if (typeNode != null && (typeNode.get() instanceof JCTree.JCClassDecl)) {
-            Iterator it = typeNode.get().defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCVariableDecl jCVariableDecl = (JCTree) it.next();
+            for (JCTree.JCVariableDecl jCVariableDecl : typeNode.get().defs) {
                 if ((jCVariableDecl instanceof JCTree.JCVariableDecl) && jCVariableDecl.name.contentEquals(lockName)) {
                     exists = JavacHandlerUtil.getGeneratedBy(jCVariableDecl) == null ? JavacHandlerUtil.MemberExistsResult.EXISTS_BY_USER : JavacHandlerUtil.MemberExistsResult.EXISTS_BY_LOMBOK;
                     boolean st = (jCVariableDecl.mods.flags & 8) != 0;

@@ -134,13 +134,11 @@ public class SelectionAggregator<T extends Attachment<? extends Object>> {
         while (it.hasNext()) {
             SelectionCoordinator selectionCoordinator = (SelectionCoordinator) it.next();
             Objects.requireNonNull(selectionCoordinator);
-            ArrayList arrayList = new ArrayList(selectionCoordinator.selectedItemPositionMap.values());
+            ArrayList<Integer> arrayList = new ArrayList(selectionCoordinator.selectedItemPositionMap.values());
             selectionCoordinator.selectedItemPositionMap.clear();
             RecyclerView.Adapter<?> adapter = selectionCoordinator.adapter;
             if (adapter != null) {
-                Iterator it2 = arrayList.iterator();
-                while (it2.hasNext()) {
-                    Integer num = (Integer) it2.next();
+                for (Integer num : arrayList) {
                     m.checkNotNullExpressionValue(num, ModelAuditLogEntry.CHANGE_KEY_POSITION);
                     adapter.notifyItemChanged(num.intValue());
                 }
@@ -177,11 +175,9 @@ public class SelectionAggregator<T extends Attachment<? extends Object>> {
     public final SelectionAggregator<T> initFrom(SelectionAggregator<T> old) {
         if (old != null) {
             this.attachments.addAll(old.attachments);
-            Iterator<SelectionCoordinator<T, ?>> it = old.childSelectionCoordinators.iterator();
-            while (it.hasNext()) {
-                SelectionCoordinator<T, ?> next = it.next();
-                m.checkNotNullExpressionValue(next, "coordinator");
-                registerSelectionCoordinatorInternal(next);
+            for (SelectionCoordinator<T, ?> selectionCoordinator : old.childSelectionCoordinators) {
+                m.checkNotNullExpressionValue(selectionCoordinator, "coordinator");
+                registerSelectionCoordinatorInternal(selectionCoordinator);
             }
             this.itemSelectionListeners.addAll(old.itemSelectionListeners);
         }

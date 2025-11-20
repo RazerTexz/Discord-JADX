@@ -360,8 +360,8 @@ public final class d {
                                 case 232:
                                     sb.append((char) 29);
                                     if (cVar2.a() > 0) {
-                                        break;
                                     }
+                                    break;
                                 case 233:
                                 case 234:
                                 case 241:
@@ -393,7 +393,6 @@ public final class d {
                                     break;
                                 default:
                                     if (iB4 != 254 || cVar2.a() != 0) {
-                                        break;
                                     }
                                     if (cVar2.a() > 0) {
                                     }

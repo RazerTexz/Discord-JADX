@@ -1,7 +1,6 @@
 package j0.l.c;
 
 import j0.l.c.j;
-import java.util.Iterator;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executors;
@@ -71,14 +70,12 @@ public final class a extends Scheduler implements k {
                     return;
                 }
                 long jNanoTime = System.nanoTime();
-                Iterator<c> it = c0626a.c.iterator();
-                while (it.hasNext()) {
-                    c next = it.next();
-                    if (next.r > jNanoTime) {
+                for (c cVar : c0626a.c) {
+                    if (cVar.r > jNanoTime) {
                         return;
                     }
-                    if (c0626a.c.remove(next)) {
-                        c0626a.d.c(next);
+                    if (c0626a.c.remove(cVar)) {
+                        c0626a.d.c(cVar);
                     }
                 }
             }

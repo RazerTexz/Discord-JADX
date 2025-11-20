@@ -56,7 +56,7 @@ public final class o {
                 enumMap = null;
             } else {
                 enumMap = new EnumMap(b.i.e.j.class);
-                enumMap.put((EnumMap) b.i.e.j.ISSUE_NUMBER, (b.i.e.j) Integer.valueOf(string));
+                enumMap.put(b.i.e.j.ISSUE_NUMBER, Integer.valueOf(string));
             }
             float f = i;
             Result result = new Result(string, null, new b.i.e.k[]{new b.i.e.k((iArrL[0] + iArrL[1]) / 2.0f, f), new b.i.e.k(iG, f)}, b.i.e.a.UPC_EAN_EXTENSION);

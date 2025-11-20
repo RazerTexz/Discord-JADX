@@ -120,7 +120,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             AuditLogActionFilterItem auditLogActionFilterItem = (AuditLogActionFilterItem) data;
             ImageView imageView = this.binding.d;
             AuditLogUtils auditLogUtils = AuditLogUtils.INSTANCE;
@@ -184,7 +184,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             AuditLogUserFilterItem auditLogUserFilterItem = (AuditLogUserFilterItem) data;
             User user = auditLogUserFilterItem.getUser();
             boolean z2 = (auditLogUserFilterItem.getId() == 0 || user == null) ? false : true;

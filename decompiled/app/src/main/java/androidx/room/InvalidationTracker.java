@@ -464,11 +464,9 @@ public class InvalidationTracker {
     @VisibleForTesting(otherwise = 3)
     public void notifyObserversByTableNames(String... strArr) {
         synchronized (this.mObserverMap) {
-            Iterator<Map.Entry<Observer, ObserverWrapper>> it = this.mObserverMap.iterator();
-            while (it.hasNext()) {
-                Map.Entry<Observer, ObserverWrapper> next = it.next();
-                if (!next.getKey().isRemote()) {
-                    next.getValue().notifyByTableNames(strArr);
+            for (Map.Entry<Observer, ObserverWrapper> entry : this.mObserverMap) {
+                if (!entry.getKey().isRemote()) {
+                    entry.getValue().notifyByTableNames(strArr);
                 }
             }
         }

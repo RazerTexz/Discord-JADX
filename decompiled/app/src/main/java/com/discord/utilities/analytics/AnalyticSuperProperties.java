@@ -156,11 +156,10 @@ public final class AnalyticSuperProperties {
                 case -1539894552:
                     if (str.equals(PROPERTY_UTM_CONTENT)) {
                         z2 = true;
-                        break;
                     } else {
                         z2 = false;
-                        break;
                     }
+                    break;
                 case -1089678029:
                     if (str.equals(PROPERTY_REFERRING_DOMAIN)) {
                     }

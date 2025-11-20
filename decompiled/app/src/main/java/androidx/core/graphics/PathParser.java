@@ -125,7 +125,6 @@ public class PathParser {
                                 extractFloatResult.mEndWithNegOrDot = true;
                                 z2 = false;
                                 z4 = true;
-                                break;
                             }
                             z2 = false;
                             break;
@@ -134,12 +133,11 @@ public class PathParser {
                                 extractFloatResult.mEndWithNegOrDot = true;
                                 z2 = false;
                                 z4 = true;
-                                break;
                             } else {
                                 z2 = false;
                                 z3 = true;
-                                break;
                             }
+                            break;
                         default:
                             z2 = false;
                             break;

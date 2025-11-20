@@ -2,7 +2,6 @@ package lombok.eclipse.handlers;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
@@ -33,10 +32,7 @@ public class HandleFieldNameConstants extends EclipseAnnotationHandler<FieldName
     private static final IdentifierName FIELDS = IdentifierName.valueOf("Fields");
 
     public void generateFieldNameConstantsForType(EclipseNode typeNode, EclipseNode errorNode, AccessLevel level, boolean asEnum, IdentifierName innerTypeName, boolean onlyExplicit, boolean uppercase) {
-        TypeDeclaration typeDecl = null;
-        if (typeNode.get() instanceof TypeDeclaration) {
-            typeDecl = (TypeDeclaration) typeNode.get();
-        }
+        TypeDeclaration typeDecl = typeNode.get() instanceof TypeDeclaration ? (TypeDeclaration) typeNode.get() : null;
         int modifiers = typeDecl == null ? 0 : typeDecl.modifiers;
         boolean notAClass = (modifiers & 8704) != 0;
         if (typeDecl == null || notAClass) {
@@ -44,9 +40,7 @@ public class HandleFieldNameConstants extends EclipseAnnotationHandler<FieldName
             return;
         }
         List<EclipseNode> qualified = new ArrayList<>();
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode field = it.next();
+        for (EclipseNode field : typeNode.down()) {
             if (fieldQualifiesForFieldNameConstantsGeneration(field, onlyExplicit)) {
                 qualified.add(field);
             }

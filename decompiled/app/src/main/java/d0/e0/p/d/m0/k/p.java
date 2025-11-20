@@ -26,7 +26,7 @@ public final class p {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Object obj) {
-            invoke2((a<H>) obj);
+            invoke2(obj);
             return Unit.a;
         }
 

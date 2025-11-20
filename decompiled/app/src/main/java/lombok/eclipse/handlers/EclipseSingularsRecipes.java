@@ -75,9 +75,7 @@ public class EclipseSingularsRecipes {
 
     private static void loadAll(TypeLibrary library, Map<String, EclipseSingularizer> map) throws IOException {
         for (EclipseSingularizer handler : SpiLoadUtil.findServices(EclipseSingularizer.class, EclipseSingularizer.class.getClassLoader())) {
-            Iterator<String> it = handler.getSupportedTypes().iterator();
-            while (it.hasNext()) {
-                String type = it.next();
+            for (String type : handler.getSupportedTypes()) {
                 EclipseSingularizer existingSingularizer = map.get(type);
                 if (existingSingularizer != null) {
                     EclipseSingularizer toKeep = existingSingularizer.getClass().getName().compareTo(handler.getClass().getName()) > 0 ? handler : existingSingularizer;
@@ -265,9 +263,7 @@ public class EclipseSingularsRecipes {
         }
 
         public boolean checkForAlreadyExistingNodesAndGenerateError(EclipseNode builderType, SingularData data) {
-            Iterator<EclipseNode> it = builderType.down().iterator();
-            while (it.hasNext()) {
-                EclipseNode child = it.next();
+            for (EclipseNode child : builderType.down()) {
                 switch ($SWITCH_TABLE$lombok$core$AST$Kind()[child.getKind().ordinal()]) {
                     case 3:
                         FieldDeclaration fd = child.get();
@@ -279,9 +275,6 @@ public class EclipseSingularsRecipes {
                                     return true;
                                 }
                             }
-                            break;
-                        } else {
-                            break;
                         }
                         break;
                     case 5:
@@ -294,9 +287,6 @@ public class EclipseSingularsRecipes {
                                     return true;
                                 }
                             }
-                            break;
-                        } else {
-                            break;
                         }
                         break;
                 }

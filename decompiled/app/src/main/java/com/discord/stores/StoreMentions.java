@@ -177,12 +177,10 @@ public final class StoreMentions extends StoreV2 {
         }
         HashMap map = new HashMap();
         Map<Long, StoreMessageAck.Ack> allInternal = this.storeMessageAck.getAllInternal();
-        Iterator<ModelReadState> it = this.serverInitReadStates.iterator();
-        while (it.hasNext()) {
-            ModelReadState next = it.next();
-            long channelId = next.getChannelId();
-            long lastMessageId = next.getLastMessageId();
-            int mentionCount = next.getMentionCount();
+        for (ModelReadState modelReadState : this.serverInitReadStates) {
+            long channelId = modelReadState.getChannelId();
+            long lastMessageId = modelReadState.getLastMessageId();
+            int mentionCount = modelReadState.getMentionCount();
             if (mentionCount >= 1 && isMentionableChannel(channelId) && (ack = allInternal.get(Long.valueOf(channelId))) != null && ack.getMessageId() <= lastMessageId) {
                 Long lValueOf = Long.valueOf(channelId);
                 Integer num = (Integer) map.get(Long.valueOf(channelId));

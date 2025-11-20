@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -132,10 +131,8 @@ public class d implements h {
             Collection<c.a> collectionC = c(this.k.e());
             long jA = this.o.a() - j;
             int i2 = 0;
-            Iterator it = ((ArrayList) collectionC).iterator();
             long j2 = 0;
-            while (it.hasNext()) {
-                c.a aVar = (c.a) it.next();
+            for (c.a aVar : (ArrayList) collectionC) {
                 if (j2 > jA) {
                     break;
                 }

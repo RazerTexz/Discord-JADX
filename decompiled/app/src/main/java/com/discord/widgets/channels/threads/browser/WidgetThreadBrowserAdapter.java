@@ -57,7 +57,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             Item.Header header = (Item.Header) data;
             TextView textView = this.binding.f2158b;
             m.checkNotNullExpressionValue(textView, "binding.headerName");
@@ -446,7 +446,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             Item.Thread thread = (Item.Thread) data;
             this.binding.f2159b.setThreadData(thread.getThreadData());
             this.binding.f2159b.setOnClickListener(new WidgetThreadBrowserAdapter$ThreadItem$onConfigure$1(this, thread));
@@ -480,7 +480,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2160b;
             m.checkNotNullExpressionValue(textView, "binding.warning");
             textView.setText(b.h(((WidgetThreadBrowserAdapter) this.adapter).getContext(), R.string.forum_android_warning, new Object[0], null, 4).toString());

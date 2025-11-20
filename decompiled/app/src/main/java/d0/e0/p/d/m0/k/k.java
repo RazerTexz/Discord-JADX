@@ -646,8 +646,11 @@ public class k {
                                             objArr[1] = "kotlin/reflect/jvm/internal/impl/resolve/OverridingUtil";
                                             break;
                                     }
+                                    break;
                             }
+                            break;
                     }
+                    break;
             }
         } else {
             objArr[1] = "extractMembersOverridableInBothWays";
@@ -869,8 +872,11 @@ public class k {
                                         default:
                                             throw new IllegalArgumentException(str2);
                                     }
+                                    break;
                             }
+                            break;
                     }
+                    break;
             }
         }
         throw new IllegalStateException(str2);

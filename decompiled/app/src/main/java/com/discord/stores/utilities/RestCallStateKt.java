@@ -47,7 +47,7 @@ public final class RestCallStateKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Object obj) {
-            invoke2((AnonymousClass1<T>) obj);
+            invoke2(obj);
             return Unit.a;
         }
 

@@ -13,7 +13,6 @@ import b.i.c.m.e.d;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 
 /* loaded from: classes3.dex */
 public class JniNativeApi implements d {
@@ -45,7 +44,7 @@ public class JniNativeApi implements d {
         String str2 = Build.CPU_ABI;
         try {
             PackageInfo packageInfo = this.f3110b.getPackageManager().getPackageInfo(this.f3110b.getPackageName(), 9216);
-            ArrayList arrayList = new ArrayList(10);
+            ArrayList<String> arrayList = new ArrayList(10);
             arrayList.add(packageInfo.applicationInfo.sourceDir);
             String[] strArr = packageInfo.applicationInfo.splitSourceDirs;
             if (strArr != null) {
@@ -65,9 +64,7 @@ public class JniNativeApi implements d {
                     arrayList2.add(new File(parentFile, "arm").getPath());
                 }
             }
-            Iterator it = arrayList.iterator();
-            while (it.hasNext()) {
-                String str3 = (String) it.next();
+            for (String str3 : arrayList) {
                 if (str3.endsWith(".apk")) {
                     arrayList2.add(str3 + "!/lib/" + str2);
                 }

@@ -398,7 +398,7 @@ public final class ModalComponent extends AppFragment {
         m.checkNotNullExpressionValue(textView2, "binding.warning");
         b.n(textView2, R.string.interaction_form_submission_application, new Object[]{getArgs().getModal().getApplication().getName()}, null, 4);
         List listFilterIsInstance = t.filterIsInstance(getArgs().getModal().b(), ActionRowComponent.class);
-        ArrayList arrayList = new ArrayList();
+        ArrayList<TextComponent> arrayList = new ArrayList();
         Iterator it = listFilterIsInstance.iterator();
         while (it.hasNext()) {
             Object orNull = u.getOrNull(((ActionRowComponent) it.next()).b(), 0);
@@ -411,9 +411,7 @@ public final class ModalComponent extends AppFragment {
             }
         }
         ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
-        Iterator it2 = arrayList.iterator();
-        while (it2.hasNext()) {
-            TextComponent textComponent2 = (TextComponent) it2.next();
+        for (TextComponent textComponent2 : arrayList) {
             View viewInflate = LayoutInflater.from(requireContext()).inflate(R.layout.bot_uikit_text_input, (ViewGroup) null, false);
             int i = R.id.edit_text;
             TextInputEditText textInputEditText = (TextInputEditText) viewInflate.findViewById(R.id.edit_text);

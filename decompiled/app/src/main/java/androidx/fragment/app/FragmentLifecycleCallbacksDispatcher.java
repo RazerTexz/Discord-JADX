@@ -6,7 +6,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /* loaded from: classes.dex */
@@ -39,11 +38,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentActivityCreated(fragment, bundle, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentActivityCreated(this.mFragmentManager, fragment, bundle);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentActivityCreated(this.mFragmentManager, fragment, bundle);
             }
         }
     }
@@ -54,11 +51,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentAttached(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentAttached(this.mFragmentManager, fragment, context);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentAttached(this.mFragmentManager, fragment, context);
             }
         }
     }
@@ -68,11 +63,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentCreated(fragment, bundle, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentCreated(this.mFragmentManager, fragment, bundle);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentCreated(this.mFragmentManager, fragment, bundle);
             }
         }
     }
@@ -82,11 +75,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentDestroyed(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentDestroyed(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentDestroyed(this.mFragmentManager, fragment);
             }
         }
     }
@@ -96,11 +87,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentDetached(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentDetached(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentDetached(this.mFragmentManager, fragment);
             }
         }
     }
@@ -110,11 +99,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentPaused(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentPaused(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentPaused(this.mFragmentManager, fragment);
             }
         }
     }
@@ -125,11 +112,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentPreAttached(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentPreAttached(this.mFragmentManager, fragment, context);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentPreAttached(this.mFragmentManager, fragment, context);
             }
         }
     }
@@ -139,11 +124,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentPreCreated(fragment, bundle, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentPreCreated(this.mFragmentManager, fragment, bundle);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentPreCreated(this.mFragmentManager, fragment, bundle);
             }
         }
     }
@@ -153,11 +136,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentResumed(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentResumed(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentResumed(this.mFragmentManager, fragment);
             }
         }
     }
@@ -167,11 +148,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentSaveInstanceState(fragment, bundle, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentSaveInstanceState(this.mFragmentManager, fragment, bundle);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentSaveInstanceState(this.mFragmentManager, fragment, bundle);
             }
         }
     }
@@ -181,11 +160,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentStarted(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentStarted(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentStarted(this.mFragmentManager, fragment);
             }
         }
     }
@@ -195,11 +172,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentStopped(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentStopped(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentStopped(this.mFragmentManager, fragment);
             }
         }
     }
@@ -209,11 +184,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentViewCreated(fragment, view, bundle, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentViewCreated(this.mFragmentManager, fragment, view, bundle);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentViewCreated(this.mFragmentManager, fragment, view, bundle);
             }
         }
     }
@@ -223,11 +196,9 @@ public class FragmentLifecycleCallbacksDispatcher {
         if (parent != null) {
             parent.getParentFragmentManager().getLifecycleCallbacksDispatcher().dispatchOnFragmentViewDestroyed(fragment, true);
         }
-        Iterator<FragmentLifecycleCallbacksHolder> it = this.mLifecycleCallbacks.iterator();
-        while (it.hasNext()) {
-            FragmentLifecycleCallbacksHolder next = it.next();
-            if (!z2 || next.mRecursive) {
-                next.mCallback.onFragmentViewDestroyed(this.mFragmentManager, fragment);
+        for (FragmentLifecycleCallbacksHolder fragmentLifecycleCallbacksHolder : this.mLifecycleCallbacks) {
+            if (!z2 || fragmentLifecycleCallbacksHolder.mRecursive) {
+                fragmentLifecycleCallbacksHolder.mCallback.onFragmentViewDestroyed(this.mFragmentManager, fragment);
             }
         }
     }

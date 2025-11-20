@@ -107,11 +107,10 @@ public class h {
                 case -1335157162:
                     if (!strNextName.equals("device")) {
                         c = 65535;
-                        break;
                     } else {
                         c = 0;
-                        break;
                     }
+                    break;
                 case 96801:
                     if (strNextName.equals("app")) {
                         c = 1;
@@ -147,11 +146,10 @@ public class h {
                         case -1708606089:
                             if (!strNextName2.equals("batteryLevel")) {
                                 c2 = 65535;
-                                break;
                             } else {
                                 c2 = 0;
-                                break;
                             }
+                            break;
                         case -1455558134:
                             if (strNextName2.equals("batteryVelocity")) {
                                 c2 = 1;
@@ -215,11 +213,10 @@ public class h {
                             case -1332194002:
                                 if (!strNextName3.equals("background")) {
                                     c3 = 65535;
-                                    break;
                                 } else {
                                     c3 = 0;
-                                    break;
                                 }
+                                break;
                             case -1090974952:
                                 if (strNextName3.equals("execution")) {
                                     c3 = 1;
@@ -254,11 +251,10 @@ public class h {
                                     case -1337936983:
                                         if (!strNextName4.equals("threads")) {
                                             c4 = 65535;
-                                            break;
                                         } else {
                                             c4 = 0;
-                                            break;
                                         }
+                                        break;
                                     case -902467928:
                                         if (strNextName4.equals("signal")) {
                                             c4 = 1;
@@ -509,11 +505,10 @@ public class h {
                 case -2118372775:
                     if (!strNextName.equals("ndkPayload")) {
                         c = 65535;
-                        break;
                     } else {
                         c = 0;
-                        break;
                     }
+                    break;
                 case -1962630338:
                     if (strNextName.equals("sdkVersion")) {
                         c = 1;
@@ -581,6 +576,7 @@ public class h {
                     }
                     c0141b.h = new b.i.c.m.d.m.d(wVarA, strNextString, null);
                     break;
+                    break;
                 case 1:
                     String strNextString2 = jsonReader.nextString();
                     Objects.requireNonNull(strNextString2, "Null sdkVersion");
@@ -621,14 +617,17 @@ public class h {
                                 str = str3;
                                 bVar.c = Long.valueOf(jsonReader.nextLong());
                                 str3 = str;
+                                break;
                             case "identifier":
                                 str = str3;
                                 bVar.f1719b = new String(Base64.decode(jsonReader.nextString(), 2), v.a);
                                 str3 = str;
+                                break;
                             case "endedAt":
                                 str = str3;
                                 bVar.d = Long.valueOf(jsonReader.nextLong());
                                 str3 = str;
+                                break;
                             case "device":
                                 str = str3;
                                 i.b bVar2 = new i.b();
@@ -678,10 +677,12 @@ public class h {
                                 jsonReader.endObject();
                                 bVar.i = bVar2.a();
                                 str3 = str;
+                                break;
                             case "events":
                                 str = str3;
                                 bVar.j = a(jsonReader, b.i.c.m.d.m.x.a.a);
                                 str3 = str;
+                                break;
                             case "os":
                                 str = str3;
                                 jsonReader.beginObject();
@@ -701,6 +702,7 @@ public class h {
                                                 c2 = 0;
                                                 break;
                                             }
+                                            break;
                                         case -293026577:
                                             if (strNextName5.equals("jailbroken")) {
                                                 c2 = 1;
@@ -752,6 +754,8 @@ public class h {
                                 }
                                 bVar.h = new t(numValueOf.intValue(), str5, str6, boolValueOf.booleanValue(), null);
                                 str3 = str;
+                                break;
+                                break;
                             case "app":
                                 jsonReader.beginObject();
                                 String str7 = null;
@@ -773,6 +777,7 @@ public class h {
                                                 c3 = 0;
                                                 break;
                                             }
+                                            break;
                                         case -519438642:
                                             str2 = str3;
                                             if (strNextName6.equals("developmentPlatform")) {
@@ -851,6 +856,8 @@ public class h {
                                 }
                                 bVar.f = new b.i.c.m.d.m.g(str7, str8, strNextString12, null, strNextString13, strNextString14, strNextString15, null);
                                 str3 = str;
+                                break;
+                                break;
                             case "user":
                                 jsonReader.beginObject();
                                 String strNextString18 = null;
@@ -872,24 +879,30 @@ public class h {
                                 bVar.g = new u(strNextString18, null);
                                 str = str3;
                                 str3 = str;
+                                break;
+                                break;
                             case "generator":
                                 String strNextString19 = jsonReader.nextString();
                                 Objects.requireNonNull(strNextString19, "Null generator");
                                 bVar.a = strNextString19;
                                 str = str3;
                                 str3 = str;
+                                break;
                             case "crashed":
                                 bVar.b(jsonReader.nextBoolean());
                                 str = str3;
                                 str3 = str;
+                                break;
                             case "generatorType":
                                 bVar.k = Integer.valueOf(jsonReader.nextInt());
                                 str = str3;
                                 str3 = str;
+                                break;
                             default:
                                 str = str3;
                                 jsonReader.skipValue();
                                 str3 = str;
+                                break;
                         }
                     }
                     jsonReader.endObject();

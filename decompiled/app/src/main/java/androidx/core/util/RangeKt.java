@@ -56,7 +56,7 @@ public final class RangeKt {
     public static final <T extends Comparable<? super T>> Range<T> plus(Range<T> range, T t) {
         m.checkNotNullParameter(range, "<this>");
         m.checkNotNullParameter(t, "value");
-        Range<T> rangeExtend = range.extend((Range<T>) t);
+        Range<T> rangeExtend = range.extend(t);
         m.checkNotNullExpressionValue(rangeExtend, "extend(value)");
         return rangeExtend;
     }

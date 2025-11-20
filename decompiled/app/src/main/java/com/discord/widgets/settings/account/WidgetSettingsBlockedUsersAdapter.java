@@ -67,7 +67,7 @@ public final class WidgetSettingsBlockedUsersAdapter extends MGRecyclerAdapterSi
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetSettingsBlockedUsersViewModel.Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.a.setOnClickListener(new WidgetSettingsBlockedUsersAdapter$BlockedUserViewHolder$onConfigure$1(this, data));
             SimpleDraweeView simpleDraweeView = this.binding.f2625b;
             m.checkNotNullExpressionValue(simpleDraweeView, "binding.blockedUserItemAvatar");

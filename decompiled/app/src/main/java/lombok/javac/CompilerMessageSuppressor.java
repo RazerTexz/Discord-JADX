@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.lang.reflect.Field;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
@@ -220,9 +219,7 @@ public final class CompilerMessageSuppressor {
         try {
             ListBuffer<?> deferredDiagnostics = (ListBuffer) field.get(receiver);
             ListBuffer<Object> newDeferredDiagnostics = new ListBuffer<>();
-            Iterator it = deferredDiagnostics.iterator();
-            while (it.hasNext()) {
-                Object diag_ = it.next();
+            for (Object diag_ : deferredDiagnostics) {
                 if (!(diag_ instanceof JCDiagnostic)) {
                     newDeferredDiagnostics.add(diag_);
                 } else {

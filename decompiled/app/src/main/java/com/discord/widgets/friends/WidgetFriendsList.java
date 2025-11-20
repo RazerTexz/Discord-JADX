@@ -109,14 +109,13 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
                 case R.id.menu_friends_start_group /* 2131364391 */:
                     if (!GroupInviteFriendsSheetFeatureFlag.INSTANCE.getINSTANCE().isEnabled()) {
                         WidgetGroupInviteFriends.INSTANCE.launch(WidgetFriendsList.this.requireContext(), WidgetFriendsList.ANALYTICS_SOURCE);
-                        break;
                     } else {
                         GroupInviteFriendsSheet.Companion companion3 = GroupInviteFriendsSheet.INSTANCE;
                         FragmentManager parentFragmentManager = WidgetFriendsList.this.getParentFragmentManager();
                         m.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
                         GroupInviteFriendsSheet.Companion.show$default(companion3, parentFragmentManager, 0L, WidgetFriendsList.ANALYTICS_SOURCE, 2, null);
-                        break;
                     }
+                    break;
             }
         }
     }

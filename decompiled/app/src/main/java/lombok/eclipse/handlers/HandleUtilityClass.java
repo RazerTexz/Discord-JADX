@@ -1,7 +1,6 @@
 package lombok.eclipse.handlers;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import lombok.ConfigurationKeys;
 import lombok.core.AST;
 import lombok.core.AnnotationValues;
@@ -95,8 +94,8 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
 
     /*  JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
         jadx.core.utils.exceptions.JadxRuntimeException: Failed to find switch 'out' block (already processed)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.calcSwitchOut(SwitchRegionMaker.java:200)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:61)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.calcSwitchOut(SwitchRegionMaker.java:217)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:68)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:112)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:103)
@@ -209,12 +208,9 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
         TypeDeclaration classDecl = typeNode.get();
         boolean makeConstructor = true;
         classDecl.modifiers |= 16;
-        boolean markStatic = true;
         boolean requiresClInit = false;
         boolean alreadyHasClinit = false;
-        if (typeNode.up().getKind() == AST.Kind.COMPILATION_UNIT) {
-            markStatic = false;
-        }
+        boolean markStatic = typeNode.up().getKind() != AST.Kind.COMPILATION_UNIT;
         if (markStatic && typeNode.up().getKind() == AST.Kind.TYPE) {
             TypeDeclaration typeDecl = typeNode.up().get();
             if ((typeDecl.modifiers & 8704) != 0) {
@@ -224,9 +220,7 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
         if (markStatic) {
             classDecl.modifiers |= 8;
         }
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode element = it.next();
+        for (EclipseNode element : typeNode.down()) {
             if (element.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fieldDecl = element.get();
                 if ((fieldDecl.modifiers & 8) == 0) {

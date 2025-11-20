@@ -2,7 +2,6 @@ package b.i.a.c.f3;
 
 import b.i.a.c.f3.n;
 import b.i.a.c.f3.p;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /* compiled from: lambda */
@@ -20,12 +19,10 @@ public final /* synthetic */ class a implements Runnable {
 
     @Override // java.lang.Runnable
     public final void run() {
-        CopyOnWriteArraySet copyOnWriteArraySet = this.j;
+        CopyOnWriteArraySet<p.c> copyOnWriteArraySet = this.j;
         int i = this.k;
         p.a aVar = this.l;
-        Iterator it = copyOnWriteArraySet.iterator();
-        while (it.hasNext()) {
-            p.c cVar = (p.c) it.next();
+        for (p.c cVar : copyOnWriteArraySet) {
             if (!cVar.d) {
                 if (i != -1) {
                     n.b bVar = cVar.f974b;

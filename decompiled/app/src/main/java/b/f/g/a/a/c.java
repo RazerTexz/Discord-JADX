@@ -20,7 +20,6 @@ import com.facebook.drawee.interfaces.DraweeHierarchy;
 import com.facebook.imagepipeline.image.ImageInfo;
 import com.facebook.imagepipeline.request.ImageRequest;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -134,10 +133,8 @@ public class c extends AbstractDraweeController<CloseableReference<b.f.j.j.c>, I
         if (eVar == null) {
             return null;
         }
-        Iterator<b.f.j.i.a> it = eVar.iterator();
-        while (it.hasNext()) {
-            b.f.j.i.a next = it.next();
-            if (next.a(cVar) && (drawableB = next.b(cVar)) != null) {
+        for (b.f.j.i.a aVar : eVar) {
+            if (aVar.a(cVar) && (drawableB = aVar.b(cVar)) != null) {
                 return drawableB;
             }
         }

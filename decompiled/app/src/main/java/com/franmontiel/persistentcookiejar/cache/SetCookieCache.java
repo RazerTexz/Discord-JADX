@@ -36,14 +36,12 @@ public class SetCookieCache implements CookieCache {
 
     @Override // com.franmontiel.persistentcookiejar.cache.CookieCache
     public void addAll(Collection<n> collection) {
-        ArrayList arrayList = new ArrayList(collection.size());
+        ArrayList<IdentifiableCookie> arrayList = new ArrayList(collection.size());
         Iterator<n> it = collection.iterator();
         while (it.hasNext()) {
             arrayList.add(new IdentifiableCookie(it.next()));
         }
-        Iterator it2 = arrayList.iterator();
-        while (it2.hasNext()) {
-            IdentifiableCookie identifiableCookie = (IdentifiableCookie) it2.next();
+        for (IdentifiableCookie identifiableCookie : arrayList) {
             this.j.remove(identifiableCookie);
             this.j.add(identifiableCookie);
         }

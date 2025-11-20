@@ -207,7 +207,7 @@ public class JavacResolution {
                 stack.pop().accept(finder);
             }
             TreeMirrorMaker mirrorMaker = new TreeMirrorMaker(node.getTreeMaker(), node.getContext());
-            JCTree copy = mirrorMaker.copy((TreeMirrorMaker) finder.copyAt());
+            JCTree copy = mirrorMaker.copy(finder.copyAt());
             Log log = Log.instance(node.getContext());
             JavaFileObject oldFileObject = log.useSource(node.top().get().getSourceFile());
             try {
@@ -603,9 +603,7 @@ public class JavacResolution {
     private static JCTree.JCExpression genericsToJCTreeNodes(List<Type> generics, JavacAST ast, JCTree.JCExpression rawTypeNode) throws TypeNotConvertibleException {
         if (generics != null && !generics.isEmpty()) {
             ListBuffer<JCTree.JCExpression> args = new ListBuffer<>();
-            Iterator it = generics.iterator();
-            while (it.hasNext()) {
-                Type t = (Type) it.next();
+            for (Type t : generics) {
                 args.append(typeToJCTree(t, ast, true, false, true));
             }
             return ast.getTreeMaker().TypeApply(rawTypeNode, args.toList());

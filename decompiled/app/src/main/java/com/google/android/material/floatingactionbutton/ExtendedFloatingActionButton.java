@@ -182,7 +182,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         public boolean getInsetDodgeRect(@NonNull CoordinatorLayout coordinatorLayout, @NonNull ExtendedFloatingActionButton extendedFloatingActionButton, @NonNull Rect rect) {
-            return super.getInsetDodgeRect(coordinatorLayout, (CoordinatorLayout) extendedFloatingActionButton, rect);
+            return super.getInsetDodgeRect(coordinatorLayout, extendedFloatingActionButton, rect);
         }
 
         public boolean onDependentViewChanged(CoordinatorLayout coordinatorLayout, @NonNull ExtendedFloatingActionButton extendedFloatingActionButton, View view) {

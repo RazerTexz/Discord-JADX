@@ -501,11 +501,9 @@ public final class r implements Cache {
         ArrayList arrayList = new ArrayList();
         Iterator it = Collections.unmodifiableCollection(this.d.a.values()).iterator();
         while (it.hasNext()) {
-            Iterator<s> it2 = ((i) it.next()).c.iterator();
-            while (it2.hasNext()) {
-                s next = it2.next();
-                if (next.n.length() != next.l) {
-                    arrayList.add(next);
+            for (s sVar : ((i) it.next()).c) {
+                if (sVar.n.length() != sVar.l) {
+                    arrayList.add(sVar);
                 }
             }
         }

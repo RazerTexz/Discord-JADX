@@ -10,7 +10,7 @@ public abstract class a<E extends Map.Entry<? extends K, ? extends V>, K, V> ext
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final /* bridge */ boolean contains(Object obj) {
         if (obj instanceof Map.Entry) {
-            return contains((a<E, K, V>) obj);
+            return contains((Map.Entry) obj);
         }
         return false;
     }

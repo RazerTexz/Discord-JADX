@@ -71,7 +71,7 @@ public final class SpoilerNode<T extends RenderContext> extends Node<T> implemen
 
     @Override // com.discord.simpleast.core.node.Node
     public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) {
-        render(spannableStringBuilder, (SpannableStringBuilder) obj);
+        render(spannableStringBuilder, (RenderContext) obj);
     }
 
     @Override // com.discord.utilities.textprocessing.node.Spoilerable

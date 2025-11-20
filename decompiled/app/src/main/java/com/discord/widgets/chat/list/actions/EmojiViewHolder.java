@@ -58,7 +58,7 @@ public final class EmojiViewHolder extends MGRecyclerViewHolder<WidgetChatListAc
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, EmojiItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         EmojiItem.EmojiData emojiData = (EmojiItem.EmojiData) data;
         SimpleDraweeView simpleDraweeView = this.binding.f2178b;
         m.checkNotNullExpressionValue(simpleDraweeView, "binding.emojiIv");

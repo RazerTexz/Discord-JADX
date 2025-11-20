@@ -22,19 +22,14 @@ public class HandleFieldDefaults extends JavacASTAdapter {
         if (checkForTypeLevelFieldDefaults && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) FieldDefaults.class, typeNode)) {
             return true;
         }
-        JCTree.JCClassDecl typeDecl = null;
-        if (typeNode.get() instanceof JCTree.JCClassDecl) {
-            typeDecl = (JCTree.JCClassDecl) typeNode.get();
-        }
+        JCTree.JCClassDecl typeDecl = typeNode.get() instanceof JCTree.JCClassDecl ? (JCTree.JCClassDecl) typeNode.get() : null;
         long modifiers = typeDecl == null ? 0L : typeDecl.mods.flags;
         boolean notAClass = (modifiers & 8704) != 0;
         if (typeDecl == null || notAClass) {
             errorNode.addError("@FieldDefaults is only supported on a class or an enum.");
             return false;
         }
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode field = it.next();
+        for (JavacNode field : typeNode.down()) {
             if (field.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl fieldDecl = field.get();
                 if (!fieldDecl.name.toString().startsWith("$")) {

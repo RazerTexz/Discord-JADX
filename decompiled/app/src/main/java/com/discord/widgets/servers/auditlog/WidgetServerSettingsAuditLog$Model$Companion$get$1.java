@@ -96,11 +96,10 @@ public final class WidgetServerSettingsAuditLog$Model$Companion$get$1<T1, T2, T3
                         User user = map2.get(Long.valueOf(modelAuditLogEntry.getTargetId()));
                         if (user != null) {
                             charSequenceAccess$resolveChannelName = UserUtils.getUserNameWithDiscriminator$default(UserUtils.INSTANCE, user, null, null, 3, null);
-                            break;
                         } else {
                             charSequenceAccess$resolveChannelName = null;
-                            break;
                         }
+                        break;
                     case ROLE:
                         GuildRole guildRole = map3.get(Long.valueOf(modelAuditLogEntry.getTargetId()));
                         if (guildRole != null) {

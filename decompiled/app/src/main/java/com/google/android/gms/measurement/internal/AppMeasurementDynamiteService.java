@@ -260,7 +260,7 @@ public class AppMeasurementDynamiteService extends dc {
     }
 
     @Override // b.i.a.f.h.l.ec
-    public void logHealthData(int i, String str, b.i.a.f.f.a aVar, b.i.a.f.f.a aVar2, b.i.a.f.f.a aVar3) throws IllegalStateException, RemoteException {
+    public void logHealthData(int i, String str, b.i.a.f.f.a aVar, b.i.a.f.f.a aVar2, b.i.a.f.f.a aVar3) throws RemoteException {
         g();
         this.a.g().w(i, true, false, str, aVar == null ? null : b.i.a.f.f.b.i(aVar), aVar2 == null ? null : b.i.a.f.f.b.i(aVar2), aVar3 != null ? b.i.a.f.f.b.i(aVar3) : null);
     }

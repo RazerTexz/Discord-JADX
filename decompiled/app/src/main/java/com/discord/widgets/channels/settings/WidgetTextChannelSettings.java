@@ -361,10 +361,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
                 case R.id.menu_channel_settings_delete /* 2131364369 */:
                     if (!this.$this_configureUI.isPublicGuildRulesChannel() && !this.$this_configureUI.isPublicGuildUpdatesChannel()) {
                         WidgetTextChannelSettings.access$confirmDelete(WidgetTextChannelSettings.this, this.$this_configureUI.getChannel());
-                        break;
                     } else {
                         WidgetTextChannelSettings.access$cannotDeleteWarn(WidgetTextChannelSettings.this, this.$this_configureUI.isPublicGuildRulesChannel());
-                        break;
                     }
                     break;
                 case R.id.menu_channel_settings_reset /* 2131364370 */:

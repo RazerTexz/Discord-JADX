@@ -318,8 +318,8 @@ public class IconCompat extends CustomVersionedParcelable {
                     return ResourcesCompat.getDrawable(getResources(context, resPackage), this.mInt1, context.getTheme());
                 } catch (RuntimeException e) {
                     Log.e(TAG, String.format("Unable to load resource 0x%08x from pkg=%s", Integer.valueOf(this.mInt1), this.mObj1), e);
-                    break;
                 }
+                break;
             case 3:
                 return new BitmapDrawable(context.getResources(), BitmapFactory.decodeByteArray((byte[]) this.mObj1, this.mInt1, this.mInt2));
             case 4:
@@ -694,7 +694,6 @@ public class IconCompat extends CustomVersionedParcelable {
                 if (this.mInt2 != 0) {
                     sb.append(" off=");
                     sb.append(this.mInt2);
-                    break;
                 }
                 break;
             case 4:
@@ -740,11 +739,10 @@ public class IconCompat extends CustomVersionedParcelable {
             case 5:
                 if (Build.VERSION.SDK_INT < 26) {
                     iconCreateWithBitmap = Icon.createWithBitmap(createLegacyIconFromAdaptiveIcon((Bitmap) this.mObj1, false));
-                    break;
                 } else {
                     iconCreateWithBitmap = Icon.createWithAdaptiveBitmap((Bitmap) this.mObj1);
-                    break;
                 }
+                break;
             case 6:
                 int i = Build.VERSION.SDK_INT;
                 if (i >= 30) {
@@ -764,12 +762,12 @@ public class IconCompat extends CustomVersionedParcelable {
                     }
                     if (i < 26) {
                         iconCreateWithBitmap = Icon.createWithBitmap(createLegacyIconFromAdaptiveIcon(BitmapFactory.decodeStream(uriInputStream), false));
-                        break;
                     } else {
                         iconCreateWithBitmap = Icon.createWithAdaptiveBitmap(BitmapFactory.decodeStream(uriInputStream));
-                        break;
                     }
+                    break;
                 }
+                break;
         }
         ColorStateList colorStateList = this.mTintList;
         if (colorStateList != null) {

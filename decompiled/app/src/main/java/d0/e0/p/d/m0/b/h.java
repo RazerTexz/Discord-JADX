@@ -79,7 +79,7 @@ public abstract class h {
                 i iVar = iVarArrValues[i];
                 d0.e0.p.d.m0.n.j0 j0VarB = h.b(h.this, iVar.getTypeName().asString());
                 d0.e0.p.d.m0.n.j0 j0VarB2 = h.b(h.this, iVar.getArrayTypeName().asString());
-                enumMap.put((EnumMap) iVar, (i) j0VarB2);
+                enumMap.put(iVar, j0VarB2);
                 map.put(j0VarB, j0VarB2);
                 map2.put(j0VarB2, j0VarB);
             }

@@ -167,6 +167,7 @@ public class g {
                                 i = 1;
                                 break;
                             }
+                            break;
                         case 4:
                             fVarU12 = d.u1(cVar, dVar);
                             break;
@@ -265,6 +266,7 @@ public class g {
                                 i2 = 1;
                                 break;
                             }
+                            break;
                         case 4:
                             fVarU14 = d.u1(cVar, dVar);
                             break;

@@ -29,7 +29,7 @@ public class TreeMirrorMaker extends TreeCopier<Void> {
     }
 
     public /* bridge */ /* synthetic */ JCTree copy(JCTree jCTree, Object obj) {
-        return copy((TreeMirrorMaker) jCTree, (Void) obj);
+        return copy(jCTree, (Void) obj);
     }
 
     public TreeMirrorMaker(JavacTreeMaker maker, Context context) {

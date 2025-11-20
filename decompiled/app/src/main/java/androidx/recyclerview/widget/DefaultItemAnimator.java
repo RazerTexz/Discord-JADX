@@ -40,9 +40,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
 
         @Override // java.lang.Runnable
         public void run() {
-            Iterator it = this.val$moves.iterator();
-            while (it.hasNext()) {
-                MoveInfo moveInfo = (MoveInfo) it.next();
+            for (MoveInfo moveInfo : this.val$moves) {
                 DefaultItemAnimator.this.animateMoveImpl(moveInfo.holder, moveInfo.fromX, moveInfo.fromY, moveInfo.toX, moveInfo.toY);
             }
             this.val$moves.clear();

@@ -1058,15 +1058,18 @@ public final class c extends g.d<c> implements d0.e0.p.d.m0.i.o {
                     switch (tag) {
                         case 0:
                             z2 = true;
+                            break;
                         case 8:
                             this.bitField0_ |= 1;
                             this.flags_ = dVar.readInt32();
+                            break;
                         case 16:
                             if ((i & 32) != 32) {
                                 this.supertypeId_ = new ArrayList();
                                 i |= 32;
                             }
                             this.supertypeId_.add(Integer.valueOf(dVar.readInt32()));
+                            break;
                         case 18:
                             int iPushLimit = dVar.pushLimit(dVar.readRawVarint32());
                             if ((i & 32) != 32 && dVar.getBytesUntilLimit() > 0) {
@@ -1081,27 +1084,32 @@ public final class c extends g.d<c> implements d0.e0.p.d.m0.i.o {
                         case 24:
                             this.bitField0_ |= 2;
                             this.fqName_ = dVar.readInt32();
+                            break;
                         case 32:
                             this.bitField0_ |= 4;
                             this.companionObjectName_ = dVar.readInt32();
+                            break;
                         case 42:
                             if ((i & 8) != 8) {
                                 this.typeParameter_ = new ArrayList();
                                 i |= 8;
                             }
                             this.typeParameter_.add(dVar.readMessage(s.k, eVar));
+                            break;
                         case 50:
                             if ((i & 16) != 16) {
                                 this.supertype_ = new ArrayList();
                                 i |= 16;
                             }
                             this.supertype_.add(dVar.readMessage(q.k, eVar));
+                            break;
                         case 56:
                             if ((i & 64) != 64) {
                                 this.nestedClassName_ = new ArrayList();
                                 i |= 64;
                             }
                             this.nestedClassName_.add(Integer.valueOf(dVar.readInt32()));
+                            break;
                         case 58:
                             int iPushLimit2 = dVar.pushLimit(dVar.readRawVarint32());
                             if ((i & 64) != 64 && dVar.getBytesUntilLimit() > 0) {
@@ -1119,36 +1127,42 @@ public final class c extends g.d<c> implements d0.e0.p.d.m0.i.o {
                                 i |= 128;
                             }
                             this.constructor_.add(dVar.readMessage(d.k, eVar));
+                            break;
                         case 74:
                             if ((i & 256) != 256) {
                                 this.function_ = new ArrayList();
                                 i |= 256;
                             }
                             this.function_.add(dVar.readMessage(i.k, eVar));
+                            break;
                         case 82:
                             if ((i & 512) != 512) {
                                 this.property_ = new ArrayList();
                                 i |= 512;
                             }
                             this.property_.add(dVar.readMessage(n.k, eVar));
+                            break;
                         case 90:
                             if ((i & 1024) != 1024) {
                                 this.typeAlias_ = new ArrayList();
                                 i |= 1024;
                             }
                             this.typeAlias_.add(dVar.readMessage(r.k, eVar));
+                            break;
                         case 106:
                             if ((i & 2048) != 2048) {
                                 this.enumEntry_ = new ArrayList();
                                 i |= 2048;
                             }
                             this.enumEntry_.add(dVar.readMessage(g.k, eVar));
+                            break;
                         case 128:
                             if ((i & 4096) != 4096) {
                                 this.sealedSubclassFqName_ = new ArrayList();
                                 i |= 4096;
                             }
                             this.sealedSubclassFqName_.add(Integer.valueOf(dVar.readInt32()));
+                            break;
                         case 130:
                             int iPushLimit3 = dVar.pushLimit(dVar.readRawVarint32());
                             if ((i & 4096) != 4096 && dVar.getBytesUntilLimit() > 0) {
@@ -1169,12 +1183,14 @@ public final class c extends g.d<c> implements d0.e0.p.d.m0.i.o {
                                 this.typeTable_ = builder.buildPartial();
                             }
                             this.bitField0_ |= 8;
+                            break;
                         case 248:
                             if ((i & 16384) != 16384) {
                                 this.versionRequirement_ = new ArrayList();
                                 i |= 16384;
                             }
                             this.versionRequirement_.add(Integer.valueOf(dVar.readInt32()));
+                            break;
                         case 250:
                             int iPushLimit4 = dVar.pushLimit(dVar.readRawVarint32());
                             if ((i & 16384) != 16384 && dVar.getBytesUntilLimit() > 0) {
@@ -1195,10 +1211,12 @@ public final class c extends g.d<c> implements d0.e0.p.d.m0.i.o {
                                 this.versionRequirementTable_ = builder2.buildPartial();
                             }
                             this.bitField0_ |= 16;
+                            break;
                         default:
                             if (!f(dVar, codedOutputStreamNewInstance, eVar, tag)) {
                                 z2 = true;
                             }
+                            break;
                     }
                 } catch (InvalidProtocolBufferException e) {
                     throw e.setUnfinishedMessage(this);

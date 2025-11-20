@@ -1990,13 +1990,11 @@ public final class GatewaySocket {
                 iIntValue = 0;
             }
         }
-        Iterator<Pair<String, Integer>> it3 = arrayList.iterator();
         int i3 = 0;
         int i4 = 0;
-        while (it3.hasNext()) {
-            Pair<String, Integer> next = it3.next();
-            String strComponent12 = next.component1();
-            int iIntValue2 = next.component2().intValue();
+        for (Pair<String, Integer> pair2 : arrayList) {
+            String strComponent12 = pair2.component1();
+            int iIntValue2 = pair2.component2().intValue();
             if (m.areEqual(strComponent12, "start_session")) {
                 i3 = iIntValue2;
             } else if (m.areEqual(strComponent12, "guilds_connect")) {

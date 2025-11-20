@@ -212,7 +212,7 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
     public void onConfigure2(int position, WidgetServerSettingsInstantInvites.Model.InviteItem data) {
         String strD;
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         User inviter = data.getInvite().getInviter();
         this.binding.a.setOnClickListener(new AnonymousClass1(data));
         TextView textView = this.binding.c;

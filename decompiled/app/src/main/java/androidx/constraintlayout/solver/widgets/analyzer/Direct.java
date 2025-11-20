@@ -629,16 +629,14 @@ public class Direct {
             return;
         }
         int finalValue3 = anchor3.getFinalValue();
-        Iterator<ConstraintAnchor> it3 = anchor3.getDependents().iterator();
-        while (it3.hasNext()) {
-            ConstraintAnchor next3 = it3.next();
-            ConstraintWidget constraintWidget4 = next3.mOwner;
+        for (ConstraintAnchor constraintAnchor10 : anchor3.getDependents()) {
+            ConstraintWidget constraintWidget4 = constraintAnchor10.mOwner;
             boolean zCanMeasure3 = canMeasure(constraintWidget4);
             if (constraintWidget4.isMeasureRequested() && zCanMeasure3) {
                 ConstraintWidgetContainer.measure(constraintWidget4, measurer, new BasicMeasure.Measure(), BasicMeasure.Measure.SELF_DIMENSIONS);
             }
             if (constraintWidget4.getVerticalDimensionBehaviour() != ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT || zCanMeasure3) {
-                if (!constraintWidget4.isMeasureRequested() && next3 == constraintWidget4.mBaseline) {
+                if (!constraintWidget4.isMeasureRequested() && constraintAnchor10 == constraintWidget4.mBaseline) {
                     constraintWidget4.setFinalBaseline(finalValue3);
                     verticalSolvingPass(constraintWidget4, measurer);
                 }

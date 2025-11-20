@@ -60,7 +60,7 @@ public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<Mo
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ModeratorStartStageItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.rootView.setOnClickListener(new ModeratorStartStageAdapter$CreateStageEventViewHolder$onConfigure$1(this, data));
         }
     }

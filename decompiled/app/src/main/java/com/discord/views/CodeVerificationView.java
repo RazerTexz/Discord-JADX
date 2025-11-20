@@ -31,7 +31,6 @@ import d0.g0.w;
 import d0.t.n;
 import d0.z.d.m;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
@@ -156,11 +155,9 @@ public final class CodeVerificationView extends LinearLayout {
             }
         }
         ArrayList arrayList2 = new ArrayList();
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            Object next = it.next();
-            if (next instanceof TextView) {
-                arrayList2.add(next);
+        for (Object obj : arrayList) {
+            if (obj instanceof TextView) {
+                arrayList2.add(obj);
             }
         }
         this.characterViews = arrayList2;

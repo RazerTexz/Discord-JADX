@@ -7,7 +7,6 @@ import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.List;
 import java.io.PrintStream;
 import java.lang.reflect.Field;
-import java.util.Iterator;
 
 /* loaded from: discord-126021.apk:lombok/javac/JavacASTVisitor.SCL.lombok */
 public interface JavacASTVisitor {
@@ -220,9 +219,7 @@ public interface JavacASTVisitor {
                 print("<RECEIVER-PARAM (%s) %s %s%s> %s", objArr);
                 if (innerContent) {
                     this.indent++;
-                    Iterator it = annotations.iterator();
-                    while (it.hasNext()) {
-                        JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+                    for (JCTree.JCAnnotation ann : annotations) {
                         print("<ANNOTATION: %s />", ann);
                     }
                     this.indent--;

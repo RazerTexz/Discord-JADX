@@ -31,7 +31,7 @@ public final class k<V> extends p<V> implements KMutableProperty0<V> {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Object obj) throws IllegalCallableAccessException {
-            invoke2((a<R>) obj);
+            invoke2(obj);
             return Unit.a;
         }
 

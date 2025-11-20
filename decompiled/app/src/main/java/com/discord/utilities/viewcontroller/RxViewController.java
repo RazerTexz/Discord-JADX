@@ -32,7 +32,7 @@ public abstract class RxViewController<V extends View, T> {
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Object obj) {
-            invoke2((AnonymousClass1) obj);
+            invoke2(obj);
             return Unit.a;
         }
 
@@ -54,7 +54,7 @@ public abstract class RxViewController<V extends View, T> {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // j0.k.b
         public /* bridge */ /* synthetic */ Boolean call(Object obj) {
-            return call((AnonymousClass1<T, R>) obj);
+            return call(obj);
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
@@ -102,7 +102,7 @@ public abstract class RxViewController<V extends View, T> {
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Object obj) {
-            invoke2((AnonymousClass3) obj);
+            invoke2(obj);
             return Unit.a;
         }
 

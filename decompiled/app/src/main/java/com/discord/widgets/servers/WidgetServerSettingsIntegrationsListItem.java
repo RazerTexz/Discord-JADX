@@ -283,7 +283,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetServerSettingsIntegrations.Model.IntegrationItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         boolean zAreEqual = m.areEqual(data.getIntegration().getType(), "twitch");
         boolean zIsSyncing = data.getIntegration().isSyncing();
         boolean zIsEnabled = data.getIntegration().isEnabled();

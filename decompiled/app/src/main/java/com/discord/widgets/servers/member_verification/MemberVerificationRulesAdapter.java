@@ -85,7 +85,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             MemberVerificationItemApproveTerms memberVerificationItemApproveTerms = (MemberVerificationItemApproveTerms) data;
             CheckedSetting checkedSetting = this.binding.f2487b;
             m.checkNotNullExpressionValue(checkedSetting, "binding.memberVerificationRulesCheck");
@@ -118,7 +118,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2489b;
             m.checkNotNullExpressionValue(textView, "binding.memberVerificationRulesHeader");
             textView.setText(((MemberVerificationItemHeader) data).getTitle());
@@ -181,7 +181,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             MemberVerificationItemMultipleChoice memberVerificationItemMultipleChoice = (MemberVerificationItemMultipleChoice) data;
             Integer response = memberVerificationItemMultipleChoice.getResponse();
             Context contextX = a.x(this.itemView, "itemView", "itemView.context");
@@ -257,7 +257,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             MemberVerificationItemParagraph memberVerificationItemParagraph = (MemberVerificationItemParagraph) data;
             this.fieldIndex = memberVerificationItemParagraph.getFieldIndex();
             this.binding.f2491b.setText(memberVerificationItemParagraph.getResponse());
@@ -291,7 +291,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2489b;
             m.checkNotNullExpressionValue(textView, "binding.memberVerificationRulesHeader");
             View view = this.itemView;
@@ -341,7 +341,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             MemberVerificationItemTerm memberVerificationItemTerm = (MemberVerificationItemTerm) data;
             TextView textView = this.binding.d;
             m.checkNotNullExpressionValue(textView, "binding.memberVerificationRuleIndex");
@@ -432,7 +432,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             MemberVerificationItemTextInput memberVerificationItemTextInput = (MemberVerificationItemTextInput) data;
             this.fieldIndex = memberVerificationItemTextInput.getFieldIndex();
             this.binding.f2495b.setText(memberVerificationItemTextInput.getResponse());

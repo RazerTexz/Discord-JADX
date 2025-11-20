@@ -6,7 +6,6 @@ import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.util.Iterator;
 import lombok.Cleanup;
 import lombok.ConfigurationKeys;
 import lombok.core.AST;
@@ -57,9 +56,7 @@ public class HandleCleanup extends JavacAnnotationHandler<Cleanup> {
         boolean seenDeclaration = false;
         ListBuffer<JCTree.JCStatement> newStatements = new ListBuffer<>();
         ListBuffer<JCTree.JCStatement> tryBlock = new ListBuffer<>();
-        Iterator it = statements.iterator();
-        while (it.hasNext()) {
-            JCTree.JCStatement statement = (JCTree.JCStatement) it.next();
+        for (JCTree.JCStatement statement : statements) {
             if (!seenDeclaration) {
                 if (statement == jCStatement) {
                     seenDeclaration = true;
@@ -106,9 +103,7 @@ public class HandleCleanup extends JavacAnnotationHandler<Cleanup> {
     }
 
     public void doAssignmentCheck(JavacNode node, List<JCTree.JCStatement> statements, Name name) {
-        Iterator it = statements.iterator();
-        while (it.hasNext()) {
-            JCTree.JCStatement statement = (JCTree.JCStatement) it.next();
+        for (JCTree.JCStatement statement : statements) {
             doAssignmentCheck0(node, statement, name);
         }
     }

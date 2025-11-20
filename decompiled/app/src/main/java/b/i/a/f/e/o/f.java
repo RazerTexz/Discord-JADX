@@ -1597,6 +1597,7 @@ public final class f {
                         default:
                             throw new IllegalArgumentException();
                     }
+                    break;
             }
             cVar.e(i2, (i & 16776960) >> 8);
             return;
@@ -1642,11 +1643,10 @@ public final class f {
                             sb.append((char) (((bC >>> 6) & 3) + 48));
                             sb.append((char) (((bC >>> 3) & 7) + 48));
                             sb.append((char) ((bC & 7) + 48));
-                            break;
                         } else {
                             sb.append((char) bC);
-                            break;
                         }
+                        break;
                 }
             } else {
                 sb.append("\\\\");
@@ -1965,7 +1965,7 @@ public final class f {
         boolean zEquals;
         HashMap map = new HashMap();
         HashMap map2 = new HashMap();
-        TreeSet treeSet = new TreeSet();
+        TreeSet<String> treeSet = new TreeSet();
         for (Method method : c6Var.getClass().getDeclaredMethods()) {
             map2.put(method.getName(), method);
             if (method.getParameterTypes().length == 0) {
@@ -1975,9 +1975,7 @@ public final class f {
                 }
             }
         }
-        Iterator it = treeSet.iterator();
-        while (it.hasNext()) {
-            String str = (String) it.next();
+        for (String str : treeSet) {
             String strSubstring = str.startsWith("get") ? str.substring(3) : str;
             boolean zBooleanValue = true;
             if (strSubstring.endsWith("List") && !strSubstring.endsWith("OrBuilderList") && !strSubstring.equals("List")) {

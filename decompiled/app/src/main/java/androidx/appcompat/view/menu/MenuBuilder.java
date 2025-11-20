@@ -26,7 +26,6 @@ import androidx.core.view.ActionProvider;
 import androidx.core.view.ViewConfigurationCompat;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -92,12 +91,10 @@ public class MenuBuilder implements SupportMenu {
             return;
         }
         stopDispatchingItemsChanged();
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter = next.get();
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter = weakReference.get();
             if (menuPresenter == null) {
-                this.mPresenters.remove(next);
+                this.mPresenters.remove(weakReference);
             } else {
                 menuPresenter.updateMenuView(z2);
             }
@@ -111,12 +108,10 @@ public class MenuBuilder implements SupportMenu {
         if (sparseParcelableArray == null || this.mPresenters.isEmpty()) {
             return;
         }
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter = next.get();
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter = weakReference.get();
             if (menuPresenter == null) {
-                this.mPresenters.remove(next);
+                this.mPresenters.remove(weakReference);
             } else {
                 int id2 = menuPresenter.getId();
                 if (id2 > 0 && (parcelable = (Parcelable) sparseParcelableArray.get(id2)) != null) {
@@ -132,12 +127,10 @@ public class MenuBuilder implements SupportMenu {
             return;
         }
         SparseArray<? extends Parcelable> sparseArray = new SparseArray<>();
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter = next.get();
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter = weakReference.get();
             if (menuPresenter == null) {
-                this.mPresenters.remove(next);
+                this.mPresenters.remove(weakReference);
             } else {
                 int id2 = menuPresenter.getId();
                 if (id2 > 0 && (parcelableOnSaveInstanceState = menuPresenter.onSaveInstanceState()) != null) {
@@ -153,12 +146,10 @@ public class MenuBuilder implements SupportMenu {
             return false;
         }
         boolean zOnSubMenuSelected = menuPresenter != null ? menuPresenter.onSubMenuSelected(subMenuBuilder) : false;
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter2 = next.get();
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter2 = weakReference.get();
             if (menuPresenter2 == null) {
-                this.mPresenters.remove(next);
+                this.mPresenters.remove(weakReference);
             } else if (!zOnSubMenuSelected) {
                 zOnSubMenuSelected = menuPresenter2.onSubMenuSelected(subMenuBuilder);
             }
@@ -312,12 +303,10 @@ public class MenuBuilder implements SupportMenu {
             return;
         }
         this.mIsClosing = true;
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter = next.get();
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter = weakReference.get();
             if (menuPresenter == null) {
-                this.mPresenters.remove(next);
+                this.mPresenters.remove(weakReference);
             } else {
                 menuPresenter.onCloseMenu(this, z2);
             }
@@ -329,17 +318,15 @@ public class MenuBuilder implements SupportMenu {
         boolean zCollapseItemActionView = false;
         if (!this.mPresenters.isEmpty() && this.mExpandedItem == menuItemImpl) {
             stopDispatchingItemsChanged();
-            Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-            while (it.hasNext()) {
-                WeakReference<MenuPresenter> next = it.next();
-                MenuPresenter menuPresenter = next.get();
-                if (menuPresenter == null) {
-                    this.mPresenters.remove(next);
-                } else {
+            for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+                MenuPresenter menuPresenter = weakReference.get();
+                if (menuPresenter != null) {
                     zCollapseItemActionView = menuPresenter.collapseItemActionView(this, menuItemImpl);
                     if (zCollapseItemActionView) {
                         break;
                     }
+                } else {
+                    this.mPresenters.remove(weakReference);
                 }
             }
             startDispatchingItemsChanged();
@@ -361,17 +348,15 @@ public class MenuBuilder implements SupportMenu {
             return false;
         }
         stopDispatchingItemsChanged();
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter = next.get();
-            if (menuPresenter == null) {
-                this.mPresenters.remove(next);
-            } else {
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter = weakReference.get();
+            if (menuPresenter != null) {
                 zExpandItemActionView = menuPresenter.expandItemActionView(this, menuItemImpl);
                 if (zExpandItemActionView) {
                     break;
                 }
+            } else {
+                this.mPresenters.remove(weakReference);
             }
         }
         startDispatchingItemsChanged();
@@ -462,13 +447,11 @@ public class MenuBuilder implements SupportMenu {
     public void flagActionItems() {
         ArrayList<MenuItemImpl> visibleItems = getVisibleItems();
         if (this.mIsActionItemsStale) {
-            Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
             boolean zFlagActionItems = false;
-            while (it.hasNext()) {
-                WeakReference<MenuPresenter> next = it.next();
-                MenuPresenter menuPresenter = next.get();
+            for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+                MenuPresenter menuPresenter = weakReference.get();
                 if (menuPresenter == null) {
-                    this.mPresenters.remove(next);
+                    this.mPresenters.remove(weakReference);
                 } else {
                     zFlagActionItems |= menuPresenter.flagActionItems();
                 }
@@ -667,12 +650,10 @@ public class MenuBuilder implements SupportMenu {
     }
 
     public void removeMenuPresenter(MenuPresenter menuPresenter) {
-        Iterator<WeakReference<MenuPresenter>> it = this.mPresenters.iterator();
-        while (it.hasNext()) {
-            WeakReference<MenuPresenter> next = it.next();
-            MenuPresenter menuPresenter2 = next.get();
+        for (WeakReference<MenuPresenter> weakReference : this.mPresenters) {
+            MenuPresenter menuPresenter2 = weakReference.get();
             if (menuPresenter2 == null || menuPresenter2 == menuPresenter) {
-                this.mPresenters.remove(next);
+                this.mPresenters.remove(weakReference);
             }
         }
     }

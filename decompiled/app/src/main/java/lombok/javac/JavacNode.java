@@ -8,7 +8,6 @@ import com.sun.tools.javac.util.Context;
 import com.sun.tools.javac.util.JCDiagnostic;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.util.Iterator;
 import java.util.List;
 import javax.lang.model.element.Element;
 import javax.tools.Diagnostic;
@@ -236,9 +235,7 @@ public class JavacNode extends LombokNode<JavacAST, JavacNode, JCTree> {
         if (f.mods.annotations == null) {
             return false;
         }
-        Iterator it = f.mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation childAnnotation = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation childAnnotation : f.mods.annotations) {
             if (childAnnotation == annotation) {
                 return true;
             }

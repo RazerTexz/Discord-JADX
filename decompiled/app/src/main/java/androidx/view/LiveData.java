@@ -7,7 +7,6 @@ import androidx.arch.core.executor.ArchTaskExecutor;
 import androidx.arch.core.internal.SafeIterableMap;
 import androidx.view.Lifecycle;
 import b.d.b.a.a;
-import java.util.Iterator;
 import java.util.Map;
 
 /* loaded from: classes.dex */
@@ -291,11 +290,9 @@ public abstract class LiveData<T> {
     @MainThread
     public void removeObservers(@NonNull LifecycleOwner lifecycleOwner) {
         assertMainThread("removeObservers");
-        Iterator<Map.Entry<Observer<? super T>, LiveData<T>.ObserverWrapper>> it = this.mObservers.iterator();
-        while (it.hasNext()) {
-            Map.Entry<Observer<? super T>, LiveData<T>.ObserverWrapper> next = it.next();
-            if (next.getValue().isAttachedTo(lifecycleOwner)) {
-                removeObserver(next.getKey());
+        for (Map.Entry<Observer<? super T>, LiveData<T>.ObserverWrapper> entry : this.mObservers) {
+            if (entry.getValue().isAttachedTo(lifecycleOwner)) {
+                removeObserver(entry.getKey());
             }
         }
     }

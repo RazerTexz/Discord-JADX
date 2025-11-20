@@ -189,11 +189,10 @@ public class q {
                             }
                             if (!z2) {
                                 w0VarG = e();
-                                break;
                             } else {
                                 w0VarG = g();
-                                break;
                             }
+                            break;
                         }
                         break;
                     case 5:

@@ -79,7 +79,6 @@ public class HandleNonNull extends JavacAnnotationHandler<NonNull> {
     public void handle(AnnotationValues<NonNull> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         JavacNode paramNode;
         Iterator it;
-        Iterator it2;
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.NON_NULL_FLAG_USAGE, "@NonNull");
         if (annotationNode.up().getKind() == AST.Kind.FIELD) {
             try {
@@ -142,25 +141,23 @@ public class HandleNonNull extends JavacAnnotationHandler<NonNull> {
                         } else {
                             List<JCTree.JCStatement> tail = statements;
                             List<JCTree.JCStatement> head = List.nil();
-                            it = statements.iterator();
-                            while (it.hasNext()) {
-                                JCTree.JCStatement stat = (JCTree.JCStatement) it.next();
+                            for (JCTree.JCStatement stat : statements) {
                                 if (JavacHandlerUtil.isConstructorCall(stat) || (JavacHandlerUtil.isGenerated(stat) && isNullCheck(stat))) {
                                     tail = tail.tail;
                                     head = head.prepend(stat);
                                 } else {
                                     List<JCTree.JCStatement> newList = tail.prepend(nullCheck);
-                                    it2 = head.iterator();
-                                    while (it2.hasNext()) {
-                                        newList = newList.prepend((JCTree.JCStatement) it2.next());
+                                    it = head.iterator();
+                                    while (it.hasNext()) {
+                                        newList = newList.prepend((JCTree.JCStatement) it.next());
                                     }
                                     declaration.body.stats = newList;
                                     annotationNode.getAst().setChanged();
                                 }
                             }
                             List<JCTree.JCStatement> newList2 = tail.prepend(nullCheck);
-                            it2 = head.iterator();
-                            while (it2.hasNext()) {
+                            it = head.iterator();
+                            while (it.hasNext()) {
                             }
                             declaration.body.stats = newList2;
                             annotationNode.getAst().setChanged();
@@ -170,12 +167,11 @@ public class HandleNonNull extends JavacAnnotationHandler<NonNull> {
             }
             List<JCTree.JCStatement> tail2 = statements;
             List<JCTree.JCStatement> head2 = List.nil();
-            it = statements.iterator();
-            while (it.hasNext()) {
+            while (r0.hasNext()) {
             }
             List<JCTree.JCStatement> newList22 = tail2.prepend(nullCheck);
-            it2 = head2.iterator();
-            while (it2.hasNext()) {
+            it = head2.iterator();
+            while (it.hasNext()) {
             }
             declaration.body.stats = newList22;
             annotationNode.getAst().setChanged();

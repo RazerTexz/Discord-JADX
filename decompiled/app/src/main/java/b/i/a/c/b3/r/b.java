@@ -46,11 +46,10 @@ public final class b {
                 case 100571:
                     if (strU1.equals("end")) {
                         c = 0;
-                        break;
                     } else {
                         c = 65535;
-                        break;
                     }
+                    break;
                 case 3556653:
                     if (strU1.equals(NotificationCompat.MessagingStyle.Message.KEY_TEXT)) {
                         c = 1;

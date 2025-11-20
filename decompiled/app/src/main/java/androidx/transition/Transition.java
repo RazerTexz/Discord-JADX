@@ -1100,12 +1100,10 @@ public abstract class Transition implements Cloneable {
     public void runAnimators() {
         start();
         ArrayMap<Animator, AnimationInfo> runningAnimators = getRunningAnimators();
-        Iterator<Animator> it = this.mAnimators.iterator();
-        while (it.hasNext()) {
-            Animator next = it.next();
-            if (runningAnimators.containsKey(next)) {
+        for (Animator animator : this.mAnimators) {
+            if (runningAnimators.containsKey(animator)) {
                 start();
-                runAnimator(next, runningAnimators);
+                runAnimator(animator, runningAnimators);
             }
         }
         this.mAnimators.clear();

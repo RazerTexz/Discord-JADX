@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.UnsupportedCharsetException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import lombok.delombok.Delombok;
 import org.apache.tools.ant.BuildException;
@@ -59,9 +58,7 @@ public class DelombokTaskImpl {
                     if (this.fromDir != null) {
                         delombok.addDirectory(this.fromDir);
                     } else {
-                        Iterator<?> it = this.path.iterator();
-                        while (it.hasNext()) {
-                            FileResource fileResource = (FileResource) it.next();
+                        for (FileResource fileResource : this.path) {
                             File baseDir = fileResource.getBaseDir();
                             if (baseDir == null) {
                                 File file = fileResource.getFile();

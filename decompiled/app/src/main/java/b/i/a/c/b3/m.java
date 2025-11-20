@@ -171,11 +171,10 @@ public final class m extends v0 implements Handler.Callback {
                 case -1351681404:
                     if (!str.equals("application/dvbsubs")) {
                         c = 65535;
-                        break;
                     } else {
                         c = 0;
-                        break;
                     }
+                    break;
                 case -1248334819:
                     if (!str.equals("application/pgs")) {
                     }

@@ -216,7 +216,7 @@ public final class WidgetServerSettingsEmojis extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Item data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 Item.EmojiItem emojiItem = (Item.EmojiItem) data;
                 TextView textView = this.binding.d;
                 m.checkNotNullExpressionValue(textView, "binding.serverSettingsEmojisName");
@@ -272,7 +272,7 @@ public final class WidgetServerSettingsEmojis extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Item data) throws Resources.NotFoundException {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 Item.EmojiSection emojiSection = (Item.EmojiSection) data;
                 int emojiMax = emojiSection.getEmojiMax() - emojiSection.getEmojiLength();
                 View view = this.itemView;

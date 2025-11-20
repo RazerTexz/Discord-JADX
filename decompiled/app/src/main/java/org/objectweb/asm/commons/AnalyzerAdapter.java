@@ -569,13 +569,15 @@ public class AnalyzerAdapter extends MethodVisitor {
                 if (value1 instanceof String) {
                     pushDescriptor(((String) value1).substring(1));
                     break;
-                } else if (value1 == Opcodes.NULL) {
-                    push(value1);
-                    break;
                 } else {
-                    push("java/lang/Object");
+                    if (value1 == Opcodes.NULL) {
+                        push(value1);
+                    } else {
+                        push("java/lang/Object");
+                    }
                     break;
                 }
+                break;
             case 54:
             case 56:
             case 58:
@@ -583,7 +585,6 @@ public class AnalyzerAdapter extends MethodVisitor {
                 set(intArg, value12);
                 if (intArg > 0 && ((value22 = get(intArg - 1)) == Opcodes.LONG || value22 == Opcodes.DOUBLE)) {
                     set(intArg - 1, Opcodes.TOP);
-                    break;
                 }
                 break;
             case 55:
@@ -594,7 +595,6 @@ public class AnalyzerAdapter extends MethodVisitor {
                 set(intArg + 1, Opcodes.TOP);
                 if (intArg > 0 && ((value2 = get(intArg - 1)) == Opcodes.LONG || value2 == Opcodes.DOUBLE)) {
                     set(intArg - 1, Opcodes.TOP);
-                    break;
                 }
                 break;
             case 79:
@@ -804,6 +804,7 @@ public class AnalyzerAdapter extends MethodVisitor {
                     default:
                         throw new IllegalArgumentException("Invalid array type " + intArg);
                 }
+                break;
             case Opcodes.ANEWARRAY /* 189 */:
                 pop();
                 pushDescriptor("[" + Type.getObjectType(stringArg));

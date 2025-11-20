@@ -145,31 +145,26 @@ public class ConstraintLayoutStates {
                         case -1349929691:
                             if (name.equals("ConstraintSet")) {
                                 c = 4;
-                                break;
                             }
                             break;
                         case 80204913:
                             if (name.equals("State")) {
                                 c = 2;
-                                break;
                             }
                             break;
                         case 1382829617:
                             if (name.equals("StateSet")) {
                                 c = 1;
-                                break;
                             }
                             break;
                         case 1657696882:
                             if (name.equals("layoutDescription")) {
                                 c = 0;
-                                break;
                             }
                             break;
                         case 1901439077:
                             if (name.equals("Variant")) {
                                 c = 3;
-                                break;
                             }
                             break;
                     }

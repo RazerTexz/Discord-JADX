@@ -5,7 +5,6 @@ import d0.e0.p.d.m0.i.n;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import org.objectweb.asm.Opcodes;
@@ -77,7 +76,7 @@ public final class d {
         this.c = 0;
         int length = i9 - i3;
         int i10 = i - length;
-        ArrayList arrayList = new ArrayList();
+        ArrayList<byte[]> arrayList = new ArrayList();
         while (i10 > 0) {
             int iMin = Math.min(i10, 4096);
             byte[] bArr2 = new byte[iMin];
@@ -96,9 +95,7 @@ public final class d {
         }
         byte[] bArr3 = new byte[i];
         System.arraycopy(this.a, i3, bArr3, 0, length);
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            byte[] bArr4 = (byte[]) it.next();
+        for (byte[] bArr4 : arrayList) {
             System.arraycopy(bArr4, 0, bArr3, length, bArr4.length);
             length += bArr4.length;
         }

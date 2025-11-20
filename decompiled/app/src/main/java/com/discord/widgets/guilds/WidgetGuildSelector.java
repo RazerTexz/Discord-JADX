@@ -134,7 +134,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
                 Guild guild;
                 String icon;
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 this.binding.a.setOnClickListener(new WidgetGuildSelector$Adapter$ItemGuild$onConfigure$1(this, data));
                 TextView textView = this.binding.d;
                 m.checkNotNullExpressionValue(textView, "binding.itemName");

@@ -108,6 +108,7 @@ public final class l {
                         sb2.append(iG4);
                         throw ParserException.b(sb2.toString());
                     }
+                    break;
             }
         }
         int i = f1121b[iG2];

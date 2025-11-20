@@ -501,6 +501,7 @@ public final class d extends e {
                                                 b.d.b.a.a.g0(33, "Invalid G2 character: ", iG4, "Cea708Decoder");
                                                 break;
                                         }
+                                        break;
                                 }
                             } else {
                                 this.l.a((char) 8480);
@@ -553,7 +554,6 @@ public final class d extends e {
                                 if (this.p != i7) {
                                     this.p = i7;
                                     this.l = this.k[i7];
-                                    break;
                                 }
                                 break;
                             case Opcodes.L2I /* 136 */:
@@ -609,11 +609,10 @@ public final class d extends e {
                                     this.h.g(3);
                                     this.h.g(3);
                                     this.l.g(zF, zF2);
-                                    break;
                                 } else {
                                     this.h.m(16);
-                                    break;
                                 }
+                                break;
                             case Opcodes.I2B /* 145 */:
                                 if (this.l.n) {
                                     int iD = b.d(this.h.g(2), this.h.g(2), this.h.g(2), this.h.g(2));
@@ -621,11 +620,10 @@ public final class d extends e {
                                     this.h.m(2);
                                     b.d(this.h.g(2), this.h.g(2), this.h.g(2), 0);
                                     this.l.h(iD, iD2);
-                                    break;
                                 } else {
                                     this.h.m(24);
-                                    break;
                                 }
+                                break;
                             case Opcodes.I2C /* 146 */:
                                 if (this.l.n) {
                                     this.h.m(4);
@@ -637,11 +635,10 @@ public final class d extends e {
                                         bVar.a('\n');
                                     }
                                     bVar.G = iG5;
-                                    break;
                                 } else {
                                     this.h.m(16);
-                                    break;
                                 }
+                                break;
                             case Opcodes.I2S /* 147 */:
                             case Opcodes.LCMP /* 148 */:
                             case Opcodes.FCMPL /* 149 */:
@@ -663,11 +660,10 @@ public final class d extends e {
                                     b bVar2 = this.l;
                                     bVar2.f858z = iD3;
                                     bVar2.w = iG6;
-                                    break;
                                 } else {
                                     this.h.m(32);
-                                    break;
                                 }
+                                break;
                             case Opcodes.DCMPG /* 152 */:
                             case 153:
                             case 154:
@@ -732,7 +728,6 @@ public final class d extends e {
                                 if (this.p != i13) {
                                     this.p = i13;
                                     this.l = this.k[i13];
-                                    break;
                                 }
                                 break;
                         }
@@ -759,17 +754,17 @@ public final class d extends e {
                                 if (iG3 < 17 || iG3 > 23) {
                                     if (iG3 < 24 || iG3 > 31) {
                                         b.d.b.a.a.g0(31, "Invalid C0 command: ", iG3, "Cea708Decoder");
-                                        break;
                                     } else {
                                         b.d.b.a.a.g0(54, "Currently unsupported COMMAND_P16 Command: ", iG3, "Cea708Decoder");
                                         this.h.m(16);
-                                        break;
                                     }
+                                    break;
                                 } else {
                                     b.d.b.a.a.g0(55, "Currently unsupported COMMAND_EXT1 Command: ", iG3, "Cea708Decoder");
                                     this.h.m(8);
                                     break;
                                 }
+                                break;
                         }
                     } else {
                         b bVar4 = this.l;

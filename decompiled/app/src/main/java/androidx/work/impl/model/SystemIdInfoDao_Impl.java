@@ -84,7 +84,7 @@ public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfSystemIdInfo.insert((EntityInsertionAdapter<SystemIdInfo>) systemIdInfo);
+            this.__insertionAdapterOfSystemIdInfo.insert(systemIdInfo);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

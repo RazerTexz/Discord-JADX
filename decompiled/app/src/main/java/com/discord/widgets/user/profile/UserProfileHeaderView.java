@@ -601,7 +601,7 @@ public final class UserProfileHeaderView extends ConstraintLayout {
             emojiNodeFrom$default = EmojiNode.Companion.from$default(companion, 0, companion.generateEmojiIdAndType(emoji), 1, (Object) null);
         }
         if (emojiNodeFrom$default != null) {
-            emojiNodeFrom$default.render((SpannableStringBuilder) draweeSpanStringBuilder, (DraweeSpanStringBuilder) new AnonymousClass1(shouldAnimate));
+            emojiNodeFrom$default.render((SpannableStringBuilder) draweeSpanStringBuilder, new AnonymousClass1(shouldAnimate));
         }
         String state = customStatusActivity.getState();
         if (state != null) {

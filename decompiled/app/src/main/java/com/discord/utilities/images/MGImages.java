@@ -270,7 +270,7 @@ public final class MGImages {
                 throw new IOException("No application available for media picker.");
             }
         } catch (IOException e) {
-            anonymousClass1.invoke((AnonymousClass1) e);
+            anonymousClass1.invoke(e);
         }
     }
 

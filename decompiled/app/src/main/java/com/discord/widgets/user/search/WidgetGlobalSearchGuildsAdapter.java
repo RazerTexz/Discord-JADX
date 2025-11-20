@@ -71,7 +71,7 @@ public final class WidgetGlobalSearchGuildsAdapter extends MGRecyclerAdapterSimp
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGlobalSearchGuildsModel.Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.itemView.setOnClickListener(new WidgetGlobalSearchGuildsAdapter$Item$onConfigure$1(this, position, data));
             View view = this.itemView;
             m.checkNotNullExpressionValue(view, "itemView");

@@ -35,7 +35,7 @@ public final class l extends d0.z.d.o implements Function0<Unit> {
     public Unit invoke() {
         EncodeQuality encodeQuality;
         List list = this.$ssrcs;
-        ArrayList arrayList = new ArrayList();
+        ArrayList<Payloads.Stream> arrayList = new ArrayList();
         Iterator it = list.iterator();
         while (true) {
             boolean z2 = true;
@@ -57,9 +57,7 @@ public final class l extends d0.z.d.o implements Function0<Unit> {
             }
         }
         ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
-        Iterator it2 = arrayList.iterator();
-        while (it2.hasNext()) {
-            Payloads.Stream stream2 = (Payloads.Stream) it2.next();
+        for (Payloads.Stream stream2 : arrayList) {
             Integer quality = stream2.getQuality();
             VideoMetadata videoMetadata = null;
             if (quality != null) {

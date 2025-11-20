@@ -104,25 +104,21 @@ public class DrawableUtils {
                             case -1383228885:
                                 if (name.equals("bottom")) {
                                     c = 3;
-                                    break;
                                 }
                                 break;
                             case 115029:
                                 if (name.equals("top")) {
                                     c = 1;
-                                    break;
                                 }
                                 break;
                             case 3317767:
                                 if (name.equals("left")) {
                                     c = 0;
-                                    break;
                                 }
                                 break;
                             case 108511772:
                                 if (name.equals("right")) {
                                     c = 2;
-                                    break;
                                 }
                                 break;
                         }

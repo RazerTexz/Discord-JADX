@@ -205,31 +205,29 @@ public final class InviteSuggestionsManager {
                 }
             }
             ArrayList arrayList3 = new ArrayList();
-            Iterator it2 = arrayList2.iterator();
-            while (it2.hasNext()) {
-                Object next = it2.next();
-                User user2 = (User) next;
+            for (Object obj : arrayList2) {
+                User user2 = (User) obj;
                 Integer num = (Integer) a.f(user2, userAffinityData.getRelationships());
                 if (!(!(channel == null || (userA = ChannelUtils.a(channel)) == null || userA.getId() != user2.getId()) || (num != null && num.intValue() == 2))) {
-                    arrayList3.add(next);
+                    arrayList3.add(obj);
                 }
             }
             List listDistinct = u.distinct(arrayList3);
-            Iterator it3 = listDistinct.iterator();
-            while (it3.hasNext()) {
-                arrayList.add(new InviteSuggestion.UserSuggestion((User) it3.next()));
+            Iterator it2 = listDistinct.iterator();
+            while (it2.hasNext()) {
+                arrayList.add(new InviteSuggestion.UserSuggestion((User) it2.next()));
             }
             ArrayList arrayList4 = new ArrayList();
-            for (Object obj : listSortedWith) {
-                Channel channel2 = (Channel) obj;
+            for (Object obj2 : listSortedWith) {
+                Channel channel2 = (Channel) obj2;
                 if ((m.areEqual(channel, channel2) ^ true) && (ChannelUtils.a(channel2) == null || !u.contains(listDistinct, ChannelUtils.a(channel2)))) {
-                    arrayList4.add(obj);
+                    arrayList4.add(obj2);
                 }
             }
             ArrayList arrayList5 = new ArrayList(o.collectionSizeOrDefault(arrayList4, 10));
-            Iterator it4 = arrayList4.iterator();
-            while (it4.hasNext()) {
-                arrayList5.add(Boolean.valueOf(arrayList.add(new InviteSuggestion.ChannelItem((Channel) it4.next()))));
+            Iterator it3 = arrayList4.iterator();
+            while (it3.hasNext()) {
+                arrayList5.add(Boolean.valueOf(arrayList.add(new InviteSuggestion.ChannelItem((Channel) it3.next()))));
             }
             return arrayList;
         }

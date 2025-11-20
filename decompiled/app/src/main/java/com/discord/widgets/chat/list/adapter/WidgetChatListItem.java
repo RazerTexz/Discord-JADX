@@ -85,7 +85,7 @@ public class WidgetChatListItem extends MGRecyclerViewHolder<WidgetChatListAdapt
     /* JADX WARN: Can't rename method to resolve collision */
     public void onConfigure(int position, ChatListEntry data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         View view = this.itemView;
         m.checkNotNullExpressionValue(view, "itemView");
         view.setBackground(data.isInExpandedBlockedMessageChunk() ? this.backgroundBlockedExpanded : this.defaultBackground);

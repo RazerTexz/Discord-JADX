@@ -276,7 +276,7 @@ public final class NotificationManagerCompat {
             }
             this.mCachedEnabledPackages = enabledListenerPackages;
             List<ResolveInfo> listQueryIntentServices = this.mContext.getPackageManager().queryIntentServices(new Intent().setAction(NotificationManagerCompat.ACTION_BIND_SIDE_CHANNEL), 0);
-            HashSet hashSet = new HashSet();
+            HashSet<ComponentName> hashSet = new HashSet();
             for (ResolveInfo resolveInfo : listQueryIntentServices) {
                 if (enabledListenerPackages.contains(resolveInfo.serviceInfo.packageName)) {
                     ServiceInfo serviceInfo = resolveInfo.serviceInfo;
@@ -288,9 +288,7 @@ public final class NotificationManagerCompat {
                     }
                 }
             }
-            Iterator it = hashSet.iterator();
-            while (it.hasNext()) {
-                ComponentName componentName2 = (ComponentName) it.next();
+            for (ComponentName componentName2 : hashSet) {
                 if (!this.mRecordMap.containsKey(componentName2)) {
                     if (Log.isLoggable(NotificationManagerCompat.TAG, 3)) {
                         Log.d(NotificationManagerCompat.TAG, "Adding listener record for " + componentName2);
@@ -298,9 +296,9 @@ public final class NotificationManagerCompat {
                     this.mRecordMap.put(componentName2, new ListenerRecord(componentName2));
                 }
             }
-            Iterator<Map.Entry<ComponentName, ListenerRecord>> it2 = this.mRecordMap.entrySet().iterator();
-            while (it2.hasNext()) {
-                Map.Entry<ComponentName, ListenerRecord> next = it2.next();
+            Iterator<Map.Entry<ComponentName, ListenerRecord>> it = this.mRecordMap.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry<ComponentName, ListenerRecord> next = it.next();
                 if (!hashSet.contains(next.getKey())) {
                     if (Log.isLoggable(NotificationManagerCompat.TAG, 3)) {
                         StringBuilder sbU = b.d.b.a.a.U("Removing listener record for ");
@@ -308,7 +306,7 @@ public final class NotificationManagerCompat {
                         Log.d(NotificationManagerCompat.TAG, sbU.toString());
                     }
                     ensureServiceUnbound(next.getValue());
-                    it2.remove();
+                    it.remove();
                 }
             }
         }

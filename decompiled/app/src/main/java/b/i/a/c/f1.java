@@ -731,16 +731,14 @@ public final class f1 extends u0 {
 
     public void o0(y1.c cVar) {
         b.i.a.c.f3.p<y1.c> pVar = this.j;
-        Iterator<p.c<y1.c>> it = pVar.d.iterator();
-        while (it.hasNext()) {
-            p.c<y1.c> next = it.next();
-            if (next.a.equals(cVar)) {
+        for (p.c<y1.c> cVar2 : pVar.d) {
+            if (cVar2.a.equals(cVar)) {
                 p.b<y1.c> bVar = pVar.c;
-                next.d = true;
-                if (next.c) {
-                    bVar.a(next.a, next.f974b.b());
+                cVar2.d = true;
+                if (cVar2.c) {
+                    bVar.a(cVar2.a, cVar2.f974b.b());
                 }
-                pVar.d.remove(next);
+                pVar.d.remove(cVar2);
             }
         }
     }

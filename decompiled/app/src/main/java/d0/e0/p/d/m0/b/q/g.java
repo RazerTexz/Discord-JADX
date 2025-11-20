@@ -200,7 +200,7 @@ public final class g implements d0.e0.p.d.m0.c.h1.a, d0.e0.p.d.m0.c.h1.c {
         if (fVarA != null && (eVarMapJavaToKotlin$default = d0.e0.p.d.m0.b.q.d.mapJavaToKotlin$default(this.c, d0.e0.p.d.m0.k.x.a.getFqNameSafe(fVarA), d0.e0.p.d.m0.b.q.b.f.getInstance(), null, 4, null)) != null) {
             c1 c1VarBuildSubstitutor = q.createMappedTypeParametersSubstitution(eVarMapJavaToKotlin$default, fVarA).buildSubstitutor();
             List<d0.e0.p.d.m0.c.d> constructors = fVarA.getConstructors();
-            ArrayList arrayList = new ArrayList();
+            ArrayList<d0.e0.p.d.m0.c.d> arrayList = new ArrayList();
             Iterator<T> it = constructors.iterator();
             while (true) {
                 boolean z3 = false;
@@ -243,9 +243,7 @@ public final class g implements d0.e0.p.d.m0.c.h1.a, d0.e0.p.d.m0.c.h1.c {
                 }
             }
             ArrayList arrayList2 = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayList, 10));
-            Iterator it2 = arrayList.iterator();
-            while (it2.hasNext()) {
-                d0.e0.p.d.m0.c.d dVar3 = (d0.e0.p.d.m0.c.d) it2.next();
+            for (d0.e0.p.d.m0.c.d dVar3 : arrayList) {
                 x.a<? extends x> aVarNewCopyBuilder = dVar3.newCopyBuilder();
                 aVarNewCopyBuilder.setOwner(eVar);
                 aVarNewCopyBuilder.setReturnType(eVar.getDefaultType());
@@ -329,7 +327,7 @@ public final class g implements d0.e0.p.d.m0.c.h1.a, d0.e0.p.d.m0.c.h1.c {
                 boolean zIsMutable = this.c.isMutable(eVar2);
                 d0.e0.p.d.m0.k.a0.i unsubstitutedMemberScope = ((d0.e0.p.d.m0.c.e) ((f.d) this.g).computeIfAbsent(d0.e0.p.d.m0.k.x.a.getFqNameSafe(fVarA), new j(fVarA, eVar3))).getUnsubstitutedMemberScope();
                 d0.z.d.m.checkNotNullExpressionValue(unsubstitutedMemberScope, "fakeJavaClassDescriptor.unsubstitutedMemberScope");
-                Collection<? extends t0> collectionInvoke = cVar.invoke((c) unsubstitutedMemberScope);
+                Collection<? extends t0> collectionInvoke = cVar.invoke(unsubstitutedMemberScope);
                 ArrayList arrayList2 = new ArrayList();
                 for (Object obj : collectionInvoke) {
                     t0 t0Var3 = (t0) obj;

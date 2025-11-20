@@ -405,9 +405,7 @@ public class JavacTreeMaker {
     static <J> MethodId<J> MethodId(String name) throws SecurityException {
         for (Method m : JavacTreeMaker.class.getDeclaredMethods()) {
             if (m.getName().equals(name)) {
-                Class<?> returnType = m.getReturnType();
-                Class[] p = m.getParameterTypes();
-                return new MethodId<>(TreeMaker.class, name, returnType, p);
+                return new MethodId<>(TreeMaker.class, name, m.getReturnType(), m.getParameterTypes());
             }
         }
         throw new InternalError("Not found: " + name);
@@ -541,20 +539,20 @@ public class JavacTreeMaker {
         Method found = null;
         for (Method method : MethodId.access$1(m).getDeclaredMethods()) {
             if (MethodId.access$2(m).equals(method.getName())) {
-                Class[] t = method.getParameterTypes();
-                if (t.length != MethodId.access$3(m).length) {
+                Class<?>[] parameterTypes = method.getParameterTypes();
+                if (parameterTypes.length != MethodId.access$3(m).length) {
                     continue;
                 } else {
                     int i = 0;
                     while (true) {
-                        if (i < t.length) {
-                            if (!Symbol.class.isAssignableFrom(t[i])) {
+                        if (i < parameterTypes.length) {
+                            if (!Symbol.class.isAssignableFrom(parameterTypes[i])) {
                                 if (!SchroedingerType.class.isAssignableFrom(MethodId.access$3(m)[i])) {
-                                    if (t[i].isPrimitive()) {
-                                        if (t[i] != MethodId.access$3(m)[i]) {
+                                    if (parameterTypes[i].isPrimitive()) {
+                                        if (parameterTypes[i] != MethodId.access$3(m)[i]) {
                                             break;
                                         }
-                                    } else if (!t[i].isAssignableFrom(MethodId.access$3(m)[i])) {
+                                    } else if (!parameterTypes[i].isAssignableFrom(MethodId.access$3(m)[i])) {
                                         break;
                                     }
                                 }

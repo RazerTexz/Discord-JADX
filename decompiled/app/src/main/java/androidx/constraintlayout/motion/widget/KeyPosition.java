@@ -86,28 +86,27 @@ public class KeyPosition extends KeyPositionBase {
                             keyPosition.mTargetId = resourceId;
                             if (resourceId == -1) {
                                 keyPosition.mTargetString = typedArray.getString(index);
-                                break;
-                            } else {
-                                break;
                             }
-                        } else if (typedArray.peekValue(index).type == 3) {
-                            keyPosition.mTargetString = typedArray.getString(index);
                             break;
                         } else {
-                            keyPosition.mTargetId = typedArray.getResourceId(index, keyPosition.mTargetId);
+                            if (typedArray.peekValue(index).type == 3) {
+                                keyPosition.mTargetString = typedArray.getString(index);
+                            } else {
+                                keyPosition.mTargetId = typedArray.getResourceId(index, keyPosition.mTargetId);
+                            }
                             break;
                         }
+                        break;
                     case 2:
                         keyPosition.mFramePosition = typedArray.getInt(index, keyPosition.mFramePosition);
                         break;
                     case 3:
                         if (typedArray.peekValue(index).type == 3) {
                             keyPosition.mTransitionEasing = typedArray.getString(index);
-                            break;
                         } else {
                             keyPosition.mTransitionEasing = Easing.NAMED_EASING[typedArray.getInteger(index, 0)];
-                            break;
                         }
+                        break;
                     case 4:
                         keyPosition.mCurveFit = typedArray.getInteger(index, keyPosition.mCurveFit);
                         break;

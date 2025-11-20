@@ -63,6 +63,7 @@ public class ModelNotificationSettings implements Model {
                     jsonReader.nextNull();
                     break;
                 }
+                break;
             case "mobile_push":
                 this.mobilePush = jsonReader.nextBoolean(this.mobilePush);
                 break;
@@ -277,6 +278,7 @@ public class ModelNotificationSettings implements Model {
                         jsonReader.nextNull();
                         break;
                     }
+                    break;
                 case "channel_id":
                     this.channelId = jsonReader.nextLong(this.channelId);
                     break;

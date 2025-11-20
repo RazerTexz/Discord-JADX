@@ -240,7 +240,7 @@ public class k9 implements t5 {
     }
 
     @WorkerThread
-    public final void B(zzaq zzaqVar, zzn zznVar) throws IllegalStateException {
+    public final void B(zzaq zzaqVar, zzn zznVar) {
         if (b.i.a.f.h.l.ea.b() && this.k.h.o(p.A0)) {
             u3 u3VarB = u3.b(zzaqVar);
             this.k.t().H(u3VarB.d, K().h0(zznVar.j));
@@ -1223,7 +1223,7 @@ public class k9 implements t5 {
     }
 
     @WorkerThread
-    public final void Q() throws IllegalStateException {
+    public final void Q() {
         a4 a4VarT;
         String strJ;
         U();
@@ -1685,7 +1685,7 @@ public class k9 implements t5 {
     }
 
     @WorkerThread
-    public final void l(zzaq zzaqVar, zzn zznVar) throws IllegalStateException {
+    public final void l(zzaq zzaqVar, zzn zznVar) {
         List<zzz> listF;
         List<zzz> listF2;
         List<zzz> listF3;
@@ -1815,7 +1815,7 @@ public class k9 implements t5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m(zzaq zzaqVar, String str) throws IllegalStateException {
+    public final void m(zzaq zzaqVar, String str) {
         boolean z2;
         a4 a4VarT = K().T(str);
         if (a4VarT == null || TextUtils.isEmpty(a4VarT.M())) {
@@ -2077,7 +2077,7 @@ public class k9 implements t5 {
     }
 
     @WorkerThread
-    public final void r(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) throws IllegalStateException {
+    public final void r(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) {
         U();
         P();
         b.c.a.a0.d.w(str);
@@ -3561,7 +3561,7 @@ public class k9 implements t5 {
     }
 
     @WorkerThread
-    public final void x() throws IllegalStateException {
+    public final void x() {
         U();
         if (this.r || this.f1543s || this.t) {
             this.k.g().n.d("Not stopping services. fetch, network, upload", Boolean.valueOf(this.r), Boolean.valueOf(this.f1543s), Boolean.valueOf(this.t));

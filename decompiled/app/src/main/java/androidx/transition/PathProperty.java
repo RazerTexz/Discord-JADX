@@ -27,13 +27,13 @@ public class PathProperty<T> extends Property<T, Float> {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // android.util.Property
     public /* bridge */ /* synthetic */ Float get(Object obj) {
-        return get((PathProperty<T>) obj);
+        return get(obj);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // android.util.Property
     public /* bridge */ /* synthetic */ void set(Object obj, Float f) {
-        set2((PathProperty<T>) obj, f);
+        set2(obj, f);
     }
 
     /* JADX WARN: Can't rename method to resolve collision */

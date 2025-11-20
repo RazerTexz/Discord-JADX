@@ -288,11 +288,10 @@ public final class BidiFormatter {
                                 break;
                             default:
                                 if (i2 != 0) {
-                                    break;
                                 } else {
                                     i2 = i;
-                                    break;
                                 }
+                                break;
                         }
                     } else {
                         continue;

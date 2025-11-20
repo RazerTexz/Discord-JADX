@@ -367,6 +367,7 @@ public class JsonReader implements Closeable {
                                                     break;
                                                 default:
                                                     i2++;
+                                                    break;
                                             }
                                         }
                                     }
@@ -616,6 +617,7 @@ public class JsonReader implements Closeable {
                                                                 break;
                                                             default:
                                                                 i2++;
+                                                                break;
                                                         }
                                                     }
                                                 }

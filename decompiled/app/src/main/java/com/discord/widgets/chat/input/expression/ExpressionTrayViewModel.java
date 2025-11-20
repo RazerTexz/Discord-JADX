@@ -592,7 +592,7 @@ public final class ExpressionTrayViewModel extends d0<ViewState> {
         if (viewState.getShowLandingPage() && selectedExpressionTab != selectedExpressionTab2 && this.wasActive) {
             this.storeAnalytics.trackChatInputComponentViewed(getChatInputComponentType(selectedExpressionTab2));
         }
-        super.updateViewState((ExpressionTrayViewModel) viewState);
+        super.updateViewState(viewState);
     }
 
     /* compiled from: ExpressionTrayViewModel.kt */

@@ -727,14 +727,12 @@ public final class AutocompleteCommandUtils {
                     if (lAsSafeNumberOrNull != null) {
                         integerOptionValue = new IntegerOptionValue(lAsSafeNumberOrNull.longValue());
                         stringOptionValue = integerOptionValue;
-                        break;
                     }
                     break;
                 case 4:
                     if (AutocompleteModelUtils.INSTANCE.isBoolean(value)) {
                         numberOptionValue = new BooleanOptionValue(Boolean.parseBoolean(value));
                         stringOptionValue = numberOptionValue;
-                        break;
                     }
                     break;
                 case 5:
@@ -745,7 +743,6 @@ public final class AutocompleteCommandUtils {
                     if (userAutocompletable != null) {
                         integerOptionValue = new UserOptionValue(userAutocompletable.getUser());
                         stringOptionValue = integerOptionValue;
-                        break;
                     }
                     break;
                 case 6:
@@ -756,7 +753,6 @@ public final class AutocompleteCommandUtils {
                     if (channelAutocompletable != null) {
                         integerOptionValue = new ChannelOptionValue(channelAutocompletable.getChannel());
                         stringOptionValue = integerOptionValue;
-                        break;
                     }
                     break;
                 case 7:
@@ -767,15 +763,16 @@ public final class AutocompleteCommandUtils {
                     if (roleAutocompletable != null) {
                         integerOptionValue = new RoleOptionValue(roleAutocompletable.getRole());
                         stringOptionValue = integerOptionValue;
-                        break;
                     }
                     break;
                 case 8:
                     if (autocompletable instanceof RoleAutocompletable) {
                         stringOptionValue = new RoleOptionValue(((RoleAutocompletable) autocompletable).getRole());
                         break;
-                    } else if (autocompletable instanceof UserAutocompletable) {
-                        stringOptionValue = new UserOptionValue(((UserAutocompletable) autocompletable).getUser());
+                    } else {
+                        if (autocompletable instanceof UserAutocompletable) {
+                            stringOptionValue = new UserOptionValue(((UserAutocompletable) autocompletable).getUser());
+                        }
                         break;
                     }
                     break;
@@ -784,7 +781,6 @@ public final class AutocompleteCommandUtils {
                     if (numberAsSafeNumberOrNull != null) {
                         numberOptionValue = new NumberOptionValue(numberAsSafeNumberOrNull);
                         stringOptionValue = numberOptionValue;
-                        break;
                     }
                     break;
                 case 10:
@@ -794,7 +790,6 @@ public final class AutocompleteCommandUtils {
                         m.checkNotNullExpressionValue(string3, "it.uri.toString()");
                         numberOptionValue = new AttachmentOptionValue(string3);
                         stringOptionValue = numberOptionValue;
-                        break;
                     }
                     break;
             }

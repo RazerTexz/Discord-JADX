@@ -298,7 +298,6 @@ public final class a extends WebSocketListener implements DebugPrintable {
                                 m.checkNotNullExpressionValue(dVar3, "it");
                                 dVar3.onSpeaking(speaking.getUserId().longValue(), speaking.getSsrc(), z2);
                             }
-                            break;
                         }
                         break;
                     case 6:
@@ -356,7 +355,6 @@ public final class a extends WebSocketListener implements DebugPrintable {
                                 m.checkNotNullExpressionValue(dVar5, "it");
                                 dVar5.e(video.getUserId().longValue(), video.getAudioSsrc(), video.getVideoSsrc(), video.getStreams());
                             }
-                            break;
                         }
                         break;
                     case 13:

@@ -88,7 +88,7 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGroupInviteFriends.Model.FriendItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.e;
             m.checkNotNullExpressionValue(textView, "binding.friendsListItemName");
             User user = data.getUser();

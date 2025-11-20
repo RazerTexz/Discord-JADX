@@ -470,10 +470,8 @@ public final class t9 extends r5 {
     }
 
     public final void Q(u3 u3Var, int i) {
-        Iterator it = new TreeSet(u3Var.d.keySet()).iterator();
         int i2 = 0;
-        while (it.hasNext()) {
-            String str = (String) it.next();
+        for (String str : new TreeSet(u3Var.d.keySet())) {
             if (X(str) && (i2 = i2 + 1) > i) {
                 StringBuilder sb = new StringBuilder(48);
                 sb.append("Event can't contain more than ");
@@ -506,17 +504,15 @@ public final class t9 extends r5 {
         }
     }
 
-    public final void T(String str, String str2, String str3, Bundle bundle, @Nullable List<String> list, boolean z2) throws IllegalStateException {
+    public final void T(String str, String str2, String str3, Bundle bundle, @Nullable List<String> list, boolean z2) {
         int iU0;
         String str4;
         int iS;
         if (bundle == null) {
             return;
         }
-        Iterator it = new TreeSet(bundle.keySet()).iterator();
         int i = 0;
-        while (it.hasNext()) {
-            String str5 = (String) it.next();
+        for (String str5 : new TreeSet(bundle.keySet())) {
             if (list == null || !list.contains(str5)) {
                 iU0 = z2 ? u0(str5) : 0;
                 if (iU0 == 0) {
@@ -562,7 +558,7 @@ public final class t9 extends r5 {
         }
     }
 
-    public final boolean Z(String str, int i, String str2) throws IllegalStateException {
+    public final boolean Z(String str, int i, String str2) {
         if (str2 == null) {
             g().h.b("Name is required and can't be null. Type", str);
             return false;
@@ -601,7 +597,7 @@ public final class t9 extends r5 {
         return true;
     }
 
-    public final boolean b0(String str, String str2, int i, Object obj) throws IllegalStateException {
+    public final boolean b0(String str, String str2, int i, Object obj) {
         if (obj != null && !(obj instanceof Long) && !(obj instanceof Float) && !(obj instanceof Integer) && !(obj instanceof Byte) && !(obj instanceof Short) && !(obj instanceof Boolean) && !(obj instanceof Double)) {
             if (!(obj instanceof String) && !(obj instanceof Character) && !(obj instanceof CharSequence)) {
                 return false;
@@ -773,7 +769,7 @@ public final class t9 extends r5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final int s(String str, String str2, String str3, Object obj, Bundle bundle, @Nullable List<String> list, boolean z2, boolean z3) throws IllegalStateException {
+    public final int s(String str, String str2, String str3, Object obj, Bundle bundle, @Nullable List<String> list, boolean z2, boolean z3) {
         int i;
         int size;
         boolean z4;

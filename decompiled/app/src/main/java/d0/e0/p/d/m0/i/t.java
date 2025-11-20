@@ -247,7 +247,7 @@ public class t<K extends Comparable<K>, V> extends AbstractMap<K, V> {
             if (contains(entry)) {
                 return false;
             }
-            t.this.put((t) entry.getKey(), (K) entry.getValue());
+            t.this.put((Comparable) entry.getKey(), (Object) entry.getValue());
             return true;
         }
     }

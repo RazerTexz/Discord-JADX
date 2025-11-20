@@ -101,7 +101,7 @@ public final class WorkTagDao_Impl implements WorkTagDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfWorkTag.insert((EntityInsertionAdapter<WorkTag>) workTag);
+            this.__insertionAdapterOfWorkTag.insert(workTag);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

@@ -196,11 +196,10 @@ public class MotionScene {
                         case -1349929691:
                             if (!name.equals("ConstraintSet")) {
                                 c = 65535;
-                                break;
                             } else {
                                 c = 5;
-                                break;
                             }
+                            break;
                         case -1239391468:
                             if (name.equals("KeyFrameSet")) {
                                 c = 6;
@@ -365,43 +364,35 @@ public class MotionScene {
     }
 
     public void addOnClickListeners(MotionLayout motionLayout, int i) {
-        Iterator<Transition> it = this.mTransitionList.iterator();
-        while (it.hasNext()) {
-            Transition next = it.next();
-            if (Transition.access$400(next).size() > 0) {
-                Iterator it2 = Transition.access$400(next).iterator();
+        for (Transition transition : this.mTransitionList) {
+            if (Transition.access$400(transition).size() > 0) {
+                Iterator it = Transition.access$400(transition).iterator();
+                while (it.hasNext()) {
+                    ((Transition.TransitionOnClick) it.next()).removeOnClickListeners(motionLayout);
+                }
+            }
+        }
+        for (Transition transition2 : this.mAbstractTransitionList) {
+            if (Transition.access$400(transition2).size() > 0) {
+                Iterator it2 = Transition.access$400(transition2).iterator();
                 while (it2.hasNext()) {
                     ((Transition.TransitionOnClick) it2.next()).removeOnClickListeners(motionLayout);
                 }
             }
         }
-        Iterator<Transition> it3 = this.mAbstractTransitionList.iterator();
-        while (it3.hasNext()) {
-            Transition next2 = it3.next();
-            if (Transition.access$400(next2).size() > 0) {
-                Iterator it4 = Transition.access$400(next2).iterator();
+        for (Transition transition3 : this.mTransitionList) {
+            if (Transition.access$400(transition3).size() > 0) {
+                Iterator it3 = Transition.access$400(transition3).iterator();
+                while (it3.hasNext()) {
+                    ((Transition.TransitionOnClick) it3.next()).addOnClickListeners(motionLayout, i, transition3);
+                }
+            }
+        }
+        for (Transition transition4 : this.mAbstractTransitionList) {
+            if (Transition.access$400(transition4).size() > 0) {
+                Iterator it4 = Transition.access$400(transition4).iterator();
                 while (it4.hasNext()) {
-                    ((Transition.TransitionOnClick) it4.next()).removeOnClickListeners(motionLayout);
-                }
-            }
-        }
-        Iterator<Transition> it5 = this.mTransitionList.iterator();
-        while (it5.hasNext()) {
-            Transition next3 = it5.next();
-            if (Transition.access$400(next3).size() > 0) {
-                Iterator it6 = Transition.access$400(next3).iterator();
-                while (it6.hasNext()) {
-                    ((Transition.TransitionOnClick) it6.next()).addOnClickListeners(motionLayout, i, next3);
-                }
-            }
-        }
-        Iterator<Transition> it7 = this.mAbstractTransitionList.iterator();
-        while (it7.hasNext()) {
-            Transition next4 = it7.next();
-            if (Transition.access$400(next4).size() > 0) {
-                Iterator it8 = Transition.access$400(next4).iterator();
-                while (it8.hasNext()) {
-                    ((Transition.TransitionOnClick) it8.next()).addOnClickListeners(motionLayout, i, next4);
+                    ((Transition.TransitionOnClick) it4.next()).addOnClickListeners(motionLayout, i, transition4);
                 }
             }
         }
@@ -420,15 +411,13 @@ public class MotionScene {
         if (isProcessingTouch() || this.mDisableAutoTransition) {
             return false;
         }
-        Iterator<Transition> it = this.mTransitionList.iterator();
-        while (it.hasNext()) {
-            Transition next = it.next();
-            if (Transition.access$600(next) != 0 && this.mCurrentTransition != next) {
-                if (i == Transition.access$100(next) && (Transition.access$600(next) == 4 || Transition.access$600(next) == 2)) {
+        for (Transition transition : this.mTransitionList) {
+            if (Transition.access$600(transition) != 0 && this.mCurrentTransition != transition) {
+                if (i == Transition.access$100(transition) && (Transition.access$600(transition) == 4 || Transition.access$600(transition) == 2)) {
                     MotionLayout.TransitionState transitionState = MotionLayout.TransitionState.FINISHED;
                     motionLayout.setState(transitionState);
-                    motionLayout.setTransition(next);
-                    if (Transition.access$600(next) == 4) {
+                    motionLayout.setTransition(transition);
+                    if (Transition.access$600(transition) == 4) {
                         motionLayout.transitionToEnd();
                         motionLayout.setState(MotionLayout.TransitionState.SETUP);
                         motionLayout.setState(MotionLayout.TransitionState.MOVING);
@@ -442,11 +431,11 @@ public class MotionScene {
                     }
                     return true;
                 }
-                if (i == Transition.access$000(next) && (Transition.access$600(next) == 3 || Transition.access$600(next) == 1)) {
+                if (i == Transition.access$000(transition) && (Transition.access$600(transition) == 3 || Transition.access$600(transition) == 1)) {
                     MotionLayout.TransitionState transitionState2 = MotionLayout.TransitionState.FINISHED;
                     motionLayout.setState(transitionState2);
-                    motionLayout.setTransition(next);
-                    if (Transition.access$600(next) == 3) {
+                    motionLayout.setTransition(transition);
+                    if (Transition.access$600(transition) == 3) {
                         motionLayout.transitionToStart();
                         motionLayout.setState(MotionLayout.TransitionState.SETUP);
                         motionLayout.setState(MotionLayout.TransitionState.MOVING);
@@ -582,16 +571,12 @@ public class MotionScene {
         if (transition == null) {
             return null;
         }
-        Iterator it = Transition.access$1300(transition).iterator();
-        while (it.hasNext()) {
-            KeyFrames keyFrames = (KeyFrames) it.next();
+        for (KeyFrames keyFrames : Transition.access$1300(transition)) {
             for (Integer num : keyFrames.getKeys()) {
                 if (i2 == num.intValue()) {
-                    Iterator<Key> it2 = keyFrames.getKeyFramesForView(num.intValue()).iterator();
-                    while (it2.hasNext()) {
-                        Key next = it2.next();
-                        if (next.mFramePosition == i3 && next.mType == i) {
-                            return next;
+                    for (Key key : keyFrames.getKeyFramesForView(num.intValue())) {
+                        if (key.mFramePosition == i3 && key.mType == i) {
+                            return key;
                         }
                     }
                 }
@@ -671,11 +656,9 @@ public class MotionScene {
     }
 
     public Transition getTransitionById(int i) {
-        Iterator<Transition> it = this.mTransitionList.iterator();
-        while (it.hasNext()) {
-            Transition next = it.next();
-            if (Transition.access$300(next) == i) {
-                return next;
+        for (Transition transition : this.mTransitionList) {
+            if (Transition.access$300(transition) == i) {
+                return transition;
             }
         }
         return null;
@@ -694,11 +677,9 @@ public class MotionScene {
     public List<Transition> getTransitionsWithState(int i) {
         int realID = getRealID(i);
         ArrayList arrayList = new ArrayList();
-        Iterator<Transition> it = this.mTransitionList.iterator();
-        while (it.hasNext()) {
-            Transition next = it.next();
-            if (Transition.access$100(next) == realID || Transition.access$000(next) == realID) {
-                arrayList.add(next);
+        for (Transition transition : this.mTransitionList) {
+            if (Transition.access$100(transition) == realID || Transition.access$000(transition) == realID) {
+                arrayList.add(transition);
             }
         }
         return arrayList;
@@ -894,8 +875,6 @@ public class MotionScene {
     public void setTransition(int i, int i2) {
         int iStateGetConstraintID;
         int iStateGetConstraintID2;
-        Iterator<Transition> it;
-        Iterator<Transition> it2;
         StateSet stateSet = this.mStateSet;
         if (stateSet != null) {
             iStateGetConstraintID = stateSet.stateGetConstraintID(i, -1, -1);
@@ -905,49 +884,43 @@ public class MotionScene {
             iStateGetConstraintID2 = this.mStateSet.stateGetConstraintID(i2, -1, -1);
             if (iStateGetConstraintID2 == -1) {
             }
-            it = this.mTransitionList.iterator();
-            while (it.hasNext()) {
-                Transition next = it.next();
-                if ((Transition.access$000(next) == iStateGetConstraintID2 && Transition.access$100(next) == iStateGetConstraintID) || (Transition.access$000(next) == i2 && Transition.access$100(next) == i)) {
-                    this.mCurrentTransition = next;
-                    if (next == null || Transition.access$200(next) == null) {
+            for (Transition transition : this.mTransitionList) {
+                if ((Transition.access$000(transition) == iStateGetConstraintID2 && Transition.access$100(transition) == iStateGetConstraintID) || (Transition.access$000(transition) == i2 && Transition.access$100(transition) == i)) {
+                    this.mCurrentTransition = transition;
+                    if (transition == null || Transition.access$200(transition) == null) {
                         return;
                     }
                     Transition.access$200(this.mCurrentTransition).setRTL(this.mRtl);
                     return;
                 }
             }
-            Transition transition = this.mDefaultTransition;
-            it2 = this.mAbstractTransitionList.iterator();
-            while (it2.hasNext()) {
-                Transition next2 = it2.next();
-                if (Transition.access$000(next2) == i2) {
-                    transition = next2;
+            Transition transition2 = this.mDefaultTransition;
+            for (Transition transition3 : this.mAbstractTransitionList) {
+                if (Transition.access$000(transition3) == i2) {
+                    transition2 = transition3;
                 }
             }
-            Transition transition2 = new Transition(this, transition);
-            Transition.access$102(transition2, iStateGetConstraintID);
-            Transition.access$002(transition2, iStateGetConstraintID2);
+            Transition transition4 = new Transition(this, transition2);
+            Transition.access$102(transition4, iStateGetConstraintID);
+            Transition.access$002(transition4, iStateGetConstraintID2);
             if (iStateGetConstraintID != -1) {
-                this.mTransitionList.add(transition2);
+                this.mTransitionList.add(transition4);
             }
-            this.mCurrentTransition = transition2;
+            this.mCurrentTransition = transition4;
         }
         iStateGetConstraintID = i;
         iStateGetConstraintID2 = i2;
-        it = this.mTransitionList.iterator();
-        while (it.hasNext()) {
+        while (r3.hasNext()) {
         }
-        Transition transition3 = this.mDefaultTransition;
-        it2 = this.mAbstractTransitionList.iterator();
-        while (it2.hasNext()) {
+        Transition transition22 = this.mDefaultTransition;
+        while (r3.hasNext()) {
         }
-        Transition transition22 = new Transition(this, transition3);
-        Transition.access$102(transition22, iStateGetConstraintID);
-        Transition.access$002(transition22, iStateGetConstraintID2);
+        Transition transition42 = new Transition(this, transition22);
+        Transition.access$102(transition42, iStateGetConstraintID);
+        Transition.access$002(transition42, iStateGetConstraintID2);
         if (iStateGetConstraintID != -1) {
         }
-        this.mCurrentTransition = transition22;
+        this.mCurrentTransition = transition42;
     }
 
     public void setupTouch() {

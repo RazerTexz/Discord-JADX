@@ -85,6 +85,7 @@ public class d {
                     i2 = iU2;
                     i4 += i2;
                     i5 = i9;
+                    break;
                 case 2:
                 case 13:
                 case 14:
@@ -99,6 +100,7 @@ public class d {
                     i2 = 5;
                     i4 += i2;
                     i5 = i9;
+                    break;
                 case 5:
                 case 6:
                     iU2 = 9;
@@ -106,6 +108,7 @@ public class d {
                     i2 = iU2;
                     i4 += i2;
                     i5 = i9;
+                    break;
                 case 7:
                 case 8:
                 case 16:
@@ -114,20 +117,24 @@ public class d {
                     i2 = 3;
                     i4 += i2;
                     i5 = i9;
+                    break;
                 case 15:
                     i2 = iU2;
                     i4 += i2;
                     i5 = i9;
+                    break;
                 case 17:
                     z3 = true;
                     i2 = 5;
                     i4 += i2;
                     i5 = i9;
+                    break;
                 case 18:
                     z4 = true;
                     i2 = 5;
                     i4 += i2;
                     i5 = i9;
+                    break;
             }
         }
     }
@@ -484,6 +491,7 @@ public class d {
                 case Opcodes.MONITORENTER /* 194 */:
                 case Opcodes.MONITOREXIT /* 195 */:
                     i37++;
+                    break;
                 case 16:
                 case 18:
                 case 21:
@@ -499,6 +507,7 @@ public class d {
                 case Opcodes.RET /* 169 */:
                 case Opcodes.NEWARRAY /* 188 */:
                     i37 += 2;
+                    break;
                 case 17:
                 case 19:
                 case 20:
@@ -515,6 +524,7 @@ public class d {
                 case Opcodes.CHECKCAST /* 192 */:
                 case Opcodes.INSTANCEOF /* 193 */:
                     i37 += 3;
+                    break;
                 case 153:
                 case 154:
                 case 155:
@@ -535,6 +545,7 @@ public class d {
                 case Opcodes.IFNONNULL /* 199 */:
                     b(q(i37 + 1) + i38, pVarArr8);
                     i37 += 3;
+                    break;
                 case Opcodes.TABLESWITCH /* 170 */:
                     int i39 = (4 - (i38 & 3)) + i37;
                     b(l(i39) + i38, pVarArr8);
@@ -542,14 +553,16 @@ public class d {
                     i34 = i39 + 12;
                     while (true) {
                         int i40 = iL2 - 1;
-                        if (iL2 > 0) {
+                        if (iL2 <= 0) {
+                            i37 = i34;
+                        } else {
                             b(l(i34) + i38, pVarArr8);
                             i34 += 4;
                             iL2 = i40;
-                        } else {
-                            i37 = i34;
                         }
+                        break;
                     }
+                    break;
                 case Opcodes.LOOKUPSWITCH /* 171 */:
                     int i41 = (4 - (i38 & 3)) + i37;
                     b(l(i41) + i38, pVarArr8);
@@ -557,17 +570,20 @@ public class d {
                     i34 = i41 + 8;
                     while (true) {
                         int i42 = iL3 - 1;
-                        if (iL3 > 0) {
+                        if (iL3 <= 0) {
+                            i37 = i34;
+                        } else {
                             b(l(i34 + 4) + i38, pVarArr8);
                             i34 += 8;
                             iL3 = i42;
-                        } else {
-                            i37 = i34;
                         }
+                        break;
                     }
+                    break;
                 case Opcodes.INVOKEINTERFACE /* 185 */:
                 case Opcodes.INVOKEDYNAMIC /* 186 */:
                     i37 += 5;
+                    break;
                 case 196:
                     int i43 = bArr[i37 + 1] & 255;
                     if (i43 != 132) {
@@ -590,19 +606,23 @@ public class d {
                                 case 24:
                                 case 25:
                                     i37 += 4;
+                                    break;
                             }
                         }
                         i37 += 4;
                     } else {
                         i37 += 6;
                     }
+                    break;
                 case Opcodes.MULTIANEWARRAY /* 197 */:
                     i37 += 4;
+                    break;
                 case 200:
                 case 201:
                 case 220:
                     b(l(i37 + 1) + i38, pVarArr8);
                     i37 += 5;
+                    break;
                 case 202:
                 case 203:
                 case 204:
@@ -623,6 +643,7 @@ public class d {
                 case 219:
                     b(u(i37 + 1) + i38, pVarArr8);
                     i37 += 3;
+                    break;
                 default:
                     throw new IllegalArgumentException();
             }
@@ -1410,6 +1431,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 16:
                                         case Opcodes.NEWARRAY /* 188 */:
                                             z3 = z11;
@@ -1426,7 +1448,6 @@ public class d {
                                                 }
                                                 i11++;
                                                 iD = d(iArr2, i11);
-                                                break;
                                             }
                                             i13 = i74;
                                             iD2 = i70;
@@ -1438,7 +1459,6 @@ public class d {
                                                 z5 = z8;
                                                 i10 = i14;
                                                 i92 = i15;
-                                                break;
                                             }
                                             z12 = z5;
                                             i74 = i13;
@@ -1485,6 +1505,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 18:
                                             z3 = z11;
                                             z4 = z2;
@@ -1515,6 +1536,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 19:
                                         case 20:
                                             z3 = z11;
@@ -1546,6 +1568,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 21:
                                         case 22:
                                         case 23:
@@ -1586,6 +1609,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 26:
                                         case 27:
                                         case 28:
@@ -1636,6 +1660,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 59:
                                         case 60:
                                         case 61:
@@ -1686,6 +1711,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case Opcodes.IINC /* 132 */:
                                             z3 = z11;
                                             z6 = z2;
@@ -1716,6 +1742,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 153:
                                         case 154:
                                         case 155:
@@ -1763,6 +1790,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case Opcodes.TABLESWITCH /* 170 */:
                                             z3 = z11;
                                             z6 = z2;
@@ -1804,6 +1832,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case Opcodes.LOOKUPSWITCH /* 171 */:
                                             z3 = z11;
                                             z6 = z2;
@@ -1862,6 +1891,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case Opcodes.GETSTATIC /* 178 */:
                                         case Opcodes.PUTSTATIC /* 179 */:
                                         case 180:
@@ -1911,6 +1941,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case Opcodes.INVOKEDYNAMIC /* 186 */:
                                             int i122 = this.f3700b[u(i107 + 1)];
                                             int i123 = this.f3700b[u(i122 + 2)];
@@ -2010,6 +2041,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 196:
                                             int i129 = bArr[i107 + 1] & 255;
                                             if (i129 == 132) {
@@ -2073,6 +2105,7 @@ public class d {
                                                 iArr12 = iArr17;
                                                 iU4 = i106;
                                             }
+                                            break;
                                         case Opcodes.MULTIANEWARRAY /* 197 */:
                                             String strG2 = g(i107 + 1, cArr);
                                             int i130 = bArr[i107 + 3] & 255;
@@ -2151,6 +2184,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         case 202:
                                         case 203:
                                         case 204:
@@ -2236,6 +2270,7 @@ public class d {
                                             i75 = iD;
                                             iArr12 = iArr17;
                                             iU4 = i106;
+                                            break;
                                         default:
                                             throw new AssertionError();
                                     }
@@ -2574,10 +2609,7 @@ public class d {
         int i3;
         int iL = l(i);
         int i4 = iL >>> 24;
-        if (i4 == 0 || i4 == 1) {
-            i2 = iL & (-65536);
-            i3 = i + 2;
-        } else {
+        if (i4 != 0 && i4 != 1) {
             switch (i4) {
                 case 16:
                 case 17:
@@ -2634,7 +2666,11 @@ public class d {
                         default:
                             throw new IllegalArgumentException();
                     }
+                    break;
             }
+        } else {
+            i2 = iL & (-65536);
+            i3 = i + 2;
         }
         hVar.h = i2;
         int iF = f(i3);
@@ -2678,6 +2714,7 @@ public class d {
                                         iU2 = i5;
                                     }
                                 }
+                                break;
                             case 66:
                             case 67:
                             case 68:

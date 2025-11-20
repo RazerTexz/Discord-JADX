@@ -748,16 +748,14 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                 float width = getWidth();
                 float height = getHeight();
                 RectF rectFA = b.o.a.t.b.a(pointFArr[0], width * 0.05f, 0.05f * height);
-                ArrayList arrayList = new ArrayList();
+                ArrayList<b.o.a.t.a> arrayList = new ArrayList();
                 PointF pointF = new PointF(rectFA.centerX(), rectFA.centerY());
                 float fWidth = rectFA.width();
                 float fHeight = rectFA.height();
                 arrayList.add(new b.o.a.t.a(rectFA, 1000));
                 arrayList.add(new b.o.a.t.a(b.o.a.t.b.a(pointF, fWidth * 1.5f, fHeight * 1.5f), Math.round(1000 * 0.1f)));
                 ArrayList arrayList2 = new ArrayList();
-                Iterator it = arrayList.iterator();
-                while (it.hasNext()) {
-                    b.o.a.t.a aVar2 = (b.o.a.t.a) it.next();
+                for (b.o.a.t.a aVar2 : arrayList) {
                     Objects.requireNonNull(aVar2);
                     RectF rectF = new RectF(0.0f, 0.0f, width, height);
                     RectF rectF2 = new RectF();
@@ -777,7 +775,6 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                 float fA = cVar.a(fN, 0.0f, 1.0f);
                 if (fA != fN) {
                     this.f3176z.G0(fA, pointFArr, true);
-                    break;
                 }
                 break;
             case 5:
@@ -787,7 +784,6 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                 float fA2 = cVar.a(fK, f, f2);
                 if (fA2 != fK) {
                     this.f3176z.d0(fA2, new float[]{f, f2}, pointFArr, true);
-                    break;
                 }
                 break;
             case 6:
@@ -797,8 +793,8 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                     float fA3 = cVar.a(fI, 0.0f, 1.0f);
                     if (fA3 != fI) {
                         dVar.d(fA3);
-                        break;
                     }
+                    break;
                 }
                 break;
             case 7:
@@ -808,8 +804,8 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
                     float fA4 = cVar.a(fG, 0.0f, 1.0f);
                     if (fA4 != fG) {
                         eVar.b(fA4);
-                        break;
                     }
+                    break;
                 }
                 break;
         }

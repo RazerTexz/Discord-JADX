@@ -114,9 +114,7 @@ public class LombokProcessor extends AbstractProcessor {
             }
             int idx = 0;
             StringBuilder out = new StringBuilder();
-            Iterator<?> it = states.iterator();
-            while (it.hasNext()) {
-                Object processState = it.next();
+            for (Object processState : states) {
                 idx++;
                 String name = processorState_processor.get(processState).getClass().getName();
                 if (out.length() > 0) {

@@ -188,7 +188,7 @@ public abstract class ClaimStatus implements Parcelable {
             parcel.writeString(this.code);
             parcel.writeString(this.body);
             parcel.writeString(this.link);
-            UtcDateTimeParceler.INSTANCE.write((UtcDateTimeParceler) this.redeemBy, parcel, flags);
+            UtcDateTimeParceler.INSTANCE.write(this.redeemBy, parcel, flags);
         }
     }
 
@@ -299,7 +299,7 @@ public abstract class ClaimStatus implements Parcelable {
         public void writeToParcel(Parcel parcel, int flags) {
             m.checkNotNullParameter(parcel, "parcel");
             parcel.writeLong(this.promoId);
-            UtcDateTimeParceler.INSTANCE.write((UtcDateTimeParceler) this.claimBy, parcel, flags);
+            UtcDateTimeParceler.INSTANCE.write(this.claimBy, parcel, flags);
         }
     }
 

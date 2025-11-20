@@ -647,18 +647,22 @@ public final class r extends g.d<r> implements d0.e0.p.d.m0.i.o {
                         switch (tag) {
                             case 0:
                                 z2 = true;
+                                break;
                             case 8:
                                 this.bitField0_ |= 1;
                                 this.flags_ = dVar.readInt32();
+                                break;
                             case 16:
                                 this.bitField0_ |= 2;
                                 this.name_ = dVar.readInt32();
+                                break;
                             case 26:
                                 if ((i & 4) != 4) {
                                     this.typeParameter_ = new ArrayList();
                                     i |= 4;
                                 }
                                 this.typeParameter_.add(dVar.readMessage(s.k, eVar));
+                                break;
                             case 34:
                                 builder = (this.bitField0_ & 4) == 4 ? this.underlyingType_.toBuilder() : null;
                                 q qVar = (q) dVar.readMessage(q.k, eVar);
@@ -668,9 +672,11 @@ public final class r extends g.d<r> implements d0.e0.p.d.m0.i.o {
                                     this.underlyingType_ = builder.buildPartial();
                                 }
                                 this.bitField0_ |= 4;
+                                break;
                             case 40:
                                 this.bitField0_ |= 8;
                                 this.underlyingTypeId_ = dVar.readInt32();
+                                break;
                             case 50:
                                 builder = (this.bitField0_ & 16) == 16 ? this.expandedType_.toBuilder() : null;
                                 q qVar2 = (q) dVar.readMessage(q.k, eVar);
@@ -680,21 +686,25 @@ public final class r extends g.d<r> implements d0.e0.p.d.m0.i.o {
                                     this.expandedType_ = builder.buildPartial();
                                 }
                                 this.bitField0_ |= 16;
+                                break;
                             case 56:
                                 this.bitField0_ |= 32;
                                 this.expandedTypeId_ = dVar.readInt32();
+                                break;
                             case 66:
                                 if ((i & 128) != 128) {
                                     this.annotation_ = new ArrayList();
                                     i |= 128;
                                 }
                                 this.annotation_.add(dVar.readMessage(d0.e0.p.d.m0.f.b.k, eVar));
+                                break;
                             case 248:
                                 if ((i & 256) != 256) {
                                     this.versionRequirement_ = new ArrayList();
                                     i |= 256;
                                 }
                                 this.versionRequirement_.add(Integer.valueOf(dVar.readInt32()));
+                                break;
                             case 250:
                                 int iPushLimit = dVar.pushLimit(dVar.readRawVarint32());
                                 if ((i & 256) != 256 && dVar.getBytesUntilLimit() > 0) {
@@ -708,9 +718,11 @@ public final class r extends g.d<r> implements d0.e0.p.d.m0.i.o {
                                 break;
                             default:
                                 F = f(dVar, codedOutputStreamNewInstance, eVar, tag);
-                                if (F == 0) {
+                                if (F != 0) {
+                                } else {
                                     z2 = true;
                                 }
+                                break;
                         }
                     } catch (Throwable th) {
                         if ((i & 4) == F) {

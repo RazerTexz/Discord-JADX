@@ -413,6 +413,6 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends d0<ViewStat
                 z2 = false;
             }
         }
-        super.updateViewState((GuildRoleSubscriptionTierBenefitViewModel) ViewState.copy$default(viewState, z2, null, null, null, null, null, null, 126, null));
+        super.updateViewState(ViewState.copy$default(viewState, z2, null, null, null, null, null, null, 126, null));
     }
 }

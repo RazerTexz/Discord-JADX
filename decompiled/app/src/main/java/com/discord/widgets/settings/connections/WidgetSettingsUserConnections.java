@@ -178,7 +178,7 @@ public final class WidgetSettingsUserConnections extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, UserConnectionItem data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 ConnectedAccount connection = data.getConnectedAccount().getConnection();
                 Platform platformFrom = Platform.INSTANCE.from(connection);
                 String id2 = connection.getId();

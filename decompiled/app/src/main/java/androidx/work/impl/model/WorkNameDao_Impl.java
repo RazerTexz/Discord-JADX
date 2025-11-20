@@ -101,7 +101,7 @@ public final class WorkNameDao_Impl implements WorkNameDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfWorkName.insert((EntityInsertionAdapter<WorkName>) workName);
+            this.__insertionAdapterOfWorkName.insert(workName);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

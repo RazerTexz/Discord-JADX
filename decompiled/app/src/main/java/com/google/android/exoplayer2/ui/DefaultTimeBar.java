@@ -361,7 +361,6 @@ public class DefaultTimeBar extends View implements o {
                         if (e(positionIncrement)) {
                             removeCallbacks(this.F);
                             postDelayed(this.F, 1000L);
-                            break;
                         }
                         break;
                     case 22:
@@ -371,7 +370,6 @@ public class DefaultTimeBar extends View implements o {
                     case 23:
                         if (this.P) {
                             g(false);
-                            break;
                         }
                         break;
                 }

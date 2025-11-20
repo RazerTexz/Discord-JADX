@@ -73,7 +73,7 @@ public final class SettingsGuildBoostSampleGuildAdapter extends MGRecyclerAdapte
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             int premiumSubscriptionCount = data.getGuild().getPremiumSubscriptionCount();
             SimpleDraweeView simpleDraweeView = this.binding.c;
             m.checkNotNullExpressionValue(simpleDraweeView, "binding.boostedSampleGuildIcon");

@@ -46,7 +46,7 @@ public final class BlockBackgroundNode<R extends BasicRenderContext> extends Nod
 
     @Override // com.discord.simpleast.core.node.Node.a, com.discord.simpleast.core.node.Node
     public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) {
-        render(spannableStringBuilder, (SpannableStringBuilder) obj);
+        render(spannableStringBuilder, (BasicRenderContext) obj);
     }
 
     @Override // com.discord.utilities.textprocessing.node.Spoilerable
@@ -60,7 +60,7 @@ public final class BlockBackgroundNode<R extends BasicRenderContext> extends Nod
         m.checkNotNullParameter(renderContext, "renderContext");
         ensureEndsWithNewline(builder);
         int length = builder.length();
-        super.render(builder, (SpannableStringBuilder) renderContext);
+        super.render(builder, renderContext);
         ensureEndsWithNewline(builder);
         Context context = renderContext.getContext();
         if (getIsRevealed()) {

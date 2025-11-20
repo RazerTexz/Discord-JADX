@@ -81,6 +81,7 @@ public final class f implements l {
                             if (Boolean.TRUE.equals(Class.forName("com.google.android.exoplayer2.ext.flac.FlacLibrary").getMethod("isAvailable", new Class[0]).invoke(null, new Object[0]))) {
                                 aVar.f1176b = Class.forName("com.google.android.exoplayer2.ext.flac.FlacExtractor").asSubclass(h.class).getConstructor(Integer.TYPE);
                             }
+                            break;
                         } catch (ClassNotFoundException unused) {
                         } catch (Exception e) {
                             throw new RuntimeException("Error instantiating FLAC extension", e);
@@ -95,6 +96,7 @@ public final class f implements l {
                     } catch (Exception e2) {
                         throw new IllegalStateException("Unexpected error creating FLAC extractor", e2);
                     }
+                    break;
                 }
                 if (hVarNewInstance != null) {
                     list.add(hVarNewInstance);

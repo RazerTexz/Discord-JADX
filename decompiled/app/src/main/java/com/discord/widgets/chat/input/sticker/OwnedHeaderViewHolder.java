@@ -54,7 +54,7 @@ public final class OwnedHeaderViewHolder extends MGRecyclerViewHolder<WidgetStic
     public void onConfigure2(int position, MGRecyclerDataPayload data) {
         HeaderType headerType;
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         if (!(data instanceof HeaderItem)) {
             data = null;
         }

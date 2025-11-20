@@ -733,11 +733,13 @@ public class m {
                                             default:
                                                 throw new IllegalArgumentException();
                                         }
+                                        break;
                                 }
                                 j(1);
                                 return;
                         }
                 }
+                break;
         }
     }
 

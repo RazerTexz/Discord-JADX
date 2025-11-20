@@ -30,7 +30,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -876,8 +875,11 @@ public class ConstraintSet {
                                                     Log.w(ConstraintSet.TAG, sbU2.toString());
                                                     break;
                                             }
+                                            break;
                                     }
+                                    break;
                             }
+                            break;
                     }
                 } else {
                     this.constrainedHeight = typedArrayObtainStyledAttributes.getBoolean(index, this.constrainedHeight);
@@ -940,11 +942,10 @@ public class ConstraintSet {
                     case 3:
                         if (typedArrayObtainStyledAttributes.peekValue(index).type == 3) {
                             this.mTransitionEasing = typedArrayObtainStyledAttributes.getString(index);
-                            break;
                         } else {
                             this.mTransitionEasing = Easing.NAMED_EASING[typedArrayObtainStyledAttributes.getInteger(index, 0)];
-                            break;
                         }
+                        break;
                     case 4:
                         this.mDrawPath = typedArrayObtainStyledAttributes.getInt(index, 0);
                         break;
@@ -1535,11 +1536,10 @@ public class ConstraintSet {
                 case 65:
                     if (typedArray.peekValue(index).type == 3) {
                         constraint.motion.mTransitionEasing = typedArray.getString(index);
-                        break;
                     } else {
                         constraint.motion.mTransitionEasing = Easing.NAMED_EASING[typedArray.getInteger(index, 0)];
-                        break;
                     }
+                    break;
                 case 66:
                     constraint.motion.mDrawPath = typedArray.getInt(index, 0);
                     break;
@@ -1741,7 +1741,7 @@ public class ConstraintSet {
 
     public void applyToInternal(ConstraintLayout constraintLayout, boolean z2) {
         int childCount = constraintLayout.getChildCount();
-        HashSet hashSet = new HashSet(this.mConstraints.keySet());
+        HashSet<Integer> hashSet = new HashSet(this.mConstraints.keySet());
         for (int i = 0; i < childCount; i++) {
             View childAt = constraintLayout.getChildAt(i);
             int id2 = childAt.getId();
@@ -1815,9 +1815,7 @@ public class ConstraintSet {
                 }
             }
         }
-        Iterator it = hashSet.iterator();
-        while (it.hasNext()) {
-            Integer num = (Integer) it.next();
+        for (Integer num : hashSet) {
             Constraint constraint2 = this.mConstraints.get(num);
             int i3 = constraint2.layout.mHelperType;
             if (i3 != -1 && i3 == 1) {
@@ -2782,11 +2780,10 @@ public class ConstraintSet {
                             case -2025855158:
                                 if (!name.equals("Layout")) {
                                     c = 65535;
-                                    break;
                                 } else {
                                     c = 5;
-                                    break;
                                 }
+                                break;
                             case -1984451626:
                                 if (name.equals("Motion")) {
                                     c = 6;
@@ -2853,6 +2850,7 @@ public class ConstraintSet {
                                 } else {
                                     throw new RuntimeException(ERROR_MESSAGE + xmlPullParser.getLineNumber());
                                 }
+                                break;
                             case 4:
                                 if (constraint != null) {
                                     constraint.transform.fillFromAttributeList(context, Xml.asAttributeSet(xmlPullParser));
@@ -2860,6 +2858,7 @@ public class ConstraintSet {
                                 } else {
                                     throw new RuntimeException(ERROR_MESSAGE + xmlPullParser.getLineNumber());
                                 }
+                                break;
                             case 5:
                                 if (constraint != null) {
                                     constraint.layout.fillFromAttributeList(context, Xml.asAttributeSet(xmlPullParser));
@@ -2867,6 +2866,7 @@ public class ConstraintSet {
                                 } else {
                                     throw new RuntimeException(ERROR_MESSAGE + xmlPullParser.getLineNumber());
                                 }
+                                break;
                             case 6:
                                 if (constraint != null) {
                                     constraint.motion.fillFromAttributeList(context, Xml.asAttributeSet(xmlPullParser));
@@ -2874,6 +2874,7 @@ public class ConstraintSet {
                                 } else {
                                     throw new RuntimeException(ERROR_MESSAGE + xmlPullParser.getLineNumber());
                                 }
+                                break;
                             case 7:
                                 if (constraint != null) {
                                     ConstraintAttribute.parse(context, xmlPullParser, constraint.mCustomConstraints);
@@ -2881,6 +2882,7 @@ public class ConstraintSet {
                                 } else {
                                     throw new RuntimeException(ERROR_MESSAGE + xmlPullParser.getLineNumber());
                                 }
+                                break;
                         }
                         constraint = constraintFillFromAttributeList;
                     } else if (eventType != 3) {

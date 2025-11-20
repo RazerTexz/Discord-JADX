@@ -324,10 +324,8 @@ public final class TextViewCompat {
                 break;
             default:
                 if (!z2) {
-                    break;
-                } else {
-                    break;
                 }
+                break;
         }
         return TextDirectionHeuristics.LTR;
     }

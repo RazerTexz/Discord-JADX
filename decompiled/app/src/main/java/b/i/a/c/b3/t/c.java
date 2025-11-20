@@ -433,11 +433,10 @@ public final class c extends b.i.a.c.b3.f {
                 case -934795532:
                     if (!attributeName.equals(ModelAuditLogEntry.CHANGE_KEY_REGION)) {
                         c = 65535;
-                        break;
                     } else {
                         c = 0;
-                        break;
                     }
+                    break;
                 case 99841:
                     if (attributeName.equals("dur")) {
                         c = 1;
@@ -623,6 +622,7 @@ public final class c extends b.i.a.c.b3.f {
                         fVarK.g = 0;
                         break;
                     }
+                    break;
                 case "fontWeight":
                     fVarK = k(fVarK);
                     fVarK.h = "bold".equalsIgnoreCase(attributeValue) ? 1 : 0;
@@ -635,6 +635,7 @@ public final class c extends b.i.a.c.b3.f {
                     } else {
                         break;
                     }
+                    break;
                 case "ruby":
                     String strU12 = b.i.a.f.e.o.f.u1(attributeValue);
                     strU12.hashCode();
@@ -697,6 +698,7 @@ public final class c extends b.i.a.c.b3.f {
                             break;
                         }
                     }
+                    break;
                 case "color":
                     fVarK = k(fVarK);
                     try {
@@ -708,6 +710,7 @@ public final class c extends b.i.a.c.b3.f {
                         Log.w("TtmlDecoder", strValueOf.length() != 0 ? "Failed parsing color value: ".concat(strValueOf) : new String("Failed parsing color value: "));
                         break;
                     }
+                    break;
                 case "shear":
                     f fVarK2 = k(fVarK);
                     Matcher matcher = q.matcher(attributeValue);
@@ -717,6 +720,7 @@ public final class c extends b.i.a.c.b3.f {
                             String strGroup = matcher.group(1);
                             Objects.requireNonNull(strGroup);
                             fMin = Math.min(100.0f, Math.max(-100.0f, Float.parseFloat(strGroup)));
+                            break;
                         } catch (NumberFormatException e) {
                             String strValueOf2 = String.valueOf(attributeValue);
                             q.c("TtmlDecoder", strValueOf2.length() != 0 ? "Failed to parse shear: ".concat(strValueOf2) : new String("Failed to parse shear: "), e);
@@ -742,6 +746,7 @@ public final class c extends b.i.a.c.b3.f {
                     } else {
                         break;
                     }
+                    break;
                 case "fontSize":
                     try {
                         fVarK = k(fVarK);
@@ -752,6 +757,7 @@ public final class c extends b.i.a.c.b3.f {
                         Log.w("TtmlDecoder", strValueOf4.length() != 0 ? "Failed parsing fontSize value: ".concat(strValueOf4) : new String("Failed parsing fontSize value: "));
                         break;
                     }
+                    break;
                 case "textEmphasis":
                     fVarK = k(fVarK);
                     Pattern pattern = b.i.a.c.b3.t.b.a;
@@ -856,6 +862,7 @@ public final class c extends b.i.a.c.b3.f {
                     } else {
                         break;
                     }
+                    break;
                 case "backgroundColor":
                     fVarK = k(fVarK);
                     try {
@@ -867,6 +874,7 @@ public final class c extends b.i.a.c.b3.f {
                         Log.w("TtmlDecoder", strValueOf5.length() != 0 ? "Failed parsing background value: ".concat(strValueOf5) : new String("Failed parsing background value: "));
                         break;
                     }
+                    break;
                 case "multiRowAlign":
                     fVarK = k(fVarK);
                     fVarK.p = m(attributeValue);
@@ -921,11 +929,10 @@ public final class c extends b.i.a.c.b3.f {
             case 102:
                 if (!strGroup4.equals("f")) {
                     c = 65535;
-                    break;
                 } else {
                     c = 0;
-                    break;
                 }
+                break;
             case 104:
                 if (strGroup4.equals("h")) {
                     c = 1;

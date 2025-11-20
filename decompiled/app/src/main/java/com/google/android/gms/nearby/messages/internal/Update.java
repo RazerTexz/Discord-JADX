@@ -156,7 +156,6 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
                                     case 10:
                                         try {
                                             b2 = bArr2[i6];
-                                            break;
                                         } catch (Exception e) {
                                             e = e;
                                             bArr = bArr2;
@@ -169,6 +168,7 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
                                             sbS.append("}");
                                             return sbS.toString();
                                         }
+                                        break;
                                 }
                             } else {
                                 sparseArray.put(((bArr2[i6 + 1] & 255) << 8) + (bArr2[i6] & 255), e.b(bArr2, i6 + 2, i5 - 2));

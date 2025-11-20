@@ -194,16 +194,14 @@ public final class FailedUploadList extends LinearLayout {
             ((FailedUploadView) it.next()).setVisibility(8);
         }
         if (!localAttachments.isEmpty()) {
-            ArrayList arrayList = new ArrayList(o.collectionSizeOrDefault(localAttachments, 10));
+            ArrayList<Attachment> arrayList = new ArrayList(o.collectionSizeOrDefault(localAttachments, 10));
             Iterator<T> it2 = localAttachments.iterator();
             while (it2.hasNext()) {
                 arrayList.add(AttachmentUtilsKt.toAttachment((LocalAttachment) it2.next()));
             }
             if (arrayList.size() <= 3) {
                 ArrayList arrayList2 = new ArrayList(o.collectionSizeOrDefault(arrayList, 10));
-                Iterator it3 = arrayList.iterator();
-                while (it3.hasNext()) {
-                    Attachment attachment = (Attachment) it3.next();
+                for (Attachment attachment : arrayList) {
                     String displayName = attachment.getDisplayName();
                     Uri uri = attachment.getUri();
                     Context context = getContext();
@@ -218,9 +216,9 @@ public final class FailedUploadList extends LinearLayout {
                 c0354b = new b.a(arrayList2);
             } else {
                 long jComputeFileSizeBytes2 = 0;
-                Iterator it4 = arrayList.iterator();
-                while (it4.hasNext()) {
-                    Uri uri2 = ((Attachment) it4.next()).getUri();
+                Iterator it3 = arrayList.iterator();
+                while (it3.hasNext()) {
+                    Uri uri2 = ((Attachment) it3.next()).getUri();
                     Context context3 = getContext();
                     m.checkNotNullExpressionValue(context3, "context");
                     ContentResolver contentResolver2 = context3.getContentResolver();

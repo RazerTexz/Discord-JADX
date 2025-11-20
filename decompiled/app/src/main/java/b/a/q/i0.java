@@ -63,20 +63,19 @@ public final class i0 implements PowerManager.OnThermalStatusChangedListener, Ru
                     if (m) {
                         ((Handler) j.getValue()).removeCallbacks(this);
                         m = false;
-                        break;
                     }
+                    break;
                 }
                 break;
             case 1:
             case 2:
                 if (!l) {
                     b.c.a.a0.d.e1("ThermalDetector", "pretty warm: ignoring low priority thermal status = " + thermalStatus);
-                    break;
                 } else {
                     b.c.a.a0.d.d1("ThermalDetector", "cooling down: thermal status = " + thermalStatus);
                     c();
-                    break;
                 }
+                break;
             case 3:
             case 4:
             case 5:

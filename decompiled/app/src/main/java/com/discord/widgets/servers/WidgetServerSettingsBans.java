@@ -123,7 +123,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
                 User user;
                 User user2;
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 TextView textView = this.binding.d;
                 m.checkNotNullExpressionValue(textView, "binding.banListItemName");
                 ModelBan ban = data.getBan();

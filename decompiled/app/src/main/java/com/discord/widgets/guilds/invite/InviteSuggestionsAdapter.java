@@ -78,7 +78,7 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, InviteSuggestionItemV2 data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             boolean z2 = data instanceof InviteSuggestionItemV2.ChannelItem;
             if (z2) {
                 InviteSuggestionItemV2.ChannelItem channelItem = (InviteSuggestionItemV2.ChannelItem) data;

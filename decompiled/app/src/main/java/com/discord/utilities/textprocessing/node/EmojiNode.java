@@ -112,7 +112,7 @@ public final class EmojiNode<T extends RenderContext> extends a<T> implements Sp
             if (emojiNodeFrom == null) {
                 simpleDraweeSpanTextView.setText(messageReactionEmoji != null ? messageReactionEmoji.getName() : null);
             } else {
-                emojiNodeFrom.render((SpannableStringBuilder) draweeSpanStringBuilder, (DraweeSpanStringBuilder) new EmojiNode$Companion$renderEmoji$1(simpleDraweeSpanTextView, z2));
+                emojiNodeFrom.render((SpannableStringBuilder) draweeSpanStringBuilder, new EmojiNode$Companion$renderEmoji$1(simpleDraweeSpanTextView, z2));
                 simpleDraweeSpanTextView.setDraweeSpanStringBuilder(draweeSpanStringBuilder);
             }
         }
@@ -430,7 +430,7 @@ public final class EmojiNode<T extends RenderContext> extends a<T> implements Sp
 
     @Override // b.a.t.b.a.a, com.discord.simpleast.core.node.Node
     public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) {
-        render(spannableStringBuilder, (SpannableStringBuilder) obj);
+        render(spannableStringBuilder, (RenderContext) obj);
     }
 
     public final void setJumbo(boolean z2) {

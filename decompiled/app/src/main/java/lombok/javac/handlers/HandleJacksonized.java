@@ -143,17 +143,15 @@ public class HandleJacksonized extends JavacAnnotationHandler<Jacksonized> {
 
     private static List<JCTree.JCAnnotation> findJacksonAnnotationsOnClass(JavacNode node) {
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
-        Iterator<JavacNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : node.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION) {
                 JCTree.JCAnnotation annotation = child.get();
-                Iterator<String> it2 = HandlerUtil.JACKSON_COPY_TO_BUILDER_ANNOTATIONS.iterator();
+                Iterator<String> it = HandlerUtil.JACKSON_COPY_TO_BUILDER_ANNOTATIONS.iterator();
                 while (true) {
-                    if (!it2.hasNext()) {
+                    if (!it.hasNext()) {
                         break;
                     }
-                    String bn = it2.next();
+                    String bn = it.next();
                     if (JavacHandlerUtil.typeMatches(bn, node, annotation.annotationType)) {
                         result.append(annotation);
                         break;

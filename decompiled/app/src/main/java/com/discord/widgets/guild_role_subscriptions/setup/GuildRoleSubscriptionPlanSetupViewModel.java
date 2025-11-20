@@ -426,7 +426,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends d0<ViewState>
     /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
         m.checkNotNullParameter(viewState, "viewState");
-        super.updateViewState((GuildRoleSubscriptionPlanSetupViewModel) ViewState.copy$default(viewState, 0, false, computeCanProceedToNextStep(viewState), null, null, null, null, 123, null));
+        super.updateViewState(ViewState.copy$default(viewState, 0, false, computeCanProceedToNextStep(viewState), null, null, null, null, 123, null));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

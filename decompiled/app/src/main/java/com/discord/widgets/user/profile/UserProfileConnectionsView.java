@@ -160,7 +160,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ConnectedAccountItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ConnectedAccount connectedAccount = data.getConnectedAccount();
             String name = connectedAccount.getName();
             Platform platformFrom = Platform.INSTANCE.from(connectedAccount);

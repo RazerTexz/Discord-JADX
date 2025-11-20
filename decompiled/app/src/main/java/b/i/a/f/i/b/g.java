@@ -563,7 +563,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final boolean K(b.i.a.f.h.l.e1 e1Var, boolean z2) throws IllegalStateException {
+    public final boolean K(b.i.a.f.h.l.e1 e1Var, boolean z2) {
         b();
         n();
         b.c.a.a0.d.w(e1Var.G1());
@@ -697,7 +697,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final boolean O(String str, int i2, b.i.a.f.h.l.l0 l0Var) throws IllegalStateException {
+    public final boolean O(String str, int i2, b.i.a.f.h.l.l0 l0Var) {
         n();
         b();
         b.c.a.a0.d.w(str);
@@ -727,7 +727,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final boolean P(String str, int i2, b.i.a.f.h.l.o0 o0Var) throws IllegalStateException {
+    public final boolean P(String str, int i2, b.i.a.f.h.l.o0 o0Var) {
         n();
         b();
         b.c.a.a0.d.w(str);
@@ -944,7 +944,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final void V(String str, String str2) throws IllegalStateException {
+    public final void V(String str, String str2) {
         b.c.a.a0.d.w(str);
         b.c.a.a0.d.w(str2);
         b();
@@ -1123,7 +1123,7 @@ public final class g extends i9 {
     }
 
     @WorkerThread
-    public final int a0(String str, String str2) throws IllegalStateException {
+    public final int a0(String str, String str2) {
         b.c.a.a0.d.w(str);
         b.c.a.a0.d.w(str2);
         b();

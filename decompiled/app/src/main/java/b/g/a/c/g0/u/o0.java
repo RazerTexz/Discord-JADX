@@ -29,21 +29,19 @@ public abstract class o0 {
                     Objects.requireNonNull(xVar);
                     if (!xVar.D(b.g.a.c.w.WRITE_DATE_KEYS_AS_TIMESTAMPS)) {
                         dVar.y(xVar.j().format(date));
-                        break;
                     } else {
                         dVar.y(String.valueOf(date.getTime()));
-                        break;
                     }
+                    break;
                 case 2:
                     long timeInMillis = ((Calendar) obj).getTimeInMillis();
                     Objects.requireNonNull(xVar);
                     if (!xVar.D(b.g.a.c.w.WRITE_DATE_KEYS_AS_TIMESTAMPS)) {
                         dVar.y(xVar.j().format(new Date(timeInMillis)));
-                        break;
                     } else {
                         dVar.y(String.valueOf(timeInMillis));
-                        break;
                     }
+                    break;
                 case 3:
                     dVar.y(((Class) obj).getName());
                     break;

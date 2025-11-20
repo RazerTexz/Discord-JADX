@@ -58,11 +58,10 @@ public class ClassReader {
                 case 1:
                     cpInfoSize = 3 + readUnsignedShort(currentCpInfoOffset + 1);
                     if (cpInfoSize <= currentMaxStringLength) {
-                        break;
                     } else {
                         currentMaxStringLength = cpInfoSize;
-                        break;
                     }
+                    break;
                 case 2:
                 case 13:
                 case 14:
@@ -1238,6 +1237,7 @@ public class ClassReader {
                         default:
                             throw new IllegalArgumentException();
                     }
+                    break;
                 case Opcodes.MULTIANEWARRAY /* 197 */:
                     currentOffset += 4;
                     break;
@@ -1679,11 +1679,10 @@ public class ClassReader {
                                     }
                                     if (opcode == 185) {
                                         currentOffset6 += 5;
-                                        break;
                                     } else {
                                         currentOffset6 += 3;
-                                        break;
                                     }
+                                    break;
                                 case Opcodes.INVOKEDYNAMIC /* 186 */:
                                     int cpInfoOffset2 = this.cpInfoOffsets[readUnsignedShort(currentOffset6 + 1)];
                                     int nameAndTypeCpInfoOffset2 = this.cpInfoOffsets[readUnsignedShort(cpInfoOffset2 + 2)];
@@ -1712,12 +1711,11 @@ public class ClassReader {
                                     if (opcode4 == 132) {
                                         methodVisitor.visitIincInsn(readUnsignedShort(currentOffset6 + 2), readShort(currentOffset6 + 4));
                                         currentOffset6 += 6;
-                                        break;
                                     } else {
                                         methodVisitor.visitVarInsn(opcode4, readUnsignedShort(currentOffset6 + 2));
                                         currentOffset6 += 4;
-                                        break;
                                     }
+                                    break;
                                 case Opcodes.MULTIANEWARRAY /* 197 */:
                                     methodVisitor.visitMultiANewArrayInsn(readClass(currentOffset6 + 1, charBuffer), classBuffer[currentOffset6 + 3] & 255);
                                     currentOffset6 += 4;
@@ -1979,7 +1977,6 @@ public class ClassReader {
                         int i2 = tableLength;
                         tableLength--;
                         if (i2 <= 0) {
-                            break;
                         } else {
                             int startPc = readUnsignedShort(currentOffset);
                             int length = readUnsignedShort(currentOffset + 2);
@@ -1987,7 +1984,9 @@ public class ClassReader {
                             createLabel(startPc, context.currentMethodLabels);
                             createLabel(startPc + length, context.currentMethodLabels);
                         }
+                        break;
                     }
+                    break;
                 case 71:
                 case 72:
                 case 73:
@@ -2350,6 +2349,7 @@ public class ClassReader {
                             annotationVisitor.visit(elementName, booleanValues);
                             break;
                     }
+                    break;
                 case 99:
                     annotationVisitor.visit(elementName, Type.getType(readUTF8(currentOffset2, charBuffer)));
                     currentOffset = currentOffset2 + 2;

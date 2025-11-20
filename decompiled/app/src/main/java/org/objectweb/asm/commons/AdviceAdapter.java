@@ -467,7 +467,6 @@ public abstract class AdviceAdapter extends GeneratorAdapter implements Opcodes 
                     if (value == UNINITIALIZED_THIS && !this.superClassConstructorCalled && name.equals("<init>")) {
                         this.superClassConstructorCalled = true;
                         onMethodEnter();
-                        break;
                     }
                     break;
             }

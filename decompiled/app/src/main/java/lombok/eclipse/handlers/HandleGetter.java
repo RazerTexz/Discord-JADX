@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import lombok.AccessLevel;
@@ -152,19 +151,14 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
         if (checkForTypeLevelGetter && EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Getter.class, typeNode)) {
             return true;
         }
-        TypeDeclaration typeDecl = null;
-        if (typeNode.get() instanceof TypeDeclaration) {
-            typeDecl = (TypeDeclaration) typeNode.get();
-        }
+        TypeDeclaration typeDecl = typeNode.get() instanceof TypeDeclaration ? (TypeDeclaration) typeNode.get() : null;
         int modifiers = typeDecl == null ? 0 : typeDecl.modifiers;
         boolean notAClass = (modifiers & 8704) != 0;
         if (typeDecl == null || notAClass) {
             pos.addError("@Getter is only supported on a class, an enum, or a field.");
             return false;
         }
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode field = it.next();
+        for (EclipseNode field : typeNode.down()) {
             if (fieldQualifiesForGetterGeneration(field)) {
                 generateGetterForField(field, pos.get(), level, false, onMethod);
             }
@@ -271,9 +265,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
 
     public static Annotation[] findDelegatesAndMarkAsHandled(EclipseNode fieldNode) {
         List<Annotation> delegates = new ArrayList<>();
-        Iterator<EclipseNode> it = fieldNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : fieldNode.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Delegate.class, child)) {
                 Annotation delegate = child.get();
                 PatchDelegate.markHandled(delegate);

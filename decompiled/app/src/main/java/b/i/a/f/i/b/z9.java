@@ -100,11 +100,10 @@ public final class z9 implements Parcelable.Creator<zzn> {
                     if (iM1 != 0) {
                         b.c.a.a0.d.z2(parcel, i, iM1, 4);
                         boolValueOf = Boolean.valueOf(parcel.readInt() != 0);
-                        break;
                     } else {
                         boolValueOf = null;
-                        break;
                     }
+                    break;
                 case 22:
                     jH15 = b.c.a.a0.d.H1(parcel, i);
                     break;

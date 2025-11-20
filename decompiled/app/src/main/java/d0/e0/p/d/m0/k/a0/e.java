@@ -72,37 +72,33 @@ public abstract class e extends j {
             r.addAll(arrayList2, l.a.getContributedDescriptors$default(((c0) it.next()).getMemberScope(), null, null, 3, null));
         }
         ArrayList arrayList3 = new ArrayList();
-        Iterator it2 = arrayList2.iterator();
-        while (it2.hasNext()) {
-            Object next = it2.next();
-            if (next instanceof d0.e0.p.d.m0.c.b) {
-                arrayList3.add(next);
+        for (Object obj : arrayList2) {
+            if (obj instanceof d0.e0.p.d.m0.c.b) {
+                arrayList3.add(obj);
             }
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        Iterator it3 = arrayList3.iterator();
-        while (it3.hasNext()) {
-            Object next2 = it3.next();
-            d0.e0.p.d.m0.g.e name = ((d0.e0.p.d.m0.c.b) next2).getName();
+        for (Object obj2 : arrayList3) {
+            d0.e0.p.d.m0.g.e name = ((d0.e0.p.d.m0.c.b) obj2).getName();
             Object arrayList4 = linkedHashMap.get(name);
             if (arrayList4 == null) {
                 arrayList4 = new ArrayList();
                 linkedHashMap.put(name, arrayList4);
             }
-            ((List) arrayList4).add(next2);
+            ((List) arrayList4).add(obj2);
         }
         for (Map.Entry entry : linkedHashMap.entrySet()) {
             d0.e0.p.d.m0.g.e eVar2 = (d0.e0.p.d.m0.g.e) entry.getKey();
             List list2 = (List) entry.getValue();
             LinkedHashMap linkedHashMap2 = new LinkedHashMap();
-            for (Object obj : list2) {
-                Boolean boolValueOf = Boolean.valueOf(((d0.e0.p.d.m0.c.b) obj) instanceof x);
+            for (Object obj3 : list2) {
+                Boolean boolValueOf = Boolean.valueOf(((d0.e0.p.d.m0.c.b) obj3) instanceof x);
                 Object arrayList5 = linkedHashMap2.get(boolValueOf);
                 if (arrayList5 == null) {
                     arrayList5 = new ArrayList();
                     linkedHashMap2.put(boolValueOf, arrayList5);
                 }
-                ((List) arrayList5).add(obj);
+                ((List) arrayList5).add(obj3);
             }
             for (Map.Entry entry2 : linkedHashMap2.entrySet()) {
                 boolean zBooleanValue = ((Boolean) entry2.getKey()).booleanValue();
@@ -110,9 +106,9 @@ public abstract class e extends j {
                 d0.e0.p.d.m0.k.k kVar = d0.e0.p.d.m0.k.k.f3468b;
                 if (zBooleanValue) {
                     collectionEmptyList = new ArrayList();
-                    for (Object obj2 : list) {
-                        if (d0.z.d.m.areEqual(((x) obj2).getName(), eVar2)) {
-                            collectionEmptyList.add(obj2);
+                    for (Object obj4 : list) {
+                        if (d0.z.d.m.areEqual(((x) obj4).getName(), eVar2)) {
+                            collectionEmptyList.add(obj4);
                         }
                     }
                 } else {

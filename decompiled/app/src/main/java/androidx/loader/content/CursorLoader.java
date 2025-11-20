@@ -165,7 +165,7 @@ public class CursorLoader extends AsyncTaskLoader<Cursor> {
         Cursor cursor2 = this.mCursor;
         this.mCursor = cursor;
         if (isStarted()) {
-            super.deliverResult((CursorLoader) cursor);
+            super.deliverResult(cursor);
         }
         if (cursor2 == null || cursor2 == cursor || cursor2.isClosed()) {
             return;

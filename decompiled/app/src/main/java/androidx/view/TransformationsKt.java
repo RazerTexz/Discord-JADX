@@ -42,7 +42,7 @@ public final class TransformationsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // androidx.arch.core.util.Function
         public /* bridge */ /* synthetic */ Object apply(Object obj) {
-            return apply((AnonymousClass1<I, O, X, Y>) obj);
+            return apply(obj);
         }
     }
 

@@ -170,7 +170,7 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfWorkProgress.insert((EntityInsertionAdapter<WorkProgress>) workProgress);
+            this.__insertionAdapterOfWorkProgress.insert(workProgress);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

@@ -769,7 +769,7 @@ public final class d extends d0.e0.p.d.m0.c.i1.a implements d0.e0.p.d.m0.c.m {
 
     public static final Collection access$computeConstructors(d dVar) {
         List<d0.e0.p.d.m0.f.d> constructorList = dVar.o.getConstructorList();
-        ArrayList arrayListA0 = b.d.b.a.a.a0(constructorList, "classProto.constructorList");
+        ArrayList<d0.e0.p.d.m0.f.d> arrayListA0 = b.d.b.a.a.a0(constructorList, "classProto.constructorList");
         for (Object obj : constructorList) {
             Boolean bool = d0.e0.p.d.m0.f.z.b.l.get(((d0.e0.p.d.m0.f.d) obj).getFlags());
             d0.z.d.m.checkNotNullExpressionValue(bool, "IS_SECONDARY.get(it.flags)");
@@ -778,9 +778,7 @@ public final class d extends d0.e0.p.d.m0.c.i1.a implements d0.e0.p.d.m0.c.m {
             }
         }
         ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(arrayListA0, 10));
-        Iterator it = arrayListA0.iterator();
-        while (it.hasNext()) {
-            d0.e0.p.d.m0.f.d dVar2 = (d0.e0.p.d.m0.f.d) it.next();
+        for (d0.e0.p.d.m0.f.d dVar2 : arrayListA0) {
             d0.e0.p.d.m0.l.b.u memberDeserializer = dVar.getC().getMemberDeserializer();
             d0.z.d.m.checkNotNullExpressionValue(dVar2, "it");
             arrayList.add(memberDeserializer.loadConstructor(dVar2, false));

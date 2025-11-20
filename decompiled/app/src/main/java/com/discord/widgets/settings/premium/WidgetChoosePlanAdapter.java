@@ -68,7 +68,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2347b;
             m.checkNotNullExpressionValue(textView, "binding.selectSubscriptionHeaderText");
             b.n(textView, ((Item.Header) data).getTitleStringResId(), new Object[0], null, 4);
@@ -354,7 +354,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             Item.Plan plan = (Item.Plan) data;
             TextView textView = this.binding.f;
             m.checkNotNullExpressionValue(textView, "binding.planItemName");

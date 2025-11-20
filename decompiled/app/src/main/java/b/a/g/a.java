@@ -6,7 +6,6 @@ import d0.z.d.m;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.PriorityQueue;
@@ -167,7 +166,7 @@ public final class a {
             }
             return;
         }
-        PriorityQueue priorityQueue = new PriorityQueue(i, C0032a.j);
+        PriorityQueue<c> priorityQueue = new PriorityQueue(i, C0032a.j);
         priorityQueue.offer(new c(0, i5 - 1));
         while (priorityQueue.size() < i && (cVar = (c) priorityQueue.poll()) != null) {
             int i8 = cVar.h;
@@ -220,9 +219,7 @@ public final class a {
             priorityQueue.offer(cVar);
         }
         ArrayList arrayList = new ArrayList(priorityQueue.size());
-        Iterator it = priorityQueue.iterator();
-        while (it.hasNext()) {
-            c cVar3 = (c) it.next();
+        for (c cVar3 : priorityQueue) {
             int i19 = cVar3.g;
             int i20 = cVar3.h;
             if (i19 <= i20) {

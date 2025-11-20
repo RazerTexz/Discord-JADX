@@ -77,14 +77,12 @@ public class c {
         public void a(boolean z2) {
             Object obj = c.a;
             synchronized (c.a) {
-                Iterator it = new ArrayList(c.c.values()).iterator();
-                while (it.hasNext()) {
-                    c cVar = (c) it.next();
+                for (c cVar : new ArrayList(c.c.values())) {
                     if (cVar.h.get()) {
                         Log.d("FirebaseApp", "Notifying background state change listeners.");
-                        Iterator<b> it2 = cVar.k.iterator();
-                        while (it2.hasNext()) {
-                            it2.next().a(z2);
+                        Iterator<b> it = cVar.k.iterator();
+                        while (it.hasNext()) {
+                            it.next().a(z2);
                         }
                     }
                 }

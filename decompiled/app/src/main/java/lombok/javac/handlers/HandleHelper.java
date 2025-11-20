@@ -60,9 +60,7 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
         while (it.hasNext() && it.next() != jCStatement) {
         }
         java.util.List<String> knownMethodNames = new ArrayList<>();
-        Iterator<JavacNode> it2 = annotatedType.down().iterator();
-        while (it2.hasNext()) {
-            JavacNode ch = it2.next();
+        for (JavacNode ch : annotatedType.down()) {
             if (ch.getKind() == AST.Kind.METHOD && (n = ch.getName()) != null && !n.isEmpty() && n.charAt(0) != '<') {
                 knownMethodNames.add(n);
             }
@@ -82,9 +80,7 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
         }
         ListBuffer<JCTree.JCStatement> newStatements = new ListBuffer<>();
         boolean mark = false;
-        Iterator it3 = origStatements.iterator();
-        while (it3.hasNext()) {
-            JCTree.JCStatement stat = (JCTree.JCStatement) it3.next();
+        for (JCTree.JCStatement stat : origStatements) {
             newStatements.append(stat);
             if (!mark && stat == jCStatement) {
                 mark = true;

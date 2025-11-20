@@ -77,7 +77,7 @@ public final class WidgetCollapsedUsersListAdapter extends MGRecyclerAdapterSimp
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, CollapsedUser data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data.getExtraCount() <= 0) {
                 if (data.getEmptySlot()) {
                     return;

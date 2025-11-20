@@ -2319,18 +2319,16 @@ public abstract class FragmentManager implements FragmentResultOwner {
             return;
         }
         this.mFragmentStore.resetActiveFragments();
-        Iterator<FragmentState> it = fragmentManagerState.mActive.iterator();
-        while (it.hasNext()) {
-            FragmentState next = it.next();
-            if (next != null) {
-                Fragment fragmentFindRetainedFragmentByWho = this.mNonConfig.findRetainedFragmentByWho(next.mWho);
+        for (FragmentState fragmentState : fragmentManagerState.mActive) {
+            if (fragmentState != null) {
+                Fragment fragmentFindRetainedFragmentByWho = this.mNonConfig.findRetainedFragmentByWho(fragmentState.mWho);
                 if (fragmentFindRetainedFragmentByWho != null) {
                     if (isLoggingEnabled(2)) {
                         Log.v(TAG, "restoreSaveState: re-attaching retained " + fragmentFindRetainedFragmentByWho);
                     }
-                    fragmentStateManager = new FragmentStateManager(this.mLifecycleCallbacksDispatcher, this.mFragmentStore, fragmentFindRetainedFragmentByWho, next);
+                    fragmentStateManager = new FragmentStateManager(this.mLifecycleCallbacksDispatcher, this.mFragmentStore, fragmentFindRetainedFragmentByWho, fragmentState);
                 } else {
-                    fragmentStateManager = new FragmentStateManager(this.mLifecycleCallbacksDispatcher, this.mFragmentStore, this.mHost.getContext().getClassLoader(), getFragmentFactory(), next);
+                    fragmentStateManager = new FragmentStateManager(this.mLifecycleCallbacksDispatcher, this.mFragmentStore, this.mHost.getContext().getClassLoader(), getFragmentFactory(), fragmentState);
                 }
                 Fragment fragment = fragmentStateManager.getFragment();
                 fragment.mFragmentManager = this;

@@ -341,10 +341,10 @@ public final class b {
                                         if (!z3) {
                                             wVar.c();
                                             i8 = i13;
-                                            break;
                                         } else {
                                             z2 = z3;
                                         }
+                                        break;
                                     } else {
                                         int iG8 = wVar.g(2);
                                         if (iG8 == 0) {
@@ -394,6 +394,7 @@ public final class b {
                             }
                             z2 = z3;
                         }
+                        break;
                     case 17:
                         if (i == 3) {
                             bArr4 = bArrA2 == null ? c : bArrA2;
@@ -468,13 +469,13 @@ public final class b {
                                     if (!z4) {
                                         wVar.c();
                                         i8 = i14;
-                                        break;
                                     } else {
                                         z6 = z4;
                                         i12 = 2;
                                         i11 = 4;
                                         i10 = 8;
                                     }
+                                    break;
                                 } else {
                                     z6 = true;
                                     z4 = z6;
@@ -489,6 +490,7 @@ public final class b {
                                 }
                             }
                         }
+                        break;
                     case 18:
                         int i15 = i8;
                         boolean z7 = false;
@@ -520,11 +522,12 @@ public final class b {
                             i15 += iG6;
                             if (z5) {
                                 i8 = i15;
-                                break;
                             } else {
                                 z7 = z5;
                             }
+                            break;
                         }
+                        break;
                     default:
                         switch (iG7) {
                             case 32:
@@ -537,6 +540,7 @@ public final class b {
                                 bArrA2 = a(16, 8, wVar);
                                 break;
                         }
+                        break;
                 }
             } else {
                 i9 += 2;

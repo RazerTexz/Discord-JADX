@@ -142,22 +142,20 @@ public final class e {
                 byte intValue = (byte) cVar.getIntValue();
                 if (zBooleanValue) {
                     dVar = new d0.e0.p.d.m0.k.v.x(intValue);
-                    break;
                 } else {
                     dVar = new d0.e0.p.d.m0.k.v.d(intValue);
-                    break;
                 }
+                break;
             case 2:
                 return new d0.e0.p.d.m0.k.v.e((char) cVar.getIntValue());
             case 3:
                 short intValue2 = (short) cVar.getIntValue();
                 if (zBooleanValue) {
                     dVar = new d0.e0.p.d.m0.k.v.a0(intValue2);
-                    break;
                 } else {
                     dVar = new d0.e0.p.d.m0.k.v.v(intValue2);
-                    break;
                 }
+                break;
             case 4:
                 int intValue3 = (int) cVar.getIntValue();
                 return zBooleanValue ? new d0.e0.p.d.m0.k.v.y(intValue3) : new d0.e0.p.d.m0.k.v.m(intValue3);

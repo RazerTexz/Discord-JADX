@@ -639,7 +639,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Drawable drawable;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ListItem.EmbeddedActivityItem embeddedActivityItem = (ListItem.EmbeddedActivityItem) data;
             Application application = embeddedActivityItem.getApplication();
             if (!this.isCallPreview) {
@@ -714,7 +714,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) throws Resources.NotFoundException {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ListItem.Event) {
                 ListItem.Event event = (ListItem.Event) data;
                 this.binding.f2220b.configureInVoiceChannel(event.getEvent(), null, event.getCanStartEvent() && event.isCurrentUserInCall(), event.isCurrentUserInCall(), event.isCurrentUserInCall(), this.isCallPreview, new CallParticipantsAdapter$ViewHolderEvent$onConfigure$1(this, data), new CallParticipantsAdapter$ViewHolderEvent$onConfigure$2(this, data));
@@ -746,7 +746,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ListItem.Header) {
                 this.binding.f2221b.setText(((ListItem.Header) data).getStringResId());
                 return;
@@ -790,7 +790,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ListItem.Invite) {
                 this.itemView.setOnClickListener(new CallParticipantsAdapter$ViewHolderInvite$onConfigure$1(this));
                 if (this.isCallPreview) {
@@ -873,7 +873,7 @@ public final class CallParticipantsAdapter extends MGRecyclerAdapterSimple<MGRec
             CharSequence charSequenceJ;
             CharSequence charSequenceJ2;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ListItem.VoiceUser voiceUser = (ListItem.VoiceUser) data;
             StoreVoiceParticipants.VoiceUser participant = voiceUser.getParticipant();
             String colorId = RepresentativeColorsKt.getColorId(participant.getUser());

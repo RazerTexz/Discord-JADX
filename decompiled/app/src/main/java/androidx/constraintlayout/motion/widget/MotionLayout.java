@@ -670,38 +670,32 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             sparseArray.clear();
             sparseArray.put(0, constraintWidgetContainer);
             sparseArray.put(MotionLayout.this.getId(), constraintWidgetContainer);
-            Iterator<ConstraintWidget> it = constraintWidgetContainer.getChildren().iterator();
-            while (it.hasNext()) {
-                ConstraintWidget next = it.next();
-                sparseArray.put(((View) next.getCompanionWidget()).getId(), next);
+            for (ConstraintWidget constraintWidget : constraintWidgetContainer.getChildren()) {
+                sparseArray.put(((View) constraintWidget.getCompanionWidget()).getId(), constraintWidget);
             }
-            Iterator<ConstraintWidget> it2 = constraintWidgetContainer.getChildren().iterator();
-            while (it2.hasNext()) {
-                ConstraintWidget next2 = it2.next();
-                View view = (View) next2.getCompanionWidget();
+            for (ConstraintWidget constraintWidget2 : constraintWidgetContainer.getChildren()) {
+                View view = (View) constraintWidget2.getCompanionWidget();
                 constraintSet.applyToLayoutParams(view.getId(), layoutParams);
-                next2.setWidth(constraintSet.getWidth(view.getId()));
-                next2.setHeight(constraintSet.getHeight(view.getId()));
+                constraintWidget2.setWidth(constraintSet.getWidth(view.getId()));
+                constraintWidget2.setHeight(constraintSet.getHeight(view.getId()));
                 if (view instanceof ConstraintHelper) {
-                    constraintSet.applyToHelper((ConstraintHelper) view, next2, layoutParams, sparseArray);
+                    constraintSet.applyToHelper((ConstraintHelper) view, constraintWidget2, layoutParams, sparseArray);
                     if (view instanceof Barrier) {
                         ((Barrier) view).validateParams();
                     }
                 }
                 layoutParams.resolveLayoutDirection(MotionLayout.this.getLayoutDirection());
-                MotionLayout.access$800(MotionLayout.this, false, view, next2, layoutParams, sparseArray);
+                MotionLayout.access$800(MotionLayout.this, false, view, constraintWidget2, layoutParams, sparseArray);
                 if (constraintSet.getVisibilityMode(view.getId()) == 1) {
-                    next2.setVisibility(view.getVisibility());
+                    constraintWidget2.setVisibility(view.getVisibility());
                 } else {
-                    next2.setVisibility(constraintSet.getVisibility(view.getId()));
+                    constraintWidget2.setVisibility(constraintSet.getVisibility(view.getId()));
                 }
             }
-            Iterator<ConstraintWidget> it3 = constraintWidgetContainer.getChildren().iterator();
-            while (it3.hasNext()) {
-                ConstraintWidget next3 = it3.next();
-                if (next3 instanceof VirtualLayout) {
-                    ConstraintHelper constraintHelper = (ConstraintHelper) next3.getCompanionWidget();
-                    Helper helper = (Helper) next3;
+            for (ConstraintWidget constraintWidget3 : constraintWidgetContainer.getChildren()) {
+                if (constraintWidget3 instanceof VirtualLayout) {
+                    ConstraintHelper constraintHelper = (ConstraintHelper) constraintWidget3.getCompanionWidget();
+                    Helper helper = (Helper) constraintWidget3;
                     constraintHelper.updatePreLayout(constraintWidgetContainer, helper, sparseArray);
                     ((VirtualLayout) helper).captureWidgets();
                 }
@@ -745,17 +739,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             map.put(constraintWidgetContainer, constraintWidgetContainer2);
             constraintWidgetContainer2.getChildren().clear();
             constraintWidgetContainer2.copy(constraintWidgetContainer, map);
-            Iterator<ConstraintWidget> it = children.iterator();
-            while (it.hasNext()) {
-                ConstraintWidget next = it.next();
-                ConstraintWidget barrier = next instanceof androidx.constraintlayout.solver.widgets.Barrier ? new androidx.constraintlayout.solver.widgets.Barrier() : next instanceof Guideline ? new Guideline() : next instanceof Flow ? new Flow() : next instanceof Helper ? new HelperWidget() : new ConstraintWidget();
+            for (ConstraintWidget constraintWidget : children) {
+                ConstraintWidget barrier = constraintWidget instanceof androidx.constraintlayout.solver.widgets.Barrier ? new androidx.constraintlayout.solver.widgets.Barrier() : constraintWidget instanceof Guideline ? new Guideline() : constraintWidget instanceof Flow ? new Flow() : constraintWidget instanceof Helper ? new HelperWidget() : new ConstraintWidget();
                 constraintWidgetContainer2.add(barrier);
-                map.put(next, barrier);
+                map.put(constraintWidget, barrier);
             }
-            Iterator<ConstraintWidget> it2 = children.iterator();
-            while (it2.hasNext()) {
-                ConstraintWidget next2 = it2.next();
-                map.get(next2).copy(next2, map);
+            for (ConstraintWidget constraintWidget2 : children) {
+                map.get(constraintWidget2).copy(constraintWidget2, map);
             }
         }
 
@@ -1146,15 +1136,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
         checkStructure(startId, motionScene2.getConstraintSet(motionScene2.getStartId()));
         SparseIntArray sparseIntArray = new SparseIntArray();
         SparseIntArray sparseIntArray2 = new SparseIntArray();
-        Iterator<MotionScene.Transition> it = this.mScene.getDefinedTransitions().iterator();
-        while (it.hasNext()) {
-            MotionScene.Transition next = it.next();
-            if (next == this.mScene.mCurrentTransition) {
+        for (MotionScene.Transition transition : this.mScene.getDefinedTransitions()) {
+            if (transition == this.mScene.mCurrentTransition) {
                 Log.v(TAG, "CHECK: CURRENT");
             }
-            checkStructure(next);
-            int startConstraintSetId = next.getStartConstraintSetId();
-            int endConstraintSetId = next.getEndConstraintSetId();
+            checkStructure(transition);
+            int startConstraintSetId = transition.getStartConstraintSetId();
+            int endConstraintSetId = transition.getEndConstraintSetId();
             String name = Debug.getName(getContext(), startConstraintSetId);
             String name2 = Debug.getName(getContext(), endConstraintSetId);
             if (sparseIntArray.get(startConstraintSetId) == endConstraintSetId) {
@@ -1361,18 +1349,16 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             return;
         }
         this.mIsAnimating = false;
-        Iterator<Integer> it = this.mTransitionCompleted.iterator();
-        while (it.hasNext()) {
-            Integer next = it.next();
+        for (Integer num : this.mTransitionCompleted) {
             TransitionListener transitionListener = this.mTransitionListener;
             if (transitionListener != null) {
-                transitionListener.onTransitionCompleted(this, next.intValue());
+                transitionListener.onTransitionCompleted(this, num.intValue());
             }
             ArrayList<TransitionListener> arrayList2 = this.mTransitionListeners;
             if (arrayList2 != null) {
-                Iterator<TransitionListener> it2 = arrayList2.iterator();
-                while (it2.hasNext()) {
-                    it2.next().onTransitionCompleted(this, next.intValue());
+                Iterator<TransitionListener> it = arrayList2.iterator();
+                while (it.hasNext()) {
+                    it.next().onTransitionCompleted(this, num.intValue());
                 }
             }
         }

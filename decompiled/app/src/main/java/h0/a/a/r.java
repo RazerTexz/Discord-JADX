@@ -1344,11 +1344,10 @@ public final class r extends q {
                         case 0:
                             if (i5 >= 64) {
                                 c2 = 251;
-                                break;
                             } else {
                                 c2 = 0;
-                                break;
                             }
+                            break;
                         case 1:
                         case 2:
                         case 3:

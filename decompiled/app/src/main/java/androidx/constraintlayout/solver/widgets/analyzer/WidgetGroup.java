@@ -7,7 +7,6 @@ import androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer;
 import b.d.b.a.a;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /* loaded from: classes.dex */
 public class WidgetGroup {
@@ -168,14 +167,12 @@ public class WidgetGroup {
     }
 
     public void moveTo(int i, WidgetGroup widgetGroup) {
-        Iterator<ConstraintWidget> it = this.widgets.iterator();
-        while (it.hasNext()) {
-            ConstraintWidget next = it.next();
-            widgetGroup.add(next);
+        for (ConstraintWidget constraintWidget : this.widgets) {
+            widgetGroup.add(constraintWidget);
             if (i == 0) {
-                next.horizontalGroup = widgetGroup.getId();
+                constraintWidget.horizontalGroup = widgetGroup.getId();
             } else {
-                next.verticalGroup = widgetGroup.getId();
+                constraintWidget.verticalGroup = widgetGroup.getId();
             }
         }
         this.moveTo = widgetGroup.f33id;
@@ -198,11 +195,9 @@ public class WidgetGroup {
         sb.append(getOrientationString());
         sb.append(" [");
         String strB = a.B(sb, this.f33id, "] <");
-        Iterator<ConstraintWidget> it = this.widgets.iterator();
-        while (it.hasNext()) {
-            ConstraintWidget next = it.next();
+        for (ConstraintWidget constraintWidget : this.widgets) {
             StringBuilder sbX = a.X(strB, " ");
-            sbX.append(next.getDebugName());
+            sbX.append(constraintWidget.getDebugName());
             strB = sbX.toString();
         }
         return a.w(strB, " >");

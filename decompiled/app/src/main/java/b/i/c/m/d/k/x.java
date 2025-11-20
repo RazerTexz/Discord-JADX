@@ -765,7 +765,7 @@ public class x {
                     z0 z0Var = new z0(fileL);
                     File fileB2 = z0Var.b(strO);
                     File fileA = z0Var.a(strO);
-                    ArrayList arrayList2 = new ArrayList();
+                    ArrayList<a1> arrayList2 = new ArrayList();
                     arrayList2.add(new b.i.c.m.d.k.f("logs_file", "logs", bArrC));
                     arrayList2.add(new u0("crash_meta_file", "metadata", dVarB.f()));
                     arrayList2.add(new u0("session_meta_file", "session", dVarB.e()));
@@ -775,9 +775,7 @@ public class x {
                     arrayList2.add(new u0("minidump_file", "minidump", dVarB.d()));
                     arrayList2.add(new u0("user_meta_file", "user", fileB2));
                     arrayList2.add(new u0("keys_file", "keys", fileA));
-                    Iterator it = arrayList2.iterator();
-                    while (it.hasNext()) {
-                        a1 a1Var = (a1) it.next();
+                    for (a1 a1Var : arrayList2) {
                         try {
                             inputStreamH = a1Var.h();
                             if (inputStreamH != null) {
@@ -802,9 +800,9 @@ public class x {
                     String strReplaceAll = strO.replaceAll("-", "");
                     Objects.requireNonNull(d1Var2);
                     ArrayList arrayList3 = new ArrayList();
-                    Iterator it2 = arrayList2.iterator();
-                    while (it2.hasNext()) {
-                        v.c.a aVarB = ((a1) it2.next()).b();
+                    Iterator it = arrayList2.iterator();
+                    while (it.hasNext()) {
+                        v.c.a aVarB = ((a1) it.next()).b();
                         if (aVarB != null) {
                             arrayList3.add(aVarB);
                         }
@@ -948,9 +946,9 @@ public class x {
         listF = b.i.c.m.d.o.g.f(gVar3.g, new b.i.c.m.d.o.b(strT));
         Collections.sort(listF, b.i.c.m.d.o.g.d);
         if (listF.size() > 8) {
-            Iterator<File> it3 = listF.subList(8, listF.size()).iterator();
-            while (it3.hasNext()) {
-                b.i.c.m.d.o.g.k(it3.next());
+            Iterator<File> it2 = listF.subList(8, listF.size()).iterator();
+            while (it2.hasNext()) {
+                b.i.c.m.d.o.g.k(it2.next());
             }
             listF = listF.subList(0, 8);
         }
@@ -1069,9 +1067,9 @@ public class x {
         if (size > 4) {
             return;
         }
-        Iterator it4 = arrayList5.subList(4, size).iterator();
-        while (it4.hasNext()) {
-            ((File) it4.next()).delete();
+        Iterator it3 = arrayList5.subList(4, size).iterator();
+        while (it3.hasNext()) {
+            ((File) it3.next()).delete();
         }
     }
 

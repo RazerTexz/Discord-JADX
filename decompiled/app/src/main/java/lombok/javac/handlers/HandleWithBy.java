@@ -11,7 +11,6 @@ import com.sun.tools.javac.util.ListBuffer;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
 import java.util.Collection;
-import java.util.Iterator;
 import javax.lang.model.type.TypeKind;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
@@ -113,19 +112,14 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
         if (checkForTypeLevelWithBy && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) WithBy.class, typeNode)) {
             return;
         }
-        JCTree.JCClassDecl typeDecl = null;
-        if (typeNode.get() instanceof JCTree.JCClassDecl) {
-            typeDecl = (JCTree.JCClassDecl) typeNode.get();
-        }
+        JCTree.JCClassDecl typeDecl = typeNode.get() instanceof JCTree.JCClassDecl ? (JCTree.JCClassDecl) typeNode.get() : null;
         long modifiers = typeDecl == null ? 0L : typeDecl.mods.flags;
         boolean notAClass = (modifiers & 25088) != 0;
         if (typeDecl == null || notAClass) {
             errorNode.addError("@WithBy is only supported on a class or a field.");
             return;
         }
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode field = it.next();
+        for (JavacNode field : typeNode.down()) {
             if (field.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl fieldDecl = field.get();
                 if (!fieldDecl.name.toString().startsWith("$") && (fieldDecl.mods.flags & 8) == 0 && ((fieldDecl.mods.flags & 16) == 0 || fieldDecl.init == null)) {
@@ -296,9 +290,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
                 return null;
             }
             ListBuffer<JCTree.JCExpression> args = new ListBuffer<>();
-            Iterator<JavacNode> it = field.up().down().iterator();
-            while (it.hasNext()) {
-                JavacNode child = it.next();
+            for (JavacNode child : field.up().down()) {
                 if (child.getKind() == AST.Kind.FIELD) {
                     JCTree.JCVariableDecl childDecl = child.get();
                     if (!childDecl.name.toString().startsWith("$")) {

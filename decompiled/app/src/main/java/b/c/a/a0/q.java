@@ -61,6 +61,7 @@ public class q {
                         z3 = false;
                         continue;
                     }
+                    break;
                 case 6:
                     pointFB4 = p.b(cVar, f);
                     continue;

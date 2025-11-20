@@ -109,7 +109,7 @@ public final class WidgetChannelSelector extends AppBottomSheet {
             public void onConfigure2(int position, Model.Item data) {
                 CharSequence charSequenceJ;
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 this.binding.a.setOnClickListener(new WidgetChannelSelector$Adapter$ItemChannel$onConfigure$1(this, data));
                 TextView textView = this.binding.f2268b;
                 m.checkNotNullExpressionValue(textView, "binding.itemName");

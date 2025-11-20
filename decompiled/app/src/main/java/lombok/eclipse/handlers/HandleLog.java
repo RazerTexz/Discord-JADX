@@ -136,28 +136,29 @@ public class HandleLog {
                 if (typeDecl == null || notAClass) {
                     annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " is legal only on classes and enums.");
                     break;
-                } else if (EclipseHandlerUtil.fieldExists(logFieldName.getName(), owner) != EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS) {
-                    annotationNode.addWarning("Field '" + logFieldName + "' already exists.");
-                    break;
                 } else {
-                    Object valueGuess = annotation.getValueGuess(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-                    StringLiteral stringLiteral = (Expression) annotation.getActualExpression(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
-                    if ((valueGuess instanceof String) && ((String) valueGuess).trim().isEmpty()) {
-                        stringLiteral = null;
+                    if (EclipseHandlerUtil.fieldExists(logFieldName.getName(), owner) != EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS) {
+                        annotationNode.addWarning("Field '" + logFieldName + "' already exists.");
+                    } else {
+                        Object valueGuess = annotation.getValueGuess(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+                        StringLiteral stringLiteral = (Expression) annotation.getActualExpression(ModelAuditLogEntry.CHANGE_KEY_TOPIC);
+                        if ((valueGuess instanceof String) && ((String) valueGuess).trim().isEmpty()) {
+                            stringLiteral = null;
+                        }
+                        if (framework.getDeclaration().getParametersWithTopic() == null && stringLiteral != null) {
+                            annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " does not allow a topic.");
+                            stringLiteral = null;
+                        }
+                        if (framework.getDeclaration().getParametersWithoutTopic() == null && stringLiteral == null) {
+                            annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " requires a topic.");
+                            stringLiteral = new StringLiteral(new char[0], 0, 0, 0);
+                        }
+                        ClassLiteralAccess loggingType = selfType(owner, source);
+                        FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, logFieldName.getName(), useStatic, stringLiteral);
+                        fieldDeclaration.traverse(new SetGeneratedByVisitor(source), typeDecl.staticInitializerScope);
+                        EclipseHandlerUtil.injectField(owner, fieldDeclaration);
+                        owner.rebuild();
                     }
-                    if (framework.getDeclaration().getParametersWithTopic() == null && stringLiteral != null) {
-                        annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " does not allow a topic.");
-                        stringLiteral = null;
-                    }
-                    if (framework.getDeclaration().getParametersWithoutTopic() == null && stringLiteral == null) {
-                        annotationNode.addError(String.valueOf(framework.getAnnotationAsString()) + " requires a topic.");
-                        stringLiteral = new StringLiteral(new char[0], 0, 0, 0);
-                    }
-                    ClassLiteralAccess loggingType = selfType(owner, source);
-                    FieldDeclaration fieldDeclaration = createField(framework, source, loggingType, logFieldName.getName(), useStatic, stringLiteral);
-                    fieldDeclaration.traverse(new SetGeneratedByVisitor(source), typeDecl.staticInitializerScope);
-                    EclipseHandlerUtil.injectField(owner, fieldDeclaration);
-                    owner.rebuild();
                     break;
                 }
                 break;

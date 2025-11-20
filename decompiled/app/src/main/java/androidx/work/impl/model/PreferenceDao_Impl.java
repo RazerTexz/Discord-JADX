@@ -127,7 +127,7 @@ public final class PreferenceDao_Impl implements PreferenceDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfPreference.insert((EntityInsertionAdapter<Preference>) preference);
+            this.__insertionAdapterOfPreference.insert(preference);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

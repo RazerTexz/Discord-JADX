@@ -33,7 +33,7 @@ public final class m<D, E, V> extends r<D, E, V> implements KProperty, Function2
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function3
         public /* bridge */ /* synthetic */ Object invoke(Object obj, Object obj2, Object obj3) throws IllegalCallableAccessException {
-            m81invoke((a<D, E, V>) obj, obj2, obj3);
+            m81invoke(obj, obj2, obj3);
             return Unit.a;
         }
 

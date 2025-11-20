@@ -127,9 +127,7 @@ public class HandleConstructor {
 
     private static List<EclipseNode> findFields(EclipseNode typeNode, boolean nullMarked) {
         List<EclipseNode> fields = new ArrayList<>();
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : typeNode.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fieldDecl = child.get();
                 if (EclipseHandlerUtil.filterField(fieldDecl)) {
@@ -152,9 +150,7 @@ public class HandleConstructor {
 
     static List<EclipseNode> findAllFields(EclipseNode typeNode, boolean evenFinalInitialized) {
         List<EclipseNode> fields = new ArrayList<>();
-        Iterator<EclipseNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : typeNode.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fieldDecl = child.get();
                 if (EclipseHandlerUtil.filterField(fieldDecl) && (evenFinalInitialized || (fieldDecl.modifiers & 16) == 0 || fieldDecl.initialization == null)) {
@@ -224,9 +220,7 @@ public class HandleConstructor {
         ASTNode source = sourceNode.get();
         boolean staticConstrRequired = (staticName == null || staticName.equals("")) ? false : true;
         if (skipIfConstructorExists != SkipIfConstructorExists.NO) {
-            Iterator<EclipseNode> it = typeNode.down().iterator();
-            while (it.hasNext()) {
-                EclipseNode child = it.next();
+            for (EclipseNode child : typeNode.down()) {
                 if (child.getKind() == AST.Kind.ANNOTATION) {
                     boolean skipGeneration = EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) NoArgsConstructor.class, child) || EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) AllArgsConstructor.class, child) || EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) RequiredArgsConstructor.class, child);
                     if (!skipGeneration && skipIfConstructorExists == SkipIfConstructorExists.YES) {
@@ -272,9 +266,7 @@ public class HandleConstructor {
                 }
             }
         }
-        Iterator<EclipseNode> it = node2.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode child = it.next();
+        for (EclipseNode child : node2.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) NoArgsConstructor.class, child)) {
                 return true;
             }
@@ -433,16 +425,14 @@ public class HandleConstructor {
 
     private static List<EclipseNode> fieldsNeedingBuilderDefaults(EclipseNode type, Collection<EclipseNode> fieldsToParam) {
         List<EclipseNode> out = new ArrayList<>();
-        Iterator<EclipseNode> it = type.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode node = it.next();
+        for (EclipseNode node : type.down()) {
             if (node.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fd = node.get();
                 if ((fd.modifiers & 8) == 0) {
-                    Iterator<EclipseNode> it2 = fieldsToParam.iterator();
+                    Iterator<EclipseNode> it = fieldsToParam.iterator();
                     while (true) {
-                        if (it2.hasNext()) {
-                            EclipseNode ftp = it2.next();
+                        if (it.hasNext()) {
+                            EclipseNode ftp = it.next();
                             if (node == ftp) {
                                 break;
                             }
@@ -458,16 +448,14 @@ public class HandleConstructor {
 
     private static List<EclipseNode> fieldsNeedingExplicitDefaults(EclipseNode type, Collection<EclipseNode> fieldsToParam) {
         List<EclipseNode> out = new ArrayList<>();
-        Iterator<EclipseNode> it = type.down().iterator();
-        while (it.hasNext()) {
-            EclipseNode node = it.next();
+        for (EclipseNode node : type.down()) {
             if (node.getKind() == AST.Kind.FIELD) {
                 FieldDeclaration fd = node.get();
                 if (fd.initialization == null && (fd.modifiers & 16) != 0 && (fd.modifiers & 8) == 0) {
-                    Iterator<EclipseNode> it2 = fieldsToParam.iterator();
+                    Iterator<EclipseNode> it = fieldsToParam.iterator();
                     while (true) {
-                        if (it2.hasNext()) {
-                            EclipseNode ftp = it2.next();
+                        if (it.hasNext()) {
+                            EclipseNode ftp = it.next();
                             if (node == ftp) {
                                 break;
                             }

@@ -55,7 +55,7 @@ public final class StickerViewHolder extends MGRecyclerViewHolder<WidgetChatInpu
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, AutocompleteStickerItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StickerView.e(this.binding.f2147b, data.getSticker(), null, 2);
         this.binding.f2147b.b();
         this.binding.a.setOnClickListener(new AnonymousClass1(data));

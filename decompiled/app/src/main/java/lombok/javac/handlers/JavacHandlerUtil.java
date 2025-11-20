@@ -631,14 +631,12 @@ public class JavacHandlerUtil {
             case 5:
             case 7:
             case 8:
-                Iterator<JavacNode> it = node.down().iterator();
-                while (it.hasNext()) {
-                    JavacNode child = it.next();
+                for (JavacNode child : node.down()) {
                     if (annotationTypeMatches(type, child)) {
                         if (delete) {
                             deleteAnnotationIfNeccessary(child, type);
-                            break;
                         }
+                        break;
                     }
                 }
                 break;
@@ -656,14 +654,12 @@ public class JavacHandlerUtil {
             case 5:
             case 7:
             case 8:
-                Iterator<JavacNode> it = node.down().iterator();
-                while (it.hasNext()) {
-                    JavacNode child = it.next();
+                for (JavacNode child : node.down()) {
                     if (annotationTypeMatches(type, child)) {
                         if (delete) {
                             deleteAnnotationIfNeccessary(child, type);
-                            break;
                         }
+                        break;
                     }
                 }
                 break;
@@ -672,9 +668,7 @@ public class JavacHandlerUtil {
     }
 
     public static JavacNode findInnerClass(JavacNode parent, String name) {
-        Iterator<JavacNode> it = parent.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : parent.down()) {
             if (child.getKind() == AST.Kind.TYPE) {
                 JCTree.JCClassDecl td = child.get();
                 if (td.name.contentEquals(name)) {
@@ -760,9 +754,7 @@ public class JavacHandlerUtil {
         if ((fieldNode.mods.flags & Permission.MENTION_EVERYONE) != 0) {
             return true;
         }
-        Iterator<JavacNode> it = field.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : field.down()) {
             if (annotationTypeMatches((Class<? extends Annotation>) Deprecated.class, child)) {
                 return true;
             }
@@ -788,9 +780,7 @@ public class JavacHandlerUtil {
         String mName;
         Map<String, AnnotationValues.AnnotationValue> values = new HashMap<>();
         List<JCTree.JCExpression> arguments = anno.getArguments();
-        Iterator it = arguments.iterator();
-        while (it.hasNext()) {
-            JCTree.JCExpression arg = (JCTree.JCExpression) it.next();
+        for (JCTree.JCExpression arg : arguments) {
             java.util.List<String> raws = new ArrayList<>();
             java.util.List<Object> guesses = new ArrayList<>();
             java.util.List<Object> expressions = new ArrayList<>();
@@ -805,9 +795,9 @@ public class JavacHandlerUtil {
             }
             if (rhs instanceof JCTree.JCNewArray) {
                 List<JCTree.JCExpression> elems = ((JCTree.JCNewArray) rhs).elems;
-                Iterator it2 = elems.iterator();
-                while (it2.hasNext()) {
-                    JCTree.JCAnnotation jCAnnotation = (JCTree.JCExpression) it2.next();
+                Iterator it = elems.iterator();
+                while (it.hasNext()) {
+                    JCTree.JCAnnotation jCAnnotation = (JCTree.JCExpression) it.next();
                     raws.add(jCAnnotation.toString());
                     expressions.add(jCAnnotation);
                     if (jCAnnotation instanceof JCTree.JCAnnotation) {
@@ -926,10 +916,9 @@ public class JavacHandlerUtil {
                     try {
                         JCTree.JCClassDecl type = parentNode.get();
                         type.mods.annotations = filterList(type.mods.annotations, annotation.get());
-                        break;
                     } catch (ClassCastException unused) {
-                        break;
                     }
+                    break;
                 case 3:
                 case 7:
                 case 8:
@@ -956,9 +945,7 @@ public class JavacHandlerUtil {
         if (!inNetbeansEditor(node) && node.shouldDeleteLombokAnnotations()) {
             ListBuffer<JCTree> newDefs = new ListBuffer<>();
             JCTree.JCCompilationUnit unit = node.top().get();
-            Iterator it = unit.defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCImport jCImport = (JCTree) it.next();
+            for (JCTree.JCImport jCImport : unit.defs) {
                 boolean delete = false;
                 if (jCImport instanceof JCTree.JCImport) {
                     JCTree.JCImport imp0rt = jCImport;
@@ -974,9 +961,7 @@ public class JavacHandlerUtil {
 
     private static List<JCTree.JCAnnotation> filterList(List<JCTree.JCAnnotation> annotations, JCTree jcTree) {
         ListBuffer<JCTree.JCAnnotation> newAnnotations = new ListBuffer<>();
-        Iterator it = annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation ann : annotations) {
             if (jcTree != ann) {
                 newAnnotations.append(ann);
             }
@@ -1065,9 +1050,7 @@ public class JavacHandlerUtil {
                 if (current == null) {
                     break;
                 }
-                Iterator<JavacNode> it2 = current.down().iterator();
-                while (it2.hasNext()) {
-                    JavacNode node2 = it2.next();
+                for (JavacNode node2 : current.down()) {
                     if (annotationTypeMatches((Class<? extends Annotation>) Accessors.class, node2)) {
                         AnnotationValues<Accessors> ann2 = createAnnotation(Accessors.class, node2);
                         if (ann2.isExplicit("prefix")) {
@@ -1085,9 +1068,7 @@ public class JavacHandlerUtil {
     }
 
     public static AnnotationValues<Accessors> getAccessorsForField(JavacNode field) {
-        Iterator<JavacNode> it = field.down().iterator();
-        while (it.hasNext()) {
-            JavacNode node = it.next();
+        for (JavacNode node : field.down()) {
             if (annotationTypeMatches((Class<? extends Annotation>) Accessors.class, node)) {
                 return createAnnotation(Accessors.class, node);
             }
@@ -1096,9 +1077,7 @@ public class JavacHandlerUtil {
         while (true) {
             JavacNode current = javacNodeUp;
             if (current != null) {
-                Iterator<JavacNode> it2 = current.down().iterator();
-                while (it2.hasNext()) {
-                    JavacNode node2 = it2.next();
+                for (JavacNode node2 : current.down()) {
                     if (annotationTypeMatches((Class<? extends Annotation>) Accessors.class, node2)) {
                         return createAnnotation(Accessors.class, node2);
                     }
@@ -1113,9 +1092,7 @@ public class JavacHandlerUtil {
     public static MemberExistsResult fieldExists(String fieldName, JavacNode node) {
         JavacNode node2 = upToTypeNode(node);
         if (node2 != null && (node2.get() instanceof JCTree.JCClassDecl)) {
-            Iterator it = node2.get().defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCVariableDecl jCVariableDecl = (JCTree) it.next();
+            for (JCTree.JCVariableDecl jCVariableDecl : node2.get().defs) {
                 if ((jCVariableDecl instanceof JCTree.JCVariableDecl) && jCVariableDecl.name.contentEquals(fieldName)) {
                     return getGeneratedBy(jCVariableDecl) == null ? MemberExistsResult.EXISTS_BY_USER : MemberExistsResult.EXISTS_BY_LOMBOK;
                 }
@@ -1131,9 +1108,7 @@ public class JavacHandlerUtil {
     public static MemberExistsResult methodExists(String methodName, JavacNode node, boolean caseSensitive, int params) {
         JavacNode node2 = upToTypeNode(node);
         if (node2 != null && (node2.get() instanceof JCTree.JCClassDecl)) {
-            Iterator it = node2.get().defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCMethodDecl jCMethodDecl = (JCTree) it.next();
+            for (JCTree.JCMethodDecl jCMethodDecl : node2.get().defs) {
                 if (jCMethodDecl instanceof JCTree.JCMethodDecl) {
                     JCTree.JCMethodDecl md = jCMethodDecl;
                     String name = md.name.toString();
@@ -1170,9 +1145,7 @@ public class JavacHandlerUtil {
     public static boolean isTolerate(JavacNode node, JCTree.JCMethodDecl md) {
         List<JCTree.JCAnnotation> annotations = md.getModifiers().getAnnotations();
         if (annotations != null) {
-            Iterator it = annotations.iterator();
-            while (it.hasNext()) {
-                JCTree.JCAnnotation anno = (JCTree.JCAnnotation) it.next();
+            for (JCTree.JCAnnotation anno : annotations) {
                 if (typeMatches((Class<?>) Tolerate.class, node, anno.getAnnotationType())) {
                     return true;
                 }
@@ -1185,9 +1158,7 @@ public class JavacHandlerUtil {
     public static MemberExistsResult constructorExists(JavacNode node) {
         JavacNode node2 = upToTypeNode(node);
         if (node2 != null && (node2.get() instanceof JCTree.JCClassDecl)) {
-            Iterator it = node2.get().defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCMethodDecl jCMethodDecl = (JCTree) it.next();
+            for (JCTree.JCMethodDecl jCMethodDecl : node2.get().defs) {
                 if (jCMethodDecl instanceof JCTree.JCMethodDecl) {
                     JCTree.JCMethodDecl md = jCMethodDecl;
                     if (md.name.contentEquals("<init>") && (md.mods.flags & Permission.CREATE_PRIVATE_THREADS) == 0 && !isTolerate(node2, md)) {
@@ -1260,9 +1231,7 @@ public class JavacHandlerUtil {
         JCTree.JCVariableDecl decl = field.get();
         JavacNode typeNode = field.up();
         for (String potentialGetterName : toAllGetterNames(field)) {
-            Iterator<JavacNode> it = typeNode.down().iterator();
-            while (it.hasNext()) {
-                JavacNode potentialGetter = it.next();
+            for (JavacNode potentialGetter : typeNode.down()) {
                 if (potentialGetter.getKind() == AST.Kind.METHOD) {
                     JCTree.JCMethodDecl method = potentialGetter.get();
                     if (method.name.toString().equalsIgnoreCase(potentialGetterName) && (method.mods.flags & 8) == 0 && (method.params == null || method.params.size() <= 0)) {
@@ -1272,9 +1241,7 @@ public class JavacHandlerUtil {
             }
         }
         boolean hasGetterAnnotation = false;
-        Iterator<JavacNode> it2 = field.down().iterator();
-        while (it2.hasNext()) {
-            JavacNode child = it2.next();
+        for (JavacNode child : field.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends Annotation>) Getter.class, child)) {
                 AnnotationValues<Getter> ann = createAnnotation(Getter.class, child);
                 if (ann.getInstance().value() == AccessLevel.NONE) {
@@ -1284,9 +1251,7 @@ public class JavacHandlerUtil {
             }
         }
         if (!hasGetterAnnotation && HandleGetter.fieldQualifiesForGetterGeneration(field) && (containingType = field.up()) != null) {
-            Iterator<JavacNode> it3 = containingType.down().iterator();
-            while (it3.hasNext()) {
-                JavacNode child2 = it3.next();
+            for (JavacNode child2 : containingType.down()) {
                 if (child2.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends Annotation>) Data.class, child2)) {
                     hasGetterAnnotation = true;
                 }
@@ -1312,9 +1277,7 @@ public class JavacHandlerUtil {
         if (fieldAccess == HandlerUtil.FieldAccess.ALWAYS_FIELD) {
             return false;
         }
-        Iterator<JavacNode> it = field.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : field.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION && annotationTypeMatches((Class<? extends Annotation>) Getter.class, child)) {
                 AnnotationValues<Getter> ann = createAnnotation(Getter.class, child);
                 if (ann.getInstance().lazy()) {
@@ -1638,9 +1601,7 @@ public class JavacHandlerUtil {
                     List<JCTree.JCAnnotation> annotations = param.getModifiers().getAnnotations();
                     if (annotations != null && !annotations.isEmpty()) {
                         ListBuffer<Attribute.Compound> newAnnotations = new ListBuffer<>();
-                        Iterator it2 = annotations.iterator();
-                        while (it2.hasNext()) {
-                            JCTree.JCAnnotation jcAnnotation = (JCTree.JCAnnotation) it2.next();
+                        for (JCTree.JCAnnotation jcAnnotation : annotations) {
                             Attribute.Compound attribute = JCAnnotationReflect.getAttribute(jcAnnotation);
                             if (attribute != null) {
                                 newAnnotations.append(attribute);
@@ -1720,9 +1681,7 @@ public class JavacHandlerUtil {
         if (LombokOptionsFactory.getDelombokOptions(context).getFormatPreferences().generateSuppressWarnings()) {
             boolean addJLSuppress = !Boolean.FALSE.equals(node.getAst().readConfiguration(ConfigurationKeys.ADD_SUPPRESSWARNINGS_ANNOTATIONS));
             if (addJLSuppress) {
-                Iterator it = mods.annotations.iterator();
-                while (it.hasNext()) {
-                    JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+                for (JCTree.JCAnnotation ann : mods.annotations) {
                     JCTree.JCIdent annotationType = ann.getAnnotationType();
                     Name n = null;
                     if (annotationType instanceof JCTree.JCIdent) {
@@ -1760,9 +1719,7 @@ public class JavacHandlerUtil {
         int idx = annotationTypeFqn.lastIndexOf(46);
         String simpleName = idx == -1 ? annotationTypeFqn : annotationTypeFqn.substring(idx + 1);
         boolean isJavaLangBased = idx == 9 && annotationTypeFqn.regionMatches(0, "java.lang.", 0, 10);
-        Iterator it = mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation ann : mods.annotations) {
             JCTree.JCIdent annotationType = ann.getAnnotationType();
             if (annotationType instanceof JCTree.JCIdent) {
                 Name lastPart = annotationType.name;
@@ -1793,9 +1750,7 @@ public class JavacHandlerUtil {
     private static List<JCTree> addAllButOne(List<JCTree> defs, int idx) {
         ListBuffer<JCTree> out = new ListBuffer<>();
         int i = 0;
-        Iterator it = defs.iterator();
-        while (it.hasNext()) {
-            JCTree def = (JCTree) it.next();
+        for (JCTree def : defs) {
             int i2 = i;
             i++;
             if (i2 != idx) {
@@ -1819,9 +1774,7 @@ public class JavacHandlerUtil {
         }
         JavacTreeMaker maker = node.getTreeMaker();
         JCTree.JCFieldAccess jCFieldAccessIdent = null;
-        Iterator<String> it = elems.iterator();
-        while (it.hasNext()) {
-            String elem = it.next();
+        for (String elem : elems) {
             jCFieldAccessIdent = jCFieldAccessIdent == null ? maker.Ident(node.toName(elem)) : maker.Select(jCFieldAccessIdent, node.toName(elem));
         }
         return jCFieldAccessIdent;
@@ -1854,9 +1807,7 @@ public class JavacHandlerUtil {
 
     public static List<JCTree.JCAnnotation> findAnnotations(JavacNode fieldNode, Pattern namePattern) {
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
-        Iterator<JavacNode> it = fieldNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : fieldNode.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION) {
                 JCTree.JCAnnotation annotation = child.get();
                 String name = annotation.annotationType.toString();
@@ -1872,9 +1823,7 @@ public class JavacHandlerUtil {
 
     public static String scanForNearestAnnotation(JavacNode node, String... anns) {
         while (node != null) {
-            Iterator<JavacNode> it = node.down().iterator();
-            while (it.hasNext()) {
-                JavacNode ann = it.next();
+            for (JavacNode ann : node.down()) {
                 if (ann.getKind() == AST.Kind.ANNOTATION) {
                     JCTree.JCAnnotation a = ann.get();
                     for (String annToFind : anns) {
@@ -1890,9 +1839,7 @@ public class JavacHandlerUtil {
     }
 
     public static boolean hasNonNullAnnotations(JavacNode node) {
-        Iterator<JavacNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : node.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION) {
                 JCTree.JCAnnotation annotation = child.get();
                 for (String nn : HandlerUtil.NONNULL_ANNOTATIONS) {
@@ -1909,9 +1856,7 @@ public class JavacHandlerUtil {
         if (anns == null) {
             return false;
         }
-        Iterator it = anns.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation ann : anns) {
             for (String nn : HandlerUtil.NONNULL_ANNOTATIONS) {
                 if (typeMatches(nn, node, (JCTree) ann)) {
                     return true;
@@ -1957,18 +1902,16 @@ public class JavacHandlerUtil {
             }
         }
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
-        Iterator<JavacNode> it2 = node.down().iterator();
-        while (it2.hasNext()) {
-            JavacNode child2 = it2.next();
+        for (JavacNode child2 : node.down()) {
             if (child2.getKind() == AST.Kind.ANNOTATION) {
                 JCTree.JCAnnotation annotation2 = child2.get();
                 boolean match = false;
-                Iterator<TypeName> it3 = configuredCopyable.iterator();
+                Iterator<TypeName> it2 = configuredCopyable.iterator();
                 while (true) {
-                    if (!it3.hasNext()) {
+                    if (!it2.hasNext()) {
                         break;
                     }
-                    TypeName cn2 = it3.next();
+                    TypeName cn2 = it2.next();
                     if (cn2 != null && typeMatches(cn2.toString(), node, annotation2.annotationType)) {
                         result.append(annotation2);
                         match = true;
@@ -1976,12 +1919,12 @@ public class JavacHandlerUtil {
                     }
                 }
                 if (!match) {
-                    Iterator<String> it4 = HandlerUtil.BASE_COPYABLE_ANNOTATIONS.iterator();
+                    Iterator<String> it3 = HandlerUtil.BASE_COPYABLE_ANNOTATIONS.iterator();
                     while (true) {
-                        if (!it4.hasNext()) {
+                        if (!it3.hasNext()) {
                             break;
                         }
-                        String bn2 = it4.next();
+                        String bn2 = it3.next();
                         if (typeMatches(bn2, node, annotation2.annotationType)) {
                             result.append(annotation2);
                             break;
@@ -2031,18 +1974,16 @@ public class JavacHandlerUtil {
             }
         }
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
-        Iterator<JavacNode> it2 = node.down().iterator();
-        while (it2.hasNext()) {
-            JavacNode child2 = it2.next();
+        for (JavacNode child2 : node.down()) {
             if (child2.getKind() == AST.Kind.ANNOTATION) {
                 JCTree.JCAnnotation annotation2 = child2.get();
                 if (0 == 0) {
-                    Iterator<String> it3 = annotationsToFind.iterator();
+                    Iterator<String> it2 = annotationsToFind.iterator();
                     while (true) {
-                        if (!it3.hasNext()) {
+                        if (!it2.hasNext()) {
                             break;
                         }
-                        String bn2 = it3.next();
+                        String bn2 = it2.next();
                         if (typeMatches(bn2, node, annotation2.annotationType)) {
                             result.append(annotation2);
                             break;
@@ -2085,9 +2026,7 @@ public class JavacHandlerUtil {
 
     public static List<Integer> createListOfNonExistentFields(List<String> list, JavacNode type, boolean excludeStandard, boolean excludeTransient) {
         boolean[] matched = new boolean[list.size()];
-        Iterator<JavacNode> it = type.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : type.down()) {
             if (list.isEmpty()) {
                 break;
             }
@@ -2115,9 +2054,7 @@ public class JavacHandlerUtil {
     static List<JCTree.JCAnnotation> unboxAndRemoveAnnotationParameter(JCTree.JCAnnotation ast, String parameterName, String errorName, JavacNode annotationNode) throws IllegalArgumentException {
         ListBuffer<JCTree.JCExpression> params = new ListBuffer<>();
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
-        Iterator it = ast.args.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAssign jCAssign = (JCTree.JCExpression) it.next();
+        for (JCTree.JCAssign jCAssign : ast.args) {
             String nameOfParam = "value";
             JCTree.JCExpression valueOfParam = null;
             if (jCAssign instanceof JCTree.JCAssign) {
@@ -2147,12 +2084,12 @@ public class JavacHandlerUtil {
                             addError(errorName, annotationNode);
                         }
                     } else {
-                        Iterator it2 = ((JCTree.JCAnnotation) valueOfParam).args.iterator();
+                        Iterator it = ((JCTree.JCAnnotation) valueOfParam).args.iterator();
                         while (true) {
-                            if (!it2.hasNext()) {
+                            if (!it.hasNext()) {
                                 break;
                             }
-                            JCTree.JCExpression expr = (JCTree.JCExpression) it2.next();
+                            JCTree.JCExpression expr = (JCTree.JCExpression) it.next();
                             if ((expr instanceof JCTree.JCAssign) && (((JCTree.JCAssign) expr).lhs instanceof JCTree.JCIdent)) {
                                 JCTree.JCIdent id2 = ((JCTree.JCAssign) expr).lhs;
                                 if ("value".equals(id2.name.toString())) {
@@ -2161,24 +2098,20 @@ public class JavacHandlerUtil {
                                     addError(errorName, annotationNode);
                                 }
                             }
-                            if (!(expr instanceof JCTree.JCAnnotation)) {
-                                if (expr instanceof JCTree.JCNewArray) {
-                                    Iterator it3 = ((JCTree.JCNewArray) expr).elems.iterator();
-                                    while (it3.hasNext()) {
-                                        JCTree.JCAnnotation jCAnnotation = (JCTree.JCExpression) it3.next();
-                                        if (jCAnnotation instanceof JCTree.JCAnnotation) {
-                                            result.append(jCAnnotation);
-                                        } else {
-                                            addError(errorName, annotationNode);
-                                            break;
-                                        }
+                            if (expr instanceof JCTree.JCAnnotation) {
+                                result.append((JCTree.JCAnnotation) expr);
+                            } else if (expr instanceof JCTree.JCNewArray) {
+                                for (JCTree.JCAnnotation jCAnnotation : ((JCTree.JCNewArray) expr).elems) {
+                                    if (jCAnnotation instanceof JCTree.JCAnnotation) {
+                                        result.append(jCAnnotation);
+                                    } else {
+                                        addError(errorName, annotationNode);
+                                        break;
                                     }
-                                } else {
-                                    addError(errorName, annotationNode);
-                                    break;
                                 }
                             } else {
-                                result.append((JCTree.JCAnnotation) expr);
+                                addError(errorName, annotationNode);
+                                break;
                             }
                         }
                     }
@@ -2186,9 +2119,7 @@ public class JavacHandlerUtil {
                     JCTree.JCNewArray arr = (JCTree.JCNewArray) valueOfParam;
                     if (!arr.elems.isEmpty()) {
                         if (allowRaw) {
-                            Iterator it4 = arr.elems.iterator();
-                            while (it4.hasNext()) {
-                                JCTree.JCAnnotation jCAnnotation2 = (JCTree.JCExpression) it4.next();
+                            for (JCTree.JCAnnotation jCAnnotation2 : arr.elems) {
                                 if (jCAnnotation2 instanceof JCTree.JCAnnotation) {
                                     result.append(jCAnnotation2);
                                 } else {
@@ -2223,15 +2154,11 @@ public class JavacHandlerUtil {
         ListBuffer<JCTree.JCTypeParameter> out = new ListBuffer<>();
         JavacTreeMaker maker = source.getTreeMaker();
         Context context = source.getContext();
-        Iterator it = params.iterator();
-        while (it.hasNext()) {
-            JCTree.JCTypeParameter tp = (JCTree.JCTypeParameter) it.next();
+        for (JCTree.JCTypeParameter tp : params) {
             List<JCTree.JCExpression> bounds = tp.bounds;
             if (bounds != null && !bounds.isEmpty()) {
                 ListBuffer<JCTree.JCExpression> boundsCopy = new ListBuffer<>();
-                Iterator it2 = tp.bounds.iterator();
-                while (it2.hasNext()) {
-                    JCTree.JCExpression expr = (JCTree.JCExpression) it2.next();
+                for (JCTree.JCExpression expr : tp.bounds) {
                     boundsCopy.append(cloneType(maker, expr, source.get(), context));
                 }
                 bounds = boundsCopy.toList();
@@ -2285,9 +2212,7 @@ public class JavacHandlerUtil {
 
     public static List<JCTree.JCExpression> typeParameterNames(JavacTreeMaker maker, List<JCTree.JCTypeParameter> params) {
         ListBuffer<JCTree.JCExpression> typeArgs = new ListBuffer<>();
-        Iterator it = params.iterator();
-        while (it.hasNext()) {
-            JCTree.JCTypeParameter param = (JCTree.JCTypeParameter) it.next();
+        for (JCTree.JCTypeParameter param : params) {
             typeArgs.append(maker.Ident(param.name));
         }
         return typeArgs.toList();
@@ -2295,9 +2220,7 @@ public class JavacHandlerUtil {
 
     public static void sanityCheckForMethodGeneratingAnnotationsOnBuilderClass(JavacNode typeNode, JavacNode errorNode) {
         List<String> disallowed = List.nil();
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : typeNode.down()) {
             for (String annType : HandlerUtil.INVALID_ON_BUILDERS) {
                 if (annotationTypeMatches(annType, child)) {
                     int lastIndex = annType.lastIndexOf(46);
@@ -2314,9 +2237,7 @@ public class JavacHandlerUtil {
             return;
         }
         StringBuilder out = new StringBuilder();
-        Iterator it2 = disallowed.iterator();
-        while (it2.hasNext()) {
-            String a = (String) it2.next();
+        for (String a : disallowed) {
             out.append("@").append(a).append(", ");
         }
         out.setLength(out.length() - 2);
@@ -2325,9 +2246,7 @@ public class JavacHandlerUtil {
 
     static List<JCTree.JCAnnotation> copyAnnotations(List<? extends JCTree.JCExpression> in) {
         ListBuffer<JCTree.JCAnnotation> out = new ListBuffer<>();
-        Iterator it = in.iterator();
-        while (it.hasNext()) {
-            JCTree.JCExpression expr = (JCTree.JCExpression) it.next();
+        for (JCTree.JCExpression expr : in) {
             if (expr instanceof JCTree.JCAnnotation) {
                 out.append((JCTree.JCAnnotation) expr.clone());
             }
@@ -2343,14 +2262,10 @@ public class JavacHandlerUtil {
             return a;
         }
         ListBuffer<JCTree.JCAnnotation> out = new ListBuffer<>();
-        Iterator it = a.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation ann : a) {
             out.append(ann);
         }
-        Iterator it2 = b2.iterator();
-        while (it2.hasNext()) {
-            JCTree.JCAnnotation ann2 = (JCTree.JCAnnotation) it2.next();
+        for (JCTree.JCAnnotation ann2 : b2) {
             out.append(ann2);
         }
         return out.toList();
@@ -2391,9 +2306,7 @@ public class JavacHandlerUtil {
             return List.of(cloneType(maker, (JCTree.JCExpression) in.get(0), source, context));
         }
         ListBuffer<JCTree.JCExpression> lb = new ListBuffer<>();
-        Iterator it = in.iterator();
-        while (it.hasNext()) {
-            JCTree.JCExpression expr = (JCTree.JCExpression) it.next();
+        for (JCTree.JCExpression expr : in) {
             lb.append(cloneType(maker, expr, source, context));
         }
         return lb.toList();
@@ -2429,9 +2342,7 @@ public class JavacHandlerUtil {
         if (in instanceof JCTree.JCTypeApply) {
             JCTree.JCTypeApply ta = (JCTree.JCTypeApply) in;
             ListBuffer<JCTree.JCExpression> lb = new ListBuffer<>();
-            Iterator it = ta.arguments.iterator();
-            while (it.hasNext()) {
-                JCTree.JCExpression typeArg = (JCTree.JCExpression) it.next();
+            for (JCTree.JCExpression typeArg : ta.arguments) {
                 lb.append(cloneType0(maker, typeArg));
             }
             return maker.TypeApply(cloneType0(maker, ta.clazz), lb.toList());

@@ -9,7 +9,6 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -36,7 +35,7 @@ public class FtsTableInfo {
             return new HashSet();
         }
         String strSubstring = str.substring(str.indexOf(40) + 1, str.lastIndexOf(41));
-        ArrayList arrayList = new ArrayList();
+        ArrayList<String> arrayList = new ArrayList();
         ArrayDeque arrayDeque = new ArrayDeque();
         int i = -1;
         for (int i2 = 0; i2 < strSubstring.length(); i2++) {
@@ -65,9 +64,7 @@ public class FtsTableInfo {
         }
         arrayList.add(strSubstring.substring(i + 1).trim());
         HashSet hashSet = new HashSet();
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            String str2 = (String) it.next();
+        for (String str2 : arrayList) {
             for (String str3 : FTS_OPTIONS) {
                 if (str2.startsWith(str3)) {
                     hashSet.add(str2);

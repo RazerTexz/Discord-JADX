@@ -104,7 +104,6 @@ public final class n4<T extends p4<T>> {
             case 7:
                 if (!(obj instanceof t3) && !(obj instanceof byte[])) {
                     z2 = false;
-                    break;
                 }
                 break;
             case 8:
@@ -185,13 +184,12 @@ public final class n4<T extends p4<T>> {
                     Logger logger7 = zzhi.a;
                     iG = ((c6) obj).g();
                     iL = zzhi.L(iG);
-                    break;
                 } else {
                     Logger logger8 = zzhi.a;
                     iG = ((d5) obj).a();
                     iL = zzhi.L(iG);
-                    break;
                 }
+                break;
             case 11:
                 return obj instanceof t3 ? zzhi.p((t3) obj) : zzhi.q((String) obj);
             case 12:
@@ -199,10 +197,10 @@ public final class n4<T extends p4<T>> {
                     Logger logger9 = zzhi.a;
                     iG = ((byte[]) obj).length;
                     iL = zzhi.L(iG);
-                    break;
                 } else {
                     return zzhi.p((t3) obj);
                 }
+                break;
             case 13:
                 return zzhi.L(((Integer) obj).intValue());
             case 14:

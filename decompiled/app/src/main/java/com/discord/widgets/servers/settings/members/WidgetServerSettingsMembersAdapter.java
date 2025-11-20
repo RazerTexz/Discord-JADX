@@ -70,7 +70,7 @@ public final class WidgetServerSettingsMembersAdapter extends MGRecyclerAdapterS
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetServerSettingsMembersModel.MemberItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f.a(data.getUser(), data.getGuildMember());
             RolesListView rolesListView = this.binding.e;
             List<GuildRole> roles = data.getRoles();

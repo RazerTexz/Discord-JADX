@@ -61,7 +61,7 @@ public final class AudienceViewHolder extends StageCallViewHolder {
     public void onConfigure2(int position, StageCallItem data) {
         Drawable drawable;
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StageCallItem.AudienceItem audienceItem = (StageCallItem.AudienceItem) data;
         this.binding.c.setCutoutEnabled(audienceItem.getVoiceUser().getIsRequestingToSpeak());
         ImageView imageView = this.binding.e;

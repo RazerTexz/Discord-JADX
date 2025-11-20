@@ -54,7 +54,7 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MemberItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             User user = data.getUser();
             this.binding.f2142b.a(user, data.getGuildMember());
             this.binding.a.setOnClickListener(new SimpleMembersAdapter$MemberAdapterItem$onConfigure$1(this, user));

@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -175,11 +174,9 @@ public class d1 {
         }
         b.i.c.m.d.o.g gVar = this.f1680b;
         List<File> listE = gVar.e();
-        ArrayList arrayList = new ArrayList();
+        ArrayList<o0> arrayList = new ArrayList();
         arrayList.ensureCapacity(((ArrayList) listE).size());
-        Iterator it = ((ArrayList) gVar.e()).iterator();
-        while (it.hasNext()) {
-            File file = (File) it.next();
+        for (File file : (ArrayList) gVar.e()) {
             try {
                 arrayList.add(new c(b.i.c.m.d.o.g.c.f(b.i.c.m.d.o.g.j(file)), file.getName()));
             } catch (IOException e) {
@@ -188,9 +185,7 @@ public class d1 {
             }
         }
         ArrayList arrayList2 = new ArrayList();
-        Iterator it2 = arrayList.iterator();
-        while (it2.hasNext()) {
-            o0 o0Var = (o0) it2.next();
+        for (o0 o0Var : arrayList) {
             b.i.c.m.d.m.v vVarA = o0Var.a();
             if ((vVarA.h() != null ? (char) 2 : vVarA.e() != null ? (char) 3 : (char) 1) != 3 || i == 3) {
                 b.i.c.m.d.r.c cVar = this.c;

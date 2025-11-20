@@ -95,17 +95,15 @@ public class MotionController {
         }
         Easing easing = this.mStartMotionPath.mKeyFrameEasing;
         float f5 = Float.NaN;
-        Iterator<MotionPaths> it = this.mMotionPaths.iterator();
-        while (it.hasNext()) {
-            MotionPaths next = it.next();
-            Easing easing2 = next.mKeyFrameEasing;
+        for (MotionPaths motionPaths : this.mMotionPaths) {
+            Easing easing2 = motionPaths.mKeyFrameEasing;
             if (easing2 != null) {
-                float f6 = next.time;
+                float f6 = motionPaths.time;
                 if (f6 < f) {
                     easing = easing2;
                     f2 = f6;
                 } else if (Float.isNaN(f5)) {
-                    f5 = next.time;
+                    f5 = motionPaths.time;
                 }
             }
         }
@@ -132,19 +130,17 @@ public class MotionController {
             double d3 = f2;
             Easing easing = this.mStartMotionPath.mKeyFrameEasing;
             float f3 = Float.NaN;
-            Iterator<MotionPaths> it = this.mMotionPaths.iterator();
             float f4 = 0.0f;
-            while (it.hasNext()) {
-                MotionPaths next = it.next();
-                Easing easing2 = next.mKeyFrameEasing;
+            for (MotionPaths motionPaths : this.mMotionPaths) {
+                Easing easing2 = motionPaths.mKeyFrameEasing;
                 float f5 = f;
                 if (easing2 != null) {
-                    float f6 = next.time;
+                    float f6 = motionPaths.time;
                     if (f6 < f2) {
                         f4 = f6;
                         easing = easing2;
                     } else if (Float.isNaN(f3)) {
-                        f3 = next.time;
+                        f3 = motionPaths.time;
                     }
                 }
                 f = f5;
@@ -225,17 +221,15 @@ public class MotionController {
             double d = f2;
             Easing easing = this.mStartMotionPath.mKeyFrameEasing;
             float f6 = Float.NaN;
-            Iterator<MotionPaths> it = this.mMotionPaths.iterator();
-            while (it.hasNext()) {
-                MotionPaths next = it.next();
-                Easing easing2 = next.mKeyFrameEasing;
+            for (MotionPaths motionPaths : this.mMotionPaths) {
+                Easing easing2 = motionPaths.mKeyFrameEasing;
                 if (easing2 != null) {
-                    float f7 = next.time;
+                    float f7 = motionPaths.time;
                     if (f7 < f2) {
                         easing = easing2;
                         f4 = f7;
                     } else if (Float.isNaN(f6)) {
-                        f6 = next.time;
+                        f6 = motionPaths.time;
                     }
                 }
             }
@@ -342,18 +336,16 @@ public class MotionController {
             double d = f3;
             Easing easing = this.mStartMotionPath.mKeyFrameEasing;
             float f6 = Float.NaN;
-            Iterator<MotionPaths> it = this.mMotionPaths.iterator();
             float f7 = 0.0f;
-            while (it.hasNext()) {
-                MotionPaths next = it.next();
-                Easing easing2 = next.mKeyFrameEasing;
+            for (MotionPaths motionPaths : this.mMotionPaths) {
+                Easing easing2 = motionPaths.mKeyFrameEasing;
                 if (easing2 != null) {
-                    float f8 = next.time;
+                    float f8 = motionPaths.time;
                     if (f8 < f3) {
                         f7 = f8;
                         easing = easing2;
                     } else if (Float.isNaN(f6)) {
-                        f6 = next.time;
+                        f6 = motionPaths.time;
                     }
                 }
             }
@@ -489,26 +481,24 @@ public class MotionController {
 
     public int getKeyFrameInfo(int i, int[] iArr) {
         float[] fArr = new float[2];
-        Iterator<Key> it = this.mKeyList.iterator();
         int i2 = 0;
         int i3 = 0;
-        while (it.hasNext()) {
-            Key next = it.next();
-            int i4 = next.mType;
+        for (Key key : this.mKeyList) {
+            int i4 = key.mType;
             if (i4 == i || i != -1) {
                 iArr[i3] = 0;
                 int i5 = i3 + 1;
                 iArr[i5] = i4;
                 int i6 = i5 + 1;
-                iArr[i6] = next.mFramePosition;
+                iArr[i6] = key.mFramePosition;
                 this.mSpline[0].getPos(r8 / 100.0f, this.mInterpolateData);
                 this.mStartMotionPath.getCenter(this.mInterpolateVariables, this.mInterpolateData, fArr, 0);
                 int i7 = i6 + 1;
                 iArr[i7] = Float.floatToIntBits(fArr[0]);
                 int i8 = i7 + 1;
                 iArr[i8] = Float.floatToIntBits(fArr[1]);
-                if (next instanceof KeyPosition) {
-                    KeyPosition keyPosition = (KeyPosition) next;
+                if (key instanceof KeyPosition) {
+                    KeyPosition keyPosition = (KeyPosition) key;
                     int i9 = i8 + 1;
                     iArr[i9] = keyPosition.mPositionType;
                     int i10 = i9 + 1;
@@ -584,11 +574,9 @@ public class MotionController {
         rectF2.top = f6;
         rectF2.right = f5 + motionPaths2.width;
         rectF2.bottom = f6 + motionPaths2.height;
-        Iterator<Key> it = this.mKeyList.iterator();
-        while (it.hasNext()) {
-            Key next = it.next();
-            if (next instanceof KeyPositionBase) {
-                KeyPositionBase keyPositionBase = (KeyPositionBase) next;
+        for (Key key : this.mKeyList) {
+            if (key instanceof KeyPositionBase) {
+                KeyPositionBase keyPositionBase = (KeyPositionBase) key;
                 if (keyPositionBase.intersects(i, i2, rectF, rectF2, f, f2)) {
                     return keyPositionBase;
                 }
@@ -688,12 +676,10 @@ public class MotionController {
     }
 
     public int getkeyFramePositions(int[] iArr, float[] fArr) {
-        Iterator<Key> it = this.mKeyList.iterator();
         int i = 0;
         int i2 = 0;
-        while (it.hasNext()) {
-            Key next = it.next();
-            iArr[i] = (next.mType * 1000) + next.mFramePosition;
+        for (Key key : this.mKeyList) {
+            iArr[i] = (key.mType * 1000) + key.mFramePosition;
             this.mSpline[0].getPos(r6 / 100.0f, this.mInterpolateData);
             this.mStartMotionPath.getCenter(this.mInterpolateVariables, this.mInterpolateData, fArr, i2);
             i2 += 2;
@@ -920,29 +906,27 @@ public class MotionController {
         this.mStartPoint.different(this.mEndPoint, hashSet2);
         ArrayList<Key> arrayList2 = this.mKeyList;
         if (arrayList2 != null) {
-            Iterator<Key> it = arrayList2.iterator();
             arrayList = null;
-            while (it.hasNext()) {
-                Key next = it.next();
-                if (next instanceof KeyPosition) {
-                    KeyPosition keyPosition = (KeyPosition) next;
+            for (Key key : arrayList2) {
+                if (key instanceof KeyPosition) {
+                    KeyPosition keyPosition = (KeyPosition) key;
                     insertKey(new MotionPaths(i, i2, keyPosition, this.mStartMotionPath, this.mEndMotionPath));
                     int i4 = keyPosition.mCurveFit;
                     if (i4 != Key.UNSET) {
                         this.mCurveFitType = i4;
                     }
-                } else if (next instanceof KeyCycle) {
-                    next.getAttributeNames(hashSet3);
-                } else if (next instanceof KeyTimeCycle) {
-                    next.getAttributeNames(hashSet);
-                } else if (next instanceof KeyTrigger) {
+                } else if (key instanceof KeyCycle) {
+                    key.getAttributeNames(hashSet3);
+                } else if (key instanceof KeyTimeCycle) {
+                    key.getAttributeNames(hashSet);
+                } else if (key instanceof KeyTrigger) {
                     if (arrayList == null) {
                         arrayList = new ArrayList();
                     }
-                    arrayList.add((KeyTrigger) next);
+                    arrayList.add((KeyTrigger) key);
                 } else {
-                    next.setInterpolation(map);
-                    next.getAttributeNames(hashSet2);
+                    key.setInterpolation(map);
+                    key.getAttributeNames(hashSet2);
                 }
             }
         } else {
@@ -955,87 +939,75 @@ public class MotionController {
         char c2 = 1;
         if (!hashSet2.isEmpty()) {
             this.mAttributesMap = new HashMap<>();
-            Iterator<String> it2 = hashSet2.iterator();
-            while (it2.hasNext()) {
-                String next2 = it2.next();
-                if (next2.startsWith("CUSTOM,")) {
+            for (String str : hashSet2) {
+                if (str.startsWith("CUSTOM,")) {
                     SparseArray sparseArray = new SparseArray();
-                    String str = next2.split(",")[c2];
-                    Iterator<Key> it3 = this.mKeyList.iterator();
-                    while (it3.hasNext()) {
-                        Key next3 = it3.next();
-                        HashMap<String, ConstraintAttribute> map2 = next3.mCustomConstraints;
-                        if (map2 != null && (constraintAttribute2 = map2.get(str)) != null) {
-                            sparseArray.append(next3.mFramePosition, constraintAttribute2);
+                    String str2 = str.split(",")[c2];
+                    for (Key key2 : this.mKeyList) {
+                        HashMap<String, ConstraintAttribute> map2 = key2.mCustomConstraints;
+                        if (map2 != null && (constraintAttribute2 = map2.get(str2)) != null) {
+                            sparseArray.append(key2.mFramePosition, constraintAttribute2);
                         }
                     }
-                    splineSetMakeSpline = SplineSet.makeCustomSpline(next2, sparseArray);
+                    splineSetMakeSpline = SplineSet.makeCustomSpline(str, sparseArray);
                 } else {
-                    splineSetMakeSpline = SplineSet.makeSpline(next2);
+                    splineSetMakeSpline = SplineSet.makeSpline(str);
                 }
                 if (splineSetMakeSpline != null) {
-                    splineSetMakeSpline.setType(next2);
-                    this.mAttributesMap.put(next2, splineSetMakeSpline);
+                    splineSetMakeSpline.setType(str);
+                    this.mAttributesMap.put(str, splineSetMakeSpline);
                 }
                 c2 = 1;
             }
             ArrayList<Key> arrayList3 = this.mKeyList;
             if (arrayList3 != null) {
-                Iterator<Key> it4 = arrayList3.iterator();
-                while (it4.hasNext()) {
-                    Key next4 = it4.next();
-                    if (next4 instanceof KeyAttributes) {
-                        next4.addValues(this.mAttributesMap);
+                for (Key key3 : arrayList3) {
+                    if (key3 instanceof KeyAttributes) {
+                        key3.addValues(this.mAttributesMap);
                     }
                 }
             }
             this.mStartPoint.addValues(this.mAttributesMap, 0);
             this.mEndPoint.addValues(this.mAttributesMap, 100);
-            for (String str2 : this.mAttributesMap.keySet()) {
-                this.mAttributesMap.get(str2).setup(map.containsKey(str2) ? map.get(str2).intValue() : 0);
+            for (String str3 : this.mAttributesMap.keySet()) {
+                this.mAttributesMap.get(str3).setup(map.containsKey(str3) ? map.get(str3).intValue() : 0);
             }
         }
         if (!hashSet.isEmpty()) {
             if (this.mTimeCycleAttributesMap == null) {
                 this.mTimeCycleAttributesMap = new HashMap<>();
             }
-            Iterator<String> it5 = hashSet.iterator();
-            while (it5.hasNext()) {
-                String next5 = it5.next();
-                if (!this.mTimeCycleAttributesMap.containsKey(next5)) {
-                    if (next5.startsWith("CUSTOM,")) {
+            for (String str4 : hashSet) {
+                if (!this.mTimeCycleAttributesMap.containsKey(str4)) {
+                    if (str4.startsWith("CUSTOM,")) {
                         SparseArray sparseArray2 = new SparseArray();
-                        String str3 = next5.split(",")[1];
-                        Iterator<Key> it6 = this.mKeyList.iterator();
-                        while (it6.hasNext()) {
-                            Key next6 = it6.next();
-                            HashMap<String, ConstraintAttribute> map3 = next6.mCustomConstraints;
-                            if (map3 != null && (constraintAttribute = map3.get(str3)) != null) {
-                                sparseArray2.append(next6.mFramePosition, constraintAttribute);
+                        String str5 = str4.split(",")[1];
+                        for (Key key4 : this.mKeyList) {
+                            HashMap<String, ConstraintAttribute> map3 = key4.mCustomConstraints;
+                            if (map3 != null && (constraintAttribute = map3.get(str5)) != null) {
+                                sparseArray2.append(key4.mFramePosition, constraintAttribute);
                             }
                         }
-                        timeCycleSplineSetMakeSpline = TimeCycleSplineSet.makeCustomSpline(next5, sparseArray2);
+                        timeCycleSplineSetMakeSpline = TimeCycleSplineSet.makeCustomSpline(str4, sparseArray2);
                     } else {
-                        timeCycleSplineSetMakeSpline = TimeCycleSplineSet.makeSpline(next5, j);
+                        timeCycleSplineSetMakeSpline = TimeCycleSplineSet.makeSpline(str4, j);
                     }
                     if (timeCycleSplineSetMakeSpline != null) {
-                        timeCycleSplineSetMakeSpline.setType(next5);
-                        this.mTimeCycleAttributesMap.put(next5, timeCycleSplineSetMakeSpline);
+                        timeCycleSplineSetMakeSpline.setType(str4);
+                        this.mTimeCycleAttributesMap.put(str4, timeCycleSplineSetMakeSpline);
                     }
                 }
             }
             ArrayList<Key> arrayList4 = this.mKeyList;
             if (arrayList4 != null) {
-                Iterator<Key> it7 = arrayList4.iterator();
-                while (it7.hasNext()) {
-                    Key next7 = it7.next();
-                    if (next7 instanceof KeyTimeCycle) {
-                        ((KeyTimeCycle) next7).addTimeValues(this.mTimeCycleAttributesMap);
+                for (Key key5 : arrayList4) {
+                    if (key5 instanceof KeyTimeCycle) {
+                        ((KeyTimeCycle) key5).addTimeValues(this.mTimeCycleAttributesMap);
                     }
                 }
             }
-            for (String str4 : this.mTimeCycleAttributesMap.keySet()) {
-                this.mTimeCycleAttributesMap.get(str4).setup(map.containsKey(str4) ? map.get(str4).intValue() : 0);
+            for (String str6 : this.mTimeCycleAttributesMap.keySet()) {
+                this.mTimeCycleAttributesMap.get(str6).setup(map.containsKey(str6) ? map.get(str6).intValue() : 0);
             }
         }
         int i5 = 2;
@@ -1046,17 +1018,17 @@ public class MotionController {
         if (this.mMotionPaths.size() > 0 && this.mCurveFitType == -1) {
             this.mCurveFitType = 0;
         }
-        Iterator<MotionPaths> it8 = this.mMotionPaths.iterator();
+        Iterator<MotionPaths> it = this.mMotionPaths.iterator();
         int i6 = 1;
-        while (it8.hasNext()) {
-            motionPathsArr[i6] = it8.next();
+        while (it.hasNext()) {
+            motionPathsArr[i6] = it.next();
             i6++;
         }
         HashSet hashSet4 = new HashSet();
-        for (String str5 : this.mEndMotionPath.attributes.keySet()) {
-            if (this.mStartMotionPath.attributes.containsKey(str5)) {
-                if (!hashSet2.contains("CUSTOM," + str5)) {
-                    hashSet4.add(str5);
+        for (String str7 : this.mEndMotionPath.attributes.keySet()) {
+            if (this.mStartMotionPath.attributes.containsKey(str7)) {
+                if (!hashSet2.contains("CUSTOM," + str7)) {
+                    hashSet4.add(str7);
                 }
             }
         }
@@ -1069,16 +1041,16 @@ public class MotionController {
             if (i7 >= strArr.length) {
                 break;
             }
-            String str6 = strArr[i7];
+            String str8 = strArr[i7];
             this.mAttributeInterpCount[i7] = 0;
             int i8 = 0;
             while (true) {
                 if (i8 >= size) {
                     break;
                 }
-                if (motionPathsArr[i8].attributes.containsKey(str6)) {
+                if (motionPathsArr[i8].attributes.containsKey(str8)) {
                     int[] iArr = this.mAttributeInterpCount;
-                    iArr[i7] = motionPathsArr[i8].attributes.get(str6).noOfInterpValues() + iArr[i7];
+                    iArr[i7] = motionPathsArr[i8].attributes.get(str8).noOfInterpValues() + iArr[i7];
                     break;
                 }
                 i8++;
@@ -1137,22 +1109,22 @@ public class MotionController {
             if (i17 >= strArr3.length) {
                 break;
             }
-            String str7 = strArr3[i17];
+            String str9 = strArr3[i17];
             int i18 = 0;
             double[] dArr3 = null;
             int i19 = 0;
             double[][] dArr4 = null;
             while (i18 < size) {
-                if (motionPathsArr[i18].hasCustomData(str7)) {
+                if (motionPathsArr[i18].hasCustomData(str9)) {
                     if (dArr4 == null) {
                         dArr3 = new double[size];
                         int[] iArr4 = new int[i5];
-                        iArr4[1] = motionPathsArr[i18].getCustomDataCount(str7);
+                        iArr4[1] = motionPathsArr[i18].getCustomDataCount(str9);
                         iArr4[c] = size;
                         dArr4 = (double[][]) Array.newInstance((Class<?>) double.class, iArr4);
                     }
                     dArr3[i19] = motionPathsArr[i18].time;
-                    motionPathsArr[i18].getCustomData(str7, dArr4[i19], 0);
+                    motionPathsArr[i18].getCustomData(str9, dArr4[i19], 0);
                     i19++;
                 }
                 i18++;
@@ -1180,28 +1152,24 @@ public class MotionController {
         float preCycleDistance = Float.NaN;
         this.mCycleMap = new HashMap<>();
         if (this.mKeyList != null) {
-            Iterator<String> it9 = hashSet3.iterator();
-            while (it9.hasNext()) {
-                String next8 = it9.next();
-                KeyCycleOscillator keyCycleOscillatorMakeSpline = KeyCycleOscillator.makeSpline(next8);
+            for (String str10 : hashSet3) {
+                KeyCycleOscillator keyCycleOscillatorMakeSpline = KeyCycleOscillator.makeSpline(str10);
                 if (keyCycleOscillatorMakeSpline != null) {
                     if (keyCycleOscillatorMakeSpline.variesByPath() && Float.isNaN(preCycleDistance)) {
                         preCycleDistance = getPreCycleDistance();
                     }
-                    keyCycleOscillatorMakeSpline.setType(next8);
-                    this.mCycleMap.put(next8, keyCycleOscillatorMakeSpline);
+                    keyCycleOscillatorMakeSpline.setType(str10);
+                    this.mCycleMap.put(str10, keyCycleOscillatorMakeSpline);
                 }
             }
-            Iterator<Key> it10 = this.mKeyList.iterator();
-            while (it10.hasNext()) {
-                Key next9 = it10.next();
-                if (next9 instanceof KeyCycle) {
-                    ((KeyCycle) next9).addCycleValues(this.mCycleMap);
+            for (Key key6 : this.mKeyList) {
+                if (key6 instanceof KeyCycle) {
+                    ((KeyCycle) key6).addCycleValues(this.mCycleMap);
                 }
             }
-            Iterator<KeyCycleOscillator> it11 = this.mCycleMap.values().iterator();
-            while (it11.hasNext()) {
-                it11.next().setup(preCycleDistance);
+            Iterator<KeyCycleOscillator> it2 = this.mCycleMap.values().iterator();
+            while (it2.hasNext()) {
+                it2.next().setup(preCycleDistance);
             }
         }
     }

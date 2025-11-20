@@ -16,7 +16,6 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -187,9 +186,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
     }
 
     void traverseChildren(JavacASTVisitor visitor, JavacNode node) {
-        Iterator<JavacNode> it = node.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : node.down()) {
             child.traverse(visitor);
         }
     }
@@ -261,9 +258,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
 
     private JavacNode buildCompilationUnit(JCTree.JCCompilationUnit top) {
         List<JavacNode> childNodes = new ArrayList<>();
-        Iterator it = top.defs.iterator();
-        while (it.hasNext()) {
-            JCTree s2 = (JCTree) it.next();
+        for (JCTree s2 : top.defs) {
             if (s2 instanceof JCTree.JCClassDecl) {
                 addIfNotNull(childNodes, buildType((JCTree.JCClassDecl) s2));
             }
@@ -276,14 +271,10 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             return null;
         }
         List<JavacNode> childNodes = new ArrayList<>();
-        Iterator it = type.mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation annotation = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation annotation : type.mods.annotations) {
             addIfNotNull(childNodes, buildAnnotation(annotation, false));
         }
-        Iterator it2 = type.defs.iterator();
-        while (it2.hasNext()) {
-            JCTree def = (JCTree) it2.next();
+        for (JCTree def : type.defs) {
             if (def instanceof JCTree.JCMethodDecl) {
                 addIfNotNull(childNodes, buildMethod((JCTree.JCMethodDecl) def));
             } else if (def instanceof JCTree.JCClassDecl) {
@@ -302,9 +293,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             return null;
         }
         List<JavacNode> childNodes = new ArrayList<>();
-        Iterator it = field.mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation annotation = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation annotation : field.mods.annotations) {
             addIfNotNull(childNodes, buildAnnotation(annotation, true));
         }
         addIfNotNull(childNodes, buildTypeUse(field.vartype));
@@ -317,9 +306,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             return null;
         }
         List<JavacNode> childNodes = new ArrayList<>();
-        Iterator it = local.mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation annotation = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation annotation : local.mods.annotations) {
             addIfNotNull(childNodes, buildAnnotation(annotation, true));
         }
         addIfNotNull(childNodes, buildTypeUse(local.vartype));
@@ -412,9 +399,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             }
         }
         addIfNotNull(childNodes, buildStatement(tryNode.body));
-        Iterator it = tryNode.catchers.iterator();
-        while (it.hasNext()) {
-            JCTree.JCCatch jcc = (JCTree.JCCatch) it.next();
+        for (JCTree.JCCatch jcc : tryNode.catchers) {
             addIfNotNull(childNodes, buildTree2((JCTree) jcc, AST.Kind.STATEMENT));
         }
         addIfNotNull(childNodes, buildStatement(tryNode.finalizer));
@@ -426,9 +411,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             return null;
         }
         List<JavacNode> childNodes = new ArrayList<>();
-        Iterator it = initializer.stats.iterator();
-        while (it.hasNext()) {
-            JCTree.JCStatement statement = (JCTree.JCStatement) it.next();
+        for (JCTree.JCStatement statement : initializer.stats) {
             addIfNotNull(childNodes, buildStatement(statement));
         }
         return putInMap(new JavacNode(this, initializer, childNodes, AST.Kind.INITIALIZER));
@@ -439,20 +422,14 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             return null;
         }
         List<JavacNode> childNodes = new ArrayList<>();
-        Iterator it = method.mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation annotation = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation annotation : method.mods.annotations) {
             addIfNotNull(childNodes, buildAnnotation(annotation, false));
         }
-        Iterator it2 = method.params.iterator();
-        while (it2.hasNext()) {
-            JCTree.JCVariableDecl param = (JCTree.JCVariableDecl) it2.next();
+        for (JCTree.JCVariableDecl param : method.params) {
             addIfNotNull(childNodes, buildLocalVar(param, AST.Kind.ARGUMENT));
         }
         if (method.body != null && method.body.stats != null) {
-            Iterator it3 = method.body.stats.iterator();
-            while (it3.hasNext()) {
-                JCTree.JCStatement statement = (JCTree.JCStatement) it3.next();
+            for (JCTree.JCStatement statement : method.body.stats) {
                 addIfNotNull(childNodes, buildStatement(statement));
             }
         }

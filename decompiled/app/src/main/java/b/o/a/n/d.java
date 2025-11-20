@@ -673,11 +673,9 @@ public class d extends b.o.a.n.g implements ImageReader.OnImageAvailableListener
         if (this.v) {
             List<b.o.a.x.b> listS1 = s1();
             boolean zB = this.L.b(b.o.a.n.t.b.SENSOR, b.o.a.n.t.b.VIEW);
-            ArrayList arrayList2 = (ArrayList) listS1;
+            ArrayList<b.o.a.x.b> arrayList2 = (ArrayList) listS1;
             ArrayList arrayList3 = new ArrayList(arrayList2.size());
-            Iterator it = arrayList2.iterator();
-            while (it.hasNext()) {
-                b.o.a.x.b bVarF = (b.o.a.x.b) it.next();
+            for (b.o.a.x.b bVarF : arrayList2) {
                 if (zB) {
                     bVarF = bVarF.f();
                 }
@@ -1069,7 +1067,7 @@ public class d extends b.o.a.n.g implements ImageReader.OnImageAvailableListener
             b.o.a.n.q.b bVar = this.k0;
             b.o.a.m.f fVar2 = this.w;
             Objects.requireNonNull(bVar);
-            ArrayList arrayList2 = new ArrayList();
+            ArrayList<Pair> arrayList2 = new ArrayList();
             int iOrdinal = fVar2.ordinal();
             if (iOrdinal == 0) {
                 arrayList2.add(new Pair(1, 0));
@@ -1083,9 +1081,7 @@ public class d extends b.o.a.n.g implements ImageReader.OnImageAvailableListener
                 arrayList2.add(new Pair(1, 2));
                 arrayList2.add(new Pair(0, 2));
             }
-            Iterator it = arrayList2.iterator();
-            while (it.hasNext()) {
-                Pair pair = (Pair) it.next();
+            for (Pair pair : arrayList2) {
                 if (arrayList.contains(pair.first)) {
                     b.o.a.b bVar2 = b.o.a.n.i.j;
                     bVar2.a(1, "applyFlash: setting CONTROL_AE_MODE to", pair.first);
@@ -1117,10 +1113,8 @@ public class d extends b.o.a.n.g implements ImageReader.OnImageAvailableListener
         Arrays.sort(rangeArr, new b.o.a.n.e(this, this.J && this.I != 0.0f));
         float f3 = this.I;
         if (f3 == 0.0f) {
-            Iterator it = ((ArrayList) r1(rangeArr)).iterator();
-            while (it.hasNext()) {
-                Range range = (Range) it.next();
-                if (range.contains((Range) 30) || range.contains((Range) 24)) {
+            for (Range range : (ArrayList) r1(rangeArr)) {
+                if (range.contains(30) || range.contains(24)) {
                     builder.set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, range);
                     return true;
                 }
@@ -1129,10 +1123,8 @@ public class d extends b.o.a.n.g implements ImageReader.OnImageAvailableListener
             float fMin = Math.min(f3, this.p.q);
             this.I = fMin;
             this.I = Math.max(fMin, this.p.p);
-            Iterator it2 = ((ArrayList) r1(rangeArr)).iterator();
-            while (it2.hasNext()) {
-                Range range2 = (Range) it2.next();
-                if (range2.contains((Range) Integer.valueOf(Math.round(this.I)))) {
+            for (Range range2 : (ArrayList) r1(rangeArr)) {
+                if (range2.contains(Integer.valueOf(Math.round(this.I)))) {
                     builder.set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, range2);
                     return true;
                 }
@@ -1307,7 +1299,7 @@ public class d extends b.o.a.n.g implements ImageReader.OnImageAvailableListener
         int iRound = Math.round(this.p.p);
         int iRound2 = Math.round(this.p.q);
         for (Range<Integer> range : rangeArr) {
-            if (range.contains((Range<Integer>) Integer.valueOf(iRound)) || range.contains((Range<Integer>) Integer.valueOf(iRound2))) {
+            if (range.contains(Integer.valueOf(iRound)) || range.contains(Integer.valueOf(iRound2))) {
                 b.o.a.b bVar = b.o.a.r.b.a;
                 String str = Build.MODEL;
                 boolean z2 = true;

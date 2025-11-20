@@ -47,7 +47,7 @@ public final class SnowflakePartitionMap<V> extends ShallowPartitionMap<Long, V>
 
         /* JADX WARN: Multi-variable type inference failed */
         public /* bridge */ Object getOrDefault(long j, Object obj) {
-            return super.getOrDefault((Object) Long.valueOf(j), (Long) obj);
+            return super.getOrDefault(Long.valueOf(j), obj);
         }
 
         public /* bridge */ Object remove(long j) {
@@ -120,7 +120,7 @@ public final class SnowflakePartitionMap<V> extends ShallowPartitionMap<Long, V>
 
     /* JADX WARN: Multi-variable type inference failed */
     public /* bridge */ Object getOrDefault(long j, Object obj) {
-        return super.getOrDefault((Object) Long.valueOf(j), (Long) obj);
+        return super.getOrDefault(Long.valueOf(j), obj);
     }
 
     public /* bridge */ Object remove(long j) {

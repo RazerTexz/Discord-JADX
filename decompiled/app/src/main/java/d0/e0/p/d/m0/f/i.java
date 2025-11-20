@@ -774,12 +774,15 @@ public final class i extends g.d<i> implements d0.e0.p.d.m0.i.o {
                         switch (tag) {
                             case 0:
                                 z2 = true;
+                                break;
                             case 8:
                                 this.bitField0_ |= 2;
                                 this.oldFlags_ = dVar.readInt32();
+                                break;
                             case 16:
                                 this.bitField0_ |= 4;
                                 this.name_ = dVar.readInt32();
+                                break;
                             case 26:
                                 q.c builder = (this.bitField0_ & 8) == 8 ? this.returnType_.toBuilder() : null;
                                 q qVar = (q) dVar.readMessage(q.k, eVar);
@@ -789,12 +792,14 @@ public final class i extends g.d<i> implements d0.e0.p.d.m0.i.o {
                                     this.returnType_ = builder.buildPartial();
                                 }
                                 this.bitField0_ |= 8;
+                                break;
                             case 34:
                                 if ((i & 32) != 32) {
                                     this.typeParameter_ = new ArrayList();
                                     i |= 32;
                                 }
                                 this.typeParameter_.add(dVar.readMessage(s.k, eVar));
+                                break;
                             case 42:
                                 q.c builder2 = (this.bitField0_ & 32) == 32 ? this.receiverType_.toBuilder() : null;
                                 q qVar2 = (q) dVar.readMessage(q.k, eVar);
@@ -804,21 +809,26 @@ public final class i extends g.d<i> implements d0.e0.p.d.m0.i.o {
                                     this.receiverType_ = builder2.buildPartial();
                                 }
                                 this.bitField0_ |= 32;
+                                break;
                             case 50:
                                 if ((i & 256) != 256) {
                                     this.valueParameter_ = new ArrayList();
                                     i |= 256;
                                 }
                                 this.valueParameter_.add(dVar.readMessage(u.k, eVar));
+                                break;
                             case 56:
                                 this.bitField0_ |= 16;
                                 this.returnTypeId_ = dVar.readInt32();
+                                break;
                             case 64:
                                 this.bitField0_ |= 64;
                                 this.receiverTypeId_ = dVar.readInt32();
+                                break;
                             case 72:
                                 this.bitField0_ |= 1;
                                 this.flags_ = dVar.readInt32();
+                                break;
                             case 242:
                                 t.b builder3 = (this.bitField0_ & 128) == 128 ? this.typeTable_.toBuilder() : null;
                                 t tVar = (t) dVar.readMessage(t.k, eVar);
@@ -828,12 +838,14 @@ public final class i extends g.d<i> implements d0.e0.p.d.m0.i.o {
                                     this.typeTable_ = builder3.buildPartial();
                                 }
                                 this.bitField0_ |= 128;
+                                break;
                             case 248:
                                 if ((i & 1024) != 1024) {
                                     this.versionRequirement_ = new ArrayList();
                                     i |= 1024;
                                 }
                                 this.versionRequirement_.add(Integer.valueOf(dVar.readInt32()));
+                                break;
                             case 250:
                                 int iPushLimit = dVar.pushLimit(dVar.readRawVarint32());
                                 if ((i & 1024) != 1024 && dVar.getBytesUntilLimit() > 0) {
@@ -854,11 +866,14 @@ public final class i extends g.d<i> implements d0.e0.p.d.m0.i.o {
                                     this.contract_ = builder4.buildPartial();
                                 }
                                 this.bitField0_ |= 256;
+                                break;
                             default:
                                 F = f(dVar, codedOutputStreamNewInstance, eVar, tag);
-                                if (F == 0) {
+                                if (F != 0) {
+                                } else {
                                     z2 = true;
                                 }
+                                break;
                         }
                     } catch (Throwable th) {
                         if ((i & 32) == F) {

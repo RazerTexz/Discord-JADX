@@ -68,7 +68,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ListItem.Header) {
                 MaterialTextView materialTextView = this.binding.c;
                 m.checkNotNullExpressionValue(materialTextView, "binding.title");
@@ -294,7 +294,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof ListItem.Participant) {
                 ListItem.Participant participant = (ListItem.Participant) data;
                 this.binding.c.setCutoutEnabled(participant.isSpeaker());

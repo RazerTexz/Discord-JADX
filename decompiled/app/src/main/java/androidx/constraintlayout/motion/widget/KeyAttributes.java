@@ -127,17 +127,17 @@ public class KeyAttributes extends Key {
                             keyAttributes.mTargetId = resourceId;
                             if (resourceId == -1) {
                                 keyAttributes.mTargetString = typedArray.getString(index);
-                                break;
-                            } else {
-                                break;
                             }
-                        } else if (typedArray.peekValue(index).type == 3) {
-                            keyAttributes.mTargetString = typedArray.getString(index);
                             break;
                         } else {
-                            keyAttributes.mTargetId = typedArray.getResourceId(index, keyAttributes.mTargetId);
+                            if (typedArray.peekValue(index).type == 3) {
+                                keyAttributes.mTargetString = typedArray.getString(index);
+                            } else {
+                                keyAttributes.mTargetId = typedArray.getResourceId(index, keyAttributes.mTargetId);
+                            }
                             break;
                         }
+                        break;
                     case 12:
                         keyAttributes.mFramePosition = typedArray.getInt(index, keyAttributes.mFramePosition);
                         break;
@@ -331,11 +331,10 @@ public class KeyAttributes extends Key {
                     case -1249320806:
                         if (str.equals(Key.ROTATION_X)) {
                             c = 0;
-                            break;
                         } else {
                             c = 65535;
-                            break;
                         }
+                        break;
                     case -1249320805:
                         if (str.equals(Key.ROTATION_Y)) {
                             c = 1;
@@ -416,102 +415,88 @@ public class KeyAttributes extends Key {
                 switch (c) {
                     case 0:
                         if (Float.isNaN(this.mRotationX)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mRotationX);
-                            break;
                         }
+                        break;
                     case 1:
                         if (Float.isNaN(this.mRotationY)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mRotationY);
-                            break;
                         }
+                        break;
                     case 2:
                         if (Float.isNaN(this.mTranslationX)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationX);
-                            break;
                         }
+                        break;
                     case 3:
                         if (Float.isNaN(this.mTranslationY)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationY);
-                            break;
                         }
+                        break;
                     case 4:
                         if (Float.isNaN(this.mTranslationZ)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationZ);
-                            break;
                         }
+                        break;
                     case 5:
                         if (Float.isNaN(this.mProgress)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mProgress);
-                            break;
                         }
+                        break;
                     case 6:
                         if (Float.isNaN(this.mScaleX)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mScaleX);
-                            break;
                         }
+                        break;
                     case 7:
                         if (Float.isNaN(this.mScaleY)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mScaleY);
-                            break;
                         }
+                        break;
                     case '\b':
                         if (Float.isNaN(this.mRotationX)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mPivotX);
-                            break;
                         }
+                        break;
                     case '\t':
                         if (Float.isNaN(this.mRotationY)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mPivotY);
-                            break;
                         }
+                        break;
                     case '\n':
                         if (Float.isNaN(this.mRotation)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mRotation);
-                            break;
                         }
+                        break;
                     case 11:
                         if (Float.isNaN(this.mElevation)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mElevation);
-                            break;
                         }
+                        break;
                     case '\f':
                         if (Float.isNaN(this.mTransitionPathRotate)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mTransitionPathRotate);
-                            break;
                         }
+                        break;
                     case '\r':
                         if (Float.isNaN(this.mAlpha)) {
-                            break;
                         } else {
                             splineSet.setPoint(this.mFramePosition, this.mAlpha);
-                            break;
                         }
+                        break;
                     default:
                         Log.v("KeyAttributes", "UNKNOWN addValues \"" + str + "\"");
                         break;

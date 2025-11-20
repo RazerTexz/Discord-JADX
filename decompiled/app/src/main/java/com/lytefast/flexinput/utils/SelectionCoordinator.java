@@ -9,7 +9,6 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import d0.z.d.e0;
 import d0.z.d.m;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Objects;
 
 /* compiled from: SelectionCoordinator.kt */
@@ -116,14 +115,12 @@ public class SelectionCoordinator<I, T extends I> {
         if (this.adapter != null) {
             throw new RestorationException("cannot restoreSelections after adapter set: prevents mismatches");
         }
-        Iterator<? extends I> it = selectedItems.iterator();
-        while (it.hasNext()) {
-            I next = it.next();
-            if (!(next instanceof Object)) {
-                next = null;
+        for (I i : selectedItems) {
+            if (!(i instanceof Object)) {
+                i = null;
             }
-            if (next != null) {
-                this.selectedItemPositionMap.put(next, -1);
+            if (i != null) {
+                this.selectedItemPositionMap.put(i, -1);
             }
         }
     }

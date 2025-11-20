@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Set;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -95,11 +94,9 @@ public class KeyFrames {
         }
         ArrayList<Key> arrayList2 = this.mFramesMap.get(-1);
         if (arrayList2 != null) {
-            Iterator<Key> it = arrayList2.iterator();
-            while (it.hasNext()) {
-                Key next = it.next();
-                if (next.matches(((ConstraintLayout.LayoutParams) motionController.mView.getLayoutParams()).constraintTag)) {
-                    motionController.addKey(next);
+            for (Key key : arrayList2) {
+                if (key.matches(((ConstraintLayout.LayoutParams) motionController.mView.getLayoutParams()).constraintTag)) {
+                    motionController.addKey(key);
                 }
             }
         }

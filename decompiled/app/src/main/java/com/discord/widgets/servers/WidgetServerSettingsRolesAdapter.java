@@ -135,7 +135,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, DragAndDropAdapter.Payload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             LinkifiedTextView linkifiedTextView = this.binding.f2572b;
             m.checkNotNullExpressionValue(linkifiedTextView, "binding.serverSettingsHelpItem");
             b.a.k.b.m(linkifiedTextView, R.string.help_roles_description, new Object[0], new WidgetServerSettingsRolesAdapter$RoleListHelpItem$onConfigure$1(data));
@@ -208,7 +208,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, DragAndDropAdapter.Payload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             RoleItem roleItem = (RoleItem) data;
             this.canDrag = roleItem.canReorder();
             TextView textView = this.binding.d;

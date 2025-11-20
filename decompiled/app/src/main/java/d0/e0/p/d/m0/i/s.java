@@ -33,6 +33,6 @@ public final class s<FieldDescriptorType> extends t<FieldDescriptorType, Object>
 
     @Override // java.util.AbstractMap, java.util.Map
     public /* bridge */ /* synthetic */ Object put(Object obj, Object obj2) {
-        return super.put((s<FieldDescriptorType>) obj, (f.a) obj2);
+        return super.put((f.a) obj, obj2);
     }
 }

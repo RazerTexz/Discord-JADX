@@ -1,6 +1,5 @@
 package lombok.core;
 
-import java.util.Iterator;
 import java.util.List;
 import lombok.core.AST;
 
@@ -55,9 +54,7 @@ public class TypeResolver {
                             break;
                         }
                         if (newN.getKind() == AST.Kind.STATEMENT || newN.getKind() == AST.Kind.INITIALIZER || newN.getKind() == AST.Kind.METHOD) {
-                            Iterator it = newN.down().iterator();
-                            while (it.hasNext()) {
-                                LombokNode<?, ?, ?> child = (LombokNode) it.next();
+                            for (LombokNode<?, ?, ?> child : newN.down()) {
                                 if (child.getKind() == AST.Kind.TYPE && firstTypeRef.equals(child.getName())) {
                                     return null;
                                 }
@@ -69,9 +66,7 @@ public class TypeResolver {
                         lombokNodeDirectUp = newN;
                     } else {
                         if (n.getKind() == AST.Kind.TYPE || n.getKind() == AST.Kind.COMPILATION_UNIT) {
-                            Iterator it2 = n.down().iterator();
-                            while (it2.hasNext()) {
-                                LombokNode<?, ?, ?> child2 = (LombokNode) it2.next();
+                            for (LombokNode<?, ?, ?> child2 : n.down()) {
                                 if (child2.getKind() == AST.Kind.TYPE && firstTypeRef.equals(child2.getName())) {
                                     return null;
                                 }

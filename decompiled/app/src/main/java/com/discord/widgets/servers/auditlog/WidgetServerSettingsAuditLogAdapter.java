@@ -169,7 +169,7 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             AuditLogEntryItem auditLogEntryItem = (AuditLogEntryItem) data;
             ModelAuditLogEntry auditLogEntry = auditLogEntryItem.getAuditLogEntry();
             User user = auditLogEntryItem.getUser();

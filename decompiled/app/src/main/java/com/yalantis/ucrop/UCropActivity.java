@@ -251,7 +251,7 @@ public class UCropActivity extends AppCompatActivity {
             this.C = (ViewGroup) findViewById(R.d.layout_rotate_wheel);
             this.D = (ViewGroup) findViewById(R.d.layout_scale_wheel);
             int intExtra = intent.getIntExtra("com.yalantis.ucrop.AspectRatioSelectedByDefault", 0);
-            ArrayList parcelableArrayListExtra = intent.getParcelableArrayListExtra("com.yalantis.ucrop.AspectRatioOptions");
+            ArrayList<AspectRatio> parcelableArrayListExtra = intent.getParcelableArrayListExtra("com.yalantis.ucrop.AspectRatioOptions");
             if (parcelableArrayListExtra == null || parcelableArrayListExtra.isEmpty()) {
                 parcelableArrayListExtra = new ArrayList();
                 parcelableArrayListExtra.add(new AspectRatio(null, 1.0f, 1.0f));
@@ -264,9 +264,7 @@ public class UCropActivity extends AppCompatActivity {
             LinearLayout linearLayout = (LinearLayout) findViewById(i3);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, -1);
             layoutParams.weight = 1.0f;
-            Iterator it = parcelableArrayListExtra.iterator();
-            while (it.hasNext()) {
-                AspectRatio aspectRatio = (AspectRatio) it.next();
+            for (AspectRatio aspectRatio : parcelableArrayListExtra) {
                 FrameLayout frameLayout = (FrameLayout) getLayoutInflater().inflate(R.e.ucrop_aspect_ratio, viewGroup);
                 frameLayout.setLayoutParams(layoutParams);
                 AspectRatioTextView aspectRatioTextView = (AspectRatioTextView) frameLayout.getChildAt(0);
@@ -277,9 +275,9 @@ public class UCropActivity extends AppCompatActivity {
                 viewGroup = null;
             }
             this.E.get(intExtra).setSelected(true);
-            Iterator<ViewGroup> it2 = this.E.iterator();
-            while (it2.hasNext()) {
-                it2.next().setOnClickListener(new b.q.a.b(this));
+            Iterator<ViewGroup> it = this.E.iterator();
+            while (it.hasNext()) {
+                it.next().setOnClickListener(new b.q.a.b(this));
             }
             this.F = (TextView) findViewById(R.d.text_view_rotate);
             int i4 = R.d.rotate_scroll_wheel;

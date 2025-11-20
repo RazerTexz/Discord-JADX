@@ -272,40 +272,38 @@ public class b0 {
                 }
             }
         }
-        Iterator<j> it = ((l) this.e.h()).iterator();
-        while (it.hasNext()) {
-            j next = it.next();
-            int iO = next.o();
+        for (j jVar : (l) this.e.h()) {
+            int iO = jVar.o();
             if (iO == 0) {
                 b.g.a.c.b bVar2 = this.g;
-                Class<?> returnType = next.l.getReturnType();
+                Class<?> returnType = jVar.l.getReturnType();
                 if (returnType != Void.TYPE && (returnType != Void.class || this.a.q(b.g.a.c.p.ALLOW_VOID_VALUED_PROPERTIES))) {
                     Boolean bool2 = Boolean.TRUE;
-                    if (bool2.equals(bVar2.S(next))) {
+                    if (bool2.equals(bVar2.S(jVar))) {
                         if (this.m == null) {
                             this.m = new LinkedList<>();
                         }
-                        this.m.add(next);
-                    } else if (bool2.equals(bVar2.V(this.a, next))) {
+                        this.m.add(jVar);
+                    } else if (bool2.equals(bVar2.V(this.a, jVar))) {
                         if (this.q == null) {
                             this.q = new LinkedList<>();
                         }
-                        this.q.add(next);
-                    } else if (bool2.equals(bVar2.W(next))) {
+                        this.q.add(jVar);
+                    } else if (bool2.equals(bVar2.W(jVar))) {
                         if (this.r == null) {
                             this.r = new LinkedList<>();
                         }
-                        this.r.add(next);
+                        this.r.add(jVar);
                     } else {
-                        b.g.a.c.t tVarO2 = bVar2.o(next);
+                        b.g.a.c.t tVarO2 = bVar2.o(jVar);
                         boolean z12 = tVarO2 != null;
                         if (z12) {
-                            strI = bVar2.i(next);
-                            if (strI == null && (strI = this.f682b.c(next, next.c())) == null) {
-                                strI = this.f682b.a(next, next.c());
+                            strI = bVar2.i(jVar);
+                            if (strI == null && (strI = this.f682b.c(jVar, jVar.c())) == null) {
+                                strI = this.f682b.a(jVar, jVar.c());
                             }
                             if (strI == null) {
-                                strI = next.c();
+                                strI = jVar.c();
                             }
                             if (tVarO2.d()) {
                                 tVarO2 = e(strI);
@@ -315,43 +313,43 @@ public class b0 {
                             z4 = z12;
                             z5 = true;
                         } else {
-                            strI = bVar2.i(next);
+                            strI = bVar2.i(jVar);
                             if (strI == null) {
-                                strI = this.f682b.c(next, next.c());
+                                strI = this.f682b.c(jVar, jVar.c());
                             }
                             if (strI == null) {
-                                strI = this.f682b.a(next, next.c());
+                                strI = this.f682b.a(jVar, jVar.c());
                                 if (strI != null) {
                                     g0.a aVar2 = (g0.a) this.f;
                                     Objects.requireNonNull(aVar2);
-                                    zF = aVar2._isGetterMinLevel.f(next.l);
+                                    zF = aVar2._isGetterMinLevel.f(jVar.l);
                                 }
                             } else {
                                 g0.a aVar3 = (g0.a) this.f;
                                 Objects.requireNonNull(aVar3);
-                                zF = aVar3._getterMinLevel.f(next.l);
+                                zF = aVar3._getterMinLevel.f(jVar.l);
                             }
                             z4 = z12;
                             z5 = zF;
                             tVar = tVarO2;
                         }
                         String strB = b(strI);
-                        boolean Z2 = bVar2.Z(next);
+                        boolean Z2 = bVar2.Z(jVar);
                         c0 c0VarF2 = f(linkedHashMap, strB);
-                        c0VarF2.f687s = new c0.d<>(next, c0VarF2.f687s, tVar, z4, z5, Z2);
+                        c0VarF2.f687s = new c0.d<>(jVar, c0VarF2.f687s, tVar, z4, z5, Z2);
                     }
                 }
             } else if (iO == 1) {
                 b.g.a.c.b bVar3 = this.g;
-                b.g.a.c.t tVarN = bVar3.n(next);
+                b.g.a.c.t tVarN = bVar3.n(jVar);
                 boolean z13 = tVarN != null;
                 if (z13) {
-                    strI2 = bVar3.i(next);
+                    strI2 = bVar3.i(jVar);
                     if (strI2 == null) {
-                        strI2 = this.f682b.b(next, next.c());
+                        strI2 = this.f682b.b(jVar, jVar.c());
                     }
                     if (strI2 == null) {
-                        strI2 = next.c();
+                        strI2 = jVar.c();
                     }
                     if (tVarN.d()) {
                         tVarN = e(strI2);
@@ -361,27 +359,27 @@ public class b0 {
                     z6 = z13;
                     zF2 = true;
                 } else {
-                    strI2 = bVar3.i(next);
+                    strI2 = bVar3.i(jVar);
                     if (strI2 == null) {
-                        strI2 = this.f682b.b(next, next.c());
+                        strI2 = this.f682b.b(jVar, jVar.c());
                     }
                     if (strI2 != null) {
                         g0.a aVar4 = (g0.a) this.f;
                         Objects.requireNonNull(aVar4);
                         z6 = z13;
-                        zF2 = aVar4._setterMinLevel.f(next.l);
+                        zF2 = aVar4._setterMinLevel.f(jVar.l);
                         tVar2 = tVarN;
                     }
                 }
                 String strB2 = b(strI2);
-                boolean Z3 = bVar3.Z(next);
+                boolean Z3 = bVar3.Z(jVar);
                 c0 c0VarF3 = f(linkedHashMap, strB2);
-                c0VarF3.t = new c0.d<>(next, c0VarF3.t, tVar2, z6, zF2, Z3);
-            } else if (iO == 2 && Boolean.TRUE.equals(this.g.U(next))) {
+                c0VarF3.t = new c0.d<>(jVar, c0VarF3.t, tVar2, z6, zF2, Z3);
+            } else if (iO == 2 && Boolean.TRUE.equals(this.g.U(jVar))) {
                 if (this.o == null) {
                     this.o = new LinkedList<>();
                 }
-                this.o.add(next);
+                this.o.add(jVar);
             }
         }
         c cVar = this.e;
@@ -411,33 +409,33 @@ public class b0 {
                     a(linkedHashMap, eVar.m(i));
                 }
             }
-            for (j jVar : this.e.f().c) {
+            for (j jVar2 : this.e.f().c) {
                 if (this.k == null) {
                     this.k = new LinkedList<>();
                 }
-                int iO2 = jVar.o();
+                int iO2 = jVar2.o();
                 for (int i2 = 0; i2 < iO2; i2++) {
-                    a(linkedHashMap, jVar.m(i2));
+                    a(linkedHashMap, jVar2.m(i2));
                 }
             }
         }
-        Iterator<c0> it2 = linkedHashMap.values().iterator();
-        while (it2.hasNext()) {
-            c0 next2 = it2.next();
-            if (!(next2.z(next2.q) || next2.z(next2.f687s) || next2.z(next2.t) || next2.z(next2.r))) {
-                it2.remove();
-            } else if (next2.y(next2.q) || next2.y(next2.f687s) || next2.y(next2.t) || next2.y(next2.r)) {
-                if (next2.u()) {
-                    next2.q = next2.G(next2.q);
-                    next2.f687s = next2.G(next2.f687s);
-                    next2.t = next2.G(next2.t);
-                    next2.r = next2.G(next2.r);
-                    if (!next2.f()) {
-                        c(next2.p());
+        Iterator<c0> it = linkedHashMap.values().iterator();
+        while (it.hasNext()) {
+            c0 next = it.next();
+            if (!(next.z(next.q) || next.z(next.f687s) || next.z(next.t) || next.z(next.r))) {
+                it.remove();
+            } else if (next.y(next.q) || next.y(next.f687s) || next.y(next.t) || next.y(next.r)) {
+                if (next.u()) {
+                    next.q = next.G(next.q);
+                    next.f687s = next.G(next.f687s);
+                    next.t = next.G(next.t);
+                    next.r = next.G(next.r);
+                    if (!next.f()) {
+                        c(next.p());
                     }
                 } else {
-                    it2.remove();
-                    c(next2.p());
+                    it.remove();
+                    c(next.p());
                 }
             }
         }
@@ -456,9 +454,9 @@ public class b0 {
             if (iOrdinal == 1) {
                 if (b0Var != null) {
                     b0Var.c(c0Var.p());
-                    Iterator<b.g.a.c.t> it3 = c0Var.L().iterator();
-                    while (it3.hasNext()) {
-                        b0Var.c(it3.next()._simpleName);
+                    Iterator<b.g.a.c.t> it2 = c0Var.L().iterator();
+                    while (it2.hasNext()) {
+                        b0Var.c(it2.next()._simpleName);
                     }
                 }
                 c0Var.t = null;
@@ -480,13 +478,13 @@ public class b0 {
                 }
             }
         }
-        Iterator<Map.Entry<String, c0>> it4 = linkedHashMap.entrySet().iterator();
-        LinkedList linkedList = null;
-        while (it4.hasNext()) {
-            c0 value = it4.next().getValue();
+        Iterator<Map.Entry<String, c0>> it3 = linkedHashMap.entrySet().iterator();
+        LinkedList<c0> linkedList = null;
+        while (it3.hasNext()) {
+            c0 value = it3.next().getValue();
             Set<b.g.a.c.t> setL = value.L();
             if (!setL.isEmpty()) {
-                it4.remove();
+                it3.remove();
                 if (linkedList == null) {
                     linkedList = new LinkedList();
                 }
@@ -503,9 +501,7 @@ public class b0 {
             }
         }
         if (linkedList != null) {
-            Iterator it5 = linkedList.iterator();
-            while (it5.hasNext()) {
-                c0 c0Var2 = (c0) it5.next();
+            for (c0 c0Var2 : linkedList) {
                 String strP = c0Var2.p();
                 c0 c0Var3 = linkedHashMap.get(strP);
                 if (c0Var3 == null) {
@@ -521,11 +517,9 @@ public class b0 {
         for (g gVar2 : this.e.g()) {
             d(this.g.j(gVar2), gVar2);
         }
-        Iterator<j> it6 = ((l) this.e.h()).iterator();
-        while (it6.hasNext()) {
-            j next3 = it6.next();
-            if (next3.o() == 1) {
-                d(this.g.j(next3), next3);
+        for (j jVar3 : (l) this.e.h()) {
+            if (jVar3.o() == 1) {
+                d(this.g.j(jVar3), jVar3);
             }
         }
         for (c0 c0Var4 : linkedHashMap.values()) {
@@ -624,9 +618,9 @@ public class b0 {
             }
         }
         if (this.a.q(b.g.a.c.p.USE_WRAPPER_NAME_AS_PROPERTY_NAME)) {
-            Iterator<Map.Entry<String, c0>> it7 = linkedHashMap.entrySet().iterator();
-            while (it7.hasNext()) {
-                if (it7.next().getValue().q() != null) {
+            Iterator<Map.Entry<String, c0>> it4 = linkedHashMap.entrySet().iterator();
+            while (it4.hasNext()) {
+                if (it4.next().getValue().q() != null) {
                     Objects.requireNonNull(this.g);
                 }
             }
@@ -640,10 +634,10 @@ public class b0 {
         } else {
             zBooleanValue = boolJ.booleanValue();
         }
-        Iterator<c0> it8 = linkedHashMap.values().iterator();
+        Iterator<c0> it5 = linkedHashMap.values().iterator();
         while (true) {
-            if (it8.hasNext()) {
-                if (it8.next().o()._index != null) {
+            if (it5.hasNext()) {
+                if (it5.next().o()._index != null) {
                     z2 = true;
                     break;
                 }
@@ -664,15 +658,15 @@ public class b0 {
                 for (String strP2 : strArrI) {
                     c0 c0Var9 = (c0) treeMap.remove(strP2);
                     if (c0Var9 == null) {
-                        Iterator<c0> it9 = linkedHashMap.values().iterator();
+                        Iterator<c0> it6 = linkedHashMap.values().iterator();
                         while (true) {
-                            if (!it9.hasNext()) {
+                            if (!it6.hasNext()) {
                                 break;
                             }
-                            c0 next4 = it9.next();
-                            if (strP2.equals(next4.p._simpleName)) {
-                                strP2 = next4.p();
-                                c0Var9 = next4;
+                            c0 next2 = it6.next();
+                            if (strP2.equals(next2.p._simpleName)) {
+                                strP2 = next2.p();
+                                c0Var9 = next2;
                                 break;
                             }
                         }
@@ -684,13 +678,13 @@ public class b0 {
             }
             if (z2) {
                 TreeMap treeMap2 = new TreeMap();
-                Iterator<Map.Entry<? extends Object, ? extends Object>> it10 = treeMap.entrySet().iterator();
-                while (it10.hasNext()) {
-                    c0 c0Var10 = (c0) it10.next().getValue();
+                Iterator<Map.Entry<? extends Object, ? extends Object>> it7 = treeMap.entrySet().iterator();
+                while (it7.hasNext()) {
+                    c0 c0Var10 = (c0) it7.next().getValue();
                     Integer num = c0Var10.o()._index;
                     if (num != null) {
                         treeMap2.put(num, c0Var10);
-                        it10.remove();
+                        it7.remove();
                     }
                 }
                 for (c0 c0Var11 : treeMap2.values()) {
@@ -700,19 +694,17 @@ public class b0 {
             if (this.k != null && (!zBooleanValue || this.a.q(b.g.a.c.p.SORT_CREATOR_PROPERTIES_FIRST))) {
                 if (zBooleanValue) {
                     TreeMap treeMap3 = new TreeMap();
-                    Iterator<c0> it11 = this.k.iterator();
-                    while (it11.hasNext()) {
-                        c0 next5 = it11.next();
-                        treeMap3.put(next5.p(), next5);
+                    for (c0 c0Var12 : this.k) {
+                        treeMap3.put(c0Var12.p(), c0Var12);
                     }
                     collectionValues = treeMap3.values();
                 } else {
                     collectionValues = this.k;
                 }
-                for (c0 c0Var12 : collectionValues) {
-                    String strP3 = c0Var12.p();
+                for (c0 c0Var13 : collectionValues) {
+                    String strP3 = c0Var13.p();
                     if (treeMap.containsKey(strP3)) {
-                        linkedHashMap2.put(strP3, c0Var12);
+                        linkedHashMap2.put(strP3, c0Var13);
                     }
                 }
             }

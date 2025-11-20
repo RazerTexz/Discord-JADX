@@ -182,7 +182,7 @@ public final class PresenceUtils {
             emojiNodeFrom$default = EmojiNode.Companion.from$default(companion, 0, companion.generateEmojiIdAndType(emoji), 1, (Object) null);
         }
         if (emojiNodeFrom$default != null) {
-            emojiNodeFrom$default.render((SpannableStringBuilder) draweeSpanStringBuilder, (DraweeSpanStringBuilder) new AnonymousClass1(context, animateCustomStatusEmoji));
+            emojiNodeFrom$default.render((SpannableStringBuilder) draweeSpanStringBuilder, new AnonymousClass1(context, animateCustomStatusEmoji));
         }
         CharSequence statusText = getStatusText(context, presence, isStreamingApplication, showFallbackStatusText);
         if (statusText != null) {

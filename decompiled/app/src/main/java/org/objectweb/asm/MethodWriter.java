@@ -266,11 +266,10 @@ final class MethodWriter extends MethodVisitor {
                 case 3:
                     if (offsetDelta < 64) {
                         this.stackMapTableEntries.putByte(offsetDelta);
-                        break;
                     } else {
                         this.stackMapTableEntries.putByte(251).putShort(offsetDelta);
-                        break;
                     }
+                    break;
                 case 4:
                     if (offsetDelta < 64) {
                         this.stackMapTableEntries.putByte(64 + offsetDelta);

@@ -312,7 +312,7 @@ public final class WidgetMedia extends AppFragment {
         }
 
         public void onFinalImageSet(String id2, ImageInfo imageInfo, Animatable animatable) {
-            super.onFinalImageSet(id2, (String) imageInfo, animatable);
+            super.onFinalImageSet(id2, imageInfo, animatable);
             WidgetMedia.access$handleImageProgressComplete(WidgetMedia.this);
         }
     }

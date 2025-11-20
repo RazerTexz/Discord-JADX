@@ -1290,7 +1290,6 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -2137365335:
                 if (type.equals("MESSAGE_REACTION_REMOVE_EMOJI")) {
                     this.messageReactionRemoveEmoji.k.onNext(data);
-                    break;
                 }
                 break;
             case -2067017195:
@@ -1301,55 +1300,46 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -2050181436:
                 if (type.equals("GUILD_JOIN_REQUEST_DELETE")) {
                     this.guildJoinRequestDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case -2026522382:
                 if (type.equals("SESSIONS_REPLACE")) {
                     this.sessionsReplace.k.onNext(data);
-                    break;
                 }
                 break;
             case -2002723137:
                 if (type.equals("GUILD_SCHEDULED_EVENT_CREATE")) {
                     this.guildScheduledEventCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1985887378:
                 if (type.equals("GUILD_SCHEDULED_EVENT_DELETE")) {
                     this.guildScheduledEventDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case -1967037287:
                 if (type.equals("THREAD_MEMBER_UPDATE")) {
                     this.threadMemberUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1921449515:
                 if (type.equals("APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE")) {
                     this.applicationCommandAutocompleteResult.k.onNext(data);
-                    break;
                 }
                 break;
             case -1862771270:
                 if (type.equals("THREAD_MEMBER_LIST_UPDATE")) {
                     this.threadMemberListUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1825641445:
                 if (type.equals("GUILD_MEMBERS_CHUNK")) {
                     this.guildMembersChunk.k.onNext(data);
-                    break;
                 }
                 break;
             case -1580624828:
                 if (type.equals("EMBEDDED_ACTIVITY_UPDATE")) {
                     this.embeddedActivityInboundUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1553569310:
@@ -1360,55 +1350,46 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -1553064252:
                 if (type.equals("MESSAGE_REACTION_REMOVE_ALL")) {
                     this.messageReactionRemoveAll.k.onNext(data);
-                    break;
                 }
                 break;
             case -1533134522:
                 if (type.equals("FORUM_UNREADS")) {
                     this.forumUnreads.k.onNext(data);
-                    break;
                 }
                 break;
             case -1489275252:
                 if (type.equals(NotificationData.TYPE_GUILD_SCHEDULED_EVENT_UPDATE)) {
                     this.guildScheduledEventUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1484942443:
                 if (type.equals("GUILD_SCHEDULED_EVENT_USER_REMOVE")) {
                     this.guildScheduledEventUserRemove.k.onNext(data);
-                    break;
                 }
                 break;
             case -1467383482:
                 if (type.equals("USER_REQUIRED_ACTION_UPDATE")) {
                     this.userRequiredActionUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1446088218:
                 if (type.equals("GUILD_STICKERS_UPDATE")) {
                     this.guildStickersUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1327124998:
                 if (type.equals(NotificationData.TYPE_RELATIONSHIP_ADD)) {
                     this.relationshipAdd.k.onNext(data);
-                    break;
                 }
                 break;
             case -1263316859:
                 if (type.equals(NotificationData.TYPE_STAGE_INSTANCE_CREATE)) {
                     this.stageInstanceCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case -1261304891:
                 if (type.equals("GUILD_BAN_ADD")) {
                     this.guildBanAdd.k.onNext(data);
-                    break;
                 }
                 break;
             case -1248965304:
@@ -1419,73 +1400,61 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -1246481100:
                 if (type.equals("STAGE_INSTANCE_DELETE")) {
                     this.stageInstanceDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case -1238538557:
                 if (type.equals("MESSAGE_REACTION_ADD")) {
                     this.messageReactionAdd.k.onNext(data);
-                    break;
                 }
                 break;
             case -1201943215:
                 if (type.equals("GUILD_MEMBER_LIST_UPDATE")) {
                     this.guildMemberListUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -974414266:
                 if (type.equals("USER_SUBSCRIPTIONS_UPDATE")) {
                     this.userSubscriptionsUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -960563390:
                 if (type.equals("USER_NOTE_UPDATE")) {
                     this.userNoteUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -903406451:
                 if (type.equals("PRESENCE_UPDATE")) {
                     this.presenceUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -850953239:
                 if (type.equals("INTERACTION_CREATE")) {
                     this.interactionCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case -843352707:
                 if (type.equals("GUILD_INTEGRATIONS_UPDATE")) {
                     this.guildIntegrationsUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -778017807:
                 if (type.equals("USER_SETTINGS_UPDATE")) {
                     this.userSettingsUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -767350043:
                 if (type.equals("GUILD_APPLICATION_COMMANDS_UPDATE")) {
                     this.guildApplicationCommands.k.onNext(data);
-                    break;
                 }
                 break;
             case -749868974:
                 if (type.equals("STAGE_INSTANCE_UPDATE")) {
                     this.stageInstanceUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -718889877:
                 if (type.equals("RELATIONSHIP_REMOVE")) {
                     this.relationshipRemove.k.onNext(data);
-                    break;
                 }
                 break;
             case -675064872:
@@ -1496,37 +1465,31 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -658229113:
                 if (type.equals("CHANNEL_DELETE")) {
                     this.channelDeleted.k.onNext(data);
-                    break;
                 }
                 break;
             case -548091546:
                 if (type.equals("CHANNEL_RECIPIENT_REMOVE")) {
                     this.channelRecipientRemove.k.onNext(data);
-                    break;
                 }
                 break;
             case -510741638:
                 if (type.equals("TYPING_START")) {
                     this.typingStart.k.onNext(data);
-                    break;
                 }
                 break;
             case -300870211:
                 if (type.equals("USER_PAYMENT_SOURCES_UPDATE")) {
                     this.userPaymentSourcesUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -273749272:
                 if (type.equals("GUILD_CREATE")) {
                     this.guildCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case -256913513:
                 if (type.equals("GUILD_DELETE")) {
                     this.guildDeleted.k.onNext(data);
-                    break;
                 }
                 break;
             case -233612803:
@@ -1537,13 +1500,11 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -216777044:
                 if (type.equals("CALL_DELETE")) {
                     this.callDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case -207118083:
                 if (type.equals("CHANNEL_UNREAD_UPDATE")) {
                     this.channelUnreadUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case -161616987:
@@ -1554,7 +1515,6 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -135720355:
                 if (type.equals("GUILD_MEMBER_REMOVE")) {
                     this.guildMemberRemove.k.onNext(data);
-                    break;
                 }
                 break;
             case -107601202:
@@ -1565,7 +1525,6 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -45642698:
                 if (type.equals("FRIEND_SUGGESTION_CREATE")) {
                     this.friendSuggestionCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case -39955806:
@@ -1576,31 +1535,26 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case -28806939:
                 if (type.equals("FRIEND_SUGGESTION_DELETE")) {
                     this.friendSuggestionDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case 77848963:
                 if (type.equals("READY")) {
                     this.ready.k.onNext(data);
-                    break;
                 }
                 break;
             case 85547718:
                 if (type.equals("STREAM_SERVER_UPDATE")) {
                     this.streamServerUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 151900580:
                 if (type.equals("THREAD_MEMBERS_UPDATE")) {
                     this.threadMembersUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 239698613:
                 if (type.equals("GUILD_UPDATE")) {
                     this.guildUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 279835082:
@@ -1611,19 +1565,16 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case 391412669:
                 if (type.equals("USER_UPDATE")) {
                     this.userUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 789496470:
                 if (type.equals("INTERACTION_SUCCESS")) {
                     this.interactionSuccess.k.onNext(data);
-                    break;
                 }
                 break;
             case 998188116:
                 if (type.equals(NotificationData.TYPE_MESSAGE_CREATE)) {
                     this.messageCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1015023875:
@@ -1634,13 +1585,11 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case 1190664927:
                 if (type.equals("CHANNEL_RECIPIENT_ADD")) {
                     this.channelRecipientAdd.k.onNext(data);
-                    break;
                 }
                 break;
             case 1249854210:
                 if (type.equals("MESSAGE_REACTION_REMOVE")) {
                     this.messageReactionRemove.k.onNext(data);
-                    break;
                 }
                 break;
             case 1268388049:
@@ -1651,92 +1600,77 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case 1276846319:
                 if (type.equals("GUILD_EMOJIS_UPDATE")) {
                     this.guildEmojisUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1281125393:
                 if (type.equals("MESSAGE_ACK")) {
                     this.messageAck.k.onNext(data);
-                    break;
                 }
                 break;
             case 1285223808:
                 if (type.equals("THREAD_DELETE")) {
                     this.threadDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case 1389895301:
                 if (type.equals("USER_GUILD_SETTINGS_UPDATE")) {
                     this.userGuildSettingsUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1476675193:
                 if (type.equals("GUILD_ROLE_CREATE")) {
                     this.guildRoleCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1478484999:
                 if (type.equals("USER_CONNECTIONS_UPDATE")) {
                     SerializedSubject<Unit, Unit> serializedSubject = this.userConnectionUpdate;
                     serializedSubject.k.onNext(Unit.a);
-                    break;
                 }
                 break;
             case 1493510952:
                 if (type.equals("GUILD_ROLE_DELETE")) {
                     this.guildRoleDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case 1511636001:
                 if (type.equals("MESSAGE_UPDATE")) {
                     this.messageUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1570092061:
                 if (type.equals("INTERACTION_FAILURE")) {
                     this.interactionFailure.k.onNext(data);
-                    break;
                 }
                 break;
             case 1616207515:
                 if (type.equals("STREAM_CREATE")) {
                     this.streamCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1622830784:
                 if (type.equals("GUILD_BAN_REMOVE")) {
                     this.guildBanRemove.k.onNext(data);
-                    break;
                 }
                 break;
             case 1633043274:
                 if (type.equals("STREAM_DELETE")) {
                     this.streamDelete.k.onNext(data);
-                    break;
                 }
                 break;
             case 1689894925:
                 if (type.equals("PRESENCES_REPLACE")) {
                     this.presenceReplace.k.onNext(data);
-                    break;
                 }
                 break;
             case 1699412580:
                 if (type.equals("VOICE_STATE_UPDATE")) {
                     this.voiceStateUpdate.onNext(data);
-                    break;
                 }
                 break;
             case 1737758480:
                 if (type.equals("GUILD_SCHEDULED_EVENT_USER_ADD")) {
                     this.guildScheduledEventUserAdd.k.onNext(data);
-                    break;
                 }
                 break;
             case 1781835934:
@@ -1747,31 +1681,26 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             case 1882183896:
                 if (type.equals("VOICE_SERVER_UPDATE")) {
                     this.voiceServerUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1901414427:
                 if (type.equals("INTERACTION_MODAL_CREATE")) {
                     this.interactionModalCreate.k.onNext(data);
-                    break;
                 }
                 break;
             case 1928220071:
                 if (type.equals("THREAD_LIST_SYNC")) {
                     this.threadListSync.k.onNext(data);
-                    break;
                 }
                 break;
             case 1990123078:
                 if (type.equals("GUILD_ROLE_UPDATE")) {
                     this.guildRoleUpdate.k.onNext(data);
-                    break;
                 }
                 break;
             case 2129655400:
                 if (type.equals("STREAM_UPDATE")) {
                     this.streamUpdate.k.onNext(data);
-                    break;
                 }
                 break;
         }

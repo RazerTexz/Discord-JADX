@@ -4,7 +4,6 @@ import android.os.Looper;
 import androidx.annotation.Nullable;
 import b.i.a.c.f3.n;
 import java.util.ArrayDeque;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /* compiled from: ListenerSet.java */
@@ -90,13 +89,11 @@ public final class p<T> {
     }
 
     public void c() {
-        Iterator<c<T>> it = this.d.iterator();
-        while (it.hasNext()) {
-            c<T> next = it.next();
+        for (c<T> cVar : this.d) {
             b<T> bVar = this.c;
-            next.d = true;
-            if (next.c) {
-                bVar.a(next.a, next.f974b.b());
+            cVar.d = true;
+            if (cVar.c) {
+                bVar.a(cVar.a, cVar.f974b.b());
             }
         }
         this.d.clear();

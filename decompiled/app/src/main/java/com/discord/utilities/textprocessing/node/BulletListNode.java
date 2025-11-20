@@ -32,7 +32,7 @@ public final class BulletListNode<T extends BasicRenderContext> extends Node<T> 
 
     @Override // com.discord.simpleast.core.node.Node
     public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) throws Resources.NotFoundException {
-        render(spannableStringBuilder, (SpannableStringBuilder) obj);
+        render(spannableStringBuilder, (BasicRenderContext) obj);
     }
 
     public void render(SpannableStringBuilder builder, T renderContext) throws Resources.NotFoundException {

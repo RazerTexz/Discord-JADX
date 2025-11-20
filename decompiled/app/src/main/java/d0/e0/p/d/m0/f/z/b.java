@@ -126,7 +126,7 @@ public class b {
 
         @Override // d0.e0.p.d.m0.f.z.b.d
         public /* bridge */ /* synthetic */ int toFlags(Object obj) {
-            return toFlags((c<E>) obj);
+            return toFlags((h.a) obj);
         }
 
         @Override // d0.e0.p.d.m0.f.z.b.d

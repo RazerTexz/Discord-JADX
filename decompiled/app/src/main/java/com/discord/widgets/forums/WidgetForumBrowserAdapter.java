@@ -55,7 +55,7 @@ public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<For
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ForumBrowserItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f2107b.setText(((ForumBrowserItem.HeaderItem) data).getStringResId());
         }
     }
@@ -97,7 +97,7 @@ public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<For
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ForumBrowserItem data) throws Resources.NotFoundException {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ForumBrowserItem.PostItem postItem = (ForumBrowserItem.PostItem) data;
             this.binding.f2108b.configurePost(postItem.getPost());
             this.binding.f2108b.setOnClickListener(new WidgetForumBrowserAdapter$PostItem$onConfigure$1(this, postItem));

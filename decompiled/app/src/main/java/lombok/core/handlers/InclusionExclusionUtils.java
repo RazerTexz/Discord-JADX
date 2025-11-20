@@ -17,9 +17,7 @@ import lombok.core.LombokNode;
 public class InclusionExclusionUtils {
     private static List<Integer> createListOfNonExistentFields(List<String> list, LombokNode<?, ?, ?> type, boolean excludeStandard, boolean excludeTransient) {
         boolean[] matched = new boolean[list.size()];
-        Iterator it = type.down().iterator();
-        while (it.hasNext()) {
-            LombokNode<?, ?, ?> child = (LombokNode) it.next();
+        for (LombokNode<?, ?, ?> child : type.down()) {
             if (list.isEmpty()) {
                 break;
             }
@@ -128,14 +126,9 @@ public class InclusionExclusionUtils {
                 annotation.setWarning("exclude", "exclude and of are mutually exclusive; the 'exclude' parameter will be ignored.");
             }
         }
-        Iterator<L> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            L child = it.next();
+        for (L child : typeNode.down()) {
             boolean markExclude = child.getKind() == AST.Kind.FIELD && child.hasAnnotation(exclType);
-            AnnotationValues<I> markInclude = null;
-            if (child.getKind() == AST.Kind.FIELD || child.getKind() == AST.Kind.METHOD) {
-                markInclude = child.findAnnotation(inclType);
-            }
+            AnnotationValues<I> markInclude = (child.getKind() == AST.Kind.FIELD || child.getKind() == AST.Kind.METHOD) ? child.findAnnotation(inclType) : null;
             if (markExclude || markInclude != null) {
                 memberAnnotationMode = true;
             }
@@ -180,11 +173,11 @@ public class InclusionExclusionUtils {
                 }
             }
         }
-        Iterator<Included<L, I>> it2 = members.iterator();
-        while (it2.hasNext()) {
-            Included<L, I> m = it2.next();
+        Iterator<Included<L, I>> it = members.iterator();
+        while (it.hasNext()) {
+            Included<L, I> m = it.next();
             if (m.isDefaultInclude() && namesToAutoExclude.contains(m.getNode().getName())) {
-                it2.remove();
+                it.remove();
             }
         }
         if (annotation == null || !annotation.isExplicit("exclude")) {

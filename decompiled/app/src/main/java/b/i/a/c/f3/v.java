@@ -16,7 +16,6 @@ import androidx.annotation.GuardedBy;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import java.lang.ref.WeakReference;
-import java.util.Iterator;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -164,14 +163,12 @@ public final class v {
                 return;
             }
             vVar.e = i;
-            Iterator<WeakReference<b>> it = vVar.c.iterator();
-            while (it.hasNext()) {
-                WeakReference<b> next = it.next();
-                b bVar = next.get();
+            for (WeakReference<b> weakReference : vVar.c) {
+                b bVar = weakReference.get();
                 if (bVar != null) {
                     bVar.a(i);
                 } else {
-                    vVar.c.remove(next);
+                    vVar.c.remove(weakReference);
                 }
             }
         }

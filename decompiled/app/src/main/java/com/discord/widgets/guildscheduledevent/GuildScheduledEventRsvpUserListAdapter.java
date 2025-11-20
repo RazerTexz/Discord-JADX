@@ -69,7 +69,7 @@ public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdap
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GuildScheduledEventRsvpUserListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             GuildScheduledEventRsvpUserListItem.RsvpUser rsvpUser = (GuildScheduledEventRsvpUserListItem.RsvpUser) data;
             this.itemView.setOnClickListener(new GuildScheduledEventRsvpUserListAdapter$UserViewHolder$onConfigure$1(this, rsvpUser));
             TextView textView = this.binding.d;

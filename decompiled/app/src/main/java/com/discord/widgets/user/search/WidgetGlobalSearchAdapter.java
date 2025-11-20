@@ -93,7 +93,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f2266b.setText(((WidgetGlobalSearchModel.ItemHeader) data).getName());
             this.binding.a.setOnClickListener(new WidgetGlobalSearchAdapter$HeaderViewHolder$onConfigure$1(this, position, data));
             TextView textView = this.binding.a;
@@ -133,7 +133,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         /* JADX WARN: Can't rename method to resolve collision */
         public void onConfigure(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.itemView.setOnClickListener(new WidgetGlobalSearchAdapter$SearchViewHolder$onConfigure$1(this, position, data));
             View view = this.itemView;
             m.checkNotNullExpressionValue(view, "itemView");

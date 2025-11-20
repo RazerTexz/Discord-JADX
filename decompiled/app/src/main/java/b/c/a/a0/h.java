@@ -40,10 +40,8 @@ public class h implements h0<b.c.a.y.c> {
                     int iQ2 = cVar.q();
                     if (iQ2 <= 2 && iQ2 >= 0) {
                         i = b.c.a.y.b.com$airbnb$lottie$model$DocumentData$Justification$s$values()[iQ2];
-                        break;
                     } else {
                         i = 3;
-                        break;
                     }
                     break;
                 case 4:

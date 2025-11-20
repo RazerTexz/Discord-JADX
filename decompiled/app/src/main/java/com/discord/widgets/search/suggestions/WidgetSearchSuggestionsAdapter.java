@@ -245,7 +245,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             FilterType filterType = ((FilterSuggestion) ((SingleTypePayload) data).getData()).getFilterType();
             int filterText = getFilterText(filterType);
             int answerText = getAnswerText(filterType);
@@ -364,7 +364,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             HasSuggestion hasSuggestion = (HasSuggestion) ((SingleTypePayload) data).getData();
             TextView textView = this.binding.d;
             m.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemHasText");
@@ -439,7 +439,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f2524b.setText(getCategoryLabel((SearchSuggestion.Category) ((SingleTypePayload) data).getData()));
         }
     }
@@ -484,7 +484,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             this.binding.f2525b.setOnClickListener(new WidgetSearchSuggestionsAdapter$HistoryHeaderViewHolder$onConfigure$1(this));
         }
     }
@@ -526,7 +526,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelSuggestion channelSuggestion = (ChannelSuggestion) ((SingleTypePayload) data).getData();
             TextView textView = this.binding.c;
             m.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemChannelText");
@@ -572,7 +572,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             List<QueryNode> query = ((RecentQuerySuggestion) ((SingleTypePayload) data).getData()).getQuery();
             TextView textView = this.binding.c;
             m.checkNotNullExpressionValue(textView, "binding.searchSuggestionsItemRecentQueryText");
@@ -613,7 +613,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             UserSuggestion userSuggestion = (UserSuggestion) ((SingleTypePayload) data).getData();
             UserListItemView userListItemView = this.binding.f2531b;
             User user = userSuggestion.getUser();

@@ -194,7 +194,7 @@ public final class Rules {
             if (state.getIsInQuote()) {
                 return null;
             }
-            return super.match(inspectionSource, lastCapture, (String) state);
+            return super.match(inspectionSource, lastCapture, state);
         }
 
         /* JADX WARN: Incorrect types in method signature: (Ljava/util/regex/Matcher;Lcom/discord/simpleast/core/parser/Parser<TT;-Lcom/discord/utilities/textprocessing/node/BlockQuoteNode<TT;>;TS;>;TS;)Lcom/discord/simpleast/core/parser/ParseSpec<TT;TS;>; */
@@ -280,7 +280,7 @@ public final class Rules {
                 m.checkNotNullParameter(builder, "builder");
                 m.checkNotNullParameter(renderContext, "renderContext");
                 int length = builder.length();
-                super.render(builder, (SpannableStringBuilder) renderContext);
+                super.render(builder, renderContext);
                 builder.setSpan(new BackgroundColorSpan(ColorCompat.getThemedColor(renderContext.getContext(), R.attr.theme_chat_code)), length, builder.length(), 33);
             }
         }

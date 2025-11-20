@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 
@@ -22,17 +21,15 @@ public class i extends b.g.a.c.e0.d implements Serializable {
         HashMap<b.g.a.c.e0.b, b.g.a.c.e0.b> map = new HashMap<>();
         LinkedHashSet<b.g.a.c.e0.b> linkedHashSet = this._registeredSubtypes;
         if (linkedHashSet != null) {
-            Iterator<b.g.a.c.e0.b> it = linkedHashSet.iterator();
-            while (it.hasNext()) {
-                b.g.a.c.e0.b next = it.next();
-                if (clsD.isAssignableFrom(next._class)) {
-                    b(b.g.a.c.c0.d.h(lVar, next._class), next, lVar, bVarE, map);
+            for (b.g.a.c.e0.b bVar : linkedHashSet) {
+                if (clsD.isAssignableFrom(bVar._class)) {
+                    b(b.g.a.c.c0.d.h(lVar, bVar._class), bVar, lVar, bVarE, map);
                 }
             }
         }
         if (iVar != null && (listN = bVarE.N(iVar)) != null) {
-            for (b.g.a.c.e0.b bVar : listN) {
-                b(b.g.a.c.c0.d.h(lVar, bVar._class), bVar, lVar, bVarE, map);
+            for (b.g.a.c.e0.b bVar2 : listN) {
+                b(b.g.a.c.c0.d.h(lVar, bVar2._class), bVar2, lVar, bVarE, map);
             }
         }
         b(b.g.a.c.c0.d.h(lVar, clsD), new b.g.a.c.e0.b(clsD, null), lVar, bVarE, map);

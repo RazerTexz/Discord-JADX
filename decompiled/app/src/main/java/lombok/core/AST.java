@@ -150,9 +150,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         L oldNode = oldNodes.get(newNode.get());
         L targetNode = oldNode == null ? newNode : oldNode;
         List children = new ArrayList();
-        Iterator<L> it = newNode.children.iterator();
-        while (it.hasNext()) {
-            L child = it.next();
+        for (L child : newNode.children) {
             LombokNode lombokNodeReplaceNewWithExistingOld = replaceNewWithExistingOld(oldNodes, child);
             children.add(lombokNodeReplaceNewWithExistingOld);
             lombokNodeReplaceNewWithExistingOld.parent = targetNode;

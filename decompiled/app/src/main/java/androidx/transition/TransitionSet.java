@@ -146,12 +146,10 @@ public class TransitionSet extends Transition {
     @Override // androidx.transition.Transition
     public void captureEndValues(@NonNull TransitionValues transitionValues) {
         if (isValidTarget(transitionValues.view)) {
-            Iterator<Transition> it = this.mTransitions.iterator();
-            while (it.hasNext()) {
-                Transition next = it.next();
-                if (next.isValidTarget(transitionValues.view)) {
-                    next.captureEndValues(transitionValues);
-                    transitionValues.mTargetedTransitions.add(next);
+            for (Transition transition : this.mTransitions) {
+                if (transition.isValidTarget(transitionValues.view)) {
+                    transition.captureEndValues(transitionValues);
+                    transitionValues.mTargetedTransitions.add(transition);
                 }
             }
         }
@@ -169,12 +167,10 @@ public class TransitionSet extends Transition {
     @Override // androidx.transition.Transition
     public void captureStartValues(@NonNull TransitionValues transitionValues) {
         if (isValidTarget(transitionValues.view)) {
-            Iterator<Transition> it = this.mTransitions.iterator();
-            while (it.hasNext()) {
-                Transition next = it.next();
-                if (next.isValidTarget(transitionValues.view)) {
-                    next.captureStartValues(transitionValues);
-                    transitionValues.mTargetedTransitions.add(next);
+            for (Transition transition : this.mTransitions) {
+                if (transition.isValidTarget(transitionValues.view)) {
+                    transition.captureStartValues(transitionValues);
+                    transitionValues.mTargetedTransitions.add(transition);
                 }
             }
         }

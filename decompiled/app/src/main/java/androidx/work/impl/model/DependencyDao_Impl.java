@@ -145,7 +145,7 @@ public final class DependencyDao_Impl implements DependencyDao {
         this.__db.assertNotSuspendingTransaction();
         this.__db.beginTransaction();
         try {
-            this.__insertionAdapterOfDependency.insert((EntityInsertionAdapter<Dependency>) dependency);
+            this.__insertionAdapterOfDependency.insert(dependency);
             this.__db.setTransactionSuccessful();
         } finally {
             this.__db.endTransaction();

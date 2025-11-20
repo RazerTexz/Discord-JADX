@@ -2,7 +2,6 @@ package b.f.e;
 
 import android.util.Pair;
 import com.facebook.datasource.DataSource;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -112,10 +111,8 @@ public abstract class c<T> implements DataSource<T> {
     public final void j() {
         boolean zH = h();
         boolean zN = n();
-        Iterator<Pair<f<T>, Executor>> it = this.g.iterator();
-        while (it.hasNext()) {
-            Pair<f<T>, Executor> next = it.next();
-            ((Executor) next.second).execute(new a(this, zH, (f) next.first, zN));
+        for (Pair<f<T>, Executor> pair : this.g) {
+            ((Executor) pair.second).execute(new a(this, zH, (f) pair.first, zN));
         }
     }
 
@@ -147,10 +144,8 @@ public abstract class c<T> implements DataSource<T> {
             }
         }
         if (z2) {
-            Iterator<Pair<f<T>, Executor>> it = this.g.iterator();
-            while (it.hasNext()) {
-                Pair<f<T>, Executor> next = it.next();
-                ((Executor) next.second).execute(new b(this, (f) next.first));
+            for (Pair<f<T>, Executor> pair : this.g) {
+                ((Executor) pair.second).execute(new b(this, (f) pair.first));
             }
         }
         return z2;

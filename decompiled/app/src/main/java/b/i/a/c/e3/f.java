@@ -2,7 +2,6 @@ package b.i.a.c.e3;
 
 import android.os.Handler;
 import androidx.annotation.Nullable;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /* compiled from: BandwidthMeter.java */
@@ -33,12 +32,10 @@ public interface f {
             }
 
             public void a(a aVar) {
-                Iterator<C0100a> it = this.a.iterator();
-                while (it.hasNext()) {
-                    C0100a next = it.next();
-                    if (next.f940b == aVar) {
-                        next.c = true;
-                        this.a.remove(next);
+                for (C0100a c0100a : this.a) {
+                    if (c0100a.f940b == aVar) {
+                        c0100a.c = true;
+                        this.a.remove(c0100a);
                     }
                 }
             }

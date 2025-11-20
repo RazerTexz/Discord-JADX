@@ -45,7 +45,7 @@ public final class UrlNode<T extends RenderContext> extends Node<T> {
 
     @Override // com.discord.simpleast.core.node.Node
     public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) {
-        render(spannableStringBuilder, (SpannableStringBuilder) obj);
+        render(spannableStringBuilder, (RenderContext) obj);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

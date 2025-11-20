@@ -268,7 +268,7 @@ public final class p4 extends i9 implements e {
         this.i.put(str, str2);
         this.d.put(str, u((b.i.a.f.h.l.u0) ((b.i.a.f.h.l.u4) aVarT.p())));
         g gVarQ = q();
-        ArrayList arrayList = new ArrayList(Collections.unmodifiableList(((b.i.a.f.h.l.u0) aVarT.k).D()));
+        ArrayList<b.i.a.f.h.l.k0> arrayList = new ArrayList(Collections.unmodifiableList(((b.i.a.f.h.l.u0) aVarT.k).D()));
         Objects.requireNonNull(gVarQ);
         String str4 = "app_id=? and audience_id=?";
         String str5 = "null reference";
@@ -381,9 +381,7 @@ public final class p4 extends i9 implements e {
             SQLiteDatabase sQLiteDatabaseT2 = gVarQ.t();
             sQLiteDatabaseT2.delete("property_filters", "app_id=?", new String[]{str});
             sQLiteDatabaseT2.delete("event_filters", "app_id=?", new String[]{str});
-            Iterator it = arrayList.iterator();
-            while (it.hasNext()) {
-                b.i.a.f.h.l.k0 k0Var = (b.i.a.f.h.l.k0) it.next();
+            for (b.i.a.f.h.l.k0 k0Var : arrayList) {
                 gVarQ.n();
                 gVarQ.b();
                 b.c.a.a0.d.w(str);
@@ -391,38 +389,38 @@ public final class p4 extends i9 implements e {
                 Objects.requireNonNull(k0Var, str14);
                 if (k0Var.x()) {
                     int iY = k0Var.y();
-                    Iterator<b.i.a.f.h.l.l0> it2 = k0Var.C().iterator();
+                    Iterator<b.i.a.f.h.l.l0> it = k0Var.C().iterator();
                     while (true) {
-                        if (it2.hasNext()) {
-                            if (!it2.next().x()) {
+                        if (it.hasNext()) {
+                            if (!it.next().x()) {
                                 gVarQ.g().i.c("Event filter with no ID. Audience definition ignored. appId, audienceId", q3.s(str), Integer.valueOf(iY));
                                 break;
                             }
                         } else {
-                            Iterator<b.i.a.f.h.l.o0> it3 = k0Var.A().iterator();
-                            while (it3.hasNext()) {
-                                if (!it3.next().v()) {
+                            Iterator<b.i.a.f.h.l.o0> it2 = k0Var.A().iterator();
+                            while (it2.hasNext()) {
+                                if (!it2.next().v()) {
                                     gVarQ.g().i.c("Property filter with no ID. Audience definition ignored. appId, audienceId", q3.s(str), Integer.valueOf(iY));
                                 }
                             }
-                            Iterator<b.i.a.f.h.l.l0> it4 = k0Var.C().iterator();
+                            Iterator<b.i.a.f.h.l.l0> it3 = k0Var.C().iterator();
                             while (true) {
-                                if (!it4.hasNext()) {
+                                if (!it3.hasNext()) {
                                     z2 = true;
                                     break;
                                 }
-                                if (!gVarQ.O(str, iY, it4.next())) {
+                                if (!gVarQ.O(str, iY, it3.next())) {
                                     z2 = false;
                                     break;
                                 }
                             }
                             if (z2) {
-                                Iterator<b.i.a.f.h.l.o0> it5 = k0Var.A().iterator();
+                                Iterator<b.i.a.f.h.l.o0> it4 = k0Var.A().iterator();
                                 while (true) {
-                                    if (!it5.hasNext()) {
+                                    if (!it4.hasNext()) {
                                         break;
                                     }
-                                    if (!gVarQ.P(str, iY, it5.next())) {
+                                    if (!gVarQ.P(str, iY, it4.next())) {
                                         z2 = false;
                                         break;
                                     }
@@ -449,9 +447,7 @@ public final class p4 extends i9 implements e {
                 str13 = str14;
             }
             ArrayList arrayList2 = new ArrayList();
-            Iterator it6 = arrayList.iterator();
-            while (it6.hasNext()) {
-                b.i.a.f.h.l.k0 k0Var2 = (b.i.a.f.h.l.k0) it6.next();
+            for (b.i.a.f.h.l.k0 k0Var2 : arrayList) {
                 arrayList2.add(k0Var2.x() ? Integer.valueOf(k0Var2.y()) : null);
             }
             gVarQ.W(str, arrayList2);

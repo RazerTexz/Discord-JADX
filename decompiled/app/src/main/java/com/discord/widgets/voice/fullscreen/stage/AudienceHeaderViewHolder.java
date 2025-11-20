@@ -46,7 +46,7 @@ public final class AudienceHeaderViewHolder extends StageCallViewHolder {
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         String str = this.numberFormatter.format(Integer.valueOf(((StageCallItem.AudienceHeaderItem) data).getAudienceSize()));
         TextView textView = this.binding.f2650b;
         m.checkNotNullExpressionValue(textView, "binding.stageChannelAudienceRoleText");

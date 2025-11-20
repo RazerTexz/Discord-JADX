@@ -338,7 +338,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Unit invoke(Object obj, Object obj2) {
-            invoke((Map<Map<T, Integer>, Integer>) obj, (Map<T, Integer>) obj2);
+            invoke((Map<Object, Integer>) obj, obj2);
             return Unit.a;
         }
 
@@ -418,7 +418,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
                             ShallowPartitionMap shallowPartitionMap = this.$emojiNameCounts;
                             String name = modelEmojiCustom2.getName();
                             m.checkNotNullExpressionValue(name, "emoji.name");
-                            anonymousClass4.invoke((Map<ShallowPartitionMap, Integer>) shallowPartitionMap, (ShallowPartitionMap) name);
+                            anonymousClass4.invoke((Map<String, Integer>) shallowPartitionMap, name);
                             ShallowPartitionMap shallowPartitionMap2 = this.$emojiIdsMap;
                             String uniqueId = modelEmojiCustom2.getUniqueId();
                             m.checkNotNullExpressionValue(uniqueId, "emoji.uniqueId");
@@ -691,7 +691,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
         Iterator<T> it5 = map6.keySet().iterator();
         while (it5.hasNext()) {
-            AnonymousClass4.INSTANCE.invoke((Map<ShallowPartitionMap, Integer>) shallowPartitionMapCreate$default, (ShallowPartitionMap) it5.next());
+            AnonymousClass4.INSTANCE.invoke((Map<String, Integer>) shallowPartitionMapCreate$default, (String) it5.next());
         }
         long guildId = emojiContext instanceof EmojiContext.Chat ? ((EmojiContext.Chat) emojiContext).getGuildId() : 0L;
         anonymousClass5.invoke(guildId);

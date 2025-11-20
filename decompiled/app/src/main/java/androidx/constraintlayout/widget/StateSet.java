@@ -149,25 +149,21 @@ public class StateSet {
                         case 80204913:
                             if (name.equals("State")) {
                                 c = 2;
-                                break;
                             }
                             break;
                         case 1301459538:
                             if (name.equals("LayoutDescription")) {
                                 c = 0;
-                                break;
                             }
                             break;
                         case 1382829617:
                             if (name.equals("StateSet")) {
                                 c = 1;
-                                break;
                             }
                             break;
                         case 1901439077:
                             if (name.equals("Variant")) {
                                 c = 3;
-                                break;
                             }
                             break;
                     }
@@ -216,14 +212,12 @@ public class StateSet {
             return state.mConstraintID;
         }
         Variant variant = null;
-        Iterator<Variant> it2 = state.mVariants.iterator();
-        while (it2.hasNext()) {
-            Variant next = it2.next();
-            if (next.match(f, f2)) {
-                if (i == next.mConstraintID) {
+        for (Variant variant2 : state.mVariants) {
+            if (variant2.match(f, f2)) {
+                if (i == variant2.mConstraintID) {
                     return i;
                 }
-                variant = next;
+                variant = variant2;
             }
         }
         return variant != null ? variant.mConstraintID : state.mConstraintID;

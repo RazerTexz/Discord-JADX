@@ -197,9 +197,7 @@ public class HandleConstructor {
 
     public static List<JavacNode> findFields(JavacNode typeNode, boolean nullMarked) {
         ListBuffer<JavacNode> fields = new ListBuffer<>();
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : typeNode.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl fieldDecl = child.get();
                 if (!fieldDecl.name.toString().startsWith("$")) {
@@ -252,9 +250,7 @@ public class HandleConstructor {
 
     public static List<JavacNode> findAllFields(JavacNode typeNode, boolean evenFinalInitialized) {
         ListBuffer<JavacNode> fields = new ListBuffer<>();
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode child = it.next();
+        for (JavacNode child : typeNode.down()) {
             if (child.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl fieldDecl = child.get();
                 if (!fieldDecl.name.toString().startsWith("$")) {
@@ -307,9 +303,7 @@ public class HandleConstructor {
     private void generate(JavacNode typeNode, AccessLevel level, List<JCTree.JCAnnotation> onConstructor, List<JavacNode> fields, boolean allToDefault, String staticName, SkipIfConstructorExists skipIfConstructorExists, JavacNode source, boolean noArgs) {
         boolean staticConstrRequired = (staticName == null || staticName.equals("")) ? false : true;
         if (skipIfConstructorExists != SkipIfConstructorExists.NO) {
-            Iterator<JavacNode> it = typeNode.down().iterator();
-            while (it.hasNext()) {
-                JavacNode child = it.next();
+            for (JavacNode child : typeNode.down()) {
                 if (child.getKind() == AST.Kind.ANNOTATION) {
                     boolean skipGeneration = JavacHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) NoArgsConstructor.class, child) || JavacHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) AllArgsConstructor.class, child) || JavacHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) RequiredArgsConstructor.class, child);
                     if (!skipGeneration && skipIfConstructorExists == SkipIfConstructorExists.YES) {
@@ -329,12 +323,12 @@ public class HandleConstructor {
             return;
         }
         ListBuffer<Type> argTypes = new ListBuffer<>();
-        Iterator it2 = fields.iterator();
+        Iterator it = fields.iterator();
         while (true) {
-            if (!it2.hasNext()) {
+            if (!it.hasNext()) {
                 break;
             }
-            JavacNode fieldNode = (JavacNode) it2.next();
+            JavacNode fieldNode = (JavacNode) it.next();
             Type mirror = JavacHandlerUtil.getMirrorForFieldType(fieldNode);
             if (mirror == null) {
                 argTypes = null;
@@ -362,9 +356,7 @@ public class HandleConstructor {
     private static boolean noArgsConstructorExists(JavacNode node) {
         JavacNode node2 = JavacHandlerUtil.upToTypeNode(node);
         if (node2 != null && (node2.get() instanceof JCTree.JCClassDecl)) {
-            Iterator it = node2.get().defs.iterator();
-            while (it.hasNext()) {
-                JCTree.JCMethodDecl jCMethodDecl = (JCTree) it.next();
+            for (JCTree.JCMethodDecl jCMethodDecl : node2.get().defs) {
                 if (jCMethodDecl instanceof JCTree.JCMethodDecl) {
                     JCTree.JCMethodDecl md = jCMethodDecl;
                     if (md.name.contentEquals("<init>") && md.params.size() == 0) {
@@ -373,9 +365,7 @@ public class HandleConstructor {
                 }
             }
         }
-        Iterator<JavacNode> it2 = node2.down().iterator();
-        while (it2.hasNext()) {
-            JavacNode child = it2.next();
+        for (JavacNode child : node2.down()) {
             if (JavacHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) NoArgsConstructor.class, child)) {
                 return true;
             }
@@ -396,9 +386,7 @@ public class HandleConstructor {
         JavacTreeMaker maker = node.getTreeMaker();
         JCTree.JCExpression constructorPropertiesType = JavacHandlerUtil.chainDots(node, "java", "beans", "ConstructorProperties");
         ListBuffer<JCTree.JCExpression> fieldNames = new ListBuffer<>();
-        Iterator it = fields.iterator();
-        while (it.hasNext()) {
-            JavacNode field = (JavacNode) it.next();
+        for (JavacNode field : fields) {
             Name fieldName = JavacHandlerUtil.removePrefixFromField(field);
             fieldNames.append(maker.Literal(fieldName.toString()));
         }
@@ -425,9 +413,7 @@ public class HandleConstructor {
         ListBuffer<JCTree.JCStatement> nullChecks = new ListBuffer<>();
         ListBuffer<JCTree.JCStatement> assigns = new ListBuffer<>();
         ListBuffer<JCTree.JCVariableDecl> params = new ListBuffer<>();
-        Iterator it = fieldsToParam.iterator();
-        while (it.hasNext()) {
-            JavacNode fieldNode = (JavacNode) it.next();
+        for (JavacNode fieldNode : fieldsToParam) {
             JCTree.JCVariableDecl field = fieldNode.get();
             Name fieldName = JavacHandlerUtil.removePrefixFromField(fieldNode);
             Name rawName = field.name;
@@ -442,17 +428,13 @@ public class HandleConstructor {
             JCTree.JCFieldAccess thisX = maker.Select(maker.Ident(fieldNode.toName("this")), rawName);
             assigns.append(maker.Exec(maker.Assign(thisX, maker.Ident(fieldName))));
         }
-        Iterator it2 = fieldsToExplicit.iterator();
-        while (it2.hasNext()) {
-            JavacNode fieldNode2 = (JavacNode) it2.next();
+        for (JavacNode fieldNode2 : fieldsToExplicit) {
             JCTree.JCVariableDecl field2 = fieldNode2.get();
             Name rawName2 = field2.name;
             JCTree.JCFieldAccess thisX2 = maker.Select(maker.Ident(fieldNode2.toName("this")), rawName2);
             assigns.append(maker.Exec(maker.Assign(thisX2, getDefaultExpr(maker, field2.vartype))));
         }
-        Iterator it3 = fieldsToDefault.iterator();
-        while (it3.hasNext()) {
-            JavacNode fieldNode3 = (JavacNode) it3.next();
+        for (JavacNode fieldNode3 : fieldsToDefault) {
             Name rawName3 = fieldNode3.get().name;
             Name nameOfDefaultProvider = typeNode.toName("$default$" + JavacHandlerUtil.removePrefixFromField(fieldNode3));
             JCTree.JCFieldAccess thisX3 = maker.Select(maker.Ident(fieldNode3.toName("this")), rawName3);
@@ -470,16 +452,14 @@ public class HandleConstructor {
 
     private static List<JavacNode> fieldsNeedingBuilderDefaults(JavacNode typeNode, List<JavacNode> fieldsToParam) {
         ListBuffer<JavacNode> out = new ListBuffer<>();
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode node = it.next();
+        for (JavacNode node : typeNode.down()) {
             if (node.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl varDecl = node.get();
                 if ((varDecl.mods.flags & 8) == 0) {
-                    Iterator it2 = fieldsToParam.iterator();
+                    Iterator it = fieldsToParam.iterator();
                     while (true) {
-                        if (it2.hasNext()) {
-                            JavacNode ftp = (JavacNode) it2.next();
+                        if (it.hasNext()) {
+                            JavacNode ftp = (JavacNode) it.next();
                             if (node == ftp) {
                                 break;
                             }
@@ -495,16 +475,14 @@ public class HandleConstructor {
 
     private static List<JavacNode> fieldsNeedingExplicitDefaults(JavacNode typeNode, List<JavacNode> fieldsToParam) {
         ListBuffer<JavacNode> out = new ListBuffer<>();
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode node = it.next();
+        for (JavacNode node : typeNode.down()) {
             if (node.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl varDecl = node.get();
                 if (varDecl.init == null && (varDecl.mods.flags & 16) != 0 && (varDecl.mods.flags & 8) == 0) {
-                    Iterator it2 = fieldsToParam.iterator();
+                    Iterator it = fieldsToParam.iterator();
                     while (true) {
-                        if (it2.hasNext()) {
-                            JavacNode ftp = (JavacNode) it2.next();
+                        if (it.hasNext()) {
+                            JavacNode ftp = (JavacNode) it.next();
                             if (node == ftp) {
                                 break;
                             }
@@ -560,9 +538,7 @@ public class HandleConstructor {
         ListBuffer<JCTree.JCVariableDecl> params = new ListBuffer<>();
         ListBuffer<JCTree.JCExpression> args = new ListBuffer<>();
         if (!type.typarams.isEmpty()) {
-            Iterator it = type.typarams.iterator();
-            while (it.hasNext()) {
-                JCTree.JCTypeParameter param = (JCTree.JCTypeParameter) it.next();
+            for (JCTree.JCTypeParameter param : type.typarams) {
                 typeParams.append(maker.TypeParameter(param.name, param.bounds));
             }
         }
@@ -572,9 +548,7 @@ public class HandleConstructor {
         }
         JCTree.JCExpression returnType = JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, typeNode, type.typarams, annsOnReturnType);
         JCTree.JCExpression constructorType = JavacHandlerUtil.namePlusTypeParamsToTypeReference(maker, typeNode, type.typarams);
-        Iterator it2 = fields.iterator();
-        while (it2.hasNext()) {
-            JavacNode fieldNode = (JavacNode) it2.next();
+        for (JavacNode fieldNode : fields) {
             JCTree.JCVariableDecl field = fieldNode.get();
             Name fieldName = JavacHandlerUtil.removePrefixFromField(fieldNode);
             JCTree.JCExpression pType = JavacHandlerUtil.cloneType(maker, field.vartype, source, typeNode.getContext());

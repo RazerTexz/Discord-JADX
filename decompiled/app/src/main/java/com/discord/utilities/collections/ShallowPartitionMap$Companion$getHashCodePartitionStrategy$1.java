@@ -19,7 +19,7 @@ public final class ShallowPartitionMap$Companion$getHashCodePartitionStrategy$1<
     /* JADX WARN: Multi-variable type inference failed */
     @Override // kotlin.jvm.functions.Function1
     public /* bridge */ /* synthetic */ Integer invoke(Object obj) {
-        return Integer.valueOf(invoke2((ShallowPartitionMap$Companion$getHashCodePartitionStrategy$1<K>) obj));
+        return Integer.valueOf(invoke2(obj));
     }
 
     /* renamed from: invoke, reason: avoid collision after fix types in other method */

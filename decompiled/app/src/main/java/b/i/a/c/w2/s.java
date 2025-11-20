@@ -4,7 +4,6 @@ import android.os.Handler;
 import androidx.annotation.CheckResult;
 import androidx.annotation.Nullable;
 import b.i.a.c.a3.a0;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /* compiled from: DrmSessionEventListener.java */
@@ -52,50 +51,38 @@ public interface s {
         }
 
         public void a() {
-            Iterator<C0101a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0101a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new i(this, next.f1157b));
+            for (C0101a c0101a : this.c) {
+                b.i.a.c.f3.e0.E(c0101a.a, new i(this, c0101a.f1157b));
             }
         }
 
         public void b() {
-            Iterator<C0101a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0101a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new h(this, next.f1157b));
+            for (C0101a c0101a : this.c) {
+                b.i.a.c.f3.e0.E(c0101a.a, new h(this, c0101a.f1157b));
             }
         }
 
         public void c() {
-            Iterator<C0101a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0101a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new j(this, next.f1157b));
+            for (C0101a c0101a : this.c) {
+                b.i.a.c.f3.e0.E(c0101a.a, new j(this, c0101a.f1157b));
             }
         }
 
         public void d(int i) {
-            Iterator<C0101a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0101a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new l(this, next.f1157b, i));
+            for (C0101a c0101a : this.c) {
+                b.i.a.c.f3.e0.E(c0101a.a, new l(this, c0101a.f1157b, i));
             }
         }
 
         public void e(Exception exc) {
-            Iterator<C0101a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0101a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new k(this, next.f1157b, exc));
+            for (C0101a c0101a : this.c) {
+                b.i.a.c.f3.e0.E(c0101a.a, new k(this, c0101a.f1157b, exc));
             }
         }
 
         public void f() {
-            Iterator<C0101a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0101a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new g(this, next.f1157b));
+            for (C0101a c0101a : this.c) {
+                b.i.a.c.f3.e0.E(c0101a.a, new g(this, c0101a.f1157b));
             }
         }
 

@@ -150,6 +150,7 @@ public class FirebaseMessagingService extends EnhancedIntentService {
                                 PackageManager packageManager = context.getPackageManager();
                                 if (packageManager != null && (applicationInfo = packageManager.getApplicationInfo(context.getPackageName(), 128)) != null && (bundle = applicationInfo.metaData) != null && bundle.containsKey("delivery_metrics_exported_to_big_query_enabled")) {
                                     z2 = applicationInfo.metaData.getBoolean("delivery_metrics_exported_to_big_query_enabled", false);
+                                    break;
                                 }
                             } catch (PackageManager.NameNotFoundException unused) {
                             }
@@ -163,6 +164,7 @@ public class FirebaseMessagingService extends EnhancedIntentService {
                     if (gVar != null) {
                         try {
                             gVar.a("FCM_CLIENT_EVENT_LOGGING", String.class, new b("json"), p.a).a(new b.i.a.b.a(null, ((d) q.a).a(new m.b(new m("MESSAGE_DELIVERED", intent))), b.i.a.b.d.VERY_LOW));
+                            break;
                         } catch (EncodingException unused3) {
                             Log.d("FirebaseMessaging", "Failed to encode big query analytics payload. Skip sending");
                         }

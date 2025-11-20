@@ -545,11 +545,9 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
                 canvas.drawCircle((normalizeValue(it.next().floatValue()) * i) + this.trackSidePadding, i2, this.thumbRadius, this.thumbPaint);
             }
         }
-        Iterator<Float> it2 = this.values.iterator();
-        while (it2.hasNext()) {
-            Float next = it2.next();
+        for (Float f2 : this.values) {
             canvas.save();
-            int iNormalizeValue = this.trackSidePadding + ((int) (normalizeValue(next.floatValue()) * i));
+            int iNormalizeValue = this.trackSidePadding + ((int) (normalizeValue(f2.floatValue()) * i));
             int i3 = this.thumbRadius;
             canvas.translate(iNormalizeValue - i3, i2 - i3);
             this.thumbDrawable.draw(canvas);
@@ -1014,14 +1012,12 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
     }
 
     private void validateValues() {
-        Iterator<Float> it = this.values.iterator();
-        while (it.hasNext()) {
-            Float next = it.next();
-            if (next.floatValue() < this.valueFrom || next.floatValue() > this.valueTo) {
-                throw new IllegalStateException(String.format(EXCEPTION_ILLEGAL_VALUE, Float.toString(next.floatValue()), Float.toString(this.valueFrom), Float.toString(this.valueTo)));
+        for (Float f2 : this.values) {
+            if (f2.floatValue() < this.valueFrom || f2.floatValue() > this.valueTo) {
+                throw new IllegalStateException(String.format(EXCEPTION_ILLEGAL_VALUE, Float.toString(f2.floatValue()), Float.toString(this.valueFrom), Float.toString(this.valueTo)));
             }
-            if (this.stepSize > 0.0f && !valueLandsOnTick(next.floatValue())) {
-                throw new IllegalStateException(String.format(EXCEPTION_ILLEGAL_DISCRETE_VALUE, Float.toString(next.floatValue()), Float.toString(this.valueFrom), Float.toString(this.stepSize), Float.toString(this.stepSize)));
+            if (this.stepSize > 0.0f && !valueLandsOnTick(f2.floatValue())) {
+                throw new IllegalStateException(String.format(EXCEPTION_ILLEGAL_DISCRETE_VALUE, Float.toString(f2.floatValue()), Float.toString(this.valueFrom), Float.toString(this.stepSize), Float.toString(this.stepSize)));
             }
         }
     }

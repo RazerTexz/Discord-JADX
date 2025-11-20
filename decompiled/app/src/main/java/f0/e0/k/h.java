@@ -71,9 +71,7 @@ public class h {
         public final byte[] b(List<? extends y> list) {
             m.checkParameterIsNotNull(list, "protocols");
             g0.e eVar = new g0.e();
-            Iterator it = ((ArrayList) a(list)).iterator();
-            while (it.hasNext()) {
-                String str = (String) it.next();
+            for (String str : (ArrayList) a(list)) {
                 eVar.T(str.length());
                 eVar.b0(str);
             }

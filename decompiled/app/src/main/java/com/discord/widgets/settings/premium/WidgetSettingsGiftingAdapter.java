@@ -111,7 +111,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
         public void onConfigure2(int position, GiftItem data) {
             int themedDrawableRes$default;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (m.areEqual(data.getExpanded(), Boolean.FALSE)) {
                 View view = this.itemView;
                 m.checkNotNullExpressionValue(view, "itemView");
@@ -243,7 +243,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
             CharSequence name;
             String icon;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data.getSku() == null || data.getCopies() == null || data.getExpanded() == null) {
                 return;
             }

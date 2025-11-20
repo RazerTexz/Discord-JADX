@@ -250,7 +250,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, CategoricalDragAndDropAdapter.Payload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             CategoryItem categoryItem = (CategoryItem) data;
             this.categoryItem = categoryItem;
             if (categoryItem != null) {
@@ -462,7 +462,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, CategoricalDragAndDropAdapter.Payload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ChannelItem channelItem = (ChannelItem) data;
             this.channelItem = channelItem;
             if (channelItem != null) {

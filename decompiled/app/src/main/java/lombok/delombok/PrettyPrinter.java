@@ -624,9 +624,7 @@ public class PrettyPrinter extends JCTree.Visitor {
     private void print(List<? extends JCTree> trees, String infix) {
         boolean first = true;
         JCTree prev = null;
-        Iterator it = trees.iterator();
-        while (it.hasNext()) {
-            JCTree tree = (JCTree) it.next();
+        for (JCTree tree : trees) {
             if (!suppress(tree)) {
                 if (!first && infix != null && !infix.isEmpty()) {
                     if ("\n".equals(infix)) {
@@ -804,8 +802,10 @@ public class PrettyPrinter extends JCTree.Visitor {
                     this.needsNewLine = true;
                     this.needsAlign = true;
                     break;
-                } else if (!this.aligned) {
-                    this.needsAlign = true;
+                } else {
+                    if (!this.aligned) {
+                        this.needsAlign = true;
+                    }
                     break;
                 }
                 break;
@@ -828,7 +828,6 @@ public class PrettyPrinter extends JCTree.Visitor {
                 if (!this.aligned) {
                     this.needsNewLine = true;
                     this.needsAlign = true;
-                    break;
                 }
                 break;
         }
@@ -880,9 +879,7 @@ public class PrettyPrinter extends JCTree.Visitor {
             println(";", n);
         }
         boolean first = true;
-        Iterator it = tree.defs.iterator();
-        while (it.hasNext()) {
-            JCTree child = (JCTree) it.next();
+        for (JCTree child : tree.defs) {
             if (child instanceof JCTree.JCImport) {
                 if (first) {
                     println();
@@ -891,9 +888,7 @@ public class PrettyPrinter extends JCTree.Visitor {
                 print(child);
             }
         }
-        Iterator it2 = tree.defs.iterator();
-        while (it2.hasNext()) {
-            JCTree child2 = (JCTree) it2.next();
+        for (JCTree child2 : tree.defs) {
             if (!(child2 instanceof JCTree.JCImport)) {
                 print(child2);
             }
@@ -1230,9 +1225,7 @@ public class PrettyPrinter extends JCTree.Visitor {
                 printVarDefInline(recvparam);
                 first = false;
             }
-            Iterator it = tree.params.iterator();
-            while (it.hasNext()) {
-                JCTree.JCVariableDecl param = (JCTree.JCVariableDecl) it.next();
+            for (JCTree.JCVariableDecl param : tree.params) {
                 if (!first) {
                     print(", ");
                 }
@@ -1300,9 +1293,7 @@ public class PrettyPrinter extends JCTree.Visitor {
                 jCExpression = ((JCTree.JCArrayTypeTree) jCExpression).elemtype;
             }
             print((JCTree) jCExpression);
-            Iterator it = tree.dims.iterator();
-            while (it.hasNext()) {
-                JCTree.JCExpression expr = (JCTree.JCExpression) it.next();
+            for (JCTree.JCExpression expr : tree.dims) {
                 print("[");
                 print((JCTree) expr);
                 print("]");
@@ -1426,9 +1417,7 @@ public class PrettyPrinter extends JCTree.Visitor {
     }
 
     private void printAnnotations(List<JCTree.JCAnnotation> annotations, boolean newlines) {
-        Iterator it = annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation ann = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation ann : annotations) {
             print((JCTree) ann);
             if (newlines) {
                 println();
@@ -1668,9 +1657,7 @@ public class PrettyPrinter extends JCTree.Visitor {
             if (tree.init.head instanceof JCTree.JCVariableDecl) {
                 boolean first = true;
                 int dims = 0;
-                Iterator it = tree.init.iterator();
-                while (it.hasNext()) {
-                    JCTree.JCStatement i = (JCTree.JCStatement) it.next();
+                for (JCTree.JCStatement i : tree.init) {
                     JCTree.JCVariableDecl vd = (JCTree.JCVariableDecl) i;
                     if (first) {
                         printVarDefInline(vd);
@@ -1691,9 +1678,7 @@ public class PrettyPrinter extends JCTree.Visitor {
                 }
             } else {
                 boolean first2 = true;
-                Iterator it2 = tree.init.iterator();
-                while (it2.hasNext()) {
-                    JCTree.JCExpressionStatement jCExpressionStatement = (JCTree.JCStatement) it2.next();
+                for (JCTree.JCExpressionStatement jCExpressionStatement : tree.init) {
                     if (!first2) {
                         print(", ");
                     }
@@ -1708,9 +1693,7 @@ public class PrettyPrinter extends JCTree.Visitor {
         }
         print("; ");
         boolean first3 = true;
-        Iterator it3 = tree.step.iterator();
-        while (it3.hasNext()) {
-            JCTree.JCExpressionStatement exprStatement = (JCTree.JCExpressionStatement) it3.next();
+        for (JCTree.JCExpressionStatement exprStatement : tree.step) {
             if (!first3) {
                 print(", ");
             }
@@ -1930,9 +1913,7 @@ public class PrettyPrinter extends JCTree.Visitor {
                 println("(");
                 this.indent++;
                 int c = 0;
-                Iterator it = resources.iterator();
-                while (it.hasNext()) {
-                    Object i = it.next();
+                for (Object i : resources) {
                     align();
                     if (i instanceof JCTree.JCVariableDecl) {
                         this.flagMod = -17L;
@@ -1952,24 +1933,18 @@ public class PrettyPrinter extends JCTree.Visitor {
         }
         println("{");
         this.indent++;
-        Iterator it2 = tree.body.stats.iterator();
-        while (it2.hasNext()) {
-            JCTree.JCStatement stat = (JCTree.JCStatement) it2.next();
+        for (JCTree.JCStatement stat : tree.body.stats) {
             print((JCTree) stat);
         }
         this.indent--;
         aPrint("}");
-        Iterator it3 = tree.catchers.iterator();
-        while (it3.hasNext()) {
-            JCTree.JCCatch catchBlock = (JCTree.JCCatch) it3.next();
+        for (JCTree.JCCatch catchBlock : tree.catchers) {
             printCatch(catchBlock);
         }
         if (tree.finalizer != null) {
             println(" finally {");
             this.indent++;
-            Iterator it4 = tree.finalizer.stats.iterator();
-            while (it4.hasNext()) {
-                JCTree.JCStatement stat2 = (JCTree.JCStatement) it4.next();
+            for (JCTree.JCStatement stat2 : tree.finalizer.stats) {
                 print((JCTree) stat2);
             }
             this.indent--;
@@ -1983,9 +1958,7 @@ public class PrettyPrinter extends JCTree.Visitor {
         printVarDefInline(catchBlock.param);
         println(") {");
         this.indent++;
-        Iterator it = catchBlock.body.stats.iterator();
-        while (it.hasNext()) {
-            JCTree.JCStatement stat = (JCTree.JCStatement) it.next();
+        for (JCTree.JCStatement stat : catchBlock.body.stats) {
             print((JCTree) stat);
         }
         this.indent--;
@@ -2189,9 +2162,7 @@ public class PrettyPrinter extends JCTree.Visitor {
         }
         if (explicit) {
             boolean first = true;
-            Iterator it = params.iterator();
-            while (it.hasNext()) {
-                JCTree.JCVariableDecl vd = (JCTree.JCVariableDecl) it.next();
+            for (JCTree.JCVariableDecl vd : params) {
                 if (!first) {
                     print(", ");
                 }
@@ -2200,9 +2171,7 @@ public class PrettyPrinter extends JCTree.Visitor {
             }
         } else {
             String sep = "";
-            Iterator it2 = params.iterator();
-            while (it2.hasNext()) {
-                JCTree.JCVariableDecl param = (JCTree.JCVariableDecl) it2.next();
+            for (JCTree.JCVariableDecl param : params) {
                 print(sep);
                 print((CharSequence) param.name);
                 sep = ", ";

@@ -51,11 +51,9 @@ public abstract class l implements a0 {
     @Override // b.i.a.c.a3.a0
     public final void c(b0 b0Var) {
         b0.a aVar = this.c;
-        Iterator<b0.a.C0092a> it = aVar.c.iterator();
-        while (it.hasNext()) {
-            b0.a.C0092a next = it.next();
-            if (next.f808b == b0Var) {
-                aVar.c.remove(next);
+        for (b0.a.C0092a c0092a : aVar.c) {
+            if (c0092a.f808b == b0Var) {
+                aVar.c.remove(c0092a);
             }
         }
     }
@@ -79,11 +77,9 @@ public abstract class l implements a0 {
     @Override // b.i.a.c.a3.a0
     public final void g(b.i.a.c.w2.s sVar) {
         s.a aVar = this.d;
-        Iterator<s.a.C0101a> it = aVar.c.iterator();
-        while (it.hasNext()) {
-            s.a.C0101a next = it.next();
-            if (next.f1157b == sVar) {
-                aVar.c.remove(next);
+        for (s.a.C0101a c0101a : aVar.c) {
+            if (c0101a.f1157b == sVar) {
+                aVar.c.remove(c0101a);
             }
         }
     }

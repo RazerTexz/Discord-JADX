@@ -728,7 +728,7 @@ public final class GuildInviteShareSheetViewModel extends d0<ViewState> {
     /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
         m.checkNotNullParameter(viewState, "viewState");
-        super.updateViewState((GuildInviteShareSheetViewModel) viewState);
+        super.updateViewState(viewState);
         if (!viewState.getHasSearchResults() || this.hasTrackedSuggestionsViewed) {
             return;
         }

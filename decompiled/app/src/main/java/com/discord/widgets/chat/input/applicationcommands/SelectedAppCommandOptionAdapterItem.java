@@ -43,7 +43,7 @@ public final class SelectedAppCommandOptionAdapterItem extends MGRecyclerViewHol
     public void onConfigure2(int position, SelectedApplicationCommandItem data) {
         int themedColor;
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         ApplicationCommandOption option = data.getOption();
         if (option != null) {
             TextView textView = this.binding.f2172b;

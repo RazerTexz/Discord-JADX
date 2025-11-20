@@ -111,9 +111,9 @@ public class Grouping {
             metrics.grouping++;
         }
         ArrayList arrayList = null;
-        ArrayList arrayList2 = null;
+        ArrayList<HelperWidget> arrayList2 = null;
         ArrayList arrayList3 = null;
-        ArrayList arrayList4 = null;
+        ArrayList<HelperWidget> arrayList4 = null;
         ArrayList arrayList5 = null;
         ArrayList arrayList6 = null;
         for (int i2 = 0; i2 < size; i2++) {
@@ -187,9 +187,7 @@ public class Grouping {
         int i3 = 0;
         WidgetGroup widgetGroup3 = null;
         if (arrayList2 != null) {
-            Iterator it2 = arrayList2.iterator();
-            while (it2.hasNext()) {
-                HelperWidget helperWidget2 = (HelperWidget) it2.next();
+            for (HelperWidget helperWidget2 : arrayList2) {
                 WidgetGroup widgetGroupFindDependents = findDependents(helperWidget2, i3, arrayList7, widgetGroup3);
                 helperWidget2.addDependents(arrayList7, i3, widgetGroupFindDependents);
                 widgetGroupFindDependents.cleanup(arrayList7);
@@ -199,42 +197,40 @@ public class Grouping {
         }
         ConstraintAnchor anchor = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.LEFT);
         if (anchor.getDependents() != null) {
-            Iterator<ConstraintAnchor> it3 = anchor.getDependents().iterator();
-            while (it3.hasNext()) {
-                findDependents(it3.next().mOwner, 0, arrayList7, null);
+            Iterator<ConstraintAnchor> it2 = anchor.getDependents().iterator();
+            while (it2.hasNext()) {
+                findDependents(it2.next().mOwner, 0, arrayList7, null);
             }
         }
         ConstraintAnchor anchor2 = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.RIGHT);
         if (anchor2.getDependents() != null) {
-            Iterator<ConstraintAnchor> it4 = anchor2.getDependents().iterator();
-            while (it4.hasNext()) {
-                findDependents(it4.next().mOwner, 0, arrayList7, null);
+            Iterator<ConstraintAnchor> it3 = anchor2.getDependents().iterator();
+            while (it3.hasNext()) {
+                findDependents(it3.next().mOwner, 0, arrayList7, null);
             }
         }
         ConstraintAnchor anchor3 = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.CENTER);
         if (anchor3.getDependents() != null) {
-            Iterator<ConstraintAnchor> it5 = anchor3.getDependents().iterator();
-            while (it5.hasNext()) {
-                findDependents(it5.next().mOwner, 0, arrayList7, null);
+            Iterator<ConstraintAnchor> it4 = anchor3.getDependents().iterator();
+            while (it4.hasNext()) {
+                findDependents(it4.next().mOwner, 0, arrayList7, null);
             }
         }
         WidgetGroup widgetGroup4 = null;
         if (arrayList5 != null) {
-            Iterator it6 = arrayList5.iterator();
-            while (it6.hasNext()) {
-                findDependents((ConstraintWidget) it6.next(), 0, arrayList7, null);
+            Iterator it5 = arrayList5.iterator();
+            while (it5.hasNext()) {
+                findDependents((ConstraintWidget) it5.next(), 0, arrayList7, null);
             }
         }
         if (arrayList3 != null) {
-            Iterator it7 = arrayList3.iterator();
-            while (it7.hasNext()) {
-                findDependents((Guideline) it7.next(), 1, arrayList7, null);
+            Iterator it6 = arrayList3.iterator();
+            while (it6.hasNext()) {
+                findDependents((Guideline) it6.next(), 1, arrayList7, null);
             }
         }
         if (arrayList4 != null) {
-            Iterator it8 = arrayList4.iterator();
-            while (it8.hasNext()) {
-                HelperWidget helperWidget3 = (HelperWidget) it8.next();
+            for (HelperWidget helperWidget3 : arrayList4) {
                 WidgetGroup widgetGroupFindDependents2 = findDependents(helperWidget3, 1, arrayList7, widgetGroup4);
                 helperWidget3.addDependents(arrayList7, 1, widgetGroupFindDependents2);
                 widgetGroupFindDependents2.cleanup(arrayList7);
@@ -243,36 +239,36 @@ public class Grouping {
         }
         ConstraintAnchor anchor4 = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.TOP);
         if (anchor4.getDependents() != null) {
-            Iterator<ConstraintAnchor> it9 = anchor4.getDependents().iterator();
-            while (it9.hasNext()) {
-                findDependents(it9.next().mOwner, 1, arrayList7, null);
+            Iterator<ConstraintAnchor> it7 = anchor4.getDependents().iterator();
+            while (it7.hasNext()) {
+                findDependents(it7.next().mOwner, 1, arrayList7, null);
             }
         }
         ConstraintAnchor anchor5 = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.BASELINE);
         if (anchor5.getDependents() != null) {
-            Iterator<ConstraintAnchor> it10 = anchor5.getDependents().iterator();
-            while (it10.hasNext()) {
-                findDependents(it10.next().mOwner, 1, arrayList7, null);
+            Iterator<ConstraintAnchor> it8 = anchor5.getDependents().iterator();
+            while (it8.hasNext()) {
+                findDependents(it8.next().mOwner, 1, arrayList7, null);
             }
         }
         ConstraintAnchor anchor6 = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.BOTTOM);
         if (anchor6.getDependents() != null) {
-            Iterator<ConstraintAnchor> it11 = anchor6.getDependents().iterator();
-            while (it11.hasNext()) {
-                findDependents(it11.next().mOwner, 1, arrayList7, null);
+            Iterator<ConstraintAnchor> it9 = anchor6.getDependents().iterator();
+            while (it9.hasNext()) {
+                findDependents(it9.next().mOwner, 1, arrayList7, null);
             }
         }
         ConstraintAnchor anchor7 = constraintWidgetContainer.getAnchor(ConstraintAnchor.Type.CENTER);
         if (anchor7.getDependents() != null) {
-            Iterator<ConstraintAnchor> it12 = anchor7.getDependents().iterator();
-            while (it12.hasNext()) {
-                findDependents(it12.next().mOwner, 1, arrayList7, null);
+            Iterator<ConstraintAnchor> it10 = anchor7.getDependents().iterator();
+            while (it10.hasNext()) {
+                findDependents(it10.next().mOwner, 1, arrayList7, null);
             }
         }
         if (arrayList6 != null) {
-            Iterator it13 = arrayList6.iterator();
-            while (it13.hasNext()) {
-                findDependents((ConstraintWidget) it13.next(), 1, arrayList7, null);
+            Iterator it11 = arrayList6.iterator();
+            while (it11.hasNext()) {
+                findDependents((ConstraintWidget) it11.next(), 1, arrayList7, null);
             }
         }
         for (int i4 = 0; i4 < size; i4++) {
@@ -291,16 +287,14 @@ public class Grouping {
             return false;
         }
         if (constraintWidgetContainer.getHorizontalDimensionBehaviour() == ConstraintWidget.DimensionBehaviour.WRAP_CONTENT) {
-            Iterator<WidgetGroup> it14 = arrayList7.iterator();
             widgetGroup = null;
             int i5 = 0;
-            while (it14.hasNext()) {
-                WidgetGroup next = it14.next();
-                if (next.getOrientation() != 1) {
-                    next.setAuthoritative(false);
-                    int iMeasureWrap = next.measureWrap(constraintWidgetContainer.getSystem(), 0);
+            for (WidgetGroup widgetGroup5 : arrayList7) {
+                if (widgetGroup5.getOrientation() != 1) {
+                    widgetGroup5.setAuthoritative(false);
+                    int iMeasureWrap = widgetGroup5.measureWrap(constraintWidgetContainer.getSystem(), 0);
                     if (iMeasureWrap > i5) {
-                        widgetGroup = next;
+                        widgetGroup = widgetGroup5;
                         i5 = iMeasureWrap;
                     }
                 }
@@ -314,25 +308,23 @@ public class Grouping {
             }
         }
         if (constraintWidgetContainer.getVerticalDimensionBehaviour() == ConstraintWidget.DimensionBehaviour.WRAP_CONTENT) {
-            Iterator<WidgetGroup> it15 = arrayList7.iterator();
-            WidgetGroup widgetGroup5 = null;
+            WidgetGroup widgetGroup6 = null;
             int i6 = 0;
-            while (it15.hasNext()) {
-                WidgetGroup next2 = it15.next();
-                if (next2.getOrientation() != 0) {
-                    next2.setAuthoritative(false);
-                    int iMeasureWrap2 = next2.measureWrap(constraintWidgetContainer.getSystem(), 1);
+            for (WidgetGroup widgetGroup7 : arrayList7) {
+                if (widgetGroup7.getOrientation() != 0) {
+                    widgetGroup7.setAuthoritative(false);
+                    int iMeasureWrap2 = widgetGroup7.measureWrap(constraintWidgetContainer.getSystem(), 1);
                     if (iMeasureWrap2 > i6) {
-                        widgetGroup5 = next2;
+                        widgetGroup6 = widgetGroup7;
                         i6 = iMeasureWrap2;
                     }
                 }
             }
-            if (widgetGroup5 != null) {
+            if (widgetGroup6 != null) {
                 constraintWidgetContainer.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.FIXED);
                 constraintWidgetContainer.setHeight(i6);
-                widgetGroup5.setAuthoritative(true);
-                widgetGroup2 = widgetGroup5;
+                widgetGroup6.setAuthoritative(true);
+                widgetGroup2 = widgetGroup6;
             }
             return widgetGroup == null || widgetGroup2 != null;
         }

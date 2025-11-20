@@ -151,9 +151,9 @@ public class CmdReader<T> {
             return;
         }
         out.append("\n  Mandatory arguments:\n");
-        Iterator i$ = items.iterator();
-        while (i$.hasNext()) {
-            generateArgHelp(maxFullName, maxShorthand, i$.next(), out);
+        Iterator<ParseItem> it = items.iterator();
+        while (it.hasNext()) {
+            generateArgHelp(maxFullName, maxShorthand, it.next(), out);
         }
     }
 
@@ -168,9 +168,9 @@ public class CmdReader<T> {
             return;
         }
         out.append("\n  Optional arguments:\n");
-        Iterator i$ = items.iterator();
-        while (i$.hasNext()) {
-            generateArgHelp(maxFullName, maxShorthand, i$.next(), out);
+        Iterator<ParseItem> it = items.iterator();
+        while (it.hasNext()) {
+            generateArgHelp(maxFullName, maxShorthand, it.next(), out);
         }
     }
 
@@ -307,12 +307,12 @@ public class CmdReader<T> {
                     throw new InvalidCommandLineException("invalid command line argument - you should write something after the '=': " + in[i]);
                 }
                 boolean handled = false;
-                Iterator i$ = this.items.iterator();
+                Iterator<ParseItem> it = this.items.iterator();
                 while (true) {
-                    if (!i$.hasNext()) {
+                    if (!it.hasNext()) {
                         break;
                     }
-                    ParseItem item = i$.next();
+                    ParseItem item = it.next();
                     if (item.getFullName().equalsIgnoreCase(key)) {
                         if (item.isParameterized() && value.length() == 0) {
                             if (i >= in.length - 1 || in[i + 1].startsWith("-")) {

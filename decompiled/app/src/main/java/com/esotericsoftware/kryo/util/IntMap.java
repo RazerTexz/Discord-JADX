@@ -797,10 +797,8 @@ public class IntMap<V> {
     }
 
     public void putAll(IntMap<V> intMap) {
-        Iterator<Entry<V>> it = intMap.entries().iterator();
-        while (it.hasNext()) {
-            Entry<V> next = it.next();
-            put(next.key, next.value);
+        for (Entry<V> entry : intMap.entries()) {
+            put(entry.key, entry.value);
         }
     }
 

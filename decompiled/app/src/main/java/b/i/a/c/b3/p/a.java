@@ -123,11 +123,10 @@ public final class a extends f {
                                 }
                                 xVar = xVar5;
                                 c0096a.c = true;
-                                break;
                             } else {
                                 xVar = xVar5;
-                                break;
                             }
+                            break;
                         case 21:
                             Objects.requireNonNull(c0096a);
                             if (iY >= 4) {

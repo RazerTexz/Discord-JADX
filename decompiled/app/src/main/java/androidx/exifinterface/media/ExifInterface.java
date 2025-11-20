@@ -1123,6 +1123,7 @@ public class ExifInterface {
                                     String str = new String(this.bytes, ExifInterface.ASCII);
                                     try {
                                         byteOrderedDataInputStream.close();
+                                        break;
                                     } catch (IOException e) {
                                         Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e);
                                     }
@@ -1131,6 +1132,7 @@ public class ExifInterface {
                                 String str2 = new String(new char[]{(char) (this.bytes[0] + 48)});
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e2) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e2);
                                 }
@@ -1165,6 +1167,7 @@ public class ExifInterface {
                                 String string = sb.toString();
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e3) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e3);
                                 }
@@ -1177,6 +1180,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e4) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e4);
                                 }
@@ -1189,6 +1193,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e5) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e5);
                                 }
@@ -1201,6 +1206,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e6) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e6);
                                 }
@@ -1213,6 +1219,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e7) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e7);
                                 }
@@ -1225,6 +1232,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e8) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e8);
                                 }
@@ -1237,6 +1245,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e9) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e9);
                                 }
@@ -1249,6 +1258,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e10) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e10);
                                 }
@@ -1261,6 +1271,7 @@ public class ExifInterface {
                                 }
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e11) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e11);
                                 }
@@ -1268,6 +1279,7 @@ public class ExifInterface {
                             default:
                                 try {
                                     byteOrderedDataInputStream.close();
+                                    break;
                                 } catch (IOException e12) {
                                     Log.e(ExifInterface.TAG, "IOException occurred while closing InputStream", e12);
                                 }
@@ -1645,141 +1657,107 @@ public class ExifInterface {
         }
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:66:0x0180, code lost:
-    
-        r19.setByteOrder(r18.mExifByteOrder);
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:67:0x0185, code lost:
-    
-        return;
-     */
+    /*  JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
+        java.lang.UnsupportedOperationException
+        	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1093)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker$1.leaveRegion(SwitchRegionMaker.java:390)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:70)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(DepthRegionTraversal.java:23)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.insertBreaksForCase(SwitchRegionMaker.java:370)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.insertBreaks(SwitchRegionMaker.java:85)
+        	at jadx.core.dex.visitors.regions.PostProcessRegions.leaveRegion(PostProcessRegions.java:33)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:70)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1118)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.lambda$traverseInternal$0(DepthRegionTraversal.java:68)
+        	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:68)
+        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(DepthRegionTraversal.java:19)
+        	at jadx.core.dex.visitors.regions.PostProcessRegions.process(PostProcessRegions.java:23)
+        	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:31)
+        */
     /* JADX WARN: Removed duplicated region for block: B:34:0x00b0 A[FALL_THROUGH] */
     /* JADX WARN: Removed duplicated region for block: B:61:0x016c A[LOOP:0: B:10:0x0038->B:61:0x016c, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:79:0x0174 A[SYNTHETIC] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private void getJpegAttributes(ByteOrderedDataInputStream byteOrderedDataInputStream, int i, int i2) throws Throwable {
-        if (DEBUG) {
-            Log.d(TAG, "getJpegAttributes starting with: " + byteOrderedDataInputStream);
-        }
-        byteOrderedDataInputStream.setByteOrder(ByteOrder.BIG_ENDIAN);
-        byte b2 = byteOrderedDataInputStream.readByte();
-        byte b3 = -1;
-        if (b2 != -1) {
-            StringBuilder sbU = a.U("Invalid marker: ");
-            sbU.append(Integer.toHexString(b2 & 255));
-            throw new IOException(sbU.toString());
-        }
-        if (byteOrderedDataInputStream.readByte() != -40) {
-            StringBuilder sbU2 = a.U("Invalid marker: ");
-            sbU2.append(Integer.toHexString(b2 & 255));
-            throw new IOException(sbU2.toString());
-        }
-        int i3 = 2;
-        int i4 = 2;
-        while (true) {
-            byte b4 = byteOrderedDataInputStream.readByte();
-            if (b4 != b3) {
-                StringBuilder sbU3 = a.U("Invalid marker:");
-                sbU3.append(Integer.toHexString(b4 & 255));
-                throw new IOException(sbU3.toString());
-            }
-            int i5 = i4 + 1;
-            byte b5 = byteOrderedDataInputStream.readByte();
-            boolean z2 = DEBUG;
-            if (z2) {
-                StringBuilder sbU4 = a.U("Found JPEG segment indicator: ");
-                sbU4.append(Integer.toHexString(b5 & 255));
-                Log.d(TAG, sbU4.toString());
-            }
-            int i6 = i5 + 1;
-            if (b5 != -39 && b5 != -38) {
-                int unsignedShort = byteOrderedDataInputStream.readUnsignedShort() - i3;
-                int i7 = i6 + i3;
-                if (z2) {
-                    StringBuilder sbU5 = a.U("JPEG segment: ");
-                    sbU5.append(Integer.toHexString(b5 & 255));
-                    sbU5.append(" (length: ");
-                    sbU5.append(unsignedShort + 2);
-                    sbU5.append(")");
-                    Log.d(TAG, sbU5.toString());
-                }
-                if (unsignedShort < 0) {
-                    throw new IOException("Invalid length");
-                }
-                if (b5 == -31) {
-                    byte[] bArr = new byte[unsignedShort];
-                    byteOrderedDataInputStream.readFully(bArr);
-                    int i8 = i7 + unsignedShort;
-                    byte[] bArr2 = IDENTIFIER_EXIF_APP1;
-                    if (ExifInterfaceUtils.startsWith(bArr, bArr2)) {
-                        byte[] bArrCopyOfRange = Arrays.copyOfRange(bArr, bArr2.length, unsignedShort);
-                        this.mOffsetToExifData = i + i7 + bArr2.length;
-                        readExifSegment(bArrCopyOfRange, i2);
-                        setThumbnailData(new ByteOrderedDataInputStream(bArrCopyOfRange));
-                    } else {
-                        byte[] bArr3 = IDENTIFIER_XMP_APP1;
-                        if (ExifInterfaceUtils.startsWith(bArr, bArr3)) {
-                            int length = i7 + bArr3.length;
-                            byte[] bArrCopyOfRange2 = Arrays.copyOfRange(bArr, bArr3.length, unsignedShort);
-                            if (getAttribute(TAG_XMP) == null) {
-                                this.mAttributes[0].put(TAG_XMP, new ExifAttribute(1, bArrCopyOfRange2.length, length, bArrCopyOfRange2));
-                                this.mXmpIsFromSeparateMarker = true;
-                            }
-                        }
-                    }
-                    i7 = i8;
-                } else if (b5 != -2) {
-                    switch (b5) {
-                        default:
-                            switch (b5) {
-                                default:
-                                    switch (b5) {
-                                        default:
-                                            switch (b5) {
-                                            }
-                                        case -55:
-                                        case -54:
-                                        case -53:
-                                            byteOrderedDataInputStream.skipFully(1);
-                                            this.mAttributes[i2].put(i2 != 4 ? TAG_IMAGE_LENGTH : TAG_THUMBNAIL_IMAGE_LENGTH, ExifAttribute.createULong(byteOrderedDataInputStream.readUnsignedShort(), this.mExifByteOrder));
-                                            this.mAttributes[i2].put(i2 != 4 ? TAG_IMAGE_WIDTH : TAG_THUMBNAIL_IMAGE_WIDTH, ExifAttribute.createULong(byteOrderedDataInputStream.readUnsignedShort(), this.mExifByteOrder));
-                                            unsignedShort -= 5;
-                                            break;
-                                    }
-                                case -59:
-                                case -58:
-                                case -57:
-                                    break;
-                            }
-                        case -64:
-                        case -63:
-                        case -62:
-                        case -61:
-                            break;
-                    }
-                    if (unsignedShort >= 0) {
-                        throw new IOException("Invalid length");
-                    }
-                    byteOrderedDataInputStream.skipFully(unsignedShort);
-                    i4 = i7 + unsignedShort;
-                    i3 = 2;
-                    b3 = -1;
-                } else {
-                    byte[] bArr4 = new byte[unsignedShort];
-                    if (byteOrderedDataInputStream.read(bArr4) != unsignedShort) {
-                        throw new IOException("Invalid exif");
-                    }
-                    if (getAttribute(TAG_USER_COMMENT) == null) {
-                        this.mAttributes[1].put(TAG_USER_COMMENT, ExifAttribute.createString(new String(bArr4, ASCII)));
-                    }
-                }
-                unsignedShort = 0;
-                if (unsignedShort >= 0) {
-                }
-            }
-        }
+    private void getJpegAttributes(androidx.exifinterface.media.ExifInterface.ByteOrderedDataInputStream r19, int r20, int r21) throws java.lang.Throwable {
+        /*
+            Method dump skipped, instruction units count: 504
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.exifinterface.media.ExifInterface.getJpegAttributes(androidx.exifinterface.media.ExifInterface$ByteOrderedDataInputStream, int, int):void");
     }
 
     private int getMimeType(BufferedInputStream bufferedInputStream) throws IOException {
@@ -4309,10 +4287,8 @@ public class ExifInterface {
                         default:
                             if (DEBUG) {
                                 a.n0("Data format isn't one of expected formats: ", i, TAG);
-                                break;
-                            } else {
-                                break;
                             }
+                            break;
                         case 9:
                             String[] strArrSplit5 = strReplaceAll.split(",", -1);
                             int[] iArr2 = new int[strArrSplit5.length];

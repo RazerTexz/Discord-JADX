@@ -283,22 +283,20 @@ public final class GroupInviteFriendsSheet extends AppBottomSheet {
         AppCompatImageView appCompatImageView = getBinding().e;
         m.checkNotNullExpressionValue(appCompatImageView, "binding.searchIcon");
         appCompatImageView.setVisibility(viewState.getShowSearchIcon() ? 0 : 8);
-        Iterator<User> it = viewState.getCheckedUsers().iterator();
-        while (it.hasNext()) {
-            User next = it.next();
+        for (User user : viewState.getCheckedUsers()) {
             ChipsView chipsView = getBinding().f2114b;
-            String username = next.getUsername();
-            String string = b.k(this, R.string.remove, new Object[]{next.getUsername()}, null, 4).toString();
-            Long lValueOf = Long.valueOf(next.getId());
-            m.checkNotNullExpressionValue(next, "user");
-            chipsView.b(username, string, lValueOf, new UserDataContract(next));
+            String username = user.getUsername();
+            String string = b.k(this, R.string.remove, new Object[]{user.getUsername()}, null, 4).toString();
+            Long lValueOf = Long.valueOf(user.getId());
+            m.checkNotNullExpressionValue(user, "user");
+            chipsView.b(username, string, lValueOf, new UserDataContract(user));
         }
         ChipsView chipsView2 = getBinding().f2114b;
         HashSet<User> checkedUsers = viewState.getCheckedUsers();
         ArrayList arrayList = new ArrayList(d0.t.o.collectionSizeOrDefault(checkedUsers, 10));
-        Iterator<T> it2 = checkedUsers.iterator();
-        while (it2.hasNext()) {
-            arrayList.add(Long.valueOf(((User) it2.next()).getId()));
+        Iterator<T> it = checkedUsers.iterator();
+        while (it.hasNext()) {
+            arrayList.add(Long.valueOf(((User) it.next()).getId()));
         }
         chipsView2.d(arrayList);
     }

@@ -145,6 +145,7 @@ public class JSRInlinerAdapter extends MethodNode implements Opcodes {
                 case Opcodes.ANEWARRAY /* 189 */:
                 case Opcodes.ARRAYLENGTH /* 190 */:
                 default:
+                    break;
             }
         }
     }

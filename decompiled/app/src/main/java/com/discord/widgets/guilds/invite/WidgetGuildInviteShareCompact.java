@@ -101,7 +101,7 @@ public final class WidgetGuildInviteShareCompact extends AppFragment {
             /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, InviteSuggestionItem data) {
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 boolean z2 = data instanceof InviteSuggestionItem.ChannelItem;
                 if (z2) {
                     InviteSuggestionItem.ChannelItem channelItem = (InviteSuggestionItem.ChannelItem) data;

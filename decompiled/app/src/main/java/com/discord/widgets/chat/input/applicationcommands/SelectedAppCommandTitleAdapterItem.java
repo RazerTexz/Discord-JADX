@@ -50,7 +50,7 @@ public final class SelectedAppCommandTitleAdapterItem extends MGRecyclerViewHold
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, SelectedApplicationCommandItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StringBuilder sbQ = a.Q(MentionUtilsKt.SLASH_CHAR);
         sbQ.append(data.getTitle());
         String string = sbQ.toString();

@@ -169,8 +169,10 @@ public final class b extends k {
                                                                     if (z4) {
                                                                         if (sb.length() == 0) {
                                                                             sb.append("]C1");
+                                                                            break;
                                                                         } else {
                                                                             sb.append((char) 29);
+                                                                            break;
                                                                         }
                                                                     }
                                                                 default:
@@ -192,6 +194,7 @@ public final class b extends k {
                                                     }
                                                     z2 = false;
                                                     z3 = z10;
+                                                    break;
                                                 case 'd':
                                                     if (i17 < 96) {
                                                         if (z10 == z6) {
@@ -252,6 +255,7 @@ public final class b extends k {
                                                         }
                                                         z2 = false;
                                                         z3 = z10;
+                                                        break;
                                                     }
                                                     break;
                                                 case 'e':

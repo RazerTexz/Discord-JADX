@@ -33,7 +33,7 @@ public final class LruCacheKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Integer invoke(Object obj, Object obj2) {
-            return Integer.valueOf(invoke2((AnonymousClass1<K, V>) obj, obj2));
+            return Integer.valueOf(invoke2(obj, obj2));
         }
     }
 
@@ -67,7 +67,7 @@ public final class LruCacheKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // kotlin.jvm.functions.Function4
         public /* bridge */ /* synthetic */ Unit invoke(Boolean bool, Object obj, Object obj2, Object obj3) {
-            invoke(bool.booleanValue(), (boolean) obj, obj2, obj3);
+            invoke(bool.booleanValue(), obj, obj2, obj3);
             return Unit.a;
         }
 

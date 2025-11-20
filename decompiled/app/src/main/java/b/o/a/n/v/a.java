@@ -98,20 +98,18 @@ public class a {
     public void e(@NonNull String str, int i) {
         synchronized (this.e) {
             ArrayList arrayList = new ArrayList();
-            Iterator<c<?>> it = this.c.iterator();
-            while (it.hasNext()) {
-                c<?> next = it.next();
-                if (next.a.equals(str)) {
-                    arrayList.add(next);
+            for (c<?> cVar : this.c) {
+                if (cVar.a.equals(str)) {
+                    arrayList.add(cVar);
                 }
             }
             a.a(0, "trim: name=", str, "scheduled=", Integer.valueOf(arrayList.size()), "allowed=", Integer.valueOf(i));
             int iMax = Math.max(arrayList.size() - i, 0);
             if (iMax > 0) {
                 Collections.reverse(arrayList);
-                Iterator it2 = arrayList.subList(0, iMax).iterator();
-                while (it2.hasNext()) {
-                    this.c.remove((c) it2.next());
+                Iterator it = arrayList.subList(0, iMax).iterator();
+                while (it.hasNext()) {
+                    this.c.remove((c) it.next());
                 }
             }
         }

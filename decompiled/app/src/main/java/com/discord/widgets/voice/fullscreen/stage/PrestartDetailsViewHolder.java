@@ -45,7 +45,7 @@ public final class PrestartDetailsViewHolder extends StageCallViewHolder {
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StageCallItem.PreStartDetailsItem preStartDetailsItem = (StageCallItem.PreStartDetailsItem) data;
         TextView textView = this.binding.c;
         m.checkNotNullExpressionValue(textView, "binding.title");

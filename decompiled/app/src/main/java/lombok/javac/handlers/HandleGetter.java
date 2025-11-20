@@ -9,7 +9,6 @@ import java.lang.annotation.Annotation;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import lombok.AccessLevel;
 import lombok.ConfigurationKeys;
@@ -110,19 +109,14 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
         if (checkForTypeLevelGetter && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) Getter.class, typeNode)) {
             return;
         }
-        JCTree.JCClassDecl typeDecl = null;
-        if (typeNode.get() instanceof JCTree.JCClassDecl) {
-            typeDecl = (JCTree.JCClassDecl) typeNode.get();
-        }
+        JCTree.JCClassDecl typeDecl = typeNode.get() instanceof JCTree.JCClassDecl ? (JCTree.JCClassDecl) typeNode.get() : null;
         long modifiers = typeDecl == null ? 0L : typeDecl.mods.flags;
         boolean notAClass = (modifiers & 8704) != 0;
         if (typeDecl == null || notAClass) {
             errorNode.addError("@Getter is only supported on a class, an enum, or a field.");
             return;
         }
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode field = it.next();
+        for (JavacNode field : typeNode.down()) {
             if (fieldQualifiesForGetterGeneration(field)) {
                 generateGetterForField(field, (JCDiagnostic.DiagnosticPosition) errorNode.get(), level, false, onMethod);
             }
@@ -290,18 +284,14 @@ public class HandleGetter extends JavacAnnotationHandler<Getter> {
     public static List<JCTree.JCAnnotation> findDelegatesAndRemoveFromField(JavacNode field) {
         JCTree.JCVariableDecl fieldNode = field.get();
         List<JCTree.JCAnnotation> delegates = List.nil();
-        Iterator it = fieldNode.mods.annotations.iterator();
-        while (it.hasNext()) {
-            JCTree.JCAnnotation annotation = (JCTree.JCAnnotation) it.next();
+        for (JCTree.JCAnnotation annotation : fieldNode.mods.annotations) {
             if (JavacHandlerUtil.typeMatches((Class<?>) Delegate.class, field, annotation.annotationType)) {
                 delegates = delegates.append(annotation);
             }
         }
         if (!delegates.isEmpty()) {
             ListBuffer<JCTree.JCAnnotation> withoutDelegates = new ListBuffer<>();
-            Iterator it2 = fieldNode.mods.annotations.iterator();
-            while (it2.hasNext()) {
-                JCTree.JCAnnotation annotation2 = (JCTree.JCAnnotation) it2.next();
+            for (JCTree.JCAnnotation annotation2 : fieldNode.mods.annotations) {
                 if (!delegates.contains(annotation2)) {
                     withoutDelegates.append(annotation2);
                 }

@@ -175,7 +175,7 @@ public final class p0 {
                     l0Var4.removeFirst(aVar.$step);
                     l0VarExpanded = l0Var4;
                     while (it.hasNext()) {
-                        l0VarExpanded.add((l0) it.next());
+                        l0VarExpanded.add(it.next());
                         if (l0VarExpanded.isFull()) {
                             int size = l0VarExpanded.size();
                             int i4 = aVar.$size;

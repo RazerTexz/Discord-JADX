@@ -2509,7 +2509,7 @@ public final class ChatInputViewModel extends d0<ViewState> {
             return;
         }
         if (!z3) {
-            chatInputViewModel$sendMessage$sendMessage$1.invoke((ChatInputViewModel$sendMessage$sendMessage$1) Long.valueOf(loaded.getChannelId()));
+            chatInputViewModel$sendMessage$sendMessage$1.invoke(Long.valueOf(loaded.getChannelId()));
             return;
         }
         String threadName = loaded.getThreadDraftState().getThreadName();

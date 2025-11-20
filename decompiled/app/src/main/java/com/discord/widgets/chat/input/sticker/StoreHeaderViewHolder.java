@@ -107,7 +107,7 @@ public final class StoreHeaderViewHolder extends MGRecyclerViewHolder<WidgetStic
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, MGRecyclerDataPayload data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         if (data instanceof StoreHeaderItem) {
             TextView textView = this.binding.g;
             m.checkNotNullExpressionValue(textView, "binding.stickerStoreHeaderItemTitle");

@@ -259,7 +259,7 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ListItem data) throws Resources.NotFoundException {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             ListItem.Participant participant = (ListItem.Participant) data;
             StoreVoiceParticipants.VoiceUser participant2 = participant.getParticipant();
             GuildMember member = participant.getMember();

@@ -5,7 +5,6 @@ import com.sun.tools.javac.tree.JCTree;
 import com.sun.tools.javac.util.List;
 import com.sun.tools.javac.util.Name;
 import java.lang.annotation.Annotation;
-import java.util.Iterator;
 import lombok.ConfigurationKeys;
 import lombok.core.AST;
 import lombok.core.AnnotationValues;
@@ -84,8 +83,8 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
 
     /*  JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
         jadx.core.utils.exceptions.JadxRuntimeException: Failed to find switch 'out' block (already processed)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.calcSwitchOut(SwitchRegionMaker.java:200)
-        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:61)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.calcSwitchOut(SwitchRegionMaker.java:217)
+        	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:68)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:112)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:103)
@@ -206,10 +205,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         JCTree.JCClassDecl classDecl = typeNode.get();
         boolean makeConstructor = true;
         classDecl.mods.flags |= 16;
-        boolean markStatic = true;
-        if (typeNode.up().getKind() == AST.Kind.COMPILATION_UNIT) {
-            markStatic = false;
-        }
+        boolean markStatic = typeNode.up().getKind() != AST.Kind.COMPILATION_UNIT;
         if (markStatic && typeNode.up().getKind() == AST.Kind.TYPE) {
             JCTree.JCClassDecl typeDecl = typeNode.up().get();
             if ((typeDecl.mods.flags & 8704) != 0) {
@@ -219,9 +215,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         if (markStatic) {
             classDecl.mods.flags |= 8;
         }
-        Iterator<JavacNode> it = typeNode.down().iterator();
-        while (it.hasNext()) {
-            JavacNode element = it.next();
+        for (JavacNode element : typeNode.down()) {
             if (element.getKind() == AST.Kind.FIELD) {
                 JCTree.JCVariableDecl fieldDecl = element.get();
                 fieldDecl.mods.flags |= 8;

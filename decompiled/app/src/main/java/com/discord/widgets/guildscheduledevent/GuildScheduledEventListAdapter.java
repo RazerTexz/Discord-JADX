@@ -54,7 +54,7 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GuildScheduledEventListItem data) throws Resources.NotFoundException {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             GuildScheduledEventListItem.Event event = (GuildScheduledEventListItem.Event) data;
             this.binding.f2121b.configureInEventList(event, new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$1(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$2(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$3(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$4(this, event), new GuildScheduledEventListAdapter$EventViewHolder$onConfigure$5(this, event));
         }

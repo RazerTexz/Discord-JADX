@@ -35,21 +35,19 @@ public final class s9 implements Parcelable.Creator<zzku> {
                     if (iM1 != 0) {
                         b.c.a.a0.d.z2(parcel, i, iM1, 8);
                         lValueOf = Long.valueOf(parcel.readLong());
-                        break;
                     } else {
                         lValueOf = null;
-                        break;
                     }
+                    break;
                 case 5:
                     int iM12 = b.c.a.a0.d.M1(parcel, i);
                     if (iM12 != 0) {
                         b.c.a.a0.d.z2(parcel, i, iM12, 4);
                         fValueOf = Float.valueOf(parcel.readFloat());
-                        break;
                     } else {
                         fValueOf = null;
-                        break;
                     }
+                    break;
                 case 6:
                     strR2 = b.c.a.a0.d.R(parcel, i);
                     break;
@@ -61,11 +59,10 @@ public final class s9 implements Parcelable.Creator<zzku> {
                     if (iM13 != 0) {
                         b.c.a.a0.d.z2(parcel, i, iM13, 8);
                         dValueOf = Double.valueOf(parcel.readDouble());
-                        break;
                     } else {
                         dValueOf = null;
-                        break;
                     }
+                    break;
                 default:
                     b.c.a.a0.d.d2(parcel, i);
                     break;

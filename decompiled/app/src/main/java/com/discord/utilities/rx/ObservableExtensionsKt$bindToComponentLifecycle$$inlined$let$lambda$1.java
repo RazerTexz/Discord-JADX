@@ -26,6 +26,6 @@ public final class ObservableExtensionsKt$bindToComponentLifecycle$$inlined$let$
     /* JADX WARN: Multi-variable type inference failed */
     @Override // j0.k.b
     public /* bridge */ /* synthetic */ Boolean call(Object obj) {
-        return call((ObservableExtensionsKt$bindToComponentLifecycle$$inlined$let$lambda$1<T, R>) obj);
+        return call(obj);
     }
 }

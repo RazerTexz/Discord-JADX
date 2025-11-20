@@ -158,11 +158,9 @@ public abstract class SpecialEffectsController {
 
     @Nullable
     private Operation findPendingOperation(@NonNull Fragment fragment) {
-        Iterator<Operation> it = this.mPendingOperations.iterator();
-        while (it.hasNext()) {
-            Operation next = it.next();
-            if (next.getFragment().equals(fragment) && !next.isCanceled()) {
-                return next;
+        for (Operation operation : this.mPendingOperations) {
+            if (operation.getFragment().equals(fragment) && !operation.isCanceled()) {
+                return operation;
             }
         }
         return null;
@@ -170,11 +168,9 @@ public abstract class SpecialEffectsController {
 
     @Nullable
     private Operation findRunningOperation(@NonNull Fragment fragment) {
-        Iterator<Operation> it = this.mRunningOperations.iterator();
-        while (it.hasNext()) {
-            Operation next = it.next();
-            if (next.getFragment().equals(fragment) && !next.isCanceled()) {
-                return next;
+        for (Operation operation : this.mRunningOperations) {
+            if (operation.getFragment().equals(fragment) && !operation.isCanceled()) {
+                return operation;
             }
         }
         return null;
@@ -186,11 +182,9 @@ public abstract class SpecialEffectsController {
     }
 
     private void updateFinalState() {
-        Iterator<Operation> it = this.mPendingOperations.iterator();
-        while (it.hasNext()) {
-            Operation next = it.next();
-            if (next.getLifecycleImpact() == Operation.LifecycleImpact.ADDING) {
-                next.mergeWith(Operation.State.from(next.getFragment().requireView().getVisibility()), Operation.LifecycleImpact.NONE);
+        for (Operation operation : this.mPendingOperations) {
+            if (operation.getLifecycleImpact() == Operation.LifecycleImpact.ADDING) {
+                operation.mergeWith(Operation.State.from(operation.getFragment().requireView().getVisibility()), Operation.LifecycleImpact.NONE);
             }
         }
     }
@@ -244,11 +238,9 @@ public abstract class SpecialEffectsController {
         }
         synchronized (this.mPendingOperations) {
             if (!this.mPendingOperations.isEmpty()) {
-                ArrayList arrayList = new ArrayList(this.mRunningOperations);
+                ArrayList<Operation> arrayList = new ArrayList(this.mRunningOperations);
                 this.mRunningOperations.clear();
-                Iterator it = arrayList.iterator();
-                while (it.hasNext()) {
-                    Operation operation = (Operation) it.next();
+                for (Operation operation : arrayList) {
                     if (FragmentManager.isLoggingEnabled(2)) {
                         Log.v(FragmentManager.TAG, "SpecialEffectsController: Cancelling operation " + operation);
                     }
@@ -261,9 +253,9 @@ public abstract class SpecialEffectsController {
                 ArrayList arrayList2 = new ArrayList(this.mPendingOperations);
                 this.mPendingOperations.clear();
                 this.mRunningOperations.addAll(arrayList2);
-                Iterator it2 = arrayList2.iterator();
-                while (it2.hasNext()) {
-                    ((Operation) it2.next()).onStart();
+                Iterator it = arrayList2.iterator();
+                while (it.hasNext()) {
+                    ((Operation) it.next()).onStart();
                 }
                 executeOperations(arrayList2, this.mOperationDirectionIsPop);
                 this.mOperationDirectionIsPop = false;
@@ -272,8 +264,6 @@ public abstract class SpecialEffectsController {
     }
 
     public void forceCompleteAllOperations() {
-        String str;
-        String str2;
         boolean zIsAttachedToWindow = ViewCompat.isAttachedToWindow(this.mContainer);
         synchronized (this.mPendingOperations) {
             updateFinalState();
@@ -281,36 +271,22 @@ public abstract class SpecialEffectsController {
             while (it.hasNext()) {
                 it.next().onStart();
             }
-            Iterator it2 = new ArrayList(this.mRunningOperations).iterator();
-            while (it2.hasNext()) {
-                Operation operation = (Operation) it2.next();
+            for (Operation operation : new ArrayList(this.mRunningOperations)) {
                 if (FragmentManager.isLoggingEnabled(2)) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("SpecialEffectsController: ");
-                    if (zIsAttachedToWindow) {
-                        str2 = "";
-                    } else {
-                        str2 = "Container " + this.mContainer + " is not attached to window. ";
-                    }
-                    sb.append(str2);
+                    sb.append(zIsAttachedToWindow ? "" : "Container " + this.mContainer + " is not attached to window. ");
                     sb.append("Cancelling running operation ");
                     sb.append(operation);
                     Log.v(FragmentManager.TAG, sb.toString());
                 }
                 operation.cancel();
             }
-            Iterator it3 = new ArrayList(this.mPendingOperations).iterator();
-            while (it3.hasNext()) {
-                Operation operation2 = (Operation) it3.next();
+            for (Operation operation2 : new ArrayList(this.mPendingOperations)) {
                 if (FragmentManager.isLoggingEnabled(2)) {
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("SpecialEffectsController: ");
-                    if (zIsAttachedToWindow) {
-                        str = "";
-                    } else {
-                        str = "Container " + this.mContainer + " is not attached to window. ";
-                    }
-                    sb2.append(str);
+                    sb2.append(zIsAttachedToWindow ? "" : "Container " + this.mContainer + " is not attached to window. ");
                     sb2.append("Cancelling pending operation ");
                     sb2.append(operation2);
                     Log.v(FragmentManager.TAG, sb2.toString());

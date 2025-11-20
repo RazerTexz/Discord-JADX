@@ -42,7 +42,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func2
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2);
+            return call((Holder) obj, obj2);
         }
     }
 
@@ -63,7 +63,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func3
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3);
+            return call((Holder) obj, obj2, obj3);
         }
     }
 
@@ -84,7 +84,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func4
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3, obj4);
+            return call((Holder) obj, obj2, obj3, obj4);
         }
     }
 
@@ -105,7 +105,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func5
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3, obj4, obj5);
+            return call((Holder) obj, obj2, obj3, obj4, obj5);
         }
     }
 
@@ -126,7 +126,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func6
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3, obj4, obj5, obj6);
+            return call((Holder) obj, obj2, obj3, obj4, obj5, obj6);
         }
     }
 
@@ -147,7 +147,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func7
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6, Object obj7) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3, obj4, obj5, obj6, obj7);
+            return call((Holder) obj, obj2, obj3, obj4, obj5, obj6, obj7);
         }
     }
 
@@ -168,7 +168,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func8
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6, Object obj7, Object obj8) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3, obj4, obj5, obj6, obj7, obj8);
+            return call((Holder) obj, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
         }
     }
 
@@ -189,7 +189,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func9
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6, Object obj7, Object obj8, Object obj9) {
-            return call((Holder) obj, (Holder<T1, T2, T3, T4, T5, T6, T7, T8, T9>) obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
+            return call((Holder) obj, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
         }
     }
 
@@ -210,7 +210,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func6
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6) {
-            return call((Holder) obj, (Holder) obj2, (Holder<T10, T11, T12, T13, T14, T15, T16, T17, T18>) obj3, obj4, obj5, obj6);
+            return call((Holder) obj, (Holder) obj2, obj3, obj4, obj5, obj6);
         }
     }
 
@@ -227,7 +227,7 @@ public final class ObservableCombineLatestOverloadsKt {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // rx.functions.Func9
         public /* bridge */ /* synthetic */ Object call(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6, Object obj7, Object obj8, Object obj9) {
-            return call((AnonymousClass1<T1, T2, T3, T4, T5, T6, T7, T8, T9, R>) obj, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
+            return call(obj, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
         }
     }
 

@@ -130,7 +130,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             int themedDrawableRes$default;
             String boostEndsAt;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (!(data instanceof Item.GuildBoostItem)) {
                 throw new Exception("Incorrect List Item Type or null data");
             }
@@ -262,7 +262,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (data instanceof Item.GuildItem) {
                 Item.GuildItem guildItem = (Item.GuildItem) data;
                 if (guildItem.getGuild() != null) {
@@ -328,7 +328,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             if (!(data instanceof Item.HeaderItem)) {
                 throw new Exception("Incorrect List Item Type or null data");
             }

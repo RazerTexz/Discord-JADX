@@ -202,7 +202,7 @@ public final class StickerViewHolder extends MGRecyclerViewHolder<WidgetStickerA
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, MGRecyclerDataPayload data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         if (this.recyclerScrollingWithinThresholdSubject == null) {
             configureSticker(data);
             return;

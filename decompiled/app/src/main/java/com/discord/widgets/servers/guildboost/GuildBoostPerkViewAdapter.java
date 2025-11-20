@@ -130,7 +130,7 @@ public final class GuildBoostPerkViewAdapter extends MGRecyclerAdapterSimple<Gui
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GuildBoostPerkViewListItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2205b;
             m.checkNotNullExpressionValue(textView, "binding.perkViewContentListItem");
             textView.setText(data.getText());

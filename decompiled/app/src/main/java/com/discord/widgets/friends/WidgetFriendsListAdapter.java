@@ -149,7 +149,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             FriendsListViewModel.Item.Header header = (FriendsListViewModel.Item.Header) data;
             TextView textView = this.binding.f2393b;
             m.checkNotNullExpressionValue(textView, "binding.friendsListItemHeaderText");
@@ -182,7 +182,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             FriendsListViewModel.Item.PendingHeader pendingHeader = (FriendsListViewModel.Item.PendingHeader) data;
             TextView textView = this.binding.c;
             m.checkNotNullExpressionValue(textView, "binding.friendsListPendingItemHeaderText");
@@ -271,7 +271,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             FriendsListViewModel.Item.PendingFriendRequest pendingFriendRequest = (FriendsListViewModel.Item.PendingFriendRequest) data;
             this.binding.a.setOnClickListener(new WidgetFriendsListAdapter$ItemPendingUser$onConfigure$1(this, data));
             TextView textView = this.binding.f;
@@ -464,7 +464,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             FriendsListViewModel.Item.Friend friend = (FriendsListViewModel.Item.Friend) data;
             this.binding.a.setOnClickListener(new WidgetFriendsListAdapter$ItemUser$onConfigure$1(this, data));
             TextView textView = this.binding.f;

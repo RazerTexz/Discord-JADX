@@ -134,7 +134,7 @@ public final class GuildTemplateChannelsView extends LinearLayout {
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelDataPayload data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.c;
             m.checkNotNullExpressionValue(textView, "binding.guildTemplateChannelsItemName");
             textView.setText(ChannelUtils.c(data.getChannel()));

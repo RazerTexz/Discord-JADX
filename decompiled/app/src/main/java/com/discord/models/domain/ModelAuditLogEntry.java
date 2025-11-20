@@ -781,14 +781,23 @@ public class ModelAuditLogEntry implements Model {
                                                                                     default:
                                                                                         return ActionType.ALL;
                                                                                 }
+                                                                                break;
                                                                         }
+                                                                        break;
                                                                 }
+                                                                break;
                                                         }
+                                                        break;
                                                 }
+                                                break;
                                         }
+                                        break;
                                 }
+                                break;
                         }
+                        break;
                 }
+                break;
         }
     }
 

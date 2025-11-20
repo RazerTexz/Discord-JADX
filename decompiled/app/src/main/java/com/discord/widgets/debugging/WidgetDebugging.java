@@ -141,7 +141,7 @@ public final class WidgetDebugging extends AppFragment {
             public void onConfigure2(int position, AppLog.LoggedItem data) {
                 String string;
                 m.checkNotNullParameter(data, "data");
-                super.onConfigure(position, (int) data);
+                super.onConfigure(position, data);
                 TextView textView = this.binding.f2361b;
                 textView.setTextColor(getColor(a.I(textView, "binding.logMessage", "binding.logMessage.context"), data.priority));
                 TextView textView2 = this.binding.f2361b;

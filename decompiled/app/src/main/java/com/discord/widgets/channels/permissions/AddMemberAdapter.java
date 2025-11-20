@@ -71,7 +71,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
         public void onConfigure2(int position, Item data) {
             String string;
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2270b;
             m.checkNotNullExpressionValue(textView, "binding.label");
             int iOrdinal = ((Item.CategoryItem) data).getCategoryType().ordinal();
@@ -161,7 +161,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             Item.PermissionOwnerItem permissionOwnerItem = (Item.PermissionOwnerItem) data;
             this.binding.f2271b.a(permissionOwnerItem.getPermissionOwner());
             MaterialCheckBox materialCheckBox = this.binding.c;

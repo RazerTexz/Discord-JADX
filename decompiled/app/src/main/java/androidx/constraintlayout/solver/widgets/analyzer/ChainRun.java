@@ -40,14 +40,12 @@ public class ChainRun extends WidgetRun {
             this.widgets.add(nextChainMember.getRun(this.orientation));
             nextChainMember = nextChainMember.getNextChainMember(this.orientation);
         }
-        Iterator<WidgetRun> it = this.widgets.iterator();
-        while (it.hasNext()) {
-            WidgetRun next = it.next();
+        for (WidgetRun widgetRun : this.widgets) {
             int i = this.orientation;
             if (i == 0) {
-                next.widget.horizontalChainRun = this;
+                widgetRun.widget.horizontalChainRun = this;
             } else if (i == 1) {
-                next.widget.verticalChainRun = this;
+                widgetRun.widget.verticalChainRun = this;
             }
         }
         if ((this.orientation == 0 && ((ConstraintWidgetContainer) this.widget.getParent()).isRtl()) && this.widgets.size() > 1) {
@@ -183,10 +181,8 @@ public class ChainRun extends WidgetRun {
         StringBuilder sbU = a.U("ChainRun ");
         sbU.append(this.orientation == 0 ? "horizontal : " : "vertical : ");
         String string = sbU.toString();
-        Iterator<WidgetRun> it = this.widgets.iterator();
-        while (it.hasNext()) {
-            WidgetRun next = it.next();
-            string = a.w(a.w(string, "<") + next, "> ");
+        for (WidgetRun widgetRun : this.widgets) {
+            string = a.w(a.w(string, "<") + widgetRun, "> ");
         }
         return string;
     }

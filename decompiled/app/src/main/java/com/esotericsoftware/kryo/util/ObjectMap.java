@@ -731,10 +731,8 @@ public class ObjectMap<K, V> {
 
     public void putAll(ObjectMap<K, V> objectMap) {
         ensureCapacity(objectMap.size);
-        Iterator<Entry<K, V>> it = objectMap.entries().iterator();
-        while (it.hasNext()) {
-            Entry<K, V> next = it.next();
-            put(next.key, next.value);
+        for (Entry<K, V> entry : objectMap.entries()) {
+            put(entry.key, entry.value);
         }
     }
 

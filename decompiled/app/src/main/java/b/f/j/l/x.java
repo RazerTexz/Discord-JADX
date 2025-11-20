@@ -31,31 +31,26 @@ public class x {
                 case -1868884870:
                     if (str.equals("legacy_default_params")) {
                         c = 3;
-                        break;
                     }
                     break;
                 case -1106578487:
                     if (str.equals("legacy")) {
                         c = 4;
-                        break;
                     }
                     break;
                 case -404562712:
                     if (str.equals("experimental")) {
                         c = 2;
-                        break;
                     }
                     break;
                 case -402149703:
                     if (str.equals("dummy_with_tracking")) {
                         c = 1;
-                        break;
                     }
                     break;
                 case 95945896:
                     if (str.equals("dummy")) {
                         c = 0;
-                        break;
                     }
                     break;
             }

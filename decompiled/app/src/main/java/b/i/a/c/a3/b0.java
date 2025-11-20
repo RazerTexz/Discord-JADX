@@ -5,7 +5,6 @@ import androidx.annotation.CheckResult;
 import androidx.annotation.Nullable;
 import b.i.a.c.a3.a0;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /* compiled from: MediaSourceEventListener.java */
@@ -61,42 +60,32 @@ public interface b0 {
         }
 
         public void b(w wVar) {
-            Iterator<C0092a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0092a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new d(this, next.f808b, wVar));
+            for (C0092a c0092a : this.c) {
+                b.i.a.c.f3.e0.E(c0092a.a, new d(this, c0092a.f808b, wVar));
             }
         }
 
         public void c(t tVar, w wVar) {
-            Iterator<C0092a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0092a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new f(this, next.f808b, tVar, wVar));
+            for (C0092a c0092a : this.c) {
+                b.i.a.c.f3.e0.E(c0092a.a, new f(this, c0092a.f808b, tVar, wVar));
             }
         }
 
         public void d(t tVar, w wVar) {
-            Iterator<C0092a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0092a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new c(this, next.f808b, tVar, wVar));
+            for (C0092a c0092a : this.c) {
+                b.i.a.c.f3.e0.E(c0092a.a, new c(this, c0092a.f808b, tVar, wVar));
             }
         }
 
         public void e(t tVar, w wVar, IOException iOException, boolean z2) {
-            Iterator<C0092a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0092a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new b(this, next.f808b, tVar, wVar, iOException, z2));
+            for (C0092a c0092a : this.c) {
+                b.i.a.c.f3.e0.E(c0092a.a, new b(this, c0092a.f808b, tVar, wVar, iOException, z2));
             }
         }
 
         public void f(t tVar, w wVar) {
-            Iterator<C0092a> it = this.c.iterator();
-            while (it.hasNext()) {
-                C0092a next = it.next();
-                b.i.a.c.f3.e0.E(next.a, new e(this, next.f808b, tVar, wVar));
+            for (C0092a c0092a : this.c) {
+                b.i.a.c.f3.e0.E(c0092a.a, new e(this, c0092a.f808b, tVar, wVar));
             }
         }
 

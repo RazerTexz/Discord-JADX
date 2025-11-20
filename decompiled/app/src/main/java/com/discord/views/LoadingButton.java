@@ -111,25 +111,21 @@ public final class LoadingButton extends FrameLayout {
                             switch (string2.hashCode()) {
                                 case -1417863058:
                                     if (string2.equals("textEnd")) {
-                                        break;
                                     }
                                     break;
                                 case -1048657099:
                                     if (string2.equals("textStart")) {
                                         i = 2;
-                                        break;
                                     }
                                     break;
                                 case 100571:
                                     if (string2.equals("end")) {
                                         i = 3;
-                                        break;
                                     }
                                     break;
                                 case 109757538:
                                     if (string2.equals("start")) {
                                         i = 1;
-                                        break;
                                     }
                                     break;
                             }

@@ -902,6 +902,7 @@ public final class b extends d0.e0.p.d.m0.i.g implements d0.e0.p.d.m0.i.o {
                             switch (tag) {
                                 case 0:
                                     z2 = true;
+                                    break;
                                 case 8:
                                     int i2 = dVar.readEnum();
                                     EnumC0549c enumC0549cValueOf = EnumC0549c.valueOf(i2);
@@ -912,24 +913,31 @@ public final class b extends d0.e0.p.d.m0.i.g implements d0.e0.p.d.m0.i.o {
                                         this.bitField0_ |= 1;
                                         this.type_ = enumC0549cValueOf;
                                     }
+                                    break;
                                 case 16:
                                     this.bitField0_ |= 2;
                                     this.intValue_ = dVar.readSInt64();
+                                    break;
                                 case 29:
                                     this.bitField0_ |= 4;
                                     this.floatValue_ = dVar.readFloat();
+                                    break;
                                 case 33:
                                     this.bitField0_ |= 8;
                                     this.doubleValue_ = dVar.readDouble();
+                                    break;
                                 case 40:
                                     this.bitField0_ |= 16;
                                     this.stringValue_ = dVar.readInt32();
+                                    break;
                                 case 48:
                                     this.bitField0_ |= 32;
                                     this.classId_ = dVar.readInt32();
+                                    break;
                                 case 56:
                                     this.bitField0_ |= 64;
                                     this.enumValueId_ = dVar.readInt32();
+                                    break;
                                 case 66:
                                     c builder = (this.bitField0_ & 128) == 128 ? this.annotation_.toBuilder() : null;
                                     b bVar = (b) dVar.readMessage(b.k, eVar);
@@ -939,22 +947,27 @@ public final class b extends d0.e0.p.d.m0.i.g implements d0.e0.p.d.m0.i.o {
                                         this.annotation_ = builder.buildPartial();
                                     }
                                     this.bitField0_ |= 128;
+                                    break;
                                 case 74:
                                     if ((i & 256) != 256) {
                                         this.arrayElement_ = new ArrayList();
                                         i |= 256;
                                     }
                                     this.arrayElement_.add(dVar.readMessage(k, eVar));
+                                    break;
                                 case 80:
                                     this.bitField0_ |= 512;
                                     this.flags_ = dVar.readInt32();
+                                    break;
                                 case 88:
                                     this.bitField0_ |= 256;
                                     this.arrayDimensionCount_ = dVar.readInt32();
+                                    break;
                                 default:
                                     if (!dVar.skipField(tag, codedOutputStreamNewInstance)) {
                                         z2 = true;
                                     }
+                                    break;
                             }
                         } catch (InvalidProtocolBufferException e) {
                             throw e.setUnfinishedMessage(this);

@@ -167,11 +167,11 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
                 BottomAppBar.access$1300(bottomAppBar);
             }
             coordinatorLayout.onLayoutChild(bottomAppBar, i);
-            return super.onLayoutChild(coordinatorLayout, (CoordinatorLayout) bottomAppBar, i);
+            return super.onLayoutChild(coordinatorLayout, bottomAppBar, i);
         }
 
         public boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull BottomAppBar bottomAppBar, @NonNull View view, @NonNull View view2, int i, int i2) {
-            return bottomAppBar.getHideOnScroll() && super.onStartNestedScroll(coordinatorLayout, (CoordinatorLayout) bottomAppBar, view, view2, i, i2);
+            return bottomAppBar.getHideOnScroll() && super.onStartNestedScroll(coordinatorLayout, bottomAppBar, view, view2, i, i2);
         }
 
         public Behavior(Context context, AttributeSet attributeSet) {

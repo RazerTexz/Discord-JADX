@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 /* loaded from: classes.dex */
@@ -31,7 +30,7 @@ public class DBUtil {
     }
 
     public static void dropFtsSyncTriggers(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
-        ArrayList arrayList = new ArrayList();
+        ArrayList<String> arrayList = new ArrayList();
         Cursor cursorQuery = supportSQLiteDatabase.query("SELECT name FROM sqlite_master WHERE type = 'trigger'");
         while (cursorQuery.moveToNext()) {
             try {
@@ -42,9 +41,7 @@ public class DBUtil {
             }
         }
         cursorQuery.close();
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            String str = (String) it.next();
+        for (String str : arrayList) {
             if (str.startsWith("room_fts_content_sync_")) {
                 supportSQLiteDatabase.execSQL("DROP TRIGGER IF EXISTS " + str);
             }

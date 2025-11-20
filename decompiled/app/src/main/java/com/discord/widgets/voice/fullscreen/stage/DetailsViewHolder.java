@@ -93,7 +93,7 @@ public final class DetailsViewHolder extends StageCallViewHolder {
     /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         m.checkNotNullParameter(data, "data");
-        super.onConfigure(position, (int) data);
+        super.onConfigure(position, data);
         StageCallItem.DetailsItem detailsItem = (StageCallItem.DetailsItem) data;
         boolean z2 = detailsItem.getNumSpeakers() > 0;
         boolean z3 = detailsItem.getNumAudience() > 0;

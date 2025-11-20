@@ -172,7 +172,7 @@ public final class a {
         for (u uVar2 : arrayList) {
             Iterator<d0.e0.p.d.m0.e.a.a> it2 = uVar2.getQualifierApplicabilityTypes().iterator();
             while (it2.hasNext()) {
-                enumMap.put((EnumMap) it2.next(), (d0.e0.p.d.m0.e.a.a) uVar2);
+                enumMap.put(it2.next(), uVar2);
                 z2 = true;
             }
         }

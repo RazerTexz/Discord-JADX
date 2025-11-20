@@ -306,7 +306,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
     private void startAnimations(@NonNull List<AnimationInfo> list, @NonNull List<SpecialEffectsController.Operation> list2, boolean z2, @NonNull Map<SpecialEffectsController.Operation, Boolean> map) {
         ViewGroup container = getContainer();
         Context context = container.getContext();
-        ArrayList arrayList = new ArrayList();
+        ArrayList<AnimationInfo> arrayList = new ArrayList();
         boolean z3 = false;
         for (AnimationInfo animationInfo : list) {
             if (animationInfo.isVisibilityUnchanged()) {
@@ -344,9 +344,7 @@ public class DefaultSpecialEffectsController extends SpecialEffectsController {
                 }
             }
         }
-        Iterator it = arrayList.iterator();
-        while (it.hasNext()) {
-            AnimationInfo animationInfo2 = (AnimationInfo) it.next();
+        for (AnimationInfo animationInfo2 : arrayList) {
             SpecialEffectsController.Operation operation2 = animationInfo2.getOperation();
             Fragment fragment2 = operation2.getFragment();
             if (z2) {

@@ -110,7 +110,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ItemUser data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             User user = data.getUser();
             SimpleDraweeView simpleDraweeView = this.binding.e;
             m.checkNotNullExpressionValue(simpleDraweeView, "binding.addFriendUserItemAvatar");

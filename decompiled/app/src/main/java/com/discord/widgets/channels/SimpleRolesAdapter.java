@@ -53,7 +53,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
         /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, RoleItem data) {
             m.checkNotNullParameter(data, "data");
-            super.onConfigure(position, (int) data);
+            super.onConfigure(position, data);
             TextView textView = this.binding.f2143b;
             m.checkNotNullExpressionValue(textView, "binding.serverSettingsRoleItemName");
             textView.setText(data.getRole().getName());
